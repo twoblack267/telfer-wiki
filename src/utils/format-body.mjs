@@ -80,8 +80,20 @@ function lookupSlug(name, people) {
   // Try first+last match
   const [first, ...rest] = clean.split(/\s+/);
   const last = rest.pop() || "";
-  for (const p of people) {
-    if (p.first_name?.toLowerCase() === first && p.last_name?.toLowerCase() === last) return p.slug;
+  const matches = people.filter(p => p.first_name?.toLowerCase() === first && p.last_name?.toLowerCase() === last);
+  if (matches.length === 1) return matches[0].slug;
+  if (matches.length > 1) {
+    // Prefer living people over deceased
+    const living = matches.filter(p => p.is_living);
+    if (living.length === 1) return living[0].slug;
+    // Prefer people with a matching middle name
+    const middle = rest.join(" ").toLowerCase();
+    if (middle) {
+      const middleMatch = matches.filter(p => p.middle_name?.toLowerCase() === middle);
+      if (middleMatch.length === 1) return middleMatch[0].slug;
+    }
+    // Fall back to first match (alphabetical order in array)
+    return matches[0].slug;
   }
 
   // Try last name match (for "Telfer" links etc.)
