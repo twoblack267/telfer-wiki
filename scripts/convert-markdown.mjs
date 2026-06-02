@@ -285,7 +285,7 @@ function main() {
       tags,
       relationships,
       roles,
-      body_markdown: bodyClean,
+      body_markdown: bodyWithImages,
       body_stripped: bodyStripped,
       parents,
       children,
