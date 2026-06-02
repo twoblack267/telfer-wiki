@@ -30,12 +30,12 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
   <!-- Filters -->
   <div class="flex flex-wrap gap-3 mb-6 items-center">
     <label class="text-sm text-[var(--color-muted)]">Filter:</label>
-    <a href="/people" class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">All</a>
-    <a href="/people?status=living" class="text-xs px-3 py-1.5 rounded-full border border-green-300 no-underline text-green-800 hover:border-green-500 transition-colors">Living</a>
-    <a href="/people?status=deceased" class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Deceased</a>
+    <a href={import.meta.env.BASE_URL + "people"} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">All</a>
+    <a href={import.meta.env.BASE_URL + "people?status=living"} class="text-xs px-3 py-1.5 rounded-full border border-green-300 no-underline text-green-800 hover:border-green-500 transition-colors">Living</a>
+    <a href={import.meta.env.BASE_URL + "people?status=deceased"} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Deceased</a>
     <span class="text-[var(--color-border)] mx-1">|</span>
-    <a href="/people?sort=alpha" class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
-    <a href="/people?sort=year" class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
+    <a href={import.meta.env.BASE_URL + "people?sort=alpha"} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
+    <a href={import.meta.env.BASE_URL + "people?sort=year"} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
   </div>
 
   <!-- People Grid -->
@@ -83,7 +83,7 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
 
   <!-- Search prompt -->
   <div class="mt-8 text-center">
-    <a href="/search" class="text-sm text-[var(--color-link)]">
+    <a href={import.meta.env.BASE_URL + "search"} class="text-sm text-[var(--color-link)]">
       Looking for someone specific? Try search →
     </a>
   </div>

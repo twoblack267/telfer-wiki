@@ -15,13 +15,13 @@ export function formatBody(body, people) {
     // Convert [[Link|Alias]] to <a href="/people/slug">Alias</a>
     .replace(/\[\[([^\]]+)\|([^\]]+)\]\]/g, (match, link, alias) => {
       const slug = lookupSlug(link.trim(), people);
-      if (slug) return `<a href="/people/${slug}" class="wiki-link">${alias.trim()}</a>`;
+      if (slug) return `<a href="/telfer-wiki/people/${slug}" class="wiki-link">${alias.trim()}</a>`;
       return alias.trim();
     })
     // Convert [[Link]] to <a href="/people/slug">Link</a>
     .replace(/\[\[([^\]]+)\]\]/g, (match, link) => {
       const slug = lookupSlug(link.trim(), people);
-      if (slug) return `<a href="/people/${slug}" class="wiki-link">${link.trim()}</a>`;
+      if (slug) return `<a href="/telfer-wiki/people/${slug}" class="wiki-link">${link.trim()}</a>`;
       return link.trim();
     })
     // Bold **text**

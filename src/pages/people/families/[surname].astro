@@ -50,9 +50,9 @@ const tags = [...new Set(members.flatMap((p) => p.tags.filter((t) => !["bio", "f
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-4">
-      <a href="/people" class="text-[var(--color-link)]">People</a>
+      <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">People</a>
       <span class="mx-2">/</span>
-      <a href="/people/families" class="text-[var(--color-link)]">Families</a>
+      <a href={import.meta.env.BASE_URL + "people/families"} class="text-[var(--color-link)]">Families</a>
       <span class="mx-2">/</span>
       <span>{surname}</span>
     </div>

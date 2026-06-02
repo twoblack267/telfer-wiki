@@ -31,7 +31,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-4">
-      <a href="/people" class="text-[var(--color-link)]">People</a>
+      <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">People</a>
       <span class="mx-2">/</span>
       <span>{person.display_name}</span>
     </div>
@@ -183,7 +183,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
 
     <!-- Navigation footer -->
     <div class="mt-8 flex justify-between items-center border-t border-[var(--color-border)] pt-4 text-sm">
-      <a href="/people" class="text-[var(--color-link)]">← Back to all people</a>
+      <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">← Back to all people</a>
     </div>
   </div>
 </BaseLayout>
