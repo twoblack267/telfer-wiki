@@ -32,7 +32,7 @@ const currentPath = Astro.url.pathname;
   </head>
   <body class="min-h-screen flex flex-col">
     <!-- Navigation -->
-    <nav class="border-b border-[var(--color-border)] style="background:var(--color-nav-bg);backdrop-filter:blur(12px)" sticky top-0 z-50 no-print">
+    <nav class="border-b border-[var(--color-border)]" style="background:var(--color-nav-bg);backdrop-filter:blur(12px)" sticky top-0 z-50 no-print">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="/" class="nav-link text-lg sm:text-xl font-serif font-bold !text-[var(--color-burgundy)] hover:!text-[var(--color-burgundy-light)] no-underline flex items-center gap-2">
           <span class="text-[var(--color-gold)] text-xl sm:text-2xl">🌳</span>
@@ -61,7 +61,7 @@ const currentPath = Astro.url.pathname;
       </div>
 
       <!-- Mobile nav panel -->
-      <div id="nav-panel" class="hidden md:hidden border-t border-[var(--color-border)] style="background:var(--color-nav-bg);backdrop-filter:blur(12px)" shadow-lg">
+      <div id="nav-panel" class="hidden md:hidden border-t border-[var(--color-border)]" style="background:var(--color-nav-bg);backdrop-filter:blur(12px)" shadow-lg">
         <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-1">
           <a href="/" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath === "/" && "active"]}>🏠 Home</a>
           <a href="/people" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/people") && "active"]}>👤 People</a>
@@ -190,6 +190,28 @@ const currentPath = Astro.url.pathname;
     --font-mono: "JetBrains Mono", "Fira Code", monospace;
     --leading-relaxed: 1.7;
     --leading-loose: 2;
+  }
+
+  /* ── Light mode CSS custom properties ── */
+  :root {
+    --color-paper: #f7f3eb;
+    --color-paper-dark: #ede5d6;
+    --color-ink: #2c1810;
+    --color-ink-light: #5a4030;
+    --color-burgundy: #6b1d3a;
+    --color-burgundy-light: #8b2d52;
+    --color-navy: #1b3a5c;
+    --color-navy-light: #2a5a8a;
+    --color-gold: #c9a94e;
+    --color-gold-light: #dcc87a;
+    --color-link: #8b3a3a;
+    --color-link-hover: #a64a4a;
+    --color-border: #d4c9b8;
+    --color-surface: #ede5d6;
+    --color-muted: #8b7d6b;
+    --color-card-bg: #ffffff;
+    --color-input-bg: #ffffff;
+    --color-nav-bg: rgba(255, 255, 255, 0.8);
   }
 
   body {
