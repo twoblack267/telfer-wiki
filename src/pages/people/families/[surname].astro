@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import type { PersonData } from "../../../utils/extract-data.mjs";
+
+export async function getStaticPaths() {
+  const people = (await import("../../../data/people.json")).default as PersonData[];
+  const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
+
+  // Group by surname
+  const families: Record<string, PersonData[]> = {};
+  for (const p of telferPeople) {
+    const name = p.last_name || "Unknown";
+    if (!families[name]) families[name] = [];
+    families[name].push(p);
+  }
+
+  return Object.entries(families).map(([surname, members]) => ({
+    params: { surname: surname.toLowerCase() },
+    props: { surname, members },
+  }));
+}
+
+const { surname, members } = Astro.props;
+const allPeople = (await import("../../../data/people.json")).default as PersonData[];
+
+// Sort members by birth year
+members.sort((a, b) => {
+  const aYear = a.birth_year || 9999;
+  const bYear = b.birth_year || 9999;
+  if (aYear !== bYear) return aYear - bYear;
+  return a.display_name.localeCompare(b.display_name);
+});
+
+const living = members.filter((p) => p.is_living);
+const deceased = members.filter((p) => !p.is_living);
+
+// Find generations covered
+const years = members.filter((p) => p.birth_year).map((p) => p.birth_year as number);
+const oldest = years.length > 0 ? Math.min(...years) : null;
+const youngest = years.length > 0 ? Math.max(...years) : null;
+
+// Gather unique roles
+const roles = [...new Set(members.flatMap((p) => p.roles))].sort();
+
+// Gather unique tags (excluding generic)
+const tags = [...new Set(members.flatMap((p) => p.tags.filter((t) => !["bio", "family", "person"].includes(t))))].sort();
+---
+
+<BaseLayout title={`${surname} Family`}>
+  <div class="max-w-4xl mx-auto">
+    <!-- Breadcrumb -->
+    <div class="text-sm text-[var(--color-muted)] mb-4">
+      <a href="/telfer-wiki/people" class="text-[var(--color-link)]">People</a>
+      <span class="mx-2">/</span>
+      <a href="/telfer-wiki/people/families" class="text-[var(--color-link)]">Families</a>
+      <span class="mx-2">/</span>
+      <span>{surname}</span>
+    </div>
+
+    <!-- Header -->
+    <div class="person-card rounded-xl p-6 md:p-8 mb-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold font-serif text-[var(--color-burgundy)] mb-2">
+            The {surname} Family
+          </h1>
+          <p class="text-lg text-[var(--color-ink-light)]">
+            {members.length} profile{members.length !== 1 ? "s" : ""}
+            {oldest && youngest ? ` · spanning ${oldest}–${youngest}` : ""}
+          </p>
+          <div class="flex gap-2 mt-3">
+            <span class="text-xs px-3 py-1 rounded badge-living">{living.length} Living</span>
+            <span class="text-xs px-3 py-1 rounded badge-deceased">{deceased.length} Deceased</span>
+          </div>
+        </div>
+        <div class="text-5xl text-[var(--color-gold)] font-bold font-serif shrink-0">
+          {members.length}
+        </div>
+      </div>
+    </div>
+
+    <!-- Roles overview -->
+    {roles.length > 0 && (
+      <div class="person-card rounded-xl p-4 mb-6">
+        <h3 class="font-serif text-[var(--color-burgundy)] mb-2">Roles in this family</h3>
+        <div class="flex flex-wrap gap-2">
+          {roles.map((role) => (
+            <span class="text-xs px-3 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-ink-light)]">
+              {role}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Tags overview -->
+    {tags.length > 0 && (
+      <div class="person-card rounded-xl p-4 mb-6">
+        <h3 class="font-serif text-[var(--color-burgundy)] mb-2">Associated Tags</h3>
+        <div class="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span class="text-xs px-3 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Members list -->
+    <div class="divide-y divide-[var(--color-border)]">
+      {members.map((person) => (
+        <a
+          href={`/telfer-wiki/people/${person.slug}`}
+          class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group"
+        >
+          <!-- Name & lifespan -->
+          <div class="flex-1 min-w-0">
+            <div class="font-medium text-[var(--color-burgundy)] group-hover:text-[var(--color-burgundy-light)] transition-colors">
+              {person.display_name}
+            </div>
+            <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
+          </div>
+
+          {/* Roles preview */}
+          {person.roles.length > 0 && (
+            <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate">
+              {person.roles[0]}
+            </div>
+          )}
+
+          {/* Status badge */}
+          <div>
+            {person.is_living ? (
+              <span class="text-xs px-2 py-0.5 rounded badge-living">Living</span>
+            ) : (
+              <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
+            )}
+          </div>
+
+          {/* Arrow */}
+          <span class="text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">→</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

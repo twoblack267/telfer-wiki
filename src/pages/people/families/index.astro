@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import type { PersonData } from "../../../utils/extract-data.mjs";
+
+const people = (await import("../../../data/people.json")).default as PersonData[];
+const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
+
+// Group by surname
+const families: Record<string, PersonData[]> = {};
+for (const p of telferPeople) {
+  const name = p.last_name || "Unknown";
+  if (!families[name]) families[name] = [];
+  families[name].push(p);
+}
+
+// Sort families by size (largest first), then alphabetically
+const sortedFamilies = Object.entries(families)
+  .sort((a, b) => {
+    if (b[1].length !== a[1].length) return b[1].length - a[1].length;
+    return a[0].localeCompare(b[0]);
+  });
+
+const totalFamilies = sortedFamilies.length;
+---
+
+<BaseLayout title="Families">
+  <div class="page-header">
+    <h1>Family Groups</h1>
+    <p class="text-[var(--color-ink-light)] mt-2">
+      {totalFamilies} family groups in the Telfer line
+      &nbsp;·&nbsp; <span class="text-[var(--color-burgundy)]">{telferPeople.length} total profiles</span>
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {sortedFamilies.map(([surname, members]) => (
+      <a
+        href={`/telfer-wiki/people/families/${surname.toLowerCase()}`}
+        class="person-card rounded-xl p-5 no-underline block hover:border-[var(--color-gold)] transition-all"
+      >
+        <div class="flex items-start justify-between">
+          <div>
+            <h2 class="font-serif text-xl text-[var(--color-burgundy)] mb-1">{surname}</h2>
+            <div class="text-sm text-[var(--color-muted)]">
+              {members.length} {members.length === 1 ? "profile" : "profiles"}
+            </div>
+          </div>
+          <div class="text-2xl text-[var(--color-gold)] font-bold font-serif">{members.length}</div>
+        </div>
+
+        <div class="mt-3 flex flex-wrap gap-1">
+          {members.slice(0, 5).map((p) => (
+            <span class="text-xs px-2 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-ink-light)]">
+              {p.display_name.split(" ").slice(1).join(" ") || p.display_name}
+            </span>
+          ))}
+          {members.length > 5 && (
+            <span class="text-xs px-2 py-0.5 rounded-full bg-[var(--color-surface)] text-[var(--color-muted)]">
+              +{members.length - 5} more
+            </span>
+          )}
+        </div>
+
+        <!-- Generations covered -->
+        {(() => {
+          const years = members.filter(p => p.birth_year).map(p => p.birth_year);
+          if (years.length > 0) {
+            const minY = Math.min(...years);
+            const maxY = Math.max(...years);
+            return (
+              <div class="mt-2 text-xs text-[var(--color-muted)]">
+                {minY}–{maxY}
+              </div>
+            );
+          }
+          return null;
+        })()}
+      </a>
+    ))}
+  </div>
+</BaseLayout>

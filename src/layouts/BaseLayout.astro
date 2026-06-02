@@ -20,10 +20,19 @@ const currentPath = Astro.url.pathname;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script is:inline>
+      (function() {
+        var saved = localStorage.getItem('telfer-wiki-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <!-- Navigation -->
-    <nav class="border-b border-[var(--color-border)] bg-white/80 backdrop-blur-sm sticky top-0 z-50 no-print">
+    <nav class="border-b border-[var(--color-border)] style="background:var(--color-nav-bg);backdrop-filter:blur(12px)" sticky top-0 z-50 no-print">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="/telfer-wiki/" class="nav-link text-lg sm:text-xl font-serif font-bold !text-[var(--color-burgundy)] hover:!text-[var(--color-burgundy-light)] no-underline flex items-center gap-2">
           <span class="text-[var(--color-gold)] text-xl sm:text-2xl">🌳</span>
@@ -36,9 +45,15 @@ const currentPath = Astro.url.pathname;
           <a href="/telfer-wiki/people" class="nav-link" class:list={[currentPath.startsWith("/telfer-wiki/people") && "active"]}>People</a>
           <a href="/telfer-wiki/timeline" class="nav-link" class:list={[currentPath.startsWith("/telfer-wiki/timeline") && "active"]}>Timeline</a>
           <a href="/telfer-wiki/search" class="nav-link" class:list={[currentPath.startsWith("/telfer-wiki/search") && "active"]}>Search</a>
+          <a href="/telfer-wiki/people/families" class="nav-link" class:list={[currentPath.startsWith("/telfer-wiki/people/families") && "active"]}>Families</a>
         </div>
 
-        <!-- Hamburger button -->
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="p-2 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-burgundy)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+          <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg id="theme-icon-moon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+                <!-- Hamburger button -->
         <button id="nav-toggle" class="md:hidden p-2 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-burgundy)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle navigation">
           <svg id="nav-icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           <svg id="nav-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -46,12 +61,13 @@ const currentPath = Astro.url.pathname;
       </div>
 
       <!-- Mobile nav panel -->
-      <div id="nav-panel" class="hidden md:hidden border-t border-[var(--color-border)] bg-white/95 backdrop-blur-sm shadow-lg">
+      <div id="nav-panel" class="hidden md:hidden border-t border-[var(--color-border)] style="background:var(--color-nav-bg);backdrop-filter:blur(12px)" shadow-lg">
         <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-1">
           <a href="/telfer-wiki/" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath === "/telfer-wiki/" && "active"]}>🏠 Home</a>
           <a href="/telfer-wiki/people" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/telfer-wiki/people") && "active"]}>👤 People</a>
           <a href="/telfer-wiki/timeline" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/telfer-wiki/timeline") && "active"]}>📅 Timeline</a>
           <a href="/telfer-wiki/search" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/telfer-wiki/search") && "active"]}>🔍 Search</a>
+          <a href="/telfer-wiki/people/families" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/telfer-wiki/people/families") && "active"]}>👪 Families</a>
         </div>
       </div>
     </nav>
@@ -75,6 +91,44 @@ const currentPath = Astro.url.pathname;
 </html>
 
 <script>
+
+  // ── Dark mode toggle ──
+  const themeToggle = document.getElementById('theme-toggle');
+  const sunIcon = document.getElementById('theme-icon-sun');
+  const moonIcon = document.getElementById('theme-icon-moon');
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      if (sunIcon) sunIcon.classList.add('hidden');
+      if (moonIcon) moonIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      if (sunIcon) sunIcon.classList.remove('hidden');
+      if (moonIcon) moonIcon.classList.add('hidden');
+    }
+    localStorage.setItem('telfer-wiki-theme', theme);
+  }
+
+  if (themeToggle) {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'dark') {
+      if (sunIcon) sunIcon.classList.add('hidden');
+      if (moonIcon) moonIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', function() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      setTheme(isDark ? 'light' : 'dark');
+    });
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (!localStorage.getItem('telfer-wiki-theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+
   const toggle = document.getElementById('nav-toggle');
   const panel = document.getElementById('nav-panel');
   const iconOpen = document.getElementById('nav-icon-open');
@@ -244,7 +298,7 @@ const currentPath = Astro.url.pathname;
     color: var(--color-burgundy);
     text-decoration: none;
   }
-  .person-card { background: white; border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; }
+  .person-card { background: var(--color-card-bg); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; }
   .person-card:hover { border-color: var(--color-gold); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
 
   .badge-living { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
@@ -284,4 +338,61 @@ const currentPath = Astro.url.pathname;
     nav { display: none; }
     .no-print { display: none; }
   }
+
+  /* ── Dark mode overrides ──────────────────────────── */
+  [data-theme="dark"] {
+    --color-paper: #1a1618;
+    --color-paper-dark: #221d1f;
+    --color-ink: #e8ddd0;
+    --color-ink-light: #b8a99a;
+    --color-burgundy: #c4688a;
+    --color-burgundy-light: #d884a0;
+    --color-gold: #d4b872;
+    --color-gold-light: #e8d49a;
+    --color-link: #d48a8a;
+    --color-link-hover: #e8a0a0;
+    --color-border: #3a3335;
+    --color-surface: #252022;
+    --color-muted: #8a7e78;
+    --color-card-bg: #2a2426;
+    --color-input-bg: #2a2426;
+    --color-nav-bg: rgba(26, 22, 24, 0.85);
+  }
+  [data-theme="dark"] body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+  [data-theme="dark"] .person-card {
+    background: var(--color-card-bg);
+  }
+  [data-theme="dark"] .person-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  [data-theme="dark"] .search-input {
+    background: var(--color-input-bg);
+    color: var(--color-ink);
+  }
+  [data-theme="dark"] .badge-living {
+    background: #1a3a1a;
+    color: #7fd18f;
+    border-color: #2a5a2a;
+  }
+  [data-theme="dark"] .badge-deceased {
+    background: var(--color-surface);
+    color: var(--color-muted);
+    border-color: var(--color-border);
+  }
+  [data-theme="dark"] img {
+    opacity: 0.9;
+  }
+  [data-theme="dark"] ::selection {
+    background: var(--color-burgundy);
+    color: white;
+  }
+
+  /* Smooth transitions for theme changes */
+  body, .person-card, .search-input, nav, footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
 </style>
