@@ -14,7 +14,7 @@ const currentPath = Astro.url.pathname;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} — Telfer Wiki</title>
     <meta name="description" content={description || "The Telfer Family Wiki — a digital genealogy for the Telfer line"} />
-    <link rel="icon" type="image/svg+xml" href="/telfer-wiki/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,18 +34,18 @@ const currentPath = Astro.url.pathname;
     <!-- Navigation -->
     <nav class="border-b border-[var(--color-border)] style="background:var(--color-nav-bg);backdrop-filter:blur(12px)" sticky top-0 z-50 no-print">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="/telfer-wiki/" class="nav-link text-lg sm:text-xl font-serif font-bold !text-[var(--color-burgundy)] hover:!text-[var(--color-burgundy-light)] no-underline flex items-center gap-2">
+        <a href="/" class="nav-link text-lg sm:text-xl font-serif font-bold !text-[var(--color-burgundy)] hover:!text-[var(--color-burgundy-light)] no-underline flex items-center gap-2">
           <span class="text-[var(--color-gold)] text-xl sm:text-2xl">🌳</span>
           Telfer Wiki
         </a>
 
         <!-- Desktop nav -->
         <div class="hidden md:flex gap-6 items-center">
-          <a href="/telfer-wiki/" class="nav-link" class:list={[currentPath === "/telfer-wiki/" && "active"]}>Home</a>
-          <a href="/telfer-wiki/people" class="nav-link" class:list={[currentPath.startsWith("/telfer-wiki/people") && "active"]}>People</a>
-          <a href="/telfer-wiki/timeline" class="nav-link" class:list={[currentPath.startsWith("/telfer-wiki/timeline") && "active"]}>Timeline</a>
-          <a href="/telfer-wiki/search" class="nav-link" class:list={[currentPath.startsWith("/telfer-wiki/search") && "active"]}>Search</a>
-          <a href="/telfer-wiki/people/families" class="nav-link" class:list={[currentPath.startsWith("/telfer-wiki/people/families") && "active"]}>Families</a>
+          <a href="/" class="nav-link" class:list={[currentPath === "/" && "active"]}>Home</a>
+          <a href="/people" class="nav-link" class:list={[currentPath.startsWith("/people") && "active"]}>People</a>
+          <a href="/timeline" class="nav-link" class:list={[currentPath.startsWith("/timeline") && "active"]}>Timeline</a>
+          <a href="/search" class="nav-link" class:list={[currentPath.startsWith("/search") && "active"]}>Search</a>
+          <a href="/people/families" class="nav-link" class:list={[currentPath.startsWith("/people/families") && "active"]}>Families</a>
         </div>
 
         <!-- Dark Mode Toggle -->
@@ -63,11 +63,11 @@ const currentPath = Astro.url.pathname;
       <!-- Mobile nav panel -->
       <div id="nav-panel" class="hidden md:hidden border-t border-[var(--color-border)] style="background:var(--color-nav-bg);backdrop-filter:blur(12px)" shadow-lg">
         <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-1">
-          <a href="/telfer-wiki/" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath === "/telfer-wiki/" && "active"]}>🏠 Home</a>
-          <a href="/telfer-wiki/people" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/telfer-wiki/people") && "active"]}>👤 People</a>
-          <a href="/telfer-wiki/timeline" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/telfer-wiki/timeline") && "active"]}>📅 Timeline</a>
-          <a href="/telfer-wiki/search" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/telfer-wiki/search") && "active"]}>🔍 Search</a>
-          <a href="/telfer-wiki/people/families" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/telfer-wiki/people/families") && "active"]}>👪 Families</a>
+          <a href="/" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath === "/" && "active"]}>🏠 Home</a>
+          <a href="/people" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/people") && "active"]}>👤 People</a>
+          <a href="/timeline" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/timeline") && "active"]}>📅 Timeline</a>
+          <a href="/search" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/search") && "active"]}>🔍 Search</a>
+          <a href="/people/families" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith("/people/families") && "active"]}>👪 Families</a>
         </div>
       </div>
     </nav>

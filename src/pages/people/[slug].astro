@@ -31,7 +31,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-4">
-      <a href="/telfer-wiki/people" class="text-[var(--color-link)]">People</a>
+      <a href="/people" class="text-[var(--color-link)]">People</a>
       <span class="mx-2">/</span>
       <span>{person.display_name}</span>
     </div>
@@ -115,7 +115,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
               {spouseLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
-                    <a href={`/telfer-wiki/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -133,7 +133,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
               {parentLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
-                    <a href={`/telfer-wiki/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -151,7 +151,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
               {childLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
-                    <a href={`/telfer-wiki/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -169,7 +169,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
               {siblingLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
-                    <a href={`/telfer-wiki/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -183,7 +183,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
 
     <!-- Navigation footer -->
     <div class="mt-8 flex justify-between items-center border-t border-[var(--color-border)] pt-4 text-sm">
-      <a href="/telfer-wiki/people" class="text-[var(--color-link)]">← Back to all people</a>
+      <a href="/people" class="text-[var(--color-link)]">← Back to all people</a>
     </div>
   </div>
 </BaseLayout>

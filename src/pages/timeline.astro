@@ -106,7 +106,7 @@ for (const t of timeline) {
                   {event.type === "death" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded badge-deceased">Died</span>}
                   {event.type === "event" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded bg-[var(--color-navy)] text-white">Event</span>}
                   {event.personSlug ? (
-                    <a href={`/telfer-wiki/people/${event.personSlug}`} class="text-xs sm:text-sm font-medium text-[var(--color-link)]">
+                    <a href={`/people/${event.personSlug}`} class="text-xs sm:text-sm font-medium text-[var(--color-link)]">
                       {event.personName}
                     </a>
                   ) : (

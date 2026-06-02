@@ -66,10 +66,10 @@ const recentPeople = telferPeople.slice(-6).reverse();
         &nbsp;·&nbsp; <span class="font-sans not-italic">{metaData.total_trees} family trees</span>
       </p>
       <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <a href="/telfer-wiki/people" class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 bg-[var(--color-burgundy)] text-white rounded-lg font-serif text-base sm:text-lg no-underline hover:bg-[var(--color-burgundy-light)] transition-colors text-center">
+        <a href="/people" class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 bg-[var(--color-burgundy)] text-white rounded-lg font-serif text-base sm:text-lg no-underline hover:bg-[var(--color-burgundy-light)] transition-colors text-center">
           Browse the People
         </a>
-        <a href="/telfer-wiki/timeline" class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 border-2 border-[var(--color-border)] text-[var(--color-ink)] rounded-lg font-serif text-base sm:text-lg no-underline hover:border-[var(--color-burgundy)] transition-colors text-center">
+        <a href="/timeline" class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 border-2 border-[var(--color-border)] text-[var(--color-ink)] rounded-lg font-serif text-base sm:text-lg no-underline hover:border-[var(--color-burgundy)] transition-colors text-center">
           View the Timeline
         </a>
       </div>
@@ -129,7 +129,7 @@ const recentPeople = telferPeople.slice(-6).reverse();
         ))}
       </div>
       <div class="mt-4">
-        <a href="/telfer-wiki/timeline" class="text-sm text-[var(--color-link)]">View full timeline →</a>
+        <a href="/timeline" class="text-sm text-[var(--color-link)]">View full timeline →</a>
       </div>
     </section>
 
@@ -138,7 +138,7 @@ const recentPeople = telferPeople.slice(-6).reverse();
       <h2 class="mb-6">Recently Added</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {recentPeople.map((person) => (
-          <a href={`/telfer-wiki/people/${person.slug}`} class="person-card rounded-lg p-4 no-underline block">
+          <a href={`/people/${person.slug}`} class="person-card rounded-lg p-4 no-underline block">
             <div class="font-medium text-[var(--color-burgundy)]">{person.display_name}</div>
             <div class="text-sm text-[var(--color-muted)]">
               {person.lifespan}

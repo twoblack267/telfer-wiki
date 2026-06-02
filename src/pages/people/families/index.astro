@@ -35,7 +35,7 @@ const totalFamilies = sortedFamilies.length;
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     {sortedFamilies.map(([surname, members]) => (
       <a
-        href={`/telfer-wiki/people/families/${surname.toLowerCase()}`}
+        href={`/people/families/${surname.toLowerCase()}`}
         class="person-card rounded-xl p-5 no-underline block hover:border-[var(--color-gold)] transition-all"
       >
         <div class="flex items-start justify-between">

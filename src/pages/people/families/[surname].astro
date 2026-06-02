@@ -50,9 +50,9 @@ const tags = [...new Set(members.flatMap((p) => p.tags.filter((t) => !["bio", "f
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-4">
-      <a href="/telfer-wiki/people" class="text-[var(--color-link)]">People</a>
+      <a href="/people" class="text-[var(--color-link)]">People</a>
       <span class="mx-2">/</span>
-      <a href="/telfer-wiki/people/families" class="text-[var(--color-link)]">Families</a>
+      <a href="/people/families" class="text-[var(--color-link)]">Families</a>
       <span class="mx-2">/</span>
       <span>{surname}</span>
     </div>
@@ -111,7 +111,7 @@ const tags = [...new Set(members.flatMap((p) => p.tags.filter((t) => !["bio", "f
     <div class="divide-y divide-[var(--color-border)]">
       {members.map((person) => (
         <a
-          href={`/telfer-wiki/people/${person.slug}`}
+          href={`/people/${person.slug}`}
           class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group"
         >
           <!-- Name & lifespan -->

@@ -2,8 +2,8 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://twoblack267.github.io/telfer-wiki",
-  base: "/telfer-wiki",
+  site: "https://telfer.org.au",
+  base: "",
   output: "static",
   vite: {
     plugins: [tailwindcss()],

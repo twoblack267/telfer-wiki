@@ -45,8 +45,11 @@ function cleanPII(text) {
   text = text.replace(/[\w.-]+@[\w.-]+\.\w+/g, '[email redacted]');
   text = text.replace(/0[45]\d{1,2}\s*\d{3}\s*\d{3}/g, '[phone redacted]');
   text = text.replace(/\+61\s*[45]\d{1,2}\s*\d{3}\s*\d{3}/g, '[phone redacted]');
-  text = text.replace(/\d+\s+[A-Za-z\s]+\d{4}/g, '[address redacted]');
-  text = text.replace(/\d+\s+[A-Za-z\s]+(?:QLD|NSW|VIC|SA|WA|TAS|NT|ACT)\s+\d{4}/g, '[address redacted]');
+  // Street-level addresses: house number + street name + suffix + suburb + state + postcode
+  // NO nested quantifiers — single char class to avoid catastrophic backtracking
+  text = text.replace(/\b\d{1,4}\s+[A-Za-z][A-Za-z\s,.'\-]+\b(?:Street|St|Road|Rd|Drive|Dr|Avenue|Ave|Lane|Ln|Place|Pl|Court|Ct|Terrace|Tce|Crescent|Cres|Parade|Highway|Hwy|Boulevard|Blvd|Circuit|Close|Way)[.,]?\s+[A-Za-z][A-Za-z\s.'\-]*(?:QLD|NSW|VIC|SA|WA|TAS|NT|ACT)\s+\d{4}/gi, '[address redacted]');
+  // Backup: any number + letters + state + postcode (catches edge cases)
+  text = text.replace(/\d+\s+[A-Za-z][A-Za-z\s,.\-']*(?:QLD|NSW|VIC|SA|WA|TAS|NT|ACT)\s+\d{4}/g, '[address redacted]');
   return text;
 }
 

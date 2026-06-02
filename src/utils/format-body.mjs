@@ -15,13 +15,13 @@ export function formatBody(body, people) {
     // Convert [[Link|Alias]] to <a href="/people/slug">Alias</a>
     .replace(/\[\[([^\]]+)\|([^\]]+)\]\]/g, (match, link, alias) => {
       const slug = lookupSlug(link.trim(), people);
-      if (slug) return `<a href="/telfer-wiki/people/${slug}" class="wiki-link">${alias.trim()}</a>`;
+      if (slug) return `<a href="/people/${slug}" class="wiki-link">${alias.trim()}</a>`;
       return alias.trim();
     })
     // Convert [[Link]] to <a href="/people/slug">Link</a>
     .replace(/\[\[([^\]]+)\]\]/g, (match, link) => {
       const slug = lookupSlug(link.trim(), people);
-      if (slug) return `<a href="/telfer-wiki/people/${slug}" class="wiki-link">${link.trim()}</a>`;
+      if (slug) return `<a href="/people/${slug}" class="wiki-link">${link.trim()}</a>`;
       return link.trim();
     })
     // Bold **text**
@@ -43,7 +43,7 @@ export function formatBody(body, people) {
     // Images: ![alt](path)
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
       if (src.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
-        return `<figure class="my-4"><img src="/telfer-wiki/${src.replace(/^\/?/, "")}" alt="${alt}" class="rounded-lg max-w-full" loading="lazy" /><figcaption class="text-xs text-[var(--color-muted)] mt-1">${alt}</figcaption></figure>`;
+        return `<figure class="my-4"><img src="/${src.replace(/^\/?/, "")}" alt="${alt}" class="rounded-lg max-w-full" loading="lazy" /><figcaption class="text-xs text-[var(--color-muted)] mt-1">${alt}</figcaption></figure>`;
       }
       return `<a href="${src}" class="wiki-link" target="_blank">${alt || src}</a>`;
     })
