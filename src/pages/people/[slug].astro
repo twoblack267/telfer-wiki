@@ -76,10 +76,21 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
           )}
         </div>
 
-        {/* Initials Avatar */}
-        <div class="w-20 h-20 rounded-full bg-[var(--color-burgundy)] text-white flex items-center justify-center text-2xl font-serif font-bold shrink-0">
-          {person.first_name?.[0]}{person.last_name?.[0]}
-        </div>
+        {/* Portrait Photo or Initials Avatar */}
+        {person.person_photo ? (
+          <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-[var(--color-gold)] shrink-0 bg-[var(--color-surface)]">
+            <img
+              src={import.meta.env.BASE_URL + person.person_photo}
+              alt={person.display_name}
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        ) : (
+          <div class="w-20 h-20 rounded-full bg-[var(--color-burgundy)] text-white flex items-center justify-center text-2xl font-serif font-bold shrink-0">
+            {person.first_name?.[0]}{person.last_name?.[0]}
+          </div>
+        )}
       </div>
     </div>
 

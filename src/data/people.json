@@ -73,7 +73,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+        "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
+        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+      }
+    ],
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
   },
   {
     "id": "Adam Francis Telfer",
@@ -144,7 +152,7 @@
     ],
     "roles": [],
     "body_markdown": "\n# Adam Francis Telfer (1842-1925)\n**Born:** 1842, Jedburgh, Scottish Borders, Scotland | **Died:** 12 January 1925, Mitcham SA | **Mother:** [[Elizabeth Beattie (1802–1891)]] | **Father:** [[James Telfer (1796–1863)]] | **Spouse:** [[Margaret Dougal Telfer (1849–1936)]] (married 1868) | **Buried:** Mitcham General Cemetery, Section P, Plot 1 Nth\n\n## Photo\n> ![[Family History/People/Photos/adam-francis-telfer-grave.jpg|400]]\n> Adam Francis Telfer headstone, Mitcham General Cemetery.\n> **Source:** [FindAGrave 201529655](https://www.findagrave.com/memorial/201529655/adam-francis-telfer) — accessed 25 May 2026\n\n## Family\n| Relation | Name |\n|---|---|\n| Father | [[James Telfer (1796–1863)]] |\n| Mother | [[Elizabeth Beattie (1802–1891)]] |\n| Brother | [[James Telfer (1829–1913)]] — emigrated to SA |\n| Spouse | [[Margaret Dougal Telfer (1849–1936)]] (married 1868) |\n| Daughter | Elizabeth Beattie \"Bessie\" Telfer (1871-1948) m. Beaton |\n| Son | Francis Adam Telfer (1875-1955) |\n| Son | James Edgerston Telfer (1877-1959) |\n| Son | Vernon Ray St Clair Telfer (1879-1960) |\n| Daughter | Violet Hope Telfer (1883-1967) |\n| Daughter | Adelaide Elsie Pearl Telfer (1889-1976) |\n\n## Life Summary\n\nAdam Francis Telfer was born in 1842 at Jedburgh, Scottish Borders, Scotland, the son of James Telfer (1796-1863) and Elizabeth Beattie. He emigrated to South Australia, where he married Margaret Dougal Telfer in 1868. \n\nAdam and Margaret had six children together. He died on 12 January 1925 at Mitcham, South Australia, and was buried at Mitcham General Cemetery. Margaret survived him by over a decade.\n\n## Timeline\n| Date | Event |\n|---|---|\n| 1842 | Born at Jedburgh, Roxburghshire/Scottish Borders, Scotland |\n| 1868 | Married Margaret Dougal Telfer, South Australia |\n| 1871 | Daughter Elizabeth \"Bessie\" born |\n| 1875 | Son Francis Adam born |\n| 1877 | Son James Edgerston born |\n| 1879 | Son Vernon Ray St Clair born |\n| 1883 | Daughter Violet Hope born |\n| 1889 | Daughter Adelaide Elsie Pearl born |\n| 12 Jan 1925 | Died at Mitcham SA |\n| 1925 | Buried Mitcham General Cemetery |\n\n## Notes\n- **Same-surname marriage:** Adam's surname and Margaret's maiden name are both Telfer. They may be first cousins — Margaret is likely the daughter of [[Francis Telfer (1809–1895)]], making her Adam's cousin through his father James Telfer (1796-1863) and Francis being brothers. Verify against the genealogy book pages.\n- **Trove obituary reference:** James Telfer (1829-1913)'s obituary lists his sons including \"Adam (of Streaky Bay)\" — confirming Adam Telfer settled at Streaky Bay, SA\n\n## Sources\n1. **FindAGrave 201529655:** Adam Francis Telfer (1842-1925), born Jedburgh Scotland, died Mitcham SA, buried Mitcham General Cemetery — [FindAGrave](https://www.findagrave.com/memorial/201529655/adam-francis-telfer) — accessed 25 May 2026\n2. **RootsWeb (moadfamily):** Herbert McDougal Telfer (b. 1881 SA), father Adam Francis Telfer, mother Margaret McDougal — accessed 25 May 2026\n3. **Trove Article 163105669:** James Telfer obituary mentioning sons including Adam of Streaky Bay — accessed 25 May 2026\n4. **FamilySearch LZLD-ML2:** Adam Francis Telfer (1842-1925) — accessed 25 May 2026\n\n## Links\n- [[James Telfer (1796–1863)]]\n- [[James Telfer (1829–1913)]]\n- [[Margaret Dougal Telfer (1849–1936)]]\n- [[Francis Telfer (1809–1895)]]\n",
-    "body_stripped": "**Born:** 1842, Jedburgh, Scottish Borders, Scotland  **Died:** 12 January 1925, Mitcham SA  **Mother:** Elizabeth Beattie (1802–1891)  **Father:** James Telfer (1796–1863)  **Spouse:** Margaret Dougal Telfer (1849–1936) (married 1868)  **Buried:** Mitcham General Cemetery, Section P, Plot 1 Nth\n\n## Photo\n> !Family History/People/Photos/adam-francis-telfer-grave.jpg400\n> Adam Francis Telfer headstone, Mitcham General Cemetery.\n> **Source:** FindAGrave 201529655 — accessed 25 May 2026\n\n## Family\n",
+    "body_stripped": "**Born:** 1842, Jedburgh, Scottish Borders, Scotland  **Died:** 12 January 1925, Mitcham SA  **Mother:** Elizabeth Beattie (1802–1891)  **Father:** James Telfer (1796–1863)  **Spouse:** Margaret Dougal Telfer (1849–1936) (married 1868)  **Buried:** Mitcham General Cemetery, Section P, Plot 1 Nth\n\n## Photo\n> !Adam francis telfer grave\n> Adam Francis Telfer headstone, Mitcham General Cemetery.\n> **Source:** FindAGrave 201529655 — accessed 25 May 2026\n\n## Family\n Relation  Name \n\n Father  James Tel",
     "is_living": false,
     "lifespan": "1842 – 1925",
     "parents": [
@@ -175,7 +183,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/adam-francis-telfer-grave.jpg",
+        "alt": "Adam francis telfer grave",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/adam-francis-telfer-grave.jpg",
+        "filename": "adam-francis-telfer-grave.jpg"
+      }
+    ],
+    "person_photo": null
   },
   {
     "id": "Alan Dale Telfer",
@@ -460,7 +476,21 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/amy-ellen-telfer.jpg",
+        "alt": "Amy ellen telfer",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/amy-ellen-telfer.jpg",
+        "filename": "amy-ellen-telfer.jpg"
+      },
+      {
+        "src": "images/people/amy-ellen-telfer-grave.jpg",
+        "alt": "Amy ellen telfer grave",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/amy-ellen-telfer-grave.jpg",
+        "filename": "amy-ellen-telfer-grave.jpg"
+      }
+    ],
+    "person_photo": "images/people/amy-ellen-telfer.jpg"
   },
   {
     "id": "Amy Nicole Telfer",
@@ -626,7 +656,7 @@
       "Adopted cousin (John's daughter)"
     ],
     "body_markdown": "\n# Carissa Telfer\n\n**Role:** Adopted cousin (John's daughter)\n**Died:** 29 June 2023\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[John Telfer (1847–1929)|John Robert Telfer]] (adoptive) |\n| **Siblings** | [[Angela Telfer]] (adopted sister) |\n\n---\n\n## Life Summary\n\nCarissa was the adopted daughter of [[John Telfer (1847–1929)|John Robert Telfer]] — making her Mark's adopted cousin and sister to [[Angela Telfer]] (also adopted). She passed away on Thursday 29 June 2023 at 1am.\n\n---\n\n## Photos\n\n![[Family History/_assets/Carissa Telfer.jpg]]\n\n*Carissa Telfer.*\n\n---\n\n## Notes\n\n- Funeral: Monday 10 July 2023, 11am at Albany Creek Crematorium, Lakeview Chapel — Brisbane, Queensland\n- Announced via Telfer Mini Digger Facebook page (5 July 2023)\n- The announcement referred to Carissa as \"our much loved daughter\"\n- Cause of death not publicly disclosed\n\n## Links\n\n- [[John Telfer (1847–1929)|John Robert Telfer]]\n- [[Angela Telfer]]\n",
-    "body_stripped": "**Role:** Adopted cousin (John's daughter)\n**Died:** 29 June 2023\n\n## Family\n\n Relation  Name \n\n **Father**  John Telfer (1847–1929)John Robert Telfer (adoptive) \n **Siblings**  Angela Telfer (adopted sister) \n\n## Life Summary\n\nCarissa was the adopted daughter of John Telfer (1847–1929)John Robert Telfer — making her Mark's adopted cousin and sister to Angela Telfer (also adopted). She passed away on Thursday 29 June 2023 at 1am.\n\n## Photos\n\n!Family History/_assets/Carissa Telfer.jpg\n\n*Carissa T",
+    "body_stripped": "**Role:** Adopted cousin (John's daughter)\n**Died:** 29 June 2023\n\n## Family\n\n Relation  Name \n\n **Father**  John Telfer (1847–1929)John Robert Telfer (adoptive) \n **Siblings**  Angela Telfer (adopted sister) \n\n## Life Summary\n\nCarissa was the adopted daughter of John Telfer (1847–1929)John Robert Telfer — making her Mark's adopted cousin and sister to Angela Telfer (also adopted). She passed away on Thursday 29 June 2023 at 1am.\n\n## Photos\n\n!Carissa Telfer\n\n*Carissa Telfer.*\n\n## Notes\n\n- Funera",
     "is_living": false,
     "lifespan": "? – 2023",
     "parents": [
@@ -640,7 +670,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Carissa-Telfer.jpg",
+        "alt": "Carissa Telfer",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Carissa Telfer.jpg",
+        "filename": "Carissa-Telfer.jpg"
+      }
+    ],
+    "person_photo": "images/people/Carissa-Telfer.jpg"
   },
   {
     "id": "Caroline Amelia Telfer",
@@ -1551,7 +1589,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/elizabeth-beattie-telfer-dillon-grave.jpg",
+        "alt": "Elizabeth beattie telfer dillon grave",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/elizabeth-beattie-telfer-dillon-grave.jpg",
+        "filename": "elizabeth-beattie-telfer-dillon-grave.jpg"
+      }
+    ],
+    "person_photo": null
   },
   {
     "id": "Elizabeth Hutton Telfer",
@@ -1623,7 +1669,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/elizabeth-betty-hutton-telfer.jpg",
+        "alt": "Elizabeth betty hutton telfer",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/elizabeth-betty-hutton-telfer.jpg",
+        "filename": "elizabeth-betty-hutton-telfer.jpg"
+      }
+    ],
+    "person_photo": "images/people/elizabeth-betty-hutton-telfer.jpg"
   },
   {
     "id": "Elizabeth Telfer",
@@ -1787,7 +1841,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/francis-charles-telfer-grave.jpg",
+        "alt": "Francis charles telfer grave",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/francis-charles-telfer-grave.jpg",
+        "filename": "francis-charles-telfer-grave.jpg"
+      }
+    ],
+    "person_photo": null
   },
   {
     "id": "Francis Telfer",
@@ -1865,7 +1927,27 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/francis-telfer-grave-2.jpg",
+        "alt": "Francis telfer grave 2",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/francis-telfer-grave-2.jpg",
+        "filename": "francis-telfer-grave-2.jpg"
+      },
+      {
+        "src": "images/people/francis-telfer-grave-1.jpg",
+        "alt": "Francis telfer grave 1",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/francis-telfer-grave-1.jpg",
+        "filename": "francis-telfer-grave-1.jpg"
+      },
+      {
+        "src": "images/people/francis-telfer-portrait.jpg",
+        "alt": "Francis telfer portrait",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/francis-telfer-portrait.jpg",
+        "filename": "francis-telfer-portrait.jpg"
+      }
+    ],
+    "person_photo": "images/people/francis-telfer-portrait.jpg"
   },
   {
     "id": "Grantley Keith Telfer",
@@ -2175,7 +2257,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/james-telfer-1761.jpg",
+        "alt": "James telfer 1761",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/james-telfer-1761.jpg",
+        "filename": "james-telfer-1761.jpg"
+      }
+    ],
+    "person_photo": "images/people/james-telfer-1761.jpg"
   },
   {
     "id": "James Telfer",
@@ -2285,7 +2375,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/james-telfer-1796-1863-grave.jpg",
+        "alt": "James telfer 1796 1863 grave",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/james-telfer-1796-1863-grave.jpg",
+        "filename": "james-telfer-1796-1863-grave.jpg"
+      }
+    ],
+    "person_photo": null
   },
   {
     "id": "James Telfer",
@@ -2358,7 +2456,7 @@
       "Station Manager, Koppio Station, Eyre Peninsula SA | **Arrived:** September 1854 aboard the \"Bernicia\""
     ],
     "body_markdown": "\n# James Telfer (1829-1913)\n**Born:** 12 August 1829, Roxburghshire, Scotland (Hermitage Castle area) | **Died:** 6 July 1913, Cliffside, Port Lincoln SA | **Mother:** [[Elizabeth Beattie (1802–1891)]] | **Father:** [[James Telfer (1796–1863)]] | **Occupation:** Station Manager, Koppio Station, Eyre Peninsula SA | **Arrived:** September 1854 aboard the \"Bernicia\"\n\n![[Family History/People/Photos/james-telfer-1828-1913-portrait.jpg|400]]\n> Portrait of James Telfer, circa 1870. State Library of South Australia B 8505/5E.\n> **Source:** [SLSA Portrait Collection](https://collections.slsa.sa.gov.au/resource/B+8505/5E) — accessed 25 May 2026\n\n## Family\n| Relation | Name |\n|---|---|\n| Father | [[James Telfer (1796–1863)]] |\n| Mother | [[Elizabeth Beattie (1802–1891)]] |\n| Spouse | Janet Welsh (married 6 November 1855, Adelaide SA) |\n| Brother | [[Adam Francis Telfer (1842–1925)]] |\n| Brother | John Telfer (ca 1840-1913) |\n| Brother | Robert Telfer (1837-1907) |\n| Sister | Elizabeth \"Betty\" Beattie Telfer (1832-1896) m. John Charles Dillon |\n| Daughter | Mrs. G. W. H. Warnock |\n| Son | James Telfer (1858-1944) — manager of Koppio Station |\n| Son | John Telfer (born ca 1861) |\n| Son | Robert Telfer (born ca 1869) — of Koppio SA |\n| Son | Adam Telfer — of Streaky Bay SA |\n\n## Life Summary\n\nJames Telfer was born in 1829 at Hermitage Castle, Roxburghshire, Scotland, the son of James Telfer (1796-1863) and Elizabeth Beattie. He emigrated to South Australia, arriving in September 1854 aboard the ship \"Bernicia\". \n\nHe married Janet Welsh on 6 November 1855 in Adelaide. James managed Koppio Station on Eyre Peninsula for approximately 30 years on behalf of Hawker & Briggs. He was one of the oldest residents of the west coast at the time of his death.\n\nJames died on 6 July 1913 at \"Cliffside\", Port Lincoln, South Australia, at the age of 84. He was survived by four sons and one daughter, and 20 grandchildren. Janet Welsh had predeceased him on 14 January 1885 at age 59.\n\n## Timeline\n| Date | Event |\n|---|---|\n| 12 Aug 1829 | Born at Hermitage Castle, Roxburghshire, Scotland |\n| Sep 1854 | Arrived South Australia aboard the \"Bernicia\" |\n| 6 Nov 1855 | Married Janet Welsh, Adelaide SA |\n| ca 1858-1888 | Managed Koppio Station, Eyre Peninsula for Hawker & Briggs |\n| 14 Jan 1885 | Death of wife Janet Welsh, aged 59 |\n| 6 Jul 1913 | Died at Cliffside, Port Lincoln SA |\n\n## Notes\n- **Date discrepancy:** Genealogy book says 1829-1914; Trove obituary says died 6 Jul 1913. FindAGrave inscription also confirms 1913. Prefer 1913 from primary source (Trove).\n- **Burial:** Likely Happy Valley Cemetery, Port Lincoln SA (Janet Welsh also buried there based on inscription transcription)\n- **SLSA portrait:** Photograph held at State Library of South Australia, reference B 8505/5E, described as \"James Telfer, 1829-1913, arrived in South Australia in September 1854 on board a ship. Manager, Koppio station.\" — dated approximately 1870\n- **Koppio Station:** Located on Eyre Peninsula, owned by George Hawker and later Hawker & Briggs\n\n## Sources\n1. **Trove — Observer, 19 Jul 1913:** \"The death occurred at Cliffside, Port Lincoln, on July 6, of Mr. James Telfer, one of the oldest residents of the west coast. He was born at Hermitage Castle... He arrived in SA on the Bernicia in 1854...\" — [Trove Article 163105669](https://trove.nla.gov.au/newspaper/article/163105669) — accessed 25 May 2026\n2. **State Library of South Australia:** Portrait B 8505/5E — James Telfer, 1829-1913 — [SLSA Catalogue](https://collections.slsa.sa.gov.au/resource/B+8505/5E) — accessed 25 May 2026\n3. **southaustralianhistory.com.au:** Koppio page — James Telfer manager for 30 years — [SA History](https://www.southaustralianhistory.com.au/portlincoln.htm) — accessed 25 May 2026\n4. **RootsWeb database:** James Telfer (12 Aug 1829-6 Jul 1913) m. Janet Welsh (ca1826-14 Jan 1885) — accessed 25 May 2026\n5. **FamilySearch:** James Telfer (1829-1913) — KDBV-SG2 — accessed 25 May 2026\n\n## Links\n- [[James Telfer (1796–1863)]]\n- [[Adam Francis Telfer (1842–1925)]]\n- [[Francis Telfer (1809–1895)]]\n",
-    "body_stripped": "**Born:** 12 August 1829, Roxburghshire, Scotland (Hermitage Castle area)  **Died:** 6 July 1913, Cliffside, Port Lincoln SA  **Mother:** Elizabeth Beattie (1802–1891)  **Father:** James Telfer (1796–1863)  **Occupation:** Station Manager, Koppio Station, Eyre Peninsula SA  **Arrived:** September 1854 aboard the \"Bernicia\"\n\n!Family History/People/Photos/james-telfer-1828-1913-portrait.jpg400\n> Portrait of James Telfer, circa 1870. State Library of South Australia B 8505/5E.\n> **Source:** SLSA Po",
+    "body_stripped": "**Born:** 12 August 1829, Roxburghshire, Scotland (Hermitage Castle area)  **Died:** 6 July 1913, Cliffside, Port Lincoln SA  **Mother:** Elizabeth Beattie (1802–1891)  **Father:** James Telfer (1796–1863)  **Occupation:** Station Manager, Koppio Station, Eyre Peninsula SA  **Arrived:** September 1854 aboard the \"Bernicia\"\n\n!James telfer 1828 1913 portrait\n> Portrait of James Telfer, circa 1870. State Library of South Australia B 8505/5E.\n> **Source:** SLSA Portrait Collection — accessed 25 May ",
     "is_living": false,
     "lifespan": "1829 – 1913",
     "parents": [
@@ -2388,7 +2486,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/james-telfer-1828-1913-portrait.jpg",
+        "alt": "James telfer 1828 1913 portrait",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/james-telfer-1828-1913-portrait.jpg",
+        "filename": "james-telfer-1828-1913-portrait.jpg"
+      }
+    ],
+    "person_photo": "images/people/james-telfer-1828-1913-portrait.jpg"
   },
   {
     "id": "James Telfer",
@@ -2600,7 +2706,27 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Jared-Ivory---Kelly-Partners.jpg",
+        "alt": "Jared Ivory   Kelly Partners",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Jared Ivory - Kelly Partners.jpg",
+        "filename": "Jared-Ivory---Kelly-Partners.jpg"
+      },
+      {
+        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+        "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
+        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+      },
+      {
+        "src": "images/people/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg",
+        "alt": "Jared with Turnbull and Widodo   21 Mar 2018",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Jared with Turnbull and Widodo - 21 Mar 2018.jpg",
+        "filename": "Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg"
+      }
+    ],
+    "person_photo": "images/people/Jared-Ivory---Kelly-Partners.jpg"
   },
   {
     "id": "Joel Ivory",
@@ -2668,7 +2794,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+        "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
+        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+      }
+    ],
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
   },
   {
     "id": "John Charles Dillon",
@@ -2755,7 +2889,21 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/john-charles-dillon-photo1.png",
+        "alt": "John charles dillon photo1",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/john-charles-dillon-photo1.png",
+        "filename": "john-charles-dillon-photo1.png"
+      },
+      {
+        "src": "images/people/john-charles-dillon-grave-photo.jpg",
+        "alt": "John charles dillon grave photo",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/john-charles-dillon-grave-photo.jpg",
+        "filename": "john-charles-dillon-grave-photo.jpg"
+      }
+    ],
+    "person_photo": "images/people/john-charles-dillon-photo1.png"
   },
   {
     "id": "John Lawrie",
@@ -3602,7 +3750,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
+        "alt": "Wedding   Mark   Kylie Telfer  12 Mar 2016 ",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Wedding - Mark & Kylie Telfer (12 Mar 2016).jpg",
+        "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
+      }
+    ],
+    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
   },
   {
     "id": "Lauren Ivory",
@@ -3653,7 +3809,7 @@
       "Step-sister (Sheryle's daughter with Paul Ivory)"
     ],
     "body_markdown": "\n# Lauren Ivory\n\n**Role:** Step-sister (Sheryle's daughter with Paul Ivory)\n**Also known as:** Nemo Mothra Pheonix (\"Lozza\")\n**From:** Brisbane, Queensland\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Siblings** | [[Aaron Ivory]], [[Jared Ivory]], [[Joel Ivory]] |\n\n---\n\n## Life Summary\n\nLauren is Mark's step-sister — Sheryle's daughter from her first marriage to [[Paul Ivory (1955–1996)]]. Uses the alias Nemo Mothra Pheonix online.\n\n---\n\n## Photos\n\n![[Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg]]\n\n*Lauren (closest to Sheryle?) with mother and siblings Joel, Aaron and Jared. Date unknown.*\n\n---\n\n## Notes\n\n- **NOT** the Network 10 / Sky News news producer Lauren Ivory in Sydney (different person, same name)\n- Do not research or dig further\n- Facebook: [Nemo Mothra Pheonix](https://www.facebook.com/NemoAmaranthePhoenix)\n\n## Links\n\n- [[Sheryle Telfer (1961–?)]]\n- [[Paul Ivory (1955–1996)]]\n- [[Aaron Ivory]]\n- [[Jared Ivory]]\n- [[Joel Ivory]]\n- [[Family Tree]]\n",
-    "body_stripped": "**Role:** Step-sister (Sheryle's daughter with Paul Ivory)\n**Also known as:** Nemo Mothra Pheonix (\"Lozza\")\n**From:** Brisbane, Queensland\n\n## Family\n\n Relation  Name \n\n **Mother**  Sheryle Telfer (1961–?) \n **Father**  Paul Ivory (1955–1996) \n **Siblings**  Aaron Ivory, Jared Ivory, Joel Ivory \n\n## Life Summary\n\nLauren is Mark's step-sister — Sheryle's daughter from her first marriage to Paul Ivory (1955–1996). Uses the alias Nemo Mothra Pheonix online.\n\n## Photos\n\n!Family History/_assets/Ivory",
+    "body_stripped": "**Role:** Step-sister (Sheryle's daughter with Paul Ivory)\n**Also known as:** Nemo Mothra Pheonix (\"Lozza\")\n**From:** Brisbane, Queensland\n\n## Family\n\n Relation  Name \n\n **Mother**  Sheryle Telfer (1961–?) \n **Father**  Paul Ivory (1955–1996) \n **Siblings**  Aaron Ivory, Jared Ivory, Joel Ivory \n\n## Life Summary\n\nLauren is Mark's step-sister — Sheryle's daughter from her first marriage to Paul Ivory (1955–1996). Uses the alias Nemo Mothra Pheonix online.\n\n## Photos\n\n!Ivory Family   Sheryle  Joel",
     "is_living": true,
     "lifespan": "? – ?",
     "parents": [
@@ -3670,7 +3826,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+        "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
+        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+      }
+    ],
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
   },
   {
     "id": "Levi Leonard Timothy Telfer",
@@ -3871,7 +4035,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/margaret-wright-telfer.jpg",
+        "alt": "Margaret wright telfer",
+        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/margaret-wright-telfer.jpg",
+        "filename": "margaret-wright-telfer.jpg"
+      }
+    ],
+    "person_photo": "images/people/margaret-wright-telfer.jpg"
   },
   {
     "id": "Maria Clara Telfer",
@@ -4133,7 +4305,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
+        "alt": "Wedding   Mark   Kylie Telfer  12 Mar 2016 ",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Wedding - Mark & Kylie Telfer (12 Mar 2016).jpg",
+        "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
+      }
+    ],
+    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
   },
   {
     "id": "Mark Telfer",
@@ -4474,7 +4654,21 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Mitchell-Telfer---16th-Birthday.jpg",
+        "alt": "Mitchell Telfer   16th Birthday",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Mitchell Telfer - 16th Birthday.jpg",
+        "filename": "Mitchell-Telfer---16th-Birthday.jpg"
+      },
+      {
+        "src": "images/people/Mitchell-Telfer---18th-Birthday.jpg",
+        "alt": "Mitchell Telfer   18th Birthday",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Mitchell Telfer - 18th Birthday.jpg",
+        "filename": "Mitchell-Telfer---18th-Birthday.jpg"
+      }
+    ],
+    "person_photo": "images/people/Mitchell-Telfer---16th-Birthday.jpg"
   },
   {
     "id": "Murray John Telfer",
@@ -4685,7 +4879,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
+        "alt": "Paul and Sheryle Ivory   Wedding Day",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Paul and Sheryle Ivory - Wedding Day.jpg",
+        "filename": "Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
+      }
+    ],
+    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
   },
   {
     "id": "Penny Telfer",
@@ -4797,7 +4999,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Peter-Telfer.jpg",
+        "alt": "Peter Telfer",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Peter Telfer.jpg",
+        "filename": "Peter-Telfer.jpg"
+      }
+    ],
+    "person_photo": "images/people/Peter-Telfer.jpg"
   },
   {
     "id": "Rob Lawrie",
@@ -5277,7 +5487,27 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
+        "alt": "Paul and Sheryle Ivory   Wedding Day",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Paul and Sheryle Ivory - Wedding Day.jpg",
+        "filename": "Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
+      },
+      {
+        "src": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
+        "alt": "Wedding   Tim   Sheryle Telfer  28 Aug 1999 ",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Wedding - Tim & Sheryle Telfer (28 Aug 1999).jpg",
+        "filename": "Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
+      },
+      {
+        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+        "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
+        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+      }
+    ],
+    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
   },
   {
     "id": "Shirley Edna Telfer",
@@ -5373,7 +5603,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Shirley-Telfer---Portrait.jpg",
+        "alt": "Shirley Telfer   Portrait",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Shirley Telfer - Portrait.jpg",
+        "filename": "Shirley-Telfer---Portrait.jpg"
+      }
+    ],
+    "person_photo": "images/people/Shirley-Telfer---Portrait.jpg"
   },
   {
     "id": "Sophia Baker",
@@ -5749,7 +5987,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
+        "alt": "Wedding   Tim   Sheryle Telfer  28 Aug 1999 ",
+        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Wedding - Tim & Sheryle Telfer (28 Aug 1999).jpg",
+        "filename": "Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
+      }
+    ],
+    "person_photo": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
   },
   {
     "id": "William Henry Parker",
@@ -6159,5 +6405,67 @@
       "telfer-tree"
     ],
     "images": []
+  },
+  {
+    "id": "Martha Allen",
+    "slug": "martha-allen",
+    "first_name": "Martha",
+    "middle_name": null,
+    "last_name": "Allen",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Martha Allen",
+    "title": "Martha Allen — First Wife of John Telfer",
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Martha Allen"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "John Telfer"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "James Telfer",
+          "Elizabeth Telfer",
+          "Susan Telfer",
+          "Martha Telfer Cameron"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Martha Allen (1840–1876)\n\n**Born:** ~1840 | **Died:** 9 May 1876 | **Mother:** ? | **Father:** ? | **Occupation:** Servant (unconfirmed)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Martha Allen |\n| Spouse | [[John Telfer (1840–1913)]] |\n| Son | [[James Telfer (1866–1946)]] |\n| Daughter | [[Elizabeth Telfer (1868–1950)]] |\n| Daughter | [[Susan Telfer (1871–1952)]] |\n| Daughter | [[Martha Telfer Cameron (1873–1964)]] |\n\n## Life Summary\n\nMartha Allen married John Telfer on 10 January 1865 at the Residence of Robert Boyd, Adelaide, South Australia. She bore four children between 1866 and 1873 — three daughters and one son — before dying young at German Flat, near Mount Gambier, on 9 May 1876, aged approximately 36.\n\nHer death left John Telfer a widower with four young children (the youngest, Martha, was barely three). John remarried seven months later to Martha Clara Henstridge on 28 December 1876.\n\n**Place of origin, parents, migration, and burial location are all unknown.** She may have arrived in South Australia aboard the *Morning Star* (departed Liverpool 28 November 1862, arrived Port Adelaide 13 February 1863) as an unmarried servant, but this is unconfirmed.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| ~1840 | Born (location unknown — possibly England) |\n| 13 Feb 1863 | Possibly arrived SA aboard *Morning Star* as a servant (unconfirmed) |\n| 10 Jan 1865 | Married John Telfer at Residence of Robert Boyd, Adelaide |\n| 27 Apr 1866 | Birth of son James Telfer |\n| 9 Aug 1868 | Birth of daughter Elizabeth Telfer |\n| 18 Dec 1871 | Birth of daughter Susan Telfer |\n| 15 Nov 1873 | Birth of daughter Martha Telfer |\n| 9 May 1876 | Died at German Flat, Mount Gambier SA (age ~36) |\n\n## Notes\n\n- **Place of origin unknown** — no birth registration or census record found that identifies Martha Allen's birthplace or parentage\n- **Parents unknown** — no marriage record (members-only Genealogy SA) or birth record has been found to name her parents\n- **Morning Star arrival unconfirmed** — the *Morning Star* (1,285 tons, Captain C. Matthews, Liverpool to Port Adelaide 28 Nov 1862 – 13 Feb 1863) carried assisted migrants and servants. A Martha Allen appears on some transcription lists but full passenger records have not been located to confirm identity\n- **Burial location unknown** — not found on FindAGrave or cemetery indexes. Possibly an unmarked grave at German Flat or Tantanoola Cemetery. John Telfer was later buried at Tantanoola Cemetery (FindAGrave memorial 186972459)\n- **Death cause unknown** — no death notice found in Trove newspapers\n- **Brick wall status** — classified as an unresolved brick wall. All standard online research avenues exhausted\n\n## Sources\n\n- **Source:** [WikiTree — John Telfer profile (Telfer-549)](https://www.wikitree.com/wiki/Telfer-549) — accessed 02 June 2026\n- **Source:** [John Telfer vault file](https://github.com/hermespack/family-tree/blob/main/Family%20History/People/John%20Telfer%20(1840%E2%80%931913).md) — accessed 02 June 2026\n- **Source:** Trove — [Morning Star arrival notice, 16 Feb 1863](https://trove.nla.gov.au/newspaper/article/50174769) — accessed 02 June 2026 (confirms ship arrival only, not passenger list)\n- **Source:** Genealogy SA marriage index — Gre B 110 P 134 — John Telfer & Martha Clara Henstridge (referenced from John Telfer profile)\n- **Source:** Genealogy SA marriage index — 1865 — John Telfer & Martha Allen (from WikiTree citation)\n\n## Links\n\n- [[John Telfer (1840–1913)]]\n- [[Martha Clara Henstridge (1854–1921)]]\n- [[James Telfer (1866–1946)]]\n- [[Elizabeth Telfer (1868–1950)]]\n- [[Susan Telfer (1871–1952)]]\n- [[Martha Telfer Cameron (1873–1964)]]\n",
+    "body_stripped": "**Born:** ~1840  **Died:** 9 May 1876  **Mother:** ?  **Father:** ?  **Occupation:** Servant (unconfirmed)\n\n## Family\n\n Relation  Name \n\n Self  Martha Allen \n Spouse  John Telfer (1840–1913) \n Son  James Telfer (1866–1946) \n Daughter  Elizabeth Telfer (1868–1950) \n Daughter  Susan Telfer (1871–1952) \n Daughter  Martha Telfer Cameron (1873–1964) \n\n## Life Summary\n\nMartha Allen married John Telfer on 10 January 1865 at the Residence of Robert Boyd, Adelaide, South Australia. She bore four children",
+    "parents": [],
+    "children": [
+      "James Telfer",
+      "Elizabeth Telfer",
+      "Susan Telfer",
+      "Martha Telfer Cameron"
+    ],
+    "siblings": [],
+    "spouses": [
+      "John Telfer"
+    ],
+    "is_living": true,
+    "lifespan": "? – ?",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null
   }
 ]

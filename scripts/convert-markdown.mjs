@@ -22,6 +22,84 @@ import matter from 'gray-matter';
 const VAULT_PEOPLE_DIR = path.resolve(process.env.HOME, 'ObsidianVault/Family History/People');
 const PEOPLE_JSON = path.resolve(process.cwd(), 'src/data/people.json');
 
+// ── Image handling ───────────────────────────────────────
+
+const IMAGE_PATTERN = /!\[\[([^\]]+)\]\]/g;
+const VAULT_BASE = path.resolve(process.env.HOME, 'ObsidianVault');
+const PUBLIC_IMAGES_DIR = path.resolve(process.cwd(), 'public/images/people');
+
+/** Resolve an Obsidian wikilink image path to absolute vault path */
+function resolveVaultImage(wikilink) {
+  // Strip size suffix: ![[path|400]] -> path
+  const clean = wikilink.split('|')[0].trim();
+
+  // Try vault-relative paths
+  // Could be "Family History/People/Photos/file.jpg" or "Family History/_assets/file.jpg"
+  const candidates = [
+    path.join(VAULT_BASE, clean),
+    path.join(VAULT_BASE, 'Family History', '_assets', path.basename(clean)),
+    path.join(VAULT_BASE, 'Family History', 'People', 'Photos', path.basename(clean)),
+  ];
+
+  for (const c of candidates) {
+    if (fs.existsSync(c)) return c;
+  }
+  return null;
+}
+
+/** Get the filename without vault path nesting, URL-safe */
+function safeImageFilename(vaultPath) {
+  let name = path.basename(vaultPath);
+  // Replace spaces and special chars with hyphens
+  name = name.replace(/[^a-zA-Z0-9._-]/g, '-');
+  return name;
+}
+
+/** Convert ![[path|size]] in body markdown to standard markdown image syntax */
+function convertObsidianImages(body) {
+  if (!body) return { body, images: [] };
+
+  const images = [];
+  let result = body;
+
+  let match;
+  // Reset regex state
+  IMAGE_PATTERN.lastIndex = 0;
+
+  while ((match = IMAGE_PATTERN.exec(body)) !== null) {
+    const fullMatch = match[0];
+    const wikilink = match[1];
+    const vaultPath = resolveVaultImage(wikilink);
+
+    if (!vaultPath) {
+      console.warn(`  ⚠️  Image not found on disk: ${wikilink}`);
+      continue;
+    }
+
+    const filename = safeImageFilename(vaultPath);
+    const ext = path.extname(vaultPath).toLowerCase();
+    if (!['.jpg', '.jpeg', '.png', '.gif', '.webp'].includes(ext)) continue;
+
+    // Derive alt text from filename
+    const altBase = path.basename(filename, ext).replace(/[-_]/g, ' ');
+    const alt = altBase.charAt(0).toUpperCase() + altBase.slice(1);
+
+    const publicSrc = `images/people/${filename}`;
+
+    images.push({
+      src: publicSrc,
+      alt,
+      vault_path: vaultPath,
+      filename
+    });
+
+    // Replace Obsidian syntax with standard markdown image
+    result = result.replace(fullMatch, `![${alt}](${publicSrc})`);
+  }
+
+  return { body: result, images };
+}
+
 // ── Helpers ──────────────────────────────────────────────
 
 /** Generate slug matching existing convention: firstname-lastname-birthyear */
@@ -188,8 +266,9 @@ function main() {
 
     const roles = extractRoles(body);
     const bodyClean = cleanPII(body);
+    const { body: bodyWithImages, images: bodyImages } = convertObsidianImages(bodyClean);
     const title = fm.title || `${displayName} — Family & Biography`;
-    const bodyStripped = bioSummary(bodyClean);
+    const bodyStripped = bioSummary(bodyWithImages);
 
     const entry = {
       id: displayName,
@@ -215,7 +294,8 @@ function main() {
       is_living: isLiving,
       lifespan,
       related_trees: fm.related_trees || ['telfer-tree'],
-      images: []
+      images: bodyImages.length > 0 ? bodyImages : [],
+      person_photo: bodyImages.find(img => !img.src.includes('grave'))?.src || null
     };
 
     // 3. Find matching existing entry
@@ -250,7 +330,12 @@ function main() {
       existing.siblings = siblings.length > 0 ? siblings : existing.siblings;
       existing.spouses = spouses.length > 0 ? spouses : existing.spouses;
       existing.related_trees = entry.related_trees;
-      if (!existing.images) existing.images = [];
+      if (bodyImages.length > 0) {
+        existing.images = bodyImages;
+        existing.person_photo = entry.person_photo;
+      } else {
+        if (!existing.images) existing.images = [];
+      }
       updated++;
     } else {
       existingPeople.push(entry);
@@ -263,6 +348,33 @@ function main() {
 
   console.log(`\n✅ Done! ${added} added, ${updated} updated, ${skipped} skipped`);
   console.log(`📊 Total: ${existingPeople.length} profiles in people.json`);
+
+  // 5. Copy images to public directory
+  let imagesCopied = 0;
+  let imagesSkipped = 0;
+  if (!fs.existsSync(PUBLIC_IMAGES_DIR)) {
+    fs.mkdirSync(PUBLIC_IMAGES_DIR, { recursive: true });
+  }
+
+  const seenFilenames = new Set();
+  for (const p of existingPeople) {
+    for (const img of p.images || []) {
+      if (!img.vault_path || seenFilenames.has(img.filename)) continue;
+      seenFilenames.add(img.filename);
+      const dest = path.join(PUBLIC_IMAGES_DIR, img.filename);
+      if (fs.existsSync(img.vault_path)) {
+        if (!fs.existsSync(dest)) {
+          fs.copyFileSync(img.vault_path, dest);
+          imagesCopied++;
+        } else {
+          imagesSkipped++;
+        }
+      } else {
+        console.warn(`  ⚠️  Missing vault image: ${img.vault_path}`);
+      }
+    }
+  }
+  console.log(`🖼️  Images: ${imagesCopied} copied, ${imagesSkipped} already exist`);
 }
 
 main();
