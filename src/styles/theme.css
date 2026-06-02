@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+/* ── Telfer Wiki — Custom Theme ─────────────────────── */
+/* Warm, scholarly family Bible aesthetic               */
+
+@theme {
+  /* Warm parchment palette */
+  --color-paper: #f7f3eb;
+  --color-paper-dark: #ede5d6;
+  --color-ink: #2c1810;
+  --color-ink-light: #5a4030;
+  --color-burgundy: #6b1d3a;
+  --color-burgundy-light: #8b2d52;
+  --color-navy: #1b3a5c;
+  --color-navy-light: #2a5a8a;
+  --color-gold: #c9a94e;
+  --color-gold-light: #dcc87a;
+  --color-link: #8b3a3a;
+  --color-link-hover: #a64a4a;
+  --color-border: #d4c9b8;
+  --color-surface: #ede5d6;
+  --color-muted: #8b7d6b;
+
+  /* Fonts */
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Spacing comfort for readability */
+  --leading-relaxed: 1.7;
+  --leading-loose: 2;
+}
+
+/* ── Base styles ───────────────────────────────────── */
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: var(--leading-relaxed);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-burgundy);
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: 1.75rem; font-weight: 600; margin-top: 2rem; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 2px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration-color: var(--color-link-hover);
+}
+
+/* ── Wiki-style content area ────────────────────────── */
+.wiki-content {
+  font-size: 1.05rem;
+  line-height: var(--leading-loose);
+}
+
+.wiki-content p {
+  margin-bottom: 1.25rem;
+}
+
+.wiki-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.wiki-content th {
+  background-color: var(--color-burgundy);
+  color: white;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+}
+
+.wiki-content td {
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.wiki-content tr:nth-child(even) td {
+  background-color: var(--color-surface);
+}
+
+.wiki-content blockquote {
+  border-left: 3px solid var(--color-gold);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--color-ink-light);
+  font-style: italic;
+}
+
+.wiki-content hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+.wiki-content ul, .wiki-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.wiki-content li {
+  margin-bottom: 0.3rem;
+}
+
+.wiki-content code {
+  background-color: var(--color-surface);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* ── Timeline ───────────────────────────────────────── */
+.timeline-line {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.25rem;
+  bottom: -0.25rem;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline-line::after {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-burgundy);
+  border: 2px solid var(--color-gold);
+}
+
+.timeline-line:last-child::before {
+  display: none;
+}
+
+/* ── Cards ──────────────────────────────────────────── */
+.person-card {
+  border: 1px solid var(--color-border);
+  background: white;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.person-card:hover {
+  box-shadow: 0 4px 12px rgba(107, 29, 58, 0.1);
+  border-color: var(--color-burgundy-light);
+}
+
+/* ── Search ─────────────────────────────────────────── */
+.search-input {
+  border: 2px solid var(--color-border);
+  background: white;
+  font-family: var(--font-sans);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(201, 169, 78, 0.2);
+  outline: none;
+}
+
+/* ── Tree view ──────────────────────────────────────── */
+.tree-node {
+  position: relative;
+}
+
+.tree-connector {
+  border-left: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+  width: 1rem;
+  height: 1rem;
+}
+
+.tree-children {
+  border-left: 2px solid var(--color-border);
+}
+
+/* ── Page header ────────────────────────────────────── */
+.page-header {
+  border-bottom: 3px double var(--color-border);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Navigation ─────────────────────────────────────── */
+.nav-link {
+  position: relative;
+  color: var(--color-ink-light);
+  text-decoration: none;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  padding: 0.25rem 0;
+  transition: color 0.15s;
+}
+
+.nav-link:hover {
+  color: var(--color-burgundy);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--color-burgundy);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-gold);
+}
+
+/* ── Status badges ──────────────────────────────────── */
+.badge-living {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.badge-deceased {
+  background: var(--color-surface);
+  color: var(--color-ink-light);
+  border: 1px solid var(--color-border);
+}
+
+/* ── Print ──────────────────────────────────────────── */
+@media print {
+  body { background: white; }
+  nav { display: none; }
+  .no-print { display: none; }
+}

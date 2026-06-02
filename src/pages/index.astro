@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { PersonData } from "../utils/extract-data.mjs";
+
+const peopleData = (await import("../data/people.json")).default as PersonData[];
+const metaData = (await import("../data/meta.json")).default;
+
+// Only Telfer tree people for the home page
+const telferPeople = peopleData.filter((p) => p.related_trees.includes("telfer-tree"));
+const deceasedTelfer = telferPeople.filter((p) => !p.is_living);
+const livingTelfer = telferPeople.filter((p) => p.is_living);
+
+// Find earliest and latest years
+const years = peopleData
+  .filter((p) => p.birth_year)
+  .map((p) => p.birth_year as number);
+const minYear = Math.min(...years);
+const maxYear = Math.max(...years, new Date().getFullYear());
+
+// Count generations from Francis (1809) to the kids (2019)
+const generationRanges = [
+  { label: "1st Gen", range: "1809–1895", from: 1809, to: 1895 },
+  { label: "2nd Gen", range: "1847–1929", from: 1847, to: 1929 },
+  { label: "3rd Gen", range: "1875–1954", from: 1875, to: 1954 },
+  { label: "4th Gen", range: "1924–2009", from: 1924, to: 2009 },
+  { label: "5th Gen", range: "1959–", from: 1959, to: new Date().getFullYear() },
+  { label: "6th Gen", range: "2008–", from: 2008, to: new Date().getFullYear() },
+];
+
+// Pre-compute generation members
+function peopleInRange(fr, t) {
+  return telferPeople.filter((p) => p.birth_year && p.birth_year >= fr && p.birth_year <= t).slice(0, 4).map((p) => p.display_name);
+}
+
+// Timeline highlight: key events
+const keyDates = [
+  { year: "1809", event: "Francis Telfer born in Scotland" },
+  { year: "1839", event: "Francis emigrates to South Australia" },
+  { year: "1874", event: "John Telfer marries Caroline Masters" },
+  { year: "1895", event: "Francis Telfer dies, aged 86" },
+  { year: "1924", event: "Murray John Telfer born" },
+  { year: "1950s", event: "The family settles on Eyre Peninsula" },
+  { year: "1986", event: "Mark Kenneth Telfer born" },
+  { year: "2017", event: "Levi Leonard Telfer born" },
+  { year: "2019", event: "Zabella Violet Telfer born" },
+];
+
+// Recent profiles added
+const recentPeople = telferPeople.slice(-6).reverse();
+---
+
+<BaseLayout title="Home">
+  <div class="space-y-8 sm:space-y-12">
+    <!-- Hero -->
+    <section class="text-center py-8 sm:py-12 border-b-2 border-[var(--color-border)]">
+      <div class="text-5xl sm:text-6xl mb-4">🌳</div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-serif text-[var(--color-burgundy)] mb-3">
+        Telfer Wiki
+      </h1>
+      <p class="text-lg sm:text-xl text-[var(--color-ink-light)] font-serif italic max-w-2xl mx-auto px-2">
+        A digital genealogy for the Telfer family line — from the Scottish lowlands to the South Australian plains
+      </p>
+      <p class="text-xs sm:text-sm text-[var(--color-muted)] mt-2">
+        <span class="font-sans not-italic">{metaData.total_people} profiles</span>
+        &nbsp;·&nbsp; covering <span class="font-sans not-italic">{minYear}–{maxYear}</span>
+        &nbsp;·&nbsp; <span class="font-sans not-italic">{metaData.total_trees} family trees</span>
+      </p>
+      <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a href="/telfer-wiki/people" class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 bg-[var(--color-burgundy)] text-white rounded-lg font-serif text-base sm:text-lg no-underline hover:bg-[var(--color-burgundy-light)] transition-colors text-center">
+          Browse the People
+        </a>
+        <a href="/telfer-wiki/timeline" class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 border-2 border-[var(--color-border)] text-[var(--color-ink)] rounded-lg font-serif text-base sm:text-lg no-underline hover:border-[var(--color-burgundy)] transition-colors text-center">
+          View the Timeline
+        </a>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section>
+      <h2 class="text-center mb-8">At a Glance</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="person-card rounded-lg p-6 text-center">
+          <div class="text-3xl font-bold font-serif text-[var(--color-burgundy)]">{telferPeople.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-1">Telfer Profiles</div>
+        </div>
+        <div class="person-card rounded-lg p-6 text-center">
+          <div class="text-3xl font-bold font-serif text-[var(--color-burgundy)]">{generationRanges.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-1">Generations</div>
+        </div>
+        <div class="person-card rounded-lg p-6 text-center">
+          <div class="text-3xl font-bold font-serif text-[var(--color-burgundy)]">{livingTelfer.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-1">Living</div>
+        </div>
+        <div class="person-card rounded-lg p-6 text-center">
+          <div class="text-3xl font-bold font-serif text-[var(--color-burgundy)]">{deceasedTelfer.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-1">Deceased</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Generations -->
+    <section>
+      <h2 class="mb-6">The Generations</h2>
+      <div class="space-y-3">
+        {generationRanges.map((gen) => (
+          <div class="person-card rounded-lg p-3 sm:p-4 flex items-center gap-3 sm:gap-4">
+            <div class="w-16 sm:w-20 text-center shrink-0">
+              <div class="font-bold font-serif text-sm sm:text-base text-[var(--color-burgundy)]">{gen.label}</div>
+              <div class="text-xs text-[var(--color-muted)]">{gen.range}</div>
+            </div>
+            <div class="h-6 sm:h-8 w-px bg-[var(--color-border)] shrink-0"></div>
+            <div class="flex-1 text-xs sm:text-sm text-[var(--color-ink-light)]">
+              {peopleInRange(gen.from, gen.to).join(", ")}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Timeline Highlights -->
+    <section>
+      <h2 class="mb-6">Timeline Highlights</h2>
+      <div class="space-y-0">
+        {keyDates.map((d, i) => (
+          <div class="timeline-line pl-8 pb-4">
+            <span class="font-bold font-serif text-[var(--color-burgundy)]">{d.year}</span>
+            <span class="text-[var(--color-ink-light)]"> — {d.event}</span>
+          </div>
+        ))}
+      </div>
+      <div class="mt-4">
+        <a href="/telfer-wiki/timeline" class="text-sm text-[var(--color-link)]">View full timeline →</a>
+      </div>
+    </section>
+
+    <!-- Recent Profiles -->
+    <section>
+      <h2 class="mb-6">Recently Added</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {recentPeople.map((person) => (
+          <a href={`/telfer-wiki/people/${person.slug}`} class="person-card rounded-lg p-4 no-underline block">
+            <div class="font-medium text-[var(--color-burgundy)]">{person.display_name}</div>
+            <div class="text-sm text-[var(--color-muted)]">
+              {person.lifespan}
+              {person.is_living ? <span class="ml-2 inline-block text-xs px-2 py-0.5 rounded badge-living">Living</span> : ""}
+            </div>
+            {person.roles.length > 0 && (
+              <div class="text-xs text-[var(--color-ink-light)] mt-1 line-clamp-2">{person.roles[0]}</div>
+            )}
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

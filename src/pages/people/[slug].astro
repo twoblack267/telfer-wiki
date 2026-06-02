@@ -1,0 +1,215 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatBody, getLinksForRelationships } from "../../utils/format-body.mjs";
+
+export async function getStaticPaths() {
+  const people = (await import("../../data/people.json")).default;
+  return people.map((person) => ({
+    params: { slug: person.slug },
+    props: { person },
+  }));
+}
+
+const { person } = Astro.props;
+const people = (await import("../../data/people.json")).default;
+const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
+
+// ── Relationship groupings ──
+const spouseLinks = getLinksForRelationships(person.spouses, telferPeople);
+const parentLinks = getLinksForRelationships(person.parents, telferPeople);
+const childLinks = getLinksForRelationships(person.children, telferPeople);
+const siblingLinks = getLinksForRelationships(person.siblings, telferPeople);
+
+// ── Body content ──
+const bodyHtml = formatBody(person.body_markdown, telferPeople);
+
+// ── Tags ──
+const importantTags = person.tags.filter((t) => !["bio", "family", "person"].includes(t));
+---
+
+<BaseLayout title={person.display_name}>
+  <div class="max-w-4xl mx-auto">
+    <!-- Breadcrumb -->
+    <div class="text-sm text-[var(--color-muted)] mb-4">
+      <a href="/telfer-wiki/people" class="text-[var(--color-link)]">People</a>
+      <span class="mx-2">/</span>
+      <span>{person.display_name}</span>
+    </div>
+
+    <!-- Header Card -->
+    <div class="person-card rounded-xl p-6 md:p-8 mb-6">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex-1">
+          <h1 class="text-3xl md:text-4xl font-bold font-serif text-[var(--color-burgundy)] mb-2">
+            {person.display_name}
+          </h1>
+
+          <!-- Lifespan -->
+          <div class="text-lg text-[var(--color-ink-light)] mb-3">
+            {person.lifespan}
+          </div>
+
+          <!-- Status -->
+          <div class="flex gap-2 mb-3">
+            {person.is_living ? (
+              <span class="text-xs px-3 py-1 rounded badge-living">Living</span>
+            ) : (
+              <span class="text-xs px-3 py-1 rounded badge-deceased">Deceased</span>
+            )}
+            {person.related_trees.includes("telfer-tree") && (
+              <span class="text-xs px-3 py-1 rounded border border-[var(--color-border)] text-[var(--color-muted)]">Telfer Line</span>
+            )}
+            {person.related_trees.length > 1 && (
+              <span class="text-xs px-3 py-1 rounded border border-[var(--color-border)] text-[var(--color-muted)]">Also in: {person.related_trees.filter((t) => t !== "telfer-tree").join(", ")}</span>
+            )}
+          </div>
+
+          <!-- Roles -->
+          {person.roles.length > 0 && (
+            <div class="space-y-1">
+              {person.roles.map((role) => (
+                <div key={role} class="text-sm text-[var(--color-ink-light)] italic">
+                  {role}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Initials Avatar */}
+        <div class="w-20 h-20 rounded-full bg-[var(--color-burgundy)] text-white flex items-center justify-center text-2xl font-serif font-bold shrink-0">
+          {person.first_name?.[0]}{person.last_name?.[0]}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Main Content -->
+      <div class="md:col-span-2">
+        <div class="person-card rounded-xl p-6">
+          <h2 class="font-serif text-xl text-[var(--color-burgundy)] mb-4">Biography</h2>
+          <!-- Wiki-formatted body -->
+          <div class="prose wiki-content" set:html={bodyHtml}></div>
+        </div>
+
+        <!-- Tags -->
+        {importantTags.length > 0 && (
+          <div class="person-card rounded-xl p-6 mt-6">
+            <h2 class="font-serif text-lg text-[var(--color-burgundy)] mb-3">Tags</h2>
+            <div class="flex flex-wrap gap-2">
+              {importantTags.map((tag) => (
+                <span key={tag} class="text-xs px-3 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <!-- Relationship: Spouse -->
+        {spouseLinks.length > 0 && (
+          <div class="person-card rounded-xl p-4">
+            <h3 class="font-serif text-[var(--color-burgundy)] mb-2">Spouse{spouseLinks.length > 1 ? "s" : ""}</h3>
+            <ul class="space-y-1">
+              {spouseLinks.map(({ name, slug }) => (
+                <li key={slug || name}>
+                  {slug ? (
+                    <a href={`/telfer-wiki/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                  ) : (
+                    <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Relationship: Parents -->
+        {parentLinks.length > 0 && (
+          <div class="person-card rounded-xl p-4">
+            <h3 class="font-serif text-[var(--color-burgundy)] mb-2">Parents</h3>
+            <ul class="space-y-1">
+              {parentLinks.map(({ name, slug }) => (
+                <li key={slug || name}>
+                  {slug ? (
+                    <a href={`/telfer-wiki/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                  ) : (
+                    <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Relationship: Children -->
+        {childLinks.length > 0 && (
+          <div class="person-card rounded-xl p-4">
+            <h3 class="font-serif text-[var(--color-burgundy)] mb-2">Children</h3>
+            <ul class="space-y-1">
+              {childLinks.map(({ name, slug }) => (
+                <li key={slug || name}>
+                  {slug ? (
+                    <a href={`/telfer-wiki/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                  ) : (
+                    <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Relationship: Siblings -->
+        {siblingLinks.length > 0 && (
+          <div class="person-card rounded-xl p-4">
+            <h3 class="font-serif text-[var(--color-burgundy)] mb-2">Siblings</h3>
+            <ul class="space-y-1">
+              {siblingLinks.map(({ name, slug }) => (
+                <li key={slug || name}>
+                  {slug ? (
+                    <a href={`/telfer-wiki/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                  ) : (
+                    <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- Navigation footer -->
+    <div class="mt-8 flex justify-between items-center border-t border-[var(--color-border)] pt-4 text-sm">
+      <a href="/telfer-wiki/people" class="text-[var(--color-link)]">← Back to all people</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .wiki-content a.wiki-link {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
+  .wiki-content a.wiki-link:hover {
+    color: var(--color-burgundy-light);
+  }
+  .wiki-content figure {
+    margin: 1.5rem 0;
+  }
+  .wiki-content img {
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--color-border);
+  }
+  .wiki-content figcaption {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    margin-top: 0.25rem;
+  }
+</style>

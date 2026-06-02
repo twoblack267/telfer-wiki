@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { PersonData } from "../utils/extract-data.mjs";
+
+const people = (await import("../data/people.json")).default as PersonData[];
+const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
+
+// Build a timeline of all events
+interface TimelineEvent {
+  year: number;
+  dateLabel: string;
+  type: "birth" | "death" | "marriage" | "event";
+  personName: string;
+  personSlug: string;
+  detail: string;
+}
+
+const timeline: TimelineEvent[] = [];
+
+for (const p of telferPeople) {
+  if (p.birth_year) {
+    const detail = p.birth_year ? `Born in ${p.birth_year}` : "";
+    timeline.push({
+      year: p.birth_year,
+      dateLabel: `${p.birth_year}`,
+      type: "birth",
+      personName: p.display_name,
+      personSlug: p.slug,
+      detail: `${p.display_name} born`,
+    });
+  }
+
+  if (p.death_year) {
+    timeline.push({
+      year: p.death_year,
+      dateLabel: `${p.death_year}`,
+      type: "death",
+      personName: p.display_name,
+      personSlug: p.slug,
+      detail: `${p.display_name} died (aged ${p.death_year && p.birth_year ? p.death_year - p.birth_year : "?"})`,
+    });
+  }
+}
+
+// Add key historical events from tree content
+timeline.push({ year: 1839, dateLabel: "1839", type: "event", personName: "Francis Telfer", personSlug: "francis-telfer-1809", detail: "Francis Telfer emigrates to South Australia" });
+timeline.push({ year: 1845, dateLabel: "1845", type: "event", personName: "Telfer Family", personSlug: "", detail: "Telfer family settles in the Tantanoola district, SA" });
+timeline.push({ year: 1874, dateLabel: "1874", type: "event", personName: "John Telfer", personSlug: "john-telfer-1847", detail: "John Telfer marries Caroline Masters" });
+
+// Sort by year
+timeline.sort((a, b) => a.year - b.year);
+
+// Group by decade for navigation
+const decades: { label: string; year: number }[] = [];
+const seenDecades = new Set<number>();
+for (const t of timeline) {
+  const decade = Math.floor(t.year / 10) * 10;
+  if (!seenDecades.has(decade)) {
+    seenDecades.add(decade);
+    decades.push({ label: `${decade}s`, year: decade });
+  }
+}
+---
+
+<BaseLayout title="Timeline">
+  <div class="page-header">
+    <h1>Timeline</h1>
+    <p class="text-[var(--color-ink-light)] mt-2">
+      {timeline.length} events across the Telfer family history
+    </p>
+  </div>
+
+  <!-- Decade jump nav -->
+  <div class="flex flex-wrap gap-2 mb-8">
+    {decades.map((d) => (
+      <a href={`#decade-${d.year}`} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] hover:text-[var(--color-burgundy)] transition-colors">
+        {d.label}
+      </a>
+    ))}
+  </div>
+
+  <!-- Timeline -->
+  <div class="space-y-0">
+    {timeline.map((event, i) => {
+      // Check if decade header needed
+      const decade = Math.floor(event.year / 10) * 10;
+      const prevDecade = i > 0 ? Math.floor(timeline[i - 1].year / 10) * 10 : -1;
+
+      return (
+        <>
+          {decade !== prevDecade && (
+            <div id={`decade-${decade}`} class="py-4 -ml-0">
+              <h2 class="text-2xl font-bold font-serif text-[var(--color-navy)] border-b-2 border-[var(--color-gold)] pb-1 inline-block">
+                {decade}s
+              </h2>
+            </div>
+          )}
+          <div class="timeline-line pl-7 sm:pl-10 pb-4 sm:pb-6 relative">
+            <div class="flex items-start gap-2 sm:gap-3">
+              <div class="text-xs sm:text-sm font-bold font-mono text-[var(--color-navy)] w-10 sm:w-12 shrink-0 pt-0.5">
+                {event.year}
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-0.5">
+                  {event.type === "birth" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded badge-living">Born</span>}
+                  {event.type === "death" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded badge-deceased">Died</span>}
+                  {event.type === "event" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded bg-[var(--color-navy)] text-white">Event</span>}
+                  {event.personSlug ? (
+                    <a href={`/telfer-wiki/people/${event.personSlug}`} class="text-xs sm:text-sm font-medium text-[var(--color-link)]">
+                      {event.personName}
+                    </a>
+                  ) : (
+                    <span class="text-xs sm:text-sm font-medium text-[var(--color-ink)]">{event.personName}</span>
+                  )}
+                </div>
+                <div class="text-xs sm:text-sm text-[var(--color-ink-light)]">{event.detail}</div>
+              </div>
+            </div>
+          </div>
+        </>
+      );
+    })}
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .timeline-line:first-of-type::before { top: 0.4rem; }
+</style>

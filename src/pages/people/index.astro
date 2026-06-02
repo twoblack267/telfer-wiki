@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import type { PersonData } from "../../utils/extract-data.mjs";
+
+const people = (await import("../../data/people.json")).default as PersonData[];
+const telferPeople = people
+  .filter((p) => p.related_trees.includes("telfer-tree"))
+  .sort((a, b) => {
+    // Sort by birth year, then by name
+    const aYear = a.birth_year || 9999;
+    const bYear = b.birth_year || 9999;
+    if (aYear !== bYear) return aYear - bYear;
+    return a.display_name.localeCompare(b.display_name);
+  });
+
+// Extract unique tags
+const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
+---
+
+<BaseLayout title="People">
+  <div class="page-header">
+    <h1>All People</h1>
+    <p class="text-[var(--color-ink-light)] mt-2">
+      {telferPeople.length} profiles in the Telfer line
+      &nbsp;·&nbsp; <span class="text-[var(--color-burgundy)]">{telferPeople.filter(p => p.is_living).length} living</span>
+      &nbsp;·&nbsp; <span>{telferPeople.filter(p => !p.is_living).length} deceased</span>
+    </p>
+  </div>
+
+  <!-- Filters -->
+  <div class="flex flex-wrap gap-3 mb-6 items-center">
+    <label class="text-sm text-[var(--color-muted)]">Filter:</label>
+    <a href="/telfer-wiki/people" class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">All</a>
+    <a href="/telfer-wiki/people?status=living" class="text-xs px-3 py-1.5 rounded-full border border-green-300 no-underline text-green-800 hover:border-green-500 transition-colors">Living</a>
+    <a href="/telfer-wiki/people?status=deceased" class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Deceased</a>
+    <span class="text-[var(--color-border)] mx-1">|</span>
+    <a href="/telfer-wiki/people?sort=alpha" class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
+    <a href="/telfer-wiki/people?sort=year" class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
+  </div>
+
+  <!-- People Grid -->
+  <div class="divide-y divide-[var(--color-border)]">
+    {telferPeople.map((person) => (
+      <a
+        href={`/telfer-wiki/people/${person.slug}`}
+        class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group"
+      >
+        <!-- Name & lifespan -->
+        <div class="flex-1 min-w-0">
+          <div class="font-medium text-[var(--color-burgundy)] group-hover:text-[var(--color-burgundy-light)] transition-colors">
+            {person.display_name}
+          </div>
+          <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
+        </div>
+
+        {/* Roles */}
+        {person.roles.length > 0 && (
+          <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate">
+            {person.roles[0]}
+          </div>
+        )}
+
+        {/* Status badge */}
+        <div>
+          {person.is_living ? (
+            <span class="text-xs px-2 py-0.5 rounded badge-living">Living</span>
+          ) : (
+            <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
+          )}
+        </div>
+
+        {/* Arrow */}
+        <span class="text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">→</span>
+      </a>
+    ))}
+  </div>
+
+  {telferPeople.length === 0 && (
+    <div class="text-center py-12 text-[var(--color-muted)]">
+      <p class="text-lg">No profiles found.</p>
+    </div>
+  )}
+
+  <!-- Search prompt -->
+  <div class="mt-8 text-center">
+    <a href="/telfer-wiki/search" class="text-sm text-[var(--color-link)]">
+      Looking for someone specific? Try search →
+    </a>
+  </div>
+</BaseLayout>

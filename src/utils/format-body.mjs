@@ -1,0 +1,99 @@
+/**
+ * Format person body text for display.
+ * Converts [[Wiki Links]] to proper HTML anchor tags.
+ */
+
+export function formatBody(body, people) {
+  if (!body) return "";
+
+  let html = body
+    // Strip social media profile URLs — no Facebook/LinkedIn/Twitter/Instagram links on public site
+    .replace(/https?:\/\/(www\.)?(facebook|fb)\.com\/[^\s)\]]+/gi, "[Facebook profile — redacted]")
+    .replace(/https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub|company)\/[^\s)\]]+/gi, "[LinkedIn — redacted]")
+    .replace(/https?:\/\/(www\.)?twitter\.com\/[^\s)\]]+/gi, "[Twitter — redacted]")
+    .replace(/https?:\/\/(www\.)?instagram\.com\/[^\s)\]]+/gi, "[Instagram — redacted]")
+    // Convert [[Link|Alias]] to <a href="/people/slug">Alias</a>
+    .replace(/\[\[([^\]]+)\|([^\]]+)\]\]/g, (match, link, alias) => {
+      const slug = lookupSlug(link.trim(), people);
+      if (slug) return `<a href="/telfer-wiki/people/${slug}" class="wiki-link">${alias.trim()}</a>`;
+      return alias.trim();
+    })
+    // Convert [[Link]] to <a href="/people/slug">Link</a>
+    .replace(/\[\[([^\]]+)\]\]/g, (match, link) => {
+      const slug = lookupSlug(link.trim(), people);
+      if (slug) return `<a href="/telfer-wiki/people/${slug}" class="wiki-link">${link.trim()}</a>`;
+      return link.trim();
+    })
+    // Bold **text**
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    // Italic *text*
+    .replace(/\*(.+?)\*/g, "<em>$1</em>")
+    // Convert headings
+    .replace(/^### (.+)$/gm, "<h3 class='font-serif text-lg text-[var(--color-burgundy)] mt-6 mb-2'>$1</h3>")
+    .replace(/^## (.+)$/gm, "<h2 class='font-serif text-xl text-[var(--color-burgundy)] mt-8 mb-3'>$1</h2>")
+    .replace(/^# (.+)$/gm, "<h1 class='font-serif text-2xl text-[var(--color-burgundy)] mt-8 mb-3'>$1</h1>")
+    // Horizontal rule
+    .replace(/^---$/gm, "<hr class='my-6 border-[var(--color-border)]'>")
+    // Convert bullet points
+    .replace(/^[-*] (.+)$/gm, "<li class='ml-4 text-[var(--color-ink)]'>$1</li>")
+    // Wrap consecutive <li> in <ul>
+    .replace(/((?:<li[^>]*>.*?<\/li>\n?)+)/g, "<ul class='space-y-1 my-2'>$1</ul>")
+    // Convert numbered lists
+    .replace(/^\d+\.\s+(.+)$/gm, "<li class='ml-4 list-decimal text-[var(--color-ink)]'>$1</li>")
+    // Images: ![alt](path)
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
+      if (src.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+        return `<figure class="my-4"><img src="/telfer-wiki/${src.replace(/^\/?/, "")}" alt="${alt}" class="rounded-lg max-w-full" loading="lazy" /><figcaption class="text-xs text-[var(--color-muted)] mt-1">${alt}</figcaption></figure>`;
+      }
+      return `<a href="${src}" class="wiki-link" target="_blank">${alt || src}</a>`;
+    })
+    // Regular links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="wiki-link">$1</a>')
+    // Convert paragraphs (double newlines)
+    .replace(/\n\n/g, "</p><p class='mb-3 text-[var(--color-ink)] leading-relaxed'>")
+    // Line breaks
+    .replace(/\n/g, "<br>");
+
+  // Wrap in <p> tags
+  html = `<p class='mb-3 text-[var(--color-ink)] leading-relaxed'>${html}</p>`;
+
+  // Fix double <p> nesting from multiple runs
+  html = html.replace(/<p[^>]*>\s*<p[^>]*>/g, "<p>");
+  html = html.replace(/<\/p>\s*<\/p>/g, "</p>");
+
+  return html;
+}
+
+function lookupSlug(name, people) {
+  if (!name || !people) return null;
+  const clean = name.replace(/\(.*?\)/g, "").trim().toLowerCase();
+
+  // Try exact match first
+  for (const p of people) {
+    if (p.display_name.toLowerCase() === clean) return p.slug;
+  }
+
+  // Try first+last match
+  const [first, ...rest] = clean.split(/\s+/);
+  const last = rest.pop() || "";
+  for (const p of people) {
+    if (p.first_name?.toLowerCase() === first && p.last_name?.toLowerCase() === last) return p.slug;
+  }
+
+  // Try last name match (for "Telfer" links etc.)
+  for (const p of people) {
+    if (p.last_name?.toLowerCase() === clean) return p.slug;
+  }
+
+  return null;
+}
+
+/**
+ * Generate a map of slug → display_name for relationship lookups
+ */
+export function getLinksForRelationships(relationshipNames, allPeople) {
+  return relationshipNames.map((name) => {
+    const slug = lookupSlug(name, allPeople);
+    return { name, slug };
+  });
+}

@@ -1,0 +1,20 @@
+{
+  "name": "telfer-wiki",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Telfer Family Wiki — a digital genealogy for the Telfer line",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "astro": "^5.7.0",
+    "fuse.js": "^7.4.0",
+    "tailwindcss": "^4.1.0",
+    "yaml": "^2.9.0"
+  }
+}

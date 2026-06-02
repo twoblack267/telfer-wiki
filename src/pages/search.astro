@@ -1,0 +1,129 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { PersonData } from "../utils/extract-data.mjs";
+
+const people = (await import("../data/people.json")).default as PersonData[];
+const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
+---
+
+<BaseLayout title="Search">
+  <div class="page-header">
+    <h1>Search</h1>
+    <p class="text-[var(--color-ink-light)] mt-2">
+      Search {telferPeople.length} profiles in the Telfer line
+    </p>
+  </div>
+
+  <!-- Search input -->
+  <div class="mb-6">
+    <div class="relative">
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-muted)] text-lg">🔍</span>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search by name, year, occupation..."
+        class="w-full pl-10 pr-4 py-3 rounded-lg border-2 border-[var(--color-border)] bg-white text-[var(--color-ink)] text-lg font-serif focus:outline-none focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/20 transition-all"
+        autofocus
+      />
+    </div>
+    <div class="mt-2 text-sm text-[var(--color-muted)]">
+      <span id="result-count">{telferPeople.length} profiles</span>
+    </div>
+  </div>
+
+  <!-- Results table -->
+  <div id="results" class="divide-y divide-[var(--color-border)]">
+    {telferPeople.map((person) => (
+      <a
+        data-search-item
+        data-name={person.display_name.toLowerCase()}
+        data-year={String(person.birth_year || "")}
+        data-role={(person.roles[0] || "").toLowerCase()}
+        data-living={person.is_living ? "1" : "0"}
+        href={`/telfer-wiki/people/${person.slug}`}
+        class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group"
+      >
+        <div class="flex-1 min-w-0">
+          <div class="font-medium text-[var(--color-burgundy)] group-hover:text-[var(--color-burgundy-light)] transition-colors">
+            {person.display_name}
+          </div>
+          <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
+        </div>
+        {person.roles.length > 0 && (
+          <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate">{person.roles[0]}</div>
+        )}
+        <div>
+          {person.is_living
+            ? <span class="text-xs px-2 py-0.5 rounded badge-living">Living</span>
+            : <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
+          }
+        </div>
+        <span class="text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">&rarr;</span>
+      </a>
+    ))}
+  </div>
+
+  <!-- Empty state -->
+  <div id="empty-state" class="hidden text-center py-12">
+    <div class="text-4xl mb-3">🔎</div>
+    <p class="text-lg text-[var(--color-ink-light)] font-serif">No profiles match your search.</p>
+    <p class="text-sm text-[var(--color-muted)] mt-1">Try a different name or keyword.</p>
+  </div>
+</BaseLayout>
+
+<script>
+  import Fuse from "fuse.js";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+    const emptyState = document.getElementById("empty-state");
+    const resultCount = document.getElementById("result-count");
+    const items = Array.from(document.querySelectorAll("[data-search-item]"));
+
+    if (!input || !results || !items.length) return;
+
+    const searchData = items.map((el) => ({
+      el,
+      name: el.dataset.name || "",
+      year: el.dataset.year || "",
+      role: el.dataset.role || "",
+    }));
+
+    const fuse = new Fuse(searchData, {
+      keys: ["name", "year", "role"],
+      threshold: 0.3,
+      includeScore: true,
+    });
+
+    function render(matchedItems) {
+      items.forEach((item) => item.style.display = "none");
+
+      if (matchedItems.length === 0) {
+        results.classList.add("hidden");
+        emptyState.classList.remove("hidden");
+        resultCount.textContent = "No results";
+        return;
+      }
+
+      results.classList.remove("hidden");
+      emptyState.classList.add("hidden");
+      resultCount.textContent = `${matchedItems.length} profile${matchedItems.length !== 1 ? "s" : ""}`;
+
+      matchedItems.forEach((item) => {
+        item.el.style.display = "";
+      });
+    }
+
+    input.addEventListener("input", () => {
+      const query = input.value.trim();
+      if (!query) {
+        render(searchData.map((s) => ({ el: s.el, score: 0 })));
+        return;
+      }
+      render(fuse.search(query).map((r) => ({ el: r.item.el, score: r.score })));
+    });
+
+    render(searchData.map((s) => ({ el: s.el, score: 0 })));
+  });
+</script>
