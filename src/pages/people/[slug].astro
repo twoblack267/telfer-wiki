@@ -115,7 +115,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
               {spouseLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
-                    <a href={`/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -133,7 +133,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
               {parentLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
-                    <a href={`/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -151,7 +151,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
               {childLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
-                    <a href={`/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -169,7 +169,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
               {siblingLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
-                    <a href={`/people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
