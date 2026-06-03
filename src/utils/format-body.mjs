@@ -14,7 +14,7 @@ export function formatBody(body, people) {
     .replace(/https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub|company)\/[^\s)\]]+/gi, "[LinkedIn — redacted]")
     .replace(/https?:\/\/(www\.)?twitter\.com\/[^\s)\]]+/gi, "[Twitter — redacted]")
     .replace(/https?:\/\/(www\.)?instagram\.com\/[^\s)\]]+/gi, "[Instagram — redacted]")
-    // Convert [[Link|Alias]] to <a href="/people/slug">Alias</a>
+    // Convert [[Link|Alias]] to <a href={`${import.meta.env.BASE_URL}people/slug`}>Alias</a>
     .replace(/\[\[([^\]]+)\|([^\]]+)\]\]/g, (match, link, alias) => {
       const slug = lookupSlug(link.trim(), people);
       if (slug) return `<a href="${BASE}people/${slug}" class="wiki-link">${alias.trim()}</a>`;
