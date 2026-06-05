@@ -271,9 +271,13 @@ function main() {
     const title = fm.title || `${displayName} — Family & Biography`;
     const bodyStripped = bioSummary(bodyWithImages);
 
+    // Record vault filename for traceability
+    const vaultFile = file;
+
     const entry = {
       id: displayName,
       slug,
+      vault_file: vaultFile,
       first_name: firstName,
       middle_name: middleName,
       last_name: lastName,
@@ -318,6 +322,7 @@ function main() {
       existing.death_year_display = entry.death_year_display;
       existing.is_living = entry.is_living;
       existing.lifespan = entry.lifespan;
+      existing.vault_file = entry.vault_file;
       existing.tags = entry.tags;
       existing.relationships = entry.relationships;
       existing.roles = entry.roles.length > 0 ? entry.roles : existing.roles;
