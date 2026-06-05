@@ -130,20 +130,22 @@ function stripNotesAndLinks(text) {
 
 function stripSocialMedia(text) {
   if (!text) return text;
-  // Remove **Facebook:** [text](URL) lines — keep the line label but remove the link
-  text = text.replace(/\*\*Facebook:\*\* \[([^\]]+)\]\(https?:\/\/(?:www\.)?facebook\.com\/[^\)]+\)(?:\s*)/gi, '');
-  // Remove **TikTok:** [text](URL) lines
-  text = text.replace(/\*\*TikTok:\*\* \[([^\]]+)\]\(https?:\/\/(?:www\.|vt\.)?tiktok\.com\/[^\)]+\)(?:\s*)/gi, '');
-  // Remove **Instagram:** [text](URL) lines
-  text = text.replace(/\*\*Instagram:\*\* \[([^\]]+)\]\(https?:\/\/(?:www\.)?instagram\.com\/[^\)]+\)(?:\s*)/gi, '');
-  // Remove **Snapchat:** [text](URL) lines
-  text = text.replace(/\*\*Snapchat:\*\* \[([^\]]+)\]\(https?:\/\/(?:www\.)?snapchat\.com\/[^\)]+\)(?:\s*)/gi, '');
+  // Remove **Facebook:** [text](URL) or - Facebook: [text](URL) lines
+  text = text.replace(/(?:\*\*Facebook:\*\*|- Facebook:) \[([^\]]+)\]\(https?:\/\/(?:www\.)?facebook\.com\/[^\)]+\)(?:\s*)/gi, '');
+  // Remove **TikTok:** [text](URL) or - TikTok: [text](URL) lines
+  text = text.replace(/(?:\*\*TikTok:\*\*|- TikTok:) \[([^\]]+)\]\(https?:\/\/(?:www\.|vt\.)?tiktok\.com\/[^\)]+\)(?:\s*)/gi, '');
+  // Remove **Instagram:** [text](URL) or - Instagram: [text](URL) lines
+  text = text.replace(/(?:\*\*Instagram:\*\*|- Instagram:) \[([^\]]+)\]\(https?:\/\/(?:www\.)?instagram\.com\/[^\)]+\)(?:\s*)/gi, '');
+  // Remove **Snapchat:** [text](URL) or - Snapchat: [text](URL) lines
+  text = text.replace(/(?:\*\*Snapchat:\*\*|- Snapchat:) \[([^\]]+)\]\(https?:\/\/(?:www\.)?snapchat\.com\/[^\)]+\)(?:\s*)/gi, '');
   // Remove bare markdown links to social media URLs (e.g. [text](facebook.com/...))
   text = text.replace(/\[([^\]]+)\]\(https?:\/\/(?:www\.)?(?:facebook|tiktok|instagram|twitter|x\.com|linkedin|snapchat|youtube|pinterest)\.com\/[^\)]+\)/gi, '');
   // Remove bare social media URLs
   text = text.replace(/https?:\/\/(?:www\.|vt\.)?(?:facebook|tiktok|instagram|twitter|x\.com|linkedin|snapchat|youtube|pinterest)\.com\/[^\s\)\]\}]*/gi, '');
   // Remove **Source:** Facebook / TikTok / Instagram lines (orphaned source labels without URLs)
-  text = text.replace(/\*\*Source:\*\* (?:Facebook|TikTok|Instagram|Twitter|YouTube|LinkedIn)[.,]?\s*/gi, '');
+  text = text.replace(/(?:\*\*|- )Source:\*\*? (?:Facebook|TikTok|Instagram|Twitter|YouTube|LinkedIn)[.,]?\s*/gi, '');
+  // Remove - Facebook: / - LinkedIn: / - Instagram: / - TikTok: / - Twitter: / - YouTube: / - Snapchat: / - Pinterest: labels (list format without URL)
+  text = text.replace(/^- (?:Facebook|LinkedIn|Instagram|TikTok|Twitter|YouTube|Snapchat|Pinterest|Profile URL):.*$/gim, '');
   // Clean up empty lines left behind
   return text.replace(/\n{3,}/g, '\n\n').trim();
 }
