@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/validate-links.mjs",
+    "postbuild": "node scripts/generate-redirects.mjs && node scripts/validate-links.mjs",
     "self-heal": "node scripts/auto-fix-links.mjs && npm run build",
     "preview": "astro preview",
     "astro": "astro"

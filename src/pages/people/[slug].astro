@@ -49,21 +49,6 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
             {person.lifespan}
           </div>
 
-          <!-- Status -->
-          <div class="flex gap-2 mb-3">
-            {person.is_living ? (
-              <span class="text-xs px-3 py-1 rounded badge-living">Living</span>
-            ) : (
-              <span class="text-xs px-3 py-1 rounded badge-deceased">Deceased</span>
-            )}
-            {person.related_trees.includes("telfer-tree") && (
-              <span class="text-xs px-3 py-1 rounded border border-[var(--color-border)] text-[var(--color-muted)]">Telfer Line</span>
-            )}
-            {person.related_trees.length > 1 && (
-              <span class="text-xs px-3 py-1 rounded border border-[var(--color-border)] text-[var(--color-muted)]">Also in: {person.related_trees.filter((t) => t !== "telfer-tree").join(", ")}</span>
-            )}
-          </div>
-
           <!-- Roles -->
           {person.roles.length > 0 && (
             <div class="space-y-1">

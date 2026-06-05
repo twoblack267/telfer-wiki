@@ -102,16 +102,14 @@ function convertObsidianImages(body) {
 
 // ── Helpers ──────────────────────────────────────────────
 
-/** Generate slug matching existing convention: firstname-lastname-birthyear */
-function toSlug(firstName, lastName, birthYear) {
-  let slug = `${firstName} ${lastName}`
+/** Generate bare slug: firstname-lastname (no year suffix) */
+function toSlug(firstName, lastName) {
+  return `${firstName} ${lastName}`
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
-  if (birthYear != null) slug += '-' + birthYear;
-  return slug;
 }
 
 function stripWikilinks(text) {
@@ -267,7 +265,7 @@ function main() {
     const deathYear = fm.death_year != null ? Number(fm.death_year) : null;
 
     // Generate slug WITHOUT middle name to match existing convention
-    const slug = toSlug(firstName, lastName, birthYear);
+    const slug = toSlug(firstName, lastName);
 
     const currentYear = new Date().getFullYear();
     const isLiving = deathYear != null ? false : birthYear != null ? (currentYear - birthYear < 120) : true;
@@ -343,6 +341,7 @@ function main() {
 
     if (existing) {
       // Update — overwrite fields from markdown, keep existing denormalized
+      existing.slug = entry.slug;
       existing.display_name = entry.display_name;
       existing.id = entry.display_name;
       existing.title = entry.title;
@@ -379,6 +378,41 @@ function main() {
     } else {
       existingPeople.push(entry);
       added++;
+    }
+  }
+
+  // ── Slug disambiguation: detect bare-slug conflicts, append year suffix ──
+  const bareSlugCounts = {};
+  for (const p of existingPeople) {
+    bareSlugCounts[p.slug] = (bareSlugCounts[p.slug] || 0) + 1;
+  }
+  const conflictedSlugs = new Set(
+    Object.entries(bareSlugCounts)
+      .filter(([, count]) => count > 1)
+      .map(([slug]) => slug)
+  );
+  if (conflictedSlugs.size > 0) {
+    console.log(`⚠️  ${conflictedSlugs.size} bare slug(s) have conflicts — disambiguating:`);
+    for (const p of existingPeople) {
+      if (conflictedSlugs.has(p.slug)) {
+        // Preference: birth_year → death_year → middle name fragment → -living
+        let suffix;
+        if (p.birth_year != null) {
+          suffix = String(p.birth_year);
+        } else if (p.death_year != null) {
+          suffix = String(p.death_year);
+        } else {
+          // Extract middle name from display_name (e.g. "Amy Nicole Telfer" → "nicole")
+          const parts = (p.display_name || '').trim().split(/\s+/);
+          if (parts.length > 2) {
+            suffix = parts.slice(1, -1).join('-').toLowerCase();
+          } else {
+            suffix = 'living';
+          }
+        }
+        p.slug = p.slug + '-' + suffix;
+        console.log(`  ${p.display_name} → ${p.slug}`);
+      }
     }
   }
 
