@@ -237,9 +237,10 @@ function main() {
     // Generate slug WITHOUT middle name to match existing convention
     const slug = toSlug(firstName, lastName, birthYear);
 
-    const isLiving = deathYear == null;
+    const currentYear = new Date().getFullYear();
+    const isLiving = deathYear != null ? false : birthYear != null ? (currentYear - birthYear < 120) : true;
     const birthYearDisplay = birthYear != null ? String(birthYear) : '?';
-    const deathYearDisplay = deathYear != null ? String(deathYear) : (birthYear != null ? 'living' : '?');
+    const deathYearDisplay = deathYear != null ? String(deathYear) : (isLiving ? 'living' : '?');
     const lifespan = `${birthYearDisplay} – ${deathYearDisplay}`;
 
     const tags = Array.isArray(fm.tags) && fm.tags.length > 0

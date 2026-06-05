@@ -102,7 +102,8 @@ function parsePeopleFile(filepath) {
   const spouses = getNames("spouse");
   const siblings = getNames("siblings");
 
-  const isLiving = !fm.death_year;
+  const currentYear = new Date().getFullYear();
+  const isLiving = fm.death_year ? false : fm.birth_year ? (currentYear - fm.birth_year < 120) : true;
   const birthD = fm.birth_year ? `${fm.birth_year}` : "?";
   const deathD = isLiving ? "living" : fm.death_year ? `${fm.death_year}` : "?";
   const lifespan = `${birthD} – ${deathD}`;

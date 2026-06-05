@@ -208,7 +208,8 @@ function buildPeople(): PersonData[] {
       const siblings = getNamesFor("siblings");
 
       // Determine if living
-      const isLiving = !frontmatter.death_year;
+      const currentYear = new Date().getFullYear();
+      const isLiving = frontmatter.death_year ? false : frontmatter.birth_year ? (currentYear - frontmatter.birth_year < 120) : true;
 
       // Build display values
       const birthDisplay = frontmatter.birth_year ? `${frontmatter.birth_year}` : "?";
