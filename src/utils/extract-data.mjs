@@ -35,6 +35,41 @@ const PII_RULES = [
 
 function filterPII(text) {
   let cleaned = text;
+
+  // Strip entire lines containing social media profile links BEFORE the PII
+  // replacement loop, so we don't end up with "[Facebook profile — redacted]"
+  // embedded inside markdown link syntax like [text](url).
+  //
+  // Handles:
+  //   - **Facebook:** [text](url)           (bold field + markdown link)
+  //   - - Facebook: [text](url)             (list field + markdown link)
+  //   - **Profile URL:** https://fb.com/... (bold field + raw URL)
+  //   - - Facebook profile: https://fb.com/... (list field + raw URL)
+  //   - **Facebook:** [Facebook profile — redacted] (already-redacted edge case)
+  //   - - TikTok: [text](url)               (all other social platforms too)
+  //
+  const SOCIAL_LABELS = '(?:Facebook[^:]*|Instagram[^:]*|LinkedIn[^:]*|TikTok|Snapchat|YouTube|Pinterest|Twitter|Profile URL)';
+  const SOCIAL_DOMAINS = '(?:facebook|instagram|linkedin|tiktok|snapchat|youtube|pinterest|twitter)\\.com';
+
+  // Pattern 1: markdown link format — [text](url)
+  cleaned = cleaned.replace(
+    new RegExp(`^.*${SOCIAL_LABELS}\\s*:\\s*(?:\\*\\*)?\\s*\\[[^\\]]*\\]\\(https?:\\/\\/(?:www\\.)?${SOCIAL_DOMAINS}[^)]*\\).*\\n?`, 'gim'),
+    ''
+  );
+
+  // Pattern 2: raw URL format (no markdown wrapper)
+  cleaned = cleaned.replace(
+    new RegExp(`^.*${SOCIAL_LABELS}\\s*:\\s*(?:\\*\\*)?\\s*https?:\\/\\/(?:www\\.)?${SOCIAL_DOMAINS}\\S*.*\\n?`, 'gim'),
+    ''
+  );
+
+  // Pattern 3: already-redacted edge cases where URL was previously replaced
+  cleaned = cleaned.replace(
+    /^.*(?:Facebook[^:]*|Instagram[^:]*|LinkedIn[^:]*|TikTok|Snapchat|YouTube|Pinterest|Twitter|Profile URL)\s*:\s*(?:\*\*)?\s*\[(?:Facebook|Instagram|LinkedIn|TikTok|Snapchat|YouTube|Pinterest|Twitter)\s*(?:profile|URL|)[\s— -]*redacted[\])].*\n?/gim,
+    ''
+  );
+
+  // Then apply the standard PII replacement rules for any remaining inline URLs
   for (const { re, sub } of PII_RULES) cleaned = cleaned.replace(re, sub);
   return cleaned;
 }
