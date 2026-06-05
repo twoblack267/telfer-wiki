@@ -75,10 +75,34 @@ function lookupSlug(name, people) {
   if (!name || !people) return null;
   const clean = name.replace(/\(.*?\)/g, "").trim().toLowerCase();
 
-  // Try exact match first
+  // Try exact match first — but if the match is deceased and a living namesake exists,
+  // fall through to first+last logic (which prefers living people)
+  let deceasedMatch = null;
   for (const p of people) {
-    if (p.display_name.toLowerCase() === clean) return p.slug;
+    if (p.display_name.toLowerCase() === clean) {
+      if (p.is_living) return p.slug;
+      deceasedMatch = p;
+      break;
+    }
   }
+
+  // If we found an exact deceased match, check for a living namesake
+  if (deceasedMatch) {
+    const [first, ...rest] = clean.split(/\s+/);
+    const last = rest.pop() || "";
+    const livingNamesake = people.find(
+      p => p.is_living
+        && p.first_name?.toLowerCase() === first
+        && p.last_name?.toLowerCase() === last
+        && p.slug !== deceasedMatch.slug
+    );
+    if (livingNamesake) {
+      // There's a living namesake — don't take the deceased match, let it fall through
+      deceasedMatch = null;
+    }
+  }
+
+  if (deceasedMatch) return deceasedMatch.slug;
 
   // Try first+last match
   const [first, ...rest] = clean.split(/\s+/);
