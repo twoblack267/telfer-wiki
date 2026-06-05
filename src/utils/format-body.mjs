@@ -9,11 +9,15 @@ export function formatBody(body, people) {
   const BASE = import.meta.env.BASE_URL || "/";
 
   let html = body
-    // Strip social media profile URLs
+    // Strip social media profile URLs — safety net (primary strip is in convert-markdown.mjs)
     .replace(/https?:\/\/(www\.)?(facebook|fb)\.com\/[^\s)\]>]+/gi, "[Facebook profile — redacted]")
     .replace(/https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub|company)\/[^\s)\]>]+/gi, "[LinkedIn — redacted]")
     .replace(/https?:\/\/(www\.)?twitter\.com\/[^\s)\]>]+/gi, "[Twitter — redacted]")
     .replace(/https?:\/\/(www\.)?instagram\.com\/[^\s)\]>]+/gi, "[Instagram — redacted]")
+    .replace(/https?:\/\/(www\.|vt\.)?tiktok\.com\/[^\s)\]>]+/gi, "[TikTok — redacted]")
+    .replace(/https?:\/\/(www\.)?snapchat\.com\/[^\s)\]>]+/gi, "[Snapchat — redacted]")
+    .replace(/https?:\/\/(www\.)?youtube\.com\/[^\s)\]>]+/gi, "[YouTube — redacted]")
+    .replace(/https?:\/\/(www\.)?pinterest\.(com|com\.au)\/[^\s)\]>]+/gi, "[Pinterest — redacted]")
     // Strip Notes and Links sections — safety net (primary strip is in convert-markdown.mjs)
     .replace(/## Notes[\s\S]*?(?=## |$)/g, '')
     .replace(/## Links[\s\S]*?(?=## |$)/g, '')
