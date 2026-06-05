@@ -8,8 +8,10 @@ import { readFileSync, readdirSync, statSync } from "fs";
 import { join } from "path";
 
 const DIST = new URL("../dist/", import.meta.url).pathname;
-const BASE = "telfer-wiki"; // Expected base path prefix
-const BROKEN_PATTERN = /href="\/(?!telfer-wiki\/|https?:\/\/|#|mailto:)/g;
+// Base path prefix — empty for custom domain (root), "telfer-wiki" for GitHub Pages subpath
+const BASE = process.env.BASE_PATH || "";
+const basePrefix = BASE ? `${BASE}/` : "";
+const BROKEN_PATTERN = new RegExp(`href="/(?!${basePrefix.replace("/", "\\/")}|https?:\\/\\/|#|mailto:)`, "g");
 
 let found = 0;
 const results = [];
