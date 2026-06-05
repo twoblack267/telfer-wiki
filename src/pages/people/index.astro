@@ -44,7 +44,7 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
     {telferPeople.map((person) => (
       <a
         href={`${import.meta.env.BASE_URL}people/${person.slug}`}
-        class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group {person.is_living ? 'living' : 'deceased'}"
+        class={`flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group ${person.is_living ? 'living' : 'deceased'}`}
       >
         <!-- Name & lifespan -->
         <div class="flex-1 min-w-0">
