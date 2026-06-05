@@ -6523,69 +6523,6 @@
     "vault_file": "Zabella Violet Zelda Telfer (2019–?).md"
   },
   {
-    "id": "Martha Allen",
-    "slug": "martha-allen",
-    "first_name": "Martha",
-    "middle_name": null,
-    "last_name": "Allen",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Martha Allen",
-    "title": "Martha Allen — First Wife of John Telfer",
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Martha Allen"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "John Telfer"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "James Telfer",
-          "Elizabeth Telfer",
-          "Susan Telfer",
-          "Martha Telfer Cameron"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Martha Allen (1840–1876)\n\n**Born:** ~1840 | **Died:** 9 May 1876 | **Mother:** ? | **Father:** ? | **Occupation:** Servant (unconfirmed)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Martha Allen |\n| Spouse | [[John Telfer (1840–1913)]] |\n| Son | [[James Telfer (1866–1946)]] |\n| Daughter | [[Elizabeth Telfer (1868–1950)]] |\n| Daughter | [[Susan Telfer (1871–1952)]] |\n| Daughter | [[Martha Telfer Cameron (1873–1964)]] |\n\n## Life Summary\n\nMartha Allen married John Telfer on 10 January 1865 at the Residence of Robert Boyd, Adelaide, South Australia. She bore four children between 1866 and 1873 — three daughters and one son — before dying young at German Flat, near Mount Gambier, on 9 May 1876, aged approximately 36.\n\nHer death left John Telfer a widower with four young children (the youngest, Martha, was barely three). John remarried seven months later to Martha Clara Henstridge on 28 December 1876.\n\n**Place of origin, parents, migration, and burial location are all unknown.** She may have arrived in South Australia aboard the *Morning Star* (departed Liverpool 28 November 1862, arrived Port Adelaide 13 February 1863) as an unmarried servant, but this is unconfirmed.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| ~1840 | Born (location unknown — possibly England) |\n| 13 Feb 1863 | Possibly arrived SA aboard *Morning Star* as a servant (unconfirmed) |\n| 10 Jan 1865 | Married John Telfer at Residence of Robert Boyd, Adelaide |\n| 27 Apr 1866 | Birth of son James Telfer |\n| 9 Aug 1868 | Birth of daughter Elizabeth Telfer |\n| 18 Dec 1871 | Birth of daughter Susan Telfer |\n| 15 Nov 1873 | Birth of daughter Martha Telfer |\n| 9 May 1876 | Died at German Flat, Mount Gambier SA (age ~36) |\n\n## Notes\n\n- **Place of origin unknown** — no birth registration or census record found that identifies Martha Allen's birthplace or parentage\n- **Parents unknown** — no marriage record (members-only Genealogy SA) or birth record has been found to name her parents\n- **Morning Star arrival unconfirmed** — the *Morning Star* (1,285 tons, Captain C. Matthews, Liverpool to Port Adelaide 28 Nov 1862 – 13 Feb 1863) carried assisted migrants and servants. A Martha Allen appears on some transcription lists but full passenger records have not been located to confirm identity\n- **Burial location unknown** — not found on FindAGrave or cemetery indexes. Possibly an unmarked grave at German Flat or Tantanoola Cemetery. John Telfer was later buried at Tantanoola Cemetery (FindAGrave memorial 186972459)\n- **Death cause unknown** — no death notice found in Trove newspapers\n- **Brick wall status** — classified as an unresolved brick wall. All standard online research avenues exhausted\n\n## Sources\n\n- **Source:** [WikiTree — John Telfer profile (Telfer-549)](https://www.wikitree.com/wiki/Telfer-549) — accessed 02 June 2026\n- **Source:** [John Telfer vault file](https://github.com/hermespack/family-tree/blob/main/Family%20History/People/John%20Telfer%20(1840%E2%80%931913).md) — accessed 02 June 2026\n- **Source:** Trove — [Morning Star arrival notice, 16 Feb 1863](https://trove.nla.gov.au/newspaper/article/50174769) — accessed 02 June 2026 (confirms ship arrival only, not passenger list)\n- **Source:** Genealogy SA marriage index — Gre B 110 P 134 — John Telfer & Martha Clara Henstridge (referenced from John Telfer profile)\n- **Source:** Genealogy SA marriage index — 1865 — John Telfer & Martha Allen (from WikiTree citation)\n\n## Links\n\n- [[John Telfer (1840–1913)]]\n- [[Martha Clara Henstridge (1854–1921)]]\n- [[James Telfer (1866–1946)]]\n- [[Elizabeth Telfer (1868–1950)]]\n- [[Susan Telfer (1871–1952)]]\n- [[Martha Telfer Cameron (1873–1964)]]\n",
-    "body_stripped": "**Born:** ~1840  **Died:** 9 May 1876  **Mother:** ?  **Father:** ?  **Occupation:** Servant (unconfirmed)\n\n## Family\n\n Relation  Name \n\n Self  Martha Allen \n Spouse  John Telfer (1840–1913) \n Son  James Telfer (1866–1946) \n Daughter  Elizabeth Telfer (1868–1950) \n Daughter  Susan Telfer (1871–1952) \n Daughter  Martha Telfer Cameron (1873–1964) \n\n## Life Summary\n\nMartha Allen married John Telfer on 10 January 1865 at the Residence of Robert Boyd, Adelaide, South Australia. She bore four children",
-    "parents": [],
-    "children": [
-      "James Telfer",
-      "Elizabeth Telfer",
-      "Susan Telfer",
-      "Martha Telfer Cameron"
-    ],
-    "siblings": [],
-    "spouses": [
-      "John Telfer"
-    ],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "vault_file": "Martha Allen.md"
-  },
-  {
     "id": "Alma Sporer",
     "slug": "alma-sporer-1881",
     "first_name": "Alma",
@@ -6861,5 +6798,68 @@
     "images": [],
     "person_photo": null,
     "vault_file": "John Telfer (of Castleton).md"
+  },
+  {
+    "id": "Martha Allen",
+    "slug": "martha-allen-1840",
+    "vault_file": "Martha Allen.md",
+    "first_name": "Martha",
+    "middle_name": null,
+    "last_name": "Allen",
+    "birth_year": 1840,
+    "death_year": 1876,
+    "birth_year_display": "1840",
+    "death_year_display": "1876",
+    "display_name": "Martha Allen",
+    "title": "Martha Allen — First Wife of John Telfer",
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Martha Allen"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "John Telfer"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "James Telfer",
+          "Elizabeth Telfer",
+          "Susan Telfer",
+          "Martha Telfer Cameron"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Martha Allen (1840–1876)\n\n**Born:** ~1840 | **Died:** 9 May 1876 | **Mother:** ? | **Father:** ? | **Occupation:** Servant (unconfirmed)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Martha Allen |\n| Spouse | [[John Telfer (1840–1913)]] |\n| Son | [[James Telfer (1866–1946)]] |\n| Daughter | [[Elizabeth Telfer (1868–1950)]] |\n| Daughter | [[Susan Telfer (1871–1952)]] |\n| Daughter | [[Martha Telfer Cameron (1873–1964)]] |\n\n## Life Summary\n\nMartha Allen married John Telfer on 10 January 1865 at the Residence of Robert Boyd, Adelaide, South Australia. She bore four children between 1866 and 1873 — three daughters and one son — before dying young at German Flat, near Mount Gambier, on 9 May 1876, aged approximately 36.\n\nHer death left John Telfer a widower with four young children (the youngest, Martha, was barely three). John remarried seven months later to Martha Clara Henstridge on 28 December 1876.\n\n**Place of origin, parents, migration, and burial location are all unknown.** She may have arrived in South Australia aboard the *Morning Star* (departed Liverpool 28 November 1862, arrived Port Adelaide 13 February 1863) as an unmarried servant, but this is unconfirmed.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| ~1840 | Born (location unknown — possibly England) |\n| 13 Feb 1863 | Possibly arrived SA aboard *Morning Star* as a servant (unconfirmed) |\n| 10 Jan 1865 | Married John Telfer at Residence of Robert Boyd, Adelaide |\n| 27 Apr 1866 | Birth of son James Telfer |\n| 9 Aug 1868 | Birth of daughter Elizabeth Telfer |\n| 18 Dec 1871 | Birth of daughter Susan Telfer |\n| 15 Nov 1873 | Birth of daughter Martha Telfer |\n| 9 May 1876 | Died at German Flat, Mount Gambier SA (age ~36) |\n\n## Notes\n\n- **Place of origin unknown** — no birth registration or census record found that identifies Martha Allen's birthplace or parentage\n- **Parents unknown** — no marriage record (members-only Genealogy SA) or birth record has been found to name her parents\n- **Morning Star arrival unconfirmed** — the *Morning Star* (1,285 tons, Captain C. Matthews, Liverpool to Port Adelaide 28 Nov 1862 – 13 Feb 1863) carried assisted migrants and servants. A Martha Allen appears on some transcription lists but full passenger records have not been located to confirm identity\n- **Burial location unknown** — not found on FindAGrave or cemetery indexes. Possibly an unmarked grave at German Flat or Tantanoola Cemetery. John Telfer was later buried at Tantanoola Cemetery (FindAGrave memorial 186972459)\n- **Death cause unknown** — no death notice found in Trove newspapers\n- **Brick wall status** — classified as an unresolved brick wall. All standard online research avenues exhausted\n\n## Sources\n\n- **Source:** [WikiTree — John Telfer profile (Telfer-549)](https://www.wikitree.com/wiki/Telfer-549) — accessed 02 June 2026\n- **Source:** [John Telfer vault file](https://github.com/hermespack/family-tree/blob/main/Family%20History/People/John%20Telfer%20(1840%E2%80%931913).md) — accessed 02 June 2026\n- **Source:** Trove — [Morning Star arrival notice, 16 Feb 1863](https://trove.nla.gov.au/newspaper/article/50174769) — accessed 02 June 2026 (confirms ship arrival only, not passenger list)\n- **Source:** Genealogy SA marriage index — Gre B 110 P 134 — John Telfer & Martha Clara Henstridge (referenced from John Telfer profile)\n- **Source:** Genealogy SA marriage index — 1865 — John Telfer & Martha Allen (from WikiTree citation)\n\n## Links\n\n- [[John Telfer (1840–1913)]]\n- [[Martha Clara Henstridge (1854–1921)]]\n- [[James Telfer (1866–1946)]]\n- [[Elizabeth Telfer (1868–1950)]]\n- [[Susan Telfer (1871–1952)]]\n- [[Martha Telfer Cameron (1873–1964)]]\n",
+    "body_stripped": "**Born:** ~1840  **Died:** 9 May 1876  **Mother:** ?  **Father:** ?  **Occupation:** Servant (unconfirmed)\n\n## Family\n\n Relation  Name \n\n Self  Martha Allen \n Spouse  John Telfer (1840–1913) \n Son  James Telfer (1866–1946) \n Daughter  Elizabeth Telfer (1868–1950) \n Daughter  Susan Telfer (1871–1952) \n Daughter  Martha Telfer Cameron (1873–1964) \n\n## Life Summary\n\nMartha Allen married John Telfer on 10 January 1865 at the Residence of Robert Boyd, Adelaide, South Australia. She bore four children",
+    "parents": [],
+    "children": [
+      "James Telfer",
+      "Elizabeth Telfer",
+      "Susan Telfer",
+      "Martha Telfer Cameron"
+    ],
+    "siblings": [],
+    "spouses": [
+      "John Telfer"
+    ],
+    "is_living": false,
+    "lifespan": "1840 – 1876",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null
   }
 ]

@@ -30,20 +30,21 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
   <!-- Filters -->
   <div class="flex flex-wrap gap-3 mb-6 items-center">
     <label class="text-sm text-[var(--color-muted)]">Filter:</label>
-    <a href={import.meta.env.BASE_URL + "people"} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">All</a>
-    <a href={import.meta.env.BASE_URL + "people?status=living"} class="text-xs px-3 py-1.5 rounded-full border border-green-300 no-underline text-green-800 hover:border-green-500 transition-colors">Living</a>
-    <a href={import.meta.env.BASE_URL + "people?status=deceased"} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Deceased</a>
+    <a href={import.meta.env.BASE_URL + "people"} data-filter-status="all" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">All</a>
+    <a href={import.meta.env.BASE_URL + "people?status=living"} data-filter-status="living" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-green-300 no-underline text-green-800 hover:border-green-500 transition-colors">Living</a>
+    <a href={import.meta.env.BASE_URL + "people?status=deceased"} data-filter-status="deceased" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Deceased</a>
     <span class="text-[var(--color-border)] mx-1">|</span>
-    <a href={import.meta.env.BASE_URL + "people?sort=alpha"} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
-    <a href={import.meta.env.BASE_URL + "people?sort=year"} class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
+    <a href={import.meta.env.BASE_URL + "people?sort=alpha"} data-filter-sort="alpha" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
+    <a href={import.meta.env.BASE_URL + "people?sort=year"} data-filter-sort="year" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
+    <span class="text-sm text-[var(--color-muted)] ml-auto"><span id="filter-count">{telferPeople.length}</span> shown</span>
   </div>
 
   <!-- People Grid -->
-  <div class="divide-y divide-[var(--color-border)]">
+  <div id="people-list" class="divide-y divide-[var(--color-border)]">
     {telferPeople.map((person) => (
       <a
         href={`${import.meta.env.BASE_URL}people/${person.slug}`}
-        class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group"
+        class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group {person.is_living ? 'living' : 'deceased'}"
       >
         <!-- Name & lifespan -->
         <div class="flex-1 min-w-0">
@@ -88,3 +89,105 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
     </a>
   </div>
 </BaseLayout>
+
+<script>
+  (function() {
+    const list = document.getElementById('people-list');
+    if (!list) return;
+    const items = Array.from(list.children);
+    // Serialize person data into data attributes
+    items.forEach(el => {
+      el.dataset.living = el.classList.contains('living') ? 'true' : 'false';
+      el.dataset.name = (el.querySelector('.font-medium')?.textContent || '').toLowerCase();
+      // Extract year from lifespan: "1840 – 1876" or "? – living" or "1840 – living"
+      const lifespan = el.querySelector('.text-sm.text-\\[var\\(--color-muted\\)\\]')?.textContent || '';
+      const yearMatch = lifespan.match(/(\d{4})\s*–/);
+      el.dataset.year = yearMatch ? yearMatch[1] : '9999';
+    });
+
+    function applyFilters() {
+      const params = new URLSearchParams(window.location.search);
+      const status = params.get('status') || 'all';
+      const sort = params.get('sort') || 'year';
+
+      // Status filter
+      items.forEach(el => {
+        if (status === 'all') {
+          el.style.display = '';
+        } else if (status === 'living') {
+          el.style.display = el.dataset.living === 'true' ? '' : 'none';
+        } else if (status === 'deceased') {
+          el.style.display = el.dataset.living === 'false' ? '' : 'none';
+        }
+      });
+
+      // Sort
+      const visible = items.filter(el => el.style.display !== 'none');
+      visible.sort((a, b) => {
+        if (sort === 'alpha') {
+          return a.dataset.name.localeCompare(b.dataset.name);
+        }
+        // Default: by year
+        return parseInt(a.dataset.year) - parseInt(b.dataset.year);
+      });
+      visible.forEach(el => list.appendChild(el));
+
+      // Update count
+      const totalSpan = document.getElementById('filter-count');
+      if (totalSpan) totalSpan.textContent = visible.length;
+
+      // Highlight active buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const btnStatus = btn.dataset.filterStatus || 'all';
+        const btnSort = btn.dataset.filterSort || '';
+        const isActive = btnStatus === status && (!btnSort || btnSort === sort);
+        btn.classList.toggle('filter-active', isActive);
+        btn.classList.toggle('filter-inactive', !isActive);
+      });
+    }
+
+    // Intercept filter clicks to update URL without reload
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const params = new URLSearchParams(window.location.search);
+        if (this.dataset.filterStatus) params.set('status', this.dataset.filterStatus);
+        if (this.dataset.filterSort) params.set('sort', this.dataset.filterSort);
+        if (this.dataset.filterStatus === 'all' && !this.dataset.filterSort) {
+          params.delete('status');
+          params.delete('sort');
+        }
+        const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+        window.history.pushState({}, '', newUrl);
+        applyFilters();
+      });
+    });
+
+    // Initial apply on load
+    applyFilters();
+
+    // Handle back/forward navigation
+    window.addEventListener('popstate', applyFilters);
+  })();
+</script>
+
+<style>
+  .filter-active {
+    border-color: var(--color-heading) !important;
+    background: var(--color-heading) !important;
+    color: white !important;
+  }
+  .filter-inactive {
+    border-color: var(--color-border);
+    color: var(--color-ink-light);
+  }
+  /* Keep living button green when not active */
+  .filter-btn[data-filter-status="living"]:not(.filter-active) {
+    border-color: #86efac;
+    color: #166534;
+  }
+  [data-theme="dark"] .filter-btn[data-filter-status="living"]:not(.filter-active) {
+    border-color: #2a5a2a;
+    color: #7fd18f;
+  }
+</style>
