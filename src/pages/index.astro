@@ -17,14 +17,16 @@ const years = peopleData
 const minYear = Math.min(...years);
 const maxYear = Math.max(...years, new Date().getFullYear());
 
-// Count generations from Francis (1809) to the kids (2019)
+// Count generations from John Telfer (of Castleton) (~1731) to the kids (2019)
 const generationRanges = [
-  { label: "1st Gen", range: "1809–1895", from: 1809, to: 1895 },
-  { label: "2nd Gen", range: "1847–1929", from: 1847, to: 1929 },
-  { label: "3rd Gen", range: "1875–1954", from: 1875, to: 1954 },
-  { label: "4th Gen", range: "1924–2009", from: 1924, to: 2009 },
-  { label: "5th Gen", range: "1959–", from: 1959, to: new Date().getFullYear() },
-  { label: "6th Gen", range: "2008–", from: 2008, to: new Date().getFullYear() },
+  { label: "1st Gen", range: "1731–1761", from: 1731, to: 1761 },
+  { label: "2nd Gen", range: "1761–1809", from: 1762, to: 1809 },
+  { label: "3rd Gen", range: "1809–1895", from: 1809, to: 1895 },
+  { label: "4th Gen", range: "1847–1929", from: 1847, to: 1929 },
+  { label: "5th Gen", range: "1875–1954", from: 1875, to: 1954 },
+  { label: "6th Gen", range: "1924–2009", from: 1924, to: 2009 },
+  { label: "7th Gen", range: "1959–", from: 1959, to: new Date().getFullYear() },
+  { label: "8th Gen", range: "2008–", from: 2008, to: new Date().getFullYear() },
 ];
 
 // Pre-compute generation members
