@@ -9,11 +9,14 @@ export function formatBody(body, people) {
   const BASE = import.meta.env.BASE_URL || "/";
 
   let html = body
-    // Strip social media profile URLs — no Facebook/LinkedIn/Twitter/Instagram links on public site
-    .replace(/https?:\/\/(www\.)?(facebook|fb)\.com\/[^\s)\]]+/gi, "[Facebook profile — redacted]")
-    .replace(/https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub|company)\/[^\s)\]]+/gi, "[LinkedIn — redacted]")
-    .replace(/https?:\/\/(www\.)?twitter\.com\/[^\s)\]]+/gi, "[Twitter — redacted]")
-    .replace(/https?:\/\/(www\.)?instagram\.com\/[^\s)\]]+/gi, "[Instagram — redacted]")
+    // Strip social media profile URLs
+    .replace(/https?:\/\/(www\.)?(facebook|fb)\.com\/[^\s)\]>]+/gi, "[Facebook profile — redacted]")
+    .replace(/https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub|company)\/[^\s)\]>]+/gi, "[LinkedIn — redacted]")
+    .replace(/https?:\/\/(www\.)?twitter\.com\/[^\s)\]>]+/gi, "[Twitter — redacted]")
+    .replace(/https?:\/\/(www\.)?instagram\.com\/[^\s)\]>]+/gi, "[Instagram — redacted]")
+    // Strip Notes and Links sections — safety net (primary strip is in convert-markdown.mjs)
+    .replace(/## Notes[\s\S]*?(?=## |$)/g, '')
+    .replace(/## Links[\s\S]*?(?=## |$)/g, '')
     // Convert [[Link|Alias]] to <a href={`${import.meta.env.BASE_URL}people/slug`}>Alias</a>
     .replace(/\[\[([^\]]+)\|([^\]]+)\]\]/g, (match, link, alias) => {
       const slug = lookupSlug(link.trim(), people);

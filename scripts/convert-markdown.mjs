@@ -118,6 +118,16 @@ function stripWikilinks(text) {
   return text ? text.replace(/\[\[([^\]]+)\]\]/g, '$1') : text;
 }
 
+function stripNotesAndLinks(text) {
+  if (!text) return text;
+  // Remove ## Notes section (everything from "## Notes" to next ## heading or end)
+  text = text.replace(/## Notes[\s\S]*?(?=## |$)/g, '');
+  // Remove ## Links section (everything from "## Links" to next ## heading or end)
+  text = text.replace(/## Links[\s\S]*?(?=## |$)/g, '');
+  // Clean up extra blank lines left behind
+  return text.replace(/\n{3,}/g, '\n\n').trim();
+}
+
 function cleanPII(text) {
   if (!text) return text;
   text = text.replace(/[\w.-]+@[\w.-]+\.\w+/g, '[email redacted]');
@@ -268,8 +278,9 @@ function main() {
     const roles = extractRoles(body);
     const bodyClean = cleanPII(body);
     const { body: bodyWithImages, images: bodyImages } = convertObsidianImages(bodyClean);
+    const bodySanitized = stripNotesAndLinks(bodyWithImages);
     const title = fm.title || `${displayName} — Family & Biography`;
-    const bodyStripped = bioSummary(bodyWithImages);
+    const bodyStripped = bioSummary(bodySanitized);
 
     // Record vault filename for traceability
     const vaultFile = file;
@@ -290,7 +301,7 @@ function main() {
       tags,
       relationships,
       roles,
-      body_markdown: bodyWithImages,
+      body_markdown: bodySanitized,
       body_stripped: bodyStripped,
       parents,
       children,
