@@ -54,13 +54,6 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
           <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
         </div>
 
-        {/* Roles */}
-        {person.roles.length > 0 && (
-          <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate">
-            {person.roles[0]}
-          </div>
-        )}
-
         {/* Status badge */}
         <div>
           {person.is_living ? (
