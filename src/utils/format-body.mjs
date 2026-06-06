@@ -110,9 +110,11 @@ export function formatBody(body, people) {
   html = html.replace(/<p([^>]*)>(<br>)+/gi, "<p$1>");
   // Strip <br> from end of <p> tags
   html = html.replace(/(<br>)+<\/p>/gi, "</p>");
-  // Remove <br> immediately before/after block elements
-  html = html.replace(/(<br>)+\s*(<(?:h[1-6]|table|figure|ul|ol|hr)[^>]*>)/gi, "$2");
-  html = html.replace(/(<\/(?:h[1-6]|table|figure|ul|ol)>)\s*(<br>)+/gi, "$1");
+  // Remove <br> immediately before/after block elements (including li siblings)
+  html = html.replace(/(<br>)+\s*(<(?:h[1-6]|table|figure|ul|ol|hr|li)[^>]*>)/gi, "$2");
+  html = html.replace(/(<\/(?:h[1-6]|table|figure|ul|ol|li)>)\s*(<br>)+/gi, "$1");
+  // Strip <br> after <br> (consecutive break collapse)
+  html = html.replace(/(<br>)+\s*(<br>)+/gi, "<br>");
 
   return html;
 }
