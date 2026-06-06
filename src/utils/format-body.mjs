@@ -40,17 +40,17 @@ export function formatBody(body, people) {
     // Italic *text*
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     // Convert headings
-    .replace(/^### (.+)$/gm, "<h3 class='font-serif text-lg text-[var(--color-burgundy)] mt-4 mb-1'>$1</h3>")
-    .replace(/^## (.+)$/gm, "<h2 class='font-serif text-xl text-[var(--color-burgundy)] mt-4 mb-1'>$1</h2>")
-    .replace(/^# (.+)$/gm, "<h1 class='font-serif text-2xl text-[var(--color-burgundy)] mt-4 mb-1'>$1</h1>")
+    .replace(/^### (.+)$/gm, "<h3 class='font-serif text-lg text-[var(--color-burgundy)] mt-4 mb-0'>$1</h3>")
+    .replace(/^## (.+)$/gm, "<h2 class='font-serif text-xl text-[var(--color-burgundy)] mt-4 mb-0'>$1</h2>")
+    .replace(/^# (.+)$/gm, "<h1 class='font-serif text-2xl text-[var(--color-burgundy)] mt-4 mb-0'>$1</h1>")
     // Horizontal rule
-    .replace(/^---$/gm, "<hr class='my-2 border-[var(--color-border)]'>")
+    .replace(/^---$/gm, "<hr class='my-0 border-[var(--color-border)]'>")
     // Convert markdown tables (header | separator | rows)
     .replace(/^\|.+\|\n^\|(?:[-: ]+\|)+\s*$\n(?:^\|.+\|\n?)+/gm, (match) => {
       const lines = match.trim().split('\n');
       if (lines.length < 2) return match;
       const headers = lines[0].split('|').filter(c => c.trim()).map(c => c.trim());
-      let html = '<table class="w-full border-collapse my-1 text-sm"><thead><tr>';
+      let html = '<table class="w-full border-collapse my-0 text-sm"><thead><tr>';
       for (const h of headers) {
         html += `<th class="bg-[var(--color-heading)] text-white font-sans font-semibold text-left px-2 py-1">${h}</th>`;
       }
@@ -69,14 +69,14 @@ export function formatBody(body, people) {
     // Convert bullet points
     .replace(/^[-*] (.+)$/gm, "<li class='ml-4 text-[var(--color-ink)]'>$1</li>")
     // Wrap consecutive <li> in <ul>
-    .replace(/((?:<li[^>]*>.*?<\/li>\n?)+)/g, "<ul class='space-y-1 my-2'>$1</ul>")
+    .replace(/((?:<li[^>]*>.*?<\/li>\n?)+)/g, "<ul class='space-y-1 my-0'>$1</ul>")
     // Convert numbered lists
     .replace(/^\d+\.\s+(.+)$/gm, "<li class='ml-4 list-decimal text-[var(--color-ink)]'>$1</li>")
     // Images: ![alt](path) — now handles blockquote-stripped markdown
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
       if (src.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
         const imgSrc = src.startsWith("/") ? `${BASE}${src.replace(/^\//, "")}` : `${BASE}${src}`;
-        return `<figure class="my-2"><img src="${imgSrc}" alt="${alt}" class="rounded-lg max-w-full" loading="lazy" /><figcaption class="text-xs text-[var(--color-muted)] mt-1">${alt}</figcaption></figure>`;
+        return `<figure class="my-0"><img src="${imgSrc}" alt="${alt}" class="rounded-lg max-w-full" loading="lazy" /><figcaption class="text-xs text-[var(--color-muted)] mt-1">${alt}</figcaption></figure>`;
       }
       return `<a href="${BASE}${src.replace(/^\//, "")}" class="wiki-link" target="_blank">${alt || src}</a>`;
     })
@@ -96,7 +96,7 @@ export function formatBody(body, people) {
     // If segment starts with a block element, leave it alone
     if (BLOCK_ELEMENTS.test(trimmed)) return trimmed;
     // Otherwise wrap in paragraph
-    return `<p class='mb-1 text-[var(--color-ink)] leading-relaxed'>${trimmed}</p>`;
+    return `<p class='mb-0 text-[var(--color-ink)] leading-relaxed'>${trimmed}</p>`;
   }).join("");
 
   // Fix any double <p> nesting
