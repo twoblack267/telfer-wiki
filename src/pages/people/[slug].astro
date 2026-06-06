@@ -84,10 +84,11 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
       <div class="md:col-span-2">
         <div class="person-card rounded-xl p-6">
           <h2 class="font-serif text-xl text-[var(--color-burgundy)] mb-4">Biography</h2>
-          <!-- Wiki-formatted body (first h1 stripped, leading empty paragraphs removed, prose tightened) -->
+          <!-- Wiki-formatted body (first h1 stripped, leading empty paragraphs + whitespace removed, prose tightened) -->
           <div class="prose prose-sm max-w-none wiki-content" set:html={bodyHtml
             .replace(/^<h1[^>]*>.*?<\/h1>\s*/i, '')
             .replace(/^(<p>\s*<\/p>\s*)+/i, '')
+            .replace(/^\s+/, '')
           }></div>
         </div>
 
