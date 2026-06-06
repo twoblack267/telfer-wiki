@@ -55,7 +55,7 @@ export function formatBody(body, people) {
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
       if (src.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
         const imgSrc = src.startsWith("/") ? `${BASE}${src.replace(/^\//, "")}` : `${BASE}${src}`;
-        return `<figure class="my-4"><img src="${imgSrc}" alt="${alt}" class="rounded-lg max-w-full" loading="lazy" /><figcaption class="text-xs text-[var(--color-muted)] mt-1">${alt}</figcaption></figure>`;
+        return `<figure class="my-2"><img src="${imgSrc}" alt="${alt}" class="rounded-lg max-w-full" loading="lazy" /><figcaption class="text-xs text-[var(--color-muted)] mt-1">${alt}</figcaption></figure>`;
       }
       return `<a href="${BASE}${src.replace(/^\//, "")}" class="wiki-link" target="_blank">${alt || src}</a>`;
     })
