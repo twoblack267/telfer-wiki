@@ -623,7 +623,7 @@
     "roles": [
       "Sister"
     ],
-    "body_markdown": "# Amy Nicole Telfer\n**Email:** [email redacted]\n**Role:** Sister\n**Residence:** Redcliffe / Brisbane, Queensland\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959\u2013?)]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986\u2013?)]] |\n\n---",
+    "body_markdown": "# Amy Nicole Telfer\n**Email:** [email redacted]\n**Role:** Sister\n**Residence:** Redcliffe / Brisbane, Queensland\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959\u2013?)]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986\u2013?)]] |\n\n---\n\n---\n\n## Photos\n\n![Amy Telfer   Age 3   Tiny Tots Quest](images/people/Amy-Telfer-Tiny-Tots-Quest.jpg)\n\n*Amy Telfer, age 3, of Clontarf \u2014 entrant in the Endeavour Foundation Tiny Tots Quest, raising money for disabled people.*\n",
     "body_stripped": "**Email:** [email redacted]\n**Role:** Sister\n**Residence:** Redcliffe / Brisbane, Queensland\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer \n **Father**  Timothy Neil Telfer (1959\u2013?) \n **Siblings**  Mark Kenneth Telfer (1986\u2013?)",
     "is_living": true,
     "lifespan": "? \u2013 living",
@@ -640,7 +640,15 @@
       "telfer-tree"
     ],
     "vault_file": "Amy Nicole Telfer.md",
-    "images": []
+    "images": [
+      {
+        "src": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg",
+        "alt": "Amy Telfer   Age 3   Tiny Tots Quest   Endeavour Foundation",
+        "vault_path": "/home/mark/ObsidianVault/Family History/Photos/Amy_Telfer_Tiny_Tots_Quest.jpg",
+        "filename": "Amy-Telfer-Tiny-Tots-Quest.jpg"
+      }
+    ],
+    "person_photo": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg"
   },
   {
     "id": "Angela Telfer",
