@@ -59,9 +59,17 @@ function sanitizeBody(body, person) {
   const akaMatch = body.match(/\*\*Also known as:\*\*\s*(.+?)(?:\n|$)/);
   if (akaMatch) alsoKnownAs = akaMatch[1].trim();
 
-  // Extract Family table section - keep this (relationships are just names)
+  // Extract Family table section - keep relationships but strip dates/PII
   const familySection = body.match(/## Family[\s\S]*?(?=## |$)/);
-  const familyTable = familySection ? familySection[0].trim() : '';
+  let familyTable = familySection ? familySection[0].trim() : '';
+  if (familyTable) {
+    // Strip marriage dates: "(m. 28 Nov 1981 — div.)" → "(m.)"
+    familyTable = familyTable.replace(/\(m\.\s*\d+\s+\w+\s+\d{4}\s*(?:—|–|\-)\s*div\.\s*\)/g, '(m. — div.)');
+    familyTable = familyTable.replace(/\(m\.\s*\d+\s+\w+\s+\d{4}\s*\)/g, '(m.)');
+    // Strip birth-death ranges from children: "(1986–?)" → ""
+    familyTable = familyTable.replace(/\s*\(\d{4}–\?\)/g, '');
+    familyTable = familyTable.replace(/\s*\(\d{4}–\d{4}\)\s*/g, ' ');
+  }
 
   // Build minimal sanitized body
   let sanitized = `# ${name}\n\n`;
