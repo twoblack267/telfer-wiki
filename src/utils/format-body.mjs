@@ -75,7 +75,7 @@ export function formatBody(body, people) {
     // If segment starts with a block element, leave it alone
     if (BLOCK_ELEMENTS.test(trimmed)) return trimmed;
     // Otherwise wrap in paragraph
-    return `<p class='mb-3 text-[var(--color-ink)] leading-relaxed'>${trimmed}</p>`;
+    return `<p class='mb-1 text-[var(--color-ink)] leading-relaxed'>${trimmed}</p>`;
   }).join("");
 
   // Fix any double <p> nesting
