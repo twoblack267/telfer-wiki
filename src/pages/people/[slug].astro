@@ -30,30 +30,30 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
 <BaseLayout title={person.display_name}>
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
-    <div class="text-sm text-[var(--color-muted)] mb-3">
+    <div class="text-sm text-[var(--color-muted)] mb-1.5">
       <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">People</a>
       <span class="mx-2">/</span>
       <span>{person.display_name}</span>
     </div>
 
     <!-- Header Card -->
-    <div class="person-card rounded-xl p-4 md:p-5 mb-4">
-      <div class="flex items-start justify-between gap-3">
+    <div class="person-card rounded-xl p-3 md:p-4 mb-3">
+      <div class="flex items-start justify-between gap-2">
         <div class="flex-1">
-          <h1 class="text-2xl md:text-3xl font-bold font-serif text-[var(--color-heading)] mb-1">
+          <h1 class="text-xl md:text-2xl font-bold font-serif text-[var(--color-heading)] mb-0.5">
             {person.display_name}
           </h1>
 
           <!-- Lifespan -->
-          <div class="text-base text-[var(--color-ink-light)] mb-2">
+          <div class="text-sm text-[var(--color-ink-light)] mb-1">
             {person.lifespan}
           </div>
 
           <!-- Roles -->
           {person.roles.length > 0 && (
-            <div class="space-y-0.5">
+            <div class="space-y-0">
               {person.roles.map((role) => (
-                <div key={role} class="text-sm text-[var(--color-ink-light)] italic">
+                <div key={role} class="text-xs text-[var(--color-ink-light)] italic">
                   {role}
                 </div>
               ))}
@@ -63,7 +63,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
 
         {/* Portrait Photo or Initials Avatar */}
         {person.person_photo ? (
-          <div class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-[var(--color-highlight)] shrink-0 bg-[var(--color-surface)]">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-[var(--color-highlight)] shrink-0 bg-[var(--color-surface)]">
             <img
               src={import.meta.env.BASE_URL + person.person_photo}
               alt={person.display_name}
@@ -72,18 +72,18 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
             />
           </div>
         ) : (
-          <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[var(--color-heading)] text-white flex items-center justify-center text-xl md:text-2xl font-serif font-bold shrink-0">
+          <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[var(--color-heading)] text-white flex items-center justify-center text-lg md:text-xl font-serif font-bold shrink-0">
             {person.first_name?.[0]}{person.last_name?.[0]}
           </div>
         )}
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-1.5">
       <!-- Main Content -->
       <div class="md:col-span-2">
-        <div class="person-card rounded-xl p-3">
-          <h2 class="font-serif text-lg text-[var(--color-heading)] mb-1">Biography</h2>
+        <div class="person-card rounded-xl p-2.5">
+          <h2 class="font-serif text-base text-[var(--color-heading)] mb-0.5">Biography</h2>
           <!-- Wiki-formatted body (first h1 stripped, leading empty paragraphs + whitespace removed, prose tightened) -->
           <div class="prose prose-sm max-w-none wiki-content" set:html={bodyHtml
             .replace(/^<h1[^>]*>.*?<\/h1>\s*/i, '')
@@ -97,11 +97,11 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
 
         <!-- Tags -->
         {importantTags.length > 0 && (
-          <div class="person-card rounded-xl p-4 mt-4">
-            <h2 class="font-serif text-base text-[var(--color-heading)] mb-2">Tags</h2>
-            <div class="flex flex-wrap gap-1.5">
+          <div class="person-card rounded-xl p-3 mt-3">
+            <h2 class="font-serif text-sm text-[var(--color-heading)] mb-1.5">Tags</h2>
+            <div class="flex flex-wrap gap-1">
               {importantTags.map((tag) => (
-                <span key={tag} class="text-xs px-2.5 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">{tag}</span>
+                <span key={tag} class="text-xs px-2 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">{tag}</span>
               ))}
             </div>
           </div>
@@ -109,12 +109,12 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
       </div>
 
       <!-- Sidebar -->
-      <div class="space-y-3">
+      <div class="space-y-2">
         <!-- Relationship: Spouse -->
         {spouseLinks.length > 0 && (
-          <div class="person-card rounded-xl p-3">
-            <h3 class="font-serif text-[var(--color-heading)] mb-1.5">Spouse{spouseLinks.length > 1 ? "s" : ""}</h3>
-            <ul class="space-y-0.5">
+          <div class="person-card rounded-xl p-2.5">
+            <h3 class="font-serif text-[var(--color-heading)] mb-1">Spouse{spouseLinks.length > 1 ? "s" : ""}</h3>
+            <ul class="space-y-0">
               {spouseLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
@@ -130,9 +130,9 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
 
         <!-- Relationship: Parents -->
         {parentLinks.length > 0 && (
-          <div class="person-card rounded-xl p-3">
-            <h3 class="font-serif text-[var(--color-heading)] mb-1.5">Parents</h3>
-            <ul class="space-y-0.5">
+          <div class="person-card rounded-xl p-2.5">
+            <h3 class="font-serif text-[var(--color-heading)] mb-1">Parents</h3>
+            <ul class="space-y-0">
               {parentLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
@@ -148,9 +148,9 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
 
         <!-- Relationship: Children -->
         {childLinks.length > 0 && (
-          <div class="person-card rounded-xl p-3">
-            <h3 class="font-serif text-[var(--color-heading)] mb-1.5">Children</h3>
-            <ul class="space-y-0.5">
+          <div class="person-card rounded-xl p-2.5">
+            <h3 class="font-serif text-[var(--color-heading)] mb-1">Children</h3>
+            <ul class="space-y-0">
               {childLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
@@ -166,9 +166,9 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
 
         <!-- Relationship: Siblings -->
         {siblingLinks.length > 0 && (
-          <div class="person-card rounded-xl p-3">
-            <h3 class="font-serif text-[var(--color-heading)] mb-1.5">Siblings</h3>
-            <ul class="space-y-0.5">
+          <div class="person-card rounded-xl p-2.5">
+            <h3 class="font-serif text-[var(--color-heading)] mb-1">Siblings</h3>
+            <ul class="space-y-0">
               {siblingLinks.map(({ name, slug }) => (
                 <li key={slug || name}>
                   {slug ? (
@@ -185,7 +185,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
     </div>
 
     <!-- Navigation footer -->
-    <div class="mt-4 flex justify-between items-center border-t border-[var(--color-border)] pt-3 text-sm">
+    <div class="mt-3 flex justify-between items-center border-t border-[var(--color-border)] pt-2 text-sm">
       <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">← Back to all people</a>
     </div>
   </div>
@@ -202,7 +202,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
     color: var(--color-heading-hover);
   }
   .wiki-content figure {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
   .wiki-content img {
     border-radius: 0.5rem;
@@ -213,6 +213,6 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
   .wiki-content figcaption {
     font-size: 0.75rem;
     color: var(--color-muted);
-    margin-top: 0.25rem;
+    margin-top: 0.15rem;
   }
 </style>
