@@ -82,9 +82,9 @@ export function formatBody(body, people) {
     })
     // Regular links
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="wiki-link">$1</a>')
-    // Convert paragraphs (double newlines) — but DON'T wrap block elements
-    .replace(/\n\n/g, "\n\n__PARA_BREAK__\n\n")
-    // Line breaks
+    // Convert paragraphs (double+ newlines) — collapse to single marker
+    .replace(/\n\n+/g, "__PARA_BREAK__")
+    // Line breaks (single newlines within paragraphs)
     .replace(/\n/g, "<br>");
 
   // Split on paragraph breaks, wrap only text segments in <p>, leave block elements alone
@@ -103,9 +103,16 @@ export function formatBody(body, people) {
   html = html.replace(/<p[^>]*>\s*<p[^>]*>/g, "<p>");
   html = html.replace(/<\/p>\s*<\/p>/g, "</p>");
 
-  // Strip leading/trailing <br> garbage
+  // Strip <br> garbage: start/end of output, inside <p> boundaries, and adjacent to block elements
   html = html.replace(/^(<br>)+/i, "");
   html = html.replace(/(<br>)+$/i, "");
+  // Strip <br> from start of <p> tags
+  html = html.replace(/<p([^>]*)>(<br>)+/gi, "<p$1>");
+  // Strip <br> from end of <p> tags
+  html = html.replace(/(<br>)+<\/p>/gi, "</p>");
+  // Remove <br> immediately before/after block elements
+  html = html.replace(/(<br>)+\s*(<(?:h[1-6]|table|figure|ul|ol|hr)[^>]*>)/gi, "$2");
+  html = html.replace(/(<\/(?:h[1-6]|table|figure|ul|ol)>)\s*(<br>)+/gi, "$1");
 
   return html;
 }
