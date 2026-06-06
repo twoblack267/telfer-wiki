@@ -84,8 +84,8 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
       <div class="md:col-span-2">
         <div class="person-card rounded-xl p-6">
           <h2 class="font-serif text-xl text-[var(--color-burgundy)] mb-4">Biography</h2>
-          <!-- Wiki-formatted body -->
-          <div class="prose wiki-content" set:html={bodyHtml}></div>
+          <!-- Wiki-formatted body (first h1 stripped — name already in header card) -->
+          <div class="prose wiki-content" set:html={bodyHtml.replace(/^<h1[^>]*>.*?<\/h1>\s*/i, '')}></div>
         </div>
 
         <!-- Tags -->
