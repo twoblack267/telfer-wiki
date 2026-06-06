@@ -9,7 +9,8 @@
  *   - Birth: year ONLY, no full date, no birthplace
  *   - Remove: residence, email, phone, address, age, profile URLs
  *   - Remove: full marriage cert transcripts, timeline sections, life summaries
- *   - Remove: photos/images (living people shouldn't have identifiable photos public)
+ *   - Keep: person_photo (profile portrait — public images in /public/images/people/)
+ *   - Remove: images array (internal vault paths that shouldn't leak)
  *   - Keep: name, role, education, occupation, family relationship table
  *   - Keep: sidebar relationships (these link to other sanitized pages)
  *
@@ -108,9 +109,10 @@ function sanitizePerson(person) {
   // Sanitize body_markdown
   sanitized.body_markdown = sanitizeBody(person.body_markdown, person);
 
-  // Strip images entirely for living people
+  // Strip images array for living people (keeps internal vault paths private)
   delete sanitized.images;
-  delete sanitized.person_photo;
+  // Keep person_photo — it points to a public image in /public/images/people/
+  // which is already a publicly-accessible URL, not private info
 
   // Strip vault_file path (internal only)
   delete sanitized.vault_file;
