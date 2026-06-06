@@ -123,6 +123,17 @@ function sanitizePerson(person) {
     });
   }
 
+  // Strip parenthetical dates from relationship arrays (parents, spouses, children, siblings)
+  // "Mark Kenneth Telfer (1986–?)" → "Mark Kenneth Telfer"
+  // "Shirley Edna Telfer (1929–2017)" → "Shirley Edna Telfer"
+  const stripDatesFromName = (name) => name.replace(/\s*\([^)]*\)/g, '').trim();
+
+  for (const field of ['parents', 'spouses', 'children', 'siblings']) {
+    if (sanitized[field] && Array.isArray(sanitized[field])) {
+      sanitized[field] = sanitized[field].map(stripDatesFromName);
+    }
+  }
+
   return sanitized;
 }
 
