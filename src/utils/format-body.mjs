@@ -40,11 +40,11 @@ export function formatBody(body, people) {
     // Italic *text*
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     // Convert headings
-    .replace(/^### (.+)$/gm, "<h3 class='font-serif text-lg text-[var(--color-burgundy)] mt-6 mb-2'>$1</h3>")
-    .replace(/^## (.+)$/gm, "<h2 class='font-serif text-xl text-[var(--color-burgundy)] mt-8 mb-3'>$1</h2>")
-    .replace(/^# (.+)$/gm, "<h1 class='font-serif text-2xl text-[var(--color-burgundy)] mt-8 mb-3'>$1</h1>")
+    .replace(/^### (.+)$/gm, "<h3 class='font-serif text-lg text-[var(--color-burgundy)] mt-4 mb-1'>$1</h3>")
+    .replace(/^## (.+)$/gm, "<h2 class='font-serif text-xl text-[var(--color-burgundy)] mt-4 mb-1'>$1</h2>")
+    .replace(/^# (.+)$/gm, "<h1 class='font-serif text-2xl text-[var(--color-burgundy)] mt-4 mb-1'>$1</h1>")
     // Horizontal rule
-    .replace(/^---$/gm, "<hr class='my-6 border-[var(--color-border)]'>")
+    .replace(/^---$/gm, "<hr class='my-2 border-[var(--color-border)]'>")
     // Convert bullet points
     .replace(/^[-*] (.+)$/gm, "<li class='ml-4 text-[var(--color-ink)]'>$1</li>")
     // Wrap consecutive <li> in <ul>
@@ -81,6 +81,10 @@ export function formatBody(body, people) {
   // Fix any double <p> nesting
   html = html.replace(/<p[^>]*>\s*<p[^>]*>/g, "<p>");
   html = html.replace(/<\/p>\s*<\/p>/g, "</p>");
+
+  // Strip leading/trailing <br> garbage
+  html = html.replace(/^(<br>)+/i, "");
+  html = html.replace(/(<br>)+$/i, "");
 
   return html;
 }
