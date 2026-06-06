@@ -45,6 +45,27 @@ export function formatBody(body, people) {
     .replace(/^# (.+)$/gm, "<h1 class='font-serif text-2xl text-[var(--color-burgundy)] mt-4 mb-1'>$1</h1>")
     // Horizontal rule
     .replace(/^---$/gm, "<hr class='my-2 border-[var(--color-border)]'>")
+    // Convert markdown tables (header | separator | rows)
+    .replace(/^\|.+\|\n\|[-: ]+\|\n((?:^\|.+\|\n?)+)/gm, (match) => {
+      const lines = match.trim().split('\n');
+      if (lines.length < 2) return match;
+      const headers = lines[0].split('|').filter(c => c.trim()).map(c => c.trim());
+      let html = '<table class="w-full border-collapse my-1 text-sm"><thead><tr>';
+      for (const h of headers) {
+        html += `<th class="bg-[var(--color-heading)] text-white font-sans font-semibold text-left px-2 py-1">${h}</th>`;
+      }
+      html += '</tr></thead><tbody>';
+      for (let i = 2; i < lines.length; i++) {
+        const cells = lines[i].split('|').filter(c => c.trim()).map(c => c.trim());
+        html += '<tr>';
+        for (const c of cells) {
+          html += `<td class="px-2 py-0.5 border-b border-[var(--color-border)]">${c}</td>`;
+        }
+        html += '</tr>';
+      }
+      html += '</tbody></table>';
+      return html;
+    })
     // Convert bullet points
     .replace(/^[-*] (.+)$/gm, "<li class='ml-4 text-[var(--color-ink)]'>$1</li>")
     // Wrap consecutive <li> in <ul>
