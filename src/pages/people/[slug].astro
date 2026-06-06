@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatBody, getLinksForRelationships } from "../../utils/format-body.mjs";
 
 export async function getStaticPaths() {
-  const people = (await import("../../data/people.json")).default;
+  const people = (await import("../../data/people.public.json")).default;
   return people.map((person) => ({
     params: { slug: person.slug },
     props: { person },
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { person } = Astro.props;
-const people = (await import("../../data/people.json")).default;
+const people = (await import("../../data/people.public.json")).default;
 const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
 
 // ── Relationship groupings ──

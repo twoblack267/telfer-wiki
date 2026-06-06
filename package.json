@@ -6,7 +6,8 @@
   "description": "The Telfer Family Wiki — a digital genealogy for the Telfer line",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "sanitize": "node scripts/sanitize-people.mjs",
+    "build": "npm run sanitize && astro build",
     "postbuild": "node scripts/generate-redirects.mjs && node scripts/validate-links.mjs",
     "self-heal": "node scripts/auto-fix-links.mjs && npm run build",
     "preview": "astro preview",

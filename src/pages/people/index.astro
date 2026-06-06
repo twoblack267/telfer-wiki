@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import type { PersonData } from "../../utils/extract-data.mjs";
 
-const people = (await import("../../data/people.json")).default as PersonData[];
+const people = (await import("../../data/people.public.json")).default as PersonData[];
 const telferPeople = people
   .filter((p) => p.related_trees.includes("telfer-tree"))
   .sort((a, b) => {
