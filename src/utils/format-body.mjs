@@ -46,7 +46,7 @@ export function formatBody(body, people) {
     // Horizontal rule
     .replace(/^---$/gm, "<hr class='my-2 border-[var(--color-border)]'>")
     // Convert markdown tables (header | separator | rows)
-    .replace(/^\|.+\|\n\|[-: ]+\|\n((?:^\|.+\|\n?)+)/gm, (match) => {
+    .replace(/^\|.+\|\n^\|(?:[-: ]+\|)+\s*$\n(?:^\|.+\|\n?)+/gm, (match) => {
       const lines = match.trim().split('\n');
       if (lines.length < 2) return match;
       const headers = lines[0].split('|').filter(c => c.trim()).map(c => c.trim());
