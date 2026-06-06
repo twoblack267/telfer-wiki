@@ -240,7 +240,8 @@ const currentPath = Astro.url.pathname;
     h3 { font-size: 1.25rem; }
   }
 
-  a {
+  /* Links: gold underline only in prose/content areas */
+  .wiki-content a {
     color: var(--color-link);
     text-decoration: underline;
     text-decoration-color: var(--color-highlight);
@@ -248,9 +249,22 @@ const currentPath = Astro.url.pathname;
     text-decoration-thickness: 2px;
     transition: color 0.15s, text-decoration-color 0.15s;
   }
-  a:hover {
+  .wiki-content a:hover {
     color: var(--color-link-hover);
     text-decoration-color: var(--color-highlight-light);
+  }
+
+  /* Nav links, person cards, buttons - no gold underline */
+  .nav-link,
+  .person-card a,
+  button a,
+  .no-underline,
+  a.no-underline {
+    text-decoration: none;
+  }
+  .nav-link:hover,
+  .person-card a:hover {
+    text-decoration: none;
   }
 
   .wiki-content {
