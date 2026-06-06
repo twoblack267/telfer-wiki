@@ -9,19 +9,21 @@ export function formatBody(body, people) {
   const BASE = import.meta.env.BASE_URL || "/";
 
   let html = body
+    // Strip leading blockquote markers (> ) from markdown first — fixes blockquote-wrapped images & notes
+    .replace(/^>\s*/gm, "")
     // Strip social media profile URLs — safety net (primary strip is in convert-markdown.mjs)
-    .replace(/https?:\/\/(www\.)?(facebook|fb)\.com\/[^\s)\]>]+/gi, "[Facebook profile — redacted]")
-    .replace(/https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub|company)\/[^\s)\]>]+/gi, "[LinkedIn — redacted]")
-    .replace(/https?:\/\/(www\.)?twitter\.com\/[^\s)\]>]+/gi, "[Twitter — redacted]")
-    .replace(/https?:\/\/(www\.)?instagram\.com\/[^\s)\]>]+/gi, "[Instagram — redacted]")
-    .replace(/https?:\/\/(www\.|vt\.)?tiktok\.com\/[^\s)\]>]+/gi, "[TikTok — redacted]")
-    .replace(/https?:\/\/(www\.)?snapchat\.com\/[^\s)\]>]+/gi, "[Snapchat — redacted]")
-    .replace(/https?:\/\/(www\.)?youtube\.com\/[^\s)\]>]+/gi, "[YouTube — redacted]")
-    .replace(/https?:\/\/(www\.)?pinterest\.(com|com\.au)\/[^\s)\]>]+/gi, "[Pinterest — redacted]")
+    .replace(/https?:\/\/(www\.)?(facebook|fb)\.com\/[^\s)\]]+/gi, "[Facebook profile — redacted]")
+    .replace(/https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub|company)\/[^\s)\]]+/gi, "[LinkedIn — redacted]")
+    .replace(/https?:\/\/(www\.)?twitter\.com\/[^\s)\]]+/gi, "[Twitter — redacted]")
+    .replace(/https?:\/\/(www\.)?instagram\.com\/[^\s)\]]+/gi, "[Instagram — redacted]")
+    .replace(/https?:\/\/(www\.|vt\.)?tiktok\.com\/[^\s)\]]+/gi, "[TikTok — redacted]")
+    .replace(/https?:\/\/(www\.)?snapchat\.com\/[^\s)\]]+/gi, "[Snapchat — redacted]")
+    .replace(/https?:\/\/(www\.)?youtube\.com\/[^\s)\]]+/gi, "[YouTube — redacted]")
+    .replace(/https?:\/\/(www\.)?pinterest\.(com|com\.au)\/[^\s)\]]+/gi, "[Pinterest — redacted]")
     // Strip Notes and Links sections — safety net (primary strip is in convert-markdown.mjs)
     .replace(/## Notes[\s\S]*?(?=## |$)/g, '')
     .replace(/## Links[\s\S]*?(?=## |$)/g, '')
-    // Convert [[Link|Alias]] to <a href={`${import.meta.env.BASE_URL}people/slug`}>Alias</a>
+    // Convert [[Link|Alias]] to <a href="${BASE}people/slug">Alias</a>
     .replace(/\[\[([^\]]+)\|([^\]]+)\]\]/g, (match, link, alias) => {
       const slug = lookupSlug(link.trim(), people);
       if (slug) return `<a href="${BASE}people/${slug}" class="wiki-link">${alias.trim()}</a>`;
@@ -49,10 +51,9 @@ export function formatBody(body, people) {
     .replace(/((?:<li[^>]*>.*?<\/li>\n?)+)/g, "<ul class='space-y-1 my-2'>$1</ul>")
     // Convert numbered lists
     .replace(/^\d+\.\s+(.+)$/gm, "<li class='ml-4 list-decimal text-[var(--color-ink)]'>$1</li>")
-    // Images: ![alt](path)
+    // Images: ![alt](path) — now handles blockquote-stripped markdown
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
       if (src.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
-        // Public images are served at BASE_URL + path
         const imgSrc = src.startsWith("/") ? `${BASE}${src.replace(/^\//, "")}` : `${BASE}${src}`;
         return `<figure class="my-4"><img src="${imgSrc}" alt="${alt}" class="rounded-lg max-w-full" loading="lazy" /><figcaption class="text-xs text-[var(--color-muted)] mt-1">${alt}</figcaption></figure>`;
       }
@@ -60,15 +61,24 @@ export function formatBody(body, people) {
     })
     // Regular links
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="wiki-link">$1</a>')
-    // Convert paragraphs (double newlines)
-    .replace(/\n\n/g, "</p><p class='mb-3 text-[var(--color-ink)] leading-relaxed'>")
+    // Convert paragraphs (double newlines) — but DON'T wrap block elements
+    .replace(/\n\n/g, "\n\n__PARA_BREAK__\n\n")
     // Line breaks
     .replace(/\n/g, "<br>");
 
-  // Wrap in <p> tags
-  html = `<p class='mb-3 text-[var(--color-ink)] leading-relaxed'>${html}</p>`;
+  // Split on paragraph breaks, wrap only text segments in <p>, leave block elements alone
+  const BLOCK_ELEMENTS = /^(<(?:h[1-6]|ul|ol|li|figure|blockquote|hr|table|div|p)[^>]*>)/i;
+  const segments = html.split("__PARA_BREAK__");
+  html = segments.map(seg => {
+    const trimmed = seg.trim();
+    if (!trimmed) return "";
+    // If segment starts with a block element, leave it alone
+    if (BLOCK_ELEMENTS.test(trimmed)) return trimmed;
+    // Otherwise wrap in paragraph
+    return `<p class='mb-3 text-[var(--color-ink)] leading-relaxed'>${trimmed}</p>`;
+  }).join("");
 
-  // Fix double <p> nesting from multiple runs
+  // Fix any double <p> nesting
   html = html.replace(/<p[^>]*>\s*<p[^>]*>/g, "<p>");
   html = html.replace(/<\/p>\s*<\/p>/g, "</p>");
 

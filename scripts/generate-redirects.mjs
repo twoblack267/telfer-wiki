@@ -61,32 +61,42 @@ const uniqueRedirects = redirects.filter(r => {
 // Write redirect pages
 console.log(`\n📝 Generating ${uniqueRedirects.length} redirect(s)...`);
 
-for (const r of uniqueRedirects) {
-  const dir = path.join(DIST_DIR, r.from);
+function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
+  const baseDir = isPeopleRedirect ? DIST_DIR : 'dist';
+  const dir = path.join(baseDir, from);
   const filePath = path.join(dir, 'index.html');
 
-  // Calculate relative path back to root
-  const depth = dir.split(path.sep).length - 1;
-  const prefix = '../'.repeat(depth);
+  // Depth from file's directory to dist/ root (number of segments past 'dist')
+  const segmentsFromDist = dir.split(path.sep).filter(Boolean).length - 1;
+  const prefix = '../'.repeat(Math.max(0, segmentsFromDist));
 
   fs.mkdirSync(dir, { recursive: true });
+
+  const targetUrl = `${prefix}people/${to}/`;
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=${prefix}people/${r.to}/">
-  <link rel="canonical" href="${prefix}people/${r.to}/">
+  <meta http-equiv="refresh" content="0;url=${targetUrl}">
+  <link rel="canonical" href="${targetUrl}">
   <title>Redirecting...</title>
 </head>
 <body>
-  <p>Redirecting to <a href="${prefix}people/${r.to}/">${r.display_name}</a>...</p>
+  <p>Redirecting to <a href="${targetUrl}">${displayName}</a>...</p>
 </body>
 </html>`;
 
   fs.writeFileSync(filePath, html);
-  console.log(`  ${r.from} → ${r.to}  (${r.display_name})`);
+  console.log(`  ${from} → ${to}  (${displayName})`);
 }
+
+for (const r of uniqueRedirects) {
+  writeRedirect(r.from, r.to, r.display_name, true);
+}
+
+// Static redirect for /families/ → /people/families/
+writeRedirect('families', 'families', 'Families', false);
 
 // Write log for reference
 fs.writeFileSync(REDIRECT_LOG, JSON.stringify(uniqueRedirects, null, 2));
