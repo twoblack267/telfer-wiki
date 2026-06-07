@@ -1,0 +1,28 @@
+# .pre-commit-config.yaml
+# Place in telfer-wiki repo root. Run: pre-commit install --hook-type pre-commit
+
+repos:
+  - repo: local
+    hooks:
+      - id: validate-no-mark-refs
+        name: "Validate: No first-person Mark references"
+        entry: python scripts/validate-no-mark-refs.py
+        language: system
+        types: [json]
+        files: ^src/data/.*\.json$
+        verbose: true
+        # Fails commit if any forbidden pattern found
+        pass_filenames: true
+
+  # Optional: run the purge script as a manual hook (not auto)
+  - repo: local
+    hooks:
+      - id: purge-mark-refs
+        name: "Purge: Remove Mark refs (manual only)"
+        entry: python scripts/purge-mark-refs.py --apply
+        language: system
+        types: [json]
+        files: ^src/data/.*\.json$
+        verbose: true
+        stages: [manual]
+        pass_filenames: false

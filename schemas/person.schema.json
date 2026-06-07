@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://telferwiki.org/schemas/person.schema.json",
+  "title": "Telfer Wiki Person",
+  "type": "object",
+  "description": "Canonical person record for Telfer Wiki. All string fields constrained to prevent first-person 'Mark' references.",
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier (e.g., 'Nick Telfer')" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "URL-safe slug" },
+    "first_name": { "type": "string" },
+    "middle_name": { "type": ["string", "null"] },
+    "last_name": { "type": "string" },
+    "birth_year": { "type": ["integer", "null"] },
+    "death_year": { "type": ["integer", "null"] },
+    "birth_year_display": { "type": "string" },
+    "death_year_display": { "type": "string" },
+    "display_name": {
+      "type": "string",
+      "pattern": "^(?:(?!\\b(?:mark'?s?|my|me)\\b.*\\b(?:cousin|step|uncle|aunt|nephew|niece)\\b)[\\s\\S])*$"
+    },
+    "title": {
+      "type": "string",
+      "pattern": "^(?:(?!\\bmark'?s?\\b.*\\b(?:cousin|step|uncle|aunt|nephew|niece)\\b)[\\s\\S])*$"
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "names": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["type", "names"]
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(?:(?!\\b(?:mark'?s?|my|me)\\b.*\\b(?:cousin|step|uncle|aunt|nephew|niece)\\b)[\\s\\S])*$"
+      },
+      "description": "Canonical roles only: 'Son of X', 'Daughter of X', 'Adopted son of X', 'Adopted daughter of X', 'Step-son of X', 'Brother of X', etc."
+    },
+    "body_markdown": {
+      "type": "string",
+      "pattern": "^(?:(?!making.*mark'?s?\\s+(?:adopted\\s+)?(?:cousin|step))[\\s\\S])*$"
+    },
+    "body_stripped": {
+      "type": "string",
+      "pattern": "^(?:(?!\\bmark'?s?\\s+(?:adopted\\s+)?(?:cousin|step))[\\s\\S])*$"
+    },
+    "summary": {
+      "type": "string",
+      "pattern": "^(?:(?!\\b(?:mark'?s?|my|me)\\b.*\\b(?:cousin|step|uncle|aunt|nephew|niece)\\b)[\\s\\S])*$"
+    },
+    "biography": {
+      "type": "string",
+      "pattern": "^(?:(?!making.*mark'?s?\\s+(?:adopted\\s+)?(?:cousin|step))[\\s\\S])*$"
+    },
+    "description": {
+      "type": "string",
+      "pattern": "^(?:(?!\\bmark'?s?\\s+(?:adopted\\s+)?(?:cousin|step))[\\s\\S])*$"
+    },
+    "is_living": { "type": "boolean" },
+    "lifespan": { "type": "string" },
+    "parents": { "type": "array", "items": { "type": "string" } },
+    "children": { "type": "array", "items": { "type": "string" } },
+    "spouses": { "type": "array", "items": { "type": "string" } },
+    "siblings": { "type": "array", "items": { "type": "string" } },
+    "related_trees": { "type": "array", "items": { "type": "string" } },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "src": { "type": "string" },
+          "alt": { "type": "string" },
+          "filename": { "type": "string" }
+        },
+        "required": ["src", "alt", "filename"]
+      }
+    }
+  },
+  "required": ["id", "slug", "first_name", "last_name", "display_name", "roles"],
+  "additionalProperties": true
+}

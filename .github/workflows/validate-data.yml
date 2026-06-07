@@ -1,0 +1,82 @@
+# .github/workflows/validate-data.yml
+# Place in telfer-wiki repo. Runs on every PR/push to main.
+
+name: Validate Telfer Wiki Data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/**'
+      - 'schemas/**'
+      - 'scripts/validate-no-mark-refs.py'
+      - 'scripts/purge-mark-refs.py'
+  pull_request:
+    paths:
+      - 'src/data/**'
+      - 'schemas/**'
+      - 'scripts/validate-no-mark-refs.py'
+      - 'scripts/purge-mark-refs.py'
+
+jobs:
+  validate-data:
+    name: Validate Data Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install jsonschema
+        run: pip install jsonschema
+
+      - name: Validate no first-person Mark references
+        run: |
+          echo "🔍 Scanning src/data/ for forbidden patterns..."
+          python scripts/validate-no-mark-refs.py src/data/
+          echo "✅ No forbidden patterns found"
+
+      - name: Validate person schema (people.json)
+        run: |
+          echo "📋 Validating people.json against schema..."
+          python -m jsonschema -i src/data/people.json schemas/person.schema.json
+          echo "✅ people.json valid"
+
+      - name: Validate person schema (people.public.json)
+        run: |
+          echo "📋 Validating people.public.json against schema..."
+          python -m jsonschema -i src/data/people.public.json schemas/person.schema.json
+          echo "✅ people.public.json valid"
+
+      - name: Summary
+        if: always()
+        run: |
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "🎉 All validation checks passed"
+          else
+            echo "❌ Validation failed — see above for details"
+            exit 1
+          fi
+
+  # Optional: dry-run purge on PRs to show what would change
+  dry-run-purge:
+    name: Dry-run Purge (Preview)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Dry-run purge
+        run: |
+          echo "🔍 Dry-run: showing what purge would change..."
+          python scripts/purge-mark-refs.py --dry-run
