@@ -73,12 +73,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Aaron Ivory.md",
     "images": [
       {
         "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
         "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
@@ -184,12 +182,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Adam Francis Telfer (1842\u20131925).md",
     "images": [
       {
         "src": "images/people/adam-francis-telfer-grave.jpg",
         "alt": "Adam francis telfer grave",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/adam-francis-telfer-grave.jpg",
         "filename": "adam-francis-telfer-grave.jpg"
       }
     ],
@@ -293,7 +289,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Alan Dale Telfer (1890\u20131937).md",
     "images": []
   },
   {
@@ -326,7 +321,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Alexander Lawrie (1780\u20131847).md",
     "images": []
   },
   {
@@ -397,12 +391,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Alma Sporer (1881\u20131965).md",
     "images": [
       {
         "src": "images/people/alma-ida-sporer-telfer.jpg",
         "alt": "Alma ida sporer telfer",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/alma-ida-sporer-telfer.jpg",
         "filename": "alma-ida-sporer-telfer.jpg"
       }
     ],
@@ -469,7 +461,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Alma Tressy Cullen (1893\u20131976).md",
     "images": []
   },
   {
@@ -560,18 +551,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Amy Ellen Telfer (1884\u20131951).md",
     "images": [
       {
         "src": "images/people/amy-ellen-telfer.jpg",
         "alt": "Amy ellen telfer",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/amy-ellen-telfer.jpg",
         "filename": "amy-ellen-telfer.jpg"
       },
       {
         "src": "images/people/amy-ellen-telfer-grave.jpg",
         "alt": "Amy ellen telfer grave",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/amy-ellen-telfer-grave.jpg",
         "filename": "amy-ellen-telfer-grave.jpg"
       }
     ],
@@ -639,12 +627,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Amy Nicole Telfer.md",
     "images": [
       {
         "src": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg",
         "alt": "Amy Telfer   Age 3   Tiny Tots Quest   Endeavour Foundation",
-        "vault_path": "/home/mark/ObsidianVault/Family History/Photos/Amy_Telfer_Tiny_Tots_Quest.jpg",
         "filename": "Amy-Telfer-Tiny-Tots-Quest.jpg"
       }
     ],
@@ -691,8 +677,8 @@
     "roles": [
       "Adopted daughter of John Telfer"
     ],
-    "body_markdown": "# Angela Telfer\n\n**Role:** Adopted daughter of John Telfer\n**Residence:** Cumnock, Scotland (from Big Sky, Montana, USA)\n**Education:** Kilmarnock College \u2014 Scotland\n**Occupation:** Digital creator\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[John Telfer (1847\u20131929)]] (adoptive) |\n| **Siblings** | [[Peter Telfer]] (adopted brother), [[Carissa Telfer (?\u20132023)]] (adopted sister, deceased) |\n\n---\n\n## Life Summary\n\nAngela is [[John Telfer (1847\u20131929)]]'s adopted daughter. She's a digital creator with 942 followers on Facebook.\n\n---",
-    "body_stripped": "**Role:** Adopted daughter of John Telfer\n**Residence:** Cumnock, Scotland (from Big Sky, Montana, USA)\n**Education:** Kilmarnock College \u2014 Scotland\n**Occupation:** Digital creator\n\n## Family\n\n Relation  Name \n\n **Father**  John Telfer (1847\u20131929) (adoptive) \n **Siblings**  Peter Telfer (adopted brother), Carissa Telfer (?\u20132023) (adopted sister, deceased) \n\n## Life Summary\n\nAngela is John Telfer (1847\u20131929)'s adopted daughter. She's a digital creator with 942 f",
+    "body_markdown": "# Angela Telfer\n\n**Role:** Adopted daughter of John Telfer\n**Residence:** Cumnock, Scotland (from Big Sky, Montana, USA)\n**Education:** Kilmarnock College \u2014 Scotland\n**Occupation:** Digital creator\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[John Telfer (1847\u20131929)]] (adoptive) |\n| **Siblings** | [[Peter Telfer]] (adopted brother), [[Carissa Telfer (?\u20132023)]] (adopted sister, deceased) |\n\n---\n\n## Life Summary\n\nAngela is [[John Telfer (1847\u20131929)]]'s adopted daughter and a digital creator with 942 followers on Facebook.\n\n---",
+    "body_stripped": "**Role:** Adopted daughter of John Telfer\n**Residence:** Cumnock, Scotland (from Big Sky, Montana, USA)\n**Education:** Kilmarnock College \u2014 Scotland\n**Occupation:** Digital creator\n\n## Family\n\n Relation  Name \n\n **Father**  John Telfer (1847\u20131929) (adoptive) \n **Siblings**  Peter Telfer (adopted brother), Carissa Telfer (?\u20132023) (adopted sister, deceased) \n\n## Life Summary\n\nAngela is John Telfer (1847\u20131929)'s adopted daughter and a digital creator with 942 f",
     "is_living": true,
     "lifespan": "? \u2013 living",
     "parents": [
@@ -707,7 +693,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Angela Telfer.md",
     "images": []
   },
   {
@@ -765,12 +750,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Carissa Telfer (?\u20132023).md",
     "images": [
       {
         "src": "images/people/Carissa-Telfer.jpg",
         "alt": "Carissa Telfer",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Carissa Telfer.jpg",
         "filename": "Carissa-Telfer.jpg"
       }
     ],
@@ -857,7 +840,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Caroline Amelia Telfer (1842\u20131929).md",
     "images": []
   },
   {
@@ -928,7 +910,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Caroline Edna Lawrie (1890\u20131957).md",
     "images": []
   },
   {
@@ -961,7 +942,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Caroline Hosking (1851\u20131920).md",
     "images": []
   },
   {
@@ -1032,7 +1012,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Clara Blanche Lane (1883\u20131974).md",
     "images": []
   },
   {
@@ -1119,7 +1098,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Clarice May Fatchen (1911\u20131997).md",
     "images": []
   },
   {
@@ -1177,7 +1155,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Colin Roy Telfer (1889\u20131964).md",
     "images": []
   },
   {
@@ -1250,7 +1227,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Daryll William Telfer.md",
     "images": []
   },
   {
@@ -1356,7 +1332,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "David Parker (1822\u20131888).md",
     "images": []
   },
   {
@@ -1413,7 +1388,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "David Telfer.md",
     "images": []
   },
   {
@@ -1502,7 +1476,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Douglas Telfer (1887\u20131956).md",
     "images": []
   },
   {
@@ -1592,7 +1565,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Elizabeth Beattie (1802\u20131891).md",
     "images": []
   },
   {
@@ -1694,12 +1666,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Elizabeth Beattie Telfer (1832\u20131896).md",
     "images": [
       {
         "src": "images/people/elizabeth-beattie-telfer-dillon-grave.jpg",
         "alt": "Elizabeth beattie telfer dillon grave",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/elizabeth-beattie-telfer-dillon-grave.jpg",
         "filename": "elizabeth-beattie-telfer-dillon-grave.jpg"
       }
     ],
@@ -1775,12 +1745,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Elizabeth Hutton Telfer (1774\u20131853).md",
     "images": [
       {
         "src": "images/people/elizabeth-betty-hutton-telfer.jpg",
         "alt": "Elizabeth betty hutton telfer",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/elizabeth-betty-hutton-telfer.jpg",
         "filename": "elizabeth-betty-hutton-telfer.jpg"
       }
     ],
@@ -1858,7 +1826,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Elizabeth Telfer (1868\u20131950).md",
     "images": []
   },
   {
@@ -1915,7 +1882,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Elspeth Young (1722\u2013?).md",
     "images": []
   },
   {
@@ -2006,12 +1972,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Francis Charles Telfer (1875\u20131954).md",
     "images": [
       {
         "src": "images/people/francis-charles-telfer-grave.jpg",
         "alt": "Francis charles telfer grave",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/francis-charles-telfer-grave.jpg",
         "filename": "francis-charles-telfer-grave.jpg"
       }
     ],
@@ -2105,24 +2069,20 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Francis Telfer (1809\u20131895).md",
     "images": [
       {
         "src": "images/people/francis-telfer-grave-2.jpg",
         "alt": "Francis telfer grave 2",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/francis-telfer-grave-2.jpg",
         "filename": "francis-telfer-grave-2.jpg"
       },
       {
         "src": "images/people/francis-telfer-grave-1.jpg",
         "alt": "Francis telfer grave 1",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/francis-telfer-grave-1.jpg",
         "filename": "francis-telfer-grave-1.jpg"
       },
       {
         "src": "images/people/francis-telfer-portrait.jpg",
         "alt": "Francis telfer portrait",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/francis-telfer-portrait.jpg",
         "filename": "francis-telfer-portrait.jpg"
       }
     ],
@@ -2210,7 +2170,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Grantley Keith Telfer.md",
     "images": []
   },
   {
@@ -2273,7 +2232,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Hannah Parker (1855\u20131948).md",
     "images": []
   },
   {
@@ -2362,7 +2320,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Isabella Lucieton Telfer (1880\u20131964).md",
     "images": []
   },
   {
@@ -2451,12 +2408,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "James Telfer (1761\u20131845).md",
     "images": [
       {
         "src": "images/people/james-telfer-1761.jpg",
         "alt": "James telfer 1761",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/james-telfer-1761.jpg",
         "filename": "james-telfer-1761.jpg"
       }
     ],
@@ -2570,12 +2525,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "James Telfer (1796\u20131863).md",
     "images": [
       {
         "src": "images/people/james-telfer-1796-1863-grave.jpg",
         "alt": "James telfer 1796 1863 grave",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/james-telfer-1796-1863-grave.jpg",
         "filename": "james-telfer-1796-1863-grave.jpg"
       }
     ],
@@ -2682,12 +2635,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "James Telfer (1829\u20131913).md",
     "images": [
       {
         "src": "images/people/james-telfer-1828-1913-portrait.jpg",
         "alt": "James telfer 1828 1913 portrait",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/james-telfer-1828-1913-portrait.jpg",
         "filename": "james-telfer-1828-1913-portrait.jpg"
       }
     ],
@@ -2775,7 +2726,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "James Telfer (1866\u20131946).md",
     "images": []
   },
   {
@@ -2844,7 +2794,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "James Telfer Dillon (1861\u20131951).md",
     "images": []
   },
   {
@@ -2913,24 +2862,20 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Jared Ivory.md",
     "images": [
       {
         "src": "images/people/Jared-Ivory---Kelly-Partners.jpg",
         "alt": "Jared Ivory   Kelly Partners",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Jared Ivory - Kelly Partners.jpg",
         "filename": "Jared-Ivory---Kelly-Partners.jpg"
       },
       {
         "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
         "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       },
       {
         "src": "images/people/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg",
         "alt": "Jared with Turnbull and Widodo   21 Mar 2018",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Jared with Turnbull and Widodo - 21 Mar 2018.jpg",
         "filename": "Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg"
       }
     ],
@@ -3002,12 +2947,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Joel Ivory.md",
     "images": [
       {
         "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
         "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
@@ -3098,18 +3041,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "John Charles Dillon (1827\u20131906).md",
     "images": [
       {
         "src": "images/people/john-charles-dillon-photo1.png",
         "alt": "John charles dillon photo1",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/john-charles-dillon-photo1.png",
         "filename": "john-charles-dillon-photo1.png"
       },
       {
         "src": "images/people/john-charles-dillon-grave-photo.jpg",
         "alt": "John charles dillon grave photo",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/john-charles-dillon-grave-photo.jpg",
         "filename": "john-charles-dillon-grave-photo.jpg"
       }
     ],
@@ -3145,7 +3085,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "John Lawrie (1810\u20131888).md",
     "images": []
   },
   {
@@ -3240,7 +3179,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "John Robert Telfer.md",
     "images": []
   },
   {
@@ -3324,7 +3262,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "John Roland Telfer (1882\u20131975).md",
     "images": []
   },
   {
@@ -3448,7 +3385,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "John Telfer (1840\u20131913).md",
     "images": []
   },
   {
@@ -3532,7 +3468,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "John Telfer (1847\u20131929).md",
     "images": []
   },
   {
@@ -3591,7 +3526,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "John Telfer (of Castleton) (1731\u2013?).md",
     "images": []
   },
   {
@@ -3651,7 +3585,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "John Webster (1750\u20131810).md",
     "images": []
   },
   {
@@ -3718,7 +3651,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Joseph March (1767\u20131831).md",
     "images": []
   },
   {
@@ -3801,7 +3733,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Joseph March (1797\u20131883).md",
     "images": []
   },
   {
@@ -3875,7 +3806,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Kathryn Mavis Telfer (1961\u20131965).md",
     "images": []
   },
   {
@@ -3950,7 +3880,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Kristin Stefanoff.md",
     "images": []
   },
   {
@@ -4025,12 +3954,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Kylie Isabella Telfer (1982\u2013?).md",
     "images": [
       {
         "src": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
         "alt": "Wedding   Mark   Kylie Telfer  12 Mar 2016 ",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Wedding - Mark & Kylie Telfer (12 Mar 2016).jpg",
         "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
       }
     ],
@@ -4102,12 +4029,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Lauren Ivory.md",
     "images": [
       {
         "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
         "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
@@ -4177,7 +4102,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Levi Leonard Timothy Telfer (2017\u2013?).md",
     "images": []
   },
   {
@@ -4251,7 +4175,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Margaret Dougal Telfer (1849\u20131936).md",
     "images": []
   },
   {
@@ -4314,12 +4237,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Margaret Wright Telfer (?\u20131892).md",
     "images": [
       {
         "src": "images/people/margaret-wright-telfer.jpg",
         "alt": "Margaret wright telfer",
-        "vault_path": "/home/mark/ObsidianVault/Family History/People/Photos/margaret-wright-telfer.jpg",
         "filename": "margaret-wright-telfer.jpg"
       }
     ],
@@ -4403,7 +4324,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Maria Clara Telfer (1878\u20131903).md",
     "images": []
   },
   {
@@ -4502,7 +4422,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Marian Telfer Cornish (1896\u20131977).md",
     "images": []
   },
   {
@@ -4587,12 +4506,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Mark Kenneth Telfer (1986\u2013?).md",
     "images": [
       {
         "src": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
         "alt": "Wedding   Mark   Kylie Telfer  12 Mar 2016 ",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Wedding - Mark & Kylie Telfer (12 Mar 2016).jpg",
         "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
       }
     ],
@@ -4659,7 +4576,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Martha Allen (1840\u20131876).md",
     "images": []
   },
   {
@@ -4747,7 +4663,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Martha Clara Henstridge (1854\u20131921).md",
     "images": []
   },
   {
@@ -4833,7 +4748,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Martha Telfer Cameron (1873\u20131964).md",
     "images": []
   },
   {
@@ -4882,7 +4796,7 @@
     "lifespan": "2008 \u2013 living",
     "parents": [
       "Crystal Rose McDonald",
-      "Mark Kenneth Telfer (1986\u2013?)"
+      "Mark Kenneth Telfer"
     ],
     "children": [],
     "spouses": [],
@@ -4890,18 +4804,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Mitchell Telfer (2008\u2013?).md",
     "images": [
       {
         "src": "images/people/Mitchell-Telfer---16th-Birthday.jpg",
         "alt": "Mitchell Telfer   16th Birthday",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Mitchell Telfer - 16th Birthday.jpg",
         "filename": "Mitchell-Telfer---16th-Birthday.jpg"
       },
       {
         "src": "images/people/Mitchell-Telfer---18th-Birthday.jpg",
         "alt": "Mitchell Telfer   18th Birthday",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Mitchell Telfer - 18th Birthday.jpg",
         "filename": "Mitchell-Telfer---18th-Birthday.jpg"
       }
     ],
@@ -4987,7 +4898,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Murray John Telfer (1924\u20132009).md",
     "images": []
   },
   {
@@ -5054,7 +4964,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Nick Telfer.md",
     "images": []
   },
   {
@@ -5118,12 +5027,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Paul Ivory (1955\u20131996).md",
     "images": [
       {
         "src": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
         "alt": "Paul and Sheryle Ivory   Wedding Day",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Paul and Sheryle Ivory - Wedding Day.jpg",
         "filename": "Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
       }
     ],
@@ -5185,24 +5092,20 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Penny Telfer.md",
     "images": [
       {
         "src": "images/people/Penny_Virgen_age14_Clontarf_High_School.jpg",
         "alt": "Penny Virgen age14 Clontarf High School",
-        "vault_path": "/home/mark/ObsidianVault/Family History/Photos/Penny_Virgen_age14_Clontarf_High_School.jpg",
         "filename": "Penny_Virgen_age14_Clontarf_High_School.jpg"
       },
       {
         "src": "images/people/Penny_Telfer_wedding_going_away_Nov1981.jpg",
         "alt": "Penny Telfer wedding going away Nov1981",
-        "vault_path": "/home/mark/ObsidianVault/Family History/Photos/Penny_Telfer_wedding_going_away_Nov1981.jpg",
         "filename": "Penny_Telfer_wedding_going_away_Nov1981.jpg"
       },
       {
         "src": "images/people/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg",
         "alt": "Telfer Virgen family pregnant Mark Nov1985",
-        "vault_path": "/home/mark/ObsidianVault/Family History/Photos/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg",
         "filename": "Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg"
       }
     ],
@@ -5265,12 +5168,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Peter Telfer.md",
     "images": [
       {
         "src": "images/people/Peter-Telfer.jpg",
         "alt": "Peter Telfer",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Peter Telfer.jpg",
         "filename": "Peter-Telfer.jpg"
       }
     ],
@@ -5334,7 +5235,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Rob Lawrie.md",
     "images": []
   },
   {
@@ -5367,7 +5267,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Robert Dunlop Lawrie (1850\u20131917).md",
     "images": []
   },
   {
@@ -5456,7 +5355,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Robert Freddy Telfer (1886\u20131949).md",
     "images": []
   },
   {
@@ -5557,7 +5455,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Robert Telfer (1803\u20131878).md",
     "images": []
   },
   {
@@ -5644,7 +5541,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Robert Telfer (1835\u20131907).md",
     "images": []
   },
   {
@@ -5694,7 +5590,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Robyn Telfer.md",
     "images": []
   },
   {
@@ -5758,24 +5653,20 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Sheryle Telfer (1961\u2013?).md",
     "images": [
       {
         "src": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
         "alt": "Paul and Sheryle Ivory   Wedding Day",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Paul and Sheryle Ivory - Wedding Day.jpg",
         "filename": "Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
       },
       {
         "src": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
         "alt": "Wedding   Tim   Sheryle Telfer  28 Aug 1999 ",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Wedding - Tim & Sheryle Telfer (28 Aug 1999).jpg",
         "filename": "Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
       },
       {
         "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
         "alt": "Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Ivory Family - Sheryle, Joel, Aaron, Jared, Lauren.jpg",
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
@@ -5875,12 +5766,10 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Shirley Edna Telfer (1929\u20132017).md",
     "images": [
       {
         "src": "images/people/Shirley-Telfer---Portrait.jpg",
         "alt": "Shirley Telfer   Portrait",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Shirley Telfer - Portrait.jpg",
         "filename": "Shirley-Telfer---Portrait.jpg"
       }
     ],
@@ -5964,7 +5853,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Sophia Baker (1829\u20131901).md",
     "images": []
   },
   {
@@ -6012,7 +5900,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Susan Burton Telfer (1844\u20131924).md",
     "images": []
   },
   {
@@ -6093,7 +5980,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Susan Shirley Lawrie.md",
     "images": []
   },
   {
@@ -6168,7 +6054,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Susan Telfer (1871\u20131952).md",
     "images": []
   },
   {
@@ -6234,7 +6119,7 @@
     "roles": [
       "Father"
     ],
-    "body_markdown": "# Timothy Neil Telfer\n\n**Role:** Father\n**Born:** 11 July 1959\n**Residence:** Kilcoy, Queensland\n**Education:** Cummins Area School, Malyon Theological College, Tov Human Flourishing\n<!-- Facebook and LinkedIn removed for privacy -->\n**Email:** [email redacted]\n**Also known as:** Tim Telfer\n\n**Spouse (1st):** [[Penny Telfer|Penny Ann Virgen]] (m. 28 Nov 1981, Redcliffe Churches of Christ Chapel, Kippa Ring \u2014 div.)\n**Spouse (2nd):** [[Sheryle Telfer (1961\u2013?)]] (m. 28 Aug 1999)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929\u20132017)]] |\n| **Father** | [[Murray John Telfer (1924\u20132009)]] |\n| **Spouse (1st)** | [[Penny Telfer|Penny Ann Virgen]] (m. 28 Nov 1981 \u2014 div.) |\n| **Spouse (2nd)** | [[Sheryle Telfer (1961\u2013?)]] (m. 28 Aug 1999) |\n| **Children** | [[Mark Kenneth Telfer (1986\u2013?)]], [[Amy Nicole Telfer]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Telfer (1847\u20131929)|John Robert Telfer]], [[Grantley Keith Telfer]], [[Kathryn Mavis Telfer (1961\u20131965)]], [[Susan Shirley Lawrie|Susan Shirley Lawrie]] |\n\n---\n\n## Life Summary\n\nTimothy Neil Telfer \u2014 Father. Son of Murray & Shirley. First married Penny Ann Virgen on 28 November 1981 at Redcliffe Churches of Christ Chapel, Kippa Ring (divorced). Married Sheryle Telfer on 28 August 1999 at Pine Rivers Baptist Church, Lawnton. Theologically trained, with studies at Malyon Theological College and Tov Human Flourishing.\n\n---\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 28 Nov 1981 | Married **Penny Ann Virgen** at Redcliffe Churches of Christ Chapel, Kippa Ring \ud83d\udc8d Reg. No. 1981/16975 *[Marriage Certificate Transcript]* |\n| 28 Aug 1999 | Married [[Sheryle Telfer (1961\u2013?)]] at Pine Rivers Baptist Church, Lawnton \ud83d\udc8d [[Wedding - Tim & Sheryle Telfer (28 Aug 1999)]] |\n\n---\n\n## Marriage Certificate \u2014 Timothy Neil Telfer & Penny Ann Virgen (28 Nov 1981)\n\n**Registration Number:** 1981/16975  \n**Date & Place:** 28 November 1981, Church of Christ Redcliffe, Kippa Ring, Queensland  \n**Rites:** Church of Christ  \n**Celebrant:** Daryll William Telfer (Q 1478)  \n**Witnesses:** Grantley Kieth Telfer, Christine Lawrence  \n**Registered:** 10 December 1981, Brisbane (Registrar: K.W. Redman)  \n**This copy certified:** 21 February 2019\n\n### Bridegroom \u2014 Timothy Neil Telfer\n- **Age:** 22 years | **Status:** Bachelor\n- **Birthplace:** Tumby Bay, South Australia\n- **Occupation:** Student\n- **Address:** 41 Brookfield Rd, Kenmore 4069\n- **Father:** Murray John Telfer\n- **Mother (maiden):** Shirley Edna Parker\n\n### Bride \u2014 Penny Ann Virgen\n- **Age:** 21 years | **Status:** Spinster\n- **Birthplace:** Brisbane, Queensland\n- **Occupation:** Laundress\n- **Address:** 1 Chrystal St, Kippa Ring 4020\n- **Father:** Kenneth Gregory Virgen\n- **Mother (maiden):** Noela Pauline Wode\n\n---\n\n## Photos\n\n![Wedding   Tim   Sheryle Telfer  28 Aug 1999 ](images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg)\n\n*Tim and Sheryle on their wedding day, 28 August 1999.*\n\n| Photo | Description |\n|-------|-------------|\n|| ![Telfer Virgen family pregnant Mark Nov1985](images/people/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg) | Timothy Neil Telfer (patterned shirt, far right) with Penny Telfer (pregnant with Mark), Kenneth Gregory Virgen (blue leisure suit) & Noela Pauline Wode, circa 1985 ||\n\n---",
+    "body_markdown": "# Timothy Neil Telfer\n\n**Role:** Father\n**Born:** 11 July 1959\n**Residence:** Kilcoy, Queensland\n**Education:** Cummins Area School, Malyon Theological College, Tov Human Flourishing\n\n**Email:** [email redacted]\n**Also known as:** Tim Telfer\n\n**Spouse (1st):** [[Penny Telfer|Penny Ann Virgen]] (m. 28 Nov 1981, Redcliffe Churches of Christ Chapel, Kippa Ring \u2014 div.)\n**Spouse (2nd):** [[Sheryle Telfer (1961\u2013?)]] (m. 28 Aug 1999)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929\u20132017)]] |\n| **Father** | [[Murray John Telfer (1924\u20132009)]] |\n| **Spouse (1st)** | [[Penny Telfer|Penny Ann Virgen]] (m. 28 Nov 1981 \u2014 div.) |\n| **Spouse (2nd)** | [[Sheryle Telfer (1961\u2013?)]] (m. 28 Aug 1999) |\n| **Children** | [[Mark Kenneth Telfer (1986\u2013?)]], [[Amy Nicole Telfer]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Telfer (1847\u20131929)|John Robert Telfer]], [[Grantley Keith Telfer]], [[Kathryn Mavis Telfer (1961\u20131965)]], [[Susan Shirley Lawrie|Susan Shirley Lawrie]] |\n\n---\n\n## Life Summary\n\nTimothy Neil Telfer \u2014 Father. Son of Murray & Shirley. First married Penny Ann Virgen on 28 November 1981 at Redcliffe Churches of Christ Chapel, Kippa Ring (divorced). Married Sheryle Telfer on 28 August 1999 at Pine Rivers Baptist Church, Lawnton. Theologically trained, with studies at Malyon Theological College and Tov Human Flourishing.\n\n---\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 28 Nov 1981 | Married **Penny Ann Virgen** at Redcliffe Churches of Christ Chapel, Kippa Ring \ud83d\udc8d [certificate registration redacted] *[Marriage Certificate Transcript]* |\n| 28 Aug 1999 | Married [[Sheryle Telfer (1961\u2013?)]] at Pine Rivers Baptist Church, Lawnton \ud83d\udc8d [[Wedding - Tim & Sheryle Telfer (28 Aug 1999)]] |\n\n---\n\n## Marriage Certificate \u2014 Timothy Neil Telfer & Penny Ann Virgen (28 Nov 1981)\n\n**Registration Number:** [redacted]  \n**Date & Place:** 28 November 1981, Church of Christ Redcliffe, Kippa Ring, Queensland  \n**Rites:** Church of Christ  \n**Celebrant:** Daryll William Telfer (Q 1478)  \n**Witnesses:** Grantley Kieth Telfer, Christine Lawrence  \n**Registered:** 10 December 1981, Brisbane (Registrar: K.W. Redman)  \n**This copy certified:** 21 February 2019\n\n### Bridegroom \u2014 Timothy Neil Telfer\n- **Age:** 22 years | **Status:** Bachelor\n- **Birthplace:** Tumby Bay, South Australia\n- **Occupation:** Student\n- **Address:** 41 Brookfield Rd, Kenmore 4069\n- **Father:** Murray John Telfer\n- **Mother (maiden):** Shirley Edna Parker\n\n### Bride \u2014 Penny Ann Virgen\n- **Age:** 21 years | **Status:** Spinster\n- **Birthplace:** Brisbane, Queensland\n- **Occupation:** Laundress\n- **Address:** 1 Chrystal St, Kippa Ring 4020\n- **Father:** Kenneth Gregory Virgen\n- **Mother (maiden):** Noela Pauline Wode\n\n---\n\n## Photos\n\n![Wedding   Tim   Sheryle Telfer  28 Aug 1999 ](images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg)\n\n*Tim and Sheryle on their wedding day, 28 August 1999.*\n\n| Photo | Description |\n|-------|-------------|\n|| ![Telfer Virgen family pregnant Mark Nov1985](images/people/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg) | Timothy Neil Telfer (patterned shirt, far right) with Penny Telfer (pregnant with Mark), Kenneth Gregory Virgen (blue leisure suit) & Noela Pauline Wode, circa 1985 ||\n\n---",
     "body_stripped": "**Role:** Father\n**Born:** 11 July 1959\n**Residence:** Kilcoy, Queensland\n**Education:** Cummins Area School, Malyon Theological College, Tov Human Flourishing\n<!-- Facebook and LinkedIn removed for privacy -->\n**Email:** [email redacted]\n**Also known as:** Tim Telfer\n\n**Spouse (1st):** Penny TelferPenny Ann Virgen (m. 28 Nov 1981, Redcliffe Churches of Christ Chapel, Kippa Ring \u2014 div.)\n**Spouse (2nd):** Sheryle Telfer (1961\u2013?) (m. 28 Aug 1999)\n\n## Family\n\n Relation  Name \n\n **Mother**  S",
     "is_living": true,
     "lifespan": "1959 \u2013 living",
@@ -6259,18 +6144,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Timothy Neil Telfer (1959\u2013?).md",
     "images": [
       {
         "src": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
         "alt": "Wedding   Tim   Sheryle Telfer  28 Aug 1999 ",
-        "vault_path": "/home/mark/ObsidianVault/Family History/_assets/Wedding - Tim & Sheryle Telfer (28 Aug 1999).jpg",
         "filename": "Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
       },
       {
         "src": "images/people/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg",
         "alt": "Telfer Virgen family pregnant Mark Nov1985",
-        "vault_path": "/home/mark/ObsidianVault/Family History/Photos/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg",
         "filename": "Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg"
       }
     ],
@@ -6354,7 +6236,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Vida Templer (1919\u20132021).md",
     "images": []
   },
   {
@@ -6460,7 +6341,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "William Henry Parker (1893\u20131968).md",
     "images": []
   },
   {
@@ -6554,7 +6434,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "William Humphrey Parker (1850\u20131926).md",
     "images": []
   },
   {
@@ -6635,7 +6514,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "William John Baker (1831\u20131919).md",
     "images": []
   },
   {
@@ -6699,7 +6577,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "William Webster (1778\u20131816).md",
     "images": []
   },
   {
@@ -6766,7 +6643,6 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Zabella Violet Zelda Telfer (2019\u2013?).md",
     "images": []
   }
 ]
