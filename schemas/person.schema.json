@@ -1,10 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://telferwiki.org/schemas/person.schema.json",
-  "title": "Telfer Wiki Person",
-  "type": "object",
-  "description": "Canonical person record for Telfer Wiki. All string fields constrained to prevent first-person 'Mark' references.",
-  "properties": {
+  "title": "Telfer Wiki People",
+  "description": "Array of canonical person records for Telfer Wiki. Each item validated against the person schema.",
+  "type": "array",
+  "items": {
+    "title": "Telfer Wiki Person",
+    "type": "object",
+    "description": "Canonical person record for Telfer Wiki. All string fields constrained to prevent first-person 'Mark' references.",
+    "properties": {
     "id": { "type": "string", "description": "Unique identifier (e.g., 'Nick Telfer')" },
     "slug": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "URL-safe slug" },
     "first_name": { "type": "string" },
@@ -82,6 +86,7 @@
       }
     }
   },
-  "required": ["id", "slug", "first_name", "last_name", "display_name", "roles"],
-  "additionalProperties": true
+    "required": ["id", "slug", "first_name", "last_name", "display_name", "roles"],
+    "additionalProperties": true
+  }
 }
