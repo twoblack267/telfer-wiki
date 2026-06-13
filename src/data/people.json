@@ -565,7 +565,8 @@
       {
         "src": "images/people/francis-charles-amy-telfer-wedding-1909.jpg",
         "alt": "Francis Charles 'Charlie' Telfer and Amy Ellen Provis on their wedding day, 6 April 1909. Studio portrait, sepia tones. Charlie (aged 33) in dark three-piece suit with handlebar mustache, white pocket square, watch chain, and boutonnière. Amy (aged 25) in elaborate white lace gown with high ruffled collar, voluminous sleeves, and floral headpiece, holding a small bouquet. Painted tropical foliage backdrop and draped curtain.",
-        "vault_path": "_assets/Francis Charles and Amy Telfer wedding 6 April 1909.jpg"
+        "vault_path": "_assets/Francis Charles and Amy Telfer wedding 6 April 1909.jpg",
+        "filename": "francis-charles-amy-telfer-wedding-1909.jpg"
       },
       {
         "src": "images/people/amy-ellen-telfer.jpg",
@@ -582,7 +583,8 @@
       {
         "src": "images/people/telfer-family-reunion-c1920.jpg",
         "alt": "Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. Amy Ellen Telfer (1884–1951, aged ~36) standing among the adults with her husband Francis Charles 'Charlie' Telfer (1875–1954, aged ~45), their children and grandchildren. Her parents-in-law John Telfer (1847–1929) and Caroline Amelia Telfer (1842–1929) seated center. Studio setting with textured wallpaper backdrop.",
-        "vault_path": "_assets/Telfer family reunion c1920.jpg"
+        "vault_path": "_assets/Telfer family reunion c1920.jpg",
+        "filename": "telfer-family-reunion-c1920.jpg"
       }
     ],
     "person_photo": "images/people/amy-ellen-telfer.jpg"
@@ -872,12 +874,14 @@
       {
         "src": "images/people/caroline-amelia-telfer-portrait-c1910.jpg",
         "alt": "Caroline Amelia Telfer (née Masters) studio portrait, circa 1910. Late 19th/early 20th century style, high lace collar, dark garment, composed expression.",
-        "vault_path": "_assets/Caroline Amelia Telfer portrait c1910.jpg"
+        "vault_path": "_assets/Caroline Amelia Telfer portrait c1910.jpg",
+        "filename": "caroline-amelia-telfer-portrait-c1910.jpg"
       },
       {
         "src": "images/people/telfer-family-reunion-c1920.jpg",
         "alt": "Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated center with white beard and lace collar respectively. Their son Francis Charles 'Charlie' Telfer (1875–1954, aged ~45) and wife Amy Ellen Telfer (1884–1951, aged ~36) among the standing adults with their children and grandchildren. Studio setting with textured wallpaper backdrop.",
-        "vault_path": "_assets/Telfer family reunion c1920.jpg"
+        "vault_path": "_assets/Telfer family reunion c1920.jpg",
+        "filename": "telfer-family-reunion-c1920.jpg"
       }
     ]
   },
@@ -2032,7 +2036,8 @@
       {
         "src": "images/people/francis-charles-amy-telfer-wedding-1909.jpg",
         "alt": "Francis Charles 'Charlie' Telfer and Amy Ellen Provis on their wedding day, 6 April 1909. Studio portrait, sepia tones. Charlie (aged 33) in dark three-piece suit with handlebar mustache, white pocket square, watch chain, and boutonnière. Amy (aged 25) in elaborate white lace gown with high ruffled collar, voluminous sleeves, and floral headpiece, holding a small bouquet. Painted tropical foliage backdrop and draped curtain.",
-        "vault_path": "_assets/Francis Charles and Amy Telfer wedding 6 April 1909.jpg"
+        "vault_path": "_assets/Francis Charles and Amy Telfer wedding 6 April 1909.jpg",
+        "filename": "francis-charles-amy-telfer-wedding-1909.jpg"
       },
       {
         "src": "images/people/francis-charles-telfer-grave.jpg",
@@ -2043,7 +2048,8 @@
       {
         "src": "images/people/telfer-family-reunion-c1920.jpg",
         "alt": "Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. Francis Charles 'Charlie' Telfer (1875–1954, aged ~45) standing among the adults with his wife Amy Ellen Telfer (1884–1951, aged ~36), their children and grandchildren. His parents John Telfer (1847–1929) and Caroline Amelia Telfer (1842–1929) seated center. Studio setting with textured wallpaper backdrop.",
-        "vault_path": "_assets/Telfer family reunion c1920.jpg"
+        "vault_path": "_assets/Telfer family reunion c1920.jpg",
+        "filename": "telfer-family-reunion-c1920.jpg"
       }
     ],
     "person_photo": null
@@ -3568,7 +3574,8 @@
       {
         "src": "images/people/telfer-family-reunion-c1920.jpg",
         "alt": "Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated center with white beard and lace collar respectively. Their son Francis Charles 'Charlie' Telfer (1875–1954, aged ~45) and wife Amy Ellen Telfer (1884–1951, aged ~36) among the standing adults with their children and grandchildren. Studio setting with textured wallpaper backdrop.",
-        "vault_path": "_assets/Telfer family reunion c1920.jpg"
+        "vault_path": "_assets/Telfer family reunion c1920.jpg",
+        "filename": "telfer-family-reunion-c1920.jpg"
       }
     ]
   },
