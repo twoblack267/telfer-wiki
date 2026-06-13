@@ -565,6 +565,10 @@
         "src": "images/people/amy-ellen-telfer-grave.jpg",
         "alt": "Amy ellen telfer grave",
         "filename": "amy-ellen-telfer-grave.jpg"
+      },
+      {
+        "src": "images/people/telfer-family-reunion-c1920.jpg",
+        "alt": "Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. Amy Ellen Telfer (1884–1951, aged ~36) standing among the adults with her husband Francis Charles 'Charlie' Telfer (1875–1954, aged ~45), their children and grandchildren. Her parents-in-law John Telfer (1847–1929) and Caroline Amelia Telfer (1842–1929) seated center. Studio setting with textured wallpaper backdrop."
       }
     ],
     "person_photo": "images/people/amy-ellen-telfer.jpg"
@@ -848,6 +852,10 @@
       {
         "src": "images/people/caroline-amelia-telfer-portrait-c1910.jpg",
         "alt": "Caroline Amelia Telfer (née Masters) studio portrait, circa 1910. Late 19th/early 20th century style, high lace collar, dark garment, composed expression."
+      },
+      {
+        "src": "images/people/telfer-family-reunion-c1920.jpg",
+        "alt": "Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated center with white beard and lace collar respectively. Their son Francis Charles 'Charlie' Telfer (1875–1954, aged ~45) and wife Amy Ellen Telfer (1884–1951, aged ~36) among the standing adults with their children and grandchildren. Studio setting with textured wallpaper backdrop."
       }
     ]
   },
@@ -1990,6 +1998,10 @@
         "src": "images/people/francis-charles-telfer-grave.jpg",
         "alt": "Francis charles telfer grave",
         "filename": "francis-charles-telfer-grave.jpg"
+      },
+      {
+        "src": "images/people/telfer-family-reunion-c1920.jpg",
+        "alt": "Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. Francis Charles 'Charlie' Telfer (1875–1954, aged ~45) standing among the adults with his wife Amy Ellen Telfer (1884–1951, aged ~36), their children and grandchildren. His parents John Telfer (1847–1929) and Caroline Amelia Telfer (1842–1929) seated center. Studio setting with textured wallpaper backdrop."
       }
     ],
     "person_photo": null
@@ -3481,7 +3493,12 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/telfer-family-reunion-c1920.jpg",
+        "alt": "Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated center with white beard and lace collar respectively. Their son Francis Charles 'Charlie' Telfer (1875–1954, aged ~45) and wife Amy Ellen Telfer (1884–1951, aged ~36) among the standing adults with their children and grandchildren. Studio setting with textured wallpaper backdrop."
+      }
+    ]
   },
   {
     "id": "John Telfer (of Castleton)",
