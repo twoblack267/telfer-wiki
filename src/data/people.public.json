@@ -4898,7 +4898,91 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg",
+        "alt": "Murray John Telfer and sister Ruth Telfer (aged 6) on Duchess the horse with family dog, circa 1936",
+        "filename": "murray-ruth-telfer-duchess-horse-1936.jpg"
+      }
+    ],
+    "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg"
+  },
+  {
+    "id": "Ruth Telfer",
+    "slug": "ruth-telfer",
+    "first_name": "Ruth",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1930,
+    "death_year": null,
+    "birth_year_display": "1930",
+    "death_year_display": "living",
+    "display_name": "Ruth Telfer",
+    "title": "Ruth Telfer — Family & Biography",
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Ruth Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Murray John Telfer",
+          "Reg Telfer",
+          "May Telfer",
+          "Eddie Telfer"
+        ]
+      }
+    ],
+    "roles": [
+      "Sister of Murray John Telfer"
+    ],
+    "body_markdown": "# Ruth Telfer\n\n**Role:** Sister of Murray John Telfer — daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis)\n**Born:** circa 1930 — South Australia\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]]\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Reg, May, Eddie (and others)\n\n---\n\n## Life Summary\n\nRuth Telfer was the youngest (or among the youngest) of the Telfer children born to Francis and Amy Telfer. She appears in a cherished family photograph circa 1936 at approximately age 6, riding the family horse **Duchess** with her brother Murray (then aged ~12), accompanied by the family dog.\n\nThe photograph captures a tender moment of rural childhood on the Eyre Peninsula — Ruth beaming with joy in her bob haircut and light summer top, bare legs dangling, while Murray holds the reins responsibly. Duchess, a bay with distinctive white blaze and four white socks, was clearly a beloved family horse.\n\nFurther details of Ruth's life — marriage, children, later residence — are currently being researched.\n\n---\n\n## Photos\n\n![Murray John Telfer and sister Ruth Telfer (aged 6) on Duchess the horse with family dog, circa 1936](images/people/murray-ruth-telfer-duchess-horse-1936.jpg)\n\n*Murray John Telfer (aged ~12) and his sister Ruth Telfer (aged 6) on Duchess the horse with the family dog, circa 1936. Ruth's joyful smile and Murray's protective posture capture a classic sibling moment on the family farm.*\n\n---\n\n## Sources\n\n- Family photograph: Murray and Ruth on Duchess the horse, circa 1936 (original print held by family)\n- Murray John Telfer profile: confirms Francis Charles Telfer and Amy Ellen Telfer as parents\n\n---",
+    "body_stripped": "**Role:** Sister of Murray John Telfer — daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis)\n**Born:** circa 1930 — South Australia\n**Parents:** Francis Charles Telfer (1875–1954) & Amy Ellen Telfer (1884–1951)\n**Brother:** Murray John Telfer (1924–2009)\n**Siblings:** Reg, May, Eddie (and others)\n\n## Life Summary\n\nRuth Telfer was the youngest (or among the youngest) of the Telfer children born to Francis and Amy Telfer. She appears in a cherished family photograph circa 1936 at approximately age 6, riding the family horse Duchess with her brother Murray (then aged ~12), accompanied by the family dog.\n\nThe photograph captures a tender moment of rural childhood on the Eyre Peninsula — Ruth beaming with joy in her bob haircut and light summer top, bare legs dangling, while Murray holds the reins responsibly. Duchess, a bay with distinctive white blaze and four white socks, was clearly a beloved family horse.\n\nFurther details of Ruth's life — marriage, children, later residence — are currently being researched.\n\n## Photos\n\nMurray John Telfer and sister Ruth Telfer (aged 6) on Duchess the horse with family dog, circa 1936\n\n*Murray John Telfer (aged ~12) and his sister Ruth Telfer (aged 6) on Duchess the horse with the family dog, circa 1936. Ruth's joyful smile and Murray's protective posture capture a classic sibling moment on the family farm.*\n\n## Sources\n\n- Family photograph: Murray and Ruth on Duchess the horse, circa 1936 (original print held by family)\n- Murray John Telfer profile: confirms Francis Charles Telfer and Amy Ellen Telfer as parents\n",
+    "is_living": true,
+    "lifespan": "1930 – living",
+    "parents": [
+      "Francis Charles Telfer",
+      "Amy Ellen Telfer (née Provis)"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "Murray John Telfer",
+      "Reg Telfer",
+      "May Telfer",
+      "Eddie Telfer"
+    ],
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [
+      {
+        "src": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg",
+        "alt": "Murray John Telfer and sister Ruth Telfer (aged 6) on Duchess the horse with family dog, circa 1936",
+        "filename": "murray-ruth-telfer-duchess-horse-1936.jpg"
+      }
+    ],
+    "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg"
   },
   {
     "id": "Nick Telfer",
