@@ -840,7 +840,12 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": []
+    "images": [
+      {
+        "src": "images/people/caroline-amelia-telfer-portrait-c1910.jpg",
+        "alt": "Caroline Amelia Telfer (née Masters) studio portrait, circa 1910. Late 19th/early 20th century style, high lace collar, dark garment, composed expression."
+      }
+    ]
   },
   {
     "id": "Caroline Edna Lawrie",
