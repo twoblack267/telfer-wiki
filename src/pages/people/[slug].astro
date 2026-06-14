@@ -105,8 +105,9 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
                   <img
                     src={import.meta.env.BASE_URL + img.src}
                     alt={img.alt}
-                    class="w-full h-auto rounded-lg border border-[var(--color-border)] object-cover aspect-[4/3]"
+                    class="w-full h-auto rounded-lg border border-[var(--color-border)] object-contain bg-[var(--color-surface)]"
                     loading="lazy"
+                    style="max-height: 300px;"
                   />
                   <figcaption class="text-xs text-[var(--color-muted)] mt-1 text-center line-clamp-2">{img.alt}</figcaption>
                 </figure>
