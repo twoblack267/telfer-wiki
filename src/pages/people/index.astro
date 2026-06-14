@@ -13,6 +13,9 @@ const telferPeople = people
     return a.display_name.localeCompare(b.display_name);
   });
 
+// Feature flag for Family Tree tab
+const TELFER_TREE_ENABLED = import.meta.env.TELFER_TREE_ENABLED === "true";
+
 // Extract unique tags
 const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
 ---
@@ -26,6 +29,34 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
       &nbsp;·&nbsp; <span>{telferPeople.filter(p => !p.is_living).length} deceased</span>
     </p>
   </div>
+
+  <!-- Tab Navigation -->
+  <nav class="mb-4 border-b border-[var(--color-border)]" aria-label="Tree views">
+    <ul class="flex gap-1" role="tablist">
+      <li role="presentation">
+        <a
+          href="/people"
+          class="px-4 py-2 rounded-t-lg border-b-2 border-[var(--color-link)] text-[var(--color-link)] font-medium"
+          role="tab"
+          aria-selected="true"
+        >
+          Pedigree (Direct Line)
+        </a>
+      </li>
+      {TELFER_TREE_ENABLED && (
+        <li role="presentation">
+          <a
+            href="/people/telfer-tree"
+            class="px-4 py-2 rounded-t-lg border-b-2 border-transparent text-[var(--color-muted)] hover:text-[var(--color-heading)] font-medium"
+            role="tab"
+            aria-selected="false"
+          >
+            Family Tree (Charles & Sons)
+          </a>
+        </li>
+      )}
+    </ul>
+  </nav>
 
   <!-- Filters -->
   <div class="flex flex-wrap gap-3 mb-6 items-center">

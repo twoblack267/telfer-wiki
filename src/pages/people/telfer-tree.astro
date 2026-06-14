@@ -1,0 +1,166 @@
+---
+// TelferTree.astro — Telfer-surname descendant chart from Charles & Sons
+// Feature-flagged: set TELFER_TREE_ENABLED=true in env to show
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const people = (await import("../../data/people.public.json")).default;
+const telferPeople = people.filter((p) => p.last_name?.toLowerCase() === "telfer");
+
+// Feature flag — default OFF
+const TREE_ENABLED = import.meta.env.TELFER_TREE_ENABLED === "true";
+
+// Helper: find person by ID (handles various formats)
+function findPerson(id: string) {
+  return telferPeople.find((p) =>
+    p.id === id ||
+    p.display_name === id ||
+    p.slug === id
+  );
+}
+
+// Build tree from Francis Charles Telfer (1875–1954) — the "Charles" of Charles & Sons
+const FRANCIS_ID = "Francis Charles Telfer (1875–1954)";
+const francis = findPerson(FRANCIS_ID);
+
+function getAllChildren(person) {
+  if (!person?.children) return [];
+  return person.children
+    .map((c) => findPerson(c))
+    .filter((c) => c)
+    .sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
+}
+
+function getSpouse(person) {
+  if (!person?.spouses) return null;
+  const spouseId = person.spouses[0];
+  return findPerson(spouseId);
+}
+
+// Should we recurse into this person's children?
+// Recurse if: they have Telfer surname (son or unmarried daughter)
+// Don't recurse if: they have a different surname (married daughter)
+function shouldRecurse(person) {
+  return person.last_name?.toLowerCase() === "telfer";
+}
+
+function renderPerson(person, depth = 0) {
+  if (!person) return "";
+  const spouse = getSpouse(person);
+  const allChildren = getAllChildren(person);
+  const childrenToRecurse = allChildren.filter(shouldRecurse);
+  const childrenToShowOnly = allChildren.filter((c) => !shouldRecurse(c));
+
+  const indent = "  ".repeat(depth);
+  const lifespan = `${person.birth_year || "?"}–${person.death_year || person.is_living ? "living" : "?"}`;
+  const livingBadge = person.is_living ? " <span class=\"text-xs text-green-600\">(living)</span>" : "";
+  const spouseName = spouse ? ` + ${spouse.display_name} (${spouse.birth_year || "?"}–${spouse.death_year || spouse.is_living ? "living" : "?"})` : "";
+  const surnameLabel = person.last_name?.toLowerCase() !== "telfer" ? ` <span class="text-xs text-[var(--color-muted)]">[${person.last_name}]</span>` : "";
+
+  let html = `
+${indent}<details class="tree-node" open>
+${indent}  <summary class="cursor-pointer select-none flex items-center gap-2">
+${indent}    <span class="font-mono text-[var(--color-heading)]">${"│  ".repeat(depth)}├─</span>
+${indent}    <strong>${person.display_name}</strong>
+${indent}    <span class="text-xs text-[var(--color-muted)]">(${lifespan})</span>${livingBadge}${spouseName}${surnameLabel}
+${indent}  </summary>
+${indent}  <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">`;
+
+  // First: children who continue the Telfer line (recurse)
+  for (const child of childrenToRecurse) {
+    html += renderPerson(child, depth + 1);
+  }
+
+  // Then: married daughters (show but don't recurse)
+  for (const child of childrenToShowOnly) {
+    const childSpouse = getSpouse(child);
+    const childLifespan = `${child.birth_year || "?"}–${child.death_year || child.is_living ? "living" : "?"}`;
+    const childLivingBadge = child.is_living ? " <span class=\"text-xs text-green-600\">(living)</span>" : "";
+    const childSpouseName = childSpouse ? ` + ${childSpouse.display_name} (${childSpouse.birth_year || "?"}–${childSpouse.death_year || childSpouse.is_living ? "living" : "?"})` : "";
+    const childSurnameLabel = ` <span class="text-xs text-[var(--color-muted)]">[${child.last_name}]</span>`;
+
+    html += `
+${indent}    <div class="tree-leaf" style="margin-top: 0.25rem;">
+${indent}      <span class="font-mono text-[var(--color-heading)]">${"│  ".repeat(depth + 1)}├─</span>
+${indent}      <strong>${child.display_name}</strong>
+${indent}      <span class="text-xs text-[var(--color-muted)]">(${childLifespan})</span>${childLivingBadge}${childSpouseName}${childSurnameLabel}
+${indent}      <span class="text-xs text-[var(--color-muted)] ml-8">→ line ends (married name)</span>
+${indent}    </div>`;
+  }
+
+  html += `
+${indent}  </div>
+${indent}</details>`;
+  return html;
+}
+
+const treeHtml = francis ? renderPerson(francis) : "<p>Francis Charles Telfer not found</p>";
+
+const pageTitle = "Telfer Family Tree (Charles & Sons)";
+---
+
+<BaseLayout title={pageTitle}>
+  <div class="max-w-6xl mx-auto p-4">
+    <!-- Tab Navigation -->
+    <nav class="mb-4 border-b border-[var(--color-border)]" aria-label="Tree views">
+      <ul class="flex gap-1" role="tablist">
+        <li role="presentation">
+          <a
+            href="/people"
+            class="px-4 py-2 rounded-t-lg border-b-2 border-[var(--color-link)] text-[var(--color-link)] font-medium"
+            role="tab"
+            aria-selected="false"
+          >
+            Pedigree (Direct Line)
+          </a>
+        </li>
+        <li role="presentation">
+          <a
+            href="/people/telfer-tree"
+            class="px-4 py-2 rounded-t-lg border-b-2 border-transparent text-[var(--color-muted)] hover:text-[var(--color-heading)] font-medium"
+            role="tab"
+            aria-selected="true"
+          >
+            Family Tree (Charles & Sons)
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-2">{pageTitle}</h1>
+    <p class="text-[var(--color-muted)] mb-6">
+      Descendant chart from <strong>Francis Charles Telfer (1875–1954)</strong> — Telfer-surname line only.
+      Wives shown; daughters' married lines excluded. Click triangles to expand/collapse.
+    </p>
+
+    <div class="person-card rounded-xl p-4 prose prose-sm max-w-none" style="font-size: 0.875rem;">
+      <div class="tree-container">
+        {treeHtml}
+      </div>
+    </div>
+
+    <style>
+      .tree-node summary {
+        line-height: 1.6;
+        transition: color 0.15s;
+      }
+      .tree-node summary:hover {
+        color: var(--color-link);
+      }
+      .tree-node summary::marker {
+        content: "";
+      }
+      .tree-node summary:focus {
+        outline: 2px solid var(--color-link);
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+      .tree-node[open] > summary {
+        color: var(--color-heading);
+      }
+      .tree-container {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        line-height: 1.7;
+      }
+    </style>
+  </div>
+</BaseLayout>
