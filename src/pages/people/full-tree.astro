@@ -1,0 +1,546 @@
+---
+// FullTree.astro — Complete Telfer Family Tree from John Telfer of Castleton (~1715)
+// Phone-first: single branch open at a time, collapsible accordion
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const people = (await import("../../data/people.public.json")).default;
+const allPeople = people;
+
+// Build a lookup map for faster matching
+const personById = new Map(allPeople.map(p => [p.id, p]));
+const personByDisplayName = new Map(allPeople.map(p => [p.display_name, p]));
+const personBySlug = new Map(allPeople.map(p => [p.slug, p]));
+
+// Also index by (firstName, birthYear) for fuzzy matching children
+const personByFirstNameAndBirth = new Map();
+for (const p of allPeople) {
+  if (p.birth_year) {
+    const firstName = p.display_name.split(' ')[0];
+    const key = `${firstName.toLowerCase()}:${p.birth_year}`;
+    if (!personByFirstNameAndBirth.has(key)) {
+      personByFirstNameAndBirth.set(key, p);
+    }
+  }
+}
+
+// Helper: find person by ID (handles various formats)
+// CRITICAL: When the input contains a birth year (e.g., "James (1796–1863)"),
+// ALWAYS use firstName:birthYear matching to disambiguate same-name people.
+// personByDisplayName has collisions (e.g., 4 "James Telfer" entries).
+function findPerson(id: string | undefined, dataset = allPeople) {
+  if (!id) return undefined;
+  // Try exact matches first
+  if (personById.has(id)) return personById.get(id);
+  if (personBySlug.has(id)) return personBySlug.get(id);
+  
+  // Check if input contains a birth year in parentheses
+  const yearMatch = id.match(/\((\d{4})/);
+  const hasBirthYear = !!yearMatch;
+  
+  // Try stripping the years suffix
+  const nameOnly = id.replace(/\s*\([^)]+\)\s*$/, "").trim();
+  
+  // If we have a birth year, PRIORITIZE firstName:birthYear matching
+  // This disambiguates people with same display_name (e.g., 4x "James Telfer")
+  if (hasBirthYear && yearMatch) {
+    const birthYear = parseInt(yearMatch[1]);
+    const firstName = nameOnly.split(' ')[0].toLowerCase();
+    const key = `${firstName}:${birthYear}`;
+    if (personByFirstNameAndBirth.has(key)) {
+      return personByFirstNameAndBirth.get(key);
+    }
+  }
+  
+  // Fallback: try display_name match (only safe for unique names)
+  if (personByDisplayName.has(nameOnly)) {
+    const candidate = personByDisplayName.get(nameOnly);
+    // Verify this candidate isn't ambiguous by checking if firstName:birthYear would give different result
+    if (candidate?.birth_year) {
+      const firstName = nameOnly.split(' ')[0].toLowerCase();
+      const key = `${firstName}:${candidate.birth_year}`;
+      const preciseMatch = personByFirstNameAndBirth.get(key);
+      if (preciseMatch && preciseMatch !== candidate) {
+        // There's a more precise match available, but we don't have the birth year from input
+        // Return the display_name match (best we can do)
+      }
+    }
+    return candidate;
+  }
+  
+  // Last resort: if we have a birth year but firstName:birthYear didn't match,
+  // try fuzzy firstName match across all people with that birth year
+  if (hasBirthYear && yearMatch) {
+    const birthYear = parseInt(yearMatch[1]);
+    const firstName = nameOnly.split(' ')[0].toLowerCase();
+    // Search all people with matching birth_year and first_name in display_name
+    for (const p of allPeople) {
+      if (p.birth_year === birthYear) {
+        const pFirstName = p.display_name.split(' ')[0].toLowerCase();
+        if (pFirstName === firstName || pFirstName.startsWith(firstName) || firstName.startsWith(pFirstName)) {
+          return p;
+        }
+      }
+    }
+  }
+  
+  return undefined;
+}
+
+// Build a complete tree structure with virtual nodes for children without records
+interface TreeNode {
+  display_name: string;
+  birth_year: number | null;
+  death_year: number | null;
+  is_living: boolean;
+  last_name?: string;
+  spouses?: string[];
+  children?: string[];
+  id: string;
+  virtual: boolean;
+  _resolvedChildren?: TreeNode[];
+  _resolvedSpouse?: TreeNode | null;
+}
+
+function createVirtualPerson(name: string, parentBirthYear?: number): TreeNode {
+  // Extract approximate birth year from name like "James (1796–1863)"
+  const yearMatch = name.match(/\((\d{4})/);
+  const birthYear = yearMatch ? parseInt(yearMatch[1]) : (parentBirthYear ? parentBirthYear + 25 : null);
+  const deathMatch = name.match(/–(\d{4})/);
+  const deathYear = deathMatch ? parseInt(deathMatch[1]) : null;
+  const isLiving = !deathYear && birthYear && birthYear > 1900;
+  
+  // Extract just the name without years
+  const cleanName = name.replace(/\s*\([^)]+\)\s*$/, "").trim();
+  
+  return {
+    display_name: cleanName,
+    birth_year: birthYear,
+    death_year: deathYear,
+    is_living: isLiving,
+    last_name: "Telfer",
+    spouses: [],
+    children: [],
+    id: `virtual:${name}`,
+    virtual: true
+  };
+}
+
+// Resolve all children recursively, creating virtual nodes as needed
+function resolveChildren(person: TreeNode, depth = 0): TreeNode[] {
+  if (!person.children || person.children.length === 0) return [];
+  
+  const resolved = person.children.map(childName => {
+    // Try to find real person first
+    const realPerson = findPerson(childName);
+    if (realPerson) {
+      return {
+        display_name: realPerson.display_name,
+        birth_year: realPerson.birth_year,
+        death_year: realPerson.death_year,
+        is_living: realPerson.is_living || false,
+        last_name: realPerson.last_name,
+        spouses: realPerson.spouses,
+        children: realPerson.children,
+        id: realPerson.id,
+        virtual: false
+      };
+    }
+    // Create virtual person
+    return createVirtualPerson(childName, person.birth_year || undefined);
+  });
+  
+  // Sort by birth year
+  return resolved.sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
+}
+
+function resolveSpouse(person: TreeNode): TreeNode | null {
+  if (!person.spouses || person.spouses.length === 0) return null;
+  const spouseId = person.spouses[0];
+  const realSpouse = findPerson(spouseId);
+  if (realSpouse) {
+    return {
+      display_name: realSpouse.display_name,
+      birth_year: realSpouse.birth_year,
+      death_year: realSpouse.death_year,
+      is_living: realSpouse.is_living || false,
+      last_name: realSpouse.last_name,
+      spouses: realSpouse.spouses,
+      children: realSpouse.children,
+      id: realSpouse.id,
+      virtual: false
+    };
+  }
+  return null;
+}
+
+// Build the complete tree starting from root
+const ROOT_ID = "John Telfer (of Castleton)";
+const realRoot = findPerson(ROOT_ID);
+
+if (!realRoot) {
+  throw new Error("Root person not found: " + ROOT_ID);
+}
+
+// Create root TreeNode
+const root: TreeNode = {
+  display_name: realRoot.display_name,
+  birth_year: realRoot.birth_year,
+  death_year: realRoot.death_year,
+  is_living: realRoot.is_living || false,
+  last_name: realRoot.last_name,
+  spouses: realRoot.spouses,
+  children: realRoot.children,
+  id: realRoot.id,
+  virtual: false
+};
+
+// Pre-resolve entire tree for rendering
+function buildFullTree(node: TreeNode, visited = new Set<string>()): TreeNode {
+  // Prevent cycles
+  if (visited.has(node.id)) {
+    // Return a shallow copy without children/spouse to break cycle
+    return { ...node, _resolvedChildren: [], _resolvedSpouse: null };
+  }
+  visited.add(node.id);
+  
+  node._resolvedChildren = resolveChildren(node).map(child => buildFullTree(child, visited));
+  node._resolvedSpouse = resolveSpouse(node);
+  return node;
+}
+
+buildFullTree(root);
+
+// Generation labels for display
+const GENERATIONS = [
+  { label: "1st Gen", from: 1715, to: 1761, ancestor: "John Telfer of Castleton" },
+  { label: "2nd Gen", from: 1761, to: 1809, ancestor: "James Telfer (1761–1845)" },
+  { label: "3rd Gen", from: 1809, to: 1895, ancestor: "Francis Telfer (1809–1895)" },
+  { label: "4th Gen", from: 1847, to: 1929, ancestor: "John Telfer (1847–1929)" },
+  { label: "5th Gen", from: 1875, to: 1954, ancestor: "Francis Charles Telfer (1875–1954)" },
+  { label: "6th Gen", from: 1924, to: 2009, ancestor: "Murray John Telfer (1924–2009)" },
+  { label: "7th Gen", from: 1959, to: 2024, ancestor: "Timothy Neil Telfer (1959–)" },
+  { label: "8th Gen", from: 2008, to: 2024, ancestor: "Mark's Kids (Mitchell, Levi, Zabella)" },
+];
+
+function renderTree(person: TreeNode, depth = 0, options = {}) {
+  if (!person) return "";
+  const { showAll = false, currentId = null } = options;
+  const spouse = person._resolvedSpouse;
+  const allChildren = person._resolvedChildren || [];
+
+  const indent = "  ".repeat(depth);
+  const lifespan = `${person.birth_year || "?"}–${
+    person.death_year ?? (person.is_living ? "living" : "?")
+  }`;
+  const livingBadge = person.is_living
+    ? ' <span class="badge badge-living text-xs">living</span>'
+    : "";
+  const virtualBadge = person.virtual
+    ? ' <span class="badge badge-virtual text-xs" style="background: var(--color-warning); color: var(--color-surface);">virtual</span>'
+    : "";
+  const spouseName = spouse
+    ? ` + ${spouse.display_name} (${spouse.birth_year || "?"}–${
+        spouse.death_year ?? (spouse.is_living ? "living" : "?")
+      })`
+    : "";
+  const surnameLabel =
+    person.last_name?.toLowerCase() !== "telfer"
+      ? ` <span class="text-xs text-[var(--color-muted)]">[${person.last_name}]</span>`
+      : "";
+  const isCurrent = currentId && person.id === currentId;
+  const highlightClass = isCurrent ? "bg-[var(--color-highlight)]/10" : "";
+
+  const hasChildren = allChildren.length > 0;
+  const openAttr = hasChildren && depth === 0 ? "open" : "";
+
+  let html = `
+${indent}<details class="tree-node ${highlightClass}" ${openAttr} data-id="${person.id}">
+${indent}  <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded ${highlightClass}" tabindex="0">
+${indent}    <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth)}├─</span>
+${indent}    <strong class="truncate">${person.display_name}</strong>
+${indent}    <span class="text-xs text-[var(--color-muted)] shrink-0">(${lifespan})</span>${livingBadge}${virtualBadge}${spouseName}${surnameLabel}
+${indent}  </summary>`;
+
+  if (hasChildren) {
+    html += `
+${indent}  <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">`;
+    for (const child of allChildren) {
+      html += renderTree(child, depth + 1, { showAll, currentId });
+    }
+    html += `
+${indent}  </div>`;
+  }
+
+  html += `
+${indent}</details>`;
+  return html;
+}
+
+// Generate the tree HTML
+const treeHtml = renderTree(root);
+
+const pageTitle = "Full Family Tree — All Generations";
+---
+
+<BaseLayout title={pageTitle}>
+  <div class="max-w-6xl mx-auto p-4">
+    <!-- Breadcrumb -->
+    <nav class="mb-4 text-sm" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap gap-1 text-[var(--color-muted)]">
+        <li><a href="/" class="hover:text-[var(--color-heading)]">Home</a></li>
+        <li class="mx-1">/</li>
+        <li><a href="/people" class="hover:text-[var(--color-heading)]">People</a></li>
+        <li class="mx-1">/</li>
+        <li class="text-[var(--color-heading)]" aria-current="page">Full Family Tree</li>
+      </ol>
+    </nav>
+
+    <header class="mb-6">
+      <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-2">
+        Complete Telfer Family Tree
+      </h1>
+      <p class="text-[var(--color-muted)]">
+        Every descendant from <strong>John Telfer of Castleton (~1715–1735?)</strong> + <strong>Elspeth Young</strong> —
+        Scottish roots to Australian branches. Click ▸ to expand, ▾ to collapse.
+      </p>
+      <p class="text-xs text-[var(--color-muted)] mt-1">
+        Phone-friendly: only one branch opens at a time. Tap a name to focus and auto-scroll.
+      </p>
+    </header>
+
+    <!-- Generation quick-jump -->
+    <nav class="mb-4 overflow-x-auto pb-2" aria-label="Generation quick jump">
+      <ul class="flex gap-2 whitespace-nowrap" role="tablist">
+        {GENERATIONS.map((gen) => (
+          <li role="presentation">
+            <button
+              class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors"
+              data-gen-from={gen.from}
+              data-gen-to={gen.to}
+              role="tab"
+              aria-selected="false"
+            >
+              {gen.label}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- Tree Container -->
+    <div class="person-card rounded-xl p-4">
+      <div class="tree-container prose prose-sm max-w-none" style="font-size: 0.85rem; line-height: 1.7;">
+        <div id="family-tree" set:html={treeHtml} />
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <details class="mt-4 person-card rounded-lg p-3">
+      <summary class="cursor-pointer font-medium text-[var(--color-heading)]">Legend &amp; Tips</summary>
+      <div class="mt-2 space-y-1 text-sm text-[var(--color-ink-light)]">
+        <div class="flex items-center gap-2">
+          <span class="font-mono text-[var(--color-heading)]">├─</span>
+          <span>Click to expand/collapse branch</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="badge badge-living text-xs">living</span>
+          <span>Living person</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-[var(--color-muted)]">[Surname]</span>
+          <span>Married name (non-Telfer surname)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span>+ Name (years)</span>
+          <span>Spouse</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <kbd class="px-2 py-0.5 bg-[var(--color-surface)] border border-[var(--color-border)] rounded text-xs">Gen 1–8</kbd>
+          <span>Top buttons jump to generation</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <kbd class="px-2 py-0.5 bg-[var(--color-surface)] border border-[var(--color-border)] rounded text-xs">Tap name</kbd>
+          <span>Focus + auto-scroll to that person</span>
+        </div>
+      </div>
+    </details>
+
+    <style>
+      .tree-node summary {
+        line-height: 1.6;
+        transition: background-color 0.15s, color 0.15s;
+        user-select: none;
+      }
+      .tree-node summary:hover {
+        background-color: var(--color-surface);
+        color: var(--color-link);
+      }
+      .tree-node summary:focus {
+        outline: 2px solid var(--color-link);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+      .tree-node[open] > summary {
+        color: var(--color-heading);
+      }
+      .tree-node[open] > summary::marker {
+        content: "";
+      }
+      .tree-container {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        line-height: 1.7;
+      }
+      .gen-jump-btn.active {
+        border-color: var(--color-heading);
+        background-color: var(--color-heading);
+        color: white;
+      }
+      /* Phone: single open branch */
+      @media (max-width: 639px) {
+        .tree-container {
+          font-size: 0.75rem;
+          line-height: 1.6;
+        }
+        .tree-node summary {
+          padding: 0.5rem 0.75rem;
+        }
+        .gen-jump-btn {
+          padding: 0.5rem 0.75rem;
+          font-size: 0.7rem;
+        }
+        /* Ensure tree fits screen width */
+        .tree-container {
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+      }
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+    </style>
+
+    <script>
+      // ─── Phone-friendly: only ONE branch open at a time PER LEVEL ───
+      document.addEventListener('DOMContentLoaded', () => {
+        const tree = document.getElementById('family-tree');
+        if (!tree) return;
+
+        // Get all details elements
+        const allDetails = tree.querySelectorAll('details.tree-node');
+
+        function getLevel(detail) {
+          let level = 0;
+          let parent = detail.parentElement;
+          while (parent) {
+            if (parent.matches('details.tree-node')) level++;
+            parent = parent.parentElement;
+          }
+          return level;
+        }
+
+        // Single-open per level: when one opens, close all other OPEN siblings at same level
+        allDetails.forEach(detail => {
+          detail.addEventListener('toggle', (e) => {
+            if (detail.open) {
+              const myLevel = getLevel(detail);
+              allDetails.forEach(other => {
+                if (other !== detail && other.open && getLevel(other) === myLevel) {
+                  other.open = false;
+                }
+              });
+            }
+          });
+        });
+
+        // ─── Generation jump buttons ───
+        const genButtons = document.querySelectorAll('.gen-jump-btn');
+        const peopleData = allDetails;
+
+        genButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const from = parseInt(btn.dataset.genFrom, 10);
+            const to = parseInt(btn.dataset.genTo, 10);
+
+            // Find first person in this generation range
+            let targetDetail = null;
+            peopleData.forEach(detail => {
+              const summary = detail.querySelector('summary');
+              if (summary) {
+                const lifespanText = summary.textContent.match(/\((\d{4})–/);
+                if (lifespanText) {
+                  const birthYear = parseInt(lifespanText[1], 10);
+                  if (birthYear >= from && birthYear <= to) {
+                    if (!targetDetail) targetDetail = detail;
+                  }
+                }
+              }
+            });
+
+            if (targetDetail) {
+              targetDetail.open = true;
+              targetDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              // Highlight the target
+              targetDetail.classList.add('bg-[var(--color-highlight)]/10');
+              setTimeout(() => targetDetail.classList.remove('bg-[var(--color-highlight)]/10'), 2000);
+            }
+
+            // Update active button
+            genButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+          });
+        });
+
+        // ─── Click name to focus + scroll ───
+        tree.addEventListener('click', (e) => {
+          const summary = e.target.closest('summary');
+          if (summary && !e.target.closest('details[open] > summary')) {
+            // Clicked on a closed summary - will open, then scroll
+            const detail = summary.parentElement;
+            setTimeout(() => {
+              detail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 50);
+          }
+        });
+
+        // ─── Keyboard support ───
+        tree.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            const summary = e.target.closest('summary');
+            if (summary) {
+              e.preventDefault();
+              summary.click();
+            }
+          }
+        });
+
+        // ─── URL hash support for deep linking ───
+        // If URL has #person-slug, open that branch and scroll
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+          setTimeout(() => {
+            const targetSummary = tree.querySelector(`summary:has(strong:contains("${hash}"))`);
+            // Fallback: find by text content
+            if (!targetSummary) {
+              tree.querySelectorAll('summary strong').forEach(strong => {
+                if (strong.textContent.toLowerCase().includes(hash.toLowerCase().replace(/-/g, ' '))) {
+                  targetSummary = strong.closest('summary');
+                }
+              });
+            }
+            if (targetSummary) {
+              const detail = targetSummary.closest('details');
+              if (detail) {
+                detail.open = true;
+                detail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }
+          }, 100);
+        }
+      });
+    </script>
+  </div>
+</BaseLayout>
