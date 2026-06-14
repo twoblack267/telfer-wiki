@@ -367,24 +367,24 @@ const pageTitle = "Full Family Tree — All Generations";
 
     <style>
       /* Global styles for dynamically injected tree HTML */
-      :global(.tree-node) summary {
+      :global(.tree-node summary) {
         line-height: 1.6;
         transition: background-color 0.15s, color 0.15s;
         user-select: none;
       }
-      :global(.tree-node) summary:hover {
+      :global(.tree-node summary:hover) {
         background-color: var(--color-surface);
         color: var(--color-link);
       }
-      :global(.tree-node) summary:focus {
+      :global(.tree-node summary:focus) {
         outline: 2px solid var(--color-link);
         outline-offset: 2px;
         border-radius: 4px;
       }
-      :global(.tree-node[open]) > summary {
+      :global(.tree-node[open] > summary) {
         color: var(--color-heading);
       }
-      :global(.tree-node[open]) > summary::marker {
+      :global(.tree-node[open] > summary::marker) {
         content: "";
       }
       :global(.tree-container) {
@@ -397,7 +397,7 @@ const pageTitle = "Full Family Tree — All Generations";
         color: white;
       }
       /* Highlight class for generation jump target */
-      :global(.tree-node.highlight-target) > summary {
+      :global(.tree-node.highlight-target > summary) {
         background-color: var(--color-highlight);
         color: var(--color-surface);
         border-radius: 4px;
@@ -408,12 +408,12 @@ const pageTitle = "Full Family Tree — All Generations";
           font-size: 0.75rem;
           line-height: 1.6;
         }
-        :global(.tree-node) summary {
+        :global(.tree-node summary) {
           padding: 0.5rem 0.75rem;
           white-space: normal;
           word-break: break-word;
         }
-        :global(.tree-node) summary strong.truncate {
+        :global(.tree-node summary strong.truncate) {
           white-space: normal;
           overflow: visible;
           text-overflow: unset;
