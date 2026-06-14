@@ -173,9 +173,7 @@ const pageTitle = "Telfer Family Tree (Charles & Sons)";
     </p>
 
     <div class="person-card rounded-xl p-4 prose prose-sm max-w-none" style="font-size: 0.875rem;">
-      <div class="tree-container">
-        {treeHtml}
-      </div>
+      <div class="tree-container" set:html={treeHtml} />
     </div>
 
     <style>
