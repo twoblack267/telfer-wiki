@@ -365,65 +365,65 @@ const pageTitle = "Full Family Tree — All Generations";
       </div>
     </details>
 
-    <style>
+    <style is:global>
       /* Global styles for dynamically injected tree HTML */
-      :global(.tree-node summary) {
+      .tree-node summary {
         line-height: 1.6;
         transition: background-color 0.15s, color 0.15s;
         user-select: none;
       }
-      :global(.tree-node summary:hover) {
+      .tree-node summary:hover {
         background-color: var(--color-surface);
         color: var(--color-link);
       }
-      :global(.tree-node summary:focus) {
+      .tree-node summary:focus {
         outline: 2px solid var(--color-link);
         outline-offset: 2px;
         border-radius: 4px;
       }
-      :global(.tree-node[open] > summary) {
+      .tree-node[open] > summary {
         color: var(--color-heading);
       }
-      :global(.tree-node[open] > summary::marker) {
+      .tree-node[open] > summary::marker {
         content: "";
       }
-      :global(.tree-container) {
+      .tree-container {
         font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         line-height: 1.7;
       }
-      :global(.gen-jump-btn.active) {
+      .gen-jump-btn.active {
         border-color: var(--color-heading);
         background-color: var(--color-heading);
         color: white;
       }
       /* Highlight class for generation jump target */
-      :global(.tree-node.highlight-target > summary) {
+      .tree-node.highlight-target > summary {
         background-color: var(--color-highlight);
         color: var(--color-surface);
         border-radius: 4px;
       }
       /* Phone: single open branch */
       @media (max-width: 639px) {
-        :global(.tree-container) {
+        .tree-container {
           font-size: 0.75rem;
           line-height: 1.6;
         }
-        :global(.tree-node summary) {
+        .tree-node summary {
           padding: 0.5rem 0.75rem;
           white-space: normal;
           word-break: break-word;
         }
-        :global(.tree-node summary strong.truncate) {
+        .tree-node summary strong.truncate {
           white-space: normal;
           overflow: visible;
           text-overflow: unset;
         }
-        :global(.gen-jump-btn) {
+        .gen-jump-btn {
           padding: 0.5rem 0.75rem;
           font-size: 0.7rem;
         }
         /* Ensure tree fits screen width */
-        :global(.tree-container) {
+        .tree-container {
           max-width: 100vw;
           overflow-x: hidden;
         }
