@@ -10,24 +10,63 @@ const telferPeople = people.filter((p) => p.last_name?.toLowerCase() === "telfer
 const TREE_ENABLED = import.meta.env.TELFER_TREE_ENABLED === "true";
 
 // Helper: find person by ID (handles various formats)
-function findPerson(id: string) {
-  return telferPeople.find((p) =>
+function findPerson(id: string | undefined) {
+  if (!id) return undefined;
+  // Try exact match on id, display_name, or slug first
+  let person = telferPeople.find((p) =>
     p.id === id ||
     p.display_name === id ||
     p.slug === id
   );
+  // Fallback: loosely match display_name (e.g. "Francis Charles Telfer" vs "Francis Charles Telfer (1875–1954)")
+  if (!person) {
+    const nameOnly = id.replace(/\s*\([^)]+\)\s*$/, "").trim();
+    person = telferPeople.find((p) => p.display_name === nameOnly);
+  }
+  return person;
 }
 
 // Build tree from Francis Charles Telfer (1875–1954) — the "Charles" of Charles & Sons
 const FRANCIS_ID = "Francis Charles Telfer (1875–1954)";
 const francis = findPerson(FRANCIS_ID);
 
+// Known children of Francis Charles Telfer (from his biography) — some lack wiki entries yet
+const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: number; hasProfile: boolean }> = {
+  "Francis Kelson Telfer": { name: "Francis Kelson Telfer", birth: 1910, death: 1987, hasProfile: false },
+  "Edwin Roy Telfer": { name: "Edwin Roy Telfer", birth: 1915, hasProfile: false },
+  "Reginald Masters Telfer": { name: "Reginald Masters Telfer", birth: 1920, hasProfile: false },
+  "Malcolm George Telfer": { name: "Malcolm George Telfer", birth: 1933, hasProfile: false },
+  "Murray John Telfer": { name: "Murray John Telfer", birth: 1924, death: 2009, hasProfile: true },
+};
+
 function getAllChildren(person) {
   if (!person?.children) return [];
-  return person.children
+  const wikiChildren = person.children
     .map((c) => findPerson(c))
     .filter((c) => c)
     .sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
+
+  // Add known children ONLY for Francis Charles Telfer (the patriarch)
+  const isFrancis = person.slug === "francis-charles-telfer" || person.display_name === "Francis Charles Telfer";
+  if (isFrancis) {
+    const knownNames = new Set(wikiChildren.map((c) => c.display_name));
+    const placeholderChildren = Object.values(KNOWN_CHILDREN)
+      .filter((kc) => !knownNames.has(kc.name) && kc.hasProfile === false)
+      .map((kc) => ({
+        display_name: kc.name,
+        birth_year: kc.birth,
+        death_year: kc.death,
+        death_year_display: kc.death?.toString(),
+        is_living: !kc.death,
+        last_name: "Telfer",
+        slug: kc.name.toLowerCase().replace(/\s+/g, "-"),
+        children: undefined,
+        spouses: undefined,
+      }));
+    return [...wikiChildren, ...placeholderChildren].sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
+  }
+
+  return wikiChildren;
 }
 
 function getSpouse(person) {
@@ -51,9 +90,9 @@ function renderPerson(person, depth = 0) {
   const childrenToShowOnly = allChildren.filter((c) => !shouldRecurse(c));
 
   const indent = "  ".repeat(depth);
-  const lifespan = `${person.birth_year || "?"}–${person.death_year || person.is_living ? "living" : "?"}`;
+  const lifespan = `${person.birth_year || "?"}–${person.death_year ?? (person.is_living ? "living" : "?")}`;
   const livingBadge = person.is_living ? " <span class=\"text-xs text-green-600\">(living)</span>" : "";
-  const spouseName = spouse ? ` + ${spouse.display_name} (${spouse.birth_year || "?"}–${spouse.death_year || spouse.is_living ? "living" : "?"})` : "";
+  const spouseName = spouse ? ` + ${spouse.display_name} (${spouse.birth_year || "?"}–${spouse.death_year ?? (spouse.is_living ? "living" : "?")})` : "";
   const surnameLabel = person.last_name?.toLowerCase() !== "telfer" ? ` <span class="text-xs text-[var(--color-muted)]">[${person.last_name}]</span>` : "";
 
   let html = `
@@ -73,9 +112,9 @@ ${indent}  <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">`;
   // Then: married daughters (show but don't recurse)
   for (const child of childrenToShowOnly) {
     const childSpouse = getSpouse(child);
-    const childLifespan = `${child.birth_year || "?"}–${child.death_year || child.is_living ? "living" : "?"}`;
+    const childLifespan = `${child.birth_year || "?"}–${child.death_year ?? (child.is_living ? "living" : "?")}`;
     const childLivingBadge = child.is_living ? " <span class=\"text-xs text-green-600\">(living)</span>" : "";
-    const childSpouseName = childSpouse ? ` + ${childSpouse.display_name} (${childSpouse.birth_year || "?"}–${childSpouse.death_year || childSpouse.is_living ? "living" : "?"})` : "";
+    const childSpouseName = childSpouse ? ` + ${childSpouse.display_name} (${childSpouse.birth_year || "?"}–${childSpouse.death_year ?? (childSpouse.is_living ? "living" : "?")})` : "";
     const childSurnameLabel = ` <span class="text-xs text-[var(--color-muted)]">[${child.last_name}]</span>`;
 
     html += `
