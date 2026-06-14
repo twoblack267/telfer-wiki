@@ -95,6 +95,26 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
           </style>
         </div>
 
+        <!-- Photo Gallery -->
+        {person.images && person.images.length > 0 && (
+          <div class="person-card rounded-xl p-3 mt-3">
+            <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">Photos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              {person.images.map((img) => (
+                <figure key={img.src} class="m-0">
+                  <img
+                    src={import.meta.env.BASE_URL + img.src}
+                    alt={img.alt}
+                    class="w-full h-auto rounded-lg border border-[var(--color-border)] object-cover aspect-[4/3]"
+                    loading="lazy"
+                  />
+                  <figcaption class="text-xs text-[var(--color-muted)] mt-1 text-center line-clamp-2">{img.alt}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        )}
+
         <!-- Tags -->
         {importantTags.length > 0 && (
           <div class="person-card rounded-xl p-3 mt-3">
