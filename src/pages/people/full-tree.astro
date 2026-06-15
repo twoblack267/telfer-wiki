@@ -101,23 +101,26 @@ interface TreeNode {
   _resolvedSpouse?: TreeNode | null;
 }
 
-function createVirtualPerson(name: string, parentBirthYear?: number): TreeNode {
+function createVirtualPerson(name: string, parentBirthYear?: number, parentLastName?: string): TreeNode {
   // Extract approximate birth year from name like "James (1796–1863)"
   const yearMatch = name.match(/\((\d{4})/);
   const birthYear = yearMatch ? parseInt(yearMatch[1]) : (parentBirthYear ? parentBirthYear + 25 : null);
   const deathMatch = name.match(/–(\d{4})/);
   const deathYear = deathMatch ? parseInt(deathMatch[1]) : null;
   const isLiving = !deathYear && birthYear && birthYear > 1900;
-  
+
   // Extract just the name without years
   const cleanName = name.replace(/\s*\([^)]+\)\s*$/, "").trim();
-  
+
+  // Include surname for virtual persons — children arrays often only have "Isobel (1798–1875)"
+  const displayName = cleanName.includes(" ") ? cleanName : `${cleanName} ${parentLastName || "Telfer"}`;
+
   return {
-    display_name: cleanName,
+    display_name: displayName,
     birth_year: birthYear,
     death_year: deathYear,
     is_living: isLiving,
-    last_name: "Telfer",
+    last_name: parentLastName || "Telfer",
     spouses: [],
     children: [],
     id: `virtual:${name}`,
@@ -128,7 +131,7 @@ function createVirtualPerson(name: string, parentBirthYear?: number): TreeNode {
 // Resolve all children recursively, creating virtual nodes as needed
 function resolveChildren(person: TreeNode, depth = 0): TreeNode[] {
   if (!person.children || person.children.length === 0) return [];
-  
+
   const resolved = person.children.map(childName => {
     // Try to find real person first
     const realPerson = findPerson(childName);
@@ -145,8 +148,8 @@ function resolveChildren(person: TreeNode, depth = 0): TreeNode[] {
         virtual: false
       };
     }
-    // Create virtual person
-    return createVirtualPerson(childName, person.birth_year || undefined);
+    // Create virtual person with parent's surname
+    return createVirtualPerson(childName, person.birth_year || undefined, person.last_name);
   });
   
   // Sort by birth year
