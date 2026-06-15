@@ -496,7 +496,13 @@ const pageTitle = "Full Family Tree — All Generations";
 
             if (targetDetail) {
               targetDetail.open = true;
-              targetDetail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              // Scroll the WINDOW (not the tree container) to bring target into view
+              const summary = targetDetail.querySelector('summary');
+              if (summary) {
+                const rect = summary.getBoundingClientRect();
+                const targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
+                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+              }
               // Highlight the target
               targetDetail.classList.add('highlight-target');
               setTimeout(() => targetDetail.classList.remove('highlight-target'), 2000);
@@ -515,7 +521,9 @@ const pageTitle = "Full Family Tree — All Generations";
             // Clicked on a closed summary - will open, then scroll
             const detail = summary.parentElement;
             setTimeout(() => {
-              detail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              const rect = summary.getBoundingClientRect();
+              const targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
+              window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
             }, 50);
           }
         });
@@ -549,7 +557,9 @@ const pageTitle = "Full Family Tree — All Generations";
               const detail = targetSummary.closest('details');
               if (detail) {
                 detail.open = true;
-                detail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const rect = targetSummary.getBoundingClientRect();
+                const targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
+                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
               }
             }
           }, 100);
