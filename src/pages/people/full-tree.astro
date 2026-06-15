@@ -512,14 +512,30 @@ const pageTitle = "Full Family Tree — All Generations";
 
             // Find target: prefer exact ancestor name match, fallback to birth year range
             let targetDetail = null;
-            // First try exact ancestor name match (from GENERATIONS array)
+            // First try exact ancestor name match (from GENERATIONS array) + year range check
             if (ancestorBase) {
               for (const detail of allDetails) {
                 const treeId = detail.dataset.id;
                 if (treeId) {
                   // Normalize tree ID similarly (strip ALL parenthetical content)
-                  const treeBase = treeId.replace(/\s*\([^)]*\)\s*/g, '').trim();
+                  const treeBase = treeId.replace(/\\s*\\([^)]*\\)\\s*/g, '').trim();
                   if (treeBase === ancestorBase) {
+                    // Verify this detail's birth year is in the generation's range
+                    const summary = detail.querySelector('summary');
+                    if (summary) {
+                      const lifespanText = summary.textContent.match(/\\((\\d{4})[-–]/);
+                      if (lifespanText) {
+                        const birthYear = parseInt(lifespanText[1], 10);
+                        if (birthYear >= from && birthYear <= to) {
+                          targetDetail = detail;
+                          break;
+                        }
+                      }
+                      // If no year found, accept it (fallback)
+                      targetDetail = detail;
+                      break;
+                    }
+                    // If no summary, accept it
                     targetDetail = detail;
                     break;
                   }
