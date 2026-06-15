@@ -522,22 +522,27 @@ const pageTitle = "Full Family Tree — All Generations";
                   if (treeBase === ancestorBase) {
                     // Verify this detail's birth year is in the generation's range
                     const summary = detail.querySelector('summary');
+                    let accept = false;
                     if (summary) {
-                      const lifespanText = summary.textContent.match(/\\((\\d{4})[-–]/);
+                      const lifespanText = summary.textContent.match(/\((\d{4})[-–]/);
                       if (lifespanText) {
                         const birthYear = parseInt(lifespanText[1], 10);
                         if (birthYear >= from && birthYear <= to) {
-                          targetDetail = detail;
-                          break;
+                          accept = true;
                         }
+                      } else {
+                        // No year found in summary - accept this match
+                        accept = true;
                       }
-                      // If no year found, accept it (fallback)
+                    } else {
+                      // No summary - accept this match
+                      accept = true;
+                    }
+                    if (accept) {
                       targetDetail = detail;
                       break;
                     }
-                    // If no summary, accept it
-                    targetDetail = detail;
-                    break;
+                    // Year out of range - continue searching
                   }
                 }
               }
