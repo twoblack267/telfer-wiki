@@ -392,41 +392,67 @@ const pageTitle = "Full Family Tree — All Generations";
         line-height: 1.7;
       }
       .gen-jump-btn.active {
-        border-color: var(--color-heading);
-        background-color: var(--color-heading);
-        color: white;
+      border-color: var(--color-heading);
+      background-color: var(--color-heading);
+      color: white;
       }
       /* Highlight class for generation jump target */
       .tree-node.highlight-target > summary {
-        background-color: var(--color-highlight) !important;
-        color: var(--color-surface) !important;
-        border-radius: 4px;
+      background-color: var(--color-highlight) !important;
+      color: var(--color-surface) !important;
+      border-radius: 4px;
       }
-      /* Phone: single open branch */
+      /* Phone: single open branch + touch-friendly */
       @media (max-width: 639px) {
-        .tree-container {
-          font-size: 0.75rem;
-          line-height: 1.6;
-          max-width: 100vw;
-          overflow-x: auto;
-        }
-        .tree-node summary {
-          padding: 0.5rem 0.75rem;
-          white-space: nowrap;
-        }
-        .tree-node summary strong.truncate {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        .gen-jump-btn {
-          padding: 0.5rem 0.75rem;
-          font-size: 0.7rem;
-        }
-        /* Generation jump buttons horizontal scroll on mobile */
-        nav[aria-label="Generation quick jump"] ul {
-          -webkit-overflow-scrolling: touch;
-        }
+      .tree-container {
+        font-size: 0.8rem;
+        line-height: 1.7;
+        max-width: 100vw;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .tree-node summary {
+        padding: 0.75rem 1rem;
+        white-space: nowrap;
+        min-height: 44px; /* touch target */
+        display: flex;
+        align-items: center;
+      }
+      .tree-node summary strong.truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+      }
+      /* Gen-jump buttons: large touch targets, visible scroll hint */
+      .gen-jump-btn {
+        padding: 0.625rem 1rem; /* ~44px height */
+        font-size: 0.8rem;
+        min-height: 44px;
+        min-width: 44px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+      }
+      nav[aria-label="Generation quick jump"] {
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+      nav[aria-label="Generation quick jump"]::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 1.5rem;
+        background: linear-gradient(to top, var(--color-background), transparent);
+        pointer-events: none;
+        opacity: 0.8;
+      }
+      nav[aria-label="Generation quick jump"] ul {
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.5rem;
+        scroll-snap-type: x mandatory;
+      }
       }
       /* Smooth scroll */
       html {
