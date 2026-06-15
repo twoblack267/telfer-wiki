@@ -498,27 +498,40 @@ const pageTitle = "Full Family Tree — All Generations";
 
         // ─── Generation jump buttons ───
         const genButtons = document.querySelectorAll('.gen-jump-btn');
-        const peopleData = allDetails;
 
         genButtons.forEach(btn => {
           btn.addEventListener('click', () => {
             const from = parseInt(btn.dataset.genFrom, 10);
             const to = parseInt(btn.dataset.genTo, 10);
+            const ancestorName = btn.dataset.genAncestor;
 
-            // Find first person in this generation range
+            // Find target: prefer exact ancestor name match, fallback to birth year range
             let targetDetail = null;
-            peopleData.forEach(detail => {
-              const summary = detail.querySelector('summary');
-              if (summary) {
-                const lifespanText = summary.textContent.match(/\((\d{4})[-–]/);
-                if (lifespanText) {
-                  const birthYear = parseInt(lifespanText[1], 10);
-                  if (birthYear >= from && birthYear <= to) {
-                    if (!targetDetail) targetDetail = detail;
+            // First try exact ancestor name match (from GENERATIONS array)
+            if (ancestorName) {
+              for (const detail of allDetails) {
+                if (detail.dataset.id === ancestorName) {
+                  targetDetail = detail;
+                  break;
+                }
+              }
+            }
+            // Fallback: first person in birth year range
+            if (!targetDetail) {
+              for (const detail of peopleData) {
+                const summary = detail.querySelector('summary');
+                if (summary) {
+                  const lifespanText = summary.textContent.match(/\((\d{4})[-–]/);
+                  if (lifespanText) {
+                    const birthYear = parseInt(lifespanText[1], 10);
+                    if (birthYear >= from && birthYear <= to) {
+                      targetDetail = detail;
+                      break;
+                    }
                   }
                 }
               }
-            });
+            }
 
             if (targetDetail) {
               targetDetail.open = true;
