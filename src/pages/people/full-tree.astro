@@ -499,6 +499,7 @@ const pageTitle = "Full Family Tree — All Generations";
 
         // ─── Generation jump buttons ───
         const genButtons = document.querySelectorAll('.gen-jump-btn');
+        const peopleData = Array.from(document.querySelectorAll('#family-tree details'));
 
         genButtons.forEach(btn => {
           btn.addEventListener('click', () => {
