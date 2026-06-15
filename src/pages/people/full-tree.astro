@@ -432,12 +432,12 @@ const pageTitle = "Full Family Tree — All Generations";
         min-width: 44px;
         flex-shrink: 0;
       }
-      .gen-jump-scroll {
+      .gen-jump-scroll, ul.scroll-snap-type-x-mandatory {
         position: relative;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
       }
-      .gen-jump-scroll::after {
+      .gen-jump-scroll::after, ul.scroll-snap-type-x-mandatory::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -448,7 +448,7 @@ const pageTitle = "Full Family Tree — All Generations";
         pointer-events: none;
         opacity: 0.8;
       }
-      .gen-jump-item {
+      .gen-jump-item, li.scroll-snap-align-start {
         scroll-snap-align: start;
         flex-shrink: 0;
       }
