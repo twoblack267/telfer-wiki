@@ -512,7 +512,8 @@ const pageTitle = "Full Family Tree — All Generations";
 
             // Normalize ancestor name: strip ALL parenthetical content (including lifespans)
             const ancestorBase = ancestorName.replace(/\s*\([^)]*\)\s*/g, '').trim();
-            
+            console.log('🔍 Searching for ancestorBase:', ancestorBase, 'year range:', from, '-', to);
+
             // Normalize tree ID: strip only the parentheses characters, keep content inside (e.g., "of Castleton")
             // But we'll do this inside the loop
 
@@ -526,6 +527,7 @@ const pageTitle = "Full Family Tree — All Generations";
                   // Normalize tree ID: strip only the parentheses characters, keep content inside
                   const treeBase = treeId.replace(/\(\s*([^)]+)\s*\)/g, '$1').trim();
                   if (treeBase === ancestorBase) {
+                    console.log('✅ EXACT MATCH:', treeId);
                     // Verify this detail's birth year is in the generation's range
                     const summary = detail.querySelector('summary');
                     let accept = false;
@@ -533,6 +535,7 @@ const pageTitle = "Full Family Tree — All Generations";
                       const lifespanText = summary.textContent.match(/\((\d{4})[-–]/);
                       if (lifespanText) {
                         const birthYear = parseInt(lifespanText[1], 10);
+                        console.log('📅 Birth year:', birthYear, 'in range?', birthYear >= from && birthYear <= to);
                         if (birthYear >= from && birthYear <= to) {
                           accept = true;
                         }
@@ -546,9 +549,11 @@ const pageTitle = "Full Family Tree — All Generations";
                     }
                     if (accept) {
                       targetDetail = detail;
+                      console.log('🎯 TARGET ACCEPTED:', detail.dataset.id);
                       break;
                     }
                     // Year out of range - continue searching
+                    console.log('❌ Year out of range, continuing...');
                   }
                 }
               }
