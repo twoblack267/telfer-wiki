@@ -507,18 +507,18 @@ const pageTitle = "Full Family Tree — All Generations";
             const to = parseInt(btn.dataset.genTo, 10);
             const ancestorName = btn.dataset.genAncestor;
 
-            // Normalize ancestor name: strip ALL parenthetical content for matching
-            const ancestorBase = ancestorName.replace(/\s*\([^)]*\)\s*/g, '').trim();
+            // Normalize ancestor name: strip only parentheses characters, keep content inside
+            const ancestorBase = ancestorName.replace(/\(\s*([^)]+)\s*\)/g, '$1').trim();
 
             // Find target: prefer exact ancestor name match, fallback to birth year range
             let targetDetail = null;
             // First try exact ancestor name match (from GENERATIONS array) + year range check
             if (ancestorBase) {
-              for (const detail of allDetails) {
+              for (const detail of peopleData) {
                 const treeId = detail.dataset.id;
                 if (treeId) {
-                  // Normalize tree ID similarly (strip ALL parenthetical content)
-                  const treeBase = treeId.replace(/\\s*\\([^)]*\\)\\s*/g, '').trim();
+                  // Normalize tree ID: strip only the parentheses characters, keep content inside
+                  const treeBase = treeId.replace(/\(\s*([^)]+)\s*\)/g, '$1').trim();
                   if (treeBase === ancestorBase) {
                     // Verify this detail's birth year is in the generation's range
                     const summary = detail.querySelector('summary');
