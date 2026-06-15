@@ -1,0 +1,161 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const people = (await import("../../data/people.public.json")).default;
+
+const peopleWithDna = people.filter(p => 
+  p.dna_matches?.length > 0 || p.haplogroup_mt || p.haplogroup_y
+);
+
+const totalMatches = people.reduce((sum, p) => sum + (p.dna_matches?.length || 0), 0);
+const uniqueNames = new Set();
+people.forEach(p => p.dna_matches?.forEach(m => uniqueNames.add(m.name)));
+
+const haplogroupsMt = [...new Set(people.filter(p => p.haplogroup_mt).map(p => ({ name: p.display_name, haplogroup: p.haplogroup_mt })))];
+const haplogroupsY = [...new Set(people.filter(p => p.haplogroup_y).map(p => ({ name: p.display_name, haplogroup: p.haplogroup_y })))];
+---
+
+<BaseLayout title="DNA Connections">
+  <div class="max-w-4xl mx-auto">
+    <!-- Breadcrumb -->
+    <div class="text-sm text-[var(--color-muted)] mb-1.5">
+      <a href="/" class="text-[var(--color-link)]">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/people" class="text-[var(--color-link)]">People</a>
+      <span class="mx-2">/</span>
+      <span>DNA Connections</span>
+    </div>
+
+    <header class="mb-6">
+      <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-2">DNA Connections</h1>
+      <p class="text-[var(--color-muted)]">
+        Genetic genealogy data for the Telfer family: DNA matches, haplogroups, and shared ancestry.
+      </p>
+    </header>
+
+    {peopleWithDna.length === 0 ? (
+      <!-- Under Construction Notice -->
+      <div class="person-card rounded-xl p-8 text-center border-2 border-dashed border-[var(--color-border)]">
+        <div class="text-5xl mb-3">🧬</div>
+        <h2 class="font-serif text-xl text-[var(--color-heading)] mb-2">DNA Page — Under Construction</h2>
+        <p class="text-[var(--color-muted)] mb-4 max-w-md mx-auto">
+          No genetic genealogy data has been added yet. When you or family members take DNA tests
+          (AncestryDNA, 23andMe, MyHeritage, FamilyTreeDNA, etc.), we can record:
+        </p>
+        <ul class="text-left max-w-md mx-auto text-[var(--color-ink-light)] space-y-1 mb-4">
+          <li>• Maternal haplogroups (mtDNA) — your direct maternal line</li>
+          <li>• Paternal haplogroups (Y-DNA) — direct paternal line (males only)</li>
+          <li>• DNA matches — cousins, shared cM, relationship estimates, testing company</li>
+          <li>• Notes on shared segments or genealogical connections</li>
+        </ul>
+        <p class="text-sm text-[var(--color-muted)] italic">
+          Data is stored privately in people.json and only appears here after running
+          <code class="font-mono bg-[var(--color-surface)] px-1.5 py-0.5 rounded">npm run sanitize && npm run build</code>
+        </p>
+      </div>
+    ) : (
+      <>
+        <!-- Summary Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+          <div class="person-card rounded-xl p-4 text-center border-2 border-[var(--color-highlight)]">
+            <div class="text-3xl font-bold text-[var(--color-highlight)]">{peopleWithDna.length}</div>
+            <div class="text-sm text-[var(--color-muted)]">People with DNA Data</div>
+          </div>
+          <div class="person-card rounded-xl p-4 text-center border-2 border-[var(--color-highlight)]">
+            <div class="text-3xl font-bold text-[var(--color-highlight)]">{totalMatches}</div>
+            <div class="text-sm text-[var(--color-muted)]">Total DNA Matches</div>
+          </div>
+          <div class="person-card rounded-xl p-4 text-center border-2 border-[var(--color-highlight)]">
+            <div class="text-3xl font-bold text-[var(--color-highlight)]">{uniqueNames.size}</div>
+            <div class="text-sm text-[var(--color-muted)]">Unique Match Names</div>
+          </div>
+        </div>
+
+        <!-- Haplogroups -->
+        {haplogroupsMt.length > 0 && (
+          <section class="mb-6">
+            <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-[var(--color-highlight)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+              Maternal Haplogroups (mtDNA)
+            </h2>
+            <div class="person-card rounded-xl p-3">
+              <dl class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {haplogroupsMt.map((h, i) => (
+                  <div key={i} class="border-l-2 border-[var(--color-highlight)] pl-3">
+                    <dt class="font-medium text-sm">{h.name}</dt>
+                    <dd class="font-mono text-sm text-[var(--color-heading)]">{h.haplogroup}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+        )}
+
+        {haplogroupsY.length > 0 && (
+          <section class="mb-6">
+            <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-[var(--color-highlight)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+              Paternal Haplogroups (Y-DNA)
+            </h2>
+            <div class="person-card rounded-xl p-3">
+              <dl class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {haplogroupsY.map((h, i) => (
+                  <div key={i} class="border-l-2 border-[var(--color-highlight)] pl-3">
+                    <dt class="font-medium text-sm">{h.name}</dt>
+                    <dd class="font-mono text-sm text-[var(--color-heading)]">{h.haplogroup}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+        )}
+
+        <!-- All DNA Matches -->
+        <section>
+          <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3">All DNA Matches</h2>
+          <div class="space-y-3">
+            {peopleWithDna.map(person => (
+              <details key={person.slug} class="person-card rounded-xl p-3 group">
+                <summary class="cursor-pointer select-none flex items-center justify-between">
+                  <span class="font-medium">{person.display_name}</span>
+                  <svg class="w-5 h-5 text-[var(--color-muted)] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="mt-3 space-y-2 border-l-2 border-[var(--color-border)] pl-3">
+                  {person.dna_matches?.map((match, i) => (
+                    <div key={i} class="py-2">
+                      <div class="flex flex-wrap items-baseline gap-2">
+                        <span class="font-medium">{match.name}</span>
+                        <span class="text-[var(--color-muted)]">→</span>
+                        <span class="text-sm text-[var(--color-ink-light)]">{match.relationship}</span>
+                        <span class="font-mono text-sm text-[var(--color-highlight)] bg-[var(--color-surface)] px-1.5 py-0.5 rounded">{match.centimorgans} cM</span>
+                        {match.company && <span class="text-xs text-[var(--color-muted)] px-2 py-0.5 bg-[var(--color-surface)] rounded">{match.company}</span>}
+                      </div>
+                      {match.notes && <div class="text-xs text-[var(--color-muted)] italic ml-8">{match.notes}</div>}
+                    </div>
+                  ))}
+                  {person.haplogroup_mt && (
+                    <div class="py-2">
+                      <span class="text-xs text-[var(--color-muted)]">mtDNA: </span>
+                      <span class="font-mono text-sm text-[var(--color-heading)]">{person.haplogroup_mt}</span>
+                    </div>
+                  )}
+                  {person.haplogroup_y && (
+                    <div class="py-2">
+                      <span class="text-xs text-[var(--color-muted)]">Y-DNA: </span>
+                      <span class="font-mono text-sm text-[var(--color-heading)]">{person.haplogroup_y}</span>
+                    </div>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      </>
+    )}
+
+    <!-- Back link -->
+    <div class="mt-6 text-center">
+      <a href="/people" class="text-[var(--color-link)] hover:underline">← Back to People</a>
+    </div>
+  </div>
+</BaseLayout>
