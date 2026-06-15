@@ -407,25 +407,21 @@ const pageTitle = "Full Family Tree — All Generations";
         .tree-container {
           font-size: 0.75rem;
           line-height: 1.6;
+          max-width: 100vw;
+          overflow-x: auto;
         }
         .tree-node summary {
           padding: 0.5rem 0.75rem;
-          white-space: normal;
-          word-break: break-word;
+          white-space: nowrap;
         }
         .tree-node summary strong.truncate {
-          white-space: normal;
-          overflow: visible;
-          text-overflow: unset;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .gen-jump-btn {
           padding: 0.5rem 0.75rem;
           font-size: 0.7rem;
-        }
-        /* Ensure tree fits screen width */
-        .tree-container {
-          max-width: 100vw;
-          overflow-x: hidden;
         }
         /* Generation jump buttons horizontal scroll on mobile */
         nav[aria-label="Generation quick jump"] ul {
