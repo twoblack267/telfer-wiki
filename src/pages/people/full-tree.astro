@@ -468,13 +468,11 @@ const pageTitle = "Full Family Tree — All Generations";
       // ─── Phone-friendly: only ONE branch open at a time PER LEVEL ───
       // IIFE wrapper so we can use early return
       (() => {
-        console.log('🔥 Telfer Wiki inline script EXECUTING');
         const tree = document.getElementById('family-tree');
         if (!tree) return;
 
         // Get all details elements
         const allDetails = tree.querySelectorAll('details.tree-node');
-        console.log('📋 tree-node count:', allDetails.length);
 
         function getLevel(detail) {
           let level = 0;
@@ -502,20 +500,16 @@ const pageTitle = "Full Family Tree — All Generations";
 
         // ─── Generation jump buttons ───
         const genButtons = document.querySelectorAll('.gen-jump-btn');
-        console.log('🎯 gen-jump-btn count:', genButtons.length);
         const peopleData = Array.from(document.querySelectorAll('#family-tree details'));
 
         genButtons.forEach(btn => {
           btn.addEventListener('click', () => {
-            console.log('🎯🎯🎯 GEN-JUMP CLICK HANDLER FIRED 🎯🎯🎯', btn.dataset.genAncestor);
-            console.log('🎯 Gen-jump CLICKED:', btn.dataset.genAncestor);
             const from = parseInt(btn.dataset.genFrom, 10);
             const to = parseInt(btn.dataset.genTo, 10);
             const ancestorName = btn.dataset.genAncestor;
 
             // Normalize ancestor name: strip ALL parenthetical content (including lifespans)
             const ancestorBase = ancestorName.replace(/\s*\([^)]*\)\s*/g, '').trim();
-            console.log('🔍 Searching for ancestorBase:', ancestorBase, 'year range:', from, '-', to);
 
             // Normalize tree ID: strip only the parentheses characters, keep content inside (e.g., "of Castleton")
             // But we'll do this inside the loop
@@ -530,7 +524,6 @@ const pageTitle = "Full Family Tree — All Generations";
                   // Normalize tree ID: strip only the parentheses characters, keep content inside
                   const treeBase = treeId.replace(/\(\s*([^)]+)\s*\)/g, '$1').trim();
                   if (treeBase === ancestorBase) {
-                    console.log('✅ EXACT MATCH:', treeId);
                     // Verify this detail's birth year is in the generation's range
                     const summary = detail.querySelector('summary');
                     let accept = false;
@@ -538,7 +531,6 @@ const pageTitle = "Full Family Tree — All Generations";
                       const lifespanText = summary.textContent.match(/\((\d{4})[-–]/);
                       if (lifespanText) {
                         const birthYear = parseInt(lifespanText[1], 10);
-                        console.log('📅 Birth year:', birthYear, 'in range?', birthYear >= from && birthYear <= to);
                         if (birthYear >= from && birthYear <= to) {
                           accept = true;
                         }
@@ -552,11 +544,9 @@ const pageTitle = "Full Family Tree — All Generations";
                     }
                     if (accept) {
                       targetDetail = detail;
-                      console.log('🎯 TARGET ACCEPTED:', detail.dataset.id);
                       break;
                     }
                     // Year out of range - continue searching
-                    console.log('❌ Year out of range, continuing...');
                   }
                 }
               }
