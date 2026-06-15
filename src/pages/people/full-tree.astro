@@ -438,16 +438,22 @@ const pageTitle = "Full Family Tree — All Generations";
       }
       .tree-node summary {
         padding: 0.75rem 1rem;
-        white-space: nowrap;
+        /* allow wrapping — don't force single line */
         min-height: 44px; /* touch target */
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
       }
       .tree-node summary strong.truncate {
-        white-space: nowrap;
+        /* flex-shrink + min-width: 0 lets it shrink below content width */
+        /* text-overflow ellipsis when it does */
+        flex-shrink: 1;
+        min-width: 0;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 180px;
+        white-space: nowrap;
+        /* generous max-width — at deep nesting the flex container shrinks naturally */
+        max-width: 300px;
       }
       /* Gen-jump buttons: large touch targets, visible scroll hint */
       .gen-jump-btn {
