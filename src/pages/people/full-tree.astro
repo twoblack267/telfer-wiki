@@ -570,7 +570,7 @@ const pageTitle = "Full Family Tree — All Generations";
         const hash = window.location.hash.slice(1);
         if (hash) {
           setTimeout(() => {
-            const targetSummary = tree.querySelector(`summary:has(strong:contains("${hash}"))`);
+            let targetSummary = tree.querySelector(`summary:has(strong:contains("${hash}"))`);
             // Fallback: find by text content
             if (!targetSummary) {
               tree.querySelectorAll('summary strong').forEach(strong => {
