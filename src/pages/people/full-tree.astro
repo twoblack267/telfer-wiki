@@ -402,6 +402,27 @@ const pageTitle = "Full Family Tree — All Generations";
       color: var(--color-surface) !important;
       border-radius: 4px;
       }
+      /* Gen-jump scroll-snap (all viewports) */
+      .gen-jump-scroll, ul.scroll-snap-type-x-mandatory {
+        position: relative;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .gen-jump-scroll::after, ul.scroll-snap-type-x-mandatory::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 1.5rem;
+        background: linear-gradient(to top, var(--color-background), transparent);
+        pointer-events: none;
+        opacity: 0.8;
+      }
+      .gen-jump-item, li.scroll-snap-align-start {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+      }
       /* Phone: single open branch + touch-friendly */
       @media (max-width: 639px) {
       .tree-container {
@@ -430,26 +451,6 @@ const pageTitle = "Full Family Tree — All Generations";
         font-size: 0.8rem;
         min-height: 44px;
         min-width: 44px;
-        flex-shrink: 0;
-      }
-      .gen-jump-scroll, ul.scroll-snap-type-x-mandatory {
-        position: relative;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-      }
-      .gen-jump-scroll::after, ul.scroll-snap-type-x-mandatory::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        height: 1.5rem;
-        background: linear-gradient(to top, var(--color-background), transparent);
-        pointer-events: none;
-        opacity: 0.8;
-      }
-      .gen-jump-item, li.scroll-snap-align-start {
-        scroll-snap-align: start;
         flex-shrink: 0;
       }
       }
