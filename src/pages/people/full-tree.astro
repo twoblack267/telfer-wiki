@@ -436,6 +436,8 @@ const pageTitle = "Full Family Tree — All Generations";
       nav[aria-label="Generation quick jump"] {
         position: relative;
         padding-bottom: 0.5rem;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
       }
       nav[aria-label="Generation quick jump"]::after {
         content: "";
@@ -449,9 +451,7 @@ const pageTitle = "Full Family Tree — All Generations";
         opacity: 0.8;
       }
       nav[aria-label="Generation quick jump"] ul {
-        -webkit-overflow-scrolling: touch;
         padding-bottom: 0.5rem;
-        scroll-snap-type: x mandatory;
       }
       }
       /* Smooth scroll */

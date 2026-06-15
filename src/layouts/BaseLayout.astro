@@ -44,17 +44,18 @@ const currentPath = Astro.url.pathname;
           <a href={import.meta.env.BASE_URL} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath === import.meta.env.BASE_URL && "active"]}>Home</a>
           <a href={import.meta.env.BASE_URL + "people"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people") && "active"]}>People</a>
           <a href={import.meta.env.BASE_URL + "timeline"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "timeline") && "active"]}>Timeline</a>
+          <a href={import.meta.env.BASE_URL + "people/full-tree"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/full-tree") && "active"]}>Time</a>
           <a href={import.meta.env.BASE_URL + "search"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "search") && "active"]}>Search</a>
           <a href={import.meta.env.BASE_URL + "people/families"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/families") && "active"]}>Families</a>
         </div>
 
         <!-- Dark Mode Toggle -->
-        <button id="theme-toggle" class="p-2 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-heading)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+        <button id="theme-toggle" class="min-w-[44px] min-h-[44px] p-3 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-heading)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle dark mode" title="Toggle dark/light mode">
           <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg id="theme-icon-moon" class="hidden" xmlns="http://www.w3.org/0000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
                 <!-- Hamburger button -->
-        <button id="nav-toggle" class="md:hidden p-2 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-heading)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle navigation">
+        <button id="nav-toggle" class="md:hidden min-w-[44px] min-h-[44px] p-3 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-heading)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle navigation">
           <svg id="nav-icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           <svg id="nav-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
@@ -66,6 +67,7 @@ const currentPath = Astro.url.pathname;
           <a href={import.meta.env.BASE_URL} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath === import.meta.env.BASE_URL && "active"]}>🏠 Home</a>
           <a href={import.meta.env.BASE_URL + "people"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people") && "active"]}>👤 People</a>
           <a href={import.meta.env.BASE_URL + "timeline"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "timeline") && "active"]}>📅 Timeline</a>
+          <a href={import.meta.env.BASE_URL + "people/full-tree"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/full-tree") && "active"]}>🕰 Time</a>
           <a href={import.meta.env.BASE_URL + "search"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "search") && "active"]}>🔍 Search</a>
           <a href={import.meta.env.BASE_URL + "people/families"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/families") && "active"]}>👪 Families</a>
         </div>
