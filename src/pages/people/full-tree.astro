@@ -3,7 +3,7 @@
 // Phone-first: single branch open at a time, collapsible accordion
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const people = (await import("../../data/people.public.json")).default;
+const people = (await import("../../data/people.json")).default;
 const allPeople = people;
 
 // Build a lookup map for faster matching
