@@ -505,6 +505,7 @@ const pageTitle = "Full Family Tree — All Generations";
 
         genButtons.forEach(btn => {
           btn.addEventListener('click', () => {
+            console.log('🎯 Gen-jump CLICKED:', btn.dataset.genAncestor);
             const from = parseInt(btn.dataset.genFrom, 10);
             const to = parseInt(btn.dataset.genTo, 10);
             const ancestorName = btn.dataset.genAncestor;
