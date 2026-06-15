@@ -466,9 +466,10 @@ const pageTitle = "Full Family Tree — All Generations";
 
     <script is:inline>
       // ─── Phone-friendly: only ONE branch open at a time PER LEVEL ───
-      // Script at end of body → DOM already parsed, no DOMContentNeeded
-      const tree = document.getElementById('family-tree');
-      if (!tree) return;
+      // IIFE wrapper so we can use early return
+      (() => {
+        const tree = document.getElementById('family-tree');
+        if (!tree) return;
 
         // Get all details elements
         const allDetails = tree.querySelectorAll('details.tree-node');
@@ -637,6 +638,7 @@ const pageTitle = "Full Family Tree — All Generations";
             }
           }, 100);
         }
+      })();
     </script>
   </div>
 </BaseLayout>
