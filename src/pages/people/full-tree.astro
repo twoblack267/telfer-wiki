@@ -474,6 +474,7 @@ const pageTitle = "Full Family Tree — All Generations";
 
         // Get all details elements
         const allDetails = tree.querySelectorAll('details.tree-node');
+        console.log('📋 tree-node count:', allDetails.length);
 
         function getLevel(detail) {
           let level = 0;
@@ -501,6 +502,7 @@ const pageTitle = "Full Family Tree — All Generations";
 
         // ─── Generation jump buttons ───
         const genButtons = document.querySelectorAll('.gen-jump-btn');
+        console.log('🎯 gen-jump-btn count:', genButtons.length);
         const peopleData = Array.from(document.querySelectorAll('#family-tree details'));
 
         genButtons.forEach(btn => {
