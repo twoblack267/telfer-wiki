@@ -310,9 +310,9 @@ const pageTitle = "Full Family Tree — All Generations";
 
     <!-- Generation quick-jump -->
     <nav class="mb-4" aria-label="Generation quick jump">
-      <ul class="flex gap-2 whitespace-nowrap overflow-x-auto pb-2 -mx-2 px-2 scroll-snap-type-x-mandatory" role="tablist">
+      <ul class="gen-jump-scroll flex gap-2 whitespace-nowrap overflow-x-auto pb-2 -mx-2 px-2" role="tablist">
         {GENERATIONS.map((gen) => (
-          <li role="presentation" class="scroll-snap-align-start shrink-0">
+          <li role="presentation" class="gen-jump-item shrink-0">
             <button
               class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors"
               data-gen-from={gen.from}
@@ -432,13 +432,12 @@ const pageTitle = "Full Family Tree — All Generations";
         min-width: 44px;
         flex-shrink: 0;
       }
-      nav[aria-label="Generation quick jump"] ul {
+      .gen-jump-scroll {
         position: relative;
-        padding-bottom: 0.5rem;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
       }
-      nav[aria-label="Generation quick jump"] ul::after {
+      .gen-jump-scroll::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -449,7 +448,7 @@ const pageTitle = "Full Family Tree — All Generations";
         pointer-events: none;
         opacity: 0.8;
       }
-      nav[aria-label="Generation quick jump"] li {
+      .gen-jump-item {
         scroll-snap-align: start;
         flex-shrink: 0;
       }
