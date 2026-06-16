@@ -82,7 +82,8 @@
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+    "branch": "other"
   },
   {
     "id": "Adam Francis Telfer",
@@ -193,7 +194,8 @@
         "filename": "adam-francis-telfer-grave.jpg"
       }
     ],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer"
   },
   {
     "id": "Alan Dale Telfer",
@@ -294,7 +296,8 @@
       "telfer-tree"
     ],
     "vault_file": "Alan Dale Telfer (1890–1937).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Alexander Lawrie",
@@ -327,7 +330,8 @@
       "telfer-tree"
     ],
     "vault_file": "Alexander Lawrie (1780–1847).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Alma Sporer",
@@ -383,15 +387,10 @@
     "body_stripped": "**Born:** 1881 (exact date unknown)  **Died:** 23 Apr 1965 (aged 83–84), Felixstow SA  **Spouse:** James Telfer (1866–1946) (m. 24 Oct 1917)  **Daughter:** Vida Templer (1919–2021)  **Surname variants:** Sporer, Spehr, Spörer\n\n## Family\n\n Relation  Name \n\n Self  Alma Ida Sporer \n Husband  James Telfer (1866–1946) (m. 24 Oct 1917) \n Daughter  Vida Templer (1919–2021) (m. Templer) \n\n## Life Summary\n\nAlma Ida Sporer was born in about 1881, likely in the Mount Gambier / Kongorong district of South A",
     "is_living": false,
     "lifespan": "1881 – 1965",
-    "parents": [
-      "?",
-      "?"
-    ],
-    "children": [
-      "Vida Templer (1919–2021)"
-    ],
+    "parents": [],
+    "children": [],
     "spouses": [
-      "James Telfer (m. 1917)"
+      "james-telfer-1866"
     ],
     "siblings": [],
     "related_trees": [
@@ -406,7 +405,8 @@
         "filename": "alma-ida-sporer-telfer.jpg"
       }
     ],
-    "person_photo": "images/people/alma-ida-sporer-telfer.jpg"
+    "person_photo": "images/people/alma-ida-sporer-telfer.jpg",
+    "branch": "other"
   },
   {
     "id": "Alma Tressy Cullen",
@@ -458,19 +458,18 @@
     "is_living": false,
     "lifespan": "1893 – 1976",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "john-telfer-1847",
+      "caroline-telfer"
     ],
     "children": [],
-    "spouses": [
-      "George Lewis Cullen"
-    ],
+    "spouses": [],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
     "vault_file": "Alma Tressy Cullen (1893–1976).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Amy Ellen Telfer",
@@ -537,24 +536,10 @@
     "body_stripped": "**Role:** Great-grandmother\n**Also known as:** Possibly \"Amy May\" (family nickname)\n**Born:** 1884 — Stokes, South Australia\n**Died:** October 1951 (aged ~67)\n**Birthplace:** Stokes, South Australia\n**Grandson:** Murray John Telfer (1924–2009)\n**Great-grandson:** Timothy Neil Telfer (1959–?)\n**Great-great-grandson:** Mark Telfer (1877–1946)\n\n## Family\n\n Relation  Name \n\n **Mother**  Emily Ellen Thorpe (m. 15 Jun 1882) \n **Father**  George Provis \n **Spouse**  Francis Charles Telfer (1875–",
     "is_living": false,
     "lifespan": "1884 – 1951",
-    "parents": [
-      "Emily Ellen Thorpe",
-      "George Provis"
-    ],
-    "children": [
-      "Francis Kelson Telfer",
-      "Clarice May Fatchen",
-      "Emily Amelia Barton",
-      "Ethel Jean McMurtrie",
-      "Gladys Merle Pedler",
-      "Doris Elma Rowe",
-      "Edwin Roy Telfer",
-      "Reginald Masters Telfer",
-      "Murray John Telfer",
-      "Malcolm George Telfer"
-    ],
+    "parents": [],
+    "children": [],
     "spouses": [
-      "Francis Charles Telfer"
+      "james-telfer-1829"
     ],
     "siblings": [],
     "related_trees": [
@@ -587,7 +572,8 @@
         "filename": "telfer-family-reunion-c1920.jpg"
       }
     ],
-    "person_photo": "images/people/amy-ellen-telfer.jpg"
+    "person_photo": "images/people/amy-ellen-telfer.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Amy Nicole Telfer",
@@ -660,7 +646,8 @@
         "filename": "Amy-Telfer-Tiny-Tots-Quest.jpg"
       }
     ],
-    "person_photo": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg"
+    "person_photo": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Angela Telfer",
@@ -720,7 +707,8 @@
       "telfer-tree"
     ],
     "vault_file": "Angela Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Carissa Telfer",
@@ -786,7 +774,8 @@
         "filename": "Carissa-Telfer.jpg"
       }
     ],
-    "person_photo": "images/people/Carissa-Telfer.jpg"
+    "person_photo": "images/people/Carissa-Telfer.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Caroline Amelia Telfer",
@@ -850,20 +839,12 @@
     "body_stripped": "**Role:** Great-great-grandmother — English immigrant\n**Born:** 10 June 1842 — Tiffield, Northamptonshire, England\n**Died:** 24 August 1929 — Clare, South Australia (within hours of her husband)\n**Buried:** Clare Cemetery, Clare, South Australia\n**Arrival:** *Templar* — arrived Port Adelaide, 24 November 1845 (aged 3)\n**Great-grandson:** Murray John Telfer (1924–2009)\n**Great-great-grandson:** Mark Telfer (1877–1946)\n\n## Family\n\n Relation  Name \n\n **Mother**  Martha Williams \n **Father** ",
     "is_living": false,
     "lifespan": "1842 – 1929",
-    "parents": [
-      "Martha Williams",
-      "Charles Masters"
-    ],
+    "parents": [],
     "children": [
-      "Francis Charles Telfer",
-      "Ernest John Telfer",
-      "William James Telfer",
-      "Albert George Telfer",
-      "Walter William Telfer",
-      "Edwin Gilbert Telfer"
+      "murray-telfer"
     ],
     "spouses": [
-      "John Telfer"
+      "john-telfer-1847"
     ],
     "siblings": [],
     "related_trees": [
@@ -883,7 +864,8 @@
         "vault_path": "_assets/Telfer family reunion c1920.jpg",
         "filename": "telfer-family-reunion-c1920.jpg"
       }
-    ]
+    ],
+    "branch": "telfer"
   },
   {
     "id": "Caroline Edna Lawrie",
@@ -954,7 +936,8 @@
       "telfer-tree"
     ],
     "vault_file": "Caroline Edna Lawrie (1890–1957).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Caroline Hosking",
@@ -987,7 +970,8 @@
       "telfer-tree"
     ],
     "vault_file": "Caroline Hosking (1851–1920).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Clara Blanche Lane",
@@ -1058,7 +1042,8 @@
       "telfer-tree"
     ],
     "vault_file": "Clara Blanche Lane (1883–1974).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Clarice May Fatchen",
@@ -1145,7 +1130,8 @@
       "telfer-tree"
     ],
     "vault_file": "Clarice May Fatchen (1911–1997).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Colin Roy Telfer",
@@ -1203,7 +1189,8 @@
       "telfer-tree"
     ],
     "vault_file": "Colin Roy Telfer (1889–1964).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Daryll William Telfer",
@@ -1276,7 +1263,8 @@
       "telfer-tree"
     ],
     "vault_file": "Daryll William Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "David Parker",
@@ -1382,7 +1370,8 @@
       "telfer-tree"
     ],
     "vault_file": "David Parker (1822–1888).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "David Telfer",
@@ -1439,7 +1428,8 @@
       "telfer-tree"
     ],
     "vault_file": "David Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Douglas Telfer",
@@ -1528,7 +1518,8 @@
       "telfer-tree"
     ],
     "vault_file": "Douglas Telfer (1887–1956).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Elizabeth Beattie",
@@ -1594,31 +1585,23 @@
     "body_stripped": "**Born:** 1802 (Roxburghshire, Scotland)  **Died:** 1891 (Scotland)  **Spouse:** James Telfer (1796–1863)  **Father:** ? (Beattie family)  **Mother:** ?\n\n> Matriarch of the Telfer family. Mother of the Telfer siblings who emigrated to South Australia and established pioneer families across the colony.\n\n## Family\n\n Relation  Name \n\n Self  Elizabeth Beattie \n Spouse  James Telfer (1796–1863) \n Child  James Telfer (1829–1913) \n Child  Margaret Telfer (~1829-?) \n Child  Elizabeth Beattie Telfer (183",
     "is_living": false,
     "lifespan": "1802 – 1891",
-    "parents": [
-      "? (Beattie family",
-      "Castleton)",
-      "?"
-    ],
+    "parents": [],
     "children": [
-      "James (1829-1913)",
-      "Elizabeth Beattie Telfer (1832-1896)",
-      "Margaret (~1829-?)",
-      "Jean (?)",
-      "Robert (1835-1907)",
-      "Isabella (~1837-?)",
-      "John (1840-1913)",
-      "Adam (1842-1925)",
-      "Agnes (~1848-?)"
+      "james-telfer-1829",
+      "elizabeth-telfer-1832",
+      "robert-telfer-1835",
+      "john-telfer-1840"
     ],
     "spouses": [
-      "James Telfer (1796-1863)"
+      "james-telfer-1796"
     ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Beattie (1802–1891).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Elizabeth Beattie Telfer",
@@ -1694,23 +1677,11 @@
     "is_living": false,
     "lifespan": "1832 – 1896",
     "parents": [
-      "Elizabeth Beattie",
-      "James Telfer (1796-1863)"
+      "james-telfer-1796",
+      "elizabeth-beattie"
     ],
-    "children": [
-      "Elizabeth Esther",
-      "John Boswell",
-      "James Telfer",
-      "Robert Telfer",
-      "Francis Telfer",
-      "Henry Hatch",
-      "Margaret",
-      "Adam Telfer",
-      "Septimus"
-    ],
-    "spouses": [
-      "John Charles Dillon"
-    ],
+    "children": [],
+    "spouses": [],
     "siblings": [
       "James Telfer (1829-1913)",
       "Robert B. Telfer (1834-1907)",
@@ -1728,7 +1699,8 @@
         "filename": "elizabeth-beattie-telfer-dillon-grave.jpg"
       }
     ],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer"
   },
   {
     "id": "Elizabeth Hutton Telfer",
@@ -1809,7 +1781,8 @@
         "filename": "elizabeth-betty-hutton-telfer.jpg"
       }
     ],
-    "person_photo": "images/people/elizabeth-betty-hutton-telfer.jpg"
+    "person_photo": "images/people/elizabeth-betty-hutton-telfer.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Elizabeth Telfer",
@@ -1884,7 +1857,8 @@
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Telfer (1868–1950).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Elspeth Young",
@@ -1941,7 +1915,8 @@
       "telfer-tree"
     ],
     "vault_file": "Elspeth Young (1722–?).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Francis Charles Telfer",
@@ -2054,7 +2029,8 @@
         "filename": "telfer-family-reunion-c1920.jpg"
       }
     ],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer"
   },
   {
     "id": "Francis Telfer",
@@ -2123,22 +2099,13 @@
     "is_living": false,
     "lifespan": "1809 – 1895",
     "parents": [
-      "James Telfer (1761–1845)",
-      "Elizabeth Betty Hutton"
+      "james-telfer-1761"
     ],
     "children": [
-      "James Telfer",
-      "Esther Jane Smith",
-      "Elizabeth Farrow",
-      "Jane Telfer",
-      "John Telfer",
-      "George Wright Telfer",
-      "Margaret Dougal Telfer"
+      "john-telfer-1847"
     ],
     "spouses": [
-      "Jean Murray (1st)",
-      "Dinah Flavel (2nd)",
-      "Margaret Wright (3rd)"
+      "margaret-telfer-1892"
     ],
     "siblings": [],
     "related_trees": [
@@ -2165,7 +2132,8 @@
         "filename": "francis-telfer-portrait.jpg"
       }
     ],
-    "person_photo": "images/people/francis-telfer-portrait.jpg"
+    "person_photo": "images/people/francis-telfer-portrait.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Grantley Keith Telfer",
@@ -2250,7 +2218,8 @@
       "telfer-tree"
     ],
     "vault_file": "Grantley Keith Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Hannah Parker",
@@ -2313,7 +2282,8 @@
       "telfer-tree"
     ],
     "vault_file": "Hannah Parker (1855–1948).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Isabella Lucieton Telfer",
@@ -2402,7 +2372,8 @@
       "telfer-tree"
     ],
     "vault_file": "Isabella Lucieton Telfer (1880–1964).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "James Telfer",
@@ -2470,21 +2441,15 @@
     "is_living": false,
     "lifespan": "1761 – 1845",
     "parents": [
-      "John Telfer (of Castleton)",
-      "Elspeth Young"
+      "john-telfer-of-castleton"
     ],
     "children": [
-      "James (1796–1863)",
-      "Isobel (1798–1875)",
-      "Adam (1799–)",
-      "Margaret (1802–1884)",
-      "Robert (1803–1878)",
-      "John (1805–1839)",
-      "Francis (1809–1895)",
-      "William (1811–1881)"
+      "francis-telfer-1809",
+      "robert-telfer-1803",
+      "james-telfer-1796"
     ],
     "spouses": [
-      "Betty Hutton"
+      "elizabeth-beattie"
     ],
     "siblings": [],
     "related_trees": [
@@ -2499,7 +2464,8 @@
         "filename": "james-telfer-1761.jpg"
       }
     ],
-    "person_photo": "images/people/james-telfer-1761.jpg"
+    "person_photo": "images/people/james-telfer-1761.jpg",
+    "branch": "telfer"
   },
   {
     "id": "James Telfer",
@@ -2580,22 +2546,16 @@
     "is_living": false,
     "lifespan": "1796 – 1863",
     "parents": [
-      "Betty Hutton",
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
     "children": [
-      "James (1829–1913)",
-      "Elizabeth (1832–96)",
-      "Margaret",
-      "Jean",
-      "Robert",
-      "John",
-      "Adam",
-      "Agnes (1848–)",
-      "Isabella (1837–)"
+      "james-telfer-1829",
+      "elizabeth-telfer-1832",
+      "robert-telfer-1835",
+      "john-telfer-1840"
     ],
     "spouses": [
-      "Elizabeth Beattie"
+      "elizabeth-beattie"
     ],
     "siblings": [
       "Isobel",
@@ -2618,7 +2578,8 @@
         "filename": "james-telfer-1796-1863-grave.jpg"
       }
     ],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer"
   },
   {
     "id": "James Telfer",
@@ -2695,19 +2656,11 @@
     "is_living": false,
     "lifespan": "1829 – 1913",
     "parents": [
-      "Elizabeth Beattie (1802-1891)",
-      "James Telfer (1796-1863)"
+      "james-telfer-1796",
+      "elizabeth-beattie"
     ],
-    "children": [
-      "James (Jr)",
-      "John",
-      "Robert",
-      "Adam",
-      "daughter (Mrs GWH Warnock)"
-    ],
-    "spouses": [
-      "Janet Welsh"
-    ],
+    "spouses": [],
+    "children": [],
     "siblings": [
       "Elizabeth",
       "Margaret",
@@ -2730,7 +2683,8 @@
         "filename": "james-telfer-1828-1913-portrait.jpg"
       }
     ],
-    "person_photo": "images/people/james-telfer-1828-1913-portrait.jpg"
+    "person_photo": "images/people/james-telfer-1828-1913-portrait.jpg",
+    "branch": "telfer"
   },
   {
     "id": "James Telfer",
@@ -2797,14 +2751,11 @@
     "is_living": false,
     "lifespan": "1866 – 1946",
     "parents": [
-      "Martha Allen",
-      "John Telfer (1840-1913)"
+      "john-telfer-1840"
     ],
-    "children": [
-      "Vida (1919–2021)"
-    ],
+    "children": [],
     "spouses": [
-      "Alma Ida Sporer (m. 1917)"
+      "alma-sporer"
     ],
     "siblings": [
       "Elizabeth (1868–1950)",
@@ -2815,7 +2766,8 @@
       "telfer-tree"
     ],
     "vault_file": "James Telfer (1866–1946).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "James Telfer Dillon",
@@ -2884,7 +2836,8 @@
       "telfer-tree"
     ],
     "vault_file": "James Telfer Dillon (1861–1951).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Jared Mitchell Ivory",
@@ -2973,7 +2926,8 @@
         "filename": "Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg"
       }
     ],
-    "person_photo": "images/people/Jared-Ivory---Kelly-Partners.jpg"
+    "person_photo": "images/people/Jared-Ivory---Kelly-Partners.jpg",
+    "branch": "other"
   },
   {
     "id": "Joel Matthew Ivory",
@@ -3050,7 +3004,8 @@
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+    "branch": "other"
   },
   {
     "id": "John Charles Dillon",
@@ -3152,7 +3107,8 @@
         "filename": "john-charles-dillon-grave-photo.jpg"
       }
     ],
-    "person_photo": "images/people/john-charles-dillon-photo1.png"
+    "person_photo": "images/people/john-charles-dillon-photo1.png",
+    "branch": "other"
   },
   {
     "id": "John Lawrie",
@@ -3185,7 +3141,8 @@
       "telfer-tree"
     ],
     "vault_file": "John Lawrie (1810–1888).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "John Robert Telfer",
@@ -3280,7 +3237,8 @@
       "telfer-tree"
     ],
     "vault_file": "John Robert Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "John Roland Telfer",
@@ -3364,7 +3322,8 @@
       "telfer-tree"
     ],
     "vault_file": "John Roland Telfer (1882–1975).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "John Telfer",
@@ -3451,28 +3410,14 @@
     "is_living": false,
     "lifespan": "1840 – 1913",
     "parents": [
-      "Elizabeth Beattie (1802-1891)",
-      "James Telfer (1796-1863)"
+      "james-telfer-1796",
+      "elizabeth-beattie"
     ],
     "children": [
-      "James",
-      "Elizabeth",
-      "Susan",
-      "Martha",
-      "Mark",
-      "Maria Clara",
-      "Isabella Lucieton",
-      "John Roland",
-      "Clara Blanche",
-      "Robert Freddy",
-      "Douglas",
-      "Colin Roy",
-      "Alan Dale",
-      "Alma Tressy"
+      "james-telfer-1866"
     ],
     "spouses": [
-      "Martha Allen",
-      "Martha Clara Henstridge"
+      "alma-sporer"
     ],
     "siblings": [
       "James (1829–1913)",
@@ -3488,7 +3433,8 @@
       "telfer-tree"
     ],
     "vault_file": "John Telfer (1840–1913).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "John Telfer",
@@ -3553,19 +3499,14 @@
     "is_living": false,
     "lifespan": "1847 – 1929",
     "parents": [
-      "Margaret Wright",
-      "Francis Telfer"
+      "francis-telfer-1809",
+      "margaret-telfer-1892"
     ],
     "children": [
-      "Francis Charles Telfer",
-      "Ernest John Telfer",
-      "William James Telfer",
-      "Albert George Telfer",
-      "Walter William Telfer",
-      "Edwin Gilbert Telfer"
+      "murray-telfer"
     ],
     "spouses": [
-      "Caroline Amelia Telfer (née Masters)"
+      "caroline-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -3579,7 +3520,8 @@
         "vault_path": "_assets/Telfer family reunion c1920.jpg",
         "filename": "telfer-family-reunion-c1920.jpg"
       }
-    ]
+    ],
+    "branch": "telfer"
   },
   {
     "id": "John Telfer (of Castleton)",
@@ -3628,17 +3570,16 @@
     "lifespan": "1731 – ?",
     "parents": [],
     "children": [
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
-    "spouses": [
-      "Elspeth Young"
-    ],
+    "spouses": [],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
     "vault_file": "John Telfer (of Castleton) (1731–?).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "John Webster",
@@ -3698,7 +3639,8 @@
       "telfer-tree"
     ],
     "vault_file": "John Webster (1750–1810).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Joseph March",
@@ -3765,7 +3707,8 @@
       "telfer-tree"
     ],
     "vault_file": "Joseph March (1767–1831).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Joseph March",
@@ -3848,7 +3791,8 @@
       "telfer-tree"
     ],
     "vault_file": "Joseph March (1797–1883).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Kathryn Mavis Telfer",
@@ -3922,7 +3866,8 @@
       "telfer-tree"
     ],
     "vault_file": "Kathryn Mavis Telfer (1961–1965).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Kristin Stefanoff",
@@ -3997,7 +3942,8 @@
       "telfer-tree"
     ],
     "vault_file": "Kristin Stefanoff.md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Kylie Isabella Telfer",
@@ -4080,7 +4026,8 @@
         "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
       }
     ],
-    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
+    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Lauren Maree Ivory",
@@ -4157,7 +4104,8 @@
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+    "branch": "other"
   },
   {
     "id": "Levi Leonard Timothy Telfer",
@@ -4224,7 +4172,8 @@
       "telfer-tree"
     ],
     "vault_file": "Levi Leonard Timothy Telfer (2017–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Margaret Dougal Telfer",
@@ -4298,7 +4247,8 @@
       "telfer-tree"
     ],
     "vault_file": "Margaret Dougal Telfer (1849–1936).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Margaret Wright Telfer",
@@ -4349,12 +4299,10 @@
     "lifespan": "? – 1892",
     "parents": [],
     "children": [
-      "John Telfer",
-      "George Wright Telfer",
-      "Margaret Dougal Telfer"
+      "john-telfer-1847"
     ],
     "spouses": [
-      "Francis Telfer (3rd wife)"
+      "francis-telfer-1809"
     ],
     "siblings": [],
     "related_trees": [
@@ -4369,7 +4317,8 @@
         "filename": "margaret-wright-telfer.jpg"
       }
     ],
-    "person_photo": "images/people/margaret-wright-telfer.jpg"
+    "person_photo": "images/people/margaret-wright-telfer.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Maria Clara Telfer",
@@ -4450,7 +4399,8 @@
       "telfer-tree"
     ],
     "vault_file": "Maria Clara Telfer (1878–1903).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Marian Telfer Cornish",
@@ -4549,7 +4499,8 @@
       "telfer-tree"
     ],
     "vault_file": "Marian Telfer Cornish (1896–1977).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Mark Kenneth Telfer",
@@ -4616,17 +4567,10 @@
     "is_living": true,
     "lifespan": "1986 – living",
     "parents": [
-      "Penny Telfer",
-      "Timothy Neil Telfer"
+      "timothy-telfer"
     ],
-    "children": [
-      "Mitchell Telfer",
-      "Levi Telfer",
-      "Zabella Telfer"
-    ],
-    "spouses": [
-      "Kylie Isabella Telfer"
-    ],
+    "children": [],
+    "spouses": [],
     "siblings": [
       "Amy Nicole Telfer"
     ],
@@ -4642,7 +4586,8 @@
         "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
       }
     ],
-    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
+    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Martha Allen",
@@ -4706,7 +4651,8 @@
       "telfer-tree"
     ],
     "vault_file": "Martha Allen (1840–1876).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Martha Clara Henstridge",
@@ -4794,7 +4740,8 @@
       "telfer-tree"
     ],
     "vault_file": "Martha Clara Henstridge (1854–1921).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Martha Telfer Cameron",
@@ -4880,7 +4827,8 @@
       "telfer-tree"
     ],
     "vault_file": "Martha Telfer Cameron (1873–1964).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Mitchell Telfer",
@@ -4951,7 +4899,8 @@
         "filename": "Mitchell-Telfer---18th-Birthday.jpg"
       }
     ],
-    "person_photo": "images/people/Mitchell-Telfer---16th-Birthday.jpg"
+    "person_photo": "images/people/Mitchell-Telfer---16th-Birthday.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Murray John Telfer",
@@ -5015,19 +4964,14 @@
     "is_living": false,
     "lifespan": "1924 – 2009",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer"
+      "john-telfer-1847",
+      "caroline-telfer"
     ],
     "children": [
-      "Daryll William Telfer",
-      "John Robert Telfer",
-      "Grantley Keith Telfer",
-      "Timothy Neil Telfer",
-      "Kathryn Mavis Telfer",
-      "Susan Shirley Lawrie (adopted)"
+      "timothy-telfer"
     ],
     "spouses": [
-      "Shirley Telfer"
+      "shirley-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -5054,7 +4998,8 @@
         "filename": "murray-shirley-telfer-wedding-portrait-1950.jpg"
       }
     ],
-    "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg"
+    "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Ruth Telfer",
@@ -5133,7 +5078,8 @@
         "filename": "murray-ruth-telfer-duchess-horse-1936.jpg"
       }
     ],
-    "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg"
+    "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Nick Telfer",
@@ -5200,7 +5146,8 @@
       "telfer-tree"
     ],
     "vault_file": "Nick Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Paul Ivory",
@@ -5272,7 +5219,8 @@
         "filename": "Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
       }
     ],
-    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
+    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
+    "branch": "other"
   },
   {
     "id": "Penny Telfer",
@@ -5351,7 +5299,8 @@
         "filename": "Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg"
       }
     ],
-    "person_photo": "images/people/Penny_Virgen_age14_Clontarf_High_School.jpg"
+    "person_photo": "images/people/Penny_Virgen_age14_Clontarf_High_School.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Peter Telfer",
@@ -5419,7 +5368,8 @@
         "filename": "Peter-Telfer.jpg"
       }
     ],
-    "person_photo": "images/people/Peter-Telfer.jpg"
+    "person_photo": "images/people/Peter-Telfer.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Rob Lawrie",
@@ -5480,7 +5430,8 @@
       "telfer-tree"
     ],
     "vault_file": "Rob Lawrie.md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Robert Dunlop Lawrie",
@@ -5513,7 +5464,8 @@
       "telfer-tree"
     ],
     "vault_file": "Robert Dunlop Lawrie (1850–1917).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Robert Freddy Telfer",
@@ -5602,7 +5554,8 @@
       "telfer-tree"
     ],
     "vault_file": "Robert Freddy Telfer (1886–1949).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Robert Telfer",
@@ -5678,18 +5631,10 @@
     "is_living": false,
     "lifespan": "1803 – 1878",
     "parents": [
-      "Betty Hutton",
-      "James Telfer"
+      "james-telfer-1761"
     ],
-    "children": [
-      "Elizabeth (~1834–)",
-      "James (~1836–)",
-      "Jean (~1838–)",
-      "John (~1839–)"
-    ],
-    "spouses": [
-      "Elizabeth \"Betty\" Oliver"
-    ],
+    "children": [],
+    "spouses": [],
     "siblings": [
       "James (1796–1863)",
       "Isobel (1798–1875)",
@@ -5703,7 +5648,8 @@
       "telfer-tree"
     ],
     "vault_file": "Robert Telfer (1803–1878).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Robert Telfer",
@@ -5769,13 +5715,11 @@
     "is_living": false,
     "lifespan": "1835 – 1907",
     "parents": [
-      "Elizabeth Beattie (1802-1891)",
-      "James Telfer (1796-1863)"
+      "james-telfer-1796",
+      "elizabeth-beattie"
     ],
     "children": [],
-    "spouses": [
-      "Susan Burton Telfer"
-    ],
+    "spouses": [],
     "siblings": [
       "James (1829–1913)",
       "Elizabeth Beattie (1832–1896)",
@@ -5790,7 +5734,8 @@
       "telfer-tree"
     ],
     "vault_file": "Robert Telfer (1835–1907).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Robyn Telfer",
@@ -5840,7 +5785,8 @@
       "telfer-tree"
     ],
     "vault_file": "Robyn Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Sheryle Telfer",
@@ -5922,7 +5868,8 @@
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
-    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
+    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Shirley Edna Telfer",
@@ -5994,20 +5941,12 @@
     "body_stripped": "**Role:** Matriarch of the Telfer family — wife of Murray\n**Born:** 28 March 1929\n**Died:** 23 February 2017 (aged 87) — Tumby Bay Hospital, South Australia\n**Burial:** Tumby Bay Cemetery, Tumby Bay SA\n**Grandson:** Mark Kenneth Telfer\n**Great-grandchildren:** Levi, Zabella\n\n## Family\n\n Relation  Name \n\n **Mother**  Caroline Edna Lawrie (1890–1957) \n **Father**  William Henry Parker \n **Spouse**  Murray John Telfer (1924–2009) (m. ~1950s) \n **Children**  Daryll William Telfer, John Telf",
     "is_living": false,
     "lifespan": "1929 – 2017",
-    "parents": [
-      "Caroline Edna Lawrie",
-      "William Henry Parker"
-    ],
+    "parents": [],
     "children": [
-      "Daryll William Telfer",
-      "John Robert Telfer",
-      "Grantley Keith Telfer",
-      "Timothy Neil Telfer",
-      "Kathryn Mavis Telfer",
-      "Susan Shirley Lawrie (adopted)"
+      "timothy-telfer"
     ],
     "spouses": [
-      "Murray John Telfer"
+      "murray-telfer"
     ],
     "siblings": [
       "Avis Muriel Nicholls",
@@ -6039,7 +5978,8 @@
         "filename": "murray-shirley-telfer-wedding-portrait-1950.jpg"
       }
     ],
-    "person_photo": "images/people/Shirley-Telfer---Portrait.jpg"
+    "person_photo": "images/people/Shirley-Telfer---Portrait.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Sophia Baker",
@@ -6120,7 +6060,8 @@
       "telfer-tree"
     ],
     "vault_file": "Sophia Baker (1829–1901).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Susan Burton Telfer",
@@ -6168,7 +6109,8 @@
       "telfer-tree"
     ],
     "vault_file": "Susan Burton Telfer (1844–1924).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Susan Shirley Lawrie",
@@ -6249,7 +6191,8 @@
       "telfer-tree"
     ],
     "vault_file": "Susan Shirley Lawrie.md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Susan Telfer",
@@ -6324,7 +6267,8 @@
       "telfer-tree"
     ],
     "vault_file": "Susan Telfer (1871–1952).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   },
   {
     "id": "Timothy Neil Telfer",
@@ -6394,16 +6338,13 @@
     "is_living": true,
     "lifespan": "1959 – living",
     "parents": [
-      "Shirley Telfer",
-      "Murray John Telfer"
+      "murray-telfer",
+      "shirley-telfer"
     ],
     "children": [
-      "Mark Kenneth Telfer",
-      "Amy Nicole Telfer"
+      "mark-telfer-1986"
     ],
-    "spouses": [
-      "Sheryle Telfer"
-    ],
+    "spouses": [],
     "siblings": [
       "Daryll William Telfer",
       "John Robert Telfer",
@@ -6429,7 +6370,8 @@
         "filename": "Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg"
       }
     ],
-    "person_photo": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
+    "person_photo": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
+    "branch": "telfer"
   },
   {
     "id": "Vida Templer",
@@ -6510,7 +6452,8 @@
       "telfer-tree"
     ],
     "vault_file": "Vida Templer (1919–2021).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "William Henry Parker",
@@ -6616,7 +6559,8 @@
       "telfer-tree"
     ],
     "vault_file": "William Henry Parker (1893–1968).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "William Humphrey Parker",
@@ -6710,7 +6654,8 @@
       "telfer-tree"
     ],
     "vault_file": "William Humphrey Parker (1850–1926).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "William John Baker",
@@ -6791,7 +6736,8 @@
       "telfer-tree"
     ],
     "vault_file": "William John Baker (1831–1919).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "William Webster",
@@ -6855,7 +6801,8 @@
       "telfer-tree"
     ],
     "vault_file": "William Webster (1778–1816).md",
-    "images": []
+    "images": [],
+    "branch": "other"
   },
   {
     "id": "Zabella Violet Zelda Telfer",
@@ -6922,6 +6869,7 @@
       "telfer-tree"
     ],
     "vault_file": "Zabella Violet Zelda Telfer (2019–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer"
   }
 ]
