@@ -761,18 +761,11 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "doris-elma-rowe",
-      "edwin-roy-telfer",
-      "emily-amelia-barton",
       "emily-ellen-thorpe",
-      "ethel-jean-mcmurtrie",
-      "francis-kelson-telfer",
-      "george-provis",
-      "gladys-merle-pedler",
-      "malcolm-george-telfer",
-      "reginald-masters-telfer"
+      "george-provis"
     ],
     "children": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -1426,6 +1419,7 @@
       "mr-fatchen"
     ],
     "siblings": [
+      "clarice-may-fatchen",
       "doris-elma-rowe",
       "edwin-roy-telfer",
       "emily-amelia-barton",
@@ -2627,6 +2621,7 @@
       "caroline-amelia-masters",
       "caroline-amelia-telfer-18421929",
       "caroline-amelia-telfer-18421929-ne-masters",
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -2781,18 +2776,15 @@
     ],
     "siblings": [
       "adam-telfer-dillon",
-      "albert-george-telfer",
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
-      "edwin-gilbert-telfer",
       "edwin-roy-telfer",
       "elizabeth-esther",
       "elizabeth-esther-dillon",
       "emily-amelia-barton",
-      "ernest-john-telfer",
       "ethel-jean-mcmurtrie",
       "francis",
-      "francis-kelson-telfer",
       "francis-telfer-dillon",
       "gladys-merle-pedler",
       "henry-hatch",
@@ -2809,8 +2801,6 @@
       "robert-telfer-dillon",
       "septimus",
       "septimus-dillon",
-      "walter-william-telfer",
-      "william-james-telfer",
       "william-telfer"
     ],
     "related_trees": [
@@ -6960,6 +6950,7 @@
       "shirley-edna-telfer-19292017"
     ],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -7069,6 +7060,7 @@
       "shirley-telfer"
     ],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -8019,6 +8011,7 @@
     ],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "eddie-telfer",
@@ -10510,53 +10503,76 @@
     "first_name": "Albert",
     "middle_name": "George",
     "last_name": "Telfer",
-    "birth_year": 1875,
-    "death_year": 1954,
-    "birth_year_display": "1875",
-    "death_year_display": "1954",
-    "display_name": "Albert George Telfer (1875–1954)",
+    "birth_year": 1882,
+    "death_year": 1961,
+    "birth_year_display": "1882",
+    "death_year_display": "1961",
+    "display_name": "Albert George Telfer (1882–1961)",
     "title": "Albert George Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Caroline Amelia Telfer 18421929",
-          "John Telfer 18471929"
+          "Albert George Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "John Telfer (1847–1929)",
+          "John Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Caroline Amelia Telfer (née Masters)",
+          "Caroline Amelia Telfer (1842–1929) (née Masters)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Francis Charles Telfer 18751954"
+          "Francis Charles Telfer",
+          "Ernest John Telfer",
+          "William James Telfer",
+          "Walter William Telfer",
+          "Edwin Gilbert Telfer",
+          "Ernest John Telfer, William James Telfer, Walter William Telfer, Edwin Gilbert Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Francis Charles Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Albert\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: George\nbirth_year: 1875\ndeath_year: 1954\n---\n\n# Albert George Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Albert George Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1882\ndate: 2026-05-20\ndeath_year: 1961\nfirst_name: Albert\nlast_name: Telfer\nmiddle_name: George\nrelationships: \"Self: Albert George Telfer | Mother: Caroline Amelia Telfer (née Masters) | Father: John Telfer (1847–1929) | Siblings: Francis Charles Telfer, Ernest John Telfer, William James Telfer, Walter William Telfer, Edwin Gilbert Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Albert George Telfer — Family & Biography\nchildren: []\n---\n\n# Albert George Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1882 — Kersbrook, South Australia\n**Died:** ~1961 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** Ernest John, William James, Walter William, Edwin Gilbert\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | Ernest John Telfer, William James Telfer, Walter William Telfer, Edwin Gilbert Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Albert's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Albert George Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1882 — Kersbrook, South Australia\n**Died:** ~1961 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** Ernest John, William James, Walter William, Edwin Gilbert\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | Ernest John Telfer, William James Telfer, Walter William Telfer, Edwin Gilbert Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Albert's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1875 – 1954",
-    "generation": 5,
+    "lifespan": "1882 – 1961",
+    "generation": 4,
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
       "john-telfer-18471929"
     ],
-    "children": [
-      "caroline-amelia-telfer-18421929",
-      "john-telfer-18471929"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "edwin-gilbert-telfer",
       "ernest-john-telfer",
       "francis-charles-telfer-18751954",
-      "francis-telfer-18091895",
       "walter-william-telfer",
       "william-james-telfer"
     ],
@@ -11266,7 +11282,16 @@
       "ruth-telfer-1930"
     ],
     "children": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
       "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
       "ruth-telfer-1930"
     ],
     "spouses": [
@@ -12452,7 +12477,12 @@
       "francis-charles-telfer-18751954"
     ],
     "children": [
-      "francis-charles-telfer-18751954"
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "walter-william-telfer",
+      "william-james-telfer"
     ],
     "spouses": [],
     "siblings": [],
@@ -12570,7 +12600,13 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [],
-    "children": [],
+    "children": [
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "walter-william-telfer",
+      "william-james-telfer"
+    ],
     "spouses": [
       "john-telfer-18471929"
     ],
@@ -13530,6 +13566,114 @@
     "haplogroup_y": null
   },
   {
+    "id": "Clarice May Telfer",
+    "slug": "clarice-may-fatchen",
+    "first_name": "Clarice May",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1911,
+    "death_year": 1997,
+    "birth_year_display": "1911",
+    "death_year_display": "1997",
+    "display_name": "Clarice May Telfer (1911–1997)",
+    "title": "Clarice May Fatchen (née Telfer) — Family & Biography",
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Clarice May Telfer"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Mr Fatchen"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Francis Kelson Telfer",
+          "Emily Amelia Barton",
+          "Ethel Jean McMurtrie",
+          "Gladys Merle Pedler",
+          "Doris Elma Rowe",
+          "Edwin Roy Telfer",
+          "Reginald Masters Telfer",
+          "Murray John Telfer",
+          "Malcolm George Telfer",
+          "Francis Kelson Telfer, Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "---\nbirth_year: 1911\ndate: 2026-05-20\ndeath_year: 1997\nfirst_name: Clarice May\nlast_name: Telfer\nmiddle_name: \"\"\nrelationships: \"Self: Clarice May Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Spouse: Mr Fatchen | Siblings: Francis Kelson Telfer, Emily Amelia Barton, Ethel Jean McMurtrie, Gladys Merle Pedler, Doris Elma Rowe, Edwin Roy Telfer, Reginald Masters Telfer, Murray John Telfer, Malcolm George Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Clarice May Fatchen (née Telfer) — Family & Biography\nchildren: []\n---\n\n# Clarice May Fatchen (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1911 — South Australia\n**Died:** ~1997 — South Australia\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Fatchen\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr Fatchen |\n| **Siblings** | Francis Kelson Telfer, Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Clarice's life — marriage date, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Clarice May\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Clarice May Fatchen (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1911 — South Australia\n**Died:** ~1997 — South Australia\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Fatchen\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr Fatchen |\n| **Siblings** | Francis Kelson Telfer, Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Clarice's life — marriage date, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Clarice May\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "is_living": false,
+    "lifespan": "1911 – 1997",
+    "generation": 5,
+    "branch": "telfer",
+    "confidence": "medium",
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [],
+    "spouses": [
+      "mr-fatchen"
+    ],
+    "siblings": [
+      "clarice-may-fatchen-19111997",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ],
+    "related_trees": [
+      "telfer",
+      "telfer-main"
+    ],
+    "vault_file": "clarice-may-fatchen.md",
+    "images": [],
+    "person_photo": null,
+    "dna_matches": [],
+    "haplogroup_mt": null,
+    "haplogroup_y": null
+  },
+  {
     "id": "Colin Roy",
     "slug": "colin-roy",
     "first_name": "Colin",
@@ -14160,54 +14304,87 @@
     "haplogroup_y": null
   },
   {
-    "id": "Doris Elma Rowe",
+    "id": "Doris Elma Telfer",
     "slug": "doris-elma-rowe",
-    "first_name": "Doris",
-    "middle_name": "Elma",
-    "last_name": "Rowe",
-    "birth_year": 1911,
-    "death_year": 2009,
-    "birth_year_display": "1911",
-    "death_year_display": "2009",
-    "display_name": "Doris Elma Rowe (1911–2009)",
-    "title": "Doris Elma Rowe — Family & Biography",
+    "first_name": "Doris Elma",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1919,
+    "death_year": null,
+    "birth_year_display": "1919",
+    "death_year_display": "?",
+    "display_name": "Doris Elma Telfer (1919–?)",
+    "title": "Doris Elma Rowe (née Telfer) — Family & Biography",
     "tags": [
-      "person",
-      "other"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Amy Ellen Telfer 18841951",
-          "Francis Charles Telfer 18751954"
+          "Doris Elma Telfer"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Mr Rowe"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen 19111997"
+          "Francis Kelson Telfer",
+          "Clarice May Fatchen",
+          "Emily Amelia Barton",
+          "Ethel Jean McMurtrie",
+          "Gladys Merle Pedler",
+          "Edwin Roy Telfer",
+          "Reginald Masters Telfer",
+          "Murray John Telfer",
+          "Malcolm George Telfer",
+          "Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Doris\nlast_name: Rowe\ntags:\n- person\n- other\nmiddle_name: Elma\nbirth_year: 1911\ndeath_year: 2009\n---\n\n# Doris Elma Rowe\n\n**Lifespan:** 1911–2009\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Doris Elma Rowe\n\n**Lifespan:** 1911–2009\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1919\ndate: 2026-05-20\ndeath_year: null\nfirst_name: Doris Elma\nlast_name: Telfer\nmiddle_name: \"\"\nrelationships: \"Self: Doris Elma Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Spouse: Mr Rowe | Siblings: Francis Kelson Telfer, Clarice May Fatchen, Emily Amelia Barton, Ethel Jean McMurtrie, Gladys Merle Pedler, Edwin Roy Telfer, Reginald Masters Telfer, Murray John Telfer, Malcolm George Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Doris Elma Rowe (née Telfer) — Family & Biography\nchildren: []\n---\n\n# Doris Elma Rowe (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1919 — South Australia\n**Died:** date unknown\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Rowe\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr Rowe |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Doris's life — marriage date, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Doris Elma\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Doris Elma Rowe (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1919 — South Australia\n**Died:** date unknown\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Rowe\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr Rowe |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Doris's life — marriage date, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Doris Elma\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1911 – 2009",
+    "lifespan": "1919 – ?",
     "generation": 5,
-    "branch": "other",
+    "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "amy-ellen-telfer-18841951",
       "francis-charles-telfer-18751954"
     ],
-    "children": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "edwin-roy-telfer",
       "emily-amelia-barton",
@@ -14222,7 +14399,7 @@
       "ruth-telfer-1930"
     ],
     "related_trees": [
-      "other",
+      "telfer",
       "telfer-main"
     ],
     "vault_file": "doris-elma-rowe.md",
@@ -14717,53 +14894,76 @@
     "first_name": "Edwin",
     "middle_name": "Gilbert",
     "last_name": "Telfer",
-    "birth_year": 1875,
-    "death_year": 1954,
-    "birth_year_display": "1875",
-    "death_year_display": "1954",
-    "display_name": "Edwin Gilbert Telfer (1875–1954)",
+    "birth_year": 1888,
+    "death_year": 1972,
+    "birth_year_display": "1888",
+    "death_year_display": "1972",
+    "display_name": "Edwin Gilbert Telfer (1888–1972)",
     "title": "Edwin Gilbert Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Caroline Amelia Telfer 18421929",
-          "John Telfer 18471929"
+          "Edwin Gilbert Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "John Telfer (1847–1929)",
+          "John Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Caroline Amelia Telfer (née Masters)",
+          "Caroline Amelia Telfer (1842–1929) (née Masters)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Francis Charles Telfer 18751954"
+          "Francis Charles Telfer",
+          "Ernest John Telfer",
+          "William James Telfer",
+          "Albert George Telfer",
+          "Walter William Telfer",
+          "Ernest John Telfer, William James Telfer, Albert George Telfer, Walter William Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Francis Charles Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Edwin\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: Gilbert\nbirth_year: 1875\ndeath_year: 1954\n---\n\n# Edwin Gilbert Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Edwin Gilbert Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1888\ndate: 2026-05-20\ndeath_year: 1972\nfirst_name: Edwin\nlast_name: Telfer\nmiddle_name: Gilbert\nrelationships: \"Self: Edwin Gilbert Telfer | Mother: Caroline Amelia Telfer (née Masters) | Father: John Telfer (1847–1929) | Siblings: Francis Charles Telfer, Ernest John Telfer, William James Telfer, Albert George Telfer, Walter William Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Edwin Gilbert Telfer — Family & Biography\nchildren: []\n---\n\n# Edwin Gilbert Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1888 — Kersbrook, South Australia\n**Died:** ~1972 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** Ernest John, William James, Albert George, Walter William\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | Ernest John Telfer, William James Telfer, Albert George Telfer, Walter William Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Edwin's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Edwin Gilbert Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1888 — Kersbrook, South Australia\n**Died:** ~1972 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** Ernest John, William James, Albert George, Walter William\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | Ernest John Telfer, William James Telfer, Albert George Telfer, Walter William Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Edwin's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1875 – 1954",
-    "generation": 5,
+    "lifespan": "1888 – 1972",
+    "generation": 4,
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
       "john-telfer-18471929"
     ],
-    "children": [
-      "caroline-amelia-telfer-18421929",
-      "john-telfer-18471929"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "albert-george-telfer",
       "ernest-john-telfer",
       "francis-charles-telfer-18751954",
-      "francis-telfer-18091895",
       "walter-william-telfer",
       "william-james-telfer"
     ],
@@ -14784,36 +14984,65 @@
     "first_name": "Edwin",
     "middle_name": "Roy",
     "last_name": "Telfer",
-    "birth_year": 1911,
+    "birth_year": 1921,
     "death_year": 2009,
-    "birth_year_display": "1911",
+    "birth_year_display": "1921",
     "death_year_display": "2009",
-    "display_name": "Edwin Roy Telfer (1911–2009)",
+    "display_name": "Edwin Roy Telfer (1921–2009)",
     "title": "Edwin Roy Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Amy Ellen Telfer 18841951",
-          "Francis Charles Telfer 18751954"
+          "Edwin Roy Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen 19111997"
+          "Francis Kelson Telfer",
+          "Clarice May Fatchen",
+          "Emily Amelia Barton",
+          "Ethel Jean McMurtrie",
+          "Gladys Merle Pedler",
+          "Doris Elma Rowe",
+          "Reginald Masters Telfer",
+          "Murray John Telfer",
+          "Malcolm George Telfer",
+          "Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Reginald Masters Telfer, Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Edwin\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: Roy\nbirth_year: 1911\ndeath_year: 2009\n---\n\n# Edwin Roy Telfer\n\n**Lifespan:** 1911–2009\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Edwin Roy Telfer\n\n**Lifespan:** 1911–2009\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1921\ndate: 2026-05-20\ndeath_year: 2009\nfirst_name: Edwin\nlast_name: Telfer\nmiddle_name: Roy\nrelationships: \"Self: Edwin Roy Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Siblings: Francis Kelson Telfer, Clarice May Fatchen, Emily Amelia Barton, Ethel Jean McMurtrie, Gladys Merle Pedler, Doris Elma Rowe, Reginald Masters Telfer, Murray John Telfer, Malcolm George Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Edwin Roy Telfer — Family & Biography\nchildren: []\n---\n\n# Edwin Roy Telfer\n\n**Role:** Son of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — brother of Murray John Telfer\n**Born:** ~1921 — South Australia\n**Died:** ~2009 — South Australia\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Edwin's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Edwin Roy\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Edwin Roy Telfer\n\n**Role:** Son of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — brother of Murray John Telfer\n**Born:** ~1921 — South Australia\n**Died:** ~2009 — South Australia\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Edwin's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Edwin Roy\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1911 – 2009",
+    "lifespan": "1921 – 2009",
     "generation": 5,
     "branch": "telfer",
     "confidence": "medium",
@@ -14821,12 +15050,10 @@
       "amy-ellen-telfer-18841951",
       "francis-charles-telfer-18751954"
     ],
-    "children": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "emily-amelia-barton",
@@ -16060,54 +16287,87 @@
     "haplogroup_y": null
   },
   {
-    "id": "Emily Amelia Barton",
+    "id": "Emily Amelia Telfer",
     "slug": "emily-amelia-barton",
-    "first_name": "Emily",
-    "middle_name": "Amelia",
-    "last_name": "Barton",
-    "birth_year": 1911,
-    "death_year": 2009,
-    "birth_year_display": "1911",
-    "death_year_display": "2009",
-    "display_name": "Emily Amelia Barton (1911–2009)",
-    "title": "Emily Amelia Barton — Family & Biography",
+    "first_name": "Emily Amelia",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1913,
+    "death_year": null,
+    "birth_year_display": "1913",
+    "death_year_display": "?",
+    "display_name": "Emily Amelia Telfer (1913–?)",
+    "title": "Emily Amelia Barton (née Telfer) — Family & Biography",
     "tags": [
-      "person",
-      "other"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Amy Ellen Telfer 18841951",
-          "Francis Charles Telfer 18751954"
+          "Emily Amelia Telfer"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Mr Barton"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen 19111997"
+          "Francis Kelson Telfer",
+          "Clarice May Fatchen",
+          "Ethel Jean McMurtrie",
+          "Gladys Merle Pedler",
+          "Doris Elma Rowe",
+          "Edwin Roy Telfer",
+          "Reginald Masters Telfer",
+          "Murray John Telfer",
+          "Malcolm George Telfer",
+          "Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Emily\nlast_name: Barton\ntags:\n- person\n- other\nmiddle_name: Amelia\nbirth_year: 1911\ndeath_year: 2009\n---\n\n# Emily Amelia Barton\n\n**Lifespan:** 1911–2009\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Emily Amelia Barton\n\n**Lifespan:** 1911–2009\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1913\ndate: 2026-05-20\ndeath_year: null\nfirst_name: Emily Amelia\nlast_name: Telfer\nmiddle_name: \"\"\nrelationships: \"Self: Emily Amelia Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Spouse: Mr Barton | Siblings: Francis Kelson Telfer, Clarice May Fatchen, Ethel Jean McMurtrie, Gladys Merle Pedler, Doris Elma Rowe, Edwin Roy Telfer, Reginald Masters Telfer, Murray John Telfer, Malcolm George Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Emily Amelia Barton (née Telfer) — Family & Biography\nchildren: []\n---\n\n# Emily Amelia Barton (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1913 — South Australia\n**Died:** date unknown\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Barton\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr Barton |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Emily's life — marriage date, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Emily Amelia\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Emily Amelia Barton (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1913 — South Australia\n**Died:** date unknown\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Barton\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr Barton |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Emily's life — marriage date, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Emily Amelia\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1911 – 2009",
+    "lifespan": "1913 – ?",
     "generation": 5,
-    "branch": "other",
+    "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "amy-ellen-telfer-18841951",
       "francis-charles-telfer-18751954"
     ],
-    "children": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -16122,7 +16382,7 @@
       "ruth-telfer-1930"
     ],
     "related_trees": [
-      "other",
+      "telfer",
       "telfer-main"
     ],
     "vault_file": "emily-amelia-barton.md",
@@ -16189,55 +16449,79 @@
     "first_name": "Ernest",
     "middle_name": "John",
     "last_name": "Telfer",
-    "birth_year": 1875,
-    "death_year": 1954,
-    "birth_year_display": "1875",
-    "death_year_display": "1954",
-    "display_name": "Ernest John Telfer (1875–1954)",
+    "birth_year": 1877,
+    "death_year": 1953,
+    "birth_year_display": "1877",
+    "death_year_display": "1953",
+    "display_name": "Ernest John Telfer (1877–1953)",
     "title": "Ernest John Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Caroline Amelia Telfer 18421929",
-          "John Telfer 18471929"
+          "Ernest John Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "John Telfer (1847–1929)",
+          "John Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Caroline Amelia Telfer (née Masters)",
+          "Caroline Amelia Telfer (1842–1929) (née Masters)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Francis Charles Telfer 18751954"
+          "Francis Charles Telfer",
+          "William James Telfer",
+          "Albert George Telfer",
+          "Walter William Telfer",
+          "Edwin Gilbert Telfer",
+          "William James Telfer, Albert George Telfer, Walter William Telfer, Edwin Gilbert Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Francis Charles Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Ernest\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: John\nbirth_year: 1875\ndeath_year: 1954\n---\n\n# Ernest John Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Ernest John Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1877\ndate: 2026-05-20\ndeath_year: 1953\nfirst_name: Ernest\nlast_name: Telfer\nmiddle_name: John\nrelationships: \"Self: Ernest John Telfer | Mother: Caroline Amelia Telfer (née Masters) | Father: John Telfer (1847–1929) | Siblings: Francis Charles Telfer, William James Telfer, Albert George Telfer, Walter William Telfer, Edwin Gilbert Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Ernest John Telfer — Family & Biography\nchildren: []\n---\n\n# Ernest John Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1877 — Kersbrook, South Australia\n**Died:** ~1953 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** William James, Albert George, Walter William, Edwin Gilbert\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | William James Telfer, Albert George Telfer, Walter William Telfer, Edwin Gilbert Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Ernest's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Ernest John Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1877 — Kersbrook, South Australia\n**Died:** ~1953 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** William James, Albert George, Walter William, Edwin Gilbert\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | William James Telfer, Albert George Telfer, Walter William Telfer, Edwin Gilbert Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Ernest's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1875 – 1954",
-    "generation": 5,
+    "lifespan": "1877 – 1953",
+    "generation": 4,
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
       "john-telfer-18471929"
     ],
-    "children": [
-      "caroline-amelia-telfer-18421929",
-      "john-telfer-18471929"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "albert-george-telfer",
       "edwin-gilbert-telfer",
       "francis-charles-telfer-18751954",
-      "francis-telfer-18091895",
       "walter-william-telfer",
-      "william-james-telfer"
+      "william-james-telfer",
+      "william-telfer"
     ],
     "related_trees": [
       "telfer",
@@ -16400,54 +16684,87 @@
     "haplogroup_y": null
   },
   {
-    "id": "Ethel Jean McMurtrie",
+    "id": "Ethel Jean Telfer",
     "slug": "ethel-jean-mcmurtrie",
-    "first_name": "Ethel",
-    "middle_name": "Jean",
-    "last_name": "McMurtrie",
-    "birth_year": 1911,
-    "death_year": 2009,
-    "birth_year_display": "1911",
-    "death_year_display": "2009",
-    "display_name": "Ethel Jean McMurtrie (1911–2009)",
-    "title": "Ethel Jean McMurtrie — Family & Biography",
+    "first_name": "Ethel Jean",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1915,
+    "death_year": null,
+    "birth_year_display": "1915",
+    "death_year_display": "?",
+    "display_name": "Ethel Jean Telfer (1915–?)",
+    "title": "Ethel Jean McMurtrie (née Telfer) — Family & Biography",
     "tags": [
-      "person",
-      "other"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Amy Ellen Telfer 18841951",
-          "Francis Charles Telfer 18751954"
+          "Ethel Jean Telfer"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Mr McMurtrie"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen 19111997"
+          "Francis Kelson Telfer",
+          "Clarice May Fatchen",
+          "Emily Amelia Barton",
+          "Gladys Merle Pedler",
+          "Doris Elma Rowe",
+          "Edwin Roy Telfer",
+          "Reginald Masters Telfer",
+          "Murray John Telfer",
+          "Malcolm George Telfer",
+          "Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Ethel\nlast_name: McMurtrie\ntags:\n- person\n- other\nmiddle_name: Jean\nbirth_year: 1911\ndeath_year: 2009\n---\n\n# Ethel Jean McMurtrie\n\n**Lifespan:** 1911–2009\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Ethel Jean McMurtrie\n\n**Lifespan:** 1911–2009\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1915\ndate: 2026-05-20\ndeath_year: null\nfirst_name: Ethel Jean\nlast_name: Telfer\nmiddle_name: \"\"\nrelationships: \"Self: Ethel Jean Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Spouse: Mr McMurtrie | Siblings: Francis Kelson Telfer, Clarice May Fatchen, Emily Amelia Barton, Gladys Merle Pedler, Doris Elma Rowe, Edwin Roy Telfer, Reginald Masters Telfer, Murray John Telfer, Malcolm George Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Ethel Jean McMurtrie (née Telfer) — Family & Biography\nchildren: []\n---\n\n# Ethel Jean McMurtrie (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1915 — South Australia\n**Died:** date unknown\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** McMurtrie\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr McMurtrie |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Ethel's life — marriage date, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Ethel Jean\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Ethel Jean McMurtrie (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1915 — South Australia\n**Died:** date unknown\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** McMurtrie\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr McMurtrie |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Ethel's life — marriage date, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Ethel Jean\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1911 – 2009",
+    "lifespan": "1915 – ?",
     "generation": 5,
-    "branch": "other",
+    "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "amy-ellen-telfer-18841951",
       "francis-charles-telfer-18751954"
     ],
-    "children": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -16462,7 +16779,7 @@
       "ruth-telfer-1930"
     ],
     "related_trees": [
-      "other",
+      "telfer",
       "telfer-main"
     ],
     "vault_file": "ethel-jean-mcmurtrie.md",
@@ -17036,36 +17353,65 @@
     "first_name": "Francis",
     "middle_name": "Kelson",
     "last_name": "Telfer",
-    "birth_year": 1911,
-    "death_year": 2009,
-    "birth_year_display": "1911",
-    "death_year_display": "2009",
-    "display_name": "Francis Kelson Telfer (1911–2009)",
+    "birth_year": 1910,
+    "death_year": 1987,
+    "birth_year_display": "1910",
+    "death_year_display": "1987",
+    "display_name": "Francis Kelson Telfer (1910–1987)",
     "title": "Francis Kelson Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Amy Ellen Telfer 18841951",
-          "Francis Charles Telfer 18751954"
+          "Francis Kelson Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen 19111997"
+          "Clarice May Fatchen",
+          "Emily Amelia Barton",
+          "Ethel Jean McMurtrie",
+          "Gladys Merle Pedler",
+          "Doris Elma Rowe",
+          "Edwin Roy Telfer",
+          "Reginald Masters Telfer",
+          "Murray John Telfer",
+          "Malcolm George Telfer",
+          "Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Francis\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: Kelson\nbirth_year: 1911\ndeath_year: 2009\n---\n\n# Francis Kelson Telfer\n\n**Lifespan:** 1911–2009\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Francis Kelson Telfer\n\n**Lifespan:** 1911–2009\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1910\ndate: 2026-05-20\ndeath_year: 1987\nfirst_name: Francis\nlast_name: Telfer\nmiddle_name: Kelson\nrelationships: \"Self: Francis Kelson Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Siblings: Clarice May Fatchen, Emily Amelia Barton, Ethel Jean McMurtrie, Gladys Merle Pedler, Doris Elma Rowe, Edwin Roy Telfer, Reginald Masters Telfer, Murray John Telfer, Malcolm George Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Francis Kelson Telfer — Family & Biography\nchildren: []\n---\n\n# Francis Kelson Telfer\n\n**Role:** Eldest son of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — brother of Murray John Telfer\n**Born:** ~1910 — South Australia\n**Died:** ~1987 — South Australia\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Francis Kelson's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Francis Kelson\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Francis Kelson Telfer\n\n**Role:** Eldest son of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — brother of Murray John Telfer\n**Born:** ~1910 — South Australia\n**Died:** ~1987 — South Australia\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Francis Kelson's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Francis Kelson\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1911 – 2009",
+    "lifespan": "1910 – 1987",
     "generation": 5,
     "branch": "telfer",
     "confidence": "medium",
@@ -17073,18 +17419,15 @@
       "amy-ellen-telfer-18841951",
       "francis-charles-telfer-18751954"
     ],
-    "children": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
       "emily-amelia-barton",
       "ethel-jean-mcmurtrie",
-      "francis-telfer-18091895",
       "gladys-merle-pedler",
       "malcolm-george-telfer",
       "murray-john-telfer-19111982",
@@ -17364,18 +17707,15 @@
     ],
     "siblings": [
       "adam-telfer-dillon",
-      "albert-george-telfer",
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
-      "edwin-gilbert-telfer",
       "edwin-roy-telfer",
       "elizabeth-esther",
       "elizabeth-esther-dillon",
       "emily-amelia-barton",
-      "ernest-john-telfer",
       "ethel-jean-mcmurtrie",
       "francis",
-      "francis-kelson-telfer",
       "francis-telfer-dillon",
       "gladys-merle-pedler",
       "henry-hatch",
@@ -17392,8 +17732,6 @@
       "robert-telfer-dillon",
       "septimus",
       "septimus-dillon",
-      "walter-william-telfer",
-      "william-james-telfer",
       "william-telfer"
     ],
     "related_trees": [
@@ -18076,54 +18414,87 @@
     "haplogroup_y": null
   },
   {
-    "id": "Gladys Merle Pedler",
+    "id": "Gladys Merle Telfer",
     "slug": "gladys-merle-pedler",
-    "first_name": "Gladys",
-    "middle_name": "Merle",
-    "last_name": "Pedler",
-    "birth_year": 1911,
-    "death_year": 2009,
-    "birth_year_display": "1911",
-    "death_year_display": "2009",
-    "display_name": "Gladys Merle Pedler (1911–2009)",
-    "title": "Gladys Merle Pedler — Family & Biography",
+    "first_name": "Gladys Merle",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1917,
+    "death_year": null,
+    "birth_year_display": "1917",
+    "death_year_display": "?",
+    "display_name": "Gladys Merle Telfer (1917–?)",
+    "title": "Gladys Merle Pedler (née Telfer) — Family & Biography",
     "tags": [
-      "person",
-      "other"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Amy Ellen Telfer 18841951",
-          "Francis Charles Telfer 18751954"
+          "Gladys Merle Telfer"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Mr Pedler"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen 19111997"
+          "Francis Kelson Telfer",
+          "Clarice May Fatchen",
+          "Emily Amelia Barton",
+          "Ethel Jean McMurtrie",
+          "Doris Elma Rowe",
+          "Edwin Roy Telfer",
+          "Reginald Masters Telfer",
+          "Murray John Telfer",
+          "Malcolm George Telfer",
+          "Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Gladys\nlast_name: Pedler\ntags:\n- person\n- other\nmiddle_name: Merle\nbirth_year: 1911\ndeath_year: 2009\n---\n\n# Gladys Merle Pedler\n\n**Lifespan:** 1911–2009\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Gladys Merle Pedler\n\n**Lifespan:** 1911–2009\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1917\ndate: 2026-05-20\ndeath_year: null\nfirst_name: Gladys Merle\nlast_name: Telfer\nmiddle_name: \"\"\nrelationships: \"Self: Gladys Merle Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Spouse: Mr Pedler | Siblings: Francis Kelson Telfer, Clarice May Fatchen, Emily Amelia Barton, Ethel Jean McMurtrie, Doris Elma Rowe, Edwin Roy Telfer, Reginald Masters Telfer, Murray John Telfer, Malcolm George Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Gladys Merle Pedler (née Telfer) — Family & Biography\nchildren: []\n---\n\n# Gladys Merle Pedler (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1917 — South Australia\n**Died:** date unknown\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Pedler\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr Pedler |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Gladys's life — marriage date, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Gladys Merle\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Gladys Merle Pedler (née Telfer)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** ~1917 — South Australia\n**Died:** date unknown\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Pedler\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Doris Elma, Edwin Roy, Reginald Masters, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | Mr Pedler |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Gladys's life — marriage date, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Gladys Merle\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1911 – 2009",
+    "lifespan": "1917 – ?",
     "generation": 5,
-    "branch": "other",
+    "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "amy-ellen-telfer-18841951",
       "francis-charles-telfer-18751954"
     ],
-    "children": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -18138,7 +18509,7 @@
       "ruth-telfer-1930"
     ],
     "related_trees": [
-      "other",
+      "telfer",
       "telfer-main"
     ],
     "vault_file": "gladys-merle-pedler.md",
@@ -23276,12 +23647,15 @@
     ],
     "children": [
       "alan-dale-telfer-18901937",
+      "albert-george-telfer",
       "alma-tressy-cullen-18931976",
       "angela-telfer",
       "clara-blanche-lane-18831974",
       "colin-roy-telfer-18891964",
       "douglas-telfer-18871956",
+      "edwin-gilbert-telfer",
       "elizabeth-telfer-18681950",
+      "ernest-john-telfer",
       "francis-charles-telfer-18751954",
       "isabella-lucieton-telfer-18801964",
       "james-telfer-17611845",
@@ -23293,7 +23667,9 @@
       "martha-telfer-cameron-18731964",
       "peter-telfer",
       "robert-freddy-telfer-18861949",
-      "susan-telfer-18711952"
+      "susan-telfer-18711952",
+      "walter-william-telfer",
+      "william-james-telfer"
     ],
     "spouses": [
       "caroline-amelia-telfer-18421929",
@@ -24673,49 +25049,75 @@
     "first_name": "Malcolm",
     "middle_name": "George",
     "last_name": "Telfer",
-    "birth_year": 1911,
-    "death_year": 2009,
-    "birth_year_display": "1911",
-    "death_year_display": "2009",
-    "display_name": "Malcolm George Telfer (1911–2009)",
+    "birth_year": 1927,
+    "death_year": null,
+    "birth_year_display": "1927",
+    "death_year_display": "?",
+    "display_name": "Malcolm George Telfer (1927–?)",
     "title": "Malcolm George Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Amy Ellen Telfer 18841951",
-          "Francis Charles Telfer 18751954"
+          "Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen 19111997"
+          "Francis Kelson Telfer",
+          "Clarice May Fatchen",
+          "Emily Amelia Barton",
+          "Ethel Jean McMurtrie",
+          "Gladys Merle Pedler",
+          "Doris Elma Rowe",
+          "Edwin Roy Telfer",
+          "Reginald Masters Telfer",
+          "Murray John Telfer",
+          "Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Malcolm\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: George\nbirth_year: 1911\ndeath_year: 2009\n---\n\n# Malcolm George Telfer\n\n**Lifespan:** 1911–2009\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Malcolm George Telfer\n\n**Lifespan:** 1911–2009\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1927\ndate: 2026-05-20\ndeath_year: null\nfirst_name: Malcolm\nlast_name: Telfer\nmiddle_name: George\nrelationships: \"Self: Malcolm George Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Siblings: Francis Kelson Telfer, Clarice May Fatchen, Emily Amelia Barton, Ethel Jean McMurtrie, Gladys Merle Pedler, Doris Elma Rowe, Edwin Roy Telfer, Reginald Masters Telfer, Murray John Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Malcolm George Telfer — Family & Biography\nchildren: []\n---\n\n# Malcolm George Telfer\n\n**Role:** Son of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — brother of Murray John Telfer\n**Born:** ~1927 — South Australia\n**Died:** date unknown (may be living)\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Malcolm's life — marriage, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Malcolm George\n- Family oral history: \"Malcolm George Telfer\" mentioned as sibling of Murray\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Malcolm George Telfer\n\n**Role:** Son of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — brother of Murray John Telfer\n**Born:** ~1927 — South Australia\n**Died:** date unknown (may be living)\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Reginald Masters\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Reginald Masters Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Malcolm's life — marriage, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Malcolm George\n- Family oral history: \"Malcolm George Telfer\" mentioned as sibling of Murray\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1911 – 2009",
+    "lifespan": "1927 – ?",
     "generation": 5,
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
+      "amy-ellen-telfer-18841951"
     ],
-    "children": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -26812,6 +27214,7 @@
     "parents": [],
     "children": [],
     "spouses": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997"
     ],
     "siblings": [],
@@ -27151,6 +27554,7 @@
       "shirley-telfer"
     ],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -28220,36 +28624,65 @@
     "first_name": "Reginald",
     "middle_name": "Masters",
     "last_name": "Telfer",
-    "birth_year": 1911,
-    "death_year": 2009,
-    "birth_year_display": "1911",
-    "death_year_display": "2009",
-    "display_name": "Reginald Masters Telfer (1911–2009)",
+    "birth_year": 1923,
+    "death_year": null,
+    "birth_year_display": "1923",
+    "death_year_display": "?",
+    "display_name": "Reginald Masters Telfer (1923–?)",
     "title": "Reginald Masters Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Amy Ellen Telfer 18841951",
-          "Francis Charles Telfer 18751954"
+          "Reginald Masters Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Charles Telfer (1875–1954)",
+          "Francis Charles Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Amy Ellen Telfer (née Provis)",
+          "Amy Ellen Telfer (1884–1951) (née Provis)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen 19111997"
+          "Francis Kelson Telfer",
+          "Clarice May Fatchen",
+          "Emily Amelia Barton",
+          "Ethel Jean McMurtrie",
+          "Gladys Merle Pedler",
+          "Doris Elma Rowe",
+          "Edwin Roy Telfer",
+          "Murray John Telfer",
+          "Malcolm George Telfer",
+          "Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Malcolm George Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Murray John Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Reginald\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: Masters\nbirth_year: 1911\ndeath_year: 2009\n---\n\n# Reginald Masters Telfer\n\n**Lifespan:** 1911–2009\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Reginald Masters Telfer\n\n**Lifespan:** 1911–2009\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Amy Ellen Telfer 18841951 |\n| Children | Francis Charles Telfer 18751954 |\n| Siblings | Clarice May Fatchen 19111997 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1923\ndate: 2026-05-20\ndeath_year: null\nfirst_name: Reginald\nlast_name: Telfer\nmiddle_name: Masters\nrelationships: \"Self: Reginald Masters Telfer | Mother: Amy Ellen Telfer (née Provis) | Father: Francis Charles Telfer (1875–1954) | Siblings: Francis Kelson Telfer, Clarice May Fatchen, Emily Amelia Barton, Ethel Jean McMurtrie, Gladys Merle Pedler, Doris Elma Rowe, Edwin Roy Telfer, Murray John Telfer, Malcolm George Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Reginald Masters Telfer — Family & Biography\nchildren: []\n---\n\n# Reginald Masters Telfer\n\n**Role:** Son of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — brother of Murray John Telfer\n**Born:** ~1923 — South Australia\n**Died:** date unknown (may be living)\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Reginald's life — marriage, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Reginald Masters\n- Family oral history: \"Reg Telfer\" mentioned as sibling of Murray\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Reginald Masters Telfer\n\n**Role:** Son of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — brother of Murray John Telfer\n**Born:** ~1923 — South Australia\n**Died:** date unknown (may be living)\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Gladys Merle, Doris Elma, Edwin Roy, Malcolm George\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | Francis Kelson Telfer, Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Gladys Merle Pedler (née Telfer), Doris Elma Rowe (née Telfer), Edwin Roy Telfer, Malcolm George Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Reginald's life — marriage, children, death date — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: lists all 10 children including Reginald Masters\n- Family oral history: \"Reg Telfer\" mentioned as sibling of Murray\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Amy Ellen Telfer (1884–1951)]]\n- [[Murray John Telfer (1924–2009)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1911 – 2009",
+    "lifespan": "1923 – ?",
     "generation": 5,
     "branch": "telfer",
     "confidence": "medium",
@@ -28257,12 +28690,10 @@
       "amy-ellen-telfer-18841951",
       "francis-charles-telfer-18751954"
     ],
-    "children": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
+      "clarice-may-fatchen",
       "clarice-may-fatchen-19111997",
       "doris-elma-rowe",
       "edwin-roy-telfer",
@@ -31765,54 +32196,77 @@
     "first_name": "Walter",
     "middle_name": "William",
     "last_name": "Telfer",
-    "birth_year": 1875,
-    "death_year": 1954,
-    "birth_year_display": "1875",
-    "death_year_display": "1954",
-    "display_name": "Walter William Telfer (1875–1954)",
+    "birth_year": 1885,
+    "death_year": 1958,
+    "birth_year_display": "1885",
+    "death_year_display": "1958",
+    "display_name": "Walter William Telfer (1885–1958)",
     "title": "Walter William Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Caroline Amelia Telfer 18421929",
-          "John Telfer 18471929"
+          "Walter William Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "John Telfer (1847–1929)",
+          "John Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Caroline Amelia Telfer (née Masters)",
+          "Caroline Amelia Telfer (1842–1929) (née Masters)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Francis Charles Telfer 18751954"
+          "Francis Charles Telfer",
+          "Ernest John Telfer",
+          "William James Telfer",
+          "Albert George Telfer",
+          "Edwin Gilbert Telfer",
+          "Ernest John Telfer, William James Telfer, Albert George Telfer, Edwin Gilbert Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Francis Charles Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: Walter\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: William\nbirth_year: 1875\ndeath_year: 1954\n---\n\n# Walter William Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Walter William Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1885\ndate: 2026-05-20\ndeath_year: 1958\nfirst_name: Walter\nlast_name: Telfer\nmiddle_name: William\nrelationships: \"Self: Walter William Telfer | Mother: Caroline Amelia Telfer (née Masters) | Father: John Telfer (1847–1929) | Siblings: Francis Charles Telfer, Ernest John Telfer, William James Telfer, Albert George Telfer, Edwin Gilbert Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Walter William Telfer — Family & Biography\nchildren: []\n---\n\n# Walter William Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1885 — Kersbrook, South Australia\n**Died:** ~1958 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** Ernest John, William James, Albert George, Edwin Gilbert\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | Ernest John Telfer, William James Telfer, Albert George Telfer, Edwin Gilbert Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Walter's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# Walter William Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1885 — Kersbrook, South Australia\n**Died:** ~1958 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** Ernest John, William James, Albert George, Edwin Gilbert\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | Ernest John Telfer, William James Telfer, Albert George Telfer, Edwin Gilbert Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of Walter's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1875 – 1954",
-    "generation": 5,
+    "lifespan": "1885 – 1958",
+    "generation": 4,
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
       "john-telfer-18471929"
     ],
-    "children": [
-      "caroline-amelia-telfer-18421929",
-      "john-telfer-18471929"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "albert-george-telfer",
       "edwin-gilbert-telfer",
       "ernest-john-telfer",
       "francis-charles-telfer-18751954",
-      "francis-telfer-18091895",
       "william-james-telfer"
     ],
     "related_trees": [
@@ -32491,54 +32945,77 @@
     "first_name": "William",
     "middle_name": "James",
     "last_name": "Telfer",
-    "birth_year": 1875,
-    "death_year": 1954,
-    "birth_year_display": "1875",
-    "death_year_display": "1954",
-    "display_name": "William James Telfer (1875–1954)",
+    "birth_year": 1879,
+    "death_year": 1948,
+    "birth_year_display": "1879",
+    "death_year_display": "1948",
+    "display_name": "William James Telfer (1879–1948)",
     "title": "William James Telfer — Family & Biography",
     "tags": [
-      "person",
-      "telfer"
+      "bio",
+      "family",
+      "person"
     ],
     "relationships": [
       {
-        "type": "Children",
+        "type": "Self",
         "names": [
-          "Caroline Amelia Telfer 18421929",
-          "John Telfer 18471929"
+          "William James Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "John Telfer (1847–1929)",
+          "John Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Caroline Amelia Telfer (née Masters)",
+          "Caroline Amelia Telfer (1842–1929) (née Masters)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Francis Charles Telfer 18751954"
+          "Francis Charles Telfer",
+          "Ernest John Telfer",
+          "Albert George Telfer",
+          "Walter William Telfer",
+          "Edwin Gilbert Telfer",
+          "Ernest John Telfer, Albert George Telfer, Walter William Telfer, Edwin Gilbert Telfer"
+        ]
+      },
+      {
+        "type": "Brother",
+        "names": [
+          "Francis Charles Telfer"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "---\nfirst_name: William\nlast_name: Telfer\ntags:\n- person\n- telfer\nmiddle_name: James\nbirth_year: 1875\ndeath_year: 1954\n---\n\n# William James Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# William James Telfer\n\n**Lifespan:** 1875–1954\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Caroline Amelia Telfer 18421929 |\n| Children | John Telfer 18471929 |\n| Siblings | Francis Charles Telfer 18751954 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
+    "body_markdown": "---\nbirth_year: 1879\ndate: 2026-05-20\ndeath_year: 1948\nfirst_name: William\nlast_name: Telfer\nmiddle_name: James\nrelationships: \"Self: William James Telfer | Mother: Caroline Amelia Telfer (née Masters) | Father: John Telfer (1847–1929) | Siblings: Francis Charles Telfer, Ernest John Telfer, Albert George Telfer, Walter William Telfer, Edwin Gilbert Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: William James Telfer — Family & Biography\nchildren: []\n---\n\n# William James Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1879 — Kersbrook, South Australia\n**Died:** ~1948 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** Ernest John, Albert George, Walter William, Edwin Gilbert\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | Ernest John Telfer, Albert George Telfer, Walter William Telfer, Edwin Gilbert Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of William's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
+    "body_stripped": "# William James Telfer\n\n**Role:** Son of John Telfer and Caroline Amelia Masters — brother of Francis Charles Telfer\n**Born:** ~1879 — Kersbrook, South Australia\n**Died:** ~1948 — South Australia\n**Parents:** [[John Telfer (1847–1929)]] & [[Caroline Amelia Telfer (1842–1929)]] (née Masters)\n**Brother:** [[Francis Charles Telfer (1875–1954)]]\n**Siblings:** Ernest John, Albert George, Walter William, Edwin Gilbert\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Caroline Amelia Telfer (1842–1929)]] (née Masters) |\n| **Father** | [[John Telfer (1847–1929)]] |\n| **Brother** | [[Francis Charles Telfer (1875–1954)]] |\n| **Siblings** | Ernest John Telfer, Albert George Telfer, Walter William Telfer, Edwin Gilbert Telfer |\n\n---\n\n*Profile enhanced from auto-generated stub. Further details of William's life — marriage, children, occupation — are currently being researched.*\n\n---\n\n## Sources\n\n- Francis Charles Telfer profile: confirms John Telfer and Caroline Amelia Masters as parents, lists siblings\n- South Australian BDM records (research pending)\n\n---\n\n## Links\n\n- [[John Telfer (1847–1929)]]\n- [[Caroline Amelia Telfer (1842–1929)]]\n- [[Francis Charles Telfer (1875–1954)]]\n- [[Telfer Family Tree]]",
     "is_living": false,
-    "lifespan": "1875 – 1954",
-    "generation": 5,
+    "lifespan": "1879 – 1948",
+    "generation": 4,
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
       "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
       "john-telfer-18471929"
     ],
-    "children": [
-      "caroline-amelia-telfer-18421929",
-      "john-telfer-18471929"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "albert-george-telfer",
       "edwin-gilbert-telfer",
       "ernest-john-telfer",
       "francis-charles-telfer-18751954",
-      "francis-telfer-18091895",
       "walter-william-telfer"
     ],
     "related_trees": [
@@ -32603,6 +33080,7 @@
     "siblings": [
       "adam",
       "adam-telfer",
+      "ernest-john-telfer",
       "francis",
       "francis-telfer-18091895",
       "isobel",

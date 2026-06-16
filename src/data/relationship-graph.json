@@ -675,7 +675,7 @@
     {
       "slug": "albert-george-telfer",
       "id": "Albert George Telfer",
-      "generation": 5,
+      "generation": 6,
       "branch": "telfer"
     },
     {
@@ -1009,6 +1009,12 @@
       "branch": "telfer"
     },
     {
+      "slug": "clarice-may-fatchen",
+      "id": "Clarice May Telfer",
+      "generation": 7,
+      "branch": "telfer"
+    },
+    {
       "slug": "colin-roy",
       "id": "Colin Roy",
       "generation": 6,
@@ -1076,9 +1082,9 @@
     },
     {
       "slug": "doris-elma-rowe",
-      "id": "Doris Elma Rowe",
+      "id": "Doris Elma Telfer",
       "generation": 7,
-      "branch": "other"
+      "branch": "telfer"
     },
     {
       "slug": "douglas",
@@ -1131,7 +1137,7 @@
     {
       "slug": "edwin-gilbert-telfer",
       "id": "Edwin Gilbert Telfer",
-      "generation": 5,
+      "generation": 6,
       "branch": "telfer"
     },
     {
@@ -1268,9 +1274,9 @@
     },
     {
       "slug": "emily-amelia-barton",
-      "id": "Emily Amelia Barton",
+      "id": "Emily Amelia Telfer",
       "generation": 7,
-      "branch": "other"
+      "branch": "telfer"
     },
     {
       "slug": "emily-ellen-thorpe",
@@ -1304,9 +1310,9 @@
     },
     {
       "slug": "ethel-jean-mcmurtrie",
-      "id": "Ethel Jean McMurtrie",
+      "id": "Ethel Jean Telfer",
       "generation": 7,
-      "branch": "other"
+      "branch": "telfer"
     },
     {
       "slug": "ezekiel-william",
@@ -1371,7 +1377,7 @@
     {
       "slug": "francis-kelson-telfer",
       "id": "Francis Kelson Telfer",
-      "generation": 7,
+      "generation": 6,
       "branch": "telfer"
     },
     {
@@ -1478,9 +1484,9 @@
     },
     {
       "slug": "gladys-merle-pedler",
-      "id": "Gladys Merle Pedler",
+      "id": "Gladys Merle Telfer",
       "generation": 7,
-      "branch": "other"
+      "branch": "telfer"
     },
     {
       "slug": "glen-ross-lawrie",
@@ -2913,7 +2919,7 @@
     {
       "slug": "walter-william-telfer",
       "id": "Walter William Telfer",
-      "generation": 5,
+      "generation": 6,
       "branch": "telfer"
     },
     {
@@ -3056,43 +3062,11 @@
         "to": "alma-tressy-cullen-18931976"
       },
       {
-        "from": "doris-elma-rowe",
-        "to": "amy-ellen-telfer-18841951"
-      },
-      {
-        "from": "edwin-roy-telfer",
-        "to": "amy-ellen-telfer-18841951"
-      },
-      {
-        "from": "emily-amelia-barton",
-        "to": "amy-ellen-telfer-18841951"
-      },
-      {
         "from": "emily-ellen-thorpe",
         "to": "amy-ellen-telfer-18841951"
       },
       {
-        "from": "ethel-jean-mcmurtrie",
-        "to": "amy-ellen-telfer-18841951"
-      },
-      {
-        "from": "francis-kelson-telfer",
-        "to": "amy-ellen-telfer-18841951"
-      },
-      {
         "from": "george-provis",
-        "to": "amy-ellen-telfer-18841951"
-      },
-      {
-        "from": "gladys-merle-pedler",
-        "to": "amy-ellen-telfer-18841951"
-      },
-      {
-        "from": "malcolm-george-telfer",
-        "to": "amy-ellen-telfer-18841951"
-      },
-      {
-        "from": "reginald-masters-telfer",
         "to": "amy-ellen-telfer-18841951"
       },
       {
@@ -4332,6 +4306,14 @@
         "to": "albert-george-telfer"
       },
       {
+        "from": "caroline-amelia-telfer-18421929-ne-masters",
+        "to": "albert-george-telfer"
+      },
+      {
+        "from": "john-telfer-1840-1913",
+        "to": "albert-george-telfer"
+      },
+      {
         "from": "john-telfer-18471929",
         "to": "albert-george-telfer"
       },
@@ -4504,6 +4486,14 @@
         "to": "clara-blanche"
       },
       {
+        "from": "amy-ellen-telfer-18841951",
+        "to": "clarice-may-fatchen"
+      },
+      {
+        "from": "francis-charles-telfer-18751954",
+        "to": "clarice-may-fatchen"
+      },
+      {
         "from": "john-telfer-18401913",
         "to": "colin-roy"
       },
@@ -4628,6 +4618,14 @@
         "to": "edwin-gilbert-telfer"
       },
       {
+        "from": "caroline-amelia-telfer-18421929-ne-masters",
+        "to": "edwin-gilbert-telfer"
+      },
+      {
+        "from": "john-telfer-1840-1913",
+        "to": "edwin-gilbert-telfer"
+      },
+      {
         "from": "john-telfer-18471929",
         "to": "edwin-gilbert-telfer"
       },
@@ -4733,6 +4731,14 @@
       },
       {
         "from": "caroline-amelia-telfer-18421929",
+        "to": "ernest-john-telfer"
+      },
+      {
+        "from": "caroline-amelia-telfer-18421929-ne-masters",
+        "to": "ernest-john-telfer"
+      },
+      {
+        "from": "john-telfer-1840-1913",
         "to": "ernest-john-telfer"
       },
       {
@@ -5340,10 +5346,6 @@
         "to": "malcolm-george-telfer"
       },
       {
-        "from": "francis-charles-telfer-18751954",
-        "to": "malcolm-george-telfer"
-      },
-      {
         "from": "martha-telfer-cameron-18731964",
         "to": "malcolm-murray-cameron"
       },
@@ -5804,6 +5806,14 @@
         "to": "walter-william-telfer"
       },
       {
+        "from": "caroline-amelia-telfer-18421929-ne-masters",
+        "to": "walter-william-telfer"
+      },
+      {
+        "from": "john-telfer-1840-1913",
+        "to": "walter-william-telfer"
+      },
+      {
         "from": "john-telfer-18471929",
         "to": "walter-william-telfer"
       },
@@ -5849,6 +5859,14 @@
       },
       {
         "from": "caroline-amelia-telfer-18421929",
+        "to": "william-james-telfer"
+      },
+      {
+        "from": "caroline-amelia-telfer-18421929-ne-masters",
+        "to": "william-james-telfer"
+      },
+      {
+        "from": "john-telfer-1840-1913",
         "to": "william-james-telfer"
       },
       {
@@ -6148,6 +6166,10 @@
       {
         "from": "caroline-edna-lawrie-18901957",
         "to": "william-henry-parker-18931968"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "mr-fatchen"
       },
       {
         "from": "dinah-flavel-2nd",
@@ -6914,14 +6936,6 @@
       {
         "from": "francis-telfer-18091895",
         "to": "septimus-dillon"
-      },
-      {
-        "from": "francis-telfer-18091895",
-        "to": "walter-william-telfer"
-      },
-      {
-        "from": "francis-telfer-18091895",
-        "to": "william-james-telfer"
       },
       {
         "from": "francis-telfer-18091895",
@@ -7845,10 +7859,6 @@
       },
       {
         "from": "albert-george-telfer",
-        "to": "francis-telfer-18091895"
-      },
-      {
-        "from": "albert-george-telfer",
         "to": "walter-william-telfer"
       },
       {
@@ -8176,6 +8186,58 @@
         "to": "robert-freddy-telfer-18861949"
       },
       {
+        "from": "clarice-may-fatchen",
+        "to": "clarice-may-fatchen-19111997"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "doris-elma-rowe"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "edwin-roy-telfer"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "emily-amelia-barton"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "ethel-jean-mcmurtrie"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "francis-kelson-telfer"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "francis-telfer-18091895"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "gladys-merle-pedler"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "malcolm-george-telfer"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "murray-john-telfer-19111982"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "murray-john-telfer-19242009"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "reginald-masters-telfer"
+      },
+      {
+        "from": "clarice-may-fatchen",
+        "to": "ruth-telfer-1930"
+      },
+      {
         "from": "colin-roy",
         "to": "douglas"
       },
@@ -8402,10 +8464,6 @@
       {
         "from": "edwin-gilbert-telfer",
         "to": "francis-charles-telfer-18751954"
-      },
-      {
-        "from": "edwin-gilbert-telfer",
-        "to": "francis-telfer-18091895"
       },
       {
         "from": "edwin-gilbert-telfer",
@@ -8797,15 +8855,15 @@
       },
       {
         "from": "ernest-john-telfer",
-        "to": "francis-telfer-18091895"
-      },
-      {
-        "from": "ernest-john-telfer",
         "to": "walter-william-telfer"
       },
       {
         "from": "ernest-john-telfer",
         "to": "william-james-telfer"
+      },
+      {
+        "from": "ernest-john-telfer",
+        "to": "william-telfer"
       },
       {
         "from": "ethel-jean-mcmurtrie",
@@ -8925,10 +8983,6 @@
       },
       {
         "from": "francis-kelson-telfer",
-        "to": "francis-telfer-18091895"
-      },
-      {
-        "from": "francis-kelson-telfer",
         "to": "gladys-merle-pedler"
       },
       {
@@ -9014,14 +9068,6 @@
       {
         "from": "francis-telfer-18091895",
         "to": "septimus-dillon"
-      },
-      {
-        "from": "francis-telfer-18091895",
-        "to": "walter-william-telfer"
-      },
-      {
-        "from": "francis-telfer-18091895",
-        "to": "william-james-telfer"
       },
       {
         "from": "francis-telfer-18091895",
