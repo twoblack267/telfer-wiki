@@ -4,7 +4,7 @@ import type { PersonData } from "../../utils/extract-data.mjs";
 
 const people = (await import("../../data/people.public.json")).default as PersonData[];
 const telferPeople = people
-  .filter((p) => p.related_trees.includes("telfer-tree"))
+  .filter((p) => p.branch === "telfer")
   .sort((a, b) => {
     // Sort by birth year, then by name
     const aYear = a.birth_year || 9999;
@@ -17,7 +17,7 @@ const telferPeople = people
 const TELFER_TREE_ENABLED = import.meta.env.TELFER_TREE_ENABLED === "true";
 
 // Extract unique tags
-const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
+const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
 ---
 
 <BaseLayout title="People">
@@ -33,28 +33,27 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags))].sort();
   <!-- Tab Navigation -->
   <nav class="mb-4 border-b border-[var(--color-border)]" aria-label="Tree views">
     <ul class="flex gap-1" role="tablist">
-      <li role="presentation">
-        <a
-          href="/people"
-          class="px-4 py-2 rounded-t-lg border-b-2 border-[var(--color-link)] text-[var(--color-link)] font-medium"
-          role="tab"
-          aria-selected="true"
-        >
-          Pedigree (Direct Line)
-        </a>
-      </li>
       {TELFER_TREE_ENABLED && (
         <li role="presentation">
           <a
             href="/people/telfer-tree"
-            class="px-4 py-2 rounded-t-lg border-b-2 border-transparent text-[var(--color-muted)] hover:text-[var(--color-heading)] font-medium"
+            class="px-4 py-2 rounded-t-lg border-b-2 border-[var(--color-link)] text-[var(--color-link)] font-medium"
             role="tab"
-            aria-selected="false"
+            aria-selected="true"
           >
-            Family Tree (Charles & Sons)
+            Family Tree (Charles &amp; Sons)
           </a>
         </li>
       )}
+      <li role="presentation">
+        <a
+          href="/people/dna"
+          class="px-4 py-2 rounded-t-lg border-b-2 border-[var(--color-highlight)] text-[var(--color-highlight)] font-medium"
+          role="tab"
+        >
+          🧬 DNA
+        </a>
+      </li>
     </ul>
   </nav>
 
