@@ -1,0 +1,261 @@
+---
+// Sidebar.astro — Left sidebar: A-Z index + Search with suggestions
+interface Props {
+  people: PersonData[];
+}
+
+const { people } = Astro.props;
+
+// Build A-Z index from people
+const azIndex = new Map<string, PersonData[]>();
+for (const person of people) {
+  const firstLetter = person.display_name[0]?.toUpperCase() || '?';
+  if (!azIndex.has(firstLetter)) azIndex.set(firstLetter, []);
+  azIndex.get(firstLetter)!.push(person);
+}
+
+// Sort letters and people within each letter
+const sortedLetters = Array.from(azIndex.keys()).sort();
+for (const letter of sortedLetters) {
+  azIndex.get(letter)!.sort((a, b) => a.display_name.localeCompare(b.display_name));
+}
+
+// Build search suggestions (name + location from birth/role)
+const searchSuggestions: string[] = [];
+for (const person of people) {
+  searchSuggestions.push(person.display_name);
+  if (person.birth_place) searchSuggestions.push(person.birth_place);
+  if (person.death_place) searchSuggestions.push(person.death_place);
+  if (person.roles) {
+    for (const role of person.roles) {
+      // Extract location from role like "Sydney, NSW" or "Port Lincoln, SA"
+      const locMatch = role.match(/([A-Z][a-z]+(?: [A-Z][a-z]+)?),?\s*(?:NSW|VIC|QLD|SA|WA|TAS|NT|ACT)?/);
+      if (locMatch) searchSuggestions.push(locMatch[1]);
+    }
+  }
+}
+const uniqueSuggestions = [...new Set(searchSuggestions)].sort();
+---
+
+<div class="sidebar sticky top-4 h-[calc(100vh-1rem)] overflow-y-auto space-y-6 p-3" role="navigation" aria-label="Navigation sidebar">
+  <!-- Search with suggestions -->
+  <div class="search-section">
+    <label for="sidebar-search" class="sr-only">Search people and places</label>
+    <div class="relative">
+      <input
+        type="search"
+        id="sidebar-search"
+        list="search-suggestions"
+        placeholder="Search name or place…"
+        class="w-full px-3 py-2 text-sm bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-link)] focus:border-transparent"
+        autocomplete="off"
+        aria-label="Search"
+      />
+      <datalist id="search-suggestions">
+        {uniqueSuggestions.map(s => <option value={s} />)}
+      </datalist>
+      <div id="search-results" class="absolute top-full left-0 right-0 mt-1 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-lg max-h-60 overflow-y-auto hidden z-10"></div>
+    </div>
+  </div>
+
+  <!-- A-Z Index -->
+  <nav class="az-index" aria-label="A-Z index">
+    <ul class="space-y-0">
+      {sortedLetters.map(letter => (
+        <li class="relative">
+          <details class="w-full">
+            <summary class="flex items-center gap-2 px-2 py-1.5 text-sm font-medium text-[var(--color-heading)] hover:bg-[var(--color-surface)] rounded cursor-pointer select-none">
+              <span class="w-6 text-center font-mono text-[var(--color-muted)]">{letter}</span>
+              <span class="text-xs text-[var(--color-muted)]">({azIndex.get(letter)?.length || 0})</span>
+            </summary>
+            <ul class="ml-6 mt-1 space-y-0.5 border-l border-[var(--color-border)] pl-2">
+              {azIndex.get(letter)?.map(person => (
+                <li>
+                  <a
+                    href={`/people/${person.slug}`}
+                    class="person-link block px-2 py-1 text-sm text-[var(--color-ink)] hover:text-[var(--color-link)] hover:bg-[var(--color-surface)] rounded transition-colors"
+                    data-person-id={person.id}
+                    data-person-slug={person.slug}
+                    data-person-name={person.display_name}
+                  >
+                    {person.display_name}
+                    {person.lifespan && <span class="text-xs text-[var(--color-muted)] ml-1">({person.lifespan})</span>}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </li>
+      ))}
+    </ul>
+  </nav>
+
+  <style>
+    .sidebar {
+      font-size: 0.85rem;
+    }
+    .sidebar summary::marker {
+      content: "▸";
+      font-size: 0.7em;
+      color: var(--color-muted);
+    }
+    .sidebar summary:not([open])::marker {
+      content: "▸";
+    }
+    .sidebar summary[open]::marker {
+      content: "▾";
+    }
+    .sidebar .person-link:focus {
+      outline: 2px solid var(--color-link);
+      outline-offset: -2px;
+    }
+    .search-results:not(.hidden) {
+      display: block;
+    }
+    .search-result-item {
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .search-result-item:last-child {
+      border-bottom: none;
+    }
+    .search-result-item:hover, .search-result-item:focus {
+      background: var(--color-surface);
+    }
+    .search-result-name {
+      font-weight: 500;
+      color: var(--color-heading);
+    }
+    .search-result-meta {
+      font-size: 0.75rem;
+      color: var(--color-muted);
+    }
+
+    @media (max-width: 1023px) {
+      .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        max-width: 85vw;
+        background: var(--color-background);
+        border-right: 1px solid var(--color-border);
+        z-index: 50;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      }
+      .sidebar.open {
+        transform: translateX(0);
+      }
+      .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        z-index: 40;
+      }
+      .sidebar-overlay.visible {
+        display: block;
+      }
+    }
+  </style>
+
+  <script>
+    // Search functionality
+    const searchInput = document.getElementById('sidebar-search');
+    const searchResults = document.getElementById('search-results');
+
+    if (searchInput && searchResults) {
+      let debounceTimer: number;
+
+      searchInput.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        const query = searchInput.value.toLowerCase().trim();
+
+        if (!query) {
+          searchResults.classList.add('hidden');
+          searchResults.innerHTML = '';
+          return;
+        }
+
+        debounceTimer = window.setTimeout(() => {
+          const people = JSON.parse(decodeURIComponent(searchInput.dataset.people || '[]'));
+          const matches = people
+            .filter(p =>
+              p.display_name.toLowerCase().includes(query) ||
+              (p.birth_place?.toLowerCase().includes(query)) ||
+              (p.death_place?.toLowerCase().includes(query)) ||
+              (p.roles?.some(r => r.toLowerCase().includes(query)))
+            )
+            .slice(0, 20);
+
+          if (matches.length === 0) {
+            searchResults.innerHTML = '<div class="search-result-item text-[var(--color-muted)] text-center py-3">No matches</div>';
+          } else {
+            searchResults.innerHTML = matches.map(p => `
+              <a href="/people/${p.slug}" class="search-result-item block" tabindex="0">
+                <div class="search-result-name">${p.display_name}</div>
+                <div class="search-result-meta">
+                  ${p.lifespan ? `(${p.lifespan})` : ''}
+                  ${p.birth_place ? ` · b. ${p.birth_place}` : ''}
+                </div>
+              </a>
+            `).join('');
+          }
+          searchResults.classList.remove('hidden');
+        }, 150);
+      });
+
+      // Close results on click outside
+      document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target as Node) && !searchResults.contains(e.target as Node)) {
+          searchResults.classList.add('hidden');
+        }
+      });
+
+      // Handle keyboard navigation
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchResults.classList.add('hidden');
+          searchInput.blur();
+        }
+      });
+    }
+
+    // Mobile sidebar toggle
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.sidebar-overlay') || (() => {
+      const o = document.createElement('div');
+      o.className = 'sidebar-overlay';
+      document.body.appendChild(o);
+      return o;
+    })();
+
+    function openSidebar() {
+      sidebar?.classList.add('open');
+      overlay.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+      sidebar?.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+
+    // Create mobile menu button if not exists
+    if (!document.querySelector('.mobile-menu-btn') && window.innerWidth < 1024) {
+      const btn = document.createElement('button');
+      btn.className = 'mobile-menu-btn fixed top-4 left-4 z-50 p-2 rounded bg-[var(--color-surface)] border border-[var(--color-border)] shadow-lg';
+      btn.innerHTML = '☰';
+      btn.setAttribute('aria-label', 'Open navigation');
+      btn.addEventListener('click', openSidebar);
+      document.body.appendChild(btn);
+    }
+
+    overlay.addEventListener('click', closeSidebar);
+  </script>
+</div>

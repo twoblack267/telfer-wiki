@@ -1,0 +1,278 @@
+---
+// TreeView.astro — Renders the Telfer surname tree (Charles & Sons view)
+// Click a person to load their detail panel
+import type { PersonData } from "../utils/extract-data.mjs";
+
+interface Props {
+  people: PersonData[];
+  selectedId?: string;
+}
+
+const { people, selectedId } = Astro.props;
+
+// Build lookup for tree rendering
+const peopleById = new Map(people.map(p => [p.id, p]));
+const peopleBySlug = new Map(people.map(p => [p.slug, p]));
+
+function findPerson(id: string | undefined, dataset = people) {
+  if (!id) return undefined;
+  let person = dataset.find(p => p.id === id || p.display_name === id || p.slug === id);
+  if (!person) {
+    const nameOnly = id.replace(/\s*\([^)]+\)\s*$/, "").trim();
+    person = dataset.find(p => p.display_name === nameOnly);
+  }
+  return person;
+}
+
+// Known children of Francis Charles Telfer (some lack wiki entries)
+const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: number; hasProfile: boolean }> = {
+  "Francis Kelson Telfer": { name: "Francis Kelson Telfer", birth: 1910, death: 1987, hasProfile: false },
+  "Edwin Roy Telfer": { name: "Edwin Roy Telfer", birth: 1915, hasProfile: false },
+  "Reginald Masters Telfer": { name: "Reginald Masters Telfer", birth: 1920, hasProfile: false },
+  "Ruth Telfer": { name: "Ruth Telfer", birth: 1930, hasProfile: true },
+  "Malcolm George Telfer": { name: "Malcolm George Telfer", birth: 1933, hasProfile: false },
+  "Murray John Telfer": { name: "Murray John Telfer", birth: 1924, death: 2009, hasProfile: true },
+};
+
+function getAllChildren(person: PersonData) {
+  if (!person?.children) return [];
+  const wikiChildren = person.children
+    .map(c => findPerson(c))
+    .filter(c => c)
+    .sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
+
+  const isFrancis =
+    person.slug === "francis-charles-telfer" ||
+    person.display_name === "Francis Charles Telfer";
+
+  if (isFrancis) {
+    const knownNames = new Set(wikiChildren.map(c => c.display_name));
+    const placeholderChildren = Object.values(KNOWN_CHILDREN)
+      .filter(kc => !knownNames.has(kc.name) && !kc.hasProfile)
+      .map(kc => ({
+        display_name: kc.name,
+        birth_year: kc.birth,
+        death_year: kc.death,
+        death_year_display: kc.death?.toString(),
+        is_living: !kc.death,
+        last_name: "Telfer",
+        slug: kc.name.toLowerCase().replace(/\s+/g, "-"),
+        children: undefined,
+        spouses: undefined,
+        id: `placeholder:${kc.name}`,
+      }));
+    return [...wikiChildren, ...placeholderChildren].sort(
+      (a, b) => (a.birth_year || 9999) - (b.birth_year || 9999)
+    );
+  }
+  return wikiChildren;
+}
+
+function getSpouse(person: PersonData) {
+  if (!person?.spouses) return null;
+  return findPerson(person.spouses[0]);
+}
+
+function shouldRecurseSurname(person: PersonData) {
+  return person.last_name?.toLowerCase() === "telfer";
+}
+
+// Render surname tree with click handlers for detail panel
+function renderSurnameTree(person: PersonData, depth = 0, seen = new Set<string>()): string {
+  if (!person) return "";
+  const personKey = person.slug || person.id || person.display_name;
+  if (seen.has(personKey)) {
+    return `<div class="tree-cycle text-xs text-[var(--color-muted)] italic">${"  ".repeat(depth)}↻ cycle skipped (${person.display_name})</div>`;
+  }
+  const newSeen = new Set(seen);
+  newSeen.add(personKey);
+
+  const spouse = getSpouse(person);
+  const allChildren = getAllChildren(person);
+  const childrenToRecurse = allChildren.filter(shouldRecurseSurname);
+  const childrenToShowOnly = allChildren.filter(c => !shouldRecurseSurname(c));
+
+  const indent = "  ".repeat(depth);
+  const lifespan = `${person.birth_year || "?"}–${person.death_year ?? (person.is_living ? "living" : "?")}`;
+  const livingBadge = person.is_living
+    ? ' <span class="badge badge-living text-xs">living</span>'
+    : "";
+  const spouseName = spouse
+    ? ` + ${spouse.display_name} (${spouse.birth_year || "?"}–${spouse.death_year ?? (spouse.is_living ? "living" : "?")})`
+    : "";
+  const surnameLabel =
+    person.last_name?.toLowerCase() !== "telfer"
+      ? ` <span class="text-xs text-[var(--color-muted)]">[${person.last_name}]</span>`
+      : "";
+
+  const isSelected = selectedId && (person.id === selectedId || person.slug === selectedId || person.display_name === selectedId);
+  const selectedClass = isSelected ? " selected" : "";
+  const personIdAttr = `data-person-id="${person.id}" data-person-slug="${person.slug}" data-person-name="${person.display_name.replace(/"/g, '&quot;')}"`;
+
+  let html = `
+${indent}<details class="tree-node${selectedClass}" ${depth === 0 ? "open" : ""}>
+${indent}  <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded ${selectedClass}" tabindex="0" ${personIdAttr}>
+${indent}    <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth)}├─</span>
+${indent}    <strong class="truncate">${person.display_name}</strong>
+${indent}    <span class="text-xs text-[var(--color-muted)] shrink-0">(${lifespan})</span>${livingBadge}${spouseName}${surnameLabel}
+${indent}  </summary>
+${indent}  <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">`;
+
+  for (const child of childrenToRecurse) {
+    html += renderSurnameTree(child, depth + 1, newSeen);
+  }
+
+  for (const child of childrenToShowOnly) {
+    const childSpouse = getSpouse(child);
+    const childLifespan = `${child.birth_year || "?"}–${child.death_year ?? (child.is_living ? "living" : "?")}`;
+    const childLivingBadge = child.is_living
+      ? ' <span class="badge badge-living text-xs">living</span>'
+      : "";
+    const childSpouseName = childSpouse
+      ? ` + ${childSpouse.display_name} (${childSpouse.birth_year || "?"}–${childSpouse.death_year ?? (childSpouse.is_living ? "living" : "?")})`
+      : "";
+    const childSurnameLabel = ` <span class="text-xs text-[var(--color-muted)]">[${child.last_name}]</span>`;
+    const childIsSelected = selectedId && (child.id === selectedId || child.slug === selectedId || child.display_name === selectedId);
+    const childIdAttr = `data-person-id="${child.id}" data-person-slug="${child.slug}" data-person-name="${child.display_name.replace(/"/g, '&quot;')}"`;
+
+    html += `
+${indent}    <div class="tree-leaf" style="margin-top: 0.25rem;">
+${indent}      <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth + 1)}├─</span>
+${indent}      <strong class="truncate">${child.display_name}</strong>
+${indent}      <span class="text-xs text-[var(--color-muted)] shrink-0">(${childLifespan})</span>${childLivingBadge}${childSpouseName}${childSurnameLabel}
+${indent}      <span class="text-xs text-[var(--color-muted)] ml-8">→ line ends (married name)</span>
+${indent}    </div>`;
+  }
+
+  html += `
+${indent}  </div>
+${indent}</details>`;
+  return html;
+}
+
+// Generate tree from Francis Charles Telfer (Charles & Sons)
+const FRANCIS_ID = "Francis Charles Telfer (1875–1954)";
+const francis = findPerson(FRANCIS_ID);
+const treeHtml = francis ? renderSurnameTree(francis) : "<p>Francis Charles Telfer not found</p>";
+---
+
+<div class="tree-view person-card rounded-xl p-4" role="region" aria-label="Telfer surname family tree">
+  <p class="text-[var(--color-muted)] mb-4 text-sm">
+    Descendant chart from <strong>Francis Charles Telfer (1875–1954)</strong> — Telfer-surname line only.
+    Wives shown; daughters' married lines noted but not expanded. Click a name to view details.
+  </p>
+  <div class="tree-container prose prose-sm max-w-none" style="font-size: 0.875rem; line-height: 1.7;" id="tree-container">
+    <div set:html={treeHtml} />
+  </div>
+</div>
+
+<style>
+  .tree-node summary {
+    line-height: 1.6;
+    transition: background-color 0.15s, color 0.15s;
+    user-select: none;
+  }
+  .tree-node summary:hover {
+    background-color: var(--color-surface);
+    color: var(--color-link);
+  }
+  .tree-node summary:focus {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  .tree-node[open] > summary {
+    color: var(--color-heading);
+  }
+  .tree-node.selected > summary,
+  .tree-leaf.selected {
+    background-color: var(--color-highlight) !important;
+    color: var(--color-surface) !important;
+    border-radius: 4px;
+  }
+  .tree-container {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .badge-living {
+    background: var(--color-success);
+    color: white;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+  }
+  .tree-cycle {
+    color: var(--color-warning);
+  }
+
+  @media (max-width: 639px) {
+    .tree-view {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .tree-container {
+      font-size: 0.8rem;
+      min-width: max-content;
+    }
+    .tree-node summary {
+      padding: 0.75rem 1rem;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .tree-node summary strong.truncate {
+      flex-shrink: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 300px;
+    }
+  }
+</style>
+
+<script>
+  // Handle person clicks in tree — dispatch event for detail panel
+  document.querySelectorAll('.tree-node summary[class*="cursor-pointer"], .tree-leaf').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLElement;
+      const personId = target.dataset.personId;
+      const personSlug = target.dataset.personSlug;
+      const personName = target.dataset.personName;
+
+      if (personId || personSlug) {
+        // Highlight selected
+        document.querySelectorAll('.tree-node, .tree-leaf').forEach(n => n.classList.remove('selected'));
+        target.closest('.tree-node')?.classList.add('selected');
+        if (target.classList.contains('tree-leaf')) target.classList.add('selected');
+
+        // Navigate to detail panel (update URL hash for deep linking)
+        const slug = personSlug || personId;
+        window.location.hash = `person/${slug}`;
+
+        // Dispatch custom event for detail panel component
+        window.dispatchEvent(new CustomEvent('person-selected', {
+          detail: { id: personId, slug: personSlug, name: personName }
+        }));
+      }
+    });
+
+    // Keyboard support
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        el.click();
+      }
+    });
+  });
+
+  // Deep link from hash on load
+  window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash.startsWith('#person/')) {
+      const slug = hash.slice(8);
+      const personLink = document.querySelector(`[data-person-slug="${slug}"]`);
+      if (personLink) personLink.click();
+    }
+  });
+</script>

@@ -1,0 +1,182 @@
+---
+// DetailPanel.astro — Shows person details when selected from tree
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { PersonData } from "../utils/extract-data.mjs";
+
+interface Props {
+  people: PersonData[];
+  selectedSlug?: string;
+  selectedId?: string;
+  selectedName?: string;
+}
+
+const { people, selectedSlug, selectedId, selectedName } = Astro.props;
+
+// Find the selected person
+let person: PersonData | undefined;
+if (selectedSlug) {
+  person = people.find(p => p.slug === selectedSlug);
+}
+if (!person && selectedId) {
+  person = people.find(p => p.id === selectedId);
+}
+if (!person && selectedName) {
+  person = people.find(p => p.display_name === selectedName);
+}
+
+// Format dates for display
+function formatDate(date: string | undefined): string {
+  if (!date) return "?";
+  // Handle YYYY-MM-DD, YYYY-MM, YYYY
+  return date.split("-")[0] || "?";
+}
+
+function formatLifespan(p: PersonData): string {
+  const birth = formatDate(p.birth_date);
+  const death = p.is_living ? "living" : formatDate(p.death_date);
+  return `${birth}–${death}`;
+}
+
+function renderRoles(roles?: string[]): string {
+  if (!roles || roles.length === 0) return "";
+  return roles.map(r => `<li>${r}</li>`).join("");
+}
+
+function renderPhotos(photos?: Array<{slug: string, caption: string}>): string {
+  if (!photos || photos.length === 0) return "";
+  return photos.map(photo => `
+    <figure class="photo-figure">
+      <img src="${photo.slug}" alt="${photo.caption}" loading="lazy" class="w-full max-w-xs rounded-lg shadow" />
+      <figcaption class="text-xs text-[var(--color-muted)] text-center mt-1">${photo.caption}</figcaption>
+    </figure>
+  `).join("");
+}
+
+function renderChildren(children?: string[]): string {
+  if (!children || children.length === 0) return "";
+  return children.map(child => {
+    const childPerson = people.find(p => p.id === child || p.display_name === child);
+    if (childPerson) {
+      return `<a href="/people/${childPerson.slug}" class="block py-1 text-sm text-[var(--color-link)] hover:underline">${childPerson.display_name} (${childPerson.lifespan})</a>`;
+    }
+    return `<span class="block py-1 text-sm text-[var(--color-ink-light)]">${child}</span>`;
+  }).join("");
+}
+
+function renderSpouses(spouses?: string[]): string {
+  if (!spouses || spouses.length === 0) return "";
+  return spouses.map(spouse => {
+    const spousePerson = people.find(p => p.id === spouse || p.display_name === spouse);
+    if (spousePerson) {
+      return `<a href="/people/${spousePerson.slug}" class="block py-1 text-sm text-[var(--color-link)] hover:underline">${spousePerson.display_name} (${spousePerson.lifespan})</a>`;
+    }
+    return `<span class="block py-1 text-sm text-[var(--color-ink-light)]">${spouse}</span>`;
+  }).join("");
+}
+---
+
+<div class="detail-panel person-card rounded-xl p-4 sm:p-6" role="region" aria-label="Person details">
+  {person ? (
+    <>
+      <header class="mb-4 pb-4 border-b border-[var(--color-border)]">
+        <div class="flex items-start gap-4">
+          <div class="flex-1">
+            <h2 class="font-serif text-2xl sm:text-3xl text-[var(--color-heading)]">{person.display_name}</h2>
+            <p class="text-[var(--color-muted)] mt-0.5">{formatLifespan(person)}</p>
+            {person.is_living && (
+              <span class="inline-block mt-1 px-3 py-0.5 text-xs font-medium bg-[var(--color-success)] text-white rounded-full">Living</span>
+            )}
+          </div>
+        </div>
+      </header>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <!-- Vitals -->
+        <section class="space-y-3">
+          <h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Vitals</h3>
+          <dl class="space-y-2 text-sm">
+            {person.birth_date && (
+              <div class="flex justify-between">
+                <dt class="text-[var(--color-muted)]">Born</dt>
+                <dd class="text-[var(--color-ink)] font-medium">{person.birth_date}{person.birth_place ? `, ${person.birth_place}` : ""}</dd>
+              </div>
+            )}
+            {person.death_date && !person.is_living && (
+              <div class="flex justify-between">
+                <dt class="text-[var(--color-muted)]">Died</dt>
+                <dd class="text-[var(--color-ink)] font-medium">{person.death_date}{person.death_place ? `, ${person.death_place}` : ""}</dd>
+              </div>
+            )}
+            {!person.is_living && !person.death_date && (
+              <div class="flex justify-between">
+                <dt class="text-[var(--color-muted)]">Died</dt>
+                <dd class="text-[var(--color-ink)] font-medium">Date unknown{person.death_place ? `, ${person.death_place}` : ""}</dd>
+              </div>
+            )}
+            {person.last_name && (
+              <div class="flex justify-between">
+                <dt class="text-[var(--color-muted)]">Surname</dt>
+                <dd class="text-[var(--color-ink)] font-medium">{person.last_name}</dd>
+              </div>
+            )}
+            {person.branch && (
+              <div class="flex justify-between">
+                <dt class="text-[var(--color-muted)]">Branch</dt>
+                <dd class="text-[var(--color-ink)] font-medium capitalize">{person.branch}</dd>
+              </div>
+            )}
+          </dl>
+        </section>
+
+        <!-- Spouses -->
+        <section class="space-y-3">
+          <h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Spouse(s)</h3>
+          <div class="text-sm text-[var(--color-ink-light)]">{renderSpouses(person.spouses) || <span class="text-[var(--color-muted)]">None recorded</span>}</div>
+        </section>
+      </div>
+
+      <!-- Children -->
+      {person.children && person.children.length > 0 && (
+        <section class="mt-4 space-y-3">
+          <h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Children</h3>
+          <div class="grid gap-2 sm:grid-cols-2 text-sm">{renderChildren(person.children)}</div>
+        </section>
+      )}
+
+      <!-- Roles / Occupations -->
+      {person.roles && person.roles.length > 0 && (
+        <section class="mt-4 space-y-3">
+          <h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Roles &amp; Occupations</h3>
+          <ul class="list-disc pl-5 space-y-1 text-sm text-[var(--color-ink-light)]">{renderRoles(person.roles)}</ul>
+        </section>
+      )}
+
+      <!-- Photos -->
+      {person.photos && person.photos.length > 0 && (
+        <section class="mt-4 space-y-3">
+          <h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Photos</h3>
+          <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3">{renderPhotos(person.photos)}</div>
+        </section>
+      )}
+
+      <!-- Notes / Biography -->
+      <section class="mt-4">
+        <h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Biography</h3>
+        <div class="prose prose-sm max-w-none mt-3 text-[var(--color-ink-light)]">
+          {person.biography ? <p class="whitespace-pre-wrap">{person.biography}</p> : <p class="text-[var(--color-muted)] italic">Biographical information is limited to the data recorded in the vault YAML fields above.</p>}
+        </div>
+      </section>
+
+      <footer class="mt-6 pt-4 border-t border-[var(--color-border)] text-xs text-[var(--color-muted)]">
+        <p>Source: Obsidian Vault YAML → people.public.json</p>
+        <p class="mt-1"><a href={`/people/${person.slug}`} class="text-[var(--color-link)] hover:underline">View full profile →</a></p>
+      </footer>
+    </>
+  ) : (
+    <div class="text-center py-12 text-[var(--color-muted)]">
+      <div class="text-4xl mb-2">👤</div>
+      <p class="text-lg">Select a person from the tree</p>
+      <p class="text-sm mt-1">Click any name in the family tree to view their details here</p>
+    </div>
+  )}
+</div>
