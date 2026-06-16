@@ -1,242 +1,153 @@
 ---
-// Unified page — Left sidebar (A-Z + search) + Right content (tree + detail panel)
 import BaseLayout from "../layouts/BaseLayout.astro";
 import type { PersonData } from "../utils/extract-data.mjs";
-import Sidebar from "../components/Sidebar.astro";
-import TreeView from "../components/TreeView.astro";
-import DetailPanel from "../components/DetailPanel.astro";
 
 const peopleData = (await import("../data/people.public.json")).default as PersonData[];
-const telferPeople = peopleData.filter(p => p.branch === "telfer") || [];
+const metaData = (await import("../data/meta.json")).default;
 
-// Get selected person from URL hash
-const selectedSlug = undefined; // Will be set via client-side JS from hash
+// Only Telfer tree people for the home page
+const telferPeople = peopleData.filter((p) => p.branch === "telfer") || [];
+const deceasedTelfer = telferPeople.filter((p) => !p.is_living);
+const livingTelfer = telferPeople.filter((p) => p.is_living);
 
+// Find earliest and latest years
+const validPeople = peopleData.filter((p) => p.birth_year);
+const years = validPeople.map((p) => p.birth_year as number);
+const minYear = years.length > 0 ? Math.min(...years) : 1731;
+const maxYear = years.length > 0 ? Math.max(...years, new Date().getFullYear()) : new Date().getFullYear();
+
+// Count generations from John Telfer (of Castleton) (~1731) to the kids (2019)
+const generationRanges = [
+  { label: "1st Gen", range: "1731–1761", from: 1731, to: 1761 },
+  { label: "2nd Gen", range: "1761–1809", from: 1762, to: 1809 },
+  { label: "3rd Gen", range: "1809–1895", from: 1809, to: 1895 },
+  { label: "4th Gen", range: "1847–1929", from: 1847, to: 1929 },
+  { label: "5th Gen", range: "1875–1954", from: 1875, to: 1954 },
+  { label: "6th Gen", range: "1924–2009", from: 1924, to: 2009 },
+  { label: "7th Gen", range: "1959–", from: 1959, to: new Date().getFullYear() },
+  { label: "8th Gen", range: "2008–", from: 2008, to: new Date().getFullYear() },
+];
+
+// Pre-compute generation members
+function peopleInRange(fr, t) {
+  return telferPeople.filter((p) => p.birth_year && p.birth_year >= fr && p.birth_year <= t).slice(0, 4).map((p) => p.display_name);
+}
+
+// Timeline highlight: key events
+const keyDates = [
+  { year: "1809", event: "Francis Telfer born in Scotland" },
+  { year: "1839", event: "Francis emigrates to South Australia" },
+  { year: "1874", event: "John Telfer marries Caroline Masters" },
+  { year: "1895", event: "Francis Telfer dies, aged 86" },
+  { year: "1924", event: "Murray John Telfer born" },
+  { year: "1950s", event: "The family settles on Eyre Peninsula" },
+  { year: "1986", event: "Mark Kenneth Telfer born" },
+  { year: "2017", event: "Levi Leonard Telfer born" },
+  { year: "2019", event: "Zabella Violet Telfer born" },
+];
+
+// Recent profiles added
+const recentPeople = (telferPeople || []).slice(-6).reverse();
 ---
 
-<BaseLayout title="Telfer Wiki — Family Tree &amp; People">
-  <div class="unified-layout grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4 lg:gap-6 p-4 lg:p-6 max-w-full">
+<BaseLayout title="Home">
+  <div class="space-y-3 sm:space-y-4">
+    <!-- Hero -->
+    <section class="text-center py-4 sm:py-5 border-b-2 border-[var(--color-border)]">
+      <div class="text-4xl sm:text-5xl mb-2">🌳</div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[var(--color-heading)] mb-2">
+        Telfer Wiki
+      </h1>
+      <p class="text-base sm:text-lg text-[var(--color-ink-light)] font-serif italic max-w-2xl mx-auto px-2">
+        A digital genealogy for the Telfer family line — from the Scottish lowlands to the South Australian plains
+      </p>
+      <p class="text-xs sm:text-sm text-[var(--color-muted)] mt-1">
+        <span class="font-sans not-italic">{metaData.total_people} profiles</span>
+        &nbsp;·&nbsp; covering <span class="font-sans not-italic">{minYear}–{maxYear}</span>
+        &nbsp;·&nbsp; <span class="font-sans not-italic">{metaData.total_trees} family trees</span>
+      </p>
+      <div class="mt-2 sm:mt-3 flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a href={import.meta.env.BASE_URL + "people"} class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 bg-[var(--color-heading)] text-white rounded-lg font-serif text-base sm:text-lg no-underline hover:bg-[var(--color-heading-hover)] transition-colors text-center">
+          Browse the People
+        </a>
+        <a href={import.meta.env.BASE_URL + "timeline"} class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 border-2 border-[var(--color-border)] text-[var(--color-ink)] rounded-lg font-serif text-base sm:text-lg no-underline hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors text-center">
+          View the Timeline
+        </a>
+      </div>
+    </section>
 
-    <!-- Left Sidebar: A-Z Index + Search -->
-    <Sidebar people={telferPeople} />
+    <!-- Stats -->
+    <section>
+      <h2 class="text-center mb-3">At a Glance</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+        <div class="person-card rounded-lg p-3 sm:p-4 text-center">
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-[var(--color-heading)]">{telferPeople.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-0.5">Telfer Profiles</div>
+        </div>
+        <div class="person-card rounded-lg p-3 sm:p-4 text-center">
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-[var(--color-heading)]">{generationRanges.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-0.5">Generations</div>
+        </div>
+        <div class="person-card rounded-lg p-3 sm:p-4 text-center">
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-[var(--color-heading)]">{livingTelfer.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-0.5">Living</div>
+        </div>
+        <div class="person-card rounded-lg p-3 sm:p-4 text-center">
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-[var(--color-heading)]">{deceasedTelfer.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-0.5">Deceased</div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Right Content: Tree (top) + Detail Panel (bottom) -->
-    <div class="content-area space-y-6 min-w-0">
-      <!-- Tree View -->
-      <TreeView people={telferPeople} id="tree-view" />
+    <!-- Generations -->
+    <section>
+      <h2 class="mb-2">The Generations</h2>
+      <div class="space-y-1">
+        {generationRanges.map((gen) => (
+          <div class="person-card rounded-lg p-2 sm:p-3 flex items-center gap-2 sm:gap-3">
+            <div class="w-12 sm:w-14 text-center shrink-0">
+              <div class="font-bold font-serif text-sm sm:text-base text-[var(--color-heading)]">{gen.label}</div>
+              <div class="text-xs text-[var(--color-muted)]">{gen.range}</div>
+            </div>
+            <div class="h-4 sm:h-6 w-px bg-[var(--color-border)] shrink-0"></div>
+            <div class="flex-1 text-xs sm:text-sm text-[var(--color-ink-light)]">
+              {peopleInRange(gen.from, gen.to).join(", ")}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
 
-      <!-- Detail Panel -->
-      <DetailPanel
-        people={telferPeople}
-        id="detail-panel"
-      />
-    </div>
+    <!-- Timeline Highlights -->
+    <section>
+      <h2 class="mb-2">Timeline Highlights</h2>
+      <div class="space-y-0">
+        {keyDates.map((item) => (
+          <div class="timeline-line pl-5 pb-2">
+            <span class="font-bold font-serif text-[var(--color-heading)]">{item.year}</span>
+            <span class="text-[var(--color-ink-light)]"> — {item.event}</span>
+          </div>
+        ))}
+      </div>
+      <div class="mt-1.5">
+        <a href="/timeline" class="text-sm text-[var(--color-link)]">View full timeline →</a>
+      </div>
+    </section>
 
+    <!-- Recent Profiles -->
+    <section>
+      <h2 class="mb-2">Recently Added</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+        {recentPeople.map((person) => (
+          <a href={import.meta.env.BASE_URL + "people/" + person.slug} class="person-card rounded-lg p-2.5 sm:p-3 no-underline block">
+            <div class="font-medium text-[var(--color-heading)]">{person.display_name}</div>
+            <div class="text-sm text-[var(--color-muted)]">
+              {person.birth_year ? person.birth_year : "?"} – {person.death_year || person.is_living ? "living" : "?"}
+              <span class="ml-2 inline-block text-xs px-2 py-0.5 rounded badge-living">{person.is_living ? "Living" : "Deceased"}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
   </div>
 </BaseLayout>
-
-<style>
-  .unified-layout {
-    min-height: 100vh;
-  }
-
-  /* Desktop: sidebar fixed, content scrollable */
-  @media (min-width: 1024px) {
-    .unified-layout > aside {
-      position: sticky;
-      top: 1.5rem;
-      height: calc(100vh - 3rem);
-    }
-    .content-area {
-      padding-right: 1rem;
-    }
-  }
-
-  /* Mobile: sidebar slides in */
-  @media (max-width: 1023px) {
-    .unified-layout {
-      display: block;
-    }
-    /* Sidebar handled by its own styles */
-  }
-
-  /* Tree and detail panel proportions on desktop */
-  @media (min-width: 1024px) {
-    .content-area {
-      display: grid;
-      grid-template-rows: 1fr auto;
-      max-height: calc(100vh - 3rem);
-      overflow: hidden;
-    }
-    .tree-view {
-      overflow-y: auto;
-      padding-right: 0.5rem;
-    }
-    .detail-panel {
-      overflow-y: auto;
-      max-height: 50vh;
-    }
-  }
-</style>
-
-<script>
-  // Client-side hydration for unified interactions
-  class UnifiedPage {
-    constructor() {
-      this.detailPanel = document.getElementById('detail-panel');
-      this.init();
-    }
-
-    init() {
-      // Listen for person-selected events from tree
-      window.addEventListener('person-selected', (e: CustomEvent) => {
-        this.loadDetail(e.detail);
-      });
-
-      // Handle hash changes
-      window.addEventListener('hashchange', () => this.handleHash());
-      this.handleHash();
-
-      // Pass people data to sidebar search
-      const searchInput = document.getElementById('sidebar-search');
-      if (searchInput) {
-        searchInput.dataset.people = encodeURIComponent(JSON.stringify(
-          Array.from(document.querySelectorAll('.az-index a[data-person-slug]')).map(a => ({
-            slug: a.dataset.personSlug,
-            display_name: a.dataset.personName,
-            birth_place: '',
-            death_place: '',
-            roles: [],
-            lifespan: a.querySelector('.text-xs')?.textContent?.replace(/[()]/g, '') || ''
-          }))
-        ));
-      }
-    }
-
-    handleHash() {
-      const hash = window.location.hash;
-      if (hash.startsWith('#person/')) {
-        const slug = hash.slice(8);
-        this.loadDetailBySlug(slug);
-      } else {
-        this.clearDetail();
-      }
-    }
-
-    async loadDetailBySlug(slug: string) {
-      try {
-        const response = await fetch(`/people/${slug}/data.json`);
-        if (!response.ok) throw new Error('Not found');
-        const person = await response.json();
-        this.loadDetail({ slug, id: person.id, name: person.display_name });
-      } catch {
-        this.clearDetail();
-      }
-    }
-
-    async loadDetail(detail: { slug?: string; id?: string; name?: string }) {
-      // Reload the detail panel with new data
-      if (!detail.slug) return;
-
-      try {
-        const response = await fetch(`/people/${detail.slug}/data.json`);
-        if (!response.ok) throw new Error('Not found');
-        const person = await response.json();
-
-        // Update detail panel content
-        this.detailPanel.innerHTML = this.renderDetail(person);
-        this.updateTreeSelection(detail.slug);
-      } catch (err) {
-        console.error('Failed to load detail:', err);
-      }
-    }
-
-    updateTreeSelection(slug: string) {
-      // Update selected highlight in tree
-      document.querySelectorAll('.tree-node, .tree-leaf').forEach(n => n.classList.remove('selected'));
-      const selectedEl = document.querySelector(`[data-person-slug="${slug}"]`);
-      selectedEl?.classList.add('selected');
-      selectedEl?.closest('.tree-node')?.classList.add('selected');
-
-      // Scroll into view in tree
-      selectedEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-    clearDetail() {
-      this.detailPanel.innerHTML = `
-        <div class="detail-panel person-card rounded-xl p-4 sm:p-6" role="region" aria-label="Person details">
-          <div class="text-center py-12 text-[var(--color-muted)]">
-            <div class="text-4xl mb-2">👤</div>
-            <p class="text-lg">Select a person from the tree</p>
-            <p class="text-sm mt-1">Click any name in the family tree to view their details here</p>
-          </div>
-        </div>
-      `;
-    }
-
-    renderDetail(person: any): string {
-      const formatDate = (date: string | undefined) => {
-        if (!date) return "?";
-        return date.split("-")[0] || "?";
-      };
-      const formatLifespan = (p: any) => {
-        const birth = formatDate(p.birth_date);
-        const death = p.is_living ? "living" : formatDate(p.death_date);
-        return `${birth}–${death}`;
-      };
-
-      return `
-        <div class="detail-panel person-card rounded-xl p-4 sm:p-6" role="region" aria-label="Person details">
-          <header class="mb-4 pb-4 border-b border-[var(--color-border)]">
-            <h2 class="font-serif text-2xl sm:text-3xl text-[var(--color-heading)]">${person.display_name}</h2>
-            <p class="text-[var(--color-muted)] mt-0.5">${formatLifespan(person)}</p>
-            ${person.is_living ? '<span class="inline-block mt-1 px-3 py-0.5 text-xs font-medium bg-[var(--color-success)] text-white rounded-full">Living</span>' : ''}
-          </header>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <section class="space-y-3"><h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Vitals</h3>
-              <dl class="space-y-2 text-sm">
-                ${person.birth_date ? `<div class="flex justify-between"><dt class="text-[var(--color-muted)]">Born</dt><dd class="text-[var(--color-ink)] font-medium">${person.birth_date}${person.birth_place ? `, ${person.birth_place}` : ''}</dd></div>` : ''}
-                ${person.death_date && !person.is_living ? `<div class="flex justify-between"><dt class="text-[var(--color-muted)]">Died</dt><dd class="text-[var(--color-ink)] font-medium">${person.death_date}${person.death_place ? `, ${person.death_place}` : ''}</dd></div>` : ''}
-                ${!person.is_living && !person.death_date ? `<div class="flex justify-between"><dt class="text-[var(--color-muted)]">Died</dt><dd class="text-[var(--color-ink)] font-medium">Date unknown${person.death_place ? `, ${person.death_place}` : ''}</dd></div>` : ''}
-                ${person.last_name ? `<div class="flex justify-between"><dt class="text-[var(--color-muted)]">Surname</dt><dd class="text-[var(--color-ink)] font-medium">${person.last_name}</dd></div>` : ''}
-                ${person.branch ? `<div class="flex justify-between"><dt class="text-[var(--color-muted)]">Branch</dt><dd class="text-[var(--color-ink)] font-medium capitalize">${person.branch}</dd></div>` : ''}
-              </dl>
-            </section>
-            <section class="space-y-3"><h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Spouse(s)</h3>
-              ${person.spouses && person.spouses.length > 0 ? person.spouses.map(s => `<span class="block py-1 text-sm text-[var(--color-link)]">${s}</span>`).join('') : '<span class="text-[var(--color-muted)]">None recorded</span>'}
-            </section>
-          </div>
-          ${person.children && person.children.length > 0 ? `
-            <section class="mt-4 space-y-3"><h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Children</h3>
-              <div class="grid gap-2 sm:grid-cols-2 text-sm">
-                ${person.children.map((c: string) => `<span class="block py-1 text-sm text-[var(--color-ink-light)]">${c}</span>`).join('')}
-              </div>
-            </section>` : ''}
-          ${person.roles && person.roles.length > 0 ? `
-            <section class="mt-4 space-y-3"><h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Roles & Occupations</h3>
-              <ul class="list-disc pl-5 space-y-1 text-sm text-[var(--color-ink-light)]">
-                ${person.roles.map((r: string) => `<li>${r}</li>`).join('')}
-              </ul>
-            </section>` : ''}
-          <section class="mt-4">
-            <h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Biography</h3>
-            <div class="prose prose-sm max-w-none mt-3 text-[var(--color-ink-light)]">
-              ${person.biography ? `<p class="whitespace-pre-wrap">${person.biography}</p>` : '<p class="text-[var(--color-muted)] italic">Biographical information is limited to the data recorded in the vault YAML fields above.</p>'}
-            </div>
-          </section>
-          <footer class="mt-6 pt-4 border-t border-[var(--color-border)] text-xs text-[var(--color-muted)]">
-            <p>Source: Obsidian Vault YAML → people.public.json</p>
-            <p class="mt-1"><a href="/people/${person.slug}" class="text-[var(--color-link)] hover:underline">View full profile →</a></p>
-          </footer>
-        </div>
-      `;
-    }
-  }
-
-  // Initialize when DOM ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => new UnifiedPage());
-  } else {
-    new UnifiedPage();
-  }
-</script>

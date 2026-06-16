@@ -1,0 +1,123 @@
+---
+// Unified page — Left sidebar (A-Z + search) + Right content (tree + detail panel)
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { PersonData } from "../utils/extract-data.mjs";
+import Sidebar from "../components/Sidebar.astro";
+import TreeView from "../components/TreeView.astro";
+import DetailPanel from "../components/DetailPanel.astro";
+
+const peopleData = (await import("../data/people.public.json")).default as PersonData[];
+const telferPeople = peopleData.filter(p => p.branch === "telfer") || [];
+
+// Get selected person from URL hash
+const selectedSlug = undefined; // Will be set via client-side JS from hash
+---
+
+<BaseLayout title="Telfer Wiki — Family Tree &amp; Explorer">
+  <div class="unified-layout grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4 lg:gap-6 p-4 lg:p-6 max-w-full">
+
+    <!-- Left Sidebar: A-Z Index + Search -->
+    <Sidebar people={telferPeople} />
+
+    <!-- Right Content: Tree (top) + Detail Panel (bottom) -->
+    <div class="content-area space-y-6 min-w-0">
+      <!-- Tree View -->
+      <TreeView people={telferPeople} id="tree-view" />
+
+      <!-- Detail Panel -->
+      <DetailPanel
+        people={telferPeople}
+        id="detail-panel"
+      />
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .unified-layout {
+    min-height: 100vh;
+  }
+
+  /* Desktop: sidebar fixed, content scrollable */
+  @media (min-width: 1024px) {
+    .unified-layout > aside {
+      position: sticky;
+      top: 1.5rem;
+      height: calc(100vh - 3rem);
+    }
+    .content-area {
+      padding-right: 1rem;
+    }
+  }
+
+  /* Mobile: sidebar slides in */
+  @media (max-width: 1023px) {
+    .unified-layout {
+      display: block;
+    }
+    /* Sidebar handled by its own styles */
+  }
+
+  /* Tree and detail panel proportions on desktop */
+  @media (min-width: 1024px) {
+    .content-area {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      max-height: calc(100vh - 3rem);
+      overflow: hidden;
+    }
+    .tree-view {
+      overflow-y: auto;
+      padding-right: 0.5rem;
+    }
+    .detail-panel {
+      overflow-y: auto;
+      max-height: 50vh;
+    }
+  }
+</style>
+
+<script>
+  // Client-side hydration for unified interactions
+  class UnifiedPage {
+    constructor() {
+      this.detailPanel = document.getElementById('detail-panel');
+      this.init();
+    }
+
+    init() {
+      // Listen for person-selected events from tree
+      window.addEventListener('person-selected', (e: CustomEvent) => {
+        this.loadDetail(e.detail);
+      });
+
+      // Handle hash changes
+      window.addEventListener('hashchange', () => this.handleHash());
+      this.handleHash();
+
+      // Pass people data to sidebar search
+      // (sidebar handles its own search logic)
+    }
+
+    handleHash() {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        const btn = document.querySelector(`[data-person-slug="${hash}"]`);
+        if (btn) btn.click();
+      }
+    }
+
+    loadDetail(slug: string) {
+      // Detail panel loads via its own logic
+      console.log('Load detail for:', slug);
+    }
+  }
+
+  // Initialize when DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new UnifiedPage());
+  } else {
+    new UnifiedPage();
+  }
+</script>
