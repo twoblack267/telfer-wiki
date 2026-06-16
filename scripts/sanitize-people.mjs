@@ -37,8 +37,6 @@ const PRIVATE_FIELDS = new Set([
   'body_markdown',
   'body_stripped',
   'vault_file',
-  'images',
-  'person_photo',
   '_stub_source',
   '_stub_relationship',
   'relationships',  // raw relationships table - replaced by parents/children/spouses/siblings
@@ -68,7 +66,9 @@ const PUBLIC_FIELDS = [
   'parents',
   'children',
   'spouses',
-  'siblings'
+  'siblings',
+  'images',
+  'person_photo'
 ];
 
 // ─── Load Data ──────────────────────────────────────────────────────────────
