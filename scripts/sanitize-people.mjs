@@ -100,22 +100,24 @@ const visible = new Set();
 // Start from each living person, walk UP the tree
 for (const living of livingPeople) {
   let currentSlugs = [living.slug];
+  const seen = new Set(); // per-walk deduplication
 
   for (let gap = 0; gap <= PRIVACY_GENERATION_GAP; gap++) {
     const nextSlugs = [];
     for (const slug of currentSlugs) {
-      if (visible.has(slug)) continue;
-      visible.add(slug);
+      if (seen.has(slug)) continue;
+      seen.add(slug);
+      visible.add(slug); // global visibility
 
       const person = slugToPerson.get(slug);
       if (person) {
         // Add parents (going UP)
         for (const parentSlug of person.parents || []) {
-          if (!visible.has(parentSlug)) nextSlugs.push(parentSlug);
+          if (!seen.has(parentSlug)) nextSlugs.push(parentSlug);
         }
         // Add spouses (same generation)
         for (const spouseSlug of person.spouses || []) {
-          if (!visible.has(spouseSlug)) nextSlugs.push(spouseSlug);
+          if (!seen.has(spouseSlug)) nextSlugs.push(spouseSlug);
         }
       }
     }
@@ -135,6 +137,21 @@ for (const slug of visible) {
   }
 }
 for (const slug of spousesToAdd) visible.add(slug);
+
+// Also mark siblings of all visible people (keep families together)
+const siblingsToAdd = new Set();
+for (const slug of visible) {
+  const person = slugToPerson.get(slug);
+  if (person && person.branch === 'telfer') {
+    for (const siblingSlug of person.siblings || []) {
+      const sibling = slugToPerson.get(siblingSlug);
+      if (sibling && sibling.branch === 'telfer' && !visible.has(siblingSlug)) {
+        siblingsToAdd.add(siblingSlug);
+      }
+    }
+  }
+}
+for (const slug of siblingsToAdd) visible.add(slug);
 
 console.log(`👁️  Visible people: ${visible.size} / ${people.length}`);
 

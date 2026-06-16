@@ -17,7 +17,8 @@
     "is_living": false,
     "parents": [],
     "children": [
-      "james-telfer"
+      "james-telfer",
+      "james-telfer-17611845"
     ],
     "spouses": [
       "john-telfer-1840-1913",
@@ -43,12 +44,89 @@
     "is_living": false,
     "parents": [],
     "children": [
-      "james-telfer"
+      "james-telfer",
+      "james-telfer-17611845"
     ],
     "spouses": [
       "elspeth-young-1722"
     ],
     "siblings": []
+  },
+  {
+    "id": "James Telfer",
+    "slug": "james-telfer-17611845",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1761,
+    "death_year": 1845,
+    "birth_year_display": "1761",
+    "death_year_display": "1845",
+    "display_name": "James Telfer (1761–1845)",
+    "title": "James Telfer (1761–1845) — Family & Biography",
+    "lifespan": "1761 – 1845",
+    "generation": 2,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elspeth-young-1722",
+      "john-telfer-of-castleton-1731"
+    ],
+    "children": [
+      "adam-telfer",
+      "francis-telfer-18091895",
+      "isobelisabella-telfer-17981875",
+      "james-telfer",
+      "james-telfer-17961863",
+      "john-telfer-1840-1913",
+      "margaret-telfer",
+      "robert-telfer-born-ca-1869",
+      "william-telfer"
+    ],
+    "spouses": [
+      "elizabeth-hutton-telfer-17741853"
+    ],
+    "siblings": [
+      "elizabeth-hutton-telfer-17741853"
+    ]
+  },
+  {
+    "id": "James Telfer",
+    "slug": "james-telfer-17611845",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1761,
+    "death_year": 1845,
+    "birth_year_display": "1761",
+    "death_year_display": "1845",
+    "display_name": "James Telfer (1761–1845)",
+    "title": "James Telfer — Family & Biography",
+    "lifespan": "1761 – 1845",
+    "generation": 2,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elspeth-young-1722",
+      "john-telfer-of-castleton-1731"
+    ],
+    "children": [
+      "adam-telfer",
+      "francis-telfer-18091895",
+      "isobelisabella-telfer-17981875",
+      "james-telfer",
+      "james-telfer-17961863",
+      "john-telfer-1840-1913",
+      "margaret-telfer",
+      "robert-telfer-born-ca-1869",
+      "william-telfer"
+    ],
+    "spouses": [
+      "elizabeth-hutton-telfer-17741853"
+    ],
+    "siblings": [
+      "elizabeth-hutton-telfer-17741853"
+    ]
   },
   {
     "id": "Elizabeth Hutton Telfer",
@@ -66,17 +144,29 @@
     "generation": 2,
     "branch": "telfer",
     "is_living": false,
-    "parents": [],
+    "parents": [
+      "adam-telfer",
+      "isobelisabella-telfer-17981875",
+      "william-telfer"
+    ],
     "children": [
+      "adam-telfer",
       "francis-telfer-18091895",
+      "isobelisabella-telfer-17981875",
       "james-telfer",
       "john-telfer-1840-1913",
-      "robert-telfer-18031878"
+      "margaret-telfer",
+      "robert-telfer-18031878",
+      "robert-telfer-born-ca-1869",
+      "william-telfer"
     ],
     "spouses": [
-      "james-telfer"
+      "james-telfer",
+      "james-telfer-17611845"
     ],
-    "siblings": []
+    "siblings": [
+      "james-telfer-17611845"
+    ]
   },
   {
     "id": "Elizabeth Beattie",
@@ -94,10 +184,17 @@
     "generation": 2,
     "branch": "telfer",
     "is_living": false,
-    "parents": [],
+    "parents": [
+      "margaret-telfer"
+    ],
     "children": [
+      "adam-francis-telfer-18421925",
+      "elizabeth-beattie-telfer-18321896",
       "james-telfer",
-      "john-telfer-1840-1913"
+      "jean-telfer",
+      "john-telfer-1840-1913",
+      "margaret-telfer",
+      "robert-telfer-born-ca-1869"
     ],
     "spouses": [
       "james-telfer",
@@ -134,7 +231,12 @@
       "alma-ida-sporer",
       "alma-sporer-18811965"
     ],
-    "siblings": []
+    "siblings": [
+      "elizabeth-telfer-18681950",
+      "martha-telfer-cameron",
+      "martha-telfer-cameron-18731964",
+      "susan-telfer-18711952"
+    ]
   },
   {
     "id": "Alma Sporer",
@@ -205,17 +307,25 @@
     "is_living": null,
     "parents": [
       "elizabeth-beattie-18021891",
+      "elizabeth-beattie-telfer-18321896",
       "elizabeth-hutton-telfer-17741853",
       "elspeth-young-1722",
       "francis-telfer-18091895",
+      "james-telfer-17611845",
+      "james-telfer-18291913",
       "john-telfer-of-castleton-1731",
       "martha-allen-18401876",
       "robert-telfer-18031878"
     ],
     "children": [
+      "adam-francis-telfer-18421925",
+      "elizabeth-beattie-telfer-18321896",
       "francis-telfer-18091895",
+      "james-telfer-17961863",
+      "james-telfer-18291913",
       "john-telfer-18401913",
       "robert-telfer-18031878",
+      "robert-telfer-18351907",
       "vida-templer-19192021"
     ],
     "spouses": [
@@ -224,8 +334,159 @@
       "elizabeth-hutton-telfer-17741853"
     ],
     "siblings": [
+      "adam-francis-telfer-18421925",
+      "adam-telfer",
+      "adam-telfer-dillon",
+      "elizabeth-beattie-telfer-18321896",
+      "elizabeth-telfer-18681950",
+      "francis-telfer-dillon",
+      "isobelisabella-telfer-17981875",
       "james-telfer-b-1832-scotland",
-      "john-telfer-18401913"
+      "jean-telfer",
+      "john-telfer-18401913",
+      "margaret-telfer",
+      "martha-telfer-cameron-18731964",
+      "robert-telfer-18351907",
+      "robert-telfer-born-ca-1869",
+      "robert-telfer-dillon",
+      "susan-telfer-18711952",
+      "william-telfer"
+    ]
+  },
+  {
+    "id": "James Telfer",
+    "slug": "james-telfer-17961863",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1796,
+    "death_year": 1863,
+    "birth_year_display": "1796",
+    "death_year_display": "1863",
+    "display_name": "James Telfer (1796–1863)",
+    "title": "James Telfer (1796–1863) — Family & Biography",
+    "lifespan": "1796 – 1863",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "james-telfer-17611845"
+    ],
+    "children": [
+      "james-telfer-17611845"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer",
+      "francis-telfer-18091895",
+      "john-telfer-1840-1913",
+      "margaret-telfer",
+      "robert-telfer-born-ca-1869",
+      "william-telfer"
+    ]
+  },
+  {
+    "id": "James Telfer",
+    "slug": "james-telfer-17961863",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1796,
+    "death_year": 1863,
+    "birth_year_display": "1796",
+    "death_year_display": "1863",
+    "display_name": "James Telfer (1796–1863)",
+    "title": "James Telfer — Family & Biography",
+    "lifespan": "1796 – 1863",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "james-telfer-17611845"
+    ],
+    "children": [
+      "james-telfer-17611845"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer",
+      "francis-telfer-18091895",
+      "john-telfer-1840-1913",
+      "margaret-telfer",
+      "robert-telfer-born-ca-1869",
+      "william-telfer"
+    ]
+  },
+  {
+    "id": "Isobel/Isabella Telfer",
+    "slug": "isobelisabella-telfer-17981875",
+    "first_name": "Isobel/Isabella",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1798,
+    "death_year": 1875,
+    "birth_year_display": "1798",
+    "death_year_display": "1875",
+    "display_name": "Isobel/Isabella Telfer (1798–1875)",
+    "title": "Isobel/Isabella Telfer — Family & Biography",
+    "lifespan": "1798 – 1875",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-hutton-telfer-17741853",
+      "james-telfer-17611845"
+    ],
+    "children": [
+      "elizabeth-hutton-telfer-17741853",
+      "james-telfer-17611845"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer",
+      "francis-telfer-18091895",
+      "james-telfer",
+      "john-telfer-1840-1913",
+      "margaret-telfer",
+      "robert-telfer-born-ca-1869",
+      "william-telfer"
+    ]
+  },
+  {
+    "id": "Adam Telfer",
+    "slug": "adam-telfer",
+    "first_name": "Adam",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1799,
+    "death_year": null,
+    "birth_year_display": "1799",
+    "death_year_display": "?",
+    "display_name": "Adam Telfer (1799–?)",
+    "title": "Adam Telfer — Family & Biography",
+    "lifespan": "1799 – ?",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-hutton-telfer-17741853",
+      "james-telfer-17611845"
+    ],
+    "children": [
+      "elizabeth-hutton-telfer-17741853",
+      "james-telfer-17611845",
+      "james-telfer-18291913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer-dillon",
+      "francis-telfer-dillon",
+      "isobelisabella-telfer-17981875",
+      "james-telfer",
+      "james-telfer-17961863",
+      "robert-telfer-born-ca-1869",
+      "robert-telfer-dillon",
+      "william-telfer"
     ]
   },
   {
@@ -249,6 +510,7 @@
     ],
     "children": [
       "james-telfer",
+      "jean-telfer",
       "john-telfer-1840-1913"
     ],
     "spouses": [
@@ -273,10 +535,13 @@
     "branch": "telfer",
     "is_living": false,
     "parents": [
-      "elizabeth-hutton-telfer-17741853"
+      "elizabeth-hutton-telfer-17741853",
+      "james-telfer-17611845"
     ],
     "children": [
+      "george-wright-telfer",
       "james-telfer",
+      "james-telfer-17611845",
       "james-telfer-b-1832-scotland",
       "john-telfer-1840-1913",
       "john-telfer-18471929"
@@ -290,7 +555,22 @@
       "margaret-wright-3rd",
       "margaret-wright-telfer-1892"
     ],
-    "siblings": []
+    "siblings": [
+      "adam-telfer-dillon",
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-telfer-dillon",
+      "gladys-merle-pedler",
+      "isobelisabella-telfer-17981875",
+      "james-telfer-17961863",
+      "malcolm-george-telfer",
+      "reginald-masters-telfer",
+      "robert-telfer-dillon",
+      "william-telfer"
+    ]
   },
   {
     "id": "Francis Telfer",
@@ -309,10 +589,13 @@
     "branch": "telfer",
     "is_living": false,
     "parents": [
-      "elizabeth-hutton-telfer-17741853"
+      "elizabeth-hutton-telfer-17741853",
+      "james-telfer-17611845"
     ],
     "children": [
+      "george-wright-telfer",
       "james-telfer",
+      "james-telfer-17611845",
       "james-telfer-b-1832-scotland",
       "john-telfer-1840-1913",
       "john-telfer-18471929"
@@ -326,7 +609,59 @@
       "margaret-wright-3rd",
       "margaret-wright-telfer-1892"
     ],
-    "siblings": []
+    "siblings": [
+      "adam-telfer-dillon",
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-telfer-dillon",
+      "gladys-merle-pedler",
+      "isobelisabella-telfer-17981875",
+      "james-telfer-17961863",
+      "malcolm-george-telfer",
+      "reginald-masters-telfer",
+      "robert-telfer-dillon",
+      "william-telfer"
+    ]
+  },
+  {
+    "id": "William Telfer",
+    "slug": "william-telfer",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1811,
+    "death_year": 1881,
+    "birth_year_display": "1811",
+    "death_year_display": "1881",
+    "display_name": "William Telfer (1811–1881)",
+    "title": "William Telfer — Family & Biography",
+    "lifespan": "1811 – 1881",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-hutton-telfer-17741853",
+      "james-telfer-17611845"
+    ],
+    "children": [
+      "elizabeth-hutton-telfer-17741853",
+      "james-telfer-17611845"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer",
+      "ernest-john-telfer",
+      "francis-telfer-18091895",
+      "isobelisabella-telfer-17981875",
+      "james-telfer",
+      "james-telfer-17961863",
+      "john-telfer-1840-1913",
+      "margaret-telfer",
+      "robert-telfer-born-ca-1869"
+    ]
   },
   {
     "id": "Elizabeth \"Betty\" Oliver",
@@ -350,6 +685,176 @@
       "robert-telfer-18031878"
     ],
     "siblings": []
+  },
+  {
+    "id": "James Telfer",
+    "slug": "james-telfer-18291913",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1829,
+    "death_year": 1913,
+    "birth_year_display": "1829",
+    "death_year_display": "1913",
+    "display_name": "James Telfer (1829–1913)",
+    "title": "James Telfer (1829-1913) — Family & Biography",
+    "lifespan": "1829 – 1913",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "adam-telfer"
+    ],
+    "children": [
+      "adam-telfer",
+      "james-telfer",
+      "james-telfer-1796-1863",
+      "john-telfer-1840-1913",
+      "robert-telfer-born-ca-1869"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-francis-telfer-18421925",
+      "john-telfer-1840-1913",
+      "robert-telfer-18351907",
+      "robert-telfer-born-ca-1869"
+    ]
+  },
+  {
+    "id": "James Telfer",
+    "slug": "james-telfer-18291913",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1829,
+    "death_year": 1913,
+    "birth_year_display": "1829",
+    "death_year_display": "1913",
+    "display_name": "James Telfer (1829–1913)",
+    "title": "James Telfer — Family & Biography",
+    "lifespan": "1829 – 1913",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "adam-telfer"
+    ],
+    "children": [
+      "adam-telfer",
+      "james-telfer",
+      "james-telfer-1796-1863",
+      "john-telfer-1840-1913",
+      "robert-telfer-born-ca-1869"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-francis-telfer-18421925",
+      "john-telfer-1840-1913",
+      "robert-telfer-18351907",
+      "robert-telfer-born-ca-1869"
+    ]
+  },
+  {
+    "id": "Margaret Telfer",
+    "slug": "margaret-telfer",
+    "first_name": "Margaret",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1829,
+    "death_year": null,
+    "birth_year_display": "1829",
+    "death_year_display": "?",
+    "display_name": "Margaret Telfer (1829–?)",
+    "title": "Margaret Telfer — Family & Biography",
+    "lifespan": "1829 – ?",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-18021891"
+    ],
+    "children": [
+      "elizabeth-beattie-18021891"
+    ],
+    "spouses": [],
+    "siblings": [
+      "isobelisabella-telfer-17981875",
+      "james-telfer",
+      "james-telfer-17961863",
+      "john-telfer-1840-1913",
+      "robert-telfer-born-ca-1869",
+      "william-telfer"
+    ]
+  },
+  {
+    "id": "Elizabeth Beattie Telfer",
+    "slug": "elizabeth-beattie-telfer-18321896",
+    "first_name": "Elizabeth",
+    "middle_name": "Beattie",
+    "last_name": "Telfer",
+    "birth_year": 1832,
+    "death_year": 1896,
+    "birth_year_display": "1832",
+    "death_year_display": "1896",
+    "display_name": "Elizabeth Beattie Telfer (1832–1896)",
+    "title": "Elizabeth Beattie Telfer — Family & Biography",
+    "lifespan": "1832 – 1896",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-18021891"
+    ],
+    "children": [
+      "adam-telfer",
+      "adam-telfer-dillon",
+      "francis-telfer-18091895",
+      "francis-telfer-dillon",
+      "james-telfer",
+      "james-telfer-1796-1863",
+      "james-telfer-b-1832-scotland",
+      "robert-telfer-born-ca-1869",
+      "robert-telfer-dillon"
+    ],
+    "spouses": [],
+    "siblings": [
+      "james-telfer",
+      "john-telfer-1840-1913",
+      "robert-telfer-18351907"
+    ]
+  },
+  {
+    "id": "Robert Telfer",
+    "slug": "robert-telfer-18351907",
+    "first_name": "Robert",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1835,
+    "death_year": 1907,
+    "birth_year_display": "1835",
+    "death_year_display": "1907",
+    "display_name": "Robert Telfer (1835–1907)",
+    "title": "Robert Telfer (1835–1907) — Family & Biography",
+    "lifespan": "1835 – 1907",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "james-telfer",
+      "james-telfer-b-1832-scotland"
+    ],
+    "children": [
+      "james-telfer-1796-1863"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-francis-telfer-18421925",
+      "elizabeth-beattie-telfer-18321896",
+      "james-telfer",
+      "james-telfer-18291913",
+      "john-telfer-1840-1913",
+      "john-telfer-18401913"
+    ]
   },
   {
     "id": "John Telfer",
@@ -379,7 +884,10 @@
       "martha-clara-henstridge-18541921"
     ],
     "siblings": [
-      "james-telfer"
+      "adam-francis-telfer-18421925",
+      "james-telfer",
+      "robert-telfer-18351907",
+      "robert-telfer-born-ca-1869"
     ]
   },
   {
@@ -404,10 +912,28 @@
       "robert-telfer-18031878"
     ],
     "children": [
+      "alan-dale-telfer-18901937",
+      "albert-george-telfer",
       "angela-telfer",
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
+      "edwin-gilbert-telfer",
+      "elizabeth-telfer-18681950",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "isabella-lucieton-telfer-18801964",
+      "james-telfer-17611845",
       "james-telfer-18661946",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
+      "marian-telfer-cornish-18961977",
       "mark-telfer-18771946",
-      "peter-telfer"
+      "martha-telfer-cameron-18731964",
+      "peter-telfer",
+      "robert-freddy-telfer-18861949",
+      "susan-telfer-18711952",
+      "walter-william-telfer",
+      "william-james-telfer"
     ],
     "spouses": [
       "caroline-amelia-telfer-18421929",
@@ -415,7 +941,17 @@
       "martha-allen-18401876",
       "martha-clara-henstridge-18541921"
     ],
-    "siblings": []
+    "siblings": [
+      "elizabeth-beattie-telfer-18321896",
+      "george-wright-telfer",
+      "isobelisabella-telfer-17981875",
+      "james-telfer-17961863",
+      "james-telfer-18291913",
+      "jean-telfer",
+      "margaret-telfer",
+      "robert-telfer-18351907",
+      "william-telfer"
+    ]
   },
   {
     "id": "Martha Allen",
@@ -435,14 +971,78 @@
     "is_living": false,
     "parents": [],
     "children": [
+      "elizabeth-telfer-18681950",
       "james-telfer",
       "james-telfer-18661946",
-      "james-telfer-b-1832-scotland"
+      "james-telfer-b-1832-scotland",
+      "martha-telfer-cameron",
+      "martha-telfer-cameron-18731964",
+      "susan-telfer-18711952"
     ],
     "spouses": [
       "john-telfer-1840-1913"
     ],
     "siblings": []
+  },
+  {
+    "id": "Adam Francis Telfer",
+    "slug": "adam-francis-telfer-18421925",
+    "first_name": "Adam",
+    "middle_name": "Francis",
+    "last_name": "Telfer",
+    "birth_year": 1842,
+    "death_year": 1925,
+    "birth_year_display": "1842",
+    "death_year_display": "1925",
+    "display_name": "Adam Francis Telfer (1842–1925)",
+    "title": "Adam Telfer (1842-1925) — Family & Biography",
+    "lifespan": "1842 – 1925",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-18021891"
+    ],
+    "children": [
+      "james-telfer-1796-1863"
+    ],
+    "spouses": [],
+    "siblings": [
+      "james-telfer",
+      "james-telfer-18291913",
+      "john-telfer-18401913",
+      "robert-telfer-18351907"
+    ]
+  },
+  {
+    "id": "Adam Francis Telfer",
+    "slug": "adam-francis-telfer-18421925",
+    "first_name": "Adam",
+    "middle_name": "Francis",
+    "last_name": "Telfer",
+    "birth_year": 1842,
+    "death_year": 1925,
+    "birth_year_display": "1842",
+    "death_year_display": "1925",
+    "display_name": "Adam Francis Telfer (1842–1925)",
+    "title": "Adam Francis Telfer — Family & Biography",
+    "lifespan": "1842 – 1925",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-18021891"
+    ],
+    "children": [
+      "james-telfer-1796-1863"
+    ],
+    "spouses": [],
+    "siblings": [
+      "james-telfer",
+      "james-telfer-18291913",
+      "john-telfer-18401913",
+      "robert-telfer-18351907"
+    ]
   },
   {
     "id": "Caroline Amelia Telfer",
@@ -462,7 +1062,13 @@
     "is_living": false,
     "parents": [],
     "children": [
-      "francis-telfer-18091895"
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "francis-telfer-18091895",
+      "walter-william-telfer",
+      "william-james-telfer"
     ],
     "spouses": [
       "john-telfer-1840-1913",
@@ -488,7 +1094,13 @@
     "is_living": false,
     "parents": [],
     "children": [
-      "francis-telfer-18091895"
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "francis-telfer-18091895",
+      "walter-william-telfer",
+      "william-james-telfer"
     ],
     "spouses": [
       "john-telfer-1840-1913",
@@ -517,15 +1129,61 @@
       "maria-smith"
     ],
     "children": [
+      "alan-dale-telfer-18901937",
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
       "frederick-henstridge",
+      "isabella-lucieton-telfer-18801964",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
       "maria-smith",
-      "mark-telfer-18771946"
+      "marian-telfer-cornish-18961977",
+      "mark-telfer-18771946",
+      "robert-freddy-telfer-18861949"
     ],
     "spouses": [
       "john-telfer-1840-1913",
       "john-telfer-18401913"
     ],
     "siblings": []
+  },
+  {
+    "id": "Robert Telfer",
+    "slug": "robert-telfer-born-ca-1869",
+    "first_name": "Robert",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1869,
+    "death_year": null,
+    "birth_year_display": "1869",
+    "death_year_display": "?",
+    "display_name": "Robert Telfer (1869–?)",
+    "title": "Robert Telfer — Family & Biography",
+    "lifespan": "1869 – ?",
+    "generation": 3,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-telfer-18321896",
+      "james-telfer-18291913"
+    ],
+    "children": [
+      "james-telfer-18291913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer",
+      "adam-telfer-dillon",
+      "francis-telfer-dillon",
+      "isobelisabella-telfer-17981875",
+      "james-telfer",
+      "james-telfer-17961863",
+      "james-telfer-18291913",
+      "john-telfer-18401913",
+      "margaret-telfer",
+      "robert-telfer-dillon",
+      "william-telfer"
+    ]
   },
   {
     "id": "Martha Allen",
@@ -543,9 +1201,14 @@
     "generation": 3,
     "branch": "other",
     "is_living": false,
-    "parents": [],
+    "parents": [
+      "martha-telfer-cameron-18731964"
+    ],
     "children": [
-      "james-telfer-18661946"
+      "elizabeth-telfer-18681950",
+      "james-telfer-18661946",
+      "martha-telfer-cameron-18731964",
+      "susan-telfer-18711952"
     ],
     "spouses": [
       "john-telfer-18401913"
@@ -758,8 +1421,11 @@
     "generation": 3,
     "branch": "telfer",
     "is_living": false,
-    "parents": [],
+    "parents": [
+      "george-wright-telfer"
+    ],
     "children": [
+      "george-wright-telfer",
       "john-telfer-1840-1913",
       "john-telfer-18471929"
     ],
@@ -785,7 +1451,11 @@
     "branch": "telfer",
     "is_living": false,
     "parents": [
-      "john-telfer-18401913"
+      "adam-francis-telfer-18421925",
+      "elizabeth-beattie-telfer-18321896",
+      "james-telfer-18291913",
+      "john-telfer-18401913",
+      "robert-telfer-18351907"
     ],
     "children": [],
     "spouses": [
@@ -844,6 +1514,36 @@
     "siblings": []
   },
   {
+    "id": "George Wright Telfer",
+    "slug": "george-wright-telfer",
+    "first_name": "George",
+    "middle_name": "Wright",
+    "last_name": "Telfer",
+    "birth_year": 1832,
+    "death_year": 1929,
+    "birth_year_display": "1832",
+    "death_year_display": "1929",
+    "display_name": "George Wright Telfer (1832–1929)",
+    "title": "George Wright Telfer — Family & Biography",
+    "lifespan": "1832 – 1929",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "francis-telfer-18091895",
+      "margaret-wright-telfer-1892"
+    ],
+    "children": [
+      "francis-telfer-18091895",
+      "margaret-wright-telfer-1892"
+    ],
+    "spouses": [],
+    "siblings": [
+      "john-telfer-1840-1913",
+      "john-telfer-18471929"
+    ]
+  },
+  {
     "id": "James Telfer",
     "slug": "james-telfer-b-1832-scotland",
     "first_name": "James",
@@ -863,17 +1563,54 @@
       "francis-telfer-18091895"
     ],
     "children": [
+      "adam-francis-telfer-18421925",
+      "elizabeth-beattie-telfer-18321896",
       "francis-telfer-18091895",
+      "james-telfer-17961863",
+      "james-telfer-18291913",
       "john-telfer-18401913",
       "robert-telfer-18031878",
+      "robert-telfer-18351907",
       "vida-templer-19192021"
     ],
     "spouses": [
       "elizabeth-beattie-18021891"
     ],
     "siblings": [
+      "adam-telfer-dillon",
+      "francis-telfer-dillon",
       "james-telfer",
-      "john-telfer-18471929"
+      "john-telfer-18471929",
+      "robert-telfer-dillon"
+    ]
+  },
+  {
+    "id": "Jean Telfer",
+    "slug": "jean-telfer",
+    "first_name": "Jean",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1838,
+    "death_year": null,
+    "birth_year_display": "1838",
+    "death_year_display": "?",
+    "display_name": "Jean Telfer (1838–?)",
+    "title": "Jean Telfer — Family & Biography",
+    "lifespan": "1838 – ?",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-18021891",
+      "robert-telfer-18031878"
+    ],
+    "children": [
+      "robert-telfer-18031878"
+    ],
+    "spouses": [],
+    "siblings": [
+      "james-telfer",
+      "john-telfer-1840-1913"
     ]
   },
   {
@@ -896,14 +1633,297 @@
       "francis-telfer-18091895"
     ],
     "children": [
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
       "francis-telfer-18091895",
-      "margaret-wright"
+      "margaret-wright",
+      "walter-william-telfer",
+      "william-james-telfer"
     ],
     "spouses": [
-      "caroline-amelia-telfer-18421929"
+      "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-ne-masters"
     ],
     "siblings": [
+      "george-wright-telfer",
       "james-telfer-b-1832-scotland"
+    ]
+  },
+  {
+    "id": "Robert Telfer Dillon",
+    "slug": "robert-telfer-dillon",
+    "first_name": "Robert",
+    "middle_name": "Telfer",
+    "last_name": "Dillon",
+    "birth_year": 1862,
+    "death_year": 1942,
+    "birth_year_display": "1862",
+    "death_year_display": "1942",
+    "display_name": "Robert Telfer Dillon (1862–1942)",
+    "title": "Robert Telfer Dillon — Family & Biography",
+    "lifespan": "1862 – 1942",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-telfer-18321896"
+    ],
+    "children": [
+      "elizabeth-beattie-telfer-18321896"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer",
+      "adam-telfer-dillon",
+      "francis-telfer-18091895",
+      "francis-telfer-dillon",
+      "james-telfer",
+      "james-telfer-b-1832-scotland",
+      "robert-telfer-born-ca-1869"
+    ]
+  },
+  {
+    "id": "Francis Telfer Dillon",
+    "slug": "francis-telfer-dillon",
+    "first_name": "Francis",
+    "middle_name": "Telfer",
+    "last_name": "Dillon",
+    "birth_year": 1864,
+    "death_year": 1942,
+    "birth_year_display": "1864",
+    "death_year_display": "1942",
+    "display_name": "Francis Telfer Dillon (1864–1942)",
+    "title": "Francis Telfer Dillon — Family & Biography",
+    "lifespan": "1864 – 1942",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-telfer-18321896"
+    ],
+    "children": [
+      "elizabeth-beattie-telfer-18321896"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer",
+      "adam-telfer-dillon",
+      "francis-telfer-18091895",
+      "james-telfer",
+      "james-telfer-b-1832-scotland",
+      "robert-telfer-born-ca-1869",
+      "robert-telfer-dillon"
+    ]
+  },
+  {
+    "id": "Martha Telfer (Cameron)",
+    "slug": "martha-telfer-cameron",
+    "first_name": "Martha",
+    "middle_name": "Telfer",
+    "last_name": "(Cameron)",
+    "birth_year": 1866,
+    "death_year": 1946,
+    "birth_year_display": "1866",
+    "death_year_display": "1946",
+    "display_name": "Martha Telfer (Cameron) (1866–1946)",
+    "title": "Martha Telfer (Cameron) — Family & Biography",
+    "lifespan": "1866 – 1946",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "martha-allen-18401876"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "alan-dale-telfer-18901937",
+      "elizabeth-telfer-18681950",
+      "james-telfer-18661946",
+      "susan-telfer-18711952"
+    ]
+  },
+  {
+    "id": "Elizabeth Telfer",
+    "slug": "elizabeth-telfer-18681950",
+    "first_name": "Elizabeth",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1868,
+    "death_year": 1950,
+    "birth_year_display": "1868",
+    "death_year_display": "1950",
+    "display_name": "Elizabeth Telfer (1868–1950)",
+    "title": "Elizabeth Telfer (1868–1950) — Family & Biography",
+    "lifespan": "1868 – 1950",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-allen-18401876"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "james-telfer",
+      "james-telfer-18661946",
+      "martha-telfer-cameron",
+      "martha-telfer-cameron-18731964",
+      "susan-telfer-18711952"
+    ]
+  },
+  {
+    "id": "Adam Telfer Dillon",
+    "slug": "adam-telfer-dillon",
+    "first_name": "Adam",
+    "middle_name": "Telfer",
+    "last_name": "Dillon",
+    "birth_year": 1870,
+    "death_year": null,
+    "birth_year_display": "1870",
+    "death_year_display": "?",
+    "display_name": "Adam Telfer Dillon (1870–?)",
+    "title": "Adam Telfer Dillon — Family & Biography",
+    "lifespan": "1870 – ?",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "elizabeth-beattie-telfer-18321896"
+    ],
+    "children": [
+      "elizabeth-beattie-telfer-18321896"
+    ],
+    "spouses": [],
+    "siblings": [
+      "adam-telfer",
+      "francis-telfer-18091895",
+      "francis-telfer-dillon",
+      "james-telfer",
+      "james-telfer-b-1832-scotland",
+      "robert-telfer-born-ca-1869",
+      "robert-telfer-dillon"
+    ]
+  },
+  {
+    "id": "Susan Telfer",
+    "slug": "susan-telfer-18711952",
+    "first_name": "Susan",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1871,
+    "death_year": 1952,
+    "birth_year_display": "1871",
+    "death_year_display": "1952",
+    "display_name": "Susan Telfer (1871–1952)",
+    "title": "Susan Telfer (1871–1952) — Family & Biography",
+    "lifespan": "1871 – 1952",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-allen-18401876"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "elizabeth-telfer-18681950",
+      "james-telfer",
+      "james-telfer-18661946",
+      "martha-telfer-cameron",
+      "martha-telfer-cameron-18731964"
+    ]
+  },
+  {
+    "id": "Martha Telfer Cameron",
+    "slug": "martha-telfer-cameron-18731964",
+    "first_name": "Martha",
+    "middle_name": "Telfer",
+    "last_name": "Cameron",
+    "birth_year": 1873,
+    "death_year": 1964,
+    "birth_year_display": "1873",
+    "death_year_display": "1964",
+    "display_name": "Martha Telfer Cameron (1873–1964)",
+    "title": "Martha Telfer Cameron (1873–1964) — Family & Biography",
+    "lifespan": "1873 – 1964",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-allen-18401876"
+    ],
+    "children": [
+      "john-telfer-1840-1913",
+      "martha-allen-d-1876"
+    ],
+    "spouses": [],
+    "siblings": [
+      "elizabeth-telfer-18681950",
+      "james-telfer",
+      "james-telfer-18661946",
+      "susan-telfer-18711952"
+    ]
+  },
+  {
+    "id": "Francis Charles Telfer",
+    "slug": "francis-charles-telfer-18751954",
+    "first_name": "Francis",
+    "middle_name": "Charles",
+    "last_name": "Telfer",
+    "birth_year": 1875,
+    "death_year": 1954,
+    "birth_year_display": "1875",
+    "death_year_display": "1954",
+    "display_name": "Francis Charles Telfer (1875–1954)",
+    "title": "Francis Charles 'Charlie' Telfer — Family & Biography",
+    "lifespan": "1875 – 1954",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
+      "john-telfer-18471929"
+    ],
+    "children": [
+      "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ],
+    "spouses": [
+      "amy-ellen-telfer-18841951",
+      "amy-ellen-telfer-ne-provis"
+    ],
+    "siblings": [
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "edwin-gilbert-telfer-one-private",
+      "ernest-john-telfer",
+      "walter-william-telfer",
+      "william-james-telfer"
     ]
   },
   {
@@ -927,12 +1947,48 @@
       "wilhelm-seebohm-18331907"
     ],
     "children": [
+      "floris-ethel-victoria-telfer",
+      "kenneth-alexander-telfer",
+      "melvin-mcleod-telfer",
       "murray-john-telfer-19111982"
     ],
     "spouses": [
       "mark-telfer-18771946"
     ],
     "siblings": []
+  },
+  {
+    "id": "Ernest John Telfer",
+    "slug": "ernest-john-telfer",
+    "first_name": "Ernest",
+    "middle_name": "John",
+    "last_name": "Telfer",
+    "birth_year": 1877,
+    "death_year": 1953,
+    "birth_year_display": "1877",
+    "death_year_display": "1953",
+    "display_name": "Ernest John Telfer (1877–1953)",
+    "title": "Ernest John Telfer — Family & Biography",
+    "lifespan": "1877 – 1953",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
+      "john-telfer-18471929"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "francis-charles-telfer-18751954",
+      "walter-william-telfer",
+      "william-james-telfer",
+      "william-telfer"
+    ]
   },
   {
     "id": "Mark Telfer",
@@ -965,7 +2021,468 @@
       "kylie-isabella-telfer-1982"
     ],
     "siblings": [
-      "amy-telfer"
+      "alan-dale-telfer-18901937",
+      "amy-nicole-telfer",
+      "amy-telfer",
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
+      "isabella-lucieton-telfer-18801964",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
+      "marian-telfer-cornish-18961977",
+      "robert-freddy-telfer-18861949",
+      "see-john-telfer-18401913"
+    ]
+  },
+  {
+    "id": "Maria Clara Telfer",
+    "slug": "maria-clara-telfer-18781903",
+    "first_name": "Maria Clara",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1878,
+    "death_year": 1903,
+    "birth_year_display": "1878",
+    "death_year_display": "1903",
+    "display_name": "Maria Clara Telfer (1878–1903)",
+    "title": "Maria Clara Telfer (1878–1903) — Family & Biography",
+    "lifespan": "1878 – 1903",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-clara-henstridge-18541921"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "alan-dale-telfer-18901937",
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
+      "isabella-lucieton-telfer-18801964",
+      "john-roland-telfer-18821975",
+      "marian-telfer-cornish-18961977",
+      "mark-telfer-18771946",
+      "robert-freddy-telfer-18861949"
+    ]
+  },
+  {
+    "id": "William James Telfer",
+    "slug": "william-james-telfer",
+    "first_name": "William",
+    "middle_name": "James",
+    "last_name": "Telfer",
+    "birth_year": 1879,
+    "death_year": 1948,
+    "birth_year_display": "1879",
+    "death_year_display": "1948",
+    "display_name": "William James Telfer (1879–1948)",
+    "title": "William James Telfer — Family & Biography",
+    "lifespan": "1879 – 1948",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
+      "john-telfer-18471929"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "walter-william-telfer"
+    ]
+  },
+  {
+    "id": "Isabella Lucieton Telfer",
+    "slug": "isabella-lucieton-telfer-18801964",
+    "first_name": "Isabella",
+    "middle_name": "Lucieton",
+    "last_name": "Telfer",
+    "birth_year": 1880,
+    "death_year": 1964,
+    "birth_year_display": "1880",
+    "death_year_display": "1964",
+    "display_name": "Isabella Lucieton Telfer (1880–1964)",
+    "title": "Isabella Lucieton Telfer (1880–1964) — Family & Biography",
+    "lifespan": "1880 – 1964",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-clara-henstridge-18541921"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "alan-dale-telfer-18901937",
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
+      "marian-telfer-cornish-18961977",
+      "mark-telfer-18771946",
+      "robert-freddy-telfer-18861949"
+    ]
+  },
+  {
+    "id": "Albert George Telfer",
+    "slug": "albert-george-telfer",
+    "first_name": "Albert",
+    "middle_name": "George",
+    "last_name": "Telfer",
+    "birth_year": 1882,
+    "death_year": 1961,
+    "birth_year_display": "1882",
+    "death_year_display": "1961",
+    "display_name": "Albert George Telfer (1882–1961)",
+    "title": "Albert George Telfer — Family & Biography",
+    "lifespan": "1882 – 1961",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
+      "john-telfer-18471929"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "walter-william-telfer",
+      "william-james-telfer"
+    ]
+  },
+  {
+    "id": "John Roland Telfer",
+    "slug": "john-roland-telfer-18821975",
+    "first_name": "John",
+    "middle_name": "Roland",
+    "last_name": "Telfer",
+    "birth_year": 1882,
+    "death_year": 1975,
+    "birth_year_display": "1882",
+    "death_year_display": "1975",
+    "display_name": "John Roland Telfer (1882–1975)",
+    "title": "John Roland Telfer (1882–1975) — Family & Biography",
+    "lifespan": "1882 – 1975",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-clara-henstridge-18541921"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "alan-dale-telfer-18901937",
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
+      "isabella-lucieton-telfer-18801964",
+      "maria-clara-telfer-18781903",
+      "marian-telfer-cornish-18961977",
+      "mark-telfer-18771946",
+      "robert-freddy-telfer-18861949"
+    ]
+  },
+  {
+    "id": "Amy Ellen Telfer",
+    "slug": "amy-ellen-telfer-18841951",
+    "first_name": "Amy",
+    "middle_name": "Ellen",
+    "last_name": "Telfer",
+    "birth_year": 1884,
+    "death_year": 1951,
+    "birth_year_display": "1884",
+    "death_year_display": "1951",
+    "display_name": "Amy Ellen Telfer (1884–1951)",
+    "title": "Amy Ellen Telfer (née Provis) — Family & Biography",
+    "lifespan": "1884 – 1951",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "emily-ellen-thorpe",
+      "george-provis"
+    ],
+    "children": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "emily-ellen-thorpe",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "george-provis",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ],
+    "spouses": [
+      "francis-charles-telfer-18751954"
+    ],
+    "siblings": []
+  },
+  {
+    "id": "Walter William Telfer",
+    "slug": "walter-william-telfer",
+    "first_name": "Walter",
+    "middle_name": "William",
+    "last_name": "Telfer",
+    "birth_year": 1885,
+    "death_year": 1958,
+    "birth_year_display": "1885",
+    "death_year_display": "1958",
+    "display_name": "Walter William Telfer (1885–1958)",
+    "title": "Walter William Telfer — Family & Biography",
+    "lifespan": "1885 – 1958",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
+      "john-telfer-18471929"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "william-james-telfer"
+    ]
+  },
+  {
+    "id": "Robert Freddy Telfer",
+    "slug": "robert-freddy-telfer-18861949",
+    "first_name": "Robert",
+    "middle_name": "Freddy",
+    "last_name": "Telfer",
+    "birth_year": 1886,
+    "death_year": 1949,
+    "birth_year_display": "1886",
+    "death_year_display": "1949",
+    "display_name": "Robert Freddy Telfer (1886–1949)",
+    "title": "Robert Freddy Telfer (1886–1949) — Family & Biography",
+    "lifespan": "1886 – 1949",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-clara-henstridge-18541921"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "alan-dale-telfer-18901937",
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
+      "isabella-lucieton-telfer-18801964",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
+      "marian-telfer-cornish-18961977",
+      "mark-telfer-18771946"
+    ]
+  },
+  {
+    "id": "Douglas Telfer",
+    "slug": "douglas-telfer-18871956",
+    "first_name": "Douglas",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1887,
+    "death_year": 1956,
+    "birth_year_display": "1887",
+    "death_year_display": "1956",
+    "display_name": "Douglas Telfer (1887–1956)",
+    "title": "Douglas Telfer (1887–1956) — Family & Biography",
+    "lifespan": "1887 – 1956",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-clara-henstridge-18541921"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "alan-dale-telfer-18901937",
+      "colin-roy-telfer-18891964",
+      "isabella-lucieton-telfer-18801964",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
+      "marian-telfer-cornish-18961977",
+      "mark-telfer-18771946",
+      "robert-freddy-telfer-18861949"
+    ]
+  },
+  {
+    "id": "Edwin Gilbert Telfer",
+    "slug": "edwin-gilbert-telfer",
+    "first_name": "Edwin",
+    "middle_name": "Gilbert",
+    "last_name": "Telfer",
+    "birth_year": 1888,
+    "death_year": 1972,
+    "birth_year_display": "1888",
+    "death_year_display": "1972",
+    "display_name": "Edwin Gilbert Telfer (1888–1972)",
+    "title": "Edwin Gilbert Telfer — Family & Biography",
+    "lifespan": "1888 – 1972",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "caroline-amelia-telfer-18421929",
+      "caroline-amelia-telfer-18421929-ne-masters",
+      "john-telfer-1840-1913",
+      "john-telfer-18471929"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "albert-george-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "walter-william-telfer",
+      "william-james-telfer"
+    ]
+  },
+  {
+    "id": "Colin Roy Telfer",
+    "slug": "colin-roy-telfer-18891964",
+    "first_name": "Colin",
+    "middle_name": "Roy",
+    "last_name": "Telfer",
+    "birth_year": 1889,
+    "death_year": 1964,
+    "birth_year_display": "1889",
+    "death_year_display": "1964",
+    "display_name": "Colin Roy Telfer (1889–1964)",
+    "title": "Colin Roy Telfer (1889–1964) — Family & Biography",
+    "lifespan": "1889 – 1964",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-clara-henstridge-18541921"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "alan-dale-telfer-18901937",
+      "douglas-telfer-18871956",
+      "isabella-lucieton-telfer-18801964",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
+      "marian-telfer-cornish-18961977",
+      "mark-telfer-18771946",
+      "robert-freddy-telfer-18861949"
+    ]
+  },
+  {
+    "id": "Alan Dale Telfer",
+    "slug": "alan-dale-telfer-18901937",
+    "first_name": "Alan",
+    "middle_name": "Dale",
+    "last_name": "Telfer",
+    "birth_year": 1890,
+    "death_year": 1937,
+    "birth_year_display": "1890",
+    "death_year_display": "1937",
+    "display_name": "Alan Dale Telfer (1890–1937)",
+    "title": "Alan Dale Telfer (1890–1937) — Family & Biography",
+    "lifespan": "1890 – 1937",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-clara-henstridge-18541921"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
+      "isabella-lucieton-telfer-18801964",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
+      "marian-telfer-cornish-18961977",
+      "mark-telfer-18771946",
+      "martha-telfer-cameron",
+      "robert-freddy-telfer-18861949"
+    ]
+  },
+  {
+    "id": "Marian Telfer Cornish",
+    "slug": "marian-telfer-cornish-18961977",
+    "first_name": "Marian",
+    "middle_name": "Telfer",
+    "last_name": "Cornish",
+    "birth_year": 1896,
+    "death_year": 1977,
+    "birth_year_display": "1896",
+    "death_year_display": "1977",
+    "display_name": "Marian Telfer Cornish (1896–1977)",
+    "title": "Marian Telfer Cornish (1896–1977) — Family & Biography",
+    "lifespan": "1896 – 1977",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "john-telfer-1840-1913",
+      "martha-clara-henstridge-18541921"
+    ],
+    "children": [
+      "john-telfer-1840-1913"
+    ],
+    "spouses": [],
+    "siblings": [
+      "alan-dale-telfer-18901937",
+      "colin-roy-telfer-18891964",
+      "douglas-telfer-18871956",
+      "isabella-lucieton-telfer-18801964",
+      "john-roland-telfer-18821975",
+      "maria-clara-telfer-18781903",
+      "mark-telfer-18771946",
+      "robert-freddy-telfer-18861949"
     ]
   },
   {
@@ -1021,8 +2538,47 @@
       "kylie-isabella-telfer-1982"
     ],
     "siblings": [
+      "amy-nicole-telfer",
       "amy-telfer"
     ]
+  },
+  {
+    "id": "Amy Ellen Telfer (née Provis)",
+    "slug": "amy-ellen-telfer-ne-provis",
+    "first_name": "Amy",
+    "middle_name": "Ellen Telfer (née",
+    "last_name": "Provis)",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Amy Ellen Telfer (née Provis) (?–?)",
+    "title": "Amy Ellen Telfer (née Provis) — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": null,
+    "parents": [
+      "murray-john-telfer-19242009",
+      "ruth-telfer-1930"
+    ],
+    "children": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ],
+    "spouses": [
+      "francis-charles-telfer-18751954"
+    ],
+    "siblings": []
   },
   {
     "id": "Angela Telfer",
@@ -1058,6 +2614,35 @@
       "peter-telfer",
       "peter-telfer-adopted-brother"
     ]
+  },
+  {
+    "id": "Caroline Amelia Telfer (née Masters)",
+    "slug": "caroline-amelia-telfer-ne-masters",
+    "first_name": "Caroline",
+    "middle_name": "Amelia Telfer (née",
+    "last_name": "Masters)",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Caroline Amelia Telfer (née Masters) (?–?)",
+    "title": "Caroline Amelia Telfer (née Masters) — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 4,
+    "branch": "telfer",
+    "is_living": null,
+    "parents": [],
+    "children": [
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "walter-william-telfer",
+      "william-james-telfer"
+    ],
+    "spouses": [
+      "john-telfer-18471929"
+    ],
+    "siblings": []
   },
   {
     "id": "Peter Telfer",
@@ -1147,6 +2732,344 @@
     ]
   },
   {
+    "id": "See John Telfer",
+    "slug": "see-john-telfer-18401913",
+    "first_name": "See",
+    "middle_name": "John",
+    "last_name": "Telfer",
+    "birth_year": 1840,
+    "death_year": 1913,
+    "birth_year_display": "1840",
+    "death_year_display": "1913",
+    "display_name": "See John Telfer (1840–1913)",
+    "title": "See John Telfer — Family & Biography",
+    "lifespan": "1840 – 1913",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "mark-telfer-18771946"
+    ]
+  },
+  {
+    "id": "Caroline Amelia Telfer (1842–1929) (née Masters)",
+    "slug": "caroline-amelia-telfer-18421929-ne-masters",
+    "first_name": "Caroline",
+    "middle_name": "Amelia Telfer (1842–1929) (née",
+    "last_name": "Masters)",
+    "birth_year": 1842,
+    "death_year": 1929,
+    "birth_year_display": "1842",
+    "death_year_display": "1929",
+    "display_name": "Caroline Amelia Telfer (1842–1929) (née Masters) (1842–1929)",
+    "title": "Caroline Amelia Telfer (1842–1929) (née Masters) — Family & Biography",
+    "lifespan": "1842 – 1929",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [
+      "albert-george-telfer",
+      "edwin-gilbert-telfer",
+      "ernest-john-telfer",
+      "francis-charles-telfer-18751954",
+      "walter-william-telfer",
+      "william-james-telfer"
+    ],
+    "spouses": [],
+    "siblings": []
+  },
+  {
+    "id": "William Humphrey Parker",
+    "slug": "william-humphrey-parker-18501926",
+    "first_name": "William",
+    "middle_name": "Humphrey",
+    "last_name": "Parker",
+    "birth_year": 1850,
+    "death_year": 1926,
+    "birth_year_display": "1850",
+    "death_year_display": "1926",
+    "display_name": "William Humphrey Parker (1850–1926)",
+    "title": "William Humphrey Parker — Family & Biography",
+    "lifespan": "1850 – 1926",
+    "generation": 5,
+    "branch": "parker",
+    "is_living": false,
+    "parents": [],
+    "children": [
+      "william-henry-parker-18931968"
+    ],
+    "spouses": [
+      "hannah-baker",
+      "hannah-baker-18551948",
+      "hannah-parker-18551948"
+    ],
+    "siblings": [
+      "shirley-edna-telfer-19292017"
+    ]
+  },
+  {
+    "id": "William Humphrey Parker",
+    "slug": "william-humphrey-parker-18501926",
+    "first_name": "William",
+    "middle_name": "Humphrey",
+    "last_name": "Parker",
+    "birth_year": 1850,
+    "death_year": 1926,
+    "birth_year_display": "1850",
+    "death_year_display": "1926",
+    "display_name": "William Humphrey Parker (1850–1926)",
+    "title": "William Humphrey Parker — Family & Biography",
+    "lifespan": "1850 – 1926",
+    "generation": 5,
+    "branch": "parker",
+    "is_living": false,
+    "parents": [],
+    "children": [
+      "william-henry-parker-18931968"
+    ],
+    "spouses": [
+      "hannah-baker",
+      "hannah-baker-18551948",
+      "hannah-parker-18551948"
+    ],
+    "siblings": [
+      "shirley-edna-telfer-19292017"
+    ]
+  },
+  {
+    "id": "Hannah Baker",
+    "slug": "hannah-baker-18551948",
+    "first_name": "Hannah",
+    "middle_name": null,
+    "last_name": "Baker",
+    "birth_year": 1855,
+    "death_year": 1948,
+    "birth_year_display": "1855",
+    "death_year_display": "1948",
+    "display_name": "Hannah Baker (1855–1948)",
+    "title": "Hannah Baker — Family & Biography",
+    "lifespan": "1855 – 1948",
+    "generation": 5,
+    "branch": "baker",
+    "is_living": false,
+    "parents": [
+      "william-henry-parker-18931968"
+    ],
+    "children": [],
+    "spouses": [
+      "william-humphrey-parker-18501926"
+    ],
+    "siblings": []
+  },
+  {
+    "id": "Hannah Parker",
+    "slug": "hannah-parker-18551948",
+    "first_name": "Hannah",
+    "middle_name": null,
+    "last_name": "Parker",
+    "birth_year": 1855,
+    "death_year": 1948,
+    "birth_year_display": "1855",
+    "death_year_display": "1948",
+    "display_name": "Hannah Parker (1855–1948)",
+    "title": "Hannah (Baker) Parker — Family & Biography",
+    "lifespan": "1855 – 1948",
+    "generation": 5,
+    "branch": "parker",
+    "is_living": false,
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "william-humphrey-parker-18501926"
+    ],
+    "siblings": []
+  },
+  {
+    "id": "Emily Ellen Thorpe",
+    "slug": "emily-ellen-thorpe",
+    "first_name": "Emily",
+    "middle_name": "Ellen",
+    "last_name": "Thorpe",
+    "birth_year": 1882,
+    "death_year": null,
+    "birth_year_display": "1882",
+    "death_year_display": "?",
+    "display_name": "Emily Ellen Thorpe (1882–?)",
+    "title": "Emily Ellen Thorpe — Family & Biography",
+    "lifespan": "1882 – ?",
+    "generation": 5,
+    "branch": "other",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951"
+    ],
+    "children": [
+      "amy-ellen-telfer-18841951"
+    ],
+    "spouses": [],
+    "siblings": []
+  },
+  {
+    "id": "Floris Ethel Victoria Telfer",
+    "slug": "floris-ethel-victoria-telfer",
+    "first_name": "Floris",
+    "middle_name": "Ethel Victoria",
+    "last_name": "Telfer",
+    "birth_year": 1903,
+    "death_year": 1951,
+    "birth_year_display": "1903",
+    "death_year_display": "1951",
+    "display_name": "Floris Ethel Victoria Telfer (1903–1951)",
+    "title": "Floris Ethel Victoria Telfer — Family & Biography",
+    "lifespan": "1903 – 1951",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "julia-matilda-seebohm-18761939"
+    ],
+    "children": [
+      "julia-matilda-seebohm-18761939"
+    ],
+    "spouses": [],
+    "siblings": [
+      "murray-john-telfer-19111982"
+    ]
+  },
+  {
+    "id": "Kenneth Alexander Telfer",
+    "slug": "kenneth-alexander-telfer",
+    "first_name": "Kenneth",
+    "middle_name": "Alexander",
+    "last_name": "Telfer",
+    "birth_year": 1904,
+    "death_year": null,
+    "birth_year_display": "1904",
+    "death_year_display": "?",
+    "display_name": "Kenneth Alexander Telfer (1904–?)",
+    "title": "Kenneth Alexander Telfer — Family & Biography",
+    "lifespan": "1904 – ?",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "julia-matilda-seebohm-18761939"
+    ],
+    "children": [
+      "julia-matilda-seebohm-18761939"
+    ],
+    "spouses": [],
+    "siblings": [
+      "murray-john-telfer-19111982"
+    ]
+  },
+  {
+    "id": "Francis Kelson Telfer",
+    "slug": "francis-kelson-telfer",
+    "first_name": "Francis",
+    "middle_name": "Kelson",
+    "last_name": "Telfer",
+    "birth_year": 1910,
+    "death_year": 1987,
+    "birth_year_display": "1910",
+    "death_year_display": "1987",
+    "display_name": "Francis Kelson Telfer (1910–1987)",
+    "title": "Francis Kelson Telfer — Family & Biography",
+    "lifespan": "1910 – 1987",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Clarice May Telfer",
+    "slug": "clarice-may-fatchen",
+    "first_name": "Clarice May",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1911,
+    "death_year": 1997,
+    "birth_year_display": "1911",
+    "death_year_display": "1997",
+    "display_name": "Clarice May Telfer (1911–1997)",
+    "title": "Clarice May Fatchen (née Telfer) — Family & Biography",
+    "lifespan": "1911 – 1997",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Melvin McLeod Telfer",
+    "slug": "melvin-mcleod-telfer",
+    "first_name": "Melvin",
+    "middle_name": "McLeod",
+    "last_name": "Telfer",
+    "birth_year": 1911,
+    "death_year": 1978,
+    "birth_year_display": "1911",
+    "death_year_display": "1978",
+    "display_name": "Melvin McLeod Telfer (1911–1978)",
+    "title": "Melvin McLeod Telfer — Family & Biography",
+    "lifespan": "1911 – 1978",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "julia-matilda-seebohm-18761939"
+    ],
+    "children": [
+      "julia-matilda-seebohm-18761939"
+    ],
+    "spouses": [],
+    "siblings": [
+      "murray-john-telfer-19111982"
+    ]
+  },
+  {
     "id": "Murray John Telfer",
     "slug": "murray-john-telfer-19111982",
     "first_name": "Murray",
@@ -1163,6 +3086,8 @@
     "branch": "telfer",
     "is_living": false,
     "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954",
       "julia-matilda-seebohm-18761939",
       "mark-telfer-18771946"
     ],
@@ -1177,7 +3102,132 @@
     "spouses": [
       "shirley-edna-telfer-19292017"
     ],
-    "siblings": []
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "floris-ethel-victoria-telfer",
+      "francis-kelson-telfer",
+      "gladys-merle-pedler",
+      "kenneth-alexander-telfer",
+      "malcolm-george-telfer",
+      "melvin-mcleod-telfer",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Emily Amelia Telfer",
+    "slug": "emily-amelia-barton",
+    "first_name": "Emily Amelia",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1913,
+    "death_year": null,
+    "birth_year_display": "1913",
+    "death_year_display": "?",
+    "display_name": "Emily Amelia Telfer (1913–?)",
+    "title": "Emily Amelia Barton (née Telfer) — Family & Biography",
+    "lifespan": "1913 – ?",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Ethel Jean Telfer",
+    "slug": "ethel-jean-mcmurtrie",
+    "first_name": "Ethel Jean",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1915,
+    "death_year": null,
+    "birth_year_display": "1915",
+    "death_year_display": "?",
+    "display_name": "Ethel Jean Telfer (1915–?)",
+    "title": "Ethel Jean McMurtrie (née Telfer) — Family & Biography",
+    "lifespan": "1915 – ?",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Gladys Merle Telfer",
+    "slug": "gladys-merle-pedler",
+    "first_name": "Gladys Merle",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1917,
+    "death_year": null,
+    "birth_year_display": "1917",
+    "death_year_display": "?",
+    "display_name": "Gladys Merle Telfer (1917–?)",
+    "title": "Gladys Merle Pedler (née Telfer) — Family & Biography",
+    "lifespan": "1917 – ?",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
   },
   {
     "id": "[[Shirley Edna Telfer",
@@ -1195,13 +3245,16 @@
     "generation": 5,
     "branch": "telfer",
     "is_living": false,
-    "parents": [],
+    "parents": [
+      "william-henry-parker-18931968"
+    ],
     "children": [
       "daryll-william-telfer",
       "grantley-keith-telfer",
       "john-robert-telfer",
       "kathryn-mavis-telfer-19611965",
-      "timothy-neil-telfer-1959"
+      "timothy-neil-telfer-1959",
+      "william-henry-parker-18931968"
     ],
     "spouses": [
       "murray-john-telfer-19242009"
@@ -1209,36 +3262,115 @@
     "siblings": []
   },
   {
-    "id": "Murray John Telfer",
-    "slug": "murray-john-telfer-19242009",
-    "first_name": "Murray",
-    "middle_name": "John",
+    "id": "Doris Elma Telfer",
+    "slug": "doris-elma-rowe",
+    "first_name": "Doris Elma",
+    "middle_name": null,
     "last_name": "Telfer",
-    "birth_year": 1924,
-    "death_year": 2009,
-    "birth_year_display": "1924",
-    "death_year_display": "2009",
-    "display_name": "Murray John Telfer (1924–2009)",
-    "title": "Murray John Telfer — Family & Biography",
-    "lifespan": "1924 – 2009",
+    "birth_year": 1919,
+    "death_year": null,
+    "birth_year_display": "1919",
+    "death_year_display": "?",
+    "display_name": "Doris Elma Telfer (1919–?)",
+    "title": "Doris Elma Rowe (née Telfer) — Family & Biography",
+    "lifespan": "1919 – ?",
     "generation": 5,
     "branch": "telfer",
     "is_living": false,
-    "parents": [],
-    "children": [
-      "daryll-william-telfer",
-      "grantley-keith-telfer",
-      "john-robert-telfer",
-      "kathryn-mavis-telfer-19611965",
-      "susan-shirley-lawrie",
-      "timothy-neil-telfer-1959"
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
     ],
-    "spouses": [
-      "shirley-edna-telfer",
-      "shirley-edna-telfer-19292017",
-      "shirley-telfer"
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Edwin Roy Telfer",
+    "slug": "edwin-roy-telfer",
+    "first_name": "Edwin",
+    "middle_name": "Roy",
+    "last_name": "Telfer",
+    "birth_year": 1921,
+    "death_year": 2009,
+    "birth_year_display": "1921",
+    "death_year_display": "2009",
+    "display_name": "Edwin Roy Telfer (1921–2009)",
+    "title": "Edwin Roy Telfer — Family & Biography",
+    "lifespan": "1921 – 2009",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
     ],
-    "siblings": []
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Reginald Masters Telfer",
+    "slug": "reginald-masters-telfer",
+    "first_name": "Reginald",
+    "middle_name": "Masters",
+    "last_name": "Telfer",
+    "birth_year": 1923,
+    "death_year": null,
+    "birth_year_display": "1923",
+    "death_year_display": "?",
+    "display_name": "Reginald Masters Telfer (1923–?)",
+    "title": "Reginald Masters Telfer — Family & Biography",
+    "lifespan": "1923 – ?",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "ruth-telfer-1930"
+    ]
   },
   {
     "id": "Murray John Telfer",
@@ -1256,8 +3388,12 @@
     "generation": 5,
     "branch": "telfer",
     "is_living": false,
-    "parents": [],
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
     "children": [
+      "amy-ellen-telfer-ne-provis",
       "daryll-william-telfer",
       "grantley-keith-telfer",
       "john-robert-telfer",
@@ -1270,7 +3406,101 @@
       "shirley-edna-telfer-19292017",
       "shirley-telfer"
     ],
-    "siblings": []
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Murray John Telfer",
+    "slug": "murray-john-telfer-19242009",
+    "first_name": "Murray",
+    "middle_name": "John",
+    "last_name": "Telfer",
+    "birth_year": 1924,
+    "death_year": 2009,
+    "birth_year_display": "1924",
+    "death_year_display": "2009",
+    "display_name": "Murray John Telfer (1924–2009)",
+    "title": "Murray John Telfer — Family & Biography",
+    "lifespan": "1924 – 2009",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [
+      "amy-ellen-telfer-ne-provis",
+      "daryll-william-telfer",
+      "grantley-keith-telfer",
+      "john-robert-telfer",
+      "kathryn-mavis-telfer-19611965",
+      "susan-shirley-lawrie",
+      "timothy-neil-telfer-1959"
+    ],
+    "spouses": [
+      "shirley-edna-telfer",
+      "shirley-edna-telfer-19292017",
+      "shirley-telfer"
+    ],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
+  },
+  {
+    "id": "Malcolm George Telfer",
+    "slug": "malcolm-george-telfer",
+    "first_name": "Malcolm",
+    "middle_name": "George",
+    "last_name": "Telfer",
+    "birth_year": 1927,
+    "death_year": null,
+    "birth_year_display": "1927",
+    "death_year_display": "?",
+    "display_name": "Malcolm George Telfer (1927–?)",
+    "title": "Malcolm George Telfer — Family & Biography",
+    "lifespan": "1927 – ?",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "francis-telfer-18091895",
+      "gladys-merle-pedler",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer",
+      "ruth-telfer-1930"
+    ]
   },
   {
     "id": "Shirley Edna Telfer",
@@ -1288,7 +3518,10 @@
     "generation": 5,
     "branch": "telfer",
     "is_living": false,
-    "parents": [],
+    "parents": [
+      "caroline-edna-lawrie-18901957",
+      "william-henry-parker-18931968"
+    ],
     "children": [
       "daryll-william-telfer",
       "grantley-keith-telfer",
@@ -1301,7 +3534,9 @@
       "murray-john-telfer-19111982",
       "murray-john-telfer-19242009"
     ],
-    "siblings": []
+    "siblings": [
+      "william-humphrey-parker-18501926"
+    ]
   },
   {
     "id": "Shirley Edna Telfer",
@@ -1319,7 +3554,10 @@
     "generation": 5,
     "branch": "telfer",
     "is_living": false,
-    "parents": [],
+    "parents": [
+      "caroline-edna-lawrie-18901957",
+      "william-henry-parker-18931968"
+    ],
     "children": [
       "daryll-william-telfer",
       "grantley-keith-telfer",
@@ -1332,7 +3570,74 @@
       "murray-john-telfer-19111982",
       "murray-john-telfer-19242009"
     ],
-    "siblings": []
+    "siblings": [
+      "william-humphrey-parker-18501926"
+    ]
+  },
+  {
+    "id": "Ruth Telfer",
+    "slug": "ruth-telfer-1930",
+    "first_name": "Ruth",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1930,
+    "death_year": "?",
+    "birth_year_display": "1930",
+    "death_year_display": "?",
+    "display_name": "Ruth Telfer (1930–?)",
+    "title": "Ruth Telfer — Family & Biography",
+    "lifespan": "1930 – ?",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "amy-ellen-telfer-18841951",
+      "amy-ellen-telfer-ne-provis",
+      "francis-charles-telfer-18751954"
+    ],
+    "children": [
+      "amy-ellen-telfer-ne-provis"
+    ],
+    "spouses": [],
+    "siblings": [
+      "clarice-may-fatchen",
+      "doris-elma-rowe",
+      "edwin-roy-telfer",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "francis-kelson-telfer",
+      "gladys-merle-pedler",
+      "malcolm-george-telfer",
+      "murray-john-telfer-19111982",
+      "murray-john-telfer-19242009",
+      "reginald-masters-telfer"
+    ]
+  },
+  {
+    "id": "[[Mitchell Telfer",
+    "slug": "mitchell-telfer",
+    "first_name": "[[Mitchell",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 2008,
+    "death_year": 2019,
+    "birth_year_display": "2008",
+    "death_year_display": "2019",
+    "display_name": "[[Mitchell Telfer (2008–2019)",
+    "title": "[[Mitchell Telfer — Family & Biography",
+    "lifespan": "2008 – 2019",
+    "generation": 5,
+    "branch": "telfer",
+    "is_living": false,
+    "parents": [
+      "mark-kenneth-telfer-1986"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "levi-leonard-timothy-telfer-2017",
+      "zabella-violet-zelda-telfer-2019"
+    ]
   },
   {
     "id": "Mitchell Telfer",
@@ -1385,6 +3690,7 @@
     "spouses": [],
     "siblings": [
       "levi-telfer",
+      "mitchell-telfer",
       "mitchell-telfer-2008",
       "zabella-telfer",
       "zabella-violet-zelda-telfer-2019"
@@ -1415,9 +3721,62 @@
     "siblings": [
       "levi-leonard-timothy-telfer-2017",
       "levi-telfer",
+      "mitchell-telfer",
       "mitchell-telfer-2008",
       "zabella-telfer"
     ]
+  },
+  {
+    "id": "George Provis",
+    "slug": "george-provis",
+    "first_name": "George",
+    "middle_name": null,
+    "last_name": "Provis",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "George Provis (?–?)",
+    "title": "George Provis — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 5,
+    "branch": "provis",
+    "is_living": null,
+    "parents": [
+      "amy-ellen-telfer-18841951"
+    ],
+    "children": [
+      "amy-ellen-telfer-18841951"
+    ],
+    "spouses": [],
+    "siblings": []
+  },
+  {
+    "id": "Hannah Baker",
+    "slug": "hannah-baker",
+    "first_name": "Hannah",
+    "middle_name": null,
+    "last_name": "Baker",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Hannah Baker (?–?)",
+    "title": "Hannah Baker — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 5,
+    "branch": "baker",
+    "is_living": null,
+    "parents": [
+      "william-henry-parker-18931968"
+    ],
+    "children": [
+      "william-henry-parker-18931968"
+    ],
+    "spouses": [
+      "william-humphrey-parker-18501926"
+    ],
+    "siblings": []
   },
   {
     "id": "John Robert Telfer (adoptive)",
@@ -1629,6 +3988,109 @@
     ]
   },
   {
+    "id": "Caroline Edna Lawrie",
+    "slug": "caroline-edna-lawrie-18901957",
+    "first_name": "Caroline",
+    "middle_name": "Edna",
+    "last_name": "Lawrie",
+    "birth_year": 1890,
+    "death_year": 1957,
+    "birth_year_display": "1890",
+    "death_year_display": "1957",
+    "display_name": "Caroline Edna Lawrie (1890–1957)",
+    "title": "Caroline Edna Lawrie — Family & Biography",
+    "lifespan": "1890 – 1957",
+    "generation": 6,
+    "branch": "lawrie",
+    "is_living": false,
+    "parents": [
+      "avis",
+      "howard-lindsay",
+      "shirley-edna",
+      "sydney-hugh",
+      "william-humphrey"
+    ],
+    "children": [
+      "avis",
+      "howard-lindsay",
+      "shirley-edna",
+      "shirley-edna-telfer-19292017",
+      "sydney-hugh",
+      "william-humphrey"
+    ],
+    "spouses": [
+      "william-henry-parker-18931968"
+    ],
+    "siblings": []
+  },
+  {
+    "id": "Caroline Edna Lawrie",
+    "slug": "caroline-edna-lawrie-18901957",
+    "first_name": "Caroline",
+    "middle_name": "Edna",
+    "last_name": "Lawrie",
+    "birth_year": 1890,
+    "death_year": 1957,
+    "birth_year_display": "1890",
+    "death_year_display": "1957",
+    "display_name": "Caroline Edna Lawrie (1890–1957)",
+    "title": "Caroline Edna Lawrie — Family & Biography",
+    "lifespan": "1890 – 1957",
+    "generation": 6,
+    "branch": "lawrie",
+    "is_living": false,
+    "parents": [
+      "avis",
+      "howard-lindsay",
+      "shirley-edna",
+      "sydney-hugh",
+      "william-humphrey"
+    ],
+    "children": [
+      "avis",
+      "howard-lindsay",
+      "shirley-edna",
+      "shirley-edna-telfer-19292017",
+      "sydney-hugh",
+      "william-humphrey"
+    ],
+    "spouses": [
+      "william-henry-parker-18931968"
+    ],
+    "siblings": []
+  },
+  {
+    "id": "William Henry Parker",
+    "slug": "william-henry-parker-18931968",
+    "first_name": "William",
+    "middle_name": "Henry",
+    "last_name": "Parker",
+    "birth_year": 1893,
+    "death_year": 1968,
+    "birth_year_display": "1893",
+    "death_year_display": "1968",
+    "display_name": "William Henry Parker (1893–1968)",
+    "title": "William Henry Parker — Family & Biography",
+    "lifespan": "1893 – 1968",
+    "generation": 6,
+    "branch": "parker",
+    "is_living": false,
+    "parents": [
+      "william-humphrey-parker-18501926"
+    ],
+    "children": [
+      "hannah-baker",
+      "hannah-baker-18551948",
+      "shirley-edna-telfer",
+      "shirley-edna-telfer-19292017",
+      "william-humphrey-parker-18501926"
+    ],
+    "spouses": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "siblings": []
+  },
+  {
     "id": "Paul Ivory",
     "slug": "paul-ivory-19551996",
     "first_name": "Paul",
@@ -1770,8 +4232,10 @@
     "spouses": [],
     "siblings": [
       "daryll-william-telfer",
+      "daryll-william-telfer-brother",
       "grantley-keith-telfer",
       "john-robert-telfer",
+      "john-robert-telfer-brother",
       "susan-shirley-lawrie",
       "timothy-neil-telfer-1959"
     ]
@@ -1806,8 +4270,10 @@
     "spouses": [],
     "siblings": [
       "daryll-william-telfer",
+      "daryll-william-telfer-brother",
       "grantley-keith-telfer",
       "john-robert-telfer",
+      "john-robert-telfer-brother",
       "susan-shirley-lawrie",
       "timothy-neil-telfer-1959"
     ]
@@ -1927,6 +4393,7 @@
     "spouses": [],
     "siblings": [
       "angela-telfer",
+      "angela-telfer-adopted-sister",
       "peter-telfer"
     ]
   },
@@ -1956,6 +4423,7 @@
     "spouses": [],
     "siblings": [
       "angela-telfer",
+      "angela-telfer-adopted-sister",
       "peter-telfer"
     ]
   },
@@ -2036,6 +4504,7 @@
     "branch": "telfer",
     "is_living": null,
     "parents": [
+      "jono-telfer",
       "murray-john-telfer-19111982",
       "murray-john-telfer-19242009",
       "shirley-edna-telfer",
@@ -2043,6 +4512,7 @@
       "shirley-telfer"
     ],
     "children": [
+      "jono-telfer",
       "kristin-stefanoff",
       "nick-telfer",
       "shirley-telfer"
@@ -2465,6 +4935,34 @@
     ]
   },
   {
+    "id": "Amy Nicole Telfer",
+    "slug": "amy-nicole-telfer",
+    "first_name": "Amy",
+    "middle_name": "Nicole",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Amy Nicole Telfer (?–?)",
+    "title": "Amy Nicole Telfer — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 7,
+    "branch": "telfer",
+    "is_living": null,
+    "parents": [
+      "penny-telfer",
+      "timothy-neil-telfer-1959"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "amy-telfer",
+      "mark-kenneth-telfer-1986",
+      "mark-telfer-18771946"
+    ]
+  },
+  {
     "id": "Amy Telfer",
     "slug": "amy-telfer",
     "first_name": "Amy",
@@ -2490,9 +4988,35 @@
     ],
     "spouses": [],
     "siblings": [
+      "amy-nicole-telfer",
       "mark-kenneth-telfer-1986",
       "mark-telfer-18771946"
     ]
+  },
+  {
+    "id": "Avis",
+    "slug": "avis",
+    "first_name": "Avis",
+    "middle_name": null,
+    "last_name": "",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Avis (?–?)",
+    "title": "Avis — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 7,
+    "branch": "other",
+    "is_living": null,
+    "parents": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "children": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "spouses": [],
+    "siblings": []
   },
   {
     "id": "Carissa Telfer (adopted",
@@ -2515,6 +5039,31 @@
     ],
     "children": [
       "john-robert-telfer"
+    ],
+    "spouses": [],
+    "siblings": []
+  },
+  {
+    "id": "Howard Lindsay",
+    "slug": "howard-lindsay",
+    "first_name": "Howard",
+    "middle_name": null,
+    "last_name": "Lindsay",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Howard Lindsay (?–?)",
+    "title": "Howard Lindsay — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 7,
+    "branch": "other",
+    "is_living": null,
+    "parents": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "children": [
+      "caroline-edna-lawrie-18901957"
     ],
     "spouses": [],
     "siblings": []
@@ -2588,6 +5137,34 @@
     ]
   },
   {
+    "id": "Jono Telfer",
+    "slug": "jono-telfer",
+    "first_name": "Jono",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Jono Telfer (?–?)",
+    "title": "Jono Telfer — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 7,
+    "branch": "telfer",
+    "is_living": null,
+    "parents": [
+      "grantley-keith-telfer"
+    ],
+    "children": [
+      "grantley-keith-telfer"
+    ],
+    "spouses": [],
+    "siblings": [
+      "kristin-stefanoff",
+      "nick-telfer"
+    ]
+  },
+  {
     "id": "Kristin Stefanoff",
     "slug": "kristin-stefanoff",
     "first_name": "Kristin",
@@ -2614,6 +5191,7 @@
       "ben-stefanoff"
     ],
     "siblings": [
+      "jono-telfer",
       "nick-telfer"
     ]
   },
@@ -2676,8 +5254,84 @@
     ],
     "spouses": [],
     "siblings": [
+      "jono-telfer",
       "kristin-stefanoff"
     ]
+  },
+  {
+    "id": "Shirley Edna",
+    "slug": "shirley-edna",
+    "first_name": "Shirley",
+    "middle_name": null,
+    "last_name": "Edna",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Shirley Edna (?–?)",
+    "title": "Shirley Edna — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 7,
+    "branch": "other",
+    "is_living": null,
+    "parents": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "children": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "spouses": [],
+    "siblings": []
+  },
+  {
+    "id": "Sydney Hugh",
+    "slug": "sydney-hugh",
+    "first_name": "Sydney",
+    "middle_name": null,
+    "last_name": "Hugh",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Sydney Hugh (?–?)",
+    "title": "Sydney Hugh — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 7,
+    "branch": "other",
+    "is_living": null,
+    "parents": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "children": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "spouses": [],
+    "siblings": []
+  },
+  {
+    "id": "William Humphrey",
+    "slug": "william-humphrey",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Humphrey",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "William Humphrey (?–?)",
+    "title": "William Humphrey — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 7,
+    "branch": "other",
+    "is_living": null,
+    "parents": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "children": [
+      "caroline-edna-lawrie-18901957"
+    ],
+    "spouses": [],
+    "siblings": []
   },
   {
     "id": "Joel Matthew Ivory (1986–?) (all with Paul Ivory (1955–1996))",
@@ -2723,6 +5377,7 @@
       "david-telfer-merrick"
     ],
     "children": [
+      "amy-nicole-telfer",
       "amy-telfer",
       "david-telfer",
       "david-telfer-merrick",
@@ -2953,6 +5608,98 @@
     "spouses": [],
     "siblings": [
       "angela-telfer"
+    ]
+  },
+  {
+    "id": "Angela Telfer (adopted sister)",
+    "slug": "angela-telfer-adopted-sister",
+    "first_name": "Angela",
+    "middle_name": "Telfer (adopted",
+    "last_name": "sister)",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Angela Telfer (adopted sister) (?–?)",
+    "title": "Angela Telfer (adopted sister) — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 99,
+    "branch": "telfer",
+    "is_living": null,
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "carissa-telfer-2023"
+    ]
+  },
+  {
+    "id": "Daryll William Telfer (brother)",
+    "slug": "daryll-william-telfer-brother",
+    "first_name": "Daryll",
+    "middle_name": "William Telfer",
+    "last_name": "(brother)",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Daryll William Telfer (brother) (?–?)",
+    "title": "Daryll William Telfer (brother) — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 99,
+    "branch": "telfer",
+    "is_living": null,
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "kathryn-mavis-telfer-19611965"
+    ]
+  },
+  {
+    "id": "Edwin Gilbert Telfer (+ one private)",
+    "slug": "edwin-gilbert-telfer-one-private",
+    "first_name": "Edwin",
+    "middle_name": "Gilbert Telfer (+ one",
+    "last_name": "private)",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Edwin Gilbert Telfer (+ one private) (?–?)",
+    "title": "Edwin Gilbert Telfer (+ one private) — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 99,
+    "branch": "telfer",
+    "is_living": null,
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "francis-charles-telfer-18751954"
+    ]
+  },
+  {
+    "id": "John Robert Telfer (brother)",
+    "slug": "john-robert-telfer-brother",
+    "first_name": "John",
+    "middle_name": "Robert Telfer",
+    "last_name": "(brother)",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "John Robert Telfer (brother) (?–?)",
+    "title": "John Robert Telfer (brother) — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 99,
+    "branch": "telfer",
+    "is_living": null,
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "kathryn-mavis-telfer-19611965"
     ]
   }
 ]
