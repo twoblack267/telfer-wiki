@@ -6,16 +6,15 @@ const peopleData = (await import("../data/people.public.json")).default as Perso
 const metaData = (await import("../data/meta.json")).default;
 
 // Only Telfer tree people for the home page
-const telferPeople = peopleData.filter((p) => p.related_trees.includes("telfer-tree"));
+const telferPeople = peopleData.filter((p) => p.branch === "telfer") || [];
 const deceasedTelfer = telferPeople.filter((p) => !p.is_living);
 const livingTelfer = telferPeople.filter((p) => p.is_living);
 
 // Find earliest and latest years
-const years = peopleData
-  .filter((p) => p.birth_year)
-  .map((p) => p.birth_year as number);
-const minYear = Math.min(...years);
-const maxYear = Math.max(...years, new Date().getFullYear());
+const validPeople = peopleData.filter((p) => p.birth_year);
+const years = validPeople.map((p) => p.birth_year as number);
+const minYear = years.length > 0 ? Math.min(...years) : 1731;
+const maxYear = years.length > 0 ? Math.max(...years, new Date().getFullYear()) : new Date().getFullYear();
 
 // Count generations from John Telfer (of Castleton) (~1731) to the kids (2019)
 const generationRanges = [
@@ -48,7 +47,7 @@ const keyDates = [
 ];
 
 // Recent profiles added
-const recentPeople = telferPeople.slice(-6).reverse();
+const recentPeople = (telferPeople || []).slice(-6).reverse();
 ---
 
 <BaseLayout title="Home">
@@ -146,7 +145,7 @@ const recentPeople = telferPeople.slice(-6).reverse();
               {person.lifespan}
               {person.is_living ? <span class="ml-2 inline-block text-xs px-2 py-0.5 rounded badge-living">Living</span> : ""}
             </div>
-            {person.roles.length > 0 && (
+            {person.roles?.length > 0 && (
               <div class="text-xs text-[var(--color-ink-light)] mt-0.5 line-clamp-2">{person.roles[0]}</div>
             )}
           </a>

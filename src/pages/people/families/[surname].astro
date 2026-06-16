@@ -4,7 +4,7 @@ import type { PersonData } from "../../../utils/extract-data.mjs";
 
 export async function getStaticPaths() {
   const people = (await import("../../../data/people.public.json")).default as PersonData[];
-  const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
+  const telferPeople = people.filter((p) => p.branch === "telfer");
 
   // Group by surname
   const families: Record<string, PersonData[]> = {};
@@ -39,11 +39,11 @@ const years = members.filter((p) => p.birth_year).map((p) => p.birth_year as num
 const oldest = years.length > 0 ? Math.min(...years) : null;
 const youngest = years.length > 0 ? Math.max(...years) : null;
 
-// Gather unique roles
-const roles = [...new Set(members.flatMap((p) => p.roles))].sort();
+// Gather unique roles (if available)
+const roles = [...new Set(members.flatMap((p) => p.roles || []))].sort();
 
 // Gather unique tags (excluding generic)
-const tags = [...new Set(members.flatMap((p) => p.tags.filter((t) => !["bio", "family", "person"].includes(t))))].sort();
+const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["bio", "family", "person"].includes(t))))].sort();
 ---
 
 <BaseLayout title={`${surname} Family`}>
@@ -123,7 +123,7 @@ const tags = [...new Set(members.flatMap((p) => p.tags.filter((t) => !["bio", "f
           </div>
 
           {/* Roles preview */}
-          {person.roles.length > 0 && (
+          {person.roles?.length > 0 && (
             <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate">
               {person.roles[0]}
             </div>

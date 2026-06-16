@@ -222,7 +222,7 @@ const GENERATIONS = [
   { label: "5th Gen", from: 1875, to: 1954, ancestor: "Francis Charles Telfer (1875–1954)" },
   { label: "6th Gen", from: 1924, to: 2009, ancestor: "Murray John Telfer (1924–2009)" },
   { label: "7th Gen", from: 1959, to: 2024, ancestor: "Timothy Neil Telfer (1959–)" },
-  { label: "8th Gen", from: 2008, to: 2024, ancestor: "Mark's Kids (Mitchell, Levi, Zabella)" },
+  { label: "8th Gen", from: 2008, to: 2024, ancestor: "Mark Kenneth Telfer (1986–)" },
 ];
 
 function renderTree(person: TreeNode, depth = 0, options = {}) {
@@ -396,15 +396,15 @@ const pageTitle = "Full Family Tree — All Generations";
         line-height: 1.7;
       }
       .gen-jump-btn.active {
-      border-color: var(--color-heading);
-      background-color: var(--color-heading);
-      color: white;
+        border-color: var(--color-heading);
+        background-color: var(--color-heading);
+        color: white;
       }
       /* Highlight class for generation jump target */
       .tree-node.highlight-target > summary {
-      background-color: var(--color-highlight) !important;
-      color: var(--color-surface) !important;
-      border-radius: 4px;
+        background-color: var(--color-highlight) !important;
+        color: var(--color-surface) !important;
+        border-radius: 4px;
       }
       /* Gen-jump scroll-snap (all viewports) */
       .gen-jump-scroll, ul.scroll-snap-type-x-mandatory {
@@ -426,46 +426,50 @@ const pageTitle = "Full Family Tree — All Generations";
         scroll-snap-align: start;
         flex-shrink: 0;
       }
-      /* Phone: single open branch + touch-friendly */
+      /* Phone: single open branch + touch-friendly + horizontal scroll for deep nodes */
       @media (max-width: 639px) {
-      .tree-container {
-        font-size: 0.8rem;
-        line-height: 1.7;
-        max-width: 100vw;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        .person-card {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .tree-container {
+          font-size: 0.8rem;
+          line-height: 1.7;
+          min-width: max-content; /* ensures content wider than viewport is scrollable */
+        }
+        .tree-node summary {
+          padding: 0.75rem 1rem;
+          /* allow wrapping — don't force single line */
+          min-height: 44px; /* touch target */
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .tree-node summary strong.truncate {
+          /* flex-shrink + min-width: 0 lets it shrink below content width */
+          /* text-overflow ellipsis when it does */
+          flex-shrink: 1;
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          /* generous max-width — at deep nesting the flex container shrinks naturally */
+          max-width: 300px;
+        }
+        /* Gen-jump buttons: large touch targets, visible scroll hint */
+        .gen-jump-btn {
+          padding: 0.625rem 1rem; /* ~44px height */
+          font-size: 0.8rem;
+          min-height: 44px;
+          min-width: 44px;
+          flex-shrink: 0;
+        }
       }
-      .tree-node summary {
-        padding: 0.75rem 1rem;
-        /* allow wrapping — don't force single line */
-        min-height: 44px; /* touch target */
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .tree-node summary strong.truncate {
-        /* flex-shrink + min-width: 0 lets it shrink below content width */
-        /* text-overflow ellipsis when it does */
-        flex-shrink: 1;
-        min-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        /* generous max-width — at deep nesting the flex container shrinks naturally */
-        max-width: 300px;
-      }
-      /* Gen-jump buttons: large touch targets, visible scroll hint */
-      .gen-jump-btn {
-        padding: 0.625rem 1rem; /* ~44px height */
-        font-size: 0.8rem;
-        min-height: 44px;
-        min-width: 44px;
-        flex-shrink: 0;
-      }
-      }
-      /* Smooth scroll */
-      html {
-        scroll-behavior: smooth;
+      /* Smooth scroll — desktop only; mobile uses native touch momentum */
+      @media (min-width: 640px) {
+        html {
+          scroll-behavior: smooth;
+        }
       }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
@@ -577,13 +581,22 @@ const pageTitle = "Full Family Tree — All Generations";
             }
 
             if (targetDetail) {
+              // Open all parent <details> elements so the target is visible
+              let parent = targetDetail.parentElement;
+              while (parent) {
+                if (parent.matches('details.tree-node')) {
+                  parent.open = true;
+                }
+                parent = parent.parentElement;
+              }
               targetDetail.open = true;
               // Scroll the WINDOW (not the tree container) to bring target into view
               const summary = targetDetail.querySelector('summary');
               if (summary) {
                 const rect = summary.getBoundingClientRect();
                 const targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
-                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+                const isMobile = window.innerWidth < 640;
+                window.scrollTo({ top: Math.max(0, targetY), behavior: isMobile ? 'auto' : 'smooth' });
               }
               // Highlight the target
               targetDetail.classList.add('highlight-target');
@@ -605,7 +618,8 @@ const pageTitle = "Full Family Tree — All Generations";
             setTimeout(() => {
               const rect = summary.getBoundingClientRect();
               const targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
-              window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+              const isMobile = window.innerWidth < 640;
+              window.scrollTo({ top: Math.max(0, targetY), behavior: isMobile ? 'auto' : 'smooth' });
             }, 50);
           }
         });

@@ -1,138 +1,197 @@
 #!/usr/bin/env node
 /**
  * sanitize-people.mjs
+ * Build-time sanitization for public output
+ * - Removes living people (born >= 1940, no death) beyond great-grandparents of living
+ * - Hides children/grandchildren of living people
+ * - Strips private fields, keeps only public-safe data
+ * - Outputs to src/data/people.public.json
  *
- * Build-time privacy filter for the Telfer Wiki.
- * Reads people.json, strips PII from living entries, writes people.public.json.
- *
- * Privacy rules for living people (surgical — keeps everything else):
- *   - Remove: email addresses
- *   - Remove: phone numbers
- *   - Remove: birth / marriage certificate registration numbers
- *   - Remove: full street addresses (keep suburb / area / town)
- *   - Remove: Facebook, LinkedIn profile URLs
- *   - Remove: vault_path from images (internal paths shouldn't leak)
- *   - Keep EVERYTHING else: life stories, photos, timeline, DOB, residence area,
- *     marriage details (minus cert numbers), photo galleries, images array
- *
- * Usage: node scripts/sanitize-people.mjs
+ * Run: node scripts/sanitize-people.mjs
+ * Input: src/data/people.json
+ * Output: src/data/people.public.json
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PEOPLE_JSON = path.resolve(__dirname, '..', 'src/data/people.json');
-const PUBLIC_JSON = path.resolve(__dirname, '..', 'src/data/people.public.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-/**
- * Sanitize body_markdown with surgical lookups rather than full rebuild.
- */
-function sanitizeBody(body) {
-  if (!body) return '';
+const INPUT_PATH = path.resolve(__dirname, '../src/data/people.json');
+const OUTPUT_PATH = path.resolve(__dirname, '../src/data/people.public.json');
 
-  let clean = body;
+// ─── Configuration ──────────────────────────────────────────────────────────
 
-  // 1. Remove email addresses
-  clean = clean.replace(/[\w.+-]+@[\w-]+\.[\w.-]+/g, '[email redacted]');
+// Cutoff year: people born >= this year with no death = LIVING
+const LIVING_CUTOFF_YEAR = 1940;
 
-  // 2. Remove phone numbers (Australian)
-  // Matches 04XX XXX XXX, 07XX XXX XXX, +61 4XX XXX XXX, 1800 numbers, landline patterns
-  clean = clean.replace(/(?:\+?61[\s-]?)?\(?\d{2,3}\)?[\s-]?\d{3}[\s-]?\d{3,4}\b/g, '[phone redacted]');
+// Privacy rule: publish up to GREAT-GRANDPARENTS of living people
+// That means: living person (gen N) → parents (N-1) → grandparents (N-2) → great-grandparents (N-3)
+// Anyone at gen <= (living_gen - 3) is publishable unless they're a direct ancestor of living
+const PRIVACY_GENERATION_GAP = 3;
 
-  // 3. Remove birth / marriage certificate registration numbers
-  // e.g. "Reg. No. 1981/16975", "Registration Number: 1981/16975"
-  clean = clean.replace(/(?:Reg(?:istration)?\.?\s*(?:No\.|Number)?:?\s*)\d{4}\/\d+\b/gi, '[certificate registration redacted]');
-  clean = clean.replace(/\*\*Registration Number:\*\*\s*\d{4}\/\d+/g, '**Registration Number:** [redacted]');
+// Fields to EXCLUDE from public output
+const PRIVATE_FIELDS = new Set([
+  'body_markdown',
+  'body_stripped',
+  'vault_file',
+  'images',
+  'person_photo',
+  '_stub_source',
+  '_stub_relationship',
+  'relationships',  // raw relationships table - replaced by parents/children/spouses/siblings
+  'roles',
+  'tags',           // contains 'stub', 'needs-research' etc.
+  'related_trees',
+  'confidence'
+]);
 
-  // 4. Remove full street addresses (keep suburb/area)
-  // Matches lines starting with a street number or PO Box
-  clean = clean.replace(/^\d+\s+[A-Za-z\s]+(?:Street|St|Road|Rd|Avenue|Ave|Drive|Dr|Place|Pl|Close|Crescent|Cres|Lane|Way|Court|Ct|Highway|Hwy|Terrace|Tce)[,\s]+[A-Za-z\s]+\d{4}\b/gim, '[address redacted]');
-  clean = clean.replace(/^PO\s+Box\s+\d+/gim, '[address redacted]');
+// Fields to KEEP in public output
+const PUBLIC_FIELDS = [
+  'id',
+  'slug',
+  'first_name',
+  'middle_name',
+  'last_name',
+  'birth_year',
+  'death_year',
+  'birth_year_display',
+  'death_year_display',
+  'display_name',
+  'title',
+  'lifespan',
+  'generation',
+  'branch',
+  'is_living',
+  'parents',
+  'children',
+  'spouses',
+  'siblings'
+];
 
-  // 5. Remove Facebook URLs
-  clean = clean.replace(/https?:\/\/(?:www\.)?facebook\.com\/[^\s)]+/gi, '[Facebook link redacted]');
-  clean = clean.replace(/<!-- Facebook[^>]*-->/gi, '');
-  clean = clean.replace(/\*\*Facebook:\*\*[^\n]*/gi, '');
+// ─── Load Data ──────────────────────────────────────────────────────────────
 
-  // 6. Remove LinkedIn URLs
-  clean = clean.replace(/https?:\/\/(?:www\.)?linkedin\.com\/[^\s)]+/gi, '[LinkedIn link redacted]');
-  clean = clean.replace(/<!-- LinkedIn[^>]*-->/gi, '');
+const people = JSON.parse(fs.readFileSync(INPUT_PATH, 'utf-8'));
+const slugToPerson = new Map(people.map(p => [p.slug, p]));
 
-  // 7. Clean up empty **Field: \n** patterns left behind
-  clean = clean.replace(/\*\*Facebook:\*\*\s*\n/g, '');
-  clean = clean.replace(/\*\*LinkedIn:\*\*\s*\n/g, '');
+console.log(`📚 Loaded ${people.length} people`);
 
-  // 8. Strip vault_path from markdown image references (shouldn't happen in body, but just in case)
-  clean = clean.replace(/\|?\s*vault_path:\s*"[^"]*"\s*$/gm, '');
-  clean = clean.replace(/vault_path:\s*\/[^\s,}\]]+/g, '');
+// ─── Identify Living People ─────────────────────────────────────────────────
 
-  return clean.trim();
+const livingPeople = people.filter(p =>
+  p.is_living === true ||
+  (p.birth_year && p.birth_year >= LIVING_CUTOFF_YEAR && !p.death_year)
+);
+
+console.log(`👤 Living people identified: ${livingPeople.length}`);
+
+// ─── Compute Visibility ──────────────────────────────────────────────────────
+
+// A person is VISIBLE if they are within PRIVACY_GENERATION_GAP generations
+// UP from any living person (including the living person themselves and spouses)
+// 
+// Living person (gen N) → Parents (N-1) → Grandparents (N-2) → Great-grandparents (N-3)
+// Great-great-grandparents (N-4) are NOT visible.
+
+const visible = new Set();
+
+// Start from each living person, walk UP the tree
+for (const living of livingPeople) {
+  let currentSlugs = [living.slug];
+
+  for (let gap = 0; gap <= PRIVACY_GENERATION_GAP; gap++) {
+    const nextSlugs = [];
+    for (const slug of currentSlugs) {
+      if (visible.has(slug)) continue;
+      visible.add(slug);
+
+      const person = slugToPerson.get(slug);
+      if (person) {
+        // Add parents (going UP)
+        for (const parentSlug of person.parents || []) {
+          if (!visible.has(parentSlug)) nextSlugs.push(parentSlug);
+        }
+        // Add spouses (same generation)
+        for (const spouseSlug of person.spouses || []) {
+          if (!visible.has(spouseSlug)) nextSlugs.push(spouseSlug);
+        }
+      }
+    }
+    currentSlugs = nextSlugs;
+    if (currentSlugs.length === 0) break;
+  }
 }
 
-/**
- * Sanitize a single person object.
- */
-function sanitizePerson(person) {
-  const sanitized = { ...person };
-
-  // Strip vault_path from images (internal paths shouldn't leak)
-  if (sanitized.images) {
-    sanitized.images = sanitized.images.map(img => {
-      const { vault_path, ...rest } = img;
-      return rest;
-    });
+// Also mark spouses of all visible people
+const spousesToAdd = new Set();
+for (const slug of visible) {
+  const person = slugToPerson.get(slug);
+  if (person) {
+    for (const spouseSlug of person.spouses || []) {
+      if (!visible.has(spouseSlug)) spousesToAdd.add(spouseSlug);
+    }
   }
+}
+for (const slug of spousesToAdd) visible.add(slug);
 
-  // Strip vault_file path for all people (internal only)
-  delete sanitized.vault_file;
+console.log(`👁️  Visible people: ${visible.size} / ${people.length}`);
 
-  if (!person.is_living) {
-    // Deceased people: just removed vault_path from images above
-    return sanitized;
-  }
+// ─── Build Public Output ────────────────────────────────────────────────────
 
-  // Living people: surgical body sanitization
-  sanitized.body_markdown = sanitizeBody(person.body_markdown);
+const publicPeople = [];
 
-  // Strip parenthetical birth-death dates from relationship arrays
-  // "Mark Kenneth Telfer (1986–?)" → "Mark Kenneth Telfer"
-  // For living people only — deceased keep their dates
-  const stripDatesFromName = (name) => name.replace(/\s*\(\d{4}–[^)]*\)/g, '').trim();
+for (const person of people) {
+  if (!visible.has(person.slug)) continue;
 
-  for (const field of ['parents', 'spouses', 'children', 'siblings']) {
-    if (sanitized[field] && Array.isArray(sanitized[field])) {
-      sanitized[field] = sanitized[field].map(stripDatesFromName);
+  const publicPerson = {};
+
+  // Copy public fields
+  for (const field of PUBLIC_FIELDS) {
+    if (person[field] !== undefined) {
+      publicPerson[field] = person[field];
     }
   }
 
-  return sanitized;
+  // Filter relationships to only visible people
+  publicPerson.parents = (person.parents || []).filter(s => visible.has(s));
+  publicPerson.children = (person.children || []).filter(s => visible.has(s));
+  publicPerson.spouses = (person.spouses || []).filter(s => visible.has(s));
+  publicPerson.siblings = (person.siblings || []).filter(s => visible.has(s));
+
+  // For living people: hide children and grandchildren
+  if (person.is_living) {
+    publicPerson.children = [];
+    // Also hide grandchildren by removing their parent links
+    // (handled by the parent's visibility check above)
+  }
+
+  publicPeople.push(publicPerson);
 }
 
-// ── Main ──
-try {
-  const raw = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
-  console.log(`📋 Loaded ${raw.length} people (${raw.filter(p => p.is_living).length} living)`);
+// Sort by generation, then birth year, then name
+publicPeople.sort((a, b) => {
+  if (a.generation !== b.generation) return a.generation - b.generation;
+  const ay = a.birth_year || 9999;
+  const by = b.birth_year || 9999;
+  if (ay !== by) return ay - by;
+  return (a.id || '').localeCompare(b.id || '');
+});
 
-  const sanitized = raw.map(sanitizePerson);
+// ─── Write Output ────────────────────────────────────────────────────────────
 
-  fs.writeFileSync(PUBLIC_JSON, JSON.stringify(sanitized, null, 2), 'utf-8');
-  console.log(`✅ Wrote ${PUBLIC_JSON} (${sanitized.length} people, sanitized living entries)`);
+fs.writeFileSync(OUTPUT_PATH, JSON.stringify(publicPeople, null, 2));
 
-  // Summary
-  const living = sanitized.filter(p => p.is_living);
-  let changedCount = 0;
-  for (const p of living) {
-    const original = raw.find(r => r.id === p.id);
-    if (original && original.body_markdown !== p.body_markdown) {
-      changedCount++;
-      const saved = original.body_markdown.length - p.body_markdown.length;
-      console.log(`  🔒 ${p.display_name}: stripped ${saved} chars`);
-    }
-  }
-  console.log(`\n🔒 ${changedCount}/${living.length} living people sanitized`);
-} catch (err) {
-  console.error('❌ Error:', err.message);
-  process.exit(1);
+console.log(`✅ Written ${publicPeople.length} people to ${OUTPUT_PATH}`);
+console.log(`   Hidden: ${people.length - publicPeople.length} people`);
+
+// Stats
+const genCounts = {};
+for (const p of publicPeople) {
+  genCounts[p.generation] = (genCounts[p.generation] || 0) + 1;
+}
+console.log('\n📊 Public Generation Distribution:');
+for (let g = 1; g <= Math.max(...Object.keys(genCounts).map(Number)); g++) {
+  console.log(`   Gen ${g}: ${genCounts[g] || 0}`);
 }

@@ -1,0 +1,44 @@
+---
+interface Props {
+  root: {
+    slug: string;
+    display_name: string;
+    is_living: boolean;
+    branch: string | null;
+    generation: number | null;
+    children: any[];
+  };
+  people: any[];
+  isRoot?: boolean;
+}
+
+const { root, people, isRoot = false } = Astro.props;
+
+if (!root) return null;
+
+const dotClass = `w-4 h-4 rounded-full ${root.is_living ? 'bg-green-500' : root.branch === 'telfer' ? 'bg-[var(--color-highlight)]' : 'bg-[var(--color-secondary)]'}`;
+
+// Self-reference for recursion
+const Self = DescendantNode;
+---
+
+<details class="descendant-node" open>
+  <summary class="flex items-center gap-2 cursor-pointer select-none py-1">
+    <span class={dotClass} title={root.branch || ''}></span>
+    <a href={`/people/${root.slug}`} class="text-sm font-medium text-[var(--color-link)] hover:underline">{root.display_name}</a>
+    {root.generation && <span class="text-xs text-[var(--color-muted)] font-mono">Gen {root.generation}</span>}
+    {root.is_living && <span class="text-xs badge-living">Living</span>}
+  </summary>
+  {root.children && root.children.length > 0 && (
+    <div class="ml-4 border-l-2 border-[var(--color-border)] pl-3 my-1 space-y-1">
+      {root.children.map(child => (
+        <Self root={child} people={people} isRoot={false} />
+      ))}
+    </div>
+  )}
+</details>
+
+<style>
+  .descendant-node summary::-webkit-details-marker { display: none; }
+  .descendant-node summary { list-style: none; }
+</style>

@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
 const { person } = Astro.props;
 const people = (await import("../../data/people.public.json")).default;
-const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
+const telferPeople = people.filter((p) => p.branch === "telfer");
 
 // ── Relationship groupings ──
 const spouseLinks = getLinksForRelationships(person.spouses, telferPeople);
@@ -21,10 +21,10 @@ const childLinks = getLinksForRelationships(person.children, telferPeople);
 const siblingLinks = getLinksForRelationships(person.siblings, telferPeople);
 
 // ── Body content ──
-const bodyHtml = formatBody(person.body_markdown, telferPeople);
+const bodyHtml = formatBody(person.body_markdown || "", telferPeople);
 
 // ── Tags ──
-const importantTags = person.tags.filter((t) => !["bio", "family", "person"].includes(t));
+const importantTags = (person.tags || []).filter((t) => !["bio", "family", "person"].includes(t));
 ---
 
 <BaseLayout title={person.display_name}>
@@ -50,7 +50,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
           </div>
 
           <!-- Roles -->
-          {person.roles.length > 0 && (
+          {person.roles?.length > 0 && (
             <div class="space-y-0">
               {person.roles.map((role) => (
                 <div key={role} class="text-xs text-[var(--color-ink-light)] italic">
@@ -96,7 +96,7 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
         </div>
 
         <!-- Photo Gallery -->
-        {person.images && person.images.length > 0 && (
+        {person.images?.length > 0 && (
           <div class="person-card rounded-xl p-3 mt-3">
             <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">Photos</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -125,6 +125,39 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
                 <span key={tag} class="text-xs px-2 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">{tag}</span>
               ))}
             </div>
+          </div>
+        )}
+
+        <!-- DNA Connections -->
+        {person.dna_matches?.length > 0 && (
+          <div class="person-card rounded-xl p-3 mt-3">
+            <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">DNA Matches</h2>
+            <dl class="space-y-3">
+              {person.dna_matches.map((match, i) => (
+                <div key={i} class="border-l-2 border-[var(--color-highlight)] pl-3">
+                  <dt class="font-medium text-sm">{match.name}</dt>
+                  <dd class="text-xs text-[var(--color-ink-light)] mt-0.5">
+                    {match.relationship} — {match.centimorgans} cM
+                    {match.company && ` (${match.company})`}
+                  </dd>
+                  {match.notes && <dd class="text-xs text-[var(--color-muted)] mt-0.5 italic">{match.notes}</dd>}
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+
+        {person.haplogroup_mt && (
+          <div class="person-card rounded-xl p-3 mt-3">
+            <h2 class="font-serif text-sm text-[var(--color-heading)] mb-1">Maternal Haplogroup</h2>
+            <p class="font-mono text-sm text-[var(--color-ink-light)]">{person.haplogroup_mt}</p>
+          </div>
+        )}
+
+        {person.haplogroup_y && (
+          <div class="person-card rounded-xl p-3 mt-3">
+            <h2 class="font-serif text-sm text-[var(--color-heading)] mb-1">Paternal Haplogroup (Y-DNA)</h2>
+            <p class="font-mono text-sm text-[var(--color-ink-light)]">{person.haplogroup_y}</p>
           </div>
         )}
       </div>
@@ -208,6 +241,18 @@ const importantTags = person.tags.filter((t) => !["bio", "family", "person"].inc
     <!-- Navigation footer -->
     <div class="mt-3 flex justify-between items-center border-t border-[var(--color-border)] pt-2 text-sm">
       <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">← Back to all people</a>
+      <div class="flex items-center gap-4">
+        {person.children.length > 0 && (
+          <a href={import.meta.env.BASE_URL + "people/" + person.slug + "/descendants"} class="text-[var(--color-link)] hover:underline text-right">
+            📊 Descendant Chart →
+          </a>
+        )}
+        {(person.spouses.length > 0 || person.parents.length > 0 || person.siblings.length > 0) && (
+          <a href={import.meta.env.BASE_URL + "people/" + person.slug + "/family-sheet"} class="text-[var(--color-link)] hover:underline">
+            👪 Family Sheet →
+          </a>
+        )}
+      </div>
     </div>
   </div>
 </BaseLayout>

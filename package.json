@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "astro dev",
     "sanitize": "node scripts/sanitize-people.mjs",
-    "build": "npm run sanitize && astro build",
+    "validate": "node validate-people.mjs",
+    "build": "npm run sanitize && npm run validate && astro build",
     "postbuild": "node scripts/generate-redirects.mjs && node scripts/validate-links.mjs",
     "self-heal": "node scripts/auto-fix-links.mjs && npm run build",
     "preview": "astro preview",
@@ -17,8 +18,10 @@
     "@tailwindcss/vite": "^4.1.0",
     "astro": "^5.7.0",
     "fuse.js": "^7.4.0",
-    "gray-matter": "^4.0.3",
     "tailwindcss": "^4.1.0",
     "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
   }
 }

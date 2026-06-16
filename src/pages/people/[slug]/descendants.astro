@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const peoplePublic = (await import("../../../data/people.public.json")).default;
+const { slug } = Astro.params;
+
+if (!slug) {
+  throw new Error("Slug is required");
+}
+
+const person = peoplePublic.find(p => p.slug === slug);
+if (!person) {
+  throw new Error(`Person not found: ${slug}`);
+}
+
+// Build descendant tree
+function buildDescendants(rootSlug, people, maxDepth = 6, currentDepth = 0) {
+  if (currentDepth >= maxDepth) return null;
+  
+  const root = people.find(p => p.slug === rootSlug);
+  if (!root) return null;
+  
+  const children = root.children
+    .map(childSlug => buildDescendants(childSlug, people, maxDepth, currentDepth + 1))
+    .filter(Boolean);
+  
+  return {
+    slug: root.slug,
+    display_name: root.display_name,
+    is_living: root.is_living,
+    branch: root.branch,
+    generation: root.generation,
+    children
+  };
+}
+
+const descendantTree = buildDescendants(slug, peoplePublic, 6);
+
+function countDescendants(node) {
+  if (!node) return 0;
+  return node.children.reduce((sum, child) => sum + countDescendants(child) + 1, 0);
+}
+
+function getMaxGeneration(node) {
+  if (!node || node.children.length === 0) return node?.generation || 0;
+  return Math.max(...node.children.map(c => getMaxGeneration(c)), node.generation || 0);
+}
+
+const totalDescendants = countDescendants(descendantTree);
+const generationsSpanned = getMaxGeneration(descendantTree) - (person.generation || 0);
+
+// Render descendant tree as HTML string
+function renderDescendantNode(node, depth = 0) {
+  if (!node) return '';
+  
+  const dotClass = `w-4 h-4 rounded-full ${node.is_living ? 'bg-green-500' : node.branch === 'telfer' ? 'bg-[var(--color-highlight)]' : 'bg-[var(--color-secondary)]'}`;
+  const indentStyle = depth > 0 ? 'ml-4 border-l-2 border-[var(--color-border)] pl-3 my-1 space-y-1' : '';
+  const wrapperClass = depth > 0 ? indentStyle : 'person-card rounded-xl p-4';
+  
+  let html = `
+    <details class="descendant-node" open>
+      <summary class="flex items-center gap-2 cursor-pointer select-none py-1">
+        <span class="${dotClass}" title="${node.branch || ''}"></span>
+        <a href="/people/${node.slug}" class="text-sm font-medium text-[var(--color-link)] hover:underline">${node.display_name}</a>
+        ${node.generation ? `<span class="text-xs text-[var(--color-muted)] font-mono">Gen ${node.generation}</span>` : ''}
+        ${node.is_living ? '<span class="text-xs badge-living">Living</span>' : ''}
+      </summary>
+  `;
+  
+  if (node.children && node.children.length > 0) {
+    html += `<div class="${indentStyle}">`;
+    for (const child of node.children) {
+      html += renderDescendantNode(child, depth + 1);
+    }
+    html += `</div>`;
+  }
+  
+  html += `</details>`;
+  
+  if (depth === 0) {
+    html = `<section class="${wrapperClass}">${html}</section>`;
+  }
+  
+  return html;
+}
+
+// getStaticPaths for dynamic route
+export async function getStaticPaths() {
+  const people = (await import("../../../data/people.public.json")).default;
+  return people
+    .filter(p => p.children && p.children.length > 0)
+    .map(p => ({ params: { slug: p.slug } }));
+}
+---
+
+<BaseLayout title={`Descendants of ${person.display_name}`}>
+  <div class="max-w-4xl mx-auto">
+    <!-- Breadcrumb -->
+    <div class="text-sm text-[var(--color-muted)] mb-1.5">
+      <a href="/" class="text-[var(--color-link)]">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/people" class="text-[var(--color-link)]">People</a>
+      <span class="mx-2">/</span>
+      <a href={`/people/${slug}`} class="text-[var(--color-link)]">{person.display_name}</a>
+      <span class="mx-2">/</span>
+      <span>Descendants</span>
+    </div>
+
+    <header class="mb-6">
+      <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-2">Descendant Chart</h1>
+      <p class="text-[var(--color-muted)]">Descendants of <a href={`/people/${slug}`} class="text-[var(--color-link)] font-medium">{person.display_name}</a></p>
+    </header>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+      <div class="person-card rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-[var(--color-highlight)]">{totalDescendants}</div>
+        <div class="text-sm text-[var(--color-muted)]">Total Descendants</div>
+      </div>
+      <div class="person-card rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-[var(--color-highlight)]">{generationsSpanned >= 0 ? generationsSpanned + 1 : '?'}</div>
+        <div class="text-sm text-[var(--color-muted)]">Generations Spanned</div>
+      </div>
+      <div class="person-card rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-[var(--color-highlight)]">
+          {person.spouses.length > 0
+            ? person.spouses.map(s => peoplePublic.find(p => p.slug === s)?.display_name || s).join(', ')
+            : '—'}
+        </div>
+        <div class="text-sm text-[var(--color-muted)]">Spouse(s)</div>
+      </div>
+    </div>
+
+    <!-- Descendant Tree -->
+    {descendantTree ? (
+      <> 
+        {descendantTree.children && descendantTree.children.length > 0 ? (
+          <div set:html={descendantTree.children.map(child => renderDescendantNode(child)).join('')} />
+        ) : (
+          <div class="person-card rounded-xl p-8 text-center text-[var(--color-muted)]">
+            No descendants recorded in the database.
+          </div>
+        )}
+      </>
+    ) : (
+      <div class="person-card rounded-xl p-8 text-center text-[var(--color-muted)]">
+        No descendants recorded in the database.
+      </div>
+    )}
+
+    <div class="mt-6 text-center">
+      <a href={`/people/${slug}`} class="text-[var(--color-link)] hover:underline">← Back to {person.display_name}</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .descendant-node summary::-webkit-details-marker { display: none; }
+  .descendant-node summary { list-style: none; }
+</style>

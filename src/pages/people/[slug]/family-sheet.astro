@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const peoplePublic = (await import("../../../data/people.public.json")).default;
+const { slug } = Astro.params;
+
+if (!slug) {
+  throw new Error("Slug is required");
+}
+
+// Find the focal person
+const person = peoplePublic.find(p => p.slug === slug);
+if (!person) {
+  throw new Error(`Person not found: ${slug}`);
+}
+
+// Get spouses
+const spouses = person.spouses
+  .map(s => peoplePublic.find(p => p.slug === s))
+  .filter(Boolean);
+
+// Get parents
+const parents = person.parents
+  .map(s => peoplePublic.find(p => p.slug === s))
+  .filter(Boolean);
+
+// Get children
+const children = person.children
+  .map(s => peoplePublic.find(p => p.slug === s))
+  .filter(Boolean);
+
+// Get siblings
+const siblings = person.siblings
+  .map(s => peoplePublic.find(p => p.slug === s))
+  .filter(Boolean);
+
+function formatDateRange(p) {
+  if (!p) return '?';
+  const b = p.birth_year || p.birth_display || '?';
+  const d = p.death_year || p.death_display || (p.is_living ? 'living' : '?');
+  return `${b}–${d}`;
+}
+
+function formatPlace(p) {
+  if (!p) return '';
+  const places = [];
+  if (p.birth_place) places.push(`b. ${p.birth_place}`);
+  if (p.death_place) places.push(`d. ${p.death_place}`);
+  return places.join('; ');
+}
+
+// getStaticPaths for dynamic route
+export async function getStaticPaths() {
+  const people = (await import("../../../data/people.public.json")).default;
+  return people
+    .filter(p => p.spouses.length > 0 || p.parents.length > 0 || p.siblings.length > 0 || p.children.length > 0)
+    .map(p => ({ params: { slug: p.slug } }));
+}
+---
+
+<BaseLayout title={`Family Group Sheet: ${person.display_name}`}>
+  <div class="max-w-3xl mx-auto">
+    <!-- Breadcrumb -->
+    <div class="text-sm text-[var(--color-muted)] mb-1.5">
+      <a href="/" class="text-[var(--color-link)]">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/people" class="text-[var(--color-link)]">People</a>
+      <span class="mx-2">/</span>
+      <a href={`/people/${slug}`} class="text-[var(--color-link)]">{person.display_name}</a>
+      <span class="mx-2">/</span>
+      <span>Family Sheet</span>
+    </div>
+
+    <header class="mb-6 text-center">
+      <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-1">Family Group Sheet</h1>
+      <p class="text-[var(--color-muted)]">Primary person: <a href={`/people/${slug}`} class="text-[var(--color-link)] font-medium">{person.display_name}</a></p>
+    </header>
+
+    <!-- Parents Section -->
+    {parents.length > 0 && (
+      <section class="mb-6">
+        <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Parents</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {parents.map(p => (
+            <article key={p.slug} class="person-card rounded-xl p-3">
+              <h3 class="font-serif text-sm text-[var(--color-heading)] mb-1">
+                <a href={`/people/${p.slug}`} class="text-[var(--color-link)] hover:underline">{p.display_name}</a>
+              </h3>
+              <p class="text-xs text-[var(--color-muted)]">{formatDateRange(p)}</p>
+              {formatPlace(p) && <p class="text-xs text-[var(--color-ink-light)] mt-0.5">{formatPlace(p)}</p>}
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Spouses / Marriage Section -->
+    {spouses.length > 0 && (
+      <section class="mb-6">
+        <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Spouse{spouses.length > 1 ? 's' : ''} &amp; Marriage{spouses.length > 1 ? 's' : ''}</h2>
+        <div class="space-y-3">
+          {spouses.map(spouse => (
+            <article key={spouse.slug} class="person-card rounded-xl p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="font-serif text-sm text-[var(--color-heading)] mb-1">
+                    <a href={`/people/${spouse.slug}`} class="text-[var(--color-link)] hover:underline">{spouse.display_name}</a>
+                  </h3>
+                  <p class="text-xs text-[var(--color-muted)]">{formatDateRange(spouse)}</p>
+                  {formatPlace(spouse) && <p class="text-xs text-[var(--color-ink-light)] mt-0.5">{formatPlace(spouse)}</p>}
+                </div>
+                {spouse.is_living && <span class="badge-living text-xs">Living</span>}
+              </div>
+              
+              {/* Marriage info - look for marriage details in relationships */}
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Children Section -->
+    {children.length > 0 && (
+      <section class="mb-6">
+        <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Children ({children.length})</h2>
+        <div class="space-y-2">
+          {children.map(child => (
+            <article key={child.slug} class="person-card rounded-xl p-2.5">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[var(--color-highlight)]"></span>
+                  <a href={`/people/${child.slug}`} class="text-sm font-medium text-[var(--color-link)] hover:underline">{child.display_name}</a>
+                </div>
+                <div class="text-xs text-[var(--color-muted)] whitespace-nowrap">
+                  {formatDateRange(child)}
+                  {child.branch && <span class="ml-1 px-1.5 py-0.5 rounded text-[10px] bg-[var(--color-surface)]">{child.branch}</span>}
+                </div>
+                {child.is_living && <span class="badge-living text-xs">Living</span>}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {children.length === 0 && spouses.length > 0 && (
+      <section class="mb-6">
+        <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Children</h2>
+        <p class="text-[var(--color-muted)] italic">No children recorded for this marriage.</p>
+      </section>
+    )}
+
+    <!-- Siblings Section -->
+    {siblings.length > 0 && (
+      <section class="mb-6">
+        <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Siblings ({siblings.length})</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {siblings.map(sib => (
+            <article key={sib.slug} class="person-card rounded-xl p-2.5">
+              <div class="flex items-center justify-between">
+                <a href={`/people/${sib.slug}`} class="text-sm font-medium text-[var(--color-link)] hover:underline">{sib.display_name}</a>
+                <span class="text-xs text-[var(--color-muted)]">{formatDateRange(sib)}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Sources -->
+    <section class="mb-6">
+      <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Notes &amp; Sources</h2>
+      <div class="person-card rounded-xl p-3 text-sm text-[var(--color-ink-light)]">
+        <p>This family group sheet was generated from the Telfer Wiki database.</p>
+        <p class="mt-1">Data last updated: {new Date().toLocaleDateString('en-AU')}.</p>
+        <p class="mt-1">For corrections or additions, contact the family historian.</p>
+      </div>
+    </section>
+
+    <div class="mt-6 flex justify-between items-center border-t border-[var(--color-border)] pt-2 text-sm">
+      <a href={`/people/${slug}`} class="text-[var(--color-link)]">← Back to {person.display_name}</a>
+      <button onclick="window.print()" class="text-[var(--color-link)] hover:underline">🖨 Print Sheet</button>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  @media print {
+    nav, footer, .no-print { display: none !important; }
+    body { background: white; color: black; }
+    .person-card { border: 1px solid #ccc; box-shadow: none; break-inside: avoid; }
+    .badge-living { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    a { text-decoration: none; color: black; }
+  }
+</style>

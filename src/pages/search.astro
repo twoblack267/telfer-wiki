@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import type { PersonData } from "../utils/extract-data.mjs";
 
 const people = (await import("../data/people.public.json")).default as PersonData[];
-const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"));
+const telferPeople = people.filter((p) => p.branch === "telfer");
 ---
 
 <BaseLayout title="Search">
@@ -38,7 +38,7 @@ const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"
         data-search-item
         data-name={person.display_name.toLowerCase()}
         data-year={String(person.birth_year || "")}
-        data-role={(person.roles[0] || "").toLowerCase()}
+        data-role={(person.roles?.[0] || "").toLowerCase()}
         data-living={person.is_living ? "1" : "0"}
         href={`${import.meta.env.BASE_URL}people/${person.slug}`}
         class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group"
@@ -49,7 +49,7 @@ const telferPeople = people.filter((p) => p.related_trees.includes("telfer-tree"
           </div>
           <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
         </div>
-        {person.roles.length > 0 && (
+        {person.roles?.length > 0 && (
           <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate">{person.roles[0]}</div>
         )}
         <div>
