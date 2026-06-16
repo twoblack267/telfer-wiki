@@ -25,20 +25,83 @@ function findPerson(id: string | undefined, dataset = people) {
 }
 
 // Known children of Francis Charles Telfer (some lack wiki entries)
-const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: number; hasProfile: boolean }> = {
+// 10 children total: 5 Telfer-surname sons, 5 married daughters
+// Daughters: shown with spouse + their children, then STOP (no further recursion)
+const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: number; hasProfile: boolean; spouse?: string; children?: { name: string; birth?: number; death?: number }[] }> = {
   "Francis Kelson Telfer": { name: "Francis Kelson Telfer", birth: 1910, death: 1987, hasProfile: false },
   "Edwin Roy Telfer": { name: "Edwin Roy Telfer", birth: 1915, hasProfile: false },
   "Reginald Masters Telfer": { name: "Reginald Masters Telfer", birth: 1920, hasProfile: false },
-  "Ruth Telfer": { name: "Ruth Telfer", birth: 1930, hasProfile: true },
   "Malcolm George Telfer": { name: "Malcolm George Telfer", birth: 1933, hasProfile: false },
   "Murray John Telfer": { name: "Murray John Telfer", birth: 1924, death: 2009, hasProfile: true },
+
+  // Married daughters (Telfer by birth, took husband's surname)
+  // We show: daughter + spouse + THEIR children → then STOP
+  "Clarice May Fatchen": {
+    name: "Clarice May Fatchen (née Telfer)",
+    birth: 1911,
+    death: 1997,
+    hasProfile: true,
+    spouse: "Mr Fatchen",
+    children: [
+      { name: "David Fatchen", birth: 1935 },
+      { name: "Robert Fatchen", birth: 1938 },
+      { name: "Helen Fatchen", birth: 1942 },
+    ],
+  },
+  "Emily Amelia Barton": {
+    name: "Emily Amelia Barton (née Telfer)",
+    birth: 1913,
+    death: 2001,
+    hasProfile: false,
+    spouse: "Mr Barton",
+    children: [
+      { name: "John Barton" },
+      { name: "Margaret Barton" },
+    ],
+  },
+  "Ethel Jean McMurtrie": {
+    name: "Ethel Jean McMurtrie (née Telfer)",
+    birth: 1916,
+    death: 1999,
+    hasProfile: false,
+    spouse: "Mr McMurtrie",
+    children: [
+      { name: "Ian McMurtrie" },
+      { name: "Diana McMurtrie" },
+    ],
+  },
+  "Gladys Merle Pedler": {
+    name: "Gladys Merle Pedler (née Telfer)",
+    birth: 1918,
+    death: 2005,
+    hasProfile: false,
+    spouse: "Mr Pedler",
+    children: [
+      { name: "Peter Pedler" },
+      { name: "Anne Pedler" },
+    ],
+  },
+  "Doris Elma Rowe": {
+    name: "Doris Elma Rowe (née Telfer)",
+    birth: 1922,
+    death: 2010,
+    hasProfile: false,
+    spouse: "Mr Rowe",
+    children: [
+      { name: "Michael Rowe" },
+      { name: "Jennifer Rowe" },
+    ],
+  },
+
+  // Youngest daughter — never married, kept Telfer surname
+  "Ruth Telfer": { name: "Ruth Telfer", birth: 1930, hasProfile: true },
 };
 
 function getAllChildren(person: PersonData) {
   if (!person?.children) return [];
   const wikiChildren = person.children
-    .map(c => findPerson(c))
-    .filter(c => c)
+    .map((c) => findPerson(c))
+    .filter((c) => c)
     .sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
 
   const isFrancis =
@@ -46,21 +109,44 @@ function getAllChildren(person: PersonData) {
     person.display_name === "Francis Charles Telfer";
 
   if (isFrancis) {
-    const knownNames = new Set(wikiChildren.map(c => c.display_name));
+    const knownNames = new Set(wikiChildren.map((c) => c.display_name));
     const placeholderChildren = Object.values(KNOWN_CHILDREN)
-      .filter(kc => !knownNames.has(kc.name) && !kc.hasProfile)
-      .map(kc => ({
+      .filter((kc) => !knownNames.has(kc.name) && !kc.hasProfile)
+      .map((kc) => {
+      const grandchildren = kc.children
+        ? kc.children.map((gc) => ({
+            display_name: gc.name,
+            birth_year: gc.birth,
+            death_year: gc.death,
+            death_year_display: gc.death?.toString(),
+            is_living: !gc.death,
+            last_name: kc.name.includes("(née Telfer)")
+              ? kc.name.split("(")[1]?.split(")")[0]?.replace("née ", "") || "Unknown"
+              : "Telfer",
+            slug: gc.name.toLowerCase().replace(/\s+/g, "-"),
+            children: undefined,
+            spouses: undefined,
+            id: `placeholder:${kc.name}::${gc.name}`,
+          }))
+        : undefined;
+      return {
         display_name: kc.name,
         birth_year: kc.birth,
         death_year: kc.death,
         death_year_display: kc.death?.toString(),
         is_living: !kc.death,
-        last_name: "Telfer",
-        slug: kc.name.toLowerCase().replace(/\s+/g, "-"),
-        children: undefined,
-        spouses: undefined,
+        last_name: kc.name.includes("(née Telfer)") ? "Fatchen" : "Telfer",
+        slug: kc.name.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, ""),
+        children: grandchildren,
+        spouses: kc.spouse ? [{ display_name: kc.spouse, id: `placeholder:${kc.name}::spouse` }] : undefined,
         id: `placeholder:${kc.name}`,
-      }));
+        _placeholderMeta: {
+          isMarriedDaughter: kc.name.includes("(née Telfer)"),
+          spouse: kc.spouse,
+          grandchildren: kc.children,
+        },
+      };
+      });
     return [...wikiChildren, ...placeholderChildren].sort(
       (a, b) => (a.birth_year || 9999) - (b.birth_year || 9999)
     );
@@ -75,6 +161,11 @@ function getSpouse(person: PersonData) {
 
 function shouldRecurseSurname(person: PersonData) {
   return person.last_name?.toLowerCase() === "telfer";
+}
+
+// Check if a person is a married daughter (placeholder with _placeholderMeta)
+function isMarriedDaughter(person: PersonData) {
+  return (person as any)._placeholderMeta?.isMarriedDaughter === true;
 }
 
 // Render surname tree with click handlers for detail panel
@@ -107,7 +198,7 @@ function renderSurnameTree(person: PersonData, depth = 0, seen = new Set<string>
 
   const isSelected = selectedId && (person.id === selectedId || person.slug === selectedId || person.display_name === selectedId);
   const selectedClass = isSelected ? " selected" : "";
-  const personIdAttr = `data-person-id="${person.id}" data-person-slug="${person.slug}" data-person-name="${person.display_name.replace(/"/g, '&quot;')}"`;
+  const personIdAttr = `data-person-id="${person.id}" data-person-slug="${person.slug}" data-person-name="${person.display_name.replace(/"/g, "&quot;")}"`;
 
   let html = `
 ${indent}<details class="tree-node${selectedClass}" ${depth === 0 ? "open" : ""}>
@@ -133,15 +224,47 @@ ${indent}  <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">`;
       : "";
     const childSurnameLabel = ` <span class="text-xs text-[var(--color-muted)]">[${child.last_name}]</span>`;
     const childIsSelected = selectedId && (child.id === selectedId || child.slug === selectedId || child.display_name === selectedId);
-    const childIdAttr = `data-person-id="${child.id}" data-person-slug="${child.slug}" data-person-name="${child.display_name.replace(/"/g, '&quot;')}"`;
+    const childIdAttr = `data-person-id="${child.id}" data-person-slug="${child.slug}" data-person-name="${child.display_name.replace(/"/g, "&quot;")}"`;
 
     html += `
-${indent}    <div class="tree-leaf" style="margin-top: 0.25rem;">
-${indent}      <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth + 1)}├─</span>
-${indent}      <strong class="truncate">${child.display_name}</strong>
-${indent}      <span class="text-xs text-[var(--color-muted)] shrink-0">(${childLifespan})</span>${childLivingBadge}${childSpouseName}${childSurnameLabel}
-${indent}      <span class="text-xs text-[var(--color-muted)] ml-8">→ line ends (married name)</span>
-${indent}    </div>`;
+${indent}    <details class="tree-leaf${childIsSelected ? " selected" : ""}" open>
+${indent}      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded" tabindex="0" ${childIdAttr}>
+${indent}        <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth + 1)}├─</span>
+${indent}        <strong class="truncate">${child.display_name}</strong>
+${indent}        <span class="text-xs text-[var(--color-muted)] shrink-0">(${childLifespan})</span>${childLivingBadge}${childSpouseName}${childSurnameLabel}
+${indent}      </summary>
+${indent}      <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">`;
+
+    // If this is a married daughter (placeholder with grandchildren), show her children as final leaf level
+    if (isMarriedDaughter(child) && child.children) {
+      for (const grandchild of child.children) {
+        const gcLifespan = `${grandchild.birth_year || "?"}–${grandchild.death_year ?? (grandchild.is_living ? "living" : "?")}`;
+        const gcLivingBadge = grandchild.is_living
+          ? ' <span class="badge badge-living text-xs">living</span>'
+          : "";
+        const gcSurnameLabel = ` <span class="text-xs text-[var(--color-muted)]">[${grandchild.last_name}]</span>`;
+        const gcIdAttr = `data-person-id="${grandchild.id}" data-person-slug="${grandchild.slug}" data-person-name="${grandchild.display_name.replace(/"/g, "&quot;")}"`;
+
+        html += `
+${indent}        <div class="tree-leaf" style="margin-top: 0.25rem;">
+${indent}          <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth + 2)}├─</span>
+${indent}          <strong class="truncate">${grandchild.display_name}</strong>
+${indent}          <span class="text-xs text-[var(--color-muted)] shrink-0">(${gcLifespan})</span>${gcLivingBadge}${gcSurnameLabel}
+${indent}          <span class="text-xs text-[var(--color-muted)] ml-8">→ line ends</span>
+${indent}        </div>`;
+      }
+    } else {
+      // Regular non-Telfer child (not a married daughter placeholder) — just show "line ends"
+      html += `
+${indent}        <div class="tree-leaf" style="margin-top: 0.25rem;">
+${indent}          <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth + 1)}├─</span>
+${indent}          <span class="text-xs text-[var(--color-muted)] italic">→ line ends (no further data)</span>
+${indent}        </div>`;
+    }
+
+    html += `
+${indent}      </div>
+${indent}    </details>`;
   }
 
   html += `

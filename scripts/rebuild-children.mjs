@@ -47,9 +47,17 @@ const correctParents = new Map([
   ['Douglas Telfer (1887–1956)', 'John Telfer (1847–1929)'],
   
   // Children of Francis Charles (1875)
-  ['Francis Telfer (1809–1895)', 'Francis Charles Telfer (1875–1954)'],  // Wrong - Francis is his grandfather
-  // Actually Francis Charles (1875) children:
-  // Need to check - but likely Murray John (1911/1924) is his child
+  ['Francis Kelson Telfer', 'Francis Charles Telfer (1875–1954)'],
+  ['Clarice May Fatchen', 'Francis Charles Telfer (1875–1954)'],
+  ['Emily Amelia Telfer', 'Francis Charles Telfer (1875–1954)'],
+  ['Ethel Jean Telfer', 'Francis Charles Telfer (1875–1954)'],
+  ['Gladys Merle Telfer', 'Francis Charles Telfer (1875–1954)'],
+  ['Doris Elma Telfer', 'Francis Charles Telfer (1875–1954)'],
+  ['Edwin Roy Telfer', 'Francis Charles Telfer (1875–1954)'],
+  ['Reginald Masters Telfer', 'Francis Charles Telfer (1875–1954)'],
+  ['Murray John Telfer', 'Francis Charles Telfer (1875–1954)'],
+  ['Murray John Telfer (1924–2009)', 'Francis Charles Telfer (1875–1954)'],
+  ['Malcolm George Telfer', 'Francis Charles Telfer (1875–1954)'],
   
   // Children of John (1840)
   ['Alan Dale Telfer (1890–1937)', 'John Telfer (1840–1913)'],
@@ -72,7 +80,7 @@ const correctParents = new Map([
   // Generation 7 - Timothy Neil Telfer (1959–) children
   ['Amy Nicole Telfer (?–living)', 'Timothy Neil Telfer (1959–living)'],
   ['Mark Kenneth Telfer (1986–living)', 'Timothy Neil Telfer (1959–living)'],
-  ['Mark Telfer (1877–1946)', 'Timothy Neil Telfer (1959–living)'],  // Wrong - Mark 1877 is grandfather's gen
+  // Mark Telfer (1877–1946) is grandfather's generation - NOT Timothy's child
   
   // Mark Kenneth (1986) children
   ['Levi Leonard Timothy Telfer (2017–living)', 'Mark Kenneth Telfer (1986–living)'],
@@ -109,7 +117,7 @@ const correctParents = new Map([
   ['Amy Nicole Telfer (?–living)', 'Penny Telfer (?–living)'],
   ['David Telfer (?–living)', 'Penny Telfer (?–living)'],
   ['Mark Kenneth Telfer (1986–living)', 'Penny Telfer (?–living)'],
-  ['Mark Telfer (1877–1946)', 'Penny Telfer (?–living)'],
+  // Mark Telfer (1877–1946) is NOT Penny's child - wrong generation
   
   // Robert Freddy Telfer children - none recorded
   // Mark Telfer (1877) children - none recorded

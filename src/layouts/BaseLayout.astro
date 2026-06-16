@@ -48,6 +48,7 @@ const currentPath = Astro.url.pathname;
           <a href={import.meta.env.BASE_URL + "search"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "search") && "active"]}>Search</a>
           <a href={import.meta.env.BASE_URL + "people/families"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/families") && "active"]}>Families</a>
           <a href={import.meta.env.BASE_URL + "people/dna"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/dna") && "active"]}>DNA</a>
+          <a href={import.meta.env.BASE_URL + "about"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "about") && "active"]}>About</a>
         </div>
 
         <!-- Dark Mode Toggle -->

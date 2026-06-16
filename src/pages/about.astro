@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { PersonData } from "../utils/extract-data.mjs";
+
+const peopleData = (await import("../data/people.public.json")).default as PersonData[];
+const people = peopleData.filter(p => p.branch === "telfer") || [];
+const totalPeople = people.length;
+const deceasedCount = people.filter(p => !p.is_living).length;
+const livingCount = people.filter(p => p.is_living).length;
+
+// Count generations
+const birthYears = people.filter(p => p.birth_year).map(p => p.birth_year as number);
+const earliest = Math.min(...birthYears) || 1731;
+const latestYear = new Date().getFullYear();
+const generations = Math.round((latestYear - earliest) / 30) + 1;
+
+// Count surnames represented
+const surnames = new Set<string>();
+people.forEach(p => {
+  const s = p.current_surname || p.birth_name || "";
+  if (s) surnames.add(s);
+});
+
+// Count families
+const families = new Set<string>();
+people.forEach(p => {
+  if (p.family_id) families.add(p.family_id);
+});
+---
+
+<BaseLayout title="About" description="What the Telfer Family Wiki is all about — a digital family tree and history archive for the Telfer family line">
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <article class="prose prose-lg dark:prose-invert max-w-none">
+      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[var(--color-heading)] mb-2">About This Website</h1>
+      <p class="text-sm text-[var(--color-text-muted)] mb-8">What it is, who it's for, and how it works</p>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">What Is the Telfer Wiki?</h2>
+        <p>
+          This is a digital family tree and history archive for the <strong>Telfer family line</strong> — starting
+          from John Telfer (born around 1731 in Castleton, Scotland) all the way down to the latest generation born today.
+        </p>
+        <p>
+          Think of it as a Wikipedia for our family. Every person has their own page with their story, photos,
+          dates, and connections to other family members. The family tree shows how everyone is related, and
+          you can click through to explore generations of history.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">What's On Here</h2>
+        <ul class="space-y-3">
+          <li>
+            <strong>🌳 Family Tree</strong> — A full, expandable tree starting from Francis Charles Telfer. Click a name to see that person's details.
+          </li>
+          <li>
+            <strong>👤 Person Pages</strong> — Every person in the tree has their own profile with birth, death, marriage, children, and notes.
+          </li>
+          <li>
+            <strong>📅 Timeline</strong> — Key dates and events in the family's history, from Scotland to South Australia to modern day.
+          </li>
+          <li>
+            <strong>🔍 Search</strong> — Find any person by name, date, or place.
+          </li>
+          <li>
+            <strong>🧬 DNA</strong> — Genetic genealogy information for family members who have tested.
+          </li>
+          <li>
+            <strong>👪 Families by Surname</strong> — Browse people grouped by their family name.
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">The Family in Numbers</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6">
+          <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 text-center">
+            <div class="text-3xl font-bold text-[var(--color-highlight)]"><%= totalPeople %></div>
+            <div class="text-sm text-[var(--color-text-muted)] mt-1">People recorded</div>
+          </div>
+          <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 text-center">
+            <div class="text-3xl font-bold text-[var(--color-highlight)]"><%= deceasedCount %></div>
+            <div class="text-sm text-[var(--color-text-muted)] mt-1">Ancestors</div>
+          </div>
+          <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 text-center">
+            <div class="text-3xl font-bold text-[var(--color-highlight)]"><%= livingCount %></div>
+            <div class="text-sm text-[var(--color-text-muted)] mt-1">Living relatives</div>
+          </div>
+          <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 text-center">
+            <div class="text-3xl font-bold text-[var(--color-highlight)]"><%= generations %></div>
+            <div class="text-sm text-[var(--color-text-muted)] mt-1">Generations</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">Who Built This?</h2>
+        <p>
+          This site was put together by <strong>Mark Telfer</strong> — one of the latest generation of the family
+          tree. It's a personal project to preserve and share the family's history with relatives near and far.
+        </p>
+        <p>
+          The data comes from years of family history research — old records, certificates, photos, family
+          stories, and online archives. It's a work in progress: new people get added, old information gets
+          corrected, and there are always more branches to explore.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">A Work in Progress</h2>
+        <p>
+          Family history is never really finished. If you notice something wrong, have information to share,
+          or want to add a family member who's not here yet — get in touch. Every contribution helps make
+          the story more complete.
+        </p>
+        <p class="text-sm text-[var(--color-text-muted)] italic mt-6">
+          Data sourced from the Telfer Family History archive. Built by Skippy the Magnificent &amp; The Librarian.
+        </p>
+      </section>
+    </article>
+  </main>
+</BaseLayout>
