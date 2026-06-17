@@ -90,6 +90,9 @@ function scrubPII(text) {
 
   result = clean.join('\n');
 
+  // Remove entire address lines from marriage cert lists (suburb info is already on cert)
+  result = result.replace(/^-\s+\*\*Address:\*\*\s*,?\s*.+\s+\d{4}\s*$/gim, '');
+
   // Remove empty markdown comment lines: <!-- ... -->
   result = result.replace(/<!--\s*.*?-->\s*\n?/g, '');
 
