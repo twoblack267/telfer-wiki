@@ -62,8 +62,8 @@ const otherSurnames = Object.entries(surnameCounts)
       &nbsp;·&nbsp; <span class="text-[var(--color-burgundy)]">{deceasedCount} deceased</span>
     </p>
     <p class="text-sm text-[var(--color-muted)] mt-1 italic">
-      The Telfer family tree including spouses, descendants by marriage, and allied families.
-      All {telferPeople.length} people are part of a single family story.
+      The Telfer family line from Scotland to Australia — direct descendants, spouses, and the families they married into.
+      All {telferPeople.length} profiles are part of a single family story.
     </p>
   </div>
 
@@ -90,9 +90,9 @@ const otherSurnames = Object.entries(surnameCounts)
   <!-- Allied families note -->
   {otherSurnames.length > 0 && (
     <div class="person-card rounded-xl p-4 mb-8">
-      <h2 class="font-serif text-lg text-[var(--color-burgundy)] mb-2">Allied Families</h2>
+      <h2 class="font-serif text-lg text-[var(--color-burgundy)] mb-2">Surnames That Married In</h2>
       <p class="text-sm text-[var(--color-ink-light)] mb-3">
-        These surnames appear within the Telfer family tree through marriage and descent:
+        These non-Telfer surnames joined the family line through marriage:
       </p>
       <div class="flex flex-wrap gap-2">
         {otherSurnames.map(([name, count]) => (

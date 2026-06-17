@@ -64,7 +64,7 @@ const recentPeople = (telferPeople || []).slice(-6).reverse();
       <p class="text-xs sm:text-sm text-[var(--color-muted)] mt-1">
         <span class="font-sans not-italic">{metaData.total_people} profiles</span>
         &nbsp;·&nbsp; covering <span class="font-sans not-italic">{minYear}–{maxYear}</span>
-        &nbsp;·&nbsp; <span class="font-sans not-italic">{metaData.total_trees} family trees</span>
+        &nbsp;·&nbsp; <span class="font-sans not-italic">{metaData.total_trees} family tree{metaData.total_trees !== 1 ? 's' : ''}</span>
       </p>
       <div class="mt-2 sm:mt-3 flex flex-col sm:flex-row gap-3 justify-center items-center">
         <a href={import.meta.env.BASE_URL + "people"} class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 bg-[var(--color-heading)] text-white rounded-lg font-serif text-base sm:text-lg no-underline hover:bg-[var(--color-heading-hover)] transition-colors text-center">
