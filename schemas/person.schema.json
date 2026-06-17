@@ -66,7 +66,7 @@
       "type": "string",
       "pattern": "^(?:(?!\\bmark'?s?\\s+(?:adopted\\s+)?(?:cousin|step))[\\s\\S])*$"
     },
-    "is_living": { "type": "boolean" },
+    "is_living": { "type": ["boolean", "null"] },
     "lifespan": { "type": "string" },
     "parents": { "type": "array", "items": { "type": "string" } },
     "children": { "type": "array", "items": { "type": "string" } },
