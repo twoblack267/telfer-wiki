@@ -282,7 +282,7 @@ ${indent}</details>`;
 // Generate the tree HTML
 const treeHtml = renderTree(root);
 
-const pageTitle = "Full Family Tree — All Generations";
+const pageTitle = "Telfer Family Tree — All Generations";
 ---
 
 <BaseLayout title={pageTitle}>
@@ -294,13 +294,13 @@ const pageTitle = "Full Family Tree — All Generations";
         <li class="mx-1">/</li>
         <li><a href="/people" class="hover:text-[var(--color-heading)]">People</a></li>
         <li class="mx-1">/</li>
-        <li class="text-[var(--color-heading)]" aria-current="page">Full Family Tree</li>
+        <li class="text-[var(--color-heading)]" aria-current="page">Telfer Family Tree</li>
       </ol>
     </nav>
 
     <header class="mb-6">
       <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-3">
-        Complete Telfer Family Tree
+        The Telfer Line — Family Tree
       </h1>
 
       <!-- What this site is about -->
@@ -313,14 +313,15 @@ const pageTitle = "Full Family Tree — All Generations";
             across the Eyre Peninsula, and down to the present day.
           </p>
           <p>
-            We trace <strong>eight generations</strong> of Telfers — shepherds and farmers, miners and
-            merchants, through wars and droughts, marriages and migrations. Every person here is part of
-            that same thread: born of John Telfer, living on through the branches.
+            This tree traces the <strong>Telfer line</strong> — every known person
+            born a Telfer or who married into the Telfer family, from John Telfer of
+            Castleton (~1715) through to the latest generation. It covers the direct
+            descendants through the Telfer name: sons and daughters, their spouses,
+            and their children.
           </p>
           <p class="text-xs text-[var(--color-muted)]">
-            This tree covers every known descendant from John Telfer + Elspeth Young through to the
-            latest generation. Click ▸ to expand a branch, ▾ to collapse it. Tap a name to focus and scroll.
-            <span class="block mt-1">Currently: <strong>{allPeople.length} people</strong> across <strong>{GENERATIONS.length} generations</strong>.</span>
+            Click ▸ to expand a branch, ▾ to collapse it. Tap a name to focus and scroll.
+            <span class="block mt-1">Currently: <strong>{allPeople.length} people</strong> across <strong>{GENERATIONS.length} generations</strong> — all connected through the Telfer name.</span>
           </p>
         </div>
       </div>
