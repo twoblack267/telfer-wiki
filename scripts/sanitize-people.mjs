@@ -34,38 +34,75 @@ function scrubPII(text) {
 
   let result = text;
 
+  // ── Strip actual PII values (replace with nothing, not a label) ──────────
+
   // Emails — anything@anything.anything
-  result = result.replace(/[\w.+-]+@[\w-]+\.[\w.-]+/gi, '[email redacted]');
+  result = result.replace(/[\w.+-]+@[\w-]+\.[\w.-]+/gi, '');
 
   // Australian mobile: 0412 345 678, +61 412 345 678, etc.
   result = result.replace(
     /(?:\+?61[\s\-.]?)?0?4[\s\-.]?\d{2}[\s\-.]?\d{3}[\s\-.]?\d{3}\b/g,
-    '[phone redacted]'
+    ''
   );
 
   // Australian landline: 08 1234 5678, +61 8 1234 5678, etc.
   result = result.replace(
     /(?:\+?61[\s\-.]?)?0[23578][\s\-.]?\d{4}[\s\-.]?\d{4}\b/g,
-    '[phone redacted]'
+    ''
   );
 
   // Medicare numbers (4+5+1 digit, starting 2-6)
-  result = result.replace(/[2-6]\d{3}\s?\d{5}\s?\d\b/g, '[Medicare redacted]');
+  result = result.replace(/[2-6]\d{3}\s?\d{5}\s?\d\b/g, '');
 
   // PO Box addresses
   result = result.replace(
     /(?:PO\s*Box|Post\s*Office\s*Box)\s+\d+/gi,
-    '[PO Box redacted]'
+    ''
   );
 
   // Street-level addresses: number + street name + street type suffix
-  // e.g. "123 Main Street", "42 Acacia Avenue"
   result = result.replace(
     /\b\d{1,4}\s+[A-Z][a-zA-Z']+(?:\s+[A-Z][a-zA-Z']+)*\s+(?:St(?:reet)?\.?|Rd(?:oad)?\.?|Ave(?:nue)?\.?|Ln(?:ane)?\.?|Dr(?:ive)?\.?|Ct(?:ourt)?\.?|Pl(?:ace)?\.?|Cres(?:cent)?\.?|Hwy(?:ay)?\.?|Pde(?:ade)?\.?|Tce(?:race)?\.?|Close|Way|Circuit|Cir(?:cuit)?\.?)\b/g,
-    '[address redacted]'
+    ''
   );
 
-  return result;
+  // Also catch any [X redacted] leftovers from manual entries
+  result = result.replace(/\[(?:email|phone|address|Medicare|PO Box)\s*redacted\]/gi, '');
+  // Catch [redacted for privacy] and similar
+  result = result.replace(/\[redacted\s*(?:for\s+)?(?:privacy|security|protection)\]/gi, '');
+
+  // ── Line-by-line cleanup ──────────────────────────────────────────────────
+
+  const LABEL_RE = /^\s*(?:-\s+)?\*\*(?:Email|Phone|Mobile|Telephone|Fax|Contact|Address|Residential\s+Address|Postal\s+Address|Street\s+Address):\*\*/i;
+
+  let lines = result.split('\n');
+  let clean = [];
+
+  for (const line of lines) {
+    // Check if line starts with a known PII label
+    if (LABEL_RE.test(line)) {
+      // Strip the label part, backticks, parentheses, commas — if nothing meaningful remains, skip it
+      let rest = line.replace(LABEL_RE, '').replace(/[`()\s,;:]+/g, '').trim();
+      if (rest === '') continue; // line was just a label with empty values
+    }
+    clean.push(line);
+  }
+
+  result = clean.join('\n');
+
+  // Remove empty markdown comment lines: <!-- ... -->
+  result = result.replace(/<!--\s*.*?-->\s*\n?/g, '');
+
+  // Remove lines that are now just whitespace
+  result = result.replace(/^[ \t]+$/gm, '');
+
+  // Collapse 3+ consecutive newlines to 2
+  result = result.replace(/\n{3,}/g, '\n\n');
+
+  // Trim trailing whitespace per line
+  result = result.replace(/[ \t]+\n/g, '\n');
+
+  return result.trim();
 }
 
 // ─── Public / Private Field Lists ────────────────────────────────────────────
