@@ -27,6 +27,8 @@ jobs:
         run: npm ci
       - name: Build site
         run: npx astro build
+      - name: Add .nojekyll for GitHub Pages
+        run: touch dist/.nojekyll
       - name: Deploy to gh-pages branch
         run: |
           cd dist/
