@@ -7,3 +7,6 @@ public/audit-history/
 public/research/
 scripts/redirect-log.json
 src/data/people.public.json
+
+apply-prune.py
+*.full-backup
