@@ -53,25 +53,42 @@ const recentPeople = (telferPeople || []).slice(-6).reverse();
 <BaseLayout title="Home">
   <div class="space-y-3 sm:space-y-4">
     <!-- Hero -->
-    <section class="text-center py-4 sm:py-5 border-b-2 border-[var(--color-border)]">
+    <section class="text-center py-4 sm:py-6 border-b-2 border-[var(--color-border)]">
       <div class="text-4xl sm:text-5xl mb-2">🌳</div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[var(--color-heading)] mb-2">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[var(--color-heading)] mb-3">
         Telfer Wiki
       </h1>
       <p class="text-base sm:text-lg text-[var(--color-ink-light)] font-serif italic max-w-2xl mx-auto px-2">
-        A digital genealogy for the Telfer family line — from the Scottish lowlands to the South Australian plains
+        A digital archive for the descendants of John Telfer of Castleton — from the Scottish lowlands to the South Australian plains
       </p>
-      <p class="text-xs sm:text-sm text-[var(--color-muted)] mt-1">
+
+      <!-- What we are -->
+      <div class="max-w-xl mx-auto mt-4 px-2 text-left">
+        <p class="text-sm sm:text-base text-[var(--color-ink-light)] font-serif italic leading-relaxed">
+          This is a living family history. <strong>Eight generations</strong> of Telfers — shepherds and farmers,
+          miners and merchants — traced from the hills of Roxburghshire, Scotland (~1715) through the copper
+          boom of South Australia, across the Eyre Peninsula, and into the present day.
+        </p>
+        <p class="text-sm sm:text-base text-[var(--color-ink-light)] font-serif italic leading-relaxed mt-2">
+          Every person here is blood of the same root. Every page tells a piece of the story.
+          This is <strong>our</strong> family's record — built for the living, remembering the gone.
+        </p>
+      </div>
+
+      <p class="text-xs sm:text-sm text-[var(--color-muted)] mt-3">
         <span class="font-sans not-italic">{metaData.total_people} profiles</span>
         &nbsp;·&nbsp; covering <span class="font-sans not-italic">{minYear}–{maxYear}</span>
         &nbsp;·&nbsp; <span class="font-sans not-italic">{metaData.total_trees} family tree{metaData.total_trees !== 1 ? 's' : ''}</span>
       </p>
-      <div class="mt-2 sm:mt-3 flex flex-col sm:flex-row gap-3 justify-center items-center">
+      <div class="mt-3 sm:mt-4 flex flex-col sm:flex-row gap-3 justify-center items-center">
         <a href={import.meta.env.BASE_URL + "people"} class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 bg-[var(--color-heading)] text-white rounded-lg font-serif text-base sm:text-lg no-underline hover:bg-[var(--color-heading-hover)] transition-colors text-center">
           Browse the People
         </a>
         <a href={import.meta.env.BASE_URL + "timeline"} class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 border-2 border-[var(--color-border)] text-[var(--color-ink)] rounded-lg font-serif text-base sm:text-lg no-underline hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors text-center">
           View the Timeline
+        </a>
+        <a href={import.meta.env.BASE_URL + "people/full-tree"} class="inline-block w-full sm:w-auto px-5 sm:px-6 py-3 border-2 border-[var(--color-border)] text-[var(--color-ink)] rounded-lg font-serif text-base sm:text-lg no-underline hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors text-center">
+          Explore the Tree
         </a>
       </div>
     </section>

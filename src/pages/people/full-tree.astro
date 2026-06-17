@@ -299,16 +299,51 @@ const pageTitle = "Full Family Tree — All Generations";
     </nav>
 
     <header class="mb-6">
-      <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-2">
+      <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-3">
         Complete Telfer Family Tree
       </h1>
-      <p class="text-[var(--color-muted)]">
-        Every descendant from <strong>John Telfer of Castleton (~1715–1735?)</strong> + <strong>Elspeth Young</strong> —
-        Scottish roots to Australian branches. Click ▸ to expand, ▾ to collapse.
-      </p>
-      <p class="text-xs text-[var(--color-muted)] mt-1">
-        Phone-friendly: only one branch opens at a time. Tap a name to focus and auto-scroll.
-      </p>
+
+      <!-- What this site is about -->
+      <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 sm:p-5 mb-4">
+        <div class="font-serif italic text-sm sm:text-base text-[var(--color-ink-light)] leading-relaxed space-y-2">
+          <p>
+            This is the <strong>Telfer Family Wiki</strong> — a digital archive for the descendants of
+            <strong>John Telfer of Castleton</strong> (~1715, Scottish Lowlands). What started in the hills
+            of Roxburghshire became a story that crossed oceans: from Scotland to the copper mines of South Australia,
+            across the Eyre Peninsula, and down to the present day.
+          </p>
+          <p>
+            We trace <strong>eight generations</strong> of Telfers — shepherds and farmers, miners and
+            merchants, through wars and droughts, marriages and migrations. Every person here is part of
+            that same thread: born of John Telfer, living on through the branches.
+          </p>
+          <p class="text-xs text-[var(--color-muted)]">
+            This tree covers every known descendant from John Telfer + Elspeth Young through to the
+            latest generation. Click ▸ to expand a branch, ▾ to collapse it. Tap a name to focus and scroll.
+            <span class="block mt-1">Currently: <strong>{allPeople.length} people</strong> across <strong>{GENERATIONS.length} generations</strong>.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick stats row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+        <div class="text-center p-2 rounded-lg bg-[var(--color-card-bg)] border border-[var(--color-border)]">
+          <div class="text-lg font-bold text-[var(--color-heading)]">{allPeople.length}</div>
+          <div class="text-xs text-[var(--color-muted)]">People</div>
+        </div>
+        <div class="text-center p-2 rounded-lg bg-[var(--color-card-bg)] border border-[var(--color-border)]">
+          <div class="text-lg font-bold text-[var(--color-heading)]">{GENERATIONS.length}</div>
+          <div class="text-xs text-[var(--color-muted)]">Generations</div>
+        </div>
+        <div class="text-center p-2 rounded-lg bg-[var(--color-card-bg)] border border-[var(--color-border)]">
+          <div class="text-lg font-bold text-[var(--color-heading)]">{allPeople.filter(p => p.birth_year).length > 0 ? Math.max(...allPeople.filter(p => p.birth_year).map(p => p.birth_year as number)) - Math.min(...allPeople.filter(p => p.birth_year).map(p => p.birth_year as number)) + " yrs" : "~300 yrs"}</div>
+          <div class="text-xs text-[var(--color-muted)]">Span</div>
+        </div>
+        <div class="text-center p-2 rounded-lg bg-[var(--color-card-bg)] border border-[var(--color-border)]">
+          <div class="text-lg font-bold text-[var(--color-heading)]">{allPeople.filter(p => p.birth_year && p.birth_year >= 1920).length}</div>
+          <div class="text-xs text-[var(--color-muted)]">Modern era</div>
+        </div>
+      </div>
     </header>
 
     <!-- Generation quick-jump -->

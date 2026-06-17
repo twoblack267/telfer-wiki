@@ -14,6 +14,16 @@ const selectedSlug = undefined; // Will be set via client-side JS from hash
 ---
 
 <BaseLayout title="Telfer Wiki — Family Tree &amp; Explorer">
+  <!-- Page intro -->
+  <div class="px-4 lg:px-6 pt-3 sm:pt-4 pb-0 max-w-full">
+    <h1 class="font-serif text-xl sm:text-2xl text-[var(--color-heading)] mb-1">
+      Family Tree Explorer <span class="text-sm font-normal text-[var(--color-muted)] font-sans">— interactive tree view</span>
+    </h1>
+    <p class="text-xs sm:text-sm text-[var(--color-ink-light)] leading-relaxed max-w-2xl">
+      Browse the Telfer family tree starting from <strong>Francis Charles Telfer (1875–1954)</strong>.
+      Click a name to see their details and descendants. Search anyone in the sidebar.
+    </p>
+  </div>
   <div class="unified-layout grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4 lg:gap-6 p-4 lg:p-6 max-w-full">
 
     <!-- Left Sidebar: A-Z Index + Search -->
