@@ -3250,7 +3250,7 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "sheryle-telfer-1961"
+      "sheryle-telfer"
     ],
     "images": [
       {
@@ -3343,7 +3343,7 @@
   },
   {
     "id": "Sheryle Telfer",
-    "slug": "sheryle-telfer-1961",
+    "slug": "sheryle-telfer",
     "first_name": "Sheryle",
     "middle_name": "",
     "last_name": "Telfer",
@@ -3357,7 +3357,7 @@
     "generation": 6,
     "branch": "telfer",
     "is_living": true,
-    "body_markdown": "",
+    "body_markdown": "# Sheryle Telfer\n\n**Role:** Stepmother\n**Born:** 1961\n**Residence:** Kilcoy, Queensland\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse (1st)** | Paul Ivory (1955–1996) |\n| **Spouse (2nd)** | [[Timothy Neil Telfer]] (m. 28 Aug 1999) |\n| **Children with Paul** | Aaron Ivory, Jared Ivory, Lauren Ivory, Joel Ivory |\n| **Stepchildren (with Tim)** | [[Mark Kenneth Telfer]], [[Amy Nicole Telfer]] |\n\n---\n\n## Life Summary\n\nSheryle Telfer (née Ivory) — stepmother. First married to Paul Ivory and had four children together. Married Timothy Neil Telfer on 28 August 1999 at Pine Rivers Baptist Church, Lawnton, becoming stepmother to Mark and Amy.",
     "roles": [],
     "tags": [
       "bio",
@@ -3539,6 +3539,40 @@
     "person_photo": ""
   },
   {
+    "id": "Susan Shirley Lawrie",
+    "slug": "susan-lawrie",
+    "first_name": "Susan",
+    "middle_name": "Shirley",
+    "last_name": "Lawrie",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "Susan Shirley Lawrie",
+    "title": "Susan Shirley Lawrie — Family & Biography",
+    "lifespan": "? – living",
+    "generation": 6,
+    "branch": "telfer",
+    "is_living": true,
+    "body_markdown": "# Susan Shirley Lawrie\n\n**Role:** Aunt (Tim's sister)\n**Born:** ?\n**Maiden Name:** Telfer\n**Married Name:** Lawrie\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Grantley Keith Telfer]], [[Kathryn Mavis Telfer (1961–1965)]], [[Timothy Neil Telfer]] |\n\n---\n\n*Profile created from family records. Details to be confirmed.*",
+    "roles": [
+      "Aunt"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "timothy-telfer"
+    ],
+    "images": [],
+    "person_photo": ""
+  },
+  {
     "id": "Joel Matthew Ivory",
     "slug": "joel-ivory-1986",
     "first_name": "Joel",
@@ -3678,7 +3712,7 @@
       "other"
     ],
     "parents": [
-      "sheryle-telfer-1961"
+      "sheryle-telfer"
     ],
     "children": [],
     "spouses": [],
@@ -3688,7 +3722,7 @@
   },
   {
     "id": "Amy Nicole Telfer",
-    "slug": "amy-nicole-telfer",
+    "slug": "amy-telfer",
     "first_name": "Amy",
     "middle_name": "Nicole",
     "last_name": "Telfer",
@@ -3702,7 +3736,7 @@
     "generation": 7,
     "branch": "telfer",
     "is_living": null,
-    "body_markdown": "---\ndate: 2026-05-18\nfirst_name: Amy\nlast_name: Telfer\nmiddle_name: Nicole\nrelationships: \"Self: Amy Nicole Telfer | Mother: Penny Telfer | Father: Timothy\n  Neil Telfer | Siblings: Mark Telfer\"\ntags:\n  - bio\n  - family\n  - person\ntitle: Amy Nicole Telfer — Family & Biography\nchildren: []\n---\n\n# Amy Nicole Telfer\n**Facebook:** [Amy Telfer](https://www.facebook.com/amy.telfer.54)\n\n**Role:** Sister\n**Residence:** Redcliffe / Brisbane, Queensland\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] |\n\n---\n\n## Notes\n\nStepmother: [[Sheryle Telfer (1961–?)]]\n- Profile created from Facebook records (May 2026)",
+    "body_markdown": "# Amy Nicole Telfer\n\n**Facebook:** [Amy Telfer](https://www.facebook.com/amy.telfer.54)\n\n**Role:** Sister\n**Residence:** Redcliffe / Brisbane, Queensland\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] |\n\n---\n\n## Notes\n\nStepmother: [[Sheryle Telfer (1961–?)]]\n- Profile created from Facebook records (May 2026)",
     "roles": [],
     "tags": [
       "bio",
@@ -3714,7 +3748,9 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "amy-telfer"
+    ],
     "images": [],
     "person_photo": ""
   },
@@ -3741,7 +3777,7 @@
       "other"
     ],
     "parents": [
-      "sheryle-telfer-1961"
+      "sheryle-telfer"
     ],
     "children": [],
     "spouses": [],
@@ -3772,7 +3808,7 @@
       "other"
     ],
     "parents": [
-      "sheryle-telfer-1961"
+      "sheryle-telfer"
     ],
     "children": [],
     "spouses": [],
@@ -3835,7 +3871,7 @@
       "other"
     ],
     "parents": [
-      "sheryle-telfer-1961"
+      "sheryle-telfer"
     ],
     "children": [],
     "spouses": [],
