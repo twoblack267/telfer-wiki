@@ -1265,17 +1265,11 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "adam-1842-1925",
-      "agnes-1848-",
       "beattie-family",
       "elizabeth-beattie-telfer-1832-1896",
       "isabella-1837-",
       "isabella-telfer",
-      "james-1829-1913",
-      "john-1840-1913",
-      "margaret-1829-",
-      "margaret-telfer",
-      "robert-1835-1907"
+      "margaret-telfer"
     ],
     "children": [
       "Adam Francis Telfer",
@@ -1286,7 +1280,6 @@
     ],
     "spouses": [
       "james-telfer",
-      "james-telfer-1796-1863",
       "james-telfer-b-1832-scotland"
     ],
     "siblings": [],
@@ -1411,7 +1404,6 @@
     ],
     "siblings": [
       "james-telfer",
-      "james-telfer-1829-1913",
       "john-telfer-1840-1913",
       "robert-b-telfer",
       "robert-b-telfer-1834-1907",
@@ -3263,7 +3255,6 @@
       "james-telfer",
       "jean",
       "margaret",
-      "margaret-1829",
       "robert",
       "robert-telfer-18351907",
       "robert-telfer-born-ca-1869"
@@ -5676,8 +5667,7 @@
       "john",
       "john-telfer-1840-1913",
       "john-telfer-18401913",
-      "margaret",
-      "margaret-1829"
+      "margaret"
     ],
     "related_trees": [
       "telfer",
@@ -6494,57 +6484,7 @@
     "haplogroup_mt": null,
     "haplogroup_y": null
   },
-  {
-    "id": "Adam",
-    "slug": "adam-1842-1925",
-    "first_name": "Adam",
-    "middle_name": null,
-    "last_name": "",
-    "birth_year": 1842,
-    "death_year": 1925,
-    "birth_year_display": "1842",
-    "death_year_display": "1925",
-    "display_name": "Adam (1842–1925)",
-    "title": "Adam — Family & Biography",
-    "tags": [
-      "person",
-      "other"
-    ],
-    "relationships": [
-      {
-        "type": "Children",
-        "names": [
-          "Elizabeth Beattie 18021891"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: Adam\nlast_name: ''\ntags:\n- person\n- other\nbirth_year: 1842\ndeath_year: 1925\n---\n\n# Adam (1842-1925)\n\n**Lifespan:** 1842–1925\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Adam (1842-1925)\n\n**Lifespan:** 1842–1925\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1842 – 1925",
-    "generation": 5,
-    "branch": "other",
-    "confidence": "medium",
-    "parents": [],
-    "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
-      "[[James Telfer"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "other",
-      "telfer-main"
-    ],
-    "vault_file": "adam-1842-1925.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
+
   {
     "id": "Adam Telfer",
     "slug": "adam-telfer-1799",
@@ -6693,56 +6633,7 @@
     "haplogroup_mt": null,
     "haplogroup_y": null
   },
-  {
-    "id": "Agnes",
-    "slug": "agnes-1848-",
-    "first_name": "Agnes",
-    "middle_name": null,
-    "last_name": "",
-    "birth_year": 1848,
-    "death_year": null,
-    "birth_year_display": "1848",
-    "death_year_display": "?",
-    "display_name": "Agnes (1848–?)",
-    "title": "Agnes — Family & Biography",
-    "tags": [
-      "person",
-      "other"
-    ],
-    "relationships": [
-      {
-        "type": "Children",
-        "names": [
-          "Elizabeth Beattie 18021891"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: Agnes\nlast_name: ''\ntags:\n- person\n- other\nbirth_year: 1848\n---\n\n# Agnes (~1848-?)\n\n**Lifespan:** 1848–?\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Agnes (~1848-?)\n\n**Lifespan:** 1848–?\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1848 – ?",
-    "generation": 5,
-    "branch": "other",
-    "confidence": "medium",
-    "parents": [],
-    "children": [
-      "Elizabeth Beattie",
-      "[[James Telfer"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "other",
-      "telfer-main"
-    ],
-    "vault_file": "agnes-1848-.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
+
   {
     "id": "Agnes",
     "slug": "agnes",
@@ -8485,193 +8376,6 @@
     "haplogroup_y": null
   },
   {
-    "id": "James",
-    "slug": "james-1829-1913",
-    "first_name": "James",
-    "middle_name": null,
-    "last_name": "",
-    "birth_year": 1829,
-    "death_year": 1913,
-    "birth_year_display": "1829",
-    "death_year_display": "1913",
-    "display_name": "James (1829–1913)",
-    "title": "James — Family & Biography",
-    "tags": [
-      "person",
-      "other"
-    ],
-    "relationships": [
-      {
-        "type": "Children",
-        "names": [
-          "Elizabeth Beattie 18021891"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: James\nlast_name: ''\ntags:\n- person\n- other\nbirth_year: 1829\ndeath_year: 1913\n---\n\n# James (1829-1913)\n\n**Lifespan:** 1829–1913\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# James (1829-1913)\n\n**Lifespan:** 1829–1913\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1829 – 1913",
-    "generation": 4,
-    "branch": "other",
-    "confidence": "medium",
-    "parents": [],
-    "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
-      "[[James Telfer",
-      "John Telfer (adoptive)",
-      "Robert Telfer",
-      "Sophia Baker",
-      "William John Baker"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "other",
-      "telfer-main"
-    ],
-    "vault_file": "james-1829-1913.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
-  {
-    "id": "James Telfer",
-    "slug": "james-telfer-1796-1863",
-    "first_name": "James",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1796,
-    "death_year": 1863,
-    "birth_year_display": "1796",
-    "death_year_display": "1863",
-    "display_name": "James Telfer (1796–1863)",
-    "title": "James Telfer — Family & Biography",
-    "tags": [
-      "person",
-      "telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Father",
-        "names": [
-          "Adam Francis Telfer 18421925",
-          "Elizabeth Beattie Telfer 18321896",
-          "James Telfer 18291913",
-          "John Telfer 18401913",
-          "Robert Telfer 18351907"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "Elizabeth Beattie 18021891"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: James\nlast_name: Telfer\ntags:\n- person\n- telfer\nbirth_year: 1796\ndeath_year: 1863\n---\n\n# James Telfer (1796-1863)\n\n**Lifespan:** 1796–1863\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Father | Adam Francis Telfer 18421925 |\n| Father | Elizabeth Beattie Telfer 18321896 |\n| Father | James Telfer 18291913 |\n| Father | John Telfer 18401913 |\n| Father | Robert Telfer 18351907 |\n| Spouse | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# James Telfer (1796-1863)\n\n**Lifespan:** 1796–1863\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Father | Adam Francis Telfer 18421925 |\n| Father | Elizabeth Beattie Telfer 18321896 |\n| Father | James Telfer 18291913 |\n| Father | John Telfer 18401913 |\n| Father | Robert Telfer 18351907 |\n| Spouse | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1796 – 1863",
-    "generation": 4,
-    "branch": "telfer",
-    "confidence": "medium",
-    "parents": [
-      "adam-francis-telfer-18421925",
-      "elizabeth-beattie-telfer-18321896",
-      "james-telfer-18291913",
-      "john-telfer-18401913",
-      "robert-telfer-18351907"
-    ],
-    "children": [
-      "Adam Francis Telfer",
-      "Elizabeth Beattie Telfer",
-      "Francis Telfer (3rd wife)",
-      "[[James Telfer",
-      "John Telfer (adoptive)",
-      "Robert Telfer",
-      "Vida Templer"
-    ],
-    "spouses": [
-      "elizabeth-beattie-18021891"
-    ],
-    "siblings": [
-      "elizabeth-beattie-1802-1891"
-    ],
-    "related_trees": [
-      "telfer",
-      "telfer-main"
-    ],
-    "vault_file": "james-telfer-1796-1863.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
-  {
-    "id": "James Telfer",
-    "slug": "james-telfer-1829-1913",
-    "first_name": "James",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1829,
-    "death_year": 1913,
-    "birth_year_display": "1829",
-    "death_year_display": "1913",
-    "display_name": "James Telfer (1829–1913)",
-    "title": "James Telfer — Family & Biography",
-    "tags": [
-      "person",
-      "telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Siblings",
-        "names": [
-          "Elizabeth Beattie Telfer 18321896"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: James\nlast_name: Telfer\ntags:\n- person\n- telfer\nbirth_year: 1829\ndeath_year: 1913\n---\n\n# James Telfer (1829-1913)\n\n**Lifespan:** 1829–1913\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Siblings | Elizabeth Beattie Telfer 18321896 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# James Telfer (1829-1913)\n\n**Lifespan:** 1829–1913\n\n**Branch:** Telfer\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Siblings | Elizabeth Beattie Telfer 18321896 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1829 – 1913",
-    "generation": 4,
-    "branch": "telfer",
-    "confidence": "medium",
-    "parents": [],
-    "children": [
-      "Adam Francis Telfer",
-      "Elizabeth Beattie Telfer",
-      "Francis Telfer (3rd wife)",
-      "[[James Telfer",
-      "John Telfer (adoptive)",
-      "Robert Telfer",
-      "Vida Templer"
-    ],
-    "spouses": [],
-    "siblings": [
-      "elizabeth-beattie-telfer-18321896"
-    ],
-    "related_trees": [
-      "telfer",
-      "telfer-main"
-    ],
-    "vault_file": "james-telfer-1829-1913.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
-  {
     "id": "James Telfer (1866–1946), Elizabeth Telfer Clarke, Susan Telfer Agnew, Martha Telfer Cameron",
     "slug": "james-cameron",
     "first_name": "James",
@@ -9079,58 +8783,6 @@
       "telfer-tree"
     ],
     "vault_file": "joel-ivory.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
-  {
-    "id": "John",
-    "slug": "john-1840-1913",
-    "first_name": "John",
-    "middle_name": null,
-    "last_name": "",
-    "birth_year": 1840,
-    "death_year": 1913,
-    "birth_year_display": "1840",
-    "death_year_display": "1913",
-    "display_name": "John (1840–1913)",
-    "title": "John — Family & Biography",
-    "tags": [
-      "person",
-      "other"
-    ],
-    "relationships": [
-      {
-        "type": "Children",
-        "names": [
-          "Elizabeth Beattie 18021891"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: John\nlast_name: ''\ntags:\n- person\n- other\nbirth_year: 1840\ndeath_year: 1913\n---\n\n# John (1840-1913)\n\n**Lifespan:** 1840–1913\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# John (1840-1913)\n\n**Lifespan:** 1840–1913\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1840 – 1913",
-    "generation": 5,
-    "branch": "other",
-    "confidence": "medium",
-    "parents": [],
-    "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
-      "[[James Telfer",
-      "Robert Telfer"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "other",
-      "telfer-main"
-    ],
-    "vault_file": "john-1840-1913.md",
     "images": [],
     "person_photo": null,
     "dna_matches": [],
@@ -9598,116 +9250,6 @@
   },
   {
     "id": "Margaret",
-    "slug": "margaret-1829-",
-    "first_name": "Margaret",
-    "middle_name": null,
-    "last_name": "",
-    "birth_year": 1829,
-    "death_year": null,
-    "birth_year_display": "1829",
-    "death_year_display": "?",
-    "display_name": "Margaret (1829–?)",
-    "title": "Margaret — Family & Biography",
-    "tags": [
-      "person",
-      "other"
-    ],
-    "relationships": [
-      {
-        "type": "Children",
-        "names": [
-          "Elizabeth Beattie 18021891"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: Margaret\nlast_name: ''\ntags:\n- person\n- other\nbirth_year: 1829\n---\n\n# Margaret (~1829-?)\n\n**Lifespan:** 1829–?\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Margaret (~1829-?)\n\n**Lifespan:** 1829–?\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1829 – ?",
-    "generation": 4,
-    "branch": "other",
-    "confidence": "medium",
-    "parents": [],
-    "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Beattie Telfer",
-      "Elizabeth Hutton Telfer",
-      "[[James Telfer",
-      "John Charles Dillon"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "other",
-      "telfer-main"
-    ],
-    "vault_file": "margaret-1829-.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
-  {
-    "id": "Margaret",
-    "slug": "margaret-1829",
-    "first_name": "Margaret",
-    "middle_name": null,
-    "last_name": "",
-    "birth_year": 1829,
-    "death_year": null,
-    "birth_year_display": "1829",
-    "death_year_display": "?",
-    "display_name": "Margaret (1829–?)",
-    "title": "Margaret — Family & Biography",
-    "tags": [
-      "person",
-      "other"
-    ],
-    "relationships": [
-      {
-        "type": "Siblings",
-        "names": [
-          "John Telfer 18401913",
-          "Robert Telfer 18351907"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: Margaret\nlast_name: ''\ntags:\n- person\n- other\nbirth_year: 1829\n---\n\n# Margaret (~1829–?)\n\n**Lifespan:** 1829–?\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Siblings | John Telfer 18401913 |\n| Siblings | Robert Telfer 18351907 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Margaret (~1829–?)\n\n**Lifespan:** 1829–?\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Siblings | John Telfer 18401913 |\n| Siblings | Robert Telfer 18351907 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1829 – ?",
-    "generation": 4,
-    "branch": "other",
-    "confidence": "medium",
-    "parents": [],
-    "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Beattie Telfer",
-      "Elizabeth Hutton Telfer",
-      "[[James Telfer",
-      "John Charles Dillon"
-    ],
-    "spouses": [],
-    "siblings": [
-      "john-telfer-18401913",
-      "robert-telfer-18351907"
-    ],
-    "related_trees": [
-      "other",
-      "telfer-main"
-    ],
-    "vault_file": "margaret-1829.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
-  {
-    "id": "Margaret",
     "slug": "margaret",
     "first_name": "Margaret",
     "middle_name": null,
@@ -9926,57 +9468,6 @@
       "telfer-tree"
     ],
     "vault_file": "reginald-masters-telfer.md",
-    "images": [],
-    "person_photo": null,
-    "dna_matches": [],
-    "haplogroup_mt": null,
-    "haplogroup_y": null
-  },
-  {
-    "id": "Robert",
-    "slug": "robert-1835-1907",
-    "first_name": "Robert",
-    "middle_name": null,
-    "last_name": "",
-    "birth_year": 1835,
-    "death_year": 1907,
-    "birth_year_display": "1835",
-    "death_year_display": "1907",
-    "display_name": "Robert (1835–1907)",
-    "title": "Robert — Family & Biography",
-    "tags": [
-      "person",
-      "other"
-    ],
-    "relationships": [
-      {
-        "type": "Children",
-        "names": [
-          "Elizabeth Beattie 18021891"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "---\nfirst_name: Robert\nlast_name: ''\ntags:\n- person\n- other\nbirth_year: 1835\ndeath_year: 1907\n---\n\n# Robert (1835-1907)\n\n**Lifespan:** 1835–1907\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*\n",
-    "body_stripped": "# Robert (1835-1907)\n\n**Lifespan:** 1835–1907\n\n**Branch:** Other\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Children | Elizabeth Beattie 18021891 |\n\n---\n*Auto-generated from unresolved references. Please verify and enhance.*",
-    "is_living": false,
-    "lifespan": "1835 – 1907",
-    "generation": 4,
-    "branch": "other",
-    "confidence": "medium",
-    "parents": [],
-    "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
-      "[[James Telfer"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "other",
-      "telfer-main"
-    ],
-    "vault_file": "robert-1835-1907.md",
     "images": [],
     "person_photo": null,
     "dna_matches": [],
