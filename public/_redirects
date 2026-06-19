@@ -1,3 +1,12 @@
 # Redirect old slugs to new (clean) ones
 /people/sheryle-telfer-1961	/people/sheryle-telfer	301
 /people/amy-nicole-telfer	/people/amy-telfer	301
+
+# Redirect removed duplicate slug entries to their proper equivalents
+/people/adam	/people/adam-telfer-1842	301
+/people/francis	/people/francis-telfer-1809	301
+/people/francis-180995	/people/francis-telfer-1809	301
+/people/james	/people/james-telfer-1829	301
+/people/james-17961863	/people/james-telfer-1796	301
+/people/john	/people/john-telfer-18401913	301
+/people/robert	/people/robert-telfer-1835	301

@@ -58,8 +58,34 @@ const uniqueRedirects = redirects.filter(r => {
   return true;
 });
 
+// Load existing Astro-generated pages to avoid collisions
+const existingPages = new Set();
+if (fs.existsSync(DIST_DIR)) {
+  const entries = fs.readdirSync(DIST_DIR, { withFileTypes: true });
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      const pageFile = path.join(DIST_DIR, entry.name, 'index.html');
+      if (fs.existsSync(pageFile)) {
+        const content = fs.readFileSync(pageFile, 'utf-8');
+        if (!content.includes('http-equiv="refresh"')) {
+          existingPages.add(entry.name);
+        }
+      }
+    }
+  }
+}
+
+// Filter out redirects whose source slug already exists as a real page
+const filteredRedirects = uniqueRedirects.filter(r => {
+  if (existingPages.has(r.from)) {
+    console.log(`  ⏭️  SKIP (page exists): ${r.from} → ${r.to}  (${r.display_name})`);
+    return false;
+  }
+  return true;
+});
+
 // Write redirect pages
-console.log(`\n📝 Generating ${uniqueRedirects.length} redirect(s)...`);
+console.log(`\n📝 Generating ${filteredRedirects.length} redirect(s) (${uniqueRedirects.length - filteredRedirects.length} skipped)...`);
 
 function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
   const baseDir = isPeopleRedirect ? DIST_DIR : 'dist';
@@ -91,7 +117,7 @@ function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
   console.log(`  ${from} → ${to}  (${displayName})`);
 }
 
-for (const r of uniqueRedirects) {
+for (const r of filteredRedirects) {
   writeRedirect(r.from, r.to, r.display_name, true);
 }
 
@@ -99,5 +125,5 @@ for (const r of uniqueRedirects) {
 writeRedirect('families', 'families', 'Families', false);
 
 // Write log for reference
-fs.writeFileSync(REDIRECT_LOG, JSON.stringify(uniqueRedirects, null, 2));
-console.log(`\n✅ ${uniqueRedirects.length} redirect(s) written to dist/\n📋 Log saved to ${REDIRECT_LOG}`);
+fs.writeFileSync(REDIRECT_LOG, JSON.stringify(filteredRedirects, null, 2));
+console.log(`\n✅ ${filteredRedirects.length} redirect(s) written to dist/\n📋 Log saved to ${REDIRECT_LOG}`);

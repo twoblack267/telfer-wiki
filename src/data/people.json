@@ -61,8 +61,8 @@
     "branch": "ivory",
     "confidence": "medium",
     "parents": [
-      "Sheryle Telfer",
-      "Paul Ivory"
+      "sheryle-telfer",
+      "paul-ivory"
     ],
     "children": [],
     "spouses": [
@@ -116,12 +116,12 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891"
+      "elizabeth-beattie"
     ],
     "children": [
       "Adelaide Elsie Pearl",
       "Adelaide Elsie Pearl Telfer",
-      "Elizabeth Beattie",
+      "elizabeth-beattie",
       "Francis Adam",
       "Francis Adam Telfer",
       "James Edgerston",
@@ -133,7 +133,7 @@
       "Violet Hope Telfer"
     ],
     "spouses": [
-      "margaret-dougal-telfer-18491936"
+      "margaret-telfer-1849"
     ],
     "siblings": [
       "agnes",
@@ -232,8 +232,8 @@
     "branch": "telfer",
     "confidence": "high",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -341,18 +341,18 @@
     ],
     "children": [
       "Francis Kelson Telfer",
-      "Clarice May Fatchen",
-      "Emily Amelia Barton",
-      "Ethel Jean McMurtrie",
-      "Gladys Merle Pedler",
-      "Doris Elma Rowe",
+      "clarice-may-telfer",
+      "emily-amelia-telfer",
+      "ethel-jean-telfer",
+      "gladys-merle-telfer",
+      "doris-elma-telfer",
       "Edwin Roy Telfer",
-      "Reginald Masters Telfer",
-      "Murray John Telfer",
-      "Malcolm George Telfer"
+      "reginald-telfer",
+      "murray-telfer-1911",
+      "malcolm-telfer"
     ],
     "spouses": [
-      "Francis Charles Telfer"
+      "francis-telfer-1875"
     ],
     "siblings": [
       "cecil-sidney-provis",
@@ -442,8 +442,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Penny Telfer",
-      "Timothy Neil Telfer"
+      "penny-telfer",
+      "timothy-telfer"
     ],
     "children": [],
     "spouses": [],
@@ -512,7 +512,7 @@
       "John Telfer (adoptive)"
     ],
     "children": [
-      "John Robert Telfer (adoptive)",
+      "john-telfer-robert",
       "John Telfer (adoptive)"
     ],
     "spouses": [],
@@ -578,10 +578,10 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "John Robert Telfer (adoptive)"
+      "john-telfer-robert"
     ],
     "children": [
-      "John Robert Telfer (adoptive)"
+      "john-telfer-robert"
     ],
     "spouses": [],
     "siblings": [
@@ -631,19 +631,19 @@
     "confidence": "medium",
     "parents": [],
     "children": [
-      "Albert George Telfer",
+      "albert-telfer",
       "Charles Masters",
       "Edwin Gilbert Telfer",
-      "Ernest John Telfer",
-      "Francis Charles Telfer",
+      "ernest-telfer",
+      "francis-telfer-1875",
       "Francis Telfer (3rd wife)",
       "Martha Williams",
-      "Walter William Telfer",
-      "William James Telfer"
+      "walter-telfer",
+      "william-telfer"
     ],
     "spouses": [
-      "john-telfer-1840-1913",
-      "john-telfer-18471929"
+      "john-telfer-1840",
+      "john-telfer-1847"
     ],
     "siblings": [
       "multiple-masters-siblings"
@@ -719,7 +719,7 @@
       "Avis",
       "Howard Lindsay",
       "Shirley Edna",
-      "Shirley Edna Telfer",
+      "shirley-telfer-1929",
       "Sydney Hugh",
       "William Humphrey"
     ],
@@ -785,8 +785,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -873,7 +873,7 @@
     "confidence": "medium",
     "parents": [
       "Shirley Telfer",
-      "Murray John Telfer"
+      "murray-telfer-1911"
     ],
     "children": [
       "Shirley Telfer"
@@ -944,7 +944,7 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Penny Telfer",
+      "penny-telfer",
       "Unknown"
     ],
     "children": [],
@@ -1027,8 +1027,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -1091,8 +1091,8 @@
       "margaret-telfer"
     ],
     "children": [
-      "Adam Francis Telfer",
-      "Elizabeth Beattie Telfer",
+      "adam-telfer-1842",
+      "elizabeth-telfer-1832",
       "James Telfer",
       "John Telfer (adoptive)",
       "Robert Telfer"
@@ -1138,15 +1138,15 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891"
+      "elizabeth-beattie"
     ],
     "children": [
-      "Elizabeth Beattie",
-      "James Telfer Dillon"
+      "elizabeth-beattie",
+      "james-dillon"
     ],
     "spouses": [
-      "john-charles-dillon-1827-1906",
-      "john-charles-dillon-18271906"
+      "john-dillon",
+      "john-dillon"
     ],
     "siblings": [
       "james-telfer",
@@ -1223,11 +1223,9 @@
     "parents": [
       "adam",
       "adam-telfer",
-      "francis",
       "francis-telfer-18091895-18091895",
       "isobelisabella-telfer-17981875",
       "james",
-      "james-17961863",
       "john",
       "margaret",
       "margaret-telfer-18021884",
@@ -1235,17 +1233,17 @@
       "william-telfer"
     ],
     "children": [
-      "James (1796–1863)",
+      "james-17961863",
       "Isobel",
       "Adam",
       "Margaret",
       "Robert",
       "John",
-      "Francis (1809–1895)",
+      "francis",
       "William"
     ],
     "spouses": [
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
     "siblings": [
       "james-telfer-17611845"
@@ -1327,8 +1325,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Allen",
-      "John Telfer (1840-1913)"
+      "martha-allen",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -1399,7 +1397,7 @@
     "confidence": "medium",
     "parents": [],
     "children": [
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
     "spouses": [
       "John Telfer (of Castleton)"
@@ -1484,23 +1482,23 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Caroline Amelia Masters",
-      "John Telfer (1847–1929)"
+      "caroline-masters",
+      "john-telfer-1847"
     ],
     "children": [
       "Francis Kelson Telfer",
-      "Clarice May Fatchen",
-      "Emily Amelia Barton",
-      "Ethel Jean McMurtrie",
-      "Gladys Merle Pedler",
-      "Doris Elma Rowe",
+      "clarice-may-telfer",
+      "emily-amelia-telfer",
+      "ethel-jean-telfer",
+      "gladys-merle-telfer",
+      "doris-elma-telfer",
       "Edwin Roy Telfer",
-      "Reginald Masters Telfer",
-      "Murray John Telfer",
-      "Malcolm George Telfer"
+      "reginald-telfer",
+      "murray-telfer-1911",
+      "malcolm-telfer"
     ],
     "spouses": [
-      "Amy Ellen Telfer (née Provis)"
+      "amy-telfer-1884"
     ],
     "siblings": [
       "albert-george-telfer",
@@ -1607,21 +1605,21 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "James Telfer (1761–1845)",
-      "Elizabeth \"Betty\" Hutton (1774–1853)"
+      "james-telfer-1761",
+      "elizabeth-telfer-1774"
     ],
     "children": [
       "James (1832–1845)",
-      "Esther Jane (1834–1909)",
-      "Elizabeth Hannah (1836–1916)",
+      "esther-jane-telfer",
+      "elizabeth-hannah-telfer",
       "Jean (1840–1892)",
       "John (1847–1929)",
-      "Margaret Dougal (1849–1936)",
+      "margaret-telfer-1849",
       "George Wright (1850–1913)"
     ],
     "spouses": [
-      "Jean Murray (1810–1839)",
-      "Dinah Flavel (1821–1844)",
+      "jean-murray",
+      "dinah-flavel",
       "Margaret Wright (1807–1892)"
     ],
     "siblings": [
@@ -1725,12 +1723,12 @@
     "confidence": "medium",
     "parents": [
       "Shirley Telfer",
-      "Murray John Telfer"
+      "murray-telfer-1911"
     ],
     "children": [
-      "Kristin Stefanoff",
+      "kristin-stefanoff",
       "Jono Telfer",
-      "Nick Telfer"
+      "nick-telfer"
     ],
     "spouses": [],
     "siblings": [
@@ -1817,8 +1815,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -1915,21 +1913,21 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "John Telfer (of Castleton) (~1731–?)",
-      "Elspeth Young (~1722–?)"
+      "john-telfer-of-castleton",
+      "elspeth-young"
     ],
     "children": [
-      "James (1796–1863)",
+      "james-17961863",
       "Isobel/Isabella (1798–1875)",
       "Adam (1799–?)",
       "Margaret (1802–1884)",
       "Robert (1803–1878)",
       "John (1805–1839)",
-      "Francis (1809–1895)",
-      "William (1811–1881)"
+      "francis",
+      "william"
     ],
     "spouses": [
-      "Elizabeth \"Betty\" Hutton (1774–1853)"
+      "elizabeth-telfer-1774"
     ],
     "siblings": [
       "elizabeth-hutton-telfer-17741853"
@@ -2008,18 +2006,18 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Elizabeth \"Betty\" Hutton (1774–1853)",
-      "James Telfer (1761–1845)"
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
     ],
     "children": [
-      "Adam Francis Telfer (1842–1925)",
-      "Elizabeth Beattie Telfer (1832–1896)",
-      "James Telfer (1829–1913)",
-      "John Telfer (1840–1913)",
-      "Robert Telfer (1835–1907)"
+      "adam-telfer-1842",
+      "elizabeth-telfer-1832",
+      "james-telfer-1829",
+      "john-telfer-18401913",
+      "robert-telfer-1835"
     ],
     "spouses": [
-      "Elizabeth Beattie (1802–1891)"
+      "elizabeth-beattie"
     ],
     "siblings": [
       "adam",
@@ -2076,8 +2074,8 @@
       "adam-telfer"
     ],
     "children": [
-      "Adam Francis Telfer",
-      "Elizabeth Beattie Telfer",
+      "adam-telfer-1842",
+      "elizabeth-telfer-1832",
       "Francis Telfer (3rd wife)",
       "James Telfer",
       "John Telfer (adoptive)",
@@ -2176,8 +2174,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Allen",
-      "John Telfer (1840-1913)"
+      "martha-allen",
+      "john-telfer-18401913"
     ],
     "children": [
       "Vida (1919–2021)"
@@ -2255,12 +2253,12 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Elizabeth Beattie Telfer (1832-1896)",
-      "John Charles Dillon (1827-1906)"
+      "elizabeth-telfer-1832",
+      "john-dillon"
     ],
     "children": [
-      "Elizabeth Beattie Telfer",
-      "John Charles Dillon"
+      "elizabeth-telfer-1832",
+      "john-dillon"
     ],
     "spouses": [],
     "siblings": [
@@ -2335,12 +2333,10 @@
     "branch": "ivory",
     "confidence": "medium",
     "parents": [
-      "Sheryle Telfer",
-      "Paul Ivory (deceased)"
+      "sheryle-telfer",
+      "paul-ivory"
     ],
-    "children": [
-      "Paul Ivory (deceased)"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "Aaron Ivory",
@@ -2393,11 +2389,11 @@
       "adam-telfer"
     ],
     "children": [
-      "James Telfer Dillon"
+      "james-dillon"
     ],
     "spouses": [
       "elizabeth-beattie-telfer-1832-1896",
-      "elizabeth-beattie-telfer-18321896"
+      "elizabeth-telfer-1832"
     ],
     "siblings": [],
     "related_trees": [
@@ -2484,16 +2480,16 @@
     "confidence": "medium",
     "parents": [
       "Shirley Telfer",
-      "Murray John Telfer"
+      "murray-telfer-1911"
     ],
     "children": [
-      "Angela Telfer (adopted)",
-      "Peter Telfer (adopted)",
+      "angela-telfer",
+      "peter-telfer",
       "Carissa Telfer (adopted",
       "deceased)"
     ],
     "spouses": [
-      "Robyn Telfer"
+      "robyn-telfer"
     ],
     "siblings": [
       "Daryll William Telfer",
@@ -2574,8 +2570,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -2712,36 +2708,36 @@
     "confidence": "medium",
     "parents": [
       "elizabeth",
-      "elizabeth-beattie-18321896",
+      "elizabeth-beattie",
       "isabella-lucieton",
       "james",
       "james-telfer",
       "james-telfer-b-1832-scotland"
     ],
     "children": [
-      "Alan Dale Telfer",
-      "Albert George Telfer",
+      "alan-telfer",
+      "albert-telfer",
       "Alma Tressy Cullen (née Telfer)",
-      "Angela Telfer (adopted)",
+      "angela-telfer",
       "Clara Blanche Lane (née Telfer)",
-      "Colin Roy Telfer",
-      "Douglas Telfer",
+      "colin-telfer",
+      "douglas-telfer",
       "Edwin Gilbert Telfer",
       "Elizabeth Telfer",
-      "Ernest John Telfer",
-      "Francis Charles Telfer",
-      "Isabella Lucieton Telfer (Thomson)",
+      "ernest-telfer",
+      "francis-telfer-1875",
+      "isabella-telfer",
       "James Telfer",
-      "John Roland Telfer",
-      "Maria Clara Telfer",
-      "Marian Telfer Cornish",
+      "john-telfer-1882",
+      "maria-clara-telfer",
+      "marian-cornish",
       "Mark Telfer",
-      "Martha Telfer Cameron",
-      "Peter Telfer (adopted)",
-      "Robert Freddy Telfer",
+      "martha-cameron",
+      "peter-telfer",
+      "robert-telfer-1886",
       "Susan Telfer",
-      "Walter William Telfer",
-      "William James Telfer"
+      "walter-telfer",
+      "william-telfer"
     ],
     "spouses": [
       "martha-allen-d-1876",
@@ -2842,15 +2838,15 @@
       "Francis Telfer"
     ],
     "children": [
-      "Francis Charles Telfer",
-      "Ernest John Telfer",
-      "William James Telfer",
-      "Albert George Telfer",
-      "Walter William Telfer",
+      "francis-telfer-1875",
+      "ernest-telfer",
+      "william-telfer",
+      "albert-telfer",
+      "walter-telfer",
       "Edwin Gilbert Telfer"
     ],
     "spouses": [
-      "Caroline Amelia Telfer (née Masters)"
+      "caroline-telfer"
     ],
     "siblings": [
       "george-wright-telfer",
@@ -2914,10 +2910,10 @@
     "confidence": "medium",
     "parents": [],
     "children": [
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
     "spouses": [
-      "Elspeth Young"
+      "elspeth-young"
     ],
     "siblings": [],
     "related_trees": [
@@ -3011,14 +3007,14 @@
       "Wilhelm Seebohm (1833–1907)"
     ],
     "children": [
-      "Floris Ethel Victoria Telfer (1903–1951)",
-      "Kenneth Alexander Telfer (1904–?)",
-      "Melvin McLeod Telfer (1911–1978)",
+      "floris-ethel-victoria-telfer",
+      "kenneth-alexander-telfer",
+      "melvin-mcleod-telfer",
       "Murray John Telfer (1911–1982",
       "adopted)"
     ],
     "spouses": [
-      "Mark Telfer (1877–1946)"
+      "mark-telfer-1877"
     ],
     "siblings": [
       "William Alexander",
@@ -3068,14 +3064,13 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "murray-john-telfer-19111982",
-      "murray-john-telfer-19242009",
-      "shirley-edna-telfer",
-      "shirley-edna-telfer-19292017"
+      "murray-telfer-1911",
+      "murray-telfer-1924",
+      "shirley-telfer-1929"
     ],
     "children": [
-      "Murray John Telfer (adoptive)",
-      "Shirley Edna Telfer",
+      "murray-telfer-1911",
+      "shirley-telfer-1929",
       "Shirley Telfer"
     ],
     "spouses": [],
@@ -3160,7 +3155,7 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "Grantley Keith Telfer",
+      "grantley-telfer",
       "[unknown]"
     ],
     "children": [
@@ -3248,8 +3243,8 @@
       "Leonard Arthur Dance"
     ],
     "children": [
-      "Levi Telfer",
-      "Zabella Telfer"
+      "levi-telfer",
+      "zabella-telfer"
     ],
     "spouses": [
       "Mark Telfer"
@@ -3328,12 +3323,10 @@
     "branch": "ivory",
     "confidence": "medium",
     "parents": [
-      "Sheryle Telfer",
-      "Paul Ivory (deceased)"
+      "sheryle-telfer",
+      "paul-ivory"
     ],
-    "children": [
-      "Paul Ivory (deceased)"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "Aaron Ivory",
@@ -3412,7 +3405,7 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Kylie Isabella Telfer",
+      "kylie-telfer",
       "Mark Telfer"
     ],
     "children": [],
@@ -3457,12 +3450,12 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "francis-telfer-18091895"
+      "francis-telfer-1809"
     ],
     "children": [
       "Adelaide Elsie Pearl",
       "Adelaide Elsie Pearl Telfer",
-      "Elizabeth Beattie",
+      "elizabeth-beattie",
       "Francis Adam",
       "Francis Adam Telfer",
       "James Edgerston",
@@ -3473,7 +3466,7 @@
       "Violet Hope Telfer"
     ],
     "spouses": [
-      "adam-francis-telfer-18421925",
+      "adam-telfer-1842",
       "adam-telfer"
     ],
     "siblings": [
@@ -3543,9 +3536,9 @@
       "george-wright-telfer"
     ],
     "children": [
-      "John Telfer (1847–1929)",
+      "john-telfer-1847",
       "George Wright Telfer",
-      "Margaret Dougal Telfer"
+      "margaret-telfer-1849"
     ],
     "spouses": [
       "Francis Telfer (3rd wife)"
@@ -3629,8 +3622,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -3729,8 +3722,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -3832,16 +3825,16 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Penny Telfer",
-      "Timothy Neil Telfer"
+      "penny-telfer",
+      "timothy-telfer"
     ],
     "children": [
-      "Mitchell Telfer",
-      "Levi Telfer",
-      "Zabella Telfer"
+      "mitchell-telfer",
+      "levi-telfer",
+      "zabella-telfer"
     ],
     "spouses": [
-      "Kylie Isabella Telfer"
+      "kylie-telfer"
     ],
     "siblings": [
       "Amy Nicole Telfer"
@@ -3945,8 +3938,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "John Telfer (1840-1913)",
-      "Martha Clara Henstridge"
+      "john-telfer-18401913",
+      "martha-henstridge"
     ],
     "children": [
       "Gilbert Melville",
@@ -3956,7 +3949,7 @@
       "Lindsay Roland"
     ],
     "spouses": [
-      "Julia Matilda Seebohm"
+      "julia-matilda-seebohm"
     ],
     "siblings": [
       "James",
@@ -4037,10 +4030,10 @@
       "James Telfer",
       "Elizabeth Telfer",
       "Susan Telfer",
-      "Martha Telfer Cameron"
+      "martha-cameron"
     ],
     "spouses": [
-      "John Telfer (1840–1913)"
+      "john-telfer-18401913"
     ],
     "siblings": [],
     "related_trees": [
@@ -4120,14 +4113,14 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Allen (d. 1876)",
-      "John Telfer (1840-1913)"
+      "martha-allen",
+      "john-telfer-18401913"
     ],
     "children": [
-      "Malcolm Murray Cameron"
+      "malcolm-duncan-cameron"
     ],
     "spouses": [
-      "Malcolm Duncan Cameron"
+      "malcolm-duncan-cameron"
     ],
     "siblings": [
       "James Telfer (1866–1946)",
@@ -4193,7 +4186,7 @@
     "confidence": "medium",
     "parents": [
       "Crystal Rose McDonald",
-      "Mark Kenneth Telfer (1986–?)"
+      "mark-telfer-1986"
     ],
     "children": [],
     "spouses": [],
@@ -4270,22 +4263,21 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954",
-      "julia-matilda-seebohm-18761939",
-      "mark-telfer-18771946"
+      "amy-telfer-1884",
+      "francis-telfer-1875",
+      "julia-matilda-seebohm",
+      "mark-telfer-1877"
     ],
     "children": [
-      "Daryll William Telfer (brother)",
-      "Grantley Keith Telfer",
-      "John Robert Telfer (brother)",
-      "Kathryn Mavis Telfer",
-      "Susan Shirley Lawrie",
-      "Susan Shirley Lawrie (adopted)",
-      "Timothy Neil Telfer"
+      "daryll-telfer",
+      "grantley-telfer",
+      "john-telfer-robert",
+      "kathryn-telfer",
+      "susan-lawrie",
+      "timothy-telfer"
     ],
     "spouses": [
-      "shirley-edna-telfer-19292017"
+      "shirley-telfer-1929"
     ],
     "siblings": [
       "clarice-may-fatchen",
@@ -4339,21 +4331,19 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "amy-ellen-telfer-18841951",
-      "francis-charles-telfer-18751954"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [
-      "Daryll William Telfer (brother)",
-      "Grantley Keith Telfer",
-      "John Robert Telfer (brother)",
-      "Kathryn Mavis Telfer",
-      "Susan Shirley Lawrie",
-      "Susan Shirley Lawrie (adopted)",
-      "Timothy Neil Telfer"
+      "daryll-telfer",
+      "grantley-telfer",
+      "john-telfer-robert",
+      "kathryn-telfer",
+      "susan-lawrie",
+      "timothy-telfer"
     ],
     "spouses": [
-      "shirley-edna-telfer",
-      "shirley-edna-telfer-19292017",
+      "shirley-telfer-1929",
       "shirley-telfer"
     ],
     "siblings": [
@@ -4434,7 +4424,7 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Grantley Keith Telfer",
+      "grantley-telfer",
       "[unknown]"
     ],
     "children": [
@@ -4505,14 +4495,7 @@
     "generation": 6,
     "branch": "ivory",
     "confidence": "medium",
-    "parents": [
-      "aaron-ivory",
-      "jared-ivory",
-      "jared-mitchell-ivory",
-      "jared-mitchell-ivory-1993",
-      "joel-ivory",
-      "lauren-ivory"
-    ],
+    "parents": [],
     "children": [
       "Aaron Ivory",
       "Jared Ivory",
@@ -4520,7 +4503,7 @@
       "Joel Ivory"
     ],
     "spouses": [
-      "Sheryle Telfer"
+      "sheryle-telfer"
     ],
     "siblings": [
       "sheryle-telfer"
@@ -4674,7 +4657,7 @@
       "John Telfer (adoptive)"
     ],
     "children": [
-      "John Robert Telfer (adoptive)",
+      "john-telfer-robert",
       "John Telfer (adoptive)"
     ],
     "spouses": [],
@@ -4766,8 +4749,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -4880,11 +4863,11 @@
     "children": [
       "Elizabeth (~1834–)",
       "James (~1836–)",
-      "Jean (~1838–)",
+      "jean",
       "John (~1839–)"
     ],
     "spouses": [
-      "Elizabeth \"Betty\" Oliver"
+      "elizabeth-oliver"
     ],
     "siblings": [
       "James (1796–1863)",
@@ -4931,7 +4914,7 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18321896",
+      "elizabeth-beattie",
       "james-telfer",
       "james-telfer-b-1832-scotland"
     ],
@@ -4939,7 +4922,7 @@
       "James Telfer"
     ],
     "spouses": [
-      "susan-burton-telfer-18441924"
+      "susan-telfer-1844"
     ],
     "siblings": [
       "adam",
@@ -5011,7 +4994,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "John Robert Telfer"
+      "john-telfer-robert"
     ],
     "siblings": [],
     "related_trees": [
@@ -5086,8 +5069,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Francis Charles Telfer",
-      "Amy Ellen Telfer (née Provis)"
+      "francis-telfer-1875",
+      "amy-telfer-1884"
     ],
     "children": [],
     "spouses": [],
@@ -5140,16 +5123,16 @@
     "parents": [],
     "children": [
       "Aaron Ivory",
-      "Aaron Paul Ivory",
+      "aaron-ivory",
       "Jared Ivory",
       "Joel Ivory",
       "Joel Matthew Ivory (1986–?) (all with Paul Ivory (1955–1996))",
       "Lauren Ivory",
-      "Lauren Maree Ivory"
+      "lauren-ivory"
     ],
     "spouses": [
-      "paul-ivory-19551996",
-      "timothy-neil-telfer-1959"
+      "paul-ivory",
+      "timothy-telfer"
     ],
     "siblings": [
       "paul-ivory-19551996"
@@ -5194,17 +5177,16 @@
       "william-henry-parker-18931968"
     ],
     "children": [
-      "Daryll William Telfer (brother)",
-      "Grantley Keith Telfer",
-      "John Robert Telfer (brother)",
-      "Kathryn Mavis Telfer",
-      "Susan Shirley Lawrie",
-      "Susan Shirley Lawrie (adopted)",
-      "Timothy Neil Telfer"
+      "daryll-telfer",
+      "grantley-telfer",
+      "john-telfer-robert",
+      "kathryn-telfer",
+      "susan-lawrie",
+      "timothy-telfer"
     ],
     "spouses": [
-      "murray-john-telfer-19111982",
-      "murray-john-telfer-19242009"
+      "murray-telfer-1911",
+      "murray-telfer-1924"
     ],
     "siblings": [
       "avis-muriel-nicholls",
@@ -5265,7 +5247,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "Robert Telfer (1835-1907)"
+      "robert-telfer-1835"
     ],
     "siblings": [],
     "related_trees": [
@@ -5338,8 +5320,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Martha Allen",
-      "John Telfer (1840-1913)"
+      "martha-allen",
+      "john-telfer-18401913"
     ],
     "children": [
       "John Telfer"
@@ -5434,14 +5416,14 @@
     "confidence": "medium",
     "parents": [
       "Shirley Telfer",
-      "Murray John Telfer"
+      "murray-telfer-1911"
     ],
     "children": [
       "Mark Telfer",
       "Amy Telfer"
     ],
     "spouses": [
-      "Sheryle Telfer"
+      "sheryle-telfer"
     ],
     "siblings": [
       "Daryll William Telfer",
@@ -5532,8 +5514,8 @@
     "branch": "telfer",
     "confidence": "low",
     "parents": [
-      "Murray John Telfer",
-      "Shirley Edna Telfer"
+      "murray-telfer-1911",
+      "shirley-telfer-1929"
     ],
     "children": [],
     "spouses": [],
@@ -5583,9 +5565,7 @@
       "david-parker-18221888",
       "elizabeth"
     ],
-    "children": [
-      "William Henry Parker"
-    ],
+    "children": [],
     "spouses": [
       "hannah-baker",
       "hannah-baker-18551948",
@@ -5659,7 +5639,7 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Kylie Isabella Telfer",
+      "kylie-telfer",
       "Mark Telfer"
     ],
     "children": [],
@@ -5704,12 +5684,12 @@
     "branch": "ivory",
     "confidence": "medium",
     "parents": [
-      "paul-ivory-19551996",
+      "paul-ivory",
       "sheryle-telfer"
     ],
     "children": [
-      "Paul Ivory (deceased)",
-      "Sheryle Telfer (1961–?) (first marriage)"
+      "paul-ivory",
+      "sheryle-telfer"
     ],
     "spouses": [],
     "siblings": [
@@ -5791,16 +5771,16 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "James Telfer (1761–1830)",
-      "Elizabeth Hutton (1774–1851)"
+      "james-telfer-1761",
+      "elizabeth-telfer-1774"
     ],
     "children": [
-      "Elizabeth Hutton Telfer",
+      "elizabeth-telfer-1774",
       "James Telfer",
-      "John Charles Dillon"
+      "john-dillon"
     ],
     "spouses": [
-      "margaret-dougal-telfer-18491936"
+      "margaret-telfer-1849"
     ],
     "siblings": [
       "James Telfer (1796–1863)",
@@ -5868,12 +5848,12 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891",
-      "james-telfer-17961863"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
+      "elizabeth-beattie",
+      "elizabeth-telfer-1774",
       "James Telfer"
     ],
     "spouses": [],
@@ -5948,10 +5928,10 @@
     "confidence": "medium",
     "parents": [
       "david-parker-18221888",
-      "elizabeth-beattie-18021891"
+      "elizabeth-beattie"
     ],
     "children": [
-      "Elizabeth Beattie",
+      "elizabeth-beattie",
       "James Telfer"
     ],
     "spouses": [],
@@ -6034,8 +6014,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -6125,8 +6105,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -6222,8 +6202,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -6309,8 +6289,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -6394,8 +6374,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
@@ -6470,8 +6450,8 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "james-telfer-17961863",
-      "robert-telfer-18031878"
+      "james-telfer-1796",
+      "robert-telfer-1803"
     ],
     "children": [
       "James Telfer",
@@ -6479,7 +6459,7 @@
       "Mary Anne McIntyre",
       "Robert Telfer",
       "Wilhelm Seebohm",
-      "William Humphrey Parker"
+      "william-parker"
     ],
     "spouses": [],
     "siblings": [
@@ -6583,8 +6563,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -6670,8 +6650,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -6761,8 +6741,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -6847,11 +6827,11 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [
-      "Julia Matilda Seebohm"
+      "julia-matilda-seebohm"
     ],
     "spouses": [],
     "siblings": [
@@ -6904,7 +6884,7 @@
     "confidence": "medium",
     "parents": [],
     "children": [
-      "Elizabeth Hutton Telfer",
+      "elizabeth-telfer-1774",
       "James Telfer"
     ],
     "spouses": [],
@@ -6985,8 +6965,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
@@ -7052,11 +7032,10 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-hutton-telfer-17741853",
-      "james-telfer-17611845"
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
     ],
     "children": [
-      "Elizabeth Hutton Telfer",
       "James Telfer"
     ],
     "spouses": [],
@@ -7160,8 +7139,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -7222,7 +7201,7 @@
     "confidence": "medium",
     "parents": [],
     "children": [
-      "Elizabeth Beattie",
+      "elizabeth-beattie",
       "James Telfer"
     ],
     "spouses": [],
@@ -7268,7 +7247,7 @@
     ],
     "children": [
       "John Telfer (adoptive)",
-      "Martha Clara Henstridge"
+      "martha-henstridge"
     ],
     "spouses": [],
     "siblings": [
@@ -7341,11 +7320,11 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891",
-      "james-telfer-17961863"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
-      "Elizabeth Beattie",
+      "elizabeth-beattie",
       "James Telfer"
     ],
     "spouses": [],
@@ -7416,8 +7395,8 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-hutton-telfer-17741853",
-      "james-telfer-17611845"
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
     ],
     "children": [
       "James Telfer"
@@ -7494,12 +7473,11 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-hutton-telfer-17741853",
-      "james-telfer-17611845"
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
     ],
     "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
+      "elizabeth-beattie",
       "James Telfer",
       "John Telfer (adoptive)",
       "Robert Telfer",
@@ -7590,13 +7568,13 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891",
-      "james-telfer-17961863",
-      "robert-telfer-18031878"
+      "elizabeth-beattie",
+      "james-telfer-1796",
+      "robert-telfer-1803"
     ],
     "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
+      "elizabeth-beattie",
+      "elizabeth-telfer-1774",
       "James Telfer",
       "John Telfer (adoptive)",
       "Robert Telfer",
@@ -7670,12 +7648,12 @@
     "branch": "ivory",
     "confidence": "medium",
     "parents": [
-      "paul-ivory-19551996",
+      "paul-ivory",
       "sheryle-telfer"
     ],
     "children": [
-      "Paul Ivory (deceased)",
-      "Sheryle Telfer (1961–?) (first marriage)"
+      "paul-ivory",
+      "sheryle-telfer"
     ],
     "spouses": [],
     "siblings": [
@@ -7723,8 +7701,8 @@
     "confidence": "medium",
     "parents": [],
     "children": [
-      "Paul Ivory (deceased)",
-      "Sheryle Telfer (1961–?) (first marriage)"
+      "paul-ivory",
+      "sheryle-telfer"
     ],
     "spouses": [],
     "siblings": [
@@ -7769,8 +7747,8 @@
     "confidence": "medium",
     "parents": [],
     "children": [
-      "Paul Ivory (deceased)",
-      "Sheryle Telfer (1961–?) (first marriage)"
+      "paul-ivory",
+      "sheryle-telfer"
     ],
     "spouses": [],
     "siblings": [
@@ -7827,9 +7805,9 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891",
-      "james-telfer-17961863",
-      "robert-telfer-18031878"
+      "elizabeth-beattie",
+      "james-telfer-1796",
+      "robert-telfer-1803"
     ],
     "children": [
       "Robert Telfer"
@@ -7882,12 +7860,12 @@
     "branch": "ivory",
     "confidence": "medium",
     "parents": [
-      "paul-ivory-19551996",
+      "paul-ivory",
       "sheryle-telfer"
     ],
     "children": [
-      "Paul Ivory (deceased)",
-      "Sheryle Telfer (1961–?) (first marriage)"
+      "paul-ivory",
+      "sheryle-telfer"
     ],
     "spouses": [],
     "siblings": [
@@ -7934,37 +7912,37 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Elizabeth Beattie (1802-1891)",
-      "James Telfer (1796-1863)"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
-      "Alan Dale Telfer",
-      "Albert George Telfer",
+      "alan-telfer",
+      "albert-telfer",
       "Alma Tressy Cullen (née Telfer)",
-      "Angela Telfer (adopted)",
+      "angela-telfer",
       "Clara Blanche Lane (née Telfer)",
-      "Colin Roy Telfer",
-      "Douglas Telfer",
+      "colin-telfer",
+      "douglas-telfer",
       "Edwin Gilbert Telfer",
       "Elizabeth Telfer",
-      "Ernest John Telfer",
-      "Francis Charles Telfer",
-      "Isabella Lucieton Telfer (Thomson)",
+      "ernest-telfer",
+      "francis-telfer-1875",
+      "isabella-telfer",
       "James Telfer",
-      "John Roland Telfer",
-      "Maria Clara Telfer",
-      "Marian Telfer Cornish",
+      "john-telfer-1882",
+      "maria-clara-telfer",
+      "marian-cornish",
       "Mark Telfer",
-      "Martha Telfer Cameron",
-      "Peter Telfer (adopted)",
-      "Robert Freddy Telfer",
+      "martha-cameron",
+      "peter-telfer",
+      "robert-telfer-1886",
       "Susan Telfer",
-      "Walter William Telfer",
-      "William James Telfer"
+      "walter-telfer",
+      "william-telfer"
     ],
     "spouses": [
-      "Martha Allen",
-      "Martha Clara Henstridge"
+      "martha-allen",
+      "martha-henstridge"
     ],
     "siblings": [
       "James (1829–1913)",
@@ -8033,13 +8011,13 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891",
-      "james-telfer-17961863",
-      "robert-telfer-18031878"
+      "elizabeth-beattie",
+      "james-telfer-1796",
+      "robert-telfer-1803"
     ],
     "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
+      "elizabeth-beattie",
+      "elizabeth-telfer-1774",
       "James Telfer",
       "Robert Telfer"
     ],
@@ -8132,11 +8110,11 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [
-      "Julia Matilda Seebohm"
+      "julia-matilda-seebohm"
     ],
     "spouses": [],
     "siblings": [
@@ -8181,12 +8159,12 @@
     "branch": "ivory",
     "confidence": "medium",
     "parents": [
-      "paul-ivory-19551996",
+      "paul-ivory",
       "sheryle-telfer"
     ],
     "children": [
-      "Paul Ivory (deceased)",
-      "Sheryle Telfer (1961–?) (first marriage)"
+      "paul-ivory",
+      "sheryle-telfer"
     ],
     "spouses": [],
     "siblings": [
@@ -8242,7 +8220,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "martha-telfer-cameron-18731964"
+      "martha-cameron"
     ],
     "siblings": [],
     "related_trees": [
@@ -8318,8 +8296,8 @@
     "branch": "telfer",
     "confidence": "low",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
@@ -8392,15 +8370,15 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891",
-      "james-telfer-17961863"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Beattie Telfer",
-      "Elizabeth Hutton Telfer",
+      "elizabeth-beattie",
+      "elizabeth-telfer-1832",
+      "elizabeth-telfer-1774",
       "James Telfer",
-      "John Charles Dillon"
+      "john-dillon"
     ],
     "spouses": [],
     "siblings": [
@@ -8495,11 +8473,11 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [
-      "Julia Matilda Seebohm"
+      "julia-matilda-seebohm"
     ],
     "spouses": [],
     "siblings": [
@@ -8581,8 +8559,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
@@ -8652,12 +8630,12 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-18021891",
-      "james-telfer-17961863"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
-      "Elizabeth Beattie",
-      "Elizabeth Hutton Telfer",
+      "elizabeth-beattie",
+      "elizabeth-telfer-1774",
       "James Telfer"
     ],
     "spouses": [],
@@ -8722,12 +8700,12 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-beattie-telfer-18321896",
-      "john-charles-dillon-18271906"
+      "elizabeth-telfer-1832",
+      "john-dillon"
     ],
     "children": [
-      "Elizabeth Beattie Telfer",
-      "John Charles Dillon"
+      "elizabeth-telfer-1832",
+      "john-dillon"
     ],
     "spouses": [],
     "siblings": [
@@ -8804,23 +8782,23 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "daryll-william-telfer",
-      "grantley-keith-telfer",
+      "daryll-telfer",
+      "grantley-telfer",
       "john-robert-telfer",
-      "kathryn-mavis-telfer-19611965",
+      "kathryn-telfer",
       "susan-shirley-lawrie",
-      "timothy-neil-telfer-1959"
+      "timothy-telfer"
     ],
     "children": [
-      "Daryll William Telfer",
-      "John Robert Telfer (adoptive)",
-      "Grantley Keith Telfer",
-      "Timothy Neil Telfer",
-      "Kathryn Mavis Telfer",
-      "Susan Shirley Lawrie"
+      "daryll-telfer",
+      "john-telfer-robert",
+      "grantley-telfer",
+      "timothy-telfer",
+      "kathryn-telfer",
+      "susan-lawrie"
     ],
     "spouses": [
-      "murray-john-telfer-19242009"
+      "murray-telfer-1924"
     ],
     "siblings": [],
     "related_trees": [
@@ -8892,8 +8870,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -8973,8 +8951,8 @@
     "branch": "telfer",
     "confidence": "medium",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -9038,8 +9016,8 @@
     "branch": "other",
     "confidence": "medium",
     "parents": [
-      "elizabeth-hutton-telfer-17741853",
-      "james-telfer-17611845"
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
     ],
     "children": [
       "James Telfer"
@@ -9167,7 +9145,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "Francis Telfer (1809–1895)"
+      "francis-telfer-1809"
     ],
     "is_living": false,
     "lifespan": "1821 – 1844",
@@ -9243,8 +9221,8 @@
     "body_markdown": "# Elizabeth Hannah Telfer (1836–1916)\n\n**Role:** Second daughter of Francis Telfer — matriarch of the Farrow line at Hope Farm, Tarlee\n**Born:** 7 June 1836 — Dumfriesshire, Scotland\n**Died:** 8 October 1916 (aged 80) — Tarlee, South Australia\n**Buried:** Tarlee Cemetery (beside husband)\n**Spouse:** Charles Farrow (~1836 – Dec 1884) — m. 28 March 1856\n**Ship:** *Prince George* — arrived Port Adelaide 26 December 1838 (aged 2)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Telfer (1809–1895)]] |\n| **Mother** | Jean Murray (1810–1839) |\n|| **Husband** | Charles Farrow (~1836 – Dec 1884) ||\n| **Sister** | [[Esther Jane Telfer (1834–1909)]] |\n\n### Children (all born at Hope Farm, Tarlee)\n\n| Child | Spouse |\n|-------|--------|\n| Jane Murray Farrow | Alfred Stribling |\n| Esther \"Ettie\" Farrow | Richard Pelling Latter |\n| Elizabeth Telfer Farrow | Thomas Holloway |\n| Joseph Francis Farrow | Annie Louise Downton |\n| Charles Farrow Jr | Ethel Mary Sambell |\n| Amy Farrow | Sidney Stribling |\n| John James Telfer Farrow | Emily Smithers |\n| George Hope Farrow | Caroline Stanton |\n| Mary Bayes Farrow | Alfred Edward Lillecrapp |\n| Eva Agnes Farrow | Walter Hookings |\n\n## Life Summary\n\nElizabeth was born in Dumfriesshire, Scotland to Francis Telfer and Jean Murray. She was just two years old when the family sailed for South Australia on the *Prince George*, arriving at Port Adelaide on 26 December 1838. Her mother Jean died at the Emigration Depot barely a month later.\n\nShe grew up at Chain of Ponds and Kersbrook in the Adelaide Hills. On 28 March 1856, aged 19, she married **Charles Farrow** at her family's home on Section 6146, Parra Wirra. The ceremony was performed by Rev. William Vercoe, witnessed by A.B. Murray and P.M. Murray — Elizabeth's uncles.\n\nThey settled at **Hope Farm**, Finniss Point, near Tarlee — 152 acres Charles had bought from John Ridley for £319/4. Charles had walked from Kersbrook to Tarlee weekly carrying food, then built a small stone cottage by hand with an axe.\n\nElizabeth was described as a \"very kind and most gracious lady, always quick to help anyone in need.\" She was a foundation member of Tarlee Baptist Church. After Charles died of pneumonia in 1884, she ran the farm with her sons for over three decades.\n\nHer father Francis Telfer came to stay with Elizabeth at Hope Farm before his death on 2 September 1895, and was buried at Tarlee Cemetery.\n\nShe died on 8 October 1916, aged 80, and was buried beside Charles.\n\n## Family Stories\n\n### The Bull at Tuppeny Well\n\nNot long after Charles bought Hope Farm, he was walking there on a hot Monday. About two miles south of Tarlee on the eastern side of the main road was a shallow well called \"Tuppeny Well\" — the owner charged tuppence to water bullocks and horses. An irate bull came up for a drink. There were no trees nearby, so Charles climbed a six-to-seven-foot whip post used to draw water and sat there until dark when the bull wandered off. Then he walked the remaining six miles home.\n\n*(From the Borders to the Bush, p.59)*\n\n### The Fire of 1865\n\nOn Saturday, 25 March 1865, fire destroyed the Farrow cottage. The roof was gone, part of the front wall collapsed, and most of their belongings. Amos Flavel's diary recorded it: *\"Mr Farrow helping put out the fire but the roof was destroyed & part of the front wall of the house & a very great deal of other things.\"*\n\nCharles rebuilt — a larger house with a galvanized iron roof and guttering. It was still standing when the Tarlee reunion was held on 2 December 1984.\n\n*(From the Borders to the Bush, pp.59–60; Amos Flavel Diary, 25 Mar 1865)*\n\n### The Water Walk\n\nDuring a long dry summer, the rainwater tanks at Hope Farm ran dry. With three small girls to care for, Elizabeth would tie baby Elizabeth Telfer Farrow to the kitchen table leg with a leather strap, take Jane (age 5) and Esther (age 3), and walk 14 miles to Deep Creek to carry back water for the family's daily washing.\n\n*(From the Borders to the Bush, p.61)*\n\n### Charles's Last Night\n\nOn 2 December 1884, Charles returned home from his rounds travelling the district with his draught stallion for mating. He was wet through from heavy showers. He told his son Charles Junior to put the horses away: *\"I am feeling very ill.\"*\n\nThat night he became much worse. Elizabeth woke Charles Junior to ride to Kapunda for the doctor. The doctor arrived around 4am and promised to return that afternoon. Charles Farrow died just before the doctor got back — pneumonia, in the days before penicillin.\n\n*(From the Borders to the Bush, p.62)*\n\n### Tarlee Baptist Church\n\nIn June 1868, the Farrow home hosted the founding meeting of Tarlee Baptist Church. Charles was appointed Deacon and lay preacher, serving for over 16 years. The Minute Book recorded after his death:\n\n> *\"This Church deeply mourns the death of Brother Farrow Senior and desires to record the Church's appreciation of his devoted labours in the cause of Christ among us.\"*\n\n*(From the Borders to the Bush, p.63)*\n\n### Ashley Cooper's 80th Birthday\n\nAshley Cooper, born in 1908, was the grandson of Elizabeth's daughter Esther Farrow. He worked for the Adelaide Steamship Company as an auditor, travelled to coastal shipping centres, and during WWII was transferred to Perth to oversee merchant ships used as troop carriers. He travelled extensively in the Flinders Ranges — Parachilna, Beltana, Moralana — and wrote a book on the history of Beltana. He suffered a stroke but kept typing one-fingered. He celebrated his 80th birthday in March 1988.\n\n*(From the Borders to the Bush, p.68)*\n\n## Sources\n\n- **Note:** The book header lists Charles Farrow as (1837–1876) and the family tree as (1828–1876), but the narrative clearly states he died in December 1884 — 32 years before Elizabeth's 1916 death. The detailed story (Dec 1884, pneumonia) is taken as accurate over the header dates. Born ~1836 based on being age 19 when buying the farm in Nov 1855.\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 58–75 — extract via OCR 19 June 2026\n- WikiTree: [Elizabeth Hannah Telfer (1836–1916)](https://www.wikitree.com/wiki/Telfer-590)",
     "body_stripped": "**Role:** Second daughter of Francis Telfer — matriarch of the Farrow line at Hope Farm, Tarlee\n**Born:** 7 June 1836 — Dumfriesshire, Scotland\n**Died:** 8 October 1916 (aged 80) — Tarlee, South Australia\n**Buried:** Tarlee Cemetery (beside husband)\n**Spouse:** Charles Farrow (~1836 – Dec 1884) — m. 28 March 1856\n**Ship:** *Prince George* — arrived Port Adelaide 26 December 1838 (aged 2)\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Telfer (1809–1895) \n **Mother**  Jean Murray (1810–1839) \n",
     "parents": [
-      "Francis Telfer (1809–1895)",
-      "Jean Murray (1810–1839)"
+      "francis-telfer-1809",
+      "jean-murray"
     ],
     "children": [
       "Jane Murray Farrow",
@@ -9260,7 +9238,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "Charles Farrow (~1836–1884)"
+      "charles-farrow"
     ],
     "is_living": false,
     "lifespan": "1836 – 1916",
@@ -9332,8 +9310,8 @@
     "body_markdown": "# Esther Jane Telfer (1834–1909)\n\n**Role:** Daughter of Francis Telfer — matriarch of the Smith line\n**Born:** 21 May 1834 — Isle of Skye, Scotland\n**Died:** March 1909 (aged 75) — Nyngan, New South Wales\n**Buried:** Nyngan Cemetery (Church of England section)\n**Spouse:** John Smith (~1827 – 5 May 1895)\n**Ship:** *Prince George* — arrived Port Adelaide 26 December 1838 (aged 4)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Telfer (1809–1895)]] |\n| **Mother** | Jean Murray (1810–1839) |\n| **Husband** | John Smith |\n\n### Children\n\n| Child | Born | Died | Married |\n|-------|------|------|---------|\n| Jane Sophie Smith | South Australia | Apr 1913 (aged 47) | Benjamin Harper |\n| Margaret Dougal Smith | Burra, S.A. | 30 Oct 1961 (aged ~93) | Thomas Parkins |\n| Esther Telfer Smith | 27 Sep 1870, Tungkillo S.A. | 5 May 1896 (aged 25) | Thomas Henry Kent |\n| John James \"Jack\" Smith | 1871, Tungkillo S.A. | — | Idona Caston Murray |\n| Francis Telfer \"Frank\" Smith | 14 Feb 1874, Mt Gambier S.A. | 9 Jul 1945, Nyngan | Ellie Forbes, Catherine Gibson |\n| Elizabeth Anne Smith | 1878, Millicent S.A. | — | — |\n\n## Life Summary\n\n### Early Life\n\nEsther was born on the Isle of Skye to Francis Telfer and Jean Murray — the second of their three children. When she was four, the family sailed for South Australia aboard the *Prince George*, arriving at Port Adelaide on 26 December 1838. Her mother Jean died at the Emigration Depot barely a month after landing.\n\nEsther grew up at Chain of Ponds in the Adelaide Hills, then Kersbrook, where her father Francis farmed and helped establish the Church of Christ.\n\n### Marriage to John Smith\n\nOn **16 November 1863** at the **Wesleyan Parsonage, Kapunda**, Esther married **John Smith** — a man born in Copenhagen, Denmark in 1830, son of a Scottish Sea Captain and a Danish mother. John had bought a block of land on Gunningbah Creek, north of Nyngan, running sheep. Together they had six children.\n\n### The Move to Victoria\n\nThe family set out for Victoria, but Esther, pregnant with her sixth child, found the journey by horse-drawn wagon with steel-rimmed wheels on dirt roads too much. She stayed in Millicent (South East) until after Elizabeth Anne was born in 1878, while John and some of the children pushed on to Natimuk, Victoria to set up a new home.\n\nTheir new home, called **\"Ebenezer\"**, was a pug-and-thatch construction at Sherwood Dam near Mount Arapiles. The children attended Arapiles School.\n\n### The Trek to Nyngan\n\nTowards the end of the 1880s, the two oldest boys — John James and Francis Telfer — rode pushbikes some 600 miles into the outback to Nyngan to scout land. They came back with glowing reports.\n\nThe family sold their Natimuk farm to the Lange family and set out on a weeks-long trek to Nyngan in a wagon drawn by four draught horses. Their diet: damper cooked in camp ovens, corned meat, and whatever rabbits and birds they caught along the way. Water bags hung from the side of the wagon in the shade to keep cool.\n\nJohn bought the block on Gunningbah Creek and ran sheep there until his death on 5 May 1895.\n\n### Later Life\n\nAfter John died, Esther moved into Nyngan township — a brick home in Wambiana Street. She was described as a tiny person, just five feet tall, a devoted mother and grandmother, and a loyal church supporter.\n\nHer home was still standing in good condition as of 1984.\n\nShe died in March 1909, aged 75, and was buried with her husband in Nyngan Cemetery.\n\n## Family Stories\n\n### The Bike Scouts\n\nIn the late 1880s, Esther's two boys — John James (about 17) and Francis Telfer (about 15) — rode pushbikes nearly 600 miles from Natimuk, Victoria into the wilds of outback New South Wales to scout land. They returned full of talk about Nyngan and the land opening up. It was their report that convinced the family to pull up roots and make the long trek north.\n\n*(From the Borders to the Bush, pp.39–40)*\n\n### Essie Ray — Esther's Granddaughter\n\nEssie (Esther Jane Harper, granddaughter through Jane Sophie) grew up walking 2.5 miles to school, milking a cow before she left. At about age 11, her family moved from Miram, Victoria to Mullengudgery, NSW. Her mother died of pneumonia about three years later. At just 14, she kept house for six children in a big house with board floors she scrubbed weekly on hands and knees, made butter, did all the cooking, and looked after the lot.\n\nHer brother rode a bike 27 miles into Nyngan to get the doctor — there were no telephones. Too late.\n\nShe later married Alex Stevenson (a \"nice chap\"), had two children. Alex died in his 30th year. She supported herself by dressmaking. Married second to Robert Ray, a widower with two grown daughters. Learned to drive a truck to take fruit from their orchard to the railway.\n\nShe celebrated her 90th birthday on 4 January 1989 and still attended Presbyterian Church and Guild, and had a life membership badge from the Orange Show.\n\n*(From the Borders to the Bush, pp.40–41)*\n\n### The Promise to a Dying Sister\n\nEsther's namesake daughter, Esther Telfer Smith, married a Wesleyan minister named Thomas Henry Kent. Thomas died of consumption on 17 December 1895 — just eight months after their wedding. The younger Esther followed him to the grave five months later, also from consumption, on 5 May 1896.\n\nOn her deathbed, she asked her sister Margaret: *\"If you ever go to Melbourne, will you visit Thomas's grave?\"*\n\nForty-six years later, Margaret — then a widow herself — visited her daughter Ruby and son-in-law Roy Pearce at Bendigo. Roy drove her to Melbourne, and she fulfilled her sister's dying wish.\n\n*(From the Borders to the Bush, pp.44–45)*\n\n### The Eudora Merino Stud\n\nEsther's youngest son, Francis Telfer Smith, drew a block at Mullengudgery (27 miles out of Nyngan) in 1898 and named it **\"Eudora\"**. He built a large weatherboard home surrounded by shade trees, a big garden with stone fruits and citrus, and a tennis court. He established the Eudora Merino Stud and took sheep to the Royal Sydney Show.\n\nHe was a keen pushbike rider in his youth — once rode from Eudora all the way to Mount Gambier with two friends. He also owned racehorses: \"Pearl George\" and \"Pharalie\" were sold and shipped to India during WWI.\n\nHis daughter Ena recalled: no refrigeration — a charcoal safe with a troublesome door and a green frog living in the water tray on top. Canvas water bags hanging on the verandah. Round galvanised tubs for bathing — knees under chin or legs over the side. Their first car was a T Model Ford; summer nights with the hood down, chugging along at about 20 mph.\n\nWhen the 1955 flood hit the Bogon River, the Dubbo Aero Club dropped food parcels that burst hitting the water. The family fished tins out of two feet of floodwater — labels lost. They opened cat food for lunch once without realising.\n\n*(From the Borders to the Bush, pp.47–57)*\n\n### Jack Smith Saves Melrose\n\nEsther's oldest son John James \"Jack\" Smith lived at \"Brooklands\" on Duck Creek and ran a Merino stud. When his sister Margaret Parkins' husband Thomas was killed in a sulky accident in 1917, Margaret struggled to keep their property \"Melrose\" going. Her son Dougal hit bad seasons and couldn't make ends meet. The bank threatened to foreclose.\n\nJack walked into the bank, threw his cheque book on the manager's desk, and said: *\"Take what you want out of that, but don't you dare put Margaret Parkins — a widow — out of Melrose.\"*\n\nMelrose stayed in the Parkins family for 61 years.\n\n*(From the Borders to the Bush, pp.44, 46)*\n\n## Sources\n\n- **Note:** WikiTree lists husband as \"Hans Hansen (Jorgenson) Smith\" — \"Hans\" is the Danish equivalent of \"John\". The book confirms he was born in Copenhagen, son of a Scottish Sea Captain and Danish mother, consistent with anglicising his name to John Smith in Australia.\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 36–57 — extract via OCR and vision analysis 19 June 2026\n- FindAGrave: [Esther Jane Smith (1834–1909)](https://www.findagrave.com/memorial/252916720) — Nyngan Cemetery\n- WikiTree: [Esther Jane Telfer (Smith) (1834–1909)](https://www.wikitree.com/wiki/Telfer-591)",
     "body_stripped": "**Role:** Daughter of Francis Telfer — matriarch of the Smith line\n**Born:** 21 May 1834 — Isle of Skye, Scotland\n**Died:** March 1909 (aged 75) — Nyngan, New South Wales\n**Buried:** Nyngan Cemetery (Church of England section)\n**Spouse:** John Smith (~1827 – 5 May 1895)\n**Ship:** *Prince George* — arrived Port Adelaide 26 December 1838 (aged 4)\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Telfer (1809–1895) \n **Mother**  Jean Murray (1810–1839) \n **Husband**  John Smith \n\n### Children\n\n Ch",
     "parents": [
-      "Francis Telfer (1809–1895)",
-      "Jean Murray (1810–1839)"
+      "francis-telfer-1809",
+      "jean-murray"
     ],
     "children": [
       "Jane Sophie Smith (b. S.A.)",
@@ -9345,7 +9323,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "John Smith (~1827–1895)"
+      "john-smith"
     ],
     "is_living": false,
     "lifespan": "1834 – 1909",
@@ -9398,8 +9376,8 @@
     "body_markdown": "# James Telfer (1832–1845)\n\n**Role:** Eldest son of [[Francis Telfer (1809–1895)]] and Jean Murray — vanished at age 13\n**Born:** 1832 — Scotland\n**Disappeared:** July 1844 (aged 13) — Chain of Ponds area, South Australia\n**Declared dead:** ~1845 (presumed)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Telfer (1809–1895)]] |\n| **Mother** | [[Jean Murray (1810–1839)]] |\n| **Stepmother (1)** | [[Dinah Flavel (1821–1844)]] | \n| **Stepmother (2)** | [[Margaret Wright Telfer (?–1892)]] |\n| **Sister** | Esther Jane Telfer (1834–1909) — m. John Smith |\n| **Sister** | Elizabeth Hannah Telfer (1836–1916) — m. Charles Farrow |\n| **Half-sister** | Jean Telfer (1840–1892) |\n\n## Life Summary\n\nJames was born in Scotland in 1832, the eldest of Francis and Jean's kids. He made the voyage on the *Prince George* with his parents and two younger sisters, docking at Port Adelaide on 26 December 1838. His mother died just 27 days later — leaving Francis with three kids under 7.\n\nJames grew up in the Adelaide Hills frontier on his father's farm near Chain of Ponds. By 13 he was working as a shepherd on the family sheep station.\n\n## Family Story — The Disappearance of James Telfer\n\nIn July 1844, during a week of heavy rain, James left the sheep station on the River Torrens near Chain of Ponds to round up stray sheep. He never came home.\n\nFrancis raised the alarm that night. Neighbours searched for days but the creeks were flooded and rain hadn't let up. Nothing was found. The general feeling was the flood took him. People figured when waters dropped, his remains would turn up in the riverbed or the Reedbeds. They didn't.\n\nThe *South Australian Register* printed this on 10 July 1844 (p.3):\n\n> **\"BOY MISSING** — On Tuesday last, during the heavy rain then falling, a youth named Telfer, thirteen years old, left his fathers sheep station on the River Torrens, near Chain of Ponds, to recover some stray sheep, but up to Saturday last had not been heard of. The surrounding country has been searched, but no trace of the wanderer has been found: and from the late inclemency of the weather, there is too much reason to believe that he has perished.\"\n\nFamily stories over the years threw up different theories — killed by aborigines, step-mother troubles, ran away. The most detailed version came from William Flavel: one morning someone walked twelve miles to tell Francis, who rounded up every man in the district. They searched for days, then got the police from Adelaide. Nothing.\n\nThen around 1877 — 33 years later — a newspaper article reported that recent floods had washed away logs and debris lodged against a tree in the river near Adelaide. Amongst the debris was a human skeleton. Police took charge. A doctor said the bones were a boy about 13, probably there for more than 20 years.\n\nWhether Francis ever learned his son had been found is unknown.\n\nTragically, James was the fourth family member Francis had lost in six years — wife Jean (1839), infant son John (died at sea 1838), second wife Dinah (1844), and now his eldest boy.\n\n*(Based on Donald Telfer, From the Borders to the Bush, pp.25–27, and the SA Register, 10 Jul 1844)*\n\n## Sources\n\n- Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 25–27 — story reference, not verbatim\n- South Australian Register, 10 July 1844, Page 3, Col. A — public domain newspaper quote",
     "body_stripped": "**Role:** Eldest son of Francis Telfer (1809–1895) and Jean Murray — vanished at age 13\n**Born:** 1832 — Scotland\n**Disappeared:** July 1844 (aged 13) — Chain of Ponds area, South Australia\n**Declared dead:** ~1845 (presumed)\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Telfer (1809–1895) \n **Mother**  Jean Murray (1810–1839) \n **Stepmother (1)**  Dinah Flavel (1821–1844)  \n **Stepmother (2)**  Margaret Wright Telfer (?–1892) \n **Sister**  Esther Jane Telfer (1834–1909) — m. John Smith \n *",
     "parents": [
-      "Francis Telfer (1809–1895)",
-      "Jean Murray (1810–1839)"
+      "francis-telfer-1809",
+      "jean-murray"
     ],
     "children": [],
     "siblings": [],
@@ -9461,12 +9439,12 @@
     "parents": [],
     "children": [
       "James (1832–1845)",
-      "Esther Jane (1834–1909)",
-      "Elizabeth Hannah (1836–1916)"
+      "esther-jane-telfer",
+      "elizabeth-hannah-telfer"
     ],
     "siblings": [],
     "spouses": [
-      "Francis Telfer (1809–1895)"
+      "francis-telfer-1809"
     ],
     "is_living": false,
     "lifespan": "1810 – 1839",
@@ -9537,14 +9515,14 @@
     "body_markdown": "# Jean (Jane) Telfer (1840–1892)\n\nThird daughter of **[[Francis Telfer (1809–1895)]]** and **Jean Murray**. After her mother's death, she was step-raised by **Dinah Flavel** (her father's second wife).\n\n## Vital Information\n\n- **Born:** 7 August 1840\n- **Birth name:** Jean Telfer (marriage certificate gives name as \"Jane\")\n- **Died:** 15 July 1892, Queens Own Town (Finniss Point), South Australia — heart disease\n- **Buried:** Strathalbyn Cemetery, South Australia\n\n## Marriage (1): Richard Paynter (1838–1869)\n\n- **Marriage date/location:** Solemnized by John Kither (Officiating Minister) at Chain of Ponds Parsonage. Witnessed by her father Francis Telfer and Henry Whiting of Chain of Ponds. Jean was several months pregnant at the time.\n- **Richard Paynter:** Son of Richard Paynter (from Calstock, Cornwall, died Jan 1856 aged 39 after \"protracted affliction\")\n- **Richard's occupation:** Initially a shepherd at Koppio (working for Jean's uncle James Telfer), later a school teacher at Saint Kitts (between Kapunda and Truro) — change due to poor health\n- **Richard died:** 7 February 1869, St. Kitts Creek, of pleurisy, aged 30. Newspaper: \"Mr Paynter, the Schoolmaster at St. Kitts Creek, died somewhat suddenly on Sunday last, by which a widow and five children have been left unprovided for.\"\n\n### Children of Richard Paynter and Jean Telfer\n\n#### 1. THOMAS PAYNTER\n- **Born:** 22 December 1859, Ward Farm, near Kersbrook\n- **Married:** Elizabeth Liebich, 1 December 1881, at Tarcowie\n- **Occupation:** Leased/worked farmland at Arden Vale (near Quorn, SA). Later worked properties around Peterborough.\n- **Accident:** Slipped under a train, had a leg amputated in 1946\n- **Died:** Shortly after amputation in 1946, aged 86. Buried Peterborough Cemetery.\n- **Children (9):** Richard, Lilian, Gustav, Ethel, Dinah, Agnes, Rose, Thomas, Helena\n\n##### 1a. Richard William John Paynter\n- Born 27 Apr 1882, Mannanarie. Bought own farm at Arden Vale at age 18. Married Lucy Arabella Hill. Died 23 Jul 1960.\n\n##### 1b. Lilian Ellen Jane Paynter\n- Born 1885, Arden Vale. Worked on stations. Married (1) Henry Alcock (railway worker, Quorn), (2) Herbert Mayer (station hand), (3) Alfred Hatchard (Iron Knob). Died 1 Mar 1954, Iron Knob.\n\n##### 1c. Gustav Francis George Paynter\n- Born 1888. Married (1) Sarah Jane Barbour, (2) Lily Olive Rowe. Worked for railways. Died 1 Jul 1946, aged 58.\n\n##### 1d. Ethel Emily Elizabeth Paynter\n- Born 1891, Arden Vale. Married (1) Frank Smith (railway worker — d. 1932), (2) David George Flavel (railway ganger). Died 19 May 1932, Peterborough.\n\n##### 1e. Dinah Alice Mary Paynter\n- Born 27 Sep 1894, Arden Vale. Married William Mundy (railway employee). Died 27 May 1963.\n\n##### 1f. Agnes Letitia May Rose Paynter\n- Born 1896, Arden Vale. Married George Hucks (railway worker). Died 28 May 1952, buried Loxton.\n\n##### 1g. Rose Isabel Margaret Paynter\n- Born 8 Aug 1900, Quorn nursing home. Married John Hunter Rankin (of Koolunga, son of Scottish migrants Angus and Jane Rankin) in 1918. Died 8 Jul 1988, Port Augusta.\n\n##### 1h. Thomas Frederick Edward Paynter\n- Born 31 Dec 1903, Arden Vale. Married Florence Catherine Donovan. Died 16 Sep 1940, aged 36.\n\n##### 1i. Helena Florence Daisy Paynter\n- Born 19 Aug 1906, Arden Vale. Married Harry Richmond Hill (northern station hand). Lived in Terowie, later Gawler.\n\n#### 2. MARY JANE PAYNTER\n- **Born:** 30 June 1861, Koppio (near Port Lincoln)\n- **Married:** John Watson, 1 March 1882. Ceremony by Rev. H. Chapman (first Wesleyan Minister of Hawker), witnessed by Mrs Anne Mapleton and John Telfer (Mary's uncle).\n- **John Watson:** Grandfather Charles Watson was a convict on \"Asia II\" (1827, Tasmania). John was a \"lime burner\" of Arkaba.\n- **Lived:** Willow Plains (share-farmed land owned by John Telfer). Moved to Olinda, Victoria in 1910.\n- **John died:** 10 September 1929\n- **Mary Jane died:** 14 July 1945, Preston, Victoria, aged 84. Buried Fawkner Cemetery.\n- **Children (10):** Joseph, Florence Beatrice, Lancelot Hobart, John Francis Percival, Blanche Olive May, Cecil Charles, Clifford, Vera Merle, Royal Ernest, Arthur\n\n#### 3. FRANCIS TELFER PAYNTER\n- **Born:** 27 October 1862, Koppio\n\n#### 4. ELIZABETH PAYNTER\n- **Born:** 31 December 1864, Chain of Ponds area\n\n#### 5. DINAH FLAVEL PAYNTER\n- **Born:** July 1869 (five months after Richard's death)\n\n## Marriage (2): Frederick Parker\n\n- **Marriage date/location:** Christmas Day, 25 December 1871, at Kapunda\n- **Frederick Parker:** Son of George Parker. Occupation: itinerant farm labourer / bullock driver\n- **Lived:** Hawker, Oraparinna area (far north SA), later Finniss Point\n- **Frederick died:** 12 August 1928, Berrima Hospital, NSW. Buried Bowral Cemetery, NSW. In later years he lived with his daughter Margaret and son-in-law Edward Liebich at Wildes Meadow, NSW.\n- **At Frederick's death, only 3 of his children survived him:** Margaret, Frederick (known as George), and Joanna\n\n### Children of Frederick Parker and Jean Telfer\n\n#### 1. MARGARET ELIZA PARKER\n- **Born:** 26 July 1872, Finniss Point\n- **Married:** Edward Liebich (26yo farmer of Arden Vale, son of Gustav Liebich), 22 February 1893, at Wesleyan Parsonage, Quorn\n- **Lived:** Moved to Handen, NSW (c.1911), then Robertson and Moss Vale districts\n- **Died:** 27 March 1938, Moss Vale. Buried Moss Vale Cemetery.\n- **Children (8):** Jean, Alice Mary, Martha Elizabeth, Emily Margaret, Edward Harold, Frederick Walter, Ruth Temperance, Ella\n\n#### 2. FREDERICK GEORGE PARKER (known as George)\n- **Born:** 5 April 1874, Oraparinna (father was bullock driver)\n- **Occupation:** Living at Wantiool at time of death\n- **Never married**\n- **Died:** 16 December 1946, Junee Hospital, NSW. Buried Church of England Cemetery, Junee, NSW.\n\n#### 3. ANNIE PARKER\n- **Born:** 18 November 1875, Oraparinna\n- **Died:** 6 November 1895, Adelaide\n\n#### 4. MARTHA PARKER\n- **Born:** January 1878 (estimated from school records — no birth certificate found)\n- **School:** Queens Own Town School, attended 1886–1892\n\n#### 5. JOANNA WITTITA CORDLEY PARKER\n- **Born:** 6 February 1880, Arkaba\n- **Still living** at father's death in 1928\n\n#### 6. ETHEL MAY PARKER\n- **Born:** 4 June 1881, Hawker\n- **School:** Until 1895",
     "body_stripped": "Third daughter of **Francis Telfer (1809–1895)** and **Jean Murray**. After her mother's death, she was step-raised by **Dinah Flavel** (her father's second wife).\n\n## Vital Information\n\n- **Born:** 7 August 1840\n- **Birth name:** Jean Telfer (marriage certificate gives name as \"Jane\")\n- **Died:** 15 July 1892, Queens Own Town (Finniss Point), South Australia — heart disease\n- **Buried:** Strathalbyn Cemetery, South Australia\n\n## Marriage (1): Richard Paynter (1838–1869)\n\n- **Marriage date/locat",
     "parents": [
-      "Francis Telfer (1809–1895)",
-      "Jean Murray (1810–1839)"
+      "francis-telfer-1809",
+      "jean-murray"
     ],
     "children": [],
     "siblings": [],
     "spouses": [
-      "Richard Paynter (1838–1869)",
-      "Frederick Parker (1844–1928)"
+      "richard-paynter",
+      "frederick-parker"
     ],
     "is_living": false,
     "lifespan": "1840 – 1892",
@@ -9623,13 +9601,13 @@
     "body_markdown": "# Caroline Edna Lawrie (1890–1957)\n**Born:** 21 Apr 1890, Balaklava, South Australia | **Died:** 1 Jan 1957, North Adelaide, South Australia | **Mother:** [[Caroline Hosking (1851–1920)]] | **Father:** [[Robert Dunlop Lawrie (1850–1917)]] | **Spouse:** [[William Henry Parker (1893–1968)]] | **Occupation:** ?\n\n## Family\n| Relation | Name |\n|---|---|\n| Self | [[Caroline Edna Lawrie (1890–1957)]] |\n| Father | [[Robert Dunlop Lawrie (1850–1917)]] |\n| Mother | [[Caroline Hosking (1851–1920)]] |\n| Spouse | [[William Henry Parker (1893–1968)]] |\n| Daughter | [[Shirley Edna Telfer (née Parker)]] |\n| Son | Sydney Hugh Parker |\n| Son | William Humphrey Parker |\n\n## Life Summary\n\nCaroline Edna Lawrie was born on 21 April 1890 at Balaklava, South Australia, the eighth of nine children born to Robert Dunlop Lawrie and Caroline Hosking. She grew up on the family farm \"Bleak Farm\" at Long Plains, South Australia.\n\nShe married William Henry Parker and had at least three children: Shirley Edna Parker (who married Murray John Telfer), Sydney Hugh Parker, and William Humphrey Parker.\n\nShe died on 1 January 1957 at North Adelaide, South Australia.\n\n## Timeline\n| Date | Event |\n|---|---|\n| 21 Apr 1890 | Born at Balaklava, South Australia |\n| 189? | Married [[William Henry Parker (1893–1968)]] |\n| 1 Jan 1957 | Died at North Adelaide, South Australia |\n\n## Sources\n- [Webtrees: Caroline Edna Lawrie (lawriefamily.info)](http://lawriefamily.info/genealogy/individual.php?pid=I0544&ged=trevorlawrie) — accessed via Wayback Machine, 17 Jun 2026\n- Corrections Log — 1 Jun 2026 entry (Robert Dunlop Lawrie correction)",
     "body_stripped": "**Born:** 21 Apr 1890, Balaklava, South Australia  **Died:** 1 Jan 1957, North Adelaide, South Australia  **Mother:** Caroline Hosking (1851–1920)  **Father:** Robert Dunlop Lawrie (1850–1917)  **Spouse:** William Henry Parker (1893–1968)  **Occupation:** ?\n\n## Family\n Relation  Name \n\n Self  Caroline Edna Lawrie (1890–1957) \n Father  Robert Dunlop Lawrie (1850–1917) \n Mother  Caroline Hosking (1851–1920) \n Spouse  William Henry Parker (1893–1968) \n Daughter  Shirley Edna Telfer (née Parker) \n S",
     "parents": [
-      "Caroline Hosking",
-      "Robert Dunlop Lawrie"
+      "caroline-hosking",
+      "robert-dunlop-lawrie"
     ],
     "children": [
       "Shirley Edna Parker",
       "Sydney Hugh Parker",
-      "William Humphrey Parker"
+      "william-parker"
     ],
     "siblings": [
       "Catherine Leah Lawrie",
@@ -9642,7 +9620,7 @@
       "Robert Dunlop Lawrie (jnr)"
     ],
     "spouses": [
-      "William Henry Parker"
+      "william-parker"
     ],
     "is_living": false,
     "lifespan": "1890 – 1957",
@@ -9740,7 +9718,7 @@
       "?"
     ],
     "spouses": [
-      "Robert Dunlop Lawrie"
+      "robert-dunlop-lawrie"
     ],
     "is_living": false,
     "lifespan": "1851 – 1920",
@@ -9837,7 +9815,7 @@
       "(see John Lawrie)"
     ],
     "spouses": [
-      "Caroline Hosking"
+      "caroline-hosking"
     ],
     "is_living": false,
     "lifespan": "1850 – 1917",
@@ -9937,17 +9915,17 @@
     "children": [
       "Ann Telfer",
       "Johnnie Telfer",
-      "Peter Telfer",
+      "peter-telfer",
       "Adam Telfer",
       "Robina Telfer",
       "Margaret Telfer",
-      "William Telfer",
+      "william-telfer",
       "James Telfer",
       "Jessie Telfer"
     ],
     "siblings": [],
     "spouses": [
-      "John Telfer (1847–1923)"
+      "john-telfer-1847"
     ],
     "is_living": false,
     "lifespan": "1856 – ?",
@@ -10010,17 +9988,17 @@
     "body_stripped": "**Role:** Wife of John Telfer (1847–1929)\n\nCaroline Masters married John Telfer (1847–1929), the eldest child of Francis Telfer and Margaret Wright. Together they raised a large family including Albert George, Ernest John, William James, Edwin Gilbert, Walter William, Maria Clara, and Caroline.\n\n**Source:** *From the Borders to the Bush*",
     "parents": [],
     "children": [
-      "Albert George Telfer (1882–1961)",
-      "Ernest John Telfer (1877–1953)",
-      "William James Telfer (1879–1948)",
-      "Edwin Gilbert Telfer (1888–1972)",
-      "Walter William Telfer (1885–1958)",
-      "Maria Clara Telfer (1878–1903)",
-      "Caroline Telfer"
+      "albert-telfer",
+      "ernest-telfer",
+      "william-telfer",
+      "edwin-telfer-1888",
+      "walter-telfer",
+      "maria-clara-telfer",
+      "caroline-telfer"
     ],
     "siblings": [],
     "spouses": [
-      "John Telfer (1847–1929)"
+      "john-telfer-1847"
     ],
     "is_living": false,
     "lifespan": "1850 – 1929",
@@ -10090,7 +10068,6 @@
     "children": [
       "Peter Farrow",
       "John Farrow",
-      "Charles Farrow",
       "Esther Hannah Farrow",
       "Elizabeth Farrow",
       "Margaret Farrow",
@@ -10103,7 +10080,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "Elizabeth Hannah Telfer (1836–1916)"
+      "elizabeth-hannah-telfer"
     ],
     "is_living": false,
     "lifespan": "1836 – 1884",
@@ -10156,7 +10133,7 @@
     "children": [],
     "siblings": [],
     "spouses": [
-      "Robert Telfer (1803–1876)"
+      "robert-telfer-1803"
     ],
     "is_living": false,
     "lifespan": "1807 – 1846",
@@ -10217,7 +10194,7 @@
     "children": [],
     "siblings": [],
     "spouses": [
-      "Jean Telfer (1840–1892)"
+      "jean-telfer"
     ],
     "is_living": false,
     "lifespan": "1838 – 1928",
@@ -10270,7 +10247,7 @@
     "children": [],
     "siblings": [],
     "spouses": [
-      "James Telfer (1829–1914)"
+      "james-telfer-1829"
     ],
     "is_living": false,
     "lifespan": "1835 – 1914",
@@ -10341,7 +10318,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "Esther Jane Telfer (1834–1909)"
+      "esther-jane-telfer"
     ],
     "is_living": false,
     "lifespan": "1827 – 1895",
@@ -10394,7 +10371,7 @@
     "children": [],
     "siblings": [],
     "spouses": [
-      "John Telfer (1840–1913)"
+      "john-telfer-18401913"
     ],
     "is_living": false,
     "lifespan": "1850 – 1913",
@@ -10473,7 +10450,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "Jean Telfer (1840–1892)"
+      "jean-telfer"
     ],
     "is_living": false,
     "lifespan": "1838 – 1869",
@@ -10594,7 +10571,7 @@
     "children": [],
     "siblings": [],
     "spouses": [
-      "Francis Charles Telfer"
+      "francis-telfer-1875"
     ],
     "is_living": true,
     "lifespan": "? – living",
@@ -10711,8 +10688,8 @@
     "body_markdown": "# Floris Ethel Victoria Telfer (1903–1951)\n\n**Role:** Daughter of Mark Telfer and Julia Seebohm\n\nFloris Ethel Victoria Telfer was born in 1903, the eldest child of Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939).\n\n**Source:** *From the Borders to the Bush*",
     "body_stripped": "**Role:** Daughter of Mark Telfer and Julia Seebohm\n\nFloris Ethel Victoria Telfer was born in 1903, the eldest child of Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939).\n\n**Source:** *From the Borders to the Bush*",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [],
     "siblings": [
@@ -10795,7 +10772,7 @@
       "Shirley Telfer"
     ],
     "children": [
-      "Carissa Telfer"
+      "carissa-telfer"
     ],
     "siblings": [
       "Daryll William Telfer",
@@ -10805,7 +10782,7 @@
       "Susan Shirley Lawrie"
     ],
     "spouses": [
-      "Robyn Telfer"
+      "robyn-telfer"
     ],
     "is_living": true,
     "lifespan": "? – living",
@@ -10869,8 +10846,8 @@
     "body_markdown": "# Kenneth Alexander Telfer (1904–?)\n\n**Role:** Son of Mark Telfer and Julia Seebohm\n\nKenneth Alexander Telfer was born in 1904, the second child of Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939).\n\n**Source:** *From the Borders to the Bush*",
     "body_stripped": "**Role:** Son of Mark Telfer and Julia Seebohm\n\nKenneth Alexander Telfer was born in 1904, the second child of Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939).\n\n**Source:** *From the Borders to the Bush*",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [],
     "siblings": [
@@ -10942,8 +10919,8 @@
     "body_markdown": "# Melvin McLeod Telfer (1911–1978)\n\n**Role:** Son of Mark Telfer and Julia Seebohm\n\nMelvin McLeod Telfer was born in 1911, the third child of Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939). He died in 1978.\n\n**Source:** *From the Borders to the Bush*",
     "body_stripped": "**Role:** Son of Mark Telfer and Julia Seebohm\n\nMelvin McLeod Telfer was born in 1911, the third child of Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939). He died in 1978.\n\n**Source:** *From the Borders to the Bush*",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [],
     "siblings": [
