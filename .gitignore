@@ -10,3 +10,4 @@ src/data/people.public.json
 
 apply-prune.py
 *.full-backup
+*.bak

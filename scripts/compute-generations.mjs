@@ -40,6 +40,7 @@ for (const person of people) {
 
 // Primary root: John Telfer of Castleton (1731)
 const ROOT_CANDIDATES = [
+  'john-telfer-of-castleton',  // actual slug
   'john-telfer-1731s',  // slug from vault file "John Telfer (of Castleton) (1731–?).md"
   'john-telfer-of-castleton-1731'
 ];
@@ -70,6 +71,109 @@ if (!rootSlug) {
 
 console.log(`🌱 Root ancestor: ${slugToPerson.get(rootSlug).display_name} (${rootSlug})`);
 
+// ─── Display Name Lookup ────────────────────────────────────────────────────
+
+// Fallback: resolve display-name references (children/parents/spouses arrays
+// often contain display names like 'James Telfer (1761–1845)' instead of slugs)
+function resolveReference(ref, contextSlug) {
+  // 1. Already a valid slug
+  if (slugToPerson.has(ref)) return ref;
+
+  // 2. Extract birth_year from lifespan in reference, e.g. "(1761–1845)", "(~1731–?)"
+  const lifespanMatch = ref.match(/\(~?(\d{4})[–-]/);
+  const refBirthYear = lifespanMatch ? parseInt(lifespanMatch[1]) : null;
+
+  // 3. Strip all parenthetical content (lifespans, née, etc.)
+  const stripped = ref.replace(/\([^)]*\)/g, '').trim().replace(/\s+/g, ' ');
+  const strippedLower = stripped.toLowerCase();
+
+  const candidates = [];
+
+  for (const person of people) {
+    const dn = person.display_name;
+    const dnLower = dn.toLowerCase();
+
+    // a) Exact display_name match
+    if (ref.toLowerCase() === dnLower) {
+      candidates.push(person);
+      continue;
+    }
+
+    // b) Stripped display_name vs stripped reference
+    const dnStripped = dn.replace(/\([^)]*\)/g, '').trim().replace(/\s+/g, ' ').toLowerCase();
+    if (strippedLower === dnStripped) {
+      candidates.push(person);
+      continue;
+    }
+
+    // c) first_name + last_name match (handles 'Mark Telfer' → 'Mark Kenneth Telfer')
+    const parts = stripped.split(/\s+/);
+    if (parts.length >= 2 && person.first_name && person.last_name) {
+      const firstName = parts[0];
+      const lastName = parts[parts.length - 1];
+      if (person.first_name.toLowerCase() === firstName.toLowerCase() &&
+          person.last_name.toLowerCase() === lastName.toLowerCase()) {
+        candidates.push(person);
+        continue;
+      }
+    }
+
+    // d) Single name (after stripping lifespan) + "Telfer" surname
+    //    e.g. "Francis (1809–1895)" → stripped "Francis" → Francis Telfer
+    if (parts.length === 1 && person.first_name && person.last_name) {
+      if (person.first_name.toLowerCase() === strippedLower &&
+          person.last_name.toLowerCase() === 'telfer') {
+        candidates.push(person);
+      }
+    }
+  }
+
+  if (candidates.length === 1) {
+    return candidates[0].slug;
+  } else if (candidates.length > 1 && refBirthYear !== null) {
+    // Disambiguate by birth year from lifespan in reference
+    for (const c of candidates) {
+      if (c.birth_year === refBirthYear) return c.slug;
+    }
+  } else if (candidates.length > 1 && contextSlug) {
+    // Disambiguate using parent context
+    // 1st pass: prefer candidate that has contextSlug in their parents array
+    const withParent = candidates.filter(c => {
+      const parents = c.parents || [];
+      return parents.some(p => {
+        // Check both slug and resolved reference
+        const resolved = resolveReference(p);
+        return resolved === contextSlug;
+      });
+    });
+    if (withParent.length === 1) return withParent[0].slug;
+    if (withParent.length > 1) {
+      // 2nd pass: prefer candidate with FEWER parents (less likely aggregate/duplicate)
+      withParent.sort((a, b) => (a.parents || []).length - (b.parents || []).length);
+      return withParent[0].slug;
+    }
+    // 3rd pass: use birth year proximity
+    const contextPerson = slugToPerson.get(contextSlug);
+    if (contextPerson && contextPerson.birth_year) {
+      const expectedBirth = contextPerson.birth_year + 30;
+      let best = null;
+      let bestDelta = Infinity;
+      for (const c of candidates) {
+        if (c.birth_year) {
+          const delta = Math.abs(c.birth_year - expectedBirth);
+          if (delta < bestDelta) {
+            bestDelta = delta;
+            best = c;
+          }
+        }
+      }
+      if (best) return best.slug;
+    }
+  }
+
+  return null; // could not resolve
+}
+
 // ─── BFS Generation Assignment ──────────────────────────────────────────────
 
 // Only traverse DOWN from root: children (gen + 1), spouses (same gen)
@@ -78,6 +182,7 @@ console.log(`🌱 Root ancestor: ${slugToPerson.get(rootSlug).display_name} (${r
 const generation = new Map();
 const visited = new Set();
 const queue = [{ slug: rootSlug, gen: 1 }];
+const unresolved = [];
 
 while (queue.length > 0) {
   const { slug, gen } = queue.shift();
@@ -90,21 +195,36 @@ while (queue.length > 0) {
     generation.set(slug, gen);
   }
 
-  // Enqueue children (gen + 1)
+  // Enqueue children (gen + 1) — resolve display-name references
   const children = childrenMap.get(slug) || [];
-  for (const childSlug of children) {
-    if (slugToPerson.has(childSlug)) {
-      queue.push({ slug: childSlug, gen: gen + 1 });
+  for (const childRef of children) {
+    const resolved = resolveReference(childRef, slug);
+    if (resolved) {
+      queue.push({ slug: resolved, gen: gen + 1 });
+    } else {
+      unresolved.push({ from: slug, ref: childRef, role: 'child' });
     }
   }
 
-  // Enqueue spouses (same generation)
+  // Enqueue spouses (same generation) — resolve display-name references
   const spouses = spousesMap.get(slug) || [];
-  for (const spouseSlug of spouses) {
-    if (slugToPerson.has(spouseSlug) && !visited.has(spouseSlug)) {
-      queue.push({ slug: spouseSlug, gen: gen });
+  for (const spouseRef of spouses) {
+    const resolved = resolveReference(spouseRef, slug);
+    if (resolved && !visited.has(resolved)) {
+      queue.push({ slug: resolved, gen: gen });
+    } else if (!resolved) {
+      unresolved.push({ from: slug, ref: spouseRef, role: 'spouse' });
     }
   }
+}
+
+if (unresolved.length > 0) {
+  console.log(`\n⚠️  ${unresolved.length} references could not be resolved (will use birth-year estimation):`);
+  for (const u of unresolved.slice(0, 15)) {
+    const from = slugToPerson.get(u.from);
+    console.log(`   ${from ? from.display_name : u.from} → ${u.role}: "${u.ref}"`);
+  }
+  if (unresolved.length > 15) console.log(`   ... and ${unresolved.length - 15} more`);
 }
 
 // ─── Post-BFS: Sync Spouse Generations ────────────────────────────────────────
@@ -117,8 +237,9 @@ const connected = new Set(visited);
 for (const personSlug of connected) {
   const personGen = generation.get(personSlug);
   const spouses = spousesMap.get(personSlug) || [];
-  for (const spouseSlug of spouses) {
-    if (!connected.has(spouseSlug)) {
+  for (const spouseRef of spouses) {
+    const spouseSlug = resolveReference(spouseRef, personSlug);
+    if (spouseSlug && !connected.has(spouseSlug)) {
       // Spouse not connected to root - give them the connected spouse's generation
       generation.set(spouseSlug, personGen);
     }
