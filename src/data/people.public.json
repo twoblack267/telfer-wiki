@@ -559,6 +559,40 @@
     "person_photo": null
   },
   {
+    "id": "William Humphrey Parker",
+    "slug": "william-humphrey-parker",
+    "first_name": "William Humphrey",
+    "middle_name": null,
+    "last_name": "Parker",
+    "birth_year": 1850,
+    "death_year": 1926,
+    "birth_year_display": "1850",
+    "death_year_display": "1926",
+    "display_name": "William Humphrey Parker",
+    "title": "William Humphrey Parker — Family & Biography",
+    "lifespan": "1850 – 1926",
+    "is_living": false,
+    "body_markdown": "# William Humphrey Parker (1850–1926)\n**Born:** 17 Jul 1850, Ragged Hill, Mossblown, Ayrshire, Scotland | **Died:** 18 Feb 1926, Lower Mitcham, South Australia | **Mother:** ? | **Father:** ? | **Buried:** Mitcham General Cemetery, SA | **Occupation:** Farmer\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | [[William Humphrey Parker (1850–1926)]] |\n| Spouse | Hannah Baker (1855–1948) |\n| Daughter | Sophia Parker (1886–1918) |\n| Son | [[William Henry Parker (1893–1968)]] |\n| Son | Hugh Kelly Parker (1897–1959) |\n\n## Life Summary\n\nWilliam Humphrey Parker was born on 17 July 1850 at Ragged Hill, Mossblown, Ayrshire, Scotland. He emigrated to South Australia, where he married Hannah Baker on 21 August 1878 at the residence of the bride's parents, Virginia, South Australia.\n\nHe was a farmer and settled in the Long Plains area. His children included Sophia (who married Frank Lindsay Lawrie) and William Henry (who married Caroline Edna Lawrie), creating a double union between the Parker and Lawrie families.\n\nHe died on 18 February 1926 at Lower Mitcham, South Australia, and was buried at Mitcham General Cemetery.\n\n## Sources\n\n1. [WikiTree: William Humphrey Parker (Parker-4351)](https://www.wikitree.com/wiki/Parker-4351) — accessed 19 June 2026\n2. [FindAGrave: William Humphrey Parker (1850–1926)](https://www.findagrave.com/memorial/184786711/william_humphrey-parker) — accessed 19 June 2026",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "parker",
+      "scottish"
+    ],
+    "parents": [],
+    "children": [
+      "William Henry Parker"
+    ],
+    "spouses": [
+      "Hannah Baker (1855–1948)"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Caroline Hosking",
     "slug": "caroline-hosking",
     "first_name": "Caroline",
@@ -585,6 +619,39 @@
     "children": [],
     "spouses": [
       "Robert Dunlop Lawrie"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Hannah Baker",
+    "slug": "hannah-baker",
+    "first_name": "Hannah",
+    "middle_name": null,
+    "last_name": "Baker",
+    "birth_year": 1855,
+    "death_year": 1948,
+    "birth_year_display": "1855",
+    "death_year_display": "1948",
+    "display_name": "Hannah Baker",
+    "title": "Hannah Baker — Family & Biography",
+    "lifespan": "1855 – 1948",
+    "is_living": false,
+    "body_markdown": "# Hannah Baker (1855–1948)\n**Born:** 28 Aug 1855, Peachy Belt, South Australia | **Died:** 6 Oct 1948, Lower Mitcham, South Australia | **Mother:** ? | **Father:** ? | **Occupation:** ?\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Hannah Baker (1855–1948) |\n| Spouse | [[William Humphrey Parker (1850–1926)]] |\n| Daughter | Sophia Parker (1886–1918) |\n| Son | [[William Henry Parker (1893–1968)]] |\n| Son | Hugh Kelly Parker (1897–1959) |\n\n## Life Summary\n\nHannah Baker was born on 28 August 1855 at Peachy Belt, South Australia. She married William Humphrey Parker on 21 August 1878 at the residence of her parents, Virginia, South Australia. She was the mother of at least three children, including William Henry Parker (who married Caroline Edna Lawrie).\n\nShe died on 6 October 1948 at Lower Mitcham, South Australia.\n\n## Sources\n\n1. [WikiTree: Hannah Baker (Baker-2229)](https://www.wikitree.com/wiki/Baker-2229) — accessed 19 June 2026\n2. [WikiTree: William Humphrey Parker (Parker-4351)](https://www.wikitree.com/wiki/Parker-4351) — accessed 19 June 2026",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "baker"
+    ],
+    "parents": [],
+    "children": [
+      "William Henry Parker"
+    ],
+    "spouses": [
+      "William Humphrey Parker (1850–1926)"
     ],
     "siblings": [],
     "images": [],
@@ -731,6 +798,44 @@
     "siblings": [
       "Robert Dunlop Lawrie (jnr)"
     ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "William Henry Parker",
+    "slug": "william-henry-parker",
+    "first_name": "William Henry",
+    "middle_name": null,
+    "last_name": "Parker",
+    "birth_year": 1893,
+    "death_year": 1968,
+    "birth_year_display": "1893",
+    "death_year_display": "1968",
+    "display_name": "William Henry Parker",
+    "title": "William Henry Parker — Family & Biography",
+    "lifespan": "1893 – 1968",
+    "is_living": false,
+    "body_markdown": "# William Henry Parker (1893–1968)\n**Born:** 13 Apr 1893, Long Plains, South Australia | **Died:** 16 Dec 1968, Owen, South Australia | **Mother:** [[Hannah Baker (1855–1948)]] | **Father:** [[William Humphrey Parker (1850–1926)]] | **Buried:** Shannon Cemetery (Calomba Methodist Cemetery), SA | **Occupation:** Farmer, Long Plains\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | [[William Henry Parker (1893–1968)]] |\n| Father | [[William Humphrey Parker (1850–1926)]] |\n| Mother | Hannah Baker (1855–1948) |\n| Spouse | [[Caroline Edna Lawrie (1890–1957)]] |\n| Daughter | Avis Parker (1918–2009) |\n| Son | Howard Parker (1920–2003) |\n| Son | Sydney Hugh Parker (1922–1964) |\n| Son | William Humphrey Parker (1926–1976) |\n| Daughter | [[Shirley Edna Telfer (1929–2017)]] |\n\n## Life Summary\n\nWilliam Henry Parker was born on 13 April 1893 at Long Plains, South Australia, the son of Scottish-born William Humphrey Parker (1850–1926) and Hannah Baker (1855–1948). His father had migrated from Mossblown, Ayrshire, Scotland, to South Australia. His older sister Sophia Parker (1886–1918) married into the Lawrie family (Frank Lindsay Lawrie), creating a double connection between the Parker and Lawrie families.\n\nWilliam married Caroline Edna Lawrie on 29 March 1917 at the residence of R. D. Lawrie, Long Plains, solemnised by Pastor Ross Goodwin. They had five children: Avis (b. 1918), Howard (b. 1920), Sydney Hugh (b. 1922), William Humphrey (b. 1926), and Shirley Edna (b. 1929).\n\nHe was a farmer at Long Plains for most of his life. He died on 16 December 1968 near Owen, South Australia, aged 75, and was buried at Shannon Cemetery (Calomba Methodist Cemetery), SA, alongside his wife Caroline Edna (who predeceased him in 1957).\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 13 Apr 1893 | Born at Long Plains, South Australia |\n| 29 Mar 1917 | Married [[Caroline Edna Lawrie (1890–1957)]] at Long Plains |\n| 20 Apr 1918 | Daughter Avis Parker born at Balaklava |\n| 10 Apr 1920 | Son Howard Parker born at Balaklava |\n| 7 Nov 1922 | Son Sydney Hugh Parker born at Long Plains |\n| 16 Apr 1926 | Son William Humphrey Parker born at Balaklava |\n| 28 Mar 1929 | Daughter Shirley Edna Parker born |\n| 1 Jan 1957 | Wife Caroline Edna Lawrie dies at North Adelaide |\n| 16 Dec 1968 | Dies near Owen, South Australia |\n| — | Buried at Shannon Cemetery (Calomba), SA |\n\n## Newspaper References\n\n> **PARKER—LAWRIE.** — Mr. and Mrs. W. H. Parker, of Long Plains, wish to announce the 30th anniversary of their wedding, solemnised by Pastor Ross Goodwin, at Long Plains, March 29, 1917.\n>\n> *The Advertiser (Adelaide), 29 March 1947*\n\n**Source:** [Trove — Parker-Lawrie 30th Wedding Anniversary](https://trove.nla.gov.au/newspaper/article/74641339) — accessed 19 June 2026\n\n## Sources\n\n1. [WikiTree: William Henry Parker (Parker-4371)](https://www.wikitree.com/wiki/Parker-4371) — accessed 19 June 2026\n2. [Australian Cemeteries Index — Shannon Cemetery inscriptions](https://austcemindex.com/?cemid=3841) — accessed 19 June 2026\n3. [Trove — Parker-Lawrie 30th Wedding Anniversary, The Advertiser, 29 Mar 1947](https://trove.nla.gov.au/newspaper/article/74641339) — accessed 19 June 2026\n4. [WikiTree: William Humphrey Parker (Parker-4351)](https://www.wikitree.com/wiki/Parker-4351) — accessed 19 June 2026\n5. [WikiTree: Hannah Baker (Baker-2229)](https://www.wikitree.com/wiki/Baker-2229) — accessed 19 June 2026",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "parker"
+    ],
+    "parents": [
+      "Hannah Baker (1855–1948)",
+      "William Humphrey Parker (1850–1926)"
+    ],
+    "children": [
+      "Sydney Hugh Parker",
+      "William Humphrey Parker",
+      "Shirley Edna Telfer"
+    ],
+    "spouses": [
+      "Caroline Edna Lawrie (1890–1957)"
+    ],
+    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -1080,37 +1185,6 @@
     "person_photo": null
   },
   {
-    "id": "Hannah Baker",
-    "slug": "hannah-baker",
-    "first_name": "Hannah",
-    "middle_name": null,
-    "last_name": "Baker",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Hannah Baker",
-    "title": "Hannah Baker — Family & Biography",
-    "lifespan": "? – living",
-    "is_living": true,
-    "body_markdown": "# Hannah Baker (1855–1948)\n**Born:** 28 Aug 1855, Peachy Belt, South Australia | **Died:** 6 Oct 1948, Lower Mitcham, South Australia | **Mother:** ? | **Father:** ? | **Occupation:** ?\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Hannah Baker (1855–1948) |\n| Spouse | [[William Humphrey Parker (1850–1926)]] |\n| Daughter | Sophia Parker (1886–1918) |\n| Son | [[William Henry Parker (1893–1968)]] |\n| Son | Hugh Kelly Parker (1897–1959) |\n\n## Life Summary\n\nHannah Baker was born on 28 August 1855 at Peachy Belt, South Australia. She married William Humphrey Parker on 21 August 1878 at the residence of her parents, Virginia, South Australia. She was the mother of at least three children, including William Henry Parker (who married Caroline Edna Lawrie).\n\nShe died on 6 October 1948 at Lower Mitcham, South Australia.\n\n## Sources\n\n1. [WikiTree: Hannah Baker (Baker-2229)](https://www.wikitree.com/wiki/Baker-2229) — accessed 19 June 2026\n2. [WikiTree: William Humphrey Parker (Parker-4351)](https://www.wikitree.com/wiki/Parker-4351) — accessed 19 June 2026",
-    "roles": [],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "baker"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "William Humphrey Parker (1850–1926)"
-    ],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "John Robert Telfer",
     "slug": "john-robert-telfer",
     "first_name": "John Robert",
@@ -1175,72 +1249,6 @@
     "parents": [],
     "children": [],
     "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "William Henry Parker",
-    "slug": "william-henry-parker",
-    "first_name": "William Henry",
-    "middle_name": null,
-    "last_name": "Parker",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "William Henry Parker",
-    "title": "William Henry Parker — Family & Biography",
-    "lifespan": "? – living",
-    "is_living": true,
-    "body_markdown": "# William Henry Parker (1893–1968)\n**Born:** 13 Apr 1893, Long Plains, South Australia | **Died:** 16 Dec 1968, Owen, South Australia | **Mother:** [[Hannah Baker (1855–1948)]] | **Father:** [[William Humphrey Parker (1850–1926)]] | **Buried:** Shannon Cemetery (Calomba Methodist Cemetery), SA | **Occupation:** Farmer, Long Plains\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | [[William Henry Parker (1893–1968)]] |\n| Father | [[William Humphrey Parker (1850–1926)]] |\n| Mother | Hannah Baker (1855–1948) |\n| Spouse | [[Caroline Edna Lawrie (1890–1957)]] |\n| Daughter | Avis Parker (1918–2009) |\n| Son | Howard Parker (1920–2003) |\n| Son | Sydney Hugh Parker (1922–1964) |\n| Son | William Humphrey Parker (1926–1976) |\n| Daughter | [[Shirley Edna Telfer (1929–2017)]] |\n\n## Life Summary\n\nWilliam Henry Parker was born on 13 April 1893 at Long Plains, South Australia, the son of Scottish-born William Humphrey Parker (1850–1926) and Hannah Baker (1855–1948). His father had migrated from Mossblown, Ayrshire, Scotland, to South Australia. His older sister Sophia Parker (1886–1918) married into the Lawrie family (Frank Lindsay Lawrie), creating a double connection between the Parker and Lawrie families.\n\nWilliam married Caroline Edna Lawrie on 29 March 1917 at the residence of R. D. Lawrie, Long Plains, solemnised by Pastor Ross Goodwin. They had five children: Avis (b. 1918), Howard (b. 1920), Sydney Hugh (b. 1922), William Humphrey (b. 1926), and Shirley Edna (b. 1929).\n\nHe was a farmer at Long Plains for most of his life. He died on 16 December 1968 near Owen, South Australia, aged 75, and was buried at Shannon Cemetery (Calomba Methodist Cemetery), SA, alongside his wife Caroline Edna (who predeceased him in 1957).\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 13 Apr 1893 | Born at Long Plains, South Australia |\n| 29 Mar 1917 | Married [[Caroline Edna Lawrie (1890–1957)]] at Long Plains |\n| 20 Apr 1918 | Daughter Avis Parker born at Balaklava |\n| 10 Apr 1920 | Son Howard Parker born at Balaklava |\n| 7 Nov 1922 | Son Sydney Hugh Parker born at Long Plains |\n| 16 Apr 1926 | Son William Humphrey Parker born at Balaklava |\n| 28 Mar 1929 | Daughter Shirley Edna Parker born |\n| 1 Jan 1957 | Wife Caroline Edna Lawrie dies at North Adelaide |\n| 16 Dec 1968 | Dies near Owen, South Australia |\n| — | Buried at Shannon Cemetery (Calomba), SA |\n\n## Newspaper References\n\n> **PARKER—LAWRIE.** — Mr. and Mrs. W. H. Parker, of Long Plains, wish to announce the 30th anniversary of their wedding, solemnised by Pastor Ross Goodwin, at Long Plains, March 29, 1917.\n>\n> *The Advertiser (Adelaide), 29 March 1947*\n\n**Source:** [Trove — Parker-Lawrie 30th Wedding Anniversary](https://trove.nla.gov.au/newspaper/article/74641339) — accessed 19 June 2026\n\n## Sources\n\n1. [WikiTree: William Henry Parker (Parker-4371)](https://www.wikitree.com/wiki/Parker-4371) — accessed 19 June 2026\n2. [Australian Cemeteries Index — Shannon Cemetery inscriptions](https://austcemindex.com/?cemid=3841) — accessed 19 June 2026\n3. [Trove — Parker-Lawrie 30th Wedding Anniversary, The Advertiser, 29 Mar 1947](https://trove.nla.gov.au/newspaper/article/74641339) — accessed 19 June 2026\n4. [WikiTree: William Humphrey Parker (Parker-4351)](https://www.wikitree.com/wiki/Parker-4351) — accessed 19 June 2026\n5. [WikiTree: Hannah Baker (Baker-2229)](https://www.wikitree.com/wiki/Baker-2229) — accessed 19 June 2026",
-    "roles": [],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "parker"
-    ],
-    "parents": [
-      "Hannah Baker (1855–1948)",
-      "William Humphrey Parker (1850–1926)"
-    ],
-    "children": [],
-    "spouses": [
-      "Caroline Edna Lawrie (1890–1957)"
-    ],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "William Humphrey Parker",
-    "slug": "william-humphrey-parker",
-    "first_name": "William Humphrey",
-    "middle_name": null,
-    "last_name": "Parker",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "William Humphrey Parker",
-    "title": "William Humphrey Parker — Family & Biography",
-    "lifespan": "? – living",
-    "is_living": true,
-    "body_markdown": "# William Humphrey Parker (1850–1926)\n**Born:** 17 Jul 1850, Ragged Hill, Mossblown, Ayrshire, Scotland | **Died:** 18 Feb 1926, Lower Mitcham, South Australia | **Mother:** ? | **Father:** ? | **Buried:** Mitcham General Cemetery, SA | **Occupation:** Farmer\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | [[William Humphrey Parker (1850–1926)]] |\n| Spouse | Hannah Baker (1855–1948) |\n| Daughter | Sophia Parker (1886–1918) |\n| Son | [[William Henry Parker (1893–1968)]] |\n| Son | Hugh Kelly Parker (1897–1959) |\n\n## Life Summary\n\nWilliam Humphrey Parker was born on 17 July 1850 at Ragged Hill, Mossblown, Ayrshire, Scotland. He emigrated to South Australia, where he married Hannah Baker on 21 August 1878 at the residence of the bride's parents, Virginia, South Australia.\n\nHe was a farmer and settled in the Long Plains area. His children included Sophia (who married Frank Lindsay Lawrie) and William Henry (who married Caroline Edna Lawrie), creating a double union between the Parker and Lawrie families.\n\nHe died on 18 February 1926 at Lower Mitcham, South Australia, and was buried at Mitcham General Cemetery.\n\n## Sources\n\n1. [WikiTree: William Humphrey Parker (Parker-4351)](https://www.wikitree.com/wiki/Parker-4351) — accessed 19 June 2026\n2. [FindAGrave: William Humphrey Parker (1850–1926)](https://www.findagrave.com/memorial/184786711/william_humphrey-parker) — accessed 19 June 2026",
-    "roles": [],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "parker",
-      "scottish"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "Hannah Baker (1855–1948)"
-    ],
     "siblings": [],
     "images": [],
     "person_photo": null

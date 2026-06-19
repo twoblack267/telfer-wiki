@@ -11486,10 +11486,10 @@
     "first_name": "Hannah",
     "middle_name": null,
     "last_name": "Baker",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
+    "birth_year": 1855,
+    "death_year": 1948,
+    "birth_year_display": "1855",
+    "death_year_display": "1948",
     "display_name": "Hannah Baker",
     "title": "Hannah Baker — Family & Biography",
     "tags": [
@@ -11550,8 +11550,8 @@
     "spouses": [
       "William Humphrey Parker (1850–1926)"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "1855 – 1948",
     "related_trees": [
       "telfer-tree"
     ],
@@ -11565,10 +11565,10 @@
     "first_name": "William Henry",
     "middle_name": null,
     "last_name": "Parker",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
+    "birth_year": 1893,
+    "death_year": 1968,
+    "birth_year_display": "1893",
+    "death_year_display": "1968",
     "display_name": "William Henry Parker",
     "title": "William Henry Parker — Family & Biography",
     "tags": [
@@ -11643,8 +11643,8 @@
     "spouses": [
       "Caroline Edna Lawrie (1890–1957)"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "1893 – 1968",
     "related_trees": [
       "telfer-tree"
     ],
@@ -11658,10 +11658,10 @@
     "first_name": "William Humphrey",
     "middle_name": null,
     "last_name": "Parker",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
+    "birth_year": 1850,
+    "death_year": 1926,
+    "birth_year_display": "1850",
+    "death_year_display": "1926",
     "display_name": "William Humphrey Parker",
     "title": "William Humphrey Parker — Family & Biography",
     "tags": [
@@ -11723,8 +11723,8 @@
     "spouses": [
       "Hannah Baker (1855–1948)"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "1850 – 1926",
     "related_trees": [
       "telfer-tree"
     ],
