@@ -285,6 +285,16 @@ publicPeople.sort((a, b) => {
 
 fs.writeFileSync(OUTPUT_PATH, JSON.stringify(publicPeople, null, 2));
 
+// Also regenerate meta.json so homepage stats stay in sync
+const META_PATH = path.resolve(__dirname, '../src/data/meta.json');
+const meta = {
+  total_people: publicPeople.length,
+  total_trees: new Set(people.map(p => p.branch).filter(Boolean)).size,
+  living: publicPeople.filter(p => p.is_living).length,
+  deceased: publicPeople.filter(p => !p.is_living).length,
+};
+fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2) + '\n');
+
 console.log(`✅ Written ${publicPeople.length} people to ${OUTPUT_PATH}`);
 console.log(`   Hidden: ${people.length - publicPeople.length} people`);
 
