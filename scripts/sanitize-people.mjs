@@ -178,6 +178,65 @@ const visible = new Set(people.map(p => p.slug));
 
 console.log(`👁️  Visible people: ${visible.size} / ${people.length}`);
 
+// ─── Build display-name-to-slug resolution ──────────────────────────────────
+// The relationship fields in people.json store DISPLAY NAMES (e.g. "Adelaide Elsie Pearl")
+// not slugs. We need to resolve them to slugs to check visibility.
+
+/** Strip parenthetical date ranges from a display name */
+function stripDates(name) {
+  return name.replace(/\s*\(.*?\)\s*/g, '').trim();
+}
+
+/** Build a map from possible display-name variants to slug */
+function buildNameToSlug(people) {
+  const map = new Map();
+  for (const p of people) {
+    // Exact slug match (for entries that somehow already have slugs)
+    map.set(p.slug, p.slug);
+    // Exact display name
+    map.set(p.display_name.toLowerCase(), p.slug);
+    // Display name without parenthetical dates
+    const noDate = stripDates(p.display_name).toLowerCase();
+    if (noDate && noDate !== p.display_name.toLowerCase()) {
+      map.set(noDate, p.slug);
+    }
+    // First name + last name (handles middle initials in relationship data)
+    if (p.first_name && p.last_name) {
+      const firstLast = `${p.first_name.toLowerCase()} ${p.last_name.toLowerCase()}`;
+      if (!map.has(firstLast)) map.set(firstLast, p.slug);
+    }
+  }
+  return map;
+}
+
+const nameToSlug = buildNameToSlug(people);
+
+/** Resolve a relationship entry (display name or partial) to a slug if visible */
+function resolveToVisible(entry) {
+  if (!entry) return null;
+  // Try the entry as-is
+  if (nameToSlug.has(entry.toLowerCase())) {
+    const slug = nameToSlug.get(entry.toLowerCase());
+    return visible.has(slug) ? entry : null;
+  }
+  // Try without parenthetical dates
+  const noDate = stripDates(entry).toLowerCase();
+  if (noDate && noDate !== entry.toLowerCase() && nameToSlug.has(noDate)) {
+    const slug = nameToSlug.get(noDate);
+    return visible.has(slug) ? entry : null;
+  }
+  // Try first+last (if entry is just a name like "James Telfer")
+  const parts = entry.toLowerCase().split(/\s+/);
+  if (parts.length >= 2) {
+    const firstLast = `${parts[0]} ${parts[parts.length - 1]}`;
+    if (nameToSlug.has(firstLast)) {
+      const slug = nameToSlug.get(firstLast);
+      return visible.has(slug) ? entry : null;
+    }
+  }
+  return null;
+}
+
 // ─── Build Public Output ────────────────────────────────────────────────────
 
 const publicPeople = [];
@@ -197,11 +256,12 @@ for (const person of people) {
     }
   }
 
-  // Filter relationships to only visible people (all are visible now, but belt-and-braces)
-  publicPerson.parents = (person.parents || []).filter(s => visible.has(s));
-  publicPerson.children = (person.children || []).filter(s => visible.has(s));
-  publicPerson.spouses = (person.spouses || []).filter(s => visible.has(s));
-  publicPerson.siblings = (person.siblings || []).filter(s => visible.has(s));
+  // Filter relationship display names to only visible people
+  // (data stores display names like "Adelaide Elsie Pearl", not slugs)
+  publicPerson.parents = (person.parents || []).map(resolveToVisible).filter(Boolean);
+  publicPerson.children = (person.children || []).map(resolveToVisible).filter(Boolean);
+  publicPerson.spouses = (person.spouses || []).map(resolveToVisible).filter(Boolean);
+  publicPerson.siblings = (person.siblings || []).map(resolveToVisible).filter(Boolean);
 
   // For living people: hide children and grandchildren
   if (person.is_living) {

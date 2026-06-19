@@ -15,7 +15,7 @@ const peopleById = new Map(people.map(p => [p.id, p]));
 const peopleBySlug = new Map(people.map(p => [p.slug, p]));
 
 function findPerson(id: string | undefined, dataset = people) {
-  if (!id) return undefined;
+  if (!id || typeof id !== "string") return undefined;
   let person = dataset.find(p => p.id === id || p.display_name === id || p.slug === id);
   if (!person) {
     const nameOnly = id.replace(/\s*\([^)]+\)\s*$/, "").trim();
@@ -155,7 +155,7 @@ function getAllChildren(person: PersonData) {
 }
 
 function getSpouse(person: PersonData) {
-  if (!person?.spouses) return null;
+  if (!person?.spouses?.length) return null;
   return findPerson(person.spouses[0]);
 }
 
