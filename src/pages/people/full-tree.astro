@@ -222,12 +222,16 @@ const root: TreeNode = {
 
 // Pre-resolve entire tree for rendering
 function buildFullTree(node: TreeNode, visited = new Set<string>()): TreeNode {
-  // Prevent cycles
-  if (visited.has(node.id)) {
+  // Use id + birth_year as unique key — there are 91 duplicate IDs in the data
+  // (e.g. 5 different "James Telfer" entries all with id="James Telfer").
+  // Using just node.id would kill every James/John/William Telfer after the first one,
+  // hiding entire sibling branches.
+  const visitedKey = `${node.id}|${node.birth_year || '?'}`;
+  if (visited.has(visitedKey)) {
     // Return a shallow copy without children/spouse to break cycle
     return { ...node, _resolvedChildren: [], _resolvedSpouse: null };
   }
-  visited.add(node.id);
+  visited.add(visitedKey);
   
   node._resolvedChildren = resolveChildren(node).map(child => buildFullTree(child, visited));
   node._resolvedSpouse = resolveSpouse(node);
