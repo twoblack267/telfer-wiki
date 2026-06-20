@@ -261,8 +261,14 @@ function main() {
       ? `${firstName} ${middleName} ${lastName}`
       : `${firstName} ${lastName}`;
 
-    const birthYear = fm.birth_year != null ? Number(fm.birth_year) : null;
-    const deathYear = fm.death_year != null ? Number(fm.death_year) : null;
+    // Safe year parsing: handle undefined, null, string 'None', NaN, and falsy values
+    const safeYear = (v) => {
+      if (v == null || v === false || v === '') return null;
+      const n = Number(v);
+      return (!isNaN(n) && isFinite(n)) ? n : null;
+    };
+    const birthYear = safeYear(fm.birth_year);
+    const deathYear = safeYear(fm.death_year);
 
     // Generate slug WITHOUT middle name to match existing convention
     const slug = toSlug(firstName, lastName);
