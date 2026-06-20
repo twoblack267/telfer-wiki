@@ -58,8 +58,8 @@
     "is_living": true,
     "lifespan": "1989 – living",
     "parents": [
-      "Sheryle Telfer",
-      "Paul Ivory"
+      "sheryle-telfer",
+      "paul-ivory"
     ],
     "children": [],
     "spouses": [
@@ -151,15 +151,15 @@
     "is_living": false,
     "lifespan": "1842 – 1925",
     "parents": [
-      "James Telfer",
-      "Elizabeth Beattie"
+      "james-telfer-1829",
+      "elizabeth-beattie"
     ],
     "children": [
-      "Margaret Wright Telfer (1869–1889)",
-      "Elizabeth Beattie Telfer (1870–1949)",
+      "margaret-telfer-1892",
+      "elizabeth-beattie-telfer-1871",
       "Lillian May Telfer (1872–1951)",
-      "Francis Adam Telfer (1875–1955)",
-      "James Edgerston Telfer (1878–1959)",
+      "francis-telfer-1875",
+      "james-telfer-1866",
       "Vernon Ray St. Clair Telfer (1879–1960)",
       "Herbert Dougal Telfer (1881–1974)",
       "Violet Hope Telfer (1883–1967)",
@@ -169,7 +169,7 @@
       "Hazel Rose Telfer (1891–1939)"
     ],
     "spouses": [
-      "Margaret Dougal Telfer (1849–1936)"
+      "margaret-telfer-1849"
     ],
     "siblings": [],
     "related_trees": [
@@ -232,7 +232,7 @@
     "lifespan": "1771 – 1846",
     "parents": [
       "James Telfer of Sorbietrees",
-      "Margaret Armstrong"
+      "margaret-armstrong"
     ],
     "children": [],
     "spouses": [],
@@ -306,7 +306,7 @@
     "is_living": false,
     "lifespan": "1799 – ?",
     "parents": [
-      "James Telfer (1761–1845)",
+      "james-telfer-1761",
       "Elizabeth Hutton (1774–1853)"
     ],
     "children": [],
@@ -398,8 +398,8 @@
     "is_living": false,
     "lifespan": "1890 – 1937",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [
@@ -483,8 +483,8 @@
     "is_living": false,
     "lifespan": "1882 – 1961",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -571,19 +571,19 @@
       "George Provis"
     ],
     "children": [
-      "Francis Kelson Telfer",
+      "francis-telfer-1910",
       "Clarice May Fatchen",
       "Emily Amelia Barton",
       "Ethel Jean McMurtrie",
       "Gladys Merle Pedler",
       "Doris Elma Rowe",
-      "Edwin Roy Telfer",
-      "Reginald Masters Telfer",
-      "Murray John Telfer",
+      "edwin-telfer-1888",
+      "reginald-telfer",
+      "murray-telfer-1911",
       "Malcolm George Telfer"
     ],
     "spouses": [
-      "Francis Charles Telfer"
+      "francis-telfer-1875"
     ],
     "siblings": [],
     "related_trees": [
@@ -664,7 +664,7 @@
     ],
     "children": [],
     "spouses": [
-      "Francis Charles Telfer"
+      "francis-telfer-1875"
     ],
     "siblings": [],
     "related_trees": [
@@ -724,8 +724,8 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "Penny Telfer",
-      "Timothy Neil Telfer"
+      "penny-telfer",
+      "timothy-telfer"
     ],
     "children": [],
     "spouses": [],
@@ -784,7 +784,7 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "John Telfer (adoptive)"
+      "john-telfer-1877"
     ],
     "children": [],
     "spouses": [],
@@ -856,16 +856,16 @@
     "children": [
       "Ann Telfer",
       "Johnnie Telfer",
-      "Peter Telfer",
-      "Adam Telfer",
+      "peter-telfer",
+      "adam-telfer-1842",
       "Robina Telfer",
-      "Margaret Telfer",
-      "William Telfer",
-      "James Telfer",
+      "margaret-telfer-1892",
+      "william-telfer-1879",
+      "james-telfer-1866",
       "Jessie Telfer"
     ],
     "spouses": [
-      "John Telfer (1847–1923)"
+      "john-telfer-1847"
     ],
     "siblings": [],
     "related_trees": [
@@ -930,8 +930,8 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "John Telfer (1847–1929)",
-      "Caroline Amelia Masters (1842–1929)"
+      "john-telfer-1847",
+      "caroline-masters"
     ],
     "children": [],
     "spouses": [],
@@ -995,7 +995,7 @@
     "is_living": false,
     "lifespan": "? – 2023",
     "parents": [
-      "John Robert Telfer (adoptive)"
+      "john-robert-telfer"
     ],
     "children": [],
     "spouses": [],
@@ -1122,16 +1122,16 @@
     "is_living": false,
     "lifespan": "1890 – 1957",
     "parents": [
-      "Caroline Hosking",
-      "Robert Dunlop Lawrie"
+      "caroline-hosking",
+      "robert-dunlop-lawrie"
     ],
     "children": [
       "Shirley Edna Parker",
-      "Sydney Hugh Parker",
-      "William Humphrey Parker"
+      "sydney-parker",
+      "william-humphrey-parker"
     ],
     "spouses": [
-      "William Henry Parker"
+      "william-henry-parker"
     ],
     "siblings": [
       "Catherine Leah Lawrie",
@@ -1237,7 +1237,7 @@
       "Robert Dunlop"
     ],
     "spouses": [
-      "Robert Dunlop Lawrie"
+      "robert-dunlop-lawrie"
     ],
     "siblings": [
       "?"
@@ -1302,16 +1302,16 @@
     "lifespan": "1850 – 1929",
     "parents": [],
     "children": [
-      "Albert George Telfer (1882–1961)",
-      "Ernest John Telfer (1877–1953)",
-      "William James Telfer (1879–1948)",
-      "Edwin Gilbert Telfer (1888–1972)",
-      "Walter William Telfer (1885–1958)",
-      "Maria Clara Telfer (1878–1903)",
-      "Caroline Telfer"
+      "albert-telfer",
+      "ernest-telfer",
+      "william-telfer-1879",
+      "edwin-telfer-1888",
+      "walter-telfer",
+      "maria-clara-telfer",
+      "caroline-telfer"
     ],
     "spouses": [
-      "John Telfer (1847–1929)"
+      "john-telfer-1847"
     ],
     "siblings": [],
     "related_trees": [
@@ -1393,7 +1393,7 @@
       "Eva Agnes Farrow"
     ],
     "spouses": [
-      "Elizabeth Hannah Telfer (1836–1916)"
+      "elizabeth-hannah-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -1468,8 +1468,8 @@
     "is_living": false,
     "lifespan": "1911 – 1997",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -1538,8 +1538,8 @@
     "is_living": false,
     "lifespan": "1889 – 1964",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [],
@@ -1605,8 +1605,8 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "Shirley Telfer",
-      "Murray John Telfer"
+      "shirley-telfer-1929",
+      "murray-telfer-1911"
     ],
     "children": [],
     "spouses": [],
@@ -1668,7 +1668,7 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "Penny Telfer",
+      "penny-telfer",
       "Unknown"
     ],
     "children": [],
@@ -1730,7 +1730,7 @@
       "Jean (1840–1892)"
     ],
     "spouses": [
-      "Francis Telfer (1809–1895)"
+      "francis-telfer-1809"
     ],
     "siblings": [],
     "related_trees": [
@@ -1805,8 +1805,8 @@
     "is_living": true,
     "lifespan": "1919 – living",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -1893,8 +1893,8 @@
     "is_living": false,
     "lifespan": "1887 – 1956",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [
@@ -1974,8 +1974,8 @@
     "is_living": false,
     "lifespan": "1888 – 1972",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -2052,8 +2052,8 @@
     "is_living": false,
     "lifespan": "1921 – 2009",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
@@ -2226,8 +2226,8 @@
     "is_living": false,
     "lifespan": "1832 – 1896",
     "parents": [
-      "Elizabeth Beattie",
-      "James Telfer (1796–1863)"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
       "William John Dillon",
@@ -2242,7 +2242,7 @@
       "Inez Priscilla Dillon"
     ],
     "spouses": [
-      "John Charles Dillon (1827–1906)"
+      "john-dillon"
     ],
     "siblings": [],
     "related_trees": [
@@ -2318,8 +2318,8 @@
     "is_living": false,
     "lifespan": "1836 – 1916",
     "parents": [
-      "Francis Telfer (1809–1895)",
-      "Jean Murray (1810–1839)"
+      "francis-telfer-1809",
+      "jean-murray"
     ],
     "children": [
       "Jane Murray Farrow",
@@ -2334,7 +2334,7 @@
       "Eva Agnes Farrow"
     ],
     "spouses": [
-      "Charles Farrow (~1836–1884)"
+      "charles-farrow"
     ],
     "siblings": [],
     "related_trees": [
@@ -2407,7 +2407,7 @@
       "William"
     ],
     "spouses": [
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
     "siblings": [],
     "related_trees": [
@@ -2467,7 +2467,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "Robert Telfer (1803–1876)"
+      "robert-telfer-1803"
     ],
     "siblings": [],
     "related_trees": [
@@ -2533,8 +2533,8 @@
     "is_living": false,
     "lifespan": "1868 – 1950",
     "parents": [
-      "Martha Allen",
-      "John Telfer (1840-1913)"
+      "martha-allen",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [
@@ -2596,10 +2596,10 @@
     "lifespan": "1722 – ?",
     "parents": [],
     "children": [
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
     "spouses": [
-      "John Telfer (of Castleton)"
+      "john-telfer-robert"
     ],
     "siblings": [],
     "related_trees": [
@@ -2674,8 +2674,8 @@
     "is_living": true,
     "lifespan": "1913 – living",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -2754,8 +2754,8 @@
     "is_living": false,
     "lifespan": "1877 – 1953",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -2835,19 +2835,19 @@
     "is_living": false,
     "lifespan": "1834 – 1909",
     "parents": [
-      "Francis Telfer (1809–1895)",
-      "Jean Murray (1810–1839)"
+      "francis-telfer-1809",
+      "jean-murray"
     ],
     "children": [
       "Jane Sophie Smith (b. S.A.)",
       "Margaret Dougal Smith (b. Burra S.A.)",
       "Esther Telfer Smith (1870–1896)",
-      "John James Smith (1871–?)",
+      "john-smith",
       "Francis Telfer Smith (1874–1945)",
       "Elizabeth Anne Smith (1878–?)"
     ],
     "spouses": [
-      "John Smith (~1827–1895)"
+      "john-smith"
     ],
     "siblings": [],
     "related_trees": [
@@ -2922,8 +2922,8 @@
     "is_living": true,
     "lifespan": "1915 – living",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -3016,8 +3016,8 @@
     "is_living": false,
     "lifespan": "1904 – 1951",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [
       "Jennifer Bunston"
@@ -3105,23 +3105,23 @@
     "is_living": false,
     "lifespan": "1875 – 1954",
     "parents": [
-      "Caroline Amelia Masters",
-      "John Telfer (1847–1929)"
+      "caroline-masters",
+      "john-telfer-1847"
     ],
     "children": [
-      "Francis Kelson Telfer",
+      "francis-telfer-1910",
       "Clarice May Fatchen",
       "Emily Amelia Barton",
       "Ethel Jean McMurtrie",
       "Gladys Merle Pedler",
       "Doris Elma Rowe",
-      "Edwin Roy Telfer",
-      "Reginald Masters Telfer",
-      "Murray John Telfer",
+      "edwin-telfer-1888",
+      "reginald-telfer",
+      "murray-telfer-1911",
       "Malcolm George Telfer"
     ],
     "spouses": [
-      "Amy Ellen Telfer (née Provis)"
+      "amy-ellen-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -3198,8 +3198,8 @@
     "is_living": false,
     "lifespan": "1910 – 1987",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
@@ -3274,7 +3274,7 @@
     "lifespan": "1768 – 1836",
     "parents": [
       "James Telfer of Sorbietrees",
-      "Margaret Armstrong"
+      "margaret-armstrong"
     ],
     "children": [],
     "spouses": [],
@@ -3373,7 +3373,7 @@
     "is_living": false,
     "lifespan": "1809 – 1895",
     "parents": [
-      "James Telfer (1761–1845)",
+      "james-telfer-1761",
       "Elizabeth \"Betty\" Hutton (1774–1853)"
     ],
     "children": [
@@ -3384,16 +3384,16 @@
       "John (1847–1929)",
       "Margaret Dougal (1849–1936)",
       "George Wright (1850–1913)",
-      "Jean Telfer",
-      "James Telfer",
-      "George Wright Telfer",
-      "Elizabeth Hannah Telfer",
-      "John Telfer",
-      "Esther Jane Telfer"
+      "jean-telfer-1840",
+      "james-telfer-1829",
+      "george-telfer",
+      "elizabeth-hannah-telfer",
+      "john-telfer-1840",
+      "esther-jane-telfer"
     ],
     "spouses": [
-      "Jean Murray (1810–1839)",
-      "Dinah Flavel (1821–1844)",
+      "jean-murray",
+      "dinah-flavel",
       "Margaret Wright (1807–1892)"
     ],
     "siblings": [],
@@ -3454,7 +3454,7 @@
     ],
     "children": [],
     "spouses": [
-      "Jean Telfer (1840–1892)"
+      "jean-telfer-1840"
     ],
     "siblings": [],
     "related_trees": [
@@ -3531,12 +3531,12 @@
     "is_living": false,
     "lifespan": "1850 – 1913",
     "parents": [
-      "Francis Telfer (1809–1895)",
+      "francis-telfer-1809",
       "Margaret Wright (?–1892)"
     ],
     "children": [],
     "spouses": [
-      "Ruth Penna"
+      "ruth-penna"
     ],
     "siblings": [
       "John Telfer (1847–1929)",
@@ -3619,8 +3619,8 @@
     "is_living": false,
     "lifespan": "1911 – 1978",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [
       "Beth Telfer",
@@ -3710,8 +3710,8 @@
     "is_living": true,
     "lifespan": "1917 – living",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [
@@ -3797,13 +3797,13 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "Shirley Telfer",
-      "Murray John Telfer"
+      "shirley-telfer-1929",
+      "murray-telfer-1911"
     ],
     "children": [
-      "Kristin Stefanoff",
+      "kristin-stefanoff",
       "Jono Telfer",
-      "Nick Telfer"
+      "nick-telfer"
     ],
     "spouses": [],
     "siblings": [
@@ -3885,12 +3885,12 @@
     ],
     "children": [
       "Sophia Parker",
-      "William Henry Parker",
+      "william-henry-parker",
       "Hugh Kelly Parker",
       "(others unconfirmed)"
     ],
     "spouses": [
-      "William Humphrey Parker (1850–1926)"
+      "william-humphrey-parker"
     ],
     "siblings": [],
     "related_trees": [
@@ -3963,8 +3963,8 @@
     "is_living": false,
     "lifespan": "1880 – 1964",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [
@@ -4046,7 +4046,7 @@
     "is_living": false,
     "lifespan": "1798 – 1875",
     "parents": [
-      "James Telfer (1761–1845)",
+      "james-telfer-1761",
       "Elizabeth Hutton (1774–1853)"
     ],
     "children": [],
@@ -4125,12 +4125,12 @@
     "lifespan": "1866 – ?",
     "parents": [
       "Susan Burton (1844–1924)",
-      "Robert Telfer (1835–1907)"
+      "robert-telfer-1837"
     ],
     "children": [
       "Leslie Robert Telfer",
       "Ethel Edith Telfer",
-      "Jean Telfer"
+      "jean-telfer-1910"
     ],
     "spouses": [
       "Hannah Peacock (1840–1915)"
@@ -4208,8 +4208,8 @@
     "is_living": false,
     "lifespan": "1761 – 1845",
     "parents": [
-      "John Telfer (of Castleton) (~1731–?)",
-      "Elspeth Young (~1722–?)"
+      "john-telfer-of-castleton",
+      "elspeth-young"
     ],
     "children": [
       "James (1796–1863)",
@@ -4220,8 +4220,8 @@
       "John (1805–1839)",
       "Francis (1809–1895)",
       "William (1811–1881)",
-      "Francis Telfer",
-      "James Telfer"
+      "francis-telfer-1768",
+      "james-telfer-1796"
     ],
     "spouses": [
       "Elizabeth \"Betty\" Hutton (1774–1853)"
@@ -4295,17 +4295,17 @@
     "lifespan": "1796 – 1863",
     "parents": [
       "Elizabeth \"Betty\" Hutton (1774–1853)",
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
     "children": [
-      "Adam Francis Telfer (1842–1925)",
-      "Elizabeth Beattie Telfer (1832–1896)",
-      "James Telfer (1829–1914)",
-      "John Telfer (1840–1913)",
-      "Robert Telfer (1835–1907)"
+      "adam-telfer-1842",
+      "elizabeth-beattie-telfer-1832",
+      "james-telfer-1829",
+      "john-telfer-1840",
+      "robert-telfer-1837"
     ],
     "spouses": [
-      "Elizabeth Beattie (1802–1891)"
+      "elizabeth-beattie"
     ],
     "siblings": [],
     "related_trees": [
@@ -4373,16 +4373,16 @@
     "is_living": false,
     "lifespan": "1829 – 1914",
     "parents": [
-      "Elizabeth Beattie",
-      "James Telfer (1796–1863)"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
-      "Margaret Rutherford Telfer",
-      "James Telfer",
+      "margaret-telfer-1849",
+      "james-telfer-1832",
       "Janet Welsh Telfer"
     ],
     "spouses": [
-      "Janet Welsh (1826–1885)"
+      "janet-welsh"
     ],
     "siblings": [],
     "related_trees": [
@@ -4435,8 +4435,8 @@
     "is_living": false,
     "lifespan": "1832 – 1845",
     "parents": [
-      "Francis Telfer (1809–1895)",
-      "Jean Murray (1810–1839)"
+      "francis-telfer-1809",
+      "jean-murray"
     ],
     "children": [],
     "spouses": [],
@@ -4512,8 +4512,8 @@
     "is_living": false,
     "lifespan": "1866 – 1946",
     "parents": [
-      "Martha Allen",
-      "John Telfer (1840-1913)"
+      "martha-allen",
+      "john-telfer-1840"
     ],
     "children": [
       "Vida (1919–2021)"
@@ -4584,8 +4584,8 @@
     "is_living": false,
     "lifespan": "1861 – 1951",
     "parents": [
-      "Elizabeth Beattie Telfer (1832-1896)",
-      "John Charles Dillon (1827-1906)"
+      "elizabeth-beattie-telfer-1832",
+      "john-dillon"
     ],
     "children": [],
     "spouses": [],
@@ -4644,7 +4644,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "James Telfer (1829–1914)"
+      "james-telfer-1829"
     ],
     "siblings": [],
     "related_trees": [
@@ -4710,8 +4710,8 @@
     "is_living": false,
     "lifespan": "1910 – 1984",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [],
     "spouses": [],
@@ -4785,13 +4785,13 @@
       "James (1832–1845)",
       "Esther Jane (1834–1909)",
       "Elizabeth Hannah (1836–1916)",
-      "Jean Telfer",
-      "James Telfer",
-      "Elizabeth Hannah Telfer",
-      "Esther Jane Telfer"
+      "jean-telfer-1840",
+      "james-telfer-1829",
+      "elizabeth-hannah-telfer",
+      "esther-jane-telfer"
     ],
     "spouses": [
-      "Francis Telfer (1809–1895)"
+      "francis-telfer-1809"
     ],
     "siblings": [],
     "related_trees": [
@@ -4864,13 +4864,13 @@
     "is_living": false,
     "lifespan": "1840 – 1892",
     "parents": [
-      "Francis Telfer (1809–1895)",
-      "Jean Murray (1810–1839)"
+      "francis-telfer-1809",
+      "jean-murray"
     ],
     "children": [],
     "spouses": [
-      "Richard Paynter (1838–1869)",
-      "Frederick Parker (1844–1928)"
+      "richard-paynter",
+      "frederick-parker"
     ],
     "siblings": [],
     "related_trees": [
@@ -4933,7 +4933,7 @@
     "lifespan": "1770 – 1842",
     "parents": [
       "James Telfer of Sorbietrees",
-      "Margaret Armstrong"
+      "margaret-armstrong"
     ],
     "children": [],
     "spouses": [],
@@ -5002,8 +5002,8 @@
     "is_living": true,
     "lifespan": "1986 – living",
     "parents": [
-      "Sheryle Telfer",
-      "Paul Ivory (deceased)"
+      "sheryle-telfer",
+      "paul-ivory"
     ],
     "children": [],
     "spouses": [],
@@ -5114,8 +5114,8 @@
     "is_living": false,
     "lifespan": "1877 – 1877",
     "parents": [
-      "John Telfer (1847–1929)",
-      "Caroline Amelia Masters (1842–1929)"
+      "john-telfer-1847",
+      "caroline-masters"
     ],
     "children": [],
     "spouses": [],
@@ -5197,13 +5197,13 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "Shirley Telfer"
+      "shirley-telfer-1929"
     ],
     "children": [
-      "Carissa Telfer"
+      "carissa-telfer"
     ],
     "spouses": [
-      "Robyn Telfer"
+      "robyn-telfer"
     ],
     "siblings": [
       "Daryll William Telfer",
@@ -5290,17 +5290,17 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "Shirley Telfer",
-      "Murray John Telfer"
+      "shirley-telfer-1929",
+      "murray-telfer-1911"
     ],
     "children": [
-      "Angela Telfer (adopted)",
-      "Peter Telfer (adopted)",
+      "angela-telfer",
+      "peter-telfer",
       "Carissa Telfer (adopted",
       "deceased)"
     ],
     "spouses": [
-      "Robyn Telfer"
+      "robyn-telfer"
     ],
     "siblings": [
       "Daryll William Telfer",
@@ -5376,8 +5376,8 @@
     "is_living": false,
     "lifespan": "1882 – 1975",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [],
@@ -5460,7 +5460,7 @@
       "Elizabeth Anne Smith (1878–?)"
     ],
     "spouses": [
-      "Esther Jane Telfer (1834–1909)"
+      "esther-jane-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -5527,7 +5527,7 @@
     "is_living": false,
     "lifespan": "1805 – 1839",
     "parents": [
-      "James Telfer (1761–1845)",
+      "james-telfer-1761",
       "Elizabeth Hutton (1774–1853)"
     ],
     "children": [],
@@ -5611,21 +5611,21 @@
     "is_living": false,
     "lifespan": "1840 – 1913",
     "parents": [
-      "Elizabeth Beattie",
-      "James Telfer (1796–1863)"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
-      "James Telfer (1866–1946)",
-      "Elizabeth Telfer (1868–?)",
-      "Susan Telfer (1871–1952)",
+      "james-telfer-1866",
+      "elizabeth-telfer-1868",
+      "susan-telfer-1871",
       "Martha Telfer (1873–?)",
       "Charles Telfer",
       "Eric John Telfer",
-      "Mark Telfer (1877–1946)"
+      "mark-telfer-1877"
     ],
     "spouses": [
-      "Martha Allen (1842–1876)",
-      "Martha Clara Henstridge (1856–1921)"
+      "martha-allen",
+      "martha-henstridge"
     ],
     "siblings": [],
     "related_trees": [
@@ -5698,18 +5698,18 @@
     "lifespan": "1847 – 1929",
     "parents": [
       "Margaret Wright",
-      "Francis Telfer"
+      "francis-telfer-1809"
     ],
     "children": [
-      "Francis Charles Telfer",
-      "Ernest John Telfer",
-      "William James Telfer",
-      "Albert George Telfer",
-      "Walter William Telfer",
-      "Edwin Gilbert Telfer"
+      "francis-telfer-1875",
+      "ernest-telfer",
+      "william-telfer-1879",
+      "albert-telfer",
+      "walter-telfer",
+      "edwin-telfer-1888"
     ],
     "spouses": [
-      "Caroline Amelia Telfer (née Masters)"
+      "caroline-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -5765,10 +5765,10 @@
     "lifespan": "1731 – ?",
     "parents": [],
     "children": [
-      "James Telfer (1761–1845)"
+      "james-telfer-1761"
     ],
     "spouses": [
-      "Elspeth Young"
+      "elspeth-young"
     ],
     "siblings": [],
     "related_trees": [
@@ -5869,8 +5869,8 @@
     "is_living": false,
     "lifespan": "1912 – 2012",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [],
     "spouses": [],
@@ -5968,14 +5968,14 @@
       "Wilhelm Seebohm (1833–1907)"
     ],
     "children": [
-      "Floris Ethel Victoria Telfer (1904–1951)",
-      "Kenneth Alexander Telfer (1904–?)",
-      "Gilbert Melville Telfer (1911–1978)",
+      "floris-telfer",
+      "kenneth-telfer",
+      "gilbert-telfer",
       "Murray John Telfer (1911–1982",
       "adopted)"
     ],
     "spouses": [
-      "Mark Telfer (1877–1946)"
+      "mark-telfer-1877"
     ],
     "siblings": [
       "William Alexander",
@@ -6096,11 +6096,11 @@
     "is_living": false,
     "lifespan": "1904 – ?",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [
-      "Murray Telfer"
+      "murray-telfer-1911"
     ],
     "spouses": [
       "Jessie Sargent"
@@ -6177,7 +6177,7 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "Grantley Keith Telfer",
+      "grantley-telfer",
       "[unknown]"
     ],
     "children": [],
@@ -6256,11 +6256,11 @@
       "Leonard Arthur Dance"
     ],
     "children": [
-      "Levi Telfer",
-      "Zabella Telfer"
+      "levi-telfer",
+      "zabella-telfer"
     ],
     "spouses": [
-      "Mark Telfer (1986–living)"
+      "mark-telfer-1986"
     ],
     "siblings": [],
     "related_trees": [
@@ -6330,8 +6330,8 @@
     "is_living": true,
     "lifespan": "1994 – living",
     "parents": [
-      "Sheryle Telfer",
-      "Paul Ivory (deceased)"
+      "sheryle-telfer",
+      "paul-ivory"
     ],
     "children": [],
     "spouses": [],
@@ -6406,8 +6406,8 @@
     "is_living": true,
     "lifespan": "2017 – living",
     "parents": [
-      "Kylie Isabella Telfer",
-      "Mark Telfer"
+      "kylie-telfer",
+      "mark-telfer-1986"
     ],
     "children": [],
     "spouses": [],
@@ -6511,8 +6511,8 @@
     "is_living": false,
     "lifespan": "1920 – 1976",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [],
     "spouses": [],
@@ -6587,8 +6587,8 @@
     "is_living": false,
     "lifespan": "1913 – 1948",
     "parents": [
-      "Mark Telfer (1877–1946)",
-      "Julia Matilda Seebohm (1876–1939)"
+      "mark-telfer-1877",
+      "julia-matilda-seebohm"
     ],
     "children": [],
     "spouses": [],
@@ -6673,15 +6673,15 @@
     "is_living": false,
     "lifespan": "1849 – 1936",
     "parents": [
-      "Francis Telfer (1809–1895)",
+      "francis-telfer-1809",
       "Margaret Wright (?–1892)"
     ],
     "children": [
-      "Margaret Wright Telfer (1869–1889)",
-      "Elizabeth Beattie Telfer (1870–1949)",
+      "margaret-telfer-1892",
+      "elizabeth-beattie-telfer-1871",
       "Lillian May Telfer (1872–1951)",
-      "Francis Adam Telfer (1875–1955)",
-      "James Edgerston Telfer (1878–1959)",
+      "francis-telfer-1875",
+      "james-telfer-1866",
       "Vernon Ray St. Clair Telfer (1879–1960)",
       "Herbert Dougal Telfer (1881–1974)",
       "Violet Hope Telfer (1883–1967)",
@@ -6691,7 +6691,7 @@
       "Hazel Rose Telfer (1891–1939)"
     ],
     "spouses": [
-      "Adam Francis Telfer (1842–1925)"
+      "adam-telfer-1842"
     ],
     "siblings": [],
     "related_trees": [
@@ -6758,7 +6758,7 @@
     "is_living": false,
     "lifespan": "1802 – 1884",
     "parents": [
-      "James Telfer (1761–1845)",
+      "james-telfer-1761",
       "Elizabeth Hutton (1774–1853)"
     ],
     "children": [],
@@ -6827,12 +6827,12 @@
     "lifespan": "? – 1892",
     "parents": [],
     "children": [
-      "John Telfer (1847–1929)",
-      "George Wright Telfer",
-      "Margaret Dougal Telfer"
+      "john-telfer-1847",
+      "george-telfer",
+      "margaret-telfer-1849"
     ],
     "spouses": [
-      "Francis Telfer (3rd wife)"
+      "francis-telfer-1875"
     ],
     "siblings": [],
     "related_trees": [
@@ -6907,8 +6907,8 @@
     "is_living": false,
     "lifespan": "1878 – 1903",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [],
@@ -7000,8 +7000,8 @@
     "is_living": false,
     "lifespan": "1896 – 1977",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [
@@ -7094,16 +7094,16 @@
     "is_living": true,
     "lifespan": "1986 – living",
     "parents": [
-      "Penny Telfer",
-      "Timothy Neil Telfer"
+      "penny-telfer",
+      "timothy-telfer"
     ],
     "children": [
-      "Mitchell Telfer",
-      "Levi Telfer",
-      "Zabella Telfer"
+      "mitchell-telfer",
+      "levi-telfer",
+      "zabella-telfer"
     ],
     "spouses": [
-      "Kylie Isabella Telfer"
+      "kylie-telfer"
     ],
     "siblings": [
       "Amy Nicole Telfer"
@@ -7203,20 +7203,20 @@
     "is_living": false,
     "lifespan": "1877 – 1946",
     "parents": [
-      "John Telfer (1840-1913)",
-      "Martha Clara Henstridge"
+      "john-telfer-1840",
+      "martha-henstridge"
     ],
     "children": [
-      "Floris Ethel Victoria Telfer",
-      "Kenneth William John Telfer",
-      "Gilbert Melville Telfer",
-      "Jean Maryann Martha Telfer",
-      "Joyce Elizabeth Telfer",
-      "Maifie Beryl Telfer",
-      "Lindsay Roland Telfer"
+      "floris-telfer",
+      "kenneth-telfer",
+      "gilbert-telfer",
+      "jean-telfer-1910",
+      "joyce-telfer",
+      "maifie-telfer",
+      "lindsay-telfer"
     ],
     "spouses": [
-      "Julia Matilda Seebohm"
+      "julia-matilda-seebohm"
     ],
     "siblings": [
       "James",
@@ -7289,13 +7289,13 @@
     "lifespan": "1840 – 1876",
     "parents": [],
     "children": [
-      "James Telfer",
-      "Elizabeth Telfer",
-      "Susan Telfer",
-      "Martha Telfer Cameron"
+      "james-telfer-1866",
+      "elizabeth-telfer-1868",
+      "susan-telfer-1844",
+      "martha-cameron"
     ],
     "spouses": [
-      "John Telfer (1840–1913)"
+      "john-telfer-1840"
     ],
     "siblings": [],
     "related_trees": [
@@ -7347,7 +7347,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "John Telfer (1840–1913)"
+      "john-telfer-1840"
     ],
     "siblings": [],
     "related_trees": [
@@ -7422,8 +7422,8 @@
     "is_living": false,
     "lifespan": "1873 – 1964",
     "parents": [
-      "Martha Allen (d. 1876)",
-      "John Telfer (1840-1913)"
+      "martha-allen",
+      "john-telfer-1840"
     ],
     "children": [
       "Malcolm Murray Cameron"
@@ -7488,7 +7488,7 @@
     "lifespan": "2008 – living",
     "parents": [
       "Crystal Rose McDonald",
-      "Mark Kenneth Telfer (1986–?)"
+      "mark-telfer-1986"
     ],
     "children": [],
     "spouses": [],
@@ -7649,7 +7649,7 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "Grantley Keith Telfer",
+      "grantley-telfer",
       "[unknown]"
     ],
     "children": [],
@@ -7713,13 +7713,13 @@
     "lifespan": "1955 – 1996",
     "parents": [],
     "children": [
-      "Aaron Ivory",
+      "aaron-ivory",
       "Jared Ivory",
-      "Lauren Ivory",
-      "Joel Ivory"
+      "lauren-ivory",
+      "joel-ivory"
     ],
     "spouses": [
-      "Sheryle Telfer"
+      "sheryle-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -7778,8 +7778,8 @@
     "lifespan": "? – living",
     "parents": [],
     "children": [
-      "Mark Telfer",
-      "Amy Telfer",
+      "mark-telfer-1986",
+      "amy-telfer-1884",
       "David Telfer-Merrick"
     ],
     "spouses": [],
@@ -7856,7 +7856,7 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [
-      "John Telfer (adoptive)"
+      "john-telfer-1877"
     ],
     "children": [],
     "spouses": [],
@@ -7938,8 +7938,8 @@
     "is_living": true,
     "lifespan": "1923 – living",
     "parents": [
-      "Amy Ellen Telfer (née Provis)",
-      "Francis Charles Telfer (1875–1954)"
+      "amy-telfer-1884",
+      "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
@@ -8029,7 +8029,7 @@
       "Dinah Flavel Paynter (1869–?)"
     ],
     "spouses": [
-      "Jean Telfer (1840–1892)"
+      "jean-telfer-1840"
     ],
     "siblings": [],
     "related_trees": [
@@ -8125,7 +8125,7 @@
       "Robert Dunlop"
     ],
     "spouses": [
-      "Caroline Hosking"
+      "caroline-hosking"
     ],
     "siblings": [
       "(see John Lawrie)"
@@ -8200,8 +8200,8 @@
     "is_living": false,
     "lifespan": "1886 – 1949",
     "parents": [
-      "Martha Clara Henstridge",
-      "John Telfer (1840-1913)"
+      "martha-henstridge",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [
@@ -8300,7 +8300,7 @@
     "lifespan": "1803 – 1878",
     "parents": [
       "Betty Hutton",
-      "James Telfer"
+      "james-telfer-1761"
     ],
     "children": [
       "Elizabeth (~1834–)",
@@ -8309,7 +8309,7 @@
       "John (~1839–)"
     ],
     "spouses": [
-      "Elizabeth \"Betty\" Oliver"
+      "elizabeth-oliver"
     ],
     "siblings": [
       "James (1796–1863)",
@@ -8391,18 +8391,18 @@
     "is_living": false,
     "lifespan": "1837 – 1907",
     "parents": [
-      "Elizabeth Beattie",
-      "James Telfer (1796–1863)"
+      "elizabeth-beattie",
+      "james-telfer-1796"
     ],
     "children": [
-      "James Telfer",
-      "Elizabeth Telfer",
+      "james-telfer-1866",
+      "elizabeth-telfer-1868",
       "Helen Telfer",
-      "Susan Telfer",
-      "William Telfer",
-      "Lindsay Burton Telfer",
-      "Robert Allan Burton Telfer",
-      "Francis John Burton Telfer",
+      "susan-telfer-1844",
+      "william-telfer-1879",
+      "lindsay-telfer",
+      "robert-telfer-1886",
+      "francis-telfer-1875",
       "Edith Mary Kathleen Telfer"
     ],
     "spouses": [
@@ -8456,7 +8456,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "John Robert Telfer"
+      "john-robert-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -8508,7 +8508,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "George Telfer (1850–1913)"
+      "george-telfer"
     ],
     "siblings": [],
     "related_trees": [
@@ -8576,8 +8576,8 @@
     "is_living": true,
     "lifespan": "1931 – living",
     "parents": [
-      "Francis Charles Telfer",
-      "Amy Ellen Telfer (née Provis)"
+      "francis-telfer-1875",
+      "amy-telfer-1884"
     ],
     "children": [],
     "spouses": [],
@@ -8716,15 +8716,15 @@
     "lifespan": "? – living",
     "parents": [],
     "children": [
-      "Daryll William Telfer",
-      "John Robert Telfer (adoptive)",
-      "Grantley Keith Telfer",
-      "Timothy Neil Telfer",
-      "Kathryn Mavis Telfer",
-      "Susan Shirley Lawrie"
+      "daryll-telfer",
+      "john-robert-telfer",
+      "grantley-telfer",
+      "timothy-telfer",
+      "kathryn-telfer",
+      "susan-lawrie"
     ],
     "spouses": [
-      "Murray John Telfer (1911–1982)"
+      "murray-telfer-1911"
     ],
     "siblings": [],
     "related_trees": [
@@ -8772,7 +8772,7 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "Robert Telfer (1835-1907)"
+      "robert-telfer-1837"
     ],
     "siblings": [],
     "related_trees": [
@@ -8838,8 +8838,8 @@
     "is_living": false,
     "lifespan": "1871 – 1952",
     "parents": [
-      "Martha Allen",
-      "John Telfer (1840-1913)"
+      "martha-allen",
+      "john-telfer-1840"
     ],
     "children": [],
     "spouses": [
@@ -8957,15 +8957,15 @@
     "is_living": true,
     "lifespan": "1959 – living",
     "parents": [
-      "Shirley Telfer",
-      "Murray John Telfer"
+      "shirley-telfer-1929",
+      "murray-telfer-1924"
     ],
     "children": [
-      "Mark Telfer",
-      "Amy Telfer"
+      "mark-telfer-1986",
+      "amy-telfer-nicole"
     ],
     "spouses": [
-      "Sheryle Telfer"
+      "sheryle-telfer"
     ],
     "siblings": [
       "Daryll William Telfer",
@@ -9050,8 +9050,8 @@
     "is_living": false,
     "lifespan": "1885 – 1958",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -9138,18 +9138,18 @@
     "is_living": false,
     "lifespan": "1893 – 1968",
     "parents": [
-      "Hannah Baker (1855–1948)",
-      "William Humphrey Parker (1850–1926)"
+      "hannah-baker",
+      "william-humphrey-parker"
     ],
     "children": [
       "Avis Parker",
       "Howard Parker",
-      "Sydney Hugh Parker",
-      "William Humphrey Parker",
-      "Shirley Edna Telfer"
+      "sydney-parker",
+      "william-humphrey-parker",
+      "shirley-telfer-1929"
     ],
     "spouses": [
-      "Caroline Edna Lawrie (1890–1957)"
+      "caroline-edna-lawrie"
     ],
     "siblings": [
       "Sophia Parker",
@@ -9229,12 +9229,12 @@
     ],
     "children": [
       "Sophia Parker",
-      "William Henry Parker",
+      "william-henry-parker",
       "Hugh Kelly Parker",
       "(others unconfirmed)"
     ],
     "spouses": [
-      "Hannah Baker (1855–1948)"
+      "hannah-baker"
     ],
     "siblings": [],
     "related_trees": [
@@ -9299,8 +9299,8 @@
     "is_living": false,
     "lifespan": "1879 – 1948",
     "parents": [
-      "Caroline Amelia Telfer (née Masters)",
-      "John Telfer (1847–1929)"
+      "caroline-telfer",
+      "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
@@ -9375,7 +9375,7 @@
     "is_living": false,
     "lifespan": "1811 – 1881",
     "parents": [
-      "James Telfer (1761–1845)",
+      "james-telfer-1761",
       "Elizabeth Hutton (1774–1853)"
     ],
     "children": [],
@@ -9451,8 +9451,8 @@
     "is_living": false,
     "lifespan": "1880 – 1880",
     "parents": [
-      "John Telfer (1847–1929)",
-      "Caroline Amelia Masters (1842–1929)"
+      "john-telfer-1847",
+      "caroline-masters"
     ],
     "children": [],
     "spouses": [],
@@ -9523,8 +9523,8 @@
     "is_living": true,
     "lifespan": "2019 – living",
     "parents": [
-      "Kylie Isabella Telfer",
-      "Mark Telfer"
+      "kylie-telfer",
+      "mark-telfer-1986"
     ],
     "children": [],
     "spouses": [],
@@ -9633,8 +9633,8 @@
     "body_markdown": "# Clara Blanche Telfer (1883–1974)\n\n**Born:** 18 November 1883 — Tantanoola, South Australia  \n**Died:** 5 June 1974 — South Australia  \n**Father:** [[John Telfer (1840–1913)]]  \n**Mother:** [[Martha Clara Henstridge (1856–1921)]]  \n**Spouse:** Francis Edward Lane (m. 6 April 1903, d. 1940)\n\n## Life Summary\n\nClara Blanche Telfer was born on 18 November 1883, the tenth child of John Telfer (1840–1913) and his second wife Martha Clara Henstridge. She married Francis Edward Lane on 6 April 1903 at the Tantanoola Presbyterian Church. The marriage certificate listed Francis's occupation as \"Hotel Keeper\" — he was the Licensee of the Tantanoola Tiger Hotel from 1902 to 1905, together with his brother William Lane.\n\nClara and Francis had ten children, though three died in infancy: Edna Elizabeth Lane (lived nine months), Brenda Olive Lane (lived three months), and Francis Lane (lived two days). The seven who survived were Nina Amy, Ethel Jean, Derrice Elma, Edna Mary, Doris Elizabeth, Albin Edward John and June.\n\nClara had a very close relationship with her brothers and sisters and often visited Tantanoola. In her 90th year she made a special request to be driven to the Presbyterian Church where she had been married, and to other places which held very special memories. She died five months after this visit, on 5 June 1974.\n\nFrancis Edward Lane died in 1940 at the age of 74.\n\n## Family Stories\n\nClara Blanche was the tenth child of John Telfer — the last of his daughters — born in 1883 at Tantanoola. At nineteen she married Francis Edward Lane, a hotel keeper who ran the Tantanoola Tiger Hotel with his brother. The wedding took place at the Tantanoola Presbyterian Church on 6 April 1903.\n\nShe raised seven surviving children through hard times. Her brother Roland never married and was a great friend of Clara and her family, spending every Good Friday and Christmas Day with them for decades.\n\nIn her 90th year, Clara returned to Tantanoola for a visit and asked to be driven to the Presbyterian Church where she had been married all those years before, and to other places that held special memories. She died five months later, on 5 June 1974 — ninety years old, and the last surviving child of John and Martha.\n\n*(From the Borders to the Bush, pp.249–251)*\n\n## Relationship\n\n| Relation | Name |\n|---|---|\n| Self | Clara Blanche Telfer |\n| Father | [[John Telfer (1840–1913)]] |\n| Mother | [[Martha Clara Henstridge (1856–1921)]] |\n| Spouse | Francis Edward Lane (m. 6 Apr 1903, d. 1940) |\n| Siblings | [[Mark Telfer (1877–1946)]], [[Maria Clara Telfer (1878–1903)]], [[Isabella Lucieton Telfer (1880–1964)]], [[John Roland Telfer (1882–1975)]], [[Albert George Telfer (1882–1961)]], [[Robert Freddy Telfer (1886–1949)]], [[Maifie Beryl Telfer (1913–1948)]], [[Jean Maryann Martha Telfer (1910–1984)]], [[Lindsay Roland Telfer (1920–1976)]] |\n| Children | Nina Amy Lane, Ethel Jean Lane, Derrice Elma Lane, Edna Mary Lane, Doris Elizabeth Lane, Albin Edward John Lane, June Lane |\n\n## Sources\n\n1. **Book:** *From the Borders to the Bush* by Donald Telfer (1986) — pages 249–251, Clara Lane family section\n2. Tantanoola Tiger Hotel records — Francis Lane as Licensee 1902–1905",
     "body_stripped": "**Born:** 18 November 1883 — Tantanoola, South Australia  \n**Died:** 5 June 1974 — South Australia  \n**Father:** John Telfer (1840–1913)  \n**Mother:** Martha Clara Henstridge (1856–1921)  \n**Spouse:** Francis Edward Lane (m. 6 April 1903, d. 1940)\n\n## Life Summary\n\nClara Blanche Telfer was born on 18 November 1883, the tenth child of John Telfer (1840–1913) and his second wife Martha Clara Henstridge. She married Francis Edward Lane on 6 April 1903 at the Tantanoola Presbyterian Church. The marr",
     "parents": [
-      "John Telfer (1840–1913)",
-      "Martha Clara Henstridge"
+      "john-telfer-1840",
+      "martha-henstridge"
     ],
     "children": [],
     "siblings": [
@@ -9717,7 +9717,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "Margaret Armstrong"
+      "margaret-armstrong"
     ],
     "is_living": false,
     "lifespan": "1740 – ?",
@@ -9779,8 +9779,8 @@
     "body_markdown": "# Jean Telfer (1764–?) — Scotland\n\n## Family Stories\n\nOnly her baptism record survives in the Castleton Session Book.\n\n*(From the Borders to the Bush, p.17)*\n\n## Sources",
     "body_stripped": "## Family Stories\n\nOnly her baptism record survives in the Castleton Session Book.\n\n*(From the Borders to the Bush, p.17)*\n\n## Sources",
     "parents": [
-      "James Telfer (of Sorbietrees) (~1740–?)",
-      "Margaret Armstrong (~1745–?)"
+      "james-telfer-of-sorbietrees",
+      "margaret-armstrong"
     ],
     "children": [],
     "siblings": [
@@ -9889,8 +9889,8 @@
     "body_markdown": "# Susan Shirley Lawrie (?–living)\n\n# Susan Shirley Lawrie\n\n**Role:** Aunt (Tim's sister)\n**Born:** ?\n**Maiden Name:** Telfer\n**Married Name:** Lawrie\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Grantley Keith Telfer]], [[Kathryn Mavis Telfer (1961–1965)]], [[Timothy Neil Telfer (1959–?)]] |\n\n---\n\n*Profile created from family records. Details to be confirmed.*",
     "body_stripped": "**Role:** Aunt (Tim's sister)\n**Born:** ?\n**Maiden Name:** Telfer\n**Married Name:** Lawrie\n\n## Family\n\n Relation  Name \n\n **Mother**  Shirley Edna Telfer (1929–2017) \n **Father**  Murray John Telfer (1924–2009) \n **Siblings**  Daryll William Telfer, John Robert Telfer, Grantley Keith Telfer, Kathryn Mavis Telfer (1961–1965), Timothy Neil Telfer (1959–?) \n\n*Profile created from family records. Details to be confirmed.*",
     "parents": [
-      "Murray John Telfer",
-      "Shirley Edna Telfer"
+      "murray-telfer-1911",
+      "shirley-telfer-1929"
     ],
     "children": [],
     "siblings": [
@@ -9972,12 +9972,12 @@
     "body_markdown": "# William Telfer (1802–1850)\n\n**Born:** 7 October 1802 — Oxnam Parish, Roxburghshire, Scotland  \n**Died:** 16 September 1850 — Tamworth, New South Wales  \n**Mother:** [[Janet Nichol]]  \n**Father:** [[William Telfer (shepherd)]]  \n**Spouse:** Margaret (surname unknown) — m. unknown, before 1841\n\n## Life Summary\n\nWilliam Telfer was born on 7 October 1802 in the Parish of Oxnam, Roxburghshire, Scotland, the fourth child of William Telfer, a shepherd, and his wife Janet Nichol. From an early age, William and his older brother Andrew worked as shepherds in the Cheviot Hills region, herding sheep through hard winters and bad seasons when work was difficult to obtain.\n\nIn 1825 William and Andrew signed on as Indented Servants — \"Free People\" — with the newly formed Australian Agricultural Company. William's agreement was dated 10 February 1825, with an annual salary of £30. He sailed on the \"York\" which arrived in Sydney Harbour on 13 November 1825. His brother Andrew arrived two days later on the \"Brothers\".\n\nWilliam rose through the ranks of the Company over the next two decades. He was Shepherd in Charge at Booral from 1827, supervising up to 1,877 sheep. By 1828 he was Master Shepherd at three stations, supplying shepherds with fresh meat three times a week on horseback. In 1832 he accompanied Sir Edward Parry (the Arctic explorer turned Company Commissioner) on the expedition to the Liverpool Plains to assess land for the Company's new stations at Warrah and Goonoo Goonoo. Parry selected William as Manager of the new sheep stations, writing that William was \"an intelligent, sober, industrious man, and as careful of the Co.'s property as if it were his own.\"\n\nWilliam moved 6,000 lambing ewes from Port Stephens to Warrah with the loss of only one sheep — a remarkable feat. In 1835 he was put in charge of the Goonoo Goonoo sheep station on the Peel River near Tamworth. He left the Company's employ in 1844.\n\nIn 1844 William purchased the leasehold of a store and accommodation house in Quirindi on the Liverpool Plains. Sir Thomas Mitchell, the famous explorer and Surveyor-General, spent Christmas Day with the Telfers in 1845. In 1846 William built the first public house in Quirindi, known as \"The Squatters Home\". In 1848 both W.C. Wentworth and the Rev. John Dunmore Lang stayed at Telfer's inn on the same night — both members of the newly formed Legislative Council.\n\nWilliam died in Tamworth on 16 September 1850 and was buried in the old cemetery. He died without leaving a will, and his widow Margaret applied for administration of the estate, as published in the NSW Government Gazette on 29 August 1851.\n\n## Family Stories\n\nWilliam Telfer was born into shepherd life in the Scottish Borders and grew up knowing hard winters and scarce work. When the Australian Agricultural Company was formed in London in 1824 to develop the fine wool industry in New South Wales, William and his brother Andrew signed on as Indented Servants. They sailed on separate ships from Cowes in June 1825, arriving in Sydney Harbour in November after calling at Rio de Janeiro. The passengers remained on board for days while arrangements were made to transport them to \"Retreat\", a temporary property thirty miles west of Sydney. Twenty carts were hired, but they needed another twenty. Their first night on land ended in a heavy thunderstorm and miserable conditions.\n\nWilliam's skill with sheep was evident from the start. When Sir Edward Parry took over as Commissioner, he personally selected William for the task of establishing new sheep stations on the Liverpool Plains. Parry's despatches to London speak of William in the highest terms — \"an intelligent, sober, industrious man\" with \"strict honesty in the case of stores committed to his charge.\" When the Company needed to move 6,000 lambing ewes from Port Stephens to Warrah, William and his brother Andrew did the job with the loss of only one sheep. Parry preferred William over the Company's surveyor, Henry Dangar, for the position of Manager — a significant show of confidence in a former indentured servant.\n\nAfter leaving the Company in 1844, William bought a store and accommodation house at Quirindi. He built the first public house in town — \"The Squatters Home\" — on 200 acres leased from the government. The pub sat on the flat near Jacob and Joseph Creeks, where the Kamilaroi people camped. It played host to some of the colony's most notable figures: Sir Thomas Mitchell arrived on Christmas Eve 1845 and spent Christmas Day with the family. In 1848, W.C. Wentworth and the Rev. John Dunmore Lang stayed on the same night — both members of the newly formed Legislative Council. Lang, a powerful orator and true patriot, was having financial difficulties at the time, and William was among those who subscribed to keep him in the House.\n\nWilliam returned to Tamworth in 1850, but died later that year on 16 September. He was buried in the old cemetery. He left no will and little provision. His eldest son William, the \"oldest native of West Tamworth\" born in 1841, was working for a magistrate by age 10. His wife Margaret must have faced hard years after his death.\n\n*(From the Borders to the Bush, pp.366–370)*\n\n## Relationship\n\n| Relation | Name |\n|---|---|\n| Self | William Telfer |\n| Father | William Telfer (shepherd) |\n| Mother | Janet Nichol |\n| Siblings | [[William Telfer (1802–1850)#Andrew Telfer (1798–1858)|Andrew Telfer (1798–1858)]] |\n| Spouse | Margaret (surname unknown) |\n| Children | William Telfer (1841–?), Elizabeth Telfer (Mrs Mansfield), Andrew Telfer, Edward Telfer |\n\n## Sources\n\n1. **Book:** *From the Borders to the Bush* by Donald Telfer (1986) — pages 366–370, \"William Telfer — In Australia (1825–1850)\"\n2. Australian Agricultural Company records, via ANU — includes copy of William Telfer's original report from Warrah, 4 November 1832",
     "body_stripped": "**Born:** 7 October 1802 — Oxnam Parish, Roxburghshire, Scotland  \n**Died:** 16 September 1850 — Tamworth, New South Wales  \n**Mother:** Janet Nichol  \n**Father:** William Telfer (shepherd)  \n**Spouse:** Margaret (surname unknown) — m. unknown, before 1841\n\n## Life Summary\n\nWilliam Telfer was born on 7 October 1802 in the Parish of Oxnam, Roxburghshire, Scotland, the fourth child of William Telfer, a shepherd, and his wife Janet Nichol. From an early age, William and his older brother Andrew wor",
     "parents": [
-      "William Telfer (shepherd)",
+      "william-telfer-1879",
       "Janet Nichol"
     ],
     "children": [
-      "William Telfer (1841–?)",
-      "Elizabeth Telfer (Mrs Mansfield)",
+      "william-telfer-1811",
+      "elizabeth-telfer-1868",
       "Andrew Telfer",
       "Edward Telfer"
     ],
