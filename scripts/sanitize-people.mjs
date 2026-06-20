@@ -155,12 +155,47 @@ const PUBLIC_FIELDS = [
   'person_photo',
 ];
 
+// ─── Deduplicate: keep per-(first,last,birth) the entry with year in slug ────
+
+function deduplicatePeople(arr) {
+  const seen = new Map(); // key -> best entry
+  const dropped = [];
+
+  for (const p of arr) {
+    const key = ((p.first_name || '') + '|' + (p.last_name || '') + '|' + (p.birth_year ?? '')).toLowerCase();
+    const hasYear = /\d{4}$/.test(p.slug || '');
+    const existing = seen.get(key);
+
+    if (!existing) {
+      seen.set(key, p);
+    } else {
+      const existingHasYear = /\d{4}$/.test(existing.slug || '');
+      // Prefer the one with year in slug — that's the 'real' entry with full data
+      if (hasYear && !existingHasYear) {
+        // Current has year, existing doesn't — swap
+        seen.set(key, p);
+        dropped.push(existing.slug);
+      } else {
+        dropped.push(p.slug);
+      }
+    }
+  }
+
+  if (dropped.length > 0) {
+    console.log(`🧹 Deduplicated: removed ${dropped.length} duplicate entries (bare-slug stubs)`);
+    dropped.forEach(s => console.log(`   - ${s}`));
+  }
+  return Array.from(seen.values());
+}
+
 // ─── Load Data ──────────────────────────────────────────────────────────────
 
-const people = JSON.parse(fs.readFileSync(INPUT_PATH, 'utf-8'));
-const slugToPerson = new Map(people.map(p => [p.slug, p]));
+let people = JSON.parse(fs.readFileSync(INPUT_PATH, 'utf-8'));
+console.log(`📚 Loaded ${people.length} raw people entries`);
+people = deduplicatePeople(people);
+console.log(`📚 After dedup: ${people.length} unique people`);
 
-console.log(`📚 Loaded ${people.length} people`);
+const slugToPerson = new Map(people.map(p => [p.slug, p]));
 
 // ─── Identify Living People ─────────────────────────────────────────────────
 
