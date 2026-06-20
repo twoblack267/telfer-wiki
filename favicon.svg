@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="hexBg" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0%" stop-color="#f7f3eb"/>
+      <stop offset="100%" stop-color="#ede5d6"/>
+    </linearGradient>
+    <linearGradient id="hexAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6b1d3a"/>
+      <stop offset="100%" stop-color="#c9a94e"/>
+    </linearGradient>
+  </defs>
+  <!-- Hexagon background -->
+  <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="url(#hexBg)" stroke="url(#hexAccent)" stroke-width="2.5"/>
+  <!-- Inner hexagon accent -->
+  <polygon points="50,18 82,34 82,66 50,82 18,66 18,34" fill="none" stroke="url(#hexAccent)" stroke-width="1.5" opacity="0.6"/>
+  <!-- Tree icon centered -->
+  <g transform="translate(50, 50)">
+    <path d="M0,-24 L0,-8 M-10,-12 L10,-12 M-14,-4 L14,-4 M-18,4 L18,4 M-10,12 L10,12" stroke="url(#hexAccent)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <ellipse cx="0" cy="20" rx="6" ry="3" fill="url(#hexAccent)" opacity="0.9"/>
+  </g>
+</svg>

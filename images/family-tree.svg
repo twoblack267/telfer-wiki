@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1450" width="100%" height="100%" style="background-color:#1a1a2e;">
+  <defs>
+    <style>
+      .title { font-family: "Georgia", serif; font-size: 22px; fill: #e94560; font-weight: bold; }
+      .subtitle { font-family: "Arial", sans-serif; font-size: 11px; fill: #999; }
+      .section { font-family: "Arial", sans-serif; font-size: 12px; fill: #e94560; font-weight: bold; }
+    </style>
+  </defs>
+  <rect width="1600" height="1800" fill="#1a1a2e"/>
+  <text x="800" y="40" text-anchor="middle" class="title">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Telfer Family Tree</text>
+  <text x="800" y="58" text-anchor="middle" class="subtitle">From James Telfer (1761) through to Mark, Kylie &amp; the kids — 7+ generations</text>
+  <text x="50" y="84" class="section">🏴󠁧󠁢󠁳󠁣󠁴󠁿 SCOTTISH ROOTS — IMMIGRANT GENERATION</text>
+    <rect x="708" y="97" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="775" y="113" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ James Telfer</text>
+    <text x="775" y="128" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1761–1845) ★</text>
+    <rect x="825" y="97" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="892" y="113" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Betty Hutton</text>
+    <text x="892" y="128" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1774–1853)</text>
+    <line x1="843" y1="116" x2="825" y2="116" stroke="#555" stroke-width="1"/>
+    <line x1="834" y1="135" x2="834" y2="149" stroke="#555" stroke-width="1.5"/>
+    <rect x="708" y="149" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="775" y="165" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ Francis Telfer</text>
+    <text x="775" y="180" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1809–1895) ★</text>
+    <rect x="825" y="149" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="892" y="165" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Margaret Wright</text>
+    <text x="892" y="180" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–1892)</text>
+    <line x1="843" y1="168" x2="825" y2="168" stroke="#555" stroke-width="1"/>
+    <line x1="834" y1="187" x2="834" y2="201" stroke="#555" stroke-width="1.5"/>
+    <rect x="708" y="201" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="775" y="217" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ John Telfer</text>
+    <text x="775" y="232" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1847–1929) ★</text>
+    <rect x="825" y="201" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="892" y="217" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Caroline A. Masters</text>
+    <text x="892" y="232" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1842–1929)</text>
+    <line x1="843" y1="220" x2="825" y2="220" stroke="#555" stroke-width="1"/>
+    <line x1="834" y1="239" x2="834" y2="253" stroke="#555" stroke-width="1.5"/>
+  <text x="50" y="269" class="section">FRANCIS CHARLES &amp; AMY — 2ND GENERATION AUSTRALIAN</text>
+    <rect x="708" y="282" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="775" y="298" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ Francis C. Telfer</text>
+    <text x="775" y="313" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1875–1954) ★</text>
+    <rect x="825" y="282" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="892" y="298" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Amy Ellen Provis</text>
+    <text x="892" y="313" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1884–1951)</text>
+    <line x1="843" y1="301" x2="825" y2="301" stroke="#555" stroke-width="1"/>
+    <line x1="834" y1="320" x2="834" y2="334" stroke="#555" stroke-width="1.5"/>
+    <line x1="76" y1="334" x2="1524" y2="334" stroke="#555" stroke-width="1.5"/>
+    <line x1="834" y1="320" x2="834" y2="334" stroke="#555" stroke-width="1.5"/>
+    <line x1="210" y1="334" x2="210" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="143" y="342" width="135" height="38" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="210" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Francis Kelson</text>
+    <text x="210" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1910–1987)</text>
+    <line x1="356" y1="334" x2="356" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="289" y="342" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="356" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Clarice May</text>
+    <text x="356" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1911–1997)</text>
+    <line x1="502" y1="334" x2="502" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="435" y="342" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="502" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Emily Amelia</text>
+    <text x="502" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="648" y1="334" x2="648" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="581" y="342" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="648" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Ethel Jean</text>
+    <text x="648" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="794" y1="334" x2="794" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="727" y="342" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="794" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Gladys Merle</text>
+    <text x="794" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="940" y1="334" x2="940" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="873" y="342" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="940" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Doris Elma</text>
+    <text x="940" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="1086" y1="334" x2="1086" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="1019" y="342" width="135" height="38" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="1086" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Edwin Roy</text>
+    <text x="1086" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="1232" y1="334" x2="1232" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="1165" y="342" width="135" height="38" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="1232" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Reginald M.</text>
+    <text x="1232" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="1378" y1="334" x2="1378" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="1311" y="342" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="1378" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ ☆ Murray John</text>
+    <text x="1378" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1924–2009 ★)</text>
+    <line x1="1524" y1="334" x2="1524" y2="342" stroke="#555" stroke-width="1.5"/>
+    <rect x="1457" y="342" width="135" height="38" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="1524" y="358" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Malcolm G.</text>
+    <text x="1524" y="373" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+  <text x="50" y="400" class="section">MURRAY JOHN &amp; SHIRLEY — ALL 6 CHILDREN WITH THEIR FAMILIES</text>
+    <rect x="708" y="413" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="775" y="429" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ ☆ Murray John</text>
+    <text x="775" y="444" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1924–2009) ★</text>
+    <rect x="825" y="413" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="892" y="429" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Shirley E. Parker</text>
+    <text x="892" y="444" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1929–2017)</text>
+    <line x1="843" y1="432" x2="825" y2="432" stroke="#555" stroke-width="1"/>
+    <line x1="834" y1="451" x2="834" y2="465" stroke="#555" stroke-width="1.5"/>
+    <line x1="350" y1="465" x2="1249" y2="465" stroke="#555" stroke-width="1.5"/>
+    <line x1="834" y1="451" x2="834" y2="465" stroke="#555" stroke-width="1.5"/>
+    <line x1="484" y1="465" x2="484" y2="473" stroke="#555" stroke-width="1.5"/>
+    <rect x="417" y="473" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="484" y="489" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Daryll Wm</text>
+    <text x="484" y="504" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">((?–?))</text>
+    <line x1="637" y1="465" x2="637" y2="473" stroke="#555" stroke-width="1.5"/>
+    <rect x="570" y="473" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="637" y="489" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">John Robert</text>
+    <text x="637" y="504" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">((?–?))</text>
+    <line x1="637" y1="511" x2="637" y2="519" stroke="#555" stroke-width="1.5"/>
+    <line x1="413" y1="519" x2="995" y2="519" stroke="#555" stroke-width="1.5"/>
+    <line x1="480" y1="519" x2="480" y2="523" stroke="#555" stroke-width="1.5"/>
+    <rect x="413" y="523" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="480" y="539" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">+ Robyn (wife)</text>
+    <text x="480" y="554" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="629" y1="519" x2="629" y2="523" stroke="#555" stroke-width="1.5"/>
+    <rect x="562" y="523" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="629" y="539" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Angela (adop)</text>
+    <text x="629" y="554" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="778" y1="519" x2="778" y2="523" stroke="#555" stroke-width="1.5"/>
+    <rect x="711" y="523" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="778" y="539" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Peter (adop)</text>
+    <text x="778" y="554" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="927" y1="519" x2="927" y2="523" stroke="#555" stroke-width="1.5"/>
+    <rect x="860" y="523" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="927" y="539" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Carissa (adop)</text>
+    <text x="927" y="554" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–2023 †)</text>
+    <line x1="790" y1="465" x2="790" y2="473" stroke="#555" stroke-width="1.5"/>
+    <rect x="723" y="473" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="790" y="489" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Grantley Keith</text>
+    <text x="790" y="504" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">((?–?))</text>
+    <line x1="790" y1="511" x2="790" y2="519" stroke="#555" stroke-width="1.5"/>
+    <line x1="641" y1="519" x2="1074" y2="519" stroke="#555" stroke-width="1.5"/>
+    <line x1="708" y1="519" x2="708" y2="523" stroke="#555" stroke-width="1.5"/>
+    <rect x="641" y="523" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="708" y="539" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Kristin Stefanoff</text>
+    <text x="708" y="554" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="857" y1="519" x2="857" y2="523" stroke="#555" stroke-width="1.5"/>
+    <rect x="790" y="523" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="857" y="539" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Jono</text>
+    <text x="857" y="554" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="1006" y1="519" x2="1006" y2="523" stroke="#555" stroke-width="1.5"/>
+    <rect x="939" y="523" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="1006" y="539" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Nick</text>
+    <text x="1006" y="554" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–?)</text>
+    <line x1="943" y1="465" x2="943" y2="473" stroke="#555" stroke-width="1.5"/>
+    <rect x="876" y="473" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="943" y="489" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ ☆ Timothy Neil</text>
+    <text x="943" y="504" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">((1959–?) ★)</text>
+    <line x1="1096" y1="465" x2="1096" y2="473" stroke="#555" stroke-width="1.5"/>
+    <rect x="1029" y="473" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="1096" y="489" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Kathryn Mavis</text>
+    <text x="1096" y="504" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">((1961–1965))</text>
+    <line x1="1249" y1="465" x2="1249" y2="473" stroke="#555" stroke-width="1.5"/>
+    <rect x="1182" y="473" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="1249" y="489" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Susan S. Lawrie</text>
+    <text x="1249" y="504" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">((née Telfer))</text>
+  <text x="50" y="741" class="section">TIMOTHY NEIL — MARK&#39;S DAD AND HIS FAMILIES</text>
+    <rect x="708" y="751" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="775" y="767" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ ☆ Timothy Neil</text>
+    <text x="775" y="782" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1959–?) ★</text>
+    <rect x="825" y="751" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="892" y="767" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Penny Telfer</text>
+    <text x="892" y="782" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(bio mother)</text>
+    <line x1="843" y1="770" x2="825" y2="770" stroke="#e94560" stroke-width="1"/>
+    <line x1="834" y1="789" x2="834" y2="803" stroke="#555" stroke-width="1.5"/>
+    <line x1="580" y1="803" x2="1020" y2="803" stroke="#555" stroke-width="1.5"/>
+    <line x1="834" y1="789" x2="834" y2="803" stroke="#555" stroke-width="1.5"/>
+    <line x1="714" y1="803" x2="714" y2="811" stroke="#555" stroke-width="1.5"/>
+    <rect x="647" y="811" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="714" y="827" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ ☆ Mark K Telfer</text>
+    <text x="714" y="842" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1986–? ★)</text>
+    <line x1="867" y1="803" x2="867" y2="811" stroke="#555" stroke-width="1.5"/>
+    <rect x="800" y="811" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="867" y="827" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Amy Nicole Telfer</text>
+    <text x="867" y="842" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–living)</text>
+    <line x1="1020" y1="803" x2="1020" y2="811" stroke="#555" stroke-width="1.5"/>
+    <rect x="953" y="811" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="1020" y="827" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">David Telfer</text>
+    <text x="1020" y="842" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–living)</text>
+  <text x="60" y="867" class="section">TIM + SHERYLE / IVORY (STEP-FAMILY)</text>
+    <rect x="708" y="877" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="775" y="893" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Sheryle Telfer</text>
+    <text x="775" y="908" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1961–?) +</text>
+    <rect x="825" y="877" width="135" height="38" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="892" y="893" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Paul Ivory</text>
+    <text x="892" y="908" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1955–1996)</text>
+    <line x1="843" y1="896" x2="825" y2="896" stroke="#e94560" stroke-width="1"/>
+    <line x1="834" y1="915" x2="834" y2="929" stroke="#555" stroke-width="1.5"/>
+    <line x1="503" y1="929" x2="1096" y2="929" stroke="#555" stroke-width="1.5"/>
+    <line x1="834" y1="915" x2="834" y2="929" stroke="#555" stroke-width="1.5"/>
+    <line x1="637" y1="929" x2="637" y2="937" stroke="#555" stroke-width="1.5"/>
+    <rect x="570" y="937" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="637" y="953" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Aaron Ivory</text>
+    <text x="637" y="968" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–living)</text>
+    <line x1="790" y1="929" x2="790" y2="937" stroke="#555" stroke-width="1.5"/>
+    <rect x="723" y="937" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="790" y="953" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Jared Ivory</text>
+    <text x="790" y="968" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–living)</text>
+    <line x1="943" y1="929" x2="943" y2="937" stroke="#555" stroke-width="1.5"/>
+    <rect x="876" y="937" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="943" y="953" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Lauren Ivory</text>
+    <text x="943" y="968" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–living)</text>
+    <line x1="1096" y1="929" x2="1096" y2="937" stroke="#555" stroke-width="1.5"/>
+    <rect x="1029" y="937" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="1096" y="953" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Joel Ivory</text>
+    <text x="1096" y="968" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(?–living)</text>
+  <text x="50" y="993" class="section">MARK &amp; KYLIE — YOUR FAMILY</text>
+    <rect x="708" y="1003" width="135" height="38" rx="4" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+    <text x="775" y="1019" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">★ ☆ Mark Kenneth</text>
+    <text x="775" y="1034" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1986–?) ★</text>
+    <rect x="825" y="1003" width="135" height="38" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="892" y="1019" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Kylie I. Dance</text>
+    <text x="892" y="1034" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1982–?)</text>
+    <line x1="843" y1="1022" x2="825" y2="1022" stroke="#e94560" stroke-width="1"/>
+    <line x1="834" y1="1041" x2="834" y2="1055" stroke="#555" stroke-width="1.5"/>
+    <line x1="570" y1="1055" x2="1030" y2="1055" stroke="#555" stroke-width="1.5"/>
+    <line x1="834" y1="1041" x2="834" y2="1055" stroke="#555" stroke-width="1.5"/>
+    <text x="834" y="1052" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="8">m. 12 Mar 2016</text>
+    <line x1="704" y1="1055" x2="704" y2="1063" stroke="#555" stroke-width="1.5"/>
+    <rect x="637" y="1063" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="704" y="1079" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Mitchell Telfer</text>
+    <text x="704" y="1094" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(2008–? (CR))</text>
+    <line x1="867" y1="1055" x2="867" y2="1063" stroke="#555" stroke-width="1.5"/>
+    <rect x="800" y="1063" width="135" height="38" rx="4" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="867" y="1079" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Levi L. T. Telfer</text>
+    <text x="867" y="1094" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(2017–?)</text>
+    <line x1="1030" y1="1055" x2="1030" y2="1063" stroke="#555" stroke-width="1.5"/>
+    <rect x="963" y="1063" width="135" height="38" rx="4" fill="#1a2744" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="1030" y="1079" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Zabella V. Z. Telfer</text>
+    <text x="1030" y="1094" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(2019–?)</text>
+  <text x="50" y="1127" class="section">SUPPORTING LINES</text>
+  <text x="60" y="1147" fill="#888" font-family="Arial, sans-serif" font-size="11" font-weight="bold">PARKER LINE (Shirley&#39;s Paternal — Ayrshire Scots)</text>
+    <rect x="310" y="1155" width="130" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="375" y="1169" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">David Parker</text>
+    <text x="375" y="1184" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1822–1888)</text>
+    <line x1="440" y1="1172" x2="460" y2="1172" stroke="#555" stroke-width="1.5"/>
+    <rect x="480" y="1155" width="130" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="545" y="1169" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Wm Humphrey P.</text>
+    <text x="545" y="1184" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1850–1926)</text>
+    <line x1="610" y1="1172" x2="630" y2="1172" stroke="#555" stroke-width="1.5"/>
+    <rect x="650" y="1155" width="130" height="35" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="715" y="1169" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">+ Hannah Baker</text>
+    <text x="715" y="1184" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1855–1948)</text>
+    <line x1="780" y1="1172" x2="800" y2="1172" stroke="#555" stroke-width="1.5"/>
+    <rect x="820" y="1155" width="130" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="885" y="1169" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Wm Henry Parker</text>
+    <text x="885" y="1184" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1893–1968)</text>
+    <line x1="950" y1="1172" x2="970" y2="1172" stroke="#555" stroke-width="1.5"/>
+    <rect x="990" y="1155" width="130" height="35" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="1055" y="1169" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">+ C. Edna Lawrie</text>
+    <text x="1055" y="1184" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1890–1957)</text>
+    <line x1="1120" y1="1172" x2="1140" y2="1172" stroke="#555" stroke-width="1.5"/>
+    <rect x="1160" y="1155" width="130" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="1225" y="1169" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">→ Shirley Parker</text>
+    <text x="1225" y="1184" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1929–2017)</text>
+  <text x="60" y="1210" fill="#888" font-family="Arial, sans-serif" font-size="11" font-weight="bold">LAWRIE LINE (Shirley&#39;s Maternal — Ayrshire Scots)</text>
+    <rect x="380" y="1218" width="130" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="445" y="1232" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Alex. Lawrie</text>
+    <text x="445" y="1247" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1780–1847)</text>
+    <line x1="510" y1="1235" x2="530" y2="1235" stroke="#555" stroke-width="1.5"/>
+    <rect x="550" y="1218" width="130" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="615" y="1232" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">John Lawrie</text>
+    <text x="615" y="1247" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1810–1888)</text>
+    <line x1="680" y1="1235" x2="700" y2="1235" stroke="#555" stroke-width="1.5"/>
+    <rect x="720" y="1218" width="130" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="785" y="1232" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Robt. D. Lawrie</text>
+    <text x="785" y="1247" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1850–1917)</text>
+    <line x1="850" y1="1235" x2="870" y2="1235" stroke="#555" stroke-width="1.5"/>
+    <rect x="890" y="1218" width="130" height="35" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="955" y="1232" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">+ Caroline Hosking</text>
+    <text x="955" y="1247" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1851–1920)</text>
+    <line x1="1020" y1="1235" x2="1040" y2="1235" stroke="#555" stroke-width="1.5"/>
+    <rect x="1060" y="1218" width="130" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="1125" y="1232" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Caroline E. Lawrie</text>
+    <text x="1125" y="1247" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1890–1957)</text>
+  <text x="60" y="1273" fill="#888" font-family="Arial, sans-serif" font-size="11" font-weight="bold">BAKER / MARCH / WEBSTER (English Roots — Hannah Baker)</text>
+    <rect x="330" y="1281" width="125" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="392" y="1295" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">J. Webster</text>
+    <text x="392" y="1310" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1750–1810)</text>
+    <line x1="455" y1="1298" x2="475" y2="1298" stroke="#555" stroke-width="1.5"/>
+    <rect x="485" y="1281" width="125" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="547" y="1295" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Wm Webster</text>
+    <text x="547" y="1310" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1778–1816)</text>
+    <line x1="610" y1="1298" x2="630" y2="1298" stroke="#555" stroke-width="1.5"/>
+    <rect x="640" y="1281" width="125" height="35" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="702" y="1295" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Sophia Webster</text>
+    <text x="702" y="1310" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1803–1892)</text>
+    <line x1="765" y1="1298" x2="785" y2="1298" stroke="#555" stroke-width="1.5"/>
+    <rect x="795" y="1281" width="125" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="857" y="1295" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Joseph March</text>
+    <text x="857" y="1310" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1797–1883)</text>
+    <line x1="920" y1="1298" x2="940" y2="1298" stroke="#555" stroke-width="1.5"/>
+    <rect x="950" y="1281" width="125" height="35" rx="4" fill="#1a2744" stroke="#4a6fa5" stroke-width="1.5"/>
+    <text x="1012" y="1295" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Sophia March</text>
+    <text x="1012" y="1310" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1829–1901)</text>
+    <line x1="1075" y1="1298" x2="1095" y2="1298" stroke="#555" stroke-width="1.5"/>
+    <rect x="1105" y="1281" width="125" height="35" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1.5"/>
+    <text x="1167" y="1295" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Wm J. Baker</text>
+    <text x="1167" y="1310" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">(1831–1919)</text>
+  <text x="50" y="1336" fill="#999" font-family="Arial, sans-serif" font-size="11" font-weight="bold">LEGEND</text>
+  <rect x="55" y="1344" width="10" height="10" rx="2" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+  <text x="71" y="1353" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="9">★ = Direct ancestor / Main line</text>
+  <rect x="55" y="1360" width="10" height="10" rx="2" fill="#1a2744" stroke="#0f3460" stroke-width="1.5"/>
+  <text x="71" y="1369" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="9">Blue bg = Female</text>
+  <rect x="55" y="1376" width="10" height="10" rx="2" fill="#16213e" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="71" y="1385" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="9">Green border = Living</text>
+  <rect x="55" y="1392" width="10" height="10" rx="2" fill="none" stroke="#666" stroke-width="1.5"/>
+  <text x="71" y="1401" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="9">+ prefix = Spouse (by marriage)</text>
+  <text x="800" y="1416" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">Telfer Family Tree — Direct ancestor line from James Telfer (1761) to Mark, Kylie &amp; the kids</text>
+  <text x="800" y="1430" text-anchor="middle" fill="#999" font-family="Arial, sans-serif" font-size="9">Data from Telfer Wiki (people.json) — All known children and grandchildren shown for main branches</text>
+</svg>

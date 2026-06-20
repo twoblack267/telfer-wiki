@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="en-AU"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Telfer Family Tree — All Generations — Telfer Wiki</title><meta name="description" content="The Telfer Family Wiki — a digital family history archive tracing nine generations of Telfers from Scotland to South Australia. A living record of the family line from John Telfer of Castleton to the present day."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Fonts: Playfair Display for headings (elegant heritage serif), Inter for body (clean, readable) --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet"><script>
+      (function() {
+        var saved = localStorage.getItem('telfer-wiki-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/about.VngFEwF6.css">
+<style>.tree-node summary{line-height:1.6;transition:background-color .15s,color .15s;user-select:none}.tree-node summary:hover{background-color:var(--color-surface);color:var(--color-link)}.tree-node summary:focus{outline:2px solid var(--color-link);outline-offset:2px;border-radius:4px}.tree-node[open]>summary{color:var(--color-heading)}.tree-node[open]>summary::marker{content:""}.tree-container{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;line-height:1.7}.gen-jump-btn.active{border-color:var(--color-heading);background-color:var(--color-heading);color:#fff}.tree-node.highlight-target>summary{background-color:var(--color-highlight)!important;color:var(--color-surface)!important;border-radius:4px}.gen-jump-scroll,ul.scroll-snap-type-x-mandatory{position:relative;scroll-snap-type:x mandatory}.gen-jump-scroll:after,ul.scroll-snap-type-x-mandatory:after{content:"";position:absolute;bottom:0;right:0;left:0;height:1.5rem;background:linear-gradient(to top,var(--color-background),transparent);pointer-events:none;opacity:.8}.gen-jump-item,li.scroll-snap-align-start{scroll-snap-align:start;flex-shrink:0}@media(max-width:639px){.person-card{overflow-x:auto;-webkit-overflow-scrolling:touch}.tree-container{font-size:.8rem;line-height:1.7;min-width:max-content}.tree-node summary{padding:.75rem 1rem;min-height:44px;display:flex;align-items:center;flex-wrap:wrap}.tree-node summary strong.truncate{flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:300px}.gen-jump-btn{padding:.625rem 1rem;font-size:.8rem;min-height:44px;min-width:44px;flex-shrink:0}}@media(min-width:640px){html{scroll-behavior:smooth}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head> <body class="min-h-screen flex flex-col"> <!-- Navigation --> <nav class="border-b-2 border-[var(--color-border)] bg-[var(--color-nav-bg)] backdrop-blur-sm sticky top-0 z-50 no-print"> <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between"> <a href="/" class="nav-link text-lg sm:text-xl font-serif font-bold text-[var(--color-heading)] hover:text-[var(--color-heading-hover)] no-underline flex items-center gap-2"> <span class="text-[var(--color-highlight)] text-xl sm:text-2xl">🌳</span>
+Telfer Wiki
+</a> <!-- Desktop nav --> <div class="hidden md:flex gap-1 items-center"> <a href="/" class="nav-link px-3 py-2 rounded-lg">Home</a> <a href="/people" class="nav-link px-3 py-2 rounded-lg active">People</a> <a href="/timeline" class="nav-link px-3 py-2 rounded-lg">Timeline</a> <a href="/people/full-tree" class="nav-link px-3 py-2 rounded-lg active">Time</a> <a href="/search" class="nav-link px-3 py-2 rounded-lg">Search</a> <a href="/people/families" class="nav-link px-3 py-2 rounded-lg">Families</a> <a href="/people/dna" class="nav-link px-3 py-2 rounded-lg">DNA</a> <a href="/about" class="nav-link px-3 py-2 rounded-lg">About</a> </div> <!-- Dark Mode Toggle --> <button id="theme-toggle" class="min-w-[44px] min-h-[44px] p-3 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-heading)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle dark mode" title="Toggle dark/light mode"> <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg> <svg id="theme-icon-moon" class="hidden" xmlns="http://www.w3.org/0000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg> </button> <!-- Hamburger button --> <button id="nav-toggle" class="md:hidden min-w-[44px] min-h-[44px] p-3 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-heading)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle navigation"> <svg id="nav-icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg> <svg id="nav-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> </button> </div> <!-- Mobile nav panel --> <div id="nav-panel" class="hidden md:hidden border-t border-[var(--color-border)] bg-[var(--color-nav-bg)] shadow-lg"> <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-1"> <a href="/" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors">🏠 Home</a> <a href="/people" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors active">👤 People</a> <a href="/timeline" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors">📅 Timeline</a> <a href="/people/full-tree" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors active">🕰 Time</a> <a href="/search" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors">🔍 Search</a> <a href="/people/families" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors">👪 Families</a> <a href="/people/dna" class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors">🧬 DNA</a> </div> </div> </nav> <!-- Main content --> <main class="max-w-5xl mx-auto px-3 sm:px-4 py-4 sm:py-8 flex-1 w-full">  <div class="max-w-6xl mx-auto p-4"> <!-- Breadcrumb --> <nav class="mb-4 text-sm" aria-label="Breadcrumb"> <ol class="flex flex-wrap gap-1 text-[var(--color-muted)]"> <li><a href="/" class="hover:text-[var(--color-heading)]">Home</a></li> <li class="mx-1">/</li> <li><a href="/people" class="hover:text-[var(--color-heading)]">People</a></li> <li class="mx-1">/</li> <li class="text-[var(--color-heading)]" aria-current="page">Telfer Family Tree</li> </ol> </nav> <header class="mb-6"> <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-3">
+The Telfer Line — Family Tree
+</h1> <!-- What this site is about --> <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 sm:p-5 mb-4"> <div class="font-serif italic text-sm sm:text-base text-[var(--color-ink-light)] leading-relaxed space-y-2"> <p>
+This is the <strong>Telfer Family Wiki</strong> — a digital archive for the descendants of
+<strong>John Telfer of Castleton</strong> (~1715, Scottish Lowlands). What started in the hills
+            of Roxburghshire became a story that crossed oceans: from Scotland to the copper mines of South Australia,
+            across the Eyre Peninsula, and down to the present day.
+</p> <p>
+This tree follows the <strong>Telfer name</strong> — every known Telfer
+            by birth and the people they married, from John Telfer of Castleton (~1715)
+            through to the latest generation. We track each couple and their children,
+            but once a daughter marries and her children take a different surname, that
+            branch ends here. It's the Telfer line — not every family that married into it.
+</p> <p class="text-xs text-[var(--color-muted)]">
+Click ▸ to expand a branch, ▾ to collapse it. Tap a name to focus and scroll.
+<span class="block mt-1">Currently: <strong>137 people</strong> across <strong>8 generations</strong> — all connected through the Telfer name.</span> </p> </div> </div> <!-- Quick stats row --> <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4"> <div class="text-center p-2 rounded-lg bg-[var(--color-card-bg)] border border-[var(--color-border)]"> <div class="text-lg font-bold text-[var(--color-heading)]">137</div> <div class="text-xs text-[var(--color-muted)]">People</div> </div> <div class="text-center p-2 rounded-lg bg-[var(--color-card-bg)] border border-[var(--color-border)]"> <div class="text-lg font-bold text-[var(--color-heading)]">8</div> <div class="text-xs text-[var(--color-muted)]">Generations</div> </div> <div class="text-center p-2 rounded-lg bg-[var(--color-card-bg)] border border-[var(--color-border)]"> <div class="text-lg font-bold text-[var(--color-heading)]">297 yrs</div> <div class="text-xs text-[var(--color-muted)]">Span</div> </div> <div class="text-center p-2 rounded-lg bg-[var(--color-card-bg)] border border-[var(--color-border)]"> <div class="text-lg font-bold text-[var(--color-heading)]">20</div> <div class="text-xs text-[var(--color-muted)]">Modern era</div> </div> </div> </header> <!-- Generation quick-jump --> <nav class="mb-4" aria-label="Generation quick jump"> <ul class="gen-jump-scroll flex gap-2 whitespace-nowrap overflow-x-auto pb-2 -mx-2 px-2" role="tablist"> <li role="presentation" class="gen-jump-item shrink-0"> <button class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors" data-gen-from="1715" data-gen-to="1761" data-gen-ancestor="John Telfer of Castleton" role="tab" aria-selected="false"> 1st Gen </button> </li><li role="presentation" class="gen-jump-item shrink-0"> <button class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors" data-gen-from="1761" data-gen-to="1809" data-gen-ancestor="James Telfer (1761–1845)" role="tab" aria-selected="false"> 2nd Gen </button> </li><li role="presentation" class="gen-jump-item shrink-0"> <button class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors" data-gen-from="1809" data-gen-to="1895" data-gen-ancestor="Francis Telfer (1809–1895)" role="tab" aria-selected="false"> 3rd Gen </button> </li><li role="presentation" class="gen-jump-item shrink-0"> <button class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors" data-gen-from="1847" data-gen-to="1929" data-gen-ancestor="John Telfer (1847–1929)" role="tab" aria-selected="false"> 4th Gen </button> </li><li role="presentation" class="gen-jump-item shrink-0"> <button class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors" data-gen-from="1875" data-gen-to="1954" data-gen-ancestor="Francis Charles Telfer (1875–1954)" role="tab" aria-selected="false"> 5th Gen </button> </li><li role="presentation" class="gen-jump-item shrink-0"> <button class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors" data-gen-from="1924" data-gen-to="2009" data-gen-ancestor="Murray John Telfer (1924–2009)" role="tab" aria-selected="false"> 6th Gen </button> </li><li role="presentation" class="gen-jump-item shrink-0"> <button class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors" data-gen-from="1959" data-gen-to="2024" data-gen-ancestor="Timothy Neil Telfer (1959–)" role="tab" aria-selected="false"> 7th Gen </button> </li><li role="presentation" class="gen-jump-item shrink-0"> <button class="gen-jump-btn px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors" data-gen-from="2008" data-gen-to="2024" data-gen-ancestor="Mark Kenneth Telfer (1986–)" role="tab" aria-selected="false"> 8th Gen </button> </li> </ul> </nav> <!-- Tree Container --> <div class="person-card rounded-xl p-4"> <div class="tree-container prose prose-sm max-w-none" style="font-size: 0.85rem; line-height: 1.7;"> <div id="family-tree">
+<details class="tree-node " open data-id="John Telfer (of Castleton)">
+  <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+    <span class="font-mono text-[var(--color-heading)] shrink-0">├─</span>
+    <strong class="truncate">John Telfer (of Castleton)</strong>
+    <span class="text-xs text-[var(--color-muted)] shrink-0">(1731–?)</span> + Elspeth (Young) Telfer (1722–?) <span class="text-xs text-[var(--color-muted)]">[Telfer (of Castleton)]</span>
+  </summary>
+  <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">
+  <details class="tree-node "  data-id="James Telfer">
+    <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+      <span class="font-mono text-[var(--color-heading)] shrink-0">│  ├─</span>
+      <strong class="truncate">James Telfer</strong>
+      <span class="text-xs text-[var(--color-muted)] shrink-0">(1761–1845)</span>
+    </summary>
+    <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">
+    <details class="tree-node "  data-id="Francis Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">Francis Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1768–1836)</span>
+      </summary>
+    </details>
+    <details class="tree-node "  data-id="James Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">James Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1796–1863)</span>
+      </summary>
+    </details>
+    <details class="tree-node "  data-id="James Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">James Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1796–1863)</span>
+      </summary>
+    </details>
+    <details class="tree-node "  data-id="Isobel Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">Isobel Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1798–1875)</span>
+      </summary>
+    </details>
+    <details class="tree-node "  data-id="Adam Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">Adam Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1799–?)</span>
+      </summary>
+    </details>
+    <details class="tree-node "  data-id="Margaret Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">Margaret Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1802–1884)</span>
+      </summary>
+    </details>
+    <details class="tree-node "  data-id="Robert Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">Robert Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1803–1878)</span> + Elizabeth (Oliver) Telfer (1807–1846)
+      </summary>
+      <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">
+      <details class="tree-node "  data-id="virtual:Elizabeth (~1834–)">
+        <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+          <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  │  ├─</span>
+          <strong class="truncate">Elizabeth Telfer</strong>
+          <span class="text-xs text-[var(--color-muted)] shrink-0">(1828–?)</span> <span class="badge badge-virtual text-xs" style="background: var(--color-warning); color: var(--color-surface);">virtual</span>
+        </summary>
+      </details>
+      <details class="tree-node "  data-id="virtual:James (~1836–)">
+        <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+          <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  │  ├─</span>
+          <strong class="truncate">James Telfer</strong>
+          <span class="text-xs text-[var(--color-muted)] shrink-0">(1828–?)</span> <span class="badge badge-virtual text-xs" style="background: var(--color-warning); color: var(--color-surface);">virtual</span>
+        </summary>
+      </details>
+      <details class="tree-node "  data-id="virtual:Jean (~1838–)">
+        <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+          <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  │  ├─</span>
+          <strong class="truncate">Jean Telfer</strong>
+          <span class="text-xs text-[var(--color-muted)] shrink-0">(1828–?)</span> <span class="badge badge-virtual text-xs" style="background: var(--color-warning); color: var(--color-surface);">virtual</span>
+        </summary>
+      </details>
+      <details class="tree-node "  data-id="virtual:John (~1839–)">
+        <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+          <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  │  ├─</span>
+          <strong class="truncate">John Telfer</strong>
+          <span class="text-xs text-[var(--color-muted)] shrink-0">(1828–?)</span> <span class="badge badge-virtual text-xs" style="background: var(--color-warning); color: var(--color-surface);">virtual</span>
+        </summary>
+      </details>
+      </div>
+    </details>
+    <details class="tree-node "  data-id="John Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">John Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1805–1839)</span>
+      </summary>
+    </details>
+    <details class="tree-node "  data-id="Francis Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">Francis Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1809–1895)</span>
+      </summary>
+    </details>
+    <details class="tree-node "  data-id="William Telfer">
+      <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded " tabindex="0">
+        <span class="font-mono text-[var(--color-heading)] shrink-0">│  │  ├─</span>
+        <strong class="truncate">William Telfer</strong>
+        <span class="text-xs text-[var(--color-muted)] shrink-0">(1811–1881)</span>
+      </summary>
+    </details>
+    </div>
+  </details>
+  </div>
+</details></div> </div> </div> <!-- Legend --> <details class="mt-4 person-card rounded-lg p-3"> <summary class="cursor-pointer font-medium text-[var(--color-heading)]">Legend &amp; Tips</summary> <div class="mt-2 space-y-1 text-sm text-[var(--color-ink-light)]"> <div class="flex items-center gap-2"> <span class="font-mono text-[var(--color-heading)]">├─</span> <span>Click to expand/collapse branch</span> </div> <div class="flex items-center gap-2"> <span class="badge badge-living text-xs">living</span> <span>Living person</span> </div> <div class="flex items-center gap-2"> <span class="text-xs text-[var(--color-muted)]">[Surname]</span> <span>Married name (non-Telfer surname)</span> </div> <div class="flex items-center gap-2"> <span>+ Name (years)</span> <span>Spouse</span> </div> <div class="flex items-center gap-2"> <kbd class="px-2 py-0.5 bg-[var(--color-surface)] border border-[var(--color-border)] rounded text-xs">Gen 1–8</kbd> <span>Top buttons jump to generation</span> </div> <div class="flex items-center gap-2"> <kbd class="px-2 py-0.5 bg-[var(--color-surface)] border border-[var(--color-border)] rounded text-xs">Tap name</kbd> <span>Focus + auto-scroll to that person</span> </div> </div> </details>  <script>
+      // ─── Phone-friendly: only ONE branch open at a time PER LEVEL ───
+      // IIFE wrapper so we can use early return
+      (() => {
+        const tree = document.getElementById('family-tree');
+        if (!tree) return;
+
+        // Get all details elements
+        const allDetails = tree.querySelectorAll('details.tree-node');
+
+        function getLevel(detail) {
+          let level = 0;
+          let parent = detail.parentElement;
+          while (parent) {
+            if (parent.matches('details.tree-node')) level++;
+            parent = parent.parentElement;
+          }
+          return level;
+        }
+
+        // Single-open per level: when one opens, close all other OPEN siblings at same level
+        allDetails.forEach(detail => {
+          detail.addEventListener('toggle', (e) => {
+            if (detail.open) {
+              const myLevel = getLevel(detail);
+              allDetails.forEach(other => {
+                if (other !== detail && other.open && getLevel(other) === myLevel) {
+                  other.open = false;
+                }
+              });
+            }
+          });
+        });
+
+        // ─── Generation jump buttons ───
+        const genButtons = document.querySelectorAll('.gen-jump-btn');
+        const peopleData = Array.from(document.querySelectorAll('#family-tree details'));
+
+        genButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const from = parseInt(btn.dataset.genFrom, 10);
+            const to = parseInt(btn.dataset.genTo, 10);
+            const ancestorName = btn.dataset.genAncestor;
+
+            // Normalize ancestor name: strip ALL parenthetical content (including lifespans)
+            const ancestorBase = ancestorName.replace(/\s*\([^)]*\)\s*/g, '').trim();
+
+            // Normalize tree ID: strip only the parentheses characters, keep content inside (e.g., "of Castleton")
+            // But we'll do this inside the loop
+
+            // Find target: prefer exact ancestor name match, fallback to birth year range
+            let targetDetail = null;
+            // First try exact ancestor name match (from GENERATIONS array) + year range check
+            if (ancestorBase) {
+              for (const detail of peopleData) {
+                const treeId = detail.dataset.id;
+                if (treeId) {
+                  // Normalize tree ID: strip only the parentheses characters, keep content inside
+                  const treeBase = treeId.replace(/\(\s*([^)]+)\s*\)/g, '$1').trim();
+                  if (treeBase === ancestorBase) {
+                    // Verify this detail's birth year is in the generation's range
+                    const summary = detail.querySelector('summary');
+                    let accept = false;
+                    if (summary) {
+                      const lifespanText = summary.textContent.match(/\((\d{4})[-–]/);
+                      if (lifespanText) {
+                        const birthYear = parseInt(lifespanText[1], 10);
+                        if (birthYear >= from && birthYear <= to) {
+                          accept = true;
+                        }
+                      } else {
+                        // No year found in summary - accept this match
+                        accept = true;
+                      }
+                    } else {
+                      // No summary - accept this match
+                      accept = true;
+                    }
+                    if (accept) {
+                      targetDetail = detail;
+                      break;
+                    }
+                    // Year out of range - continue searching
+                  }
+                }
+              }
+            }
+            // Fallback: first person in birth year range
+            if (!targetDetail) {
+              for (const detail of peopleData) {
+                const summary = detail.querySelector('summary');
+                if (summary) {
+                  const lifespanText = summary.textContent.match(/\((\d{4})[-–]/);
+                  if (lifespanText) {
+                    const birthYear = parseInt(lifespanText[1], 10);
+                    if (birthYear >= from && birthYear <= to) {
+                      targetDetail = detail;
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+
+            if (targetDetail) {
+              // Open all parent <details> elements so the target is visible
+              let parent = targetDetail.parentElement;
+              while (parent) {
+                if (parent.matches('details.tree-node')) {
+                  parent.open = true;
+                }
+                parent = parent.parentElement;
+              }
+              targetDetail.open = true;
+              // Scroll the WINDOW (not the tree container) to bring target into view
+              const summary = targetDetail.querySelector('summary');
+              if (summary) {
+                const rect = summary.getBoundingClientRect();
+                const targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
+                const isMobile = window.innerWidth < 640;
+                window.scrollTo({ top: Math.max(0, targetY), behavior: isMobile ? 'auto' : 'smooth' });
+              }
+              // Highlight the target
+              targetDetail.classList.add('highlight-target');
+              setTimeout(() => targetDetail.classList.remove('highlight-target'), 2000);
+            }
+
+            // Update active button
+            genButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+          });
+        });
+
+        // ─── Click name to focus + scroll ───
+        tree.addEventListener('click', (e) => {
+          const summary = e.target.closest('summary');
+          if (summary && !e.target.closest('details[open] > summary')) {
+            // Clicked on a closed summary - will open, then scroll
+            const detail = summary.parentElement;
+            setTimeout(() => {
+              const rect = summary.getBoundingClientRect();
+              const targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
+              const isMobile = window.innerWidth < 640;
+              window.scrollTo({ top: Math.max(0, targetY), behavior: isMobile ? 'auto' : 'smooth' });
+            }, 50);
+          }
+        });
+
+        // ─── Keyboard support ───
+        tree.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            const summary = e.target.closest('summary');
+            if (summary) {
+              e.preventDefault();
+              summary.click();
+            }
+          }
+        });
+
+        // ─── URL hash support for deep linking ───
+        // If URL has #person-slug, open that branch and scroll
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+          setTimeout(() => {
+            let targetSummary = tree.querySelector(`summary:has(strong:contains("${hash}"))`);
+            // Fallback: find by text content
+            if (!targetSummary) {
+              tree.querySelectorAll('summary strong').forEach(strong => {
+                if (strong.textContent.toLowerCase().includes(hash.toLowerCase().replace(/-/g, ' '))) {
+                  targetSummary = strong.closest('summary');
+                }
+              });
+            }
+            if (targetSummary) {
+              const detail = targetSummary.closest('details');
+              if (detail) {
+                detail.open = true;
+                const rect = targetSummary.getBoundingClientRect();
+                const targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
+                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+              }
+            }
+          }, 100);
+        }
+      })();
+    </script> </div>  </main> <!-- Footer --> <footer class="border-t border-[var(--color-border)] bg-[var(--color-surface)] no-print"> <div class="max-w-5xl mx-auto px-4 py-4 sm:py-6 text-center text-sm text-[var(--color-muted)]"> <p class="font-serif italic">Telfer Wiki — a living family history archive. From the Scottish lowlands to the South Australian plains.</p> <p class="mt-1">
+Data sourced from the Telfer Family History archive.
+<span class="text-xs">Built by Skippy the Magnificent &amp; The Librarian.</span> </p> </div> </footer> <script type="module">const c=document.getElementById("theme-toggle"),d=document.getElementById("theme-icon-sun"),i=document.getElementById("theme-icon-moon");function o(e){e==="dark"?(document.documentElement.setAttribute("data-theme","dark"),d&&d.classList.add("hidden"),i&&i.classList.remove("hidden")):(document.documentElement.removeAttribute("data-theme"),d&&d.classList.remove("hidden"),i&&i.classList.add("hidden")),localStorage.setItem("telfer-wiki-theme",e)}if(c){var l=document.documentElement.getAttribute("data-theme");l==="dark"&&(d&&d.classList.add("hidden"),i&&i.classList.remove("hidden")),c.addEventListener("click",function(){var e=document.documentElement.getAttribute("data-theme")==="dark";o(e?"light":"dark")}),window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(e){localStorage.getItem("telfer-wiki-theme")||o(e.matches?"dark":"light")})}const n=document.getElementById("nav-toggle"),t=document.getElementById("nav-panel"),s=document.getElementById("nav-icon-open"),a=document.getElementById("nav-icon-close");n&&t&&(n.addEventListener("click",()=>{const e=!t.classList.contains("hidden");t.classList.toggle("hidden"),s?.classList.toggle("hidden"),a?.classList.toggle("hidden"),n.setAttribute("aria-expanded",String(!e))}),document.addEventListener("click",e=>{!t.classList.contains("hidden")&&!n.contains(e.target)&&!t.contains(e.target)&&(t.classList.add("hidden"),s?.classList.remove("hidden"),a?.classList.add("hidden"),n.setAttribute("aria-expanded","false"))}),document.addEventListener("keydown",e=>{e.key==="Escape"&&!t.classList.contains("hidden")&&(t.classList.add("hidden"),s?.classList.remove("hidden"),a?.classList.add("hidden"),n.setAttribute("aria-expanded","false"),n.focus())}));</script> </body></html>
