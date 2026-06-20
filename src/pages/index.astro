@@ -6,7 +6,7 @@ const peopleData = (await import("../data/people.public.json")).default as Perso
 const metaData = (await import("../data/meta.json")).default;
 
 // Only Telfer tree people for the home page
-const telferPeople = peopleData.filter((p) => p.branch === "telfer") || [];
+const telferPeople = peopleData;
 const deceasedTelfer = telferPeople.filter((p) => !p.is_living);
 const livingTelfer = telferPeople.filter((p) => p.is_living);
 
@@ -147,7 +147,7 @@ const recentPeople = (telferPeople || []).slice(-6).reverse();
         ))}
       </div>
       <div class="mt-1.5">
-        <a href="/timeline" class="text-sm text-[var(--color-link)]">View full timeline →</a>
+        <a href={import.meta.env.BASE_URL + "timeline"} class="text-sm text-[var(--color-link)]">View full timeline →</a>
       </div>
     </section>
 

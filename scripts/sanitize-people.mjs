@@ -289,7 +289,7 @@ fs.writeFileSync(OUTPUT_PATH, JSON.stringify(publicPeople, null, 2));
 const META_PATH = path.resolve(__dirname, '../src/data/meta.json');
 const meta = {
   total_people: publicPeople.length,
-  total_trees: new Set(people.map(p => p.branch).filter(Boolean)).size,
+  total_trees: new Set(people.map(p => p.branch).filter(Boolean)).size || 1,
   living: publicPeople.filter(p => p.is_living).length,
   deceased: publicPeople.filter(p => !p.is_living).length,
 };
