@@ -4,7 +4,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const people = (await import("../../data/people.json")).default;
-const allPeople = people;
+const allPeople = people.filter((p) => p.id);
 
 // Build a lookup map for faster matching
 const personById = new Map(allPeople.map(p => [p.id, p]));

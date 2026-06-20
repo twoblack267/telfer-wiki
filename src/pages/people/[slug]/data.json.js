@@ -2,7 +2,9 @@
 /** @type {import('astro').GetStaticPaths} */
 export async function getStaticPaths() {
   const peopleData = (await import("@data/people.public.json")).default;
-  return peopleData.map((p) => ({ params: { slug: p.slug } }));
+  return peopleData
+    .filter((p) => p.id)
+    .map((p) => ({ params: { slug: p.slug } }));
 }
 
 /** @type {import('astro').APIRoute} */

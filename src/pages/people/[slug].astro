@@ -4,7 +4,9 @@ import { formatBody, getLinksForRelationships } from "../../utils/format-body.mj
 
 export async function getStaticPaths() {
   const people = (await import("../../data/people.public.json")).default;
-  return people.map((person) => ({
+  return people
+    .filter((p) => p.id)
+    .map((person) => ({
     params: { slug: person.slug },
     props: { person },
   }));

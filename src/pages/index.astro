@@ -16,16 +16,18 @@ const years = validPeople.map((p) => p.birth_year as number);
 const minYear = years.length > 0 ? Math.min(...years) : 1731;
 const maxYear = years.length > 0 ? Math.max(...years, new Date().getFullYear()) : new Date().getFullYear();
 
-// Count generations from John Telfer (of Castleton) (~1731) to the kids (2019)
+// Count generations from John Telfer (of Castleton) (~1731) to the kids (2008+)
+// 9 generations: John→James→Francis→John→Francis Charles→Murray→Timothy→Mark→Mitchell/Levi/Zabella
 const generationRanges = [
   { label: "1st Gen", range: "1731–1761", from: 1731, to: 1761 },
   { label: "2nd Gen", range: "1761–1809", from: 1762, to: 1809 },
-  { label: "3rd Gen", range: "1809–1895", from: 1809, to: 1895 },
-  { label: "4th Gen", range: "1847–1929", from: 1847, to: 1929 },
-  { label: "5th Gen", range: "1875–1954", from: 1875, to: 1954 },
-  { label: "6th Gen", range: "1924–2009", from: 1924, to: 2009 },
-  { label: "7th Gen", range: "1959–", from: 1959, to: new Date().getFullYear() },
-  { label: "8th Gen", range: "2008–", from: 2008, to: new Date().getFullYear() },
+  { label: "3rd Gen", range: "1809–1846", from: 1809, to: 1846 },
+  { label: "4th Gen", range: "1847–1874", from: 1847, to: 1874 },
+  { label: "5th Gen", range: "1875–1923", from: 1875, to: 1923 },
+  { label: "6th Gen", range: "1924–1958", from: 1924, to: 1958 },
+  { label: "7th Gen", range: "1959–1985", from: 1959, to: 1985 },
+  { label: "8th Gen", range: "1986–2007", from: 1986, to: 2007 },
+  { label: "9th Gen", range: "2008–", from: 2008, to: new Date().getFullYear() },
 ];
 
 // Pre-compute generation members
@@ -65,7 +67,7 @@ const recentPeople = (telferPeople || []).slice(-6).reverse();
       <!-- What we are -->
       <div class="max-w-xl mx-auto mt-4 px-2 text-left">
         <p class="text-sm sm:text-base text-[var(--color-ink-light)] font-serif italic leading-relaxed">
-          This is a living family history. <strong>Eight generations</strong> of Telfers — shepherds and farmers,
+          This is a living family history. <strong>Nine generations</strong> of Telfers — shepherds and farmers,
           miners and merchants — traced from the hills of Roxburghshire, Scotland (~1715) through the copper
           boom of South Australia, across the Eyre Peninsula, and into the present day.
         </p>

@@ -82,7 +82,9 @@
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "id": "Adam Francis Telfer",
@@ -176,7 +178,9 @@
       "telfer-tree"
     ],
     "vault_file": "Adam Francis Telfer (1842–1925).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Adam Telfer",
@@ -246,7 +250,9 @@
       "telfer-tree"
     ],
     "vault_file": "Adam Telfer (1771–1846).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "id": "Adam Telfer",
@@ -324,7 +330,9 @@
       "telfer-tree"
     ],
     "vault_file": "Adam Telfer (1799–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Alan Dale Telfer",
@@ -425,7 +433,9 @@
       "telfer-tree"
     ],
     "vault_file": "Alan Dale Telfer (1890–1937).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Albert Telfer",
@@ -499,7 +509,9 @@
       "telfer-tree"
     ],
     "vault_file": "Albert George Telfer (1882–1961).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Amy Ellen Telfer",
@@ -511,8 +523,8 @@
     "death_year": 1951,
     "birth_year_display": "1884",
     "death_year_display": "1951",
-    "display_name": "Amy Ellen Telfer",
-    "title": "Amy Ellen Telfer (née Provis) — Family & Biography",
+    "display_name": "Amy Ellen (Provis) Telfer",
+    "title": "Amy Ellen (Provis) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -604,7 +616,9 @@
         "filename": "amy-ellen-telfer-grave.jpg"
       }
     ],
-    "person_photo": "images/people/amy-ellen-telfer.jpg"
+    "person_photo": "images/people/amy-ellen-telfer.jpg",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Amy Ellen Telfer",
@@ -671,7 +685,9 @@
       "telfer-tree"
     ],
     "vault_file": "Amy Ellen Telfer (née Provis).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Amy Nicole Telfer",
@@ -736,7 +752,9 @@
       "telfer-tree"
     ],
     "vault_file": "Amy Nicole Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Angela Telfer",
@@ -796,7 +814,9 @@
       "telfer-tree"
     ],
     "vault_file": "Angela Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "id": "Ann Taylor",
@@ -808,8 +828,8 @@
     "death_year": null,
     "birth_year_display": "1856",
     "death_year_display": "?",
-    "display_name": "Ann Taylor",
-    "title": "Ann Taylor — Family & Biography",
+    "display_name": "Ann (Taylor) Telfer",
+    "title": "Ann (Taylor) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -821,7 +841,7 @@
       {
         "type": "Self",
         "names": [
-          "Ann Taylor"
+          "Ann (Taylor) Telfer"
         ]
       },
       {
@@ -872,7 +892,9 @@
       "telfer-tree"
     ],
     "vault_file": "Ann Taylor (~1856–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Bertha Telfer",
@@ -948,7 +970,9 @@
       "telfer-tree"
     ],
     "vault_file": "Bertha Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Carissa Telfer",
@@ -1014,7 +1038,9 @@
         "filename": "Carissa-Telfer.jpg"
       }
     ],
-    "person_photo": "images/people/Carissa-Telfer.jpg"
+    "person_photo": "images/people/Carissa-Telfer.jpg",
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "id": "Caroline Amelia Telfer",
@@ -1048,7 +1074,9 @@
       "telfer-tree"
     ],
     "vault_file": "Caroline Amelia Telfer (1842–1929).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Caroline Edna Lawrie",
@@ -1147,7 +1175,9 @@
       "telfer-tree"
     ],
     "vault_file": "Caroline Edna Lawrie (1890–1957).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Caroline Hosking",
@@ -1246,7 +1276,9 @@
       "telfer-tree"
     ],
     "vault_file": "Caroline Hosking (1851–1920).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Caroline Masters",
@@ -1258,8 +1290,8 @@
     "death_year": 1929,
     "birth_year_display": "1850",
     "death_year_display": "1929",
-    "display_name": "Caroline Masters",
-    "title": "Caroline Masters — Family & Biography",
+    "display_name": "Caroline (Masters) Telfer",
+    "title": "Caroline (Masters) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -1271,7 +1303,7 @@
       {
         "type": "Self",
         "names": [
-          "Caroline Masters"
+          "Caroline (Masters) Telfer"
         ]
       },
       {
@@ -1318,7 +1350,9 @@
       "telfer-tree"
     ],
     "vault_file": "Caroline Masters (~1850–1929).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Charles Farrow",
@@ -1400,7 +1434,9 @@
       "telfer-tree"
     ],
     "vault_file": "Charles Farrow (~1836–1884).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Clarice May Telfer",
@@ -1490,7 +1526,9 @@
       "telfer-tree"
     ],
     "vault_file": "Clarice May Telfer (1911–1997).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Colin Roy Telfer",
@@ -1548,7 +1586,9 @@
       "telfer-tree"
     ],
     "vault_file": "Colin Roy Telfer (1889–1964).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Daryll William Telfer",
@@ -1621,7 +1661,9 @@
       "telfer-tree"
     ],
     "vault_file": "Daryll William Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "David Telfer",
@@ -1678,7 +1720,9 @@
       "telfer-tree"
     ],
     "vault_file": "David Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Dinah Flavel",
@@ -1690,8 +1734,8 @@
     "death_year": 1844,
     "birth_year_display": "1821",
     "death_year_display": "1844",
-    "display_name": "Dinah Flavel",
-    "title": "Dinah Flavel (1821–1844) — Second Wife of Francis Telfer",
+    "display_name": "Dinah (Flavel) Telfer",
+    "title": "Dinah (Flavel) Telfer (1821–1844) — Second Wife of Francis Telfer",
     "tags": [
       "person",
       "telfer",
@@ -1702,7 +1746,7 @@
       {
         "type": "Self",
         "names": [
-          "Dinah Flavel"
+          "Dinah (Flavel) Telfer"
         ]
       },
       {
@@ -1737,7 +1781,9 @@
       "telfer-tree"
     ],
     "vault_file": "Dinah Flavel (1821–1844).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Doris Elma Telfer",
@@ -1827,7 +1873,9 @@
       "telfer-tree"
     ],
     "vault_file": "Doris Elma Telfer (1919–living).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Douglas Telfer",
@@ -1916,7 +1964,9 @@
       "telfer-tree"
     ],
     "vault_file": "Douglas Telfer (1887–1956).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Edwin Telfer",
@@ -1990,7 +2040,9 @@
       "telfer-tree"
     ],
     "vault_file": "Edwin Gilbert Telfer (1888–1972).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Edwin Telfer",
@@ -2072,7 +2124,9 @@
       "telfer-tree"
     ],
     "vault_file": "Edwin Roy Telfer (1921–2009).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Elizabeth Beattie",
@@ -2106,7 +2160,9 @@
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Beattie (1802–1891).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Elizabeth Beattie Telfer",
@@ -2158,7 +2214,9 @@
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Beattie Bessie Telfer (1871–1948).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Elizabeth Beattie Telfer",
@@ -2249,7 +2307,9 @@
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Beattie Telfer (1832–1896).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Elizabeth Hannah Telfer",
@@ -2341,7 +2401,9 @@
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Hannah Telfer (1836–1916).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Elizabeth Hutton Telfer",
@@ -2353,7 +2415,7 @@
     "death_year": 1853,
     "birth_year_display": "1774",
     "death_year_display": "1853",
-    "display_name": "Elizabeth Hutton Telfer",
+    "display_name": "Elizabeth (Hutton) Telfer",
     "title": "Elizabeth Betty Hutton Telfer (1774–1853)",
     "tags": [
       "bio",
@@ -2422,7 +2484,9 @@
         "filename": "elizabeth-betty-hutton-telfer.jpg"
       }
     ],
-    "person_photo": "images/people/elizabeth-betty-hutton-telfer.jpg"
+    "person_photo": "images/people/elizabeth-betty-hutton-telfer.jpg",
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "id": "Elizabeth Oliver",
@@ -2434,8 +2498,8 @@
     "death_year": 1846,
     "birth_year_display": "1807",
     "death_year_display": "1846",
-    "display_name": "Elizabeth Oliver",
-    "title": "Elizabeth Oliver — Family & Biography",
+    "display_name": "Elizabeth (Oliver) Telfer",
+    "title": "Elizabeth (Oliver) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -2447,7 +2511,7 @@
       {
         "type": "Self",
         "names": [
-          "Elizabeth Oliver"
+          "Elizabeth (Oliver) Telfer"
         ]
       },
       {
@@ -2474,7 +2538,9 @@
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Oliver (1807–1846).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Elizabeth Telfer",
@@ -2509,7 +2575,7 @@
       {
         "type": "Mother",
         "names": [
-          "Martha Allen"
+          "Martha (Allen) Telfer"
         ]
       },
       {
@@ -2549,7 +2615,9 @@
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Telfer (1868–1950).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Elspeth Young",
@@ -2561,8 +2629,8 @@
     "death_year": null,
     "birth_year_display": "1722",
     "death_year_display": "?",
-    "display_name": "Elspeth Young",
-    "title": "Elspeth Young",
+    "display_name": "Elspeth (Young) Telfer",
+    "title": "Elspeth (Young) Telfer",
     "tags": [
       "young",
       "castleton",
@@ -2573,7 +2641,7 @@
       {
         "type": "Self",
         "names": [
-          "Elspeth Young"
+          "Elspeth (Young) Telfer"
         ]
       },
       {
@@ -2606,7 +2674,9 @@
       "telfer-tree"
     ],
     "vault_file": "Elspeth Young (1722–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "id": "Emily Amelia Telfer",
@@ -2696,7 +2766,9 @@
       "telfer-tree"
     ],
     "vault_file": "Emily Amelia Telfer (1913–living).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Ernest Telfer",
@@ -2770,7 +2842,9 @@
       "telfer-tree"
     ],
     "vault_file": "Ernest John Telfer (1877–1953).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Esther Jane Telfer",
@@ -2854,7 +2928,9 @@
       "telfer-tree"
     ],
     "vault_file": "Esther Jane Telfer (1834–1909).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Ethel Jean Telfer",
@@ -2944,7 +3020,9 @@
       "telfer-tree"
     ],
     "vault_file": "Ethel Jean Telfer (1915–living).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Floris Telfer",
@@ -3037,7 +3115,9 @@
       "telfer-tree"
     ],
     "vault_file": "Floris Ethel Victoria Telfer (1904–1951).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Francis Charles Telfer",
@@ -3136,7 +3216,9 @@
         "filename": "francis-charles-telfer-grave.jpg"
       }
     ],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Francis Telfer",
@@ -3218,7 +3300,9 @@
       "telfer-tree"
     ],
     "vault_file": "Francis Kelson Telfer (1910–1987).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Francis Telfer",
@@ -3288,7 +3372,9 @@
       "telfer-tree"
     ],
     "vault_file": "Francis Telfer (1768–1836).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Francis Telfer",
@@ -3401,7 +3487,9 @@
       "telfer-tree"
     ],
     "vault_file": "Francis Telfer (1809–1895).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Frederick Parker",
@@ -3461,7 +3549,9 @@
       "telfer-tree"
     ],
     "vault_file": "Frederick Parker (~1838–1928).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "George Telfer",
@@ -3503,7 +3593,7 @@
       {
         "type": "Spouse",
         "names": [
-          "Ruth Penna"
+          "Ruth (Penna) Telfer"
         ]
       },
       {
@@ -3546,7 +3636,9 @@
       "telfer-tree"
     ],
     "vault_file": "George Wright Telfer (1850–1913).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Gilbert Telfer",
@@ -3642,7 +3734,9 @@
       "telfer-tree"
     ],
     "vault_file": "Gilbert Melville Telfer (1911–1978).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Gladys Merle Telfer",
@@ -3732,7 +3826,9 @@
       "telfer-tree"
     ],
     "vault_file": "Gladys Merle Telfer (1917–living).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Grantley Keith Telfer",
@@ -3817,7 +3913,9 @@
       "telfer-tree"
     ],
     "vault_file": "Grantley Keith Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Hannah Baker",
@@ -3897,7 +3995,9 @@
       "telfer-tree"
     ],
     "vault_file": "Hannah Baker (1855–1948).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Isabella Lucieton Telfer",
@@ -3986,7 +4086,9 @@
       "telfer-tree"
     ],
     "vault_file": "Isabella Lucieton Telfer (1880–1964).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Isobel Telfer",
@@ -4064,7 +4166,9 @@
       "telfer-tree"
     ],
     "vault_file": "Isobel Telfer (1798–1875).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "James Robert Telfer",
@@ -4140,7 +4244,9 @@
       "telfer-tree"
     ],
     "vault_file": "James Robert Telfer (~1866–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "James Telfer",
@@ -4231,7 +4337,9 @@
       "telfer-tree"
     ],
     "vault_file": "James Telfer (1761–1845).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "id": "James Telfer",
@@ -4312,7 +4420,9 @@
       "telfer-tree"
     ],
     "vault_file": "James Telfer (1796–1863).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "James Telfer",
@@ -4389,7 +4499,9 @@
       "telfer-tree"
     ],
     "vault_file": "James Telfer (1829–1914).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "James Telfer",
@@ -4445,7 +4557,9 @@
       "telfer-tree"
     ],
     "vault_file": "James Telfer (1832–1845).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "James Telfer",
@@ -4486,7 +4600,7 @@
       {
         "type": "Mother",
         "names": [
-          "Martha Allen"
+          "Martha (Allen) Telfer"
         ]
       },
       {
@@ -4530,7 +4644,9 @@
       "telfer-tree"
     ],
     "vault_file": "James Telfer (1866–1946).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "James Telfer Dillon",
@@ -4599,7 +4715,9 @@
       "telfer-tree"
     ],
     "vault_file": "James Telfer Dillon (1861–1951).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Janet Welsh",
@@ -4611,8 +4729,8 @@
     "death_year": 1914,
     "birth_year_display": "1835",
     "death_year_display": "1914",
-    "display_name": "Janet Welsh",
-    "title": "Janet Welsh — Family & Biography",
+    "display_name": "Janet (Welsh) Telfer",
+    "title": "Janet (Welsh) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -4624,7 +4742,7 @@
       {
         "type": "Self",
         "names": [
-          "Janet Welsh"
+          "Janet (Welsh) Telfer"
         ]
       },
       {
@@ -4651,7 +4769,9 @@
       "telfer-tree"
     ],
     "vault_file": "Janet Welsh (~1835–1914).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Jean Telfer",
@@ -4727,7 +4847,9 @@
       "telfer-tree"
     ],
     "vault_file": "Jean Maryann Martha Telfer (1910–1984).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Jean Murray",
@@ -4739,8 +4861,8 @@
     "death_year": 1839,
     "birth_year_display": "1810",
     "death_year_display": "1839",
-    "display_name": "Jean Murray",
-    "title": "Jean Murray (1810–1839) — First Wife of Francis Telfer",
+    "display_name": "Jean (Murray) Telfer",
+    "title": "Jean (Murray) Telfer (1810–1839) — First Wife of Francis Telfer",
     "tags": [
       "person",
       "telfer",
@@ -4751,7 +4873,7 @@
       {
         "type": "Self",
         "names": [
-          "Jean Murray"
+          "Jean (Murray) Telfer"
         ]
       },
       {
@@ -4798,7 +4920,9 @@
       "telfer-tree"
     ],
     "vault_file": "Jean Murray (1810–1839).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Jean Telfer",
@@ -4877,7 +5001,9 @@
       "telfer-tree"
     ],
     "vault_file": "Jean Telfer (1840–1892).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Jenet Telfer",
@@ -4947,7 +5073,9 @@
       "telfer-tree"
     ],
     "vault_file": "Jenet Telfer (1770–1842).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "id": "Joel Matthew Ivory",
@@ -5024,7 +5152,9 @@
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "id": "John Charles Dillon",
@@ -5056,7 +5186,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Charles Dillon (1827–1906).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "John Telfer",
@@ -5132,7 +5264,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Ernest Telfer (1877–1877).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "John Robert Telfer",
@@ -5216,7 +5350,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Robert Telfer (adoptive).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "id": "John Robert Telfer",
@@ -5313,7 +5449,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Robert Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "id": "John Roland Telfer",
@@ -5397,7 +5535,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Roland Telfer (1882–1975).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "John Smith",
@@ -5467,7 +5607,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Smith (~1827–1895).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "John Telfer",
@@ -5545,7 +5687,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Telfer (1805–1839).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "John Telfer",
@@ -5632,7 +5776,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Telfer (1840–1913).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "John Telfer",
@@ -5716,7 +5862,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Telfer (1847–1929).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "John Telfer (of Castleton)",
@@ -5746,7 +5894,7 @@
       {
         "type": "Spouse",
         "names": [
-          "Elspeth Young"
+          "Elspeth (Young) Telfer"
         ]
       },
       {
@@ -5775,7 +5923,9 @@
       "telfer-tree"
     ],
     "vault_file": "John Telfer (of Castleton) (1731–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "id": "Joseph March",
@@ -5810,7 +5960,9 @@
       "telfer-tree"
     ],
     "vault_file": "Joseph March (1797–1883).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Joyce Telfer",
@@ -5886,7 +6038,9 @@
       "telfer-tree"
     ],
     "vault_file": "Joyce Elizabeth Telfer (1912–2012).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Julia Matilda Seebohm",
@@ -5898,8 +6052,8 @@
     "death_year": 1939,
     "birth_year_display": "1876",
     "death_year_display": "1939",
-    "display_name": "Julia Matilda Seebohm",
-    "title": "Julia Matilda Seebohm — Family & Biography",
+    "display_name": "Julia Matilda (Seebohm) Telfer",
+    "title": "Julia Matilda (Seebohm) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -5909,7 +6063,7 @@
       {
         "type": "Self",
         "names": [
-          "Julia Matilda Seebohm"
+          "Julia Matilda (Seebohm) Telfer"
         ]
       },
       {
@@ -5993,7 +6147,9 @@
       "telfer-tree"
     ],
     "vault_file": "Julia Matilda Seebohm (1876–1939).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Kathryn Mavis Telfer",
@@ -6025,7 +6181,9 @@
       "telfer-tree"
     ],
     "vault_file": "Kathryn Mavis Telfer (1961–1965).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 9
   },
   {
     "id": "Kenneth Telfer",
@@ -6117,7 +6275,9 @@
       "telfer-tree"
     ],
     "vault_file": "Kenneth Alexander Telfer (1904–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Kristin Stefanoff",
@@ -6192,7 +6352,9 @@
       "telfer-tree"
     ],
     "vault_file": "Kristin Stefanoff.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Kylie Isabella Telfer",
@@ -6204,8 +6366,8 @@
     "death_year": null,
     "birth_year_display": "1982",
     "death_year_display": "living",
-    "display_name": "Kylie Isabella Telfer",
-    "title": "Kylie Isabella Telfer (née Dance) — Family & Biography",
+    "display_name": "Kylie Isabella (Dance) Telfer",
+    "title": "Kylie Isabella (Dance) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -6215,7 +6377,7 @@
       {
         "type": "Self",
         "names": [
-          "Kylie Isabella Telfer"
+          "Kylie Isabella (Dance) Telfer"
         ]
       },
       {
@@ -6275,7 +6437,9 @@
         "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
       }
     ],
-    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
+    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
+    "branch": "telfer",
+    "generation": 9
   },
   {
     "id": "Lauren Maree Ivory",
@@ -6352,7 +6516,9 @@
         "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
       }
     ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "id": "Levi Leonard Timothy Telfer",
@@ -6381,7 +6547,7 @@
       {
         "type": "Mother",
         "names": [
-          "Kylie Isabella Telfer"
+          "Kylie Isabella (Dance) Telfer"
         ]
       },
       {
@@ -6419,7 +6585,9 @@
       "telfer-tree"
     ],
     "vault_file": "Levi Leonard Timothy Telfer (2017–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 11
   },
   {
     "id": "Lilian Jean Parker",
@@ -6452,7 +6620,9 @@
       "telfer-tree"
     ],
     "vault_file": "Lilian Jean Parker (1922–2001).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Lindsay Telfer",
@@ -6528,7 +6698,9 @@
       "telfer-tree"
     ],
     "vault_file": "Lindsay Roland Telfer (1920–1976).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Maifie Telfer",
@@ -6604,7 +6776,9 @@
       "telfer-tree"
     ],
     "vault_file": "Maifie Beryl Telfer (1913–1948).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Margaret Dougal Telfer",
@@ -6616,8 +6790,8 @@
     "death_year": 1936,
     "birth_year_display": "1849",
     "death_year_display": "1936",
-    "display_name": "Margaret Dougal Telfer",
-    "title": "Margaret Dougal Telfer — Family & Biography",
+    "display_name": "Margaret (Dougal) Telfer",
+    "title": "Margaret (Dougal) Telfer — Family & Biography",
     "tags": [
       "person",
       "telfer"
@@ -6698,7 +6872,9 @@
       "telfer-tree"
     ],
     "vault_file": "Margaret Dougal Telfer (1849–1936).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Margaret Telfer",
@@ -6776,7 +6952,9 @@
       "telfer-tree"
     ],
     "vault_file": "Margaret Telfer (1802–1884).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Margaret Wright Telfer",
@@ -6788,8 +6966,8 @@
     "death_year": 1892,
     "birth_year_display": "?",
     "death_year_display": "1892",
-    "display_name": "Margaret Wright Telfer",
-    "title": "Margaret Wright Telfer — Family & Biography",
+    "display_name": "Margaret (Wright) Telfer",
+    "title": "Margaret (Wright) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -6800,7 +6978,7 @@
       {
         "type": "Self",
         "names": [
-          "Margaret Wright Telfer"
+          "Margaret (Wright) Telfer"
         ]
       },
       {
@@ -6814,7 +6992,7 @@
         "names": [
           "John Telfer (1847–1929)",
           "George Wright Telfer",
-          "Margaret Dougal Telfer"
+          "Margaret (Dougal) Telfer"
         ]
       }
     ],
@@ -6847,7 +7025,9 @@
         "filename": "margaret-wright-telfer.jpg"
       }
     ],
-    "person_photo": "images/people/margaret-wright-telfer.jpg"
+    "person_photo": "images/people/margaret-wright-telfer.jpg",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Maria Clara Telfer",
@@ -6928,7 +7108,9 @@
       "telfer-tree"
     ],
     "vault_file": "Maria Clara Telfer (1878–1903).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Marian Telfer Cornish",
@@ -7027,7 +7209,9 @@
       "telfer-tree"
     ],
     "vault_file": "Marian Telfer Cornish (1896–1977).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Mark Kenneth Telfer",
@@ -7056,7 +7240,7 @@
       {
         "type": "Spouse",
         "names": [
-          "Kylie Isabella Telfer"
+          "Kylie Isabella (Dance) Telfer"
         ]
       },
       {
@@ -7120,7 +7304,9 @@
         "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
       }
     ],
-    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
+    "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "id": "Mark Telfer",
@@ -7150,7 +7336,7 @@
       {
         "type": "Spouse",
         "names": [
-          "Julia Matilda Seebohm"
+          "Julia Matilda (Seebohm) Telfer"
         ]
       },
       {
@@ -7238,7 +7424,9 @@
       "telfer-tree"
     ],
     "vault_file": "Mark Telfer (1877–1946).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Martha Allen",
@@ -7250,8 +7438,8 @@
     "death_year": 1876,
     "birth_year_display": "1840",
     "death_year_display": "1876",
-    "display_name": "Martha Allen",
-    "title": "Martha Allen — First Wife of John Telfer",
+    "display_name": "Martha (Allen) Telfer",
+    "title": "Martha (Allen) Telfer — First Wife of John Telfer",
     "tags": [
       "bio",
       "family",
@@ -7261,7 +7449,7 @@
       {
         "type": "Self",
         "names": [
-          "Martha Allen"
+          "Martha (Allen) Telfer"
         ]
       },
       {
@@ -7302,7 +7490,9 @@
       "telfer-tree"
     ],
     "vault_file": "Martha Allen (1840–1876).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Martha Henstridge",
@@ -7314,8 +7504,8 @@
     "death_year": 1921,
     "birth_year_display": "1854",
     "death_year_display": "1921",
-    "display_name": "Martha Henstridge",
-    "title": "Martha Henstridge — Family & Biography",
+    "display_name": "Martha (Henstridge) Telfer",
+    "title": "Martha (Henstridge) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -7327,7 +7517,7 @@
       {
         "type": "Self",
         "names": [
-          "Martha Henstridge"
+          "Martha (Henstridge) Telfer"
         ]
       },
       {
@@ -7354,7 +7544,9 @@
       "telfer-tree"
     ],
     "vault_file": "Martha Henstridge (~1854–1921).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Martha Telfer Cameron",
@@ -7440,7 +7632,9 @@
       "telfer-tree"
     ],
     "vault_file": "Martha Telfer Cameron (1873–1964).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Mitchell Telfer",
@@ -7511,7 +7705,9 @@
         "filename": "Mitchell-Telfer---18th-Birthday.jpg"
       }
     ],
-    "person_photo": "images/people/Mitchell-Telfer---16th-Birthday.jpg"
+    "person_photo": "images/people/Mitchell-Telfer---16th-Birthday.jpg",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "id": "Murray John Telfer",
@@ -7563,7 +7759,9 @@
       "telfer-tree"
     ],
     "vault_file": "Murray John Telfer (1911–1982).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Murray John Telfer",
@@ -7595,7 +7793,9 @@
       "telfer-tree"
     ],
     "vault_file": "Murray John Telfer (1924–2009).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Nick Telfer",
@@ -7662,7 +7862,9 @@
       "telfer-tree"
     ],
     "vault_file": "Nick Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Paul Ivory",
@@ -7734,7 +7936,9 @@
         "filename": "Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
       }
     ],
-    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
+    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
+    "branch": "telfer",
+    "generation": 8
   },
   {
     "id": "Penny Telfer",
@@ -7808,7 +8012,9 @@
         "filename": "Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg"
       }
     ],
-    "person_photo": "images/people/Penny_Virgen_age14_Clontarf_High_School.jpg"
+    "person_photo": "images/people/Penny_Virgen_age14_Clontarf_High_School.jpg",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Peter Telfer",
@@ -7876,7 +8082,9 @@
         "filename": "Peter-Telfer.jpg"
       }
     ],
-    "person_photo": "images/people/Peter-Telfer.jpg"
+    "person_photo": "images/people/Peter-Telfer.jpg",
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "id": "Reginald Telfer",
@@ -7958,7 +8166,9 @@
       "telfer-tree"
     ],
     "vault_file": "Reginald Masters Telfer (1923–living).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Richard Paynter",
@@ -8036,7 +8246,9 @@
       "telfer-tree"
     ],
     "vault_file": "Richard Paynter (1838–1869).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Robert Dunlop Lawrie",
@@ -8134,7 +8346,9 @@
       "telfer-tree"
     ],
     "vault_file": "Robert Dunlop Lawrie (1850–1917).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Robert Freddy Telfer",
@@ -8223,7 +8437,9 @@
       "telfer-tree"
     ],
     "vault_file": "Robert Freddy Telfer (1886–1949).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Robert Telfer",
@@ -8324,7 +8540,9 @@
       "telfer-tree"
     ],
     "vault_file": "Robert Telfer (1803–1878).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Robert Telfer",
@@ -8413,7 +8631,9 @@
       "telfer-tree"
     ],
     "vault_file": "Robert Telfer (1835–1907).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Robyn Telfer",
@@ -8463,7 +8683,9 @@
       "telfer-tree"
     ],
     "vault_file": "Robyn Telfer.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "id": "Ruth Penna",
@@ -8475,8 +8697,8 @@
     "death_year": 1913,
     "birth_year_display": "1855",
     "death_year_display": "1913",
-    "display_name": "Ruth Penna",
-    "title": "Ruth Penna — Family & Biography",
+    "display_name": "Ruth (Penna) Telfer",
+    "title": "Ruth (Penna) Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -8488,7 +8710,7 @@
       {
         "type": "Self",
         "names": [
-          "Ruth Penna"
+          "Ruth (Penna) Telfer"
         ]
       },
       {
@@ -8515,7 +8737,9 @@
       "telfer-tree"
     ],
     "vault_file": "Ruth Penna (~1855–1913).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Ruth Telfer",
@@ -8596,7 +8820,9 @@
       "telfer-tree"
     ],
     "vault_file": "Ruth Telfer (1930–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 8
   },
   {
     "id": "Sheryle Telfer",
@@ -8628,7 +8854,9 @@
       "telfer-tree"
     ],
     "vault_file": "Sheryle Telfer (1961–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 9
   },
   {
     "id": "Shirley Edna Telfer",
@@ -8662,7 +8890,9 @@
       "telfer-tree"
     ],
     "vault_file": "Shirley Edna Telfer (1929–2017).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 8
   },
   {
     "id": "Shirley Telfer",
@@ -8731,7 +8961,9 @@
       "telfer-tree"
     ],
     "vault_file": "Shirley Telfer (living).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Susan Burton Telfer",
@@ -8743,8 +8975,8 @@
     "death_year": 1924,
     "birth_year_display": "1844",
     "death_year_display": "1924",
-    "display_name": "Susan Burton Telfer",
-    "title": "Susan Burton Telfer (1844–1924) — Family & Biography",
+    "display_name": "Susan (Burton) Telfer",
+    "title": "Susan (Burton) Telfer (1844–1924) — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -8754,7 +8986,7 @@
       {
         "type": "Self",
         "names": [
-          "Susan Burton Telfer"
+          "Susan (Burton) Telfer"
         ]
       },
       {
@@ -8779,7 +9011,9 @@
       "telfer-tree"
     ],
     "vault_file": "Susan Burton Telfer (1844–1924).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Susan Telfer",
@@ -8814,7 +9048,7 @@
       {
         "type": "Mother",
         "names": [
-          "Martha Allen"
+          "Martha (Allen) Telfer"
         ]
       },
       {
@@ -8854,7 +9088,9 @@
       "telfer-tree"
     ],
     "vault_file": "Susan Telfer (1871–1952).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "Sydney Hugh Parker",
@@ -8887,7 +9123,9 @@
       "telfer-tree"
     ],
     "vault_file": "Sydney Hugh Parker (1922–1964).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "id": "Timothy Neil Telfer",
@@ -8992,7 +9230,9 @@
         "filename": "Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg"
       }
     ],
-    "person_photo": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
+    "person_photo": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
+    "branch": "telfer",
+    "generation": 9
   },
   {
     "id": "Walter Telfer",
@@ -9066,7 +9306,9 @@
       "telfer-tree"
     ],
     "vault_file": "Walter William Telfer (1885–1958).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "William Henry Parker",
@@ -9160,7 +9402,9 @@
       "telfer-tree"
     ],
     "vault_file": "William Henry Parker (1893–1968).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "William Humphrey Parker",
@@ -9241,7 +9485,9 @@
       "telfer-tree"
     ],
     "vault_file": "William Humphrey Parker (1850–1926).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "William Telfer",
@@ -9315,7 +9561,9 @@
       "telfer-tree"
     ],
     "vault_file": "William James Telfer (1879–1948).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "id": "William Telfer",
@@ -9393,7 +9641,9 @@
       "telfer-tree"
     ],
     "vault_file": "William Telfer (1811–1881).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "William Telfer",
@@ -9469,7 +9719,9 @@
       "telfer-tree"
     ],
     "vault_file": "William Telfer (1880–1880).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "Zabella Violet Zelda Telfer",
@@ -9498,7 +9750,7 @@
       {
         "type": "Mother",
         "names": [
-          "Kylie Isabella Telfer"
+          "Kylie Isabella (Dance) Telfer"
         ]
       },
       {
@@ -9536,7 +9788,9 @@
       "telfer-tree"
     ],
     "vault_file": "Zabella Violet Zelda Telfer (2019–?).md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 11
   },
   {
     "id": "Septimus unknown",
@@ -9568,7 +9822,9 @@
       "telfer-tree"
     ],
     "vault_file": "septimus.md",
-    "images": []
+    "images": [],
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "Clara Blanche Lane",
@@ -9658,7 +9914,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "id": "James Telfer (of Sorbietrees)",
@@ -9725,7 +9983,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "id": "Jean Telfer",
@@ -9796,7 +10056,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "id": "Margaret Armstrong",
@@ -9832,7 +10094,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "id": "Susan Lawrie",
@@ -9907,7 +10171,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "id": "William Telfer",
@@ -9993,7 +10259,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "Sophia Baker",
@@ -10029,7 +10297,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "id": "Sophia Webster",
@@ -10066,7 +10336,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "id": "William John Baker",
@@ -10101,7 +10373,9 @@
       "telfer-tree"
     ],
     "images": [],
-    "person_photo": null
+    "person_photo": null,
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "aaron-ivory-1989",
@@ -10117,7 +10391,9 @@
       "karina-ivory"
     ],
     "children": [],
-    "vault_file": "Aaron Paul Ivory (1989–?).md"
+    "vault_file": "Aaron Paul Ivory (1989–?).md",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "slug": "adam-dillon",
@@ -10131,7 +10407,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Adam Dillon.md"
+    "vault_file": "Adam Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "adelaideelsiepearl-telfer-1889",
@@ -10145,7 +10423,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Adelaide Elsie Pearl Telfer (1889–1976).md"
+    "vault_file": "Adelaide Elsie Pearl Telfer (1889–1976).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "alan-telfer-1890",
@@ -10161,7 +10441,9 @@
       "None (never married)"
     ],
     "children": [],
-    "vault_file": "Alan Dale Telfer (1890–1937).md"
+    "vault_file": "Alan Dale Telfer (1890–1937).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "albert-telfer-1882",
@@ -10175,7 +10457,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Albert George Telfer (1882–1961).md"
+    "vault_file": "Albert George Telfer (1882–1961).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "alberta-grace",
@@ -10189,7 +10473,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Alberta Grace.md"
+    "vault_file": "Alberta Grace.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "alexander-brown-thomson",
@@ -10203,7 +10489,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Alexander Brown Thomson.md"
+    "vault_file": "Alexander Brown Thomson.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "allan-telfer",
@@ -10217,7 +10505,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Allan Telfer.md"
+    "vault_file": "Allan Telfer.md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "alma-ida-sporer",
@@ -10231,7 +10521,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Alma Ida Sporer.md"
+    "vault_file": "Alma Ida Sporer.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "amyellen-telfer",
@@ -10247,7 +10539,9 @@
       "francis-telfer-1875"
     ],
     "children": [],
-    "vault_file": "Amy Ellen Telfer (née Provis).md"
+    "vault_file": "Amy Ellen Telfer (née Provis).md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "amy-farrow",
@@ -10261,11 +10555,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Amy Farrow.md"
+    "vault_file": "Amy Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "amy-telfer",
-    "display_name": "Amy Nicole Telfer — Family & Biography",
+    "display_name": "Amy Nicole Telfer",
     "first_name": "Amy",
     "middle_name": "Nicole",
     "last_name": "Telfer",
@@ -10275,7 +10571,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Amy Nicole Telfer.md"
+    "vault_file": "Amy Nicole Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "andrew-telfer",
@@ -10289,7 +10587,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Andrew Telfer.md"
+    "vault_file": "Andrew Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "ann-taylor-1856",
@@ -10315,7 +10615,9 @@
       "james-telfer-1866",
       "jessie-telfer"
     ],
-    "vault_file": "Ann Taylor (~1856–?).md"
+    "vault_file": "Ann Taylor (~1856–?).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "ann-telfer",
@@ -10329,7 +10631,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Ann Telfer.md"
+    "vault_file": "Ann Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "avis-parker",
@@ -10343,7 +10647,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Avis Parker.md"
+    "vault_file": "Avis Parker.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "ben-stefanoff",
@@ -10357,7 +10663,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Ben Stefanoff.md"
+    "vault_file": "Ben Stefanoff.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "beth-telfer",
@@ -10371,7 +10679,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Beth Telfer.md"
+    "vault_file": "Beth Telfer.md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "betty-hutton",
@@ -10385,7 +10695,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Betty Hutton.md"
+    "vault_file": "Betty Hutton.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "caroline-telfer-1842",
@@ -10399,7 +10711,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Caroline Amelia Telfer (1842–1929).md"
+    "vault_file": "Caroline Amelia Telfer (1842–1929).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "carolineedna-lawrie-1890",
@@ -10419,7 +10733,9 @@
       "sydney-parker",
       "william-humphrey-parker"
     ],
-    "vault_file": "Caroline Edna Lawrie (1890–1957).md"
+    "vault_file": "Caroline Edna Lawrie (1890–1957).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "caroline-edna",
@@ -10433,7 +10749,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Caroline Edna.md"
+    "vault_file": "Caroline Edna.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "caroline-hosking-1851",
@@ -10459,7 +10777,9 @@
       "caroline-edna",
       "robert-dunlop"
     ],
-    "vault_file": "Caroline Hosking (1851–1920).md"
+    "vault_file": "Caroline Hosking (1851–1920).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "caroline-masters-1850",
@@ -10483,7 +10803,9 @@
       "maria-clara-telfer",
       "caroline-telfer"
     ],
-    "vault_file": "Caroline Masters (~1850–1929).md"
+    "vault_file": "Caroline Masters (~1850–1929).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "catherine-leah",
@@ -10497,7 +10819,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Catherine Leah.md"
+    "vault_file": "Catherine Leah.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "charles-farrow-1836",
@@ -10526,7 +10850,9 @@
       "william-farrow",
       "eva-agnes-farrow"
     ],
-    "vault_file": "Charles Farrow (~1836–1884).md"
+    "vault_file": "Charles Farrow (~1836–1884).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "charles-farrow-jr",
@@ -10540,7 +10866,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Charles Farrow Jr.md"
+    "vault_file": "Charles Farrow Jr.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "charles-telfer",
@@ -10554,7 +10882,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Charles Telfer.md"
+    "vault_file": "Charles Telfer.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "clarablanche-lane-1883",
@@ -10571,7 +10901,9 @@
       "d-1940"
     ],
     "children": [],
-    "vault_file": "Clara Blanche Telfer (1883–1974).md"
+    "vault_file": "Clara Blanche Telfer (1883–1974).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "clarice-may-fatchen",
@@ -10585,7 +10917,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Clarice May Fatchen.md"
+    "vault_file": "Clarice May Fatchen.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "claricemay-telfer-1911",
@@ -10601,7 +10935,9 @@
       "Mr Fatchen"
     ],
     "children": [],
-    "vault_file": "Clarice May Telfer (1911–1997).md"
+    "vault_file": "Clarice May Telfer (1911–1997).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "colin-telfer-1889",
@@ -10615,7 +10951,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Colin Roy Telfer (1889–1964).md"
+    "vault_file": "Colin Roy Telfer (1889–1964).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "crystal-rose-mcdonald",
@@ -10629,7 +10967,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Crystal Rose McDonald.md"
+    "vault_file": "Crystal Rose McDonald.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "david-telfer-merrick",
@@ -10643,7 +10983,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "David Telfer-Merrick.md"
+    "vault_file": "David Telfer-Merrick.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "dinah-flavel-1821",
@@ -10661,7 +11003,9 @@
     "children": [
       "jean-telfer-1840"
     ],
-    "vault_file": "Dinah Flavel (1821–1844).md"
+    "vault_file": "Dinah Flavel (1821–1844).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "dinah-flavel-paynter-1869",
@@ -10675,7 +11019,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Dinah Flavel Paynter (1869–?).md"
+    "vault_file": "Dinah Flavel Paynter (1869–?).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "doris-elma-rowe",
@@ -10689,7 +11035,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Doris Elma Rowe.md"
+    "vault_file": "Doris Elma Rowe.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "doriselma-telfer-1919",
@@ -10705,7 +11053,9 @@
       "Mr Rowe"
     ],
     "children": [],
-    "vault_file": "Doris Elma Telfer (1919–living).md"
+    "vault_file": "Doris Elma Telfer (1919–living).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "dorothy-dillon",
@@ -10719,7 +11069,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Dorothy Dillon.md"
+    "vault_file": "Dorothy Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "douglas-telfer-1887",
@@ -10735,7 +11087,9 @@
       "lilian-daisy-dawson"
     ],
     "children": [],
-    "vault_file": "Douglas Telfer (1887–1956).md"
+    "vault_file": "Douglas Telfer (1887–1956).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "edith-farrow",
@@ -10749,7 +11103,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Edith Farrow.md"
+    "vault_file": "Edith Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "edith-mary-kathleen-telfer",
@@ -10763,7 +11119,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Edith Mary Kathleen Telfer.md"
+    "vault_file": "Edith Mary Kathleen Telfer.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "edward-telfer",
@@ -10777,7 +11135,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Edward Telfer.md"
+    "vault_file": "Edward Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "edwin-ernest-clarke",
@@ -10791,7 +11151,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Edwin Ernest Clarke.md"
+    "vault_file": "Edwin Ernest Clarke.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "effieolive-telfer-1886",
@@ -10805,7 +11167,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Effie Olive Telfer (1886–1969).md"
+    "vault_file": "Effie Olive Telfer (1886–1969).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "elizabeth-anne-smith-1878",
@@ -10819,7 +11183,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Elizabeth Anne Smith (1878–?).md"
+    "vault_file": "Elizabeth Anne Smith (1878–?).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "elizabeth-beattie-1802",
@@ -10833,7 +11199,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Elizabeth Beattie (1802–1891).md"
+    "vault_file": "Elizabeth Beattie (1802–1891).md",
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "slug": "elizabethbeattie-telfer-1871",
@@ -10849,7 +11217,9 @@
       "Beaton"
     ],
     "children": [],
-    "vault_file": "Elizabeth Beattie Bessie Telfer (1871–1948).md"
+    "vault_file": "Elizabeth Beattie Bessie Telfer (1871–1948).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "elizabethbeattie-telfer-1832",
@@ -10876,7 +11246,9 @@
       "dorothy-dillon",
       "inez-priscilla-dillon"
     ],
-    "vault_file": "Elizabeth Beattie Telfer (1832–1896).md"
+    "vault_file": "Elizabeth Beattie Telfer (1832–1896).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "elizabeth-farrow",
@@ -10890,7 +11262,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Elizabeth Farrow.md"
+    "vault_file": "Elizabeth Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "elizabeth-hannah-1836",
@@ -10904,7 +11278,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Elizabeth Hannah (1836–1916).md"
+    "vault_file": "Elizabeth Hannah (1836–1916).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "elizabethhannah-telfer-1836",
@@ -10931,7 +11307,9 @@
       "mary-bayes-farrow",
       "eva-agnes-farrow"
     ],
-    "vault_file": "Elizabeth Hannah Telfer (1836–1916).md"
+    "vault_file": "Elizabeth Hannah Telfer (1836–1916).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "elizabeth-hutton-1774",
@@ -10945,7 +11323,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Elizabeth Hutton (1774–1853).md"
+    "vault_file": "Elizabeth Hutton (1774–1853).md",
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "slug": "elizabeth-oliver-1807",
@@ -10961,7 +11341,9 @@
       "robert-telfer-1803"
     ],
     "children": [],
-    "vault_file": "Elizabeth Oliver (1807–1846).md"
+    "vault_file": "Elizabeth Oliver (1807–1846).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "elizabeth-paynter-1864",
@@ -10975,7 +11357,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Elizabeth Paynter (1864–?).md"
+    "vault_file": "Elizabeth Paynter (1864–?).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "elizabethtelfer-farrow",
@@ -10989,11 +11373,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Elizabeth Telfer Farrow.md"
+    "vault_file": "Elizabeth Telfer Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "elspeth-young-1722",
-    "display_name": "Elspeth Young",
+    "display_name": "Elspeth (Young) Telfer",
     "first_name": "Elspeth",
     "middle_name": "",
     "last_name": "Young",
@@ -11007,7 +11393,9 @@
     "children": [
       "james-telfer-1761"
     ],
-    "vault_file": "Elspeth Young (1722–?).md"
+    "vault_file": "Elspeth Young (1722–?).md",
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "slug": "emily-amelia-barton",
@@ -11021,7 +11409,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Emily Amelia Barton.md"
+    "vault_file": "Emily Amelia Barton.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "emilyamelia-telfer-1913",
@@ -11037,7 +11427,9 @@
       "Mr Barton"
     ],
     "children": [],
-    "vault_file": "Emily Amelia Telfer (1913–living).md"
+    "vault_file": "Emily Amelia Telfer (1913–living).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "emily-ellen-thorpe",
@@ -11051,7 +11443,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Emily Ellen Thorpe.md"
+    "vault_file": "Emily Ellen Thorpe.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "eric-john-telfer",
@@ -11065,7 +11459,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Eric John Telfer.md"
+    "vault_file": "Eric John Telfer.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "ernest-telfer-1877",
@@ -11079,7 +11475,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Ernest John Telfer (1877–1953).md"
+    "vault_file": "Ernest John Telfer (1877–1953).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "esther-farrow",
@@ -11093,7 +11491,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Esther Farrow.md"
+    "vault_file": "Esther Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "esther-hannah-farrow",
@@ -11107,7 +11507,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Esther Hannah Farrow.md"
+    "vault_file": "Esther Hannah Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "esther-jane-1834",
@@ -11121,7 +11523,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Esther Jane (1834–1909).md"
+    "vault_file": "Esther Jane (1834–1909).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "estherjane-telfer-1834",
@@ -11144,7 +11548,9 @@
       "francistelfer-smith-1874",
       "elizabeth-anne-smith-1878"
     ],
-    "vault_file": "Esther Jane Telfer (1834–1909).md"
+    "vault_file": "Esther Jane Telfer (1834–1909).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "esthertelfer-smith-1870",
@@ -11158,7 +11564,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Esther Telfer Smith (1870–1896).md"
+    "vault_file": "Esther Telfer Smith (1870–1896).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "ethel-edith-telfer",
@@ -11172,7 +11580,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Ethel Edith Telfer.md"
+    "vault_file": "Ethel Edith Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "ethel-jean-mcmurtrie",
@@ -11186,7 +11596,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Ethel Jean McMurtrie.md"
+    "vault_file": "Ethel Jean McMurtrie.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "etheljean-telfer-1915",
@@ -11202,7 +11614,9 @@
       "Mr McMurtrie"
     ],
     "children": [],
-    "vault_file": "Ethel Jean Telfer (1915–living).md"
+    "vault_file": "Ethel Jean Telfer (1915–living).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "eva-agnes-farrow",
@@ -11216,7 +11630,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Eva Agnes Farrow.md"
+    "vault_file": "Eva Agnes Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "evarowena-telfer-1885",
@@ -11230,7 +11646,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Eva Rowena Telfer (1885–1974).md"
+    "vault_file": "Eva Rowena Telfer (1885–1974).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "floris-telfer-1904",
@@ -11246,7 +11664,9 @@
       "harry-bunston"
     ],
     "children": [],
-    "vault_file": "Floris Ethel Victoria Telfer (1904–1951).md"
+    "vault_file": "Floris Ethel Victoria Telfer (1904–1951).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "francis-edward-lane-m-1903",
@@ -11260,7 +11680,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Francis Edward Lane (m. 1903.md"
+    "vault_file": "Francis Edward Lane (m. 1903.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "francistelfer-dillon",
@@ -11274,7 +11696,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Francis Telfer Dillon.md"
+    "vault_file": "Francis Telfer Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "francis-telfer-paynter-1862",
@@ -11288,7 +11712,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Francis Telfer Paynter (1862–?).md"
+    "vault_file": "Francis Telfer Paynter (1862–?).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "francistelfer-smith-1874",
@@ -11302,7 +11728,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Francis Telfer Smith (1874–1945).md"
+    "vault_file": "Francis Telfer Smith (1874–1945).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "frank-lindsay",
@@ -11316,7 +11744,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Frank Lindsay.md"
+    "vault_file": "Frank Lindsay.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "frederick-parker-1838",
@@ -11332,7 +11762,9 @@
       "jean-telfer-1840"
     ],
     "children": [],
-    "vault_file": "Frederick Parker (~1838–1928).md"
+    "vault_file": "Frederick Parker (~1838–1928).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "george-hope-farrow",
@@ -11346,7 +11778,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "George Hope Farrow.md"
+    "vault_file": "George Hope Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "george-parker",
@@ -11360,7 +11794,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "George Parker.md"
+    "vault_file": "George Parker.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "george-provis",
@@ -11374,7 +11810,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "George Provis.md"
+    "vault_file": "George Provis.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "george-wright-1850",
@@ -11388,7 +11826,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "George Wright (1850–1913).md"
+    "vault_file": "George Wright (1850–1913).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "george-telfer-1850",
@@ -11404,7 +11844,9 @@
       "ruth-penna"
     ],
     "children": [],
-    "vault_file": "George Wright Telfer (1850–1913).md"
+    "vault_file": "George Wright Telfer (1850–1913).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "gilbert-telfer-1911",
@@ -11424,7 +11866,9 @@
       "ian-telfer",
       "allan-telfer"
     ],
-    "vault_file": "Gilbert Melville Telfer (1911–1978).md"
+    "vault_file": "Gilbert Melville Telfer (1911–1978).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "gladys-merle-pedler",
@@ -11438,7 +11882,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Gladys Merle Pedler.md"
+    "vault_file": "Gladys Merle Pedler.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "gladysmerle-telfer-1917",
@@ -11454,7 +11900,9 @@
       "Mr Pedler"
     ],
     "children": [],
-    "vault_file": "Gladys Merle Telfer (1917–living).md"
+    "vault_file": "Gladys Merle Telfer (1917–living).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "hannah-baker-1855",
@@ -11475,7 +11923,9 @@
       "hugh-kelly-parker",
       "(others unconfirmed)"
     ],
-    "vault_file": "Hannah Baker (1855–1948).md"
+    "vault_file": "Hannah Baker (1855–1948).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "hannah-peacock-1840",
@@ -11489,7 +11939,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Hannah Peacock (1840–1915).md"
+    "vault_file": "Hannah Peacock (1840–1915).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "hannah-peacock",
@@ -11503,7 +11955,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Hannah Peacock.md"
+    "vault_file": "Hannah Peacock.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "harry-bunston",
@@ -11517,7 +11971,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Harry Bunston.md"
+    "vault_file": "Harry Bunston.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "hazelrose-telfer-1891",
@@ -11531,7 +11987,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Hazel Rose Telfer (1891–1939).md"
+    "vault_file": "Hazel Rose Telfer (1891–1939).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "helen-telfer",
@@ -11545,7 +12003,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Helen Telfer.md"
+    "vault_file": "Helen Telfer.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "henry-hatch-dillon",
@@ -11559,7 +12019,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Henry Hatch Dillon.md"
+    "vault_file": "Henry Hatch Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "herbertdougal-telfer-1881",
@@ -11573,7 +12035,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Herbert Dougal Telfer (1881–1974).md"
+    "vault_file": "Herbert Dougal Telfer (1881–1974).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "howard-parker",
@@ -11587,7 +12051,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Howard Parker.md"
+    "vault_file": "Howard Parker.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "hugh-john",
@@ -11601,7 +12067,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Hugh John.md"
+    "vault_file": "Hugh John.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "hugh-kelly-parker",
@@ -11615,7 +12083,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Hugh Kelly Parker.md"
+    "vault_file": "Hugh Kelly Parker.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "ian-telfer",
@@ -11629,7 +12099,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Ian Telfer.md"
+    "vault_file": "Ian Telfer.md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "inez-dillon",
@@ -11643,7 +12115,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Inez Dillon.md"
+    "vault_file": "Inez Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "inez-priscilla-dillon",
@@ -11657,7 +12131,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Inez Priscilla Dillon.md"
+    "vault_file": "Inez Priscilla Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "isabella-telfer-1880",
@@ -11673,7 +12149,9 @@
       "alexander-brown-thomson"
     ],
     "children": [],
-    "vault_file": "Isabella Lucieton Telfer (1880–1964).md"
+    "vault_file": "Isabella Lucieton Telfer (1880–1964).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "isobel-telfer-1798",
@@ -11687,7 +12165,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Isobel Telfer (1798–1875).md"
+    "vault_file": "Isobel Telfer (1798–1875).md",
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "slug": "james-farrow",
@@ -11701,7 +12181,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "James Farrow.md"
+    "vault_file": "James Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "jamesrobert-telfer-1866",
@@ -11721,7 +12203,9 @@
       "ethel-edith-telfer",
       "jean-telfer-1910"
     ],
-    "vault_file": "James Robert Telfer (~1866–?).md"
+    "vault_file": "James Robert Telfer (~1866–?).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "james-telfer-of-sorbietrees-1740",
@@ -11743,7 +12227,9 @@
       "Jenet (1770–1842)",
       "Adam (1771–1846)"
     ],
-    "vault_file": "James Telfer (of Sorbietrees) (~1740–?).md"
+    "vault_file": "James Telfer (of Sorbietrees) (~1740–?).md",
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "slug": "james-dillon-1861",
@@ -11757,7 +12243,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "James Telfer Dillon (1861–1951).md"
+    "vault_file": "James Telfer Dillon (1861–1951).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "james-telfer-sorbietrees",
@@ -11771,7 +12259,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "James Telfer Sorbietrees.md"
+    "vault_file": "James Telfer Sorbietrees.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "jane-murray-farrow",
@@ -11785,7 +12275,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jane Murray Farrow.md"
+    "vault_file": "Jane Murray Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "jane-sophie-smith",
@@ -11799,7 +12291,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jane Sophie Smith.md"
+    "vault_file": "Jane Sophie Smith.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "janet-dunlop",
@@ -11813,7 +12307,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Janet Dunlop.md"
+    "vault_file": "Janet Dunlop.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "janet-nichol",
@@ -11827,7 +12323,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Janet Nichol.md"
+    "vault_file": "Janet Nichol.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "janet-stevenson",
@@ -11841,7 +12339,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Janet Stevenson.md"
+    "vault_file": "Janet Stevenson.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "janet-welsh-1835",
@@ -11857,7 +12357,9 @@
       "james-telfer-1829"
     ],
     "children": [],
-    "vault_file": "Janet Welsh (~1835–1914).md"
+    "vault_file": "Janet Welsh (~1835–1914).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "janet-welsh-telfer",
@@ -11871,7 +12373,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Janet Welsh Telfer.md"
+    "vault_file": "Janet Welsh Telfer.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "jared-ivory",
@@ -11885,7 +12389,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jared Ivory.md"
+    "vault_file": "Jared Ivory.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "jean-murray-1810",
@@ -11909,7 +12415,9 @@
       "elizabeth-hannah-telfer",
       "esther-jane-telfer"
     ],
-    "vault_file": "Jean Murray (1810–1839).md"
+    "vault_file": "Jean Murray (1810–1839).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "jenet-telfer-1770",
@@ -11923,7 +12431,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jenet Telfer (1770–1842).md"
+    "vault_file": "Jenet Telfer (1770–1842).md",
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "slug": "jennifer-bunston",
@@ -11937,7 +12447,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jennifer Bunston.md"
+    "vault_file": "Jennifer Bunston.md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "jessie-allan",
@@ -11951,7 +12463,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jessie Allan.md"
+    "vault_file": "Jessie Allan.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "jessie-sargent",
@@ -11965,7 +12479,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jessie Sargent.md"
+    "vault_file": "Jessie Sargent.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "jessie-telfer",
@@ -11979,7 +12495,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jessie Telfer.md"
+    "vault_file": "Jessie Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "joel-ivory-1986",
@@ -11993,7 +12511,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Joel Matthew Ivory (1986–?).md"
+    "vault_file": "Joel Matthew Ivory (1986–?).md",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "slug": "john-dillon-1827",
@@ -12007,7 +12527,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "John Charles Dillon (1827–1906).md"
+    "vault_file": "John Charles Dillon (1827–1906).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "john-farrow",
@@ -12021,7 +12543,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "John Farrow.md"
+    "vault_file": "John Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "john-james-smith-1871",
@@ -12035,7 +12559,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "John James Smith (1871–?).md"
+    "vault_file": "John James Smith (1871–?).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "johnjamestelfer-farrow",
@@ -12049,7 +12575,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "John James Telfer Farrow.md"
+    "vault_file": "John James Telfer Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "john-lawrie",
@@ -12063,11 +12591,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "John Lawrie.md"
+    "vault_file": "John Lawrie.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "john-telfer",
-    "display_name": "John Robert Telfer — Family & Biography",
+    "display_name": "John Robert Telfer",
     "first_name": "John",
     "middle_name": "Robert",
     "last_name": "Telfer",
@@ -12084,7 +12614,9 @@
       "Carissa Telfer (adopted",
       "deceased)"
     ],
-    "vault_file": "John Robert Telfer.md"
+    "vault_file": "John Robert Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "john-smith-1827",
@@ -12107,7 +12639,9 @@
       "francistelfer-smith-1874",
       "elizabeth-anne-smith-1878"
     ],
-    "vault_file": "John Smith (~1827–1895).md"
+    "vault_file": "John Smith (~1827–1895).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "john-telfer-of-castleton-1731",
@@ -12125,7 +12659,9 @@
     "children": [
       "james-telfer-1761"
     ],
-    "vault_file": "John Telfer (of Castleton) (1731–?).md"
+    "vault_file": "John Telfer (of Castleton) (1731–?).md",
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "slug": "johnnie-telfer",
@@ -12139,7 +12675,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Johnnie Telfer.md"
+    "vault_file": "Johnnie Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "jono-telfer",
@@ -12153,7 +12691,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Jono Telfer.md"
+    "vault_file": "Jono Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "joseph-francis-farrow",
@@ -12167,7 +12707,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Joseph Francis Farrow.md"
+    "vault_file": "Joseph Francis Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "joseph-march-1767",
@@ -12181,7 +12723,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Joseph March (1767–1831).md"
+    "vault_file": "Joseph March (1767–1831).md",
+    "branch": "telfer",
+    "generation": 2
   },
   {
     "slug": "joseph-march-1797",
@@ -12195,7 +12739,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Joseph March (1797–1883).md"
+    "vault_file": "Joseph March (1797–1883).md",
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "slug": "joyce-telfer-1912",
@@ -12209,11 +12755,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Joyce Elizabeth Telfer (1912–2012).md"
+    "vault_file": "Joyce Elizabeth Telfer (1912–2012).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "juliamatilda-seebohm-1876",
-    "display_name": "Julia Matilda Seebohm — Family & Biography",
+    "display_name": "Julia Matilda (Seebohm) Telfer",
     "first_name": "Julia Matilda",
     "middle_name": "",
     "last_name": "Seebohm",
@@ -12231,7 +12779,9 @@
       "murray-john-telfer-19111982",
       "adopted)"
     ],
-    "vault_file": "Julia Matilda Seebohm (1876–1939).md"
+    "vault_file": "Julia Matilda Seebohm (1876–1939).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "karina-ivory",
@@ -12245,7 +12795,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Karina Ivory.md"
+    "vault_file": "Karina Ivory.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "kathryn-telfer-1961",
@@ -12259,7 +12811,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Kathryn Mavis Telfer (1961–1965).md"
+    "vault_file": "Kathryn Mavis Telfer (1961–1965).md",
+    "branch": "telfer",
+    "generation": 9
   },
   {
     "slug": "kenneth-telfer-1904",
@@ -12275,7 +12829,9 @@
       "jessie-sargent"
     ],
     "children": [],
-    "vault_file": "Kenneth Alexander Telfer (1904–?).md"
+    "vault_file": "Kenneth Alexander Telfer (1904–?).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "kenneth-cornish",
@@ -12289,7 +12845,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Kenneth Cornish.md"
+    "vault_file": "Kenneth Cornish.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "kylie-telfer-1982",
@@ -12308,7 +12866,9 @@
       "levi-telfer",
       "zabella-telfer"
     ],
-    "vault_file": "Kylie Isabella Telfer (1982–?).md"
+    "vault_file": "Kylie Isabella Telfer (1982–?).md",
+    "branch": "telfer",
+    "generation": 9
   },
   {
     "slug": "lauren-ivory-1994",
@@ -12322,7 +12882,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Lauren Maree Ivory (1994–?).md"
+    "vault_file": "Lauren Maree Ivory (1994–?).md",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "slug": "leonard-arthur-dance",
@@ -12336,7 +12898,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Leonard Arthur Dance.md"
+    "vault_file": "Leonard Arthur Dance.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "leslie-robert-telfer",
@@ -12350,11 +12914,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Leslie Robert Telfer.md"
+    "vault_file": "Leslie Robert Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "levi-telfer-2017",
-    "display_name": "Levi Leonard Timothy Telfer — Family & Biography",
+    "display_name": "Levi Leonard Timothy Telfer",
     "first_name": "Levi",
     "middle_name": "Leonard Timothy",
     "last_name": "Telfer",
@@ -12364,7 +12930,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Levi Leonard Timothy Telfer (2017–?).md"
+    "vault_file": "Levi Leonard Timothy Telfer (2017–?).md",
+    "branch": "telfer",
+    "generation": 11
   },
   {
     "slug": "lilian-daisy-dawson",
@@ -12378,7 +12946,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Lilian Daisy Dawson.md"
+    "vault_file": "Lilian Daisy Dawson.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "lilian-parker-1922",
@@ -12392,7 +12962,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Lilian Jean Parker (1922–2001).md"
+    "vault_file": "Lilian Jean Parker (1922–2001).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "lillianmay-telfer-1872",
@@ -12406,7 +12978,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Lillian May Telfer (1872–1951).md"
+    "vault_file": "Lillian May Telfer (1872–1951).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "lindsay-telfer-1920",
@@ -12420,7 +12994,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Lindsay Roland Telfer (1920–1976).md"
+    "vault_file": "Lindsay Roland Telfer (1920–1976).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "maifie-telfer-1913",
@@ -12434,7 +13010,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Maifie Beryl Telfer (1913–1948).md"
+    "vault_file": "Maifie Beryl Telfer (1913–1948).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "malcolm-duncan-cameron",
@@ -12448,7 +13026,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Malcolm Duncan Cameron.md"
+    "vault_file": "Malcolm Duncan Cameron.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "malcolm-george-telfer",
@@ -12462,7 +13042,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Malcolm George Telfer.md"
+    "vault_file": "Malcolm George Telfer.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "malcolm-murray-cameron",
@@ -12476,7 +13058,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Malcolm Murray Cameron.md"
+    "vault_file": "Malcolm Murray Cameron.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "margaret-armstrong-1745",
@@ -12490,7 +13074,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Margaret Armstrong (~1745–?).md"
+    "vault_file": "Margaret Armstrong (~1745–?).md",
+    "branch": "telfer",
+    "generation": 1
   },
   {
     "slug": "margaret-dougal-1849",
@@ -12504,7 +13090,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Margaret Dougal (1849–1936).md"
+    "vault_file": "Margaret Dougal (1849–1936).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "margaret-dougal-smith",
@@ -12518,7 +13106,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Margaret Dougal Smith.md"
+    "vault_file": "Margaret Dougal Smith.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "margaret-farrow",
@@ -12532,7 +13122,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Margaret Farrow.md"
+    "vault_file": "Margaret Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "margaret-wright-1807",
@@ -12546,11 +13138,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Margaret Wright (1807–1892).md"
+    "vault_file": "Margaret Wright (1807–1892).md",
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "slug": "margaret-telfer",
-    "display_name": "Margaret Wright Telfer — Family & Biography",
+    "display_name": "Margaret (Wright) Telfer",
     "first_name": "Margaret",
     "middle_name": "Wright",
     "last_name": "Telfer",
@@ -12566,7 +13160,9 @@
       "george-telfer",
       "margaret-telfer-1849"
     ],
-    "vault_file": "Margaret Wright Telfer (?–1892).md"
+    "vault_file": "Margaret Wright Telfer (?–1892).md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "margaret-wright",
@@ -12580,7 +13176,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Margaret Wright.md"
+    "vault_file": "Margaret Wright.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "mariaclara-telfer-1878",
@@ -12594,7 +13192,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Maria Clara Telfer (1878–1903).md"
+    "vault_file": "Maria Clara Telfer (1878–1903).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "marian-cornish-1896",
@@ -12610,7 +13210,9 @@
       "kenneth-cornish"
     ],
     "children": [],
-    "vault_file": "Marian Telfer Cornish (1896–1977).md"
+    "vault_file": "Marian Telfer Cornish (1896–1977).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "marion-vida",
@@ -12624,11 +13226,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Marion Vida.md"
+    "vault_file": "Marion Vida.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "martha-allen-1840",
-    "display_name": "Martha Allen — First Wife of John Telfer",
+    "display_name": "Martha (Allen) Telfer",
     "first_name": "Martha",
     "middle_name": "",
     "last_name": "Allen",
@@ -12645,7 +13249,9 @@
       "susan-telfer-1844",
       "martha-cameron"
     ],
-    "vault_file": "Martha Allen (1840–1876).md"
+    "vault_file": "Martha Allen (1840–1876).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "martha-henstridge-1854",
@@ -12661,7 +13267,9 @@
       "john-telfer-1840"
     ],
     "children": [],
-    "vault_file": "Martha Henstridge (~1854–1921).md"
+    "vault_file": "Martha Henstridge (~1854–1921).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "martha-telfer-1873",
@@ -12675,7 +13283,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Martha Telfer (1873–?).md"
+    "vault_file": "Martha Telfer (1873–?).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "martha-cameron-1873",
@@ -12693,7 +13303,9 @@
     "children": [
       "malcolm-murray-cameron"
     ],
-    "vault_file": "Martha Telfer Cameron (1873–1964).md"
+    "vault_file": "Martha Telfer Cameron (1873–1964).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "mary-anne-mcintyre-1836",
@@ -12707,7 +13319,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Mary Anne McIntyre (1836–1913).md"
+    "vault_file": "Mary Anne McIntyre (1836–1913).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "maryanne-mcintyre",
@@ -12721,7 +13335,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Mary Anne McIntyre.md"
+    "vault_file": "Mary Anne McIntyre.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "mary-bayes-farrow",
@@ -12735,7 +13351,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Mary Bayes Farrow.md"
+    "vault_file": "Mary Bayes Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "mary-jane-paynter-1861",
@@ -12749,7 +13367,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Mary Jane Paynter (1861–1945).md"
+    "vault_file": "Mary Jane Paynter (1861–1945).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "may-foy",
@@ -12763,11 +13383,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "May Foy.md"
+    "vault_file": "May Foy.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "mitchell-telfer-2008",
-    "display_name": "Mitchell Telfer — Ohdo Syndrome Awareness — Family & Biography",
+    "display_name": "Mitchell Telfer",
     "first_name": "Mitchell",
     "middle_name": "",
     "last_name": "Telfer",
@@ -12777,7 +13399,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Mitchell Telfer (2008–?).md"
+    "vault_file": "Mitchell Telfer (2008–?).md",
+    "branch": "telfer",
+    "generation": 10
   },
   {
     "slug": "murray-john-telfer-19111982",
@@ -12791,7 +13415,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Murray John Telfer (1911–1982.md"
+    "vault_file": "Murray John Telfer (1911–1982.md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "paul-ivory-1955",
@@ -12812,7 +13438,9 @@
       "lauren-ivory",
       "joel-ivory"
     ],
-    "vault_file": "Paul Ivory (1955–1996).md"
+    "vault_file": "Paul Ivory (1955–1996).md",
+    "branch": "telfer",
+    "generation": 8
   },
   {
     "slug": "peter-farrow",
@@ -12826,7 +13454,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Peter Farrow.md"
+    "vault_file": "Peter Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "reginald-telfer-1923",
@@ -12840,7 +13470,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Reginald Masters Telfer (1923–living).md"
+    "vault_file": "Reginald Masters Telfer (1923–living).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "richard-paynter-1838",
@@ -12862,7 +13494,9 @@
       "elizabeth-paynter-1864",
       "dinah-flavel-paynter-1869"
     ],
-    "vault_file": "Richard Paynter (1838–1869).md"
+    "vault_file": "Richard Paynter (1838–1869).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "richard-paynter-of-calstock",
@@ -12876,7 +13510,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Richard Paynter (of Calstock.md"
+    "vault_file": "Richard Paynter (of Calstock.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "robert-agnew",
@@ -12890,7 +13526,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Robert Agnew.md"
+    "vault_file": "Robert Agnew.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "robertdunlop-lawrie-1850",
@@ -12916,7 +13554,9 @@
       "caroline-edna",
       "robert-dunlop"
     ],
-    "vault_file": "Robert Dunlop Lawrie (1850–1917).md"
+    "vault_file": "Robert Dunlop Lawrie (1850–1917).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "robert-dunlop",
@@ -12930,7 +13570,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Robert Dunlop.md"
+    "vault_file": "Robert Dunlop.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "robert-farrow",
@@ -12944,7 +13586,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Robert Farrow.md"
+    "vault_file": "Robert Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "robina-telfer",
@@ -12958,7 +13602,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Robina Telfer.md"
+    "vault_file": "Robina Telfer.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "ruth-penna-1855",
@@ -12974,11 +13620,13 @@
       "george-telfer"
     ],
     "children": [],
-    "vault_file": "Ruth Penna (~1855–1913).md"
+    "vault_file": "Ruth Penna (~1855–1913).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "ruth-telfer-1931",
-    "display_name": "Ruth Telfer — Family & Biography",
+    "display_name": "Ruth Telfer",
     "first_name": "Ruth",
     "middle_name": "",
     "last_name": "Telfer",
@@ -12988,7 +13636,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Ruth Telfer (1930–?).md"
+    "vault_file": "Ruth Telfer (1930–?).md",
+    "branch": "telfer",
+    "generation": 8
   },
   {
     "slug": "sandra-lee-smith",
@@ -13002,7 +13652,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Sandra Lee Smith.md"
+    "vault_file": "Sandra Lee Smith.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "sarah-farrow",
@@ -13016,7 +13668,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Sarah Farrow.md"
+    "vault_file": "Sarah Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "septimus-dillon",
@@ -13030,7 +13684,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Septimus Dillon.md"
+    "vault_file": "Septimus Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "sheryle-telfer-1961",
@@ -13044,7 +13700,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Sheryle Telfer (1961–?).md"
+    "vault_file": "Sheryle Telfer (1961–?).md",
+    "branch": "telfer",
+    "generation": 9
   },
   {
     "slug": "shirley-edna-parker",
@@ -13058,7 +13716,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Shirley Edna Parker.md"
+    "vault_file": "Shirley Edna Parker.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "shirley-telfer",
@@ -13081,7 +13741,9 @@
       "kathryn-telfer",
       "susan-lawrie"
     ],
-    "vault_file": "Shirley Telfer (living).md"
+    "vault_file": "Shirley Telfer (living).md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "sophia-baker-1829",
@@ -13095,7 +13757,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Sophia Baker (1829–1901).md"
+    "vault_file": "Sophia Baker (1829–1901).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "sophia-parker",
@@ -13109,7 +13773,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Sophia Parker.md"
+    "vault_file": "Sophia Parker.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "sophia-webster-1800",
@@ -13123,7 +13789,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Sophia Webster (~1800–?).md"
+    "vault_file": "Sophia Webster (~1800–?).md",
+    "branch": "telfer",
+    "generation": 3
   },
   {
     "slug": "susan-burton-1844",
@@ -13137,7 +13805,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Susan Burton (1844–1924).md"
+    "vault_file": "Susan Burton (1844–1924).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "susan-burton-1845",
@@ -13151,7 +13821,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Susan Burton (1845–1924).md"
+    "vault_file": "Susan Burton (1845–1924).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "sydney-parker-1922",
@@ -13165,7 +13837,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Sydney Hugh Parker (1922–1964).md"
+    "vault_file": "Sydney Hugh Parker (1922–1964).md",
+    "branch": "telfer",
+    "generation": 7
   },
   {
     "slug": "thomas-cleveland-dillon",
@@ -13179,7 +13853,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Thomas Cleveland Dillon.md"
+    "vault_file": "Thomas Cleveland Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "thomas-paynter-1859",
@@ -13193,11 +13869,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Thomas Paynter (1859–1946).md"
+    "vault_file": "Thomas Paynter (1859–1946).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "timothy-telfer-1959",
-    "display_name": "Timothy Neil Telfer — Family & Biography",
+    "display_name": "Timothy Neil Telfer",
     "first_name": "Timothy",
     "middle_name": "Neil",
     "last_name": "Telfer",
@@ -13212,7 +13890,9 @@
       "mark-telfer-1986",
       "amy-telfer-nicole"
     ],
-    "vault_file": "Timothy Neil Telfer (1959–?).md"
+    "vault_file": "Timothy Neil Telfer (1959–?).md",
+    "branch": "telfer",
+    "generation": 9
   },
   {
     "slug": "vera-dillon",
@@ -13226,7 +13906,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Vera Dillon.md"
+    "vault_file": "Vera Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "vernonraystclair-telfer-1879",
@@ -13240,7 +13922,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Vernon Ray St. Clair Telfer (1879–1960).md"
+    "vault_file": "Vernon Ray St. Clair Telfer (1879–1960).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "vida-telfer-1919",
@@ -13254,7 +13938,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Vida Telfer (1919–2021).md"
+    "vault_file": "Vida Telfer (1919–2021).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "violethope-telfer-1883",
@@ -13268,7 +13954,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Violet Hope Telfer (1883–1967).md"
+    "vault_file": "Violet Hope Telfer (1883–1967).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "walter-telfer-1885",
@@ -13282,7 +13970,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Walter William Telfer (1885–1958).md"
+    "vault_file": "Walter William Telfer (1885–1958).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "wilhelm-seebohm-1833",
@@ -13296,7 +13986,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Wilhelm Seebohm (1833–1907).md"
+    "vault_file": "Wilhelm Seebohm (1833–1907).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "wilhelm-seebohm",
@@ -13310,7 +14002,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Wilhelm Seebohm.md"
+    "vault_file": "Wilhelm Seebohm.md",
+    "branch": "telfer",
+    "generation": 99
   },
   {
     "slug": "william-farrow",
@@ -13324,7 +14018,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "William Farrow.md"
+    "vault_file": "William Farrow.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "williamhenry-parker-1893",
@@ -13346,7 +14042,9 @@
       "william-humphrey-parker",
       "shirley-telfer-1929"
     ],
-    "vault_file": "William Henry Parker (1893–1968).md"
+    "vault_file": "William Henry Parker (1893–1968).md",
+    "branch": "telfer",
+    "generation": 6
   },
   {
     "slug": "williamhumphrey-parker-1850",
@@ -13367,7 +14065,9 @@
       "hugh-kelly-parker",
       "(others unconfirmed)"
     ],
-    "vault_file": "William Humphrey Parker (1850–1926).md"
+    "vault_file": "William Humphrey Parker (1850–1926).md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "williamjohn-baker-1831",
@@ -13381,7 +14081,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "William John Baker (1831–1919).md"
+    "vault_file": "William John Baker (1831–1919).md",
+    "branch": "telfer",
+    "generation": 4
   },
   {
     "slug": "william-john-dillon",
@@ -13395,11 +14097,13 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "William John Dillon.md"
+    "vault_file": "William John Dillon.md",
+    "branch": "telfer",
+    "generation": 5
   },
   {
     "slug": "zabella-telfer-2019",
-    "display_name": "Zabella Violet Zelda Telfer — Family & Biography",
+    "display_name": "Zabella Violet Zelda Telfer",
     "first_name": "Zabella",
     "middle_name": "Violet Zelda",
     "last_name": "Telfer",
@@ -13409,7 +14113,9 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "Zabella Violet Zelda Telfer (2019–?).md"
+    "vault_file": "Zabella Violet Zelda Telfer (2019–?).md",
+    "branch": "telfer",
+    "generation": 11
   },
   {
     "slug": "d-1940",
@@ -13423,6 +14129,8 @@
     "parents": [],
     "spouses": [],
     "children": [],
-    "vault_file": "d. 1940).md"
+    "vault_file": "d. 1940).md",
+    "branch": "telfer",
+    "generation": 99
   }
 ]

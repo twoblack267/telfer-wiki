@@ -3,7 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import type { PersonData } from "../../../utils/extract-data.mjs";
 
 const people = (await import("../../../data/people.public.json")).default as PersonData[];
-const telferPeople = people.filter((p) => p.branch === "telfer");
+const telferPeople = people.filter((p) => p.branch === "telfer" && p.id);
 
 // Get unique birth decades for generation grouping
 const generations: Record<string, PersonData[]> = {};

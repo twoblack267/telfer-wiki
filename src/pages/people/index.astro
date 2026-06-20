@@ -4,7 +4,7 @@ import type { PersonData } from "../../utils/extract-data.mjs";
 
 const people = (await import("../../data/people.public.json")).default as PersonData[];
 const telferPeople = people
-  .filter((p) => p.branch === "telfer")
+  .filter((p) => p.branch === "telfer" && p.id)
   .sort((a, b) => {
     // Sort by birth year, then by name
     const aYear = a.birth_year || 9999;
