@@ -63,7 +63,7 @@
     ],
     "children": [],
     "spouses": [
-      "Karina Ivory"
+      "karina-ivory"
     ],
     "siblings": [
       "Jared Ivory",
@@ -157,16 +157,16 @@
     "children": [
       "margaret-telfer-1892",
       "elizabeth-beattie-telfer-1871",
-      "Lillian May Telfer (1872–1951)",
+      "lillianmay-telfer-1872",
       "francis-telfer-1875",
       "james-telfer-1866",
-      "Vernon Ray St. Clair Telfer (1879–1960)",
-      "Herbert Dougal Telfer (1881–1974)",
-      "Violet Hope Telfer (1883–1967)",
-      "Eva Rowena Telfer (1885–1974)",
-      "Effie Olive Telfer (1886–1969)",
-      "Adelaide Elsie Pearl Telfer (1889–1976)",
-      "Hazel Rose Telfer (1891–1939)"
+      "vernonraystclair-telfer-1879",
+      "herbertdougal-telfer-1881",
+      "violethope-telfer-1883",
+      "evarowena-telfer-1885",
+      "effieolive-telfer-1886",
+      "adelaideelsiepearl-telfer-1889",
+      "hazelrose-telfer-1891"
     ],
     "spouses": [
       "margaret-telfer-1849"
@@ -307,7 +307,7 @@
     "lifespan": "1799 – ?",
     "parents": [
       "james-telfer-1761",
-      "Elizabeth Hutton (1774–1853)"
+      "elizabeth-hutton-1774"
     ],
     "children": [],
     "spouses": [],
@@ -567,20 +567,20 @@
     "is_living": false,
     "lifespan": "1884 – 1951",
     "parents": [
-      "Emily Ellen Thorpe",
-      "George Provis"
+      "emily-ellen-thorpe",
+      "george-provis"
     ],
     "children": [
       "francis-telfer-1910",
-      "Clarice May Fatchen",
-      "Emily Amelia Barton",
-      "Ethel Jean McMurtrie",
-      "Gladys Merle Pedler",
-      "Doris Elma Rowe",
+      "clarice-may-fatchen",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "gladys-merle-pedler",
+      "doris-elma-rowe",
       "edwin-telfer-1888",
       "reginald-telfer",
       "murray-telfer-1911",
-      "Malcolm George Telfer"
+      "malcolm-george-telfer"
     ],
     "spouses": [
       "francis-telfer-1875"
@@ -854,15 +854,15 @@
     "lifespan": "1856 – ?",
     "parents": [],
     "children": [
-      "Ann Telfer",
-      "Johnnie Telfer",
+      "ann-telfer",
+      "johnnie-telfer",
       "peter-telfer",
       "adam-telfer-1842",
-      "Robina Telfer",
+      "robina-telfer",
       "margaret-telfer-1892",
       "william-telfer-1879",
       "james-telfer-1866",
-      "Jessie Telfer"
+      "jessie-telfer"
     ],
     "spouses": [
       "john-telfer-1847"
@@ -1126,7 +1126,7 @@
       "robert-dunlop-lawrie"
     ],
     "children": [
-      "Shirley Edna Parker",
+      "shirley-edna-parker",
       "sydney-parker",
       "william-humphrey-parker"
     ],
@@ -1226,15 +1226,15 @@
       "?"
     ],
     "children": [
-      "Catherine Leah",
-      "Janet Stevenson",
-      "Alberta Grace",
-      "Hugh John",
-      "Frank Lindsay",
+      "catherine-leah",
+      "janet-stevenson",
+      "alberta-grace",
+      "hugh-john",
+      "frank-lindsay",
       "Jeanette",
-      "Marion Vida",
-      "Caroline Edna",
-      "Robert Dunlop"
+      "marion-vida",
+      "caroline-edna",
+      "robert-dunlop"
     ],
     "spouses": [
       "robert-dunlop-lawrie"
@@ -1379,18 +1379,18 @@
     "lifespan": "1836 – 1884",
     "parents": [],
     "children": [
-      "Peter Farrow",
-      "John Farrow",
+      "peter-farrow",
+      "john-farrow",
       "Charles Farrow",
-      "Esther Hannah Farrow",
-      "Elizabeth Farrow",
-      "Margaret Farrow",
-      "Sarah Farrow",
-      "Edith Farrow",
-      "James Farrow",
-      "Robert Farrow",
-      "William Farrow",
-      "Eva Agnes Farrow"
+      "esther-hannah-farrow",
+      "elizabeth-farrow",
+      "margaret-farrow",
+      "sarah-farrow",
+      "edith-farrow",
+      "james-farrow",
+      "robert-farrow",
+      "william-farrow",
+      "eva-agnes-farrow"
     ],
     "spouses": [
       "elizabeth-hannah-telfer"
@@ -1898,7 +1898,7 @@
     ],
     "children": [],
     "spouses": [
-      "Lilian Daisy Dawson (m. 1910)"
+      "lilian-daisy-dawson"
     ],
     "siblings": [
       "Mark (1877–1946)",
@@ -2230,16 +2230,16 @@
       "james-telfer-1796"
     ],
     "children": [
-      "William John Dillon",
-      "Septimus Dillon",
-      "Francis Telfer Dillon",
-      "Thomas Cleveland Dillon",
-      "Inez Dillon",
-      "Vera Dillon",
-      "Adam Dillon",
-      "Henry Hatch Dillon",
-      "Dorothy Dillon",
-      "Inez Priscilla Dillon"
+      "william-john-dillon",
+      "septimus-dillon",
+      "francistelfer-dillon",
+      "thomas-cleveland-dillon",
+      "inez-dillon",
+      "vera-dillon",
+      "adam-dillon",
+      "henry-hatch-dillon",
+      "dorothy-dillon",
+      "inez-priscilla-dillon"
     ],
     "spouses": [
       "john-dillon"
@@ -2322,16 +2322,16 @@
       "jean-murray"
     ],
     "children": [
-      "Jane Murray Farrow",
-      "Esther Farrow",
-      "Elizabeth Telfer Farrow",
-      "Joseph Francis Farrow",
-      "Charles Farrow Jr",
-      "Amy Farrow",
-      "John James Telfer Farrow",
-      "George Hope Farrow",
-      "Mary Bayes Farrow",
-      "Eva Agnes Farrow"
+      "jane-murray-farrow",
+      "esther-farrow",
+      "elizabethtelfer-farrow",
+      "joseph-francis-farrow",
+      "charles-farrow-jr",
+      "amy-farrow",
+      "johnjamestelfer-farrow",
+      "george-hope-farrow",
+      "mary-bayes-farrow",
+      "eva-agnes-farrow"
     ],
     "spouses": [
       "charles-farrow"
@@ -2538,7 +2538,7 @@
     ],
     "children": [],
     "spouses": [
-      "Edwin Ernest Clarke (m. 1899)"
+      "edwin-ernest-clarke"
     ],
     "siblings": [
       "James (1866–1946)",
@@ -2839,12 +2839,12 @@
       "jean-murray"
     ],
     "children": [
-      "Jane Sophie Smith (b. S.A.)",
-      "Margaret Dougal Smith (b. Burra S.A.)",
-      "Esther Telfer Smith (1870–1896)",
+      "jane-sophie-smith",
+      "margaret-dougal-smith",
+      "esthertelfer-smith-1870",
       "john-smith",
-      "Francis Telfer Smith (1874–1945)",
-      "Elizabeth Anne Smith (1878–?)"
+      "francistelfer-smith-1874",
+      "elizabeth-anne-smith-1878"
     ],
     "spouses": [
       "john-smith"
@@ -3020,10 +3020,10 @@
       "julia-matilda-seebohm"
     ],
     "children": [
-      "Jennifer Bunston"
+      "jennifer-bunston"
     ],
     "spouses": [
-      "Harry Bunston"
+      "harry-bunston"
     ],
     "siblings": [
       "Kenneth William John Telfer (1904–?)",
@@ -3110,15 +3110,15 @@
     ],
     "children": [
       "francis-telfer-1910",
-      "Clarice May Fatchen",
-      "Emily Amelia Barton",
-      "Ethel Jean McMurtrie",
-      "Gladys Merle Pedler",
-      "Doris Elma Rowe",
+      "clarice-may-fatchen",
+      "emily-amelia-barton",
+      "ethel-jean-mcmurtrie",
+      "gladys-merle-pedler",
+      "doris-elma-rowe",
       "edwin-telfer-1888",
       "reginald-telfer",
       "murray-telfer-1911",
-      "Malcolm George Telfer"
+      "malcolm-george-telfer"
     ],
     "spouses": [
       "amy-ellen-telfer"
@@ -3374,16 +3374,16 @@
     "lifespan": "1809 – 1895",
     "parents": [
       "james-telfer-1761",
-      "Elizabeth \"Betty\" Hutton (1774–1853)"
+      "elizabeth-hutton-1774"
     ],
     "children": [
       "James (1832–1845)",
-      "Esther Jane (1834–1909)",
-      "Elizabeth Hannah (1836–1916)",
+      "esther-jane-1834",
+      "elizabeth-hannah-1836",
       "Jean (1840–1892)",
       "John (1847–1929)",
-      "Margaret Dougal (1849–1936)",
-      "George Wright (1850–1913)",
+      "margaret-dougal-1849",
+      "george-wright-1850",
       "jean-telfer-1840",
       "james-telfer-1829",
       "george-telfer",
@@ -3394,7 +3394,7 @@
     "spouses": [
       "jean-murray",
       "dinah-flavel",
-      "Margaret Wright (1807–1892)"
+      "margaret-wright-1807"
     ],
     "siblings": [],
     "related_trees": [
@@ -3450,7 +3450,7 @@
     "is_living": false,
     "lifespan": "1838 – 1928",
     "parents": [
-      "George Parker"
+      "george-parker"
     ],
     "children": [],
     "spouses": [
@@ -3532,7 +3532,7 @@
     "lifespan": "1850 – 1913",
     "parents": [
       "francis-telfer-1809",
-      "Margaret Wright (?–1892)"
+      "margaret-wright-1807"
     ],
     "children": [],
     "spouses": [
@@ -3623,12 +3623,12 @@
       "julia-matilda-seebohm"
     ],
     "children": [
-      "Beth Telfer",
-      "Ian Telfer",
-      "Allan Telfer"
+      "beth-telfer",
+      "ian-telfer",
+      "allan-telfer"
     ],
     "spouses": [
-      "Jessie Allan"
+      "jessie-allan"
     ],
     "siblings": [
       "Floris Ethel Victoria Telfer (1904–1951)",
@@ -3802,7 +3802,7 @@
     ],
     "children": [
       "kristin-stefanoff",
-      "Jono Telfer",
+      "jono-telfer",
       "nick-telfer"
     ],
     "spouses": [],
@@ -3884,9 +3884,9 @@
       "?"
     ],
     "children": [
-      "Sophia Parker",
+      "sophia-parker",
       "william-henry-parker",
-      "Hugh Kelly Parker",
+      "hugh-kelly-parker",
       "(others unconfirmed)"
     ],
     "spouses": [
@@ -3968,7 +3968,7 @@
     ],
     "children": [],
     "spouses": [
-      "Alexander Brown Thomson (m. 1911)"
+      "alexander-brown-thomson"
     ],
     "siblings": [
       "Mark (1877–1946)",
@@ -4047,7 +4047,7 @@
     "lifespan": "1798 – 1875",
     "parents": [
       "james-telfer-1761",
-      "Elizabeth Hutton (1774–1853)"
+      "elizabeth-hutton-1774"
     ],
     "children": [],
     "spouses": [],
@@ -4124,16 +4124,16 @@
     "is_living": false,
     "lifespan": "1866 – ?",
     "parents": [
-      "Susan Burton (1844–1924)",
+      "susan-burton-1844",
       "robert-telfer-1837"
     ],
     "children": [
-      "Leslie Robert Telfer",
-      "Ethel Edith Telfer",
+      "leslie-robert-telfer",
+      "ethel-edith-telfer",
       "jean-telfer-1910"
     ],
     "spouses": [
-      "Hannah Peacock (1840–1915)"
+      "hannah-peacock-1840"
     ],
     "siblings": [],
     "related_trees": [
@@ -4224,7 +4224,7 @@
       "james-telfer-1796"
     ],
     "spouses": [
-      "Elizabeth \"Betty\" Hutton (1774–1853)"
+      "elizabeth-hutton-1774"
     ],
     "siblings": [],
     "related_trees": [
@@ -4294,7 +4294,7 @@
     "is_living": false,
     "lifespan": "1796 – 1863",
     "parents": [
-      "Elizabeth \"Betty\" Hutton (1774–1853)",
+      "elizabeth-hutton-1774",
       "james-telfer-1761"
     ],
     "children": [
@@ -4379,7 +4379,7 @@
     "children": [
       "margaret-telfer-1849",
       "james-telfer-1832",
-      "Janet Welsh Telfer"
+      "janet-welsh-telfer"
     ],
     "spouses": [
       "janet-welsh"
@@ -4519,7 +4519,7 @@
       "Vida (1919–2021)"
     ],
     "spouses": [
-      "Alma Ida Sporer (m. 1917)"
+      "alma-ida-sporer"
     ],
     "siblings": [
       "Elizabeth (1868–1950)",
@@ -4783,8 +4783,8 @@
     "parents": [],
     "children": [
       "James (1832–1845)",
-      "Esther Jane (1834–1909)",
-      "Elizabeth Hannah (1836–1916)",
+      "esther-jane-1834",
+      "elizabeth-hannah-1836",
       "jean-telfer-1840",
       "james-telfer-1829",
       "elizabeth-hannah-telfer",
@@ -5452,12 +5452,12 @@
     "lifespan": "1827 – 1895",
     "parents": [],
     "children": [
-      "Jane Sophie Smith",
-      "Margaret Dougal Smith",
-      "Esther Telfer Smith (1870–1896)",
-      "John James Smith (1871–?)",
-      "Francis Telfer Smith (1874–1945)",
-      "Elizabeth Anne Smith (1878–?)"
+      "jane-sophie-smith",
+      "margaret-dougal-smith",
+      "esthertelfer-smith-1870",
+      "john-james-smith-1871",
+      "francistelfer-smith-1874",
+      "elizabeth-anne-smith-1878"
     ],
     "spouses": [
       "esther-jane-telfer"
@@ -5528,7 +5528,7 @@
     "lifespan": "1805 – 1839",
     "parents": [
       "james-telfer-1761",
-      "Elizabeth Hutton (1774–1853)"
+      "elizabeth-hutton-1774"
     ],
     "children": [],
     "spouses": [],
@@ -5618,9 +5618,9 @@
       "james-telfer-1866",
       "elizabeth-telfer-1868",
       "susan-telfer-1871",
-      "Martha Telfer (1873–?)",
-      "Charles Telfer",
-      "Eric John Telfer",
+      "martha-telfer-1873",
+      "charles-telfer",
+      "eric-john-telfer",
       "mark-telfer-1877"
     ],
     "spouses": [
@@ -5697,7 +5697,7 @@
     "is_living": false,
     "lifespan": "1847 – 1929",
     "parents": [
-      "Margaret Wright",
+      "margaret-wright-1807",
       "francis-telfer-1809"
     ],
     "children": [
@@ -5964,14 +5964,14 @@
     "is_living": false,
     "lifespan": "1876 – 1939",
     "parents": [
-      "Mary Anne McIntyre (1836–1913)",
-      "Wilhelm Seebohm (1833–1907)"
+      "mary-anne-mcintyre-1836",
+      "wilhelm-seebohm-1833"
     ],
     "children": [
       "floris-telfer",
       "kenneth-telfer",
       "gilbert-telfer",
-      "Murray John Telfer (1911–1982",
+      "murray-john-telfer-19111982",
       "adopted)"
     ],
     "spouses": [
@@ -6103,7 +6103,7 @@
       "murray-telfer-1911"
     ],
     "spouses": [
-      "Jessie Sargent"
+      "jessie-sargent"
     ],
     "siblings": [
       "Floris Ethel Victoria Telfer (1904–1951)",
@@ -6182,7 +6182,7 @@
     ],
     "children": [],
     "spouses": [
-      "Ben Stefanoff"
+      "ben-stefanoff"
     ],
     "siblings": [
       "Jono Telfer",
@@ -6252,8 +6252,8 @@
     "is_living": true,
     "lifespan": "1982 – living",
     "parents": [
-      "Sandra Lee Smith",
-      "Leonard Arthur Dance"
+      "sandra-lee-smith",
+      "leonard-arthur-dance"
     ],
     "children": [
       "levi-telfer",
@@ -6674,21 +6674,21 @@
     "lifespan": "1849 – 1936",
     "parents": [
       "francis-telfer-1809",
-      "Margaret Wright (?–1892)"
+      "margaret-wright-1807"
     ],
     "children": [
       "margaret-telfer-1892",
       "elizabeth-beattie-telfer-1871",
-      "Lillian May Telfer (1872–1951)",
+      "lillianmay-telfer-1872",
       "francis-telfer-1875",
       "james-telfer-1866",
-      "Vernon Ray St. Clair Telfer (1879–1960)",
-      "Herbert Dougal Telfer (1881–1974)",
-      "Violet Hope Telfer (1883–1967)",
-      "Eva Rowena Telfer (1885–1974)",
-      "Effie Olive Telfer (1886–1969)",
-      "Adelaide Elsie Pearl Telfer (1889–1976)",
-      "Hazel Rose Telfer (1891–1939)"
+      "vernonraystclair-telfer-1879",
+      "herbertdougal-telfer-1881",
+      "violethope-telfer-1883",
+      "evarowena-telfer-1885",
+      "effieolive-telfer-1886",
+      "adelaideelsiepearl-telfer-1889",
+      "hazelrose-telfer-1891"
     ],
     "spouses": [
       "adam-telfer-1842"
@@ -6759,7 +6759,7 @@
     "lifespan": "1802 – 1884",
     "parents": [
       "james-telfer-1761",
-      "Elizabeth Hutton (1774–1853)"
+      "elizabeth-hutton-1774"
     ],
     "children": [],
     "spouses": [],
@@ -7005,7 +7005,7 @@
     ],
     "children": [],
     "spouses": [
-      "Kenneth Cornish"
+      "kenneth-cornish"
     ],
     "siblings": [
       "James (1866-1946)",
@@ -7426,10 +7426,10 @@
       "john-telfer-1840"
     ],
     "children": [
-      "Malcolm Murray Cameron"
+      "malcolm-murray-cameron"
     ],
     "spouses": [
-      "Malcolm Duncan Cameron"
+      "malcolm-duncan-cameron"
     ],
     "siblings": [
       "James Telfer (1866–1946)",
@@ -7487,7 +7487,7 @@
     "is_living": true,
     "lifespan": "2008 – living",
     "parents": [
-      "Crystal Rose McDonald",
+      "crystal-rose-mcdonald",
       "mark-telfer-1986"
     ],
     "children": [],
@@ -7714,7 +7714,7 @@
     "parents": [],
     "children": [
       "aaron-ivory",
-      "Jared Ivory",
+      "jared-ivory",
       "lauren-ivory",
       "joel-ivory"
     ],
@@ -7780,7 +7780,7 @@
     "children": [
       "mark-telfer-1986",
       "amy-telfer-1884",
-      "David Telfer-Merrick"
+      "david-telfer-merrick"
     ],
     "spouses": [],
     "siblings": [],
@@ -8018,15 +8018,15 @@
     "is_living": false,
     "lifespan": "1838 – 1869",
     "parents": [
-      "Richard Paynter (of Calstock",
+      "richard-paynter-of-calstock",
       "Cornwall)"
     ],
     "children": [
-      "Thomas Paynter (1859–1946)",
-      "Mary Jane Paynter (1861–1945)",
-      "Francis Telfer Paynter (1862–?)",
-      "Elizabeth Paynter (1864–?)",
-      "Dinah Flavel Paynter (1869–?)"
+      "thomas-paynter-1859",
+      "mary-jane-paynter-1861",
+      "francis-telfer-paynter-1862",
+      "elizabeth-paynter-1864",
+      "dinah-flavel-paynter-1869"
     ],
     "spouses": [
       "jean-telfer-1840"
@@ -8110,19 +8110,19 @@
     "is_living": false,
     "lifespan": "1850 – 1917",
     "parents": [
-      "John Lawrie",
-      "Janet Dunlop"
+      "john-lawrie",
+      "janet-dunlop"
     ],
     "children": [
-      "Catherine Leah",
-      "Janet Stevenson",
-      "Alberta Grace",
-      "Hugh John",
-      "Frank Lindsay",
+      "catherine-leah",
+      "janet-stevenson",
+      "alberta-grace",
+      "hugh-john",
+      "frank-lindsay",
       "Jeanette",
-      "Marion Vida",
-      "Caroline Edna",
-      "Robert Dunlop"
+      "marion-vida",
+      "caroline-edna",
+      "robert-dunlop"
     ],
     "spouses": [
       "caroline-hosking"
@@ -8205,7 +8205,7 @@
     ],
     "children": [],
     "spouses": [
-      "May Foy"
+      "may-foy"
     ],
     "siblings": [
       "Mark (1877–1946)",
@@ -8299,7 +8299,7 @@
     "is_living": false,
     "lifespan": "1803 – 1878",
     "parents": [
-      "Betty Hutton",
+      "betty-hutton",
       "james-telfer-1761"
     ],
     "children": [
@@ -8397,16 +8397,16 @@
     "children": [
       "james-telfer-1866",
       "elizabeth-telfer-1868",
-      "Helen Telfer",
+      "helen-telfer",
       "susan-telfer-1844",
       "william-telfer-1879",
       "lindsay-telfer",
       "robert-telfer-1886",
       "francis-telfer-1875",
-      "Edith Mary Kathleen Telfer"
+      "edith-mary-kathleen-telfer"
     ],
     "spouses": [
-      "Susan Burton (1845–1924)"
+      "susan-burton-1845"
     ],
     "siblings": [],
     "related_trees": [
@@ -8843,7 +8843,7 @@
     ],
     "children": [],
     "spouses": [
-      "Robert Agnew (m. 1892)"
+      "robert-agnew"
     ],
     "siblings": [
       "James (1866–1946)",
@@ -9142,8 +9142,8 @@
       "william-humphrey-parker"
     ],
     "children": [
-      "Avis Parker",
-      "Howard Parker",
+      "avis-parker",
+      "howard-parker",
       "sydney-parker",
       "william-humphrey-parker",
       "shirley-telfer-1929"
@@ -9228,9 +9228,9 @@
       "unknown"
     ],
     "children": [
-      "Sophia Parker",
+      "sophia-parker",
       "william-henry-parker",
-      "Hugh Kelly Parker",
+      "hugh-kelly-parker",
       "(others unconfirmed)"
     ],
     "spouses": [
@@ -9376,7 +9376,7 @@
     "lifespan": "1811 – 1881",
     "parents": [
       "james-telfer-1761",
-      "Elizabeth Hutton (1774–1853)"
+      "elizabeth-hutton-1774"
     ],
     "children": [],
     "spouses": [],
@@ -9649,8 +9649,8 @@
       "Lindsay Roland Telfer (1920–1976)"
     ],
     "spouses": [
-      "Francis Edward Lane (m. 1903",
-      "d. 1940)"
+      "francis-edward-lane-m-1903",
+      "d-1940"
     ],
     "is_living": false,
     "lifespan": "1883 – 1974",
@@ -9973,13 +9973,13 @@
     "body_stripped": "**Born:** 7 October 1802 — Oxnam Parish, Roxburghshire, Scotland  \n**Died:** 16 September 1850 — Tamworth, New South Wales  \n**Mother:** Janet Nichol  \n**Father:** William Telfer (shepherd)  \n**Spouse:** Margaret (surname unknown) — m. unknown, before 1841\n\n## Life Summary\n\nWilliam Telfer was born on 7 October 1802 in the Parish of Oxnam, Roxburghshire, Scotland, the fourth child of William Telfer, a shepherd, and his wife Janet Nichol. From an early age, William and his older brother Andrew wor",
     "parents": [
       "william-telfer-1879",
-      "Janet Nichol"
+      "janet-nichol"
     ],
     "children": [
       "william-telfer-1811",
       "elizabeth-telfer-1868",
-      "Andrew Telfer",
-      "Edward Telfer"
+      "andrew-telfer",
+      "edward-telfer"
     ],
     "siblings": [
       "Andrew Telfer (1798–1858)"
@@ -10102,5 +10102,3327 @@
     ],
     "images": [],
     "person_photo": null
+  },
+  {
+    "slug": "aaron-ivory-1989",
+    "display_name": "Aaron Ivory — Family & Biography",
+    "first_name": "Aaron",
+    "middle_name": "Paul",
+    "last_name": "Ivory",
+    "birth_year": 1989,
+    "death_year": null,
+    "lifespan": "1989–?",
+    "parents": [],
+    "spouses": [
+      "karina-ivory"
+    ],
+    "children": [],
+    "vault_file": "Aaron Paul Ivory (1989–?).md"
+  },
+  {
+    "slug": "adam-dillon",
+    "display_name": "Adam Dillon",
+    "first_name": "Adam",
+    "middle_name": "",
+    "last_name": "Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Adam Dillon.md"
+  },
+  {
+    "slug": "adelaideelsiepearl-telfer-1889",
+    "display_name": "Adelaide Elsie Pearl Telfer (1889–1976)",
+    "first_name": "Adelaide Elsie Pearl",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1889,
+    "death_year": 1976,
+    "lifespan": "1889–1976",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Adelaide Elsie Pearl Telfer (1889–1976).md"
+  },
+  {
+    "slug": "alan-telfer-1890",
+    "display_name": "Alan Dale Telfer (1890–1937) — Family & Biography",
+    "first_name": "Alan",
+    "middle_name": "Dale",
+    "last_name": "Telfer",
+    "birth_year": 1890,
+    "death_year": 1937,
+    "lifespan": "1890–1937",
+    "parents": [],
+    "spouses": [
+      "None (never married)"
+    ],
+    "children": [],
+    "vault_file": "Alan Dale Telfer (1890–1937).md"
+  },
+  {
+    "slug": "albert-telfer-1882",
+    "display_name": "Albert George Telfer (1882–1961)",
+    "first_name": "Albert",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1882,
+    "death_year": 1961,
+    "lifespan": "1882–1961",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Albert George Telfer (1882–1961).md"
+  },
+  {
+    "slug": "alberta-grace",
+    "display_name": "Alberta Grace",
+    "first_name": "Alberta",
+    "middle_name": "",
+    "last_name": "Grace",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Alberta Grace.md"
+  },
+  {
+    "slug": "alexander-brown-thomson",
+    "display_name": "Alexander Brown Thomson",
+    "first_name": "Alexander",
+    "middle_name": "",
+    "last_name": "Brown Thomson",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Alexander Brown Thomson.md"
+  },
+  {
+    "slug": "allan-telfer",
+    "display_name": "Allan Telfer",
+    "first_name": "Allan",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Allan Telfer.md"
+  },
+  {
+    "slug": "alma-ida-sporer",
+    "display_name": "Alma Ida Sporer",
+    "first_name": "Alma",
+    "middle_name": "",
+    "last_name": "Ida Sporer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Alma Ida Sporer.md"
+  },
+  {
+    "slug": "amyellen-telfer",
+    "display_name": "Amy Ellen Telfer (née Provis)",
+    "first_name": "Amy Ellen",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [
+      "francis-telfer-1875"
+    ],
+    "children": [],
+    "vault_file": "Amy Ellen Telfer (née Provis).md"
+  },
+  {
+    "slug": "amy-farrow",
+    "display_name": "Amy Farrow",
+    "first_name": "Amy",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Amy Farrow.md"
+  },
+  {
+    "slug": "amy-telfer",
+    "display_name": "Amy Nicole Telfer — Family & Biography",
+    "first_name": "Amy",
+    "middle_name": "Nicole",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Amy Nicole Telfer.md"
+  },
+  {
+    "slug": "andrew-telfer",
+    "display_name": "Andrew Telfer",
+    "first_name": "Andrew",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Andrew Telfer.md"
+  },
+  {
+    "slug": "ann-taylor-1856",
+    "display_name": "Ann Taylor (~1856–?)",
+    "first_name": "Ann",
+    "middle_name": "",
+    "last_name": "Taylor",
+    "birth_year": 1856,
+    "death_year": null,
+    "lifespan": "1856–?",
+    "parents": [],
+    "spouses": [
+      "john-telfer-1847"
+    ],
+    "children": [
+      "ann-telfer",
+      "johnnie-telfer",
+      "peter-telfer",
+      "adam-telfer-1842",
+      "robina-telfer",
+      "margaret-telfer-1892",
+      "william-telfer-1879",
+      "james-telfer-1866",
+      "jessie-telfer"
+    ],
+    "vault_file": "Ann Taylor (~1856–?).md"
+  },
+  {
+    "slug": "ann-telfer",
+    "display_name": "Ann Telfer",
+    "first_name": "Ann",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Ann Telfer.md"
+  },
+  {
+    "slug": "avis-parker",
+    "display_name": "Avis Parker",
+    "first_name": "Avis",
+    "middle_name": "",
+    "last_name": "Parker",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Avis Parker.md"
+  },
+  {
+    "slug": "ben-stefanoff",
+    "display_name": "Ben Stefanoff",
+    "first_name": "Ben",
+    "middle_name": "",
+    "last_name": "Stefanoff",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Ben Stefanoff.md"
+  },
+  {
+    "slug": "beth-telfer",
+    "display_name": "Beth Telfer",
+    "first_name": "Beth",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Beth Telfer.md"
+  },
+  {
+    "slug": "betty-hutton",
+    "display_name": "Betty Hutton",
+    "first_name": "Betty",
+    "middle_name": "",
+    "last_name": "Hutton",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Betty Hutton.md"
+  },
+  {
+    "slug": "caroline-telfer-1842",
+    "display_name": "Caroline Amelia Telfer (1842–1929)",
+    "first_name": "Caroline",
+    "middle_name": "Amelia",
+    "last_name": "Telfer",
+    "birth_year": 1842,
+    "death_year": 1929,
+    "lifespan": "1842–1929",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Caroline Amelia Telfer (1842–1929).md"
+  },
+  {
+    "slug": "carolineedna-lawrie-1890",
+    "display_name": "Caroline Edna Lawrie — Family & Biography",
+    "first_name": "Caroline Edna",
+    "middle_name": "",
+    "last_name": "Lawrie",
+    "birth_year": 1890,
+    "death_year": 1957,
+    "lifespan": "1890–1957",
+    "parents": [],
+    "spouses": [
+      "william-henry-parker"
+    ],
+    "children": [
+      "shirley-edna-parker",
+      "sydney-parker",
+      "william-humphrey-parker"
+    ],
+    "vault_file": "Caroline Edna Lawrie (1890–1957).md"
+  },
+  {
+    "slug": "caroline-edna",
+    "display_name": "Caroline Edna",
+    "first_name": "Caroline",
+    "middle_name": "",
+    "last_name": "Edna",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Caroline Edna.md"
+  },
+  {
+    "slug": "caroline-hosking-1851",
+    "display_name": "Caroline Hosking — Family & Biography",
+    "first_name": "Caroline",
+    "middle_name": "",
+    "last_name": "Hosking",
+    "birth_year": 1851,
+    "death_year": 1920,
+    "lifespan": "1851–1920",
+    "parents": [],
+    "spouses": [
+      "robert-dunlop-lawrie"
+    ],
+    "children": [
+      "catherine-leah",
+      "janet-stevenson",
+      "alberta-grace",
+      "hugh-john",
+      "frank-lindsay",
+      "Jeanette",
+      "marion-vida",
+      "caroline-edna",
+      "robert-dunlop"
+    ],
+    "vault_file": "Caroline Hosking (1851–1920).md"
+  },
+  {
+    "slug": "caroline-masters-1850",
+    "display_name": "Caroline Masters (~1850–1929)",
+    "first_name": "Caroline",
+    "middle_name": "",
+    "last_name": "Masters",
+    "birth_year": 1850,
+    "death_year": 1929,
+    "lifespan": "1850–1929",
+    "parents": [],
+    "spouses": [
+      "john-telfer-1847"
+    ],
+    "children": [
+      "albert-telfer",
+      "ernest-telfer",
+      "william-telfer-1879",
+      "edwin-telfer-1888",
+      "walter-telfer",
+      "maria-clara-telfer",
+      "caroline-telfer"
+    ],
+    "vault_file": "Caroline Masters (~1850–1929).md"
+  },
+  {
+    "slug": "catherine-leah",
+    "display_name": "Catherine Leah",
+    "first_name": "Catherine",
+    "middle_name": "",
+    "last_name": "Leah",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Catherine Leah.md"
+  },
+  {
+    "slug": "charles-farrow-1836",
+    "display_name": "Charles Farrow (~1836–1884)",
+    "first_name": "Charles",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": 1836,
+    "death_year": 1884,
+    "lifespan": "1836–1884",
+    "parents": [],
+    "spouses": [
+      "elizabeth-hannah-telfer"
+    ],
+    "children": [
+      "peter-farrow",
+      "john-farrow",
+      "charles-farrow-jr",
+      "esther-hannah-farrow",
+      "elizabeth-farrow",
+      "margaret-farrow",
+      "sarah-farrow",
+      "edith-farrow",
+      "james-farrow",
+      "robert-farrow",
+      "william-farrow",
+      "eva-agnes-farrow"
+    ],
+    "vault_file": "Charles Farrow (~1836–1884).md"
+  },
+  {
+    "slug": "charles-farrow-jr",
+    "display_name": "Charles Farrow Jr",
+    "first_name": "Charles",
+    "middle_name": "",
+    "last_name": "Farrow Jr",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Charles Farrow Jr.md"
+  },
+  {
+    "slug": "charles-telfer",
+    "display_name": "Charles Telfer",
+    "first_name": "Charles",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Charles Telfer.md"
+  },
+  {
+    "slug": "clarablanche-lane-1883",
+    "display_name": "Clara Blanche Telfer/Lane (1883–1974)",
+    "first_name": "Clara Blanche",
+    "middle_name": "",
+    "last_name": "Lane",
+    "birth_year": 1883,
+    "death_year": 1974,
+    "lifespan": "1883–1974",
+    "parents": [],
+    "spouses": [
+      "francis-edward-lane-m-1903",
+      "d-1940"
+    ],
+    "children": [],
+    "vault_file": "Clara Blanche Telfer (1883–1974).md"
+  },
+  {
+    "slug": "clarice-may-fatchen",
+    "display_name": "Clarice May Fatchen",
+    "first_name": "Clarice",
+    "middle_name": "",
+    "last_name": "May Fatchen",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Clarice May Fatchen.md"
+  },
+  {
+    "slug": "claricemay-telfer-1911",
+    "display_name": "Clarice May Telfer (1911–1997)",
+    "first_name": "Clarice May",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1911,
+    "death_year": 1997,
+    "lifespan": "1911–1997",
+    "parents": [],
+    "spouses": [
+      "Mr Fatchen"
+    ],
+    "children": [],
+    "vault_file": "Clarice May Telfer (1911–1997).md"
+  },
+  {
+    "slug": "colin-telfer-1889",
+    "display_name": "Colin Roy Telfer (1889–1964) — Family & Biography",
+    "first_name": "Colin",
+    "middle_name": "Roy",
+    "last_name": "Telfer",
+    "birth_year": 1889,
+    "death_year": 1964,
+    "lifespan": "1889–1964",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Colin Roy Telfer (1889–1964).md"
+  },
+  {
+    "slug": "crystal-rose-mcdonald",
+    "display_name": "Crystal Rose McDonald",
+    "first_name": "Crystal",
+    "middle_name": "",
+    "last_name": "Rose McDonald",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Crystal Rose McDonald.md"
+  },
+  {
+    "slug": "david-telfer-merrick",
+    "display_name": "David Telfer-Merrick",
+    "first_name": "David",
+    "middle_name": "",
+    "last_name": "Telfer-Merrick",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "David Telfer-Merrick.md"
+  },
+  {
+    "slug": "dinah-flavel-1821",
+    "display_name": "Dinah Flavel (1821–1844) — Second Wife of Francis Telfer",
+    "first_name": "Dinah",
+    "middle_name": "",
+    "last_name": "Flavel",
+    "birth_year": 1821,
+    "death_year": 1844,
+    "lifespan": "1821–1844",
+    "parents": [],
+    "spouses": [
+      "francis-telfer-1809"
+    ],
+    "children": [
+      "jean-telfer-1840"
+    ],
+    "vault_file": "Dinah Flavel (1821–1844).md"
+  },
+  {
+    "slug": "dinah-flavel-paynter-1869",
+    "display_name": "Dinah Flavel Paynter (1869–?)",
+    "first_name": "Dinah",
+    "middle_name": "",
+    "last_name": "Flavel Paynter",
+    "birth_year": 1869,
+    "death_year": null,
+    "lifespan": "1869–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Dinah Flavel Paynter (1869–?).md"
+  },
+  {
+    "slug": "doris-elma-rowe",
+    "display_name": "Doris Elma Rowe",
+    "first_name": "Doris",
+    "middle_name": "",
+    "last_name": "Elma Rowe",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Doris Elma Rowe.md"
+  },
+  {
+    "slug": "doriselma-telfer-1919",
+    "display_name": "Doris Elma Telfer (1919–living)",
+    "first_name": "Doris Elma",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1919,
+    "death_year": "None",
+    "lifespan": "1919–None",
+    "parents": [],
+    "spouses": [
+      "Mr Rowe"
+    ],
+    "children": [],
+    "vault_file": "Doris Elma Telfer (1919–living).md"
+  },
+  {
+    "slug": "dorothy-dillon",
+    "display_name": "Dorothy Dillon",
+    "first_name": "Dorothy",
+    "middle_name": "",
+    "last_name": "Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Dorothy Dillon.md"
+  },
+  {
+    "slug": "douglas-telfer-1887",
+    "display_name": "Douglas Telfer (1887–1956) — Family & Biography",
+    "first_name": "Douglas",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1887,
+    "death_year": 1956,
+    "lifespan": "1887–1956",
+    "parents": [],
+    "spouses": [
+      "lilian-daisy-dawson"
+    ],
+    "children": [],
+    "vault_file": "Douglas Telfer (1887–1956).md"
+  },
+  {
+    "slug": "edith-farrow",
+    "display_name": "Edith Farrow",
+    "first_name": "Edith",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Edith Farrow.md"
+  },
+  {
+    "slug": "edith-mary-kathleen-telfer",
+    "display_name": "Edith Mary Kathleen Telfer",
+    "first_name": "Edith",
+    "middle_name": "",
+    "last_name": "Mary Kathleen Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Edith Mary Kathleen Telfer.md"
+  },
+  {
+    "slug": "edward-telfer",
+    "display_name": "Edward Telfer",
+    "first_name": "Edward",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Edward Telfer.md"
+  },
+  {
+    "slug": "edwin-ernest-clarke",
+    "display_name": "Edwin Ernest Clarke",
+    "first_name": "Edwin",
+    "middle_name": "",
+    "last_name": "Ernest Clarke",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Edwin Ernest Clarke.md"
+  },
+  {
+    "slug": "effieolive-telfer-1886",
+    "display_name": "Effie Olive Telfer (1886–1969)",
+    "first_name": "Effie Olive",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1886,
+    "death_year": 1969,
+    "lifespan": "1886–1969",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Effie Olive Telfer (1886–1969).md"
+  },
+  {
+    "slug": "elizabeth-anne-smith-1878",
+    "display_name": "Elizabeth Anne Smith (1878–?)",
+    "first_name": "Elizabeth",
+    "middle_name": "",
+    "last_name": "Anne Smith",
+    "birth_year": 1878,
+    "death_year": null,
+    "lifespan": "1878–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Elizabeth Anne Smith (1878–?).md"
+  },
+  {
+    "slug": "elizabeth-beattie-1802",
+    "display_name": "Elizabeth Beattie (1802–1891)",
+    "first_name": "Elizabeth",
+    "middle_name": "",
+    "last_name": "Beattie",
+    "birth_year": 1802,
+    "death_year": 1891,
+    "lifespan": "1802–1891",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Elizabeth Beattie (1802–1891).md"
+  },
+  {
+    "slug": "elizabethbeattie-telfer-1871",
+    "display_name": "Elizabeth Beattie Bessie Telfer (1871–1948)",
+    "first_name": "Elizabeth Beattie",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1871,
+    "death_year": 1948,
+    "lifespan": "1871–1948",
+    "parents": [],
+    "spouses": [
+      "Beaton"
+    ],
+    "children": [],
+    "vault_file": "Elizabeth Beattie Bessie Telfer (1871–1948).md"
+  },
+  {
+    "slug": "elizabethbeattie-telfer-1832",
+    "display_name": "Elizabeth Beattie Telfer (1832–1896) — South Australia",
+    "first_name": "Elizabeth Beattie",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1832,
+    "death_year": 1896,
+    "lifespan": "1832–1896",
+    "parents": [],
+    "spouses": [
+      "john-dillon"
+    ],
+    "children": [
+      "william-john-dillon",
+      "septimus-dillon",
+      "francistelfer-dillon",
+      "thomas-cleveland-dillon",
+      "inez-dillon",
+      "vera-dillon",
+      "adam-dillon",
+      "henry-hatch-dillon",
+      "dorothy-dillon",
+      "inez-priscilla-dillon"
+    ],
+    "vault_file": "Elizabeth Beattie Telfer (1832–1896).md"
+  },
+  {
+    "slug": "elizabeth-farrow",
+    "display_name": "Elizabeth Farrow",
+    "first_name": "Elizabeth",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Elizabeth Farrow.md"
+  },
+  {
+    "slug": "elizabeth-hannah-1836",
+    "display_name": "Elizabeth Hannah (1836–1916)",
+    "first_name": "Elizabeth",
+    "middle_name": "",
+    "last_name": "Hannah",
+    "birth_year": 1836,
+    "death_year": 1916,
+    "lifespan": "1836–1916",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Elizabeth Hannah (1836–1916).md"
+  },
+  {
+    "slug": "elizabethhannah-telfer-1836",
+    "display_name": "Elizabeth Hannah Telfer (1836–1916) — Matriarch of Hope Farm",
+    "first_name": "Elizabeth Hannah",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1836,
+    "death_year": 1916,
+    "lifespan": "1836–1916",
+    "parents": [],
+    "spouses": [
+      "charles-farrow"
+    ],
+    "children": [
+      "jane-murray-farrow",
+      "esther-farrow",
+      "elizabethtelfer-farrow",
+      "joseph-francis-farrow",
+      "charles-farrow-jr",
+      "amy-farrow",
+      "johnjamestelfer-farrow",
+      "george-hope-farrow",
+      "mary-bayes-farrow",
+      "eva-agnes-farrow"
+    ],
+    "vault_file": "Elizabeth Hannah Telfer (1836–1916).md"
+  },
+  {
+    "slug": "elizabeth-hutton-1774",
+    "display_name": "Elizabeth Hutton (1774–1853)",
+    "first_name": "Elizabeth",
+    "middle_name": "",
+    "last_name": "Hutton",
+    "birth_year": 1774,
+    "death_year": 1853,
+    "lifespan": "1774–1853",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Elizabeth Hutton (1774–1853).md"
+  },
+  {
+    "slug": "elizabeth-oliver-1807",
+    "display_name": "Elizabeth Oliver (1807–1846)",
+    "first_name": "Elizabeth",
+    "middle_name": "",
+    "last_name": "Oliver",
+    "birth_year": 1807,
+    "death_year": 1846,
+    "lifespan": "1807–1846",
+    "parents": [],
+    "spouses": [
+      "robert-telfer-1803"
+    ],
+    "children": [],
+    "vault_file": "Elizabeth Oliver (1807–1846).md"
+  },
+  {
+    "slug": "elizabeth-paynter-1864",
+    "display_name": "Elizabeth Paynter (1864–?)",
+    "first_name": "Elizabeth",
+    "middle_name": "",
+    "last_name": "Paynter",
+    "birth_year": 1864,
+    "death_year": null,
+    "lifespan": "1864–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Elizabeth Paynter (1864–?).md"
+  },
+  {
+    "slug": "elizabethtelfer-farrow",
+    "display_name": "Elizabeth Telfer Farrow",
+    "first_name": "Elizabeth Telfer",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Elizabeth Telfer Farrow.md"
+  },
+  {
+    "slug": "elspeth-young-1722",
+    "display_name": "Elspeth Young",
+    "first_name": "Elspeth",
+    "middle_name": "",
+    "last_name": "Young",
+    "birth_year": 1722,
+    "death_year": null,
+    "lifespan": "1722–?",
+    "parents": [],
+    "spouses": [
+      "john-telfer-robert"
+    ],
+    "children": [
+      "james-telfer-1761"
+    ],
+    "vault_file": "Elspeth Young (1722–?).md"
+  },
+  {
+    "slug": "emily-amelia-barton",
+    "display_name": "Emily Amelia Barton",
+    "first_name": "Emily",
+    "middle_name": "",
+    "last_name": "Amelia Barton",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Emily Amelia Barton.md"
+  },
+  {
+    "slug": "emilyamelia-telfer-1913",
+    "display_name": "Emily Amelia Telfer (1913–living)",
+    "first_name": "Emily Amelia",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1913,
+    "death_year": "None",
+    "lifespan": "1913–None",
+    "parents": [],
+    "spouses": [
+      "Mr Barton"
+    ],
+    "children": [],
+    "vault_file": "Emily Amelia Telfer (1913–living).md"
+  },
+  {
+    "slug": "emily-ellen-thorpe",
+    "display_name": "Emily Ellen Thorpe",
+    "first_name": "Emily",
+    "middle_name": "",
+    "last_name": "Ellen Thorpe",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Emily Ellen Thorpe.md"
+  },
+  {
+    "slug": "eric-john-telfer",
+    "display_name": "Eric John Telfer",
+    "first_name": "Eric",
+    "middle_name": "",
+    "last_name": "John Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Eric John Telfer.md"
+  },
+  {
+    "slug": "ernest-telfer-1877",
+    "display_name": "Ernest John Telfer (1877–1953)",
+    "first_name": "Ernest",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1877,
+    "death_year": 1953,
+    "lifespan": "1877–1953",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Ernest John Telfer (1877–1953).md"
+  },
+  {
+    "slug": "esther-farrow",
+    "display_name": "Esther Farrow",
+    "first_name": "Esther",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Esther Farrow.md"
+  },
+  {
+    "slug": "esther-hannah-farrow",
+    "display_name": "Esther Hannah Farrow",
+    "first_name": "Esther",
+    "middle_name": "",
+    "last_name": "Hannah Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Esther Hannah Farrow.md"
+  },
+  {
+    "slug": "esther-jane-1834",
+    "display_name": "Esther Jane (1834–1909)",
+    "first_name": "Esther",
+    "middle_name": "",
+    "last_name": "Jane",
+    "birth_year": 1834,
+    "death_year": 1909,
+    "lifespan": "1834–1909",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Esther Jane (1834–1909).md"
+  },
+  {
+    "slug": "estherjane-telfer-1834",
+    "display_name": "Esther Jane Telfer (1834–1909) — From Scotland to Nyngan",
+    "first_name": "Esther Jane",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1834,
+    "death_year": 1909,
+    "lifespan": "1834–1909",
+    "parents": [],
+    "spouses": [
+      "john-smith"
+    ],
+    "children": [
+      "jane-sophie-smith",
+      "margaret-dougal-smith",
+      "esthertelfer-smith-1870",
+      "john-james-smith-1871",
+      "francistelfer-smith-1874",
+      "elizabeth-anne-smith-1878"
+    ],
+    "vault_file": "Esther Jane Telfer (1834–1909).md"
+  },
+  {
+    "slug": "esthertelfer-smith-1870",
+    "display_name": "Esther Telfer Smith (1870–1896)",
+    "first_name": "Esther Telfer",
+    "middle_name": "",
+    "last_name": "Smith",
+    "birth_year": 1870,
+    "death_year": 1896,
+    "lifespan": "1870–1896",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Esther Telfer Smith (1870–1896).md"
+  },
+  {
+    "slug": "ethel-edith-telfer",
+    "display_name": "Ethel Edith Telfer",
+    "first_name": "Ethel",
+    "middle_name": "",
+    "last_name": "Edith Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Ethel Edith Telfer.md"
+  },
+  {
+    "slug": "ethel-jean-mcmurtrie",
+    "display_name": "Ethel Jean McMurtrie",
+    "first_name": "Ethel",
+    "middle_name": "",
+    "last_name": "Jean McMurtrie",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Ethel Jean McMurtrie.md"
+  },
+  {
+    "slug": "etheljean-telfer-1915",
+    "display_name": "Ethel Jean Telfer (1915–living)",
+    "first_name": "Ethel Jean",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1915,
+    "death_year": "None",
+    "lifespan": "1915–None",
+    "parents": [],
+    "spouses": [
+      "Mr McMurtrie"
+    ],
+    "children": [],
+    "vault_file": "Ethel Jean Telfer (1915–living).md"
+  },
+  {
+    "slug": "eva-agnes-farrow",
+    "display_name": "Eva Agnes Farrow",
+    "first_name": "Eva",
+    "middle_name": "",
+    "last_name": "Agnes Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Eva Agnes Farrow.md"
+  },
+  {
+    "slug": "evarowena-telfer-1885",
+    "display_name": "Eva Rowena Telfer (1885–1974)",
+    "first_name": "Eva Rowena",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1885,
+    "death_year": 1974,
+    "lifespan": "1885–1974",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Eva Rowena Telfer (1885–1974).md"
+  },
+  {
+    "slug": "floris-telfer-1904",
+    "display_name": "Floris Ethel Victoria Telfer (1904–1951)",
+    "first_name": "Floris",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1904,
+    "death_year": 1951,
+    "lifespan": "1904–1951",
+    "parents": [],
+    "spouses": [
+      "harry-bunston"
+    ],
+    "children": [],
+    "vault_file": "Floris Ethel Victoria Telfer (1904–1951).md"
+  },
+  {
+    "slug": "francis-edward-lane-m-1903",
+    "display_name": "Francis Edward Lane (m. 1903",
+    "first_name": "Francis",
+    "middle_name": "",
+    "last_name": "Edward Lane (m. 1903",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Francis Edward Lane (m. 1903.md"
+  },
+  {
+    "slug": "francistelfer-dillon",
+    "display_name": "Francis Telfer Dillon",
+    "first_name": "Francis Telfer",
+    "middle_name": "",
+    "last_name": "Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Francis Telfer Dillon.md"
+  },
+  {
+    "slug": "francis-telfer-paynter-1862",
+    "display_name": "Francis Telfer Paynter (1862–?)",
+    "first_name": "Francis",
+    "middle_name": "",
+    "last_name": "Telfer Paynter",
+    "birth_year": 1862,
+    "death_year": null,
+    "lifespan": "1862–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Francis Telfer Paynter (1862–?).md"
+  },
+  {
+    "slug": "francistelfer-smith-1874",
+    "display_name": "Francis Telfer Smith (1874–1945)",
+    "first_name": "Francis Telfer",
+    "middle_name": "",
+    "last_name": "Smith",
+    "birth_year": 1874,
+    "death_year": 1945,
+    "lifespan": "1874–1945",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Francis Telfer Smith (1874–1945).md"
+  },
+  {
+    "slug": "frank-lindsay",
+    "display_name": "Frank Lindsay",
+    "first_name": "Frank",
+    "middle_name": "",
+    "last_name": "Lindsay",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Frank Lindsay.md"
+  },
+  {
+    "slug": "frederick-parker-1838",
+    "display_name": "Frederick Parker (~1838–1928)",
+    "first_name": "Frederick",
+    "middle_name": "",
+    "last_name": "Parker",
+    "birth_year": 1838,
+    "death_year": 1928,
+    "lifespan": "1838–1928",
+    "parents": [],
+    "spouses": [
+      "jean-telfer-1840"
+    ],
+    "children": [],
+    "vault_file": "Frederick Parker (~1838–1928).md"
+  },
+  {
+    "slug": "george-hope-farrow",
+    "display_name": "George Hope Farrow",
+    "first_name": "George",
+    "middle_name": "",
+    "last_name": "Hope Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "George Hope Farrow.md"
+  },
+  {
+    "slug": "george-parker",
+    "display_name": "George Parker",
+    "first_name": "George",
+    "middle_name": "",
+    "last_name": "Parker",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "George Parker.md"
+  },
+  {
+    "slug": "george-provis",
+    "display_name": "George Provis",
+    "first_name": "George",
+    "middle_name": "",
+    "last_name": "Provis",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "George Provis.md"
+  },
+  {
+    "slug": "george-wright-1850",
+    "display_name": "George Wright (1850–1913)",
+    "first_name": "George",
+    "middle_name": "",
+    "last_name": "Wright",
+    "birth_year": 1850,
+    "death_year": 1913,
+    "lifespan": "1850–1913",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "George Wright (1850–1913).md"
+  },
+  {
+    "slug": "george-telfer-1850",
+    "display_name": "George Wright Telfer (1850–1913)",
+    "first_name": "George",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1850,
+    "death_year": 1913,
+    "lifespan": "1850–1913",
+    "parents": [],
+    "spouses": [
+      "ruth-penna"
+    ],
+    "children": [],
+    "vault_file": "George Wright Telfer (1850–1913).md"
+  },
+  {
+    "slug": "gilbert-telfer-1911",
+    "display_name": "Gilbert Melville Telfer (1911–1978)",
+    "first_name": "Gilbert",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1911,
+    "death_year": 1978,
+    "lifespan": "1911–1978",
+    "parents": [],
+    "spouses": [
+      "jessie-allan"
+    ],
+    "children": [
+      "beth-telfer",
+      "ian-telfer",
+      "allan-telfer"
+    ],
+    "vault_file": "Gilbert Melville Telfer (1911–1978).md"
+  },
+  {
+    "slug": "gladys-merle-pedler",
+    "display_name": "Gladys Merle Pedler",
+    "first_name": "Gladys",
+    "middle_name": "",
+    "last_name": "Merle Pedler",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Gladys Merle Pedler.md"
+  },
+  {
+    "slug": "gladysmerle-telfer-1917",
+    "display_name": "Gladys Merle Telfer (1917–living)",
+    "first_name": "Gladys Merle",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1917,
+    "death_year": "None",
+    "lifespan": "1917–None",
+    "parents": [],
+    "spouses": [
+      "Mr Pedler"
+    ],
+    "children": [],
+    "vault_file": "Gladys Merle Telfer (1917–living).md"
+  },
+  {
+    "slug": "hannah-baker-1855",
+    "display_name": "Hannah Baker — Family & Biography",
+    "first_name": "Hannah",
+    "middle_name": "",
+    "last_name": "Baker",
+    "birth_year": 1855,
+    "death_year": 1948,
+    "lifespan": "1855–1948",
+    "parents": [],
+    "spouses": [
+      "william-humphrey-parker"
+    ],
+    "children": [
+      "sophia-parker",
+      "william-henry-parker",
+      "hugh-kelly-parker",
+      "(others unconfirmed)"
+    ],
+    "vault_file": "Hannah Baker (1855–1948).md"
+  },
+  {
+    "slug": "hannah-peacock-1840",
+    "display_name": "Hannah Peacock (1840–1915)",
+    "first_name": "Hannah",
+    "middle_name": "",
+    "last_name": "Peacock",
+    "birth_year": 1840,
+    "death_year": 1915,
+    "lifespan": "1840–1915",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Hannah Peacock (1840–1915).md"
+  },
+  {
+    "slug": "hannah-peacock",
+    "display_name": "Hannah Peacock",
+    "first_name": "Hannah",
+    "middle_name": "",
+    "last_name": "Peacock",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Hannah Peacock.md"
+  },
+  {
+    "slug": "harry-bunston",
+    "display_name": "Harry Bunston",
+    "first_name": "Harry",
+    "middle_name": "",
+    "last_name": "Bunston",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Harry Bunston.md"
+  },
+  {
+    "slug": "hazelrose-telfer-1891",
+    "display_name": "Hazel Rose Telfer (1891–1939)",
+    "first_name": "Hazel Rose",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1891,
+    "death_year": 1939,
+    "lifespan": "1891–1939",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Hazel Rose Telfer (1891–1939).md"
+  },
+  {
+    "slug": "helen-telfer",
+    "display_name": "Helen Telfer",
+    "first_name": "Helen",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Helen Telfer.md"
+  },
+  {
+    "slug": "henry-hatch-dillon",
+    "display_name": "Henry Hatch Dillon",
+    "first_name": "Henry",
+    "middle_name": "",
+    "last_name": "Hatch Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Henry Hatch Dillon.md"
+  },
+  {
+    "slug": "herbertdougal-telfer-1881",
+    "display_name": "Herbert Dougal Telfer (1881–1974)",
+    "first_name": "Herbert Dougal",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1881,
+    "death_year": 1974,
+    "lifespan": "1881–1974",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Herbert Dougal Telfer (1881–1974).md"
+  },
+  {
+    "slug": "howard-parker",
+    "display_name": "Howard Parker",
+    "first_name": "Howard",
+    "middle_name": "",
+    "last_name": "Parker",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Howard Parker.md"
+  },
+  {
+    "slug": "hugh-john",
+    "display_name": "Hugh John",
+    "first_name": "Hugh",
+    "middle_name": "",
+    "last_name": "John",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Hugh John.md"
+  },
+  {
+    "slug": "hugh-kelly-parker",
+    "display_name": "Hugh Kelly Parker",
+    "first_name": "Hugh",
+    "middle_name": "",
+    "last_name": "Kelly Parker",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Hugh Kelly Parker.md"
+  },
+  {
+    "slug": "ian-telfer",
+    "display_name": "Ian Telfer",
+    "first_name": "Ian",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Ian Telfer.md"
+  },
+  {
+    "slug": "inez-dillon",
+    "display_name": "Inez Dillon",
+    "first_name": "Inez",
+    "middle_name": "",
+    "last_name": "Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Inez Dillon.md"
+  },
+  {
+    "slug": "inez-priscilla-dillon",
+    "display_name": "Inez Priscilla Dillon",
+    "first_name": "Inez",
+    "middle_name": "",
+    "last_name": "Priscilla Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Inez Priscilla Dillon.md"
+  },
+  {
+    "slug": "isabella-telfer-1880",
+    "display_name": "Isabella Lucieton Telfer (1880–1964) — Family & Biography",
+    "first_name": "Isabella",
+    "middle_name": "Lucieton",
+    "last_name": "Telfer",
+    "birth_year": 1880,
+    "death_year": 1964,
+    "lifespan": "1880–1964",
+    "parents": [],
+    "spouses": [
+      "alexander-brown-thomson"
+    ],
+    "children": [],
+    "vault_file": "Isabella Lucieton Telfer (1880–1964).md"
+  },
+  {
+    "slug": "isobel-telfer-1798",
+    "display_name": "Isobel Telfer (1798–1875)",
+    "first_name": "Isobel",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1798,
+    "death_year": 1875,
+    "lifespan": "1798–1875",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Isobel Telfer (1798–1875).md"
+  },
+  {
+    "slug": "james-farrow",
+    "display_name": "James Farrow",
+    "first_name": "James",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "James Farrow.md"
+  },
+  {
+    "slug": "jamesrobert-telfer-1866",
+    "display_name": "James Robert Telfer (~1866–?) — South Australia",
+    "first_name": "James Robert",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1866,
+    "death_year": null,
+    "lifespan": "1866–?",
+    "parents": [],
+    "spouses": [
+      "hannah-peacock-1840"
+    ],
+    "children": [
+      "leslie-robert-telfer",
+      "ethel-edith-telfer",
+      "jean-telfer-1910"
+    ],
+    "vault_file": "James Robert Telfer (~1866–?).md"
+  },
+  {
+    "slug": "james-telfer-of-sorbietrees-1740",
+    "display_name": "James Telfer (of Sorbietrees) (~1740–?)",
+    "first_name": "James",
+    "middle_name": "",
+    "last_name": "Telfer (of Sorbietrees)",
+    "birth_year": 1740,
+    "death_year": null,
+    "lifespan": "1740–?",
+    "parents": [],
+    "spouses": [
+      "margaret-armstrong"
+    ],
+    "children": [
+      "James (bap.1762)",
+      "Jean (bap.1764)",
+      "Francis (1768–1836)",
+      "Jenet (1770–1842)",
+      "Adam (1771–1846)"
+    ],
+    "vault_file": "James Telfer (of Sorbietrees) (~1740–?).md"
+  },
+  {
+    "slug": "james-dillon-1861",
+    "display_name": "James Telfer Dillon (1861–1951) — Family & Biography",
+    "first_name": "James",
+    "middle_name": "Telfer",
+    "last_name": "Dillon",
+    "birth_year": 1861,
+    "death_year": 1951,
+    "lifespan": "1861–1951",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "James Telfer Dillon (1861–1951).md"
+  },
+  {
+    "slug": "james-telfer-sorbietrees",
+    "display_name": "James Telfer Sorbietrees",
+    "first_name": "James",
+    "middle_name": "",
+    "last_name": "Telfer Sorbietrees",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "James Telfer Sorbietrees.md"
+  },
+  {
+    "slug": "jane-murray-farrow",
+    "display_name": "Jane Murray Farrow",
+    "first_name": "Jane",
+    "middle_name": "",
+    "last_name": "Murray Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jane Murray Farrow.md"
+  },
+  {
+    "slug": "jane-sophie-smith",
+    "display_name": "Jane Sophie Smith",
+    "first_name": "Jane",
+    "middle_name": "",
+    "last_name": "Sophie Smith",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jane Sophie Smith.md"
+  },
+  {
+    "slug": "janet-dunlop",
+    "display_name": "Janet Dunlop",
+    "first_name": "Janet",
+    "middle_name": "",
+    "last_name": "Dunlop",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Janet Dunlop.md"
+  },
+  {
+    "slug": "janet-nichol",
+    "display_name": "Janet Nichol",
+    "first_name": "Janet",
+    "middle_name": "",
+    "last_name": "Nichol",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Janet Nichol.md"
+  },
+  {
+    "slug": "janet-stevenson",
+    "display_name": "Janet Stevenson",
+    "first_name": "Janet",
+    "middle_name": "",
+    "last_name": "Stevenson",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Janet Stevenson.md"
+  },
+  {
+    "slug": "janet-welsh-1835",
+    "display_name": "Janet Welsh (~1835–1914)",
+    "first_name": "Janet",
+    "middle_name": "",
+    "last_name": "Welsh",
+    "birth_year": 1835,
+    "death_year": 1914,
+    "lifespan": "1835–1914",
+    "parents": [],
+    "spouses": [
+      "james-telfer-1829"
+    ],
+    "children": [],
+    "vault_file": "Janet Welsh (~1835–1914).md"
+  },
+  {
+    "slug": "janet-welsh-telfer",
+    "display_name": "Janet Welsh Telfer",
+    "first_name": "Janet",
+    "middle_name": "",
+    "last_name": "Welsh Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Janet Welsh Telfer.md"
+  },
+  {
+    "slug": "jared-ivory",
+    "display_name": "Jared Ivory",
+    "first_name": "Jared",
+    "middle_name": "",
+    "last_name": "Ivory",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jared Ivory.md"
+  },
+  {
+    "slug": "jean-murray-1810",
+    "display_name": "Jean Murray (1810–1839) — First Wife of Francis Telfer",
+    "first_name": "Jean",
+    "middle_name": "",
+    "last_name": "Murray",
+    "birth_year": 1810,
+    "death_year": 1839,
+    "lifespan": "1810–1839",
+    "parents": [],
+    "spouses": [
+      "francis-telfer-1809"
+    ],
+    "children": [
+      "james-telfer-1829",
+      "esther-jane-1834",
+      "elizabeth-hannah-1836",
+      "jean-telfer-1840",
+      "james-telfer-1829",
+      "elizabeth-hannah-telfer",
+      "esther-jane-telfer"
+    ],
+    "vault_file": "Jean Murray (1810–1839).md"
+  },
+  {
+    "slug": "jenet-telfer-1770",
+    "display_name": "Jenet Telfer (1770–1842)",
+    "first_name": "Jenet",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1770,
+    "death_year": 1842,
+    "lifespan": "1770–1842",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jenet Telfer (1770–1842).md"
+  },
+  {
+    "slug": "jennifer-bunston",
+    "display_name": "Jennifer Bunston",
+    "first_name": "Jennifer",
+    "middle_name": "",
+    "last_name": "Bunston",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jennifer Bunston.md"
+  },
+  {
+    "slug": "jessie-allan",
+    "display_name": "Jessie Allan",
+    "first_name": "Jessie",
+    "middle_name": "",
+    "last_name": "Allan",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jessie Allan.md"
+  },
+  {
+    "slug": "jessie-sargent",
+    "display_name": "Jessie Sargent",
+    "first_name": "Jessie",
+    "middle_name": "",
+    "last_name": "Sargent",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jessie Sargent.md"
+  },
+  {
+    "slug": "jessie-telfer",
+    "display_name": "Jessie Telfer",
+    "first_name": "Jessie",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jessie Telfer.md"
+  },
+  {
+    "slug": "joel-ivory-1986",
+    "display_name": "Joel Ivory — Family & Biography",
+    "first_name": "Joel",
+    "middle_name": "Matthew",
+    "last_name": "Ivory",
+    "birth_year": 1986,
+    "death_year": null,
+    "lifespan": "1986–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Joel Matthew Ivory (1986–?).md"
+  },
+  {
+    "slug": "john-dillon-1827",
+    "display_name": "John Charles Dillon (1827–1906)",
+    "first_name": "John",
+    "middle_name": "Charles",
+    "last_name": "Dillon",
+    "birth_year": 1827,
+    "death_year": 1906,
+    "lifespan": "1827–1906",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "John Charles Dillon (1827–1906).md"
+  },
+  {
+    "slug": "john-farrow",
+    "display_name": "John Farrow",
+    "first_name": "John",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "John Farrow.md"
+  },
+  {
+    "slug": "john-james-smith-1871",
+    "display_name": "John James Smith (1871–?)",
+    "first_name": "John",
+    "middle_name": "",
+    "last_name": "James Smith",
+    "birth_year": 1871,
+    "death_year": null,
+    "lifespan": "1871–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "John James Smith (1871–?).md"
+  },
+  {
+    "slug": "johnjamestelfer-farrow",
+    "display_name": "John James Telfer Farrow",
+    "first_name": "John James Telfer",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "John James Telfer Farrow.md"
+  },
+  {
+    "slug": "john-lawrie",
+    "display_name": "John Lawrie",
+    "first_name": "John",
+    "middle_name": "",
+    "last_name": "Lawrie",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "John Lawrie.md"
+  },
+  {
+    "slug": "john-telfer",
+    "display_name": "John Robert Telfer — Family & Biography",
+    "first_name": "John",
+    "middle_name": "Robert",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [
+      "robyn-telfer"
+    ],
+    "children": [
+      "angela-telfer",
+      "peter-telfer",
+      "Carissa Telfer (adopted",
+      "deceased)"
+    ],
+    "vault_file": "John Robert Telfer.md"
+  },
+  {
+    "slug": "john-smith-1827",
+    "display_name": "John Smith (~1827–1895)",
+    "first_name": "John",
+    "middle_name": "",
+    "last_name": "Smith",
+    "birth_year": 1827,
+    "death_year": 1895,
+    "lifespan": "1827–1895",
+    "parents": [],
+    "spouses": [
+      "esther-jane-telfer"
+    ],
+    "children": [
+      "jane-sophie-smith",
+      "margaret-dougal-smith",
+      "esthertelfer-smith-1870",
+      "john-james-smith-1871",
+      "francistelfer-smith-1874",
+      "elizabeth-anne-smith-1878"
+    ],
+    "vault_file": "John Smith (~1827–1895).md"
+  },
+  {
+    "slug": "john-telfer-of-castleton-1731",
+    "display_name": "John Telfer (of Castleton)",
+    "first_name": "John",
+    "middle_name": "",
+    "last_name": "Telfer (of Castleton)",
+    "birth_year": 1731,
+    "death_year": null,
+    "lifespan": "1731–?",
+    "parents": [],
+    "spouses": [
+      "elspeth-young"
+    ],
+    "children": [
+      "james-telfer-1761"
+    ],
+    "vault_file": "John Telfer (of Castleton) (1731–?).md"
+  },
+  {
+    "slug": "johnnie-telfer",
+    "display_name": "Johnnie Telfer",
+    "first_name": "Johnnie",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Johnnie Telfer.md"
+  },
+  {
+    "slug": "jono-telfer",
+    "display_name": "Jono Telfer",
+    "first_name": "Jono",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Jono Telfer.md"
+  },
+  {
+    "slug": "joseph-francis-farrow",
+    "display_name": "Joseph Francis Farrow",
+    "first_name": "Joseph",
+    "middle_name": "",
+    "last_name": "Francis Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Joseph Francis Farrow.md"
+  },
+  {
+    "slug": "joseph-march-1767",
+    "display_name": "Joseph March (abt. 1767–1831)",
+    "first_name": "Joseph",
+    "middle_name": "",
+    "last_name": "March",
+    "birth_year": 1767,
+    "death_year": 1831,
+    "lifespan": "1767–1831",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Joseph March (1767–1831).md"
+  },
+  {
+    "slug": "joseph-march-1797",
+    "display_name": "Joseph March (1797–1883)",
+    "first_name": "Joseph",
+    "middle_name": "",
+    "last_name": "March",
+    "birth_year": 1797,
+    "death_year": 1883,
+    "lifespan": "1797–1883",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Joseph March (1797–1883).md"
+  },
+  {
+    "slug": "joyce-telfer-1912",
+    "display_name": "Joyce Elizabeth Telfer (1912–2012)",
+    "first_name": "Joyce",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1912,
+    "death_year": 2012,
+    "lifespan": "1912–2012",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Joyce Elizabeth Telfer (1912–2012).md"
+  },
+  {
+    "slug": "juliamatilda-seebohm-1876",
+    "display_name": "Julia Matilda Seebohm — Family & Biography",
+    "first_name": "Julia Matilda",
+    "middle_name": "",
+    "last_name": "Seebohm",
+    "birth_year": 1876,
+    "death_year": 1939,
+    "lifespan": "1876–1939",
+    "parents": [],
+    "spouses": [
+      "mark-telfer-1877"
+    ],
+    "children": [
+      "floris-telfer",
+      "kenneth-telfer",
+      "gilbert-telfer",
+      "murray-john-telfer-19111982",
+      "adopted)"
+    ],
+    "vault_file": "Julia Matilda Seebohm (1876–1939).md"
+  },
+  {
+    "slug": "karina-ivory",
+    "display_name": "Karina Ivory",
+    "first_name": "Karina",
+    "middle_name": "",
+    "last_name": "Ivory",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Karina Ivory.md"
+  },
+  {
+    "slug": "kathryn-telfer-1961",
+    "display_name": "Kathryn Mavis Telfer (1961–1965)",
+    "first_name": "Kathryn",
+    "middle_name": "Mavis",
+    "last_name": "Telfer",
+    "birth_year": 1961,
+    "death_year": 1965,
+    "lifespan": "1961–1965",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Kathryn Mavis Telfer (1961–1965).md"
+  },
+  {
+    "slug": "kenneth-telfer-1904",
+    "display_name": "Kenneth Alexander Telfer (1904–?)",
+    "first_name": "Kenneth",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1904,
+    "death_year": null,
+    "lifespan": "1904–?",
+    "parents": [],
+    "spouses": [
+      "jessie-sargent"
+    ],
+    "children": [],
+    "vault_file": "Kenneth Alexander Telfer (1904–?).md"
+  },
+  {
+    "slug": "kenneth-cornish",
+    "display_name": "Kenneth Cornish",
+    "first_name": "Kenneth",
+    "middle_name": "",
+    "last_name": "Cornish",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Kenneth Cornish.md"
+  },
+  {
+    "slug": "kylie-telfer-1982",
+    "display_name": "Kylie Isabella Telfer (née Dance) — Family & Biography",
+    "first_name": "Kylie",
+    "middle_name": "Isabella",
+    "last_name": "Telfer",
+    "birth_year": 1982,
+    "death_year": null,
+    "lifespan": "1982–?",
+    "parents": [],
+    "spouses": [
+      "mark-telfer-1986"
+    ],
+    "children": [
+      "levi-telfer",
+      "zabella-telfer"
+    ],
+    "vault_file": "Kylie Isabella Telfer (1982–?).md"
+  },
+  {
+    "slug": "lauren-ivory-1994",
+    "display_name": "Lauren Ivory — Family & Biography",
+    "first_name": "Lauren",
+    "middle_name": "Maree",
+    "last_name": "Ivory",
+    "birth_year": 1994,
+    "death_year": null,
+    "lifespan": "1994–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Lauren Maree Ivory (1994–?).md"
+  },
+  {
+    "slug": "leonard-arthur-dance",
+    "display_name": "Leonard Arthur Dance",
+    "first_name": "Leonard",
+    "middle_name": "",
+    "last_name": "Arthur Dance",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Leonard Arthur Dance.md"
+  },
+  {
+    "slug": "leslie-robert-telfer",
+    "display_name": "Leslie Robert Telfer",
+    "first_name": "Leslie",
+    "middle_name": "",
+    "last_name": "Robert Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Leslie Robert Telfer.md"
+  },
+  {
+    "slug": "levi-telfer-2017",
+    "display_name": "Levi Leonard Timothy Telfer — Family & Biography",
+    "first_name": "Levi",
+    "middle_name": "Leonard Timothy",
+    "last_name": "Telfer",
+    "birth_year": 2017,
+    "death_year": null,
+    "lifespan": "2017–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Levi Leonard Timothy Telfer (2017–?).md"
+  },
+  {
+    "slug": "lilian-daisy-dawson",
+    "display_name": "Lilian Daisy Dawson",
+    "first_name": "Lilian",
+    "middle_name": "",
+    "last_name": "Daisy Dawson",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Lilian Daisy Dawson.md"
+  },
+  {
+    "slug": "lilian-parker-1922",
+    "display_name": "Lilian Jean Parker (1922–2001)",
+    "first_name": "Lilian",
+    "middle_name": "Jean",
+    "last_name": "Parker",
+    "birth_year": 1922,
+    "death_year": 2001,
+    "lifespan": "1922–2001",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Lilian Jean Parker (1922–2001).md"
+  },
+  {
+    "slug": "lillianmay-telfer-1872",
+    "display_name": "Lillian May Telfer (1872–1951)",
+    "first_name": "Lillian May",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1872,
+    "death_year": 1951,
+    "lifespan": "1872–1951",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Lillian May Telfer (1872–1951).md"
+  },
+  {
+    "slug": "lindsay-telfer-1920",
+    "display_name": "Lindsay Roland Telfer (1920–1976)",
+    "first_name": "Lindsay",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1920,
+    "death_year": 1976,
+    "lifespan": "1920–1976",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Lindsay Roland Telfer (1920–1976).md"
+  },
+  {
+    "slug": "maifie-telfer-1913",
+    "display_name": "Maifie Beryl Telfer (1913–1948)",
+    "first_name": "Maifie",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1913,
+    "death_year": 1948,
+    "lifespan": "1913–1948",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Maifie Beryl Telfer (1913–1948).md"
+  },
+  {
+    "slug": "malcolm-duncan-cameron",
+    "display_name": "Malcolm Duncan Cameron",
+    "first_name": "Malcolm",
+    "middle_name": "",
+    "last_name": "Duncan Cameron",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Malcolm Duncan Cameron.md"
+  },
+  {
+    "slug": "malcolm-george-telfer",
+    "display_name": "Malcolm George Telfer",
+    "first_name": "Malcolm",
+    "middle_name": "",
+    "last_name": "George Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Malcolm George Telfer.md"
+  },
+  {
+    "slug": "malcolm-murray-cameron",
+    "display_name": "Malcolm Murray Cameron",
+    "first_name": "Malcolm",
+    "middle_name": "",
+    "last_name": "Murray Cameron",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Malcolm Murray Cameron.md"
+  },
+  {
+    "slug": "margaret-armstrong-1745",
+    "display_name": "Margaret Armstrong (~1745–?) — Scotland",
+    "first_name": "Margaret",
+    "middle_name": "",
+    "last_name": "Armstrong",
+    "birth_year": 1745,
+    "death_year": null,
+    "lifespan": "1745–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Margaret Armstrong (~1745–?).md"
+  },
+  {
+    "slug": "margaret-dougal-1849",
+    "display_name": "Margaret Dougal (1849–1936)",
+    "first_name": "Margaret",
+    "middle_name": "",
+    "last_name": "Dougal",
+    "birth_year": 1849,
+    "death_year": 1936,
+    "lifespan": "1849–1936",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Margaret Dougal (1849–1936).md"
+  },
+  {
+    "slug": "margaret-dougal-smith",
+    "display_name": "Margaret Dougal Smith",
+    "first_name": "Margaret",
+    "middle_name": "",
+    "last_name": "Dougal Smith",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Margaret Dougal Smith.md"
+  },
+  {
+    "slug": "margaret-farrow",
+    "display_name": "Margaret Farrow",
+    "first_name": "Margaret",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Margaret Farrow.md"
+  },
+  {
+    "slug": "margaret-wright-1807",
+    "display_name": "Margaret Wright (1807–1892)",
+    "first_name": "Margaret",
+    "middle_name": "",
+    "last_name": "Wright",
+    "birth_year": 1807,
+    "death_year": 1892,
+    "lifespan": "1807–1892",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Margaret Wright (1807–1892).md"
+  },
+  {
+    "slug": "margaret-telfer",
+    "display_name": "Margaret Wright Telfer — Family & Biography",
+    "first_name": "Margaret",
+    "middle_name": "Wright",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": 1892,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [
+      "francis-telfer-1875"
+    ],
+    "children": [
+      "john-telfer-1847",
+      "george-telfer",
+      "margaret-telfer-1849"
+    ],
+    "vault_file": "Margaret Wright Telfer (?–1892).md"
+  },
+  {
+    "slug": "margaret-wright",
+    "display_name": "Margaret Wright",
+    "first_name": "Margaret",
+    "middle_name": "",
+    "last_name": "Wright",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Margaret Wright.md"
+  },
+  {
+    "slug": "mariaclara-telfer-1878",
+    "display_name": "Maria Clara Telfer (1878–1903) — Family & Biography",
+    "first_name": "Maria Clara",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1878,
+    "death_year": 1903,
+    "lifespan": "1878–1903",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Maria Clara Telfer (1878–1903).md"
+  },
+  {
+    "slug": "marian-cornish-1896",
+    "display_name": "Marian Telfer Cornish (1896–1977) — Family & Biography",
+    "first_name": "Marian",
+    "middle_name": "Telfer",
+    "last_name": "Cornish",
+    "birth_year": 1896,
+    "death_year": 1977,
+    "lifespan": "1896–1977",
+    "parents": [],
+    "spouses": [
+      "kenneth-cornish"
+    ],
+    "children": [],
+    "vault_file": "Marian Telfer Cornish (1896–1977).md"
+  },
+  {
+    "slug": "marion-vida",
+    "display_name": "Marion Vida",
+    "first_name": "Marion",
+    "middle_name": "",
+    "last_name": "Vida",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Marion Vida.md"
+  },
+  {
+    "slug": "martha-allen-1840",
+    "display_name": "Martha Allen — First Wife of John Telfer",
+    "first_name": "Martha",
+    "middle_name": "",
+    "last_name": "Allen",
+    "birth_year": 1840,
+    "death_year": 1876,
+    "lifespan": "1840–1876",
+    "parents": [],
+    "spouses": [
+      "john-telfer-1840"
+    ],
+    "children": [
+      "james-telfer-1866",
+      "elizabeth-telfer-1868",
+      "susan-telfer-1844",
+      "martha-cameron"
+    ],
+    "vault_file": "Martha Allen (1840–1876).md"
+  },
+  {
+    "slug": "martha-henstridge-1854",
+    "display_name": "Martha Henstridge (~1854–1921)",
+    "first_name": "Martha",
+    "middle_name": "",
+    "last_name": "Henstridge",
+    "birth_year": 1854,
+    "death_year": 1921,
+    "lifespan": "1854–1921",
+    "parents": [],
+    "spouses": [
+      "john-telfer-1840"
+    ],
+    "children": [],
+    "vault_file": "Martha Henstridge (~1854–1921).md"
+  },
+  {
+    "slug": "martha-telfer-1873",
+    "display_name": "Martha Telfer (1873–?)",
+    "first_name": "Martha",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1873,
+    "death_year": null,
+    "lifespan": "1873–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Martha Telfer (1873–?).md"
+  },
+  {
+    "slug": "martha-cameron-1873",
+    "display_name": "Martha Telfer Cameron (1873–1964) — Family & Biography",
+    "first_name": "Martha",
+    "middle_name": "Telfer",
+    "last_name": "Cameron",
+    "birth_year": 1873,
+    "death_year": 1964,
+    "lifespan": "1873–1964",
+    "parents": [],
+    "spouses": [
+      "malcolm-duncan-cameron"
+    ],
+    "children": [
+      "malcolm-murray-cameron"
+    ],
+    "vault_file": "Martha Telfer Cameron (1873–1964).md"
+  },
+  {
+    "slug": "mary-anne-mcintyre-1836",
+    "display_name": "Mary Anne McIntyre (1836–1913)",
+    "first_name": "Mary",
+    "middle_name": "",
+    "last_name": "Anne McIntyre",
+    "birth_year": 1836,
+    "death_year": 1913,
+    "lifespan": "1836–1913",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Mary Anne McIntyre (1836–1913).md"
+  },
+  {
+    "slug": "maryanne-mcintyre",
+    "display_name": "Mary Anne McIntyre",
+    "first_name": "Mary Anne",
+    "middle_name": "",
+    "last_name": "McIntyre",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Mary Anne McIntyre.md"
+  },
+  {
+    "slug": "mary-bayes-farrow",
+    "display_name": "Mary Bayes Farrow",
+    "first_name": "Mary",
+    "middle_name": "",
+    "last_name": "Bayes Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Mary Bayes Farrow.md"
+  },
+  {
+    "slug": "mary-jane-paynter-1861",
+    "display_name": "Mary Jane Paynter (1861–1945)",
+    "first_name": "Mary",
+    "middle_name": "",
+    "last_name": "Jane Paynter",
+    "birth_year": 1861,
+    "death_year": 1945,
+    "lifespan": "1861–1945",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Mary Jane Paynter (1861–1945).md"
+  },
+  {
+    "slug": "may-foy",
+    "display_name": "May Foy",
+    "first_name": "May",
+    "middle_name": "",
+    "last_name": "Foy",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "May Foy.md"
+  },
+  {
+    "slug": "mitchell-telfer-2008",
+    "display_name": "Mitchell Telfer — Ohdo Syndrome Awareness — Family & Biography",
+    "first_name": "Mitchell",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 2008,
+    "death_year": null,
+    "lifespan": "2008–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Mitchell Telfer (2008–?).md"
+  },
+  {
+    "slug": "murray-john-telfer-19111982",
+    "display_name": "Murray John Telfer (1911–1982",
+    "first_name": "Murray",
+    "middle_name": "",
+    "last_name": "John Telfer (1911–1982",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Murray John Telfer (1911–1982.md"
+  },
+  {
+    "slug": "paul-ivory-1955",
+    "display_name": "Paul Ivory — Family & Biography",
+    "first_name": "Paul",
+    "middle_name": "",
+    "last_name": "Ivory",
+    "birth_year": 1955,
+    "death_year": 1996,
+    "lifespan": "1955–1996",
+    "parents": [],
+    "spouses": [
+      "sheryle-telfer"
+    ],
+    "children": [
+      "aaron-ivory",
+      "jared-ivory",
+      "lauren-ivory",
+      "joel-ivory"
+    ],
+    "vault_file": "Paul Ivory (1955–1996).md"
+  },
+  {
+    "slug": "peter-farrow",
+    "display_name": "Peter Farrow",
+    "first_name": "Peter",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Peter Farrow.md"
+  },
+  {
+    "slug": "reginald-telfer-1923",
+    "display_name": "Reginald Masters Telfer (1923–living)",
+    "first_name": "Reginald",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1923,
+    "death_year": "None",
+    "lifespan": "1923–None",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Reginald Masters Telfer (1923–living).md"
+  },
+  {
+    "slug": "richard-paynter-1838",
+    "display_name": "Richard Paynter (1838–1869)",
+    "first_name": "Richard",
+    "middle_name": "",
+    "last_name": "Paynter",
+    "birth_year": 1838,
+    "death_year": 1869,
+    "lifespan": "1838–1869",
+    "parents": [],
+    "spouses": [
+      "jean-telfer-1840"
+    ],
+    "children": [
+      "thomas-paynter-1859",
+      "mary-jane-paynter-1861",
+      "francis-telfer-paynter-1862",
+      "elizabeth-paynter-1864",
+      "dinah-flavel-paynter-1869"
+    ],
+    "vault_file": "Richard Paynter (1838–1869).md"
+  },
+  {
+    "slug": "richard-paynter-of-calstock",
+    "display_name": "Richard Paynter (of Calstock",
+    "first_name": "Richard",
+    "middle_name": "",
+    "last_name": "Paynter (of Calstock",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Richard Paynter (of Calstock.md"
+  },
+  {
+    "slug": "robert-agnew",
+    "display_name": "Robert Agnew",
+    "first_name": "Robert",
+    "middle_name": "",
+    "last_name": "Agnew",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Robert Agnew.md"
+  },
+  {
+    "slug": "robertdunlop-lawrie-1850",
+    "display_name": "Robert Dunlop Lawrie — Family & Biography",
+    "first_name": "Robert Dunlop",
+    "middle_name": "",
+    "last_name": "Lawrie",
+    "birth_year": 1850,
+    "death_year": 1917,
+    "lifespan": "1850–1917",
+    "parents": [],
+    "spouses": [
+      "caroline-hosking"
+    ],
+    "children": [
+      "catherine-leah",
+      "janet-stevenson",
+      "alberta-grace",
+      "hugh-john",
+      "frank-lindsay",
+      "Jeanette",
+      "marion-vida",
+      "caroline-edna",
+      "robert-dunlop"
+    ],
+    "vault_file": "Robert Dunlop Lawrie (1850–1917).md"
+  },
+  {
+    "slug": "robert-dunlop",
+    "display_name": "Robert Dunlop",
+    "first_name": "Robert",
+    "middle_name": "",
+    "last_name": "Dunlop",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Robert Dunlop.md"
+  },
+  {
+    "slug": "robert-farrow",
+    "display_name": "Robert Farrow",
+    "first_name": "Robert",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Robert Farrow.md"
+  },
+  {
+    "slug": "robina-telfer",
+    "display_name": "Robina Telfer",
+    "first_name": "Robina",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Robina Telfer.md"
+  },
+  {
+    "slug": "ruth-penna-1855",
+    "display_name": "Ruth Penna (~1855–1913)",
+    "first_name": "Ruth",
+    "middle_name": "",
+    "last_name": "Penna",
+    "birth_year": 1855,
+    "death_year": 1913,
+    "lifespan": "1855–1913",
+    "parents": [],
+    "spouses": [
+      "george-telfer"
+    ],
+    "children": [],
+    "vault_file": "Ruth Penna (~1855–1913).md"
+  },
+  {
+    "slug": "ruth-telfer-1931",
+    "display_name": "Ruth Telfer — Family & Biography",
+    "first_name": "Ruth",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1931,
+    "death_year": "?",
+    "lifespan": "1931–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Ruth Telfer (1930–?).md"
+  },
+  {
+    "slug": "sandra-lee-smith",
+    "display_name": "Sandra Lee Smith",
+    "first_name": "Sandra",
+    "middle_name": "",
+    "last_name": "Lee Smith",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Sandra Lee Smith.md"
+  },
+  {
+    "slug": "sarah-farrow",
+    "display_name": "Sarah Farrow",
+    "first_name": "Sarah",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Sarah Farrow.md"
+  },
+  {
+    "slug": "septimus-dillon",
+    "display_name": "Septimus Dillon",
+    "first_name": "Septimus",
+    "middle_name": "",
+    "last_name": "Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Septimus Dillon.md"
+  },
+  {
+    "slug": "sheryle-telfer-1961",
+    "display_name": "Sheryle Telfer (1961–?)",
+    "first_name": "Sheryle",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1961,
+    "death_year": null,
+    "lifespan": "1961–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Sheryle Telfer (1961–?).md"
+  },
+  {
+    "slug": "shirley-edna-parker",
+    "display_name": "Shirley Edna Parker",
+    "first_name": "Shirley",
+    "middle_name": "",
+    "last_name": "Edna Parker",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Shirley Edna Parker.md"
+  },
+  {
+    "slug": "shirley-telfer",
+    "display_name": "Shirley Telfer (living)",
+    "first_name": "Shirley",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [
+      "murray-telfer-1911"
+    ],
+    "children": [
+      "daryll-telfer",
+      "john-robert-telfer",
+      "grantley-telfer",
+      "timothy-telfer",
+      "kathryn-telfer",
+      "susan-lawrie"
+    ],
+    "vault_file": "Shirley Telfer (living).md"
+  },
+  {
+    "slug": "sophia-baker-1829",
+    "display_name": "Sophia Baker (1829–1901)",
+    "first_name": "Sophia",
+    "middle_name": "",
+    "last_name": "Baker",
+    "birth_year": 1829,
+    "death_year": 1901,
+    "lifespan": "1829–1901",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Sophia Baker (1829–1901).md"
+  },
+  {
+    "slug": "sophia-parker",
+    "display_name": "Sophia Parker",
+    "first_name": "Sophia",
+    "middle_name": "",
+    "last_name": "Parker",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Sophia Parker.md"
+  },
+  {
+    "slug": "sophia-webster-1800",
+    "display_name": "Sophia Webster (~1800–?)",
+    "first_name": "Sophia",
+    "middle_name": "",
+    "last_name": "Webster",
+    "birth_year": 1800,
+    "death_year": null,
+    "lifespan": "1800–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Sophia Webster (~1800–?).md"
+  },
+  {
+    "slug": "susan-burton-1844",
+    "display_name": "Susan Burton (1844–1924)",
+    "first_name": "Susan",
+    "middle_name": "",
+    "last_name": "Burton",
+    "birth_year": 1844,
+    "death_year": 1924,
+    "lifespan": "1844–1924",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Susan Burton (1844–1924).md"
+  },
+  {
+    "slug": "susan-burton-1845",
+    "display_name": "Susan Burton (1845–1924)",
+    "first_name": "Susan",
+    "middle_name": "",
+    "last_name": "Burton",
+    "birth_year": 1845,
+    "death_year": 1924,
+    "lifespan": "1845–1924",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Susan Burton (1845–1924).md"
+  },
+  {
+    "slug": "sydney-parker-1922",
+    "display_name": "Sydney Hugh Parker (1922–1964)",
+    "first_name": "Sydney",
+    "middle_name": "Hugh",
+    "last_name": "Parker",
+    "birth_year": 1922,
+    "death_year": 1964,
+    "lifespan": "1922–1964",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Sydney Hugh Parker (1922–1964).md"
+  },
+  {
+    "slug": "thomas-cleveland-dillon",
+    "display_name": "Thomas Cleveland Dillon",
+    "first_name": "Thomas",
+    "middle_name": "",
+    "last_name": "Cleveland Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Thomas Cleveland Dillon.md"
+  },
+  {
+    "slug": "thomas-paynter-1859",
+    "display_name": "Thomas Paynter (1859–1946)",
+    "first_name": "Thomas",
+    "middle_name": "",
+    "last_name": "Paynter",
+    "birth_year": 1859,
+    "death_year": 1946,
+    "lifespan": "1859–1946",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Thomas Paynter (1859–1946).md"
+  },
+  {
+    "slug": "timothy-telfer-1959",
+    "display_name": "Timothy Neil Telfer — Family & Biography",
+    "first_name": "Timothy",
+    "middle_name": "Neil",
+    "last_name": "Telfer",
+    "birth_year": 1959,
+    "death_year": null,
+    "lifespan": "1959–?",
+    "parents": [],
+    "spouses": [
+      "sheryle-telfer"
+    ],
+    "children": [
+      "mark-telfer-1986",
+      "amy-telfer-nicole"
+    ],
+    "vault_file": "Timothy Neil Telfer (1959–?).md"
+  },
+  {
+    "slug": "vera-dillon",
+    "display_name": "Vera Dillon",
+    "first_name": "Vera",
+    "middle_name": "",
+    "last_name": "Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Vera Dillon.md"
+  },
+  {
+    "slug": "vernonraystclair-telfer-1879",
+    "display_name": "Vernon Ray St. Clair Telfer (1879–1960)",
+    "first_name": "Vernon Ray St. Clair",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1879,
+    "death_year": 1960,
+    "lifespan": "1879–1960",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Vernon Ray St. Clair Telfer (1879–1960).md"
+  },
+  {
+    "slug": "vida-telfer-1919",
+    "display_name": "Vida Telfer (1919–2021)",
+    "first_name": "Vida",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1919,
+    "death_year": 2021,
+    "lifespan": "1919–2021",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Vida Telfer (1919–2021).md"
+  },
+  {
+    "slug": "violethope-telfer-1883",
+    "display_name": "Violet Hope Telfer (1883–1967)",
+    "first_name": "Violet Hope",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1883,
+    "death_year": 1967,
+    "lifespan": "1883–1967",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Violet Hope Telfer (1883–1967).md"
+  },
+  {
+    "slug": "walter-telfer-1885",
+    "display_name": "Walter William Telfer (1885–1958)",
+    "first_name": "Walter",
+    "middle_name": "",
+    "last_name": "Telfer",
+    "birth_year": 1885,
+    "death_year": 1958,
+    "lifespan": "1885–1958",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Walter William Telfer (1885–1958).md"
+  },
+  {
+    "slug": "wilhelm-seebohm-1833",
+    "display_name": "Wilhelm Seebohm (1833–1907)",
+    "first_name": "Wilhelm",
+    "middle_name": "",
+    "last_name": "Seebohm",
+    "birth_year": 1833,
+    "death_year": 1907,
+    "lifespan": "1833–1907",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Wilhelm Seebohm (1833–1907).md"
+  },
+  {
+    "slug": "wilhelm-seebohm",
+    "display_name": "Wilhelm Seebohm",
+    "first_name": "Wilhelm",
+    "middle_name": "",
+    "last_name": "Seebohm",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Wilhelm Seebohm.md"
+  },
+  {
+    "slug": "william-farrow",
+    "display_name": "William Farrow",
+    "first_name": "William",
+    "middle_name": "",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "William Farrow.md"
+  },
+  {
+    "slug": "williamhenry-parker-1893",
+    "display_name": "William Henry Parker — Family & Biography",
+    "first_name": "William Henry",
+    "middle_name": "",
+    "last_name": "Parker",
+    "birth_year": 1893,
+    "death_year": 1968,
+    "lifespan": "1893–1968",
+    "parents": [],
+    "spouses": [
+      "caroline-edna-lawrie"
+    ],
+    "children": [
+      "avis-parker",
+      "howard-parker",
+      "sydney-parker",
+      "william-humphrey-parker",
+      "shirley-telfer-1929"
+    ],
+    "vault_file": "William Henry Parker (1893–1968).md"
+  },
+  {
+    "slug": "williamhumphrey-parker-1850",
+    "display_name": "William Humphrey Parker — Family & Biography",
+    "first_name": "William Humphrey",
+    "middle_name": "",
+    "last_name": "Parker",
+    "birth_year": 1850,
+    "death_year": 1926,
+    "lifespan": "1850–1926",
+    "parents": [],
+    "spouses": [
+      "hannah-baker"
+    ],
+    "children": [
+      "sophia-parker",
+      "william-henry-parker",
+      "hugh-kelly-parker",
+      "(others unconfirmed)"
+    ],
+    "vault_file": "William Humphrey Parker (1850–1926).md"
+  },
+  {
+    "slug": "williamjohn-baker-1831",
+    "display_name": "William John Baker (1831–1919)",
+    "first_name": "William John",
+    "middle_name": "",
+    "last_name": "Baker",
+    "birth_year": 1831,
+    "death_year": 1919,
+    "lifespan": "1831–1919",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "William John Baker (1831–1919).md"
+  },
+  {
+    "slug": "william-john-dillon",
+    "display_name": "William John Dillon",
+    "first_name": "William",
+    "middle_name": "",
+    "last_name": "John Dillon",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "William John Dillon.md"
+  },
+  {
+    "slug": "zabella-telfer-2019",
+    "display_name": "Zabella Violet Zelda Telfer — Family & Biography",
+    "first_name": "Zabella",
+    "middle_name": "Violet Zelda",
+    "last_name": "Telfer",
+    "birth_year": 2019,
+    "death_year": null,
+    "lifespan": "2019–?",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "Zabella Violet Zelda Telfer (2019–?).md"
+  },
+  {
+    "slug": "d-1940",
+    "display_name": "d. 1940)",
+    "first_name": "d.",
+    "middle_name": "",
+    "last_name": "1940)",
+    "birth_year": null,
+    "death_year": null,
+    "lifespan": "",
+    "parents": [],
+    "spouses": [],
+    "children": [],
+    "vault_file": "d. 1940).md"
   }
 ]
