@@ -17,11 +17,24 @@ if (!person) {
 function buildDescendants(rootSlug, people, maxDepth = 6, currentDepth = 0) {
   if (currentDepth >= maxDepth) return null;
   
-  const root = people.find(p => p.slug === rootSlug);
+  // rootSlug might be a slug or a display name — normalize it
+  const root = people.find(p => p.slug === rootSlug)
+    || people.find(p => p.display_name === rootSlug);
   if (!root) return null;
   
-  const children = root.children
-    .map(childSlug => buildDescendants(childSlug, people, maxDepth, currentDepth + 1))
+  const children = (root.children || [])
+    .map(child => {
+      // child might be a slug or a display name — resolve to child's slug first
+      let childSlug = people.find(p => p.slug === child)?.slug
+        || people.find(p => p.display_name === child)?.slug;
+      // If still not found, try stripping birth/death years "(YYYY–YYYY)" from display name
+      if (!childSlug) {
+        const nameOnly = child.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        childSlug = people.find(p => p.display_name === nameOnly)?.slug;
+      }
+      if (!childSlug) return null;
+      return buildDescendants(childSlug, people, maxDepth, currentDepth + 1);
+    })
     .filter(Boolean);
   
   return {
@@ -42,8 +55,13 @@ function countDescendants(node) {
 }
 
 function getMaxGeneration(node) {
-  if (!node || node.children.length === 0) return node?.generation || 0;
-  return Math.max(...node.children.map(c => getMaxGeneration(c)), node.generation || 0);
+  if (!node || node.children.length === 0) {
+    const gen = node?.generation;
+    return (gen && gen < 90) ? gen : 0;
+  }
+  const maxChild = Math.max(...node.children.map(c => getMaxGeneration(c)), 0);
+  const selfGen = (node.generation && node.generation < 90) ? node.generation : 0;
+  return Math.max(maxChild, selfGen);
 }
 
 const totalDescendants = countDescendants(descendantTree);

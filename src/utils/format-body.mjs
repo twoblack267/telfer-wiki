@@ -20,8 +20,9 @@ export function formatBody(body, people) {
     .replace(/https?:\/\/(www\.)?snapchat\.com\/[^\s)\]]+/gi, "[Snapchat — redacted]")
     .replace(/https?:\/\/(www\.)?youtube\.com\/[^\s)\]]+/gi, "[YouTube — redacted]")
     .replace(/https?:\/\/(www\.)?pinterest\.(com|com\.au)\/[^\s)\]]+/gi, "[Pinterest — redacted]")
-    // Strip Notes and Links sections — safety net (primary strip is in convert-markdown.mjs)
+    // Strip Notes, Photos, and Links sections — safety net (primary strip is in convert-markdown.mjs)
     .replace(/## Notes[\s\S]*?(?=## |$)/g, '')
+    .replace(/## Photos[\s\S]*?(?=## |$)/g, '')
     .replace(/## Links[\s\S]*?(?=## |$)/g, '')
     // Convert [[Link|Alias]] to <a href="${BASE}people/slug">Alias</a>
     .replace(/\[\[([^\]]+)\|([^\]]+)\]\]/g, (match, link, alias) => {
