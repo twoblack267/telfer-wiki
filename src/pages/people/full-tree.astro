@@ -23,6 +23,18 @@ for (const p of allPeople) {
   }
 }
 
+// Also index by (first_name, last_name) for matching shorthand references like "Levi Telfer"
+const personByFirstLast = new Map();
+for (const p of allPeople) {
+  if (p.first_name && p.last_name) {
+    const key = `${p.first_name.toLowerCase()}:${p.last_name.toLowerCase()}`;
+    // Prefer entry with birth_year (more complete data) on duplicates
+    if (!personByFirstLast.has(key) || (p.birth_year && !personByFirstLast.get(key).birth_year)) {
+      personByFirstLast.set(key, p);
+    }
+  }
+}
+
 // Helper: find person by ID (handles various formats)
 // CRITICAL: When the input contains a birth year (e.g., "James (1796–1863)"),
 // ALWAYS use firstName:birthYear matching to disambiguate same-name people.
@@ -83,6 +95,17 @@ function findPerson(id: string | undefined, dataset = allPeople) {
     }
   }
   
+  // Fallback: try matching by first_name + last_name (handles shorthand "Levi Telfer" vs "Levi Leonard Timothy Telfer")
+  const nameParts = id.trim().split(/\s+/);
+  if (nameParts.length >= 2) {
+    const firstName = nameParts[0].toLowerCase();
+    const lastName = nameParts[nameParts.length - 1].toLowerCase();
+    const key = `${firstName}:${lastName}`;
+    if (personByFirstLast.has(key)) {
+      return personByFirstLast.get(key);
+    }
+  }
+
   return undefined;
 }
 
