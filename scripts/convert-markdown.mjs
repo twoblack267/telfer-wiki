@@ -368,11 +368,21 @@ function main() {
         existing.body_markdown = entry.body_markdown;
         existing.body_stripped = entry.body_stripped;
       }
-      // Keep existing denormalized fields if markdown doesn't provide them
-      existing.parents = parents.length > 0 ? parents : existing.parents;
-      existing.children = children.length > 0 ? children : existing.children;
-      existing.siblings = siblings.length > 0 ? siblings : existing.siblings;
-      existing.spouses = spouses.length > 0 ? spouses : existing.spouses;
+      // If the vault file explicitly had a relationships field, trust what we parsed
+      // (even if empty — this allows removing children/spouses etc by omitting them).
+      // Only fall back to existing data when relationships was entirely absent.
+      if (fm.relationships && typeof fm.relationships === 'string') {
+        existing.parents = parents;
+        existing.children = children;
+        existing.siblings = siblings;
+        existing.spouses = spouses;
+      } else {
+        // No relationships field in vault — keep existing denormalized data
+        existing.parents = parents.length > 0 ? parents : existing.parents;
+        existing.children = children.length > 0 ? children : existing.children;
+        existing.siblings = siblings.length > 0 ? siblings : existing.siblings;
+        existing.spouses = spouses.length > 0 ? spouses : existing.spouses;
+      }
       existing.related_trees = entry.related_trees;
       if (bodyImages.length > 0) {
         existing.images = bodyImages;

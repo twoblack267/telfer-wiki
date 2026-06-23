@@ -122,7 +122,7 @@ export function formatBody(body, people) {
 
 function lookupSlug(name, people) {
   if (!name || !people) return null;
-  const clean = name.replace(/\(.*?\)/g, "").trim().toLowerCase();
+  const clean = name.replace(/\([^)]*\d[^)]*\)/g, "").trim().toLowerCase();
 
   // Try exact match first — but if the match is deceased and a living namesake exists,
   // fall through to first+last logic (which prefers living people)

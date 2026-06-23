@@ -219,7 +219,7 @@ console.log(`👁️  Visible people: ${visible.size} / ${people.length}`);
 
 /** Strip parenthetical date ranges from a display name */
 function stripDates(name) {
-  return name.replace(/\s*\(.*?\)\s*/g, '').trim();
+  return name.replace(/\s*\([^)]*\d[^)]*\)\s*/g, '').trim();
 }
 
 /** Build a map from possible display-name variants to slug */
