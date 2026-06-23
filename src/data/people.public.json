@@ -12,6 +12,7 @@
     "display_name": "James Telfer",
     "title": "James Telfer — Family & Biography",
     "lifespan": "1762 – ?",
+    "branch": "telfer",
     "is_living": false,
     "body_markdown": "# James Telfer (bap.1762)\n\n**Baptised:** 24 September 1762 — Castleton, Roxburghshire, Scotland\n**Father:** [[James Telfer (of Sorbietrees) (~1740–?)]]\n**Mother:** [[Margaret Armstrong (~1745–?)]]\n\n## Sources\n\n- Parish baptismal registers, Castleton, Roxburghshire: James Telfer (24 Sep 1762)",
     "roles": [],
@@ -26,7 +27,10 @@
       "James Telfer (of Sorbietrees) (~1740–?)",
       "Margaret Armstrong (~1745–?)"
     ],
-    "children": [],
+    "children": [
+      "Adam Francis Telfer (1842–1925)",
+      "Robert Telfer (1803–1878)"
+    ],
     "spouses": [],
     "siblings": [],
     "images": [],
@@ -67,6 +71,36 @@
     "person_photo": null
   },
   {
+    "id": "Sophia March",
+    "slug": "sophia-march",
+    "first_name": "Sophia",
+    "middle_name": null,
+    "last_name": "March",
+    "birth_year": 1803,
+    "death_year": 1892,
+    "birth_year_display": "1803",
+    "death_year_display": "1892",
+    "display_name": "Sophia March",
+    "title": "Sophia March — Family & Biography",
+    "lifespan": "1803 – 1892",
+    "is_living": false,
+    "body_markdown": "# Sophia (Webster) March (1803–1892)\n\n**Born:** 1803 in Norfolk, England\n**Died:** 6 Oct 1892 in Prospect, South Australia (about age 89)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | William Webster |\n| **Mother** | Susanna (Hewett) Webster |\n| **Spouse** | [[Joseph March (1797–1883)]] (married 31 Oct 1825, St Michael's, Aylsham) |\n| **Children** | Joseph March, Hannah March (m. Sloman), [[Sophia Baker (1829–1901)|Sophia March (m. Baker)]], William March, William March (×2), Susanna March, Charles March, Samuel March, Alfred March, John Henry March |\n\n## Life\n\nSophia was born in Norfolk, England in 1803, the daughter of William Webster and Susanna (Hewett) Webster. Her brother was John Webster (b. 1804, Tuttington, Norfolk).\n\nShe married [[Joseph March (1797–1883)]] at St Michael's Church, Aylsham, Norfolk on 31 October 1825.\n\nThe family emigrated to the Colony of South Australia aboard the ship **Canton**, arriving at Port Adelaide on 31 July 1846 with their seven children.\n\nSophia died on 6 October 1892 at Prospect, South Australia at about age 89.\n\n## Sources\n\n- **WikiTree:** [Webster-4505](https://www.wikitree.com/wiki/Webster-4505) — accessed 23 Jun 2026\n- **WikiTree:** [March-507](https://www.wikitree.com/wiki/March-507) — accessed 23 Jun 2026 (Joseph March's profile)\n- **Bound for South Australia:** Ship *Canton* 1846",
+    "roles": [],
+    "tags": [
+      "person",
+      "ancestor",
+      "webster",
+      "march",
+      "australian-immigrant"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "David Parker",
     "slug": "david-parker",
     "first_name": "David",
@@ -98,7 +132,8 @@
       "Frederick Robert Parker"
     ],
     "spouses": [
-      "Isabella Kelly (abt 1825–1867)"
+      "Isabella Kelly (abt 1825–1867)",
+      "Isabella Kelly (~1825–1867)"
     ],
     "siblings": [],
     "images": [],
@@ -160,6 +195,70 @@
     ],
     "parents": [
       "William Telfer (1802–1850)"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Francis Adam Telfer",
+    "slug": "francis-adam-telfer",
+    "first_name": "Francis Adam",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1875,
+    "death_year": 1955,
+    "birth_year_display": "1875",
+    "death_year_display": "1955",
+    "display_name": "Francis Adam Telfer",
+    "title": "Francis Adam Telfer — Family & Biography",
+    "lifespan": "1875 – 1955",
+    "is_living": false,
+    "body_markdown": "# Francis Adam Telfer (1875–1955)\n\n**Role:** Son of Adam Francis Telfer and Margaret Dougal Telfer\n\n**Born:** 1875\n**Died:** 1955\n\n**Father:** [[Adam Francis Telfer (1842–1925)]]\n**Mother:** [[Margaret Dougal Telfer (1849–1936)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Adam Francis Telfer (1842–1925)]] |\n| **Mother** | [[Margaret Dougal Telfer (1849–1936)]] |\n\n---\n\n## Life Summary\n\nFrancis Adam Telfer was born in 1875 and died in 1955. Son of Adam Francis Telfer and Margaret Dougal Telfer\n\n---\n\n**Source:** Telfer family records\n\n---",
+    "roles": [
+      "Son of Adam Francis Telfer and Margaret Dougal Telfer"
+    ],
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "parents": [
+      "Adam Francis Telfer (1842–1925)",
+      "Margaret Dougal Telfer (1849–1936)"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "James Edgerston Telfer",
+    "slug": "james-edgerston-telfer",
+    "first_name": "James Edgerston",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1878,
+    "death_year": 1959,
+    "birth_year_display": "1878",
+    "death_year_display": "1959",
+    "display_name": "James Edgerston Telfer",
+    "title": "James Edgerston Telfer — Family & Biography",
+    "lifespan": "1878 – 1959",
+    "is_living": false,
+    "body_markdown": "# James Edgerston Telfer (1878–1959)\n\n**Role:** Son of Adam Francis Telfer and Margaret Dougal Telfer\n\n**Born:** 1878\n**Died:** 1959\n\n**Father:** [[Adam Francis Telfer (1842–1925)]]\n**Mother:** [[Margaret Dougal Telfer (1849–1936)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Adam Francis Telfer (1842–1925)]] |\n| **Mother** | [[Margaret Dougal Telfer (1849–1936)]] |\n\n---\n\n## Life Summary\n\nJames Edgerston Telfer was born in 1878 and died in 1959. Son of Adam Francis Telfer and Margaret Dougal Telfer\n\n---\n\n**Source:** Telfer family records\n\n---",
+    "roles": [
+      "Son of Adam Francis Telfer and Margaret Dougal Telfer"
+    ],
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "parents": [
+      "Adam Francis Telfer (1842–1925)",
+      "Margaret Dougal Telfer (1849–1936)"
     ],
     "children": [],
     "spouses": [],
@@ -1018,9 +1117,14 @@
       "Robert Telfer (1803–?)",
       "John Telfer (1805–1839)",
       "Francis Telfer (1809–1895)",
-      "William Telfer (1811–1881)"
+      "William Telfer (1811–1881)",
+      "Isobel Telfer (1798–1875)"
     ],
-    "spouses": [],
+    "spouses": [
+      "Elizabeth Hutton (1774–1853)",
+      "Elizabeth Hutton (1774–?)",
+      "Elizabeth Hutton Telfer (1774–1853)"
+    ],
     "siblings": [],
     "images": []
   },
@@ -1399,7 +1503,18 @@
     "parents": [
       "Margaret Armstrong"
     ],
-    "children": [],
+    "children": [
+      "Adelaide Elsie Pearl Telfer (1889–1976)",
+      "Effie Olive Telfer (1886–1969)",
+      "Eva Rowena Telfer (1885–1974)",
+      "Francis Adam Telfer (1875–1955)",
+      "Hazel Rose Telfer (1891–1939)",
+      "Herbert Dougal Telfer (1881–1974)",
+      "James Edgerston Telfer (1878–1959)",
+      "Lillian May Telfer (1872–1951)",
+      "Vernon Ray St. Clair Telfer (1879–1960)",
+      "Violet Hope Telfer (1883–1967)"
+    ],
     "spouses": [],
     "siblings": [
       "Jean Telfer (bapt. 1764)",
@@ -1466,7 +1581,7 @@
     "generation": 3,
     "branch": "telfer",
     "is_living": false,
-    "body_markdown": "# Joseph March (1797–1883)\n\n**Born:** 1797 in Aylsham, Norfolk, England\n**Baptised:** 1 Jun 1797 at St Michael, Aylsham\n**Died:** 30 Oct 1883 in Prospect, South Australia\n**Buried:** North Road Cemetery, Nailsworth, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Joseph March (1767–1831)]] |\n| **Mother** | [[Sarah Jacobs (~1763–1811)]] |\n| **Spouse** | [[Sophia Webster (~1800–?)]] (married 31 Oct 1825, Aylsham) |\n| **Children** | [[Sophia Baker (1829–1901)]] (m. Baker), Hannah March (m. Sloman), Joseph March, William March ×2, Susanna March, Charles March, Samuel March, Alfred March, John Henry March |\n\n## Life\n\nJoseph was born in Aylsham, Norfolk in 1797 and worked as an agricultural labourer according to the 1841 England & Wales census.\n\nHe married Sophia Webster at St Michael's Church, Aylsham on 31 October 1825.\n\nThe family emigrated to the Colony of South Australia aboard the ship *Canton*, arriving 31 July 1846 with his wife and seven children.\n\nHe died on 30 October 1883 in Prospect, Adelaide and is buried at North Road Cemetery, Nailsworth.\n\n## Sources\n\n- WikiTree: March-507\n- FamilySearch: England, Norfolk, Parish Registers (1510–1997)\n- *A History and Family Tree of Joseph and Sophia March and Their Descendants 1846–1996* (Gould Printing Services, SA)\n- England & Wales Census 1841\n- Death notice: *The Express and Telegraph* (Adelaide), 31 Oct 1883, p.2 — [Trove](https://trove.nla.gov.au/newspaper/article/210518545)\n- Funeral notice: *South Australian Register* (Adelaide), 31 Oct 1883, p.2 — [Trove](https://trove.nla.gov.au/newspaper/article/43609071)\n- Bound for South Australia: *Canton* 1846",
+    "body_markdown": "# Joseph March (1797–1883)\n\n**Born:** 1797 in Aylsham, Norfolk, England\n**Baptised:** 1 Jun 1797 at St Michael, Aylsham\n**Died:** 30 Oct 1883 in Prospect, South Australia\n**Buried:** North Road Cemetery, Nailsworth, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Joseph March (1767–1831)]] |\n| **Mother** | [[Sarah Jacobs (~1763–1811)]] |\n| **Spouse** | [[Sophia (Webster) March (1803–1892)]] (married 31 Oct 1825, Aylsham) |\n| **Children** | [[Sophia Baker (1829–1901)]] (m. Baker), Hannah March (m. Sloman), Joseph March, William March ×2, Susanna March, Charles March, Samuel March, Alfred March, John Henry March |\n\n## Life\n\nJoseph was born in Aylsham, Norfolk in 1797 and worked as an agricultural labourer according to the 1841 England & Wales census.\n\nHe married Sophia Webster at St Michael's Church, Aylsham on 31 October 1825.\n\nThe family emigrated to the Colony of South Australia aboard the ship *Canton*, arriving 31 July 1846 with his wife and seven children.\n\nHe died on 30 October 1883 in Prospect, Adelaide and is buried at North Road Cemetery, Nailsworth.\n\n## Sources\n\n- WikiTree: March-507\n- FamilySearch: England, Norfolk, Parish Registers (1510–1997)\n- *A History and Family Tree of Joseph and Sophia March and Their Descendants 1846–1996* (Gould Printing Services, SA)\n- England & Wales Census 1841\n- Death notice: *The Express and Telegraph* (Adelaide), 31 Oct 1883, p.2 — [Trove](https://trove.nla.gov.au/newspaper/article/210518545)\n- Funeral notice: *South Australian Register* (Adelaide), 31 Oct 1883, p.2 — [Trove](https://trove.nla.gov.au/newspaper/article/43609071)\n- Bound for South Australia: *Canton* 1846",
     "roles": [],
     "tags": [
       "person",
@@ -1553,7 +1668,9 @@
       "James Telfer (1761–1845)",
       "Elizabeth Hutton (1774–1853)"
     ],
-    "children": [],
+    "children": [
+      "Caroline Hosking (1851–1920)"
+    ],
     "spouses": [],
     "siblings": [
       "James Telfer (1796–1863)",
@@ -1783,8 +1900,14 @@
       "James Telfer (1761–1845)",
       "Elizabeth Hutton (1774–1853)"
     ],
-    "children": [],
-    "spouses": [],
+    "children": [
+      "Daryll William Telfer",
+      "John Robert Telfer",
+      "Kathryn Mavis Telfer (1961–1965)"
+    ],
+    "spouses": [
+      "Shirley Telfer (living)"
+    ],
     "siblings": [
       "James Telfer (1796–1863)",
       "Adam Telfer (1799–?)",
@@ -1893,9 +2016,13 @@
       "Elizabeth Hannah Telfer (1836–1916)",
       "Jean Telfer (1840–?)",
       "John Telfer (1847–1929)",
-      "Margaret Dougal Telfer (1849–1936)"
+      "Margaret Dougal Telfer (1849–1936)",
+      "James Telfer (1832–1845)",
+      "Jean Telfer (1840–1892)"
     ],
     "spouses": [
+      "Jean Murray (1810–1839)",
+      "Dinah Flavel (1821–1844)",
       "Jean Murray (1810–1839)",
       "Dinah Flavel (1821–1844)",
       "Margaret Wright (?–1892)"
@@ -2079,7 +2206,8 @@
       "Janet Welsh Telfer"
     ],
     "spouses": [
-      "Janet Welsh (1826–1885)"
+      "Janet Welsh (1826–1885)",
+      "Janet Welsh (~1835–1914)"
     ],
     "siblings": [],
     "images": []
@@ -2186,7 +2314,8 @@
       "Adam Dillon",
       "Henry Hatch Dillon",
       "Dorothy Dillon",
-      "Inez Priscilla Dillon"
+      "Inez Priscilla Dillon",
+      "James Telfer Dillon (1861–1951)"
     ],
     "spouses": [
       "John Charles Dillon (1827–1906)"
@@ -2276,7 +2405,10 @@
       "non-telfer"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "Esther Telfer Smith (1870–1896)",
+      "Francis Telfer Smith (1874–1945)"
+    ],
     "spouses": [],
     "images": [],
     "siblings": []
@@ -2421,8 +2553,13 @@
       "non-telfer"
     ],
     "parents": [],
-    "children": [],
-    "spouses": [],
+    "children": [
+      "Elizabeth Telfer Farrow",
+      "John James Telfer Farrow"
+    ],
+    "spouses": [
+      "Charles Farrow (~1836–1884)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -2510,7 +2647,8 @@
       "Edith Mary Kathleen Telfer"
     ],
     "spouses": [
-      "Susan Burton (1845–1924)"
+      "Susan Burton (1845–1924)",
+      "Susan Burton Telfer (1844–1924)"
     ],
     "siblings": [],
     "images": []
@@ -2622,6 +2760,8 @@
     "children": [],
     "spouses": [
       "Richard Paynter (1838–1869)",
+      "Frederick Parker (~1838–1928)",
+      "Richard Paynter (1838–1869)",
       "Frederick Parker (1844–1928)"
     ],
     "siblings": [],
@@ -2663,10 +2803,22 @@
       "Martha Telfer (1873–?)",
       "Charles Telfer",
       "Eric John Telfer",
-      "Mark Telfer (1877–1946)"
+      "Mark Telfer (1877–1946)",
+      "Alan Dale Telfer (1890–1937)",
+      "Colin Roy Telfer (1889–1964)",
+      "Douglas Telfer (1887–1956)",
+      "Elizabeth Telfer (1868–1950)",
+      "Isabella Lucieton Telfer (1880–1964)",
+      "John Roland Telfer (1882–1975)",
+      "Maria Clara Telfer (1878–1903)",
+      "Marian Telfer Cornish (1896–1977)",
+      "Martha Telfer Cameron (1873–1964)",
+      "Robert Freddy Telfer (1886–1949)"
     ],
     "spouses": [
-      "Martha Allen (1842–1876)"
+      "Martha Allen (1842–1876)",
+      "Martha Allen (1840–1876)",
+      "Martha Henstridge (~1854–1921)"
     ],
     "siblings": [],
     "images": []
@@ -2740,6 +2892,8 @@
       "Margaret Wright Telfer (1869–1889)",
       "Elizabeth Beattie Telfer (1870–1949)",
       "Lillian May Telfer (1872–1951)",
+      "Francis Adam Telfer (1875–1955)",
+      "James Edgerston Telfer (1878–1959)",
       "Vernon Ray St. Clair Telfer (1879–1960)",
       "Herbert Dougal Telfer (1881–1974)",
       "Violet Hope Telfer (1883–1967)",
@@ -2807,7 +2961,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Robert Telfer (1835–1907)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -2878,7 +3034,18 @@
       "non-telfer"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "Adelaide Elsie Pearl Telfer (1889–1976)",
+      "Effie Olive Telfer (1886–1969)",
+      "Eva Rowena Telfer (1885–1974)",
+      "Francis Adam Telfer (1875–1955)",
+      "Hazel Rose Telfer (1891–1939)",
+      "Herbert Dougal Telfer (1881–1974)",
+      "James Edgerston Telfer (1878–1959)",
+      "Lillian May Telfer (1872–1951)",
+      "Vernon Ray St. Clair Telfer (1879–1960)",
+      "Violet Hope Telfer (1883–1967)"
+    ],
     "spouses": [],
     "images": [],
     "siblings": []
@@ -2915,6 +3082,8 @@
       "Margaret Wright Telfer (1869–1889)",
       "Elizabeth Beattie Telfer (1870–1949)",
       "Lillian May Telfer (1872–1951)",
+      "Francis Adam Telfer (1875–1955)",
+      "James Edgerston Telfer (1878–1959)",
       "Vernon Ray St. Clair Telfer (1879–1960)",
       "Herbert Dougal Telfer (1881–1974)",
       "Violet Hope Telfer (1883–1967)",
@@ -3220,7 +3389,9 @@
       "non-telfer"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "James Robert Telfer (~1866–?)"
+    ],
     "spouses": [],
     "images": [],
     "siblings": []
@@ -3249,9 +3420,12 @@
       "person"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "James Robert Telfer (~1866–?)"
+    ],
     "spouses": [
-      "Robert Telfer (1835-1907)"
+      "Robert Telfer (1835-1907)",
+      "Leslie Robert Telfer"
     ],
     "siblings": [],
     "images": []
@@ -3354,7 +3528,7 @@
     "generation": 5,
     "branch": "telfer",
     "is_living": false,
-    "body_markdown": "# William Humphrey Parker (1850–1926)\n**Born:** 17 Jul 1850, Ragged Hill, Mossblown, Ayrshire, Scotland | **Died:** 18 Feb 1926, Lower Mitcham, South Australia | **Mother:** ? | **Father:** ? | **Buried:** Mitcham General Cemetery, SA | **Occupation:** Farmer\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | William Humphrey Parker (1850–1926) |\n| Spouse | Hannah Baker (1855–1948) |\n| Daughter | Sophia Parker (1886–1918) |\n| Son | [[William Henry Parker (1893–1968)]] |\n| Son | Hugh Kelly Parker (1897–1959) |\n\n## Life Summary\n\nWilliam Humphrey Parker was born on 17 July 1850 at Ragged Hill, Mossblown, Ayrshire, Scotland. He emigrated to South Australia, where he married Hannah Baker on 21 August 1878 at the residence of the bride's parents, Virginia, South Australia.\n\nHe was a farmer and settled in the Long Plains area. His children included Sophia (who married Frank Lindsay Lawrie) and William Henry (who married Caroline Edna Lawrie), creating a double union between the Parker and Lawrie families.\n\nHe died on 18 February 1926 at Lower Mitcham, South Australia, and was buried at Mitcham General Cemetery.\n\n## Sources\n\n1. [WikiTree: William Humphrey Parker (Parker-4351)](https://www.wikitree.com/wiki/Parker-4351) — accessed 19 June 2026\n2. [FindAGrave: William Humphrey Parker (1850–1926)](https://www.findagrave.com/memorial/184786711/william_humphrey-parker) — accessed 19 June 2026",
+    "body_markdown": "# William Humphrey Parker (1850–1926)\n\n**Born:** 17 Jul 1850, Ragged Hill, Mossblown, Ayrshire, Scotland | **Died:** 18 Feb 1926, Lower Mitcham, South Australia | **Mother:** [[Isabella Kelly (~1825–1867)]] | **Father:** [[David Parker (1822–1888)]] | **Spouse:** [[Hannah Baker (1855–1948)]] | **Buried:** Mitcham General Cemetery, SA | **Occupation:** Farmer\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | William Humphrey Parker (1850–1926) |\n| Father | [[David Parker (1822–1888)]] |\n| Mother | [[Isabella Kelly (~1825–1867)]] |\n| Spouse | [[Hannah Baker (1855–1948)]] |\n| Daughter | [[Elizabeth Parker (1879–1957)]] |\n| Daughter | [[Lucy Agnes Parker (1881–1903)]] |\n| Son | [[Andrew Kelly Parker (1883–1952)]] |\n| Daughter | [[Sophia Parker Lawrie (1886–1918)]] |\n| Son | [[Edward Albert Parker (1888–1939)]] |\n| Daughter | [[Mabel Winifred Parker (1890–1895)]] |\n| Son | [[William Henry Parker (1893–1968)]] |\n| Daughter | [[Isabella Mabel Parker Carne (1895–1954)]] |\n| Daughter | [[Mina Evelyn Parker (1897–1982)]] |\n| Daughter | [[Stella Winifred Parker (1899–1974)]] |\n\n## Life Summary\n\nWilliam Humphrey Parker was born on 17 July 1850 at Ragged Hill, Mossblown, Ayrshire, Scotland, the son of David Parker (1822–1888) and Isabella Kelly (c. 1825–1867). He emigrated to South Australia with his family.\n\nHe married Hannah Baker on 21 August 1878 at the residence of the bride's parents, Virginia, South Australia. They had ten children — six daughters and four sons — born between 1879 and 1899.\n\nHe was a farmer who settled in the Long Plains area. Two of his children married into the Lawrie family: daughter Sophia married Frank Lindsay Lawrie, and son William Henry married Caroline Edna Lawrie (Frank's sister).\n\nHe died on 18 February 1926 at Lower Mitcham, South Australia, and was buried at Mitcham General Cemetery.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 17 Jul 1850 | Born at Ragged Hill, Mossblown, Ayrshire, Scotland |\n| c. 1852 | Emigrated to South Australia with family (father David on ship *Martin Luther*) |\n| 21 Aug 1878 | Married Hannah Baker at Virginia, South Australia |\n| 8 Dec 1879 | Daughter Elizabeth born at Balaklava |\n| 11 Sep 1881 | Daughter Lucy Agnes born at Dublin SA |\n| 8 Nov 1883 | Son Andrew Kelly born at Long Plains |\n| 4 Feb 1886 | Daughter Sophia born at Long Plains |\n| 4 Jan 1888 | Son Edward Albert born at Long Plains |\n| 4 Jun 1890 | Daughter Mabel Winifred born at Long Plains |\n| 13 Apr 1893 | Son William Henry born at Long Plains |\n| 21 Jan 1895 | Daughter Isabella Mabel born at Long Plains |\n| 24 Apr 1897 | Daughter Mina Evelyn born at Long Plains |\n| 25 Jul 1899 | Daughter Stella Winifred born at Long Plains |\n| 18 Feb 1926 | Died at Lower Mitcham, South Australia |\n\n## References\n\n- **Father:** [[David Parker (1822–1888)]] — born Ragged Hill Farm, Tarbolton, Ayrshire; emigrated on *Martin Luther* 1852; died Hundred of Pirie SA\n- **Mother:** [[Isabella Kelly (~1825–1867)]] — born Bridgeton, Glasgow; died Virginia SA\n\n## Sources\n\n1. **Source:** [WikiTree: William Humphrey Parker (Parker-4351)](https://www.wikitree.com/wiki/Parker-4351) — accessed 20 June 2026\n2. **Source:** [WikiTree: David Parker (Parker-4350)](https://www.wikitree.com/wiki/Parker-4350) — accessed 20 June 2026\n3. **Source:** [WikiTree: Andrew Kelly Parker (Parker-4367)](https://www.wikitree.com/wiki/Parker-4367) — accessed 20 June 2026\n4. **Source:** [FindAGrave: William Humphrey Parker (1850–1926)](https://www.findagrave.com/memorial/184786711/william_humphrey-parker) — accessed 20 June 2026",
     "roles": [
       "Farmer"
     ],
@@ -3365,12 +3539,25 @@
       "parker",
       "scottish"
     ],
-    "parents": [],
-    "children": [
-      "sophia-parker",
-      "hugh-kelly-parker"
+    "parents": [
+      "David Parker (1822–1888)",
+      "Isabella Kelly (abt 1825–1867)"
     ],
-    "spouses": [],
+    "children": [
+      "Elizabeth Parker (1879–1957)",
+      "Lucy Agnes Parker (1881–1903)",
+      "Andrew Kelly Parker (1883–1952)",
+      "Sophia Parker Lawrie (1886–1918)",
+      "Edward Albert Parker (1888–1939)",
+      "Mabel Winifred Parker (1890–1895)",
+      "William Henry Parker (1893–1968)",
+      "Isabella Mabel Parker Carne (1895–1954)",
+      "Mina Evelyn Parker (1897–1982)",
+      "Stella Winifred Parker (1899–1974)"
+    ],
+    "spouses": [
+      "Hannah Baker (1855–1948)"
+    ],
     "siblings": [],
     "images": []
   },
@@ -3447,9 +3634,7 @@
       "sophia-parker",
       "hugh-kelly-parker"
     ],
-    "spouses": [
-      "william-humphrey-parker"
-    ],
+    "spouses": [],
     "siblings": [],
     "images": []
   },
@@ -3605,8 +3790,14 @@
       "ancestor"
     ],
     "parents": [],
-    "children": [],
-    "spouses": [],
+    "children": [
+      "James Telfer (1832–1845)",
+      "Jean Telfer (1840–1892)"
+    ],
+    "spouses": [
+      "Dinah Flavel (1821–1844)",
+      "Margaret Wright Telfer (?–1892)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -3794,7 +3985,10 @@
       "beaton"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "James Telfer (1829–1914)",
+      "Robert Telfer (1835–1907)"
+    ],
     "spouses": [],
     "siblings": [],
     "images": []
@@ -4625,7 +4819,7 @@
   },
   {
     "id": "William Humphrey Parker",
-    "slug": "william-humphrey-parker",
+    "slug": "william-humphrey-parker-1926",
     "first_name": "William Humphrey",
     "middle_name": null,
     "last_name": "Parker",
@@ -4721,7 +4915,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "James Telfer (1866–1946)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -4837,7 +5033,10 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Amy Ellen Telfer (née Provis)",
+      "Amy Ellen Telfer (1884–1951)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -4945,7 +5144,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Elizabeth Telfer (1868–1950)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -5385,7 +5586,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "James Telfer (1829–1914)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -5497,7 +5700,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Martha Telfer Cameron (1873–1964)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -5605,7 +5810,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Robert Freddy Telfer (1886–1949)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -5659,7 +5866,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Susan Telfer (1871–1952)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -6319,8 +6528,7 @@
     ],
     "parents": [],
     "children": [
-      "shirley-edna-parker",
-      "william-humphrey-parker"
+      "shirley-edna-parker"
     ],
     "spouses": [],
     "siblings": [
@@ -6354,13 +6562,10 @@
       "person",
       "parker"
     ],
-    "parents": [
-      "william-humphrey-parker"
-    ],
+    "parents": [],
     "children": [
       "avis-parker",
       "howard-parker",
-      "william-humphrey-parker",
       "shirley-telfer-1929"
     ],
     "spouses": [],
@@ -6978,7 +7183,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Ruth Penna (~1855–1913)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -7032,7 +7239,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Shirley Telfer (living)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -7490,7 +7699,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Edwin Ernest Clarke"
+    ],
     "images": [],
     "siblings": []
   },
@@ -7517,7 +7728,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Kenneth Cornish"
+    ],
     "images": [],
     "siblings": []
   },
@@ -8204,7 +8417,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Isabella Lucieton Telfer (1880–1964)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -8348,7 +8563,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Kristin Stefanoff"
+    ],
     "images": [],
     "siblings": []
   },
@@ -8439,7 +8656,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "William Henry Parker (1893–1968)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -8755,7 +8974,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Sophia Parker Lawrie (1886–1918)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -8876,7 +9097,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "James Robert Telfer (~1866–?)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -8957,7 +9180,11 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Elizabeth Hutton (1774–1853)",
+      "Elizabeth Hutton Telfer (1774–1853)",
+      "Janet Welsh (~1835–1914)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -9011,7 +9238,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "William Telfer (shepherd)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -9200,7 +9429,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Aaron Paul Ivory (1989–?)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -9227,7 +9458,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Marian Telfer Cornish (1896–1977)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -9319,7 +9552,10 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Elizabeth Oliver (1807–1846)",
+      "Susan Burton Telfer (1844–1924)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -9346,7 +9582,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Douglas Telfer (1887–1956)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -9373,7 +9611,10 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Francis Telfer (1809–1895)",
+      "Francis Telfer Paynter (1862–?)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -9568,7 +9809,9 @@
     ],
     "parents": [],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "Caroline Hosking (1851–1920)"
+    ],
     "images": [],
     "siblings": []
   },
@@ -9710,7 +9953,8 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "Murray John Telfer (1911–1982)"
+      "Murray John Telfer (1911–1982)",
+      "John Telfer (1805–1839)"
     ],
     "siblings": [],
     "images": []
@@ -9760,15 +10004,14 @@
     "generation": 99,
     "branch": "telfer",
     "is_living": true,
-    "body_markdown": "# Susan Shirley Lawrie (?–living)\n\n# Susan Shirley Lawrie\n\n**Role:** Aunt (Tim's sister)\n**Born:** ?\n**Maiden Name:** Telfer\n**Married Name:** Lawrie\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Grantley Keith Telfer]], [[Kathryn Mavis Telfer (1961–1965)]], [[Timothy Neil Telfer (1959–?)]] |\n\n---\n\n*Profile created from family records. Details to be confirmed.*",
+    "body_markdown": "# Susan's birth year unknown\n# Susan's death year unknown\ntags:\n  - bio\n  - family\n  - person\n  - descendant\nrelationships: 'Self: Susan Shirley Lawrie | Father: Murray John Telfer | Mother: Shirley Edna Telfer | Siblings: Daryll William Telfer, John Robert Telfer, Grantley Keith Telfer, Kathryn Mavis Telfer, Timothy Neil Telfer'\n---\n\n# Susan Shirley Lawrie (?–living)\n\n# Susan Shirley Lawrie\n\n**Role:** Aunt (Tim's sister)\n**Born:** ?\n**Maiden Name:** Telfer\n**Married Name:** Lawrie\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Grantley Keith Telfer]], [[Kathryn Mavis Telfer (1961–1965)]], [[Timothy Neil Telfer (1959–?)]] |\n\n---\n\n*Profile created from family records. Details to be confirmed.*",
     "roles": [
       "Aunt (Tim's sister)"
     ],
     "tags": [
       "bio",
       "family",
-      "person",
-      "descendant"
+      "person"
     ],
     "parents": [
       "Murray John Telfer",
