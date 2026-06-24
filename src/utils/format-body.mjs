@@ -122,6 +122,11 @@ export function formatBody(body, people) {
 
 function lookupSlug(name, people) {
   if (!name || !people) return null;
+
+  // Extract birth year from name BEFORE stripping (e.g. "James Telfer (1796–1863)" → 1796)
+  const yearMatch = name.match(/\((\d{4})/);
+  const targetBirthYear = yearMatch ? parseInt(yearMatch[1]) : null;
+
   const clean = name.replace(/\([^)]*\d[^)]*\)/g, "").trim().toLowerCase();
 
   // Try exact match first — but if the match is deceased and a living namesake exists,
@@ -159,15 +164,20 @@ function lookupSlug(name, people) {
   const matches = people.filter(p => p.first_name?.toLowerCase() === first && p.last_name?.toLowerCase() === last);
   if (matches.length === 1) return matches[0].slug;
   if (matches.length > 1) {
-    // Prefer living people over deceased
-    const living = matches.filter(p => p.is_living);
-    if (living.length === 1) return living[0].slug;
+    // Prefer by birth year if we have one from the name
+    if (targetBirthYear) {
+      const yearMatch = matches.filter(p => p.birth_year === targetBirthYear);
+      if (yearMatch.length === 1) return yearMatch[0].slug;
+    }
     // Prefer people with a matching middle name
     const middle = rest.join(" ").toLowerCase();
     if (middle) {
       const middleMatch = matches.filter(p => p.middle_name?.toLowerCase() === middle);
       if (middleMatch.length === 1) return middleMatch[0].slug;
     }
+    // Prefer living people over deceased
+    const living = matches.filter(p => p.is_living);
+    if (living.length === 1) return living[0].slug;
     // Fall back to first match (alphabetical order in array)
     return matches[0].slug;
   }
