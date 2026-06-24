@@ -129,34 +129,21 @@ function lookupSlug(name, people) {
 
   const clean = name.replace(/\([^)]*\d[^)]*\)/g, "").trim().toLowerCase();
 
-  // Try exact match first — but if the match is deceased and a living namesake exists,
-  // fall through to first+last logic (which prefers living people)
-  let deceasedMatch = null;
-  for (const p of people) {
-    if (p.display_name.toLowerCase() === clean) {
-      if (p.is_living) return p.slug;
-      deceasedMatch = p;
-      break;
+  // Collect ALL exact display_name matches first
+  const exactMatches = people.filter(p => p.display_name?.toLowerCase() === clean);
+  if (exactMatches.length === 1) return exactMatches[0].slug;
+  if (exactMatches.length > 1) {
+    // Among multiple exact matches, prefer by target birth year
+    if (targetBirthYear) {
+      const yearExact = exactMatches.find(p => p.birth_year === targetBirthYear);
+      if (yearExact) return yearExact.slug;
     }
+    // Prefer living over deceased
+    const living = exactMatches.filter(p => p.is_living);
+    if (living.length === 1) return living[0].slug;
+    // Fall back to first (by slug sort / array order)
+    return exactMatches[0].slug;
   }
-
-  // If we found an exact deceased match, check for a living namesake
-  if (deceasedMatch) {
-    const [first, ...rest] = clean.split(/\s+/);
-    const last = rest.pop() || "";
-    const livingNamesake = people.find(
-      p => p.is_living
-        && p.first_name?.toLowerCase() === first
-        && p.last_name?.toLowerCase() === last
-        && p.slug !== deceasedMatch.slug
-    );
-    if (livingNamesake) {
-      // There's a living namesake — don't take the deceased match, let it fall through
-      deceasedMatch = null;
-    }
-  }
-
-  if (deceasedMatch) return deceasedMatch.slug;
 
   // Try first+last match
   const [first, ...rest] = clean.split(/\s+/);
