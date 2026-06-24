@@ -9871,7 +9871,8 @@
       "bio",
       "family",
       "person",
-      "ancestor"
+      "ancestor",
+      "orphan"
     ],
     "relationships": [
       {
@@ -9891,23 +9892,13 @@
         "names": [
           "Caroline Amelia Masters (1842–1929)"
         ]
-      },
-      {
-        "type": "Siblings",
-        "names": [
-          "Francis Charles Telfer (1875–1954)",
-          "Maria Clara Telfer (1878–1903)",
-          "Isabella Lucieton Telfer (1880–1964)",
-          "Albert George Telfer (1882–1961)",
-          "Walter William Telfer (1885–1958)",
-          "Robert Freddy Telfer (1886–1949)",
-          "Edwin Gilbert Telfer (1888–1972)"
-        ]
       }
     ],
-    "roles": [],
-    "body_markdown": "Born 16 September 1880 at Willow Plains, South Australia. Son of John Telfer (1847–1929) and Caroline Amelia Masters (1842–1929). Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\n**Source:** *From the Borders to the Bush* — body text",
-    "body_stripped": "Born 16 September 1880 at Willow Plains, South Australia. Son of John Telfer (1847–1929) and Caroline Amelia Masters (1842–1929). Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\n**Source:** *From the Borders to the Bush* — body text",
+    "roles": [
+      "Infant son of John Telfer and Caroline Amelia Masters"
+    ],
+    "body_markdown": "# William Telfer (1880–1880)\n\n> **⚠️ Redirect / Consolidated:** This person is **William James Telfer (1880–1880)**. See the consolidated profile at [[William James Telfer (1880–1880)]] for the full biography and sources.\n\nBorn 16 September 1880 at Willow Plains, South Australia. Son of John Telfer (1847–1929) and Caroline Amelia Masters (1842–1929). Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\n**Source:** *From the Borders to the Bush* — body text; also recorded as William James Telfer (1880–1880) on FamilySearch MF8B-PND and FindAGrave 200328442.\n\nConsolidated into [[William James Telfer (1880–1880)]] — this file retained as a redirect stub.",
+    "body_stripped": "> **⚠️ Redirect / Consolidated:** This person is **William James Telfer (1880–1880)**. See the consolidated profile at William James Telfer (1880–1880) for the full biography and sources.\n\nBorn 16 September 1880 at Willow Plains, South Australia. Son of John Telfer (1847–1929) and Caroline Amelia Masters (1842–1929). Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\n**Source:** *From t",
     "is_living": false,
     "lifespan": "1880 – 1880",
     "parents": [
@@ -9916,15 +9907,7 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [
-      "Francis Charles Telfer (1875–1954)",
-      "Maria Clara Telfer (1878–1903)",
-      "Isabella Lucieton Telfer (1880–1964)",
-      "Albert George Telfer (1882–1961)",
-      "Walter William Telfer (1885–1958)",
-      "Robert Freddy Telfer (1886–1949)",
-      "Edwin Gilbert Telfer (1888–1972)"
-    ],
+    "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
@@ -11916,7 +11899,7 @@
     "children": [
       "Albert George Telfer (1882–1961)",
       "Ernest John Telfer (1877–1953)",
-      "William James Telfer (1879–1948)",
+      "William James Telfer (1880–1880)",
       "Edwin Gilbert Telfer (1888–1972)",
       "Walter William Telfer (1885–1958)",
       "Maria Clara Telfer (1878–1903)",
@@ -11955,7 +11938,7 @@
         "names": [
           "Albert George Telfer (1882–1961)",
           "Ernest John Telfer (1877–1953)",
-          "William James Telfer (1879–1948)",
+          "William James Telfer (1880–1880)",
           "Edwin Gilbert Telfer (1888–1972)",
           "Walter William Telfer (1885–1958)",
           "Maria Clara Telfer (1878–1903)",
@@ -21302,8 +21285,8 @@
       "australian-immigrant"
     ],
     "relationships": [],
-    "body_markdown": "# Sophia (March) Baker (1829–1901)\n\n**Born:** 29 Nov 1829 in Aylsham, Norfolk, England  \n**Baptised:** —  \n**Died:** 20 Dec 1901 at Hyde Park, South Australia (aged 72)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Joseph March (1797–1883)]] |\n| **Mother** | [[Sophia (Webster) March (1803–1892)]] |\n| **Spouse** | [[William John Baker (1831–1919)]] (married in Adelaide, South Australia) |\n| **Children** | William John Baker (1853–1933), [[Hannah Baker (1855–1948)]] (m. Telfer), Sophia Baker (1857–1949), James Baker (1859–1927), Joseph Baker (1861–1946), Samuel Baker (1863–1955), Charles Baker (1868–1956), Henry Baker (1870–1959) |\n\n## Life\n\nSophia was born in Aylsham, Norfolk in 1829, the daughter of [[Joseph March (1797–1883)]] and [[Sophia (Webster) March (1803–1892)]].\n\nShe emigrated to the Colony of South Australia with her parents and siblings aboard the ship **Canton**, arriving at Port Adelaide on 31 July 1846.\n\nShe married [[William John Baker (1831–1919)]] in Adelaide, South Australia. The couple settled in Hyde Park, Unley, where they raised eight children. William had emigrated from Devon, England aboard the *Stag* in 1850.\n\nSophia died at Hyde Park on 20 December 1901 at the age of 72.\n\n## Sources\n\n- **WikiTree:** [March-72](https://www.wikitree.com/wiki/March-72) — accessed 23 Jun 2026\n- **WikiTree:** [Baker-1805](https://www.wikitree.com/wiki/Baker-1805) — accessed 23 Jun 2026\n- **FindAGrave:** [William John Baker (1831–1919) — Memorial 156315174](https://www.findagrave.com/memorial/156315174/william_john-baker) — accessed 23 Jun 2026 (via Wayback Machine)\n- **Bound for South Australia:** Ship *Canton* 1846",
-    "body_stripped": "**Born:** 29 Nov 1829 in Aylsham, Norfolk, England  \n**Baptised:** —  \n**Died:** 20 Dec 1901 at Hyde Park, South Australia (aged 72)\n\n## Family\n\n Relation  Name \n\n **Father**  Joseph March (1797–1883) \n **Mother**  Sophia (Webster) March (1803–1892) \n **Spouse**  William John Baker (1831–1919) (married in Adelaide, South Australia) \n **Children**  William John Baker (1853–1933), Hannah Baker (1855–1948) (m. Telfer), Sophia Baker (1857–1949), James Baker (1859–1927), Joseph Baker (1861–1946), Sam",
+    "body_markdown": "# Sophia (March) Baker (1829–1901)\n\n**Born:** 29 Nov 1829 in Aylsham, Norfolk, England  \n**Baptised:** —  \n**Died:** 20 Dec 1901 at Hyde Park, South Australia (aged 72)  \n**Buried:** West Terrace Cemetery, Adelaide, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Joseph March (1797–1883)]] |\n| **Mother** | [[Sophia (Webster) March (1803–1892)]] |\n| **Spouse** | [[William John Baker (1831–1919)]] (married in Adelaide, South Australia) |\n| **Children** | William John Baker (1853–1933), [[Hannah Baker (1855–1948)]] (m. Telfer), Sophia Baker (1857–1949), James Baker (1859–1927), Joseph Baker (1861–1946), Samuel Baker (1863–1955), Charles Baker (1868–1956), Henry Baker (1870–1959) |\n\n## Life\n\nSophia was born in Aylsham, Norfolk in 1829, the daughter of [[Joseph March (1797–1883)]] and [[Sophia (Webster) March (1803–1892)]].\n\nShe emigrated to the Colony of South Australia with her parents and siblings aboard the ship **Canton**, arriving at Port Adelaide on 31 July 1846.\n\nShe married [[William John Baker (1831–1919)]] in Adelaide, South Australia. The couple settled in Hyde Park, Unley, where they raised eight children. William had emigrated from Devon, England aboard the *Stag* in 1850.\n\nSophia died at Hyde Park on 20 December 1901 at the age of 72 and was buried at West Terrace Cemetery, Adelaide.\n\n## Sources\n\n- **FindAGrave:** [Sophia March Baker (1829–1901) — Memorial 156315152](https://www.findagrave.com/memorial/156315152/sophia-baker) — accessed 24 Jun 2026 (verified via Wayback Machine). Confirms burial at West Terrace Cemetery, Adelaide SA. Records birth 29 Mar 1829, death 1 Dec 1901.\n- **WikiTree:** [March-72](https://www.wikitree.com/wiki/March-72) — accessed 24 Jun 2026. Records birth 29 Nov 1829, death 20 Dec 1901.\n- **WikiTree:** [Baker-1805](https://www.wikitree.com/wiki/Baker-1805) — accessed 24 Jun 2026.\n- **Bound for South Australia:** Ship *Canton* 1846.",
+    "body_stripped": "**Born:** 29 Nov 1829 in Aylsham, Norfolk, England  \n**Baptised:** —  \n**Died:** 20 Dec 1901 at Hyde Park, South Australia (aged 72)  \n**Buried:** West Terrace Cemetery, Adelaide, South Australia\n\n## Family\n\n Relation  Name \n\n **Father**  Joseph March (1797–1883) \n **Mother**  Sophia (Webster) March (1803–1892) \n **Spouse**  William John Baker (1831–1919) (married in Adelaide, South Australia) \n **Children**  William John Baker (1853–1933), Hannah Baker (1855–1948) (m. Telfer), Sophia Baker (185",
     "related_trees": [
       "telfer-tree"
     ],
@@ -24066,14 +24049,14 @@
     "tags": [
       "person",
       "ancestor",
-      "webster",
       "march",
+      "webster",
       "australian-immigrant"
     ],
     "relationships": [],
     "roles": [],
-    "body_markdown": "# Sophia (Webster) March (1803–1892)\n\n**Born:** 1803 in Norfolk, England  \n**Died:** 6 Oct 1892 in Prospect, South Australia (about age 89)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | William Webster |\n| **Mother** | Susanna (Hewett) Webster |\n| **Spouse** | [[Joseph March (1797–1883)]] (married 31 Oct 1825, St Michael's, Aylsham) |\n| **Children** | Joseph March, Hannah March (m. Sloman), [[Sophia Baker (1829–1901)|Sophia March (m. Baker)]], William March, William March (×2), Susanna March, Charles March, Samuel March, Alfred March, John Henry March |\n\n## Life\n\nSophia was born in Norfolk, England in 1803, the daughter of William Webster and Susanna (Hewett) Webster. Her brother was John Webster (b. 1804, Tuttington, Norfolk).\n\nShe married [[Joseph March (1797–1883)]] at St Michael's Church, Aylsham, Norfolk on 31 October 1825.\n\nThe family emigrated to the Colony of South Australia aboard the ship **Canton**, arriving at Port Adelaide on 31 July 1846 with their seven children.\n\nSophia died on 6 October 1892 at Prospect, South Australia at about age 89.\n\n## Sources\n\n- **WikiTree:** [Webster-4505](https://www.wikitree.com/wiki/Webster-4505) — accessed 23 Jun 2026\n- **WikiTree:** [March-507](https://www.wikitree.com/wiki/March-507) — accessed 23 Jun 2026 (Joseph March's profile)\n- **Bound for South Australia:** Ship *Canton* 1846",
-    "body_stripped": "**Born:** 1803 in Norfolk, England  \n**Died:** 6 Oct 1892 in Prospect, South Australia (about age 89)\n\n## Family\n\n Relation  Name \n\n **Father**  William Webster \n **Mother**  Susanna (Hewett) Webster \n **Spouse**  Joseph March (1797–1883) (married 31 Oct 1825, St Michael's, Aylsham) \n **Children**  Joseph March, Hannah March (m. Sloman), Sophia Baker (1829–1901)Sophia March (m. Baker), William March, William March (×2), Susanna March, Charles March, Samuel March, Alfred March, John Henry March \n",
+    "body_markdown": "# Sophia (Webster) March (1803–1892)\n\n**Born:** 18 Jun 1803 in Tuttington, Norfolk, England  \n**Baptised:** —  \n**Died:** 6 Oct 1892 at Prospect, South Australia (aged 89)  \n**Buried:** North Road Cemetery, Nailsworth, City of Prospect, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | William Webster (1777–1816) of Tuttington, Norfolk |\n| **Mother** | Susanna Hewett (1781–1850) of Aylsham, Norfolk |\n| **Spouse** | [[Joseph March (1797–1883)]] (married 31 Oct 1825, St Michael's Church, Aylsham, Norfolk) |\n| **Children** | Joseph March (1826–1875), Hannah March (1828–1922, m. Sloman), [[Sophia Baker (1829–1901)|Sophia (March) Baker]] (1829–1901), William March (1832–1833), William March (1833–1902), Susanna March (1835–1902), Charles March (1838–1921), Samuel March (1843–1920), Alfred March, John Henry March (1845–1928) |\n\n## Life\n\nSophia Webster was born on 18 June 1803 in Tuttington, Norfolk, England, the daughter of William Webster (1777–1816) and Susanna Hewett (1781–1850).\n\nOn 31 October 1825, she married Joseph March at St Michael's Church, Aylsham, Norfolk. Joseph was a carpenter and wheelwright from Aylsham.\n\nSophia and Joseph emigrated to the Colony of South Australia with their children aboard the ship **Canton**, departing London and arriving at Port Adelaide on 31 July 1846. The family settled in the Prospect area, north of Adelaide.\n\nJoseph March died on 30 October 1883 at Prospect, South Australia, and was buried at North Road Cemetery, Nailsworth.\n\nSophia died on 6 October 1892 at Prospect, South Australia, at the age of 89. She was buried at North Road Cemetery, Nailsworth, City of Prospect, South Australia — the same cemetery as her husband.\n\n## Sources\n\n- **FindAGrave:** [Sophia Webster March (1803–1892) — Memorial 194049482](https://www.findagrave.com/memorial/194049482/sophia-march) — accessed 24 Jun 2026 (verified via Wayback Machine). Confirms born 18 Jun 1803, died 6 Oct 1892, buried North Road Cemetery, Nailsworth SA. Maintained by Alex March (contributor 49752586).\n- **WikiTree:** [Webster-4505](https://www.wikitree.com/wiki/Webster-4505) — accessed 24 Jun 2026 (via API). Confirms birth 1803 Norfolk, death 6 Oct 1892 Prospect SA, parents William Webster & Susanna Hewett, children, ship *Canton* 1846.\n- **RootsWeb:** [MARCH, Joseph & WEBSTER, Sophia](https://freepages.rootsweb.com/~moadfamily/family/Family/WC145/WC145_409.HTM) — accessed 24 Jun 2026. Confirms birth ca 1803 Aylsham Norfolk, death 6 Oct 1892 Prospect SA, burial North Road Cemetery.\n- **Bound for South Australia:** Ship *Canton* 1846 (arrived Port Adelaide 31 Jul 1846 with Joseph March family).",
+    "body_stripped": "**Born:** 18 Jun 1803 in Tuttington, Norfolk, England  \n**Baptised:** —  \n**Died:** 6 Oct 1892 at Prospect, South Australia (aged 89)  \n**Buried:** North Road Cemetery, Nailsworth, City of Prospect, South Australia\n\n## Family\n\n Relation  Name \n\n **Father**  William Webster (1777–1816) of Tuttington, Norfolk \n **Mother**  Susanna Hewett (1781–1850) of Aylsham, Norfolk \n **Spouse**  Joseph March (1797–1883) (married 31 Oct 1825, St Michael's Church, Aylsham, Norfolk) \n **Children**  Joseph March (",
     "parents": [],
     "children": [],
     "siblings": [],
