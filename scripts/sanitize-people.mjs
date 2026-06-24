@@ -240,6 +240,18 @@ function buildNameToSlug(people) {
       const firstLast = `${p.first_name.toLowerCase()} ${p.last_name.toLowerCase()}`;
       if (!map.has(firstLast)) map.set(firstLast, p.slug);
     }
+    // Birth-year-suffixed variants for disambiguation
+    // (so "James Telfer (1761–1845)" resolves to james-telfer-1761, not a random James Telfer)
+    if (p.display_name && p.birth_year) {
+      const displayNameLC = p.display_name.toLowerCase();
+      if (p.death_year) {
+        map.set(`${displayNameLC} (${p.birth_year}–${p.death_year})`, p.slug);
+      } else {
+        map.set(`${displayNameLC} (${p.birth_year}–)`, p.slug);
+      }
+      // Also just birth year alone
+      map.set(`${displayNameLC} (${p.birth_year})`, p.slug);
+    }
   }
   return map;
 }
