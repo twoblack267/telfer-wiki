@@ -4575,6 +4575,14 @@
         "names": [
           "Jean Murray (1810–1839)"
         ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Esther Jane Telfer (1834–1909)",
+          "Elizabeth Hannah Telfer (1836–1916)",
+          "Jean Telfer (1840–1892)"
+        ]
       }
     ],
     "roles": [
@@ -4590,7 +4598,11 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "Esther Jane Telfer (1834–1909)",
+      "Elizabeth Hannah Telfer (1836–1916)",
+      "Jean Telfer (1840–1892)"
+    ],
     "related_trees": [
       "telfer-tree"
     ],

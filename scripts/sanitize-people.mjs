@@ -222,18 +222,30 @@ function stripDates(name) {
   return name.replace(/\s*\([^)]*\d[^)]*\)\s*/g, '').trim();
 }
 
+/** Check if a slug ends with 4 digits (year suffix) */
+function hasYearInSlug(slug) { return /\d{4}$/.test(slug); }
+
 /** Build a map from possible display-name variants to slug */
 function buildNameToSlug(people) {
   const map = new Map();
   for (const p of people) {
+    if (!p.slug || !p.display_name) continue;
+    const thisHasYear = hasYearInSlug(p.slug);
+    // Helper: prefer year-suffixed slug when multiple entries share a key
+    const preferYear = (key) => {
+      if (!map.has(key)) return true;
+      return thisHasYear && !hasYearInSlug(map.get(key));
+    };
     // Exact slug match (for entries that somehow already have slugs)
     map.set(p.slug, p.slug);
-    // Exact display name
-    map.set(p.display_name.toLowerCase(), p.slug);
+    // Exact display name — prefer year-suffixed slug
+    if (preferYear(p.display_name.toLowerCase())) {
+      map.set(p.display_name.toLowerCase(), p.slug);
+    }
     // Display name without parenthetical dates
     const noDate = stripDates(p.display_name).toLowerCase();
     if (noDate && noDate !== p.display_name.toLowerCase()) {
-      map.set(noDate, p.slug);
+      if (preferYear(noDate)) map.set(noDate, p.slug);
     }
     // First name + last name (handles middle initials in relationship data)
     if (p.first_name && p.last_name) {
@@ -245,12 +257,15 @@ function buildNameToSlug(people) {
     if (p.display_name && p.birth_year) {
       const displayNameLC = p.display_name.toLowerCase();
       if (p.death_year) {
-        map.set(`${displayNameLC} (${p.birth_year}–${p.death_year})`, p.slug);
+        const key = `${displayNameLC} (${p.birth_year}–${p.death_year})`;
+        if (preferYear(key)) map.set(key, p.slug);
       } else {
-        map.set(`${displayNameLC} (${p.birth_year}–)`, p.slug);
+        const key = `${displayNameLC} (${p.birth_year}–)`;
+        if (preferYear(key)) map.set(key, p.slug);
       }
       // Also just birth year alone
-      map.set(`${displayNameLC} (${p.birth_year})`, p.slug);
+      const birthKey = `${displayNameLC} (${p.birth_year})`;
+      if (preferYear(birthKey)) map.set(birthKey, p.slug);
     }
   }
   return map;
