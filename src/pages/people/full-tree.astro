@@ -15,7 +15,7 @@ const personBySlug = new Map(allPeople.map(p => [p.slug, p]));
 const personByFirstNameAndBirth = new Map();
 for (const p of allPeople) {
   if (p.birth_year) {
-    const firstName = p.display_name.split(' ')[0];
+    const firstName = p.first_name || p.display_name.split(' ')[0];
     const key = `${firstName.toLowerCase()}:${p.birth_year}`;
     if (!personByFirstNameAndBirth.has(key)) {
       personByFirstNameAndBirth.set(key, p);
