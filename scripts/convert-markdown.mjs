@@ -209,10 +209,23 @@ function main() {
   const existingBySlug = new Map(existingPeople.map(p => [p.slug, p]));
 
   // Build secondary index: first_name + last_name + birth_year → existing entry
+  // Prefer year-suffixed slug (canonical over bare stub) when keys collide
   const existingByKey = new Map();
   for (const p of existingPeople) {
     const key = `${p.first_name}|${p.last_name}|${p.birth_year ?? ''}`;
-    existingByKey.set(key.toLowerCase(), p);
+    const keyLower = key.toLowerCase();
+    const existing = existingByKey.get(keyLower);
+    if (!existing) {
+      existingByKey.set(keyLower, p);
+    } else {
+      // Key collision — prefer the entry with a year-suffixed slug
+      const existingHasYear = /\d{4}$/.test(existing.slug || '');
+      const thisHasYear = /\d{4}$/.test(p.slug || '');
+      if (thisHasYear && !existingHasYear) {
+        existingByKey.set(keyLower, p);
+      }
+      // Otherwise keep existing (year-suffixed already, or both same type)
+    }
   }
 
   // 2. Scan vault markdown files
@@ -341,7 +354,7 @@ function main() {
     };
 
     // 3. Find matching existing entry
-    // Priority: first_name+last_name+birth_year key match, then slug match
+    // Priority: key match (first+last+birth_year) first, then slug match (fallback)
     const matchKey = `${firstName}|${lastName}|${birthYear ?? ''}`.toLowerCase();
     let existing = existingByKey.get(matchKey) || existingBySlug.get(slug);
 
