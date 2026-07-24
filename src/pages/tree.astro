@@ -7,7 +7,7 @@ import TreeView from "../components/TreeView.astro";
 import DetailPanel from "../components/DetailPanel.astro";
 
 const peopleData = (await import("../data/people.public.json")).default as PersonData[];
-const telferPeople = peopleData.filter(p => p.branch === "telfer") || [];
+const telferPeople = peopleData.filter(p => p.branch === "telfer" || !p.branch) || [];
 
 // Get selected person from URL hash
 const selectedSlug = undefined; // Will be set via client-side JS from hash

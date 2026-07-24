@@ -4,7 +4,7 @@ import type { PersonData } from "../../../utils/extract-data.mjs";
 
 export async function getStaticPaths() {
   const people = (await import("../../../data/people.public.json")).default as PersonData[];
-  const telferPeople = people.filter((p) => p.branch === "telfer");
+  const telferPeople = people.filter((p) => p.branch === "telfer" || !p.branch);
 
   // Group by surname
   const families: Record<string, PersonData[]> = {};

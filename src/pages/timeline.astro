@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import type { PersonData } from "../utils/extract-data.mjs";
 
 const people = (await import("../data/people.public.json")).default as PersonData[];
-const telferPeople = people.filter((p) => p.branch === "telfer" && p.id);
+const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) && p.id);
 
 // Build a timeline of all events
 interface TimelineEvent {

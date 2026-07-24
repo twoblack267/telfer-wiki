@@ -3936,76 +3936,6 @@
     "images": []
   },
   {
-    "id": "Elizabeth Hutton",
-    "slug": "elizabeth-hutton-1774",
-    "first_name": "Elizabeth",
-    "middle_name": null,
-    "last_name": "Hutton",
-    "birth_year": 1774,
-    "death_year": null,
-    "birth_year_display": "1774",
-    "death_year_display": "?",
-    "display_name": "Elizabeth Hutton",
-    "title": "Elizabeth Hutton (1774–?)",
-    "tags": [
-      "family",
-      "hutton",
-      "telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Elizabeth Hutton (1774–?)"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "James Telfer (1761–1845)"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "James Telfer (1796–1863)",
-          "Isobel/Isabella Telfer (1798–1875)",
-          "Adam Telfer (1799–?)",
-          "Margaret Telfer (1802–1884)",
-          "Robert Telfer (1803–?)",
-          "John Telfer (1805–1839)",
-          "Francis Telfer (1809–1895)",
-          "William Telfer (1811–1881)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Elizabeth Hutton (1774–?)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "is_living": false,
-    "lifespan": "1774 – ?",
-    "parents": [],
-    "children": [
-      "James Telfer (1796–1863)",
-      "Isobel/Isabella Telfer (1798–1875)",
-      "Adam Telfer (1799–?)",
-      "Margaret Telfer (1802–1884)",
-      "Robert Telfer (1803–?)",
-      "John Telfer (1805–1839)",
-      "Francis Telfer (1809–1895)",
-      "William Telfer (1811–1881)"
-    ],
-    "spouses": [
-      "James Telfer (1761–1845)"
-    ],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "Elizabeth Hutton (1774–?).md",
-    "images": []
-  },
-  {
     "id": "Elizabeth Anne Smith",
     "slug": "elizabeth-anne-smith",
     "first_name": "Elizabeth",
@@ -4455,76 +4385,6 @@
       "telfer-tree"
     ],
     "vault_file": "Elizabeth Hannah Telfer (1836–1916).md",
-    "images": []
-  },
-  {
-    "id": "Elizabeth Hutton",
-    "slug": "elizabeth-hutton-1774",
-    "first_name": "Elizabeth",
-    "middle_name": null,
-    "last_name": "Hutton",
-    "birth_year": 1774,
-    "death_year": null,
-    "birth_year_display": "1774",
-    "death_year_display": "?",
-    "display_name": "Elizabeth Hutton",
-    "title": "Elizabeth Hutton (1774–?)",
-    "tags": [
-      "family",
-      "hutton",
-      "telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Elizabeth Hutton (1774–?)"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "James Telfer (1761–1845)"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "James Telfer (1796–1863)",
-          "Isobel/Isabella Telfer (1798–1875)",
-          "Adam Telfer (1799–?)",
-          "Margaret Telfer (1802–1884)",
-          "Robert Telfer (1803–?)",
-          "John Telfer (1805–1839)",
-          "Francis Telfer (1809–1895)",
-          "William Telfer (1811–1881)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Elizabeth Hutton (1774–?)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "is_living": false,
-    "lifespan": "1774 – ?",
-    "parents": [],
-    "children": [
-      "James Telfer (1796–1863)",
-      "Isobel/Isabella Telfer (1798–1875)",
-      "Adam Telfer (1799–?)",
-      "Margaret Telfer (1802–1884)",
-      "Robert Telfer (1803–?)",
-      "John Telfer (1805–1839)",
-      "Francis Telfer (1809–1895)",
-      "William Telfer (1811–1881)"
-    ],
-    "spouses": [
-      "James Telfer (1761–1845)"
-    ],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "Elizabeth Hutton (1774–?).md",
     "images": []
   },
   {
@@ -13360,11 +13220,11 @@
     "middle_name": null,
     "last_name": "Wright",
     "birth_year": 1807,
-    "death_year": null,
+    "death_year": 1892,
     "birth_year_display": "1807",
-    "death_year_display": "?",
+    "death_year_display": "1892",
     "display_name": "Margaret Wright",
-    "title": "Margaret Wright (1807–?)",
+    "title": "Margaret Wright (1807–1892)",
     "tags": [
       "family",
       "non-telfer"
@@ -13373,15 +13233,15 @@
       {
         "type": "Self",
         "names": [
-          "Margaret Wright (1807–?)"
+          "Margaret Wright (1807–1892)"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Margaret Wright (1807–?)\n\n> Stub entry — linked from the Telfer family tree.",
+    "body_markdown": "# Margaret Wright (1807–1892)\n\n> Stub entry — linked from the Telfer family tree.",
     "body_stripped": "> Stub entry — linked from the Telfer family tree.",
     "is_living": false,
-    "lifespan": "1807 – ?",
+    "lifespan": "1807 – 1892",
     "parents": [],
     "children": [],
     "spouses": [],
@@ -13389,43 +13249,8 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Margaret Wright (1807–?).md",
+    "vault_file": "Margaret Wright (1807–1892).md",
     "images": []
-  },
-  {
-    "id": "Margaret Wright (1807–?)",
-    "slug": "margaret-wright-1807",
-    "first_name": "Margaret",
-    "middle_name": null,
-    "last_name": "Wright",
-    "birth_year": 1807,
-    "death_year": null,
-    "birth_year_display": "1807",
-    "death_year_display": "?",
-    "display_name": "Margaret Wright",
-    "title": "Margaret Wright (1807–?)",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Margaret Wright (1807–?)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Margaret Wright (1807–?)\n\n> Stub entry — linked from the Telfer family tree.\n\n## Links\n\n- [[Family Tree]]",
-    "body_stripped": "Margaret Wright 1807–?\n\nStub entry — linked from the Telfer family tree.\n\nLinks\n\nFamily Tree",
-    "is_living": false,
-    "lifespan": "1807 – ?",
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": []
   },
   {
     "id": "Margaret Wright Telfer",
@@ -16770,11 +16595,11 @@
     "middle_name": null,
     "last_name": "Burton",
     "birth_year": 1844,
-    "death_year": null,
+    "death_year": 1924,
     "birth_year_display": "1844",
-    "death_year_display": "?",
+    "death_year_display": "1924",
     "display_name": "Susan Burton",
-    "title": "Susan Burton (1844–?)",
+    "title": "Susan Burton (1844–1924)",
     "tags": [
       "family",
       "non-telfer"
@@ -16783,59 +16608,32 @@
       {
         "type": "Self",
         "names": [
-          "Susan Burton (1844–?)"
+          "Susan Burton (1844–1924)"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "James Robert Telfer (~1866–?)"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Susan Burton (1844–?)\n\n> Stub entry — linked from the Telfer family tree.",
+    "body_markdown": "# Susan Burton (1844–1924)\n\n> Stub entry — linked from the Telfer family tree.",
     "body_stripped": "> Stub entry — linked from the Telfer family tree.",
     "is_living": false,
-    "lifespan": "1844 – ?",
+    "lifespan": "1844 – 1924",
     "parents": [],
-    "children": [],
+    "children": [
+      "James Robert Telfer (~1866–?)"
+    ],
     "spouses": [],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "Susan Burton (1844–?).md",
+    "vault_file": "Susan Burton (1844–1924).md",
     "images": []
-  },
-  {
-    "id": "Susan Burton (1844–?)",
-    "slug": "susan-burton-1844",
-    "first_name": "Susan",
-    "middle_name": null,
-    "last_name": "Burton",
-    "birth_year": 1844,
-    "death_year": null,
-    "birth_year_display": "1844",
-    "death_year_display": "?",
-    "display_name": "Susan Burton",
-    "title": "Susan Burton (1844–?)",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Susan Burton (1844–?)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Susan Burton (1844–?)\n\n> Stub entry — linked from the Telfer family tree.\n\n## Links\n\n- [[Family Tree]]",
-    "body_stripped": "Susan Burton 1844–?\n\nStub entry — linked from the Telfer family tree.\n\nLinks\n\nFamily Tree",
-    "is_living": false,
-    "lifespan": "1844 – ?",
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": []
   },
   {
     "id": "Susan Burton",
@@ -18038,65 +17836,6 @@
     "images": []
   },
   {
-    "id": "William Telfer",
-    "slug": "william-telfer-1880",
-    "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1880,
-    "death_year": 1880,
-    "birth_year_display": "1880",
-    "death_year_display": "1880",
-    "display_name": "William Telfer",
-    "title": "William Telfer — Family & Biography",
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "ancestor",
-      "orphan"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "William Telfer (1880–1880)"
-        ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "John Telfer (1847–1929)"
-        ]
-      },
-      {
-        "type": "Mother",
-        "names": [
-          "Caroline Amelia Masters (1842–1929)"
-        ]
-      }
-    ],
-    "roles": [
-      "Infant son of John Telfer and Caroline Amelia Masters"
-    ],
-    "body_markdown": "# William Telfer (1880–1880)\n\n> **⚠️ Redirect / Consolidated:** This person is **William James Telfer (1880–1880)**. See the consolidated profile at [[William James Telfer (1880–1880)]] for the full biography and sources.\n\nBorn 16 September 1880 at Willow Plains, South Australia. Son of John Telfer (1847–1929) and Caroline Amelia Masters (1842–1929). Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\n**Source:** *From the Borders to the Bush* — body text; also recorded as William James Telfer (1880–1880) on FamilySearch MF8B-PND and FindAGrave 200328442.\n\nConsolidated into [[William James Telfer (1880–1880)]] — this file retained as a redirect stub.",
-    "body_stripped": "> **⚠️ Redirect / Consolidated:** This person is **William James Telfer (1880–1880)**. See the consolidated profile at William James Telfer (1880–1880) for the full biography and sources.\n\nBorn 16 September 1880 at Willow Plains, South Australia. Son of John Telfer (1847–1929) and Caroline Amelia Masters (1842–1929). Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\n**Source:** *From t",
-    "is_living": false,
-    "lifespan": "1880 – 1880",
-    "parents": [
-      "John Telfer (1847–1929)",
-      "Caroline Amelia Masters (1842–1929)"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "William Telfer (1880–1880).md",
-    "images": []
-  },
-  {
     "id": "William John Baker",
     "slug": "william-john-baker",
     "first_name": "William John",
@@ -18171,225 +17910,6 @@
   },
   {
     "id": "William Telfer",
-    "slug": "william-telfer-1802",
-    "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1802,
-    "death_year": 1850,
-    "birth_year_display": "1802",
-    "death_year_display": "1850",
-    "display_name": "William Telfer",
-    "title": "William Telfer (1802–1850) — Australian Pioneer",
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "William Telfer"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "Margaret (surname unknown)"
-        ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "William Telfer (shepherd)"
-        ]
-      },
-      {
-        "type": "Mother",
-        "names": [
-          "Janet Nichol"
-        ]
-      },
-      {
-        "type": "Siblings",
-        "names": [
-          "Andrew Telfer (1798–1858)"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "William Telfer (1841–?)",
-          "Elizabeth Telfer (Mrs Mansfield)",
-          "Andrew Telfer",
-          "Edward Telfer"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# William Telfer (1802–1850)\n\n**Born:** 7 October 1802 — Oxnam Parish, Roxburghshire, Scotland  \n**Died:** 16 September 1850 — Tamworth, New South Wales  \n**Mother:** [[Janet Nichol]]  \n**Father:** [[William Telfer (shepherd)]]  \n**Spouse:** Margaret (surname unknown) — m. unknown, before 1841\n\n## Life Summary\n\nWilliam Telfer was born on 7 October 1802 in the Parish of Oxnam, Roxburghshire, Scotland, the fourth child of William Telfer, a shepherd, and his wife Janet Nichol. From an early age, William and his older brother Andrew worked as shepherds in the Cheviot Hills region, herding sheep through hard winters and bad seasons when work was difficult to obtain.\n\nIn 1825 William and Andrew signed on as Indented Servants — \"Free People\" — with the newly formed Australian Agricultural Company. William's agreement was dated 10 February 1825, with an annual salary of £30. He sailed on the \"York\" which arrived in Sydney Harbour on 13 November 1825. His brother Andrew arrived two days later on the \"Brothers\".\n\nWilliam rose through the ranks of the Company over the next two decades. He was Shepherd in Charge at Booral from 1827, supervising up to 1,877 sheep. By 1828 he was Master Shepherd at three stations, supplying shepherds with fresh meat three times a week on horseback. In 1832 he accompanied Sir Edward Parry (the Arctic explorer turned Company Commissioner) on the expedition to the Liverpool Plains to assess land for the Company's new stations at Warrah and Goonoo Goonoo. Parry selected William as Manager of the new sheep stations, writing that William was \"an intelligent, sober, industrious man, and as careful of the Co.'s property as if it were his own.\"\n\nWilliam moved 6,000 lambing ewes from Port Stephens to Warrah with the loss of only one sheep — a remarkable feat. In 1835 he was put in charge of the Goonoo Goonoo sheep station on the Peel River near Tamworth. He left the Company's employ in 1844.\n\nIn 1844 William purchased the leasehold of a store and accommodation house in Quirindi on the Liverpool Plains. Sir Thomas Mitchell, the famous explorer and Surveyor-General, spent Christmas Day with the Telfers in 1845. In 1846 William built the first public house in Quirindi, known as \"The Squatters Home\". In 1848 both W.C. Wentworth and the Rev. John Dunmore Lang stayed at Telfer's inn on the same night — both members of the newly formed Legislative Council.\n\nWilliam died in Tamworth on 16 September 1850 and was buried in the old cemetery. He died without leaving a will, and his widow Margaret applied for administration of the estate, as published in the NSW Government Gazette on 29 August 1851.\n\n## Family Stories\n\nWilliam Telfer was born into shepherd life in the Scottish Borders and grew up knowing hard winters and scarce work. When the Australian Agricultural Company was formed in London in 1824 to develop the fine wool industry in New South Wales, William and his brother Andrew signed on as Indented Servants. They sailed on separate ships from Cowes in June 1825, arriving in Sydney Harbour in November after calling at Rio de Janeiro. The passengers remained on board for days while arrangements were made to transport them to \"Retreat\", a temporary property thirty miles west of Sydney. Twenty carts were hired, but they needed another twenty. Their first night on land ended in a heavy thunderstorm and miserable conditions.\n\nWilliam's skill with sheep was evident from the start. When Sir Edward Parry took over as Commissioner, he personally selected William for the task of establishing new sheep stations on the Liverpool Plains. Parry's despatches to London speak of William in the highest terms — \"an intelligent, sober, industrious man\" with \"strict honesty in the case of stores committed to his charge.\" When the Company needed to move 6,000 lambing ewes from Port Stephens to Warrah, William and his brother Andrew did the job with the loss of only one sheep. Parry preferred William over the Company's surveyor, Henry Dangar, for the position of Manager — a significant show of confidence in a former indentured servant.\n\nAfter leaving the Company in 1844, William bought a store and accommodation house at Quirindi. He built the first public house in town — \"The Squatters Home\" — on 200 acres leased from the government. The pub sat on the flat near Jacob and Joseph Creeks, where the Kamilaroi people camped. It played host to some of the colony's most notable figures: Sir Thomas Mitchell arrived on Christmas Eve 1845 and spent Christmas Day with the family. In 1848, W.C. Wentworth and the Rev. John Dunmore Lang stayed on the same night — both members of the newly formed Legislative Council. Lang, a powerful orator and true patriot, was having financial difficulties at the time, and William was among those who subscribed to keep him in the House.\n\nWilliam returned to Tamworth in 1850, but died later that year on 16 September. He was buried in the old cemetery. He left no will and little provision. His eldest son William, the \"oldest native of West Tamworth\" born in 1841, was working for a magistrate by age 10. His wife Margaret must have faced hard years after his death.\n\n*(From the Borders to the Bush, pp.366–370)*\n\n## Relationship\n\n| Relation | Name |\n|---|---|\n| Self | William Telfer |\n| Father | William Telfer (shepherd) |\n| Mother | Janet Nichol |\n| Siblings | [[Andrew Telfer|Andrew Telfer (1798–1858)]] |\n| Spouse | Margaret (surname unknown) |\n| Children | William Telfer (1841–?), Elizabeth Telfer (Mrs Mansfield), Andrew Telfer, Edward Telfer |\n\n## Sources\n\n1. **Book:** *From the Borders to the Bush* by Donald Telfer (1986) — pages 366–370, \"William Telfer — In Australia (1825–1850)\"\n2. Australian Agricultural Company records, via ANU — includes copy of William Telfer's original report from Warrah, 4 November 1832",
-    "body_stripped": "**Born:** 7 October 1802 — Oxnam Parish, Roxburghshire, Scotland  \n**Died:** 16 September 1850 — Tamworth, New South Wales  \n**Mother:** Janet Nichol  \n**Father:** William Telfer (shepherd)  \n**Spouse:** Margaret (surname unknown) — m. unknown, before 1841\n\n## Life Summary\n\nWilliam Telfer was born on 7 October 1802 in the Parish of Oxnam, Roxburghshire, Scotland, the fourth child of William Telfer, a shepherd, and his wife Janet Nichol. From an early age, William and his older brother Andrew wor",
-    "is_living": false,
-    "lifespan": "1802 – 1850",
-    "parents": [
-      "William Telfer (shepherd)",
-      "Janet Nichol"
-    ],
-    "children": [
-      "William Telfer (1841–?)",
-      "Elizabeth Telfer (Mrs Mansfield)",
-      "Andrew Telfer",
-      "Edward Telfer"
-    ],
-    "spouses": [
-      "Margaret (surname unknown)"
-    ],
-    "siblings": [
-      "Andrew Telfer (1798–1858)"
-    ],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "William Telfer (1802–1850).md",
-    "images": []
-  },
-  {
-    "id": "William Telfer",
-    "slug": "william-telfer-1811",
-    "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1811,
-    "death_year": 1881,
-    "birth_year_display": "1811",
-    "death_year_display": "1881",
-    "display_name": "William Telfer",
-    "title": "William Telfer — Family & Biography",
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "ancestor"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "William Telfer (1811–1881)"
-        ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "James Telfer (1761–1845)"
-        ]
-      },
-      {
-        "type": "Mother",
-        "names": [
-          "Elizabeth Hutton (1774–1853)"
-        ]
-      },
-      {
-        "type": "Siblings",
-        "names": [
-          "James Telfer (1796–1863)",
-          "Isobel/Isabella Telfer (1798–1875)",
-          "Adam Telfer (1799–?)",
-          "Margaret Telfer (1802–1884)",
-          "Robert Telfer (1803–1878)",
-          "John Telfer (1805–1839)",
-          "Francis Telfer (1809–1895)"
-        ]
-      }
-    ],
-    "roles": [
-      "Brother of Francis Telfer (1809–1895), youngest of the siblings"
-    ],
-    "body_markdown": "# William Telfer (1811–1881)\n\n**Role:** Brother of Francis Telfer (1809–1895), youngest of the siblings\n\nWilliam Telfer was born ~1811 at Blackburnfoot, Newcastleton, Roxburghshire, Scotland. He was the youngest child and son of James Telfer (1761–1845), a hand loom weaver, and Elizabeth \"Betty\" Hutton (1774–1853).\n\nHe did NOT emigrate to Australia and died in 1881 in Scotland.\n\nThe book states: *\"We have no further information about four members of this family; namely Isobel, Adam, Margaret and William.\"* Like his siblings Isobel, Adam, and Margaret, William's fate after the family records is not documented beyond his death.\n\n**Source:** *From the Borders to the Bush* — pages 17–20\n\n---\n\n## Family Stories\n\n### The Youngest Brother\n\nWilliam Telfer was born around 1811 at Blackburnfoot, Newcastleton — the youngest child of James Telfer and Elizabeth Hutton. He was seven years younger than his brother Francis, who would go on to build a new life in South Australia.\n\nWilliam never made the voyage. He stayed in Scotland and died there in 1881, the youngest of the siblings who remained behind. Like Adam, Isobel, and Margaret, his life after the family records ends is undocumented — one of the four the book has no further information on. He's the bookend of that generation, the youngest, the one who stayed.\n\n*(From the Borders to the Bush, pp.17-20)*\n\n---",
-    "body_stripped": "**Role:** Brother of Francis Telfer (1809–1895), youngest of the siblings\n\nWilliam Telfer was born ~1811 at Blackburnfoot, Newcastleton, Roxburghshire, Scotland. He was the youngest child and son of James Telfer (1761–1845), a hand loom weaver, and Elizabeth \"Betty\" Hutton (1774–1853).\n\nHe did NOT emigrate to Australia and died in 1881 in Scotland.\n\nThe book states: *\"We have no further information about four members of this family; namely Isobel, Adam, Margaret and William.\"* Like his siblings ",
-    "is_living": false,
-    "lifespan": "1811 – 1881",
-    "parents": [
-      "James Telfer (1761–1845)",
-      "Elizabeth Hutton (1774–1853)"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "James Telfer (1796–1863)",
-      "Isobel/Isabella Telfer (1798–1875)",
-      "Adam Telfer (1799–?)",
-      "Margaret Telfer (1802–1884)",
-      "Robert Telfer (1803–1878)",
-      "John Telfer (1805–1839)",
-      "Francis Telfer (1809–1895)"
-    ],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "William Telfer (1811–1881).md",
-    "images": []
-  },
-  {
-    "id": "William Telfer",
-    "slug": "william-telfer-1841",
-    "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1841,
-    "death_year": null,
-    "birth_year_display": "1841",
-    "death_year_display": "?",
-    "display_name": "William Telfer",
-    "title": "William Telfer — Family & Biography",
-    "tags": [
-      "person",
-      "telfer",
-      "australian",
-      "stub"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "William Telfer (1841–?)"
-        ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "William Telfer (1802–1850)"
-        ]
-      },
-      {
-        "type": "Mother",
-        "names": [
-          "Margaret (surname unknown)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# William Telfer (1841–?)\n\n**Born:** 1841 — New South Wales, Australia\n**Father:** [[William Telfer (1802–1850)]]\n**Mother:** Margaret (surname unknown)\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370",
-    "body_stripped": "**Born:** 1841 — New South Wales, Australia\n**Father:** William Telfer (1802–1850)\n**Mother:** Margaret (surname unknown)\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370",
-    "is_living": false,
-    "lifespan": "1841 – ?",
-    "parents": [
-      "William Telfer (1802–1850)",
-      "Margaret (surname unknown)"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "William Telfer (1841–?).md",
-    "images": []
-  },
-  {
-    "id": "William Telfer (1880–1880)",
     "slug": "william-telfer-1880",
     "first_name": "William",
     "middle_name": null,
@@ -18399,7 +17919,7 @@
     "birth_year_display": "1880",
     "death_year_display": "1880",
     "display_name": "William Telfer",
-    "title": "William Telfer",
+    "title": "William Telfer — Family & Biography",
     "tags": [
       "bio",
       "family",
@@ -18427,80 +17947,24 @@
         ]
       }
     ],
-    "roles": [],
+    "roles": [
+      "Infant son of John Telfer and Caroline Amelia Masters"
+    ],
     "body_markdown": "# William Telfer (1880–1880)\n\n> **⚠️ Redirect / Consolidated:** This person is **William James Telfer (1880–1880)**. See the consolidated profile at [[William James Telfer (1880–1880)]] for the full biography and sources.\n\nBorn 16 September 1880 at Willow Plains, South Australia. Son of John Telfer (1847–1929) and Caroline Amelia Masters (1842–1929). Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\n**Source:** *From the Borders to the Bush* — body text; also recorded as William James Telfer (1880–1880) on FamilySearch MF8B-PND and FindAGrave 200328442.\n\nConsolidated into [[William James Telfer (1880–1880)]] — this file retained as a redirect stub.",
-    "body_stripped": "William Telfer 1880–1880\n\n⚠️ Redirect / Consolidated: This person is William James Telfer 1880–1880. See the consolidated profile at William James Telfer 1880–1880 for the full biography and sources.\n\nBorn 16 September 1880 at Willow Plains, South Australia. Son of John Telfer 1847–1929 and Caroline Amelia Masters 1842–1929. Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\nSource: Fro",
+    "body_stripped": "> **⚠️ Redirect / Consolidated:** This person is **William James Telfer (1880–1880)**. See the consolidated profile at William James Telfer (1880–1880) for the full biography and sources.\n\nBorn 16 September 1880 at Willow Plains, South Australia. Son of John Telfer (1847–1929) and Caroline Amelia Masters (1842–1929). Died November 1880 aged 2 months. Buried by the side of the road at Willow Plains with a stone marker — a testament to the family's early hardships on the land.\n\n**Source:** *From t",
     "is_living": false,
     "lifespan": "1880 – 1880",
     "parents": [
-      "Caroline Amelia Masters (1842–1929)",
-      "John Telfer (1847–1929)"
+      "John Telfer (1847–1929)",
+      "Caroline Amelia Masters (1842–1929)"
     ],
     "children": [],
     "spouses": [],
     "siblings": [],
-    "related_trees": []
-  },
-  {
-    "id": "William Telfer",
-    "slug": "william-telfer-living",
-    "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "William Telfer",
-    "title": "William Telfer — Family & Biography",
-    "tags": [
-      "person",
-      "telfer",
-      "shepherd",
-      "scotland",
-      "stub"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "William Telfer (shepherd)"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "Janet Nichol"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "Andrew Telfer (1798–1858)",
-          "William Telfer (1802–1850)"
-        ]
-      }
-    ],
-    "roles": [
-      "Shepherd in the Cheviot Hills region, Roxburghshire, Scotland"
-    ],
-    "body_markdown": "# William Telfer (shepherd)\n\n**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** [[Janet Nichol]]\n**Children:** Andrew Telfer (1798–1858), [[William Telfer (1802–1850)]]\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
-    "body_stripped": "**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** Janet Nichol\n**Children:** Andrew Telfer (1798–1858), William Telfer (1802–1850)\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
-    "is_living": true,
-    "lifespan": "? – living",
-    "parents": [],
-    "children": [
-      "Andrew Telfer (1798–1858)",
-      "William Telfer (1802–1850)"
-    ],
-    "spouses": [
-      "Janet Nichol"
-    ],
-    "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
-    "vault_file": "William Telfer (shepherd).md",
+    "vault_file": "William Telfer (1880–1880).md",
     "images": []
   },
   {
@@ -18568,6 +18032,365 @@
       "telfer-tree"
     ],
     "vault_file": "Zabella Violet Zelda Telfer (2019–?).md",
+    "images": []
+  },
+  {
+    "id": "William Telfer",
+    "slug": "william-telfer-1802",
+    "vault_file": "William Telfer (1802–1850).md",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1802,
+    "death_year": 1850,
+    "birth_year_display": "1802",
+    "death_year_display": "1850",
+    "display_name": "William Telfer",
+    "title": "William Telfer (1802–1850) — Australian Pioneer",
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "William Telfer"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Margaret (surname unknown)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "William Telfer (shepherd)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Janet Nichol"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Andrew Telfer (1798–1858)"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "William Telfer (1841–?)",
+          "Elizabeth Telfer (Mrs Mansfield)",
+          "Andrew Telfer",
+          "Edward Telfer"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# William Telfer (1802–1850)\n\n**Born:** 7 October 1802 — Oxnam Parish, Roxburghshire, Scotland  \n**Died:** 16 September 1850 — Tamworth, New South Wales  \n**Mother:** [[Janet Nichol]]  \n**Father:** [[William Telfer (shepherd)]]  \n**Spouse:** Margaret (surname unknown) — m. unknown, before 1841\n\n## Life Summary\n\nWilliam Telfer was born on 7 October 1802 in the Parish of Oxnam, Roxburghshire, Scotland, the fourth child of William Telfer, a shepherd, and his wife Janet Nichol. From an early age, William and his older brother Andrew worked as shepherds in the Cheviot Hills region, herding sheep through hard winters and bad seasons when work was difficult to obtain.\n\nIn 1825 William and Andrew signed on as Indented Servants — \"Free People\" — with the newly formed Australian Agricultural Company. William's agreement was dated 10 February 1825, with an annual salary of £30. He sailed on the \"York\" which arrived in Sydney Harbour on 13 November 1825. His brother Andrew arrived two days later on the \"Brothers\".\n\nWilliam rose through the ranks of the Company over the next two decades. He was Shepherd in Charge at Booral from 1827, supervising up to 1,877 sheep. By 1828 he was Master Shepherd at three stations, supplying shepherds with fresh meat three times a week on horseback. In 1832 he accompanied Sir Edward Parry (the Arctic explorer turned Company Commissioner) on the expedition to the Liverpool Plains to assess land for the Company's new stations at Warrah and Goonoo Goonoo. Parry selected William as Manager of the new sheep stations, writing that William was \"an intelligent, sober, industrious man, and as careful of the Co.'s property as if it were his own.\"\n\nWilliam moved 6,000 lambing ewes from Port Stephens to Warrah with the loss of only one sheep — a remarkable feat. In 1835 he was put in charge of the Goonoo Goonoo sheep station on the Peel River near Tamworth. He left the Company's employ in 1844.\n\nIn 1844 William purchased the leasehold of a store and accommodation house in Quirindi on the Liverpool Plains. Sir Thomas Mitchell, the famous explorer and Surveyor-General, spent Christmas Day with the Telfers in 1845. In 1846 William built the first public house in Quirindi, known as \"The Squatters Home\". In 1848 both W.C. Wentworth and the Rev. John Dunmore Lang stayed at Telfer's inn on the same night — both members of the newly formed Legislative Council.\n\nWilliam died in Tamworth on 16 September 1850 and was buried in the old cemetery. He died without leaving a will, and his widow Margaret applied for administration of the estate, as published in the NSW Government Gazette on 29 August 1851.\n\n## Family Stories\n\nWilliam Telfer was born into shepherd life in the Scottish Borders and grew up knowing hard winters and scarce work. When the Australian Agricultural Company was formed in London in 1824 to develop the fine wool industry in New South Wales, William and his brother Andrew signed on as Indented Servants. They sailed on separate ships from Cowes in June 1825, arriving in Sydney Harbour in November after calling at Rio de Janeiro. The passengers remained on board for days while arrangements were made to transport them to \"Retreat\", a temporary property thirty miles west of Sydney. Twenty carts were hired, but they needed another twenty. Their first night on land ended in a heavy thunderstorm and miserable conditions.\n\nWilliam's skill with sheep was evident from the start. When Sir Edward Parry took over as Commissioner, he personally selected William for the task of establishing new sheep stations on the Liverpool Plains. Parry's despatches to London speak of William in the highest terms — \"an intelligent, sober, industrious man\" with \"strict honesty in the case of stores committed to his charge.\" When the Company needed to move 6,000 lambing ewes from Port Stephens to Warrah, William and his brother Andrew did the job with the loss of only one sheep. Parry preferred William over the Company's surveyor, Henry Dangar, for the position of Manager — a significant show of confidence in a former indentured servant.\n\nAfter leaving the Company in 1844, William bought a store and accommodation house at Quirindi. He built the first public house in town — \"The Squatters Home\" — on 200 acres leased from the government. The pub sat on the flat near Jacob and Joseph Creeks, where the Kamilaroi people camped. It played host to some of the colony's most notable figures: Sir Thomas Mitchell arrived on Christmas Eve 1845 and spent Christmas Day with the family. In 1848, W.C. Wentworth and the Rev. John Dunmore Lang stayed on the same night — both members of the newly formed Legislative Council. Lang, a powerful orator and true patriot, was having financial difficulties at the time, and William was among those who subscribed to keep him in the House.\n\nWilliam returned to Tamworth in 1850, but died later that year on 16 September. He was buried in the old cemetery. He left no will and little provision. His eldest son William, the \"oldest native of West Tamworth\" born in 1841, was working for a magistrate by age 10. His wife Margaret must have faced hard years after his death.\n\n*(From the Borders to the Bush, pp.366–370)*\n\n## Relationship\n\n| Relation | Name |\n|---|---|\n| Self | William Telfer |\n| Father | William Telfer (shepherd) |\n| Mother | Janet Nichol |\n| Siblings | [[Andrew Telfer|Andrew Telfer (1798–1858)]] |\n| Spouse | Margaret (surname unknown) |\n| Children | William Telfer (1841–?), Elizabeth Telfer (Mrs Mansfield), Andrew Telfer, Edward Telfer |\n\n## Sources\n\n1. **Book:** *From the Borders to the Bush* by Donald Telfer (1986) — pages 366–370, \"William Telfer — In Australia (1825–1850)\"\n2. Australian Agricultural Company records, via ANU — includes copy of William Telfer's original report from Warrah, 4 November 1832",
+    "body_stripped": "**Born:** 7 October 1802 — Oxnam Parish, Roxburghshire, Scotland  \n**Died:** 16 September 1850 — Tamworth, New South Wales  \n**Mother:** Janet Nichol  \n**Father:** William Telfer (shepherd)  \n**Spouse:** Margaret (surname unknown) — m. unknown, before 1841\n\n## Life Summary\n\nWilliam Telfer was born on 7 October 1802 in the Parish of Oxnam, Roxburghshire, Scotland, the fourth child of William Telfer, a shepherd, and his wife Janet Nichol. From an early age, William and his older brother Andrew wor",
+    "parents": [
+      "William Telfer (shepherd)",
+      "Janet Nichol"
+    ],
+    "children": [
+      "William Telfer (1841–?)",
+      "Elizabeth Telfer (Mrs Mansfield)",
+      "Andrew Telfer",
+      "Edward Telfer"
+    ],
+    "siblings": [
+      "Andrew Telfer (1798–1858)"
+    ],
+    "spouses": [
+      "Margaret (surname unknown)"
+    ],
+    "is_living": false,
+    "lifespan": "1802 – 1850",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "William Telfer",
+    "slug": "william-telfer-1811",
+    "vault_file": "William Telfer (1811–1881).md",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1811,
+    "death_year": 1881,
+    "birth_year_display": "1811",
+    "death_year_display": "1881",
+    "display_name": "William Telfer",
+    "title": "William Telfer — Family & Biography",
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "ancestor"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "William Telfer (1811–1881)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "James Telfer (1761–1845)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Elizabeth Hutton (1774–1853)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "James Telfer (1796–1863)",
+          "Isobel/Isabella Telfer (1798–1875)",
+          "Adam Telfer (1799–?)",
+          "Margaret Telfer (1802–1884)",
+          "Robert Telfer (1803–1878)",
+          "John Telfer (1805–1839)",
+          "Francis Telfer (1809–1895)"
+        ]
+      }
+    ],
+    "roles": [
+      "Brother of Francis Telfer (1809–1895), youngest of the siblings"
+    ],
+    "body_markdown": "# William Telfer (1811–1881)\n\n**Role:** Brother of Francis Telfer (1809–1895), youngest of the siblings\n\nWilliam Telfer was born ~1811 at Blackburnfoot, Newcastleton, Roxburghshire, Scotland. He was the youngest child and son of James Telfer (1761–1845), a hand loom weaver, and Elizabeth \"Betty\" Hutton (1774–1853).\n\nHe did NOT emigrate to Australia and died in 1881 in Scotland.\n\nThe book states: *\"We have no further information about four members of this family; namely Isobel, Adam, Margaret and William.\"* Like his siblings Isobel, Adam, and Margaret, William's fate after the family records is not documented beyond his death.\n\n**Source:** *From the Borders to the Bush* — pages 17–20\n\n---\n\n## Family Stories\n\n### The Youngest Brother\n\nWilliam Telfer was born around 1811 at Blackburnfoot, Newcastleton — the youngest child of James Telfer and Elizabeth Hutton. He was seven years younger than his brother Francis, who would go on to build a new life in South Australia.\n\nWilliam never made the voyage. He stayed in Scotland and died there in 1881, the youngest of the siblings who remained behind. Like Adam, Isobel, and Margaret, his life after the family records ends is undocumented — one of the four the book has no further information on. He's the bookend of that generation, the youngest, the one who stayed.\n\n*(From the Borders to the Bush, pp.17-20)*\n\n---",
+    "body_stripped": "**Role:** Brother of Francis Telfer (1809–1895), youngest of the siblings\n\nWilliam Telfer was born ~1811 at Blackburnfoot, Newcastleton, Roxburghshire, Scotland. He was the youngest child and son of James Telfer (1761–1845), a hand loom weaver, and Elizabeth \"Betty\" Hutton (1774–1853).\n\nHe did NOT emigrate to Australia and died in 1881 in Scotland.\n\nThe book states: *\"We have no further information about four members of this family; namely Isobel, Adam, Margaret and William.\"* Like his siblings ",
+    "parents": [
+      "James Telfer (1761–1845)",
+      "Elizabeth Hutton (1774–1853)"
+    ],
+    "children": [],
+    "siblings": [
+      "James Telfer (1796–1863)",
+      "Isobel/Isabella Telfer (1798–1875)",
+      "Adam Telfer (1799–?)",
+      "Margaret Telfer (1802–1884)",
+      "Robert Telfer (1803–1878)",
+      "John Telfer (1805–1839)",
+      "Francis Telfer (1809–1895)"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1811 – 1881",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "William Telfer",
+    "slug": "william-telfer-1841",
+    "vault_file": "William Telfer (1841–?).md",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1841,
+    "death_year": null,
+    "birth_year_display": "1841",
+    "death_year_display": "?",
+    "display_name": "William Telfer",
+    "title": "William Telfer — Family & Biography",
+    "tags": [
+      "person",
+      "telfer",
+      "australian",
+      "stub"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "William Telfer (1841–?)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "William Telfer (1802–1850)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Margaret (surname unknown)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# William Telfer (1841–?)\n\n**Born:** 1841 — New South Wales, Australia\n**Father:** [[William Telfer (1802–1850)]]\n**Mother:** Margaret (surname unknown)\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370",
+    "body_stripped": "**Born:** 1841 — New South Wales, Australia\n**Father:** William Telfer (1802–1850)\n**Mother:** Margaret (surname unknown)\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370",
+    "parents": [
+      "William Telfer (1802–1850)",
+      "Margaret (surname unknown)"
+    ],
+    "children": [],
+    "siblings": [],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1841 – ?",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "William Telfer",
+    "slug": "william-telfer-living",
+    "vault_file": "William Telfer (shepherd).md",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "William Telfer",
+    "title": "William Telfer — Family & Biography",
+    "tags": [
+      "person",
+      "telfer",
+      "shepherd",
+      "scotland",
+      "stub"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "William Telfer (shepherd)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Janet Nichol"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "Andrew Telfer (1798–1858)",
+          "William Telfer (1802–1850)"
+        ]
+      }
+    ],
+    "roles": [
+      "Shepherd in the Cheviot Hills region, Roxburghshire, Scotland"
+    ],
+    "body_markdown": "# William Telfer (shepherd)\n\n**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** [[Janet Nichol]]\n**Children:** Andrew Telfer (1798–1858), [[William Telfer (1802–1850)]]\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
+    "body_stripped": "**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** Janet Nichol\n**Children:** Andrew Telfer (1798–1858), William Telfer (1802–1850)\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
+    "parents": [],
+    "children": [
+      "Andrew Telfer (1798–1858)",
+      "William Telfer (1802–1850)"
+    ],
+    "siblings": [],
+    "spouses": [
+      "Janet Nichol"
+    ],
+    "is_living": true,
+    "lifespan": "? – living",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Elizabeth Hutton",
+    "slug": "elizabeth-hutton-1774",
+    "first_name": "Elizabeth",
+    "middle_name": null,
+    "last_name": "Hutton",
+    "birth_year": 1774,
+    "death_year": 1853,
+    "birth_year_display": "1774",
+    "death_year_display": "1853",
+    "display_name": "Elizabeth Hutton",
+    "title": "Elizabeth Hutton (1774–1853)",
+    "tags": [
+      "family",
+      "hutton",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Elizabeth Hutton (1774–1853)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "James Telfer (1761–1845)",
+          "James Telfer Sorbietrees"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "James Telfer (1796–1863)",
+          "Isobel/Isabella Telfer (1798–1875)",
+          "Adam Telfer (1799–?)",
+          "Margaret Telfer (1802–1884)",
+          "Robert Telfer (1803–?)",
+          "John Telfer (1805–1839)",
+          "Francis Telfer (1809–1895)",
+          "William Telfer (1811–1881)",
+          "Isobel Telfer (1798–1875)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Elizabeth Hutton (1774–1853)\n\n> Stub entry — linked from the Telfer family tree.",
+    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
+    "is_living": false,
+    "lifespan": "1774 – 1853",
+    "parents": [],
+    "children": [
+      "James Telfer (1796–1863)",
+      "Isobel/Isabella Telfer (1798–1875)",
+      "Adam Telfer (1799–?)",
+      "Margaret Telfer (1802–1884)",
+      "Robert Telfer (1803–?)",
+      "John Telfer (1805–1839)",
+      "Francis Telfer (1809–1895)",
+      "William Telfer (1811–1881)",
+      "Isobel Telfer (1798–1875)"
+    ],
+    "spouses": [
+      "James Telfer (1761–1845)",
+      "James Telfer Sorbietrees"
+    ],
+    "siblings": [],
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "vault_file": "Elizabeth Hutton (1774–1853).md",
     "images": []
   }
 ]

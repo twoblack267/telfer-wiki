@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
 const { person } = Astro.props;
 const people = (await import("../../data/people.public.json")).default;
-const telferPeople = people.filter((p) => p.branch === "telfer");
+const telferPeople = people.filter((p) => p.branch === "telfer" || !p.branch);
 
 // ── Relationship groupings ──
 const spouseLinks = getLinksForRelationships(person.spouses, telferPeople);
