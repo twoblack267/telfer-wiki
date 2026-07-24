@@ -163,7 +163,7 @@ function renderSpouses(spouses?: string[]): string {
       <section class="mt-4">
         <h3 class="font-medium text-[var(--color-heading)] border-b border-[var(--color-border)] pb-1">Biography</h3>
         <div class="prose prose-sm max-w-none mt-3 text-[var(--color-ink-light)]">
-          {person.biography ? <p class="whitespace-pre-wrap">{person.biography}</p> : <p class="text-[var(--color-muted)] italic">Biographical information is limited to the data recorded in the vault YAML fields above.</p>}
+          {person.body_stripped ? <p class="whitespace-pre-wrap">{person.body_stripped}</p> : <p class="text-[var(--color-muted)] italic">Biographical information is limited to the data recorded in the vault YAML fields above.</p>}
         </div>
       </section>
 
