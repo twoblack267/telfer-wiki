@@ -48,8 +48,10 @@ const keyDates = [
   { year: "2019", event: "Zabella Violet Telfer born" },
 ];
 
-// Recent profiles added
-const recentPeople = (telferPeople || []).slice(-6).reverse();
+// Recent profiles added — skip bare stubs (no dates, no family links, no body)
+const recentPeople = (telferPeople || [])
+  .filter((p) => p.birth_year || p.death_year || (p.parents && p.parents.length > 0) || (p.children && p.children.length > 0) || (p.body_markdown && p.body_markdown.length > 100))
+  .slice(-6).reverse();
 ---
 
 <BaseLayout title="Home">
