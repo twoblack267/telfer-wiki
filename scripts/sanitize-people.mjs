@@ -248,9 +248,10 @@ function buildNameToSlug(people) {
       if (preferYear(noDate)) map.set(noDate, p.slug);
     }
     // First name + last name (handles middle initials in relationship data)
+    // When multiple people share first+last (6 James Telfers!), prefer year-suffixed slug
     if (p.first_name && p.last_name) {
       const firstLast = `${p.first_name.toLowerCase()} ${p.last_name.toLowerCase()}`;
-      if (!map.has(firstLast)) map.set(firstLast, p.slug);
+      if (preferYear(firstLast)) map.set(firstLast, p.slug);
     }
     // Birth-year-suffixed variants for disambiguation
     // (so "James Telfer (1761–1845)" resolves to james-telfer-1761, not a random James Telfer)
