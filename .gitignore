@@ -4,7 +4,7 @@ dist/
 .env
 .DS_Store
 public/audit-history/
-public/research/
+# public/research/ — removing so the 1986 Telfer Reunion Booklet PDF deploys
 scripts/redirect-log.json
 src/data/people.public.json
 
