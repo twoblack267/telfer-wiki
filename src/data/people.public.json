@@ -10161,12 +10161,12 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "William Telfer",
-    "title": "William Telfer — Family & Biography",
-    "lifespan": "? – living",
+    "title": "William Telfer (shepherd) — Scottish Ancestor",
+    "lifespan": "? – ?",
     "branch": "telfer",
-    "is_living": true,
+    "is_living": false,
     "body_markdown": "# William Telfer (shepherd)\n\n**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** [[Janet Nichol]]\n**Children:** Andrew Telfer (1798–1858), [[William Telfer (1802–1850)]]\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
     "roles": [
       "Shepherd in the Cheviot Hills region, Roxburghshire, Scotland"
@@ -10179,7 +10179,10 @@
       "stub"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "Andrew Telfer (1798–1858)",
+      "William Telfer (1802–1850)"
+    ],
     "spouses": [
       "Janet Nichol"
     ],
