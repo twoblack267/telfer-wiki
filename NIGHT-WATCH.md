@@ -17,7 +17,7 @@ Committed as `fd8e3fc` + `f17caa0`, held OFF main pending user review.
 - **Susan Burton / Susan Burton Telfer** — TRUE MERGE. Kept `susan-telfer-1844` (full bio, Yahl SA, spouses Robert Telfer + Leslie Robert, child James Robert). Deleted BOTH stubs `susan-burton-1844` + `susan-burton-1845`. Re-pointed `james-robert-telfer.parents` "Susan Burton (1844–1924)" → "Susan Burton Telfer (1844–1924)".
 
 ### Duplicate slugs blocking build (critical) — resolved
-- **Margaret Wright / Margaret Wright Telfer** — dup slugs with birth CONFLICT (1807 vs 1810). **VAULT RESOLVES TO 1807** (2-source rule): `_Index.md`, `Francis Telfer (1809–1895).md` "Wife(3) Margaret Wright (1807–1892) m.27Mar1845", her own profile `Margaret Wright (1807–1892)`. Kept birth-1807 records; deleted both 1810 records.
+- **Margaret Wright / Margaret Wright Telfer** — dup slugs with birth CONFLICT (1807 vs 1810). **BOOK SOURCE RESOLVES TO 1810** — Supplement-2008 p.203 "Margaret Wright (1810-1892)"; committed audit e222fce set 1810 per book. Kept the full 1810 biography record (gravestone, life summary); remove the 1807 dup. ⚠️ **OPEN for Mark**: her own gravestone age (died 1892 aged 86-87 → ~1805-6) challenges BOTH 1807 and 1810. Not to be resolved by guessing — needs verifier + Mark.
 - **Amy Farrow Stribling** — deleted the redirect-shell stub (`superseded by full profile`); kept the full record.
 
 ### Naming rule (proper names, NOT "Mark's [role]")
