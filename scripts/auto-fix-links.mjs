@@ -8,7 +8,6 @@ import { join, extname } from "path";
 
 const SRC = new URL("../src/", import.meta.url).pathname;
 const FIX_PATTERN = /href="\/([a-z][^"]*?)"/g;
-
 let fixed = 0;
 let filesChanged = 0;
 
@@ -25,6 +24,7 @@ function walk(dir) {
       const replaced = original.replace(FIX_PATTERN, (match, path) => {
         // Skip already-fixed links, external URLs, anchors, mailto
         if (
+          path.includes("${") || // JS template-literal interpolation — do NOT rewrite (breaks JS strings)
           path.startsWith("telfer-wiki/") || // already has prefix
           path.startsWith("http") || // external URL
           path.startsWith("mailto:") ||

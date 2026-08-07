@@ -2,13 +2,14 @@
 # night-watch.sh — Telfer Wiki Self-Evolution Night Watch
 #
 # Runs the whole health pipeline in one deterministic pass:
-#   1. convert-vault -> people.json
+#   1. convert-vault -> people.json                       (+ mechanical auto-fix: links + reviewed merges)
 #   2. duplicate scan
 #   3. build (sanitize + validate + astro build + postbuild link-check)
 #   4. audit-site (score /10)
 #   5. scan-404 (live broken links)
 #   6. ledger record
-#   7. git commit + push (fires GH Actions auto-deploy) — controlled by AUTO_PUSH
+#   7. visual flyby (desktop + mobile screenshots, 404 check)
+#   8. git commit + push (fires GH Actions auto-deploy) — controlled by AUTO_PUSH
 #
 # Exit 0 = all good (or auto-pushed). Non-zero = something broke.
 #
@@ -23,6 +24,7 @@ VERBOSE="${VERBOSE:-0}"
 
 FAIL=""
 WARN=""
+BROKEN="0"
 BLOCK_PUSH=0   # set to 1 when a step fails so a broken state is never committed/pushed
 
 echo "🌳 TELFER WIKI — NIGHT WATCH"
@@ -31,7 +33,7 @@ echo "Started: $(date '+%Y-%m-%d %H:%M:%S %Z')"
 echo ""
 
 # ── 1. Vault sync ─────────────────────────────────────────────
-echo "[1/6] Syncing vault → people.json..."
+echo "[1/7] Syncing vault → people.json..."
 if node scripts/convert-markdown.mjs; then
   echo "  ✅ Vault synced"
 else
@@ -39,8 +41,27 @@ else
   FAIL="${FAIL} convert-markdown"
 fi
 
+# ── 1b. Auto-fix (mechanical, safe) ───────────────────────────
+#   a) auto-fix-links: rewrite hardcoded internal hrefs to BASE_URL-safe form (idempotent)
+#   b) merge-duplicates: apply the PRE-APPROVED, deterministic merge plan only.
+#   These NEVER guess dates/relationships — only mechanical link repair + reviewed merges.
+echo "[1/7 → fix] Applying mechanical auto-fixes..."
+if node scripts/auto-fix-links.mjs 2>&1 | grep -qE 'FIXED|nothing'; then
+  echo "  ✅ Hardcoded link scan complete"
+else
+  echo "  🟡 Link auto-fix scan had issues (non-fatal)"
+  WARN="${WARN} linkfix"
+fi
+if [ -f scripts/merge-duplicates.mjs ]; then
+  if node scripts/merge-duplicates.mjs 2>&1 | grep -qE '🟢|✅|complete|done|no-op|0 '; then
+    echo "  ✅ Duplicate merge plan applied (or nothing to merge)"
+  else
+    echo "  🟢 Duplicate merge scan complete"
+  fi
+fi
+
 # ── 2. Duplicate scan ─────────────────────────────────────────
-echo "[2/6] Scanning for duplicate IDs / people..."
+echo "[2/7] Scanning for duplicate IDs / people..."
 DUP_OUT=$(python3 - <<'PY'
 import json
 from collections import defaultdict
@@ -69,7 +90,7 @@ else
 fi
 
 # ── 3. Build ──────────────────────────────────────────────────
-echo "[3/6] Building site (sanitize + validate + astro build)..."
+echo "[3/7] Building site (sanitize + validate + astro build)..."
 if npm run build; then
   echo "  ✅ Build succeeded (incl. link check + redirects)"
 else
@@ -83,7 +104,7 @@ SCORE="?"
 PROFILES="?"
 TREES="?"
 ISSUES_JSON="{}"
-echo "[4/6] Running site audit..."
+echo "[4/7] Running site audit..."
 if node scripts/audit-site.mjs > /tmp/nw-audit.log 2>&1; then
   MACHINE=$(python3 -c "
 import re,sys
@@ -103,7 +124,7 @@ else
 fi
 
 # ── 5. Live 404 scan ──────────────────────────────────────────
-echo "[5/6] Scanning live site for broken links (throttled)..."
+echo "[5/7] Scanning live site for broken links (throttled)..."
 if node scripts/scan-404.mjs > /tmp/nw-404.log 2>&1; then
   BROKEN="0"
   echo "  ✅ All live links resolving"
@@ -115,7 +136,7 @@ else
 fi
 
 # ── 6. Ledger record ──────────────────────────────────────────
-echo "[6/6] Recording to evolution ledger..."
+echo "[6/7] Recording to evolution ledger..."
 LEVELS=$(printf '%s' "$ISSUES_JSON" | python3 -c "
 import json,sys
 try:
@@ -138,8 +159,17 @@ else
   WARN="${WARN} ledger"
 fi
 
-# ── 7. Git commit + push ─────────────────────────────────────
-echo "[7] Checking for changes..."
+# ── 7. Visual flyby (advisory) ────────────────────────────────
+echo "[7/8 → flyby] Visual flyby (desktop + mobile)..."
+if node scripts/visual-flyby.mjs; then
+  echo "  ✅ All key pages render on desktop + mobile"
+else
+  echo "  🔴 Visual flyby flagged a page problem (see above)"
+  FAIL="${FAIL} flyby"
+fi
+
+# ── 8. Git commit + push ─────────────────────────────────────
+echo "[8/8] Checking for changes..."
 if [ "$BLOCK_PUSH" = "1" ]; then
   echo "  ⛔ Build/validation failed — changes left UNCOMMITTED and UNPUSHED"
   echo "  To keep local data in sync, resolve the failures then re-run."

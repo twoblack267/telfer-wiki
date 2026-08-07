@@ -21,7 +21,7 @@ const haplogroupsY = [...new Set(people.filter(p => p.haplogroup_y).map(p => ({ 
     <div class="text-sm text-[var(--color-muted)] mb-1.5">
       <a href="/" class="text-[var(--color-link)]">Home</a>
       <span class="mx-2">/</span>
-      <a href="/people" class="text-[var(--color-link)]">People</a>
+      <a href={`${import.meta.env.BASE_URL}people`} class="text-[var(--color-link)]">People</a>
       <span class="mx-2">/</span>
       <span>DNA Connections</span>
     </div>
@@ -155,7 +155,7 @@ const haplogroupsY = [...new Set(people.filter(p => p.haplogroup_y).map(p => ({ 
 
     <!-- Back link -->
     <div class="mt-6 text-center">
-      <a href="/people" class="text-[var(--color-link)] hover:underline">← Back to People</a>
+      <a href={`${import.meta.env.BASE_URL}people`} class="text-[var(--color-link)] hover:underline">← Back to People</a>
     </div>
   </div>
 </BaseLayout>
