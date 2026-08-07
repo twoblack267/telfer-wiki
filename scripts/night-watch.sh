@@ -23,6 +23,7 @@ VERBOSE="${VERBOSE:-0}"
 
 FAIL=""
 WARN=""
+BLOCK_PUSH=0   # set to 1 when a step fails so a broken state is never committed/pushed
 
 echo "🌳 TELFER WIKI — NIGHT WATCH"
 echo "============================"
@@ -72,8 +73,9 @@ echo "[3/6] Building site (sanitize + validate + astro build)..."
 if npm run build; then
   echo "  ✅ Build succeeded (incl. link check + redirects)"
 else
-  echo "  🔴 Build failed"
+  echo "  🔴 Build failed — WILL NOT push broken state"
   FAIL="${FAIL} build"
+  BLOCK_PUSH=1
 fi
 
 # ── 4. Audit ──────────────────────────────────────────────────
@@ -138,10 +140,13 @@ fi
 
 # ── 7. Git commit + push ─────────────────────────────────────
 echo "[7] Checking for changes..."
-git add -A
-if git diff --cached --quiet; then
+if [ "$BLOCK_PUSH" = "1" ]; then
+  echo "  ⛔ Build/validation failed — changes left UNCOMMITTED and UNPUSHED"
+  echo "  To keep local data in sync, resolve the failures then re-run."
+elif git diff --quiet; then
   echo "  ℹ️  No changes — nothing to push"
 else
+  git add -A
   echo "  Detected changes. Committing..."
   git commit -m "Night Watch: auto-sync vault + rebuild ($(date '+%Y-%m-%d %H:%M'))" -q
   if [ "$AUTO_PUSH" = "1" ]; then
