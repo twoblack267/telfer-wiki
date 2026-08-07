@@ -209,11 +209,15 @@ function main() {
   const existingBySlug = new Map(existingPeople.map(p => [p.slug, p]));
 
   // Build secondary index: first_name + last_name + birth_year → existing entry
-  // Prefer year-suffixed slug (canonical over bare stub) when keys collide
+  // Prefer year-suffixed slug (canonical over bare stub) when keys collide.
+  // NOTE: concatenate first+last before lowercasing so the key is robust to
+  // inconsistent first/last split points (e.g. "Mary"+"Anne McIntyre" vs
+  // "Mary Anne"+"McIntyre") — otherwise a legitimate re-merge dedupes to the
+  // wrong person or spawns a duplicate.
   const existingByKey = new Map();
   for (const p of existingPeople) {
-    const key = `${p.first_name}|${p.last_name}|${p.birth_year ?? ''}`;
-    const keyLower = key.toLowerCase();
+    const key = `${(p.first_name || '')}${(p.last_name || '')}|${p.birth_year ?? ''}`;
+    const keyLower = key.toLowerCase().replace(/\s+/g, '');
     const existing = existingByKey.get(keyLower);
     if (!existing) {
       existingByKey.set(keyLower, p);
@@ -259,6 +263,19 @@ function main() {
     }
 
     const { data: fm, content: body } = parsed;
+
+    // ── Redirect stubs: skip files that are placeholders for a canonical profile ──
+    // A vault file whose title marks it as a "redirect" (e.g. "... (redirect)")
+    // is not a real profile — it points at a canonical entry elsewhere. Skipping
+    // them prevents phantom/stub records from regenerating, and lets the orphan
+    // purge below drop any previously-accumulated stub entries.
+    const rawTitle = (fm.title || '').toString().toLowerCase();
+    if (rawTitle.includes('redirect')) {
+      console.log(`  ↩️  SKIP redirect stub: ${file}`);
+      skipped++;
+      continue;
+    }
+
     const firstName = (fm.first_name || '').trim();
     const lastName = (fm.last_name || '').trim();
     const middleNameRaw = (fm.middle_name || '').trim();
@@ -355,12 +372,30 @@ function main() {
 
     // 3. Find matching existing entry
     // Priority: key match (first+last+birth_year) first, then slug match (fallback)
-    const matchKey = `${firstName}|${lastName}|${birthYear ?? ''}`.toLowerCase();
+    // Key must concatenate first+last exactly as the index builder does, so
+    // first/last split inconsistencies still merge to the same person.
+    const matchKey = `${firstName}${lastName}|${birthYear ?? ''}`.toLowerCase().replace(/\s+/g, '');
     let existing = existingByKey.get(matchKey) || existingBySlug.get(slug);
 
     if (existing) {
       // Update — overwrite fields from markdown, keep existing denormalized
-      existing.slug = entry.slug;
+      // Slug preservation: don't regress an already-disambiguated slug to a
+      // bare form. Existing slugs may carry a year suffix (-1805), a descriptive
+      // suffix (-robert, -of-castleton) or a living marker (-living); the incoming
+      // markdown file's bare slug would collide with / sit ambiguously beside
+      // genuinely distinct people. Keep the existing explicit slug so a rerun
+      // never merges distinct profiles or shortens a URL the committed scheme
+      // deliberately disambiguated. Rule: preserve whenever the existing slug is
+      // "incoming bare slug" + a disambiguating suffix (any suffix after a dash).
+      const existingIsStrictSuperset =
+        existing.slug && entry.slug &&
+        existing.slug.startsWith(entry.slug) &&
+        existing.slug.length > entry.slug.length &&
+        existing.slug[entry.slug.length] === '-';
+      const incomingBare = !/-\d{4}$/.test(entry.slug || '');
+      if (!(existingIsStrictSuperset && incomingBare)) {
+        existing.slug = entry.slug;
+      }
       existing.display_name = entry.display_name;
       existing.id = entry.display_name;
       existing.title = entry.title;
@@ -408,6 +443,57 @@ function main() {
       existingPeople.push(entry);
       added++;
     }
+  }
+
+  // ── Orphan purge: drop entries whose vault file no longer exists ────────
+  // Records carrying a vault_file that is absent from the vault AND wasn't
+  // processed this run are orphans (vault file renamed/deleted but the entry
+  // survived in people.json). Purge them so they don't re-accumulate. Entries
+  // with no vault_file (manually curated) are always preserved.
+  const vaultDirExists = fs.existsSync(VAULT_PEOPLE_DIR);
+  const vaultFilesNow = vaultDirExists
+    ? new Set(fs.readdirSync(VAULT_PEOPLE_DIR))
+    : new Set();
+  // Redirect-stub filenames: files whose title marks them as placeholders for a
+  // canonical profile. Any record sourced from one of these is a phantom and
+  // must be purged even though the file itself still exists on disk.
+  const redirectStubFiles = new Set();
+  if (vaultDirExists) {
+    for (const f of vaultFilesNow) {
+      if (!f.endsWith('.md')) continue;
+      try {
+        const fm = matter(fs.readFileSync(path.join(VAULT_PEOPLE_DIR, f), 'utf-8')).data;
+        if ((fm.title || '').toString().toLowerCase().includes('redirect')) {
+          redirectStubFiles.add(f);
+        }
+      } catch { /* unreadable/tiny stub — ignore */ }
+    }
+  }
+  const processedFiles = new Set(mdFiles); // files we just parsed & merged
+  const beforePurge = existingPeople.length;
+  const keep = [];
+  for (const p of existingPeople) {
+    const vf = p.vault_file;
+    // Keep if manually curated (no vault_file) and the file is a real,
+    // non-redirect profile. Purge if: file missing, OR it's a redirect stub.
+    if (!vf) {
+      keep.push(p);
+    } else if (vaultFilesNow.has(vf) || processedFiles.has(vf)) {
+      if (redirectStubFiles.has(vf)) {
+        console.log(`  🧹 PURGED phantom (redirect stub source): ${p.display_name || p.slug} [${vf}]`);
+      } else {
+        keep.push(p);
+      }
+    } else {
+      console.log(`  🧹 PURGED orphan (vault file missing): ${p.display_name || p.slug} [${vf}]`);
+    }
+  }
+  existingPeople = keep;
+  const purged = beforePurge - existingPeople.length;
+  if (purged > 0) {
+    console.log(`  🧹 Orphan purge: removed ${purged} stale record(s)`);
+  } else {
+    console.log(`  🧹 Orphan purge: no stale records to remove`);
   }
 
   // ── Slug disambiguation: detect bare-slug conflicts, append year suffix ──
