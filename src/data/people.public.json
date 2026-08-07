@@ -3578,6 +3578,38 @@
     "images": []
   },
   {
+    "id": "Francis Telfer Dillon",
+    "slug": "francis-telfer-dillon",
+    "first_name": "Francis Telfer",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1864,
+    "death_year": 1942,
+    "birth_year_display": "1864",
+    "death_year_display": "1942",
+    "display_name": "Francis Telfer Dillon",
+    "title": "Francis Telfer Dillon — Family & Biography",
+    "lifespan": "1864 – 1942",
+    "branch": "telfer",
+    "is_living": false,
+    "body_markdown": "# Francis Telfer Dillon (1864–1942)\n\n**Role:** Son of Elizabeth Beattie Telfer\n\n**Born:** 7 June 1864 — Kersbrook, South Australia\n**Died:** 26 April 1942 — Mitcham, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).\n\n**Father:** [[Elizabeth Beattie Telfer (1832–1896)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Elizabeth Beattie Telfer (1832–1896)]] |\n\n---\n\n## Life Summary\n\nFrancis Telfer Dillon (1864–1942), son of Elizabeth Beattie Telfer and John Charles Dillon.\n\n---\n\n**Source:** Telfer family records",
+    "roles": [
+      "Son of Elizabeth Beattie Telfer"
+    ],
+    "tags": [
+      "person"
+    ],
+    "parents": [
+      "Elizabeth Beattie Telfer (1832–1896)"
+    ],
+    "children": [
+      "John Telfer (1847–1929)"
+    ],
+    "spouses": [],
+    "siblings": [],
+    "images": []
+  },
+  {
     "id": "George Sidney Gilbert Stribling",
     "slug": "george-sidney-gilbert-stribling",
     "first_name": "George Sidney Gilbert",
@@ -3629,6 +3661,33 @@
       "person",
       "ancestor",
       "baker"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": []
+  },
+  {
+    "id": "Henry Hatch Dillon",
+    "slug": "henry-hatch-dillon",
+    "first_name": "Henry",
+    "middle_name": null,
+    "last_name": "Hatch Dillon",
+    "birth_year": 1866,
+    "death_year": 1936,
+    "birth_year_display": "1866",
+    "death_year_display": "1936",
+    "display_name": "Henry Hatch Dillon",
+    "title": "Henry Hatch Dillon",
+    "lifespan": "1866 – 1936",
+    "branch": "telfer",
+    "is_living": false,
+    "body_markdown": "# Henry Hatch Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Born:** 2 May 1866 — Maidstone, South Australia\n**Died:** 27 September 1936 — Houghton, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
     ],
     "parents": [],
     "children": [],
@@ -3834,6 +3893,33 @@
     "images": []
   },
   {
+    "id": "Adam Dillon",
+    "slug": "adam-dillon",
+    "first_name": "Adam",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1870,
+    "death_year": 1948,
+    "birth_year_display": "1870",
+    "death_year_display": "1948",
+    "display_name": "Adam Dillon",
+    "title": "Adam Dillon",
+    "lifespan": "1870 – 1948",
+    "branch": "telfer",
+    "is_living": false,
+    "body_markdown": "# Adam Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Born:** 16 January 1870 — Kersbrook, South Australia\n**Died:** 1 May 1948 — South Payneham, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": []
+  },
+  {
     "id": "Esther Telfer Smith",
     "slug": "esther-telfer-smith",
     "first_name": "Esther Telfer",
@@ -3943,6 +4029,33 @@
     "branch": "telfer",
     "is_living": false,
     "body_markdown": "# John James Smith (1871–?)\n\n> Stub entry — linked from the Telfer family tree.",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": []
+  },
+  {
+    "id": "Septimus Dillon",
+    "slug": "septimus-dillon",
+    "first_name": "Septimus",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1871,
+    "death_year": 1946,
+    "birth_year_display": "1871",
+    "death_year_display": "1946",
+    "display_name": "Septimus Dillon",
+    "title": "Septimus Dillon",
+    "lifespan": "1871 – 1946",
+    "branch": "telfer",
+    "is_living": false,
+    "body_markdown": "# Septimus Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Born:** 19 July 1871 — Kersbrook, South Australia\n**Died:** 4 February 1946 — Payneham, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
     "roles": [],
     "tags": [
       "family",
@@ -5006,6 +5119,46 @@
     "images": []
   },
   {
+    "id": "Florence Nicholas",
+    "slug": "florence-nicholas",
+    "first_name": "Florence",
+    "middle_name": null,
+    "last_name": "Nicholas",
+    "birth_year": 1885,
+    "death_year": 1960,
+    "birth_year_display": "~1885",
+    "death_year_display": "~1960",
+    "display_name": "Florence Nicholas",
+    "title": "Florence Nicholas — Family & Biography",
+    "lifespan": "~1885 – ~1960",
+    "is_living": false,
+    "body_markdown": "# Florence Nicholas Telfer\n\n**Role:** Wife of Rev. Ernest John Telfer — First Matron of Dulhi-Gunyah Orphanage\n**Born:** ~1885 — Boulder City, Western Australia (estimated from marriage in 1909)\n**Died:** Unknown — likely New South Wales\n**Spouse:** [[Ernest John Telfer (1877–1953)]] (m. 24 Feb 1909)\n**Children:** John Ernest, Jessica Veronica, Lloyd Wilbur, Gweneth Miranda\n\n![Mrs E J Telfer](images/people/Mrs-E-J-Telfer.jpg)\n*Mrs. E.J. Telfer (Florence) — First Matron of Dulhi-Gunyah Orphanage, East Perth — portrait from \"Amongst Australian Aborigines\" (c.1939)*\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Ernest John Telfer (1877–1953)]] |\n| **Children** | John Ernest Telfer (1877–1877), Jessica Veronica Telfer, Lloyd Wilbur Telfer, Gweneth Miranda Telfer |\n\n---\n\n## Life Summary\n\nFlorence Nicholas married Rev. Ernest John Telfer on 24 February 1909 at Boulder City, Western Australia. The following day they began work together at Dulhi-Gunyah (meaning \"little child's home\") Orphanage in East Perth, where Florence served as the first Matron of the home. While Ernie travelled inland on missionary journeys to remote stations, Florence remained in charge of the orphanage, caring for Aboriginal children brought in from the far interior — some from as far as 900 miles inland.\n\nIn March 1911, Florence and Ernie resigned from the United Aborigines' Mission staff. Ernie subsequently entered the Baptist ministry, serving pastorates at Terowie (SA), in Tasmania, and in New South Wales. Florence likely accompanied him through these postings.\n\nA photograph of Florence in academic regalia (mortarboard and gown) appears in Ernie's 1939 book *Amongst Australian Aborigines*, which she helped make possible by \"supplying material\" and supporting the work of the mission.\n\n*(Details on Florence's parentage, birth year, and death date remain unverified — information needed from birth/marriage certificates or family records.)*\n\n---\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| ~1885 | Born at Boulder City, Western Australia (estimated) |\n| 24 Feb 1909 | Married Ernest John Telfer at Boulder City, WA |\n| 25 Feb 1909 | Began as first Matron, Dulhi-Gunyah Orphanage, East Perth |\n| Mar 1911 | Resigned from UAM staff with Ernie |\n| 1912–1916 | Lived at Terowie, SA (Baptist pastorate) |\n| ~1939 | Photo published in *Amongst Australian Aborigines* |\n\n---\n\n## Sources\n\n- **Source:** E.J. Telfer, *Amongst Australian Aborigines* (1939), p.138 — photo and caption \"Mrs. E.J. Telfer, First Matron of the Dulhi-Gunyah Orphanage\" — via vision_analyze 26 Jul 2026\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp.141–142 — marriage and mission details — via OCR 25 Jul 2026\n- **Source:** Group photograph caption in *Amongst Australian Aborigines* (c.1939), pp.199–200 — \"Rev. E.J. Telfer, Miss V.E. Turner, Mr. T. Graham, Mr. J. Jago, Mr. G.L. Aitken, Mr. H. Rotherham\" — via vision_analyze 26 Jul 2026\n\n---",
+    "roles": [
+      "Wife of Rev. Ernest John Telfer — First Matron of Dulhi-Gunyah Orphanage"
+    ],
+    "tags": [
+      "bio",
+      "person"
+    ],
+    "parents": [],
+    "children": [
+      "John Ernest Telfer"
+    ],
+    "spouses": [
+      "Ernest John Telfer"
+    ],
+    "siblings": [],
+    "images": [
+      {
+        "src": "images/people/Mrs-E-J-Telfer.jpg",
+        "alt": "Mrs E J Telfer",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Mrs-E-J-Telfer.jpg",
+        "filename": "Mrs-E-J-Telfer.jpg"
+      }
+    ],
+    "person_photo": "images/people/Mrs-E-J-Telfer.jpg"
+  },
+  {
     "id": "Walter Telfer",
     "slug": "walter-telfer",
     "first_name": "Walter",
@@ -5823,6 +5976,33 @@
     "images": []
   },
   {
+    "id": "Thomas Cleveland Dillon",
+    "slug": "thomas-cleveland-dillon",
+    "first_name": "Thomas",
+    "middle_name": null,
+    "last_name": "Cleveland Dillon",
+    "birth_year": 1900,
+    "death_year": 1976,
+    "birth_year_display": "1900",
+    "death_year_display": "1976",
+    "display_name": "Thomas Cleveland Dillon",
+    "title": "Thomas Cleveland Dillon",
+    "lifespan": "1900 – 1976",
+    "branch": "telfer",
+    "is_living": false,
+    "body_markdown": "# Thomas Cleveland Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Born:** 29 August 1900 — Adelaide, South Australia\n**Died:** 7 August 1976 — Bordertown, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": []
+  },
+  {
     "id": "Floris Telfer",
     "slug": "floris-telfer",
     "first_name": "Floris",
@@ -5896,6 +6076,60 @@
     "spouses": [
       "Jessie Sargent"
     ],
+    "siblings": [],
+    "images": []
+  },
+  {
+    "id": "Inez Dillon",
+    "slug": "inez-dillon",
+    "first_name": "Inez",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1905,
+    "death_year": 1978,
+    "birth_year_display": "1905",
+    "death_year_display": "1978",
+    "display_name": "Inez Dillon",
+    "title": "Inez Dillon",
+    "lifespan": "1905 – 1978",
+    "branch": "telfer",
+    "is_living": false,
+    "body_markdown": "# Inez Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Born:** ~1905 — Adelaide, South Australia\n**Died:** 25 November 1978 — South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source). Birth year approximate (~1905), death date as recorded.",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": []
+  },
+  {
+    "id": "Vera Dillon",
+    "slug": "vera-dillon",
+    "first_name": "Vera",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1905,
+    "death_year": 1986,
+    "birth_year_display": "1905",
+    "death_year_display": "1986",
+    "display_name": "Vera Dillon",
+    "title": "Vera Dillon",
+    "lifespan": "1905 – 1986",
+    "branch": "telfer",
+    "is_living": false,
+    "body_markdown": "# Vera Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Born:** 15 August 1905 — Adelaide, South Australia\n**Died:** 15 July 1986 — Adelaide, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
     "siblings": [],
     "images": []
   },
@@ -7287,33 +7521,6 @@
     "images": []
   },
   {
-    "id": "Adam Dillon",
-    "slug": "adam-dillon",
-    "first_name": "Adam",
-    "middle_name": null,
-    "last_name": "Dillon",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Adam Dillon",
-    "title": "Adam Dillon",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Adam Dillon\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
-  },
-  {
     "id": "Alexander Brown Thomson",
     "slug": "alexander-brown-thomson",
     "first_name": "Alexander",
@@ -7991,15 +8198,15 @@
     "middle_name": null,
     "last_name": "Dillon",
     "birth_year": null,
-    "death_year": null,
+    "death_year": 1988,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "1988",
     "display_name": "Dorothy Dillon",
     "title": "Dorothy Dillon",
-    "lifespan": "? – living",
+    "lifespan": "? – 1988",
     "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Dorothy Dillon\n\n> Stub entry — linked from the Telfer family tree.",
+    "is_living": false,
+    "body_markdown": "# Dorothy Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Died:** 1988\n\n> **Source note:** Death year from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification). Birth year not recorded; exact death date unconfirmed.",
     "roles": [],
     "tags": [
       "family",
@@ -8365,74 +8572,6 @@
     "images": []
   },
   {
-    "id": "Florence Nicholas",
-    "slug": "florence-nicholas",
-    "first_name": "Florence",
-    "middle_name": null,
-    "last_name": "Nicholas",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Florence Nicholas",
-    "title": "Florence Nicholas — Family & Biography",
-    "lifespan": "? – living",
-    "is_living": true,
-    "body_markdown": "# Florence Nicholas Telfer\n\n**Role:** Wife of Rev. Ernest John Telfer — First Matron of Dulhi-Gunyah Orphanage\n**Born:** ~1885 — Boulder City, Western Australia (estimated from marriage in 1909)\n**Died:** Unknown — likely New South Wales\n**Spouse:** [[Ernest John Telfer (1877–1953)]] (m. 24 Feb 1909)\n**Children:** John Ernest, Jessica Veronica, Lloyd Wilbur, Gweneth Miranda\n\n![Mrs E J Telfer](images/people/Mrs-E-J-Telfer.jpg)\n*Mrs. E.J. Telfer (Florence) — First Matron of Dulhi-Gunyah Orphanage, East Perth — portrait from \"Amongst Australian Aborigines\" (c.1939)*\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Ernest John Telfer (1877–1953)]] |\n| **Children** | John Ernest Telfer (1877–1877), Jessica Veronica Telfer, Lloyd Wilbur Telfer, Gweneth Miranda Telfer |\n\n---\n\n## Life Summary\n\nFlorence Nicholas married Rev. Ernest John Telfer on 24 February 1909 at Boulder City, Western Australia. The following day they began work together at Dulhi-Gunyah (meaning \"little child's home\") Orphanage in East Perth, where Florence served as the first Matron of the home. While Ernie travelled inland on missionary journeys to remote stations, Florence remained in charge of the orphanage, caring for Aboriginal children brought in from the far interior — some from as far as 900 miles inland.\n\nIn March 1911, Florence and Ernie resigned from the United Aborigines' Mission staff. Ernie subsequently entered the Baptist ministry, serving pastorates at Terowie (SA), in Tasmania, and in New South Wales. Florence likely accompanied him through these postings.\n\nA photograph of Florence in academic regalia (mortarboard and gown) appears in Ernie's 1939 book *Amongst Australian Aborigines*, which she helped make possible by \"supplying material\" and supporting the work of the mission.\n\n*(Details on Florence's parentage, birth year, and death date remain unverified — information needed from birth/marriage certificates or family records.)*\n\n---\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| ~1885 | Born at Boulder City, Western Australia (estimated) |\n| 24 Feb 1909 | Married Ernest John Telfer at Boulder City, WA |\n| 25 Feb 1909 | Began as first Matron, Dulhi-Gunyah Orphanage, East Perth |\n| Mar 1911 | Resigned from UAM staff with Ernie |\n| 1912–1916 | Lived at Terowie, SA (Baptist pastorate) |\n| ~1939 | Photo published in *Amongst Australian Aborigines* |\n\n---\n\n## Sources\n\n- **Source:** E.J. Telfer, *Amongst Australian Aborigines* (1939), p.138 — photo and caption \"Mrs. E.J. Telfer, First Matron of the Dulhi-Gunyah Orphanage\" — via vision_analyze 26 Jul 2026\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp.141–142 — marriage and mission details — via OCR 25 Jul 2026\n- **Source:** Group photograph caption in *Amongst Australian Aborigines* (c.1939), pp.199–200 — \"Rev. E.J. Telfer, Miss V.E. Turner, Mr. T. Graham, Mr. J. Jago, Mr. G.L. Aitken, Mr. H. Rotherham\" — via vision_analyze 26 Jul 2026\n\n---",
-    "roles": [
-      "Wife of Rev. Ernest John Telfer — First Matron of Dulhi-Gunyah Orphanage"
-    ],
-    "tags": [
-      "bio",
-      "person"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "Ernest John Telfer"
-    ],
-    "siblings": [],
-    "images": [
-      {
-        "src": "images/people/Mrs-E-J-Telfer.jpg",
-        "alt": "Mrs E J Telfer",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Mrs-E-J-Telfer.jpg",
-        "filename": "Mrs-E-J-Telfer.jpg"
-      }
-    ],
-    "person_photo": "images/people/Mrs-E-J-Telfer.jpg"
-  },
-  {
-    "id": "Francis Telfer Dillon",
-    "slug": "francis-telfer-dillon",
-    "first_name": "Francis Telfer",
-    "middle_name": null,
-    "last_name": "Dillon",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Francis Telfer Dillon",
-    "title": "Francis Telfer Dillon — Family & Biography",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Francis Telfer Dillon (?–?)\n\n**Role:** Son of Elizabeth Beattie Telfer\n\n**Father:** [[Elizabeth Beattie Telfer (1832–1896)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Elizabeth Beattie Telfer (1832–1896)]] |\n\n---\n\n## Life Summary\n\nFrancis Telfer Dillon was born in an unknown year. Son of Elizabeth Beattie Telfer\n\n---\n\n**Source:** Telfer family records\n\n---",
-    "roles": [
-      "Son of Elizabeth Beattie Telfer"
-    ],
-    "tags": [
-      "person"
-    ],
-    "parents": [
-      "Elizabeth Beattie Telfer (1832–1896)"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
-  },
-  {
     "id": "Frank Lindsay",
     "slug": "frank-lindsay",
     "first_name": "Frank",
@@ -8636,33 +8775,6 @@
     "images": []
   },
   {
-    "id": "Henry Hatch Dillon",
-    "slug": "henry-hatch-dillon",
-    "first_name": "Henry",
-    "middle_name": null,
-    "last_name": "Hatch Dillon",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Henry Hatch Dillon",
-    "title": "Henry Hatch Dillon",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Henry Hatch Dillon\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
-  },
-  {
     "id": "Hugh John",
     "slug": "hugh-john",
     "first_name": "Hugh",
@@ -8719,48 +8831,21 @@
     "images": []
   },
   {
-    "id": "Inez Dillon",
-    "slug": "inez-dillon",
-    "first_name": "Inez",
+    "id": "Inez Priscilla Dillon",
+    "slug": "inez-priscilla-dillon",
+    "first_name": "Inez Priscilla",
     "middle_name": null,
     "last_name": "Dillon",
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Inez Dillon",
-    "title": "Inez Dillon",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Inez Dillon\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
-  },
-  {
-    "id": "Inez Priscilla Dillon",
-    "slug": "inez-priscilla-dillon",
-    "first_name": "Inez",
-    "middle_name": null,
-    "last_name": "Priscilla Dillon",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Inez Priscilla Dillon",
     "title": "Inez Priscilla Dillon",
-    "lifespan": "? – living",
+    "lifespan": "? – ?",
     "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Inez Priscilla Dillon\n\n> Stub entry — linked from the Telfer family tree.",
+    "is_living": false,
+    "body_markdown": "# Inez Priscilla Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Deceased — dates not recorded.**\n\n> **Source note:** Confirmed as a historical family member (child of Elizabeth Beattie Telfer, 1832–1896, and John Charles Dillon, 1827–1906) — therefore deceased. No birth or death year is recorded in the family history sources consulted; \"Inez Priscilla\" does not appear in the compiled histories, so it may be an alternate name for the same Inez — exact dates intentionally left blank rather than guessed.",
     "roles": [],
     "tags": [
       "family",
@@ -10063,33 +10148,6 @@
     "images": []
   },
   {
-    "id": "Septimus Dillon",
-    "slug": "septimus-dillon",
-    "first_name": "Septimus",
-    "middle_name": null,
-    "last_name": "Dillon",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Septimus Dillon",
-    "title": "Septimus Dillon",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Septimus Dillon\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
-  },
-  {
     "id": "Susan Lawrie",
     "slug": "susan-lawrie",
     "first_name": "Susan",
@@ -10112,60 +10170,6 @@
       "bio",
       "family",
       "person"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
-  },
-  {
-    "id": "Thomas Cleveland Dillon",
-    "slug": "thomas-cleveland-dillon",
-    "first_name": "Thomas",
-    "middle_name": null,
-    "last_name": "Cleveland Dillon",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Thomas Cleveland Dillon",
-    "title": "Thomas Cleveland Dillon",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Thomas Cleveland Dillon\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
-  },
-  {
-    "id": "Vera Dillon",
-    "slug": "vera-dillon",
-    "first_name": "Vera",
-    "middle_name": null,
-    "last_name": "Dillon",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Vera Dillon",
-    "title": "Vera Dillon",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Vera Dillon\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
     ],
     "parents": [],
     "children": [],
@@ -10203,19 +10207,19 @@
   {
     "id": "William John Dillon",
     "slug": "william-john-dillon",
-    "first_name": "William",
+    "first_name": "William John",
     "middle_name": null,
-    "last_name": "John Dillon",
+    "last_name": "Dillon",
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "William John Dillon",
     "title": "William John Dillon",
-    "lifespan": "? – living",
+    "lifespan": "? – ?",
     "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# William John Dillon\n\n> Stub entry — linked from the Telfer family tree.",
+    "is_living": false,
+    "body_markdown": "# William John Dillon\n\n> Stub entry — linked from the Telfer family tree.\n\n## Lifespan\n\n**Deceased — dates not recorded.**\n\n> **Source note:** Confirmed as a historical family member (child of Elizabeth Beattie Telfer, 1832–1896, and John Charles Dillon, 1827–1906) — therefore deceased. No birth or death year is recorded in the family history sources consulted; exact dates remain unknown and are intentionally left blank rather than guessed.",
     "roles": [],
     "tags": [
       "family",

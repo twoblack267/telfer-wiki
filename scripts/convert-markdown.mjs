@@ -317,7 +317,17 @@ function main() {
     const slug = toSlug(firstName, lastName);
 
     const currentYear = new Date().getFullYear();
-    const isLiving = deathYear != null ? false : birthYear != null ? (currentYear - birthYear < 120) : true;
+    // Living status: a death year means deceased. If no death year is recorded but the
+    // person is known to be deceased (frontmatter `deceased: true`), respect that —
+    // some historical ancestors are clearly gone (e.g. children of people born 1827/1832)
+    // yet their exact dates were never recorded. Without this flag, they'd be wrongly
+    // shown as "living". This lets us mark them deceased-honestly WITHOUT inventing a
+    // death year (fabrication is banned). death_year always takes precedence.
+    const deceasedFlag = fm.deceased === true || fm.deceased === 'true' || fm.is_deceased === true || fm.is_deceased === 'true';
+    const isLiving = deathYear != null ? false
+      : deceasedFlag ? false
+      : birthYear != null ? (currentYear - birthYear < 120)
+      : true;
     const birthYearDisplay = birthYear != null ? (birthApprox ? `~${birthYear}` : String(birthYear)) : '?';
     const deathYearDisplay = deathYear != null ? (deathApprox ? `~${deathYear}` : String(deathYear)) : (isLiving ? 'living' : '?');
     const lifespan = `${birthYearDisplay} – ${deathYearDisplay}`;
