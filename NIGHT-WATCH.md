@@ -3,24 +3,31 @@
 ## Status (Aug 2026)
 - **Built:** `scripts/night-watch.sh` (full pipeline watchdog) + `scripts/evolution-ledger.mjs` (run-history ledger + pruner). Both on `main`.
 - **Deps fixed:** repo previously had NO `node_modules` → local builds impossible → live site numbers frozen. `npm install` done.
-- **Live site healthy:** 300 people build clean, NO broken links (404 scan + link check pass), audit ~score.
+- **GitHub push auth: SOLVED** — `gh auth login` complete (twoblack267); git wired to gh credential helper (non-interactive push works). Night Watch auto-push is ON.
+- **Cron job: SCHEDULED** via Hermes as **"Telfer Wiki Website Audit"** — nightly 20:00, wrapper `~/.hermes/scripts/telfer-night-watch.sh` → repo `scripts/night-watch.sh`.
+- **Push-safety fix:** Night Watch never commits/pushes a broken state. If the build gate fails it leaves changes uncommitted/unpushed and reports 🔴 (commit `f52361a`).
 
-## BLOCKER — GitHub auth for auto-push
-- Remote is `https://github.com/twoblack267/telfer-wiki.git` (HTTPS + osxkeychain helper).
-- Non-interactive push fails: `fatal: could not read Username ... Device not configured`.
-- **Fix (one-time):** run `gh auth login` in a terminal on this Mac, OR store a PAT with `repo` scope as `GITHUB_TOKEN` in `~/.hermes/.env`. Until then night-watch commits locally and reports the push failure (safe default — it never pushes silently).
+## Merge back to main (2026-08-07) — DONE
+- reconcile branch merged + pushed. Contains: 12 new vault people (Stribling/Farrow/Holloway/Latter/Drummond/Haining), duplicate merges, 56 proper-name fixes.
+- **ON HOLD (open):** Margaret Wright birth-year conflict — see below. Not resolved; waiting on verifier + more information (per Mark).
 
-## PENDING — reconcile branch
-- `reconcile-2026-08-07` (side branch, OFF main): 12 new vault people + a Margaret Wright naming reconciliation (women-surname convention). **NOT on main**, so won't deploy. Needs Mark's review before merge to main.
-  - New: Stribling (Alfred/Amy/Arthur/Sidney-Gilbert), Farrow (Joseph/Amy/Esther), Elizabeth Telfer Farrow Holloway, Latter, Drummond, Haining, Margaret Wright.
-  - Concern flagged: `margaret-wright-1807` vs `margaret-telfer-1807` (birth 1807 vs 1810; the 1810 was a prior manual fix per commit e222fce) — verify against the 1810 fix before merging.
+## Data-integrity work
+### Duplicate merges (build passes: duplicate slugs=0, critical=0)
+- **Amy Ellen Telfer** — keep `amy-telfer-1884`; folded "née Provis" into body; DELETED shell.
+- **Hannah Peacock** — keep `hannah-peacock-1840`; DELETED `hannah-peacock-living` shell.
+- **Mary Anne McIntyre** — keep `mary-anne-mcintyre-1836`; DELETED shell.
+- **Susan Burton / Susan Burton Telfer** — TRUE MERGE. Kept `susan-telfer-1844`; deleted both stubs; re-pointed `james-robert-telfer.parents`.
+- **Amy Farrow Stribling** — deleted redirect-shell stub; kept full record.
 
-## Merge back to main
-```bash
-git checkout main
-git merge reconcile-2026-08-07 --no-ff -m "Merge: 12 new vault people (reviewed)"
-git push origin main   # triggers GH Actions → live deploy
-```
+### Margaret Wright birth-year CONFLICT — ⚠️ OPEN, DO NOT RESOLVE BY GUESSING
+Duplicate slugs `margaret-wright-1807` / `margaret-telfer-1807` with birth CONFLICT: **book 1810** (Supplement-2008 p.203 "Margaret Wright (1810–1892)") vs **vault index 1807** vs **gravestone ~1805–06** (died 13 Sep 1892 aged 86–87). Restored the full 1810 biography record. **HOLD for Mark + verifier per 2026-08-07 ruling: wait for more information.**
 
-## Cron
-Night Watch cron job scheduled via Hermes (`cronjob` tool). It drives `night-watch.sh`. Auto-push is disabled until GitHub auth is fixed.
+### Naming rule (proper names, NOT "Mark's [role]")
+Ran `scripts/fix-mark-perspective.py` — fixed 56 occurrences across 24+ people. `validate-no-mark-refs.py` passes (0 violations).
+
+## Host-path note
+`fix-mark-perspective.py` hardcodes `/home/mark/telfer-wiki` (old Linux host). On this Mac run via path-substituted copy: `sed 's#/home/mark/telfer-wiki#/Users/marktelfer/telfer-wiki#g'`.
+
+## Full Tree UI fixes (on main, `43b9fba`)
+- Removed `truncate` class → long names no longer clipped.
+- Added 9th-Gen jump (Mitchell 2008–); corrected 8th-Gen range to Mark's birth (1986).
