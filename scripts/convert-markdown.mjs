@@ -291,22 +291,35 @@ function main() {
       ? `${firstName} ${middleName} ${lastName}`
       : `${firstName} ${lastName}`;
 
-    // Safe year parsing: handle undefined, null, string 'None', NaN, and falsy values
+    // Safe year parsing: handle undefined, null, string 'None', NaN, and falsy values.
+    // Also accept approximation prefixes ("~1885", "c.1885", "approx 1885") — the
+    // vault uses "~" for estimated years, and Number() alone would yield NaN and drop
+    // them, wrongly marking the person as living (e.g. Florence Nicholas ~1885/~1960).
     const safeYear = (v) => {
       if (v == null || v === false || v === '') return null;
-      const n = Number(v);
+      if (typeof v === 'number') return isFinite(v) ? v : null;
+      const s = String(v).trim().replace(/^[~\s]+/, '').replace(/^c\.?\s*/i, '').replace(/^approx(imately)?\s*/i, '');
+      const n = Number(s);
       return (!isNaN(n) && isFinite(n)) ? n : null;
+    };
+    // Track whether the source used an approximation marker (~ / c. / approx) so the
+    // display can keep it, e.g. "~1885" rather than silently presenting an exact year.
+    const approxYear = (v) => {
+      if (v == null || v === '') return false;
+      return /^[~]|^c\.?\s/i.test(String(v).trim()) || /^approx(imately)?\s/i.test(String(v).trim());
     };
     const birthYear = safeYear(fm.birth_year);
     const deathYear = safeYear(fm.death_year);
+    const birthApprox = approxYear(fm.birth_year);
+    const deathApprox = approxYear(fm.death_year);
 
     // Generate slug WITHOUT middle name to match existing convention
     const slug = toSlug(firstName, lastName);
 
     const currentYear = new Date().getFullYear();
     const isLiving = deathYear != null ? false : birthYear != null ? (currentYear - birthYear < 120) : true;
-    const birthYearDisplay = birthYear != null ? String(birthYear) : '?';
-    const deathYearDisplay = deathYear != null ? String(deathYear) : (isLiving ? 'living' : '?');
+    const birthYearDisplay = birthYear != null ? (birthApprox ? `~${birthYear}` : String(birthYear)) : '?';
+    const deathYearDisplay = deathYear != null ? (deathApprox ? `~${deathYear}` : String(deathYear)) : (isLiving ? 'living' : '?');
     const lifespan = `${birthYearDisplay} – ${deathYearDisplay}`;
 
     const tags = Array.isArray(fm.tags) && fm.tags.length > 0

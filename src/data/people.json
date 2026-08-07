@@ -18041,10 +18041,10 @@
     "first_name": "Florence",
     "middle_name": null,
     "last_name": "Nicholas",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
+    "birth_year": 1885,
+    "death_year": 1960,
+    "birth_year_display": "~1885",
+    "death_year_display": "~1960",
     "display_name": "Florence Nicholas",
     "title": "Florence Nicholas — Family & Biography",
     "tags": [
@@ -18090,8 +18090,8 @@
     "spouses": [
       "Ernest John Telfer"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "~1885 – ~1960",
     "related_trees": [
       "telfer-tree"
     ],
