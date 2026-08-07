@@ -249,7 +249,8 @@ const GENERATIONS = [
   { label: "5th Gen", from: 1875, to: 1954, ancestor: "Francis Charles Telfer (1875–1954)" },
   { label: "6th Gen", from: 1924, to: 2009, ancestor: "Murray John Telfer (1924–2009)" },
   { label: "7th Gen", from: 1959, to: 2024, ancestor: "Timothy Neil Telfer (1959–)" },
-  { label: "8th Gen", from: 2008, to: 2024, ancestor: "Mark Kenneth Telfer (1986–)" },
+  { label: "8th Gen", from: 1986, to: 2007, ancestor: "Mark Kenneth Telfer (1986–)" },
+  { label: "9th Gen", from: 2008, to: 2029, ancestor: "Mitchell Telfer (2008–)" },
 ];
 
 function renderTree(person: TreeNode, depth = 0, options = {}) {
@@ -287,7 +288,7 @@ function renderTree(person: TreeNode, depth = 0, options = {}) {
 ${indent}<details class="tree-node ${highlightClass}" ${openAttr} data-id="${person.id}">
 ${indent}  <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded ${highlightClass}" tabindex="0">
 ${indent}    <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth)}├─</span>
-${indent}    <strong class="truncate">${person.display_name}</strong>
+${indent}    <strong>${person.display_name}</strong>
 ${indent}    <span class="text-xs text-[var(--color-muted)] shrink-0">(${lifespan})</span>${livingBadge}${virtualBadge}${spouseName}${surnameLabel}
 ${indent}  </summary>`;
 
