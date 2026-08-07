@@ -51,7 +51,7 @@
       }
     ],
     "roles": [
-      "Step-brother through marriage (Sheryle's son)"
+      "Step-brother (Sheryle's son, through Tim's marriage)"
     ],
     "body_markdown": "# Aaron Ivory\n\n**Role:** Step-brother (Sheryle's son, step-brother through Tim)\n**Residence:** Adelaide, South Australia (originally Brisbane, QLD)\n**Education:** The University of Adelaide — MBA (2020–2022)\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Spouse** | Karina Ivory (m. 5 Sep 2009) |\n| **Siblings** | Jared Mitchell Ivory (1986–1994), [[Lauren Maree Ivory (1994–?)]], [[Joel Matthew Ivory (1986–?)]] |\n\n---\n\n## Life Summary\n\nSheryle Telfer's son from her first marriage to Paul Ivory. Step-brother to Amy and through Sheryle's marriage to Tim through Sheryle's marriage to Tim (28 Aug 1999). Lives in Adelaide with his wife Karina.\n\n---\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 5 Sep 2009 | Married Karina Ivory 💍 |\n\n---\n\n## Photos\n\n![Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n\n*Aaron (second from left) with mother Sheryle and siblings Joel, Jared and Lauren. Date unknown.*\n\n---",
     "body_stripped": "**Role:** Step-brother (Sheryle's son, step-brother through Tim)\n**Residence:** Adelaide, South Australia (originally Brisbane, QLD)\n**Education:** The University of Adelaide — MBA (2020–2022)\n\n## Family\n\n Relation  Name \n\n **Mother**  Sheryle Telfer (1961–?) \n **Father**  Paul Ivory (1955–1996) \n **Spouse**  Karina Ivory (m. 5 Sep 2009) \n **Siblings**  Jared Mitchell Ivory (1986–1994), Lauren Maree Ivory (1994–?), Joel Matthew Ivory (1986–?) \n\n## Life Summary\n\nSheryle Telfer's son from h",
@@ -1002,46 +1002,6 @@
       }
     ],
     "person_photo": "images/people/amy-ellen-telfer.jpg",
-    "branch": "telfer"
-  },
-  {
-    "id": "Amy Farrow",
-    "slug": "amy-farrow",
-    "first_name": "Amy",
-    "middle_name": null,
-    "last_name": "Farrow",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Amy Farrow",
-    "title": "Amy Farrow",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Amy Farrow"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Amy Farrow\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "is_living": true,
-    "lifespan": "? – living",
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "Amy Farrow.md",
-    "images": [],
     "branch": "telfer"
   },
   {
@@ -2568,46 +2528,6 @@
       "telfer-tree"
     ],
     "vault_file": "Clara Blanche Telfer (1883–1974).md",
-    "images": [],
-    "branch": "telfer"
-  },
-  {
-    "id": "Clarice May Fatchen",
-    "slug": "clarice-may-fatchen",
-    "first_name": "Clarice",
-    "middle_name": null,
-    "last_name": "May Fatchen",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Clarice May Fatchen",
-    "title": "Clarice May Fatchen",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Clarice May Fatchen"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Clarice May Fatchen\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "is_living": true,
-    "lifespan": "? – living",
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "Clarice May Fatchen.md",
     "images": [],
     "branch": "telfer"
   },
@@ -10629,47 +10549,6 @@
     "branch": "telfer"
   },
   {
-    "id": "John Lawrie",
-    "slug": "john-lawrie-living",
-    "first_name": "John",
-    "middle_name": null,
-    "last_name": "Lawrie",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "John Lawrie",
-    "title": "John Lawrie (redirect)",
-    "tags": [
-      "family",
-      "non-telfer",
-      "redirect"
-    ],
-    "relationships": [
-      {
-        "type": "Redirect",
-        "names": [
-          "John Lawrie (1810–1888)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# John Lawrie — Redirect\n\nThis page has been replaced with the full disambiguated profile.\n\n➡️ **See [[John Lawrie (1810–1888)]]**",
-    "body_stripped": "This page has been replaced with the full disambiguated profile.\n\n➡️ **See John Lawrie (1810–1888)**",
-    "is_living": true,
-    "lifespan": "? – living",
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "John Lawrie.md",
-    "images": [],
-    "branch": "telfer"
-  },
-  {
     "id": "John Robert Telfer",
     "slug": "john-telfer-robert",
     "first_name": "John",
@@ -14031,9 +13910,9 @@
   {
     "id": "Mary Anne McIntyre",
     "slug": "mary-anne-mcintyre-1836",
-    "first_name": "Mary",
+    "first_name": "Mary Anne",
     "middle_name": null,
-    "last_name": "Anne McIntyre",
+    "last_name": "McIntyre",
     "birth_year": 1836,
     "death_year": 1913,
     "birth_year_display": "1836",
@@ -14410,54 +14289,6 @@
       "telfer-tree"
     ],
     "vault_file": "Murray John Telfer (1911–1982).md",
-    "images": [],
-    "branch": "telfer"
-  },
-  {
-    "id": "Murray John Telfer (1911–1982",
-    "slug": "murray-john-telfer-19111982",
-    "first_name": "Murray",
-    "middle_name": null,
-    "last_name": "John Telfer (1911–1982",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Murray John Telfer (1911–1982",
-    "title": "Murray John Telfer (1911–1982",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Murray John Telfer (1911–1982"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "Shirley Telfer (living)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Murray John Telfer (1911–1982\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "is_living": true,
-    "lifespan": "? – living",
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "Shirley Telfer (living)"
-    ],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "vault_file": "Murray John Telfer (1911–1982.md",
     "images": [],
     "branch": "telfer"
   },
@@ -19228,102 +19059,6 @@
     "spouses": [
       "Francis Charles Telfer"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Hannah Peacock",
-    "slug": "hannah-peacock-living",
-    "vault_file": "Hannah Peacock.md",
-    "first_name": "Hannah",
-    "middle_name": null,
-    "last_name": "Peacock",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Hannah Peacock",
-    "title": "Hannah Peacock (redirect)",
-    "tags": [
-      "redirect",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Hannah Peacock"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "James Robert Telfer (~1866–?)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "> **Redirect** — this is a stale stub under the bare name. The canonical profile is [[Hannah Peacock (1840–1915)]].",
-    "body_stripped": "> **Redirect** — this is a stale stub under the bare name. The canonical profile is Hannah Peacock (1840–1915).",
-    "parents": [],
-    "children": [],
-    "siblings": [],
-    "spouses": [
-      "James Robert Telfer (~1866–?)"
-    ],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Mary Anne McIntyre",
-    "slug": "mary-anne-mcintyre-anne",
-    "vault_file": "Mary Anne McIntyre.md",
-    "first_name": "Mary Anne",
-    "middle_name": null,
-    "last_name": "McIntyre",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Mary Anne McIntyre",
-    "title": "Mary Anne McIntyre (redirect)",
-    "tags": [
-      "redirect",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Mary Anne McIntyre"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "Julia Matilda Seebohm (1876–1939)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "> **Redirect** — this is a stale stub under the bare name. The canonical profile is [[Mary Anne McIntyre (1836–1913)]].",
-    "body_stripped": "> **Redirect** — this is a stale stub under the bare name. The canonical profile is Mary Anne McIntyre (1836–1913).",
-    "parents": [],
-    "children": [
-      "Julia Matilda Seebohm (1876–1939)"
-    ],
-    "siblings": [],
-    "spouses": [],
     "is_living": true,
     "lifespan": "? – living",
     "related_trees": [

@@ -2078,7 +2078,6 @@
       "Elizabeth Telfer Farrow",
       "Joseph Francis Farrow",
       "Charles Farrow Jr",
-      "Amy Farrow",
       "John James Telfer Farrow",
       "George Hope Farrow",
       "Mary Bayes Farrow",
@@ -2093,9 +2092,9 @@
   {
     "id": "Mary Anne McIntyre",
     "slug": "mary-anne-mcintyre-1836",
-    "first_name": "Mary",
+    "first_name": "Mary Anne",
     "middle_name": null,
-    "last_name": "Anne McIntyre",
+    "last_name": "McIntyre",
     "birth_year": 1836,
     "death_year": 1913,
     "birth_year_display": "1836",
@@ -4262,9 +4261,7 @@
       "Mary Anne McIntyre (1836–1913)",
       "Wilhelm Seebohm (1833–1907)"
     ],
-    "children": [
-      "Murray John Telfer (1911–1982"
-    ],
+    "children": [],
     "spouses": [
       "Mark Telfer (1877–1946)"
     ],
@@ -5933,7 +5930,6 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "Clarice May Fatchen",
       "Emily Amelia Barton",
       "Ethel Jean McMurtrie",
       "Gladys Merle Pedler",
@@ -6493,7 +6489,6 @@
     "spouses": [],
     "siblings": [
       "Francis Kelson Telfer",
-      "Clarice May Fatchen",
       "Emily Amelia Barton",
       "Ethel Jean McMurtrie",
       "Gladys Merle Pedler",
@@ -6592,7 +6587,6 @@
     "spouses": [],
     "siblings": [
       "Francis Kelson Telfer",
-      "Clarice May Fatchen",
       "Emily Amelia Barton",
       "Ethel Jean McMurtrie",
       "Gladys Merle Pedler",
@@ -6781,7 +6775,6 @@
     "spouses": [],
     "siblings": [
       "Francis Kelson Telfer",
-      "Clarice May Fatchen",
       "Emily Amelia Barton",
       "Ethel Jean McMurtrie",
       "Gladys Merle Pedler",
@@ -7100,7 +7093,7 @@
     "is_living": true,
     "body_markdown": "# Aaron Ivory\n\n**Role:** Step-brother (Sheryle's son, step-brother through Tim)\n**Residence:** Adelaide, South Australia (originally Brisbane, QLD)\n**Education:** The University of Adelaide — MBA (2020–2022)\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Spouse** | Karina Ivory (m. 5 Sep 2009) |\n| **Siblings** | Jared Mitchell Ivory (1986–1994), [[Lauren Maree Ivory (1994–?)]], [[Joel Matthew Ivory (1986–?)]] |\n\n---\n\n## Life Summary\n\nSheryle Telfer's son from her first marriage to Paul Ivory. Step-brother to Amy and through Sheryle's marriage to Tim through Sheryle's marriage to Tim (28 Aug 1999). Lives in Adelaide with his wife Karina.\n\n---\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 5 Sep 2009 | Married Karina Ivory 💍 |\n\n---\n\n## Photos\n\n![Ivory Family   Sheryle  Joel  Aaron  Jared  Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n\n*Aaron (second from left) with mother Sheryle and siblings Joel, Jared and Lauren. Date unknown.*\n\n---",
     "roles": [
-      "Step-brother through marriage (Sheryle's son)"
+      "Step-brother (Sheryle's son, through Tim's marriage)"
     ],
     "tags": [
       "bio",
@@ -7438,33 +7431,6 @@
     "siblings": [],
     "images": [],
     "person_photo": null
-  },
-  {
-    "id": "Amy Farrow",
-    "slug": "amy-farrow",
-    "first_name": "Amy",
-    "middle_name": null,
-    "last_name": "Farrow",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Amy Farrow",
-    "title": "Amy Farrow",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Amy Farrow\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
   },
   {
     "id": "Amy Nicole Telfer",
@@ -7863,33 +7829,6 @@
     "spouses": [
       "Amy Ellen Telfer (1884–1951)"
     ],
-    "siblings": [],
-    "images": []
-  },
-  {
-    "id": "Clarice May Fatchen",
-    "slug": "clarice-may-fatchen",
-    "first_name": "Clarice",
-    "middle_name": null,
-    "last_name": "May Fatchen",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Clarice May Fatchen",
-    "title": "Clarice May Fatchen",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Clarice May Fatchen\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
     "siblings": [],
     "images": []
   },
@@ -8643,35 +8582,6 @@
     "images": []
   },
   {
-    "id": "Hannah Peacock",
-    "slug": "hannah-peacock-living",
-    "first_name": "Hannah",
-    "middle_name": null,
-    "last_name": "Peacock",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Hannah Peacock",
-    "title": "Hannah Peacock (redirect)",
-    "lifespan": "? – living",
-    "is_living": true,
-    "body_markdown": "> **Redirect** — this is a stale stub under the bare name. The canonical profile is [[Hannah Peacock (1840–1915)]].",
-    "roles": [],
-    "tags": [
-      "redirect",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "James Robert Telfer (~1866–?)"
-    ],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Harry Bunston",
     "slug": "harry-bunston",
     "first_name": "Harry",
@@ -9248,34 +9158,6 @@
     "images": []
   },
   {
-    "id": "John Lawrie",
-    "slug": "john-lawrie-living",
-    "first_name": "John",
-    "middle_name": null,
-    "last_name": "Lawrie",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "John Lawrie",
-    "title": "John Lawrie (redirect)",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# John Lawrie — Redirect\n\nThis page has been replaced with the full disambiguated profile.\n\n➡️ **See [[John Lawrie (1810–1888)]]**",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer",
-      "redirect"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": []
-  },
-  {
     "id": "John Robert Telfer",
     "slug": "john-telfer-robert",
     "first_name": "John",
@@ -9747,33 +9629,6 @@
     "images": []
   },
   {
-    "id": "Mary Anne McIntyre",
-    "slug": "mary-anne-mcintyre-anne",
-    "first_name": "Mary Anne",
-    "middle_name": null,
-    "last_name": "McIntyre",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Mary Anne McIntyre",
-    "title": "Mary Anne McIntyre (redirect)",
-    "lifespan": "? – living",
-    "is_living": true,
-    "body_markdown": "> **Redirect** — this is a stale stub under the bare name. The canonical profile is [[Mary Anne McIntyre (1836–1913)]].",
-    "roles": [],
-    "tags": [
-      "redirect",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Mary Bayes Farrow",
     "slug": "mary-bayes-farrow",
     "first_name": "Mary",
@@ -9826,33 +9681,6 @@
     "spouses": [
       "Robert Freddy Telfer (1886–1949)"
     ],
-    "siblings": [],
-    "images": []
-  },
-  {
-    "id": "Murray John Telfer (1911–1982",
-    "slug": "murray-john-telfer-19111982",
-    "first_name": "Murray",
-    "middle_name": null,
-    "last_name": "John Telfer (1911–1982",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Murray John Telfer (1911–1982",
-    "title": "Murray John Telfer (1911–1982",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Murray John Telfer (1911–1982\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
     "siblings": [],
     "images": []
   },

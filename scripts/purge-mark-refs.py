@@ -84,6 +84,11 @@ ROLES_REPLACEMENTS = [
     # "Mark's step-brother/uncle/step-sister/etc" → generic
     (re.compile(r"^Mark's\s+step[-\s]?brother\s*[:—-]?\s*(.+)?$", re.IGNORECASE),
      lambda m: f"Step-brother" + (f" ({m.group(1).strip()})" if m.group(1) else "")),
+    # Mid-string redundant clause (role already states Step-brother):
+    # "Step-brother (Sheryle's son, Mark's step-brother through Tim)" → 
+    # "Step-brother (Sheryle's son, through Tim's marriage)"
+    (re.compile(r",\s*Mark'?s?\s+(?:step[-\s]?brother|step[-\s]?sister)\s+through\s+(.+?)\s*\)$", re.IGNORECASE),
+     lambda m: f", through {m.group(1).capitalize()}'s marriage)"),
     (re.compile(r"^Mark's\s+step[-\s]?sister\s*[:—-]?\s*(.+)?$", re.IGNORECASE),
      lambda m: f"Step-sister" + (f" ({m.group(1).strip()})" if m.group(1) else "")),
     (re.compile(r"^Mark's\s+uncle\s*[:—-]?\s*(.+)?$", re.IGNORECASE),

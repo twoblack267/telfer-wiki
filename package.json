@@ -12,7 +12,8 @@
     "postbuild": "node scripts/generate-redirects.mjs && node scripts/validate-links.mjs",
     "self-heal": "node scripts/auto-fix-links.mjs && npm run build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "regenerate-data": "bash scripts/regenerate-data.sh"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.0",
