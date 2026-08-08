@@ -22,6 +22,11 @@ cd "$HOME/telfer-wiki" || { echo "🔴 Night Watch: repo dir not found"; exit 1;
 AUTO_PUSH="${AUTO_PUSH:-1}"   # 1 = git push on its own, 0 = stop & report
 VERBOSE="${VERBOSE:-0}"
 
+# Runtime/log dir — NOT /tmp (macOS TCC sandbox blocks some scripts there).
+# Use a gitignored dir inside the repo so logs persist and are TCC-safe.
+RUN_DIR="$HOME/telfer-wiki/runtime"
+mkdir -p "$RUN_DIR"
+
 FAIL=""
 WARN=""
 BROKEN="0"
@@ -32,13 +37,19 @@ echo "============================"
 echo "Started: $(date '+%Y-%m-%d %H:%M:%S %Z')"
 echo ""
 
-# ── 1. Vault sync ─────────────────────────────────────────────
-echo "[1/7] Syncing vault → people.json..."
-if node scripts/convert-markdown.mjs; then
-  echo "  ✅ Vault synced"
+# ── 1. Vault sync (SAFE: convert + purge 'Mark's X' + gate-verify) ──
+# Use regenerate-data.sh, NOT raw convert-markdown.mjs — running convert alone
+# re-imports "Mark's X" first-person strings from vault files into people.json,
+# which then fails the no-mark-refs deploy gate on the next push. The wrapper
+# below runs convert -> purge -> gate-verify, so a broken state is caught before
+# it can ever be committed/pushed.
+echo "[1/7] Syncing vault → people.json (convert + purge 'Mark's X' + verify)..."
+if bash scripts/regenerate-data.sh; then
+  echo "  ✅ Vault synced and gate-clean (no 'Mark's' refs)"
 else
-  echo "  🔴 convert-markdown failed"
-  FAIL="${FAIL} convert-markdown"
+  echo "  🔴 Vault regen failed (convert, purge, or gate) — see $RUN_DIR/nw-regen.log"
+  FAIL="${FAIL} regen"
+  BLOCK_PUSH=1
 fi
 
 # ── 1b. Auto-fix (mechanical, safe) ───────────────────────────
@@ -89,6 +100,60 @@ else
   echo "  ✅ No duplicates found"
 fi
 
+# ── 2b. DATA-TRUTH check (the "false death" + living/deceased sanity guard) ──
+# Catches the exact bug class that broke Jared earlier: a living person rendered
+# as dead. Uses PRECISE signals only (is_living + death_year + death_year_display
+# + the person's own lifespan heading) — NOT a greedy body-text regex, which
+# misfires on unrelated date ranges like "(1924–2009)" (grandfather's dates)
+# quoted in a biography. Verifies:
+#   (a) every person flagged living has NO death_year, and vice versa
+#   (b) a living person's death_year_display must == "living" (no closed range)
+#   (c) the lifespan heading must not contradict status
+#   (d) totals living/deceased so the nightly summary confirms the page numbers
+LIVING_N=0
+DECEASED_N=0
+TRUTH_N=0
+TRUTH_OUT=$(python3 - <<'PY'
+import json, re
+data = json.load(open('src/data/people.json'))
+living = dec = 0
+issues = []
+for p in data:
+    is_living = p.get('is_living')
+    dyd = p.get('death_year_display')
+    d = p.get('death_year')
+    name = (p.get('first_name') or '') + ' ' + (p.get('last_name') or '') + ' (' + str(p.get('slug')) + ')'
+    if is_living is True:
+        living += 1
+    else:
+        dec += 1
+    if is_living is True and d is not None:
+        issues.append("LIVING with death_year %s: %s" % (d, name))
+    if is_living is True and dyd not in (None, '', 'living'):
+        issues.append("LIVING but death_year_display=%r: %s" % (dyd, name))
+    if is_living is not True and dyd == 'living' and d is not None:
+        issues.append("DECEASED but death_year_display='living': %s" % name)
+    ls = p.get('lifespan')
+    if is_living is True and isinstance(ls, str) and '(' in ls:
+        m = re.search(r'\((\d{4})[-–](\d{4})\)', ls)
+        if m and m.group(2).lower() != 'living':
+            issues.append("lifespan %r on LIVING person: %s" % (ls, name))
+print(json.dumps({"living": living, "deceased": dec, "issues": issues}))
+PY
+)
+TRUTH_ISSUES=$(printf '%s' "$TRUTH_OUT" | python3 -c "import json,sys;print('\n'.join(json.load(sys.stdin)['issues']))" 2>/dev/null)
+LIVING_N=$(printf '%s' "$TRUTH_OUT" | python3 -c "import json,sys;print(json.load(sys.stdin)['living'])" 2>/dev/null || echo 0)
+DECEASED_N=$(printf '%s' "$TRUTH_OUT" | python3 -c "import json,sys;print(json.load(sys.stdin)['deceased'])" 2>/dev/null || echo 0)
+TRUTH_N=$(printf '%s' "$TRUTH_ISSUES" | grep -c . 2>/dev/null || echo 0)
+if [ -n "$TRUTH_ISSUES" ]; then
+  echo "  🔴 DATA-TRUTH VIOLATION(S):"
+  printf '%s\n' "$TRUTH_ISSUES" | sed 's/^/      - /'
+  FAIL="${FAIL} data-truth:$TRUTH_N"
+  BLOCK_PUSH=1
+else
+  echo "  ✅ Data-truth check passed — $LIVING_N living / $DECEASED_N deceased (no false deaths)"
+fi
+
 # ── 3. Build ──────────────────────────────────────────────────
 echo "[3/7] Building site (sanitize + validate + astro build)..."
 if npm run build; then
@@ -105,10 +170,10 @@ PROFILES="?"
 TREES="?"
 ISSUES_JSON="{}"
 echo "[4/7] Running site audit..."
-if node scripts/audit-site.mjs > /tmp/nw-audit.log 2>&1; then
+if node scripts/audit-site.mjs > "$RUN_DIR/nw-audit.log" 2>&1; then
   MACHINE=$(python3 -c "
 import re,sys
-t=open('/tmp/nw-audit.log').read()
+t=open('$RUN_DIR/nw-audit.log').read()
 m=re.search(r'---MACHINE_START---\n(.*?)\n---MACHINE_END---', t, re.S)
 print(m.group(1) if m else '{}')" 2>/dev/null)
   if [ -n "$MACHINE" ]; then
@@ -125,13 +190,13 @@ fi
 
 # ── 5. Live 404 scan ──────────────────────────────────────────
 echo "[5/7] Scanning live site for broken links (throttled)..."
-if node scripts/scan-404.mjs > /tmp/nw-404.log 2>&1; then
+if node scripts/scan-404.mjs > "$RUN_DIR/nw-404.log" 2>&1; then
   BROKEN="0"
   echo "  ✅ All live links resolving"
 else
-  BROKEN_RAW=$(tail -5 /tmp/nw-404.log | grep -oE 'Failures: [0-9]+' | grep -oE '[0-9]+' | head -1)
+  BROKEN_RAW=$(tail -5 "$RUN_DIR/nw-404.log" | grep -oE 'Failures: [0-9]+' | grep -oE '[0-9]+' | head -1)
   BROKEN="${BROKEN_RAW:-1}"
-  echo "  🔴 $BROKEN live link(s) broken — see /tmp/nw-404.log"
+  echo "  🔴 $BROKEN live link(s) broken — see $RUN_DIR/nw-404.log"
   FAIL="${FAIL} broken-links:$BROKEN"
 fi
 
@@ -180,10 +245,10 @@ else
   echo "  Detected changes. Committing..."
   git commit -m "Night Watch: auto-sync vault + rebuild ($(date '+%Y-%m-%d %H:%M'))" -q
   if [ "$AUTO_PUSH" = "1" ]; then
-    if git push origin main 2>/tmp/nw-push.log; then
+    if git push origin main 2>"$RUN_DIR/nw-push.log"; then
       echo "  ✅ Pushed — GitHub Actions is redeploying the live site"
     else
-      echo "  🔴 Push failed: $(cat /tmp/nw-push.log | tail -2)"
+      echo "  🔴 Push failed: $(cat "$RUN_DIR/nw-push.log" | tail -2)"
       FAIL="${FAIL} push"
     fi
   else
@@ -193,6 +258,7 @@ fi
 
 echo ""
 echo "============================"
+echo "All people total: $((LIVING_N + DECEASED_N)) · Living: $LIVING_N · Deceased: $DECEASED_N"
 if [ -n "$FAIL" ]; then
   echo "◼ NIGHT WATCH COMPLETE — ISSUES:${FAIL}"
   exit 1
