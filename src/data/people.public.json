@@ -7074,7 +7074,8 @@
     "children": [
       "Aaron Paul Ivory (1989–?)",
       "Joel Matthew Ivory (1986–?)",
-      "Lauren Maree Ivory (1994–?)"
+      "Lauren Maree Ivory (1994–?)",
+      "Jared Ivory"
     ],
     "spouses": [
       "Sheryle Telfer"
@@ -7383,6 +7384,40 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+  },
+  {
+    "id": "Jared Ivory",
+    "slug": "jared-ivory",
+    "first_name": "Jared",
+    "middle_name": null,
+    "last_name": "Ivory",
+    "birth_year": 1993,
+    "death_year": null,
+    "birth_year_display": "1993",
+    "death_year_display": "living",
+    "display_name": "Jared Ivory",
+    "title": "Jared Ivory",
+    "lifespan": "1993 – living",
+    "branch": "telfer",
+    "is_living": true,
+    "body_markdown": "# Jared Ivory\n\n**Role:** Step-brother (Sheryle's son with Paul Ivory)\n**Full name:** Jared Mitchell Ivory\n**Born:** 1 April 1993\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer]] |\n| **Father** | [[Paul Ivory]] |\n| **Siblings** | [[Joel Ivory]], [[Aaron Ivory]], [[Lauren Ivory]] |\n\n---\n\n## Life Summary\n\nJared is Mark's step-brother — Sheryle's son from her first marriage to [[Paul Ivory]]. Birth details confirmed by the family (1 April 1993).",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "Sheryle Telfer",
+      "Paul Ivory"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "Joel Ivory",
+      "Aaron Ivory",
+      "Lauren Ivory"
+    ],
+    "images": []
   },
   {
     "id": "Lauren Maree Ivory",
@@ -9047,33 +9082,6 @@
     "spouses": [
       "James Telfer (1829–1914)"
     ],
-    "siblings": [],
-    "images": []
-  },
-  {
-    "id": "Jared Ivory",
-    "slug": "jared-ivory",
-    "first_name": "Jared",
-    "middle_name": null,
-    "last_name": "Ivory",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Jared Ivory",
-    "title": "Jared Ivory",
-    "lifespan": "? – living",
-    "branch": "telfer",
-    "is_living": true,
-    "body_markdown": "# Jared Ivory\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
     "siblings": [],
     "images": []
   },
