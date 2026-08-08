@@ -154,6 +154,20 @@ else
   echo "  ✅ Data-truth check passed — $LIVING_N living / $DECEASED_N deceased (no false deaths)"
 fi
 
+# ── 2c. SELF-HEAL (auto-fix what's safe; block what needs a human) ──
+echo "[2c] Self-heal: auto-repair reversible data errors..."
+SELFHEAL_OUT=$(node scripts/selfheal-data.mjs 2>&1)
+SELFHEAL_RC=$?
+printf '%s\n' "$SELFHEAL_OUT" | grep -v '^SELF-HEAL:' | grep -v '^$' | sed 's/^/    /'
+echo "  $(printf '%s\n' "$SELFHEAL_OUT" | grep '^SELF-HEAL:' | tail -1)"
+if [ "$SELFHEAL_RC" != "0" ]; then
+  echo "  ⛔ Self-heal found issue(s) that need Mark's decision — WILL NOT auto-fix genealogy"
+  FAIL="${FAIL} selfheal-block"
+  BLOCK_PUSH=1
+elif printf '%s' "$SELFHEAL_OUT" | grep -q 'auto-fixed [1-9]'; then
+  echo "  🟢 Self-healed reversible error(s) — will be included in this push's rebuild"
+fi
+
 # ── 3. Build ──────────────────────────────────────────────────
 echo "[3/7] Building site (sanitize + validate + astro build)..."
 if npm run build; then
@@ -224,17 +238,9 @@ else
   WARN="${WARN} ledger"
 fi
 
-# ── 7. Visual flyby (advisory) ────────────────────────────────
-echo "[7/8 → flyby] Visual flyby (desktop + mobile)..."
-if node scripts/visual-flyby.mjs; then
-  echo "  ✅ All key pages render on desktop + mobile"
-else
-  echo "  🔴 Visual flyby flagged a page problem (see above)"
-  FAIL="${FAIL} flyby"
-fi
-
-# ── 8. Git commit + push ─────────────────────────────────────
-echo "[8/8] Checking for changes..."
+# ── 7. Git commit + push (before the live flyby) ─────────────
+echo "[7/8] Checking for changes..."
+PUSHED=0
 if [ "$BLOCK_PUSH" = "1" ]; then
   echo "  ⛔ Build/validation failed — changes left UNCOMMITTED and UNPUSHED"
   echo "  To keep local data in sync, resolve the failures then re-run."
@@ -247,6 +253,7 @@ else
   if [ "$AUTO_PUSH" = "1" ]; then
     if git push origin main 2>"$RUN_DIR/nw-push.log"; then
       echo "  ✅ Pushed — GitHub Actions is redeploying the live site"
+      PUSHED=1
     else
       echo "  🔴 Push failed: $(cat "$RUN_DIR/nw-push.log" | tail -2)"
       FAIL="${FAIL} push"
@@ -254,6 +261,25 @@ else
   else
     echo "  ℹ️  Changes committed but AUTO_PUSH=0 — NOT pushed. Run \`git push origin main\`."
   fi
+fi
+
+# ── 8. Visual flyby of the LIVE site (post-push verification) ─
+# Only makes sense after a real push: wait for GitHub Pages to deploy the new
+# build, then screenshot the LIVE site (home/tree/person) on desktop + mobile
+# and fail if it 404s or renders empty. Read-only, advisory about *what was
+# actually shipped* — the update the user just pushed.
+echo "[8/8] Visual flyby of live site (desktop + mobile)..."
+if [ "$PUSHED" = "1" ]; then
+  echo "  Waiting for GitHub Pages redeploy to settle (~60s)..."
+  sleep 60
+else
+  echo "  (Nothing pushed — checking current live site anyway)"
+fi
+if node scripts/visual-flyby.mjs; then
+  echo "  ✅ Live site renders correctly on desktop + mobile — no visual errors"
+else
+  echo "  🔴 Live site flyby flagged a page problem (see above)"
+  FAIL="${FAIL} flyby"
 fi
 
 echo ""
