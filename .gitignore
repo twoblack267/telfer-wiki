@@ -12,3 +12,5 @@ apply-prune.py
 *.full-backup
 *.bak
 runtime/
+
+src/data/_pre-clean-2026-08-10/
