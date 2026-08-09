@@ -43,3 +43,8 @@ OUT="$(python3 scripts/validate-no-mark-refs.py src/data/people.json src/data/pe
 
 COUNT="$(python3 -c "import json,sys;print(len(json.load(open('src/data/people.json'))))")"
 echo "OK — $COUNT profiles, no 'Mark's' references, deploy gate passes."
+
+echo
+echo "==> Step 4/4: rebuild relationship graph + generations (stale-graph fix)"
+node scripts/build-relationship-graph.mjs
+node scripts/compute-generations.mjs

@@ -33,6 +33,40 @@ const slugIndex = new Map(people.map(p => [p.slug.toLowerCase(), p.slug]));
 
 // Secondary index: display name without dates
 const nameIndex = new Map();
+function setPrefersComplete(key, slug) {
+  // A bare "First Last" name resolves safely ONLY when it maps to a single,
+  // well-defined person. When multiple DISTINCT people share the name (e.g.
+  // William Telfer 1802 / 1811 / 1841 / 1880), leave the key unset (ambiguous)
+  // so a bare reference resolves to nothing rather than the WRONG person.
+  const existing = nameIndex.get(key);
+  if (existing === AMBIGUOUS) return;
+  if (!existing) { nameIndex.set(key, slug); return; }
+  if (existing === slug) return; // same person, ignore
+
+  const existingPerson = slugToPerson.get(existing);
+  const newPerson = slugToPerson.get(slug);
+  const existingHasYear = !!(existingPerson && existingPerson.birth_year);
+  const newHasYear = !!(newPerson && newPerson.birth_year);
+
+  // Two DIFFERENT year-bearing people with the same bare name → genuinely
+  // ambiguous. A bare reference can't pick between them. Mark as ambiguous.
+  if (existingHasYear && newHasYear) {
+    nameIndex.set(key, AMBIGUOUS);
+    return;
+  }
+  // A year-less stub collides with a dated record → prefer the dated one.
+  if (newHasYear && !existingHasYear) {
+    nameIndex.set(key, slug);
+    return;
+  }
+  // Existing is year-bearing, new is a stub → keep existing, ignore stub.
+  if (existingHasYear && !newHasYear) {
+    return;
+  }
+  // Both year-less stubs with the same name → ambiguous too.
+  nameIndex.set(key, AMBIGUOUS);
+}
+const AMBIGUOUS = '__ambiguous__';
 for (const person of people) {
   const name = person.id.toLowerCase(); // id has clean name
   if (!nameIndex.has(name)) nameIndex.set(name, person.slug);
@@ -41,7 +75,7 @@ for (const person of people) {
   if (parts.length >= 2) {
     const fn = parts[0].toLowerCase();
     const ln = parts[parts.length - 1].toLowerCase();
-    nameIndex.set(`${fn} ${ln}`, person.slug);
+    setPrefersComplete(`${fn} ${ln}`, person.slug);
   }
 }
 
@@ -53,25 +87,54 @@ function resolveNameToSlug(name, sourceSlug) {
   if (name.match(/^(Self|Spouse|Father|Mother|Children|Siblings)$/i)) return null;
 
   // Extract clean name (remove dates in parens)
-  const cleanName = name.replace(/\s*\([^)]+\)$/, '').trim();
+  const cleanName = name.replace(/[\(（]\d{4}[\-–]\d{2,4}.{0,2}\d{0,4}[\)）]/g, '').replace(/\s*\([^)]+\)$/, '').trim();
 
-  // Try exact slug match (slugified clean name)
+  // Extract birth/death years from the reference if present, e.g.
+  // "William Telfer (1802–1850)" or "William Telfer (1802)". Use them to
+  // disambiguate between same-named people reliably.
+  const yearsMatch = name.match(/(\d{4})[\-–](\d{4})/);
+  let refBirth = null, refDeath = null;
+  if (yearsMatch) {
+    refBirth = parseInt(yearsMatch[1], 10);
+    refDeath = parseInt(yearsMatch[2], 10);
+  } else {
+    const singleYear = name.match(/\(\s*(\d{4})\s*\)/);
+    if (singleYear) refBirth = parseInt(singleYear[1], 10);
+  }
+
+  // 1) Exact slug match (slugified clean name)
   const slugified = slugify(cleanName);
   if (slugIndex.has(slugified)) return slugIndex.get(slugified);
 
-  // Try exact name match
-  if (nameIndex.has(cleanName.toLowerCase())) return nameIndex.get(cleanName.toLowerCase());
+  // 1b) If reference carried years, prefer a record whose birth year matches.
+  if (refBirth) {
+    let best = null;
+    for (const person of people) {
+      if (person.id.toLowerCase() !== cleanName.toLowerCase()) continue;
+      if (refDeath && person.death_year && person.death_year === refDeath) return person.slug;
+      if (person.birth_year === refBirth) best = person.slug;
+    }
+    if (best) return best;
+  }
 
-  // Try fuzzy: first + last name
+  // 2) Exact name match
+  const exactKey = cleanName.toLowerCase();
+  const exactVal = nameIndex.get(exactKey);
+  if (exactVal === AMBIGUOUS) return null;
+  if (nameIndex.has(exactKey)) return exactVal;
+
+  // 3) Fuzzy: first + last name (only safe when unambiguous)
   const parts = cleanName.split(' ');
   if (parts.length >= 2) {
     const fn = parts[0].toLowerCase();
     const ln = parts[parts.length - 1].toLowerCase();
     const key = `${fn} ${ln}`;
-    if (nameIndex.has(key)) return nameIndex.get(key);
+    const fuzzyVal = nameIndex.get(key);
+    if (fuzzyVal === AMBIGUOUS) return null;
+    if (nameIndex.has(key)) return fuzzyVal;
   }
 
-  // Try partial match on display_name
+  // 4) Partial match on display_name
   for (const person of people) {
     if (person.id.toLowerCase() === cleanName.toLowerCase()) return person.slug;
   }
@@ -120,7 +183,20 @@ function deduplicateParents(people, parentEdges) {
     if (parents.size <= 2) continue; // At most 2 biological parents
 
     const child = slugToPerson.get(childSlug);
-    if (!child?.birth_year) continue;
+    if (!child?.birth_year) {
+      // Child has no birth year — we can't judge age plausibility. But we CAN
+      // still drop year-less parent stubs (unreliable fuzzy matches) when the
+      // child also has been assigned a year-bearing parent. Keeps real parents,
+      // removes poisoned stub fusions like a modern "Penny" grafted onto an
+      // 1884-born ancestor.
+      const datedParents = [...parents].filter(p => slugToPerson.get(p)?.birth_year);
+      const stubParents = [...parents].filter(p => !slugToPerson.get(p)?.birth_year);
+      if (datedParents.length > 0 && stubParents.length > 0) {
+        stubParents.forEach(p => parents.delete(p));
+        removed += stubParents.length;
+      }
+      continue;
+    }
 
     const plausible = [];
     const noBirthYear = [];
@@ -135,6 +211,20 @@ function deduplicateParents(people, parentEdges) {
         plausible.push(parentSlug);
       }
       // Also keep if diff < 15 (too young to be parent) or diff > 45 (too old) - flag as implausible
+    }
+
+    // A living person cannot be the parent of a deceased person. This catches
+    // year-less fusions (e.g. a modern "Penny Telfer" grafted onto an 1884-born
+    // ancestor) that age logic alone can't reject when every candidate parent
+    // is also year-less.
+    if (child.is_living === false) {
+      const livingParents = [...parents].filter(
+        p => slugToPerson.get(p)?.is_living === true
+      );
+      if (livingParents.length < parents.size) {
+        livingParents.forEach(p => parents.delete(p));
+        removed += livingParents.length;
+      }
     }
 
     // If we have plausible parents, remove any parents with no birth year (stubs)
@@ -161,6 +251,43 @@ function deduplicateParents(people, parentEdges) {
 
 let resolved = 0, unresolved = 0;
 
+// Add a parent->child edge only if it won't create a mutual-claim 2-cycle where
+// one person claims the other as BOTH parent and child (the signature of a
+// bare-name collision across generations). When a mutual claim exists, keep the
+// direction that is biologically plausible (parent older than child by a
+// reasonable margin); if neither direction is checkable (no years), keep the
+// newly-added direction.
+function addParentChild(parentSlug, childSlug) {
+  // If child already has this parent, nothing to do.
+  if (parentEdges.get(childSlug)?.has(parentSlug)) return false;
+  // If the reverse (parent claims child as ITS parent) is already recorded,
+  // one of these claims is a bare-name collision across generations. Keep the
+  // direction that is biologically plausible (parent older than child); if
+  // neither/both are plausible (no years available), keep the existing.
+  if (parentEdges.get(parentSlug)?.has(childSlug)) {
+    const child = slugToPerson.get(childSlug);
+    const parent = slugToPerson.get(parentSlug);
+    const newDiff = child?.birth_year && parent?.birth_year
+      ? child.birth_year - parent.birth_year : null;
+    const existingDiff = child?.birth_year && parent?.birth_year
+      ? parent.birth_year - child.birth_year : null;
+    const newPlausible = newDiff !== null && newDiff >= 13 && newDiff <= 55;
+    const existingPlausible = existingDiff !== null && existingDiff >= 13 && existingDiff <= 55;
+    // Existing direction is plausible & new isn't → keep existing (skip new).
+    if (existingPlausible && !newPlausible) return false;
+    // New direction is plausible & existing isn't → drop existing, take new.
+    if (newPlausible && !existingPlausible) {
+      parentEdges.get(parentSlug).delete(childSlug);
+      childEdges.get(childSlug).delete(parentSlug);
+    } else {
+      return false; // ambiguous / both plausible — keep what we have
+    }
+  }
+  parentEdges.get(childSlug).add(parentSlug);
+  childEdges.get(parentSlug).add(childSlug);
+  return true;
+}
+
 for (const person of people) {
   const sourceSlug = person.slug;
 
@@ -183,8 +310,7 @@ for (const person of people) {
         case 'Father':
         case 'Mother':
         case 'Parents':
-          parentEdges.get(sourceSlug).add(targetSlug);
-          childEdges.get(targetSlug).add(sourceSlug);
+          addParentChild(targetSlug, sourceSlug);
           resolved++;
           break;
 
@@ -192,8 +318,7 @@ for (const person of people) {
         case 'Child':
         case 'Son':
         case 'Daughter':
-          childEdges.get(sourceSlug).add(targetSlug);
-          parentEdges.get(targetSlug).add(sourceSlug);
+          addParentChild(sourceSlug, targetSlug);
           resolved++;
           break;
 
@@ -245,15 +370,13 @@ for (const person of people) {
   // Also process existing parents/children/spouses/siblings arrays (from vault files)
   for (const parentSlug of person.parents || []) {
     if (slugToPerson.has(parentSlug)) {
-      parentEdges.get(sourceSlug).add(parentSlug);
-      childEdges.get(parentSlug).add(sourceSlug);
+      addParentChild(parentSlug, sourceSlug);
       resolved++;
     }
   }
   for (const childSlug of person.children || []) {
     if (slugToPerson.has(childSlug)) {
-      childEdges.get(sourceSlug).add(childSlug);
-      parentEdges.get(childSlug).add(sourceSlug);
+      addParentChild(sourceSlug, childSlug);
       resolved++;
     }
   }
