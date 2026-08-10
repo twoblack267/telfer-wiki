@@ -447,7 +447,7 @@ function main() {
       existing.vault_file = entry.vault_file;
       existing.tags = entry.tags;
       existing.relationships = entry.relationships;
-      existing.roles = entry.roles.length > 0 ? entry.roles : existing.roles;
+      existing.roles = entry.roles.length > 0 ? entry.roles : (existing.roles || []);
       if (entry.body_markdown && entry.body_markdown.trim()) {
         existing.body_markdown = entry.body_markdown;
         existing.body_stripped = entry.body_stripped;
