@@ -246,6 +246,7 @@
       "james-telfer-1796",
       "john-telfer-1805",
       "margaret-telfer-1802",
+      "robert-telfer-1803",
       "william-telfer-1811"
     ],
     "spouses": [
@@ -1096,7 +1097,8 @@
       "robert-telfer-son-of-james"
     ],
     "parents": [
-      "betty-hutton"
+      "betty-hutton",
+      "james-telfer-1761"
     ],
     "children": [],
     "spouses": [
@@ -1191,6 +1193,41 @@
       "robert-telfer-1803",
       "william-telfer-1811"
     ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Elizabeth Oliver",
+    "slug": "elizabeth-oliver",
+    "first_name": "Elizabeth",
+    "middle_name": null,
+    "last_name": "Oliver",
+    "birth_year": 1807,
+    "death_year": 1846,
+    "birth_year_display": "1807",
+    "death_year_display": "1846",
+    "display_name": "Elizabeth Oliver",
+    "title": "Elizabeth Oliver — Family & Biography",
+    "lifespan": "1807 – 1846",
+    "generation": 3,
+    "is_living": false,
+    "body_markdown": "# Elizabeth Oliver (1807–1846)\n\n**Role:** Wife of Robert Telfer (1803–1878)\n**Born:** ~1807 — likely Roxburghshire, Scotland\n**Died:** 1846 (aged ~39) — Newcastleton, Scottish Borders, Scotland\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Robert Telfer (1803–1878)]] (m. ~1832) |\n| **Daughter** | Elizabeth Telfer (b. ~1834) |\n| **Son** | James Telfer (b. ~1836) |\n| **Daughter** | Jean Telfer (b. ~1838) |\n| **Son** | John Telfer (b. ~1839) |\n\n---\n\n## Family Stories\n\n### A Quiet Life in Liddesdale\n\nElizabeth Oliver was born around 1807 and married Robert Telfer, one of the younger brothers of Francis Telfer who would later emigrate to South Australia. Unlike Francis, Robert and Elizabeth stayed in Scotland, living in Newcastleton in the Liddesdale valley where the Telfers had been for generations.\n\n### The 1841 Census Snapshot\n\nThe 1841 Census for Newcastleton gives us a rare clear window into Elizabeth's life. The entry reads: \"Robert Telfer 36, and Betty 34 with children, Elizabeth 7, James 5, Jean 3, and John 2, also James aged 75, and Betty Hutton 65 of Newcastleton.\"\n\nSo in 1841, Elizabeth (recorded as \"Betty\") was living with Robert at age 34, with four young children under eight. Also in the household were Robert's elderly parents — James Telfer (75) and Betty Hutton (65) — making it a multi-generational home. This tells us that Elizabeth not only raised her own children but likely helped care for her aging in-laws as well.\n\n### A Short Life\n\nElizabeth died in 1846 at around 39 years old, leaving Robert a widower with four children to raise — the oldest just twelve. She never lived to see the next chapter of the Telfer story, when some of the next generation would follow Uncle Francis to Australia. Her children — Elizabeth, James, Jean, and John — carried on the family name in Scotland, and some of their descendants would later make the journey to the new world.\n\n*(From the Borders to the Bush, p.18)*\n\n## Sources\n\n- 1841 Census, Newcastleton, Roxburghshire — records Robert Telfer (36), Elizabeth/Betty (34), and children Elizabeth (7), James (5), Jean (3), John (2), plus parents James Telfer (75) and Betty Hutton (65)\n- *From the Borders to the Bush* by Hope Simmons (1989), p.18\n- Castleton Parish Records, OPR 784/1 — baptism records for Telfer children",
+    "roles": [
+      "Wife of Robert Telfer (1803–1878)"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "oliver",
+      "in-law"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "robert-telfer-1803"
+    ],
+    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -1544,41 +1581,6 @@
       "howard-lindsay-parker",
       "william-humphrey-parker-1926"
     ],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Elizabeth Oliver",
-    "slug": "elizabeth-oliver",
-    "first_name": "Elizabeth",
-    "middle_name": null,
-    "last_name": "Oliver",
-    "birth_year": 1807,
-    "death_year": 1846,
-    "birth_year_display": "1807",
-    "death_year_display": "1846",
-    "display_name": "Elizabeth Oliver",
-    "title": "Elizabeth Oliver — Family & Biography",
-    "lifespan": "1807 – 1846",
-    "generation": 4,
-    "is_living": false,
-    "body_markdown": "# Elizabeth Oliver (1807–1846)\n\n**Role:** Wife of Robert Telfer (1803–1878)\n**Born:** ~1807 — likely Roxburghshire, Scotland\n**Died:** 1846 (aged ~39) — Newcastleton, Scottish Borders, Scotland\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Robert Telfer (1803–1878)]] (m. ~1832) |\n| **Daughter** | Elizabeth Telfer (b. ~1834) |\n| **Son** | James Telfer (b. ~1836) |\n| **Daughter** | Jean Telfer (b. ~1838) |\n| **Son** | John Telfer (b. ~1839) |\n\n---\n\n## Family Stories\n\n### A Quiet Life in Liddesdale\n\nElizabeth Oliver was born around 1807 and married Robert Telfer, one of the younger brothers of Francis Telfer who would later emigrate to South Australia. Unlike Francis, Robert and Elizabeth stayed in Scotland, living in Newcastleton in the Liddesdale valley where the Telfers had been for generations.\n\n### The 1841 Census Snapshot\n\nThe 1841 Census for Newcastleton gives us a rare clear window into Elizabeth's life. The entry reads: \"Robert Telfer 36, and Betty 34 with children, Elizabeth 7, James 5, Jean 3, and John 2, also James aged 75, and Betty Hutton 65 of Newcastleton.\"\n\nSo in 1841, Elizabeth (recorded as \"Betty\") was living with Robert at age 34, with four young children under eight. Also in the household were Robert's elderly parents — James Telfer (75) and Betty Hutton (65) — making it a multi-generational home. This tells us that Elizabeth not only raised her own children but likely helped care for her aging in-laws as well.\n\n### A Short Life\n\nElizabeth died in 1846 at around 39 years old, leaving Robert a widower with four children to raise — the oldest just twelve. She never lived to see the next chapter of the Telfer story, when some of the next generation would follow Uncle Francis to Australia. Her children — Elizabeth, James, Jean, and John — carried on the family name in Scotland, and some of their descendants would later make the journey to the new world.\n\n*(From the Borders to the Bush, p.18)*\n\n## Sources\n\n- 1841 Census, Newcastleton, Roxburghshire — records Robert Telfer (36), Elizabeth/Betty (34), and children Elizabeth (7), James (5), Jean (3), John (2), plus parents James Telfer (75) and Betty Hutton (65)\n- *From the Borders to the Bush* by Hope Simmons (1989), p.18\n- Castleton Parish Records, OPR 784/1 — baptism records for Telfer children",
-    "roles": [
-      "Wife of Robert Telfer (1803–1878)"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "oliver",
-      "in-law"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "robert-telfer-1803"
-    ],
-    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -2122,37 +2124,7 @@
       "william-farrow"
     ],
     "spouses": [
-      "elizabeth-hannah",
       "elizabeth-hannah-telfer"
-    ],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Elizabeth Hannah",
-    "slug": "elizabeth-hannah",
-    "first_name": "Elizabeth",
-    "middle_name": null,
-    "last_name": "Hannah",
-    "birth_year": 1836,
-    "death_year": 1916,
-    "birth_year_display": "1836",
-    "death_year_display": "1916",
-    "display_name": "Elizabeth Hannah",
-    "title": "Elizabeth Hannah (1836–1916)",
-    "lifespan": "1836 – 1916",
-    "generation": 4,
-    "is_living": false,
-    "body_markdown": "# Elizabeth Hannah (1836–1916)\n\n> ⚠️ Redirect — duplicate stub. The full profile for this person (Elizabeth \"Telfer\" Farrow, matriarch of Hope Farm) lives at the disambiguated full-name file.\n\n## This is now a full profile\n\n➡️ **[[Elizabeth Hannah Telfer (1836–1916)]]** — second daughter of Francis Telfer, wife of Charles Farrow, matriarch of the Farrow line at Hope Farm, Tarlee.",
-    "roles": [],
-    "tags": [
-      "redirect"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "charles-farrow"
     ],
     "siblings": [],
     "images": [],
@@ -3325,6 +3297,33 @@
     "spouses": [
       "elizabeth-anne-smith"
     ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Elizabeth Hannah",
+    "slug": "elizabeth-hannah",
+    "first_name": "Elizabeth",
+    "middle_name": null,
+    "last_name": "Hannah",
+    "birth_year": 1836,
+    "death_year": 1916,
+    "birth_year_display": "1836",
+    "death_year_display": "1916",
+    "display_name": "Elizabeth Hannah",
+    "title": "Elizabeth Hannah (1836–1916)",
+    "lifespan": "1836 – 1916",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Elizabeth Hannah (1836–1916)\n\n> ⚠️ Redirect — duplicate stub. The full profile for this person (Elizabeth \"Telfer\" Farrow, matriarch of Hope Farm) lives at the disambiguated full-name file.\n\n## This is now a full profile\n\n➡️ **[[Elizabeth Hannah Telfer (1836–1916)]]** — second daughter of Francis Telfer, wife of Charles Farrow, matriarch of the Farrow line at Hope Farm, Tarlee.",
+    "roles": [],
+    "tags": [
+      "redirect"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
     "siblings": [],
     "images": [],
     "person_photo": null
