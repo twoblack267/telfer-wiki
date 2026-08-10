@@ -162,7 +162,15 @@ function deduplicatePeople(arr) {
   const dropped = [];
 
   for (const p of arr) {
-    const key = ((p.first_name || '') + '|' + (p.last_name || '') + '|' + (p.birth_year ?? '')).toLowerCase();
+    const by = p.birth_year ?? '';
+    // Include middle_name ONLY when birth_year is absent, matching convert-markdown.mjs.
+    // Two no-year same first+last people (e.g. John Alick Ralph Telfer vs John Robert
+    // Telfer) share a first+last-only key and would wrongly deduplicate — this mirrors
+    // the converter's collision fix so the two Johns coexist.
+    const namePart = by
+      ? ((p.first_name || '') + (p.last_name || ''))
+      : ((p.first_name || '') + (p.middle_name || '') + (p.last_name || ''));
+    const key = (namePart + '|' + by).toLowerCase();
     const hasYear = /\d{4}$/.test(p.slug || '');
     const existing = seen.get(key);
 

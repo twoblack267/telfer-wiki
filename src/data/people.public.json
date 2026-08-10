@@ -5498,6 +5498,7 @@
     "children": [
       "beatrice-telfer-1911",
       "douglas-telfer-1913",
+      "john-telfer-alick-ralph",
       "melville-telfer",
       "murray-telfer-1920",
       "rita-telfer"
@@ -5949,6 +5950,7 @@
     "children": [
       "beatrice-telfer-1911",
       "douglas-telfer-1913",
+      "john-telfer-alick-ralph",
       "melville-telfer",
       "murray-telfer-1920",
       "rita-telfer"
@@ -9534,6 +9536,7 @@
     "siblings": [
       "beatrice-telfer-1911",
       "douglas-telfer-1913",
+      "john-telfer-alick-ralph",
       "melville-telfer",
       "murray-telfer-1920"
     ],
@@ -9655,6 +9658,7 @@
     "spouses": [],
     "siblings": [
       "douglas-telfer-1913",
+      "john-telfer-alick-ralph",
       "melville-telfer",
       "murray-telfer-1920",
       "rita-telfer"
@@ -9824,6 +9828,7 @@
     "spouses": [],
     "siblings": [
       "beatrice-telfer-1911",
+      "john-telfer-alick-ralph",
       "melville-telfer",
       "murray-telfer-1920",
       "rita-telfer"
@@ -9948,6 +9953,7 @@
     "siblings": [
       "beatrice-telfer-1911",
       "douglas-telfer-1913",
+      "john-telfer-alick-ralph",
       "murray-telfer-1920",
       "rita-telfer"
     ],
@@ -10267,6 +10273,7 @@
     "siblings": [
       "beatrice-telfer-1911",
       "douglas-telfer-1913",
+      "john-telfer-alick-ralph",
       "melville-telfer",
       "rita-telfer"
     ],
@@ -10754,6 +10761,43 @@
       "kenneth-telfer"
     ],
     "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "John Alick Ralph Telfer",
+    "slug": "john-telfer-alick-ralph",
+    "first_name": "John",
+    "middle_name": "Alick Ralph",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "John Alick Ralph Telfer",
+    "title": "John Alick Ralph Telfer — Family & Biography",
+    "lifespan": "? – living",
+    "generation": 6,
+    "is_living": true,
+    "body_markdown": "# John Alick Ralph Telfer\n\n**Lifespan:** born ? – died ? (dates unverified — left blank under the conflicting/unknown-dates rule)\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nJohn Alick Ralph Telfer was one of the six children of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]], born while the family lived at Warcowie before their 1923 move to Hill River (near Clare).\n\nHis birth and death dates are not yet verified, so they are left blank here rather than guessed.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Siblings** | Rita Joyce Telfer (1909–1990), Beatrice Sylvia Telfer (1911–1999), Douglas Ivan Telfer (1913–1993), Melville Bruce Telfer (1914–1997), Murray Keith Telfer (1920–2005) |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — names John Alick Ralph as one of Albert & Beatrice's six children\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — confirms Albert & Beatrice's family at Clare (John Alick Ralph himself has no separate dated headstone listing / dates unverified) — accessed 10 Aug 2026",
+    "roles": [],
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "parents": [
+      "albert-telfer",
+      "beatrice-telfer-1877"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "beatrice-telfer-1911",
+      "douglas-telfer-1913",
+      "melville-telfer",
+      "murray-telfer-1920",
+      "rita-telfer"
+    ],
     "images": [],
     "person_photo": null
   },

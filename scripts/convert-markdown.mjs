@@ -216,7 +216,14 @@ function main() {
   // wrong person or spawns a duplicate.
   const existingByKey = new Map();
   for (const p of existingPeople) {
-    const key = `${(p.first_name || '')}${(p.last_name || '')}|${p.birth_year ?? ''}`;
+    // Include middle_name in the key ONLY when birth_year is absent. Two people with
+    // the same first+last AND no birth year collide under a first+last-only key (they
+    // cover the same key). Adding the middle name disambiguates them (e.g. John Alick
+    // Ralph Telfer vs John Robert Telfer). People WITH a birth year keep the exact
+    // first+last+year key, so they are unaffected (zero regression).
+    const by = p.birth_year ?? '';
+    const namePart = by ? `${(p.first_name || '')}${(p.last_name || '')}` : `${(p.first_name || '')}${(p.middle_name || '')}${(p.last_name || '')}`;
+    const key = `${namePart}|${by}`;
     const keyLower = key.toLowerCase().replace(/\s+/g, '');
     const existing = existingByKey.get(keyLower);
     if (!existing) {
@@ -394,10 +401,16 @@ function main() {
     };
 
     // 3. Find matching existing entry
-    // Priority: key match (first+last+birth_year) first, then slug match (fallback)
-    // Key must concatenate first+last exactly as the index builder does, so
-    // first/last split inconsistencies still merge to the same person.
-    const matchKey = `${firstName}${lastName}|${birthYear ?? ''}`.toLowerCase().replace(/\s+/g, '');
+    // Priority: key match first, then slug match (fallback).
+    // Key must concatenate name exactly as the index builder does, so first/last
+    // split inconsistencies still merge to the same person. For people with a birth
+    // year the key is first+last+birth_year (unchanged). For people WITHOUT a birth
+    // year the middle name is included so two no-year same-first+last people do not
+    // collide (e.g. John Alick Ralph Telfer vs John Robert Telfer).
+    const matchKey = (birthYear
+      ? `${firstName}${lastName}|${birthYear}`
+      : `${firstName}${middleName || ''}${lastName}|`
+    ).toLowerCase().replace(/\s+/g, '');
     let existing = existingByKey.get(matchKey) || existingBySlug.get(slug);
 
     if (existing) {

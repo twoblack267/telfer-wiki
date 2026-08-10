@@ -1534,6 +1534,11 @@
       "slug": "rita-telfer",
       "id": "Rita Joyce Telfer",
       "generation": 6
+    },
+    {
+      "slug": "john-telfer-alick-ralph",
+      "id": "John Alick Ralph Telfer",
+      "generation": 4
     }
   ],
   "edges": {
@@ -3169,6 +3174,14 @@
       {
         "from": "beatrice-telfer-1877",
         "to": "rita-telfer"
+      },
+      {
+        "from": "albert-telfer",
+        "to": "john-telfer-alick-ralph"
+      },
+      {
+        "from": "beatrice-telfer-1877",
+        "to": "john-telfer-alick-ralph"
       }
     ],
     "spouseOf": [
@@ -5504,6 +5517,10 @@
       },
       {
         "from": "beatrice-telfer-1911",
+        "to": "john-telfer-alick-ralph"
+      },
+      {
+        "from": "beatrice-telfer-1911",
         "to": "melville-telfer"
       },
       {
@@ -5513,6 +5530,10 @@
       {
         "from": "beatrice-telfer-1911",
         "to": "rita-telfer"
+      },
+      {
+        "from": "douglas-telfer-1913",
+        "to": "john-telfer-alick-ralph"
       },
       {
         "from": "douglas-telfer-1913",
@@ -5536,6 +5557,18 @@
       },
       {
         "from": "melville-telfer",
+        "to": "rita-telfer"
+      },
+      {
+        "from": "john-telfer-alick-ralph",
+        "to": "melville-telfer"
+      },
+      {
+        "from": "john-telfer-alick-ralph",
+        "to": "murray-telfer-1920"
+      },
+      {
+        "from": "john-telfer-alick-ralph",
         "to": "rita-telfer"
       }
     ]
