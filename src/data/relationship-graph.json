@@ -1444,6 +1444,66 @@
       "slug": "martha-masters",
       "id": "Martha Masters",
       "generation": 4
+    },
+    {
+      "slug": "emma-masters",
+      "id": "Emma Jane Masters",
+      "generation": 5
+    },
+    {
+      "slug": "frederick-masters",
+      "id": "Frederick Charles Masters",
+      "generation": 5
+    },
+    {
+      "slug": "george-masters-1844",
+      "id": "George Edward Masters",
+      "generation": 5
+    },
+    {
+      "slug": "george-masters-1841",
+      "id": "George Masters",
+      "generation": 5
+    },
+    {
+      "slug": "james-masters",
+      "id": "James Masters",
+      "generation": 5
+    },
+    {
+      "slug": "jemima-masters",
+      "id": "Jemima Williams Masters",
+      "generation": 5
+    },
+    {
+      "slug": "joseph-masters-1841",
+      "id": "Joseph Masters",
+      "generation": 5
+    },
+    {
+      "slug": "joseph-masters-1853",
+      "id": "Joseph Robert Masters",
+      "generation": 5
+    },
+    {
+      "slug": "mary-masters",
+      "id": "Mary Ellen Masters",
+      "generation": 5
+    },
+    {
+      "slug": "william-masters",
+      "id": "William Williams Masters",
+      "generation": 5
+    },
+    {
+      "slug": "charles-masters-1837",
+      "id": "Charles Frederick Masters",
+      "generation": null
+    },
+    {
+      "slug": "martha-masters-1839",
+      "id": "Martha Ann Masters",
+      "generation": null
     }
   ],
   "edges": {
@@ -2943,6 +3003,102 @@
       {
         "from": "mark-telfer-1986",
         "to": "zabella-telfer"
+      },
+      {
+        "from": "charles-masters",
+        "to": "emma-masters"
+      },
+      {
+        "from": "martha-masters",
+        "to": "emma-masters"
+      },
+      {
+        "from": "charles-masters",
+        "to": "frederick-masters"
+      },
+      {
+        "from": "martha-masters",
+        "to": "frederick-masters"
+      },
+      {
+        "from": "charles-masters",
+        "to": "george-masters-1844"
+      },
+      {
+        "from": "martha-masters",
+        "to": "george-masters-1844"
+      },
+      {
+        "from": "charles-masters",
+        "to": "george-masters-1841"
+      },
+      {
+        "from": "martha-masters",
+        "to": "george-masters-1841"
+      },
+      {
+        "from": "charles-masters",
+        "to": "james-masters"
+      },
+      {
+        "from": "martha-masters",
+        "to": "james-masters"
+      },
+      {
+        "from": "charles-masters",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "martha-masters",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "charles-masters",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "martha-masters",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "charles-masters",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "martha-masters",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "charles-masters",
+        "to": "mary-masters"
+      },
+      {
+        "from": "martha-masters",
+        "to": "mary-masters"
+      },
+      {
+        "from": "charles-masters",
+        "to": "william-masters"
+      },
+      {
+        "from": "martha-masters",
+        "to": "william-masters"
+      },
+      {
+        "from": "charles-masters",
+        "to": "charles-masters-1837"
+      },
+      {
+        "from": "martha-masters",
+        "to": "charles-masters-1837"
+      },
+      {
+        "from": "charles-masters",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "martha-masters",
+        "to": "martha-masters-1839"
       }
     ],
     "spouseOf": [
@@ -3535,6 +3691,54 @@
       {
         "from": "carissa-telfer",
         "to": "peter-telfer"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "charles-masters-1837"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "emma-masters"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "frederick-masters"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "george-masters-1841"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "george-masters-1844"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "james-masters"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "mary-masters"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "william-masters"
       },
       {
         "from": "caroline-edna-lawrie",
@@ -4955,6 +5159,270 @@
       {
         "from": "walter-telfer",
         "to": "william-telfer-1880"
+      },
+      {
+        "from": "emma-masters",
+        "to": "frederick-masters"
+      },
+      {
+        "from": "emma-masters",
+        "to": "george-masters-1841"
+      },
+      {
+        "from": "emma-masters",
+        "to": "george-masters-1844"
+      },
+      {
+        "from": "emma-masters",
+        "to": "james-masters"
+      },
+      {
+        "from": "emma-masters",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "emma-masters",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "emma-masters",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "emma-masters",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "emma-masters",
+        "to": "mary-masters"
+      },
+      {
+        "from": "emma-masters",
+        "to": "william-masters"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "george-masters-1841"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "george-masters-1844"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "james-masters"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "mary-masters"
+      },
+      {
+        "from": "frederick-masters",
+        "to": "william-masters"
+      },
+      {
+        "from": "george-masters-1844",
+        "to": "james-masters"
+      },
+      {
+        "from": "george-masters-1844",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "george-masters-1844",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "george-masters-1844",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "george-masters-1844",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "george-masters-1844",
+        "to": "mary-masters"
+      },
+      {
+        "from": "george-masters-1844",
+        "to": "william-masters"
+      },
+      {
+        "from": "george-masters-1841",
+        "to": "george-masters-1844"
+      },
+      {
+        "from": "george-masters-1841",
+        "to": "james-masters"
+      },
+      {
+        "from": "george-masters-1841",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "george-masters-1841",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "george-masters-1841",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "george-masters-1841",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "george-masters-1841",
+        "to": "mary-masters"
+      },
+      {
+        "from": "george-masters-1841",
+        "to": "william-masters"
+      },
+      {
+        "from": "james-masters",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "james-masters",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "james-masters",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "james-masters",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "james-masters",
+        "to": "mary-masters"
+      },
+      {
+        "from": "james-masters",
+        "to": "william-masters"
+      },
+      {
+        "from": "jemima-masters",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "jemima-masters",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "jemima-masters",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "jemima-masters",
+        "to": "mary-masters"
+      },
+      {
+        "from": "jemima-masters",
+        "to": "william-masters"
+      },
+      {
+        "from": "joseph-masters-1841",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "joseph-masters-1841",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "joseph-masters-1841",
+        "to": "mary-masters"
+      },
+      {
+        "from": "joseph-masters-1841",
+        "to": "william-masters"
+      },
+      {
+        "from": "joseph-masters-1853",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "joseph-masters-1853",
+        "to": "mary-masters"
+      },
+      {
+        "from": "joseph-masters-1853",
+        "to": "william-masters"
+      },
+      {
+        "from": "mary-masters",
+        "to": "william-masters"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "emma-masters"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "frederick-masters"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "george-masters-1841"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "george-masters-1844"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "james-masters"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "jemima-masters"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "joseph-masters-1841"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "joseph-masters-1853"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "martha-masters-1839"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "mary-masters"
+      },
+      {
+        "from": "charles-masters-1837",
+        "to": "william-masters"
+      },
+      {
+        "from": "martha-masters-1839",
+        "to": "mary-masters"
+      },
+      {
+        "from": "martha-masters-1839",
+        "to": "william-masters"
       }
     ]
   }

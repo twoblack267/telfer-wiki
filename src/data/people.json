@@ -2140,6 +2140,23 @@
         ]
       },
       {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      },
+      {
         "type": "Children",
         "names": [
           "Francis Charles Telfer (1875–1954)",
@@ -2172,7 +2189,20 @@
       "walter-telfer",
       "william-telfer-1880"
     ],
-    "siblings": [],
+    "siblings": [
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
     "spouses": [
       "john-telfer-1847"
     ],
@@ -19153,18 +19183,42 @@
       {
         "type": "Children",
         "names": [
-          "Caroline Amelia Telfer (1842–1929)"
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
         ]
       }
     ],
     "roles": [
       "Caroline Telfer's father; SA pioneer farmer at Wroxton Grange, Angaston"
     ],
-    "body_markdown": "# Charles Masters (1809–1866)\n\n**Lifespan:** 30 June 1809 – 4 June 1866\n\n**Branch:** Masters (father of Caroline Amelia Telfer)\n\n**Role:** Caroline Telfer's father; SA pioneer farmer at Wroxton Grange, Angaston\n\n## Biography\n\nCharles Masters was born 30th June 1809 at Brownsover, Warwickshire, England. He married **Martha Williams** on 6th August 1835 at Aston le Walls, Northamptonshire.\n\nHe emigrated to South Australia with his family on the *Templar*, arriving **24 November 1845**. The family farmed at Flaxman's Valley, Angaston — his property was known as **Wroxton Grange**.\n\nCharles died 4th June 1866 at Wroxton Grange, Angaston, aged 56. He is buried at Angaston Old Cemetery (plot 69).\n\n## Family\n\nDaughter **Caroline Amelia Masters** married **John Telfer** on 22nd September 1874 at Tarlee — she became the matriarch of the Willow Plains Telfers (Great-great-grandmother).\n\nThe full birth register of Charles & Martha's thirteen children is recorded in *From the Borders to the Bush*. Most are confirmed only by that family record and are held as leads pending secondary confirmation.\n\n*Sources: From the Borders to the Bush; WikiTree Masters-12 (SA Death Register 24/338, South Australian Register 8 Jun 1866, Angaston Old Cemetery).*\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Martha Williams Masters (1814–1896)]] (m. 6 Aug 1835) |\n| **Children** | [[Caroline Amelia Telfer (1842–1929)]] |",
+    "body_markdown": "# Charles Masters (1809–1866)\n\n**Lifespan:** 30 June 1809 – 4 June 1866\n\n**Branch:** Masters (father of Caroline Amelia Telfer)\n\n**Role:** Caroline Telfer's father; SA pioneer farmer at Wroxton Grange, Angaston\n\n## Biography\n\nCharles Masters was born 30th June 1809 at Brownsover, Warwickshire, England. He married **Martha Williams** on 6th August 1835 at Aston le Walls, Northamptonshire.\n\nHe emigrated to South Australia with his family on the *Templar*, arriving **24 November 1845**. The family farmed at Flaxman's Valley, Angaston — his property was known as **Wroxton Grange**.\n\nCharles died 4th June 1866 at Wroxton Grange, Angaston, aged 56. He is buried at Angaston Old Cemetery (plot 69).\n\n## Family\n\nDaughter **Caroline Amelia Masters** married **John Telfer** on 22nd September 1874 at Tarlee — she became the matriarch of the Willow Plains Telfers (Great-great-grandmother).\n\nCharles and Martha had thirteen children (see Relationships). Daughter **Caroline Amelia Masters** married **John Telfer** on 22nd September 1874 at Tarlee — she became the matriarch of the Willow Plains Telfers (Great-great-grandmother). The full birth register is recorded in *From the Borders to the Bush*, and ten of the thirteen children are additionally confirmed against FindAGrave gravestones.\n\n*Sources: From the Borders to the Bush; WikiTree Masters-12 (SA Death Register 24/338, South Australian Register 8 Jun 1866, Angaston Old Cemetery).*\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Martha Williams Masters (1814–1896)]] (m. 6 Aug 1835) |\n| **Children** (13) | [[Charles Frederick Masters (1837–1845)]], [[William Williams Masters (1838–1927)]], [[Martha Ann Masters Radford (1839–1912)]], [[Joseph Masters (1841–1841)]], [[George Masters (1841–1841)]], [[Caroline Amelia Telfer (1842–1929)]], [[George Edward Masters (1844–1912)]], [[James Masters (1846–1847)]], [[Frederick Charles Masters (1848–1939)]], [[Jemima Williams Masters Grant (1850–1919)]], [[Mary Ellen Masters Roach (1852–1935)]], [[Joseph Robert Masters (1853–1922)]], [[Emma Jane Masters Tuck (1855–1922)]] |",
     "body_stripped": "**Lifespan:** 30 June 1809 – 4 June 1866\n\n**Branch:** Masters (father of Caroline Amelia Telfer)\n\n**Role:** Caroline Telfer's father; SA pioneer farmer at Wroxton Grange, Angaston\n\n## Biography\n\nCharles Masters was born 30th June 1809 at Brownsover, Warwickshire, England. He married **Martha Williams** on 6th August 1835 at Aston le Walls, Northamptonshire.\n\nHe emigrated to South Australia with his family on the *Templar*, arriving **24 November 1845**. The family farmed at Flaxman's Valley, Ang",
     "parents": [],
     "children": [
-      "caroline-telfer"
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
     ],
     "siblings": [],
     "spouses": [
@@ -19212,18 +19266,42 @@
       {
         "type": "Children",
         "names": [
-          "Caroline Amelia Telfer (1842–1929)"
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
         ]
       }
     ],
     "roles": [
       "Caroline Telfer's mother; SA pioneer at Angaston"
     ],
-    "body_markdown": "# Martha Williams Masters (1814–1896)\n\n**Lifespan:** 21 September 1814 – 18 February 1896\n\n**Branch:** Masters (née Williams; mother of Caroline Amelia Telfer)\n\n**Role:** Caroline Telfer's mother; SA pioneer at Angaston\n\n## Biography\n\nMartha Williams was baptised 21st September 1814 at Moreton Pinkney, Northamptonshire, England, daughter of John Williams. She married **Charles Masters** on 6th August 1835 at Aston le Walls, Northamptonshire.\n\nShe emigrated to South Australia with her family on the *Templar*, arriving 24 November 1845. The family farmed at Flaxman's Valley, Angaston. After Charles's death in 1866, Martha (with her children's help) carried on the farm.\n\nMartha died 18th February 1896 at Clare, South Australia, aged 81.\n\n## Family\n\nDaughter **Caroline Amelia Masters** married **John Telfer** on 22nd September 1874 at Tarlee — she became the matriarch of the Willow Plains Telfers (Great-great-grandmother).\n\n*Sources: From the Borders to the Bush; WikiTree Williams-262 (Non-Conformist/parish baptism register; SA death record).*\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Charles Masters (1809–1866)]] (m. 6 Aug 1835) |\n| **Children** | [[Caroline Amelia Telfer (1842–1929)]] |",
+    "body_markdown": "# Martha Williams Masters (1814–1896)\n\n**Lifespan:** 21 September 1814 – 18 February 1896\n\n**Branch:** Masters (née Williams; mother of Caroline Amelia Telfer)\n\n**Role:** Caroline Telfer's mother; SA pioneer at Angaston\n\n## Biography\n\nMartha Williams was baptised 21st September 1814 at Moreton Pinkney, Northamptonshire, England, daughter of John Williams. She married **Charles Masters** on 6th August 1835 at Aston le Walls, Northamptonshire.\n\nShe emigrated to South Australia with her family on the *Templar*, arriving 24 November 1845. The family farmed at Flaxman's Valley, Angaston. After Charles's death in 1866, Martha (with her children's help) carried on the farm.\n\nMartha died 18th February 1896 at Clare, South Australia, aged 81.\n\n## Family\n\nCharles and Martha had thirteen children (see Relationships). Daughter **Caroline Amelia Masters** married **John Telfer** on 22nd September 1874 at Tarlee — she became the matriarch of the Willow Plains Telfers (Great-great-grandmother).\n\n*Sources: From the Borders to the Bush; WikiTree Williams-262 (Non-Conformist/parish baptism register; SA death record).*\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Charles Masters (1809–1866)]] (m. 6 Aug 1835) |\n| **Children** (13) | [[Charles Frederick Masters (1837–1845)]], [[William Williams Masters (1838–1927)]], [[Martha Ann Masters Radford (1839–1912)]], [[Joseph Masters (1841–1841)]], [[George Masters (1841–1841)]], [[Caroline Amelia Telfer (1842–1929)]], [[George Edward Masters (1844–1912)]], [[James Masters (1846–1847)]], [[Frederick Charles Masters (1848–1939)]], [[Jemima Williams Masters Grant (1850–1919)]], [[Mary Ellen Masters Roach (1852–1935)]], [[Joseph Robert Masters (1853–1922)]], [[Emma Jane Masters Tuck (1855–1922)]] |",
     "body_stripped": "**Lifespan:** 21 September 1814 – 18 February 1896\n\n**Branch:** Masters (née Williams; mother of Caroline Amelia Telfer)\n\n**Role:** Caroline Telfer's mother; SA pioneer at Angaston\n\n## Biography\n\nMartha Williams was baptised 21st September 1814 at Moreton Pinkney, Northamptonshire, England, daughter of John Williams. She married **Charles Masters** on 6th August 1835 at Aston le Walls, Northamptonshire.\n\nShe emigrated to South Australia with her family on the *Templar*, arriving 24 November 1845",
     "parents": [],
     "children": [
-      "caroline-telfer"
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
     ],
     "siblings": [],
     "spouses": [
@@ -19237,5 +19315,1007 @@
     "images": [],
     "person_photo": null,
     "generation": 4
+  },
+  {
+    "id": "Emma Jane Masters",
+    "slug": "emma-masters",
+    "vault_file": "Emma Jane Masters Tuck (1855–1922).md",
+    "first_name": "Emma",
+    "middle_name": "Jane",
+    "last_name": "Masters",
+    "birth_year": 1855,
+    "death_year": 1922,
+    "birth_year_display": "1855",
+    "death_year_display": "1922",
+    "display_name": "Emma Jane Masters",
+    "title": "Emma Jane Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Emma Jane Masters Tuck"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Bernard Henry Tuck"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Youngest child of Charles & Martha Masters; married Bernard Henry Tuck of Forestville"
+    ],
+    "body_markdown": "# Emma Jane Masters Tuck (1855–1922)\n\n**Lifespan:** 4 October 1855 – 28 November 1922\n\n**Branch:** Masters → Tuck (married into)\n\n**Role:** Youngest child of Charles & Martha Masters; married Bernard Henry Tuck of Forestville\n\n## Biography\n\nEmma Jane Masters was born 4th October 1855, the youngest child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. \n\nShe married **Bernard Henry Tuck** (1858–1942) on 28th September 1882 at \"Willow Farm\", near Clare — the farm of her sister [[Martha Ann Masters Radford (1839–1912)|Martha's]] husband John Radford. She died 28th November 1922 at Forestville, South Australia, and is buried at Mitcham General Cemetery.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n| **Spouse** | Bernard Henry Tuck (1858–1942), m. 28 Sep 1882, Willow Farm, Clare |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register\n- **Source:** FindAGrave Memorial 201534823 — Emma Jane Tuck (1855–1922), Mitcham General Cemetery — [https://www.findagrave.com/memorial/201534823](https://www.findagrave.com/memorial/201534823) — accessed 10 Aug 2026\n- **Source:** SA BDM death 458/247 — Emma Jane Tuck, d.28 Nov 1922\n- **Source:** *The Advertiser* (Adelaide), 29 Nov 1922, p.10 — death notice\n- **Source:** SA BDM marriage 132/1319 — Emma Jane Masters m. Bernard Henry Tuck, 28 Sep 1882",
+    "body_stripped": "**Lifespan:** 4 October 1855 – 28 November 1922\n\n**Branch:** Masters → Tuck (married into)\n\n**Role:** Youngest child of Charles & Martha Masters; married Bernard Henry Tuck of Forestville\n\n## Biography\n\nEmma Jane Masters was born 4th October 1855, the youngest child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). \n\nShe married **Bernard Henry Tuck** (1858–1942) on 28th September 1882 at \"Willow Farm\", near Clare — the farm of her sister Martha Ann Masters Radford (1839–19",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1855 – 1922",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Frederick Charles Masters",
+    "slug": "frederick-masters",
+    "vault_file": "Frederick Charles Masters (1848–1939).md",
+    "first_name": "Frederick",
+    "middle_name": "Charles",
+    "last_name": "Masters",
+    "birth_year": 1848,
+    "death_year": 1939,
+    "birth_year_display": "1848",
+    "death_year_display": "1939",
+    "display_name": "Frederick Charles Masters",
+    "title": "Frederick Charles Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Frederick Charles Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Son of Charles and Martha Masters; emigrated to New Zealand where he lived to 90"
+    ],
+    "body_markdown": "# Frederick Charles Masters (1848–1939)\n\n**Lifespan:** 14 September 1848 – 20 January 1939\n\n**Branch:** Masters (ninth child of Charles & Martha Masters)\n\n**Role:** Son of Charles and Martha Masters; emigrated to New Zealand where he lived to 90\n\n## Biography\n\nFrederick Charles Masters was born 14th September 1848 at Tanunda, South Australia, the ninth child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. \n\nLike his elder brother [[William Williams Masters (1838–1927)]], Frederick emigrated to New Zealand, settling at Port Chalmers. He died there 20th January 1939, aged 90.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register (death date corrected to 20 Jan 1939)\n- **Source:** FindAGrave Memorial 204995126 — Frederick Charles Masters (1848–1939), Port Chalmers, New Zealand — [https://www.findagrave.com/memorial/204995126](https://www.findagrave.com/memorial/204995126) — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 14 September 1848 – 20 January 1939\n\n**Branch:** Masters (ninth child of Charles & Martha Masters)\n\n**Role:** Son of Charles and Martha Masters; emigrated to New Zealand where he lived to 90\n\n## Biography\n\nFrederick Charles Masters was born 14th September 1848 at Tanunda, South Australia, the ninth child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). \n\nLike his elder brother William Williams Masters (1838–1927), Frederick emigrated to New Zealand, settling ",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1848 – 1939",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "George Edward Masters",
+    "slug": "george-masters-1844",
+    "vault_file": "George Edward Masters (1844–1912).md",
+    "first_name": "George",
+    "middle_name": "Edward",
+    "last_name": "Masters",
+    "birth_year": 1844,
+    "death_year": 1912,
+    "birth_year_display": "1844",
+    "death_year_display": "1912",
+    "display_name": "George Edward Masters",
+    "title": "George Edward Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "George Edward Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Son of Charles and Martha Masters; died at Farrell Flat, buried at Saddleworth"
+    ],
+    "body_markdown": "# George Edward Masters (1844–1912)\n\n**Lifespan:** 26 April 1844 – 8 March 1912\n\n**Branch:** Masters (sixth child of Charles & Martha Masters)\n\n**Role:** Son of Charles and Martha Masters; died at Farrell Flat, buried at Saddleworth\n\n## Biography\n\nGeorge Edward Masters was born 26th April 1844 in England, the sixth child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. He emigrated to South Australia with his family on the *Templar*, arriving 24th November 1845.\n\nHe died 8th March 1912 at Farrell Flat, South Australia, and is buried at Saddleworth.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register\n- **Source:** FindAGrave Memorial 158720660 — George Edward Masters (1844–1912), Saddleworth Cemetery — [https://www.findagrave.com/memorial/158720660](https://www.findagrave.com/memorial/158720660) — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 26 April 1844 – 8 March 1912\n\n**Branch:** Masters (sixth child of Charles & Martha Masters)\n\n**Role:** Son of Charles and Martha Masters; died at Farrell Flat, buried at Saddleworth\n\n## Biography\n\nGeorge Edward Masters was born 26th April 1844 in England, the sixth child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). He emigrated to South Australia with his family on the *Templar*, arriving 24th November 1845.\n\nHe died 8th March 1912 at Farrell Flat, South ",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1844 – 1912",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "George Masters",
+    "slug": "george-masters-1841",
+    "vault_file": "George Masters (1841–1841).md",
+    "first_name": "George",
+    "middle_name": null,
+    "last_name": "Masters",
+    "birth_year": 1841,
+    "death_year": 1841,
+    "birth_year_display": "1841",
+    "death_year_display": "1841",
+    "display_name": "George Masters",
+    "title": "George Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "George Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Twin infant son of Charles & Martha Masters; died aged three months"
+    ],
+    "body_markdown": "# George Masters (1841–1841)\n\n**Lifespan:** 10 February 1841 – 9 May 1841\n\n**Branch:** Masters (twin of Joseph)\n\n**Role:** Twin infant son of Charles & Martha Masters; died aged three months\n\n## Biography\n\nGeorge Masters was born 10th February 1841 in England, one of twin sons of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. He died 9th May 1841, aged three months, in England before the family emigrated.\n\nHis twin brother was [[Joseph Masters (1841–1841)]].\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n| **Twin Brother** | [[Joseph Masters (1841–1841)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register",
+    "body_stripped": "**Lifespan:** 10 February 1841 – 9 May 1841\n\n**Branch:** Masters (twin of Joseph)\n\n**Role:** Twin infant son of Charles & Martha Masters; died aged three months\n\n## Biography\n\nGeorge Masters was born 10th February 1841 in England, one of twin sons of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). He died 9th May 1841, aged three months, in England before the family emigrated.\n\nHis twin brother was Joseph Masters (1841–1841).\n\n## Family\n\n Relation  Name \n\n **Father**  Charle",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1841 – 1841",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "James Masters",
+    "slug": "james-masters",
+    "vault_file": "James Masters (1846–1847).md",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Masters",
+    "birth_year": 1846,
+    "death_year": 1847,
+    "birth_year_display": "1846",
+    "death_year_display": "1847",
+    "display_name": "James Masters",
+    "title": "James Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "James Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Infant son of Charles and Martha Masters; the first child born in South Australia; died aged 7 days"
+    ],
+    "body_markdown": "# James Masters (1846–1847)\n\n**Lifespan:** 27 December 1846 – 3 January 1847\n\n**Branch:** Masters (eighth child of Charles & Martha Masters)\n\n**Role:** Infant son of Charles and Martha Masters; the first child born in South Australia; died aged 7 days\n\n## Biography\n\nJames Masters was born 27th December 1846 at Payneham, South Australia — the first child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]] to be born in the colony, following the family's arrival on the *Templar* on 24th November 1845. He died 3rd January 1847 at Adelaide, aged just seven days.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register (death date corrected to 3 Jan 1847, aged 7 days)\n- **Source:** FindAGrave Memorial 160773569 — James Masters (1846–1847), Adelaide — [https://www.findagrave.com/memorial/160773569](https://www.findagrave.com/memorial/160773569) — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 27 December 1846 – 3 January 1847\n\n**Branch:** Masters (eighth child of Charles & Martha Masters)\n\n**Role:** Infant son of Charles and Martha Masters; the first child born in South Australia; died aged 7 days\n\n## Biography\n\nJames Masters was born 27th December 1846 at Payneham, South Australia — the first child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896) to be born in the colony, following the family's arrival on the *Templar* on 24th November 1845. He di",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1846 – 1847",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Jemima Williams Masters",
+    "slug": "jemima-masters",
+    "vault_file": "Jemima Williams Masters Grant (1850–1919).md",
+    "first_name": "Jemima",
+    "middle_name": "Williams",
+    "last_name": "Masters",
+    "birth_year": 1850,
+    "death_year": 1919,
+    "birth_year_display": "1850",
+    "death_year_display": "1919",
+    "display_name": "Jemima Williams Masters",
+    "title": "Jemima Williams Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Jemima Williams Masters Grant"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Daughter of Charles & Martha Masters; married into the Grant family"
+    ],
+    "body_markdown": "# Jemima Williams Masters Grant (1850–1919)\n\n**Lifespan:** 2 July 1850 – 11 February 1919\n\n**Branch:** Masters → Grant (married into)\n\n**Role:** Daughter of Charles & Martha Masters; married into the Grant family\n\n## Biography\n\nJemima Williams Masters, known as **\"Mimie\"**, was born 2nd July 1850 at Angaston, South Australia, the tenth child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. \n\nShe married a Mr **Grant** and spent her later years at Semaphore. She died 11th February 1919 at Semaphore, South Australia, and is buried at Cheltenham Cemetery.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n| **Spouse** | Mr Grant (given name not recorded) |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register\n- **Source:** FindAGrave Memorial 100576704 — Jemima Williams Grant (1850–1919), Cheltenham Cemetery — [https://www.findagrave.com/memorial/100576704](https://www.findagrave.com/memorial/100576704) — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 2 July 1850 – 11 February 1919\n\n**Branch:** Masters → Grant (married into)\n\n**Role:** Daughter of Charles & Martha Masters; married into the Grant family\n\n## Biography\n\nJemima Williams Masters, known as **\"Mimie\"**, was born 2nd July 1850 at Angaston, South Australia, the tenth child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). \n\nShe married a Mr **Grant** and spent her later years at Semaphore. She died 11th February 1919 at Semaphore, South Australia, a",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1850 – 1919",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Joseph Masters",
+    "slug": "joseph-masters-1841",
+    "vault_file": "Joseph Masters (1841–1841).md",
+    "first_name": "Joseph",
+    "middle_name": null,
+    "last_name": "Masters",
+    "birth_year": 1841,
+    "death_year": 1841,
+    "birth_year_display": "1841",
+    "death_year_display": "1841",
+    "display_name": "Joseph Masters",
+    "title": "Joseph Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Joseph Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Twin infant son of Charles & Martha Masters; died aged three months"
+    ],
+    "body_markdown": "# Joseph Masters (1841–1841)\n\n**Lifespan:** 10 February 1841 – 9 May 1841\n\n**Branch:** Masters (twin of George)\n\n**Role:** Twin infant son of Charles & Martha Masters; died aged three months\n\n## Biography\n\nJoseph Masters was born 10th February 1841 in England, one of twin sons of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. He died 9th May 1841, aged three months, in England before the family emigrated.\n\nHis twin brother was [[George Masters (1841–1841)]].\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n| **Twin Brother** | [[George Masters (1841–1841)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register",
+    "body_stripped": "**Lifespan:** 10 February 1841 – 9 May 1841\n\n**Branch:** Masters (twin of George)\n\n**Role:** Twin infant son of Charles & Martha Masters; died aged three months\n\n## Biography\n\nJoseph Masters was born 10th February 1841 in England, one of twin sons of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). He died 9th May 1841, aged three months, in England before the family emigrated.\n\nHis twin brother was George Masters (1841–1841).\n\n## Family\n\n Relation  Name \n\n **Father**  Charle",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1841 – 1841",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Joseph Robert Masters",
+    "slug": "joseph-masters-1853",
+    "vault_file": "Joseph Robert Masters (1853–1922).md",
+    "first_name": "Joseph",
+    "middle_name": "Robert",
+    "last_name": "Masters",
+    "birth_year": 1853,
+    "death_year": 1922,
+    "birth_year_display": "1853",
+    "death_year_display": "1922",
+    "display_name": "Joseph Robert Masters",
+    "title": "Joseph Robert Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Joseph Robert Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Son of Charles and Martha Masters; farmer at Bendleby, buried at Johnburgh"
+    ],
+    "body_markdown": "# Joseph Robert Masters (1853–1922)\n\n**Lifespan:** 12 November 1853 – 13 May 1922\n\n**Branch:** Masters (twelfth child of Charles & Martha Masters)\n\n**Role:** Son of Charles and Martha Masters; farmer at Bendleby, buried at Johnburgh\n\n## Biography\n\nJoseph Robert Masters was born 12th November 1853 at Angaston, South Australia, the twelfth child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. \n\nHe farmed at Bendleby, in South Australia's mid-north. He died suddenly there on 13th May 1922 and is buried at Johnburgh.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register\n- **Source:** FindAGrave Memorial 215303862 — Joseph Robert Masters (1853–1922), Johnburgh Cemetery — [https://www.findagrave.com/memorial/215303862](https://www.findagrave.com/memorial/215303862) — accessed 10 Aug 2026\n- **Source:** Trove *Chronicle* (Adelaide), 19 May 1923 — in-memoriam notice: \"Joseph Robert Masters... died suddenly at Bendleby on May 13th 1922\"",
+    "body_stripped": "**Lifespan:** 12 November 1853 – 13 May 1922\n\n**Branch:** Masters (twelfth child of Charles & Martha Masters)\n\n**Role:** Son of Charles and Martha Masters; farmer at Bendleby, buried at Johnburgh\n\n## Biography\n\nJoseph Robert Masters was born 12th November 1853 at Angaston, South Australia, the twelfth child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). \n\nHe farmed at Bendleby, in South Australia's mid-north. He died suddenly there on 13th May 1922 and is buried at Johnb",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1853 – 1922",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Mary Ellen Masters",
+    "slug": "mary-masters",
+    "vault_file": "Mary Ellen Masters Roach (1852–1935).md",
+    "first_name": "Mary",
+    "middle_name": "Ellen",
+    "last_name": "Masters",
+    "birth_year": 1852,
+    "death_year": 1935,
+    "birth_year_display": "1852",
+    "death_year_display": "1935",
+    "display_name": "Mary Ellen Masters",
+    "title": "Mary Ellen Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Mary Ellen Masters Roach"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Daughter of Charles & Martha Masters; witness at Caroline & John Telfer's wedding; married a Roach"
+    ],
+    "body_markdown": "# Mary Ellen Masters Roach (1852–1935)\n\n**Lifespan:** 1852 – 1935\n\n**Branch:** Masters → Roach (married into)\n\n**Role:** Daughter of Charles & Martha Masters; witness at Caroline & John Telfer's wedding; married a Roach\n\n## Biography\n\nMary Ellen Masters was born in 1852, the eleventh child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. \n\nShe was a witness at her younger sister [[Caroline Amelia Telfer (1842–1929)|Caroline's]] marriage to [[John Telfer (1847–1929)|John Telfer]] on 22nd September 1874 at Tarlee — Caroline's marriage certificate lists \"Mary Ellen\" as one of the witnesses.\n\nMary Ellen married a Mr **Roach** (given name not recorded) and farmed at White Hut, near Clare. She died there in 1935 and is buried at White Hut Cemetery.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n| **Spouse** | Mr Roach (given name not recorded) |\n| **Sister** | [[Caroline Amelia Telfer (1842–1929)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register\n- **Source:** Caroline Amelia Telfer & John Telfer marriage certificate (22 Sep 1874, Tarlee) — witness \"Mary Ellen\"\n- **Source:** FindAGrave Memorial 277889820 — Mary Ellen Roach (1852–1935), White Hut Cemetery — [https://www.findagrave.com/memorial/277889820](https://www.findagrave.com/memorial/277889820) — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 1852 – 1935\n\n**Branch:** Masters → Roach (married into)\n\n**Role:** Daughter of Charles & Martha Masters; witness at Caroline & John Telfer's wedding; married a Roach\n\n## Biography\n\nMary Ellen Masters was born in 1852, the eleventh child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). \n\nShe was a witness at her younger sister Caroline Amelia Telfer (1842–1929)Caroline's marriage to John Telfer (1847–1929)John Telfer on 22nd September 1874 at Tarlee — Caroline",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1852 – 1935",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "William Williams Masters",
+    "slug": "william-masters",
+    "vault_file": "William Williams Masters (1838–1927).md",
+    "first_name": "William",
+    "middle_name": "Williams",
+    "last_name": "Masters",
+    "birth_year": 1838,
+    "death_year": 1927,
+    "birth_year_display": "1838",
+    "death_year_display": "1927",
+    "display_name": "William Williams Masters",
+    "title": "William Williams Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "William Williams Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Son of Charles and Martha Masters; emigrated to New Zealand where he lived to 89"
+    ],
+    "body_markdown": "# William Williams Masters (1838–1927)\n\n**Lifespan:** 28 March 1838 – 28 March 1927\n\n**Branch:** Masters (second child of Charles & Martha Masters)\n\n**Role:** Son of Charles and Martha Masters; emigrated to New Zealand where he lived to 89\n\n## Biography\n\nWilliam Williams Masters was born 28th March 1838 in Warwickshire, England, the second child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. He emigrated to South Australia with his family on the *Templar*, arriving 24th November 1845.\n\nWilliam later emigrated to New Zealand, settling at Port Chalmers on the Otago coast. He died there 28th March 1927, aged 89.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register (death date corrected)\n- **Source:** FindAGrave Memorial 204994992 — William Williams Masters (1838–1927), Port Chalmers, New Zealand — [https://www.findagrave.com/memorial/204994992](https://www.findagrave.com/memorial/204994992) — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 28 March 1838 – 28 March 1927\n\n**Branch:** Masters (second child of Charles & Martha Masters)\n\n**Role:** Son of Charles and Martha Masters; emigrated to New Zealand where he lived to 89\n\n## Biography\n\nWilliam Williams Masters was born 28th March 1838 in Warwickshire, England, the second child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). He emigrated to South Australia with his family on the *Templar*, arriving 24th November 1845.\n\nWilliam later emigrated ",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1838 – 1927",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Charles Frederick Masters",
+    "slug": "charles-masters-1837",
+    "vault_file": "Charles Frederick Masters (1837–1845).md",
+    "first_name": "Charles",
+    "middle_name": "Frederick",
+    "last_name": "Masters",
+    "birth_year": 1837,
+    "death_year": 1845,
+    "birth_year_display": "1837",
+    "death_year_display": "1845",
+    "display_name": "Charles Frederick Masters",
+    "title": "Charles Frederick Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Charles Frederick Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "William Williams Masters (1838–1927)",
+          "Martha Ann Masters (1839–1912)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Eldest child of Charles and Martha Masters; died as an infant in England before the family emigrated"
+    ],
+    "body_markdown": "# Charles Frederick Masters (1837–1845)\n\n**Lifespan:** 18 February 1837 – 30 November 1845\n\n**Branch:** Masters (eldest child of Charles & Martha Masters)\n\n**Role:** Eldest child of Charles and Martha Masters; died as an infant in England before the family emigrated\n\n## Biography\n\nCharles Frederick Masters was born 18th February 1837 in Warwickshire, England, the eldest child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. He died 30th November 1845 in England, only days after — or en route to — the family's emigration departure; the family sailed to South Australia on the *Templar*, arriving 24th November 1845. He did not accompany the family to Australia.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register of Charles & Martha Masters' thirteen children\n- **Source:** FindAGrave Memorial 160773554 — Charles Frederick Masters (1837–1845) — [https://www.findagrave.com/memorial/160773554](https://www.findagrave.com/memorial/160773554) — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 18 February 1837 – 30 November 1845\n\n**Branch:** Masters (eldest child of Charles & Martha Masters)\n\n**Role:** Eldest child of Charles and Martha Masters; died as an infant in England before the family emigrated\n\n## Biography\n\nCharles Frederick Masters was born 18th February 1837 in Warwickshire, England, the eldest child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). He died 30th November 1845 in England, only days after — or en route to — the family's emi",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "martha-masters-1839",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1837 – 1845",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Martha Ann Masters",
+    "slug": "martha-masters-1839",
+    "vault_file": "Martha Ann Masters Radford (1839–1912).md",
+    "first_name": "Martha",
+    "middle_name": "Ann",
+    "last_name": "Masters",
+    "birth_year": 1839,
+    "death_year": 1912,
+    "birth_year_display": "1839",
+    "death_year_display": "1912",
+    "display_name": "Martha Ann Masters",
+    "title": "Martha Ann Masters — Family & Biography",
+    "tags": [
+      "person",
+      "masters"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Martha Ann Masters"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Charles Masters (1809–1866)",
+          "Martha Williams Masters (1814–1896)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Charles Frederick Masters (1837–1845)",
+          "William Williams Masters (1838–1927)",
+          "Joseph Masters (1841–1841)",
+          "George Masters (1841–1841)",
+          "Caroline Amelia Telfer (1842–1929)",
+          "George Edward Masters (1844–1912)",
+          "James Masters (1846–1847)",
+          "Frederick Charles Masters (1848–1939)",
+          "Jemima Williams Masters (1850–1919)",
+          "Mary Ellen Masters (1852–1935)",
+          "Joseph Robert Masters (1853–1922)",
+          "Emma Jane Masters (1855–1922)"
+        ]
+      }
+    ],
+    "roles": [
+      "Daughter of Charles & Martha Masters; married John Radford of Clare"
+    ],
+    "body_markdown": "# Martha Ann Masters Radford (1839–1912)\n\n**Lifespan:** 20 July 1839 – 28 November 1912\n\n**Branch:** Masters → Radford (married into)\n\n**Role:** Daughter of Charles & Martha Masters; married John Radford of Clare\n\n## Biography\n\nMartha Ann Masters was born 20th July 1839 in Warwickshire, England, the third child of [[Charles Masters (1809–1866)]] and [[Martha Williams Masters (1814–1896)]]. She emigrated to South Australia with her family on the *Templar*, arriving 24th November 1845.\n\nMartha Ann married **John Radford** (1834–1902), a farmer of Clare, South Australia. She died 28th November 1912 and is buried at Clare General Cemetery with her husband.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Charles Masters (1809–1866)]] |\n| **Mother** | [[Martha Williams Masters (1814–1896)]] |\n| **Spouse** | John Radford (1834–1902), m. at Clare, SA |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017) — family birth register (death date corrected)\n- **Source:** FindAGrave Memorial 215270295 — Martha Ann Masters Radford (1839–1912), Clare General Cemetery — [https://www.findagrave.com/memorial/215270295](https://www.findagrave.com/memorial/215270295) — accessed 10 Aug 2026\n- **Source:** ozburials Clare transcription — Martha Ann Radford burial at Clare",
+    "body_stripped": "**Lifespan:** 20 July 1839 – 28 November 1912\n\n**Branch:** Masters → Radford (married into)\n\n**Role:** Daughter of Charles & Martha Masters; married John Radford of Clare\n\n## Biography\n\nMartha Ann Masters was born 20th July 1839 in Warwickshire, England, the third child of Charles Masters (1809–1866) and Martha Williams Masters (1814–1896). She emigrated to South Australia with her family on the *Templar*, arriving 24th November 1845.\n\nMartha Ann married **John Radford** (1834–1902), a farmer of",
+    "parents": [
+      "charles-masters",
+      "martha-masters"
+    ],
+    "children": [],
+    "siblings": [
+      "caroline-telfer",
+      "charles-masters-1837",
+      "emma-masters",
+      "frederick-masters",
+      "george-masters-1841",
+      "george-masters-1844",
+      "james-masters",
+      "jemima-masters",
+      "joseph-masters-1841",
+      "joseph-masters-1853",
+      "mary-masters",
+      "william-masters"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1839 – 1912",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
   }
 ]
