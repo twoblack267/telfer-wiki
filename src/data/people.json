@@ -7504,47 +7504,6 @@
     "generation": 5
   },
   {
-    "id": "George Wright",
-    "slug": "george-wright",
-    "vault_file": "George Wright (1850–1913).md",
-    "first_name": "George",
-    "middle_name": null,
-    "last_name": "Wright",
-    "birth_year": 1850,
-    "death_year": 1913,
-    "birth_year_display": "1850",
-    "death_year_display": "1913",
-    "display_name": "George Wright",
-    "title": "George Wright (1850–1913)",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "George Wright (1850–1913)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# George Wright (1850–1913)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "parents": [],
-    "children": [],
-    "siblings": [],
-    "spouses": [],
-    "is_living": false,
-    "lifespan": "1850 – 1913",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 5
-  },
-  {
     "id": "George Telfer",
     "slug": "george-telfer",
     "vault_file": "George Wright Telfer (1850–1913).md",
