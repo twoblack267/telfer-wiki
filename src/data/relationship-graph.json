@@ -1454,6 +1454,16 @@
       "slug": "zabella-telfer",
       "id": "Zabella Violet Zelda Telfer",
       "generation": 6
+    },
+    {
+      "slug": "charles-masters",
+      "id": "Charles Masters",
+      "generation": 4
+    },
+    {
+      "slug": "martha-masters",
+      "id": "Martha Masters",
+      "generation": 4
     }
   ],
   "edges": {
@@ -1617,6 +1627,14 @@
       {
         "from": "john-telfer-robert",
         "to": "carissa-telfer"
+      },
+      {
+        "from": "charles-masters",
+        "to": "caroline-telfer"
+      },
+      {
+        "from": "martha-masters",
+        "to": "caroline-telfer"
       },
       {
         "from": "caroline-hosking",
@@ -3195,6 +3213,10 @@
       {
         "from": "thelma-ellen-parker",
         "to": "william-humphrey-parker-1926"
+      },
+      {
+        "from": "charles-masters",
+        "to": "martha-masters"
       }
     ],
     "siblingOf": [
