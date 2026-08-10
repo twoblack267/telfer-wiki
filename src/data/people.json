@@ -1263,7 +1263,7 @@
       {
         "type": "Siblings",
         "names": [
-          "Mark Telfer"
+          "Mark Kenneth Telfer"
         ]
       }
     ],
@@ -1452,7 +1452,7 @@
       {
         "type": "Father",
         "names": [
-          "John Telfer (adoptive)"
+          "John Robert Telfer"
         ]
       },
       {
@@ -2822,10 +2822,10 @@
         "type": "Siblings",
         "names": [
           "Francis Kelson Telfer",
-          "Emily Amelia Barton",
-          "Ethel Jean McMurtrie",
-          "Gladys Merle Pedler",
-          "Doris Elma Rowe",
+          "Emily Amelia Telfer",
+          "Ethel Jean Telfer",
+          "Gladys Merle Telfer",
+          "Doris Elma Telfer",
           "Edwin Roy Telfer",
           "Reginald Masters Telfer",
           "Murray John Telfer",
@@ -2844,15 +2844,11 @@
     ],
     "children": [],
     "siblings": [
-      "doris-elma-rowe",
       "doris-elma-telfer",
       "edwin-telfer-1921",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
       "francis-telfer-1910",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "reginald-telfer",
@@ -3362,53 +3358,6 @@
     "images": [],
     "person_photo": null,
     "generation": 5
-  },
-  {
-    "id": "Doris Elma Rowe",
-    "slug": "doris-elma-rowe",
-    "vault_file": "Doris Elma Rowe.md",
-    "first_name": "Doris",
-    "middle_name": null,
-    "last_name": "Elma Rowe",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Doris Elma Rowe",
-    "title": "Doris Elma Rowe",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Doris Elma Rowe"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Doris Elma Rowe\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "parents": [],
-    "children": [],
-    "siblings": [
-      "clarice-may-telfer",
-      "edwin-telfer-1921",
-      "francis-telfer-1910",
-      "reginald-telfer",
-      "ruth-telfer"
-    ],
-    "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 99
   },
   {
     "id": "Doris Elma Telfer",
@@ -4020,11 +3969,11 @@
         "type": "Siblings",
         "names": [
           "Francis Kelson Telfer",
-          "Clarice May Fatchen",
-          "Emily Amelia Barton",
-          "Ethel Jean McMurtrie",
-          "Gladys Merle Pedler",
-          "Doris Elma Rowe",
+          "Clarice May Telfer",
+          "Emily Amelia Telfer",
+          "Ethel Jean Telfer",
+          "Gladys Merle Telfer",
+          "Doris Elma Telfer",
           "Reginald Masters Telfer",
           "Murray John Telfer",
           "Ruth Telfer"
@@ -4043,14 +3992,10 @@
     "children": [],
     "siblings": [
       "clarice-may-telfer",
-      "doris-elma-rowe",
       "doris-elma-telfer",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
       "francis-telfer-1910",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "reginald-telfer",
@@ -5223,53 +5168,6 @@
     "generation": 5
   },
   {
-    "id": "Emily Amelia Barton",
-    "slug": "emily-amelia-barton",
-    "vault_file": "Emily Amelia Barton.md",
-    "first_name": "Emily",
-    "middle_name": null,
-    "last_name": "Amelia Barton",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Emily Amelia Barton",
-    "title": "Emily Amelia Barton",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Emily Amelia Barton"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Emily Amelia Barton\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "parents": [],
-    "children": [],
-    "siblings": [
-      "clarice-may-telfer",
-      "edwin-telfer-1921",
-      "francis-telfer-1910",
-      "reginald-telfer",
-      "ruth-telfer"
-    ],
-    "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 99
-  },
-  {
     "id": "Emily Amelia Telfer",
     "slug": "emily-amelia-telfer",
     "vault_file": "Emily Amelia Telfer (1913–living).md",
@@ -6048,53 +5946,6 @@
     "generation": 6
   },
   {
-    "id": "Ethel Jean McMurtrie",
-    "slug": "ethel-jean-mcmurtrie",
-    "vault_file": "Ethel Jean McMurtrie.md",
-    "first_name": "Ethel",
-    "middle_name": null,
-    "last_name": "Jean McMurtrie",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Ethel Jean McMurtrie",
-    "title": "Ethel Jean McMurtrie",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Ethel Jean McMurtrie"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Ethel Jean McMurtrie\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "parents": [],
-    "children": [],
-    "siblings": [
-      "clarice-may-telfer",
-      "edwin-telfer-1921",
-      "francis-telfer-1910",
-      "reginald-telfer",
-      "ruth-telfer"
-    ],
-    "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 99
-  },
-  {
     "id": "Ethel Jean Telfer",
     "slug": "ethel-jean-telfer",
     "vault_file": "Ethel Jean Telfer (1915–living).md",
@@ -6721,11 +6572,11 @@
       {
         "type": "Siblings",
         "names": [
-          "Clarice May Fatchen",
-          "Emily Amelia Barton",
-          "Ethel Jean McMurtrie",
-          "Gladys Merle Pedler",
-          "Doris Elma Rowe",
+          "Clarice May Telfer",
+          "Emily Amelia Telfer",
+          "Ethel Jean Telfer",
+          "Gladys Merle Telfer",
+          "Doris Elma Telfer",
           "Edwin Roy Telfer",
           "Reginald Masters Telfer",
           "Murray John Telfer",
@@ -6745,14 +6596,10 @@
     "children": [],
     "siblings": [
       "clarice-may-telfer",
-      "doris-elma-rowe",
       "doris-elma-telfer",
       "edwin-telfer-1921",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "reginald-telfer",
@@ -7690,53 +7537,6 @@
     "images": [],
     "person_photo": null,
     "generation": 6
-  },
-  {
-    "id": "Gladys Merle Pedler",
-    "slug": "gladys-merle-pedler",
-    "vault_file": "Gladys Merle Pedler.md",
-    "first_name": "Gladys",
-    "middle_name": null,
-    "last_name": "Merle Pedler",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Gladys Merle Pedler",
-    "title": "Gladys Merle Pedler",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Gladys Merle Pedler"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Gladys Merle Pedler\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "parents": [],
-    "children": [],
-    "siblings": [
-      "clarice-may-telfer",
-      "edwin-telfer-1921",
-      "francis-telfer-1910",
-      "reginald-telfer",
-      "ruth-telfer"
-    ],
-    "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 99
   },
   {
     "id": "Gladys Merle Telfer",
@@ -12129,7 +11929,7 @@
     "title": "Jono Telfer",
     "tags": [
       "family",
-      "ancestor"
+      "descendant"
     ],
     "relationships": [
       {
@@ -12137,11 +11937,32 @@
         "names": [
           "Jono Telfer"
         ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Grantley Keith Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Unknown"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Kristin Stefanoff",
+          "Nick Telfer"
+        ]
       }
     ],
-    "roles": [],
-    "body_markdown": "# Jono Telfer\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
+    "roles": [
+      "Son of Grantley Keith Telfer — brother of Kristin Stefanoff and Nick Telfer"
+    ],
+    "body_markdown": "# Jono Telfer\n\n**Role:** Son of Grantley Keith Telfer — brother of Kristin Stefanoff and Nick Telfer\n**Father:** [[Grantley Keith Telfer]]\n**Mother:** Unknown — Grantley's wife\n**Siblings:** Kristin Stefanoff, Nick Telfer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Grantley Keith Telfer]] |\n| **Mother** | Unknown — Grantley's wife |\n| **Siblings** | Kristin Stefanoff (née Telfer), Nick Telfer |\n\n---",
+    "body_stripped": "**Role:** Son of Grantley Keith Telfer — brother of Kristin Stefanoff and Nick Telfer\n**Father:** Grantley Keith Telfer\n**Mother:** Unknown — Grantley's wife\n**Siblings:** Kristin Stefanoff, Nick Telfer\n\n## Family\n\n Relation  Name \n\n **Father**  Grantley Keith Telfer \n **Mother**  Unknown — Grantley's wife \n **Siblings**  Kristin Stefanoff (née Telfer), Nick Telfer",
     "parents": [
       "grantley-telfer"
     ],
@@ -15691,7 +15512,7 @@
       {
         "type": "Father",
         "names": [
-          "John Telfer (adoptive)"
+          "John Robert Telfer"
         ]
       },
       {
@@ -15810,11 +15631,11 @@
         "type": "Siblings",
         "names": [
           "Francis Kelson Telfer",
-          "Clarice May Fatchen",
-          "Emily Amelia Barton",
-          "Ethel Jean McMurtrie",
-          "Gladys Merle Pedler",
-          "Doris Elma Rowe",
+          "Clarice May Telfer",
+          "Emily Amelia Telfer",
+          "Ethel Jean Telfer",
+          "Gladys Merle Telfer",
+          "Doris Elma Telfer",
           "Edwin Roy Telfer",
           "Murray John Telfer",
           "Ruth Telfer"
@@ -15833,15 +15654,11 @@
     "children": [],
     "siblings": [
       "clarice-may-telfer",
-      "doris-elma-rowe",
       "doris-elma-telfer",
       "edwin-telfer-1921",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
       "francis-telfer-1910",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "ruth-telfer"
@@ -16808,15 +16625,11 @@
     "children": [],
     "siblings": [
       "clarice-may-telfer",
-      "doris-elma-rowe",
       "doris-elma-telfer",
       "edwin-telfer-1921",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
       "francis-telfer-1910",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "reginald-telfer"

@@ -7804,11 +7804,13 @@
     "lifespan": "? – living",
     "generation": 5,
     "is_living": true,
-    "body_markdown": "# Jono Telfer\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
+    "body_markdown": "# Jono Telfer\n\n**Role:** Son of Grantley Keith Telfer — brother of Kristin Stefanoff and Nick Telfer\n**Father:** [[Grantley Keith Telfer]]\n**Mother:** Unknown — Grantley's wife\n**Siblings:** Kristin Stefanoff, Nick Telfer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Grantley Keith Telfer]] |\n| **Mother** | Unknown — Grantley's wife |\n| **Siblings** | Kristin Stefanoff (née Telfer), Nick Telfer |\n\n---",
+    "roles": [
+      "Son of Grantley Keith Telfer — brother of Kristin Stefanoff and Nick Telfer"
+    ],
     "tags": [
       "family",
-      "ancestor"
+      "descendant"
     ],
     "parents": [
       "grantley-telfer"
@@ -8901,14 +8903,10 @@
     "spouses": [],
     "siblings": [
       "clarice-may-telfer",
-      "doris-elma-rowe",
       "doris-elma-telfer",
       "edwin-telfer-1921",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "reginald-telfer",
@@ -8991,15 +8989,11 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "doris-elma-rowe",
       "doris-elma-telfer",
       "edwin-telfer-1921",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
       "francis-telfer-1910",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "reginald-telfer",
@@ -9503,14 +9497,10 @@
     "spouses": [],
     "siblings": [
       "clarice-may-telfer",
-      "doris-elma-rowe",
       "doris-elma-telfer",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
       "francis-telfer-1910",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "reginald-telfer",
@@ -9588,15 +9578,11 @@
     "spouses": [],
     "siblings": [
       "clarice-may-telfer",
-      "doris-elma-rowe",
       "doris-elma-telfer",
       "edwin-telfer-1921",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
       "francis-telfer-1910",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "ruth-telfer"
@@ -9707,15 +9693,11 @@
     "spouses": [],
     "siblings": [
       "clarice-may-telfer",
-      "doris-elma-rowe",
       "doris-elma-telfer",
       "edwin-telfer-1921",
-      "emily-amelia-barton",
       "emily-amelia-telfer",
-      "ethel-jean-mcmurtrie",
       "ethel-jean-telfer",
       "francis-telfer-1910",
-      "gladys-merle-pedler",
       "gladys-merle-telfer",
       "murray-telfer",
       "reginald-telfer"
@@ -10719,40 +10701,6 @@
     "person_photo": null
   },
   {
-    "id": "Doris Elma Rowe",
-    "slug": "doris-elma-rowe",
-    "first_name": "Doris",
-    "middle_name": null,
-    "last_name": "Elma Rowe",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Doris Elma Rowe",
-    "title": "Doris Elma Rowe",
-    "lifespan": "? – living",
-    "generation": 99,
-    "is_living": true,
-    "body_markdown": "# Doris Elma Rowe\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "clarice-may-telfer",
-      "edwin-telfer-1921",
-      "francis-telfer-1910",
-      "reginald-telfer",
-      "ruth-telfer"
-    ],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Edward Telfer",
     "slug": "edward-telfer",
     "first_name": "Edward",
@@ -10783,40 +10731,6 @@
     "person_photo": null
   },
   {
-    "id": "Emily Amelia Barton",
-    "slug": "emily-amelia-barton",
-    "first_name": "Emily",
-    "middle_name": null,
-    "last_name": "Amelia Barton",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Emily Amelia Barton",
-    "title": "Emily Amelia Barton",
-    "lifespan": "? – living",
-    "generation": 99,
-    "is_living": true,
-    "body_markdown": "# Emily Amelia Barton\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "clarice-may-telfer",
-      "edwin-telfer-1921",
-      "francis-telfer-1910",
-      "reginald-telfer",
-      "ruth-telfer"
-    ],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Emily Ellen Thorpe",
     "slug": "emily-ellen-thorpe",
     "first_name": "Emily",
@@ -10841,40 +10755,6 @@
     "children": [],
     "spouses": [],
     "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Ethel Jean McMurtrie",
-    "slug": "ethel-jean-mcmurtrie",
-    "first_name": "Ethel",
-    "middle_name": null,
-    "last_name": "Jean McMurtrie",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Ethel Jean McMurtrie",
-    "title": "Ethel Jean McMurtrie",
-    "lifespan": "? – living",
-    "generation": 99,
-    "is_living": true,
-    "body_markdown": "# Ethel Jean McMurtrie\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "clarice-may-telfer",
-      "edwin-telfer-1921",
-      "francis-telfer-1910",
-      "reginald-telfer",
-      "ruth-telfer"
-    ],
     "images": [],
     "person_photo": null
   },
@@ -10931,40 +10811,6 @@
     "children": [],
     "spouses": [],
     "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Gladys Merle Pedler",
-    "slug": "gladys-merle-pedler",
-    "first_name": "Gladys",
-    "middle_name": null,
-    "last_name": "Merle Pedler",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Gladys Merle Pedler",
-    "title": "Gladys Merle Pedler",
-    "lifespan": "? – living",
-    "generation": 99,
-    "is_living": true,
-    "body_markdown": "# Gladys Merle Pedler\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "clarice-may-telfer",
-      "edwin-telfer-1921",
-      "francis-telfer-1910",
-      "reginald-telfer",
-      "ruth-telfer"
-    ],
     "images": [],
     "person_photo": null
   },

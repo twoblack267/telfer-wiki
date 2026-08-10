@@ -246,11 +246,6 @@
       "generation": 5
     },
     {
-      "slug": "doris-elma-rowe",
-      "id": "Doris Elma Rowe",
-      "generation": 99
-    },
-    {
       "slug": "doris-elma-telfer",
       "id": "Doris Elma Telfer",
       "generation": 6
@@ -391,11 +386,6 @@
       "generation": 5
     },
     {
-      "slug": "emily-amelia-barton",
-      "id": "Emily Amelia Barton",
-      "generation": 99
-    },
-    {
       "slug": "emily-amelia-telfer",
       "id": "Emily Amelia Telfer",
       "generation": 6
@@ -454,11 +444,6 @@
       "slug": "ethel-edith-telfer",
       "id": "Ethel Edith Telfer",
       "generation": 6
-    },
-    {
-      "slug": "ethel-jean-mcmurtrie",
-      "id": "Ethel Jean McMurtrie",
-      "generation": 99
     },
     {
       "slug": "ethel-jean-telfer",
@@ -569,11 +554,6 @@
       "slug": "gilbert-telfer",
       "id": "Gilbert Telfer",
       "generation": 6
-    },
-    {
-      "slug": "gladys-merle-pedler",
-      "id": "Gladys Merle Pedler",
-      "generation": 99
     },
     {
       "slug": "gladys-merle-telfer",
@@ -3698,10 +3678,6 @@
       },
       {
         "from": "clarice-may-telfer",
-        "to": "doris-elma-rowe"
-      },
-      {
-        "from": "clarice-may-telfer",
         "to": "doris-elma-telfer"
       },
       {
@@ -3710,15 +3686,7 @@
       },
       {
         "from": "clarice-may-telfer",
-        "to": "emily-amelia-barton"
-      },
-      {
-        "from": "clarice-may-telfer",
         "to": "emily-amelia-telfer"
-      },
-      {
-        "from": "clarice-may-telfer",
-        "to": "ethel-jean-mcmurtrie"
       },
       {
         "from": "clarice-may-telfer",
@@ -3727,10 +3695,6 @@
       {
         "from": "clarice-may-telfer",
         "to": "francis-telfer-1910"
-      },
-      {
-        "from": "clarice-may-telfer",
-        "to": "gladys-merle-pedler"
       },
       {
         "from": "clarice-may-telfer",
@@ -3811,22 +3775,6 @@
       {
         "from": "dinah-flavel-paynter",
         "to": "thomas-paynter"
-      },
-      {
-        "from": "doris-elma-rowe",
-        "to": "edwin-telfer-1921"
-      },
-      {
-        "from": "doris-elma-rowe",
-        "to": "francis-telfer-1910"
-      },
-      {
-        "from": "doris-elma-rowe",
-        "to": "reginald-telfer"
-      },
-      {
-        "from": "doris-elma-rowe",
-        "to": "ruth-telfer"
       },
       {
         "from": "doris-elma-telfer",
@@ -3938,15 +3886,7 @@
       },
       {
         "from": "edwin-telfer-1921",
-        "to": "emily-amelia-barton"
-      },
-      {
-        "from": "edwin-telfer-1921",
         "to": "emily-amelia-telfer"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "ethel-jean-mcmurtrie"
       },
       {
         "from": "edwin-telfer-1921",
@@ -3955,10 +3895,6 @@
       {
         "from": "edwin-telfer-1921",
         "to": "francis-telfer-1910"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "gladys-merle-pedler"
       },
       {
         "from": "edwin-telfer-1921",
@@ -4161,18 +4097,6 @@
         "to": "mary-bayes-farrow"
       },
       {
-        "from": "emily-amelia-barton",
-        "to": "francis-telfer-1910"
-      },
-      {
-        "from": "emily-amelia-barton",
-        "to": "reginald-telfer"
-      },
-      {
-        "from": "emily-amelia-barton",
-        "to": "ruth-telfer"
-      },
-      {
         "from": "emily-amelia-telfer",
         "to": "ethel-jean-telfer"
       },
@@ -4251,18 +4175,6 @@
       {
         "from": "esther-telfer-smith",
         "to": "margaret-dougal-smith"
-      },
-      {
-        "from": "ethel-jean-mcmurtrie",
-        "to": "francis-telfer-1910"
-      },
-      {
-        "from": "ethel-jean-mcmurtrie",
-        "to": "reginald-telfer"
-      },
-      {
-        "from": "ethel-jean-mcmurtrie",
-        "to": "ruth-telfer"
       },
       {
         "from": "ethel-jean-telfer",
@@ -4383,10 +4295,6 @@
       {
         "from": "francis-telfer-1875",
         "to": "william-telfer-1880"
-      },
-      {
-        "from": "francis-telfer-1910",
-        "to": "gladys-merle-pedler"
       },
       {
         "from": "francis-telfer-1910",
@@ -4519,14 +4427,6 @@
       {
         "from": "gilbert-telfer",
         "to": "maifie-telfer"
-      },
-      {
-        "from": "gladys-merle-pedler",
-        "to": "reginald-telfer"
-      },
-      {
-        "from": "gladys-merle-pedler",
-        "to": "ruth-telfer"
       },
       {
         "from": "gladys-merle-telfer",
