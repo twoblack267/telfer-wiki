@@ -1511,8 +1511,7 @@
       {
         "type": "Spouse",
         "names": [
-          "John Telfer (1847–1923)",
-          "Ernest John Telfer (1877–1953)"
+          "John Telfer (1847–1923)"
         ]
       },
       {
@@ -1545,7 +1544,6 @@
     ],
     "siblings": [],
     "spouses": [
-      "ernest-telfer",
       "john-telfer-1847"
     ],
     "is_living": false,
@@ -5534,9 +5532,7 @@
       "william-telfer-1880"
     ],
     "spouses": [
-      "ann-taylor",
-      "florence-nicholas",
-      "martha-henstridge"
+      "florence-nicholas"
     ],
     "is_living": false,
     "lifespan": "1878 – 1953",
@@ -14973,8 +14969,7 @@
       {
         "type": "Spouse",
         "names": [
-          "John Telfer (1840–1913)",
-          "Ernest John Telfer (1877–1953)"
+          "John Telfer (1840–1913)"
         ]
       }
     ],
@@ -14998,7 +14993,6 @@
     ],
     "siblings": [],
     "spouses": [
-      "ernest-telfer",
       "john-telfer-1840"
     ],
     "is_living": false,
