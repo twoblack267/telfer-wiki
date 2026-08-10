@@ -181,11 +181,6 @@
       "generation": 4
     },
     {
-      "slug": "caroline-masters",
-      "id": "Caroline Masters",
-      "generation": 4
-    },
-    {
       "slug": "catherine-leah",
       "id": "Catherine Leah",
       "generation": 5
@@ -1531,10 +1526,6 @@
         "to": "alan-telfer"
       },
       {
-        "from": "caroline-masters",
-        "to": "albert-telfer"
-      },
-      {
         "from": "caroline-telfer",
         "to": "albert-telfer"
       },
@@ -1627,10 +1618,6 @@
         "to": "avis-muriel-nicholls"
       },
       {
-        "from": "caroline-masters",
-        "to": "bertha-telfer"
-      },
-      {
         "from": "caroline-telfer",
         "to": "bertha-telfer"
       },
@@ -1645,10 +1632,6 @@
       {
         "from": "john-telfer-robert",
         "to": "carissa-telfer"
-      },
-      {
-        "from": "caroline-masters",
-        "to": "caroline-telfer"
       },
       {
         "from": "caroline-hosking",
@@ -1899,10 +1882,6 @@
         "to": "eric-john-telfer"
       },
       {
-        "from": "caroline-masters",
-        "to": "ernest-telfer"
-      },
-      {
         "from": "caroline-telfer",
         "to": "ernest-telfer"
       },
@@ -1997,10 +1976,6 @@
       {
         "from": "margaret-telfer-1849",
         "to": "francis-adam-telfer"
-      },
-      {
-        "from": "caroline-masters",
-        "to": "francis-telfer-1875"
       },
       {
         "from": "caroline-telfer",
@@ -2387,10 +2362,6 @@
         "to": "joel-ivory"
       },
       {
-        "from": "caroline-masters",
-        "to": "john-telfer-1877"
-      },
-      {
         "from": "john-telfer-1847",
         "to": "john-telfer-1877"
       },
@@ -2635,10 +2606,6 @@
         "to": "margaret-telfer-1810"
       },
       {
-        "from": "caroline-masters",
-        "to": "maria-clara-telfer"
-      },
-      {
         "from": "john-telfer-1840",
         "to": "maria-clara-telfer"
       },
@@ -2795,10 +2762,6 @@
         "to": "robert-telfer-1907"
       },
       {
-        "from": "elizabeth-beattie-telfer-1871",
-        "to": "robert-telfer-1907"
-      },
-      {
         "from": "james-telfer-1796",
         "to": "robert-telfer-1907"
       },
@@ -2923,10 +2886,6 @@
         "to": "violet-hope-telfer"
       },
       {
-        "from": "caroline-masters",
-        "to": "walter-telfer"
-      },
-      {
         "from": "caroline-telfer",
         "to": "walter-telfer"
       },
@@ -2961,10 +2920,6 @@
       {
         "from": "william-henry-parker",
         "to": "william-humphrey-parker-1926"
-      },
-      {
-        "from": "caroline-masters",
-        "to": "william-telfer-1880"
       },
       {
         "from": "caroline-telfer",
@@ -3075,10 +3030,6 @@
       {
         "from": "caroline-hosking",
         "to": "robert-dunlop-lawrie"
-      },
-      {
-        "from": "caroline-masters",
-        "to": "john-telfer-1847"
       },
       {
         "from": "charles-farrow",
@@ -3609,10 +3560,6 @@
       {
         "from": "bertha-telfer",
         "to": "isabella-telfer"
-      },
-      {
-        "from": "bertha-telfer",
-        "to": "john-telfer-1877"
       },
       {
         "from": "bertha-telfer",
@@ -4276,10 +4223,6 @@
       },
       {
         "from": "ernest-telfer",
-        "to": "john-telfer-1877"
-      },
-      {
-        "from": "ernest-telfer",
         "to": "walter-telfer"
       },
       {
@@ -4881,10 +4824,6 @@
       {
         "from": "john-telfer-1877",
         "to": "walter-telfer"
-      },
-      {
-        "from": "john-telfer-1877",
-        "to": "william-telfer-1880"
       },
       {
         "from": "john-james-smith",
