@@ -45,6 +45,10 @@ COUNT="$(python3 -c "import json,sys;print(len(json.load(open('src/data/people.j
 echo "OK — $COUNT profiles, no 'Mark's' references, deploy gate passes."
 
 echo
-echo "==> Step 4/4: rebuild relationship graph + generations (stale-graph fix)"
+echo "==> Step 4/5: rebuild relationship graph + generations (stale-graph fix)"
 node scripts/build-relationship-graph.mjs
 node scripts/compute-generations.mjs
+
+echo "==> Step 5/5: regenerate people.public.json (sanitize from people.json)"
+# MUST run sanitize, else people.public.json (what the site renders) stays stale.
+node scripts/sanitize-people.mjs

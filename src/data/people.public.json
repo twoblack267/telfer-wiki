@@ -2471,9 +2471,7 @@
       "person",
       "telfer"
     ],
-    "parents": [
-      "caroline-masters"
-    ],
+    "parents": [],
     "children": [
       "albert-telfer",
       "bertha-telfer",
@@ -2564,7 +2562,6 @@
     ],
     "spouses": [
       "ann-taylor",
-      "caroline-masters",
       "caroline-telfer"
     ],
     "siblings": [
@@ -2621,51 +2618,6 @@
       "george-telfer",
       "john-telfer-1847"
     ],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Caroline Masters",
-    "slug": "caroline-masters",
-    "first_name": "Caroline",
-    "middle_name": null,
-    "last_name": "Masters",
-    "birth_year": 1850,
-    "death_year": 1929,
-    "birth_year_display": "1850",
-    "death_year_display": "1929",
-    "display_name": "Caroline Masters",
-    "title": "Caroline Masters — Family & Biography",
-    "lifespan": "1850 – 1929",
-    "generation": 4,
-    "is_living": false,
-    "body_markdown": "## ⚠️ Duplicate Profile\n\nThis person is the same as **[[Caroline Amelia Telfer (1842–1929)]]** (née Masters). This file exists as an alternate name reference. See the canonical profile for full biography and family information.\n\n# Caroline Masters (~1850–1929)\n\n**Role:** Wife of John Telfer (1847–1929)\n\nCaroline Masters married John Telfer (1847–1929), the eldest child of Francis Telfer and Margaret Wright. Together they raised a large family including Albert George, Ernest John, William James, Edwin Gilbert, Walter William, Maria Clara, and Caroline.\n\n**Source:** *From the Borders to the Bush*\n\n## Family Stories\n\nCaroline Amelia Masters was the daughter of Charles Masters and Martha Williams of Flaxman's Valley, Angaston. Her father's family Bible, treasured by Caroline until her death and later passed to her youngest son Edwin, recorded the family's English origins in Brownsover, Warwickshire, and their emigration to South Australia in 1845. After her father died around 1868, Caroline and her sister Mary Ellen opened a school at Gilberton, next to the Forrester's Arms Hotel — a staging camp for bullockies hauling goods to and from Adelaide. But the venture failed when the railway bypassed the hotel and the population moved to the new rail head at Tarlee. In 1870 Caroline tried again, securing a licence from the Tarlee District Council. The book says she showed \"dedication and persistence that would do a present day teacher proud,\" commencing classes in the original section of the Baptist Church with 41 pupils — 18 boys and 23 girls. This time her perseverance paid off and the school flourished. She taught there until 17 August 1874, when she resigned to marry John Telfer.\n\nThe match came about through the Flavel family. John's uncles, who lived at Finniss Point as close neighbours of Charles and Elizabeth Farrow, knew of the high esteem in which Miss Masters was held and felt she would make an excellent wife for a young pioneer. John took their advice, called on Miss Masters, and \"seemed to have liked what he saw as he kept going back.\" They were married on 22 September 1874 at the Tarlee Baptist Church — her schoolroom for four years. On the marriage certificate Caroline signed as C.A. Masters, but she later dropped the \"Amelia\" to avoid her initials being C.A.T., signing as C.M. Telfer instead. Their first child Francis Charles was born in 1875, and a second son John Ernest in 1877 lived only six months before dying of pneumonia — Caroline wrote a poem at the time of his death.\n\n*(From the Borders to the Bush, pp.110–111)*",
-    "roles": [
-      "Wife of John Telfer (1847–1929)"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "masters",
-      "in-law"
-    ],
-    "parents": [],
-    "children": [
-      "albert-telfer",
-      "bertha-telfer",
-      "caroline-telfer",
-      "ernest-telfer",
-      "francis-telfer-1875",
-      "john-telfer-1877",
-      "maria-clara-telfer",
-      "walter-telfer",
-      "william-telfer-1880"
-    ],
-    "spouses": [
-      "john-telfer-1847"
-    ],
-    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -3250,7 +3202,6 @@
     ],
     "parents": [
       "elizabeth-beattie-1802",
-      "elizabeth-beattie-telfer-1871",
       "james-telfer-1796"
     ],
     "children": [
@@ -4521,10 +4472,7 @@
       "adam-telfer-1842",
       "margaret-telfer-1849"
     ],
-    "children": [
-      "james-telfer-1829",
-      "robert-telfer-1907"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "adelaide-elsie-pearl-telfer",
@@ -4881,7 +4829,6 @@
       "person"
     ],
     "parents": [
-      "caroline-masters",
       "caroline-telfer",
       "john-telfer-1847"
     ],
@@ -4985,21 +4932,17 @@
       "ancestor"
     ],
     "parents": [
-      "caroline-masters",
       "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
       "albert-telfer",
-      "bertha-telfer",
-      "ernest-telfer",
       "francis-telfer-1875",
       "isabella-telfer",
       "maria-clara-telfer",
       "robert-telfer-1886",
-      "walter-telfer",
-      "william-telfer-1880"
+      "walter-telfer"
     ],
     "images": [],
     "person_photo": null
@@ -5122,7 +5065,6 @@
       "descendant"
     ],
     "parents": [
-      "caroline-masters",
       "caroline-telfer",
       "john-telfer-1847"
     ],
@@ -5137,7 +5079,6 @@
       "bertha-telfer",
       "edwin-telfer-1888",
       "francis-telfer-1875",
-      "john-telfer-1877",
       "walter-telfer",
       "william-telfer-1880"
     ],
@@ -5225,7 +5166,6 @@
       "person"
     ],
     "parents": [
-      "caroline-masters",
       "john-telfer-1840",
       "martha-henstridge"
     ],
@@ -5363,7 +5303,6 @@
       "ancestor"
     ],
     "parents": [
-      "caroline-masters",
       "caroline-telfer",
       "john-telfer-1847"
     ],
@@ -5375,7 +5314,6 @@
       "edwin-telfer-1888",
       "ernest-telfer",
       "francis-telfer-1875",
-      "john-telfer-1877",
       "walter-telfer"
     ],
     "images": [],
@@ -5451,7 +5389,6 @@
       "descendant"
     ],
     "parents": [
-      "caroline-masters",
       "caroline-telfer",
       "john-telfer-1847"
     ],
@@ -5814,7 +5751,6 @@
       "descendant"
     ],
     "parents": [
-      "caroline-masters",
       "caroline-telfer",
       "john-telfer-1847"
     ],
@@ -7060,7 +6996,6 @@
       "ancestor"
     ],
     "parents": [
-      "caroline-masters",
       "caroline-telfer",
       "john-telfer-1847"
     ],
@@ -7072,7 +7007,6 @@
       "ernest-telfer",
       "francis-telfer-1875",
       "isabella-telfer",
-      "john-telfer-1877",
       "maria-clara-telfer",
       "robert-telfer-1886",
       "walter-telfer",
