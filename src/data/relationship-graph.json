@@ -338,7 +338,7 @@
     {
       "slug": "elizabeth-hannah",
       "id": "Elizabeth Hannah",
-      "generation": 4
+      "generation": 5
     },
     {
       "slug": "elizabeth-hannah-telfer",
@@ -353,7 +353,7 @@
     {
       "slug": "elizabeth-oliver",
       "id": "Elizabeth Oliver",
-      "generation": 4
+      "generation": 3
     },
     {
       "slug": "elizabeth-parker",
@@ -731,11 +731,6 @@
       "generation": 5
     },
     {
-      "slug": "james-telfer-sorbietrees",
-      "id": "James Telfer Sorbietrees",
-      "generation": 2
-    },
-    {
       "slug": "jane-murray-farrow",
       "id": "Jane Murray Farrow",
       "generation": 5
@@ -769,11 +764,6 @@
       "slug": "janet-welsh",
       "id": "Janet Welsh",
       "generation": 4
-    },
-    {
-      "slug": "janet-welsh-telfer",
-      "id": "Janet Welsh Telfer",
-      "generation": 5
     },
     {
       "slug": "jared-ivory",
@@ -2293,10 +2283,6 @@
         "to": "janet-stevenson"
       },
       {
-        "from": "james-telfer-1829",
-        "to": "janet-welsh-telfer"
-      },
-      {
         "from": "paul-ivory",
         "to": "jared-ivory"
       },
@@ -2873,10 +2859,6 @@
         "to": "vida-telfer"
       },
       {
-        "from": "james-telfer-sorbietrees",
-        "to": "vida-telfer"
-      },
-      {
         "from": "adam-telfer-1842",
         "to": "violet-hope-telfer"
       },
@@ -3067,10 +3049,6 @@
         "to": "james-telfer-1761"
       },
       {
-        "from": "elizabeth-telfer-1774",
-        "to": "james-telfer-sorbietrees"
-      },
-      {
         "from": "elizabeth-oliver",
         "to": "robert-telfer-1803"
       },
@@ -3133,10 +3111,6 @@
       {
         "from": "james-telfer-1829",
         "to": "janet-welsh"
-      },
-      {
-        "from": "james-telfer-1829",
-        "to": "janet-welsh-telfer"
       },
       {
         "from": "james-telfer-of-sorbietrees",

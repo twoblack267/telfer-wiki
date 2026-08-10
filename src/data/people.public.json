@@ -571,8 +571,7 @@
       "william-telfer-1811"
     ],
     "spouses": [
-      "james-telfer-1761",
-      "james-telfer-sorbietrees"
+      "james-telfer-1761"
     ],
     "siblings": [],
     "images": [
@@ -584,36 +583,6 @@
       }
     ],
     "person_photo": "images/people/elizabeth-betty-hutton-telfer.jpg"
-  },
-  {
-    "id": "James Telfer Sorbietrees",
-    "slug": "james-telfer-sorbietrees",
-    "first_name": "James",
-    "middle_name": null,
-    "last_name": "Telfer Sorbietrees",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "James Telfer Sorbietrees",
-    "title": "James Telfer Sorbietrees",
-    "lifespan": "? – living",
-    "generation": 2,
-    "is_living": true,
-    "body_markdown": "# James Telfer Sorbietrees\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "elizabeth-telfer-1774"
-    ],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
   },
   {
     "id": "John Murray",
@@ -1454,38 +1423,6 @@
     "person_photo": null
   },
   {
-    "id": "Vida Telfer",
-    "slug": "vida-telfer",
-    "first_name": "Vida",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1919,
-    "death_year": 2021,
-    "birth_year_display": "1919",
-    "death_year_display": "2021",
-    "display_name": "Vida Telfer",
-    "title": "Vida Telfer — Family & Biography",
-    "lifespan": "1919 – 2021",
-    "generation": 3,
-    "is_living": false,
-    "body_markdown": "# Vida Telfer (1919–2021)\n\n**Role:** Daughter of James Telfer and Alma Ida Sporer\n\n**Born:** 1919\n**Died:** 2021\n\n**Father:** [[James Telfer (1866–1946)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[James Telfer (1866–1946)]] |\n\n---\n\n## Life Summary\n\nVida Telfer was born in 1919 and died in 2021. Daughter of James Telfer and Alma Ida Sporer\n\n---\n\n**Source:** Telfer family records\n\n---",
-    "roles": [
-      "Daughter of James Telfer and Alma Ida Sporer"
-    ],
-    "tags": [
-      "person"
-    ],
-    "parents": [
-      "james-telfer-1866",
-      "james-telfer-sorbietrees"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Murray John Telfer",
     "slug": "murray-telfer",
     "first_name": "Murray",
@@ -1761,12 +1698,9 @@
       "elizabeth-beattie-1802",
       "james-telfer-1796"
     ],
-    "children": [
-      "janet-welsh-telfer"
-    ],
+    "children": [],
     "spouses": [
-      "janet-welsh",
-      "janet-welsh-telfer"
+      "janet-welsh"
     ],
     "siblings": [
       "adam-telfer-1842",
@@ -7678,38 +7612,6 @@
     "person_photo": null
   },
   {
-    "id": "Janet Welsh Telfer",
-    "slug": "janet-welsh-telfer",
-    "first_name": "Janet",
-    "middle_name": null,
-    "last_name": "Welsh Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Janet Welsh Telfer",
-    "title": "Janet Welsh Telfer",
-    "lifespan": "? – living",
-    "generation": 5,
-    "is_living": true,
-    "body_markdown": "# Janet Welsh Telfer\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [
-      "james-telfer-1829"
-    ],
-    "children": [],
-    "spouses": [
-      "james-telfer-1829"
-    ],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Jessie Telfer",
     "slug": "jessie-telfer",
     "first_name": "Jessie",
@@ -9397,6 +9299,37 @@
       "reginald-telfer",
       "ruth-telfer"
     ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Vida Telfer",
+    "slug": "vida-telfer",
+    "first_name": "Vida",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1919,
+    "death_year": 2021,
+    "birth_year_display": "1919",
+    "death_year_display": "2021",
+    "display_name": "Vida Telfer",
+    "title": "Vida Telfer — Family & Biography",
+    "lifespan": "1919 – 2021",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Vida Telfer (1919–2021)\n\n**Role:** Daughter of James Telfer and Alma Ida Sporer\n\n**Born:** 1919\n**Died:** 2021\n\n**Father:** [[James Telfer (1866–1946)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[James Telfer (1866–1946)]] |\n\n---\n\n## Life Summary\n\nVida Telfer was born in 1919 and died in 2021. Daughter of James Telfer and Alma Ida Sporer\n\n---\n\n**Source:** Telfer family records\n\n---",
+    "roles": [
+      "Daughter of James Telfer and Alma Ida Sporer"
+    ],
+    "tags": [
+      "person"
+    ],
+    "parents": [
+      "james-telfer-1866"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
     "images": [],
     "person_photo": null
   },

@@ -3082,9 +3082,8 @@
       {
         "type": "Spouse",
         "names": [
-          "Isabella Kelly (abt 1825–1867)",
-          "Clementina Minto (m. 1871)",
-          "Isabella Kelly (~1825–1867)"
+          "Isabella Kelly (~1825–1867)",
+          "Clementina Minto (m. 1871)"
         ]
       },
       {
@@ -4683,8 +4682,7 @@
       {
         "type": "Spouse",
         "names": [
-          "James Telfer (1761–1845)",
-          "James Telfer Sorbietrees"
+          "James Telfer (1761–1845)"
         ]
       },
       {
@@ -4717,8 +4715,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "james-telfer-1761",
-      "james-telfer-sorbietrees"
+      "james-telfer-1761"
     ],
     "is_living": false,
     "lifespan": "1774 – 1853",
@@ -9425,9 +9422,7 @@
       {
         "type": "Spouse",
         "names": [
-          "Janet Welsh (1826–1885)",
-          "Janet Welsh (~1835–1914)",
-          "Janet Welsh Telfer"
+          "Janet Welsh (~1835–1914)"
         ]
       },
       {
@@ -9460,9 +9455,7 @@
       "elizabeth-beattie-1802",
       "james-telfer-1796"
     ],
-    "children": [
-      "janet-welsh-telfer"
-    ],
+    "children": [],
     "siblings": [
       "adam-telfer-1842",
       "elizabeth-beattie-telfer-1832",
@@ -9470,8 +9463,7 @@
       "robert-telfer-1907"
     ],
     "spouses": [
-      "janet-welsh",
-      "janet-welsh-telfer"
+      "janet-welsh"
     ],
     "is_living": false,
     "lifespan": "1829 – 1914",
@@ -9836,77 +9828,6 @@
     "images": [],
     "person_photo": null,
     "generation": 5
-  },
-  {
-    "id": "James Telfer Sorbietrees",
-    "slug": "james-telfer-sorbietrees",
-    "vault_file": "James Telfer Sorbietrees.md",
-    "first_name": "James",
-    "middle_name": null,
-    "last_name": "Telfer Sorbietrees",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "James Telfer Sorbietrees",
-    "title": "James Telfer Sorbietrees",
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "James Telfer Sorbietrees"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "Adam Telfer (1799–?)",
-          "Isobel Telfer (1798–1875)",
-          "James Telfer (1829–1914)",
-          "Jean Telfer (1764–?)",
-          "John Telfer (1805–1839)",
-          "Margaret Telfer (1802–1884)",
-          "Robert Telfer (1837–1907)",
-          "Vida Telfer (1919–2021)",
-          "William Telfer (1811–1881)"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "Elizabeth Hutton Telfer (1774–1853)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# James Telfer Sorbietrees\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "parents": [],
-    "children": [
-      "isobel-telfer",
-      "james-telfer-1829",
-      "john-telfer-1805",
-      "margaret-telfer-1802",
-      "robert-telfer-1907",
-      "vida-telfer",
-      "william-telfer-1811"
-    ],
-    "siblings": [],
-    "spouses": [
-      "elizabeth-telfer-1774"
-    ],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 2
   },
   {
     "id": "Jane Murray Farrow",
@@ -10341,57 +10262,6 @@
     "images": [],
     "person_photo": null,
     "generation": 4
-  },
-  {
-    "id": "Janet Welsh Telfer",
-    "slug": "janet-welsh-telfer",
-    "vault_file": "Janet Welsh Telfer.md",
-    "first_name": "Janet",
-    "middle_name": null,
-    "last_name": "Welsh Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Janet Welsh Telfer",
-    "title": "Janet Welsh Telfer",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Janet Welsh Telfer"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "James Telfer (1829–1914)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Janet Welsh Telfer\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
-    "parents": [
-      "james-telfer-1829"
-    ],
-    "children": [],
-    "siblings": [],
-    "spouses": [
-      "james-telfer-1829"
-    ],
-    "is_living": true,
-    "lifespan": "? – living",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 5
   },
   {
     "id": "Jared Mitchell Ivory",
@@ -18317,8 +18187,7 @@
     "body_markdown": "# Vida Telfer (1919–2021)\n\n**Role:** Daughter of James Telfer and Alma Ida Sporer\n\n**Born:** 1919\n**Died:** 2021\n\n**Father:** [[James Telfer (1866–1946)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[James Telfer (1866–1946)]] |\n\n---\n\n## Life Summary\n\nVida Telfer was born in 1919 and died in 2021. Daughter of James Telfer and Alma Ida Sporer\n\n---\n\n**Source:** Telfer family records\n\n---",
     "body_stripped": "**Role:** Daughter of James Telfer and Alma Ida Sporer\n\n**Born:** 1919\n**Died:** 2021\n\n**Father:** James Telfer (1866–1946)\n\n## Family\n\n Relation  Name \n\n **Father**  James Telfer (1866–1946) \n\n## Life Summary\n\nVida Telfer was born in 1919 and died in 2021. Daughter of James Telfer and Alma Ida Sporer\n\n**Source:** Telfer family records",
     "parents": [
-      "james-telfer-1866",
-      "james-telfer-sorbietrees"
+      "james-telfer-1866"
     ],
     "children": [],
     "siblings": [],
@@ -18330,7 +18199,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 6
   },
   {
     "id": "Violet Hope Telfer",
