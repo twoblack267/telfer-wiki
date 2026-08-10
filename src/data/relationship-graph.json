@@ -1498,12 +1498,42 @@
     {
       "slug": "charles-masters-1837",
       "id": "Charles Frederick Masters",
-      "generation": null
+      "generation": 5
     },
     {
       "slug": "martha-masters-1839",
       "id": "Martha Ann Masters",
-      "generation": null
+      "generation": 5
+    },
+    {
+      "slug": "beatrice-telfer-1877",
+      "id": "Beatrice Rowe Telfer",
+      "generation": 5
+    },
+    {
+      "slug": "beatrice-telfer-1911",
+      "id": "Beatrice Sylvia Telfer",
+      "generation": 6
+    },
+    {
+      "slug": "douglas-telfer-1913",
+      "id": "Douglas Ivan Telfer",
+      "generation": 6
+    },
+    {
+      "slug": "murray-telfer-1920",
+      "id": "Murray Keith Telfer",
+      "generation": 6
+    },
+    {
+      "slug": "melville-telfer",
+      "id": "Melville Bruce Telfer",
+      "generation": 6
+    },
+    {
+      "slug": "rita-telfer",
+      "id": "Rita Joyce Telfer",
+      "generation": 6
     }
   ],
   "edges": {
@@ -3099,6 +3129,46 @@
       {
         "from": "martha-masters",
         "to": "martha-masters-1839"
+      },
+      {
+        "from": "albert-telfer",
+        "to": "beatrice-telfer-1911"
+      },
+      {
+        "from": "beatrice-telfer-1877",
+        "to": "beatrice-telfer-1911"
+      },
+      {
+        "from": "albert-telfer",
+        "to": "douglas-telfer-1913"
+      },
+      {
+        "from": "beatrice-telfer-1877",
+        "to": "douglas-telfer-1913"
+      },
+      {
+        "from": "albert-telfer",
+        "to": "murray-telfer-1920"
+      },
+      {
+        "from": "beatrice-telfer-1877",
+        "to": "murray-telfer-1920"
+      },
+      {
+        "from": "albert-telfer",
+        "to": "melville-telfer"
+      },
+      {
+        "from": "beatrice-telfer-1877",
+        "to": "melville-telfer"
+      },
+      {
+        "from": "albert-telfer",
+        "to": "rita-telfer"
+      },
+      {
+        "from": "beatrice-telfer-1877",
+        "to": "rita-telfer"
       }
     ],
     "spouseOf": [
@@ -3109,6 +3179,10 @@
       {
         "from": "adam-telfer-1842",
         "to": "margaret-telfer-1849"
+      },
+      {
+        "from": "albert-telfer",
+        "to": "beatrice-telfer-1877"
       },
       {
         "from": "alexander-brown-thomson",
@@ -5423,6 +5497,46 @@
       {
         "from": "martha-masters-1839",
         "to": "william-masters"
+      },
+      {
+        "from": "beatrice-telfer-1911",
+        "to": "douglas-telfer-1913"
+      },
+      {
+        "from": "beatrice-telfer-1911",
+        "to": "melville-telfer"
+      },
+      {
+        "from": "beatrice-telfer-1911",
+        "to": "murray-telfer-1920"
+      },
+      {
+        "from": "beatrice-telfer-1911",
+        "to": "rita-telfer"
+      },
+      {
+        "from": "douglas-telfer-1913",
+        "to": "melville-telfer"
+      },
+      {
+        "from": "douglas-telfer-1913",
+        "to": "murray-telfer-1920"
+      },
+      {
+        "from": "douglas-telfer-1913",
+        "to": "rita-telfer"
+      },
+      {
+        "from": "murray-telfer-1920",
+        "to": "rita-telfer"
+      },
+      {
+        "from": "melville-telfer",
+        "to": "murray-telfer-1920"
+      },
+      {
+        "from": "melville-telfer",
+        "to": "rita-telfer"
       }
     ]
   }

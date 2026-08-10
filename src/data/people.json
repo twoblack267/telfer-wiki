@@ -635,6 +635,17 @@
         ]
       },
       {
+        "type": "Children",
+        "names": [
+          "Rita Joyce Telfer (1909–1990)",
+          "Beatrice Sylvia Telfer (1911–1999)",
+          "Douglas Ivan Telfer (1913–1993)",
+          "Melville Bruce Telfer (1914–1997)",
+          "John Alick Ralph Telfer",
+          "Murray Keith Telfer (1920–2005)"
+        ]
+      },
+      {
         "type": "Siblings",
         "names": [
           "Francis Charles Telfer",
@@ -654,7 +665,13 @@
       "caroline-telfer",
       "john-telfer-1847"
     ],
-    "children": [],
+    "children": [
+      "beatrice-telfer-1911",
+      "douglas-telfer-1913",
+      "melville-telfer",
+      "murray-telfer-1920",
+      "rita-telfer"
+    ],
     "siblings": [
       "bertha-telfer",
       "edwin-telfer-1888",
@@ -664,7 +681,9 @@
       "walter-telfer",
       "william-telfer-1880"
     ],
-    "spouses": [],
+    "spouses": [
+      "beatrice-telfer-1877"
+    ],
     "is_living": false,
     "lifespan": "1881 – 1970",
     "related_trees": [
@@ -20317,5 +20336,396 @@
     "images": [],
     "person_photo": null,
     "generation": 5
+  },
+  {
+    "slug": "beatrice-telfer-1877",
+    "id": "Beatrice Rowe Telfer",
+    "first_name": "Beatrice",
+    "middle_name": "Rowe",
+    "last_name": "Telfer",
+    "birth_year": 1877,
+    "death_year": 1951,
+    "vault_file": "Beatrice Rowe Telfer (1877–1951).md",
+    "display_name": "Beatrice Rowe Telfer",
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Beatrice Rowe Telfer (née Rowe)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Albert George Telfer (1881–1970)"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "Rita Joyce Telfer (1909–1990)",
+          "Beatrice Sylvia Telfer (1911–1999)",
+          "Douglas Ivan Telfer (1913–1993)",
+          "Melville Bruce Telfer (1914–1997)",
+          "John Alick Ralph Telfer",
+          "Murray Keith Telfer (1920–2005)"
+        ]
+      }
+    ],
+    "title": "Beatrice Rowe Telfer — Family & Biography",
+    "birth_year_display": "1877",
+    "death_year_display": "1951",
+    "is_living": false,
+    "lifespan": "1877 – 1951",
+    "roles": [
+      "Wife of Albert George Telfer; mother of his six children"
+    ],
+    "body_markdown": "# Beatrice Rowe Telfer (1877–1951)\n\n**Lifespan:** 12 October 1877 – 29 June 1951\n\n**Branch:** Rowe → Telfer (married into)\n\n**Role:** Wife of Albert George Telfer; mother of his six children\n\n## Biography\n\nBeatrice Rowe was born 12th October 1877 at Kadina, South Australia. She was a school teacher in the Warcowie district, and boarded with the Telfer family for a year or two before being transferred to Moolawurtie.\n\nShe married **[[Albert George Telfer (1881–1970)]]** at Warcowie and they farmed there from 1903 before moving to Hill River (near Clare) in 1923 so their children could attend High School. Their children — **Rita Joyce, Beatrice Sylvia, Douglas Ivan, Melville Bruce, John Alick Ralph and Murray Keith** — were all born while the family lived at Warcowie.\n\nBeatrice died 29th June 1951 and is buried at Clare Old Cemetery, beside her husband Albert.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Husband** | [[Albert George Telfer (1881–1970)]] |\n| **Children** | [[Rita Joyce Telfer (1909–1990)]], [[Beatrice Sylvia Telfer (1911–1999)]], [[Douglas Ivan Telfer (1913–1993)]], [[Melville Bruce Telfer (1914–1997)]], John Alick Ralph Telfer, [[Murray Keith Telfer (1920–2005)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — Beatrice Rowe, b.12/10/1877 Kadina, Warcowie school teacher; m. Albert; six children\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — \"TELFER, Beatrice & Albert George\"; Beatrice 12 Oct 1877 – 29 Jun 1951 — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 12 October 1877 – 29 June 1951\n\n**Branch:** Rowe → Telfer (married into)\n\n**Role:** Wife of Albert George Telfer; mother of his six children\n\n## Biography\n\nBeatrice Rowe was born 12th October 1877 at Kadina, South Australia. She was a school teacher in the Warcowie district, and boarded with the Telfer family for a year or two before being transferred to Moolawurtie.\n\nShe married **Albert George Telfer (1881–1970)** at Warcowie and they farmed there from 1903 before moving to Hill ",
+    "parents": [],
+    "children": [
+      "beatrice-telfer-1911",
+      "douglas-telfer-1913",
+      "melville-telfer",
+      "murray-telfer-1920",
+      "rita-telfer"
+    ],
+    "siblings": [],
+    "spouses": [
+      "albert-telfer"
+    ],
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "generation": 5
+  },
+  {
+    "slug": "beatrice-telfer-1911",
+    "id": "Beatrice Sylvia Telfer",
+    "first_name": "Beatrice",
+    "middle_name": "Sylvia",
+    "last_name": "Telfer",
+    "birth_year": 1911,
+    "death_year": 1999,
+    "vault_file": "Beatrice Sylvia Telfer (1911–1999).md",
+    "display_name": "Beatrice Sylvia Telfer",
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Beatrice Sylvia Telfer"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Albert George Telfer (1881–1970)",
+          "Beatrice Rowe Telfer (1877–1951)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Rita Joyce Telfer (1909–1990)",
+          "Douglas Ivan Telfer (1913–1993)",
+          "Melville Bruce Telfer (1914–1997)",
+          "John Alick Ralph Telfer",
+          "Murray Keith Telfer (1920–2005)"
+        ]
+      }
+    ],
+    "title": "Beatrice Sylvia Telfer — Family & Biography",
+    "birth_year_display": "1911",
+    "death_year_display": "1999",
+    "is_living": false,
+    "lifespan": "1911 – 1999",
+    "body_markdown": "# Beatrice Sylvia Telfer (1911–1999)\n\n**Lifespan:** 25 March 1911 – 4 March 1999\n\n**Branch:** Telfer — daughter of Albert George & Beatrice Telfer (granddaughter of John & Caroline)\n\n## Biography\n\nBeatrice Sylvia Telfer was born 25th March 1911, the second child of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]]. She was born at Warcowie.\n\nShe died 5th March 1999 and is buried at Clare Old Cemetery.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Siblings** | Rita Joyce Telfer (1909–1990), Douglas Ivan Telfer (1913–1993), Melville Bruce Telfer (1914–1997), John Alick Ralph Telfer, Murray Keith Telfer (1920–2005) |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — Albert's children, born at Warcowie\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — \"Beatrice Sylvia TELFER, 25 Mar 1911 – 4 Mar 1999\" — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 25 March 1911 – 4 March 1999\n\n**Branch:** Telfer — daughter of Albert George & Beatrice Telfer (granddaughter of John & Caroline)\n\n## Biography\n\nBeatrice Sylvia Telfer was born 25th March 1911, the second child of Albert George Telfer (1881–1970) and Beatrice Rowe Telfer (1877–1951). She was born at Warcowie.\n\nShe died 5th March 1999 and is buried at Clare Old Cemetery.\n\n## Family\n\n Relation  Name \n\n **Father**  Albert George Telfer (1881–1970) \n **Mother**  Beatrice Rowe Telfer (1",
+    "parents": [
+      "albert-telfer",
+      "beatrice-telfer-1877"
+    ],
+    "children": [],
+    "siblings": [
+      "douglas-telfer-1913",
+      "melville-telfer",
+      "murray-telfer-1920",
+      "rita-telfer"
+    ],
+    "spouses": [],
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "generation": 6
+  },
+  {
+    "slug": "douglas-telfer-1913",
+    "id": "Douglas Ivan Telfer",
+    "first_name": "Douglas",
+    "middle_name": "Ivan",
+    "last_name": "Telfer",
+    "birth_year": 1913,
+    "death_year": 1993,
+    "vault_file": "Douglas Ivan Telfer (1913–1993).md",
+    "display_name": "Douglas Ivan Telfer",
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Douglas Ivan Telfer"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Albert George Telfer (1881–1970)",
+          "Beatrice Rowe Telfer (1877–1951)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Rita Joyce Telfer (1909–1990)",
+          "Beatrice Sylvia Telfer (1911–1999)",
+          "Melville Bruce Telfer (1914–1997)",
+          "John Alick Ralph Telfer",
+          "Murray Keith Telfer (1920–2005)"
+        ]
+      }
+    ],
+    "title": "Douglas Ivan Telfer — Family & Biography",
+    "birth_year_display": "1913",
+    "death_year_display": "1993",
+    "is_living": false,
+    "lifespan": "1913 – 1993",
+    "body_markdown": "# Douglas Ivan Telfer (1913–1993)\n\n**Lifespan:** 6 October 1913 – 16 January 1993\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nDouglas Ivan Telfer was born 6th October 1913 at Frome, South Australia, the third child of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]]. The family were farming at Warcowie at the time, moving to Hill River (near Clare) in 1923.\n\nHe died 16th January 1993 at Colonel Light Gardens, South Australia, and was cremated at Centennial Park.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Siblings** | Rita Joyce Telfer (1909–1990), Beatrice Sylvia Telfer (1911–1999), Melville Bruce Telfer (1914–1997), John Alick Ralph Telfer, Murray Keith Telfer (1920–2005) |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — Albert's children\n- **Source:** WikiTree — Douglas Ivan Telfer (1913–1993); cites SA BDM birth 923/22 (6 Oct 1913, Frome) and Centennial Park Crematorium records (d.16 Jan 1993, Colonel Light Gardens) — [https://www.wikitree.com/wiki/Telfer-301](https://www.wikitree.com/wiki/Telfer-301) — accessed 10 Aug 2026\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — confirms Douglas Ivan in the TELFER family plot — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 6 October 1913 – 16 January 1993\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nDouglas Ivan Telfer was born 6th October 1913 at Frome, South Australia, the third child of Albert George Telfer (1881–1970) and Beatrice Rowe Telfer (1877–1951). The family were farming at Warcowie at the time, moving to Hill River (near Clare) in 1923.\n\nHe died 16th January 1993 at Colonel Light Gardens, South Australia, and was cremated at Ce",
+    "parents": [
+      "albert-telfer",
+      "beatrice-telfer-1877"
+    ],
+    "children": [],
+    "siblings": [
+      "beatrice-telfer-1911",
+      "melville-telfer",
+      "murray-telfer-1920",
+      "rita-telfer"
+    ],
+    "spouses": [],
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "generation": 6
+  },
+  {
+    "slug": "murray-telfer-1920",
+    "id": "Murray Keith Telfer",
+    "first_name": "Murray",
+    "middle_name": "Keith",
+    "last_name": "Telfer",
+    "birth_year": 1920,
+    "death_year": 2005,
+    "vault_file": "Murray Keith Telfer (1920–2005).md",
+    "display_name": "Murray Keith Telfer",
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Murray Keith Telfer"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Albert George Telfer (1881–1970)",
+          "Beatrice Rowe Telfer (1877–1951)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Rita Joyce Telfer (1909–1990)",
+          "Beatrice Sylvia Telfer (1911–1999)",
+          "Douglas Ivan Telfer (1913–1993)",
+          "Melville Bruce Telfer (1914–1997)",
+          "John Alick Ralph Telfer"
+        ]
+      }
+    ],
+    "title": "Murray Keith Telfer — Family & Biography",
+    "birth_year_display": "1920",
+    "death_year_display": "2005",
+    "is_living": false,
+    "lifespan": "1920 – 2005",
+    "body_markdown": "# Murray Keith Telfer (1920–2005)\n\n**Lifespan:** 1920 – 2005\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nMurray Keith Telfer was born in 1920, the youngest child of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]]. He was born at Warcowie and moved with the family to Hill River (near Clare) in 1923.\n\nHe died in 2005 and is buried at Clare Old Cemetery. The family name is recorded in some gravestone transcriptions as \"Keith Murray\".\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Siblings** | Rita Joyce Telfer (1909–1990), Beatrice Sylvia Telfer (1911–1999), Douglas Ivan Telfer (1913–1993), Melville Bruce Telfer (1914–1997), John Alick Ralph Telfer |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — Albert's children; \"Murray Keith\" named\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — \"Keith Murray TELFER, 1920–2005\" — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 1920 – 2005\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nMurray Keith Telfer was born in 1920, the youngest child of Albert George Telfer (1881–1970) and Beatrice Rowe Telfer (1877–1951). He was born at Warcowie and moved with the family to Hill River (near Clare) in 1923.\n\nHe died in 2005 and is buried at Clare Old Cemetery. The family name is recorded in some gravestone transcriptions as \"Keith Murray\".\n\n## Family\n\n Rel",
+    "parents": [
+      "albert-telfer",
+      "beatrice-telfer-1877"
+    ],
+    "children": [],
+    "siblings": [
+      "beatrice-telfer-1911",
+      "douglas-telfer-1913",
+      "melville-telfer",
+      "rita-telfer"
+    ],
+    "spouses": [],
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "generation": 6
+  },
+  {
+    "id": "Melville Bruce Telfer",
+    "slug": "melville-telfer",
+    "vault_file": "Melville Bruce Telfer (1914–1997).md",
+    "first_name": "Melville",
+    "middle_name": "Bruce",
+    "last_name": "Telfer",
+    "birth_year": 1914,
+    "death_year": 1997,
+    "birth_year_display": "1914",
+    "death_year_display": "1997",
+    "display_name": "Melville Bruce Telfer",
+    "title": "Melville Bruce Telfer — Family & Biography",
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Melville Bruce Telfer"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Albert George Telfer (1881–1970)",
+          "Beatrice Rowe Telfer (1877–1951)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Rita Joyce Telfer (1909–1990)",
+          "Beatrice Sylvia Telfer (1911–1999)",
+          "Douglas Ivan Telfer (1913–1993)",
+          "John Alick Ralph Telfer",
+          "Murray Keith Telfer (1920–2005)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Melville Bruce Telfer (1914–1997)\n\n**Lifespan:** 30 April 1914 – 1 March 1997\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nMelville Bruce Telfer was born 30th April 1914, the fourth child of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]]. He was born at Warcowie and, like his siblings, moved with the family to Hill River (near Clare) in 1923.\n\nHe married **Violet Merle Crossman** (1 Nov 1912 – 16 Sep 2004) and died 1st March 1997. He is buried at Clare Old Cemetery with his wife Violet Merle.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Spouse** | Violet Merle Crossman (1912–2004), m. 6 Jan 1940, Clare |\n| **Siblings** | Rita Joyce Telfer (1909–1990), Beatrice Sylvia Telfer (1911–1999), Douglas Ivan Telfer (1913–1993), John Alick Ralph Telfer, Murray Keith Telfer (1920–2005) |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — Albert's children; Melville Bruce named\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — \"Melville Bruce TELFER, 30 Apr 1914 – 1 Mar 1997\" and \"Violet Merle TELFER, 1 Nov 1912 – 16 Sep 2004\" (separate entries, same plot) — accessed 10 Aug 2026\n- **Source (disputed):** WikiTree — Melville Bruce Telfer \"1912–2004\" (Telfer-976) — dates match Violet's tombstone; treated as unconfirmed — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 30 April 1914 – 1 March 1997\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nMelville Bruce Telfer was born 30th April 1914, the fourth child of Albert George Telfer (1881–1970) and Beatrice Rowe Telfer (1877–1951). He was born at Warcowie and, like his siblings, moved with the family to Hill River (near Clare) in 1923.\n\nHe married **Violet Merle Crossman** (1 Nov 1912 – 16 Sep 2004) and died 1st March 1997. He is buried at ",
+    "parents": [
+      "albert-telfer",
+      "beatrice-telfer-1877"
+    ],
+    "children": [],
+    "siblings": [
+      "beatrice-telfer-1911",
+      "douglas-telfer-1913",
+      "murray-telfer-1920",
+      "rita-telfer"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1914 – 1997",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 6
+  },
+  {
+    "id": "Rita Joyce Telfer",
+    "slug": "rita-telfer",
+    "vault_file": "Rita Joyce Telfer (1909–1990).md",
+    "first_name": "Rita",
+    "middle_name": "Joyce",
+    "last_name": "Telfer",
+    "birth_year": 1909,
+    "death_year": 1990,
+    "birth_year_display": "1909",
+    "death_year_display": "1990",
+    "display_name": "Rita Joyce Telfer",
+    "title": "Rita Joyce Telfer — Family & Biography",
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Rita Joyce Telfer"
+        ]
+      },
+      {
+        "type": "Parents",
+        "names": [
+          "Albert George Telfer (1881–1970)",
+          "Beatrice Rowe Telfer (1877–1951)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Beatrice Sylvia Telfer (1911–1999)",
+          "Douglas Ivan Telfer (1913–1993)",
+          "Melville Bruce Telfer (1914–1997)",
+          "John Alick Ralph Telfer",
+          "Murray Keith Telfer (1920–2005)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Rita Joyce Telfer (1909–1990)\n\n**Lifespan:** 12 April 1909 – 25 April 1990\n\n**Branch:** Telfer — daughter of Albert George & Beatrice Telfer (granddaughter of John & Caroline)\n\n## Biography\n\nRita Joyce Telfer was born 12th April 1909, the eldest child of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]]. She was born at Warcowie, where the family farmed from 1903.\n\nShe died 25th April 1990 and is buried at Clare Old Cemetery.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Siblings** | Beatrice Sylvia Telfer (1911–1999), Douglas Ivan Telfer (1913–1993), Melville Bruce Telfer (1914–1997), John Alick Ralph Telfer, Murray Keith Telfer (1920–2005) |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — Albert's children, born at Warcowie\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — \"Rita Joyce TELFER, 12 Apr 1909 – 25 Apr 1990\" — accessed 10 Aug 2026",
+    "body_stripped": "**Lifespan:** 12 April 1909 – 25 April 1990\n\n**Branch:** Telfer — daughter of Albert George & Beatrice Telfer (granddaughter of John & Caroline)\n\n## Biography\n\nRita Joyce Telfer was born 12th April 1909, the eldest child of Albert George Telfer (1881–1970) and Beatrice Rowe Telfer (1877–1951). She was born at Warcowie, where the family farmed from 1903.\n\nShe died 25th April 1990 and is buried at Clare Old Cemetery.\n\n## Family\n\n Relation  Name \n\n **Father**  Albert George Telfer (1881–1970) \n **M",
+    "parents": [
+      "albert-telfer",
+      "beatrice-telfer-1877"
+    ],
+    "children": [],
+    "siblings": [
+      "beatrice-telfer-1911",
+      "douglas-telfer-1913",
+      "melville-telfer",
+      "murray-telfer-1920"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1909 – 1990",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 6
   }
 ]
