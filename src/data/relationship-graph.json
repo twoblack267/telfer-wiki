@@ -286,11 +286,6 @@
       "generation": 5
     },
     {
-      "slug": "edwin-telfer-1888",
-      "id": "Edwin Telfer",
-      "generation": 5
-    },
-    {
       "slug": "edwin-telfer-1921",
       "id": "Edwin Telfer",
       "generation": 6
@@ -1539,6 +1534,10 @@
       "slug": "john-telfer-alick-ralph",
       "id": "John Alick Ralph Telfer",
       "generation": 6
+    },
+    {
+      "slug": "edwin-telfer",
+      "id": "Edwin Telfer"
     }
   ],
   "edges": {
@@ -1846,14 +1845,6 @@
       {
         "from": "william-telfer-1802",
         "to": "edward-telfer"
-      },
-      {
-        "from": "caroline-telfer",
-        "to": "edwin-telfer-1888"
-      },
-      {
-        "from": "john-telfer-1847",
-        "to": "edwin-telfer-1888"
       },
       {
         "from": "amy-telfer-1884",
@@ -3182,6 +3173,14 @@
       {
         "from": "beatrice-telfer-1877",
         "to": "john-telfer-alick-ralph"
+      },
+      {
+        "from": "caroline-telfer",
+        "to": "edwin-telfer"
+      },
+      {
+        "from": "john-telfer-1847",
+        "to": "edwin-telfer"
       }
     ],
     "spouseOf": [
@@ -3597,7 +3596,7 @@
       },
       {
         "from": "albert-telfer",
-        "to": "edwin-telfer-1888"
+        "to": "edwin-telfer"
       },
       {
         "from": "albert-telfer",
@@ -3753,7 +3752,7 @@
       },
       {
         "from": "bertha-telfer",
-        "to": "edwin-telfer-1888"
+        "to": "edwin-telfer"
       },
       {
         "from": "bertha-telfer",
@@ -4154,26 +4153,6 @@
       {
         "from": "edward-albert-parker",
         "to": "william-henry-parker"
-      },
-      {
-        "from": "edwin-telfer-1888",
-        "to": "ernest-telfer"
-      },
-      {
-        "from": "edwin-telfer-1888",
-        "to": "francis-telfer-1875"
-      },
-      {
-        "from": "edwin-telfer-1888",
-        "to": "john-telfer-1877"
-      },
-      {
-        "from": "edwin-telfer-1888",
-        "to": "walter-telfer"
-      },
-      {
-        "from": "edwin-telfer-1888",
-        "to": "william-telfer-1880"
       },
       {
         "from": "edwin-telfer-1921",
@@ -5570,6 +5549,26 @@
       {
         "from": "john-telfer-alick-ralph",
         "to": "rita-telfer"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "ernest-telfer"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "francis-telfer-1875"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "john-telfer-1877"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "walter-telfer"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "william-telfer-1880"
       }
     ]
   }
