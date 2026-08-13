@@ -1746,6 +1746,7 @@
     ],
     "parents": [],
     "children": [
+      "francis-telfer-dillon",
       "james-dillon"
     ],
     "spouses": [
@@ -3869,45 +3870,6 @@
     "person_photo": null
   },
   {
-    "id": "Margaret Dougal",
-    "slug": "margaret-dougal",
-    "first_name": "Margaret",
-    "middle_name": null,
-    "last_name": "Dougal",
-    "birth_year": 1849,
-    "death_year": 1936,
-    "birth_year_display": "1849",
-    "death_year_display": "1936",
-    "display_name": "Margaret Dougal",
-    "title": "Margaret Dougal (1849–1936)",
-    "lifespan": "1849 – 1936",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Margaret Dougal (1849–1936)\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [
-      "adelaide-elsie-pearl-telfer",
-      "effie-olive-telfer",
-      "eva-rowena-telfer",
-      "francis-adam-telfer",
-      "hazel-rose-telfer",
-      "herbert-dougal-telfer",
-      "james-edgerston-telfer",
-      "lillian-may-telfer",
-      "vernon-ray-st-clair-telfer",
-      "violet-hope-telfer"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Jemima Williams Masters",
     "slug": "jemima-masters",
     "first_name": "Jemima",
@@ -4470,6 +4432,7 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "francis-telfer-dillon",
       "william-john-dillon"
     ],
     "images": [],
@@ -4627,7 +4590,7 @@
     "lifespan": "1864 – 1942",
     "generation": 5,
     "is_living": false,
-    "body_markdown": "# Francis Telfer Dillon (1864–1942)\n\n**Role:** Son of Elizabeth Beattie Telfer\n\n**Born:** 7 June 1864 — Kersbrook, South Australia\n**Died:** 26 April 1942 — Mitcham, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).\n\n**Father:** [[Elizabeth Beattie Telfer (1832–1896)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Elizabeth Beattie Telfer (1832–1896)]] |\n\n---\n\n## Life Summary\n\nFrancis Telfer Dillon (1864–1942), son of Elizabeth Beattie Telfer and John Charles Dillon.\n\n---\n\n**Source:** Telfer family records",
+    "body_markdown": "# Francis Telfer Dillon (1864–1942)\n\n**Role:** Son of Elizabeth Beattie Telfer\n\n**Born:** 7 June 1864 — Kersbrook, South Australia\n**Died:** 26 April 1942 — Mitcham, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).\n\n**Father:** [[John Charles Dillon (1827–1906)]]\n**Mother:** [[Elizabeth Beattie Telfer (1832–1896)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[John Charles Dillon (1827–1906)]] |\n| **Mother** | [[Elizabeth Beattie Telfer (1832–1896)]] |\n\n---\n\n## Life Summary\n\nFrancis Telfer Dillon (1864–1942), son of Elizabeth Beattie Telfer and John Charles Dillon.\n\n---\n\n**Source:** Telfer family records",
     "roles": [
       "Son of Elizabeth Beattie Telfer"
     ],
@@ -4635,13 +4598,14 @@
       "person"
     ],
     "parents": [
-      "elizabeth-beattie-telfer-1832"
+      "elizabeth-beattie-telfer-1832",
+      "john-dillon"
     ],
-    "children": [
-      "john-telfer-1847"
-    ],
+    "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "james-dillon"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -5222,7 +5186,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -5347,7 +5310,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -5725,7 +5687,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -5811,7 +5772,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -5994,7 +5954,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -6168,7 +6127,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -6315,7 +6273,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -6398,7 +6355,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -6619,7 +6575,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -6800,7 +6755,6 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-dougal",
       "margaret-telfer-1849"
     ],
     "children": [],
@@ -7068,6 +7022,39 @@
     ],
     "children": [],
     "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "James Alexander Alcorn",
+    "slug": "james-alexander-alcorn",
+    "first_name": "James Alexander",
+    "middle_name": null,
+    "last_name": "Alcorn",
+    "birth_year": 1915,
+    "death_year": 1942,
+    "birth_year_display": "1915",
+    "death_year_display": "1942",
+    "display_name": "James Alexander Alcorn",
+    "title": "James Alexander Alcorn (1915–1942) — RAAF casualty, Runnymede",
+    "lifespan": "1915 – 1942",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# James Alexander Alcorn (1915–1942)\n\n**Role:** Dillon-branch descendant — RAAF sergeant lost over the North Sea, WWII\n**Born:** 2 December 1915 — Adelaide, South Australia\n**Died:** 16 July 1942 (aged 26) — North Sea (aircraft accident, no remains recovered)\n**Father:** Leslie Alcorn\n**Mother:** Rebecca Elizabeth Alcorn\n**Branch:** Tantanoola/Dillon line of Elizabeth Beattie Telfer\n\n## War Service\n\nSergeant **James Alexander ALCORN** (Service No. 407886), Royal Australian Air Force (RAAF), Air Gunner. Enlisted 3 February 1941. Unit: **No. 27 Operational Training Unit (RAF), RAF Lichfield, Staffordshire.**\n\nDied in an aircraft accident when **Wellington P9285** of No. 27 OTU, on a cross-country training exercise, crashed into the **North Sea on 16 July 1942** (RDF plot faded at 1230 hrs; aircraft did not return). Aged 26. **Body never recovered.**\n\nCommemorated at the **Runnymede Memorial, Surrey, England**. Names on the AWM Roll of Honour panel.\n\nSon of Leslie and Rebecca Elizabeth Alcorn; husband of Rona Mary Alcorn, of Henley Beach, South Australia.\n\n## Life Summary\n\nJames Alexander Alcorn, born Adelaide 2 December 1915, was an RAAF Air Gunner during the Second World War. Attached to the RAF's No. 27 Operational Training Unit at Lichfield for training, his Wellington bomber disappeared over the North Sea on 16 July 1942 and his body was never recovered. He is commemorated at the Runnymede Memorial in England.\n\n## Anecdote\n\n🖊️ **Anecdote — as told in *A Telfer Family Tree* (Supplement 2008, p.198):** RAAF sergeant James Alcorn was lost when his Wellington crashed into the North Sea during RAF training at Lichfield in July 1942. His body was never recovered; Runnymede remembers him.\n\n## Sources\n\n- **Source:** [Australian War Memorial — James Alexander Alcorn, R1706397](https://www.awm.gov.au/collection/R1706397) — accessed 12 Aug 2026 (verified: Sergeant, No. 27 OTU RAF, 16 July 1942, North Sea, Runnymede Memorial)\n- **Source:** [Aviation Heritage Museum WA — ALCORN James Alexander 407886](https://aviationmuseumwa.org.au/afcraaf-roll/alcorn-james-alexander-407886/) — accessed 12 Aug 2026 (verified: Sgt, born Adelaide 2 Dec 1915, No. 27 OTU RAF Lichfield, Wellington P9285, North Sea 16 Jul 1942 aged 26, unrecovered)\n- **Source:** [Find a Grave — memorial 249758299](https://www.findagrave.com/memorial/249758299) — accessed 12 Aug 2026\n- **Source:** *A Telfer Family Tree* (Supplement to From the Borders to the Bush, 2008), p.198 — family book record of the service and death",
+    "roles": [
+      "Dillon-branch descendant — RAAF sergeant lost over the North Sea, WWII"
+    ],
+    "tags": [
+      "person",
+      "alcorn",
+      "war-casualty"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "bertha-telfer"
+    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -7564,7 +7551,9 @@
       "john-telfer-1847"
     ],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "james-alexander-alcorn"
+    ],
     "siblings": [
       "albert-telfer",
       "edwin-telfer",
@@ -9412,6 +9401,37 @@
     "siblings": [
       "george-sidney-gilbert-stribling"
     ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Leslie Frank Dillon",
+    "slug": "leslie-frank-dillon",
+    "first_name": "Leslie Frank",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1892,
+    "death_year": 1915,
+    "birth_year_display": "~1892",
+    "death_year_display": "1915",
+    "display_name": "Leslie Frank Dillon",
+    "title": "Leslie Frank Dillon (~1892–1915) — WWI casualty, Gallipoli",
+    "lifespan": "~1892 – 1915",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Leslie Frank Dillon (~1892–1915)\n\n**Role:** Dillon-branch descendant of Elizabeth Beattie Telfer — killed at Gallipoli, WWI\n**Died:** 1915 (ANZAC landings, late April) — Gallipoli, **no known grave**\n**Branch:** Tea Tree Gully, South Australia (Dillon line of Elizabeth Beattie Telfer)\n\n## War Service\n\nPrivate **Leslie Frank Dillon**, Australian Imperial Force, killed at **Gallipoli** during the ANZAC landings of late April 1915. He has **no known grave** — his name is commemorated on the **Lone Pine Memorial, Gallipoli**.\n\nHis name appears on the Australian War Memorial Gallipoli Peninsula commemorative roll alongside other DILLON servicemen of the branch (incl. Francis William, Herbert, Martin Michael Dillon).\n\n## Life Summary\n\nLeslie Frank Dillon belonged to the Tea Tree Gully DILLON branch (descendants of Elizabeth Beattie Telfer's marriage to John Charles Dillon). He was killed at Gallipoli in 1915 and — having no known grave — his name is recorded on the Lone Pine Memorial.\n\n## Anecdote\n\n🖊️ **Anecdote — as told in *From the Borders to the Bush* / *A Telfer Family Tree* (2008, p.197):** Leslie Frank Dillon of the Telfer line was killed at Gallipoli in the ANZAC landings of late April 1915 and has no known grave — his name sits on the Lone Pine Memorial. *(Exact date 25–29 April 1915 is the family-book recollection; the AWM confirms his Gallipoli commemoration and name on the Lone Pine roll.)*\n\n## Sources\n\n- **Source:** [Australian War Memorial — Private Leslie Frank Dillon, P10327985](https://www.awm.gov.au/collection/P10327985) — accessed 12 Aug 2026 (verified: Private, AWM People record)\n- **Source:** [Australian War Memorial — Gallipoli Peninsula (Lone Pine) commemorative roll, PL503649](https://www.awm.gov.au/collection/PL503649) — accessed 12 Aug 2026 (verified: \"Dillon, Leslie Frank\" appears on the Gallipoli Peninsula commemorative roll)\n- **Source:** *From the Borders to the Bush* / *A Telfer Family Tree* (Supplement 2008), p.197 — family book record of the service and death at Gallipoli, no known grave",
+    "roles": [
+      "Dillon-branch descendant of Elizabeth Beattie Telfer — killed at Gallipoli, WWI"
+    ],
+    "tags": [
+      "person",
+      "dillon",
+      "war-casualty"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -11313,6 +11333,37 @@
       "sophia-parker-lawrie",
       "william-henry-parker"
     ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Leslie James Dillon",
+    "slug": "leslie-james-dillon",
+    "first_name": "Leslie James",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1916,
+    "death_year": 1941,
+    "birth_year_display": "1916",
+    "death_year_display": "1941",
+    "display_name": "Leslie James Dillon",
+    "title": "Leslie James Dillon (1916–1941) — WII casualty, Tobruk",
+    "lifespan": "1916 – 1941",
+    "generation": 7,
+    "is_living": false,
+    "body_markdown": "# Leslie James Dillon (1916–1941)\n\n**Role:** Dillon-branch descendant of Elizabeth Beattie Telfer (1832–1896) — killed in action, WWII\n**Born:** 2 December 1916\n**Died:** 9 July 1941 (aged 24) — Libya (Tobruk siege)\n**Father:** Robert Telfer Dillon\n**Mother:** Mary Ann Dillon\n**Branch:** Tea Tree Gully, South Australia (Dillon line of Elizabeth Beattie Telfer)\n\n## War Service\n\nPrivate **Leslie James Dillon** (Service No. SX5551), 2/43rd Australian Infantry Battalion. Killed in action in Libya in 1941 and recognised as one of the **\"Rats of Tobruk.\"**\n\nBuried **Tobruk War Cemetery, Tobruk, Libya.** Commemorated on the Tea Tree Gully SA Roll of Honour and on panel 62 in the Commemorative Area at the Australian War Memorial.\n\nSon of Robert and Mary Anne Dillon, of Tea Tree Gully, South Australia; husband of Elizabeth Alice Dillon, of Tea Tree Gully, South Australia.\n\n## Life Summary\n\nLeslie James Dillon, of the Tea Tree Gully DILLON branch (descendants of Elizabeth Beattie Telfer's marriage to John Charles Dillon), served in the Second World War with the 2/43rd Australian Infantry Battalion. He was killed in action during the siege of Tobruk in July 1941 and has no marked personal grave — he is commemorated at the Tobruk War Cemetery and on the AWM Roll of Honour panel.\n\n## Anecdote\n\n🖊️ **Anecdote — as told in *A Telfer Family Tree* (Supplement 2008, p.201):** Leslie James Dillon, a \"Rat of Tobruk,\" was killed in action at Tobruk in July 1941 and lies in the Tobruk War Cemetery in Libya. Commemorated on the Tea Tree Gully Roll of Honour and AWM panel 62.\n\n## Sources\n\n- **Source:** [Find a Grave — Pte Leslie James Dillon (1916–1941), memorial 56089296](https://www.findagrave.com/memorial/56089296) — accessed 12 Aug 2026 (verified: born 2 Dec 1916, died 9 Jul 1941 aged 24, Tobruk War Cemetery, 2/43rd Bn, killed in action Libya, Rats of Tobruk; son of Robert & Mary Anne Dillon)\n- **Source:** [Australian War Memorial — Leslie James Dillon, R1710900](https://www.awm.gov.au/collection/R1710900) — accessed 12 Aug 2026 (verified: Private, 09 July 1941, Libya, Tobruk War Cemetery)\n- **Source:** [Virtual War Memorial Australia — Leslie James Dillon, 603627](https://vwma.org.au/explore/people/603627) — accessed 12 Aug 2026 (403 anti-bot block; corroborated by the two primary sources above)\n- **Source:** *A Telfer Family Tree* (Supplement to From the Borders to the Bush, 2008), p.201 — family book record of the service and death",
+    "roles": [
+      "Dillon-branch descendant of Elizabeth Beattie Telfer (1832–1896) — killed in action, WWII"
+    ],
+    "tags": [
+      "person",
+      "dillon",
+      "war-casualty"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
     "images": [],
     "person_photo": null
   },

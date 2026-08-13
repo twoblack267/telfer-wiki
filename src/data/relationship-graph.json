@@ -1011,11 +1011,6 @@
       "generation": 1
     },
     {
-      "slug": "margaret-dougal",
-      "id": "Margaret Dougal",
-      "generation": 5
-    },
-    {
       "slug": "margaret-dougal-smith",
       "id": "Margaret Dougal Smith",
       "generation": 5
@@ -1539,6 +1534,18 @@
       "slug": "edwin-telfer",
       "id": "Edwin Telfer",
       "generation": 5
+    },
+    {
+      "slug": "james-alexander-alcorn",
+      "id": "James Alexander Alcorn"
+    },
+    {
+      "slug": "leslie-frank-dillon",
+      "id": "Leslie Frank Dillon"
+    },
+    {
+      "slug": "leslie-james-dillon",
+      "id": "Leslie James Dillon"
     }
   ],
   "edges": {
@@ -1577,10 +1584,6 @@
       },
       {
         "from": "adam-telfer-1842",
-        "to": "adelaide-elsie-pearl-telfer"
-      },
-      {
-        "from": "margaret-dougal",
         "to": "adelaide-elsie-pearl-telfer"
       },
       {
@@ -1860,10 +1863,6 @@
         "to": "effie-olive-telfer"
       },
       {
-        "from": "margaret-dougal",
-        "to": "effie-olive-telfer"
-      },
-      {
         "from": "margaret-telfer-1849",
         "to": "effie-olive-telfer"
       },
@@ -2020,10 +2019,6 @@
         "to": "eva-rowena-telfer"
       },
       {
-        "from": "margaret-dougal",
-        "to": "eva-rowena-telfer"
-      },
-      {
         "from": "margaret-telfer-1849",
         "to": "eva-rowena-telfer"
       },
@@ -2037,10 +2032,6 @@
       },
       {
         "from": "adam-telfer-1842",
-        "to": "francis-adam-telfer"
-      },
-      {
-        "from": "margaret-dougal",
         "to": "francis-adam-telfer"
       },
       {
@@ -2081,6 +2072,10 @@
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
+        "to": "francis-telfer-dillon"
+      },
+      {
+        "from": "john-dillon",
         "to": "francis-telfer-dillon"
       },
       {
@@ -2180,10 +2175,6 @@
         "to": "hazel-rose-telfer"
       },
       {
-        "from": "margaret-dougal",
-        "to": "hazel-rose-telfer"
-      },
-      {
         "from": "margaret-telfer-1849",
         "to": "hazel-rose-telfer"
       },
@@ -2197,10 +2188,6 @@
       },
       {
         "from": "adam-telfer-1842",
-        "to": "herbert-dougal-telfer"
-      },
-      {
-        "from": "margaret-dougal",
         "to": "herbert-dougal-telfer"
       },
       {
@@ -2261,10 +2248,6 @@
       },
       {
         "from": "adam-telfer-1842",
-        "to": "james-edgerston-telfer"
-      },
-      {
-        "from": "margaret-dougal",
         "to": "james-edgerston-telfer"
       },
       {
@@ -2600,10 +2583,6 @@
         "to": "lillian-may-telfer"
       },
       {
-        "from": "margaret-dougal",
-        "to": "lillian-may-telfer"
-      },
-      {
         "from": "margaret-telfer-1849",
         "to": "lillian-may-telfer"
       },
@@ -2932,10 +2911,6 @@
         "to": "vernon-ray-st-clair-telfer"
       },
       {
-        "from": "margaret-dougal",
-        "to": "vernon-ray-st-clair-telfer"
-      },
-      {
         "from": "margaret-telfer-1849",
         "to": "vernon-ray-st-clair-telfer"
       },
@@ -2945,10 +2920,6 @@
       },
       {
         "from": "adam-telfer-1842",
-        "to": "violet-hope-telfer"
-      },
-      {
-        "from": "margaret-dougal",
         "to": "violet-hope-telfer"
       },
       {
@@ -3228,6 +3199,10 @@
       {
         "from": "ben-stefanoff",
         "to": "kristin-stefanoff"
+      },
+      {
+        "from": "bertha-telfer",
+        "to": "james-alexander-alcorn"
       },
       {
         "from": "beth-telfer",
@@ -4618,6 +4593,10 @@
       {
         "from": "francis-telfer-1809",
         "to": "william-telfer-1811"
+      },
+      {
+        "from": "francis-telfer-dillon",
+        "to": "james-dillon"
       },
       {
         "from": "francis-telfer-paynter",
