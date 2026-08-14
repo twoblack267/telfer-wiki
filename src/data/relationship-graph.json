@@ -1537,15 +1537,18 @@
     },
     {
       "slug": "james-alexander-alcorn",
-      "id": "James Alexander Alcorn"
+      "id": "James Alexander Alcorn",
+      "generation": 5
     },
     {
       "slug": "leslie-frank-dillon",
-      "id": "Leslie Frank Dillon"
+      "id": "Leslie Frank Dillon",
+      "generation": 6
     },
     {
       "slug": "leslie-james-dillon",
-      "id": "Leslie James Dillon"
+      "id": "Leslie James Dillon",
+      "generation": 7
     }
   ],
   "edges": {
