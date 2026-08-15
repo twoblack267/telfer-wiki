@@ -1552,11 +1552,17 @@
     },
     {
       "slug": "john-koppio-telfer",
-      "id": "John Koppio Telfer"
+      "id": "John Koppio Telfer",
+      "generation": 5
     },
     {
       "slug": "trevor-andrew-thomson",
-      "id": "Trevor Andrew Thomson"
+      "id": "Trevor Andrew Thomson",
+      "generation": 6
+    },
+    {
+      "slug": "colin-lindsay-beaton",
+      "id": "Colin Lindsay Beaton"
     }
   ],
   "edges": {
@@ -2195,6 +2201,10 @@
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
+        "to": "henry-hatch-dillon"
+      },
+      {
+        "from": "john-dillon",
         "to": "henry-hatch-dillon"
       },
       {
@@ -2847,6 +2857,10 @@
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
+        "to": "septimus-dillon"
+      },
+      {
+        "from": "john-dillon",
         "to": "septimus-dillon"
       },
       {
@@ -4623,7 +4637,15 @@
       },
       {
         "from": "francis-telfer-dillon",
+        "to": "henry-hatch-dillon"
+      },
+      {
+        "from": "francis-telfer-dillon",
         "to": "james-dillon"
+      },
+      {
+        "from": "francis-telfer-dillon",
+        "to": "septimus-dillon"
       },
       {
         "from": "francis-telfer-paynter",
@@ -4752,6 +4774,14 @@
       {
         "from": "hazel-rose-telfer",
         "to": "violet-hope-telfer"
+      },
+      {
+        "from": "henry-hatch-dillon",
+        "to": "james-dillon"
+      },
+      {
+        "from": "henry-hatch-dillon",
+        "to": "septimus-dillon"
       },
       {
         "from": "herbert-dougal-telfer",
@@ -4912,6 +4942,10 @@
       {
         "from": "james-telfer-1762",
         "to": "jenet-telfer"
+      },
+      {
+        "from": "james-dillon",
+        "to": "septimus-dillon"
       },
       {
         "from": "james-dillon",

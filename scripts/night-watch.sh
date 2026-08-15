@@ -202,17 +202,16 @@ else
   WARN="${WARN} audit"
 fi
 
-# ── 5. Live 404 scan ──────────────────────────────────────────
-echo "[5/7] Scanning live site for broken links (throttled)..."
-if node scripts/scan-404.mjs > "$RUN_DIR/nw-404.log" 2>&1; then
-  BROKEN="0"
-  echo "  ✅ All live links resolving"
-else
-  BROKEN_RAW=$(tail -5 "$RUN_DIR/nw-404.log" | grep -oE 'Failures: [0-9]+' | grep -oE '[0-9]+' | head -1)
-  BROKEN="${BROKEN_RAW:-1}"
-  echo "  🔴 $BROKEN live link(s) broken — see $RUN_DIR/nw-404.log"
-  FAIL="${FAIL} broken-links:$BROKEN"
-fi
+# ── 5. Live 404 scan (DEFERRED to step 8 — runs AFTER push + redeploy) ──
+# IMPORTANT: the live 404 scan MUST run after the new build is pushed and the
+# redeploy has settled. If it runs here (pre-push) it scans the stale live site
+# and false-flags brand-new redirect pages as 404 (deploy race). The actual
+# scan now lives in step 8, after the redeploy wait. BROKEN starts 0/unknown
+# here and is set for real in step 8 before the summary. The ledger (step 6)
+# records the pre-check placeholder; step 8 overwrites BROKEN for the exit code.
+BROKEN="0"
+echo "[5/7] Live 404 scan deferred to step 8 (post-push, post-redeploy) — running against fresh site"
+echo "  ℹ️  (avoid pre-push deploy-race false positives)"
 
 # ── 6. Ledger record ──────────────────────────────────────────
 echo "[6/7] Recording to evolution ledger..."
@@ -275,6 +274,22 @@ if [ "$PUSHED" = "1" ]; then
 else
   echo "  (Nothing pushed — checking current live site anyway)"
 fi
+
+# ── 5b. LIVE 404 scan (post-push, post-redeploy — accurate) ──
+# Runs against the FRESH deployed site now that the redeploy has settled.
+# This is the authoritative broken-link check; the step-5 placeholder above
+# deferred to here specifically to avoid the pre-push deploy-race false positive.
+echo "[5/7→8] Scanning live site for broken links (post-deploy)..."
+if node scripts/scan-404.mjs > "$RUN_DIR/nw-404.log" 2>&1; then
+  BROKEN="0"
+  echo "  ✅ All live links resolving (post-deploy scan)"
+else
+  BROKEN_RAW=$(tail -5 "$RUN_DIR/nw-404.log" | grep -oE 'Failures: [0-9]+' | grep -oE '[0-9]+' | head -1)
+  BROKEN="${BROKEN_RAW:-1}"
+  echo "  🔴 $BROKEN live link(s) broken — see $RUN_DIR/nw-404.log"
+  FAIL="${FAIL} broken-links:$BROKEN"
+fi
+
 if node scripts/visual-flyby.mjs; then
   echo "  ✅ Live site renders correctly on desktop + mobile — no visual errors"
 else
