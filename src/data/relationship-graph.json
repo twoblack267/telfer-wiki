@@ -1549,6 +1549,14 @@
       "slug": "leslie-james-dillon",
       "id": "Leslie James Dillon",
       "generation": 7
+    },
+    {
+      "slug": "john-koppio-telfer",
+      "id": "John Koppio Telfer"
+    },
+    {
+      "slug": "trevor-andrew-thomson",
+      "id": "Trevor Andrew Thomson"
     }
   ],
   "edges": {
@@ -3156,6 +3164,22 @@
       {
         "from": "john-telfer-1847",
         "to": "edwin-telfer"
+      },
+      {
+        "from": "james-telfer-1829",
+        "to": "john-koppio-telfer"
+      },
+      {
+        "from": "janet-welsh",
+        "to": "john-koppio-telfer"
+      },
+      {
+        "from": "alexander-brown-thomson",
+        "to": "trevor-andrew-thomson"
+      },
+      {
+        "from": "isabella-telfer",
+        "to": "trevor-andrew-thomson"
       }
     ],
     "spouseOf": [
