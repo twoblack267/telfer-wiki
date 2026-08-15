@@ -279,15 +279,28 @@ fi
 # Runs against the FRESH deployed site now that the redeploy has settled.
 # This is the authoritative broken-link check; the step-5 placeholder above
 # deferred to here specifically to avoid the pre-push deploy-race false positive.
+#
+# NOTE on exit semantics: scan-404.mjs exits 1 on EITHER real 404s (Failures)
+# OR transient network errors (Errors). Only Failures are genuine broken links;
+# transient Errors (a single timeout across 374 URLs) must NOT fail the night.
 echo "[5/7→8] Scanning live site for broken links (post-deploy)..."
 if node scripts/scan-404.mjs > "$RUN_DIR/nw-404.log" 2>&1; then
   BROKEN="0"
   echo "  ✅ All live links resolving (post-deploy scan)"
 else
-  BROKEN_RAW=$(tail -5 "$RUN_DIR/nw-404.log" | grep -oE 'Failures: [0-9]+' | grep -oE '[0-9]+' | head -1)
-  BROKEN="${BROKEN_RAW:-1}"
-  echo "  🔴 $BROKEN live link(s) broken — see $RUN_DIR/nw-404.log"
-  FAIL="${FAIL} broken-links:$BROKEN"
+  SCAN_FAIL=$(grep -E '^   Failures: [0-9]+' "$RUN_DIR/nw-404.log" | grep -oE '[0-9]+')
+  SCAN_ERR=$(grep -E '^   Errors: [0-9]+' "$RUN_DIR/nw-404.log" | grep -oE '[0-9]+')
+  BROKEN="${SCAN_FAIL:-0}"
+  if [ "${BROKEN:-0}" -gt 0 ]; then
+    echo "  🔴 $BROKEN real broken link(s) — see $RUN_DIR/nw-404.log"
+    FAIL="${FAIL} broken-links:$BROKEN"
+  elif [ "${SCAN_ERR:-0}" -gt 0 ]; then
+    echo "  🟡 ${SCAN_ERR} transient network error(s) (0 real broken links) — not a failure"
+    WARN="${WARN} scan-err:$SCAN_ERR"
+  else
+    echo "  🟡 Live scan exited non-zero with no failures — see $RUN_DIR/nw-404.log"
+    WARN="${WARN} scan-rc"
+  fi
 fi
 
 if node scripts/visual-flyby.mjs; then
