@@ -226,16 +226,6 @@
       "generation": 4
     },
     {
-      "slug": "david-telfer-merrick",
-      "id": "David Telfer-Merrick",
-      "generation": 99
-    },
-    {
-      "slug": "david-telfer",
-      "id": "David Telfer",
-      "generation": 99
-    },
-    {
       "slug": "dinah-flavel",
       "id": "Dinah Flavel",
       "generation": 3
@@ -1564,6 +1554,11 @@
       "slug": "colin-lindsay-beaton",
       "id": "Colin Lindsay Beaton",
       "generation": 7
+    },
+    {
+      "slug": "david-mark-kenneth-telfer-merrick",
+      "id": "David Mark Kenneth Telfer-Merrick",
+      "generation": 99
     }
   ],
   "edges": {
@@ -1811,14 +1806,6 @@
       {
         "from": "hugh-kelly-parker",
         "to": "david-parker"
-      },
-      {
-        "from": "penny-telfer",
-        "to": "david-telfer-merrick"
-      },
-      {
-        "from": "penny-telfer",
-        "to": "david-telfer"
       },
       {
         "from": "jean-telfer-1840",
@@ -3195,6 +3182,10 @@
       {
         "from": "isabella-telfer",
         "to": "trevor-andrew-thomson"
+      },
+      {
+        "from": "penny-telfer",
+        "to": "david-mark-kenneth-telfer-merrick"
       }
     ],
     "spouseOf": [

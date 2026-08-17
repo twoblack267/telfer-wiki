@@ -11668,21 +11668,21 @@
     "person_photo": null
   },
   {
-    "id": "David Telfer",
-    "slug": "david-telfer",
-    "first_name": "David",
+    "id": "David Mark Kenneth Telfer-Merrick",
+    "slug": "david-mark-kenneth-telfer-merrick",
+    "first_name": "David Mark Kenneth",
     "middle_name": null,
-    "last_name": "Telfer",
+    "last_name": "Telfer-Merrick",
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
     "death_year_display": "living",
-    "display_name": "David Telfer",
+    "display_name": "David Mark Kenneth Telfer-Merrick",
     "title": "David Telfer-Merrick — Family & Biography",
     "lifespan": "? – living",
     "generation": 99,
     "is_living": true,
-    "body_markdown": "# David Telfer-Merrick\n\n**Role:** Brother (Penny's son)\n**Age:** 26 (born ~2000)\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n**Relationship:** Single\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n\n---\n\n## Life Summary\n\nBrother through their mother Penny Telfer. Works as a labourer for BMD Group in Rockhampton, Queensland.\n\n---\n\n## Contact",
+    "body_markdown": "# David Telfer-Merrick\n\n**Role:** Brother (Penny's son)\n**Age:** 26 (born ~2000)\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n**Relationship:** Single\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n\n---\n\n## Life Summary\n\nBrother through their mother Penny Telfer. Works as a labourer for BMD Group in Rockhampton, Queensland.\n\n---",
     "roles": [
       "Half-brother (Penny's son)"
     ],
@@ -11690,36 +11690,6 @@
       "bio",
       "family",
       "person"
-    ],
-    "parents": [
-      "penny-telfer"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "David Telfer-Merrick",
-    "slug": "david-telfer-merrick",
-    "first_name": "David",
-    "middle_name": null,
-    "last_name": "Telfer-Merrick",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "David Telfer-Merrick",
-    "title": "David Telfer-Merrick",
-    "lifespan": "? – living",
-    "generation": 99,
-    "is_living": true,
-    "body_markdown": "# David Telfer-Merrick\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
     ],
     "parents": [
       "penny-telfer"
