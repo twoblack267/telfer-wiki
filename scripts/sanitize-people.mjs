@@ -285,14 +285,23 @@ const nameToSlug = buildNameToSlug(people);
 /** Resolve a relationship entry (display name or partial) to a slug if visible */
 function resolveToVisible(entry) {
   if (!entry) return null;
+  // Already a slug / person id — pass through directly if that person is visible.
+  // Some relationships store slugs (e.g. "adam-telfer-1799") instead of display
+  // names; previously these fell through every name-match and were dropped.
+  const entryLC = entry.toLowerCase();
+  if (slugToPerson.has(entryLC) || slugToPerson.has(entry)) {
+    const exists = slugToPerson.has(entry) ? slugToPerson.get(entry) : slugToPerson.get(entryLC);
+    const slug = exists ? (exists.slug || entry) : entry;
+    return visible.has(slug) ? entry : null;
+  }
   // Try the entry as-is
-  if (nameToSlug.has(entry.toLowerCase())) {
-    const slug = nameToSlug.get(entry.toLowerCase());
+  if (nameToSlug.has(entryLC)) {
+    const slug = nameToSlug.get(entryLC);
     return visible.has(slug) ? entry : null;
   }
   // Try without parenthetical dates
   const noDate = stripDates(entry).toLowerCase();
-  if (noDate && noDate !== entry.toLowerCase() && nameToSlug.has(noDate)) {
+  if (noDate && noDate !== entryLC && nameToSlug.has(noDate)) {
     const slug = nameToSlug.get(noDate);
     return visible.has(slug) ? entry : null;
   }
