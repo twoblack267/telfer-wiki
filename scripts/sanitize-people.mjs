@@ -334,11 +334,10 @@ for (const person of people) {
   publicPerson.spouses = (person.spouses || []).map(resolveToVisible).filter(Boolean);
   publicPerson.siblings = (person.siblings || []).map(resolveToVisible).filter(Boolean);
 
-  // For living people: hide children and grandchildren
-  if (person.is_living) {
-    publicPerson.children = [];
-    // Grandchildren are handled by the child's own visibility filters
-  }
+  // NOTE: Living people's children ARE published (owner decision, Aug 2026).
+  // Previously this wiped children for all living people to hide living kids;
+  // Mark chose to show them so family history is fully visible. Living people's
+  // children resolve via resolveToVisible just like deceased people's.
 
   publicPeople.push(publicPerson);
 }
