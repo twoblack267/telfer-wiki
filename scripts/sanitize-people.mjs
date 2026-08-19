@@ -317,6 +317,41 @@ function resolveToVisible(entry) {
   return null;
 }
 
+// ─── Age-Gate Privacy Guardian ────────────────────────────────────────────────
+//
+// Owner decision (Aug 2026): anyone UNDER 18 must not have school, occupation,
+// or any locating detail published — only name + relationships + DOB. A build
+// time-of-run date makes the gate recompute automatically as people age past 18.
+const BUILD_DATE = new Date(); // set at build; recomputes the gate each regenerate
+
+/**
+ * Strip locator detail (school/occupation/location) from a minor's bio.
+ * Works at line level so a "School: Riverview HS" line is removed whole.
+ * Only drops lines that clearly NAME a school/occupation/place for the minor,
+ * leaving generic biographical statements intact.
+ */
+function guardMinorBio(text) {
+  if (!text) return text;
+  const out = [];
+  for (const raw of text.split('\n')) {
+    const line = raw;
+    const trimmed = line.replace(/^\s*[-*+]\s*/, '').trim();
+    // Drop explicitly-labelled locator/occupation lines (drop whole line)
+    if (/^\*\*\s*(School|College|Occupation|Job|Work|Employer|Workplace|Residence|Resides|Lives|Lives at|Address|Worked at)\b/i.test(trimmed)) {
+      continue;
+    }
+    // Drop bullet/line only when it NAMES a specific school/institution or a
+    // specific residence for the minor — e.g. "at St John's College" —
+    // but keep generic lines like "He attends school in Brisbane."
+    if (/^\*\*\s*(School|College|Attends|Studied|S)|(attends|studies|studied|works|worked|employed)\b.*?\b(school|college|university|tafe)/i.test(line) &&
+        /[A-Z][a-z]{2,}/.test(line)) {
+      continue;
+    }
+    out.push(line);
+  }
+  return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+
 // ─── Build Public Output ────────────────────────────────────────────────────
 
 const publicPeople = [];
@@ -343,10 +378,16 @@ for (const person of people) {
   publicPerson.spouses = (person.spouses || []).map(resolveToVisible).filter(Boolean);
   publicPerson.siblings = (person.siblings || []).map(resolveToVisible).filter(Boolean);
 
-  // NOTE: Living people's children ARE published (owner decision, Aug 2026).
-  // Previously this wiped children for all living people to hide living kids;
-  // Mark chose to show them so family history is fully visible. Living people's
-  // children resolve via resolveToVisible just like deceased people's.
+  // ── Age gate (owner decision, Aug 2026): UNDER-18s get school/occupation/
+  //    location detail stripped from their public bio. Gate recomputes every
+  //    build as people age; unknown birth_year ⇒ treated as normal (no guess).
+  const by = person.birth_year;
+  if (typeof by === 'number') {
+    const age = BUILD_DATE.getFullYear() - by;
+    if (age < 18 && publicPerson.body_markdown) {
+      publicPerson.body_markdown = guardMinorBio(publicPerson.body_markdown);
+    }
+  }
 
   publicPeople.push(publicPerson);
 }
