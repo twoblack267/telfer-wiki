@@ -1186,11 +1186,6 @@
       "generation": 3
     },
     {
-      "slug": "robert-telfer-1907",
-      "id": "Robert Telfer",
-      "generation": 4
-    },
-    {
       "slug": "robina-telfer",
       "id": "Robina Telfer",
       "generation": 5
@@ -1559,6 +1554,10 @@
       "slug": "david-mark-kenneth-telfer-merrick",
       "id": "David Mark Kenneth Telfer-Merrick",
       "generation": 10
+    },
+    {
+      "slug": "robert-telfer",
+      "id": "Robert Telfer"
     }
   ],
   "edges": {
@@ -1840,7 +1839,7 @@
         "to": "edith-farrow"
       },
       {
-        "from": "robert-telfer-1907",
+        "from": "robert-telfer",
         "to": "edith-mary-kathleen-telfer"
       },
       {
@@ -2184,7 +2183,7 @@
         "to": "hazel-rose-telfer"
       },
       {
-        "from": "robert-telfer-1907",
+        "from": "robert-telfer",
         "to": "helen-telfer"
       },
       {
@@ -2268,7 +2267,7 @@
         "to": "james-farrow"
       },
       {
-        "from": "robert-telfer-1907",
+        "from": "robert-telfer",
         "to": "james-robert-telfer"
       },
       {
@@ -2816,18 +2815,6 @@
         "to": "robert-telfer-1803"
       },
       {
-        "from": "james-telfer-1761",
-        "to": "robert-telfer-1803"
-      },
-      {
-        "from": "elizabeth-beattie-1802",
-        "to": "robert-telfer-1907"
-      },
-      {
-        "from": "james-telfer-1796",
-        "to": "robert-telfer-1907"
-      },
-      {
         "from": "ann-taylor",
         "to": "robina-telfer"
       },
@@ -3186,6 +3173,14 @@
       {
         "from": "penny-telfer",
         "to": "david-mark-kenneth-telfer-merrick"
+      },
+      {
+        "from": "elizabeth-beattie-1802",
+        "to": "robert-telfer"
+      },
+      {
+        "from": "james-telfer-1796",
+        "to": "robert-telfer"
       }
     ],
     "spouseOf": [
@@ -3296,6 +3291,10 @@
       {
         "from": "elizabeth-telfer-1774",
         "to": "james-telfer-1761"
+      },
+      {
+        "from": "elizabeth-oliver",
+        "to": "robert-telfer"
       },
       {
         "from": "elizabeth-oliver",
@@ -3434,10 +3433,6 @@
         "to": "susan-telfer-1871"
       },
       {
-        "from": "robert-telfer-1907",
-        "to": "susan-telfer-1844"
-      },
-      {
         "from": "sheryle-telfer",
         "to": "timothy-telfer"
       },
@@ -3448,6 +3443,10 @@
       {
         "from": "charles-masters",
         "to": "martha-masters"
+      },
+      {
+        "from": "robert-telfer",
+        "to": "susan-telfer-1844"
       }
     ],
     "siblingOf": [
@@ -3477,7 +3476,7 @@
       },
       {
         "from": "adam-telfer-1842",
-        "to": "robert-telfer-1907"
+        "to": "robert-telfer"
       },
       {
         "from": "adam-telfer-1771",
@@ -3517,7 +3516,7 @@
       },
       {
         "from": "adam-telfer-1799",
-        "to": "robert-telfer-1803"
+        "to": "robert-telfer"
       },
       {
         "from": "adam-telfer-1799",
@@ -4289,7 +4288,7 @@
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
-        "to": "robert-telfer-1907"
+        "to": "robert-telfer"
       },
       {
         "from": "elizabeth-hannah-telfer",
@@ -4625,6 +4624,10 @@
       },
       {
         "from": "francis-telfer-1809",
+        "to": "robert-telfer"
+      },
+      {
+        "from": "francis-telfer-1809",
         "to": "william-telfer-1811"
       },
       {
@@ -4873,7 +4876,7 @@
       },
       {
         "from": "isobel-telfer",
-        "to": "robert-telfer-1803"
+        "to": "robert-telfer"
       },
       {
         "from": "isobel-telfer",
@@ -4905,6 +4908,10 @@
       },
       {
         "from": "james-telfer-1796",
+        "to": "robert-telfer"
+      },
+      {
+        "from": "james-telfer-1796",
         "to": "william-telfer-1811"
       },
       {
@@ -4913,7 +4920,7 @@
       },
       {
         "from": "james-telfer-1829",
-        "to": "robert-telfer-1907"
+        "to": "robert-telfer"
       },
       {
         "from": "james-telfer-1832",
@@ -5041,7 +5048,7 @@
       },
       {
         "from": "john-telfer-1805",
-        "to": "robert-telfer-1803"
+        "to": "robert-telfer"
       },
       {
         "from": "john-telfer-1805",
@@ -5049,7 +5056,7 @@
       },
       {
         "from": "john-telfer-1840",
-        "to": "robert-telfer-1907"
+        "to": "robert-telfer"
       },
       {
         "from": "john-telfer-1847",
@@ -5153,7 +5160,7 @@
       },
       {
         "from": "margaret-telfer-1802",
-        "to": "robert-telfer-1803"
+        "to": "robert-telfer"
       },
       {
         "from": "margaret-telfer-1802",
@@ -5222,10 +5229,6 @@
       {
         "from": "reginald-telfer",
         "to": "ruth-telfer"
-      },
-      {
-        "from": "robert-telfer-1803",
-        "to": "william-telfer-1811"
       },
       {
         "from": "shirley-telfer",
@@ -5602,6 +5605,10 @@
       {
         "from": "edwin-telfer",
         "to": "william-telfer-1880"
+      },
+      {
+        "from": "robert-telfer",
+        "to": "william-telfer-1811"
       }
     ]
   }
