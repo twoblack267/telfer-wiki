@@ -258,7 +258,7 @@
     {
       "slug": "edith-mary-kathleen-telfer",
       "id": "Edith Mary Kathleen Telfer",
-      "generation": 5
+      "generation": 4
     },
     {
       "slug": "edward-albert-parker",
@@ -428,7 +428,7 @@
     {
       "slug": "ethel-edith-telfer",
       "id": "Ethel Edith Telfer",
-      "generation": 6
+      "generation": 5
     },
     {
       "slug": "ethel-jean-telfer",
@@ -558,7 +558,7 @@
     {
       "slug": "hannah-peacock",
       "id": "Hannah Peacock",
-      "generation": 5
+      "generation": 4
     },
     {
       "slug": "harry-bunston",
@@ -573,7 +573,7 @@
     {
       "slug": "helen-telfer",
       "id": "Helen Telfer",
-      "generation": 5
+      "generation": 4
     },
     {
       "slug": "henry-hatch-dillon",
@@ -653,7 +653,7 @@
     {
       "slug": "james-robert-telfer",
       "id": "James Robert Telfer",
-      "generation": 5
+      "generation": 4
     },
     {
       "slug": "james-telfer-1761",
@@ -938,7 +938,7 @@
     {
       "slug": "leslie-robert-telfer",
       "id": "Leslie Robert Telfer",
-      "generation": 6
+      "generation": 5
     },
     {
       "slug": "levi-telfer",
@@ -1273,7 +1273,7 @@
     {
       "slug": "susan-telfer-1844",
       "id": "Susan Burton Telfer",
-      "generation": 4
+      "generation": 3
     },
     {
       "slug": "susan-lawrie",
@@ -1557,7 +1557,8 @@
     },
     {
       "slug": "robert-telfer",
-      "id": "Robert Telfer"
+      "id": "Robert Telfer",
+      "generation": 3
     }
   ],
   "edges": {
