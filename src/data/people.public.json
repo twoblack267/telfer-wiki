@@ -11527,6 +11527,72 @@
     "person_photo": null
   },
   {
+    "id": "Colin Louis Paynter",
+    "slug": "colin-paynter",
+    "first_name": "Colin",
+    "middle_name": "Louis",
+    "last_name": "Paynter",
+    "birth_year": 1919,
+    "death_year": 1942,
+    "birth_year_display": "1919",
+    "death_year_display": "1942",
+    "display_name": "Colin Louis Paynter",
+    "title": "Colin Louis Paynter (1919–1942) — WW2 Serviceman",
+    "lifespan": "1919 – 1942",
+    "generation": 7,
+    "is_living": false,
+    "body_markdown": "# Colin Louis Paynter (1919–1942)\n\n**Role:** Second World War serviceman of the Paynter (Telfer-descendant) branch — killed in action in Papua, 1942\n\n**Born:** 6 April 1919 — Quorn, South Australia\n**Died:** 29 December 1942 (aged 23) — Papua, killed in action\n**Commemorated:** Port Moresby Memorial, Port Moresby, Papua New Guinea — Panel 35\n**Service:** Private, SX10471, 2/10th Australian Infantry Battalion, Australian Army\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Branch** | PAYNTER — descent from [[Jean Telfer (1840–1892)]] and [[Richard Paynter (1838–1869)]] line, Quorn SA |\n| **⚠️ Parentage** | Not independently confirmed this pass — see Notes |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 6 Apr 1919 | Born at Quorn, South Australia |\n| 1943 (enlist) | Enlisted Australian Army, allocated service number SX10471, 2/10th Infantry Battalion |\n| 29 Dec 1942 | Killed in action in Papua (Second World War, 1939–1945) |\n| — | Commemorated at Port Moresby Memorial, Panel 35 |\n\n## Sources\n\n1. **AWM Roll of Honour:** [Colin Louis Paynter (R1700373)](https://www.awm.gov.au/collection/R1700373) — SX10471, 2/10th Bn, d. 29 Dec 1942 Papua, Port Moresby Memorial panel 35 — accessed 21 Aug 2026\n2. **AWM Portrait:** [Private Colin Louis Paynter (P10303675)](https://www.awm.gov.au/collection/P10303675) — SX10471, d. 29-12-1942 Papua — accessed 21 Aug 2026\n3. **Virtual War Memorial Australia:** PAYNTER, Colin Louis, SX10471, Private, 2/10th Infantry Bn, born 6 Apr 1919, died 29 Dec 1942 — [vwma.org.au](https://vwma.org.au/explore/people?history_events.unit_id=10&memorial_people.memorial_id=1902) — accessed 21 Aug 2026\n4. **Book:** *A Telfer Family Tree* (Supplement), p.109 — Quorn Paynter line descendant row — accessed 21 Aug 2026",
+    "roles": [
+      "Second World War serviceman of the Paynter (Telfer-descendant) branch — killed in action in Papua, 1942"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "paynter",
+      "war"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "John Ralph Paynter",
+    "slug": "john-paynter",
+    "first_name": "John",
+    "middle_name": "Ralph",
+    "last_name": "Paynter",
+    "birth_year": 1921,
+    "death_year": 1941,
+    "birth_year_display": "1921",
+    "death_year_display": "1941",
+    "display_name": "John Ralph Paynter",
+    "title": "John Ralph Paynter (1921–1941) — WW2 Serviceman",
+    "lifespan": "1921 – 1941",
+    "generation": 7,
+    "is_living": false,
+    "body_markdown": "# John Ralph Paynter (1921–1941)\n\n**Role:** Second World War serviceman of the Paynter (Telfer-descendant) branch — died of wounds in Libya, 1941\n\n**Born:** 29 January 1921 — North Quorn, South Australia\n**Died:** 4 May 1941 (aged 20) — Libya, died of wounds\n**Commemorated:** Tobruk War Cemetery, Tobruk, Libya — Panel 36\n**Service:** Private, SX6633, 2/12th Australian Infantry Battalion, Australian Army\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Branch** | PAYNTER — descent from [[Jean Telfer (1840–1892)]] and [[Richard Paynter (1838–1869)]] line, Quorn SA |\n| **⚠️ Parentage** | Not independently confirmed this pass — see Notes |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 29 Jan 1921 | Born at North Quorn, South Australia |\n| (enlist) | Enlisted Australian Army, allocated service number SX6633, 2/12th Infantry Battalion |\n| 4 May 1941 | Died of wounds in Libya (Second World War, 1939–1945) |\n| — | Commemorated at Tobruk War Cemetery, Panel 36 |\n\n## Sources\n\n1. **AWM Roll of Honour:** [John Ralph Paynter (R1700532)](https://www.awm.gov.au/collection/R1700532) — SX6633, 2/12th Bn, d. 4 May 1941 Libya, Tobruk War Cemetery panel 36 — accessed 21 Aug 2026\n2. **AWM Portrait:** [John Ralph Paynter (C2759186)](https://www.awm.gov.au/collection/C2759186) — SX6633, of Quorn SA, d. 4 May 1941 Libya — accessed 21 Aug 2026\n3. **Virtual War Memorial Australia:** PAYNTER, John Ralph, SX6633, Private, 2/12th Infantry Bn, born 29 Jan 1921, died 4 May 1941 — [vwma.org.au](https://vwma.org.au/explore/people?conflict_id=3&history_events.unit_id=813&home_town_id=242&memorial_people.memorial_id=766) — accessed 21 Aug 2026\n4. **Book:** *A Telfer Family Tree* (Supplement), p.109 — Quorn Paynter line descendant row — accessed 21 Aug 2026",
+    "roles": [
+      "Second World War serviceman of the Paynter (Telfer-descendant) branch — died of wounds in Libya, 1941"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "paynter",
+      "war"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Lilian Jean Parker",
     "slug": "lilian-parker",
     "first_name": "Lilian",
