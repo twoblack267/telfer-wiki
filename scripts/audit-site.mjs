@@ -35,8 +35,9 @@ function personName(person) {
 }
 
 // ── PII Check ──────────────────────────────────────────
-function checkPII(text, label, severity = 'high') {
+function checkPII(text, label, severity = 'high', opts = {}) {
   const issues = [];
+  const { skipAddresses = false } = opts;
   const checks = [
     // Email addresses (skip if already contains "redacted")
     { regex: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g, type: 'EMAIL', label: 'Email' },
@@ -48,14 +49,19 @@ function checkPII(text, label, severity = 'high') {
     { regex: /(?:facebook|fb)\.com\/[a-zA-Z0-9._-]+/gi, type: 'FACEBOOK', label: 'Facebook URL' },
     // Street addresses: number + street name + street suffix
     // Careful to exclude dates (e.g. "24 August" won't have a suffix)
-    { regex: /\b\d{1,4}\s+[A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+)?\s+(?:Street|St|Road|Rd|Avenue|Ave|Drive|Dr|Court|Ct|Place|Pl|Lane|Ln|Way|Boulevard|Blvd|Circuit|Cct|Parade|Pde)\b/g, type: 'ADDRESS', label: 'Street address' },
+    // NOTE: the build-time redactor (redactLivingAddresses) strips living
+    // adults' **Address:** lines, so the SOURCE scan should skip this to avoid
+    // nightly false "leak" noise. The deployed dist scan below still catches a
+    // real public leak. (skipAddresses=true on the source pass.)
+    { regex: /\b\d{1,4}\s+[A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+)?\s+(?:Street|St|Road|Rd|Avenue|Ave|Drive|Dr|Court|Ct|Place|Pl|Lane|Ln|Way|Boulevard|Blvd|Circuit|Cct|Parade|Pde)\b/g, type: 'ADDRESS', label: 'Street address', skip: skipAddresses },
   ];
 
   let body = typeof text === 'string' ? text : JSON.stringify(text);
   // Strip URLs to avoid false positives from transcript IDs, etc.
   body = body.replace(/https?:\/\/[^\s"'<>]+/g, '[URL REMOVED]');
 
-  for (const { regex, type, label } of checks) {
+  for (const { regex, type, label, skip = false } of checks) {
+    if (skip) continue;
     const matches = body.match(regex);
     if (matches) {
       // Filter out already-redacted entries
@@ -210,11 +216,16 @@ async function main() {
   console.log('\n🔒 Checking PII...');
   // Check raw JSON data
   for (const p of people) {
-    const pii = checkPII(JSON.stringify(p), personName(p), 'medium');
+    // skipAddresses: trust the build-time redactor (redactLivingAddresses strips
+    // living **Address:** lines). The source/vault legitimately holds full PII, so
+    // addresses there are NOT a public leak — only the deployed dist scan below
+    // (keepAddresses) catches a real leak.
+    const pii = checkPII(JSON.stringify(p), personName(p), 'medium', { skipAddresses: true });
     allIssues.push(...pii);
   }
 
-  // Check built HTML files
+  // Check built HTML files — this is the REAL leak catcher: what's actually
+  // deployed (skipAddresses NOT set, so ADDRESS still fires on real public leaks).
   if (existsSync(DIST)) {
     let htmlCount = 0;
     function scanDir(dir) {
