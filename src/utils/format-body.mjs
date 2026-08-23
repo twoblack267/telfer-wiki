@@ -203,11 +203,21 @@ function lookupSlug(name, people) {
 }
 
 /**
- * Generate a map of slug → display_name for relationship lookups
+ * Generate relationship sidebar link objects ({ name, slug }) for a person's
+ * parents/children/spouses/siblings arrays.
+ *
+ * Those arrays store SLUGS (e.g. "kylie-telfer"). We resolve each slug to its
+ * person so the link href is clean AND the link TEXT shows the display name
+ * (not the raw slug) — the same readable name format used everywhere else on
+ * the site. Unresolvable slugs fall back gracefully (name=slug, no link).
  */
 export function getLinksForRelationships(relationshipNames, allPeople) {
-  return relationshipNames.map((name) => {
-    const slug = lookupSlug(name, allPeople);
-    return { name, slug };
+  return relationshipNames.map((entry) => {
+    const person = allPeople.find((p) => (p.slug || "") === entry.trim());
+    if (person) return { name: person.display_name, slug: person.slug };
+    // Not a slug — try resolving a display-name/wiki-link to a slug, keep the
+    // original text as the link label.
+    const slug = lookupSlug(entry, allPeople);
+    return { name: entry, slug };
   });
 }
