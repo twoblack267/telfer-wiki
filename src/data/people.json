@@ -83,7 +83,7 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Adam Dillon",
@@ -1310,7 +1310,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Andrew Kelly Parker",
@@ -1506,7 +1506,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Ann Taylor",
@@ -1876,7 +1876,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Bertha Telfer",
@@ -2133,7 +2133,7 @@
       }
     ],
     "person_photo": "images/people/Carissa-Telfer.jpg",
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Caroline Amelia Telfer",
@@ -3010,7 +3010,6 @@
     "body_markdown": "# Daryll William Telfer\n\n**Role:** Uncle — eldest child of Murray & Shirley\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[John Robert Telfer]], [[Grantley Keith Telfer]], [[Timothy Neil Telfer (1959–?)]], [[Kathryn Mavis Telfer (1961–1965)]], [[Susan Shirley Lawrie (?–living)]] |\n\n---\n\n## Life Summary\n\nDaryll is the eldest of Murray & Shirley's six children.\n\n---",
     "body_stripped": "**Role:** Uncle — eldest child of Murray & Shirley\n\n## Family\n\n Relation  Name \n\n **Mother**  Shirley Edna Telfer (1929–2017) \n **Father**  Murray John Telfer (1924–2009) \n **Siblings**  John Robert Telfer, Grantley Keith Telfer, Timothy Neil Telfer (1959–?), Kathryn Mavis Telfer (1961–1965), Susan Shirley Lawrie (?–living) \n\n## Life Summary\n\nDaryll is the eldest of Murray & Shirley's six children.",
     "parents": [
-      "john-telfer-1805",
       "murray-telfer",
       "shirley-telfer"
     ],
@@ -3030,7 +3029,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "David Parker",
@@ -3187,16 +3186,16 @@
   {
     "id": "Dinah Flavel Paynter",
     "slug": "dinah-flavel-paynter",
-    "vault_file": "Dinah Flavel Paynter (1869–?).md",
+    "vault_file": "Dinah Flavel Paynter (1869–1958).md",
     "first_name": "Dinah",
     "middle_name": null,
     "last_name": "Flavel Paynter",
     "birth_year": 1869,
-    "death_year": null,
+    "death_year": 1958,
     "birth_year_display": "1869",
-    "death_year_display": "?",
+    "death_year_display": "1958",
     "display_name": "Dinah Flavel Paynter",
-    "title": "Dinah Flavel Paynter (1869–?)",
+    "title": "Dinah Flavel Paynter (1869–1958)",
     "tags": [
       "family",
       "non-telfer"
@@ -3205,13 +3204,31 @@
       {
         "type": "Self",
         "names": [
-          "Dinah Flavel Paynter (1869–?)"
+          "Dinah Flavel Paynter (1869–1958)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Thomas Dennis"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Richard Paynter (1838–1869)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Jean Telfer (1840–1892)"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Dinah Flavel Paynter (1869–?)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
+    "body_markdown": "# Dinah Flavel Paynter (1869–1958)\n\n> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 18 July 1869 — Finniss Point, South Australia\n**Died:** 10 June 1958 (aged 88) — Mukinbudin, Western Australia\n**Buried:** Mukinbudin Cemetery, WA\n\n## Family\n\n- **Father:** Richard Paynter (1838–1869) — school teacher at St Kitt's Creek\n- **Mother:** Jean (Telfer) Paynter, later Parker (1840–1892)\n- **Spouse:** Thomas Dennis — m. 2 July 1895, Appila, SA\n- **Children:** Lavinia Daisy (→Williams), Dalby Cecil (1897), Amy Pearl (→Dempster), William (1900), Kathleen Lydia (→Gray), Gordon Percival (1904), Jean Telfer Dennis (1906), Hamilton Hobart (1908–1974), Mary Evelyn (1914)\n\n## Life Summary\n\nDinah was the youngest child of Richard Paynter and Jean Telfer, born posthumously in July 1869 (her father died in February 1869). She was named for her maternal grandmother, Dinah Flavel. She married Thomas Dennis at Appila, SA in July 1895, and the family later moved to Mukinbudin, Western Australia, where she died in June 1958 aged 88. *(Death year 1958 resolves the previously blank end-date in the tree.)*\n\n## Sources\n\n1. **OzBurials (Mukinbudin Cemetery, WA):** [headstone transcription](http://www.ozburials.com/CemsWA/Mukinbudin/mukinbudin.htm) — \"DENNIS, Diana FlaveL . 11 June 1958 . Aged 88 years\" (garbled transcription of Dinah Flavel); son Hamilton Hobart on same page — accessed 24 Aug 2026\n2. **WikiTree:** [Paynter-1379](https://www.wikitree.com/wiki/Paynter-1379) — Dinah Flavel (Paynter) Dennis, b. 18 Jul 1869 Finniss Point SA, d. 10 Jun 1958 Mukinbudin WA; m. Thomas Dennis 2 Jul 1895 Appila — accessed 24 Aug 2026",
+    "body_stripped": "> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 18 July 1869 — Finniss Point, South Australia\n**Died:** 10 June 1958 (aged 88) — Mukinbudin, Western Australia\n**Buried:** Mukinbudin Cemetery, WA\n\n## Family\n\n- **Father:** Richard Paynter (1838–1869) — school teacher at St Kitt's Creek\n- **Mother:** Jean (Telfer) Paynter, later Parker (1840–1892)\n- **Spouse:** Thomas Dennis — m. 2 July 1895, Appila, SA\n- **Children:** Lavinia Daisy (→Williams), Dal",
     "parents": [
       "jean-telfer-1840",
       "richard-paynter"
@@ -3225,7 +3242,7 @@
     ],
     "spouses": [],
     "is_living": false,
-    "lifespan": "1869 – ?",
+    "lifespan": "1869 – 1958",
     "related_trees": [
       "telfer-tree"
     ],
@@ -4625,16 +4642,16 @@
   {
     "id": "Elizabeth Paynter",
     "slug": "elizabeth-paynter",
-    "vault_file": "Elizabeth Paynter (1864–?).md",
+    "vault_file": "Elizabeth Paynter (1864–1928).md",
     "first_name": "Elizabeth",
     "middle_name": null,
     "last_name": "Paynter",
     "birth_year": 1864,
-    "death_year": null,
+    "death_year": 1928,
     "birth_year_display": "1864",
-    "death_year_display": "?",
+    "death_year_display": "1928",
     "display_name": "Elizabeth Paynter",
-    "title": "Elizabeth Paynter (1864–?)",
+    "title": "Elizabeth Paynter (1864–1928)",
     "tags": [
       "family",
       "non-telfer"
@@ -4643,13 +4660,31 @@
       {
         "type": "Self",
         "names": [
-          "Elizabeth Paynter (1864–?)"
+          "Elizabeth Paynter (1864–1928)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "George Langford (1856–1928)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Richard Paynter (1838–1869)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Jean Telfer (1840–1892)"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Elizabeth Paynter (1864–?)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
+    "body_markdown": "# Elizabeth Paynter (1864–1928)\n\n> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 31 December 1864 — Chain of Ponds / Kersbrook, South Australia\n**Died:** 14 December 1928 — Strathalbyn, South Australia\n**Buried:** Strathalbyn Cemetery, SA\n\n## Family\n\n- **Father:** Richard Paynter (1838–1869) — school teacher at St Kitt's Creek\n- **Mother:** Jean (Telfer) Paynter, later Parker (1840–1892)\n- **Spouse:** George Langford (1856–1928) — married around 1884\n\n## Life Summary\n\nElizabeth was the fourth child of Richard Paynter and Jean Telfer, born at Chain of Ponds / Kersbrook in December 1864. She married George Langford and the couple lived around Strathalbyn, South Australia. She died on 14 December 1928 and is buried at Strathalbyn Cemetery; her husband George (1856–1928) is buried on the same cemetery page. *(Death year 1928 resolves the previously blank end-date in the tree.)*\n\n## Sources\n\n1. **OzBurials (Strathalbyn Cemetery, SA):** [headstone transcription](http://www.ozburials.com/CemsSA/strathalbyn.htm) — \"LANGFORD, Elizabeth . 1864–1928\" (and George 1856–1928 on same page) — accessed 24 Aug 2026\n2. **WikiTree:** [Paynter-1369](https://www.wikitree.com/wiki/Paynter-1369) — b. 31 Dec 1864 Kersbrook SA, d. 14 Dec 1928 Strathalbyn SA — accessed 24 Aug 2026",
+    "body_stripped": "> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 31 December 1864 — Chain of Ponds / Kersbrook, South Australia\n**Died:** 14 December 1928 — Strathalbyn, South Australia\n**Buried:** Strathalbyn Cemetery, SA\n\n## Family\n\n- **Father:** Richard Paynter (1838–1869) — school teacher at St Kitt's Creek\n- **Mother:** Jean (Telfer) Paynter, later Parker (1840–1892)\n- **Spouse:** George Langford (1856–1928) — married around 1884\n\n## Life Summary\n\nElizabeth ",
     "parents": [
       "jean-telfer-1840",
       "richard-paynter"
@@ -4663,7 +4698,7 @@
     ],
     "spouses": [],
     "is_living": false,
-    "lifespan": "1864 – ?",
+    "lifespan": "1864 – 1928",
     "related_trees": [
       "telfer-tree"
     ],
@@ -7539,7 +7574,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "Hannah Baker",
@@ -10047,7 +10082,7 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Jean Telfer",
@@ -10336,8 +10371,8 @@
           "Thomas Paynter (1859–1946)",
           "Mary Jane Paynter (1861–1945)",
           "Francis Telfer Paynter (1862–?)",
-          "Elizabeth Paynter (1864–?)",
-          "Dinah Flavel Paynter (1869–?)",
+          "Elizabeth Paynter (1864–1928)",
+          "Dinah Flavel Paynter (1869–1958)",
           "Margaret Eliza Parker (1872–1938)",
           "Frederick George Parker (1874–1946)",
           "Annie Parker (1875–1895)",
@@ -10712,7 +10747,7 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "John Charles Dillon",
@@ -11225,7 +11260,6 @@
     "body_markdown": "# John Robert Telfer\n\n**Role:** Uncle (Tim's brother)\n**Residence:** Brisbane, Queensland (from Ungarra, South Australia)\n**Education:** Cummins Area School\n**Occupation:** Runs Telfer Mini Digger (earthmoving/mini digger business)\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | [[Robyn Telfer]] (wife) |\n| **Children** | [[Angela Telfer]] (adopted), [[Peter Telfer]] (adopted), [[Carissa Telfer (?–2023)]] (adopted, deceased) |\n| **Siblings** | [[Daryll William Telfer]], [[Grantley Keith Telfer]], [[Timothy Neil Telfer (1959–?)]], [[Kathryn Mavis Telfer (1961–1965)]], [[Susan Shirley Lawrie (?–living)]] |\n\n---\n\n## Life Summary\n\nJohn is one of Tim's uncles — brother to Tim, Grantley, Daryll, Kathryn, and Sue. Runs **Telfer Mini Digger**, an earthmoving/mini digger service in the Brisbane area.\n\n---",
     "body_stripped": "**Role:** Uncle (Tim's brother)\n**Residence:** Brisbane, Queensland (from Ungarra, South Australia)\n**Education:** Cummins Area School\n**Occupation:** Runs Telfer Mini Digger (earthmoving/mini digger business)\n\n## Family\n\n Relation  Name \n\n **Mother**  Shirley Edna Telfer (1929–2017) \n **Father**  Murray John Telfer (1924–2009) \n **Spouse**  Robyn Telfer (wife) \n **Children**  Angela Telfer (adopted), Peter Telfer (adopted), Carissa Telfer (?–2023) (adopted, deceased) \n **Siblings**  Daryll Will",
     "parents": [
-      "john-telfer-1805",
       "murray-telfer",
       "shirley-telfer"
     ],
@@ -11251,7 +11285,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "John Roland Telfer",
@@ -11458,20 +11492,6 @@
           "Francis Telfer (1809–1895)",
           "William Telfer (1811–1881)"
         ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "Daryll William Telfer",
-          "John Robert Telfer",
-          "Kathryn Mavis Telfer (1961–1965)"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "Shirley Telfer (living)"
-        ]
       }
     ],
     "roles": [
@@ -11483,11 +11503,7 @@
       "elizabeth-telfer-1774",
       "james-telfer-1761"
     ],
-    "children": [
-      "daryll-telfer",
-      "john-telfer-robert",
-      "kathryn-telfer"
-    ],
+    "children": [],
     "siblings": [
       "adam-telfer-1799",
       "francis-telfer-1809",
@@ -11497,9 +11513,7 @@
       "robert-telfer",
       "william-telfer-1811"
     ],
-    "spouses": [
-      "shirley-telfer"
-    ],
+    "spouses": [],
     "is_living": false,
     "lifespan": "1805 – 1839",
     "related_trees": [
@@ -11884,7 +11898,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Joseph Farrow",
@@ -12317,7 +12331,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Kathryn Mavis Telfer",
@@ -12379,7 +12393,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "Kenneth Telfer",
@@ -12599,7 +12613,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Kylie Isabella Telfer",
@@ -12683,7 +12697,7 @@
       }
     ],
     "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Lauren Maree Ivory",
@@ -12761,7 +12775,7 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Leonard Arthur Dance",
@@ -12928,7 +12942,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 9
   },
   {
     "id": "Lilian Daisy Dawson",
@@ -14279,7 +14293,7 @@
       }
     ],
     "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Mark Telfer",
@@ -14638,6 +14652,12 @@
         ]
       },
       {
+        "type": "Spouse",
+        "names": [
+          "Wilhelm Seebohm (1833–1907)"
+        ]
+      },
+      {
         "type": "Children",
         "names": [
           "Julia Matilda Seebohm (1876–1939)"
@@ -14645,14 +14665,16 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Mary Anne McIntyre (1836–1913)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
+    "body_markdown": "# Mary Anne McIntyre (1836–1913)\n\n> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** about 1836 — Glasgow, Scotland\n**Died:** 17 January 1913 (death place not fully confirmed by public records)\n**Buried:** Tantanoola Cemetery, SA (with husband)\n\n## Family\n\n- **Spouse:** Wilhelm Seebohm (1833–1907) — m. 1858\n- **Children:** Julia Matilda \"Tilley\" Seebohm (1876–1939) — married into the Telfer family; also William Alexander (1858–1944), Bessie McPherson (1860–1941), Mary Ashby (1863–1941), Anabella Laslett (1868–1925), Peter Colin (1870–1949), Jessie Davis (1873–1942)\n\n## Life Summary\n\nMary Anne (Ann) McIntyre was born about 1836 in Glasgow, Scotland. She married Wilhelm Seebohm in 1858, and they raised a large family of eleven children in South Australia, settling as farmers at Tantanoola. Their tenth child, Julia Matilda \"Tilley\" Seebohm (born 1876), connected the Seebohm family to the Telfers. *(Name recorded variously as \"Mary Anne\" and \"Mary Ann\".)*\n\n## Sources\n\n1. **Find A Grave:** [William Seebohm — memorial 186971060](https://www.findagrave.com/memorial/186971060/william-seebohm) — family link \"Mary Ann McIntyre Seebohm 1836–1913\" — accessed 24 Aug 2026\n2. **WikiTree:** [Seebohm-52](https://www.wikitree.com/wiki/Seebohm-52) — Mary Anne b. abt 1836 Glasgow, d. 17 Jan 1913 — accessed 24 Aug 2026\n3. **MyHeritage:** [William Seebohm](https://www.myheritage.com/names/william_seebohm) — marriage to Mary Ann b. McIntyre 1858 — accessed 24 Aug 2026",
+    "body_stripped": "> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** about 1836 — Glasgow, Scotland\n**Died:** 17 January 1913 (death place not fully confirmed by public records)\n**Buried:** Tantanoola Cemetery, SA (with husband)\n\n## Family\n\n- **Spouse:** Wilhelm Seebohm (1833–1907) — m. 1858\n- **Children:** Julia Matilda \"Tilley\" Seebohm (1876–1939) — married into the Telfer family; also William Alexander (1858–1944), Bessie McPherson (1860–1941), Mary Ashby (1863–19",
     "parents": [],
     "children": [
       "julia-matilda-seebohm"
     ],
     "siblings": [],
-    "spouses": [],
+    "spouses": [
+      "wilhelm-seebohm"
+    ],
     "is_living": false,
     "lifespan": "1836 – 1913",
     "related_trees": [
@@ -14737,11 +14759,29 @@
         "names": [
           "Mary Jane Paynter (1861–1945)"
         ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "John Watson"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Richard Paynter (1838–1869)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Jean Telfer (1840–1892)"
+        ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Mary Jane Paynter (1861–1945)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
+    "body_markdown": "# Mary Jane Paynter (1861–1945)\n\n> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 30 June 1861 — Koppio, South Australia\n**Died:** 14 July 1945 — Preston, Victoria\n**Buried:** Fawkner Cemetery, Melbourne, Victoria\n\n## Family\n\n- **Father:** Richard Paynter (1838–1869) — school teacher at St Kitt's Creek\n- **Mother:** Jean (Telfer) Paynter, later Parker (1840–1892)\n- **Spouse:** John Watson — m. 1 March 1882\n\n## Life Summary\n\nMary Jane was the second child of Richard Paynter and Jean Telfer, born at Koppio, South Australia in June 1861. She married John Watson on 1 March 1882. She died on 14 July 1945 at Preston, Victoria and is buried at Fawkner Cemetery, Melbourne. *(Death year 1945 matches the existing tree data.)*\n\n## Sources\n\n1. **WikiTree:** [Paynter-716](https://www.wikitree.com/wiki/Paynter-716) — Mary Jane Paynter, b. 30 Jun 1861 Koppio SA, d. 14 Jul 1945 Preston VIC — accessed 24 Aug 2026\n2. **FamilySearch:** [Mary Jane Paynter 1861–1945](https://ancestors.familysearch.org/en/KDWD-NJP/mary-jane-paynter-1861-1945) — accessed 24 Aug 2026\n3. **Book:** Donald Telfer, *From the Borders to the Bush* — b. 30 Jun 1861 Koppio; m. John Watson 1 Mar 1882; d. 14 Jul 1945 Preston VIC; buried Fawkner Cemetery",
+    "body_stripped": "> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 30 June 1861 — Koppio, South Australia\n**Died:** 14 July 1945 — Preston, Victoria\n**Buried:** Fawkner Cemetery, Melbourne, Victoria\n\n## Family\n\n- **Father:** Richard Paynter (1838–1869) — school teacher at St Kitt's Creek\n- **Mother:** Jean (Telfer) Paynter, later Parker (1840–1892)\n- **Spouse:** John Watson — m. 1 March 1882\n\n## Life Summary\n\nMary Jane was the second child of Richard Paynter and Je",
     "parents": [
       "jean-telfer-1840",
       "richard-paynter"
@@ -14753,7 +14793,9 @@
       "francis-telfer-paynter",
       "thomas-paynter"
     ],
-    "spouses": [],
+    "spouses": [
+      "john-watson"
+    ],
     "is_living": false,
     "lifespan": "1861 – 1945",
     "related_trees": [
@@ -14967,7 +15009,7 @@
       }
     ],
     "person_photo": "images/people/Mitchell-Telfer---16th-Birthday.jpg",
-    "generation": 6
+    "generation": 9
   },
   {
     "id": "Murray John Telfer",
@@ -15062,7 +15104,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 6
   },
   {
     "id": "Nick Telfer",
@@ -15130,7 +15172,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 8
   },
   {
     "id": "Paul Ivory",
@@ -15202,7 +15244,7 @@
       }
     ],
     "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "Penny Telfer",
@@ -15636,8 +15678,8 @@
           "Thomas Paynter (1859–1946)",
           "Mary Jane Paynter (1861–1945)",
           "Francis Telfer Paynter (1862–?)",
-          "Elizabeth Paynter (1864–?)",
-          "Dinah Flavel Paynter (1869–?)"
+          "Elizabeth Paynter (1864–1928)",
+          "Dinah Flavel Paynter (1869–1958)"
         ]
       }
     ],
@@ -16251,7 +16293,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "Ruth Penna",
@@ -16671,7 +16713,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "Shirley Edna Telfer",
@@ -16737,7 +16779,6 @@
       "william-humphrey-parker-1926"
     ],
     "spouses": [
-      "john-telfer-1805",
       "murray-telfer"
     ],
     "is_living": false,
@@ -16747,7 +16788,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 6
   },
   {
     "id": "Sophia March",
@@ -17239,7 +17280,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "Susan Telfer",
@@ -17489,11 +17530,29 @@
         "names": [
           "Thomas Paynter (1859–1946)"
         ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Elizabeth Jane Liebich (1859–1919)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Richard Paynter (1838–1869)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Jean Telfer (1840–1892)"
+        ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Thomas Paynter (1859–1946)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
+    "body_markdown": "# Thomas Paynter (1859–1946)\n\n> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 22 December 1859 — Talunga / Ward Farm, near Kersbrook, South Australia\n**Died:** 11 May 1946 (aged 86) — Peterborough, South Australia\n**Buried:** Peterborough Cemetery, SA\n\n## Family\n\n- **Father:** Richard Paynter (1838–1869) — school teacher at St Kitt's Creek\n- **Mother:** Jean (Telfer) Paynter, later Parker (1840–1892)\n- **Spouse:** Elizabeth Jane Liebich (1859–1919) — m. 1 December 1881, Tarcowie, SA\n- **Children:** Richard William John (1882–1960), Lillian Ellen Jayne (→Hatchard), Gustav Francis George, Ethel Emily Elizabeth (→Flavel), Dinah Alice Mary (→Mundy), Agnes Letitia May Rose (→Hucks), Thomas Frederick Edward (1903–1940), Helena Florence Daisy (→Hill)\n\n## Life Summary\n\nThomas was the eldest child of Richard Paynter and Jean Telfer, born at Ward Farm near Kersbrook in the Adelaide Hills in 1859. He farmed at Ward Farm (Kersbrook) and later at Arden Vale in the Quorn/Peterborough region of South Australia. He married Elizabeth Jane Liebich at Tarcowie on 1 December 1881. He died on 11 May 1946, aged 86, at Peterborough and is buried in Peterborough Cemetery. *(Family details per Find A Grave headstone and the family history \"From the Borders to the Bush\").*\n\n## Sources\n\n1. **Find A Grave:** [Thomas Paynter — memorial 195865401](https://www.findagrave.com/memorial/195865401/thomas-paynter) — b. 22 Dec 1859, d. 11 May 1946, buried Peterborough Cemetery; wife Elizabeth Jane Liebich 1859–1919; family list — accessed 24 Aug 2026\n2. **WikiTree:** [Paynter-1281](https://www.wikitree.com/wiki/Paynter-1281) — b. 22 Dec 1859 Talunga SA, d. 1946 — accessed 24 Aug 2026\n3. **Book:** Donald Telfer, *From the Borders to the Bush* — b. 22 Dec 1859 Ward Farm near Kersbrook; m. Elizabeth Liebich 1 Dec 1881 Tarcowie; d. 1946 Peterborough",
+    "body_stripped": "> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 22 December 1859 — Talunga / Ward Farm, near Kersbrook, South Australia\n**Died:** 11 May 1946 (aged 86) — Peterborough, South Australia\n**Buried:** Peterborough Cemetery, SA\n\n## Family\n\n- **Father:** Richard Paynter (1838–1869) — school teacher at St Kitt's Creek\n- **Mother:** Jean (Telfer) Paynter, later Parker (1840–1892)\n- **Spouse:** Elizabeth Jane Liebich (1859–1919) — m. 1 December 1881, Tarco",
     "parents": [
       "jean-telfer-1840",
       "richard-paynter"
@@ -17619,7 +17678,7 @@
       }
     ],
     "person_photo": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
-    "generation": 4
+    "generation": 7
   },
   {
     "id": "Vera Dillon",
@@ -17988,6 +18047,12 @@
         ]
       },
       {
+        "type": "Spouse",
+        "names": [
+          "Mary Anne McIntyre (1836–1913)"
+        ]
+      },
+      {
         "type": "Children",
         "names": [
           "Julia Matilda Seebohm (1876–1939)"
@@ -17995,14 +18060,16 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Wilhelm Seebohm (1833–1907)\n\n> Stub entry — linked from the Telfer family tree.",
-    "body_stripped": "> Stub entry — linked from the Telfer family tree.",
+    "body_markdown": "# Wilhelm Seebohm (1833–1907)\n\n> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 26 September 1833 — Altona, Hamburg, Germany\n**Died:** 26 December 1907 (aged 74) — Tantanoola, South Australia\n**Buried:** Tantanoola Cemetery, SA\n\n## Family\n\n- **Spouse:** Mary Anne (Ann) McIntyre (1836–1913) — m. 1858\n- **Children:** Julia Matilda \"Tilley\" Seebohm (1876–1939) — married into the Telfer family; also William Alexander (1858–1944), Bessie McPherson (1860–1941), Mary Ashby (1863–1941), Anabella Laslett (1868–1925), Peter Colin (1870–1949), Jessie Davis (1873–1942)\n\n## Life Summary\n\nWilhelm Seebohm was born in Altona, Hamburg in 1833. He married Mary Anne McIntyre in 1858, and the family settled as farmers at Tantanoola in South Australia. He had eleven children; the tenth was Julia Matilda \"Tilley\" (born 18 October 1876), whose descendants continued into the Telfer family. He died on 26 December 1907 at Tantanoola, aged 74, and is buried at Tantanoola Cemetery. *(Details per Find A Grave headstone and family-tree sources.)*\n\n## Sources\n\n1. **Find A Grave:** [William Seebohm — memorial 186971060](https://www.findagrave.com/memorial/186971060/william-seebohm) — b. 26 Sep 1833 Altona, Germany, d. 26 Dec 1907 Tantanoola SA, buried Tantanoola Cemetery; family list incl. wife Mary Ann McIntyre Seebohm 1836–1913 — accessed 24 Aug 2026\n2. **WikiTree:** [Seebohm-52](https://www.wikitree.com/wiki/Seebohm-52) — Seebohm, b. abt 26 Sep 1833 Altona — accessed 24 Aug 2026\n3. **Find A Grave:** [Julia Matilda Telfer — memorial 186972473](https://www.findagrave.com/memorial/186972473/julia_matilda-telfer) — parents William 1833–1907 & Mary Ann McIntyre — accessed 24 Aug 2026",
+    "body_stripped": "> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 26 September 1833 — Altona, Hamburg, Germany\n**Died:** 26 December 1907 (aged 74) — Tantanoola, South Australia\n**Buried:** Tantanoola Cemetery, SA\n\n## Family\n\n- **Spouse:** Mary Anne (Ann) McIntyre (1836–1913) — m. 1858\n- **Children:** Julia Matilda \"Tilley\" Seebohm (1876–1939) — married into the Telfer family; also William Alexander (1858–1944), Bessie McPherson (1860–1941), Mary Ashby (1863–1941)",
     "parents": [],
     "children": [
       "julia-matilda-seebohm"
     ],
     "siblings": [],
-    "spouses": [],
+    "spouses": [
+      "mary-anne-mcintyre"
+    ],
     "is_living": false,
     "lifespan": "1833 – 1907",
     "related_trees": [
@@ -18885,7 +18952,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 9
   },
   {
     "id": "Charles Masters",
@@ -21366,7 +21433,9 @@
     "parents": [],
     "children": [],
     "siblings": [],
-    "spouses": [],
+    "spouses": [
+      "mary-jane-paynter"
+    ],
     "is_living": false,
     "lifespan": "1916 – 1943",
     "related_trees": [
@@ -21374,7 +21443,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 5
   },
   {
     "id": "Joseph Watson",
