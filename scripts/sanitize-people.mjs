@@ -353,6 +353,41 @@ function guardMinorBio(text) {
   return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
 }
 
+/**
+ * Redact exact street addresses from a LIVING person's public bio while leaving
+ * suburban/town/state/region intact.
+ *
+ * Owner decision (Mark, Aug 2026): for adults, schools and workplaces are fine
+ * to publish — the one thing we must NOT post is an EXACT street address.
+ * Minors (<18) are handled separately by guardMinorBio (schools + workplaces +
+ * addresses). Deceased people are never touched.
+ *
+ * SAFETY: we do NOT regex over free prose (too risky — dates like "28 August"
+ * and years get misread as addresses). Instead we drop whole lines that are
+ * EXPLICITLY labelled as an address, using the same line-level pattern
+ * guardMinorBio already trusts. This is deterministic and can never mangle a
+ * biography sentence. Suburbs/towns/states ("Redcliffe, Queensland") are kept.
+ */
+function redactLivingAddresses(text) {
+  if (!text) return text;
+  const out = [];
+  for (const raw of text.split('\n')) {
+    const line = raw;
+    const trimmed = line.replace(/^\s*[-*+]\s*/, '').trim();
+    // Drop a whole line that explicitly labels a physical address.
+    // Matches: **Address:** 41 Brookfield Rd, Kenmore 4069
+    //          - **Address:** 1 Chrystal St, Kippa Ring 4020
+    //          Address: PO Box 1234  /  Postal address: ...
+    // Does NOT touch suburb/state plain text or marriage "at [venue]".
+    if (/^\*\*\s*(Address|Postal\s*Address)\b/i.test(trimmed) ||
+        /^Address\s*:/i.test(trimmed)) {
+      continue;
+    }
+    out.push(line);
+  }
+  return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+
 // ─── Build Public Output ────────────────────────────────────────────────────
 
 const publicPeople = [];
@@ -388,6 +423,15 @@ for (const person of people) {
     if (age < 18 && publicPerson.body_markdown) {
       publicPerson.body_markdown = guardMinorBio(publicPerson.body_markdown);
     }
+  }
+
+  // ── Living-ADDRESS gate (owner decision, Aug 2026): for adults, schools and
+  //    workplaces are fine to publish — but NO EXACT STREET ADDRESS anywhere on
+  //    a living person (suburb/town/state stays). Deceased people keep records.
+  //    Runs for every living person (adult or minor) as a second pass after the
+  //    minor gate, so any street address the minor gate missed is also caught.
+  if (person.is_living && publicPerson.body_markdown) {
+    publicPerson.body_markdown = redactLivingAddresses(publicPerson.body_markdown);
   }
 
   publicPeople.push(publicPerson);
