@@ -202,6 +202,38 @@ else
   WARN="${WARN} audit"
 fi
 
+# ── 4b. TRUST CHECK (content-accuracy sentry) ────────────────
+# Complements the link guard: catches CONTENT problems the link-check can't.
+# Derives a per-person trust level (✅ sourced / ⚠️ partial / ❓ unverified) from
+# what the data ACTUALLY contains — never fabricating or guessing answers.
+#   - Stats feed the nightly summary + ledger so the trend is visible.
+#   - A hard `alert` (burden imbalance) is a WARN-level flag (visible to Skippy +
+#     Mark) but does NOT block the push — unverified ancestors aren't broken code.
+#     Mechanical failures (build/link-guard) still block; trust gaps need research,
+#     not a blocked deploy.
+T_SRC=0
+T_PART=0
+T_UNV=0
+T_ALERT=""
+echo "[4/7→4b] Running content-trust check..."
+if node scripts/trust-classify.mjs > "$RUN_DIR/nw-trust.json" 2>&1; then
+  T_SRC=$(python3 -c "import json;d=json.load(open('$RUN_DIR/nw-trust.json'));print(d.get('sourced',0))" 2>/dev/null || echo 0)
+  T_PART=$(python3 -c "import json;d=json.load(open('$RUN_DIR/nw-trust.json'));print(d.get('partial',0))" 2>/dev/null || echo 0)
+  T_UNV=$(python3 -c "import json;d=json.load(open('$RUN_DIR/nw-trust.json'));print(d.get('unverified',0))" 2>/dev/null || echo 0)
+  T_ALERT=$(python3 -c "import json;d=json.load(open('$RUN_DIR/nw-trust.json'));print(d.get('alert') or '')" 2>/dev/null || echo "")
+  echo "  ✅ Trust check: ✅$T_SRC sourced · ⚠️ $T_PART partial · ❓ $T_UNV unverified"
+  if [ -n "$T_ALERT" ]; then
+    echo "  🟡 TRUST ALERT: $T_ALERT — surfaced for Skippy/Mark review (non-blocking)"
+    WARN="${WARN} Trust-alert: $T_ALERT"
+  else
+    # Non-alert normal runs still surface the trend so content-accuracy is visible.
+    echo "  ℹ️  Content-trust trend logged."
+  fi
+else
+  echo "  🟡 Trust check errored (non-fatal)"
+  WARN="${WARN} trust-err"
+fi
+
 # ── 5. Live 404 scan (DEFERRED to step 8 — runs AFTER push + redeploy) ──
 # IMPORTANT: the live 404 scan MUST run after the new build is pushed and the
 # redeploy has settled. If it runs here (pre-push) it scans the stale live site
@@ -230,6 +262,7 @@ if node scripts/evolution-ledger.mjs record \
     --score "$SCORE" --people "$PROFILES" --trees "$TREES" \
     --high "$HIGH" --medium "$MED" --low "$LOW" \
     --duplicates "$DUP_N" --broken "$BROKEN" \
+    --trust-sourced "$T_SRC" --trust-partial "$T_PART" --trust-unverified "$T_UNV" \
     --summary "$SUMMARY"; then
   echo "  ✅ Ledger updated"
 else

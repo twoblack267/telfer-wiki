@@ -42,7 +42,8 @@ function readArgs() {
   for (let i = 1; i < args.length; i++) {
     const k = args[i];
     if (k.startsWith('--')) {
-      const key = k.slice(2);
+      const rawKey = k.slice(2);
+      const key = rawKey.replace(/-/g, '_'); // normalize --trust-sourced -> trust_sourced
       const val = args[i + 1];
       if (val !== undefined && !val.startsWith('--')) {
         out.opts[key] = val;
@@ -69,12 +70,22 @@ function record(day, opts) {
     duplicates: Number(opts.duplicates ?? 0),
     broken: Number(opts.broken ?? 0),
   };
+  // Content-trust trend (✅ sourced / ⚠️ partial / ❓ unverified) — optional,
+  // recorded so the "how much do we actually KNOW" number is trackable over time.
+  const trust = {
+    sourced: opts.trust_sourced !== undefined ? Number(opts.trust_sourced) : null,
+    partial: opts.trust_partial !== undefined ? Number(opts.trust_partial) : null,
+    unverified: opts.trust_unverified !== undefined ? Number(opts.trust_unverified) : null,
+  };
   const summary = opts.summary ?? 'Night Watch ran.';
+  const trustLine = (trust.sourced !== null)
+    ? `\n- **Content trust:** ✅${trust.sourced} sourced · ⚠️ ${trust.partial} partial · ❓ ${trust.unverified} unverified`
+    : '';
 
   const entry = `## ${isoDateTime()}
 - **Score:** ${score}/10
 - **Profiles:** ${people} · **Trees:** ${trees}
-- **Issues:** 🔴${issues.high} 🟡${issues.medium} 🟢${issues.low} · Duplicates: ${issues.duplicates} · Broken links: ${issues.broken}
+- **Issues:** 🔴${issues.high} 🟡${issues.medium} 🟢${issues.low} · Duplicates: ${issues.duplicates} · Broken links: ${issues.broken}${trustLine}
 - **Notes:** ${summary}
 
 `;
