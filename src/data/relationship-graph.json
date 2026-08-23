@@ -196,11 +196,6 @@
       "generation": 5
     },
     {
-      "slug": "clara-blanche-lane",
-      "id": "Clara Blanche Lane",
-      "generation": 5
-    },
-    {
       "slug": "clarice-may-telfer",
       "id": "Clarice May Telfer",
       "generation": 6
@@ -1562,11 +1557,38 @@
     },
     {
       "slug": "colin-paynter",
-      "id": "Colin Louis Paynter"
+      "id": "Colin Louis Paynter",
+      "generation": 7
     },
     {
       "slug": "john-paynter",
-      "id": "John Ralph Paynter"
+      "id": "John Ralph Paynter",
+      "generation": 7
+    },
+    {
+      "slug": "clara-blanche-telfer",
+      "id": "Clara Blanche Telfer",
+      "generation": 5
+    },
+    {
+      "slug": "john-watson",
+      "id": "John Hobart Watson",
+      "generation": 7
+    },
+    {
+      "slug": "joseph-watson",
+      "id": "Joseph Watson",
+      "generation": 6
+    },
+    {
+      "slug": "lancelot-watson",
+      "id": "Lancelot Hobart Watson",
+      "generation": 6
+    },
+    {
+      "slug": "richard-watson",
+      "id": "Richard Lancelot Watson",
+      "generation": 7
     }
   ],
   "edges": {
@@ -1774,14 +1796,6 @@
       {
         "from": "elizabeth-hannah-telfer",
         "to": "charles-farrow-jr"
-      },
-      {
-        "from": "john-telfer-1840",
-        "to": "clara-blanche-lane"
-      },
-      {
-        "from": "martha-henstridge",
-        "to": "clara-blanche-lane"
       },
       {
         "from": "amy-telfer-1884",
@@ -3190,6 +3204,14 @@
       {
         "from": "james-telfer-1796",
         "to": "robert-telfer"
+      },
+      {
+        "from": "john-telfer-1840",
+        "to": "clara-blanche-telfer"
+      },
+      {
+        "from": "martha-henstridge",
+        "to": "clara-blanche-telfer"
       }
     ],
     "spouseOf": [
@@ -3573,7 +3595,7 @@
       },
       {
         "from": "alan-telfer",
-        "to": "clara-blanche-lane"
+        "to": "clara-blanche-telfer"
       },
       {
         "from": "alan-telfer",
@@ -3942,46 +3964,6 @@
       {
         "from": "charles-farrow-jr",
         "to": "mary-bayes-farrow"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "colin-telfer"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "douglas-telfer"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "isabella-telfer"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "john-telfer-1882"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "lindsay-telfer"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "maifie-telfer"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "maria-clara-telfer"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "marian-cornish"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "mark-telfer-1877"
-      },
-      {
-        "from": "clara-blanche-lane",
-        "to": "robert-telfer-1886"
       },
       {
         "from": "clarice-may-telfer",
@@ -5618,6 +5600,46 @@
       {
         "from": "robert-telfer",
         "to": "william-telfer-1811"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "colin-telfer"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "douglas-telfer"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "isabella-telfer"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "john-telfer-1882"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "lindsay-telfer"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "maifie-telfer"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "maria-clara-telfer"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "marian-cornish"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "mark-telfer-1877"
+      },
+      {
+        "from": "clara-blanche-telfer",
+        "to": "robert-telfer-1886"
       }
     ]
   }
