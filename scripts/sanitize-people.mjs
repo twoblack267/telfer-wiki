@@ -139,6 +139,7 @@ const PUBLIC_FIELDS = [
   'birth_year_display',
   'death_year_display',
   'display_name',
+  'aliases',          // alternate names a wiki-link may resolve to (e.g. "David Telfer")
   'title',
   'lifespan',
   'generation',

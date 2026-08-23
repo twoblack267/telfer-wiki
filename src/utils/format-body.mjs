@@ -162,6 +162,14 @@ function lookupSlug(name, people) {
     return exactMatches[0].slug;
   }
 
+  // Check aliases: a profile may carry alternate names that a wiki-link should
+  // resolve to (e.g. "David Telfer" → profile "David Mark Kenneth Telfer-Merrick").
+  // An alias is essentially another exact name, so match clean (post-trim) against it.
+  const aliasMatches = people.filter(p =>
+    Array.isArray(p.aliases) && p.aliases.some(a => a && a.toLowerCase() === clean)
+  );
+  if (aliasMatches.length === 1) return aliasMatches[0].slug;
+
   // Try first+last match
   const [first, ...rest] = clean.split(/\s+/);
   const last = rest.pop() || "";
