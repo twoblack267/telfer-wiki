@@ -1592,7 +1592,16 @@
     },
     {
       "slug": "charles-telfer",
-      "id": "Charles Telfer"
+      "id": "Charles Telfer",
+      "generation": 5
+    },
+    {
+      "slug": "kenneth-gregory-virgen",
+      "id": "Kenneth Gregory Virgen"
+    },
+    {
+      "slug": "noela-pauline-virgen",
+      "id": "Noela Pauline Virgen"
     }
   ],
   "edges": {
@@ -2784,6 +2793,14 @@
       {
         "from": "grantley-telfer",
         "to": "nick-telfer"
+      },
+      {
+        "from": "kenneth-gregory-virgen",
+        "to": "penny-telfer"
+      },
+      {
+        "from": "noela-pauline-virgen",
+        "to": "penny-telfer"
       },
       {
         "from": "charles-farrow",
