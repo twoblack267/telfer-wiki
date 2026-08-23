@@ -2449,6 +2449,7 @@
     ],
     "children": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",
@@ -2889,6 +2890,7 @@
     "parents": [],
     "children": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",
@@ -5421,6 +5423,49 @@
     "person_photo": null
   },
   {
+    "id": "Charles Telfer",
+    "slug": "charles-telfer",
+    "first_name": "Charles",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1875,
+    "death_year": 1954,
+    "birth_year_display": "1875",
+    "death_year_display": "1954",
+    "display_name": "Charles Telfer",
+    "title": "Charles Telfer (1875–1954) — Family & Biography",
+    "lifespan": "1875 – 1954",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Charles Telfer (1875–1954)\n\n**Born:** 13 Jan 1875, Mount Gambier SA | **Died:** 1 Sep 1954, Port Augusta SA (age 79) | **Father:** [[John Telfer (1840–1913)]] | **Mother:** [[Martha Henstridge (~1854–1921)]] | **Spouse:** Amelia Curkpatrick James (m. 26 Feb 1902, Naracoorte SA)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Charles (Charles William) Telfer |\n| Father | [[John Telfer (1840–1913)]] |\n| Mother | [[Martha Henstridge (~1854–1921)]] |\n| Spouse | Amelia Curkpatrick James (m. 26 Feb 1902) |\n| Child | Three sons |\n| Child | Three daughters |\n| Half-Brother | James Telfer (1866–1946) |\n| Half-Sister | Elizabeth Telfer (1868–?) |\n| Half-Sister | Susan Telfer (1871–1952) |\n| Half-Sister | Martha Telfer (1873–?) |\n| Brother | [[Mark Telfer (1877–1946)]] |\n| Sister | [[Maria Clara Telfer (1878–1903)]] |\n| Sister | [[Isabella Lucieton Telfer (1880–1964)]] |\n| Brother | [[John Roland Telfer (1882–1975)]] |\n| Sister | [[Clara Blanche Telfer (1883–1974)]] |\n| Brother | [[Robert Freddy Telfer (1886–1949)]] |\n| Brother | [[Douglas Telfer (1887–1956)]] |\n| Brother | [[Colin Roy Telfer (1889–1964)]] |\n| Brother | [[Alan Dale Telfer (1890–1937)]] |\n| Sister | Alma Tressy Cullen (1893–1976) |\n| Sister | [[Marian Telfer Cornish (1896–1977)]] |\n\n## Life Summary\n\nCharles Telfer was the fifth child of [[John Telfer (1840–1913)]] and the first child of his second wife [[Martha Henstridge (~1854–1921)]]. Born at Mount Gambier, South Australia on 13 January 1875, he was the eldest of Martha Clara Henstridge's children. He married Amelia Curkpatrick James at Naracoorte, South Australia on 26 February 1902. They had six children — three sons and three daughters. Like several of his siblings he moved to the mid-north of the state, and he died at Port Augusta, South Australia on 1 September 1954, aged 79.\n\n**Note — two Charles Telfers (do not merge):** This is the Tantanoola-branch Charles Telfer (1875–1954), son of John Telfer & Martha Henstridge, who died at Port Augusta. He must be distinguished from the OTHER Charles Telfer who also died in 1954 — Francis Charles \"Charlie\" Telfer (1875–1954) [[Francis Charles Telfer (1875–1954)]], the son of John Telfer & Caroline (John 1847–1929 branch), who died at Croydon. Two different men, same given name, same death year, different branches.\n\n**Note — spouse surname discrepancy:** The family history book (*From the Borders to the Bush*, p.240) records his wife as \"Amelia **Fitzpatrick**\"; FamilySearch gives \"Amelia **Curkpatrick** James.\" These share a common root and are almost certainly the same person under a transcription/OCR variance, but the exact form is not authoritatively resolved — recorded, not silently chosen.\n\n**Note — birth year variance:** FamilySearch records birth 13 Jan **1875**; the Lehmann/Henschke genealogical sheet records **1874**. Age-79 at death (1 Sep 1954) is consistent with either. File titled 1875 per FamilySearch's precise birth date; variance noted.\n\n## Family Stories\n\n*(From the Borders to the Bush, p.240)*\n\n> \"Charles Telfer was the fifth child of John and Martha (nee Henstridge), who married Amelia Fitzpatrick. They had six children, Charles died at Port Augusta in 1954.\"\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 13 Jan 1875 | Born at Mount Gambier, South Australia |\n| 28 Dec 1876 | Marriage of parents John Telfer & Martha Clara Henstridge |\n| 1877 | Birth of brother Mark |\n| 1902 | Births of brothers/sisters continue |\n| 26 Feb 1902 | Married Amelia Curkpatrick James at Naracoorte, SA |\n| ~1903–1907 | Six children born (three sons, three daughters) |\n| 5 Jan 1913 | Death of father John Telfer at Tantanoola |\n| 13 Nov 1921 | Death of mother Martha Clara Henstridge |\n| 1 Sep 1954 | Died at Port Augusta, South Australia (age 79) |\n\n## Sources\n\n- ✅ *From the Borders to the Bush: A Genealogical History of the Telfer Family* (pp. 240) — family register\n- ✅ FamilySearch: Charlie William Telfer (K81Z-PGY), b. 13 Jan 1875 Mount Gambier, m. Amelia Curkpatrick James 1902 Naracoorte, d. 1 Sep 1954 Port Augusta — via [FamilySearch](https://ancestors.familysearch.org/en/K81Z-PGY/charles-william-telfer-1875-1954)\n- ✅ Lehmann/Henschke genealogical index — Charles Telfer (1874–1954), child of John Telfer (1840–1913) & Martha Clara Henstridge (2nd marriage), after the four Martha Allen children",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "john-telfer-1840",
+      "martha-henstridge"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "alan-telfer",
+      "clara-blanche-telfer",
+      "colin-telfer",
+      "douglas-telfer",
+      "isabella-telfer",
+      "john-telfer-1882",
+      "maria-clara-telfer",
+      "marian-cornish",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Francis Adam Telfer",
     "slug": "francis-adam-telfer",
     "first_name": "Francis Adam",
@@ -5688,6 +5733,7 @@
     ],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",
@@ -5871,6 +5917,7 @@
     "spouses": [],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",
@@ -5960,6 +6007,7 @@
     ],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",
@@ -6184,6 +6232,7 @@
     "spouses": [],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",
@@ -6226,6 +6275,7 @@
     "spouses": [],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "colin-telfer",
       "douglas-telfer",
       "isabella-telfer",
@@ -6543,6 +6593,7 @@
     ],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",
@@ -6633,6 +6684,7 @@
     ],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "isabella-telfer",
@@ -6762,6 +6814,7 @@
     "spouses": [],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "douglas-telfer",
       "isabella-telfer",
@@ -6805,6 +6858,7 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",
@@ -7031,6 +7085,7 @@
     ],
     "siblings": [
       "alan-telfer",
+      "charles-telfer",
       "clara-blanche-telfer",
       "colin-telfer",
       "douglas-telfer",

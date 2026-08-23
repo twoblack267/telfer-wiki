@@ -1589,6 +1589,10 @@
       "slug": "richard-watson",
       "id": "Richard Lancelot Watson",
       "generation": 7
+    },
+    {
+      "slug": "charles-telfer",
+      "id": "Charles Telfer"
     }
   ],
   "edges": {
@@ -3212,6 +3216,14 @@
       {
         "from": "martha-henstridge",
         "to": "clara-blanche-telfer"
+      },
+      {
+        "from": "john-telfer-1840",
+        "to": "charles-telfer"
+      },
+      {
+        "from": "martha-henstridge",
+        "to": "charles-telfer"
       }
     ],
     "spouseOf": [
@@ -3592,6 +3604,10 @@
       {
         "from": "adelaide-elsie-pearl-telfer",
         "to": "violet-hope-telfer"
+      },
+      {
+        "from": "alan-telfer",
+        "to": "charles-telfer"
       },
       {
         "from": "alan-telfer",
@@ -5639,6 +5655,42 @@
       },
       {
         "from": "clara-blanche-telfer",
+        "to": "robert-telfer-1886"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "clara-blanche-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "colin-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "douglas-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "isabella-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "john-telfer-1882"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "maria-clara-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "marian-cornish"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "mark-telfer-1877"
+      },
+      {
+        "from": "charles-telfer",
         "to": "robert-telfer-1886"
       }
     ]
