@@ -123,6 +123,15 @@ export function formatBody(body, people) {
 function lookupSlug(name, people) {
   if (!name || !people) return null;
 
+  // Relationship fields (parents/children/spouses/siblings) store SLUGS, not display
+  // names (e.g. "john-smith", "francis-telfer-1809"). Resolve a direct slug match
+  // first so sidebar relationship links work. Safe for body [[wiki-links]] too:
+  // a display name like "John Smith" never equals a lowercase hyphenated slug.
+  const directSlug = people.find(
+    (p) => (p.slug || "").toLowerCase() === name.trim().toLowerCase()
+  );
+  if (directSlug) return directSlug.slug;
+
   // Extract birth year from name BEFORE stripping (e.g. "James Telfer (1796–1863)" → 1796)
   const yearMatch = name.match(/\((\d{4})/);
   const targetBirthYear = yearMatch ? parseInt(yearMatch[1]) : null;
