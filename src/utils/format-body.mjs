@@ -47,26 +47,42 @@ export function formatBody(body, people) {
     // Horizontal rule
     .replace(/^---$/gm, "<hr class='my-0 border-[var(--color-border)]'>")
     // Convert markdown tables (header | separator | rows)
-    .replace(/^\|.+\|\n^\|(?:[-: ]+\|)+\s*$\n(?:^\|.+\|\n?)+/gm, (match) => {
-      const lines = match.trim().split('\n');
-      if (lines.length < 2) return match;
-      const headers = lines[0].split('|').filter(c => c.trim()).map(c => c.trim());
-      let html = '<table class="w-full border-collapse my-0 text-sm"><thead><tr>';
-      for (const h of headers) {
-        html += `<th class="bg-[var(--color-heading)] text-white font-sans font-semibold text-left px-2 py-1">${h}</th>`;
-      }
-      html += '</tr></thead><tbody>';
-      for (let i = 2; i < lines.length; i++) {
-        const cells = lines[i].split('|').filter(c => c.trim()).map(c => c.trim());
-        html += '<tr>';
-        for (const c of cells) {
-          html += `<td class="px-2 py-0.5 border-b border-[var(--color-border)]">${c}</td>`;
+    // Tolerant: accepts both GFM leading-pipe (| a | b |) and lax format
+    // ( a | b |) where rows may start with whitespace instead of a pipe,
+    // and the separator row may have no leading pipe. This fixes the
+    // "names not in columns" ragged render seen on Castleton/Murray profiles.
+    .replace(
+      /^\s*\|?[^\n]+?\|\s*\n^\s*\|?[-|: ]+\|\s*\n(?:^\s*\|?[^\n]+\|\s*\n?)+/gm,
+      (match) => {
+        // Normalise each line: strip leading pipe + whitespace and trailing pipe + whitespace
+        const rows = match.trim().split('\n').map((l) => {
+          let s = l.trim();
+          if (s.startsWith('|')) s = s.slice(1).trim();
+          if (s.endsWith('|')) s = s.slice(0, -1).trim();
+          return s;
+        });
+        if (rows.length < 2) return match;
+        const headers = rows[0].split('|').filter((c) => c.trim()).map((c) => c.trim());
+        // Only treat as a table if the 2nd line is a real separator (--- | --- pattern)
+        const sep = rows[1].replace(/\|/g, '').trim();
+        if (!/^[-: ]+$/.test(sep) || !sep.includes('-')) return match;
+        let html = '<table class="w-full border-collapse my-0 text-sm"><thead><tr>';
+        for (const h of headers) {
+          html += `<th class="bg-[var(--color-heading)] text-white font-sans font-semibold text-left px-2 py-1">${h}</th>`;
         }
-        html += '</tr>';
+        html += '</tr></thead><tbody>';
+        for (let i = 2; i < rows.length; i++) {
+          const cells = rows[i].split('|').filter((c) => c.trim()).map((c) => c.trim());
+          html += '<tr>';
+          for (const c of cells) {
+            html += `<td class="px-2 py-0.5 border-b border-[var(--color-border)]">${c}</td>`;
+          }
+          html += '</tr>';
+        }
+        html += '</tbody></table>';
+        return html;
       }
-      html += '</tbody></table>';
-      return html;
-    })
+    )
     // Convert bullet points
     .replace(/^[-*] (.+)$/gm, "<li class='ml-4 text-[var(--color-ink)]'>$1</li>")
     // Wrap consecutive <li> in <ul>
