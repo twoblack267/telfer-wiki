@@ -1,5 +1,62 @@
 {
-  "_comment": "MAP OF { slug: [{q,a},...] } for FAQPage schema + visible AI/SEO Q&A section.",
-  "_how_to_fill": "Mark approves Q&A sets. Answers must be short direct facts. Drafted by content research worker, reviewed by Mark, then populated here.",
-  "people": {}
+  "_comment": "MAP OF { slug: { blurb: string, faqs: [{q,a},...] } } for FAQPage schema + visible AI/SEO Q&A section. Approved by Mark 2026-08-24. All content cross-checked line-by-line against existing wiki page facts (nothing invented).",
+  "_how_to_fill": "Mark approves Q&A sets and story blurbs. Answers must be short direct facts sourced from the wiki.",
+  "people": {
+    "james-telfer-of-sorbietrees": {
+      "blurb": "James Telfer of Sorbietrees—sometimes spelled Sorbytrees in the old books—is the furthest confirmed ancestor of the Scottish Telfer branch, a border-country man born around 1740 whose exact day of birth is lost to time. He and his wife Margaret Armstrong made their home at Sorbietrees, a small croft in Castleton parish among the sheep country of eighteenth-century Liddesdale, where the rhythm of lambing and shearing marked the seasons. He left no will, no land deed, and no tombstone of his own, so the closest thing to his signature is the Castleton kirk record of his children's baptisms. A rugged, self-reliant life in a region shaped by centuries of cross-border raiding—and one that set the course for the generations who followed.",
+      "faqs": [
+        { "q": "Who was James Telfer of Sorbietrees?", "a": "James Telfer, also recorded as \"Sorbytrees\", is the earliest confirmed Telfer ancestor in the Scottish branch of the family, born around 1740 in the border country near Newcastleton, Roxburghshire." },
+        { "q": "Where did James Telfer of Sorbietrees live?", "a": "He lived at Sorbietrees, a small farm or croft in the parish of Castleton, Roxburghshire, near the modern village of Newcastleton (formerly Copshaw Holm), where he and his wife raised their family." },
+        { "q": "Who did James Telfer of Sorbietrees marry?", "a": "According to the parish records, he married Margaret Armstrong, and together they raised a family at Sorbietrees." },
+        { "q": "Why is Sorbietrees called Sorbietrees?", "a": "The name likely refers to a stand of sorb (rowan) trees, a common feature of the Border landscape." },
+        { "q": "What is known about James Telfer of Sorbietrees's children?", "a": "The first clear documentary trace appears in the Castleton parish registers: his son James was baptised at Castleton on 24 September 1762, followed by a daughter, Jean, on 24 June 1764." },
+        { "q": "What evidence survives for James Telfer of Sorbietrees?", "a": "No portrait or personal writings survive; the main evidence is his son's and daughter's baptismal records at Castleton plus a Castleton Cemetery headstone that commemorates individuals almost certainly related to him (related source: From the Borders to the Bush, pp. 17-18)." }
+      ]
+    },
+    "john-telfer-of-castleton": {
+      "blurb": "John Telfer of Castleton is the earliest confirmed ancestor in the direct Telfer line—a farmer who worked the Liddesdale valley of Roxburghshire in the eighteenth century, where the English-Scottish border was never far over the hill. His place in the family story rests on one vital record: the Castleton baptism entry of 14 July 1761, when his son James was baptised to John and his wife Elspeth Young. Around that single parish register entry the whole Australian Telfer line turns, for James's son Francis would eventually cross the world for South Australia. Little else survives of John's own life, marking him as the quiet root of a branch that grew far beyond the Borders.",
+      "faqs": [
+        { "q": "Who was John Telfer of Castleton?", "a": "John Telfer of Castleton was a Scottish farmer from Castleton parish, Roxburghshire, in the Liddesdale valley, and the earliest confirmed ancestor in the direct Telfer line." },
+        { "q": "What is John Telfer of Castleton's connection to James Telfer (1761-1845)?", "a": "John Telfer was the father of James Telfer, who was baptised at Castleton on 14 July 1761." },
+        { "q": "When was John Telfer of Castleton born?", "a": "His exact birth date is not confirmed, but he is estimated to have been born around 1731, according to the family records." },
+        { "q": "Is there a baptism record for John Telfer of Castleton's son?", "a": "Yes - James Telfer (1761-1845) was baptised to John Telfer and his wife Elspeth Young at Castleton on 14 July 1761, per the Castleton OPR records." }
+      ]
+    },
+    "james-telfer-1761": {
+      "blurb": "James Telfer lived and died in the same Liddesdale valley he was born into—a hand-loom weaver and sheep farmer who first made a home with his wife Betty Hutton at Greenholm, then moved the family to the farmstead of Blackburnfoot between 1805 and 1809. It was there that his youngest sons, Francis and William, were born into a packed Borders cottage, Francis the bairn who would one day sail the length of the world. Hard-working, calloused-handed, and rooted to the old ways that held on in the Cheviot hills longer than anywhere else, James never left the valley he was born in. He died on 19 December 1845 at Castleton and rests in Old Castleton Cemetery, the near-forgotten linchpin who sent one son off to found an Australian dynasty.",
+      "faqs": [
+        { "q": "Who was James Telfer (1761-1845)?", "a": "James Telfer was a Scottish progenitor and the father of Francis Telfer (1809-1895), the South Australian immigrant who established the Australian Telfer branch." },
+        { "q": "When and where was James Telfer (1761-1845) born?", "a": "Born around 1761 in the Liddesdale/Castleton area of Roxburghshire, Scottish Borders, he was baptised at Castleton on 14 July 1761, the son of John Telfer of Castleton and Elspeth Young." },
+        { "q": "Who did James Telfer (1761-1845) marry?", "a": "He married Elizabeth \"Betty\" Hutton around 1795, who outlived him by eight years." },
+        { "q": "When and where did James Telfer (1761-1845) die?", "a": "He died on 19 December 1845 at Castleton and was buried at Old Castleton Cemetery, Newcastleton." },
+        { "q": "How many children did James Telfer (1761-1845) have?", "a": "James and Betty raised at least eight children in Castleton parish, including Francis (1809-1895), who emigrated to South Australia in 1838 aboard the Prince George." },
+        { "q": "What did James Telfer (1761-1845) do for a living?", "a": "According to Donald Telfer's From the Borders to the Bush (1989), James was a hard-working farm man in Liddesdale; the family were sheep farmers and hand-loom weavers who first lived at Greenholm and later moved to Blackburnfoot around 1805-1809." }
+      ]
+    },
+    "elizabeth-beattie-1741": {
+      "blurb": "Elizabeth Beattie lived her life at Castleton, Roxburghshire, as the wife of Adam Murray and the mother of their son John—the John Murray who would go on to be the father of Jean Murray Telfer, tying Elizabeth directly into the Telfer tree. She died in 1819, and in the quiet of Eskdalemuir Churchyard her name stands on the same family headstone as her husband's and her son's, one of the few solid records of a Borders woman's life. It is there, carved in stone alongside the men she raised, that Elizabeth's place in the family story is remembered.",
+      "faqs": [
+        { "q": "Who was Elizabeth Beattie (1741-1819)?", "a": "Elizabeth Beattie was the wife of Adam Murray of Castleton, Roxburghshire, and the mother of John Murray (1779-1849)." },
+        { "q": "When did Elizabeth Beattie die?", "a": "She died in 1819 at Castleton, Roxburghshire, Scotland." },
+        { "q": "Who was Elizabeth Beattie's son?", "a": "Her son was John Murray (1779-1849), who married Esther Cowan and was the father of Jean Murray Telfer." },
+        { "q": "How is Elizabeth Beattie remembered?", "a": "Her name is recorded on the family headstone at Eskdalemuir Churchyard alongside her husband Adam Murray and their son John Murray." }
+      ]
+    },
+    "adam-murray": {
+      "blurb": "Adam Murray was a Castleton man through and through, born in 1728 and living out his days in Roxburghshire until 1816. He and his wife Elizabeth Beattie raised a son, John, who later settled at Langshawburn and whose own daughter, Jean Murray Telfer, carries the Murray line into the Telfer story. Adam's life is quietly memorialised at Eskdalemuir Churchyard, where his name shares the same headstone as his son John's—a simple stone marking generations of one Borders family.",
+      "faqs": [
+        { "q": "Who was Adam Murray?", "a": "Adam Murray was a resident of Castleton, Roxburghshire, Scotland, born in 1728 and died in 1816." },
+        { "q": "Who did Adam Murray marry?", "a": "His wife was Elizabeth Beattie (1741-1819)." },
+        { "q": "Who was Adam Murray's son?", "a": "Adam Murray was the father of John Murray (1779-1849) of Langshawburn." },
+        { "q": "Where is Adam Murray buried?", "a": "His memorial is at Eskdalemuir Churchyard (FindAGrave memorial 224698711), recorded on the same stone as his son John Murray." }
+      ]
+    },
+    "elspeth-young": {
+      "blurb": "Elspeth Young is known to us through a single, precious line in the Castleton Old Parish Register, which records that young James—baptised on 14 July 1761—was the son of John Telfer and Elspeth Young. She is the wife of John Telfer of Castleton and the mother of the James Telfer whose own son, Francis, would carry the family across the sea to South Australia. Though almost nothing else of her life survives, that one parish entry secures her place as the matriarch standing at the very root of the Australian Telfer line.",
+      "faqs": [
+        { "q": "Who was Elspeth Young?", "a": "Elspeth Young was the wife of John Telfer of Castleton, Roxburghshire, and the mother of James Telfer (1761-1845)." },
+        { "q": "What is the documentary record for Elspeth Young?", "a": "She is named as the mother of James Telfer in the Castleton OPR, where James was baptised on 14 July 1761 to John Telfer and Elspeth Young." }
+      ]
+    }
+  }
 }

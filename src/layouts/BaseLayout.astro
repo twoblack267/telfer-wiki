@@ -8,8 +8,9 @@ interface Props {
   ogImage?: string;                // absolute or relative URL to share thumbnail
   schema?: object | object[];      // single Schema.org object, OR array for multiple JSON-LD blocks (e.g. Person + FAQPage)
   faqItems?: { q: string; a: string }[];   // visible FAQ section on the page (also emits FAQPage schema via `schema`)
+  storyBlurb?: string;                       // optional AI/SEO story blurb for curated ancestors
 }
-const { title, description, canonicalPath, ogType, ogImage, schema, faqItems } = Astro.props;
+const { title, description, canonicalPath, ogType, ogImage, schema, faqItems, storyBlurb } = Astro.props;
 const currentPath = Astro.url.pathname;
 const canonicalUrl = canonicalPath ? `https://telferwiki.com${canonicalPath}` : Astro.url.origin + Astro.url.pathname;
 const defaultDescription = "The Telfer Family Wiki — a digital family history archive tracing nine generations of Telfers from Scotland to South Australia. A living record of the family line from John Telfer of Castleton to the present day.";
@@ -112,6 +113,12 @@ const jsonLd = schema ? (Array.isArray(schema) ? schema : [schema]) : null;
 
     <!-- Main content -->
     <main class="max-w-5xl mx-auto px-3 sm:px-4 py-4 sm:py-8 flex-1 w-full">
+      {storyBlurb && (
+        <section aria-label="Story blurb" class="person-card rounded-xl p-3 md:p-4 mb-4">
+          <h2 class="text-lg md:text-xl font-bold font-serif text-[var(--color-heading)] mb-2">Their Story</h2>
+          <p class="wiki-content leading-relaxed">{storyBlurb}</p>
+        </section>
+      )}
       {faqItems && faqItems.length > 0 && (
         <section aria-label="Frequently asked questions" class="person-card rounded-xl p-3 md:p-4 mb-4">
           <h2 class="text-lg md:text-xl font-bold font-serif text-[var(--color-heading)] mb-2">Common Questions</h2>

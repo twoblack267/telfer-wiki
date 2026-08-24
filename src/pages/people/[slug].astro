@@ -91,7 +91,9 @@ const personSchema = {
 // Only curated ancestors get a FAQ section. Renders BOTH a visible Q&A block AND
 // FAQPage JSON-LD (the most-cited format for AI answers), when present.
 const faqs = (await import("../../data/faqs.json")).default;
-const faqItems = (faqs.people || {})[person.slug] || [];
+const thisFaq = (faqs.people || {})[person.slug] || null;
+const faqItems = thisFaq?.faqs || [];
+const storyBlurb = thisFaq?.blurb || "";
 const faqSchema = faqItems.length
   ? {
       "@context": "https://schema.org",
@@ -113,6 +115,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
   ogType="profile"
   schema={combinedSchema}
   faqItems={faqItems}
+  storyBlurb={storyBlurb}
 >
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
