@@ -51,9 +51,15 @@ for f in sitemap-index.xml sitemap-0.xml robots.txt llms.txt telferwiki-og.png; 
   [ -f "dist/$f" ] && ok "$f present" || bad "$f missing"
 done
 
-# ── 3. robots.txt Sitemap directive ──
-if grep -q "^Sitemap:" dist/robots.txt 2>/dev/null; then
-  ok "robots.txt has Sitemap directive"
+# ── 3. robots.txt Sitemap directive must point at a real, present sitemap ──
+SMAP=$(grep -i '^Sitemap:' dist/robots.txt 2>/dev/null | awk '{print $2}')
+if [ -n "$SMAP" ]; then
+  SMFILE=$(basename "$SMAP")
+  if [ -f "dist/$SMFILE" ]; then
+    ok "robots.txt Sitemap -> $SMFILE (present in dist)"
+  else
+    bad "robots.txt Sitemap '$SMFILE' NOT found in dist (404 risk)"
+  fi
 else
   bad "robots.txt missing Sitemap directive"
 fi
