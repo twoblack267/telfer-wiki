@@ -214,10 +214,15 @@ function lookupSlug(name, people) {
 export function getLinksForRelationships(relationshipNames, allPeople) {
   return relationshipNames.map((entry) => {
     const person = allPeople.find((p) => (p.slug || "") === entry.trim());
-    if (person) return { name: person.display_name, slug: person.slug };
+    if (person) return { name: person.display_name, slug: person.slug, lifespan: person.lifespan };
     // Not a slug — try resolving a display-name/wiki-link to a slug, keep the
     // original text as the link label.
     const slug = lookupSlug(entry, allPeople);
-    return { name: entry, slug };
+    let linkedLifespan;
+    if (slug) {
+      const linked = allPeople.find((p) => p.slug === slug);
+      if (linked) linkedLifespan = linked.lifespan;
+    }
+    return { name: entry, slug, lifespan: linkedLifespan };
   });
 }

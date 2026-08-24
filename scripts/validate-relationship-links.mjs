@@ -104,7 +104,37 @@ function checkPage(file) {
         `<span[^>]*>[\\s\\S]*?${escapeRegExp(name)}[\\s\\S]*?</span>`
       );
       if (linked.test(section)) {
-        continue; // linked ✓
+        // Linked ✓ — but the whole point of the 2026-08-24 fix is that linked
+        // relatives show their life DATES, not a bare name. Assert the linked
+        // row carries its lifespan when the person has one in the data. If the
+        // person has no lifespan/birth at all, that's a DATA gap we surface too.
+        const relPerson = bySlug.get(relSlug);
+        const hasDates = !!(relPerson?.lifespan || relPerson?.birth_year);
+        // The lifespan renders as: </a> <span class="...">(LIFESPAN)</span>
+        const ls = relPerson?.lifespan;
+        const withDates = ls
+          ? new RegExp(
+              `</a>\\s*<span[^>]*>\\(${escapeRegExp(ls)}\\)</span>`
+            )
+          : null;
+        if (hasDates && withDates && !withDates.test(section)) {
+          failures.push({
+            file: file.replace(DIST, ""),
+            page: slug,
+            field: SECTION_LABEL[field],
+            relationship: `${name} (${relSlug})`,
+            reason: `linked but lifespan "${relPerson.lifespan}" NOT rendered on row`,
+          });
+        } else if (!hasDates) {
+          failures.push({
+            file: file.replace(DIST, ""),
+            page: slug,
+            field: SECTION_LABEL[field],
+            relationship: `${name} (${relSlug})`,
+            reason: "linked person has NO lifespan/birth date in data — renders as bare name",
+          });
+        }
+        continue; // linked ✓ (subject to lifespan guard above)
       }
       if (asPlainText.test(section)) {
         failures.push({

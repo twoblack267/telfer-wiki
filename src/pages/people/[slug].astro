@@ -171,13 +171,14 @@ const importantTags = (person.tags || []).filter((t) => !["bio", "family", "pers
           <div class="person-card rounded-xl p-2.5">
             <h3 class="font-serif text-[var(--color-heading)] mb-1">Spouse{spouseLinks.length > 1 ? "s" : ""}</h3>
             <ul class="space-y-0">
-              {spouseLinks.map(({ name, slug }) => (
+              {spouseLinks.map(({ name, slug, lifespan }) => (
                 <li key={slug || name}>
                   {slug ? (
                     <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
+                  {lifespan && <span class="text-xs text-[var(--color-muted)] ml-1">({lifespan})</span>}
                 </li>
               ))}
             </ul>
@@ -189,13 +190,14 @@ const importantTags = (person.tags || []).filter((t) => !["bio", "family", "pers
           <div class="person-card rounded-xl p-2.5">
             <h3 class="font-serif text-[var(--color-heading)] mb-1">Parents</h3>
             <ul class="space-y-0">
-              {parentLinks.map(({ name, slug }) => (
+              {parentLinks.map(({ name, slug, lifespan }) => (
                 <li key={slug || name}>
                   {slug ? (
                     <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
+                  {lifespan && <span class="text-xs text-[var(--color-muted)] ml-1">({lifespan})</span>}
                 </li>
               ))}
             </ul>
@@ -207,13 +209,14 @@ const importantTags = (person.tags || []).filter((t) => !["bio", "family", "pers
           <div class="person-card rounded-xl p-2.5">
             <h3 class="font-serif text-[var(--color-heading)] mb-1">Children</h3>
             <ul class="space-y-0">
-              {childLinks.map(({ name, slug }) => (
+              {childLinks.map(({ name, slug, lifespan }) => (
                 <li key={slug || name}>
                   {slug ? (
                     <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
+                  {lifespan && <span class="text-xs text-[var(--color-muted)] ml-1">({lifespan})</span>}
                 </li>
               ))}
             </ul>
@@ -225,13 +228,14 @@ const importantTags = (person.tags || []).filter((t) => !["bio", "family", "pers
           <div class="person-card rounded-xl p-2.5">
             <h3 class="font-serif text-[var(--color-heading)] mb-1">Siblings</h3>
             <ul class="space-y-0">
-              {siblingLinks.map(({ name, slug }) => (
+              {siblingLinks.map(({ name, slug, lifespan }) => (
                 <li key={slug || name}>
                   {slug ? (
                     <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
+                  {lifespan && <span class="text-xs text-[var(--color-muted)] ml-1">({lifespan})</span>}
                 </li>
               ))}
             </ul>
