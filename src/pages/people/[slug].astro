@@ -27,9 +27,55 @@ const bodyHtml = formatBody(person.body_markdown || "", telferPeople);
 
 // ── Tags ──
 const importantTags = (person.tags || []).filter((t) => !["bio", "family", "person"].includes(t));
+
+// ── Helper: ordinal suffix (1st, 2nd, 3rd, 4th…) for generation labels ──
+function ordinalSuffix(n) {
+  const s = ["th", "st", "nd", "rd"];
+  const v = n % 100;
+  return s[(v - 20) % 10] || s[v] || s[0];
+}
+
+
+// ── SEO: unique per-person meta description ──
+const yearSpan = person.lifespan
+  ? person.lifespan
+  : [person.birth_year_display, person.is_living ? "living" : person.death_year_display]
+      .filter(Boolean)
+      .join(" – ");
+const genNote = person.generation
+  ? ` ${person.generation}${ordinalSuffix(person.generation)} generation Telfer.`
+  : "";
+const livingNote = person.is_living ? "" : " Ancestor of the Telfer line.";
+const seoDescription = [
+  person.display_name,
+  yearSpan ? `(${yearSpan})` : "",
+  `— Telfer family history.`,
+  genNote,
+  livingNote,
+].join(" ").replace(/\s+/g, " ").slice(0, 158);
+
+
+// ── SEO: Schema.org Person structured data ──
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: person.display_name,
+  url: `https://telferwiki.com/people/${person.slug}`,
+  ...(person.birth_year_display ? { birthDate: person.birth_year_display } : {}),
+  ...(person.death_year_display && !person.is_living ? { deathDate: person.death_year_display } : {}),
+  // Relatives live at their own URLs on this same site
+  ...(parentLinks.length ? { parent: parentLinks.map((p) => ({ "@type": "Person", name: p.name, url: `https://telferwiki.com/people/${p.slug}` })) } : {}),
+  ...(childLinks.length ? { children: childLinks.map((c) => ({ "@type": "Person", name: c.name, url: `https://telferwiki.com/people/${c.slug}` })) } : {}),
+};
 ---
 
-<BaseLayout title={person.display_name}>
+<BaseLayout
+  title={person.display_name}
+  description={seoDescription}
+  canonicalPath={`/people/${person.slug}`}
+  ogType="profile"
+  schema={personSchema}
+>
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">

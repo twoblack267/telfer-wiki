@@ -2,9 +2,19 @@
 interface Props {
   title: string;
   description?: string;
+  // Optional SEO enhancement props (all optional — existing callers unaffected)
+  canonicalPath?: string;          // e.g. "/people/elizabeth-beattie"
+  ogType?: string;                 // "website" | "article" | "profile"
+  ogImage?: string;                // absolute or relative URL to share thumbnail
+  schema?: object;                 // JSON-LD structured data (e.g. Schema.org Person)
 }
-const { title, description } = Astro.props;
+const { title, description, canonicalPath, ogType, ogImage, schema } = Astro.props;
 const currentPath = Astro.url.pathname;
+const canonicalUrl = canonicalPath ? `https://telferwiki.com${canonicalPath}` : Astro.url.origin + Astro.url.pathname;
+const defaultDescription = "The Telfer Family Wiki — a digital family history archive tracing nine generations of Telfers from Scotland to South Australia. A living record of the family line from John Telfer of Castleton to the present day.";
+const resolvedOgType = ogType || "website";
+const resolvedOgImage = ogImage || "https://telferwiki.com/telferwiki-og.png";
+const jsonLd = schema ? JSON.stringify(schema) : null;
 ---
 
 <!doctype html>
@@ -13,8 +23,27 @@ const currentPath = Astro.url.pathname;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} — Telfer Wiki</title>
-    <meta name="description" content={description || "The Telfer Family Wiki — a digital family history archive tracing nine generations of Telfers from Scotland to South Australia. A living record of the family line from John Telfer of Castleton to the present day."} />
+    <meta name="description" content={description || defaultDescription} />
     <link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + "favicon.svg"} />
+
+    <!-- Canonical URL (prevents duplicate-content across URL variants) -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content={resolvedOgType} />
+    <meta property="og:site_name" content="Telfer Wiki" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description || defaultDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={resolvedOgImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description || defaultDescription} />
+    <meta name="twitter:image" content={resolvedOgImage} />
+
+    <!-- Structured data (JSON-LD) -->
+    {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
+
 
     <!-- Fonts: Playfair Display for headings (elegant heritage serif), Inter for body (clean, readable) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
