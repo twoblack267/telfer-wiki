@@ -105,13 +105,17 @@ else
   bad "one or more sameAs URLs malformed (see check output)"
 fi
 check_manifest faqs.json
-# FAQ answers must have q+a strings
+# FAQ entries: { slug: { blurb: string, faqs: [{q,a},...] } }
 if node -e '
   const d=require("./src/data/faqs.json").people||{};
-  for (const [s,items] of Object.entries(d))
-    for (const it of (items||[]))
+  for (const [s,e] of Object.entries(d)) {
+    if (e.blurb && typeof e.blurb!=="string") { console.error("BAD blurb "+s); process.exit(1); }
+    const items = e.faqs || e || [];
+    if (!Array.isArray(items)) { console.error("BAD faqs not array "+s); process.exit(1); }
+    for (const it of items)
       if (!it.q || !it.a || typeof it.q!=="string" || typeof it.a!=="string")
         { console.error("BAD "+s+": "+JSON.stringify(it)); process.exit(1); }
+  }
 ' 2>/dev/null; then
   ok "all FAQ items valid (q+a strings)"
 else
