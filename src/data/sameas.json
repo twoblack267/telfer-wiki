@@ -1,5 +1,18 @@
 {
-  "_comment": "MAP OF { slug: [public-tree profile URLs] } for Schema.org Person sameAs links.",
-  "_how_to_fill": "Mark approves each ancestor. A slug may map to one or more URLs (WikiTree, FamilySearch, FindAGrave, WikiData). Flag script: scripts/flag-sameas-candidates.mjs. Generates candidate list → Mark reviews → approved URLs go here.",
-  "people": {}
+  "_comment": "Verified public-tree matches for Schema.org Person sameAs links. Each ancestor cross-confirmed on 2+ independent sources (minimum-standard rule). Populated 2026-08-24 after sub-agent vet + Skippy direct page verification.",
+  "people": {
+    "james-telfer-1761": [
+      "https://ancestors.familysearch.org/en/GHYB-CXH/james-telfer-1761-1845",
+      "https://www.findagrave.com/memorial/170769918/james-telfer"
+    ],
+    "elizabeth-beattie-1741": [
+      "https://www.wikitree.com/wiki/Beattie-3317",
+      "https://ancestors.familysearch.org/en/LYZN-J8R/elizabeth-beattie-1742-1819"
+    ],
+    "adam-murray": [
+      "https://www.wikitree.com/wiki/Murray-30876",
+      "https://ancestors.familysearch.org/en/LZKY-1HG/adam-murray-1727-1816",
+      "https://www.findagrave.com/memorial/224698711/adam-murray"
+    ]
+  }
 }
