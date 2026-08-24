@@ -56,25 +56,63 @@ const seoDescription = [
 
 
 // ── SEO: Schema.org Person structured data ──
+// sameAs links (verified public-tree matches, e.g. WikiTree/FamilySearch/FindAGrave)
+// come from the data-driven manifest src/data/sameas.json — only ancestors Mark has
+// verified get entries; everyone else simply emits no sameAs.
+const sameas = (await import("../../data/sameas.json")).default;
+const sameAsLinks = (sameas.people || {})[person.slug] || [];
+
+// Enrich with given/family names, gender, spouse links when the data is available.
+const spouseSchema = (person.spouses || [])
+  .map((s) => telferPeople.find((p) => p.id === s))
+  .filter(Boolean)
+  .map((s) => ({ "@type": "Person", name: s.display_name, url: `https://telferwiki.com/people/${s.slug}` }));
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: person.display_name,
+  ...(person.first_name ? { givenName: person.first_name } : {}),
+  ...(person.last_name ? { familyName: person.last_name } : {}),
+  ...(person.gender ? { gender: person.gender } : {}),
   url: `https://telferwiki.com/people/${person.slug}`,
   ...(person.birth_year_display ? { birthDate: person.birth_year_display } : {}),
   ...(person.death_year_display && !person.is_living ? { deathDate: person.death_year_display } : {}),
+  // Public-tree matches (wikiTree / FamilySearch / FindAGrave / WikiData) anchor this
+  // person as the SAME entity Google/AI already knows — the key genealogy entity boost.
+  ...(sameAsLinks.length ? { sameAs: sameAsLinks } : {}),
   // Relatives live at their own URLs on this same site
   ...(parentLinks.length ? { parent: parentLinks.map((p) => ({ "@type": "Person", name: p.name, url: `https://telferwiki.com/people/${p.slug}` })) } : {}),
   ...(childLinks.length ? { children: childLinks.map((c) => ({ "@type": "Person", name: c.name, url: `https://telferwiki.com/people/${c.slug}` })) } : {}),
+  ...(spouseSchema.length ? { spouse: spouseSchema } : {}),
 };
----
 
+// ── SEO/AI: curated FAQ (data-driven manifest src/data/faqs.json) ──
+// Only curated ancestors get a FAQ section. Renders BOTH a visible Q&A block AND
+// FAQPage JSON-LD (the most-cited format for AI answers), when present.
+const faqs = (await import("../../data/faqs.json")).default;
+const faqItems = (faqs.people || {})[person.slug] || [];
+const faqSchema = faqItems.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    }
+  : null;
+const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
+---
+ 
 <BaseLayout
   title={person.display_name}
   description={seoDescription}
   canonicalPath={`/people/${person.slug}`}
   ogType="profile"
-  schema={personSchema}
+  schema={combinedSchema}
+  faqItems={faqItems}
 >
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->

@@ -1,0 +1,5 @@
+{
+  "_comment": "MAP OF { slug: [public-tree profile URLs] } for Schema.org Person sameAs links.",
+  "_how_to_fill": "Mark approves each ancestor. A slug may map to one or more URLs (WikiTree, FamilySearch, FindAGrave, WikiData). Flag script: scripts/flag-sameas-candidates.mjs. Generates candidate list → Mark reviews → approved URLs go here.",
+  "people": {}
+}

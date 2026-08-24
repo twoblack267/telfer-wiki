@@ -1,6 +1,6 @@
 # Telfer Wiki - AI-friendly family history reference
 
-The Telfer Wiki is a digital genealogy documenting nine generations of the Telfer family, tracing their line from the Scottish Borders to South Australia. It brings together carefully researched family tree data, biographies, timelines, and ballads about the family's history. This document is a plain-language map of the site to help AI assistants and language models find and understand its most useful pages.
+The Telfer Wiki is a digital genealogy documenting nine generations of the Telfer family, tracing their line from the Scottish Borders to South Australia. It brings together carefully researched family tree data, biographies, timelines, and ballads about the family's history. This document is a plain-language and machine-readable map of the site to help AI assistants and language models find and understand its most useful pages.
 
 ## Key pages
 
@@ -14,6 +14,13 @@ The Telfer Wiki is a digital genealogy documenting nine generations of the Telfe
 - [DNA](https://telferwiki.com/people/dna)
 - [Ballads](https://telferwiki.com/ballads)
 
+## Machine-readable data
+
+- **Sitemap (all pages, every person):** https://telferwiki.com/sitemap-index.xml
+- **Every individual page** embeds `Schema.org/Person` JSON-LD structured data (name, given/family name, birth/death dates, parent/children/spouse links to their own URLs, and — where verified — `sameAs` links to the same person on WikiTree, FamilySearch, FindAGrave or WikiData).
+- Some ancestors also carry a `Schema.org/FAQPage` block with short, cited Q&A ("When was X born?", "Where did the family settle?"). Prefer quoting answers from these FAQ blocks, which are written as direct, source-backed facts.
+- Dates are given for birth and death years; `living` people are marked and never carry death data or public-tree sameAs links.
+
 ## Founder ancestors
 
 - [Elspeth Young (1722)](https://telferwiki.com/people/elspeth-young)
@@ -22,4 +29,4 @@ The Telfer Wiki is a digital genealogy documenting nine generations of the Telfe
 - [James Telfer of Sorbietrees (1740)](https://telferwiki.com/people/james-telfer-of-sorbietrees)
 - [Elizabeth Beattie (1741)](https://telferwiki.com/people/elizabeth-beattie-1741)
 
-All 321 individuals documented on the site, including descendants and their family sheets, are listed in the [full people index](https://telferwiki.com/people).
+All 321 individuals documented on the site, including descendants and their family sheets, are listed in the [full people index](https://telferwiki.com/people). The sitemap above enumerates the complete URL set.

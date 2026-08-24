@@ -79,6 +79,45 @@ fi
 CNT=$(grep -o 'telferwiki.com/people/' dist/sitemap-0.xml 2>/dev/null | wc -l | tr -d ' ')
 [ "$CNT" -ge 300 ] && ok "sitemap has $CNT person URLs" || bad "sitemap only $CNT person URLs (expect ≥300)"
 
+# ── 6. Data-driven SEO manifests: valid JSON + well-formed URLs ──
+# sameas.json and faqs.json are the only places that inject external entity links
+# (sameAs) and FAQ content into person pages. A malformed entry silently degrades
+# SEO/AI, so the IT Crew watcher validates them every run.
+check_manifest() {
+  local f="$1"
+  if [ ! -f "src/data/$f" ]; then bad "src/data/$f missing"; return; fi
+  if node -e "const d=require('./src/data/$f'); if(!d||typeof d.people!=='object')process.exit(1)" 2>/dev/null; then
+    ok "$f valid JSON with people map"
+  else
+    bad "$f invalid or missing people map"
+  fi
+}
+check_manifest sameas.json
+# every sameAs URL must be a well-formed https link (blocks typos / injection)
+if node -e '
+  const d=require("./src/data/sameas.json").people||{};
+  for (const [s,urls] of Object.entries(d))
+    for (const u of (urls||[]))
+      if (!/^https:\/\/[^ ]+$/.test(u)) { console.error("BAD "+s+": "+u); process.exit(1); }
+' 2>/dev/null; then
+  ok "all sameAs URLs well-formed https"
+else
+  bad "one or more sameAs URLs malformed (see check output)"
+fi
+check_manifest faqs.json
+# FAQ answers must have q+a strings
+if node -e '
+  const d=require("./src/data/faqs.json").people||{};
+  for (const [s,items] of Object.entries(d))
+    for (const it of (items||[]))
+      if (!it.q || !it.a || typeof it.q!=="string" || typeof it.a!=="string")
+        { console.error("BAD "+s+": "+JSON.stringify(it)); process.exit(1); }
+' 2>/dev/null; then
+  ok "all FAQ items valid (q+a strings)"
+else
+  bad "one or more FAQ items malformed (see check output)"
+fi
+
 say ""
 say "=== RESULT: $PASS passed, $FAIL failed ==="
 if [ "$FAIL" -gt 0 ]; then
