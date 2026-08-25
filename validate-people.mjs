@@ -112,8 +112,28 @@ people.forEach(p => {
 });
 console.log(`\n9. PARENT CYCLES: ${cycles}`);
 
+// 10. IMPOSSIBLE-PARENT EDGES (generation guard — catches cross-branch contamination)
+// A parent must be an adult when the child is born: parent birth <= child birth - 11 years.
+// Catches the recurring same-name contamination class (e.g. a wife wrongly attached as a
+// child, or a bare ref resolving to a person from a different generation).
+let impossibleParent = 0;
+const bySlug = new Map(people.map(p => [p.slug, p]));
+people.forEach(p => {
+  if (!p.birth_year) return;
+  (p.parents || []).forEach(parSlug => {
+    const par = bySlug.get(parSlug);
+    if (!par || !par.birth_year) return;
+    const gap = p.birth_year - par.birth_year;
+    if (gap < 11) {
+      console.log(`   IMPOSSIBLE PARENT: ${p.slug} (b.${p.birth_year}) -> parent ${parSlug} (b.${par.birth_year}), gap ${gap}y`);
+      impossibleParent++;
+    }
+  });
+});
+console.log(`\n10. IMPOSSIBLE-PARENT EDGES (birth gap < 11y): ${impossibleParent}`);
+
 console.log(`\n=== SUMMARY ===`);
-const criticalIssues = dupSlugs.length + suspect.length + selfRefs + cycles;
+const criticalIssues = dupSlugs.length + suspect.length + selfRefs + cycles + impossibleParent;
 // childMismatch excluded — expected for incomplete family trees; not a build blocker
 // Invalid refs are warnings only — side-branch entries reference long build-generated slugs
 // (e.g. francis-telfer-18091895) which get resolved via redirect system at build time

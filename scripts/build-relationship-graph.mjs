@@ -92,21 +92,28 @@ function resolveNameToSlug(name, sourceSlug) {
   // Extract birth/death years from the reference if present, e.g.
   // "William Telfer (1802–1850)" or "William Telfer (1802)". Use them to
   // disambiguate between same-named people reliably.
-  const yearsMatch = name.match(/(\d{4})[\-–](\d{4})/);
+  // Handle open-ended ranges like "Robert Telfer (1803–?)" (unknown death) and
+  // "Adam Telfer (1799–?)": the 4-digit first group is the birth year. A single
+  // bare `(1803)` is also a birth year.
+  const yearsMatch = name.match(/(\d{4})\s*[\-–]\s*(\d{4})/);
   let refBirth = null, refDeath = null;
   if (yearsMatch) {
     refBirth = parseInt(yearsMatch[1], 10);
     refDeath = parseInt(yearsMatch[2], 10);
   } else {
-    const singleYear = name.match(/\(\s*(\d{4})\s*\)/);
-    if (singleYear) refBirth = parseInt(singleYear[1], 10);
+    // Open-ended range "1803–?" or "1803–": birth year is the first 4-digit group.
+    const openRange = name.match(/\(\s*(\d{4})\s*[\-–]\s*\?/);
+    if (openRange) refBirth = parseInt(openRange[1], 10);
+    else {
+      const singleYear = name.match(/\(\s*(\d{4})\s*\)/);
+      if (singleYear) refBirth = parseInt(singleYear[1], 10);
+    }
   }
 
-  // 1) Exact slug match (slugified clean name)
-  const slugified = slugify(cleanName);
-  if (slugIndex.has(slugified)) return slugIndex.get(slugified);
-
-  // 1b) If reference carried years, prefer a record whose birth year matches.
+  // 1b) If the reference CARRIED years, that year disambiguation is authoritative.
+  // It MUST take priority over a bare same-name slug match, so a person with the
+  // ref's birth/death years is preferred — and if no such person exists, the ref is
+  // null (do NOT fall through to a different-generation same-name record).
   if (refBirth) {
     let best = null;
     for (const person of people) {
@@ -115,7 +122,18 @@ function resolveNameToSlug(name, sourceSlug) {
       if (person.birth_year === refBirth) best = person.slug;
     }
     if (best) return best;
+    // GUARD (26 Aug 2026): a year-carrying ref matching NO record with those years
+    // must NOT short-circuit to an exact bare-slug match on a DIFFERENT generation.
+    // That unsafe fallback wired cross-branch false parents (e.g. `David Parker
+    // (1856–1906)` -> david-parker 1822; Janet Dunlop 1811 as parent of John Lawrie
+    // 1810 / Alexander Lawrie 1776; Margaret Wright 1810 as child of Adam 1842).
+    return null;
   }
+
+  // 1) Exact slug match (slugified clean name) — only safe when the ref carries no
+  // years, because a bare slug match ignores generations entirely.
+  const slugified = slugify(cleanName);
+  if (slugIndex.has(slugified)) return slugIndex.get(slugified);
 
   // 2) Exact name match
   const exactKey = cleanName.toLowerCase();
@@ -257,9 +275,22 @@ let resolved = 0, unresolved = 0;
 // direction that is biologically plausible (parent older than child by a
 // reasonable margin); if neither direction is checkable (no years), keep the
 // newly-added direction.
-function addParentChild(parentSlug, childSlug) {
+function addParentChild(parentSlug, childSlug, sourceSlug) {
   // If child already has this parent, nothing to do.
   if (parentEdges.get(childSlug)?.has(parentSlug)) return false;
+  // GUARD (26 Aug 2026): biological plausibility — a parent must be an adult when
+  // the child is born. When both years are known and the parent is not ≥13y older,
+  // reject the edge outright (catches cross-branch false parents like a wife or
+  // cousin wired as a child, or a bare-name ref resolving across generations).
+  {
+    const child = slugToPerson.get(childSlug);
+    const parent = slugToPerson.get(parentSlug);
+    const cBy = child?.birth_year, pBy = parent?.birth_year;
+    if (cBy && pBy && (cBy - pBy) < 11) {
+      console.warn(`   ⚠️ rejected impossible parent edge: ${childSlug}(b${cBy}) <- ${parentSlug}(b${pBy})`);
+      return false;
+    }
+  }
   // If the reverse (parent claims child as ITS parent) is already recorded,
   // one of these claims is a bare-name collision across generations. Keep the
   // direction that is biologically plausible (parent older than child); if

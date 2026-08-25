@@ -361,6 +361,23 @@ function main() {
       }
     }
 
+    // ── Flat-field schema support ─────────────────────────────────────────────
+    // Some vault files store relationships as flat frontmatter fields instead of a
+    // `relationships:` string: `father:`, `mother:` (singular) plus `children:`
+    // and `spouse:` (arrays/lists of names). Previously these were DEAD — the
+    // converter only read `fm.relationships`, so a flat-file's children/parents
+    // never reached the build (e.g. Sophia Baker's children stayed empty). Merge
+    // them in when present and not already supplied by the string form. Prefer
+    // the explicit `relationships:` string when it defines a given role.
+    const flatParent = [fm.father, fm.mother].filter(Boolean).map(String);
+    const flatSpouses = Array.isArray(fm.spouse) ? fm.spouse.map(String) : (fm.spouse ? [String(fm.spouse)] : []);
+    const flatChildren = Array.isArray(fm.children) ? fm.children.map(String) : (fm.children ? [String(fm.children)] : []);
+    if (parents.length === 0 && flatParent.length > 0) parents.push(...flatParent);
+    if (spouses.length === 0 && flatSpouses.length > 0) spouses.push(...flatSpouses);
+    if (children.length === 0 && flatChildren.length > 0) children.push(...flatChildren);
+    // No flat-field sibling support: sibling lists only come from the string form.
+
+
     const roles = extractRoles(body);
     const bodyClean = cleanPII(body);
     const { body: bodyWithImages, images: bodyImages } = convertObsidianImages(bodyClean);
