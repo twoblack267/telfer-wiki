@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatBody, getLinksForRelationships } from "../../utils/format-body.mjs";
+import { NOINDEX_SLUGS } from "../../data/privacy-exclusions.mjs";
 
 export async function getStaticPaths() {
   const people = (await import("../../data/people.public.json")).default;
@@ -13,6 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { person } = Astro.props;
+const isNoIndex = NOINDEX_SLUGS.has(person.slug);
 const people = (await import("../../data/people.public.json")).default;
 const telferPeople = people.filter((p) => p.branch === "telfer" || !p.branch);
 
@@ -116,6 +118,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
   schema={combinedSchema}
   faqItems={faqItems}
   storyBlurb={storyBlurb}
+  noindex={isNoIndex}
 >
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->

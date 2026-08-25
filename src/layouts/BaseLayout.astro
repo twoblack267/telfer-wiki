@@ -9,14 +9,17 @@ interface Props {
   schema?: object | object[];      // single Schema.org object, OR array for multiple JSON-LD blocks (e.g. Person + FAQPage)
   faqItems?: { q: string; a: string }[];   // visible FAQ section on the page (also emits FAQPage schema via `schema`)
   storyBlurb?: string;                       // optional AI/SEO story blurb for curated ancestors
+  noindex?: boolean;                         // privacy: emit robots noindex, nofollow + suppress JSON-LD
 }
-const { title, description, canonicalPath, ogType, ogImage, schema, faqItems, storyBlurb } = Astro.props;
+const { title, description, canonicalPath, ogType, ogImage, schema, faqItems, storyBlurb, noindex } = Astro.props;
 const currentPath = Astro.url.pathname;
 const canonicalUrl = canonicalPath ? `https://telferwiki.com${canonicalPath}` : Astro.url.origin + Astro.url.pathname;
 const defaultDescription = "The Telfer Family Wiki — a digital family history archive tracing nine generations of Telfers from Scotland to South Australia. A living record of the family line from John Telfer of Castleton to the present day.";
 const resolvedOgType = ogType || "website";
 const resolvedOgImage = ogImage || "https://telferwiki.com/telferwiki-og.png";
-const jsonLd = schema ? (Array.isArray(schema) ? schema : [schema]) : null;
+// When a page is noindexed for privacy, drop structured data entirely (no schema
+// signal for Google/AI to latch onto) and suppress Open Graph/JSON-LD bloat.
+const jsonLd = (!noindex && schema) ? (Array.isArray(schema) ? schema : [schema]) : null;
 ---
 
 <!doctype html>
@@ -30,6 +33,9 @@ const jsonLd = schema ? (Array.isArray(schema) ? schema : [schema]) : null;
 
     <!-- Canonical URL (prevents duplicate-content across URL variants) -->
     <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Privacy: keep this page out of search engine indexes (living persons) -->
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content={resolvedOgType} />

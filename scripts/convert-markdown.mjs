@@ -468,11 +468,15 @@ function main() {
         existing.spouses = spouses.length > 0 ? spouses : existing.spouses;
       }
       existing.related_trees = entry.related_trees;
+      // Images are source-of-truth from the vault body. If the processed vault
+      // file no longer references any image, clear stale images/person_photo so
+      // removed photos don't persist on the live page (privacy + correctness).
       if (bodyImages.length > 0) {
         existing.images = bodyImages;
         existing.person_photo = entry.person_photo;
       } else {
-        if (!existing.images) existing.images = [];
+        existing.images = [];
+        existing.person_photo = null;
       }
       updated++;
     } else {
