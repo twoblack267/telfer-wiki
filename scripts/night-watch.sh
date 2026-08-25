@@ -168,6 +168,30 @@ elif printf '%s' "$SELFHEAL_OUT" | grep -q 'auto-fixed [1-9]'; then
   echo "  🟢 Self-healed reversible error(s) — will be included in this push's rebuild"
 fi
 
+# ── 2d. DECEASED-FLIP CHECK (living→deceased -> kanban review card) ──
+# Owner rule: living = private-by-default; deceased = published in full. Skippy
+# makes the living/deceased call from the data (owner: "you decide whether dead
+# or alive — leave me out of this"). This step DETECTS a living→deceased
+# transition (git HEAD baseline vs current vault truth) and FIRES a Kanban
+# backlog card so a human agent reviews and uplifts the profile. Non-blocking:
+# a death genuinely needs human uplift, but it must not block the deploy of
+# unrelated content.
+echo "[2c→2d] Checking for living→deceased transitions (fires Kanban review card)..."
+DEATH_OUT=$(node scripts/deceased-flip-check.mjs 2>&1)
+printf '%s\n' "$DEATH_OUT" | grep -v '^$' | sed 's/^/    /'
+if printf '%s' "$DEATH_OUT" | grep -q '📌 FIRED'; then
+  DEATH_FIRED=$(printf '%s' "$DEATH_OUT" | grep -c '📌 FIRED')
+  echo "  🟠 $DEATH_FIRED living→deceased transition(s) fired to Kanban Backlog — human review + profile uplift needed"
+  WARN="${WARN} deceased-flip:${DEATH_FIRED}"
+elif printf '%s' "$DEATH_OUT" | grep -q '⚠ deceased-flip: 0\|no living→deceased'; then
+  echo "  ✅ No living→deceased transitions"
+elif printf '%s' "$DEATH_OUT" | grep -q 'no committed people.json baseline'; then
+  echo "  ℹ️  No committed baseline yet — flip-check idle"
+else
+  echo "  🟡 Deceased-flip check had an issue (non-fatal)"
+  WARN="${WARN} deceased-flip-err"
+fi
+
 # ── 3. Build ──────────────────────────────────────────────────
 echo "[3/7] Building site (sanitize + validate + astro build)..."
 if npm run build; then

@@ -388,8 +388,77 @@ function redactLivingAddresses(text) {
   return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
 }
 
-// ─── Build Public Output ────────────────────────────────────────────────────
+/**
+ * Strip private/personal detail from a LIVING person's public bio down to the
+ * owner-approved keep-list (owner decision, Mark, Aug 2026):
+ *   KEEP   — full name, full DOB, family relationships (parents/siblings/
+ *            spouse/children), marriage/divorce status, photos + captions.
+ *   STRIP  — narrative bios (Life Summary / Notable Event / Family Stories),
+ *            residence/locality (current OR listed), education/school,
+ *            occupation/employer, diagnoses / mental-health, aliases /
+ *            "also known as", personality, SOCIAL (facebook/instagram/etc.),
+ *            and research-provenance (Source / Evidence / Facebook-Lead /
+ *            Profile URL / who provided the lead + when).
+ *
+ * Applied to EVERY living person (after PII scrub, minor gate, and
+ * living-address redaction). Deceased people are NEVER touched — per the
+ * owner rule "once you're dead you're fair game even if your body is still
+ * warm", deceased profiles keep their full published content.
+ *
+ * Deterministic + line/section based (same style as the existing address
+ * guard): we drop whole labelled field-lines (bolded `**X:**`, bare `- X:`
+ * bullets) and whole `## Section`s. We never regex over free prose (dates/
+ * places get misread). Marriage/divorce survives because the `## Family`
+ * table + `## Marriage` sections (spouse row, "m. date", ceremony) are
+ * untouched. Family-table rows are pipe-delimited — never matched by the
+ * dash-bullet field drops.
+ */
+function stripLivingPrivateContent(text) {
+  if (!text) return text;
 
+  // Sections dropped wholesale for living people (narrative/residence/
+  // occupation/research-provenance).
+  const DROP_SECTIONS = /^##\s*(Life Summary|Notable Event|Family Stories|Timeline|Timeline\s*\([^)]*\)|Notes|Residence|Residences|Residency|Occupations?|Career|Employment|Work History|Education|Diagnoses?|Health|Aliases?|Also Known As|Source|Sources|Evidence|Research Notes|Research Notes[\s&]*Decisions|Leads?|Tracking|Facebook Lead|Profile URL|Citations?|References)\b/i;
+
+  // Explicitly-labelled bolded field lines dropped wholesale (covers
+  // `**Field:**`, `- **Field:**`).
+  const DROP_FIELDS = /^\s*(?:-\s*)?\*\*\s*(Residence|Resides|Lives?|Lived|Located|Location|Address|Postal Address|Education|Studied|School|College|Occupation|Occupation\(s\)|Employer|Employer\(s\)|Work|Worked at|Job|Workplace|Diagnoses?|Diagnosis|Mental health|Health|Also known as|Alias|Aka|Nickname|Facebook|Facebook profile|Instagram|TikTok|Twitter|LinkedIn|Website|Social|Social media|Contact|Phone|Mobile|Profile URL|Access Date|Provided By|Evidence chain)[^:]*:/i;
+  const DROP_FIELDS_BARE = /^\s*(?:-\s*)?\b(Residence|Resides|Lives?|Lived|Location|Address|Occupation|Education|Employer|School|Schooling|Contact|Phone|Mobile|Facebook|Instagram|TikTok|Twitter|LinkedIn|Website|Profile URL|Access Date|Provided By)\s*:/i;
+  // Drop named-academic-qualification bullets (e.g. `- **Bachelor of Music
+  //   Education** — University of Adelaide (2004–2007)`) which leak education
+  //   detail that isn't a labelled `**Education:**` field line.
+  const DROP_QUAL = /^\s*-\s*\*\*(Bachelor|Master|Masters|Diploma|Certificate|Degree|Graduate|Postgraduate|Studied|Ph\.?D|B\.\s?\w+|M\.\s?\w+|A\.\s?\w+)[^*]*\*\*/i;
+  // Bare `- Social:` / `- Location:` bullets (label not bolded).
+  const DROP_BARE_BULLET = /^\s*-\s*(Location|Employer|Occupation|Residence|Address|School|Schooling|Phone|Mobile|Facebook profile|Facebook|Instagram|TikTok|Twitter|LinkedIn|Website|Profile URL)\s*:/i;
+
+  const out = [];
+  let inDropSection = false;
+
+  for (const raw of text.split('\n')) {
+    const trimmed = raw.replace(/^\s*[-*+]\s*/, '').trim();
+
+    // Enter/exit section stripping at `## ` headings.
+    if (/^##\s/.test(trimmed)) {
+      inDropSection = DROP_SECTIONS.test(trimmed);
+      if (inDropSection) continue;         // heading itself dropped
+    } else if (inDropSection) {
+      continue;                            // content inside a dropped section
+    }
+
+    // Drop labelled sensitive field-lines (bolded, bare, or bullet forms).
+    if (DROP_FIELDS.test(raw) || DROP_FIELDS_BARE.test(raw) || DROP_QUAL.test(raw) || DROP_BARE_BULLET.test(raw)) continue;
+
+    out.push(raw);
+  }
+
+  return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+
+// ─── Build Public Output ────────────────────────────────────────────────────
+// buildPublicPeople() is exported + run-guarded so tests can import
+// stripLivingPrivateContent without triggering the side-effectful write.
+
+export function buildPublicPeople() {
 const publicPeople = [];
 
 for (const person of people) {
@@ -434,6 +503,16 @@ for (const person of people) {
     publicPerson.body_markdown = redactLivingAddresses(publicPerson.body_markdown);
   }
 
+  // ── LIVING-PRIVACY gate (owner decision, Aug 2026): every living person's
+  //    public bio is stripped down to the keep-list (name, DOB, family
+  //    relationships, marriage/divorce, photos w/ captions). Narrative bios,
+  //    residence, education, occupation, diagnoses, aliases are dropped.
+  //    Runs last, for every living person, after PII/minor/address passes.
+  //    Deceased people are never touched.
+  if (person.is_living && publicPerson.body_markdown) {
+    publicPerson.body_markdown = stripLivingPrivateContent(publicPerson.body_markdown);
+  }
+
   publicPeople.push(publicPerson);
 }
 
@@ -475,4 +554,20 @@ console.log('\n📊 Public Generation Distribution:');
 const maxGen = Math.max(...Object.keys(genCounts).map(Number));
 for (let g = 1; g <= maxGen; g++) {
   console.log(`   Gen ${g}: ${genCounts[g] || 0}`);
+}
+
+return publicPeople;
+}
+
+// ── Export the strip function so it can be unit-tested WITHOUT running the
+//    side-effectful build (the write only happens on direct node execution). ──
+export { stripLivingPrivateContent };
+
+// ── Run directly (`node scripts/sanitize-people.mjs`) → build + write outputs.
+//    Importing the module DOES NOT run the build (script/test-safe).
+const isDirectRun =
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isDirectRun) {
+  buildPublicPeople();
 }
