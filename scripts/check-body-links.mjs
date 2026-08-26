@@ -142,10 +142,27 @@ function buildVaultStemSet(root) {
 }
 const VAULT_STEMS = buildVaultStemSet(VAULT_ROOT);
 
-function isFileLikeTarget(t) {
+// ENTENDED non-person note/document references (deliberate Obsidian cross-links).
+// These render by alias by DESIGN (kept as a genealogy/Obsidian trail), NEVER as
+// person pages. They are NOT broken links. Seeded from the Aug 2026 sweep, where
+// each was verified as a genuine vault-note / wedding-note / memorial / index /
+// discrepancy-investigation reference — non-issues by Mark's explicit call.
+// A future BROKEN PERSON link (name with surname + years failing to map to a
+// slug — the Susan/Sophia/married-name class) will never match this list and so
+// will still fail the build. Matching is case-insensitive on the trimmed target.
+const KNOWN_NOTE_REFERENCES = new Set([
+  'leads',
+  'wedding - mark & kylie telfer (12 mar 2016)',
+  'wedding - tim & sheryle telfer (28 aug 1999)',
+  'celebrating the life of murray john telfer',
+  'malcolm george telfer — discrepancy investigation',
+].map((s) => s.toLowerCase()));
+
+function isNonPersonReference(t) {
   const s = t.trim();
   if (/\.(md|pdf|jpg|jpeg|png|gif|webp|docx?|txt)$/i.test(s)) return true;       // explicit doc/asset extension
   if (s.includes('/')) return true;                                               // path separator ⇒ file path
+  if (KNOWN_NOTE_REFERENCES.has(s.toLowerCase())) return true;                     // deliberate note reference
   // Otherwise: is there a vault file whose basename matches this link target?
   // (A person never collides with a vault note here, because if it were a
   // person that resolved, lookupSlug would have returned non-null already.)
@@ -177,7 +194,7 @@ for (const p of people) {
   const body = p.body_markdown || '';
   if (!body.includes('[[')) continue;
   for (const target of extractWikilinks(body)) {
-    if (isFileLikeTarget(target)) continue;    // deliberate file/note link, not a bug
+    if (isNonPersonReference(target)) continue;  // deliberate file/note link, not a bug
     const resolved = lookupSlug(target, people);
     if (!resolved) {
       deadLinks.push({
