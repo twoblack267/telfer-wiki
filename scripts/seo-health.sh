@@ -75,9 +75,37 @@ else
   bad "sample person page not found: $PAGE"
 fi
 
-# ── 5. Sitemap URL count (should be ~300+ people entries) ──
-CNT=$(grep -o 'telferwiki.com/people/' dist/sitemap-0.xml 2>/dev/null | wc -l | tr -d ' ')
-[ "$CNT" -ge 300 ] && ok "sitemap has $CNT person URLs" || bad "sitemap only $CNT person URLs (expect ≥300)"
+# ── 5. Sitemap person-page coverage (privacy-aware) ──
+# Count EXACT /people/<slug>/ person pages in the live sitemap and compare
+# against the actual public person count minus the deliberately NOINDEX'd
+# living people (privacy-exclusions.mjs). This replaces the old magic "≥300"
+# check, which could NOT know that 5 living Ivory people are intentionally
+# kept out of the sitemap (privacy request 2026-08-25) — the source of a
+# recurring false-positive. It also separates person pages from the
+# /people/<slug>/family-sheet/ sub-pages and the special /people/{dna,
+# families,full-tree}/ views, so the count is honest.
+EXPECTED_MIN=$(node -e '
+  const d = require("./src/data/people.public.json");
+  // privacy-exclusions.mjs is an ES module; re-read its slug list directly.
+  const fs = require("fs");
+  const src = fs.readFileSync("./src/data/privacy-exclusions.mjs", "utf8");
+  const noindex = new Set([...src.matchAll(/"([a-z0-9-]+)"/g)].map(m => m[1]));
+  const real = (d || []).filter(p => p && p.slug && p.slug !== "dna" &&
+    p.slug !== "families" && p.slug !== "full-tree" && !noindex.has(p.slug));
+  console.log(real.length);
+' 2>/dev/null || echo 0)
+CNT=$(grep -oE 'telferwiki\.com/people/[a-z0-9-]+/' dist/sitemap-0.xml 2>/dev/null | grep -vE '/family-sheet|/descendants' | sort -u | wc -l | tr -d ' ')
+PRIVACY_OK=1
+for s in aaron-ivory joel-ivory jared-ivory lauren-ivory karina-ivory; do
+  grep -qE "telferwiki\.com/people/$s/" dist/sitemap-0.xml 2>/dev/null && PRIVACY_OK=0
+done
+if [ "$EXPECTED_MIN" -gt 0 ] && [ "$CNT" -ge "$EXPECTED_MIN" ] && [ "$PRIVACY_OK" -eq 1 ]; then
+  ok "sitemap covers $CNT person pages (≥ $EXPECTED_MIN expected post-privacy); 5 Ivory noindex'ed"
+elif [ "$EXPECTED_MIN" -eq 0 ]; then
+  bad "could not compute expected person count from people.public.json (step 5 can't validate)"
+else
+  bad "sitemap person-page mismatch: found $CNT, expected ≥ $EXPECTED_MIN, privacy_excluded_ok=$PRIVACY_OK"
+fi
 
 # ── 6. Data-driven SEO manifests: valid JSON + well-formed URLs ──
 # sameas.json and faqs.json are the only places that inject external entity links

@@ -117,30 +117,21 @@ function lookupSlug(name, people) {
 // These are NOT bugs. (The 2026-08 sweep confirmed all of these are intentional
 // vault notes / PDFs, not dead person-links.)
 //
-// So: a [[...]] is only a BROKEN PERSON-LINK when it is NOT a person AND no
-// matching file exists in the vault. We precompute the vault's filenames once
-// (matched by exact basename, sans extension) for a fast, honest check.
-const VAULT_ROOT = process.env.OBSIDIAN_VAULT || path.join(process.env.HOME, 'ObsidianVault');
-function buildVaultStemSet(root) {
-  const set = new Set();
-  function walk(d) {
-    let entries;
-    try { entries = readdirSync(d, { withFileTypes: true }); }
-    catch { return; }
-    for (const e of entries) {
-      const full = path.join(d, e.name);
-      if (e.isDirectory()) { walk(full); continue; }
-      // record basename and basename-minus-extension
-      const base = e.name;
-      set.add(base.toLowerCase());
-      const dot = base.lastIndexOf('.');
-      if (dot > 0) set.add(base.slice(0, dot).toLowerCase());
-    }
-  }
-  if (existsSync(root)) walk(root);
-  return set;
-}
-const VAULT_STEMS = buildVaultStemSet(VAULT_ROOT);
+// So: a [[...]] is only a BROKEN PERSON-LINK when it is NOT a person and NOT
+// a known deliberate note/document reference.
+//
+// VAULT-INDEPENDENT (2026-08-27): this guard deliberately does NOT consult the
+// local ObsidianVault filesystem anymore. Previously it treated ANY link whose
+// target matched a real vault filename as a "deliberate note" and passed it.
+// That made the guard diverge between local (vault present -> VAULT_STEMS
+// populated -> lenient) and CI (no vault -> strict) — the exact blind spot that
+// let the Susan Lawrie / married-name / Paynter-Hucks dead links slip through
+// CI only. Now behaviour is identical everywhere by construction. The curated
+// KNOWN_NOTE_REFERENCES allowlist below is the ONLY thing that exempts a
+// non-person wikilink — a new intentional note-link must be explicitly added
+// to it (reviewable step), and a future broken person-link (name+surname+years
+// failing to map to a slug) will never match it, so it still blocks the build
+// in BOTH local and CI.
 
 // ENTENDED non-person note/document references (deliberate Obsidian cross-links).
 // These render by alias by DESIGN (kept as a genealogy/Obsidian trail), NEVER as
@@ -163,11 +154,7 @@ function isNonPersonReference(t) {
   if (/\.(md|pdf|jpg|jpeg|png|gif|webp|docx?|txt)$/i.test(s)) return true;       // explicit doc/asset extension
   if (s.includes('/')) return true;                                               // path separator ⇒ file path
   if (KNOWN_NOTE_REFERENCES.has(s.toLowerCase())) return true;                     // deliberate note reference
-  // Otherwise: is there a vault file whose basename matches this link target?
-  // (A person never collides with a vault note here, because if it were a
-  // person that resolved, lookupSlug would have returned non-null already.)
-  if (VAULT_STEMS.has(s.toLowerCase())) return true;
-  return false;
+  return false;  // no vault-filesystem fallback (vault-independent by design)
 }
 
 // Extract all [[...]] (and [[...|...]]) targets from a body, deduped, in order.
