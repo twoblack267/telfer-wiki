@@ -1381,11 +1381,6 @@
       "generation": 5
     },
     {
-      "slug": "william-telfer-living",
-      "id": "William Telfer",
-      "generation": 99
-    },
-    {
       "slug": "zabella-telfer",
       "id": "Zabella Violet Zelda Telfer",
       "generation": 9
@@ -1614,6 +1609,11 @@
       "slug": "hugh-parker-1864",
       "id": "Hugh Parker",
       "generation": 5
+    },
+    {
+      "slug": "william-telfer-shepherd",
+      "id": "William Telfer (shepherd)",
+      "generation": 99
     }
   ],
   "edges": {
@@ -2947,7 +2947,7 @@
         "to": "william-telfer-1802"
       },
       {
-        "from": "william-telfer-living",
+        "from": "william-telfer-shepherd",
         "to": "william-telfer-1802"
       },
       {
@@ -3386,7 +3386,7 @@
       },
       {
         "from": "janet-nichol",
-        "to": "william-telfer-living"
+        "to": "william-telfer-shepherd"
       },
       {
         "from": "jean-telfer-1840",
