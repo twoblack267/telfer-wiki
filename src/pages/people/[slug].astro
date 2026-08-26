@@ -113,7 +113,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
 <BaseLayout
   title={person.display_name}
   description={seoDescription}
-  canonicalPath={`/people/${person.slug}`}
+  canonicalPath={`/people/${person.slug}/`}
   ogType="profile"
   schema={combinedSchema}
   faqItems={faqItems}
