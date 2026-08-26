@@ -152,7 +152,7 @@ function lookupSlug(name, people) {
   const yearMatch = name.match(/\((\d{4})/);
   const targetBirthYear = yearMatch ? parseInt(yearMatch[1]) : null;
 
-  let clean = name.replace(/\([^)]*\d[^)]*\)/g, "").trim().toLowerCase();
+  let clean = name.replace(/\([^)]*(?:\d|living|deceased|\?)[^)]*\)/g, "").trim().toLowerCase();
   // Strip leading honorific titles so "Rev. Robert Haining" matches profile "Robert Haining".
   // Titles include a trailing period + space OR a bare space. Safe: only strips at the very
   // start; "Rev. Robert Haining" → "robert haining", never touches a surname or middle name.
