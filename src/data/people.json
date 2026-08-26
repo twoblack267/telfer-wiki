@@ -17982,8 +17982,8 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Wilhelm Seebohm (1833–1907)\n\n> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 26 September 1833 — Altona, Hamburg, Germany\n**Died:** 26 December 1907 (aged 74) — Tantanoola, South Australia\n**Buried:** Tantanoola Cemetery, SA\n\n## Family\n\n- **Spouse:** Mary Anne (Ann) McIntyre (1836–1913) — m. 1858\n- **Children:** Julia Matilda \"Tilley\" Seebohm (1876–1939) — married into the Telfer family; also William Alexander (1858–1944), Bessie McPherson (1860–1941), Mary Ashby (1863–1941), Anabella Laslett (1868–1925), Peter Colin (1870–1949), Jessie Davis (1873–1942)\n\n## Life Summary\n\nWilhelm Seebohm was born in Altona, Hamburg in 1833. He married Mary Anne McIntyre in 1858, and the family settled as farmers at Tantanoola in South Australia. He had eleven children; the tenth was Julia Matilda \"Tilley\" (born 18 October 1876), whose descendants continued into the Telfer family. He died on 26 December 1907 at Tantanoola, aged 74, and is buried at Tantanoola Cemetery. *(Details per Find A Grave headstone and family-tree sources.)*\n\n## Sources\n\n1. **Find A Grave:** [William Seebohm — memorial 186971060](https://www.findagrave.com/memorial/186971060/william-seebohm) — b. 26 Sep 1833 Altona, Germany, d. 26 Dec 1907 Tantanoola SA, buried Tantanoola Cemetery; family list incl. wife Mary Ann McIntyre Seebohm 1836–1913 — accessed 24 Aug 2026\n2. **WikiTree:** [Seebohm-52](https://www.wikitree.com/wiki/Seebohm-52) — Seebohm, b. abt 26 Sep 1833 Altona — accessed 24 Aug 2026\n3. **Find A Grave:** [Julia Matilda Telfer — memorial 186972473](https://www.findagrave.com/memorial/186972473/julia_matilda-telfer) — parents William 1833–1907 & Mary Ann McIntyre — accessed 24 Aug 2026",
-    "body_stripped": "> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 26 September 1833 — Altona, Hamburg, Germany\n**Died:** 26 December 1907 (aged 74) — Tantanoola, South Australia\n**Buried:** Tantanoola Cemetery, SA\n\n## Family\n\n- **Spouse:** Mary Anne (Ann) McIntyre (1836–1913) — m. 1858\n- **Children:** Julia Matilda \"Tilley\" Seebohm (1876–1939) — married into the Telfer family; also William Alexander (1858–1944), Bessie McPherson (1860–1941), Mary Ashby (1863–1941)",
+    "body_markdown": "# Wilhelm Seebohm (1833–1907)\n\n> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Photos\n\n![William seebohm grave](images/people/william-seebohm-grave.jpg)\n*Grave of Wilhelm Seebohm (1833–1907), Tantanoola Cemetery*\n\n## Lifespan\n\n**Born:** 26 September 1833 — Altona, Hamburg, Germany\n**Died:** 26 December 1907 (aged 74) — Tantanoola, South Australia\n**Buried:** Tantanoola Cemetery, SA\n\n## Family\n\n- **Spouse:** Mary Anne (Ann) McIntyre (1836–1913) — m. 1858\n- **Children:** Julia Matilda \"Tilley\" Seebohm (1876–1939) — married into the Telfer family; also William Alexander (1858–1944), Bessie McPherson (1860–1941), Mary Ashby (1863–1941), Anabella Laslett (1868–1925), Peter Colin (1870–1949), Jessie Davis (1873–1942)\n\n## Life Summary\n\nWilhelm Seebohm was born in Altona, Hamburg in 1833. He married Mary Anne McIntyre in 1858, and the family settled as farmers at Tantanoola in South Australia. He had eleven children; the tenth was Julia Matilda \"Tilley\" (born 18 October 1876), whose descendants continued into the Telfer family. He died on 26 December 1907 at Tantanoola, aged 74, and is buried at Tantanoola Cemetery. *(Details per Find A Grave headstone and family-tree sources.)*\n\n## Sources\n\n1. **Find A Grave:** [William Seebohm — memorial 186971060](https://www.findagrave.com/memorial/186971060/william-seebohm) — b. 26 Sep 1833 Altona, Germany, d. 26 Dec 1907 Tantanoola SA, buried Tantanoola Cemetery; family list incl. wife Mary Ann McIntyre Seebohm 1836–1913 — accessed 24 Aug 2026\n2. **WikiTree:** [Seebohm-52](https://www.wikitree.com/wiki/Seebohm-52) — Seebohm, b. abt 26 Sep 1833 Altona — accessed 24 Aug 2026\n3. **Find A Grave:** [Julia Matilda Telfer — memorial 186972473](https://www.findagrave.com/memorial/186972473/julia_matilda-telfer) — parents William 1833–1907 & Mary Ann McIntyre — accessed 24 Aug 2026",
+    "body_stripped": "> Stub entry filled from primary sources, 24 Aug 2026. See Sources below.\n\n## Photos\n\n!William seebohm grave\n*Grave of Wilhelm Seebohm (1833–1907), Tantanoola Cemetery*\n\n## Lifespan\n\n**Born:** 26 September 1833 — Altona, Hamburg, Germany\n**Died:** 26 December 1907 (aged 74) — Tantanoola, South Australia\n**Buried:** Tantanoola Cemetery, SA\n\n## Family\n\n- **Spouse:** Mary Anne (Ann) McIntyre (1836–1913) — m. 1858\n- **Children:** Julia Matilda \"Tilley\" Seebohm (1876–1939) — married into the Telfer f",
     "parents": [],
     "children": [
       "julia-matilda-seebohm"
@@ -17997,7 +17997,14 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "images/people/william-seebohm-grave.jpg",
+        "alt": "William seebohm grave",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/william-seebohm-grave.jpg",
+        "filename": "william-seebohm-grave.jpg"
+      }
+    ],
     "person_photo": null,
     "generation": 4
   },
