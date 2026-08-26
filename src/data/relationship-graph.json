@@ -1607,11 +1607,13 @@
     },
     {
       "slug": "hugh-parker-1859",
-      "id": "Hugh Parker"
+      "id": "Hugh Parker",
+      "generation": 5
     },
     {
       "slug": "hugh-parker-1864",
-      "id": "Hugh Parker"
+      "id": "Hugh Parker",
+      "generation": 5
     }
   ],
   "edges": {
