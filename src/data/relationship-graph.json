@@ -1617,15 +1617,18 @@
     },
     {
       "slug": "agnes-paynter",
-      "id": "Agnes Paynter"
+      "id": "Agnes Paynter",
+      "generation": 6
     },
     {
       "slug": "elizabeth-liebich",
-      "id": "Elizabeth Liebich"
+      "id": "Elizabeth Liebich",
+      "generation": 5
     },
     {
       "slug": "george-hucks",
-      "id": "George Hucks"
+      "id": "George Hucks",
+      "generation": 6
     }
   ],
   "edges": {
