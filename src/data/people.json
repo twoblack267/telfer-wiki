@@ -2911,9 +2911,11 @@
           "Christian Parker",
           "William Humphrey Parker (1850–1926)",
           "Henry Kelly Parker",
+          "Hugh Parker (1859–1861)",
           "Agnes Parker",
           "David Parker",
           "Margaret Parker",
+          "Hugh Parker (1864–1891)",
           "James Parker",
           "Jeanie Humphrey Parker",
           "Charlotte Stoddart Parker",
@@ -2922,10 +2924,12 @@
       }
     ],
     "roles": [],
-    "body_markdown": "> **NOTE (26 Aug 2026):** The `relationships:` children list was corrected — the bare refs `Elizabeth Parker`, `Frederick Robert Parker`, `Hugh Kelly Parker`, and `Hugh Parker` were removed. `Hugh Kelly Parker` (1896–1959) is a grandson (via David Parker 1856–1906), not a son; `Elizabeth Parker` (1879–1957) is a granddaughter (daughter of William Humphrey Parker & Hannah Baker), not a child; `Frederick Robert Parker` resolved to frederick-parker (~1838–1928, son of George Parker, husband of Jean Telfer — a different family); the two bare `Hugh Parker` refs resolved to hugh-kelly-parker. No dedicated records exist for any same-named son of this David, so these refs were dropped rather than mis-wired. Re-link them only when verified records exist.\n\n# David Parker (1822–1888)\n\n**Born:** 29 Jun 1822, Ragged Hill Farm, Tarbolton, Ayrshire, Scotland | **Died:** 4 Apr 1888, Hundred of Pirie, South Australia | **Christened:** 13 Jul 1822, Tarbolton, Ayrshire (father Hugh Parker, mother Christian Fulton) | **Buried:** Port Pirie Cemetery, SA | **Ship:** *Martin Luther*, arrived Adelaide 4 May 1852 | **Occupation:** Victualler (Scotland), Farmer (SA)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | David Parker (1822–1888) |\n| 1st Spouse | Isabella Kelly (m. 9 Aug 1846, Barony, Lanarkshire, Scotland; d. 6 Jul 1867) |\n| 2nd Spouse | Clementina Minto (m. 20 Jun 1871, Adelaide) |\n| Son | William Humphrey Parker (1850–1926) — by Isabella Kelly |\n\n## Children (10 — 7 with Isabella Kelly, 3 with Clementina Minto)\n\n**With Isabella Kelly:**\n- Christian Parker\n- **William Humphrey Parker** (1850–1926)\n- Henry Kelly Parker\n- Agnes Parker\n- David Parker\n- Margaret Parker\n- James Parker\n\n**With Clementina Minto:**\n- Jeanie Humphrey Parker\n- Charlotte Stoddart Parker\n- John Albert Parker\n\n> See the note above: bare refs for `Hugh Parker`, `Elizabeth Parker`, and `Frederick Robert Parker` were removed as wrong same-name resolutions and are **not** counted as children here.\n\n## Life Summary\n\nDavid Parker was born on 29 June 1822 at Ragged Hill Farm, Tarbolton, Ayrshire, Scotland. He was christened on 13 July 1822 at Tarbolton, with parents listed as Hugh Parker and Christian Fulton.\n\nHe married Isabella Kelly on 9 August 1846 in Barony, Lanarkshire, Scotland. In the 1851 Scotland Census, he was recorded as a Victualler living at Wallace Street, Wallacetown, St Quivox, Ayrshire, with wife Isabella and infant son William H (age 1).\n\nThe family emigrated to South Australia in 1852 aboard the ship **Martin Luther** (arriving 4 May 1852 in Adelaide), travelling with wife Isabella and three children.\n\nAfter Isabella's death on 6 July 1867, he married Clementina Minto on 20 June 1871 at Hailes House, Hackney, Adelaide.\n\nHe died on 4 April 1888 at his residence \"Wheatlands\", Hundred of Pirie, South Australia, aged 65, and was buried at Port Pirie Cemetery.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 29 Jun 1822 | Born at Ragged Hill Farm, Tarbolton, Ayrshire, Scotland |\n| 13 Jul 1822 | Christened at Tarbolton, Ayrshire |\n| 9 Aug 1846 | Married Isabella Kelly at Barony, Lanarkshire |\n| 1851 | Recorded in Scotland Census as Victualler, Wallacetown, Ayrshire |\n| 1852 | Emigrated to South Australia on *Martin Luther* |\n| 17 Jul 1850 | Son William Humphrey Parker born |\n| 6 Jul 1867 | Wife Isabella Kelly died at Virginia, SA |\n| 20 Jun 1871 | Married Clementina Minto at Hailes House, Hackney, Adelaide |\n| 4 Apr 1888 | Died at Hundred of Pirie, South Australia |\n\n## Sources\n\n1. **Source:** [WikiTree: David Parker (Parker-4350)](https://www.wikitree.com/wiki/Parker-4350) — accessed 20 June 2026\n2. **Source:** Genealogy South Australia 87/640 1871 (marriage record)\n3. **Source:** South Australia Deaths 1842-1972 (FindMyPast, District: Clare, Book/Page: 170/99)\n4. **Source:** BillionGraves burial record — Port Pirie Cemetery\n5. **Source:** \"Family Notices\" — *Evening Journal* (Adelaide), 11 Apr 1888, p. 2 (Death notice for David Parker at \"Wheatlands\", Port Pirie) — via Trove article [207764575](https://trove.nla.gov.au/newspaper/article/207764575) — accessed 25 June 2026\n6. **Source:** \"PARKER—MINTO marriage\" — *Evening Journal* (Adelaide), 22 Jun 1871 (Marriage notice for David Parker to Clementina Minto at Hailes House, Hackney) — via WikiTree citing Genealogy SA",
-    "body_stripped": "> **NOTE (26 Aug 2026):** The `relationships:` children list was corrected — the bare refs `Elizabeth Parker`, `Frederick Robert Parker`, `Hugh Kelly Parker`, and `Hugh Parker` were removed. `Hugh Kelly Parker` (1896–1959) is a grandson (via David Parker 1856–1906), not a son; `Elizabeth Parker` (1879–1957) is a granddaughter (daughter of William Humphrey Parker & Hannah Baker), not a child; `Frederick Robert Parker` resolved to frederick-parker (~1838–1928, son of George Parker, husband of Jean",
+    "body_markdown": "> **NOTE (26 Aug 2026, updated):** David Parker **did** have two sons named **Hugh Parker**, both with his first wife Isabella Kelly. A prior data-hygiene correction (see below) removed the two bare `Hugh Parker` refs on the grounds that \"no dedicated records exist\"; that conclusion was **reversed on 26 Aug 2026** when evidence was found. The two sons are:\n> 1. **[[Hugh Parker (1859–1861)]]** — born Nov 1859, Virginia SA; died 13 Dec 1861 (aged ~2), Peachy Belt SA. *Lead — parent link from WikiTree + SA death reg (Port Gawler 14/144); exact-date burial at Two Wells (FindAGrave).*\n> 2. **[[Hugh Parker (1864–1891)]]** — born 31 Oct 1864, Virginia SA; died 23 Nov 1891 (aged 27), Hundred of Pirie SA; buried Port Pirie Cemetery. *VERIFIED — WikiTree + FindAGrave + father's 1888 death notice (\"leaving seven sons and one daughter\", which only counts with Hugh included).*\n>\n> Both were named after David's own father, **Hugh Parker**. The name was reused after infant #1 died in 1861, a common practice of the era. These are **sons**, not the grandson Hugh Kelly Parker (1896–1959).\n>\n> **What happened (original 26 Aug 2026 correction, now superseded):** the bare frontmatter refs `Elizabeth Parker`, `Frederick Robert Parker`, `Hugh Kelly Parker`, and two `Hugh Parker` were removed. `Hugh Kelly Parker` (1896–1959) is a grandson (via David Parker 1856–1906), not a son; `Elizabeth Parker` (1879–1957) is a granddaughter (daughter of William Humphrey Parker & Hannah Baker); `Frederick Robert Parker` resolved to a different family (~1838–1928, son of George Parker, husband of Jean Telfer). The two bare `Hugh Parker` refs were dropped as \"no dedicated records exist\" — but research (26 Aug 2026) proved records **do** exist and both were genuine sons; they are re-added above.\n\n# David Parker (1822–1888)\n\n**Born:** 29 Jun 1822, Ragged Hill Farm, Tarbolton, Ayrshire, Scotland | **Died:** 4 Apr 1888, Hundred of Pirie, South Australia | **Christened:** 13 Jul 1822, Tarbolton, Ayrshire (father Hugh Parker, mother Christian Fulton) | **Buried:** Port Pirie Cemetery, SA | **Ship:** *Martin Luther*, arrived Adelaide 4 May 1852 | **Occupation:** Victualler (Scotland), Farmer (SA)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | David Parker (1822–1888) |\n| 1st Spouse | Isabella Kelly (m. 9 Aug 1846, Barony, Lanarkshire, Scotland; d. 6 Jul 1867) |\n| 2nd Spouse | Clementina Minto (m. 20 Jun 1871, Adelaide) |\n| Son | William Humphrey Parker (1850–1926) — by Isabella Kelly |\n| Son | [[Hugh Parker (1859–1861)]] — by Isabella Kelly |\n| Son | [[Hugh Parker (1864–1891)]] — by Isabella Kelly |\n\n## Children (12 — 9 with Isabella Kelly, 3 with Clementina Minto)\n\n**With Isabella Kelly:**\n- Christian Parker\n- **William Humphrey Parker** (1850–1926)\n- Henry Kelly Parker\n- [[Hugh Parker (1859–1861)]]\n- Agnes Parker\n- David Parker\n- Margaret Parker\n- [[Hugh Parker (1864–1891)]]\n- James Parker\n\n**With Clementina Minto:**\n- Jeanie Humphrey Parker\n- Charlotte Stoddart Parker\n- John Albert Parker\n\n> Two sons both named **Hugh Parker** (born 1859 and 1864) are included here — see the note above. The prior removal of these refs as \"no dedicated records\" was reversed on 26 Aug 2026 once verified records were found.\n\n## Life Summary\n\nDavid Parker was born on 29 June 1822 at Ragged Hill Farm, Tarbolton, Ayrshire, Scotland. He was christened on 13 July 1822 at Tarbolton, with parents listed as Hugh Parker and Christian Fulton.\n\nHe married Isabella Kelly on 9 August 1846 in Barony, Lanarkshire, Scotland. In the 1851 Scotland Census, he was recorded as a Victualler living at Wallace Street, Wallacetown, St Quivox, Ayrshire, with wife Isabella and infant son William H (age 1).\n\nThe family emigrated to South Australia in 1852 aboard the ship **Martin Luther** (arriving 4 May 1852 in Adelaide), travelling with wife Isabella and three children.\n\nAfter Isabella's death on 6 July 1867, he married Clementina Minto on 20 June 1871 at Hailes House, Hackney, Adelaide.\n\nWith Isabella he also had two sons named **Hugh Parker**: the first (born Nov 1859) died in infancy in December 1861, and the name was given to a second son born in 1864, who survived to age 27 but died in 1891 — both named in honour of David's own father, Hugh Parker. See [[Hugh Parker (1859–1861)]] and [[Hugh Parker (1864–1891)]].\n\nHe died on 4 April 1888 at his residence \"Wheatlands\", Hundred of Pirie, South Australia, aged 65, and was buried at Port Pirie Cemetery.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 29 Jun 1822 | Born at Ragged Hill Farm, Tarbolton, Ayrshire, Scotland |\n| 13 Jul 1822 | Christened at Tarbolton, Ayrshire |\n| 9 Aug 1846 | Married Isabella Kelly at Barony, Lanarkshire |\n| 1851 | Recorded in Scotland Census as Victualler, Wallacetown, Ayrshire |\n| 1852 | Emigrated to South Australia on *Martin Luther* |\n| 17 Jul 1850 | Son William Humphrey Parker born |\n| Nov 1859 | Son Hugh Parker (1859–1861) born at Virginia, SA |\n| 13 Dec 1861 | Son Hugh Parker (1859–1861) died aged ~2, Peachy Belt SA |\n| 31 Oct 1864 | Son Hugh Parker (1864–1891) born at Virginia, SA |\n| 6 Jul 1867 | Wife Isabella Kelly died at Virginia, SA |\n| 20 Jun 1871 | Married Clementina Minto at Hailes House, Hackney, Adelaide |\n| 23 Nov 1891 | Son Hugh Parker (1864–1891) died aged 27, Hundred of Pirie, SA |\n\n## Sources\n\n1. **Source:** [WikiTree: David Parker (Parker-4350)](https://www.wikitree.com/wiki/Parker-4350) — accessed 20 June 2026\n2. **Source:** Genealogy South Australia 87/640 1871 (marriage record)\n3. **Source:** South Australia Deaths 1842-1972 (FindMyPast, District: Clare, Book/Page: 170/99)\n4. **Source:** BillionGraves burial record — Port Pirie Cemetery\n5. **Source:** \"Family Notices\" — *Evening Journal* (Adelaide), 11 Apr 1888, p. 2 (Death notice for David Parker at \"Wheatlands\", Port Pirie) — via Trove article [207764575](https://trove.nla.gov.au/newspaper/article/207764575) — accessed 25 June 2026\n6. **Source:** \"PARKER—MINTO marriage\" — *Evening Journal* (Adelaide), 22 Jun 1871 (Marriage notice for David Parker to Clementina Minto at Hailes House, Hackney) — via WikiTree citing Genealogy SA\n7. **Source:** [WikiTree: Hugh Parker (1859–1861) (Parker-4357)](https://www.wikitree.com/wiki/Parker-4357) — son of Parker-4350 & Kelly; died 13 Dec 1861 aged 2, Peachy Belt SA; SA death reg Port Gawler 14/144 — accessed 26 Aug 2026\n8. **Source:** [WikiTree: Hugh Parker (1864–1891) (Parker-4359)](https://www.wikitree.com/wiki/Parker-4359) — son of Parker-4350 & Kelly; died 23 Nov 1891 aged 27, Hd of Pirie; SA Deaths (FindMyPast) District Clare 198/87 — accessed 26 Aug 2026\n9. **Source:** [FindAGrave: Hugh Parker (1859–1861)](https://www.findagrave.com/memorial/202084822/hugh-parker) — Two Wells Cemetery, died 13 Dec 1861 — accessed 26 Aug 2026\n10. **Source:** [FindAGrave: Hugh Parker (1864–1891)](https://www.findagrave.com/memorial/202005418/hugh-parker) — born 31 Oct 1864 Virginia SA, died 23 Nov 1891 aged 27, Port Pirie Cemetery; parents David Parker & Isabella Kelly Parker — accessed 26 Aug 2026\n11. **Source:** David Parker death notice — *Evening Journal* (Adelaide), 14 Apr 1888, via Trove article [94733280](https://trove.nla.gov.au/newspaper/article/94733280) — \"leaving seven sons and one daughter\"; accessed 26 Aug 2026",
+    "body_stripped": "> **NOTE (26 Aug 2026, updated):** David Parker **did** have two sons named **Hugh Parker**, both with his first wife Isabella Kelly. A prior data-hygiene correction (see below) removed the two bare `Hugh Parker` refs on the grounds that \"no dedicated records exist\"; that conclusion was **reversed on 26 Aug 2026** when evidence was found. The two sons are:\n> 1. **Hugh Parker (1859–1861)** — born Nov 1859, Virginia SA; died 13 Dec 1861 (aged ~2), Peachy Belt SA. *Lead — parent link from WikiTree ",
     "parents": [],
     "children": [
+      "hugh-parker-1859",
+      "hugh-parker-1864",
       "william-humphrey-parker-1850"
     ],
     "siblings": [],
@@ -8158,6 +8162,8 @@
     "body_stripped": "**Born:** abt 1825, Bridgeton, Glasgow, Lanarkshire, Scotland  **Died:** 6 Jul 1867, Virginia, South Australia  **Spouse:** David Parker (1822–1888)  **Ship:** *Martin Luther*, arrived Adelaide 4 May 1852\n\n## Family\n\n Relation  Name \n\n Self  Isabella Kelly (~1825–1867) \n Spouse  David Parker (1822–1888) \n Son  William Humphrey Parker (1850–1926) \n\n## Life Summary\n\nIsabella Kelly was born about 1825 in Bridgeton, Glasgow, Lanarkshire, Scotland. She married David Parker on 9 August 1846 in Barony,",
     "parents": [],
     "children": [
+      "hugh-parker-1859",
+      "hugh-parker-1864",
       "william-humphrey-parker-1850"
     ],
     "siblings": [],
@@ -18032,7 +18038,10 @@
       "stella-winifred-parker",
       "william-henry-parker"
     ],
-    "siblings": [],
+    "siblings": [
+      "hugh-parker-1859",
+      "hugh-parker-1864"
+    ],
     "spouses": [
       "hannah-baker"
     ],
@@ -21702,6 +21711,140 @@
     "spouses": [],
     "is_living": false,
     "lifespan": "1862 – 1942",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Hugh Parker",
+    "slug": "hugh-parker-1859",
+    "vault_file": "Hugh Parker (1859–1861).md",
+    "first_name": "Hugh",
+    "middle_name": null,
+    "last_name": "Parker",
+    "birth_year": 1859,
+    "death_year": 1861,
+    "birth_year_display": "1859",
+    "death_year_display": "1861",
+    "display_name": "Hugh Parker",
+    "title": "Hugh Parker — Family & Biography",
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "parker"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Hugh Parker"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "David Parker (1822–1888)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Isabella Kelly (~1825–1867)"
+        ]
+      },
+      {
+        "type": "Sibling",
+        "names": [
+          "William Humphrey Parker (1850–1926)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Hugh Parker (1859–1861)\n\n**Born:** Nov 1859, Virginia, South Australia | **Died:** 13 Dec 1861 (aged ~2), Peachy Belt, South Australia | **Father:** [[David Parker (1822–1888)]] | **Mother:** [[Isabella Kelly (~1825–1867)]]\n\n## Family Stories\n\n### The First Name in the House\n\nHugh came first — the eldest son David and Isabella gave the name of David's own father, Hugh Parker of Ayrshire. But this boy only lived to about two, dying in December 1861 on the family farm country near Peachy Belt. Rather than lose the name, the family gave it again to a son born three Octobers later, in 1864 — the practice of the time. Two short-lived boys, one much-loved name, passed down twice in a row.\n\n*(Research-compiled story, 26 Aug 2026 — see Sources.)*\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Hugh Parker (1859–1861) |\n| Father | [[David Parker (1822–1888)]] |\n| Mother | [[Isabella Kelly (~1825–1867)]] |\n| Brother | [[William Humphrey Parker (1850–1926)]] — by Isabella Kelly |\n| Brother | [[Hugh Parker (1864–1891)]] — next brother born with same name |\n\n## Life Summary\n\nHugh Parker was born in November 1859 at Virginia, South Australia, the son of David Parker (1822–1888) and Isabella Kelly (c. 1825–1867). He was the first son his father named Hugh, in honour of David's own father Hugh Parker.\n\nHugh died on 13 December 1861, aged about 2, in the Peachy Belt area of South Australia — not long after his mother Isabella, born to the family near Virginia and Two Wells in the Adelaide Plains district. His death record is registered in the Port Gawler district. After his death, the family gave the name Hugh again to a son born in 1864.\n\n## Note on Name\n\nThis Hugh Parker is distinct from his brother **Hugh Parker (1864–1891)**, born after this child's death. Both sons were named after David Parker's father, Hugh Parker.\n\n## Evidence Note\n\n> **Verification status:** This profile is a **lead, not a fully-verified fact.** The parent link (son of David & Isabella) rests on one source group (WikiTree, user-contributed). A matching burial record exists (FindAGrave, Two Wells Cemetery, died 13 Dec 1861 — exact date match) but is **not** name-linked to this family and lists no parents. The exact SA birth/death registration could not be pulled (paywalled). Per the Telfer vault standard, the parent link should be re-confirmed against the SA BDM death registration (Port Gawler district, ~1861) when accessible.\n\n## Sources\n\n1. **Source:** [WikiTree: Hugh Parker (Parker-4357)](https://www.wikitree.com/wiki/Parker-4357) — lists father David Parker (Parker-4350), mother Isabella Kelly; died aged 2 on 13 Dec 1861, Peachy Belt SA; accessed 26 Aug 2026\n2. **Source:** Genealogy SA death registrations — district Port Gawler, book/page 14/144, cited on WikiTree (SA civil registry); accessed 26 Aug 2026\n3. **Source (suggestive, not parent-linked):** [FindAGrave: Hugh Parker (d. 13 Dec 1861), Two Wells Cemetery, Two Wells SA](https://www.findagrave.com/memorial/202084822/hugh-parker) — death date 13 Dec 1861 matches exactly; birth unknown, no parents listed; accessed 26 Aug 2026\n\n## References\n\n- **Father:** [[David Parker (1822–1888)]] — died Hundred of Pirie SA\n- **Mother:** [[Isabella Kelly (~1825–1867)]] — died Virginia SA",
+    "body_stripped": "**Born:** Nov 1859, Virginia, South Australia  **Died:** 13 Dec 1861 (aged ~2), Peachy Belt, South Australia  **Father:** David Parker (1822–1888)  **Mother:** Isabella Kelly (~1825–1867)\n\n## Family Stories\n\n### The First Name in the House\n\nHugh came first — the eldest son David and Isabella gave the name of David's own father, Hugh Parker of Ayrshire. But this boy only lived to about two, dying in December 1861 on the family farm country near Peachy Belt. Rather than lose the name, the family g",
+    "parents": [
+      "david-parker",
+      "isabella-kelly"
+    ],
+    "children": [],
+    "siblings": [
+      "hugh-parker-1864",
+      "william-humphrey-parker-1850"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1859 – 1861",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Hugh Parker",
+    "slug": "hugh-parker-1864",
+    "vault_file": "Hugh Parker (1864–1891).md",
+    "first_name": "Hugh",
+    "middle_name": null,
+    "last_name": "Parker",
+    "birth_year": 1864,
+    "death_year": 1891,
+    "birth_year_display": "1864",
+    "death_year_display": "1891",
+    "display_name": "Hugh Parker",
+    "title": "Hugh Parker — Family & Biography",
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "parker"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Hugh Parker"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "David Parker (1822–1888)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Isabella Kelly (~1825–1867)"
+        ]
+      },
+      {
+        "type": "Sibling",
+        "names": [
+          "William Humphrey Parker (1850–1926)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Hugh Parker (1864–1891)\n\n**Born:** 31 Oct 1864, Virginia, South Australia | **Died:** 23 Nov 1891 (aged 27), Hundred of Pirie, South Australia | **Father:** [[David Parker (1822–1888)]] | **Mother:** [[Isabella Kelly (~1825–1867)]] | **Buried:** Port Pirie Cemetery, SA\n\n## Family Stories\n\n### A Name Carried On\n\nHugh was the second son his parents named Hugh. His elder brother, also Hugh, had died in December 1861 at barely two years old — and in an era when families didn't waste a good name, David and Isabella gave it again to this son born in October 1864. The name honoured David's own father, Hugh Parker, back in Ayrshire. Hugh himself died young, at 27, in 1891 — never marrying or leaving children of his own, but his short life is how the name travelled through the tree twice.\n\n*(Research-compiled story, 26 Aug 2026 — see Sources.)*\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Hugh Parker (1864–1891) |\n| Father | [[David Parker (1822–1888)]] |\n| Mother | [[Isabella Kelly (~1825–1867)]] |\n| Brother | [[William Humphrey Parker (1850–1926)]] — by Isabella Kelly |\n\n## Life Summary\n\nHugh Parker was born on 31 October 1864 at Virginia, South Australia, the son of David Parker (1822–1888) and Isabella Kelly (c. 1825–1867). He was one of two sons his father named Hugh — he carried the name after his elder brother Hugh (1859–1861), who had died in infancy.\n\nHugh died on 23 November 1891, aged 27, at Hundred of Pirie, South Australia, and was buried at Port Pirie Cemetery — near his father David, who had died three years earlier. His early death at 27 meant he did not appear among the sons listed in his father's 1888 death notice.\n\n## Note on Name\n\nThis Hugh Parker is distinct from — and lives alongside, in the records — his elder half-decade brother **Hugh Parker (1859–1861)**, who died aged two. David Parker named both a son Hugh in honour of his own father, Hugh Parker (christened David at Tarbolton, Ayrshire, 1822; father Hugh Parker, mother Christian Fulton). Reusing the name after an infant death was a common practice of the period.\n\n## Sources\n\n1. **Source:** [WikiTree: Hugh Parker (Parker-4359)](https://www.wikitree.com/wiki/Parker-4359) — lists father David Parker (Parker-4350), mother Isabella Kelly; accessed 26 Aug 2026\n2. **Source:** [FindAGrave: Hugh Parker (1864–1891)](https://www.findagrave.com/memorial/202005418/hugh-parker) — born 31 Oct 1864 Virginia SA, died 23 Nov 1891 aged 27, Port Pirie Cemetery; parents David Parker (1822–1888) & Isabella Kelly Parker (1829–1867); accessed 26 Aug 2026\n3. **Source:** South Australia Deaths 1842–1972 (FindMyPast): \"Parker, Hugh — Death 23 Nov 1891, Marital status not recorded, Age 27y, Residence & Death Place: Hd of Pirie; Reference: District Clare, Book/Page 198/87\" — cited on WikiTree; accessed 26 Aug 2026\n4. **Source:** [David Parker death notice — *Evening Journal* (Adelaide), 14 Apr 1888, article 94733280](https://trove.nla.gov.au/newspaper/article/94733280): \"leaving seven sons and one daughter to mourn their loss\". With the other living sons, Hugh (1864–1891) is required to reach the count of seven; accessed 26 Aug 2026\n\n## References\n\n- **Father:** [[David Parker (1822–1888)]] — born Ragged Hill Farm, Tarbolton, Ayrshire; emigrated on *Martin Luther* 1852; died Hundred of Pirie SA\n- **Mother:** [[Isabella Kelly (~1825–1867)]] — died Virginia SA",
+    "body_stripped": "**Born:** 31 Oct 1864, Virginia, South Australia  **Died:** 23 Nov 1891 (aged 27), Hundred of Pirie, South Australia  **Father:** David Parker (1822–1888)  **Mother:** Isabella Kelly (~1825–1867)  **Buried:** Port Pirie Cemetery, SA\n\n## Family Stories\n\n### A Name Carried On\n\nHugh was the second son his parents named Hugh. His elder brother, also Hugh, had died in December 1861 at barely two years old — and in an era when families didn't waste a good name, David and Isabella gave it again to this",
+    "parents": [
+      "david-parker",
+      "isabella-kelly"
+    ],
+    "children": [],
+    "siblings": [
+      "hugh-parker-1859",
+      "william-humphrey-parker-1850"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1864 – 1891",
     "related_trees": [
       "telfer-tree"
     ],

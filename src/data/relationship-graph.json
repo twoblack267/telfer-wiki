@@ -1604,6 +1604,14 @@
       "slug": "robert-telfer-dillon",
       "id": "Robert Telfer Dillon",
       "generation": 5
+    },
+    {
+      "slug": "hugh-parker-1859",
+      "id": "Hugh Parker"
+    },
+    {
+      "slug": "hugh-parker-1864",
+      "id": "Hugh Parker"
     }
   ],
   "edges": {
@@ -3183,6 +3191,22 @@
       {
         "from": "john-dillon",
         "to": "robert-telfer-dillon"
+      },
+      {
+        "from": "david-parker",
+        "to": "hugh-parker-1859"
+      },
+      {
+        "from": "isabella-kelly",
+        "to": "hugh-parker-1859"
+      },
+      {
+        "from": "david-parker",
+        "to": "hugh-parker-1864"
+      },
+      {
+        "from": "isabella-kelly",
+        "to": "hugh-parker-1864"
       }
     ],
     "spouseOf": [
@@ -5559,6 +5583,18 @@
       {
         "from": "robert-telfer-dillon",
         "to": "septimus-dillon"
+      },
+      {
+        "from": "hugh-parker-1859",
+        "to": "hugh-parker-1864"
+      },
+      {
+        "from": "hugh-parker-1859",
+        "to": "william-humphrey-parker-1850"
+      },
+      {
+        "from": "hugh-parker-1864",
+        "to": "william-humphrey-parker-1850"
       }
     ]
   }
