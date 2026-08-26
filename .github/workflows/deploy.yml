@@ -28,7 +28,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build site
-        run: npx astro build
+        # Run the FULL build script (npm run build) NOT bare `npx astro build`.
+        # The postbuild hook generates people-redirects (generate-redirects.mjs)
+        # and runs the link-integrity guard (validate-people-links.mjs). CI must
+        # exercise those or broken/legacy person links get deployed as 404s.
+        run: npm run build
       - name: Add .nojekyll for GitHub Pages
         run: touch dist/.nojekyll
       - name: Upload Pages artifact
