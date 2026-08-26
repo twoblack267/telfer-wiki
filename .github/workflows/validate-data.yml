@@ -11,12 +11,14 @@ on:
       - 'schemas/**'
       - 'scripts/validate-no-mark-refs.py'
       - 'scripts/purge-mark-refs.py'
+      - 'scripts/scan-cross-branch.mjs'
   pull_request:
     paths:
       - 'src/data/**'
       - 'schemas/**'
       - 'scripts/validate-no-mark-refs.py'
       - 'scripts/purge-mark-refs.py'
+      - 'scripts/scan-cross-branch.mjs'
 
 jobs:
   validate-data:
@@ -40,6 +42,12 @@ jobs:
           echo "🔍 Running data integrity validation..."
           npm run validate
           echo "✅ Data integrity validation passed"
+
+      - name: Scan for cross-branch sibling contamination (scan-cross-branch.mjs)
+        run: |
+          echo "🧬 Scanning for cross-branch sibling contamination (same-name branch leaks)..."
+          node scripts/scan-cross-branch.mjs
+          echo "✅ No cross-branch sibling contamination found"
 
       - name: Set up Python
         uses: actions/setup-python@v5

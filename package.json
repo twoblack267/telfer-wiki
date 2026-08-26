@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "astro dev",
     "sanitize": "node scripts/sanitize-people.mjs",
-    "validate": "node validate-people.mjs",
+    "validate": "node validate-people.mjs && node scripts/scan-cross-branch.mjs",
+    "scan:cross-branch": "node scripts/scan-cross-branch.mjs",
     "build": "npm run sanitize && npm run validate && astro build",
     "postbuild": "node scripts/generate-redirects.mjs && node scripts/validate-links.mjs && node scripts/validate-relationship-links.mjs",
     "self-heal": "node scripts/auto-fix-links.mjs && npm run build",

@@ -52,3 +52,14 @@ node scripts/compute-generations.mjs
 echo "==> Step 5/5: regenerate people.public.json (sanitize from people.json)"
 # MUST run sanitize, else people.public.json (what the site renders) stays stale.
 node scripts/sanitize-people.mjs
+
+echo
+echo "==> GATE: scan for cross-branch sibling contamination (same-name branch leaks)"
+node scripts/scan-cross-branch.mjs || {
+  echo
+  echo "GATE FAILED — same-name branch contamination found in regenerated data."
+  echo "Fix: correct the affected VAULT profile(s) (Siblings/Children fields must not"
+  echo "collide with a same-named person in another branch), then re-run this script."
+  exit 1
+}
+echo "OK — no cross-branch sibling contamination, deploy gate passes."
