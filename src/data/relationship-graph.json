@@ -1614,6 +1614,18 @@
       "slug": "william-telfer-shepherd",
       "id": "William Telfer (shepherd)",
       "generation": 99
+    },
+    {
+      "slug": "agnes-paynter",
+      "id": "Agnes Paynter"
+    },
+    {
+      "slug": "elizabeth-liebich",
+      "id": "Elizabeth Liebich"
+    },
+    {
+      "slug": "george-hucks",
+      "id": "George Hucks"
     }
   ],
   "edges": {
@@ -3209,6 +3221,10 @@
       {
         "from": "isabella-kelly",
         "to": "hugh-parker-1864"
+      },
+      {
+        "from": "thomas-paynter",
+        "to": "agnes-paynter"
       }
     ],
     "spouseOf": [
@@ -3467,6 +3483,10 @@
       {
         "from": "john-watson",
         "to": "mary-jane-paynter"
+      },
+      {
+        "from": "elizabeth-liebich",
+        "to": "thomas-paynter"
       }
     ],
     "siblingOf": [

@@ -4047,6 +4047,36 @@
     "person_photo": null
   },
   {
+    "id": "Elizabeth Liebich",
+    "slug": "elizabeth-liebich",
+    "first_name": "Elizabeth",
+    "middle_name": null,
+    "last_name": "Liebich",
+    "birth_year": 1859,
+    "death_year": 1919,
+    "birth_year_display": "1859",
+    "death_year_display": "1919",
+    "display_name": "Elizabeth Liebich",
+    "title": "Elizabeth Jane Liebich (1859–1919)",
+    "lifespan": "1859 – 1919",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Elizabeth Jane Liebich (1859–1919)\n\n> Verified 2-source (FindAGrave headstone + WikiTree citing Genealogy SA birth register). See Sources below.\n\n## Lifespan\n\n**Born:** 12 December 1859 — South Australia\n**Died:** 14 December 1919 (aged 60) — burial Quorn (Flinders Ranges), South Australia\n**Buried:** Quorn Town Cemetery, Quorn, SA\n\n## Family\n\n- **Father:** Gustav Johann Liebich (~1835–1895) — born Silesia, Prussia (per WikiTree)\n- **Mother:** Mary Jane Hoare (~1837–1913) — born Belfast, Ireland (per WikiTree)\n- **Spouse:** [[Thomas Paynter (1859–1946)]] — m. 1 Dec 1881, Tarcowie, SA (book) / Yongala (WikiTree — same Peterborough-region district)\n- **Children:** Richard William John (1882–1960), Lillian Ellen Jayne (→Hatchard), Gustav Francis George, Ethel Emily Elizabeth (→Flavel), Dinah Alice Mary (→Mundy), Agnes Letitia May Rose (→Hucks), Thomas Frederick Edward (1903–1940), Helena Florence Daisy (→Hill)\n\n## Life Summary\n\nElizabeth Jane Liebich married Thomas Paynter, eldest son of Richard Paynter and Jean (Telfer) Paynter, in the Peterborough region of South Australia (book gives Tarcowie; WikiTree gives Yongala — likely the same registration district). They had a large family of eight children. She died on 14 December 1919 and is buried at Quorn Town Cemetery. *(Family relationships per From the Borders to the Bush; vital dates per Find A Grave headstone and WikiTree citing Genealogy SA.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 12 Dec 1859 | Born, South Australia |\n| 1 Dec 1881 | Married Thomas Paynter (Tarcowie, SA) |\n| 1882–1906 | Children born (eight) |\n| 14 Dec 1919 | Died; buried Quorn Town Cemetery, SA |\n\n## Sources\n\n1. **Find A Grave:** [Elizabeth Jane Liebich Paynter — memorial 195864845](https://www.findagrave.com/memorial/195864845/elizabeth-jane-paynter) — b. 12 Dec 1859, d. 14 Dec 1919, buried Quorn Town Cemetery — accessed 26 Aug 2026\n2. **WikiTree:** [Elizabeth (Liebich) Paynter — Liebich-76](https://www.wikitree.com/wiki/Liebich-76) — b. 12 Dec 1859, d. 15 Dec 1919; daughter of Gustav Johann Liebich (~1835–1895) & Mary Jane Hoare; cites Genealogy SA birth registration 574/276 — accessed 26 Aug 2026\n3. **Book:** Donald Telfer, *From the Borders to the Bush*, ch.5 (Jean/Jane Telfer 1840–1892 chapter) — wife of Thomas Paynter, m. 1 Dec 1881; death 14 Dec 1919",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "thomas-paynter"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Esther Farrow Latter",
     "slug": "esther-farrow-latter",
     "first_name": "Esther",
@@ -4179,8 +4209,12 @@
       "jean-telfer-1840",
       "richard-paynter"
     ],
-    "children": [],
-    "spouses": [],
+    "children": [
+      "agnes-paynter"
+    ],
+    "spouses": [
+      "elizabeth-liebich"
+    ],
     "siblings": [
       "dinah-flavel-paynter",
       "elizabeth-paynter",
@@ -8211,6 +8245,34 @@
     "person_photo": null
   },
   {
+    "id": "George Hucks",
+    "slug": "george-hucks",
+    "first_name": "George",
+    "middle_name": null,
+    "last_name": "Hucks",
+    "birth_year": 1875,
+    "death_year": 1947,
+    "birth_year_display": "1875",
+    "death_year_display": "1947",
+    "display_name": "George Hucks",
+    "title": "George Herbert Hucks (1875–1947)",
+    "lifespan": "1875 – 1947",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# George Herbert Hucks (1875–1947)\n\n> Verified across 3 independent compiled family trees (RootsWeb moadfamily, cornwalldiaspora, WikiTree). A primary (Find A Grave / SA BDM) is the recommended next confirmation step — see Notes.\n\n## Lifespan\n\n**Born:** 15 May 1875 — Eudunda, South Australia\n**Married:** 6 July 1914 — Agnes Letitia May Rose Paynter, at her parents' house, Quorn, SA\n**Died:** 28 September 1947 (aged 72) — Terowie, South Australia\n**Buried:** Oodla Wirra Cemetery, District Council of Peterborough, SA\n\n## Family\n\n- **Father:** John Ring Hucks (1854–1928)\n- **Mother:** Charlotte Bromley (1853–1931)\n- **Spouse:** [[Agnes Letitia May Rose Paynter-Hucks (1895–1952)]] — m. 6 Jul 1914, Quorn\n- **Children:** Linda Georgenia Elizabeth Hucks (b. 22 Apr 1920, Cockburn SA), George Leslie Roy Hucks (b. 1926 SA)\n\n## Life Summary\n\nGeorge Herbert Hucks was born at Eudunda, South Australia in 1875, son of John Ring Hucks and Charlotte Bromley. A railway worker, he lived in the upper-North SA rail towns of Quorn, Cockburn and Oodla Wirra (per From the Borders to the Bush, ch.5, as husband of Agnes Paynter). He married Agnes Letitia May Rose Paynter on 6 July 1914 at her parents' house in Quorn. He died on 28 September 1947 at Terowie and was buried at Oodla Wirra. *(Dates per RootsWeb moadfamily, cornwalldiaspora F1452 and WikiTree; book corroborates his role as Agnes's husband.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 15 May 1875 | Born, Eudunda SA |\n| 6 Jul 1914 | Married Agnes Paynter, Quorn SA |\n| 22 Apr 1920 | Daughter Linda born, Cockburn SA |\n| 1926 | Son George Leslie Roy born |\n| 28 Sep 1947 | Died, Terowie SA |\n| — | Buried, Oodla Wirra Cemetery |\n\n## Sources\n\n1. **RootsWeb (moadfamily):** [HUCKS, George Herbert — family group sheet PS115](https://freepages.rootsweb.com/~moadfamily/family/Family/PS115/PS115_244.HTM) — b. 15 May 1875 Eudunda, d. 28 Sep 1947 Terowie, buried Oodla Wirra; father John Ring Hucks (1854–1928) — accessed 26 Aug 2026\n2. **Cornwall Diaspora tree F1452:** [Family Group Sheet George Herbert HUCKS / Emma TURNER](https://cornwalldiaspora.org/familygroup.php?familyID=F1452&tree=GI131011) — d. 28 Sep 1947 Terowie, burial Oodla Wirra — accessed 26 Aug 2026\n3. **WikiTree:** [Herbert George Hucks — Hucks-51](https://www.wikitree.com/wiki/Hucks-51) — b. 15 May 1875 Eudunda, d. 1947 SA; husband of Agnes (Paynter) Hucks — accessed 26 Aug 2026\n4. **Book:** Donald Telfer, *From the Borders to the Bush*, ch.5 — husband of Agnes, railway worker of Quorn/Cockburn/Oodla Wirra",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Elizabeth Parker",
     "slug": "elizabeth-parker",
     "first_name": "Elizabeth",
@@ -8766,6 +8828,36 @@
       "sophia-parker-lawrie",
       "stella-winifred-parker"
     ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Agnes Paynter",
+    "slug": "agnes-paynter",
+    "first_name": "Agnes",
+    "middle_name": null,
+    "last_name": "Paynter",
+    "birth_year": 1895,
+    "death_year": 1952,
+    "birth_year_display": "1895",
+    "death_year_display": "1952",
+    "display_name": "Agnes Paynter",
+    "title": "Agnes Letitia May Rose Paynter-Hucks (1895–1952)",
+    "lifespan": "1895 – 1952",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Agnes Letitia May Rose Paynter-Hucks (1895–1952)\n\n> Verified 2-source (WikiTree citing Genealogy SA Registers + RootsWeb/FamilySearch compiled trees). Death date resolved to **28 Mar 1952**; prior book figure \"28 May\" is an outlier.\n\n## Lifespan\n\n**Born:** 3 December 1895 — Quorn, South Australia\n**Married:** 6 July 1914 — George Herbert Hucks, at her parents' house, Quorn, SA\n**Died:** 28 March 1952 (aged 56) — Loxton, South Australia\n**Buried:** 30 March 1952 — Loxton Cemetery, SA\n\n## Family\n\n- **Father:** [[Thomas Paynter (1859–1946)]]\n- **Mother:** [[Elizabeth Jane Liebich (1859–1919)]]\n- **Spouse:** [[George Herbert Hucks (1875–1947)]] — m. 6 Jul 1914, Quorn\n- **Children:** Linda Georgenia Elizabeth Hucks (b. 22 Apr 1920, Cockburn SA), George Leslie Roy Hucks (b. 1926 SA)\n\n## Life Summary\n\nAgnes was a daughter of Thomas Paynter and Elizabeth Liebich, born at Quorn in South Australia's Flinders Ranges in 1895. She married George Herbert Hucks, a railway worker of the Quorn/Cockburn/Oodla Wirra area, on 6 July 1914 at her parents' house in Quorn. They had children including Linda and George Leslie Roy. Agnes died on 28 March 1952 at Loxton and was buried there on 30 March 1952. *(Relationships and dates per WikiTree citing Genealogy SA registers and the RootsWeb moadfamily tree.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 3 Dec 1895 | Born, Quorn SA |\n| 6 Jul 1914 | Married George Herbert Hucks, Quorn SA |\n| 22 Apr 1920 | Daughter Linda Georgenia Elizabeth born, Cockburn SA |\n| 1926 | Son George Leslie Roy born |\n| 28 Mar 1952 | Died, Loxton SA |\n| 30 Mar 1952 | Buried, Loxton Cemetery |\n\n## Sources\n\n1. **WikiTree:** [Agnes Letitia May Rose (Paynter) Hucks — Paynter-195](https://www.wikitree.com/wiki/Paynter-195) — b. 1895 Quorn, m. George Herbert Hucks 6 Jul 1914 Quorn, d. 1952 buried Loxton; cites Genealogy SA birth 574/276, marriage 260/75, death 781/1696; daughter of Thomas Paynter & Elizabeth (Liebich) Paynter — accessed 26 Aug 2026\n2. **RootsWeb (moadfamily):** [Family Group Sheet PS115](https://freepages.rootsweb.com/~moadfamily/family/Family/PS115/PS115_244.HTM) — b. 3 Dec 1895 Quorn, d. 28 Mar 1952 Loxton, bur. 30 Mar 1952 Loxton — accessed 26 Aug 2026\n3. **FamilySearch:** (per book-digester report) KDWD-FTS — d. 28 Mar 1952, bur. 30 Mar 1952 Loxton\n4. **Book:** Donald Telfer, *From the Borders to the Bush*, ch.5 — \"On 28 May 1952 Agnes died, buried Loxton\" (date rejected as outlier against records above)",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "thomas-paynter"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -10823,7 +10915,7 @@
     "lifespan": "1959 – living",
     "generation": 7,
     "is_living": true,
-    "body_markdown": "# Timothy Neil Telfer\n\n**Role:** Father\n**Born:** 11 July 1959\n\n**Spouse (1st):** [[Penny Telfer|Penny Ann Virgen]] (m. 28 Nov 1981, Redcliffe Churches of Christ Chapel, Kippa Ring — div.)\n**Spouse (2nd):** [[Sheryle Telfer (1961–?)]] (m. 28 Aug 1999)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse (1st)** | [[Penny Telfer|Penny Ann Virgen]] (m. 28 Nov 1981 — div.) |\n| **Spouse (2nd)** | [[Sheryle Telfer (1961–?)]] (m. 28 Aug 1999) |\n| **Children** | [[Mark Kenneth Telfer (1986–?)]], [[Amy Nicole Telfer]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Grantley Keith Telfer]], [[Kathryn Mavis Telfer (1961–1965)]], [[Susan Shirley Lawrie (?–living)]] |\n\n---\n\n## Marriage Certificate — Timothy Neil Telfer & Penny Ann Virgen (28 Nov 1981)\n\n**Registration Number:** 1981/16975\n**Date & Place:** 28 November 1981, Church of Christ Redcliffe, Kippa Ring, Queensland\n**Rites:** Church of Christ\n**Celebrant:** Daryll William Telfer (Q 1478)\n**Witnesses:** Grantley Kieth Telfer, Christine Lawrence\n**Registered:** 10 December 1981, Brisbane (Registrar: K.W. Redman)\n**This copy certified:** 21 February 2019\n\n### Bridegroom — Timothy Neil Telfer\n- **Age:** 22 years | **Status:** Bachelor\n- **Birthplace:** Tumby Bay, South Australia\n\n- **Father:** Murray John Telfer\n- **Mother (maiden):** Shirley Edna Parker\n\n### Bride — Penny Ann Virgen\n- **Age:** 21 years | **Status:** Spinster\n- **Birthplace:** Brisbane, Queensland\n\n- **Father:** Kenneth Gregory Virgen\n- **Mother (maiden):** Noela Pauline Wode\n\n---\n\n## Marriage Record — Timothy Neil Telfer & Sheryle Telfer (28 Aug 1999)\n\n**Date & Place:** 28 August 1999, Pine Rivers Baptist Church, Lawnton, Queensland\n**Bridegroom:** Timothy Neil Telfer\n**Bride:** Sheryle Telfer (née Ivory), born 1961\n\n*Full certificate particulars (celebrant, witnesses, registration number) not yet transcribed — [TBC from marriage record].*\n\n## Photos\n\n| Photo | Description |\n|-------|-------------|\n|| ![Timothy Neil Telfer and Sheryle Telfer (née Ivory) on their wedding day, 28 August 1999, Pine Rivers Baptist Church, Lawnton](images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg) | Timothy Neil Telfer and Sheryle Telfer (née Ivory) on their wedding day, 28 August 1999, Pine Rivers Baptist Church, Lawnton ||\n| | ![Timothy Neil Telfer (patterned shirt, far right) with Penny Telfer (pregnant with Mark), Kenneth Gregory Virgen (blue leisure suit) & Noela Pauline Wode, circa 1985](images/people/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg) | Timothy Neil Telfer (patterned shirt, far right) with Penny Telfer (pregnant with Mark), Kenneth Gregory Virgen (blue leisure suit) & Noela Pauline Wode, circa 1985 ||\n\n---",
+    "body_markdown": "# Timothy Neil Telfer\n\n**Role:** Father\n**Born:** 11 July 1959\n\n**Spouse (1st):** [[Penny Telfer|Penny Ann Virgen]] (m. 28 Nov 1981, Redcliffe Churches of Christ Chapel, Kippa Ring — div.)\n**Spouse (2nd):** [[Sheryle Telfer (1961–?)]] (m. 28 Aug 1999)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse (1st)** | [[Penny Telfer|Penny Ann Virgen]] (m. 28 Nov 1981 — div.) |\n| **Spouse (2nd)** | [[Sheryle Telfer (1961–?)]] (m. 28 Aug 1999) |\n| **Children** | [[Mark Kenneth Telfer (1986–?)]], [[Amy Nicole Telfer]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Grantley Keith Telfer]], [[Kathryn Mavis Telfer (1961–1965)]], [[Susan Shirley Lawrie (?–living)]] |\n\n---\n\n## Marriage Certificate — Timothy Neil Telfer & Penny Ann Virgen (28 Nov 1981)\n\n**Registration Number:** 1981/16975\n**Date & Place:** 28 November 1981, Church of Christ Redcliffe, Kippa Ring, Queensland\n**Rites:** Church of Christ\n**Celebrant:** Daryll William Telfer (Q 1478)\n**Witnesses:** Grantley Kieth Telfer, Christine Lawrence\n**Registered:** 10 December 1981, Brisbane (Registrar: K.W. Redman)\n**This copy certified:** 21 February 2019\n\n### Bridegroom — Timothy Neil Telfer\n- **Age:** 22 years | **Status:** Bachelor\n- **Birthplace:** Tumby Bay, South Australia\n\n- **Father:** Murray John Telfer\n- **Mother (maiden):** Shirley Edna Parker\n\n### Bride — Penny Ann Virgen\n- **Age:** 21 years | **Status:** Spinster\n- **Birthplace:** Brisbane, Queensland\n\n- **Father:** Kenneth Gregory Virgen\n- **Mother (maiden):** Noela Pauline Wode\n\n---\n\n## Photos\n\n![Wedding   Tim   Sheryle Telfer  28 Aug 1999 ](images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg)\n\n*Tim and Sheryle on their wedding day, 28 August 1999.*\n\n| Photo | Description |\n|-------|-------------|\n|| ![Telfer Virgen family pregnant Mark Nov1985](images/people/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg) | Timothy Neil Telfer (patterned shirt, far right) with Penny Telfer (pregnant with Mark), Kenneth Gregory Virgen (blue leisure suit) & Noela Pauline Wode, circa 1985 ||\n\n---",
     "roles": [
       "Father"
     ],
@@ -10853,17 +10945,15 @@
     "images": [
       {
         "src": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
-        "alt": "Timothy Neil Telfer and Sheryle Telfer (née Ivory) on their wedding day, 28 August 1999, Pine Rivers Baptist Church, Lawnton",
+        "alt": "Wedding   Tim   Sheryle Telfer  28 Aug 1999 ",
         "vault_path": "/Users/marktelfer/ObsidianVault/Family History/_assets/Wedding - Tim & Sheryle Telfer (28 Aug 1999).jpg",
-        "filename": "Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
-        "caption": "Tim & Sheryle wedding, 28 Aug 1999"
+        "filename": "Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
       },
       {
         "src": "images/people/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg",
-        "alt": "Timothy Neil Telfer (patterned shirt, far right) with Penny Telfer (pregnant with Mark), Kenneth Gregory Virgen (blue leisure suit) & Noela Pauline Wode, circa 1985",
+        "alt": "Telfer Virgen family pregnant Mark Nov1985",
         "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg",
-        "filename": "Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg",
-        "caption": "Telfer–Virgen family, circa 1985"
+        "filename": "Telfer_Virgen_family_pregnant_Mark_Nov1985.jpg"
       }
     ],
     "person_photo": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
