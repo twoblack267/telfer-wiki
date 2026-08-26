@@ -45,6 +45,27 @@ for (const p of people) {
     });
   }
 
+  // Case 1b: COLLAPSED-first-name old slug variant.
+  // Historical/legacy slug scheme used only the FIRST word of a multi-word
+  // first name, e.g. 'william-parker-1850' for "William Humphrey Parker",
+  // 'clara-telfer-1883' for "Clara Blanche Telfer". If a person's first name
+  // has more than one word, redirect the collapsed form → the correct new slug.
+  // This covers legacy links that full-first-name Case 1 misses (147 people
+  // had no redirect; william-parker-* links 404'd live).
+  const firstWords = (p.first_name || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
+  if (firstWords.length > 1) {
+    const collapsedBare = `${firstWords[0]}-${lastName}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+    const collapsedOld = birthYear ? `${collapsedBare}-${birthYear}` : collapsedBare;
+    if (collapsedOld !== newSlug && collapsedOld !== oldSlug) {
+      redirects.push({
+        from: collapsedOld,
+        to: newSlug,
+        reason: 'collapsed-first-name',
+        display_name: p.display_name
+      });
+    }
+  }
+
   // Case 2: Bare slug was taken by this person before, now changed
   // e.g. 'amy-telfer' was taken by Amy Nicole, but now Amy Nicole is 'amy-telfer-nicole'
   // This is covered by Case 1 (oldSlug 'amy-telfer' !== newSlug 'amy-telfer-nicole')
