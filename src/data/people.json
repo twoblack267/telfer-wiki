@@ -781,7 +781,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Alexander Brown Thomson",
     "title": "Alexander Brown Thomson",
     "tags": [
@@ -813,8 +813,8 @@
     "spouses": [
       "isabella-telfer"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -1019,7 +1019,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Alma Ida Sporer",
     "title": "Alma Ida Sporer",
     "tags": [
@@ -1049,8 +1049,8 @@
     "spouses": [
       "james-telfer-1866"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -1607,7 +1607,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Ann Telfer",
     "title": "Ann Telfer",
     "tags": [
@@ -1631,8 +1631,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -1893,7 +1893,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Bertha Telfer",
     "title": "Bertha Telfer — Family & Biography",
     "tags": [
@@ -1962,8 +1962,8 @@
     "spouses": [
       "james-alexander-alcorn"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -1981,7 +1981,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Beth Telfer",
     "title": "Beth Telfer",
     "tags": [
@@ -2013,8 +2013,8 @@
     "spouses": [
       "edwin-ernest-clarke"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -2567,7 +2567,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Charles Farrow Jr",
     "title": "Charles Farrow Jr",
     "tags": [
@@ -2619,8 +2619,8 @@
       "jane-murray-farrow"
     ],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -3360,7 +3360,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Edith Farrow",
     "title": "Edith Farrow",
     "tags": [
@@ -3384,8 +3384,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -3403,7 +3403,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Edith Mary Kathleen Telfer",
     "title": "Edith Mary Kathleen Telfer",
     "tags": [
@@ -3427,8 +3427,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -3577,7 +3577,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Edwin Ernest Clarke",
     "title": "Edwin Ernest Clarke",
     "tags": [
@@ -3608,8 +3608,8 @@
       "beth-telfer",
       "elizabeth-telfer-1868"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -4118,7 +4118,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Elizabeth Farrow",
     "title": "Elizabeth Farrow",
     "tags": [
@@ -4142,8 +4142,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -5024,7 +5024,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Eric John Telfer",
     "title": "Eric John Telfer",
     "tags": [
@@ -5048,8 +5048,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -5328,7 +5328,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Esther Farrow",
     "title": "Esther Farrow",
     "tags": [
@@ -5352,8 +5352,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -5371,7 +5371,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Esther Hannah Farrow",
     "title": "Esther Hannah Farrow",
     "tags": [
@@ -5395,8 +5395,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -5621,7 +5621,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Ethel Edith Telfer",
     "title": "Ethel Edith Telfer",
     "tags": [
@@ -5645,8 +5645,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -5754,7 +5754,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Eva Agnes Farrow",
     "title": "Eva Agnes Farrow",
     "tags": [
@@ -5786,8 +5786,8 @@
       "jane-murray-farrow"
     ],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -7585,7 +7585,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Harry Bunston",
     "title": "Harry Bunston",
     "tags": [
@@ -7615,8 +7615,8 @@
     "spouses": [
       "floris-telfer"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -7710,7 +7710,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Helen Telfer",
     "title": "Helen Telfer",
     "tags": [
@@ -7734,8 +7734,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -8085,7 +8085,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Ian Telfer",
     "title": "Ian Telfer",
     "tags": [
@@ -8117,8 +8117,8 @@
     "spouses": [
       "kenneth-cornish"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -8654,7 +8654,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "James Farrow",
     "title": "James Farrow",
     "tags": [
@@ -8678,8 +8678,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -9515,7 +9515,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Jane Sophie Smith",
     "title": "Jane Sophie Smith (Harper)",
     "tags": [
@@ -9574,8 +9574,8 @@
       "margaret-dougal-smith"
     ],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -10372,7 +10372,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Jessie Allan",
     "title": "Jessie Allan",
     "tags": [
@@ -10402,8 +10402,8 @@
     "spouses": [
       "gilbert-telfer"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -10421,7 +10421,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Jessie Sargent",
     "title": "Jessie Sargent",
     "tags": [
@@ -10451,8 +10451,8 @@
     "spouses": [
       "kenneth-telfer"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -10470,7 +10470,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Jessie Telfer",
     "title": "Jessie Telfer",
     "tags": [
@@ -10494,8 +10494,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -10735,7 +10735,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "John Farrow",
     "title": "John Farrow",
     "tags": [
@@ -10759,8 +10759,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -10828,7 +10828,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "John James Telfer Farrow",
     "title": "John James Telfer Farrow — Family & Biography",
     "tags": [
@@ -10859,8 +10859,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -11650,7 +11650,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Johnnie Telfer",
     "title": "Johnnie Telfer",
     "tags": [
@@ -11674,8 +11674,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -11821,7 +11821,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Joseph Francis Farrow",
     "title": "Joseph Francis Farrow",
     "tags": [
@@ -11845,8 +11845,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -12341,7 +12341,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Kenneth Cornish",
     "title": "Kenneth Cornish",
     "tags": [
@@ -12372,8 +12372,8 @@
       "ian-telfer",
       "marian-cornish"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -12677,7 +12677,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Leslie Robert Telfer",
     "title": "Leslie Robert Telfer",
     "tags": [
@@ -12707,8 +12707,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -12795,7 +12795,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Lilian Daisy Dawson",
     "title": "Lilian Daisy Dawson",
     "tags": [
@@ -12825,8 +12825,8 @@
     "spouses": [
       "douglas-telfer"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -13267,7 +13267,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Malcolm Duncan Cameron",
     "title": "Malcolm Duncan Cameron",
     "tags": [
@@ -13297,8 +13297,8 @@
     "spouses": [
       "martha-cameron"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -13363,7 +13363,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Malcolm Murray Cameron",
     "title": "Malcolm Murray Cameron",
     "tags": [
@@ -13387,8 +13387,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -13675,7 +13675,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Margaret Farrow",
     "title": "Margaret Farrow",
     "tags": [
@@ -13699,8 +13699,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -14582,7 +14582,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Mary Bayes Farrow",
     "title": "Mary Bayes Farrow",
     "tags": [
@@ -14606,8 +14606,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -14694,7 +14694,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "May Foy",
     "title": "May Foy",
     "tags": [
@@ -14724,8 +14724,8 @@
     "spouses": [
       "robert-telfer-1886"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -15231,7 +15231,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Peter Farrow",
     "title": "Peter Farrow",
     "tags": [
@@ -15255,8 +15255,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -15274,7 +15274,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Peter Telfer",
     "title": "Peter Telfer — Family & Biography",
     "tags": [
@@ -15318,8 +15318,8 @@
       "carissa-telfer"
     ],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -15667,7 +15667,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Robert Agnew",
     "title": "Robert Agnew",
     "tags": [
@@ -15697,8 +15697,8 @@
     "spouses": [
       "susan-telfer-1871"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -15858,7 +15858,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Robert Farrow",
     "title": "Robert Farrow",
     "tags": [
@@ -15882,8 +15882,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -16090,7 +16090,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Robina Telfer",
     "title": "Robina Telfer",
     "tags": [
@@ -16114,8 +16114,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -16378,7 +16378,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Sarah Farrow",
     "title": "Sarah Farrow",
     "tags": [
@@ -16402,8 +16402,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -18063,7 +18063,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "William Farrow",
     "title": "William Farrow",
     "tags": [
@@ -18087,8 +18087,8 @@
     "children": [],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -20411,7 +20411,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "John Alick Ralph Telfer",
     "title": "John Alick Ralph Telfer — Family & Biography",
     "tags": [
@@ -20444,14 +20444,14 @@
       }
     ],
     "roles": [],
-    "is_living": true,
+    "is_living": false,
     "generation": 6,
     "related_trees": [
       "telfer-tree"
     ],
     "images": [],
     "person_photo": null,
-    "lifespan": "? – living",
+    "lifespan": "? – ?",
     "body_markdown": "# John Alick Ralph Telfer\n\n**Lifespan:** born ? – died ? (dates unverified — left blank under the conflicting/unknown-dates rule)\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nJohn Alick Ralph Telfer was one of the six children of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]], born while the family lived at Warcowie before their 1923 move to Hill River (near Clare).\n\nHis birth and death dates are not yet verified, so they are left blank here rather than guessed.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Siblings** | Rita Joyce Telfer (1909–1990), Beatrice Sylvia Telfer (1911–1999), Douglas Ivan Telfer (1913–1993), Melville Bruce Telfer (1914–1997), Murray Keith Telfer (1920–2005) |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — names John Alick Ralph as one of Albert & Beatrice's six children\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — confirms Albert & Beatrice's family at Clare (John Alick Ralph himself has no separate dated headstone listing / dates unverified) — accessed 10 Aug 2026",
     "body_stripped": "**Lifespan:** born ? – died ? (dates unverified — left blank under the conflicting/unknown-dates rule)\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nJohn Alick Ralph Telfer was one of the six children of Albert George Telfer (1881–1970) and Beatrice Rowe Telfer (1877–1951), born while the family lived at Warcowie before their 1923 move to Hill River (near Clare).\n\nHis birth and death dates are not yet verified, so they are left blank he",
     "parents": [
