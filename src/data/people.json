@@ -21582,9 +21582,9 @@
     "middle_name": null,
     "last_name": "Virgen",
     "birth_year": 1926,
-    "death_year": null,
+    "death_year": 2003,
     "birth_year_display": "1926",
-    "death_year_display": "living",
+    "death_year_display": "2003",
     "display_name": "Kenneth Gregory Virgen",
     "title": "Kenneth Gregory Virgen (1926–2003)",
     "tags": [
@@ -21616,8 +21616,8 @@
     ],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "1926 – living",
+    "is_living": false,
+    "lifespan": "1926 – 2003",
     "related_trees": [
       "telfer-tree"
     ],
@@ -21633,9 +21633,9 @@
     "middle_name": null,
     "last_name": "Virgen",
     "birth_year": 1922,
-    "death_year": null,
+    "death_year": 2015,
     "birth_year_display": "1922",
-    "death_year_display": "living",
+    "death_year_display": "2015",
     "display_name": "Noela Pauline Virgen",
     "title": "Noela Pauline Virgen, née Wode (1922–2015)",
     "tags": [
@@ -21667,8 +21667,8 @@
     ],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "1922 – living",
+    "is_living": false,
+    "lifespan": "1922 – 2015",
     "related_trees": [
       "telfer-tree"
     ],
