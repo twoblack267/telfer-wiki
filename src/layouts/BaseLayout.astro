@@ -31,6 +31,9 @@ const jsonLd = (!noindex && schema) ? (Array.isArray(schema) ? schema : [schema]
     <meta name="description" content={description || defaultDescription} />
     <link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + "favicon.svg"} />
 
+    <!-- Google AdSense — site ownership verification (ad client ca-pub-8950658490247877) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8950658490247877" crossorigin="anonymous"></script>
+
     <!-- Canonical URL (prevents duplicate-content across URL variants) -->
     <link rel="canonical" href={canonicalUrl} />
 
