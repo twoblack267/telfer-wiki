@@ -418,7 +418,7 @@ function stripLivingPrivateContent(text) {
 
   // Sections dropped wholesale for living people (narrative/residence/
   // occupation/research-provenance).
-  const DROP_SECTIONS = /^##\s*(Life Summary|Notable Event|Family Stories|Timeline|Timeline\s*\([^)]*\)|Notes|Residence|Residences|Residency|Occupations?|Career|Employment|Work History|Education|Diagnoses?|Health|Aliases?|Also Known As|Source|Sources|Evidence|Research Notes|Research Notes[\s&]*Decisions|Leads?|Tracking|Facebook Lead|Profile URL|Citations?|References)\b/i;
+  const DROP_SECTIONS = /^##\s*(Life Summary|Notable Event|Family Stories|Timeline|Timeline\s*\([^)]*\)|Notes|Residence|Residences|Residency|Occupations?|Qualifications?|Career|Employment|Work History|Education|Diagnoses?|Health|Aliases?|Also Known As|Source|Sources|Evidence|Research Notes|Research Notes[\s&]*Decisions|Leads?|Tracking|Facebook Lead|Profile URL|Citations?|References)\b/i;
 
   // Explicitly-labelled bolded field lines dropped wholesale (covers
   // `**Field:**`, `- **Field:**`).
