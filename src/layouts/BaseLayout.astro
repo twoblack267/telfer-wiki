@@ -90,6 +90,9 @@ const jsonLd = (!noindex && schema) ? (Array.isArray(schema) ? schema : [schema]
           <a href={import.meta.env.BASE_URL + "people/dna"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/dna") && "active"]}>DNA</a>
           <a href={import.meta.env.BASE_URL + "ballads"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "ballads") && "active"]}>Ballads</a>
           <a href={import.meta.env.BASE_URL + "about"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "about") && "active"]}>About</a>
+          <a href={import.meta.env.BASE_URL + "contact"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "contact") && "active"]}>Contact</a>
+          <a href={import.meta.env.BASE_URL + "privacy"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "privacy") && "active"]}>Privacy</a>
+          <a href={import.meta.env.BASE_URL + "terms"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "terms") && "active"]}>Terms</a>
         </div>
 
         <!-- Dark Mode Toggle -->
@@ -116,6 +119,9 @@ const jsonLd = (!noindex && schema) ? (Array.isArray(schema) ? schema : [schema]
           <a href={import.meta.env.BASE_URL + "people/dna"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/dna") && "active"]}>🧬 DNA</a>
           <a href={import.meta.env.BASE_URL + "ballads"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "ballads") && "active"]}>🎵 Ballads</a>
           <a href={import.meta.env.BASE_URL + "about"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "about") && "active"]}>📖 About</a>
+          <a href={import.meta.env.BASE_URL + "contact"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "contact") && "active"]}>✉️ Contact</a>
+          <a href={import.meta.env.BASE_URL + "privacy"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "privacy") && "active"]}>🔒 Privacy</a>
+          <a href={import.meta.env.BASE_URL + "terms"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "terms") && "active"]}>📜 Terms</a>
         </div>
       </div>
     </nav>
@@ -156,6 +162,11 @@ const jsonLd = (!noindex && schema) ? (Array.isArray(schema) ? schema : [schema]
           Data sourced from the Telfer Family History archive.
           <span class="text-xs">Built by Skippy the Magnificent &amp; The Librarian.</span>
         </p>
+        <nav class="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs">
+          <a href={import.meta.env.BASE_URL + "contact"} class="nav-link">Contact</a>
+          <a href={import.meta.env.BASE_URL + "privacy"} class="nav-link">Privacy</a>
+          <a href={import.meta.env.BASE_URL + "terms"} class="nav-link">Terms</a>
+        </nav>
       </div>
     </footer>
   </body>
