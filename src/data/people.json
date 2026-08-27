@@ -4975,7 +4975,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Emily Ellen Thorpe",
     "title": "Emily Ellen Thorpe",
     "tags": [
@@ -5005,8 +5005,8 @@
     ],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -6978,7 +6978,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "George Provis",
     "title": "George Provis",
     "tags": [
@@ -7008,8 +7008,8 @@
     ],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -15809,7 +15809,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Robert Dunlop",
     "title": "Robert Dunlop",
     "tags": [
@@ -15839,8 +15839,8 @@
     ],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],

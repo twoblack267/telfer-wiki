@@ -194,27 +194,56 @@ for (const p of people) {
 }
 
 // ── [B] Detect phantom-living data corruption ─────────────────────────────
-// A person living with NO death_year AND NO vault_file. This is the signature
-// of convert-markdown's orphan-purge branch: "Keep if manually curated (no
+// A person living with NO death_year AND NO vault_file — the signature of
+// convert-markdown's orphan-purge branch: "Keep if manually curated (no
 // vault_file)" — which is how a 1700s ancestor survived as a fake living entry.
+//
+// FIX (Skippy, 2026-08-27): previously a living person WITH a vault_file was
+// always exempt here (vault_file => "legit"). But 3 more root ancestors
+// (Emily Ellen Thorpe, George Provis, Robert Dunlop — parents/partners of
+// people born 1789-1884) were wrongly showing as living because their vault
+// files lacked BOTH a death year AND a `deceased` flag, so convert-markdown
+// defaulted them to living. A definitive signal catches this class: ANY
+// person flagged living who still has >=4 recorded generations of descendants
+// (a great-great-grandchild or deeper) is provably a historical ancestor and
+// therefore necessarily deceased — no living person has 4 descendant
+// generations below them while also being alive. This applies regardless of
+// vault_file presence. (A modern living person has desc-depth < 4, so this
+// never flags them — verified against Sandra Lee Smith, Crystal McDonald,
+// Leonard Dance, Amy Nicole Telfer, Karina Ivory, the 4 great-aunts, etc.)
+const childMap = new Map();
+for (const p of people) childMap.set(p.slug, p.children || []);
+const depthMemo = new Map();
+function descendantDepth(slug) {
+  if (depthMemo.has(slug)) return depthMemo.get(slug);
+  const kids = childMap.get(slug) || [];
+  const d = kids.length === 0
+    ? 0
+    : 1 + Math.max(...kids.map((k) => descendantDepth(k)), 0);
+  depthMemo.set(slug, d);
+  return d;
+}
 const phantomLiving = [];
 for (const p of people) {
   if (p.is_living !== true) continue;
-  if (p.vault_file) continue;                  // has a real vault source → legit
   if (p.death_year != null) continue;          // has a death year → not phantom-living
-  // Heuristic: an ancestor (higher generation) masquerading as living with no source.
   const gen = p.generation;
-  // Only flag as phantom if it's clearly an ancestor generation (gen < current)
-  // OR has lifespan text implying a historical window. A modern living person in
-  // ~gen 0 who just lacks a vault_file is NOT flagged (could be legitimate).
   const isAncestorGen = (typeof gen === 'number' && gen >= 1);
-  const lifespan = p.lifespan || '';
-  const historicalStart = (p.birth_year != null && p.birth_year < 1950);
-  if (isAncestorGen && historicalStart) {
+  // A person flagged living who still has >=4 recorded generations of descendants
+  // (great-great-grandchild or deeper) is provably a historical ancestor and
+  // therefore necessarily deceased — no living person has 4 descendant
+  // generations below them while also being alive. This is the single airtight
+  // phantom-living signal. It subsumes the old birth_year<1950 heuristic (a
+  // 1700s orphan-purged ancestor always sits atop 5+ living generations) and it
+  // does NOT catch documented-century living people (desc-depth 0): e.g. the
+  // preserved great-aunts/uncles Ethel Jean/Gladys/Doris/Ruth/Reginald.
+  const provablyDeadByDescent = descendantDepth(p.slug) >= 4;
+  if (isAncestorGen && provablyDeadByDescent) {
     phantomLiving.push({
       slug: p.slug, id: p.id || p.display_name || p.slug,
       vault_file: p.vault_file || '',
       generation: gen, birth_year: p.birth_year,
+      descendant_depth: descendantDepth(p.slug),
     });
   }
 }
