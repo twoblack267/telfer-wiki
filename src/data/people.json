@@ -14642,7 +14642,7 @@
       {
         "type": "Spouse",
         "names": [
-          "John Watson"
+          "John Watson (1851–1929)"
         ]
       },
       {
@@ -14656,6 +14656,13 @@
         "names": [
           "Jean Telfer (1840–1892)"
         ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "Joseph Watson (1883–1948)",
+          "Lancelot Hobart Watson (1888–1960)"
+        ]
       }
     ],
     "roles": [],
@@ -14665,7 +14672,10 @@
       "jean-telfer-1840",
       "richard-paynter"
     ],
-    "children": [],
+    "children": [
+      "joseph-watson",
+      "lancelot-watson"
+    ],
     "siblings": [
       "dinah-flavel-paynter",
       "elizabeth-paynter",
@@ -14673,7 +14683,7 @@
       "thomas-paynter"
     ],
     "spouses": [
-      "john-watson"
+      "john-watson-1851"
     ],
     "is_living": false,
     "lifespan": "1861 – 1945",
@@ -21266,53 +21276,62 @@
     "generation": 5
   },
   {
-    "id": "John Hobart Watson",
-    "slug": "john-watson",
-    "vault_file": "John Hobart (Jack) Watson (1916–1943).md",
+    "id": "John Watson",
+    "slug": "john-watson-1851",
+    "vault_file": "John Watson (1851–1929).md",
     "first_name": "John",
-    "middle_name": "Hobart",
+    "middle_name": null,
     "last_name": "Watson",
-    "birth_year": 1916,
-    "death_year": 1943,
-    "birth_year_display": "1916",
-    "death_year_display": "1943",
-    "display_name": "John Hobart Watson",
-    "title": "John Hobart (Jack) Watson (1916–1943) — WW2 Serviceman",
+    "birth_year": 1851,
+    "death_year": 1929,
+    "birth_year_display": "1851",
+    "death_year_display": "1929",
+    "display_name": "John Watson",
+    "title": "John Watson — Family & Biography",
     "tags": [
       "bio",
       "family",
       "person",
       "watson",
-      "war"
+      "in-law"
     ],
     "relationships": [
       {
         "type": "Self",
         "names": [
-          "John Hobart (Jack) Watson"
+          "John Watson"
         ]
       },
       {
-        "type": "Branch",
+        "type": "Spouse",
         "names": [
-          "Watson (Telfer descendant)",
-          "Armadale Vic"
+          "Mary Jane Paynter (1861–1945)"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "Joseph Watson (1883–1948)",
+          "Lancelot Hobart Watson (1888–1960)"
         ]
       }
     ],
     "roles": [
-      "Second World War serviceman of the Watson (Telfer-descendant) branch — died of wounds at Lae, 1943"
+      "Husband of Mary Jane Paynter — Watson branch of the Telfer tree"
     ],
-    "body_markdown": "# John Hobart (Jack) Watson (1916–1943)\n\n**Role:** Second World War serviceman of the Watson (Telfer-descendant) branch — died of wounds at Lae, 1943\n\n**Born:** 1916 — Hawksburn, Victoria (AWM Roll of Honour circular, primary; supplement book gives Armadale — both inner-Melbourne, see Notes)\n**Died:** 5 July 1943 (aged 27) — New Guinea, died of wounds\n**Buried:** Lae War Cemetery, Lae, Papua New Guinea (Roll of Honour panel 32 / supplementary panel 6)\n**Service:** Corporal, VX102907, 58/59th Australian Infantry Battalion, Australian Army\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Branch** | WATSON — descent from [[Jean Telfer (1840–1892)]] → [[Mary Jane Paynter (1861–1945)]] → John Watson (b. 1851 Hobart) → [[Lancelot Hobart Watson (1888–1960)]] |\n| **Father** | Lancelot Hobart Watson (b. 30 Jan 1888; moved to Sydney, worked at Hay Street factory, Leichhardt; d. 29 Mar 1960, Sydney NSW) |\n| **Mother** | Miriam ... Hobart West (of Arkaba SA; m. ~1913) |\n| **Siblings** | Lancelot Rowe Watson (b. 1914 Murrumbeena Vic, d. 14 Apr 1974), Dorothy Jean Watson (b. 1918 Armadale Vic, d. 16 Sep 1980) |\n| **Spouse** | Thelma Alice Scammel (m. 1941) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 1916 | Born at Hawksburn, Victoria (AWM circular; book gives Armadale) |\n| ~1913 | Father Lancelot Hobart Watson married Miriam ... Hobart West |\n| 1941 | Married Thelma Alice Scammel |\n| 1941/42 (enlist) | Enlisted Australian Army, allocated service number VX102907, 58/59th Australian Infantry Battalion |\n| 5 Jul 1943 | Died of wounds in New Guinea (Second World War, 1939–1945) |\n| — | Buried at Lae War Cemetery, Lae, Papua New Guinea |\n\n## Sources\n\n1. **AWM Roll of Honour:** [John Hobart Watson (R1695924)](https://www.awm.gov.au/collection/R1695924) — Cpl VX102907, 58/59th Aust Inf Bn, d. 5 Jul 1943 New Guinea (died of wounds), Lae War Cemetery, panel 32 / supp panel 6 — accessed 23 Aug 2026\n2. **AWM Roll of Honour circular:** [RCDIG1069316](https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/RCDIG1069316/large/5623311.JPG) — biographical card — accessed 23 Aug 2026\n3. **Book:** *A Telfer Family Tree* (Supplement 2008) — descendant tree, Watson line, Armadale/Murrumbeena Vic\n4. **Book:** *From the Borders to the Bush* — father Lancelot Hobart Watson b. 30 Jan 1888, Leichhardt factory, Sydney",
-    "body_stripped": "**Role:** Second World War serviceman of the Watson (Telfer-descendant) branch — died of wounds at Lae, 1943\n\n**Born:** 1916 — Hawksburn, Victoria (AWM Roll of Honour circular, primary; supplement book gives Armadale — both inner-Melbourne, see Notes)\n**Died:** 5 July 1943 (aged 27) — New Guinea, died of wounds\n**Buried:** Lae War Cemetery, Lae, Papua New Guinea (Roll of Honour panel 32 / supplementary panel 6)\n**Service:** Corporal, VX102907, 58/59th Australian Infantry Battalion, Australian Ar",
+    "body_markdown": "# John Watson (1851–1929)\n\n**Role:** Husband of Mary Jane Paynter — Watson branch of the Telfer tree\n**Born:** 8 June 1851 — Hobart, Tasmania\n**Died:** 10 September 1929 — Brunswick, Victoria\n**Spouse:** [[Mary Jane Paynter (1861–1945)]] (m. 1 March 1882, Arkaba, South Australia)\n\nJohn Watson was born in Hobart, Tasmania in 1851. He married Mary Jane Paynter, daughter of [[Jean Telfer (1840–1892)]] and Richard Paynter, on 1 March 1882 at Arkaba, South Australia — the marriage place recorded as \"Home of Mr Mapleton\".\n\nHe and Mary Jane had at least two sons recorded in the Telfer family books: [[Joseph Watson (1883–1948)]] and [[Lancelot Hobart Watson (1888–1960)]]. He died at Brunswick, Victoria on 10 September 1929.\n\n> **⚠️ Death-detail caveat:** The 1929 Brunswick detail rests on the Telfer family books. As with the broader Watson branch, a primary death registration (Victorian BDM) has not yet been cross-checked — treat the death year/location as high-confidence until a registration is located.\n\n## Family Stories\n\nJohn Watson was born in Hobart, Tasmania on 8 June 1851. He married Mary Jane Paynter on 1 March 1882 at Arkaba, South Australia. Their eldest son Joseph was born at Hawker, South Australia on 21 March 1883; a second son Lancelot Hobart followed on 30 January 1888. The family's \"Hobart\" middle names (carried by Lancelot and later his son John Hobart Watson) preserve their Tasmanian origins. John Watson died at Brunswick, Victoria on 10 September 1929.\n\n## Sources\n\n1. **Book:** *From the Borders to the Bush* — records John Watson (b. 8 Jun 1851, Hobart, Tas; m. 1 Mar 1882; d. 10 Sep 1929, Brunswick, Vic) as father of Joseph and Lancelot Watson (both confirmed from this book in their profiles)\n2. **Book:** *A Telfer Family Tree* (Supplement 2008) — John Watson, of the Jean Telfer (1840–1892) descendant line, father of the Arkaba/Hawker SA Watson branch",
+    "body_stripped": "**Role:** Husband of Mary Jane Paynter — Watson branch of the Telfer tree\n**Born:** 8 June 1851 — Hobart, Tasmania\n**Died:** 10 September 1929 — Brunswick, Victoria\n**Spouse:** Mary Jane Paynter (1861–1945) (m. 1 March 1882, Arkaba, South Australia)\n\nJohn Watson was born in Hobart, Tasmania in 1851. He married Mary Jane Paynter, daughter of Jean Telfer (1840–1892) and Richard Paynter, on 1 March 1882 at Arkaba, South Australia — the marriage place recorded as \"Home of Mr Mapleton\".\n\nHe and Mary ",
     "parents": [],
-    "children": [],
+    "children": [
+      "joseph-watson",
+      "lancelot-watson"
+    ],
     "siblings": [],
     "spouses": [
       "mary-jane-paynter"
     ],
     "is_living": false,
-    "lifespan": "1916 – 1943",
+    "lifespan": "1851 – 1929",
     "related_trees": [
       "telfer-tree"
     ],
@@ -21359,9 +21378,14 @@
     ],
     "body_markdown": "# Joseph Watson (1883–1948)\n\n**Role:** Eldest son of Mary Jane Paynter & John Watson — Watson branch of the Telfer tree, Preston Victoria\n\n**Born:** 21 March 1883 — Hawker, South Australia\n**Died:** 1948\n**Spouse:** May Bailey, of Hobart, Tasmania (m. 1907)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Branch** | WATSON — son of [[Mary Jane Paynter (1861–1945)]] and John Watson (b. 1851 Hobart); grandson of [[Jean Telfer (1840–1892)]] and Richard Paynter (1838–1869) |\n| **Father** | John Watson (b. 8 Jun 1851, Hobart, Tas; m. 1 Mar 1882; d. 10 Sep 1929, Brunswick, Vic) |\n| **Mother** | [[Mary Jane Paynter (1861–1945)]] |\n| **Spouse** | May Bailey, of Hobart, Tasmania (m. 1907) |\n| **Children** | John Bailey (Jack) Watson (b. 1908), Hazel Beulah Watson (b. 1910, m. FIRTH), [[Richard Lancelot Watson (1910–1942)]], Donald Stewart Watson (b. 1914), Maxwell Charles Watson (b. 1916), Joyce Elaine Watson (b. 1920, m. LOCK) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 21 Mar 1883 | Born at Hawker, South Australia |\n| ~1910 | Family moved from Hawker to Olinda, then Preston, Victoria |\n| 1907 | Married May Bailey of Hobart, Tasmania |\n| — | Caretaker-manager of a piggery at Preston, Victoria |\n| 1948 | Died |\n\n## Sources\n\n1. **Book:** *From the Borders to the Bush* — Joseph Watson b. 21 Mar 1883, m. May Bailey of Hobart, piggery caretaker at Preston, d. 1948\n2. **Book:** *A Telfer Family Tree* (Supplement 2008) — Jean Telfer line, Joseph WATSON m. May Bailey",
     "body_stripped": "**Role:** Eldest son of Mary Jane Paynter & John Watson — Watson branch of the Telfer tree, Preston Victoria\n\n**Born:** 21 March 1883 — Hawker, South Australia\n**Died:** 1948\n**Spouse:** May Bailey, of Hobart, Tasmania (m. 1907)\n\n## Family\n\n Relation  Name \n\n **Branch**  WATSON — son of Mary Jane Paynter (1861–1945) and John Watson (b. 1851 Hobart); grandson of Jean Telfer (1840–1892) and Richard Paynter (1838–1869) \n **Father**  John Watson (b. 8 Jun 1851, Hobart, Tas; m. 1 Mar 1882; d. 10 Sep ",
-    "parents": [],
+    "parents": [
+      "john-watson-1851",
+      "mary-jane-paynter"
+    ],
     "children": [],
-    "siblings": [],
+    "siblings": [
+      "lancelot-watson"
+    ],
     "spouses": [],
     "is_living": false,
     "lifespan": "1883 – 1948",
@@ -21411,9 +21435,14 @@
     ],
     "body_markdown": "# Lancelot Hobart Watson (1888–1960)\n\n**Role:** Son of Mary Jane Paynter & John Watson — Watson branch of the Telfer tree, Sydney NSW\n\n**Born:** 30 January 1888 — Hawker, South Australia\n**Died:** 29 March 1960 — Sydney, New South Wales\n**Spouse:** **Lilian Alice West** (1887–1973) of Arkaba, SA (m. 1913) — *spouse's name corrected from OCR-garbled \"Miriam ... Hobart West\"*\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Branch** | WATSON — son of [[Mary Jane Paynter (1861–1945)]] and John Watson (b. 1851 Hobart); grandson of [[Jean Telfer (1840–1892)]] and Richard Paynter (1838–1869) |\n| **Father** | John Watson (b. 8 Jun 1851, Hobart, Tas) |\n| **Mother** | [[Mary Jane Paynter (1861–1945)]] |\n| **Spouse** | **Lilian Alice West** (1887–1973), of Arkaba, South Australia (m. 1913) |\n| **Children** | Lancelot Rowe Watson (b. 1914 Murrumbeena Vic, d. 14 Apr **1971** Niddrie Vic, bur. Springvale), [[John Hobart (Jack) Watson (1916–1943)]], Dorothy Jean Watson (b. 1918 Armadale Vic, d. 16 Sep 1980) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 30 Jan 1888 | Born at Hawker, South Australia |\n| ~1913 | Married **Lilian Alice West** of Arkaba, SA — *name corrected 23 Aug 2026* |\n| 1914–1918 | Family grew: Lancelot Rowe (1914, Murrumbeena), John Hobart (1916, Armadale), Dorothy Jean (1918, Armadale) — all Victoria |\n| — | Moved to Sydney, NSW; worked at a factory in Hay Street, Leichhardt, until ill health forced retirement ~1940–45 |\n| 29 Mar 1960 | Died at Sydney, NSW |\n\n## Sources\n\n1. **Book:** *From the Borders to the Bush* — Lancelot Hobart Watson b. 30 Jan 1888, Hay St factory, Leichhardt, Sydney\n2. **Book:** *A Telfer Family Tree* (Supplement 2008) — Lancelot WATSON d. 29 Mar 1960 Sydney NSW, children Lancelot Rowe / John Hobart (Jack) / Dorothy Jean; spouse OCR-garbled (corrected below)\n3. **Registry:** Victoria Marriage Index 1913, reg #3048 — Lancelot Hobart Watson m. Lilian Alice West (primary; settles spouse name)\n4. **Index:** FamilySearch — mother Lillian Alice West (1887–1973); son Lancelot Rowe d. 1971 Niddrie, bur. Springvale (BillionGraves / Find A Grave / Victoria Probate registers)",
     "body_stripped": "**Role:** Son of Mary Jane Paynter & John Watson — Watson branch of the Telfer tree, Sydney NSW\n\n**Born:** 30 January 1888 — Hawker, South Australia\n**Died:** 29 March 1960 — Sydney, New South Wales\n**Spouse:** **Lilian Alice West** (1887–1973) of Arkaba, SA (m. 1913) — *spouse's name corrected from OCR-garbled \"Miriam ... Hobart West\"*\n\n## Family\n\n Relation  Name \n\n **Branch**  WATSON — son of Mary Jane Paynter (1861–1945) and John Watson (b. 1851 Hobart); grandson of Jean Telfer (1840–1892) an",
-    "parents": [],
+    "parents": [
+      "john-watson-1851",
+      "mary-jane-paynter"
+    ],
     "children": [],
-    "siblings": [],
+    "siblings": [
+      "joseph-watson"
+    ],
     "spouses": [],
     "is_living": false,
     "lifespan": "1888 – 1960",
@@ -22380,6 +22409,59 @@
     "spouses": [],
     "is_living": false,
     "lifespan": "1900 – 1988",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 7
+  },
+  {
+    "id": "John Hobart Watson",
+    "slug": "john-watson-1916",
+    "vault_file": "John Hobart (Jack) Watson (1916–1943).md",
+    "first_name": "John",
+    "middle_name": "Hobart",
+    "last_name": "Watson",
+    "birth_year": 1916,
+    "death_year": 1943,
+    "birth_year_display": "1916",
+    "death_year_display": "1943",
+    "display_name": "John Hobart Watson",
+    "title": "John Hobart (Jack) Watson (1916–1943) — WW2 Serviceman",
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "watson",
+      "war"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "John Hobart (Jack) Watson"
+        ]
+      },
+      {
+        "type": "Branch",
+        "names": [
+          "Watson (Telfer descendant)",
+          "Armadale Vic"
+        ]
+      }
+    ],
+    "roles": [
+      "Second World War serviceman of the Watson (Telfer-descendant) branch — died of wounds at Lae, 1943"
+    ],
+    "body_markdown": "# John Hobart (Jack) Watson (1916–1943)\n\n**Role:** Second World War serviceman of the Watson (Telfer-descendant) branch — died of wounds at Lae, 1943\n\n**Born:** 1916 — Hawksburn, Victoria (AWM Roll of Honour circular, primary; supplement book gives Armadale — both inner-Melbourne, see Notes)\n**Died:** 5 July 1943 (aged 27) — New Guinea, died of wounds\n**Buried:** Lae War Cemetery, Lae, Papua New Guinea (Roll of Honour panel 32 / supplementary panel 6)\n**Service:** Corporal, VX102907, 58/59th Australian Infantry Battalion, Australian Army\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Branch** | WATSON — descent from [[Jean Telfer (1840–1892)]] → [[Mary Jane Paynter (1861–1945)]] → John Watson (b. 1851 Hobart) → [[Lancelot Hobart Watson (1888–1960)]] |\n| **Father** | Lancelot Hobart Watson (b. 30 Jan 1888; moved to Sydney, worked at Hay Street factory, Leichhardt; d. 29 Mar 1960, Sydney NSW) |\n| **Mother** | Miriam ... Hobart West (of Arkaba SA; m. ~1913) |\n| **Siblings** | Lancelot Rowe Watson (b. 1914 Murrumbeena Vic, d. 14 Apr 1974), Dorothy Jean Watson (b. 1918 Armadale Vic, d. 16 Sep 1980) |\n| **Spouse** | Thelma Alice Scammel (m. 1941) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 1916 | Born at Hawksburn, Victoria (AWM circular; book gives Armadale) |\n| ~1913 | Father Lancelot Hobart Watson married Miriam ... Hobart West |\n| 1941 | Married Thelma Alice Scammel |\n| 1941/42 (enlist) | Enlisted Australian Army, allocated service number VX102907, 58/59th Australian Infantry Battalion |\n| 5 Jul 1943 | Died of wounds in New Guinea (Second World War, 1939–1945) |\n| — | Buried at Lae War Cemetery, Lae, Papua New Guinea |\n\n## Sources\n\n1. **AWM Roll of Honour:** [John Hobart Watson (R1695924)](https://www.awm.gov.au/collection/R1695924) — Cpl VX102907, 58/59th Aust Inf Bn, d. 5 Jul 1943 New Guinea (died of wounds), Lae War Cemetery, panel 32 / supp panel 6 — accessed 23 Aug 2026\n2. **AWM Roll of Honour circular:** [RCDIG1069316](https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/RCDIG1069316/large/5623311.JPG) — biographical card — accessed 23 Aug 2026\n3. **Book:** *A Telfer Family Tree* (Supplement 2008) — descendant tree, Watson line, Armadale/Murrumbeena Vic\n4. **Book:** *From the Borders to the Bush* — father Lancelot Hobart Watson b. 30 Jan 1888, Leichhardt factory, Sydney",
+    "body_stripped": "**Role:** Second World War serviceman of the Watson (Telfer-descendant) branch — died of wounds at Lae, 1943\n\n**Born:** 1916 — Hawksburn, Victoria (AWM Roll of Honour circular, primary; supplement book gives Armadale — both inner-Melbourne, see Notes)\n**Died:** 5 July 1943 (aged 27) — New Guinea, died of wounds\n**Buried:** Lae War Cemetery, Lae, Papua New Guinea (Roll of Honour panel 32 / supplementary panel 6)\n**Service:** Corporal, VX102907, 58/59th Australian Infantry Battalion, Australian Ar",
+    "parents": [],
+    "children": [],
+    "siblings": [],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1916 – 1943",
     "related_trees": [
       "telfer-tree"
     ],

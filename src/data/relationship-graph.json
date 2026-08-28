@@ -1551,8 +1551,8 @@
       "generation": 5
     },
     {
-      "slug": "john-watson",
-      "id": "John Hobart Watson",
+      "slug": "john-watson-1851",
+      "id": "John Watson",
       "generation": 5
     },
     {
@@ -1639,6 +1639,10 @@
       "slug": "rose-rankin",
       "id": "Rose Isabel Margaret Paynter (Rankin)",
       "generation": 7
+    },
+    {
+      "slug": "john-watson-1916",
+      "id": "John Hobart Watson"
     }
   ],
   "edges": {
@@ -3192,6 +3196,22 @@
         "to": "clara-blanche-telfer"
       },
       {
+        "from": "john-watson-1851",
+        "to": "joseph-watson"
+      },
+      {
+        "from": "mary-jane-paynter",
+        "to": "joseph-watson"
+      },
+      {
+        "from": "john-watson-1851",
+        "to": "lancelot-watson"
+      },
+      {
+        "from": "mary-jane-paynter",
+        "to": "lancelot-watson"
+      },
+      {
         "from": "john-telfer-1840",
         "to": "charles-telfer"
       },
@@ -3494,7 +3514,7 @@
         "to": "susan-telfer-1844"
       },
       {
-        "from": "john-watson",
+        "from": "john-watson-1851",
         "to": "mary-jane-paynter"
       },
       {
@@ -5574,6 +5594,10 @@
       {
         "from": "clara-blanche-telfer",
         "to": "robert-telfer-1886"
+      },
+      {
+        "from": "joseph-watson",
+        "to": "lancelot-watson"
       },
       {
         "from": "charles-telfer",

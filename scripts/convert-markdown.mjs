@@ -428,7 +428,17 @@ function main() {
       ? `${firstName}${lastName}|${birthYear}`
       : `${firstName}${middleName || ''}${lastName}|`
     ).toLowerCase().replace(/\s+/g, '');
-    let existing = existingByKey.get(matchKey) || existingBySlug.get(slug);
+    let existing = existingByKey.get(matchKey);
+    // Fall back to slug match ONLY when the incoming profile has no birth year.
+    // A birth-year key (first+last|YYYY) is authoritative and disambiguates
+    // same-first+last people of different generations (e.g. John Watson 1851 vs
+    // John Watson 1916). If the year key misses, that's a genuinely new person —
+    // falling back to the bare slug would let a same-name-different-year profile
+    // capture (and overwrite) the wrong generation's record. No-year profiles
+    // have no year discriminator, so the bare slug is their correct match.
+    if (!existing && birthYear == null) {
+      existing = existingBySlug.get(slug);
+    }
 
     if (existing) {
       // Update — overwrite fields from markdown, keep existing denormalized

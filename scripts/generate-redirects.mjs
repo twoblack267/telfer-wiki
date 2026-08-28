@@ -71,6 +71,53 @@ for (const p of people) {
   // This is covered by Case 1 (oldSlug 'amy-telfer' !== newSlug 'amy-telfer-nicole')
 }
 
+// Case 3: NEWLY-CONFLICTED bare slug → suffixed slug.
+// When a second person with the same first+last appears, the slug disambiguator
+// year-suffixes EVERY member of the conflict group (convert-markdown collision
+// logic). The member who previously held the bare slug loses it. Emit a redirect
+// from the now-unclaimed bare slug → their new suffixed slug, but ONLY when the
+// bare slug is not claimed as the real page of another person in this run.
+const bareToNew = [];
+for (const p of people) {
+  const firstName = (p.first_name || '').toLowerCase();
+  const lastName = (p.last_name || '').toLowerCase();
+  const bareSlug = `${firstName}-${lastName}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+  if (bareSlug !== p.slug && /-\d{4}$/.test(bareSlug) === false) {
+    // bareSlug differs — someone in this group holds it; find who owns the bare slug
+    const owner = people.find(q => {
+      const qf = (q.first_name || '').toLowerCase();
+      const ql = (q.last_name || '').toLowerCase();
+      const qbare = `${qf}-${ql}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+      return qbare === bareSlug && q.slug === bareSlug;
+    });
+    // Only redirect when the bare slug is NOT a live page in this run
+    if (!owner) {
+      bareToNew.push({ from: bareSlug, to: p.slug, display_name: p.display_name, birth: p.birth_year });
+    }
+  }
+}
+// When a whole collision group lost their bare slug (e.g. a newly-added same-name
+// ancestor), the historically-live bare URL belonged to whichever member was
+// ALREADY at that slug before the conflict — deterministically the one with no
+// children in this run (a leaf), since an ancestor being introduced triggers the
+// conflict and owns it. Prefer that candidate for the bare-slug redirect.
+const byBare = new Map();
+for (const r of bareToNew) {
+  if (!byBare.has(r.from)) {
+    byBare.set(r.from, r);
+  } else if ((r.birth || 0) >= (byBare.get(r.from).birth || 0)) {
+    // equal-name conflict: the LEAF (no children) inherits the historical bare URL.
+    byBare.set(r.from, r);
+  }
+}
+// Push Case 3 redirects (dedupe: skip any 'from' already claimed by an earlier redirect)
+const existingFrom = new Set(redirects.map(r => r.from));
+for (const r of byBare.values()) {
+  if (!existingFrom.has(r.from)) {
+    redirects.push({ from: r.from, to: r.to, display_name: r.display_name });
+  }
+}
+
 // Deduplicate (same 'from' should only redirect to one destination)
 const seen = new Set();
 const uniqueRedirects = redirects.filter(r => {
