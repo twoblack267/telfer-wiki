@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { formatBody, getLinksForRelationships } from "../../utils/format-body.mjs";
+import { formatBody, getLinksForRelationships, inlineLinks, stripWikiLinks } from "../../utils/format-body.mjs";
 import { NOINDEX_SLUGS } from "../../data/privacy-exclusions.mjs";
 
 export async function getStaticPaths() {
@@ -44,7 +44,7 @@ const yearSpan = person.lifespan
   : [person.birth_year_display, person.is_living ? "living" : person.death_year_display]
       .filter(Boolean)
       .join(" – ");
-const genNote = person.generation
+const genNote = (person.generation && person.generation < 90)
   ? ` ${person.generation}${ordinalSuffix(person.generation)} generation Telfer.`
   : "";
 const livingNote = person.is_living ? "" : " Ancestor of the Telfer line.";
@@ -145,9 +145,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
           {person.roles?.length > 0 && (
             <div class="space-y-0">
               {person.roles.map((role) => (
-                <div key={role} class="text-xs text-[var(--color-ink-light)] italic">
-                  {role}
-                </div>
+                <div key={stripWikiLinks(role)} class="text-xs text-[var(--color-ink-light)] italic" set:html={inlineLinks(role, telferPeople)} />
               ))}
             </div>
           )}

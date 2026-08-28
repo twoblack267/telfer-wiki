@@ -227,6 +227,40 @@ function lookupSlug(name, people) {
  * (not the raw slug) — the same readable name format used everywhere else on
  * the site. Unresolvable slugs fall back gracefully (name=slug, no link).
  */
+/**
+ * Resolve [[Wiki Links]] inside a short string (role lines, subtitles) to
+ * anchors. This is the lighter equivalent of formatBody's wiki-link pass —
+ * roles are one-liners and must NOT be run through the full paragraph/heading
+ * pipeline. Unresolvable links degrade to plain text (brackets stripped).
+ */
+export function inlineLinks(text, people) {
+  if (!text) return "";
+  const BASE = import.meta.env.BASE_URL || "/";
+  return text
+    .replace(/\[\[([^\]]+)\|([^\]]+)\]\]/g, (match, link, alias) => {
+      const slug = lookupSlug(link.trim(), people);
+      if (slug) return `<a href="${BASE}people/${slug}" class="wiki-link">${alias.trim()}</a>`;
+      return alias.trim();
+    })
+    .replace(/\[\[([^\]]+)\]\]/g, (match, link) => {
+      const slug = lookupSlug(link.trim(), people);
+      if (slug) return `<a href="${BASE}people/${slug}" class="wiki-link">${link.trim()}</a>`;
+      return link.trim();
+    });
+}
+
+/**
+ * Strip wiki-link markup from a string down to plain text (no HTML). Used for
+ * attribute values (data-role filters) where anchors are invalid — turns
+ * `[[Name (y)–(z)]]` and `[[Link|Alias]]` into `Name (y)–(z)` / `Alias`.
+ */
+export function stripWikiLinks(text) {
+  return String(text ?? "").replace(/\[\[([^\]|]+(?:\|[^\]|]+)?)\]\]/g, (m, inner) => {
+    const [, alias] = inner.split("|");
+    return alias || inner;
+  }).replace(/[\[\]]/g, "");
+}
+
 export function getLinksForRelationships(relationshipNames, allPeople) {
   return relationshipNames.map((entry) => {
     const person = allPeople.find((p) => (p.slug || "") === entry.trim());
