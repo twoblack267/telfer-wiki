@@ -56,8 +56,32 @@ for (const p of people) {
   }
 }
 
+// ─── NOTE-LEAK CHECK (prevents data-maintenance notes rendering to visitors) ──
+// Data-hygiene notes like "> **NOTE (26 Aug 2026):** REMOVED the bare ..." inside a
+// profile body_markdown leak the internal maintenance log onto the live site. That
+// happened across 11+ Telfer/Lawrie/Parker/Dunlop profiles in Aug 2026. This gate
+// fails the build if any maintainer NOTE-blockquote survives into the regenerated
+// data — forcing it to be relocated to the Corrections Log / converted to a real
+// section BEFORE it can publish. Real biographical notes must NOT be written as a
+// "> **NOTE (...):**" blockquote: use a "## " section so the guard lets them pass.
+let noteFlags = 0;
+for (const p of people) {
+  const body = p.body_markdown || '';
+  const re = /^>\s*\*\*NOTE\s*\(/m;
+  if (re.test(body)) {
+    noteFlags++;
+    // find the offending line for a precise message
+    const line = body.split('\n').find(l => /^>\s*\*\*NOTE\s*\(/m.test(l)) || '';
+    console.log(`• ${p.slug || p.id}: internal NOTE-blockquote in body leaks to visitors — relocate to Corrections Log or convert to a "## " section`);
+  }
+}
+console.log(`\nNOTE-blockquote leaks found in published data: ${noteFlags}`);
+
 console.log(`\nScanned ${people.length} people. FLAGGED (sibling overlapping parent/child): ${flags}`);
 console.log(flags === 0
   ? `\n✅ No cross-branch sibling contamination found.`
   : `\n❌ ${flags} sibling ref(s) contradict parent/child structure — same-name contamination. Fix at the VAULT, then regenerate.`);
-process.exit(flags === 0 ? 0 : 1);
+if (noteFlags > 0) {
+  console.log(`\n❌ ${noteFlags} internal data-maintenance NOTE-blockquote(s) leaked into body_markdown. Move them to the Corrections Log (or convert to a "## " section) at the VAULT, then regenerate.`);
+}
+process.exit((flags === 0 && noteFlags === 0) ? 0 : 1);
