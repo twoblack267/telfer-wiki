@@ -1644,6 +1644,11 @@
       "slug": "john-watson-1916",
       "id": "John Hobart Watson",
       "generation": 7
+    },
+    {
+      "slug": "margaret-telfer",
+      "id": "Margaret Wright Telfer",
+      "generation": 5
     }
   ],
   "edges": {
@@ -3259,6 +3264,14 @@
       {
         "from": "thomas-paynter",
         "to": "agnes-paynter"
+      },
+      {
+        "from": "adam-telfer-1842",
+        "to": "margaret-telfer"
+      },
+      {
+        "from": "margaret-telfer-1849",
+        "to": "margaret-telfer"
       }
     ],
     "spouseOf": [
@@ -3631,6 +3644,10 @@
       {
         "from": "adelaide-elsie-pearl-telfer",
         "to": "lillian-may-telfer"
+      },
+      {
+        "from": "adelaide-elsie-pearl-telfer",
+        "to": "margaret-telfer"
       },
       {
         "from": "adelaide-elsie-pearl-telfer",
@@ -4198,6 +4215,10 @@
       },
       {
         "from": "effie-olive-telfer",
+        "to": "margaret-telfer"
+      },
+      {
+        "from": "effie-olive-telfer",
         "to": "vernon-ray-st-clair-telfer"
       },
       {
@@ -4247,6 +4268,10 @@
       {
         "from": "elizabeth-beattie-telfer-1871",
         "to": "lillian-may-telfer"
+      },
+      {
+        "from": "elizabeth-beattie-telfer-1871",
+        "to": "margaret-telfer"
       },
       {
         "from": "elizabeth-beattie-telfer-1871",
@@ -4474,6 +4499,10 @@
       },
       {
         "from": "eva-rowena-telfer",
+        "to": "margaret-telfer"
+      },
+      {
+        "from": "eva-rowena-telfer",
         "to": "vernon-ray-st-clair-telfer"
       },
       {
@@ -4519,6 +4548,10 @@
       {
         "from": "francis-adam-telfer",
         "to": "lillian-may-telfer"
+      },
+      {
+        "from": "francis-adam-telfer",
+        "to": "margaret-telfer"
       },
       {
         "from": "francis-adam-telfer",
@@ -4726,6 +4759,10 @@
       },
       {
         "from": "hazel-rose-telfer",
+        "to": "margaret-telfer"
+      },
+      {
+        "from": "hazel-rose-telfer",
         "to": "vernon-ray-st-clair-telfer"
       },
       {
@@ -4751,6 +4788,10 @@
       {
         "from": "herbert-dougal-telfer",
         "to": "lillian-may-telfer"
+      },
+      {
+        "from": "herbert-dougal-telfer",
+        "to": "margaret-telfer"
       },
       {
         "from": "herbert-dougal-telfer",
@@ -4847,6 +4888,10 @@
       {
         "from": "james-edgerston-telfer",
         "to": "lillian-may-telfer"
+      },
+      {
+        "from": "james-edgerston-telfer",
+        "to": "margaret-telfer"
       },
       {
         "from": "james-edgerston-telfer",
@@ -5067,6 +5112,10 @@
       {
         "from": "levi-telfer",
         "to": "zabella-telfer"
+      },
+      {
+        "from": "lillian-may-telfer",
+        "to": "margaret-telfer"
       },
       {
         "from": "lillian-may-telfer",
@@ -5655,6 +5704,14 @@
       {
         "from": "hugh-parker-1864",
         "to": "william-humphrey-parker-1850"
+      },
+      {
+        "from": "margaret-telfer",
+        "to": "vernon-ray-st-clair-telfer"
+      },
+      {
+        "from": "margaret-telfer",
+        "to": "violet-hope-telfer"
       }
     ]
   }

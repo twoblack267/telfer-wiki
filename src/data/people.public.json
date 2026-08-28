@@ -956,6 +956,7 @@
       "elizabeth-beattie-telfer-1832",
       "james-telfer-1829",
       "john-telfer-1840",
+      "margaret-telfer",
       "robert-telfer"
     ],
     "spouses": [
@@ -2587,6 +2588,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -2806,6 +2808,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -2941,6 +2944,7 @@
       "ann-telfer",
       "jessie-telfer",
       "johnnie-telfer",
+      "margaret-telfer",
       "peter-telfer",
       "robina-telfer"
     ],
@@ -5047,6 +5051,52 @@
     "person_photo": null
   },
   {
+    "id": "Margaret Wright Telfer",
+    "slug": "margaret-telfer",
+    "first_name": "Margaret",
+    "middle_name": "Wright",
+    "last_name": "Telfer",
+    "birth_year": 1869,
+    "death_year": 1890,
+    "birth_year_display": "1869",
+    "death_year_display": "1890",
+    "display_name": "Margaret Wright Telfer",
+    "title": "Margaret Wright Telfer — Family & Biography",
+    "lifespan": "1869 – 1890",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Margaret Wright Telfer (1869–1890)\n\n**Role:** First-born daughter of [[Adam Francis Telfer (1842–1925)]] and [[Margaret Dougal Telfer (1849–1936)]] — the eldest of their twelve children, who died young, unmarried.\n\n**Born:** 26 August 1869 — Koppio, South Australia\n**Died:** 21 April 1890 — Tantanoola, South Australia (aged ~20, of pneumonia)\n**Marital status:** Single (never married)\n\n> ⚠️ **Not to be confused with** [[Margaret Wright Telfer (1810–1892)]] — that is the *aunt / mother-in-law* (third wife of Francis Telfer, and the mother of Margaret Dougal). This profile (1869–1890) is the *daughter*. The two share the exact same name but are different people.\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Adam Francis Telfer (1842–1925)]] |\n| **Mother** | [[Margaret Dougal Telfer (1849–1936)]] |\n| **Sibling** | [[Elizabeth Beattie Bessie Telfer (1871–1948)]] |\n| **Siblings (others)** | Lillian May, Francis Adam, James Edgerston, Vernon Ray St. Clair, Herbert Dougal, Violet Hope, Eva Rowena, Effie Olive, Adelaide Elsie Pearl, Hazel Rose |\n\n---\n\n## Life Summary\n\nMargaret Wright Telfer was the first of Adam and Margaret's twelve children, born at Koppio in the Port Lincoln region in 1869. She died at Tantanoola in April 1890, aged about twenty, unmarried, of pneumonia. Her mother's biography records that Margaret was to receive a piano as a present for her twenty-first birthday but never lived to see it — a loss that, by family account, never left her mother.\n\nHer name is the same as her aunt, [[Margaret Wright Telfer (1810–1892)]], which has repeatedly caused confusion in record transcription; they are separate people.\n\n---\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 26 Aug 1869 | Born — Koppio, SA |\n| c. 21 Apr 1890 | Died — Tantanoola, SA (aged ~20, unmarried, of pneumonia) |\n\n---\n\n## Sources\n\n**Source:** *From the Borders to the Bush* — pp.268, 276-277 (chapter covering Adam & Margaret; first child born Koppio 1869, died of pneumonia before her 21st)\n**Source:** *A Telfer Family Tree* — p.287 — \"Margaret Wright Telfer, b. 26 Aug 1869 Koppio SA, d. 21 Apr 1890 Tantanoola SA, single\" — accessed 28 Aug 2026 (via Book Digester swing-11 report)\n**Source (corroboration, family cluster):** [Find a Grave — Telfer family cluster, Memorial 245337994](https://www.findagrave.com/memorial/245337994) — lists sibling \"Margaret Wright Telfer 1869–1890\" — cited in Book Digester swing-11 report (memorial not directly re-fetchable; FAQ/anti-bot)\n\n---",
+    "roles": [
+      "First-born daughter of [[Adam Francis Telfer (1842–1925)]] and [[Margaret Dougal Telfer (1849–1936)]] — the eldest of their twelve children, who died young, unmarried."
+    ],
+    "tags": [
+      "person",
+      "telfer",
+      "ancestor"
+    ],
+    "parents": [
+      "adam-telfer-1842",
+      "margaret-telfer-1849"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "adelaide-elsie-pearl-telfer",
+      "effie-olive-telfer",
+      "elizabeth-beattie-telfer-1871",
+      "eva-rowena-telfer",
+      "francis-adam-telfer",
+      "hazel-rose-telfer",
+      "herbert-dougal-telfer",
+      "james-edgerston-telfer",
+      "lillian-may-telfer",
+      "vernon-ray-st-clair-telfer",
+      "violet-hope-telfer"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Adam Dillon",
     "slug": "adam-dillon",
     "first_name": "Adam",
@@ -5155,6 +5205,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -5349,6 +5400,7 @@
       "hazel-rose-telfer",
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -5515,6 +5567,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -5906,6 +5959,7 @@
       "hazel-rose-telfer",
       "herbert-dougal-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -5993,6 +6047,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "violet-hope-telfer"
     ],
     "images": [],
@@ -6177,6 +6232,7 @@
       "hazel-rose-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -6308,6 +6364,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer"
     ],
     "images": [],
@@ -6465,6 +6522,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -6547,6 +6605,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -6723,6 +6782,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -6857,6 +6917,7 @@
       "herbert-dougal-telfer",
       "james-edgerston-telfer",
       "lillian-may-telfer",
+      "margaret-telfer",
       "vernon-ray-st-clair-telfer",
       "violet-hope-telfer"
     ],
@@ -9002,50 +9063,6 @@
     "person_photo": null
   },
   {
-    "id": "Kenneth Telfer",
-    "slug": "kenneth-telfer",
-    "first_name": "Kenneth",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1904,
-    "death_year": null,
-    "birth_year_display": "1904",
-    "death_year_display": "?",
-    "display_name": "Kenneth Telfer",
-    "title": "Kenneth Telfer — Family & Biography",
-    "lifespan": "1904 – ?",
-    "generation": 6,
-    "is_living": false,
-    "body_markdown": "# Kenneth William John Telfer (1904–?)\n\n**Role:** Second child and eldest son of Mark Telfer and Julia Seebohm\n\n| Relation | Name |\n|---|---|\n| Father | [[Mark Telfer (1877–1946)]] |\n| Mother | [[Julia Matilda Seebohm (1876–1939)]] |\n| Spouse | Jessie Sargent |\n| Siblings | [[Floris Ethel Victoria Telfer (1904–1951)]], [[Gilbert Melville Telfer (1911–1978)]], [[Jean Maryann Martha Telfer (1910–1984)]], [[Joyce Elizabeth Telfer (1912–2012)]], [[Maifie Beryl Telfer (1913–1948)]], [[Lindsay Roland Telfer (1920–1976)]] |\n\nKenneth William John Telfer (the book *From the Borders to the Bush* records his middle names as William John, not Alexander) was born in 1904, the second child and eldest son of Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939) of Tantanoola, South Australia.\n\nHe married Jessie Sargent. Their son, Murray, married Susanne Maloney and had five children — Joanne, Mark (who married Maryann Harrap), John, Richard and Neville.\n\nKen played football for Tantanoola for many years. He was Captain of the team and played at centre. He also played in the Tantanoola cricket team, being a useful bat and a slow bowler. In later years he played bowls, both indoor and outdoor. He held the position of President of the Tantanoola Pastoral, Agricultural and Horticultural Society from 1953–55.\n\n## Family Stories\n\nKen was the second child and eldest son of Mark and Tillie Telfer. The family history records that he played football for Tantanoola for many years, serving as Captain and playing at centre. He also played cricket for Tantanoola, a useful bat and a slow bowler. In later years he took up bowls, both indoor and outdoor. He served as President of the Tantanoola Pastoral, Agricultural and Horticultural Society from 1953 to 1955. He married Jessie Sargent and they had a son, Murray, who married Susanne Maloney. *(From the Borders to the Bush, p.243)*\n\n## Sources\n\n- *From the Borders to the Bush* by Donald Telfer (1986) — page 243",
-    "roles": [
-      "Second child and eldest son of Mark Telfer and Julia Seebohm"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "telfer"
-    ],
-    "parents": [
-      "julia-matilda-seebohm",
-      "mark-telfer-1877"
-    ],
-    "children": [],
-    "spouses": [
-      "jessie-sargent"
-    ],
-    "siblings": [
-      "floris-telfer",
-      "gilbert-telfer",
-      "jean-telfer-1910",
-      "joyce-telfer",
-      "lindsay-telfer",
-      "maifie-telfer"
-    ],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Rita Joyce Telfer",
     "slug": "rita-telfer",
     "first_name": "Rita",
@@ -10244,6 +10261,50 @@
       "melville-telfer",
       "murray-telfer-1920",
       "rita-telfer"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Kenneth Telfer",
+    "slug": "kenneth-telfer",
+    "first_name": "Kenneth",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": 1970,
+    "birth_year_display": "?",
+    "death_year_display": "1970",
+    "display_name": "Kenneth Telfer",
+    "title": "Kenneth Telfer — Family & Biography",
+    "lifespan": "? – 1970",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Kenneth William John Telfer\n\n**Role:** Second child and eldest son of Mark Telfer and Julia Seebohm\n\n| Relation | Name |\n|---|---|\n| Father | [[Mark Telfer (1877–1946)]] |\n| Mother | [[Julia Matilda Seebohm (1876–1939)]] |\n| Spouse | Jessie Sargent |\n| Children | Murray Telfer |\n| Siblings | [[Floris Ethel Victoria Telfer (1904–1951)]], [[Gilbert Melville Telfer]], [[Jean Maryann Martha Telfer (1910–1984)]], Joyce Elizabeth Telfer, [[Maifie Beryl Telfer (1913–1948)]], [[Lindsay Roland Telfer (1920–1976)]] |\n\n## Gravestone\n\n*Image to be added — headstone photo of Ken's grave at Tantanoola Cemetery is yet to be sourced. [View the headstone transcription and cemetery records](http://www.ozburials.com/CemsSA/tantanoola.htm)*\n\nKenneth William John Telfer (the family book *From the Borders to the Bush* records his middle names as William John, not Alexander) was the second child and eldest son of Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939) of Tantanoola, South Australia. He died on **9 November 1970**, aged 64, and is buried at Tantanoola Cemetery.\n\n## Verified facts\n\n- **Name:** Kenneth William John Telfer — confirmed by three independent source groups: Tantanoola Cemetery headstone transcription (Ozburials: \"TELFER, Kenneth William John. 9 November 1970. Aged 64\"), FamilySearch (1906–1970), and *From the Borders to the Bush* p.243.\n- **Parents:** Mark Telfer (1877–1946) and Julia Matilda Seebohm (1876–1939).\n- **Death:** 9 November 1970, aged 64 (headstone transcription + FamilySearch).\n\n## Family record\n\nThe following is family knowledge / word of mouth, as recorded in the family history book — shared as the family record, not yet independently verified against public records.\n\nKen married **Jessie Sargent**. Their son, **Murray**, married Susanne Maloney and had five children — Joanne, Mark (who married Maryann Harrap), John, Richard and Neville.\n\n## Stories from the family\n\nThese come from word of mouth / family history passed down *(From the Borders to the Bush, p.243)*:\n\nKen played football for Tantanoola for many years. He was Captain of the team and played at centre. He also played in the Tantanoola cricket team, being a useful bat and a slow bowler. In later years he played bowls, both indoor and outdoor. He held the position of President of the Tantanoola Pastoral, Agricultural and Horticultural Society from 1953 to 1955.\n\n## Sources\n\n- *From the Borders to the Bush* by Donald Telfer (1986) — page 243\n- Tantanoola Cemetery headstone transcription — [Ozburials.com](http://www.ozburials.com/CemsSA/tantanoola.htm)\n- FamilySearch family tree  — Telfer (KH2G-L1B)",
+    "roles": [
+      "Second child and eldest son of Mark Telfer and Julia Seebohm"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "telfer"
+    ],
+    "parents": [
+      "julia-matilda-seebohm",
+      "mark-telfer-1877"
+    ],
+    "children": [],
+    "spouses": [
+      "jessie-sargent"
+    ],
+    "siblings": [
+      "floris-telfer",
+      "gilbert-telfer",
+      "jean-telfer-1910",
+      "joyce-telfer",
+      "lindsay-telfer",
+      "maifie-telfer"
     ],
     "images": [],
     "person_photo": null
