@@ -1649,6 +1649,10 @@
       "slug": "margaret-telfer",
       "id": "Margaret Wright Telfer",
       "generation": 5
+    },
+    {
+      "slug": "alfred-edward-lillecrapp",
+      "id": "Alfred Edward Lillecrapp"
     }
   ],
   "edges": {
@@ -3264,6 +3268,10 @@
       {
         "from": "thomas-paynter",
         "to": "agnes-paynter"
+      },
+      {
+        "from": "alfred-edward-lillecrapp",
+        "to": "olive-mary-lillecrapp"
       },
       {
         "from": "adam-telfer-1842",
