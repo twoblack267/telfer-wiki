@@ -414,7 +414,13 @@ function main() {
       lifespan,
       related_trees: fm.related_trees || ['telfer-tree'],
       images: bodyImages.length > 0 ? bodyImages : [],
-      person_photo: bodyImages.find(img => !img.src.includes('grave'))?.src || null
+      // person_photo = the profile's circular AVATAR. Must be a photo OF the
+      // person, never a grave OR a scenery/place book-plate. Book-page scans
+      // use the `_p{N}` suffix (e.g. Newcastleton_and_the_Liddesdale_Hills_p6.jpg);
+      // those are historical-place illustrations for the Photos GALLERY, not a
+      // portrait. If every image is a grave or scenery plate (no photograph of
+      // the person survives), fall back to the initials avatar (null).
+      person_photo: bodyImages.find(img => !img.src.includes('grave') && !/_[pP]\d+\.jpg$/.test(img.src))?.src || null
     };
 
     // 3. Find matching existing entry
