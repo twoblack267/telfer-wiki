@@ -190,24 +190,6 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
         <div class="person-card rounded-xl p-2.5">
           <h2 class="font-serif text-base text-[var(--color-heading)] mb-0">Biography</h2>
 
-          <!-- Newcastleton map — leads the town story, before the narrative/citations (verified town centre 55.1793, -2.8136). Moved to top so it does NOT sit below the sources/footnotes. -->
-          {["james-telfer-1761", "john-telfer-of-castleton"].includes(person.slug) && (
-            <div class="mt-3 mb-2">
-              <h3 class="font-serif text-base text-[var(--color-heading)] mt-2 mb-1">Where the Telfers came from — Newcastleton (formerly Castleton)</h3>
-              <iframe
-                title="Map of Newcastleton, formerly Castleton, Scottish Borders"
-                src="https://www.google.com/maps?q=55.1793,-2.8136&amp;z=15&amp;output=embed"
-                width="100%"
-                height="380"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen
-              ></iframe>
-              <p class="mt-1 text-xs text-[var(--color-muted)]">Newcastleton (Copshaw Holm) is the modern village on the site of the old parish of Castleton, in the Liddesdale valley of the Scottish Borders. <a href="https://www.google.com/maps?q=55.1793,-2.8136" class="text-[var(--color-link)]" target="_blank" rel="noopener">Open in Google Maps →</a></p>
-            </div>
-          )}
-
           <!-- Wiki-formatted body (first h1 stripped, leading empty paragraphs + whitespace removed, prose tightened) -->
           <div class="prose prose-sm max-w-none wiki-content" set:html={bodyHtml
             .replace(/^<h1[^>]*>.*?<\/h1>\s*/i, '')
@@ -237,6 +219,24 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
                 </figure>
               ))}
             </div>
+          </div>
+        )}
+
+        <!-- Newcastleton map — tucked under Photos (verified town centre 55.1793, -2.8136) -->
+        {["james-telfer-1761", "john-telfer-of-castleton"].includes(person.slug) && (
+          <div class="person-card rounded-xl p-3 mt-3">
+            <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">Where the Telfers came from — Newcastleton (formerly Castleton)</h2>
+            <iframe
+              title="Map of Newcastleton, formerly Castleton, Scottish Borders"
+              src="https://www.google.com/maps?q=55.1793,-2.8136&amp;z=15&amp;output=embed"
+              width="100%"
+              height="380"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+            <p class="mt-1 text-xs text-[var(--color-muted)]">Newcastleton (Copshaw Holm) is the modern village on the site of the old parish of Castleton, in the Liddesdale valley of the Scottish Borders. <a href="https://www.google.com/maps?q=55.1793,-2.8136" class="text-[var(--color-link)]" target="_blank" rel="noopener">Open in Google Maps →</a></p>
           </div>
         )}
 
