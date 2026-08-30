@@ -222,24 +222,6 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
           </div>
         )}
 
-        <!-- Newcastleton map — tucked under Photos (verified town centre 55.1793, -2.8136) -->
-        {["james-telfer-1761", "john-telfer-of-castleton"].includes(person.slug) && (
-          <div class="person-card rounded-xl p-3 mt-3">
-            <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">Where the Telfers came from — Newcastleton (formerly Castleton)</h2>
-            <iframe
-              title="Map of Newcastleton, formerly Castleton, Scottish Borders"
-              src="https://www.google.com/maps?q=55.1793,-2.8136&amp;z=15&amp;output=embed"
-              width="100%"
-              height="380"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-            ></iframe>
-            <p class="mt-1 text-xs text-[var(--color-muted)]">Newcastleton (Copshaw Holm) is the modern village on the site of the old parish of Castleton, in the Liddesdale valley of the Scottish Borders. <a href="https://www.google.com/maps?q=55.1793,-2.8136" class="text-[var(--color-link)]" target="_blank" rel="noopener">Open in Google Maps →</a></p>
-          </div>
-        )}
-
         <!-- Tags -->
         {importantTags.length > 0 && (
           <div class="person-card rounded-xl p-3 mt-3">
@@ -382,6 +364,24 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
         )}
       </div>
     </div>
+
+    <!-- Newcastleton map (verified town centre 55.1793, -2.8136) — sits after the story, before the Common Questions block -->
+    {["james-telfer-1761", "john-telfer-of-castleton"].includes(person.slug) && (
+      <div class="person-card rounded-xl p-3 mt-3">
+        <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">Where the Telfers came from — Newcastleton (formerly Castleton)</h2>
+        <iframe
+          title="Map of Newcastleton, formerly Castleton, Scottish Borders"
+          src="https://www.google.com/maps?q=55.1793,-2.8136&amp;z=15&amp;output=embed"
+          width="100%"
+          height="380"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+        <p class="mt-1 text-xs text-[var(--color-muted)]">Newcastleton (Copshaw Holm) is the modern village on the site of the old parish of Castleton, in the Liddesdale valley of the Scottish Borders. <a href="https://www.google.com/maps?q=55.1793,-2.8136" class="text-[var(--color-link)]" target="_blank" rel="noopener">Open in Google Maps →</a></p>
+      </div>
+    )}
   </div>
 </BaseLayout>
 
