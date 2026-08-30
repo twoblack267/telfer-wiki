@@ -91,14 +91,42 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
       role: el.dataset.role || "",
     }));
 
+    // Hybrid ranking for genealogy search:
+    //   tier 1 — exact/prefix name match (a word starts with the query) — these always surface first
+    //   tier 2 — name contains the query
+    //   tier 3 — fuzzy Fuse fallback (exact and contains already caught, so fuzz stays optional)
+    // This stops a query like "mark" being flooded by fuzzy "Margaret"/"Martha" matches, and keeps
+    // the real "Mark Telfer" profiles on top.
     const fuse = new Fuse(searchData, {
-      keys: ["name", "year", "role"],
+      keys: [{ name: "name", weight: 3 }],
       threshold: 0.3,
       includeScore: true,
+      ignoreLocation: true,
     });
 
+    function rank(query) {
+      const q = query.toLowerCase();
+      if (!q) return searchData.map((s) => ({ el: s.el, score: 0 }));
+      if (q.length < 2) return searchData;
+
+      const isWordBoundaryStartsWith = (name) =>
+        name.startsWith(q) || name.split(" ").some((w) => w.startsWith(q));
+
+      const exact = searchData.filter((s) => isWordBoundaryStartsWith(s.name));
+      const exactIds = new Set(exact.map((s) => s.el));
+      const contains = searchData.filter((s) => s.name.includes(q) && !exactIds.has(s.el));
+      const containsIds = new Set([...exactIds, ...contains.map((s) => s.el)]);
+      const rest = searchData.filter((s) => !containsIds.has(s.el));
+      const fuzzy =
+        rest.length > 0
+          ? fuse.search(q).map((r) => ({ el: r.item.el, score: r.score }))
+          : [];
+
+      return [...exact, ...contains, ...fuzzy].slice(0, 60);
+    }
+
     function render(matchedItems) {
-      items.forEach((item) => item.style.display = "none");
+      items.forEach((item) => (item.style.display = "none"));
 
       if (matchedItems.length === 0) {
         results.classList.add("hidden");
@@ -117,14 +145,9 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
     }
 
     input.addEventListener("input", () => {
-      const query = input.value.trim();
-      if (!query) {
-        render(searchData.map((s) => ({ el: s.el, score: 0 })));
-        return;
-      }
-      render(fuse.search(query).map((r) => ({ el: r.item.el, score: r.score })));
+      render(rank(input.value.trim()));
     });
 
-    render(searchData.map((s) => ({ el: s.el, score: 0 })));
+    render(rank(input.value.trim()));
   });
 </script>
