@@ -88,7 +88,7 @@ if (!existsSync(DIST_LLMS)) {
   const cur = readFileSync(DIST_LLMS, 'utf8');
   const r = rewrite(cur, 'dist/llms.txt');
   if (!r.ok) fail(`dist/llms.txt count line malformed: ${r.detail}`);
-  if (!/All ${personCount} individuals/.test(cur)) {
+  if (!cur.includes(`All ${personCount} individuals `)) {
     writeFileSync(DIST_LLMS, r.out, 'utf8');
     console.log(`  🔧 generate-llms-count: ${r.detail} (shipped artifact corrected)`);
     ship = `dist/llms.txt corrected to ${personCount}`;
@@ -100,7 +100,7 @@ if (!existsSync(DIST_LLMS)) {
 
 // ── 4. Keep the versioned source in sync so the NEXT build can't ship a stale number ──
 let srcMsg = 'public/llms.txt already correct';
-if (!/All ${personCount} individuals/.test(template)) {
+if (!template.includes(`All ${personCount} individuals `)) {
   writeFileSync(PUBLIC_LLMS, rewrite(template, 'public/llms.txt').out, 'utf8');
   console.log(`  🔧 generate-llms-count: rewrote public/llms.txt count to ${personCount} (versioned source of truth — commit this)`);
   srcMsg = `public/llms.txt refreshed to ${personCount} in place`;
