@@ -11,7 +11,7 @@
     "scan:cross-branch": "node scripts/scan-cross-branch.mjs",
     "body-links": "node scripts/check-body-links.mjs",
     "build": "npm run sanitize && npm run validate && astro build",
-    "postbuild": "node scripts/generate-redirects.mjs && node scripts/validate-people-links.mjs && node scripts/validate-links.mjs && node scripts/validate-relationship-links.mjs && npm run body-links && node scripts/check-rendered-layout.mjs && node scripts/generate-llms-count.mjs",
+    "postbuild": "node scripts/generate-redirects.mjs && node scripts/validate-people-links.mjs && node scripts/validate-links.mjs && node scripts/validate-relationship-links.mjs && npm run body-links && node scripts/check-rendered-layout.mjs && node scripts/generate-llms-count.mjs && node test/search-order.test.mjs && node test/search-render.test.mjs",
     "self-heal": "node scripts/auto-fix-links.mjs && npm run build",
     "preview": "astro preview",
     "astro": "astro",
@@ -26,6 +26,7 @@
     "yaml": "^2.9.0"
   },
   "devDependencies": {
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "playwright": "^1.62.1"
   }
 }

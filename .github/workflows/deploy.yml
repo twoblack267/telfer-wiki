@@ -27,6 +27,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Install Playwright Chromium (for search e2e guard)
+        run: npx playwright install chromium --with-deps
       - name: Build site
         # Run the FULL build script (npm run build) NOT bare `npx astro build`.
         # The postbuild hook generates people-redirects (generate-redirects.mjs)
