@@ -10,8 +10,13 @@ interface Props {
   faqItems?: { q: string; a: string }[];   // visible FAQ section on the page (also emits FAQPage schema via `schema`)
   storyBlurb?: string;                       // optional AI/SEO story blurb for curated ancestors
   noindex?: boolean;                         // privacy: emit robots noindex, nofollow + suppress JSON-LD
+  navState?: {                              // person-page nav footer data — renders the three links
+    slug: string;                            //   at the VERY BOTTOM of the page (after FAQ/map)
+    showDescendants: boolean;                //   Back to all people / Descendant Chart / Family Sheet
+    showFamily: boolean;
+  } | null;
 }
-const { title, description, canonicalPath, ogType, ogImage, schema, faqItems, storyBlurb, noindex } = Astro.props;
+const { title, description, canonicalPath, ogType, ogImage, schema, faqItems, storyBlurb, noindex, navState } = Astro.props;
 const currentPath = Astro.url.pathname;
 const canonicalUrl = canonicalPath ? `https://telferwiki.com${canonicalPath}` : Astro.url.origin + Astro.url.pathname;
 const defaultDescription = "The Telfer Family Wiki — a digital family history archive tracing nine generations of Telfers from Scotland to South Australia. A living record of the family line from John Telfer of Castleton to the present day.";
@@ -171,6 +176,27 @@ const jsonLd = (!noindex && schema) ? (Array.isArray(schema) ? schema : [schema]
           <p class="mt-1 text-xs text-[var(--color-muted)]">Newcastleton (Copshaw Holm) is the modern village on the site of the old parish of Castleton, in the Liddesdale valley of the Scottish Borders. <a href="https://www.google.com/maps?q=55.1793,-2.8136" class="text-[var(--color-link)]" target="_blank" rel="noopener">Open in Google Maps →</a></p>
         </section>
       ) : null}
+
+      <!-- Navigation footer (Back to all people / Descendant Chart / Family Sheet)
+           rendered as the LAST block on the page, after Common Questions + map,
+           so these three links are always at the very bottom (Mark 2026-08-30). -->
+      {navState && (
+        <div class="mt-3 flex justify-between items-center border-t border-[var(--color-border)] pt-2 text-sm">
+          <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">← Back to all people</a>
+          <div class="flex items-center gap-4">
+            {navState.showDescendants && (
+              <a href={import.meta.env.BASE_URL + "people/" + navState.slug + "/descendants"} class="text-[var(--color-link)] hover:underline text-right">
+                📊 Descendant Chart →
+              </a>
+            )}
+            {navState.showFamily && (
+              <a href={import.meta.env.BASE_URL + "people/" + navState.slug + "/family-sheet"} class="text-[var(--color-link)] hover:underline">
+                👪 Family Sheet →
+              </a>
+            )}
+          </div>
+        </div>
+      )}
     </main>
 
     <!-- Footer -->

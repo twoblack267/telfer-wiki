@@ -133,6 +133,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
   schema={combinedSchema}
   faqItems={faqItems}
   storyBlurb={storyBlurb}
+  navState={person.children.length > 0 || person.spouses.length > 0 || person.parents.length > 0 || person.siblings.length > 0 ? { slug: person.slug, showDescendants: person.children.length > 0, showFamily: person.spouses.length > 0 || person.parents.length > 0 || person.siblings.length > 0 } : null}
   noindex={isNoIndex}
 >
   <div class="max-w-4xl mx-auto">
@@ -348,22 +349,9 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
       </div>
     </div>
 
-    <!-- Navigation footer -->
-    <div class="mt-3 flex justify-between items-center border-t border-[var(--color-border)] pt-2 text-sm">
-      <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">← Back to all people</a>
-      <div class="flex items-center gap-4">
-        {person.children.length > 0 && (
-          <a href={import.meta.env.BASE_URL + "people/" + person.slug + "/descendants"} class="text-[var(--color-link)] hover:underline text-right">
-            📊 Descendant Chart →
-          </a>
-        )}
-        {(person.spouses.length > 0 || person.parents.length > 0 || person.siblings.length > 0) && (
-          <a href={import.meta.env.BASE_URL + "people/" + person.slug + "/family-sheet"} class="text-[var(--color-link)] hover:underline">
-            👪 Family Sheet →
-          </a>
-        )}
-      </div>
-    </div>
+    <!-- The three navigation links (Back to all people / Descendant Chart /
+         Family Sheet) are rendered by BaseLayout at the VERY BOTTOM of the
+         page, after Common Questions + map, via the navState prop. -->
   </div>
 </BaseLayout>
 
