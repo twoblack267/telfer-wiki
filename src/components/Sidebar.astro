@@ -47,6 +47,14 @@ const uniqueSuggestions = [...new Set(searchSuggestions)].sort();
         id="sidebar-search"
         list="search-suggestions"
         placeholder="Search name or place…"
+        data-people={encodeURIComponent(JSON.stringify(people.map(p => ({
+          display_name: p.display_name,
+          slug: p.slug,
+          lifespan: p.lifespan ?? null,
+          birth_place: p.birth_place ?? null,
+          death_place: p.death_place ?? null,
+          roles: p.roles ?? [],
+        }))))}
         class="w-full px-3 py-2 text-sm bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-link)] focus:border-transparent"
         autocomplete="off"
         aria-label="Search"
