@@ -155,6 +155,22 @@ const jsonLd = (!noindex && schema) ? (Array.isArray(schema) ? schema : [schema]
           </dl>
         </section>
       )}
+      {currentPath.includes("/people/james-telfer-1761/") || currentPath.includes("/people/john-telfer-of-castleton/") ? (
+        <section aria-label="Where the Telfers came from" class="person-card rounded-xl p-3 md:p-4 mt-4">
+          <h2 class="text-lg md:text-xl font-bold font-serif text-[var(--color-heading)] mb-2">Where the Telfers came from — Newcastleton (formerly Castleton)</h2>
+          <iframe
+            title="Map of Newcastleton, formerly Castleton, Scottish Borders"
+            src="https://www.google.com/maps?q=55.1793,-2.8136&amp;z=15&amp;output=embed"
+            width="100%"
+            height="380"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+          <p class="mt-1 text-xs text-[var(--color-muted)]">Newcastleton (Copshaw Holm) is the modern village on the site of the old parish of Castleton, in the Liddesdale valley of the Scottish Borders. <a href="https://www.google.com/maps?q=55.1793,-2.8136" class="text-[var(--color-link)]" target="_blank" rel="noopener">Open in Google Maps →</a></p>
+        </section>
+      ) : null}
     </main>
 
     <!-- Footer -->
