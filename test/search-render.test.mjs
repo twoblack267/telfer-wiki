@@ -99,6 +99,34 @@ try {
   const allCount = (await visibleNames(page)).length;
   assert(allCount > 100, `empty query shows all profiles (visible=${allCount})`);
 
+  // — DOM-integrity guard: NO orphan ghost rows —
+  // The role caption previously used set:html inlineLinks() which emitted a NESTED
+  // <a> inside the row's <a data-search-item>. The HTML parser can't nest anchors, so
+  // it split those rows apart: an empty <a> shell stayed in the list while the role,
+  // badge and arrow were orphaned as bare #results children — rendering 15 visible
+  // "badge-only" ghost rows on top of the real results. This is the bug Mark kept
+  // seeing as "still playing up". Guard: the #results container must contain only
+  // <a data-search-item> rows (plus the empty-state/etc outside it) — zero loose
+  // .shrink-0 badges/arrows/role divs and zero anchor shells missing their name.
+  const integrity = await page.evaluate(() => {
+    const results = document.getElementById("results");
+    const anchors = Array.from(results.querySelectorAll("a[data-search-item]"));
+    const orphanBadges = Array.from(results.querySelectorAll(":scope > div.shrink-0")).length;
+    const orphanArrows = Array.from(results.querySelectorAll(":scope > span.shrink-0")).length;
+    const orphanRoles = Array.from(results.querySelectorAll(":scope > div.hidden.md\\:block")).length;
+    const emptyShells = anchors.filter(
+      (a) => !a.querySelector(".font-medium") || !a.querySelector(".font-medium").textContent.trim()
+    ).length;
+    return { orphanBadges, orphanArrows, orphanRoles, emptyShells, anchors: anchors.length };
+  });
+  assert(integrity.orphanBadges === 0 && integrity.orphanArrows === 0 && integrity.orphanRoles === 0,
+    `no orphan badge/arrow/role ghost rows (badges=${integrity.orphanBadges}, arrows=${integrity.orphanArrows}, roles=${integrity.orphanRoles})`);
+  assert(integrity.emptyShells === 0,
+    `no empty <a data-search-item> shells (found ${integrity.emptyShells})`);
+  assert(integrity.orphanBadges + integrity.orphanArrows + integrity.orphanRoles + integrity.emptyShells === 0,
+    `#results rows are all intact single anchor rows (anchors=${integrity.anchors})`);
+
+
   // — THE critical test: type "mark", read the real visible order —
   await page.fill("#search-input", "mark");
   await page.waitForTimeout(400); // let the input handler + reorder run

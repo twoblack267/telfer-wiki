@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import type { PersonData } from "../utils/extract-data.mjs";
-import { inlineLinks, stripWikiLinks } from "../utils/format-body.mjs";
+import { stripWikiLinks } from "../utils/format-body.mjs";
 
 const people = (await import("../data/people.public.json")).default as PersonData[];
 const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) && p.id);
@@ -51,7 +51,7 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
           <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
         </div>
         {person.roles?.length > 0 && (
-          <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate" set:html={inlineLinks(person.roles[0], telferPeople)}></div>
+          <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate">{stripWikiLinks(person.roles[0])}</div>
         )}
         <div class="shrink-0">
           {person.is_living
