@@ -139,6 +139,10 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
       emptyState.classList.add("hidden");
       resultCount.textContent = `${matchedItems.length} profile${matchedItems.length !== 1 ? "s" : ""}`;
 
+      // Reorder the DOM so visible rows follow the ranked order from rank(),
+      // not the stale server-rendered data order. Fixes "mark" showing fuzzy
+      // Margaret/Martha rows above the actual Mark Telfer matches.
+      matchedItems.forEach((item) => results.appendChild(item.el));
       matchedItems.forEach((item) => {
         item.el.style.display = "";
       });
