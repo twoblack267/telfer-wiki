@@ -17,6 +17,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      # Unique build marker stamped into every page by scripts/stamp-build.mjs.
+      # The verify-live job asserts the live site serves THIS id — if it doesn't,
+      # the deploy silently failed to publish and the pipeline fails loudly.
+      build_id: ${{ steps.read-build-id.outputs.build_id }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,10 +36,13 @@ jobs:
         run: npx playwright install chromium --with-deps
       - name: Build site
         # Run the FULL build script (npm run build) NOT bare `npx astro build`.
-        # The postbuild hook generates people-redirects (generate-redirects.mjs)
-        # and runs the link-integrity guard (validate-people-links.mjs). CI must
-        # exercise those or broken/legacy person links get deployed as 404s.
+        # The postbuild hook stamps a BUILD_ID (stamp-build.mjs), generates
+        # people-redirects, and runs the link-integrity guards. CI must exercise
+        # those or broken/legacy person links get deployed as 404s.
         run: npm run build
+      - name: Read stamped build id
+        id: read-build-id
+        run: echo "build_id=$(cat dist/.build-id)" >> "$GITHUB_OUTPUT"
       - name: Add .nojekyll for GitHub Pages
         run: touch dist/.nojekyll
       - name: Upload Pages artifact
@@ -51,3 +59,29 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  verify-live:
+    # THE GUARD. Root cause this fix exists for: the old pipeline "succeeded" for
+    # months while Pages served a stale branch — no check compared what users got
+    # against what was built. This job fetches the live site and asserts it serves
+    # this build's stamped BUILD_ID. Mismatch => deploy did NOT publish => FAIL.
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assert live site serves the just-published build
+        env:
+          BUILD_ID: ${{ needs.build.outputs.build_id }}
+        run: |
+          set -euo pipefail
+          if [ -z "$BUILD_ID" ]; then echo "::error::no build_id output from build job"; exit 1; fi
+          url="https://telferwiki.com/?cb=${BUILD_ID}"
+          echo "Polling $url for data-build-id=$BUILD_ID (Pages can take ~1-2 min to propagate)"
+          for i in $(seq 1 30); do
+            if curl -fsS --max-time 30 -A "Mozilla/5.0 (deploy-verify)" "$url" 2>/dev/null | grep -q "data-build-id=\"$BUILD_ID\""; then
+              echo "✅ LIVE SITE SERVES BUILD $BUILD_ID (attempt $i)"
+              exit 0
+            fi
+            echo "  attempt $i: not yet live, waiting 10s..."
+            sleep 10
+          done
+          echo "::error::LIVE SITE DOES NOT SERVE BUILD $BUILD_ID after retries. Deploy did not publish. FIX REQUIRED."
+          exit 1

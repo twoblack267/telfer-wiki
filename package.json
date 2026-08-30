@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "description": "The Telfer Family Wiki — a digital genealogy for the Telfer line",
+  "description": "The Telfer Family Wiki \u2014 a digital genealogy for the Telfer line",
   "scripts": {
     "dev": "astro dev",
     "sanitize": "node scripts/sanitize-people.mjs",
@@ -11,7 +11,7 @@
     "scan:cross-branch": "node scripts/scan-cross-branch.mjs",
     "body-links": "node scripts/check-body-links.mjs",
     "build": "npm run sanitize && npm run validate && astro build",
-    "postbuild": "node scripts/generate-redirects.mjs && node scripts/validate-people-links.mjs && node scripts/validate-links.mjs && node scripts/validate-relationship-links.mjs && npm run body-links && node scripts/check-rendered-layout.mjs && node scripts/generate-llms-count.mjs && node test/search-order.test.mjs && node test/search-render.test.mjs",
+    "postbuild": "node scripts/stamp-build.mjs && node scripts/generate-redirects.mjs && node scripts/validate-people-links.mjs && node scripts/validate-links.mjs && node scripts/validate-relationship-links.mjs && npm run body-links && node scripts/check-rendered-layout.mjs && node scripts/generate-llms-count.mjs && node test/search-order.test.mjs && node test/search-render.test.mjs",
     "self-heal": "node scripts/auto-fix-links.mjs && npm run build",
     "preview": "astro preview",
     "astro": "astro",
