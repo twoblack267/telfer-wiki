@@ -53,13 +53,13 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
         {person.roles?.length > 0 && (
           <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate" set:html={inlineLinks(person.roles[0], telferPeople)}></div>
         )}
-        <div>
+        <div class="shrink-0">
           {person.is_living
             ? <span class="text-xs px-2 py-0.5 rounded badge-living">Living</span>
             : <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
           }
         </div>
-        <span class="text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">&rarr;</span>
+        <span class="shrink-0 text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">&rarr;</span>
       </a>
     ))}
   </div>
