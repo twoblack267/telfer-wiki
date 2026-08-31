@@ -1664,6 +1664,14 @@
       "slug": "frances-margaret-oswald",
       "id": "Frances Margaret Oswald",
       "generation": 4
+    },
+    {
+      "slug": "herbert-clifford-holloway",
+      "id": "Herbert Clifford Holloway"
+    },
+    {
+      "slug": "william-francis-telfer",
+      "id": "William Francis Telfer"
     }
   ],
   "edges": {
@@ -3303,6 +3311,14 @@
       {
         "from": "janet-welsh",
         "to": "james-telfer"
+      },
+      {
+        "from": "elizabeth-telfer-farrow",
+        "to": "herbert-clifford-holloway"
+      },
+      {
+        "from": "ruth-penna",
+        "to": "william-francis-telfer"
       }
     ],
     "spouseOf": [
