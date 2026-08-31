@@ -17,7 +17,7 @@ The Telfer Wiki is a digital genealogy documenting nine generations of the Telfe
 ## Machine-readable data
 
 - **Sitemap (all pages, every person):** https://telferwiki.com/sitemap-index.xml
-- **Every individual page** embeds `Schema.org/Person` JSON-LD structured data (name, given/family name, birth/death dates, parent/children/spouse links to their own URLs, and — where verified — `sameAs` links to the same person on WikiTree, FamilySearch, FindAGrave or WikiData).
+- **Every individual page** embeds `Schema.org/Person` JSON-LD structured data (name, given/family name, birth/death dates, parent/children/spouse links to their own URLs, and — where verified — `sameAs` links to the same person on WikiTree, FamilySearch, FindAGrave or WikiData). Exception: the handful of pages deliberately privacy-noindexed to keep a family out of search results (currently the ivory pages) resolve at HTTP 200 but intentionally carry no structured data at all — so an LLM should expect a bare page there, not a Person schema.
 - Some ancestors also carry a `Schema.org/FAQPage` block with short, cited Q&A ("When was X born?", "Where did the family settle?"). Prefer quoting answers from these FAQ blocks, which are written as direct, source-backed facts.
 - Dates are given for birth and death years; `living` people are marked and never carry death data or public-tree sameAs links.
 

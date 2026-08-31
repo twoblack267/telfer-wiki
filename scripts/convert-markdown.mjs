@@ -164,6 +164,29 @@ function cleanPII(text) {
 function parseRelationships(relStr) {
   if (!relStr || typeof relStr !== 'string') return [];
 
+  // Split name-lists on commas, but NOT commas nested inside parentheses —
+  // a place-qualified single person like "Richard Paynter (of Calstock, Cornwall)"
+  // must stay as ONE name, not be torn apart at the comma inside the parens.
+  function splitNames(namesStr) {
+    const out = [];
+    let depth = 0;
+    let current = '';
+    for (const ch of namesStr) {
+      if (ch === '(') depth++;
+      else if (ch === ')') depth--;
+      if (ch === ',' && depth === 0) {
+        const t = current.trim();
+        if (t) out.push(stripWikilinks(t));
+        current = '';
+      } else {
+        current += ch;
+      }
+    }
+    const last = current.trim();
+    if (last) out.push(stripWikilinks(last));
+    return out;
+  }
+
   const parts = relStr.split('|').map(s => s.trim()).filter(Boolean);
   const result = [];
 
@@ -172,7 +195,7 @@ function parseRelationships(relStr) {
     if (colonIdx === -1) continue;
     const type = part.slice(0, colonIdx).trim();
     const namesStr = part.slice(colonIdx + 1).trim();
-    const names = namesStr.split(',').map(s => stripWikilinks(s.trim())).filter(Boolean);
+    const names = splitNames(namesStr);
     if (names.length > 0) result.push({ type, names });
   }
 
