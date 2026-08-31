@@ -1667,11 +1667,13 @@
     },
     {
       "slug": "herbert-clifford-holloway",
-      "id": "Herbert Clifford Holloway"
+      "id": "Herbert Clifford Holloway",
+      "generation": 6
     },
     {
       "slug": "william-francis-telfer",
-      "id": "William Francis Telfer"
+      "id": "William Francis Telfer",
+      "generation": 5
     }
   ],
   "edges": {
