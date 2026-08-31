@@ -3252,36 +3252,6 @@
     "person_photo": null
   },
   {
-    "id": "Hannah Peacock",
-    "slug": "hannah-peacock",
-    "first_name": "Hannah",
-    "middle_name": null,
-    "last_name": "Peacock",
-    "birth_year": 1840,
-    "death_year": 1915,
-    "birth_year_display": "1840",
-    "death_year_display": "1915",
-    "display_name": "Hannah Peacock",
-    "title": "Hannah Peacock (1840–1915)",
-    "lifespan": "1840 – 1915",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Hannah Peacock (1840–1915)\n\n> Stub entry — linked from the Telfer family tree.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "james-robert-telfer"
-    ],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "George Masters",
     "slug": "george-masters-1841",
     "first_name": "George",
@@ -4512,6 +4482,36 @@
     "person_photo": null
   },
   {
+    "id": "Hannah Peacock",
+    "slug": "hannah-peacock",
+    "first_name": "Hannah",
+    "middle_name": null,
+    "last_name": "Peacock",
+    "birth_year": 1862,
+    "death_year": 1948,
+    "birth_year_display": "1862",
+    "death_year_display": "1948",
+    "display_name": "Hannah Peacock",
+    "title": "Hannah Peacock (1862–1948)",
+    "lifespan": "1862 – 1948",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Hannah Peacock (1862–1948)\n\n> Spouse of James Robert Telfer. B. 05 May 1862 Mount Gambier — d. 25 Aug 1948 Mount Gambier.",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "james-robert-telfer"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "John Koppio Telfer",
     "slug": "john-koppio-telfer",
     "first_name": "John Koppio",
@@ -4840,7 +4840,7 @@
     "lifespan": "1866 – 1925",
     "generation": 5,
     "is_living": false,
-    "body_markdown": "# James Robert Telfer (~1866–1925)\n\n**Role:** Eldest son of [[Robert Telfer (1835–1907)]] — station hand at Moorak\n**Spouse:** Hannah Peacock (1840–1915)\n**Father:** [[Robert Telfer (1835–1907)]]\n**Mother:** [[Susan Burton Telfer (1844–1924)]]\n\n**Born:** 1866\n**Died:** 4 October 1925\n**Buried:** Lake Terrace Cemetery, Mount Gambier, SA\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | Hannah Peacock (1840–1915) |\n| **Father** | [[Robert Telfer (1835–1907)]] |\n| **Mother** | [[Susan Burton Telfer (1844–1924)]] |\n| **Son** | Leslie Robert Telfer |\n| **Daughter** | Ethel Edith Telfer — m. James Gordon Steele |\n| **Daughter** | Jean Telfer |\n\n## Life Summary\n\nJames Robert Telfer was the eldest son of Robert Telfer and Susan Burton. He worked as a station hand at Moorak Station and married Hannah Peacock. They had three children — Leslie Robert, Ethel Edith and Jean.\n\nHe died on 4 October 1925 and is buried at Lake Terrace Cemetery, Mount Gambier, South Australia.\n\n*(From the Borders to the Bush, p. 227 — eldest son; death/burial confirmed by headstone.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| ~1866 | Born |\n| — | Worked as station hand at Moorak Station |\n| 4 Oct 1925 | Died — buried Lake Terrace Cemetery, Mount Gambier, SA |\n\n## Sources\n\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 227–230 — eldest son of Robert & Susan. Accessed 16 Aug 2026.\n- **Source:** [Find a Grave — James Robert Telfer (1866–1925), memorial 215167934, Lake Terrace Cemetery, Mount Gambier SA](https://www.findagrave.com/memorial/215167934) — \"born 1866 and died 4 Oct 1925. Buried at Lake Terrace Cemetery, Mount Gambier\" — accessed 16 Aug 2026.",
+    "body_markdown": "# James Robert Telfer (~1866–1925)\n\n**Role:** Eldest son of [[Robert Telfer (1835–1907)]] — station hand at Moorak\n**Spouse:** Hannah Peacock (1862–1948)\n**Father:** [[Robert Telfer (1835–1907)]]\n**Mother:** [[Susan Burton Telfer (1844–1924)]]\n\n**Born:** 1866\n**Died:** 4 October 1925\n**Buried:** Lake Terrace Cemetery, Mount Gambier, SA\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | Hannah Peacock (1862–1948) |\n| **Father** | [[Robert Telfer (1835–1907)]] |\n| **Mother** | [[Susan Burton Telfer (1844–1924)]] |\n| **Son** | Leslie Robert Telfer |\n| **Daughter** | Ethel Edith Telfer — m. James Gordon Steele |\n| **Daughter** | Jean Telfer |\n\n## Life Summary\n\nJames Robert Telfer was the eldest son of Robert Telfer and Susan Burton. He worked as a station hand at Moorak Station and married Hannah Peacock. They had three children — Leslie Robert, Ethel Edith and Jean.\n\nHe died on 4 October 1925 and is buried at Lake Terrace Cemetery, Mount Gambier, South Australia.\n\n*(From the Borders to the Bush, p. 227 — eldest son; death/burial confirmed by headstone.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| ~1866 | Born |\n| — | Worked as station hand at Moorak Station |\n| 4 Oct 1925 | Died — buried Lake Terrace Cemetery, Mount Gambier, SA |\n\n## Sources\n\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 227–230 — eldest son of Robert & Susan. Accessed 16 Aug 2026.\n- **Source:** [Find a Grave — James Robert Telfer (1866–1925), memorial 215167934, Lake Terrace Cemetery, Mount Gambier SA](https://www.findagrave.com/memorial/215167934) — \"born 1866 and died 4 Oct 1925. Buried at Lake Terrace Cemetery, Mount Gambier\" — accessed 16 Aug 2026.",
     "roles": [
       "Eldest son of [[Robert Telfer (1835–1907)]] — station hand at Moorak"
     ],

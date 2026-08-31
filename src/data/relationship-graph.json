@@ -541,11 +541,6 @@
       "generation": 5
     },
     {
-      "slug": "hannah-peacock",
-      "id": "Hannah Peacock",
-      "generation": 5
-    },
-    {
       "slug": "harry-bunston",
       "id": "Harry Bunston",
       "generation": 6
@@ -1654,6 +1649,10 @@
       "slug": "margaret-telfer-1801",
       "id": "Margaret Telfer",
       "generation": 3
+    },
+    {
+      "slug": "hannah-peacock",
+      "id": "Hannah Peacock"
     }
   ],
   "edges": {
@@ -3441,10 +3440,6 @@
         "to": "william-humphrey-parker-1850"
       },
       {
-        "from": "hannah-peacock",
-        "to": "james-robert-telfer"
-      },
-      {
         "from": "ian-telfer",
         "to": "kenneth-cornish"
       },
@@ -3547,6 +3542,10 @@
       {
         "from": "elizabeth-liebich",
         "to": "thomas-paynter"
+      },
+      {
+        "from": "hannah-peacock",
+        "to": "james-robert-telfer"
       }
     ],
     "siblingOf": [
