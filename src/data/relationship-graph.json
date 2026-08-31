@@ -1659,6 +1659,10 @@
       "slug": "james-telfer",
       "id": "James Telfer",
       "generation": 4
+    },
+    {
+      "slug": "frances-margaret-oswald",
+      "id": "Frances Margaret Oswald"
     }
   ],
   "edges": {
@@ -3560,6 +3564,10 @@
       {
         "from": "hannah-peacock",
         "to": "james-robert-telfer"
+      },
+      {
+        "from": "frances-margaret-oswald",
+        "to": "james-telfer"
       }
     ],
     "siblingOf": [

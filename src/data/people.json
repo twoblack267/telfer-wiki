@@ -22755,9 +22755,82 @@
       "janet-welsh-telfer",
       "john-koppio-telfer"
     ],
-    "spouses": [],
+    "spouses": [
+      "frances-margaret-oswald"
+    ],
     "is_living": false,
     "lifespan": "1858 – 1944",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [
+      {
+        "src": "images/people/james-telfer-1858-1944-grave.jpg",
+        "alt": "James telfer 1858 1944 grave",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/james-telfer-1858-1944-grave.jpg",
+        "filename": "james-telfer-1858-1944-grave.jpg"
+      }
+    ],
+    "person_photo": null,
+    "generation": 4
+  },
+  {
+    "id": "Frances Margaret Oswald",
+    "slug": "frances-margaret-oswald",
+    "vault_file": "Frances Margaret Oswald (1861–1931).md",
+    "first_name": "Frances Margaret",
+    "middle_name": null,
+    "last_name": "Oswald",
+    "birth_year": 1861,
+    "death_year": 1931,
+    "birth_year_display": "1861",
+    "death_year_display": "1931",
+    "display_name": "Frances Margaret Oswald",
+    "title": "Frances Margaret Oswald (1861–1931) — wife of James Telfer, the twin son of the Koppio pioneer",
+    "tags": [
+      "person",
+      "telfer",
+      "ancestor"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Frances Margaret Oswald"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "James Telfer (1858–1944)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "(unverified) Oswald"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "(unverified)"
+        ]
+      }
+    ],
+    "roles": [
+      "Wife of James Telfer (1858–1944), the twin son of pioneer James Telfer (1829–1913) & Janet Welsh — mother of seven daughters"
+    ],
+    "body_markdown": "# Frances Margaret Oswald (1861–1931)\n\n**Role:** Wife of James Telfer (1858–1944), the twin son of pioneer James Telfer (1829–1913) & Janet Welsh — mother of seven daughters\n**Born:** circa 1861 — South Australia *(exact date and place not yet confirmed)*\n**Married:** 14 March 1882 — Port Lincoln, South Australia, to James Telfer\n**Died:** December 1931 — Adelaide, South Australia (aged 69)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Husband** | [[James Telfer (1858–1944)]] |\n| **Daughter** | Jane Margaret Telfer (1882–) |\n| **Daughter** | Janet Welsh Telfer (1885–1924) |\n| **Daughter** | Millicent Agnes Telfer (1887–) |\n| **Daughter** | Rose Gladys Telfer (1890–) |\n| **Daughter** | Mary Frances Telfer (1893–1893) |\n| **Daughter** | Elizabeth Lillian Telfer (1896–) |\n| **Daughter** | Martha Pearce Telfer (1898–) |\n\n## Photos\n\n![James telfer 1858 1944 grave](images/people/james-telfer-1858-1944-grave.jpg)\n*The Telfer family headstone, North Road Cemetery, Nailsworth — this is Frances Margaret's resting stone. It reads \"FRANCES MARGARET … BELOVED WIFE OF JAMES TELFER … PASSED AWAY DECEMBER [?] 1931, AGED 69 YEARS\" with James added below. Photo by Faithe Jones via Find A Grave.*\n\n## Life Summary\n\nFrances Margaret Oswald married **James Telfer** on **14 March 1882** at Port Lincoln, South Australia. James was the twin son of the Koppio pioneer James Telfer (1829–1913) and Janet Welsh, and later served as a Justice of the Peace for some forty-five years at Portana Station, Sheringa. The couple raised **seven daughters**, and Frances is buried in the Telfer family plot at the **North Road Cemetery, Nailsworth**, on a headstone she shares with her husband. She passed away in **December 1931**, aged about 69; her exact birth date and place, and her Oswald parents, are not yet confirmed.\n\n> **⚠️ Not yet verified — do not treat as fact:** Frances's **exact birth date and birth place**, her **parents' names**, and the precise day of her death (the headstone's day figure is worn; a secondary source gives 8 December 1931). These are open leads, not confirmed facts.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| c. 1861 | Born (exact date/place unconfirmed; \"aged 69\" in Dec 1931 implies birth ~1861–62) |\n| 14 Mar 1882 | Married James Telfer at Port Lincoln, South Australia |\n| 1882–1898 | Seven daughters born (Jane Margaret, Janet Welsh, Millicent Agnes, Rose Gladys, Mary Frances, Elizabeth Lillian, Martha Pearce) |\n| Dec 1931 | Died at Adelaide, South Australia (aged 69); buried in the Telfer plot, North Road Cemetery, Nailsworth |\n\n## Sources\n\n- **Find A Grave (PRIMARY — headstone):** James Telfer (1858–1944), North Road Cemetery, Nailsworth SA — [memorial 201613602](https://www.findagrave.com/memorial/201613602/james-telfer); grave photo by Faithe Jones records *\"FRANCES MARGARET … BELOVED WIFE OF JAMES TELFER … PASSED AWAY DECEMBER [?] 1931, AGED 69 YEARS\"* and *\"JAMES TELFER … DIED JULY 27th 1944, AGED 85 YEARS\"* (photo held in vault `People/Photos/james-telfer-1858-1944-grave.jpg`) (accessed 31 Aug 2026)\n- **FamilySearch:** James Telfer (1858–1944) — [KDBV-SG2](https://www.familysearch.org/tree/person/details/KDBV-SG2) — spouse **Frances Margaret Oswald (1861–1931)**, married 14 Mar 1882 Port Lincoln; seven daughters listed (accessed 31 Aug 2026)\n- **MyHeritage name index (snippet-level, bot-walled):** [Frances Oswald records](https://www.myheritage.se/names/frances_oswald) — *\"Frances Margaret Telfer (född Oswald), 1861–1931 … Dec 8 1931, Adelaide, South Australia\"* — supplied the death day/place (accessed 31 Aug 2026)\n- **Source (corroborating marriage/region):** Donald Telfer, *A Telfer Family Tree* (Supplement to *From the Borders to the Bush*, 2008), ch. 9 / p.183 — marriage to Frances Margaret Oswald 14 Mar 1882, Portana Station/Sheringa, JP detail; descendant line through Oswald/Vigar (book-digester report p.195, accessed 24 Aug 2026)",
+    "body_stripped": "**Role:** Wife of James Telfer (1858–1944), the twin son of pioneer James Telfer (1829–1913) & Janet Welsh — mother of seven daughters\n**Born:** circa 1861 — South Australia *(exact date and place not yet confirmed)*\n**Married:** 14 March 1882 — Port Lincoln, South Australia, to James Telfer\n**Died:** December 1931 — Adelaide, South Australia (aged 69)\n\n## Family\n\n Relation  Name \n\n **Husband**  James Telfer (1858–1944) \n **Daughter**  Jane Margaret Telfer (1882–) \n **Daughter**  Janet Welsh Tel",
+    "parents": [],
+    "children": [],
+    "siblings": [],
+    "spouses": [
+      "james-telfer"
+    ],
+    "is_living": false,
+    "lifespan": "1861 – 1931",
     "related_trees": [
       "telfer-tree"
     ],
