@@ -9018,6 +9018,7 @@
       "james-telfer-1796"
     ],
     "children": [
+      "james-telfer",
       "janet-welsh-telfer",
       "john-koppio-telfer"
     ],
@@ -9806,6 +9807,7 @@
     "body_stripped": "**Role:** Wife of James Telfer (1829–1913)\n\n**Born:** ca 1826 — Nisbet, Scotland\n**Married:** James Telfer — 6 November 1855, \"the Manse\" Wakefield Street, Adelaide (Church of Scotland rite, Rev. Robert Haining; witnesses Robert & Elizabeth Telfer)\n**Died:** 14 January 1885 — Port Lincoln, South Australia (after a long illness)\n\nJanet Welsh married James Telfer (1829–1913), son of James Telfer (1796–1863) and Elizabeth Beattie. She was the daughter of John and Margaret Welsh of Nisbet, Scotland.",
     "parents": [],
     "children": [
+      "james-telfer",
       "janet-welsh-telfer",
       "john-koppio-telfer"
     ],
@@ -10116,7 +10118,7 @@
       {
         "type": "Siblings",
         "names": [
-          "James Telfer",
+          "James Telfer (1762–?)",
           "Francis Telfer",
           "Jenet Telfer",
           "Adam Telfer"
@@ -13446,6 +13448,7 @@
     "children": [
       "adam-telfer-1771",
       "francis-telfer-1768",
+      "james-telfer",
       "james-telfer-1762",
       "jean-telfer-1764",
       "jenet-telfer"
@@ -14253,7 +14256,7 @@
       {
         "type": "Children",
         "names": [
-          "James Telfer",
+          "James Telfer (1866–1946)",
           "Elizabeth Telfer",
           "Susan Telfer",
           "Martha Telfer Cameron"
@@ -15987,7 +15990,9 @@
       "elizabeth-telfer-1774",
       "james-telfer-1761"
     ],
-    "children": [],
+    "children": [
+      "james-telfer"
+    ],
     "siblings": [
       "adam-telfer-1799",
       "francis-telfer-1809",
@@ -20713,6 +20718,7 @@
     ],
     "children": [],
     "siblings": [
+      "james-telfer",
       "janet-welsh-telfer"
     ],
     "spouses": [],
@@ -21764,6 +21770,7 @@
     ],
     "children": [],
     "siblings": [
+      "james-telfer",
       "john-koppio-telfer"
     ],
     "spouses": [],
@@ -22680,5 +22687,82 @@
     "images": [],
     "person_photo": null,
     "generation": 5
+  },
+  {
+    "id": "James Telfer",
+    "slug": "james-telfer",
+    "vault_file": "James Telfer (1858–1944).md",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1858,
+    "death_year": 1944,
+    "birth_year_display": "1858",
+    "death_year_display": "1944",
+    "display_name": "James Telfer",
+    "title": "James Telfer (1858–1944) — the twin son of the Koppio pioneer",
+    "tags": [
+      "person",
+      "telfer",
+      "ancestor"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "James Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "James Telfer (1829–1913)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Janet Welsh (1826–1885)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Frances Margaret Oswald"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Janet Welsh Telfer (1858–1921) twin",
+          "John Koppio Telfer (1862–1922)",
+          "Margaret Rutherford Telfer",
+          "Elizabeth Telfer"
+        ]
+      }
+    ],
+    "roles": [
+      "Son of pioneer James Telfer (1829–1913) & Janet Welsh — the twin brother of Janet Welsh Telfer (1858–1921)"
+    ],
+    "body_markdown": "# James Telfer (1858–1944)\n\n**Role:** Son of pioneer James Telfer (1829–1913) & Janet Welsh — the twin brother of Janet Welsh Telfer (1858–1921)\n**Born:** 29 August 1858 — Tungkillo, South Australia\n**Died:** 27 July 1944 — Medindie Gardens, South Australia (aged 85)\n**Spouse:** Frances Margaret Oswald (m. 14 March 1882, Port Lincoln)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[James Telfer (1829–1913)]] |\n| **Mother** | [[Janet Welsh (1826–1885)]] |\n| **Twin sister** | [[Janet Welsh Telfer (1858–1921)]] |\n| **Brother** | [[John Koppio Telfer (1862–1922)]] |\n| **Sister** | Margaret Rutherford Telfer |\n| **Sister** | Elizabeth \"Betty\" Telfer (1861–1938) |\n| **Spouse** | Frances Margaret Oswald (1861–1931) |\n\n## Life Summary\n\nJames Telfer was the twin brother of Janet Welsh Telfer (1858–1921) — the pair shared the birth date **29 August 1858** at Tungkillo, South Australia, children of pioneer James Telfer (1829–1913) and Janet Welsh. On **14 March 1882** he married **Frances Margaret Oswald** at Port Lincoln, South Australia. Unlike his sister's line (which carried no children through her marriage to Andrew Watherstone), James's line carried deep through the Fraser/Donnelly families via his daughters. He died **27 July 1944** at Medindie Gardens, South Australia, aged 85, and was buried at the North Road Cemetery, Nailsworth.\n\n> **⚠️ Do not conflate:** This James Telfer (1858–1944) is the *son and twin*. He must not be confused with his father **James Telfer (1829–1913)** of Koppio, nor with the unrelated James Telford / other James Telfers elsewhere in the tree. The shared 29 Aug 1858 twin birth date is his signature identifier.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 29 Aug 1858 | Born at Tungkillo, South Australia (twin of Janet) |\n| 14 Mar 1882 | Married Frances Margaret Oswald at Port Lincoln, South Australia |\n| 1882–1898 | At least seven daughters born (Jane Margaret 1882, Janet Welsh 1885, Millicent Agnes 1887, Rose Gladys 1890, Mary Frances 1893–1893, +2 more) |\n| 27 Jul 1944 | Died at Medindie Gardens, South Australia (aged 85) |\n| → | Buried at North Road Cemetery, Nailsworth, South Australia |\n\n## Sources\n\n- **FamilySearch:** James Telfer (1858–1944) — [KDBV-SG2](https://www.familysearch.org/tree/person/details/KDBV-SG2) — born 29 Aug 1858 Tungkillo, m. Frances Margaret Oswald 14 Mar 1882 Port Lincoln, d. 27 Jul 1944 Medindie Gardens, buried Nailsworth; cites BillionGraves Index, SA Will & Probate, Find A Grave Index (accessed 31 Aug 2026)\n- **Source:** Donald Telfer, *A Telfer Family Tree* (Supplement to *From the Borders to the Bush*, 2008), pp. 183, 185 + ch. 9 — twin birth, Portana Station/Sheringa JP detail, \"d. 1944 Medindie\" (swing 7 extraction, accessed 24 Aug 2026)\n- **Source (corroborating identity):** GRO land-grant records via LocalWiki — \"TELFER, James station manager Pt Lincoln 1908\"; \"Sheringa allocation 1888\" — independent primary support for occupation/region (accessed 31 Aug 2026)",
+    "body_stripped": "**Role:** Son of pioneer James Telfer (1829–1913) & Janet Welsh — the twin brother of Janet Welsh Telfer (1858–1921)\n**Born:** 29 August 1858 — Tungkillo, South Australia\n**Died:** 27 July 1944 — Medindie Gardens, South Australia (aged 85)\n**Spouse:** Frances Margaret Oswald (m. 14 March 1882, Port Lincoln)\n\n## Family\n\n Relation  Name \n\n **Father**  James Telfer (1829–1913) \n **Mother**  Janet Welsh (1826–1885) \n **Twin sister**  Janet Welsh Telfer (1858–1921) \n **Brother**  John Koppio Telfer (",
+    "parents": [
+      "james-telfer-1829",
+      "janet-welsh"
+    ],
+    "children": [],
+    "siblings": [
+      "janet-welsh-telfer",
+      "john-koppio-telfer"
+    ],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "1858 – 1944",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 4
   }
 ]

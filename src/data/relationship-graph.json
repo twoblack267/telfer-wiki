@@ -1652,7 +1652,13 @@
     },
     {
       "slug": "hannah-peacock",
-      "id": "Hannah Peacock"
+      "id": "Hannah Peacock",
+      "generation": 5
+    },
+    {
+      "slug": "james-telfer",
+      "id": "James Telfer",
+      "generation": 4
     }
   ],
   "edges": {
@@ -3284,6 +3290,14 @@
       {
         "from": "james-telfer-1761",
         "to": "margaret-telfer-1801"
+      },
+      {
+        "from": "james-telfer-1829",
+        "to": "james-telfer"
+      },
+      {
+        "from": "janet-welsh",
+        "to": "james-telfer"
       }
     ],
     "spouseOf": [
@@ -5724,6 +5738,14 @@
       {
         "from": "margaret-telfer-1801",
         "to": "william-telfer-1811"
+      },
+      {
+        "from": "james-telfer",
+        "to": "janet-welsh-telfer"
+      },
+      {
+        "from": "james-telfer",
+        "to": "john-koppio-telfer"
       }
     ]
   }
