@@ -78,10 +78,32 @@ for (const p of people) {
 console.log(`\nNOTE-blockquote leaks found in published data: ${noteFlags}`);
 
 console.log(`\nScanned ${people.length} people. FLAGGED (sibling overlapping parent/child): ${flags}`);
+// ─── SAME-NAME BRANCH-LEAK ASSERTIONS (resolver regression guard) ────────────
+// The 26-Aug death-year-early-return bug in build-relationship-graph.mjs wired a
+// same-name person across branches (e.g. Sorbietrees' sibling "James Telfer
+// (1762–1845)" resolving to the CASTLETON James b1761 who died in the same year
+// 1845, and vice-versa). That signature does NOT overlap parent/child, so the
+// generic check above can't see it. Pin the known stable facts so a resolver
+// regression fails here loudly instead of quietly re-leaking:
+let sigFlags = 0;
+function sig(cond, msg) {
+  if (!cond) { sigFlags++; console.log(`• ${msg}`); }
+}
+const adam1771 = bySlug.get('adam-telfer-1771');
+const castletonJames = bySlug.get('james-telfer-1761');
+if (adam1771 && castletonJames) {
+  sig(!(adam1771.siblings || []).includes('james-telfer-1761'),
+      "adam-telfer-1771 (Sorbietrees) must NOT list castleton james-telfer-1761 as sibling");
+  sig(!(castletonJames.siblings || []).includes('adam-telfer-1771'),
+      "james-telfer-1761 (Castleton) must NOT list Sorbietrees adam-telfer-1771 as sibling");
+  sig(!(castletonJames.siblings || []).includes('francis-telfer-1768'),
+      "james-telfer-1761 (Castleton) must NOT list Sorbietrees francis-telfer-1768 as sibling");
+}
+console.log(`Current: same-name branch-leak assertions FAILED: ${sigFlags}`);
 console.log(flags === 0
   ? `\n✅ No cross-branch sibling contamination found.`
   : `\n❌ ${flags} sibling ref(s) contradict parent/child structure — same-name contamination. Fix at the VAULT, then regenerate.`);
 if (noteFlags > 0) {
   console.log(`\n❌ ${noteFlags} internal data-maintenance NOTE-blockquote(s) leaked into body_markdown. Move them to the Corrections Log (or convert to a "## " section) at the VAULT, then regenerate.`);
 }
-process.exit((flags === 0 && noteFlags === 0) ? 0 : 1);
+process.exit((flags === 0 && noteFlags === 0 && sigFlags === 0) ? 0 : 1);

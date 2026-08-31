@@ -115,13 +115,38 @@ function resolveNameToSlug(name, sourceSlug) {
   // ref's birth/death years is preferred — and if no such person exists, the ref is
   // null (do NOT fall through to a different-generation same-name record).
   if (refBirth) {
-    let best = null;
-    for (const person of people) {
-      if (person.id.toLowerCase() !== cleanName.toLowerCase()) continue;
-      if (refDeath && person.death_year && person.death_year === refDeath) return person.slug;
-      if (person.birth_year === refBirth) best = person.slug;
+    // Collect every same-name candidate FIRST, then score the match. Death-year
+    // matching must be a TIEBREAKER, not an early return: several same-named
+    // Telfers share death years (e.g. James Telfer b1761 d1845 AND James Telfer
+    // b1832 d1845), so `if (death_year === refDeath) return ...` grabbed whichever
+    // appeared first in list order and wired a wrong-generation sibling/parent/
+    // child. Only a *unique* same-name+death-year candidate is safe by death alone.
+    const cleanedId = cleanName.toLowerCase();
+    const candidates = people.filter((p) => p.id.toLowerCase() === cleanedId);
+
+    // Exact both-years match is unequivocal.
+    if (refDeath) {
+      const exact = candidates.find((p) => p.birth_year === refBirth && p.death_year === refDeath);
+      if (exact) return exact.slug;
     }
-    if (best) return best;
+    // Birth-year match.
+    const byBirth = candidates.filter((p) => p.birth_year === refBirth);
+    if (byBirth.length === 1) return byBirth[0].slug;
+    if (byBirth.length > 1) {
+      // Same name + same birth year but conflicting deaths — genuinely ambiguous.
+      if (refDeath) {
+        const byBoth = byBirth.find((p) => p.death_year === refDeath);
+        if (byBoth) return byBoth.slug;
+      }
+      return null;
+    }
+    // No birth-year match. Fall back to death-year ONLY if unique among same-name
+    // candidates — otherwise we'd guess wrong generation.
+    if (refDeath) {
+      const byDeath = candidates.filter((p) => p.death_year && p.death_year === refDeath);
+      if (byDeath.length === 1) return byDeath[0].slug;
+      if (byDeath.length > 1) return null;
+    }
     // GUARD (26 Aug 2026): a year-carrying ref matching NO record with those years
     // must NOT short-circuit to an exact bare-slug match on a DIFFERENT generation.
     // That unsafe fallback wired cross-branch false parents (e.g. `David Parker
