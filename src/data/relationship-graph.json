@@ -1674,6 +1674,21 @@
       "slug": "william-francis-telfer",
       "id": "William Francis Telfer",
       "generation": 5
+    },
+    {
+      "slug": "charlotte-beven",
+      "id": "Charlotte Beven",
+      "generation": 7
+    },
+    {
+      "slug": "emma-turner",
+      "id": "Emma Turner",
+      "generation": 6
+    },
+    {
+      "slug": "gwinfred-hucks",
+      "id": "Gwinfred Hucks",
+      "generation": 7
     }
   ],
   "edges": {
@@ -3321,6 +3336,14 @@
       {
         "from": "ruth-penna",
         "to": "william-francis-telfer"
+      },
+      {
+        "from": "emma-turner",
+        "to": "charlotte-beven"
+      },
+      {
+        "from": "emma-turner",
+        "to": "gwinfred-hucks"
       }
     ],
     "spouseOf": [
@@ -3587,6 +3610,10 @@
       {
         "from": "frances-margaret-oswald",
         "to": "james-telfer"
+      },
+      {
+        "from": "emma-turner",
+        "to": "george-hucks"
       }
     ],
     "siblingOf": [
