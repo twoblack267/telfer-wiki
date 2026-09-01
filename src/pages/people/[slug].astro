@@ -30,6 +30,12 @@ const bodyHtml = formatBody(person.body_markdown || "", telferPeople);
 // ── Tags ──
 const importantTags = (person.tags || []).filter((t) => !["bio", "family", "person"].includes(t));
 
+// ── Photo gallery ──
+// Don't repeat the portrait avatar in the gallery when person_photo is also listed in images[].
+const galleryImages = (person.images || []).filter(
+  (img) => !(person.person_photo && img.src === person.person_photo)
+);
+
 // ── Helper: ordinal suffix (1st, 2nd, 3rd, 4th…) for generation labels ──
 function ordinalSuffix(n) {
   const s = ["th", "st", "nd", "rd"];
@@ -203,11 +209,11 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
         </div>
 
         <!-- Photo Gallery -->
-        {person.images?.length > 0 && (
+        {galleryImages.length > 0 && (
           <div class="person-card rounded-xl p-3 mt-3">
             <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">Photos</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              {person.images.map((img) => (
+              {galleryImages.map((img) => (
                 <figure key={img.src} class="m-0">
                   <img
                     src={import.meta.env.BASE_URL + img.src}
