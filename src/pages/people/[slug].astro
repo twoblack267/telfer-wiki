@@ -32,8 +32,20 @@ const importantTags = (person.tags || []).filter((t) => !["bio", "family", "pers
 
 // ── Photo gallery ──
 // Don't repeat the portrait avatar in the gallery when person_photo is also listed in images[].
+// Don't repeat in the gallery any photo that's already shown inline in the biography body
+// (body_markdown raw '![..](images/people/..)' embeds). Emit each photo once: gallery OR body,
+// never both (Card telw-20260902-001 systemic duplicate-image rendering).
+const bodyImageFiles = new Set(
+  [...bodyHtml.matchAll(/src="([^"]*\/images\/people\/[^"]+)"/g)].map((m) =>
+    decodeURIComponent(m[1].split("/").pop()?.toLowerCase() ?? "")
+  )
+);
 const galleryImages = (person.images || []).filter(
-  (img) => !(person.person_photo && img.src === person.person_photo)
+  (img) =>
+    !(person.person_photo && img.src === person.person_photo) &&
+    !bodyImageFiles.has(
+      decodeURIComponent(String(img.src || "").split("/").pop()?.toLowerCase() ?? "")
+    )
 );
 
 // ── Helper: ordinal suffix (1st, 2nd, 3rd, 4th…) for generation labels ──
