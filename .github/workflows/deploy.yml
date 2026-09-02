@@ -73,9 +73,13 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "$BUILD_ID" ]; then echo "::error::no build_id output from build job"; exit 1; fi
-          url="https://telferwiki.com/?cb=${BUILD_ID}"
-          echo "Polling $url for data-build-id=$BUILD_ID (Pages can take ~1-2 min to propagate)"
+          echo "Polling https://telferwiki.com for data-build-id=$BUILD_ID (Pages can take ~1-2 min to propagate)"
           for i in $(seq 1 30); do
+            # Re-roll the cache-busting param each attempt so Cloudflare cannot
+            # serve a stale cached copy of a previously-seen URL. A fresh unique
+            # query string forces an origin fetch from GitHub Pages, which proves
+            # the deploy actually published this build — immune to CF edge TTL.
+            url="https://telferwiki.com/?cb=${BUILD_ID}_${i}"
             if curl -fsS --max-time 30 -A "Mozilla/5.0 (deploy-verify)" "$url" 2>/dev/null | grep -q "data-build-id=\"$BUILD_ID\""; then
               echo "✅ LIVE SITE SERVES BUILD $BUILD_ID (attempt $i)"
               exit 0
