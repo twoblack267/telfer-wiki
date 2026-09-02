@@ -29,8 +29,8 @@ function findPerson(id: string | undefined, dataset = people) {
 // Daughters: shown with spouse + their children, then STOP (no further recursion)
 const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: number; hasProfile: boolean; spouse?: string; children?: { name: string; birth?: number; death?: number }[] }> = {
   "Francis Kelson Telfer": { name: "Francis Kelson Telfer", birth: 1910, death: 1987, hasProfile: false },
-  "Edwin Roy Telfer": { name: "Edwin Roy Telfer", birth: 1915, hasProfile: false },
-  "Reginald Masters Telfer": { name: "Reginald Masters Telfer", birth: 1920, hasProfile: false },
+  "Edwin Roy Telfer": { name: "Edwin Roy Telfer", birth: 1921, death: 2009, hasProfile: false },
+  "Reginald Masters Telfer": { name: "Reginald Masters Telfer", birth: 1923, hasProfile: false },
   "Murray John Telfer": { name: "Murray John Telfer", birth: 1924, death: 2009, hasProfile: true },
 
   // Married daughters (Telfer by birth, took husband's surname)
@@ -50,7 +50,7 @@ const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: numb
   "Emily Amelia Barton": {
     name: "Emily Amelia Barton (née Telfer)",
     birth: 1913,
-    death: 2001,
+    death: 2000,
     hasProfile: false,
     spouse: "Mr Barton",
     children: [
@@ -60,8 +60,7 @@ const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: numb
   },
   "Ethel Jean McMurtrie": {
     name: "Ethel Jean McMurtrie (née Telfer)",
-    birth: 1916,
-    death: 1999,
+    birth: 1915,
     hasProfile: false,
     spouse: "Mr McMurtrie",
     children: [
@@ -71,8 +70,7 @@ const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: numb
   },
   "Gladys Merle Pedler": {
     name: "Gladys Merle Pedler (née Telfer)",
-    birth: 1918,
-    death: 2005,
+    birth: 1917,
     hasProfile: false,
     spouse: "Mr Pedler",
     children: [
@@ -82,8 +80,7 @@ const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: numb
   },
   "Doris Elma Rowe": {
     name: "Doris Elma Rowe (née Telfer)",
-    birth: 1922,
-    death: 2010,
+    birth: 1919,
     hasProfile: false,
     spouse: "Mr Rowe",
     children: [
@@ -93,7 +90,7 @@ const KNOWN_CHILDREN: Record<string, { name: string; birth: number; death?: numb
   },
 
   // Youngest daughter — never married, kept Telfer surname
-  "Ruth Telfer": { name: "Ruth Telfer", birth: 1930, hasProfile: true },
+  "Ruth Telfer": { name: "Ruth Telfer", birth: 1931, hasProfile: true },
 };
 
 function getAllChildren(person: PersonData) {
