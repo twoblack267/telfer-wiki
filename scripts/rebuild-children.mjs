@@ -57,7 +57,6 @@ const correctParents = new Map([
   ['Reginald Masters Telfer', 'Francis Charles Telfer (1875–1954)'],
   ['Murray John Telfer', 'Francis Charles Telfer (1875–1954)'],
   ['Murray John Telfer (1924–2009)', 'Francis Charles Telfer (1875–1954)'],
-  ['Malcolm George Telfer', 'Francis Charles Telfer (1875–1954)'],
   
   // Children of John (1840)
   ['Alan Dale Telfer (1890–1937)', 'John Telfer (1840–1913)'],
