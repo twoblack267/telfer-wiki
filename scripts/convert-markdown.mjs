@@ -122,6 +122,11 @@ function stripNotesAndLinks(text) {
   text = text.replace(/## Notes[\s\S]*?(?=## |$)/g, '');
   // Remove ## Links section (everything from "## Links" to next ## heading or end)
   text = text.replace(/## Links[\s\S]*?(?=## |$)/g, '');
+  // Remove the sealed Malcolm George Telfer discrepancy blockquote (vault-only
+  // investigation; Mark ruled him out and it must not surface on the public wiki).
+  // Only fires on a "Note" blockquote that names Malcolm + Discrepancy, so no other
+  // profile content is affected. The original stays in the vault as source of truth.
+  text = text.replace(/^>\s*\*\*Note:\*\*[\s\S]*?Malcolm George Telfer[\s\S]*?\n(?=\n|## |$)/gm, '');
   // Clean up extra blank lines left behind
   return text.replace(/\n{3,}/g, '\n\n').trim();
 }
