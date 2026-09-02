@@ -109,12 +109,82 @@ function getAllChildren(person: PersonData) {
     person.display_name === "Francis Charles Telfer";
 
   if (isFrancis) {
-    const knownNames = new Set(wikiChildren.map((c) => c.display_name));
-    const placeholderChildren = Object.values(KNOWN_CHILDREN)
-      .filter((kc) => !knownNames.has(kc.name) && !kc.hasProfile)
-      .map((kc) => {
+    // KNOWN_CHILDREN is the authoritative list of Francis's children (sons +
+    // married daughters). Every child now has a real profile in the vault, so we
+    // merge that live data in instead of emitting duplicate placeholder nodes:
+    //   - real profile supplies the node (correct birth/death years + working link)
+    //   - a married daughter additionally carries her grandchildren from the table
+    //     (the vault's daughter profiles hold no children), rendered as final leaves
+    const result: PersonData[] = [];
+    const seenSlugs = new Set<string>();
+
+    for (const kc of Object.values(KNOWN_CHILDREN)) {
+      // Resolve the real profile by exact slug (children slugs are stored as-is)
+      // or by given names (married entries swap the surname to the husband's and
+      // may drop/alter middle names, so match on the first two given-name tokens).
+      const realBySlug = findPerson(kc.profile_slug || kc.name);
+      const givenKey = kc.name.replace(/\(.*\)/, "").trim().toLowerCase();
+      const givenTokens = givenKey.split(/\s+/).slice(0, 2).join(" ");
+      const firstToken = givenKey.split(/\s+/)[0];
+      const real =
+        realBySlug ||
+        wikiChildren.find(
+          (wc) => wc.display_name?.toLowerCase() === givenKey
+        ) ||
+        wikiChildren.find((wc) =>
+          wc.display_name?.toLowerCase().split(/\s+/).slice(0, 2).join(" ") === givenTokens
+        ) ||
+        // Sons carry middle names in this table that real profiles omit
+        // ("Francis Kelson Telfer" -> "Francis Telfer"). Every child of Francis
+        // has a unique first given name, so a first-token fallback is safe.
+        wikiChildren.find((wc) =>
+          wc.display_name?.toLowerCase().split(/\s+/)[0] === firstToken
+        );
+
+      if (real) {
+        if (seenSlugs.has(real.slug || real.id)) continue; // already emitted
+        // Sons and unmarried daughters: emit the real profile as a recurse node.
+        const isMarriedDaughter = kc.name.includes("(née") && (kc.children?.length || kc.spouse);
+        if (!isMarriedDaughter) {
+          seenSlugs.add(real.slug || real.id);
+          result.push(real);
+          continue;
+        }
+        // Married daughter: emit a leaf node using the real profile's correct
+        // years + slug (working link) but the married surname so it renders as a
+        // non-recursing leaf, with her grandchildren as the final line.
+        const marriedSurname = (kc.name.split("(")[0]?.trim().split(/\s+/).slice(-1)[0]) || "Telfer";
+        const grandkids = (kc.children || []).map((gc: any) => ({
+          display_name: gc.name,
+          birth_year: gc.birth,
+          death_year: gc.death,
+          death_year_display: gc.death?.toString(),
+          is_living: !gc.death,
+          last_name: gc.name.split(" ").slice(-1)[0] || "Unknown",
+          slug: gc.name.toLowerCase().replace(/\s+/g, "-"),
+          children: undefined,
+          spouses: undefined,
+          id: `placeholder:${kc.name}::${gc.name}`,
+        }));
+        seenSlugs.add(real.slug || real.id);
+        result.push({
+          ...real,
+          last_name: marriedSurname,
+          children: grandkids,
+          spouses: undefined,
+          _placeholderMeta: {
+            isMarriedDaughter: true,
+            spouse: kc.spouse,
+            grandchildren: kc.children,
+          },
+        } as any);
+        continue;
+      }
+
+      // No real profile at all — emit a placeholder node (the data is only in the
+      // table). This is rare now that all children have profiles.
       const grandchildren = kc.children
-        ? kc.children.map((gc) => ({
+        ? kc.children.map((gc: any) => ({
             display_name: gc.name,
             birth_year: gc.birth,
             death_year: gc.death,
@@ -129,15 +199,19 @@ function getAllChildren(person: PersonData) {
             id: `placeholder:${kc.name}::${gc.name}`,
           }))
         : undefined;
-      return {
+      const marriedSurname = kc.name.includes("(née")
+        ? (kc.name.split("(")[0]?.trim().split(/\s+/).slice(-1)[0]) || "Telfer"
+        : "Telfer";
+      result.push({
         display_name: kc.name,
         birth_year: kc.birth,
         death_year: kc.death,
         death_year_display: kc.death?.toString(),
         is_living: !kc.death,
-        last_name: kc.name.includes("(née Telfer)") ? "Fatchen" : "Telfer",
+        last_name: kc.name.includes("(née Telfer)") ? marriedSurname : "Telfer",
         slug: kc.name.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, ""),
         children: grandchildren,
+        spouse: undefined,
         spouses: kc.spouse ? [{ display_name: kc.spouse, id: `placeholder:${kc.name}::spouse` }] : undefined,
         id: `placeholder:${kc.name}`,
         _placeholderMeta: {
@@ -145,11 +219,9 @@ function getAllChildren(person: PersonData) {
           spouse: kc.spouse,
           grandchildren: kc.children,
         },
-      };
-      });
-    return [...wikiChildren, ...placeholderChildren].sort(
-      (a, b) => (a.birth_year || 9999) - (b.birth_year || 9999)
-    );
+      } as any);
+    }
+    return result.sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
   }
   return wikiChildren;
 }
