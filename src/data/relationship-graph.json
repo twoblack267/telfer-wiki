@@ -1684,6 +1684,16 @@
       "slug": "gwinfred-hucks",
       "id": "Gwinfred Hucks",
       "generation": 7
+    },
+    {
+      "slug": "beatrice-mary-murray",
+      "id": "Beatrice Mary Murray",
+      "generation": 6
+    },
+    {
+      "slug": "mary-ann-dillon",
+      "id": "Mary Ann Dillon",
+      "generation": 5
     }
   ],
   "edges": {
@@ -3189,8 +3199,8 @@
         "to": "edwin-telfer"
       },
       {
-        "from": "robert-telfer-dillon",
-        "to": "leslie-frank-dillon"
+        "from": "mary-ann-dillon",
+        "to": "leslie-james-dillon"
       },
       {
         "from": "robert-telfer-dillon",
@@ -3339,6 +3349,10 @@
       {
         "from": "emma-turner",
         "to": "gwinfred-hucks"
+      },
+      {
+        "from": "robert-telfer-dillon",
+        "to": "beatrice-mary-murray"
       }
     ],
     "spouseOf": [
@@ -3609,6 +3623,10 @@
       {
         "from": "emma-turner",
         "to": "george-hucks"
+      },
+      {
+        "from": "mary-ann-dillon",
+        "to": "robert-telfer-dillon"
       }
     ],
     "siblingOf": [
@@ -5783,6 +5801,10 @@
       {
         "from": "james-telfer",
         "to": "john-koppio-telfer"
+      },
+      {
+        "from": "beatrice-mary-murray",
+        "to": "leslie-james-dillon"
       }
     ]
   }
