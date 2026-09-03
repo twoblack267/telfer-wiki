@@ -746,11 +746,6 @@
       "generation": 6
     },
     {
-      "slug": "jessie-sargent",
-      "id": "Jessie Sargent",
-      "generation": 6
-    },
-    {
       "slug": "jessie-telfer",
       "id": "Jessie Telfer",
       "generation": 5
@@ -879,11 +874,6 @@
       "slug": "kathryn-telfer",
       "id": "Kathryn Mavis Telfer",
       "generation": 7
-    },
-    {
-      "slug": "kenneth-telfer",
-      "id": "Kenneth Telfer",
-      "generation": 6
     },
     {
       "slug": "kenneth-cornish",
@@ -1093,11 +1083,6 @@
     {
       "slug": "phineas-baker",
       "id": "Phineas Baker",
-      "generation": 6
-    },
-    {
-      "slug": "reginald-telfer",
-      "id": "Reginald Telfer",
       "generation": 6
     },
     {
@@ -1694,6 +1679,25 @@
       "slug": "mary-ann-dillon",
       "id": "Mary Ann Dillon",
       "generation": 5
+    },
+    {
+      "slug": "gwendoline-victoria-telfer",
+      "id": "Gwendoline Victoria Telfer",
+      "generation": 7
+    },
+    {
+      "slug": "jessie-kathleen-telfer",
+      "id": "Jessie Kathleen Telfer",
+      "generation": 7
+    },
+    {
+      "slug": "kenneth-telfer",
+      "id": "Kenneth Telfer",
+      "generation": 6
+    },
+    {
+      "slug": "reginald-masters-telfer",
+      "id": "Reginald Masters Telfer"
     }
   ],
   "edges": {
@@ -2611,14 +2615,6 @@
         "to": "kathryn-telfer"
       },
       {
-        "from": "julia-matilda-seebohm",
-        "to": "kenneth-telfer"
-      },
-      {
-        "from": "mark-telfer-1877",
-        "to": "kenneth-telfer"
-      },
-      {
         "from": "grantley-telfer",
         "to": "kristin-stefanoff"
       },
@@ -2821,14 +2817,6 @@
       {
         "from": "john-telfer-robert",
         "to": "peter-telfer"
-      },
-      {
-        "from": "amy-telfer-1884",
-        "to": "reginald-telfer"
-      },
-      {
-        "from": "francis-telfer-1875",
-        "to": "reginald-telfer"
       },
       {
         "from": "richard-paynter-of-calstock",
@@ -3353,6 +3341,22 @@
       {
         "from": "robert-telfer-dillon",
         "to": "beatrice-mary-murray"
+      },
+      {
+        "from": "julia-matilda-seebohm",
+        "to": "kenneth-telfer"
+      },
+      {
+        "from": "mark-telfer-1877",
+        "to": "kenneth-telfer"
+      },
+      {
+        "from": "amy-telfer-1884",
+        "to": "reginald-masters-telfer"
+      },
+      {
+        "from": "francis-telfer-1875",
+        "to": "reginald-masters-telfer"
       }
     ],
     "spouseOf": [
@@ -3531,10 +3535,6 @@
       {
         "from": "jean-telfer-1840",
         "to": "richard-paynter"
-      },
-      {
-        "from": "jessie-sargent",
-        "to": "kenneth-telfer"
       },
       {
         "from": "john-telfer-robert",
@@ -4088,7 +4088,7 @@
       },
       {
         "from": "clarice-may-telfer",
-        "to": "reginald-telfer"
+        "to": "reginald-masters-telfer"
       },
       {
         "from": "clarice-may-telfer",
@@ -4184,7 +4184,7 @@
       },
       {
         "from": "doris-elma-telfer",
-        "to": "reginald-telfer"
+        "to": "reginald-masters-telfer"
       },
       {
         "from": "doris-elma-telfer",
@@ -4268,7 +4268,7 @@
       },
       {
         "from": "edwin-telfer-1921",
-        "to": "reginald-telfer"
+        "to": "reginald-masters-telfer"
       },
       {
         "from": "edwin-telfer-1921",
@@ -4480,7 +4480,7 @@
       },
       {
         "from": "emily-amelia-telfer",
-        "to": "reginald-telfer"
+        "to": "reginald-masters-telfer"
       },
       {
         "from": "emily-amelia-telfer",
@@ -4552,7 +4552,7 @@
       },
       {
         "from": "ethel-jean-telfer",
-        "to": "reginald-telfer"
+        "to": "reginald-masters-telfer"
       },
       {
         "from": "ethel-jean-telfer",
@@ -4672,7 +4672,7 @@
       },
       {
         "from": "francis-telfer-1910",
-        "to": "reginald-telfer"
+        "to": "reginald-masters-telfer"
       },
       {
         "from": "francis-telfer-1910",
@@ -4808,7 +4808,7 @@
       },
       {
         "from": "gladys-merle-telfer",
-        "to": "reginald-telfer"
+        "to": "reginald-masters-telfer"
       },
       {
         "from": "gladys-merle-telfer",
@@ -5175,14 +5175,6 @@
         "to": "timothy-telfer"
       },
       {
-        "from": "kenneth-telfer",
-        "to": "lindsay-telfer"
-      },
-      {
-        "from": "kenneth-telfer",
-        "to": "maifie-telfer"
-      },
-      {
         "from": "kristin-stefanoff",
         "to": "nick-telfer"
       },
@@ -5296,14 +5288,10 @@
       },
       {
         "from": "murray-telfer",
-        "to": "reginald-telfer"
+        "to": "reginald-masters-telfer"
       },
       {
         "from": "murray-telfer",
-        "to": "ruth-telfer"
-      },
-      {
-        "from": "reginald-telfer",
         "to": "ruth-telfer"
       },
       {
@@ -5805,6 +5793,18 @@
       {
         "from": "beatrice-mary-murray",
         "to": "leslie-james-dillon"
+      },
+      {
+        "from": "kenneth-telfer",
+        "to": "lindsay-telfer"
+      },
+      {
+        "from": "kenneth-telfer",
+        "to": "maifie-telfer"
+      },
+      {
+        "from": "reginald-masters-telfer",
+        "to": "ruth-telfer"
       }
     ]
   }
