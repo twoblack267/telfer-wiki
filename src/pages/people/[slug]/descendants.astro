@@ -67,6 +67,15 @@ function getMaxGeneration(node) {
 const totalDescendants = countDescendants(descendantTree);
 const generationsSpanned = getMaxGeneration(descendantTree) - (person.generation || 0);
 
+// Compact inline lifespan for a person record where data exists
+function lifespan(p) {
+  if (!p) return '';
+  const b = p.birth_year || p.birth_display || '?';
+  const d = p.death_year || p.death_display || (p.is_living ? 'living' : '?');
+  const both = (p.birth_year || p.birth_display) && (p.death_year || p.death_display || p.is_living);
+  return both ? ` (${b}–${d})` : '';
+}
+
 // Render descendant tree as HTML string
 function renderDescendantNode(node, depth = 0) {
   if (!node) return '';
@@ -126,7 +135,7 @@ export async function getStaticPaths() {
 
     <header class="mb-6">
       <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-2">Descendant Chart</h1>
-      <p class="text-[var(--color-muted)]">Descendants of <a href={`/people/${slug}`} class="text-[var(--color-link)] font-medium">{person.display_name}</a></p>
+      <p class="text-[var(--color-muted)]">Descendants of <a href={`/people/${slug}`} class="text-[var(--color-link)] font-medium">{person.display_name}</a>{lifespan(person)}{totalDescendants > 0 ? ` · ${totalDescendants} descendants` : ''}</p>
     </header>
 
     <!-- Stats -->

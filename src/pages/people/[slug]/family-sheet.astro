@@ -73,7 +73,7 @@ export async function getStaticPaths() {
 
     <header class="mb-6 text-center">
       <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-1">Family Group Sheet</h1>
-      <p class="text-[var(--color-muted)]">Primary person: <a href={`/people/${slug}`} class="text-[var(--color-link)] font-medium">{person.display_name}</a></p>
+      <p class="text-[var(--color-muted)]">Primary person: <a href={`/people/${slug}`} class="text-[var(--color-link)] font-medium">{person.display_name}</a>{(person.birth_year || person.birth_display || person.death_year || person.death_display || person.is_living) ? ` (${formatDateRange(person)})` : ''}</p>
     </header>
 
     <!-- Parents Section -->
