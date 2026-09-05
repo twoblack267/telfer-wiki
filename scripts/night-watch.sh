@@ -71,6 +71,30 @@ if [ -f scripts/merge-duplicates.mjs ]; then
   fi
 fi
 
+# ── 1c. Image-integrity guard (photos that would go blank/broken) ────────
+# The plain-wikilink trap used to silently strip photos on every regen and the
+# nightly push shipped the blank page with no alarm (Noela/Virgen grave, etc.).
+# This guard AUTOFIXES mechanical photo problems (missing published file that
+# exists in the vault; dead byte-identical duplicate twin), and if a genuine
+# non-auto-fixable case remains (e.g. a photo referenced as plain [[...]] prose
+# on a profile, or a missing file with no vault source) it BLOCKS the push so a
+# blank photo page is never shipped, and surfaces it for the board/human.
+echo "[1/7 → img] Image-integrity guard (auto-fix + block-blank-photos)..."
+if node scripts/image-integrity-check.mjs --autofix > "$RUN_DIR/nw-img.json" 2>"$RUN_DIR/nw-img.err"; then
+  echo "  ✅ Image integrity clean — no photo would be dropped on this rebuild"
+else
+  IMG_OK=$(python3 -c "import json;d=json.load(open('$RUN_DIR/nw-img.json'));print('true' if d.get('ok') else 'false')" 2>/dev/null)
+  IMG_TOT=$(python3 -c "import json;d=json.load(open('$RUN_DIR/nw-img.json'));print(len(d.get('missing_files',[]))+len(d.get('dead_duplicates',[]))+len(d.get('plain_wikilink_photo_mentions',[])))" 2>/dev/null || echo "?")
+  if [ "$IMG_OK" = "false" ]; then
+    echo "  🔴 Image-integrity BLOCKER(S) remain after autofix ($IMG_TOT) — refusing to push a state that would drop/blank photos"
+    python3 -c "import json;[print('       -',r) for r in json.load(open('$RUN_DIR/nw-img.json')).get('recommendation',[])]" 2>/dev/null | head -8
+    FAIL="${FAIL} image-integrity:$IMG_TOT"
+    BLOCK_PUSH=1
+  else
+    echo "  ✅ Image integrity clean (photos all wired / shared-legit)"
+  fi
+fi
+
 # ── 2. Duplicate scan ─────────────────────────────────────────
 echo "[2/7] Scanning for duplicate IDs / people..."
 DUP_OUT=$(python3 - <<'PY'
