@@ -2165,34 +2165,6 @@
     "person_photo": null
   },
   {
-    "id": "Esther Jane",
-    "slug": "esther-jane",
-    "first_name": "Esther",
-    "middle_name": null,
-    "last_name": "Jane",
-    "birth_year": 1834,
-    "death_year": 1909,
-    "birth_year_display": "1834",
-    "death_year_display": "1909",
-    "display_name": "Esther Jane",
-    "title": "Esther Jane (1834–1909)",
-    "lifespan": "1834 – 1909",
-    "generation": 4,
-    "is_living": false,
-    "body_markdown": "# Esther Jane (1834–1909)\n\nThis is the **canonical, full profile**: [[Esther Jane Telfer (1834–1909)]] (daughter of Francis Telfer & Jean Murray; married John Smith; portrait in that profile).",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Esther Jane Telfer",
     "slug": "esther-jane-telfer",
     "first_name": "Esther Jane",
@@ -4902,6 +4874,46 @@
     "person_photo": null
   },
   {
+    "id": "Charles Farrow Jr",
+    "slug": "charles-farrow-jr",
+    "first_name": "Charles",
+    "middle_name": null,
+    "last_name": "Farrow Jr",
+    "birth_year": 1865,
+    "death_year": 1936,
+    "birth_year_display": "~1865",
+    "death_year_display": "1936",
+    "display_name": "Charles Farrow Jr",
+    "title": "Charles Farrow Jr",
+    "lifespan": "~1865 – 1936",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Charles Farrow Jr (~1865–1936)\n\n**Role:** Son of Charles Farrow and Elizabeth Hannah Telfer — Hope Farm, Tarlee\n**Born:** ~1865 — Hope Farm, Tarlee, South Australia\n**Died:** 21 September 1936 (aged 71) — Tarlee, South Australia\n**Buried:** Tarlee Cemetery\n**Spouse:** Ethel Mary Sambell\n\nCharles Farrow Jr was the sixth child and third son of Charles Farrow and Elizabeth Hannah Telfer. He grew up at Hope Farm, Finniss Point, near Tarlee, and married **Ethel Mary Sambell**.\n\n## Newspaper References\n\n### Death Notice\n\n- **The Advertiser (Adelaide), 22 September 1936:** Charles Farrow died 21 September 1936 at Tarlee, aged 71 years — interred in Tarlee Cemetery.\n  **Source:** [Ozburials — Tarlee Cemetery](http://www.ozburials.com/CemsSA/tarlee.htm) — accessed 28 July 2026\n\n## Sources\n\n1. **\"From the Borders to the Bush\"** — Chapter on Elizabeth Hannah Telfer (pp. 93, 110). Elizabeth's children list includes Charles Farrow Jr, noting his marriage to Ethel Mary Sambell.\n2. **Ozburials.com — Tarlee Cemetery transcription:** \"FARROW, Charles — 21 September 1936, aged 71 years.\" Transcribed by Lorraine Larment from photographs by Marylin and Steve Jones.\n   **Source:** [Ozburials Tarlee Cemetery](http://www.ozburials.com/CemsSA/tarlee.htm) — accessed 28 July 2026",
+    "roles": [
+      "Son of Charles Farrow and Elizabeth Hannah Telfer — Hope Farm, Tarlee"
+    ],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "charles-farrow",
+      "elizabeth-hannah-telfer"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "amy-farrow-stribling",
+      "elizabeth-telfer-farrow-holloway",
+      "esther-farrow-latter",
+      "eva-agnes-farrow",
+      "george-hope-farrow",
+      "jane-murray-farrow"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Walter Baker",
     "slug": "walter-baker",
     "first_name": "Walter",
@@ -5718,7 +5730,7 @@
     "lifespan": "1875 – 1955",
     "generation": 5,
     "is_living": false,
-    "body_markdown": "# Francis Adam Telfer (1875–1955)\n\n**Role:** Son of Adam Francis Telfer and Margaret Dougal Telfer\n\n**Born:** 17 August 1875 — Edgerston, Tantanoola, South Australia\n**Died:** 27 May 1955\n**Spouse:** Clara Ann Millicent Dunn (m. 23 Oct 1899)\n**Children:** 5 — Ronald Edgerston, Millicent Joyce, Dorothy Margaret Hope, Gordon Francis, Estelle May\n\n**Father:** [[Adam Francis Telfer (1842–1925)]]\n**Mother:** [[Margaret Dougal Telfer (1849–1936)]]\n**Wife:** [[Clara Ann Millicent Telfer|Clara Ann Millicent (Dunn) Telfer (1878–1966)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Adam Francis Telfer (1842–1925)]] |\n| **Mother** | [[Margaret Dougal Telfer (1849–1936)]] |\n| **Wife** | [[Clara Ann Millicent Telfer|Clara Ann Millicent (Dunn) Telfer (1878–1966)]] (m. 23 Oct 1899) |\n\n---\n\n## Life Summary\n\nFrancis Adam (Frank) Telfer was born 17 August 1875 at Edgerston, Tantanoola, South Australia — the fourth of Adam Francis Telfer and Margaret Dougal Telfer's 12 children. He married **Clara Ann Millicent Dunn** (born 1 September 1878, Millicent, SA) on 23 October 1899 at the residence of Adam Telfer, Tantanoola. They had five children — Ronald Edgerston, Millicent Joyce, Dorothy Margaret Hope, Gordon Francis and Estelle May — and lived at \"Pleasant Hill,\" Glencoe West. Frank died 27 May 1955; Clara continued to live in Mount Gambier until her death on 24 May 1966.\n\n*(Relationship spine of Frank + his wife Clara (b. 1 Sep 1878, d. 24 May 1966) and the five children by name is confirmed in both \"From the Borders to the Bush\" and \"A Telfer Family Tree — Supplement 2008.\")*\n\n---\n\n**Source:** *From the Borders to the Bush* (book pp. 286–297) and *A Telfer Family Tree — Supplement 2008* — Francis Adam (Frank) Telfer 17 Aug 1875 Edgerston / d. 27 May 1955; wife Clara Ann Millicent Dunn b. 1 Sep 1878 Millicent / d. 24 May 1966; m. 23 Oct 1899 at residence of Adam Telfer, Tantanoola; five children.\n\n---\n\n## Family Stories\n\n🖊️ **Anecdote — as told in From the Borders to the Bush (book pp. 286):** Frank was the plough-and-pencil farmer. He took up 'Pleasant Hill' down at Glencoe West, and for close on fifty years — 1908 to 1955 — he wrote his farming diary every blessed day. Weather, wool, the pigs, potatoes, the wheat and the barley; he kept the whole life of the place in those books, and his son Ronald kept them safe after him. They're a farm's heartbeat in ink. Sheep and cattle, crops, nothing too small to note. Five children grew up at Pleasant Hill around that steady, recording hand — and you get the feeling Frank believed if it wasn't written down, it hadn't properly happened.\n\n*(Anecdote only — family colour, told as the elders tell it. Does not establish any relationship, date or place.)*",
+    "body_markdown": "# Francis Adam Telfer (1875–1955)\n\n**Role:** Son of Adam Francis Telfer and Margaret Dougal Telfer\n\n**Born:** 17 August 1875 — Edgerston, Tantanoola, South Australia\n**Died:** 27 May 1955\n**Spouse:** Clara Ann Millicent Dunn (m. 23 Oct 1899)\n**Children:** 5 — Ronald Edgerston, Millicent Joyce, Dorothy Margaret Hope, Gordon Francis, Estelle May\n\n**Father:** [[Adam Francis Telfer (1842–1925)]]\n**Mother:** [[Margaret Dougal Telfer (1849–1936)]]\n**Wife:** [[Clara Ann Millicent Telfer (1878–1966)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Adam Francis Telfer (1842–1925)]] |\n| **Mother** | [[Margaret Dougal Telfer (1849–1936)]] |\n| **Wife** | [[Clara Ann Millicent Telfer (1878–1966)]] (m. 23 Oct 1899) |\n\n---\n\n## Life Summary\n\nFrancis Adam (Frank) Telfer was born 17 August 1875 at Edgerston, Tantanoola, South Australia — the fourth of Adam Francis Telfer and Margaret Dougal Telfer's 12 children. He married **Clara Ann Millicent Dunn** (born 1 September 1878, Millicent, SA) on 23 October 1899 at the residence of Adam Telfer, Tantanoola. They had five children — Ronald Edgerston, Millicent Joyce, Dorothy Margaret Hope, Gordon Francis and Estelle May — and lived at \"Pleasant Hill,\" Glencoe West. Frank died 27 May 1955; Clara continued to live in Mount Gambier until her death on 24 May 1966.\n\n*(Relationship spine of Frank + his wife Clara (b. 1 Sep 1878, d. 24 May 1966) and the five children by name is confirmed in both \"From the Borders to the Bush\" and \"A Telfer Family Tree — Supplement 2008.\")*\n\n---\n\n**Source:** *From the Borders to the Bush* (book pp. 286–297) and *A Telfer Family Tree — Supplement 2008* — Francis Adam (Frank) Telfer 17 Aug 1875 Edgerston / d. 27 May 1955; wife Clara Ann Millicent Dunn b. 1 Sep 1878 Millicent / d. 24 May 1966; m. 23 Oct 1899 at residence of Adam Telfer, Tantanoola; five children.\n\n---\n\n## Family Stories\n\n🖊️ **Anecdote — as told in From the Borders to the Bush (book pp. 286):** Frank was the plough-and-pencil farmer. He took up 'Pleasant Hill' down at Glencoe West, and for close on fifty years — 1908 to 1955 — he wrote his farming diary every blessed day. Weather, wool, the pigs, potatoes, the wheat and the barley; he kept the whole life of the place in those books, and his son Ronald kept them safe after him. They're a farm's heartbeat in ink. Sheep and cattle, crops, nothing too small to note. Five children grew up at Pleasant Hill around that steady, recording hand — and you get the feeling Frank believed if it wasn't written down, it hadn't properly happened.\n\n*(Anecdote only — family colour, told as the elders tell it. Does not establish any relationship, date or place.)*",
     "roles": [
       "Son of Adam Francis Telfer and Margaret Dougal Telfer"
     ],
@@ -7493,46 +7505,6 @@
       "edwin-ernest-clarke"
     ],
     "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Charles Farrow Jr",
-    "slug": "charles-farrow-jr",
-    "first_name": "Charles",
-    "middle_name": null,
-    "last_name": "Farrow Jr",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Charles Farrow Jr",
-    "title": "Charles Farrow Jr",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Charles Farrow Jr (~1865–1936)\n\n**Role:** Son of Charles Farrow and Elizabeth Hannah Telfer — Hope Farm, Tarlee\n**Born:** ~1865 — Hope Farm, Tarlee, South Australia\n**Died:** 21 September 1936 (aged 71) — Tarlee, South Australia\n**Buried:** Tarlee Cemetery\n**Spouse:** Ethel Mary Sambell\n\nCharles Farrow Jr was the sixth child and third son of Charles Farrow and Elizabeth Hannah Telfer. He grew up at Hope Farm, Finniss Point, near Tarlee, and married **Ethel Mary Sambell**.\n\n## Newspaper References\n\n### Death Notice\n\n- **The Advertiser (Adelaide), 22 September 1936:** Charles Farrow died 21 September 1936 at Tarlee, aged 71 years — interred in Tarlee Cemetery.\n  **Source:** [Ozburials — Tarlee Cemetery](http://www.ozburials.com/CemsSA/tarlee.htm) — accessed 28 July 2026\n\n## Sources\n\n1. **\"From the Borders to the Bush\"** — Chapter on Elizabeth Hannah Telfer (pp. 93, 110). Elizabeth's children list includes Charles Farrow Jr, noting his marriage to Ethel Mary Sambell.\n2. **Ozburials.com — Tarlee Cemetery transcription:** \"FARROW, Charles — 21 September 1936, aged 71 years.\" Transcribed by Lorraine Larment from photographs by Marylin and Steve Jones.\n   **Source:** [Ozburials Tarlee Cemetery](http://www.ozburials.com/CemsSA/tarlee.htm) — accessed 28 July 2026",
-    "roles": [
-      "Son of Charles Farrow and Elizabeth Hannah Telfer — Hope Farm, Tarlee"
-    ],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [
-      "charles-farrow",
-      "elizabeth-hannah-telfer"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "amy-farrow-stribling",
-      "elizabeth-telfer-farrow-holloway",
-      "esther-farrow-latter",
-      "eva-agnes-farrow",
-      "george-hope-farrow",
-      "jane-murray-farrow"
-    ],
     "images": [],
     "person_photo": null
   },
@@ -9989,7 +9961,7 @@
     "lifespan": "1914 – 1945",
     "generation": 6,
     "is_living": false,
-    "body_markdown": "# Trevor Andrew Thomson (1914–1945)\n\n**Role:** Grandson of Robert Telfer & Susan Burton (via daughter Isabella Lucieton Telfer) — killed in action, WWII bomber crew\n**Born:** 20 October 1914 — Thebarton, South Australia (Aviation Heritage Museum roll)\n**Died:** 2 March 1945 (aged 30) — bomber lost on Cologne raid, Germany\n**Father:** Alexander Brown Thomson\n**Mother:** [[Isabella Lucieton Telfer (1880–1964)]]\n**Spouse:** Ethel Winifred Charlotte Rivett (m. ____)\n**Branch:** Tantanoola Telfer line (Robert Telfer 1837–1907 & Susan Burton)\n\n## War Service\n\nFlight Sergeant **Trevor Andrew Thomson** (Service No. 436777), **No. 460 Squadron RAAF** (RAF Binbrook, Lincolnshire). Killed in action **2 March 1945** when his Lancaster bomber was lost on a raid toward Cologne during the Allies' push to the Rhine.\n\nCommemorated at **Hotton War Cemetery, Hotton, Wallonie, Belgium.** Name located in the Commemorative Area at the Australian War Memorial (Second World War, Air Force).\n\nSon of Alexander and Isabella Thomson; husband of Ethel Winifred Thomson, of South Perth, Western Australia.\n\n## Life Summary\n\nTrevor Andrew Thomson was born at Thebarton, South Australia on 20 October 1914, delivered into the Telfer line through his mother Isabella Lucieton Telfer, daughter of John Telfer (1840–1913) and Martha Clara Henstridge. Isabella married Alexander Brown Thomson in July 1911; the couple raised three children — Roma, Trevor and Murray.\n\nTrevor enlisted in the RAAF and served as a Flight Sergeant with No. 460 Squadron. He died on 2 March 1945 when his aircraft went down on a mission over Germany, aged 30. He has no marked local grave; he is commemorated at Hotton War Cemetery in Belgium and on the AWM Roll of Honour.\n\n## Anecdote\n\n🖊️ **Anecdote — as told in *A Telfer Family Tree* (Supplement 2008, p.264):** Trevor Andrew Thomson, Flight Sergeant, RAAF 460 Squadron, was killed 2 March 1945 when his bomber went down on a Cologne raid during the Allied push to the Rhine. Son of Alexander & Isabella Thomson; buried Hotton War Cemetery, Belgium.\n\n## Sources\n\n- **Source:** [Australian War Memorial — Trevor Andrew Thomson, R1717206](https://www.awm.gov.au/collection/R1717206) — accessed 14 Aug 2026 (verified: Flight Sergeant, No. 460 Squadron, killed 2 March 1945, buried Hotton War Cemetery, Hotton, Wallonie, Belgium; WWII, Air Force)\n- **Source:** [Aviation Heritage Museum WA — THOMSON Trevor Andrew 436777](https://aviationmuseumwa.org.au/afcraaf-roll/thomson-trevor-andrew) — accessed 14 Aug 2026 (verified: born Thebarton SA 20 Oct 1914, No. 460 Sqn RAF Binbrook, Lancaster RA524, died 1945 aged 30, buried Hotton War Cemetery)\n- **Source:** [Find a Grave — Flight Sergeant Trevor Andrew Thomson (1914–1945), memorial 14042390](https://www.findagrave.com/memorial/14042390) — accessed 14 Aug 2026 (verified: born 1914, died 1945 aged 30, Hotton War Cemetery; husband of Ethel Winifred Thomson of South Perth WA)\n- **Source:** [Find a Grave — Trevor Andrew Thomson, memorial 249852462](https://www.findagrave.com/memorial/249852462) — accessed via *A Telfer Family Tree* Swing 9 findings (corroborating memorial)\n- **Source:** *A Telfer Family Tree* (Supplement to From the Borders to the Bush, 2008), p.264 — family book record of the service and death",
+    "body_markdown": "# Trevor Andrew Thomson (1914–1945)\n\n**Role:** Grandson of Robert Telfer & Susan Burton (via daughter Isabella Lucieton Telfer) — killed in action, WWII bomber crew\n**Born:** 20 October 1914 — Thebarton, South Australia (Aviation Heritage Museum roll)\n**Died:** 2 March 1945 (aged 30) — bomber lost on Cologne raid, Germany\n**Father:** Alexander Brown Thomson\n**Mother:** [[Isabella Lucieton Telfer (1880–1964)]]\n**Spouse:** Ethel Winifred Charlotte Rivett\n**Branch:** Tantanoola Telfer line (Robert Telfer 1837–1907 & Susan Burton)\n\n## War Service\n\nFlight Sergeant **Trevor Andrew Thomson** (Service No. 436777), **No. 460 Squadron RAAF** (RAF Binbrook, Lincolnshire). Killed in action **2 March 1945** when his Lancaster bomber was lost on a raid toward Cologne during the Allies' push to the Rhine.\n\nCommemorated at **Hotton War Cemetery, Hotton, Wallonie, Belgium.** Name located in the Commemorative Area at the Australian War Memorial (Second World War, Air Force).\n\nSon of Alexander and Isabella Thomson; husband of Ethel Winifred Thomson, of South Perth, Western Australia.\n\n## Life Summary\n\nTrevor Andrew Thomson was born at Thebarton, South Australia on 20 October 1914, delivered into the Telfer line through his mother Isabella Lucieton Telfer, daughter of John Telfer (1840–1913) and Martha Clara Henstridge. Isabella married Alexander Brown Thomson in July 1911; the couple raised three children — Roma, Trevor and Murray.\n\nTrevor enlisted in the RAAF and served as a Flight Sergeant with No. 460 Squadron. He died on 2 March 1945 when his aircraft went down on a mission over Germany, aged 30. He has no marked local grave; he is commemorated at Hotton War Cemetery in Belgium and on the AWM Roll of Honour.\n\n## Anecdote\n\n🖊️ **Anecdote — as told in *A Telfer Family Tree* (Supplement 2008, p.264):** Trevor Andrew Thomson, Flight Sergeant, RAAF 460 Squadron, was killed 2 March 1945 when his bomber went down on a Cologne raid during the Allied push to the Rhine. Son of Alexander & Isabella Thomson; buried Hotton War Cemetery, Belgium.\n\n## Sources\n\n- **Source:** [Australian War Memorial — Trevor Andrew Thomson, R1717206](https://www.awm.gov.au/collection/R1717206) — accessed 14 Aug 2026 (verified: Flight Sergeant, No. 460 Squadron, killed 2 March 1945, buried Hotton War Cemetery, Hotton, Wallonie, Belgium; WWII, Air Force)\n- **Source:** [Aviation Heritage Museum WA — THOMSON Trevor Andrew 436777](https://aviationmuseumwa.org.au/afcraaf-roll/thomson-trevor-andrew) — accessed 14 Aug 2026 (verified: born Thebarton SA 20 Oct 1914, No. 460 Sqn RAF Binbrook, Lancaster RA524, died 1945 aged 30, buried Hotton War Cemetery)\n- **Source:** [Find a Grave — Flight Sergeant Trevor Andrew Thomson (1914–1945), memorial 14042390](https://www.findagrave.com/memorial/14042390) — accessed 14 Aug 2026 (verified: born 1914, died 1945 aged 30, Hotton War Cemetery; husband of Ethel Winifred Thomson of South Perth WA)\n- **Source:** [Find a Grave — Trevor Andrew Thomson, memorial 249852462](https://www.findagrave.com/memorial/249852462) — accessed 14 Aug 2026 (corroborating memorial cross-referenced in *A Telfer Family Tree*)\n- **Source:** *A Telfer Family Tree* (Supplement to From the Borders to the Bush, 2008), p.264 — family book record of the service and death",
     "roles": [
       "Grandson of Robert Telfer & Susan Burton (via daughter Isabella Lucieton Telfer) — killed in action, WWII bomber crew"
     ],
@@ -12251,9 +12223,10 @@
       },
       {
         "src": "images/people/Mark-Telfer-newspaper-clipping-1988.jpg",
-        "alt": "Mark Telfer newspaper clipping 1988",
+        "alt": "Mark Kenneth Telfer, aged 2, of Redcliffe, on a \"NO. 1 DRIVER\" ride-on toy, Christmas 1988 — from a local newspaper feature on Christmas toys (clipping dated 1988).",
         "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Mark-Telfer-newspaper-clipping-1988.jpg",
-        "filename": "Mark-Telfer-newspaper-clipping-1988.jpg"
+        "filename": "Mark-Telfer-newspaper-clipping-1988.jpg",
+        "caption": "Mark Kenneth Telfer, aged 2, of Redcliffe, on a \"NO. 1 DRIVER\" ride-on toy, Christmas 1988 — from a local newspaper feature on Christmas toys (clipping dated 1988)."
       }
     ],
     "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"

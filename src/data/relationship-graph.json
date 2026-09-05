@@ -181,11 +181,6 @@
       "generation": 4
     },
     {
-      "slug": "charles-farrow-jr",
-      "id": "Charles Farrow Jr",
-      "generation": 5
-    },
-    {
       "slug": "clarice-may-telfer",
       "id": "Clarice May Telfer",
       "generation": 6
@@ -394,11 +389,6 @@
       "slug": "esther-hannah-farrow",
       "id": "Esther Hannah Farrow",
       "generation": 5
-    },
-    {
-      "slug": "esther-jane",
-      "id": "Esther Jane",
-      "generation": 4
     },
     {
       "slug": "esther-jane-telfer",
@@ -1709,6 +1699,11 @@
       "slug": "clara-ann-millicent-telfer",
       "id": "Clara Ann Millicent Telfer",
       "generation": 6
+    },
+    {
+      "slug": "charles-farrow-jr",
+      "id": "Charles Farrow Jr",
+      "generation": 5
     }
   ],
   "edges": {
@@ -1888,14 +1883,6 @@
       {
         "from": "joseph-farrow",
         "to": "charles-farrow"
-      },
-      {
-        "from": "charles-farrow",
-        "to": "charles-farrow-jr"
-      },
-      {
-        "from": "elizabeth-hannah-telfer",
-        "to": "charles-farrow-jr"
       },
       {
         "from": "amy-telfer-1884",
@@ -3372,6 +3359,14 @@
       {
         "from": "ruth-penna",
         "to": "lesley-thomas-telfer"
+      },
+      {
+        "from": "charles-farrow",
+        "to": "charles-farrow-jr"
+      },
+      {
+        "from": "elizabeth-hannah-telfer",
+        "to": "charles-farrow-jr"
       }
     ],
     "spouseOf": [
@@ -4052,26 +4047,6 @@
       {
         "from": "catherine-leah",
         "to": "marion-vida"
-      },
-      {
-        "from": "charles-farrow-jr",
-        "to": "elizabeth-telfer-farrow-holloway"
-      },
-      {
-        "from": "charles-farrow-jr",
-        "to": "esther-farrow-latter"
-      },
-      {
-        "from": "charles-farrow-jr",
-        "to": "eva-agnes-farrow"
-      },
-      {
-        "from": "charles-farrow-jr",
-        "to": "george-hope-farrow"
-      },
-      {
-        "from": "charles-farrow-jr",
-        "to": "jane-murray-farrow"
       },
       {
         "from": "clarice-may-telfer",
@@ -5840,6 +5815,26 @@
       {
         "from": "lesley-thomas-telfer",
         "to": "william-francis-telfer"
+      },
+      {
+        "from": "charles-farrow-jr",
+        "to": "elizabeth-telfer-farrow-holloway"
+      },
+      {
+        "from": "charles-farrow-jr",
+        "to": "esther-farrow-latter"
+      },
+      {
+        "from": "charles-farrow-jr",
+        "to": "eva-agnes-farrow"
+      },
+      {
+        "from": "charles-farrow-jr",
+        "to": "george-hope-farrow"
+      },
+      {
+        "from": "charles-farrow-jr",
+        "to": "jane-murray-farrow"
       }
     ]
   }
