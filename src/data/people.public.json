@@ -820,6 +820,42 @@
     "person_photo": null
   },
   {
+    "id": "Andrew Telfer",
+    "slug": "andrew-telfer-1798",
+    "first_name": "Andrew",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1798,
+    "death_year": 1858,
+    "birth_year_display": "1798",
+    "death_year_display": "1858",
+    "display_name": "Andrew Telfer",
+    "title": "Andrew Telfer (1798–1858)",
+    "lifespan": "1798 – 1858",
+    "generation": 3,
+    "is_living": false,
+    "body_markdown": "# Andrew Telfer (1798–1858)\n\n**Role:** NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager\n**Born:** 28 April 1798 — Oxnam Parish, Roxburghshire, Scotland\n**Died:** 11 March 1858 (aged 59) — buried Tamworth General Cemetery, New South Wales\n**Father:** [[William Telfer (shepherd)]]\n**Mother:** [[Janet Nichol]]\n**Brother:** [[William Telfer (1802–1850)]]\n**Spouse:** Mary Hayes (m. 10 May 1846, St Augustine's RC Church, Singleton NSW)\n\n## Life Summary\n\nAndrew Telfer was born 28 April 1798 in the Parish of Oxnam, Roxburghshire, Scotland, son of William Telfer, a shepherd, and Janet Nichol — four years older than his brother William (1802–1850). He signed on as an Indented Servant with the Australian Agricultural Company on 16 February 1825 and sailed to New South Wales on the \"Brothers\", arriving in Sydney Harbour two days after his brother William landed on the \"York\", both in November 1825.\n\nAndrew married **Mary Hayes** on 10 May 1846 at St. Augustine's Roman Catholic Church, Singleton, New South Wales. They had four children: William (b. 1847), Mary (b. 1849, married A.L. Bowden), Andrew (b. 1850) and Elizabeth \"Betsy\" (b. 1854, married A. Bolton). In 1851 he purchased Goonoo Goonoo Section J, Lots 3 and 12 (22 August 1851). He died on 11 March 1858 and was buried at Tamworth General Cemetery, where his headstone reads *\"Sacred to the Memory of ANDREW TELFER who departed this life March 11, 1858 ... Native of Roxburghshire, Scotland.\"*\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Self** | Andrew Telfer |\n| **Father** | William Telfer (shepherd) |\n| **Mother** | [[Janet Nichol]] |\n| **Brother** | [[William Telfer (1802–1850)]] |\n| **Sisters** | Helen Nichol (Telfer) Lillico; Mary Nichol (Telfer) Gibson |\n| **Spouse** | Mary Hayes (m. 10 May 1846, Singleton NSW) |\n| **Children** | William (b. 1847); Mary (m. A.L. Bowden, 1848–1933); Andrew (b. 1850); Elizabeth / Betsy (m. A. Bolton, 1854–1874) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 28 Apr 1798 | Born — Oxnam, Roxburghshire, Scotland |\n| 16 Feb 1825 | Signed AACo indenture |\n| Nov 1825 | Arrived Sydney Harbour on the \"Brothers\" |\n| 10 May 1846 | Married Mary Hayes — St Augustine's RC Church, Singleton NSW |\n| 1847–1854 | Children William, Mary, Andrew, Elizabeth born |\n| 22 Aug 1851 | Purchased Goonoo Goonoo Sec J Lots 3 & 12 |\n| 11 Mar 1858 | Died (aged 59) — buried Tamworth General Cemetery |\n\n## Sources\n\n- **Find A Grave:** [Andrew Nichol Telfer (1798–1858) — memorial 48579836](https://www.findagrave.com/memorial/48579836/andrew-telfer) — accessed 6 Sep 2026 (born 28 Apr 1798; died 11 Mar 1858; buried Tamworth General Cem; m. Mary Hayes 1846 Singleton; children William, Mary Bowden, Andrew, Elizabeth Bolton; headstone transcription)\n- **Book:** *From the Borders to the Bush* by Donald Telfer (1986), p.370 & pp.364–371 — AACo indentured-servant journey, brother of William, land purchase, adult fates\n- **ANU / Australian Agricultural Company records** — AACo indentured-servant record (brother of Warrah manager William)\n- **Geni profile (Andrew-Nichol-Telfer)** — compiled tree corroborating dates/children (secondary group)",
+    "roles": [
+      "NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager"
+    ],
+    "tags": [
+      "family",
+      "ancestor",
+      "telfer"
+    ],
+    "parents": [
+      "janet-nichol",
+      "william-telfer-shepherd"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "william-telfer-1802"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Isobel Telfer",
     "slug": "isobel-telfer",
     "first_name": "Isobel",
@@ -1078,12 +1114,14 @@
       "william-telfer-shepherd"
     ],
     "children": [
-      "andrew-telfer",
+      "andrew-telfer-living",
       "edward-telfer",
       "william-telfer-1841"
     ],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "andrew-telfer-1798"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -11265,6 +11303,37 @@
     "person_photo": null
   },
   {
+    "id": "Norman Thomas Patten",
+    "slug": "norman-thomas-patten",
+    "first_name": "Norman Thomas",
+    "middle_name": null,
+    "last_name": "Patten",
+    "birth_year": 1917,
+    "death_year": 1942,
+    "birth_year_display": "1917",
+    "death_year_display": "1942",
+    "display_name": "Norman Thomas Patten",
+    "title": "Norman Thomas Patten (1917–1942) — RAN Able Seaman, HMAS Perth",
+    "lifespan": "1917 – 1942",
+    "generation": 7,
+    "is_living": false,
+    "body_markdown": "# Norman Thomas Patten (1917–1942)\n\n**Role:** Able Seaman, Royal Australian Navy — HMAS Perth (I); killed in action, WWII\n**Born:** 25 July 1917 — Houghton, South Australia\n**Died:** 1 March 1942 (aged 24) — Sunda Strait, Netherlands East Indies (KIA)\n**Father:** Thomas Henry Patten\n**Mother:** Beatrice Maud (Dillon) Patten (a Dillon-line connection to the Telfer family)\n**Branch:** Dillon line of the Telfer tree — fated in the family's war-generation cluster\n\n## War Service\n\nAble Seaman **Norman Thomas Patten** (Service No. 24690), Royal Australian Navy aboard **HMAS Perth (I) D29**. He enlisted with the RAN on 1 July 1941 (having earlier served in the AIF as Private/Gunner S11534, 48 Field Battery, from 6 Aug 1940), and was killed in action when HMAS Perth was sunk in the **Sunda Strait, Netherlands East Indies, on 1 March 1942** during the Battle of Sunda Strait.\n\nHe has no known grave — commemorated on the **Plymouth Naval Memorial, Panel 73, Column 3** (\"Known Unto God\"), and on the Australian War Memorial Roll of Honour, the Adelaide WW2 Wall of Remembrance, and the St Peters Heroes War Memorial. Son of **Thomas Henry and Beatrice Maud Patten, of St Peters, South Australia**.\n\n> **⚠️ Family-book vs official record:** *A Telfer Family Tree* (Supplement, p.197) records him dying \"28 Feb 1942, HMAS Perth, Indian Ocean.\" The documented loss of HMAS Perth was **1 March 1942 in the Sunda Strait, Dutch East Indies**, when the ship was sunk in action. The identity is solid across records; the book's precise day/location is treated as approximate family recollection — the official loss date/location (1 Mar 1942, Sunda Strait) is used here.\n\n## Life Summary\n\nNorman Thomas Patten was born 25 July 1917 at Houghton, South Australia, son of Thomas Henry Patten and Beatrice Maud (Dillon) Patten of St Peters, South Australia. He was an electrical mechanic with the Adelaide Electric Supply Co. before the war. He enlisted in the Australian Military Forces on 6 August 1940, served with the 48 Field Battery, then joined the Royal Australian Navy on 1 July 1941 as an Ordinary Seaman. He was an Able Seaman aboard HMAS Perth (I) when the cruiser was sunk with heavy loss of life in the Sunda Strait on 1 March 1942. He is remembered on the Plymouth Naval Memorial and the AWM Roll of Honour alongside his family's other war dead of the Dillon generation.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 25 Jul 1917 | Born — Houghton, South Australia |\n| 6 Aug 1940 | Enlisted AIF (Private 48 Field Battery, Kensington SA) |\n| 1 Jul 1941 | Enlisted Royal Australian Navy (Ordinary Seaman 24690) |\n| — | Rose to Able Seaman aboard HMAS Perth (I) D29 |\n| 1 Mar 1942 | Killed in action — HMAS Perth sunk, Sunda Strait, Dutch East Indies (aged 24) |\n\n## Sources\n\n- **Find A Grave:** [Able Seaman Norman Thomas Patten (1917–1942) — memorial 13301756](https://www.findagrave.com/memorial/13301756/norman_thomas-patten) — accessed 6 Sep 2026 (born 25 Jul 1917 Houghton SA; RAN Able Seaman Svc 24690; HMAS Perth (I) D29; KIA Sunda Strait 1 Mar 1942 aged 24; son of Thomas Henry & Beatrice Maud Patten of St Peters SA; Plymouth Naval Memorial)\n- **Virtual War Memorial Australia:** [Norman Thomas PATTEN — VWMA 504989](https://vwma.org.au/explore/people/504989) — accessed 6 Sep 2026 (RAN Svc 24690, enl. 1 Jul 1941, KIA Sunda Strait 1 Mar 1942; earlier AIF S11534)\n- **AWM Roll of Honour portrait:** [Norman Thomas Patten — P10278067](https://www.awm.gov.au/collection/P10278067) — candidate portrait\n- **Book:** *A Telfer Family Tree* (Supplement to From the Borders to the Bush, 2008), p.197 — family record of the service (approximate date/location corrected to official)",
+    "roles": [
+      "Able Seaman, Royal Australian Navy — HMAS Perth (I); killed in action, WWII"
+    ],
+    "tags": [
+      "person",
+      "dillon",
+      "war-casualty"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Avis Muriel Nicholls",
     "slug": "avis-muriel-nicholls",
     "first_name": "Avis Muriel",
@@ -12881,7 +12950,7 @@
   },
   {
     "id": "Andrew Telfer",
-    "slug": "andrew-telfer",
+    "slug": "andrew-telfer-living",
     "first_name": "Andrew",
     "middle_name": null,
     "last_name": "Telfer",
@@ -13198,6 +13267,7 @@
     ],
     "parents": [],
     "children": [
+      "andrew-telfer-1798",
       "william-telfer-1802"
     ],
     "spouses": [
@@ -13431,6 +13501,7 @@
     ],
     "parents": [],
     "children": [
+      "andrew-telfer-1798",
       "william-telfer-1802"
     ],
     "spouses": [

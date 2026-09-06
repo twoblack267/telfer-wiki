@@ -101,7 +101,7 @@
       "generation": 6
     },
     {
-      "slug": "andrew-telfer",
+      "slug": "andrew-telfer-living",
       "id": "Andrew Telfer",
       "generation": 99
     },
@@ -1699,6 +1699,16 @@
       "slug": "charles-farrow-jr",
       "id": "Charles Farrow Jr",
       "generation": 5
+    },
+    {
+      "slug": "andrew-telfer-1798",
+      "id": "Andrew Telfer",
+      "generation": 3
+    },
+    {
+      "slug": "norman-thomas-patten",
+      "id": "Norman Thomas Patten",
+      "generation": 7
     }
   ],
   "edges": {
@@ -1809,7 +1819,7 @@
       },
       {
         "from": "william-telfer-1802",
-        "to": "andrew-telfer"
+        "to": "andrew-telfer-living"
       },
       {
         "from": "john-telfer-robert",
@@ -3370,6 +3380,14 @@
       {
         "from": "elizabeth-hannah-telfer",
         "to": "charles-farrow-jr"
+      },
+      {
+        "from": "janet-nichol",
+        "to": "andrew-telfer-1798"
+      },
+      {
+        "from": "william-telfer-shepherd",
+        "to": "andrew-telfer-1798"
       }
     ],
     "spouseOf": [
@@ -5870,6 +5888,10 @@
       {
         "from": "charles-farrow-jr",
         "to": "john-james-telfer-farrow"
+      },
+      {
+        "from": "andrew-telfer-1798",
+        "to": "william-telfer-1802"
       }
     ]
   }
