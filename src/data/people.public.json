@@ -2311,12 +2311,12 @@
       "george-hope-farrow",
       "james-farrow",
       "jane-murray-farrow",
+      "john-james-telfer-farrow",
       "margaret-farrow",
       "peter-farrow",
       "robert-farrow",
       "sarah-farrow",
-      "william-farrow",
-      "john-james-telfer-farrow"
+      "william-farrow"
     ],
     "spouses": [
       "elizabeth-hannah-telfer"
@@ -4153,7 +4153,8 @@
       "elizabeth-telfer-farrow-holloway",
       "esther-farrow-latter",
       "eva-agnes-farrow",
-      "george-hope-farrow"
+      "george-hope-farrow",
+      "john-james-telfer-farrow"
     ],
     "images": [],
     "person_photo": null
@@ -4263,7 +4264,8 @@
       "elizabeth-telfer-farrow-holloway",
       "eva-agnes-farrow",
       "george-hope-farrow",
-      "jane-murray-farrow"
+      "jane-murray-farrow",
+      "john-james-telfer-farrow"
     ],
     "images": [],
     "person_photo": null
@@ -4471,7 +4473,8 @@
       "esther-farrow-latter",
       "eva-agnes-farrow",
       "george-hope-farrow",
-      "jane-murray-farrow"
+      "jane-murray-farrow",
+      "john-james-telfer-farrow"
     ],
     "images": [],
     "person_photo": null
@@ -4911,7 +4914,8 @@
       "esther-farrow-latter",
       "eva-agnes-farrow",
       "george-hope-farrow",
-      "jane-murray-farrow"
+      "jane-murray-farrow",
+      "john-james-telfer-farrow"
     ],
     "images": [],
     "person_photo": null
@@ -5097,7 +5101,8 @@
       "esther-farrow-latter",
       "eva-agnes-farrow",
       "george-hope-farrow",
-      "jane-murray-farrow"
+      "jane-murray-farrow",
+      "john-james-telfer-farrow"
     ],
     "images": [],
     "person_photo": null
@@ -5546,7 +5551,8 @@
       "elizabeth-telfer-farrow-holloway",
       "esther-farrow-latter",
       "eva-agnes-farrow",
-      "jane-murray-farrow"
+      "jane-murray-farrow",
+      "john-james-telfer-farrow"
     ],
     "images": [],
     "person_photo": null
@@ -7785,7 +7791,8 @@
       "elizabeth-telfer-farrow-holloway",
       "esther-farrow-latter",
       "george-hope-farrow",
-      "jane-murray-farrow"
+      "jane-murray-farrow",
+      "john-james-telfer-farrow"
     ],
     "images": [],
     "person_photo": null
@@ -7973,7 +7980,7 @@
     "is_living": false,
     "body_markdown": "# John James Telfer Farrow (?–?)\n\n**Role:** Son of Charles Farrow & Elizabeth Hannah Telfer — the Farrow line at Hope Farm, Tarlee\n\n**Father:** [[Charles Farrow (~1836–1884)]]\n**Mother:** [[Elizabeth Hannah Telfer (1836–1916)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Charles Farrow (~1836–1884)]] |\n| **Mother** | [[Elizabeth Hannah Telfer (1836–1916)]] |\n\n---\n\n## Life Summary\n\nJohn James Telfer Farrow was a son of Charles Farrow and Elizabeth Hannah Telfer of Hope Farm, Tarlee. He married Emily Smithers; their children included Marjorie Olive (b. 1900), Murray Lee (b. 1901), Ilma, Grace, Mavis, Brook and John Junior. The family farmed at Angle Vale (Hundred of Munno Para, from 1902) and at Gawler River (\"Sunnybrook\", from 1909), later living at Edwardstown. He died 23 May 1948 at Edwardstown, aged 77 (b. c.1870/71), and is buried at Centennial Park Cemetery, Adelaide. Mother buried with him (Emily, d. 9 Nov 1951, aged 82).\n\n*(Registered death dates are from the Gold Book narrative / community family-history record; a SA BDM district birth entry for c.1870-71 was not yet transcribed into the vault.)*\n\n---\n\n**Source:** Telfer family records; *From the Borders to the Bush* (1989) pp. 60–61 (the night Charles died — his boy rode for the doctor); Gawler History \"Farrow John and Emily\".\n\n---\n\n## Family Stories\n\n🖊️ **Anecdote — as told in From the Borders to the Bush (book pp. 60–61):** Here's the one this family still tells in a hush — the finish of Charles. He'd been out on the stallion round for three hard weeks, soaked to the bone time and again in the rain — and when he finally came home he was a very sick man, shaking and feverish. His boy John James didn't waste a minute: he saddled up and galloped the long road into Kapunda to fetch a doctor. But pneumonia had already taken too firm a hold. Before the doctor could ever reach the bedside, our Charles was gone. To the very last he was a working man, and the land took him in the end.\n\n*(Anecdote only — family colour, told as the elders tell it. Does not establish any relationship, date or place.)*",
     "roles": [
-      "Son of Elizabeth Hannah Telfer"
+      "Son of Charles Farrow & Elizabeth Hannah Telfer — the Farrow line at Hope Farm, Tarlee"
     ],
     "tags": [
       "person"
@@ -7984,7 +7991,15 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "amy-farrow-stribling",
+      "charles-farrow-jr",
+      "elizabeth-telfer-farrow-holloway",
+      "esther-farrow-latter",
+      "eva-agnes-farrow",
+      "george-hope-farrow",
+      "jane-murray-farrow"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -9282,19 +9297,21 @@
     "lifespan": "1894 – ?",
     "generation": 6,
     "is_living": false,
-    "body_markdown": "# Ethel Edith Telfer",
+    "body_markdown": "# Ethel Edith Telfer\n\n**Born:** 8 March 1894 — Moorak, South Australia *(SA BDM Birth Reg 540/133; confirmed 2026-09-06)*\n**Died:** not confirmed\n\n## Life Summary\n\nEthel Edith Telfer was the daughter of James Robert Telfer (station hand at Moorak Station) and Hannah Peacock. She married **James Gordon Steele**, and the family's 1989 history records that the couple had two sons and two daughters.\n\nHer birth year (1894) is confirmed by the South Australian birth registration; the \"1884\" date printed in the *Supplement 2008* is a transcription slip (1894 → 1884). Her death is not yet confirmed from records.\n\n## Sources\n\n- **SA BDM Birth Registration 540/133** — Ethel Edith Telfer, 8 Mar 1894, Moorak, father James Robert Telfer, mother Hannah Peacock. Accessed via Genealogy SA 6 Sep 2026.\n- *From the Borders to the Bush* (1989 family history) — life/family narrative.\n- *A Telfer Family Tree — Supplement 2008* — for the \"1884\" date shown to be a slip.",
     "roles": [],
     "tags": [
       "family",
       "non-telfer"
     ],
     "parents": [
-      "james-robert-telfer",
-      "hannah-peacock"
+      "hannah-peacock",
+      "james-robert-telfer"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "leslie-robert-telfer"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -10698,12 +10715,14 @@
       "non-telfer"
     ],
     "parents": [
-      "james-robert-telfer",
-      "hannah-peacock"
+      "hannah-peacock",
+      "james-robert-telfer"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "ethel-edith-telfer"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -12199,10 +12218,9 @@
       },
       {
         "src": "images/people/Mark-Telfer-newspaper-clipping-1988.jpg",
-        "alt": "Mark Kenneth Telfer, aged 2, of Redcliffe, on a \"NO. 1 DRIVER\" ride-on toy, Christmas 1988 — from a local newspaper feature on Christmas toys (clipping dated 1988).",
+        "alt": "Mark Telfer newspaper clipping 1988",
         "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Mark-Telfer-newspaper-clipping-1988.jpg",
-        "filename": "Mark-Telfer-newspaper-clipping-1988.jpg",
-        "caption": "Mark Kenneth Telfer, aged 2, of Redcliffe, on a \"NO. 1 DRIVER\" ride-on toy, Christmas 1988 — from a local newspaper feature on Christmas toys (clipping dated 1988)."
+        "filename": "Mark-Telfer-newspaper-clipping-1988.jpg"
       }
     ],
     "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
