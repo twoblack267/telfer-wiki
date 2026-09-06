@@ -9268,6 +9268,37 @@
     "person_photo": null
   },
   {
+    "id": "Ethel Edith Telfer",
+    "slug": "ethel-edith-telfer",
+    "first_name": "Ethel",
+    "middle_name": null,
+    "last_name": "Edith Telfer",
+    "birth_year": 1894,
+    "death_year": null,
+    "birth_year_display": "1894",
+    "death_year_display": "?",
+    "display_name": "Ethel Edith Telfer",
+    "title": "Ethel Edith Telfer",
+    "lifespan": "1894 – ?",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Ethel Edith Telfer",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "james-robert-telfer",
+      "hannah-peacock"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Agnes Paynter",
     "slug": "agnes-paynter",
     "first_name": "Agnes",
@@ -10547,37 +10578,6 @@
       }
     ],
     "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg"
-  },
-  {
-    "id": "Ethel Edith Telfer",
-    "slug": "ethel-edith-telfer",
-    "first_name": "Ethel",
-    "middle_name": null,
-    "last_name": "Edith Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Ethel Edith Telfer",
-    "title": "Ethel Edith Telfer",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": false,
-    "body_markdown": "# Ethel Edith Telfer",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [
-      "james-robert-telfer",
-      "hannah-peacock"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
   },
   {
     "id": "Harry Bunston",

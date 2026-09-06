@@ -5520,9 +5520,9 @@
     "first_name": "Ethel",
     "middle_name": null,
     "last_name": "Edith Telfer",
-    "birth_year": null,
+    "birth_year": 1894,
     "death_year": null,
-    "birth_year_display": "?",
+    "birth_year_display": "1894",
     "death_year_display": "?",
     "display_name": "Ethel Edith Telfer",
     "title": "Ethel Edith Telfer",
@@ -5561,7 +5561,7 @@
     "siblings": [],
     "spouses": [],
     "is_living": false,
-    "lifespan": "? – ?",
+    "lifespan": "1894 – ?",
     "related_trees": [
       "telfer-tree"
     ],
