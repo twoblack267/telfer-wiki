@@ -2311,12 +2311,12 @@
       "george-hope-farrow",
       "james-farrow",
       "jane-murray-farrow",
-      "john-farrow",
       "margaret-farrow",
       "peter-farrow",
       "robert-farrow",
       "sarah-farrow",
-      "william-farrow"
+      "william-farrow",
+      "john-james-telfer-farrow"
     ],
     "spouses": [
       "elizabeth-hannah-telfer"
@@ -4613,7 +4613,10 @@
       "non-telfer"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "ethel-edith-telfer",
+      "leslie-robert-telfer"
+    ],
     "spouses": [
       "james-robert-telfer"
     ],
@@ -7954,36 +7957,6 @@
     "person_photo": null
   },
   {
-    "id": "John Farrow",
-    "slug": "john-farrow",
-    "first_name": "John",
-    "middle_name": null,
-    "last_name": "Farrow",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "John Farrow",
-    "title": "John Farrow",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# John Farrow",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [
-      "charles-farrow"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "John James Telfer Farrow",
     "slug": "john-james-telfer-farrow",
     "first_name": "John James Telfer",
@@ -7998,7 +7971,7 @@
     "lifespan": "? – ?",
     "generation": 5,
     "is_living": false,
-    "body_markdown": "# John James Telfer Farrow (?–?)\n\n**Role:** Son of Elizabeth Hannah Telfer\n\n**Father:** [[Elizabeth Hannah Telfer (1836–1916)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Elizabeth Hannah Telfer (1836–1916)]] |\n\n---\n\n## Life Summary\n\nJohn James Telfer Farrow was born in an unknown year. Son of Elizabeth Hannah Telfer\n\n---\n\n**Source:** Telfer family records\n\n---\n\n## Family Stories\n\n🖊️ **Anecdote — as told in From the Borders to the Bush (book pp. 60–61):** Here's the one this family still tells in a hush — the finish of Charles. He'd been out on the stallion round for three hard weeks, soaked to the bone time and again in the rain — and when he finally came home he was a very sick man, shaking and feverish. His boy John James didn't waste a minute: he saddled up and galloped the long road into Kapunda to fetch a doctor. But pneumonia had already taken too firm a hold. Before the doctor could ever reach the bedside, our Charles was gone. To the very last he was a working man, and the land took him in the end.\n\n*(Anecdote only — family colour, told as the elders tell it. Does not establish any relationship, date or place.)*",
+    "body_markdown": "# John James Telfer Farrow (?–?)\n\n**Role:** Son of Charles Farrow & Elizabeth Hannah Telfer — the Farrow line at Hope Farm, Tarlee\n\n**Father:** [[Charles Farrow (~1836–1884)]]\n**Mother:** [[Elizabeth Hannah Telfer (1836–1916)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Charles Farrow (~1836–1884)]] |\n| **Mother** | [[Elizabeth Hannah Telfer (1836–1916)]] |\n\n---\n\n## Life Summary\n\nJohn James Telfer Farrow was a son of Charles Farrow and Elizabeth Hannah Telfer of Hope Farm, Tarlee. He married Emily Smithers; their children included Marjorie Olive (b. 1900), Murray Lee (b. 1901), Ilma, Grace, Mavis, Brook and John Junior. The family farmed at Angle Vale (Hundred of Munno Para, from 1902) and at Gawler River (\"Sunnybrook\", from 1909), later living at Edwardstown. He died 23 May 1948 at Edwardstown, aged 77 (b. c.1870/71), and is buried at Centennial Park Cemetery, Adelaide. Mother buried with him (Emily, d. 9 Nov 1951, aged 82).\n\n*(Registered death dates are from the Gold Book narrative / community family-history record; a SA BDM district birth entry for c.1870-71 was not yet transcribed into the vault.)*\n\n---\n\n**Source:** Telfer family records; *From the Borders to the Bush* (1989) pp. 60–61 (the night Charles died — his boy rode for the doctor); Gawler History \"Farrow John and Emily\".\n\n---\n\n## Family Stories\n\n🖊️ **Anecdote — as told in From the Borders to the Bush (book pp. 60–61):** Here's the one this family still tells in a hush — the finish of Charles. He'd been out on the stallion round for three hard weeks, soaked to the bone time and again in the rain — and when he finally came home he was a very sick man, shaking and feverish. His boy John James didn't waste a minute: he saddled up and galloped the long road into Kapunda to fetch a doctor. But pneumonia had already taken too firm a hold. Before the doctor could ever reach the bedside, our Charles was gone. To the very last he was a working man, and the land took him in the end.\n\n*(Anecdote only — family colour, told as the elders tell it. Does not establish any relationship, date or place.)*",
     "roles": [
       "Son of Elizabeth Hannah Telfer"
     ],
@@ -8006,6 +7979,7 @@
       "person"
     ],
     "parents": [
+      "charles-farrow",
       "elizabeth-hannah-telfer"
     ],
     "children": [],
@@ -10596,7 +10570,8 @@
       "non-telfer"
     ],
     "parents": [
-      "james-robert-telfer"
+      "james-robert-telfer",
+      "hannah-peacock"
     ],
     "children": [],
     "spouses": [],
@@ -10723,7 +10698,8 @@
       "non-telfer"
     ],
     "parents": [
-      "james-robert-telfer"
+      "james-robert-telfer",
+      "hannah-peacock"
     ],
     "children": [],
     "spouses": [],

@@ -756,11 +756,6 @@
       "generation": 5
     },
     {
-      "slug": "john-farrow",
-      "id": "John Farrow",
-      "generation": 5
-    },
-    {
       "slug": "john-james-smith",
       "id": "John James Smith",
       "generation": 5
@@ -2502,7 +2497,7 @@
       },
       {
         "from": "charles-farrow",
-        "to": "john-farrow"
+        "to": "john-james-telfer-farrow"
       },
       {
         "from": "esther-jane-telfer",
