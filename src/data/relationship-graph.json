@@ -1714,6 +1714,11 @@
       "slug": "ian-telfer-1947",
       "id": "Ian Telfer",
       "generation": 7
+    },
+    {
+      "slug": "john-lindsay-cameron",
+      "id": "John Lindsay Cameron",
+      "generation": 6
     }
   ],
   "edges": {
@@ -3389,6 +3394,14 @@
       {
         "from": "gilbert-telfer-1908",
         "to": "ian-telfer-1947"
+      },
+      {
+        "from": "malcolm-duncan-cameron",
+        "to": "john-lindsay-cameron"
+      },
+      {
+        "from": "martha-cameron",
+        "to": "john-lindsay-cameron"
       }
     ],
     "spouseOf": [
@@ -5889,6 +5902,10 @@
       {
         "from": "gilbert-telfer-1908",
         "to": "maifie-telfer"
+      },
+      {
+        "from": "john-lindsay-cameron",
+        "to": "malcolm-murray-cameron"
       }
     ]
   }
