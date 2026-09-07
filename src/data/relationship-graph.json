@@ -511,11 +511,6 @@
       "generation": 4
     },
     {
-      "slug": "gilbert-telfer",
-      "id": "Gilbert Telfer",
-      "generation": 6
-    },
-    {
       "slug": "gladys-merle-telfer",
       "id": "Gladys Merle Telfer",
       "generation": 6
@@ -1709,6 +1704,11 @@
       "slug": "norman-thomas-patten",
       "id": "Norman Thomas Patten",
       "generation": 7
+    },
+    {
+      "slug": "gilbert-telfer-1908",
+      "id": "Gilbert Telfer",
+      "generation": 6
     }
   ],
   "edges": {
@@ -1782,7 +1782,7 @@
         "to": "alberta-grace-lawrie"
       },
       {
-        "from": "gilbert-telfer",
+        "from": "gilbert-telfer-1908",
         "to": "allan-telfer"
       },
       {
@@ -1854,7 +1854,7 @@
         "to": "bertha-telfer"
       },
       {
-        "from": "gilbert-telfer",
+        "from": "gilbert-telfer-1908",
         "to": "beth-telfer"
       },
       {
@@ -2234,14 +2234,6 @@
         "to": "george-telfer"
       },
       {
-        "from": "julia-matilda-seebohm",
-        "to": "gilbert-telfer"
-      },
-      {
-        "from": "mark-telfer-1877",
-        "to": "gilbert-telfer"
-      },
-      {
         "from": "amy-telfer-1884",
         "to": "gladys-merle-telfer"
       },
@@ -2310,7 +2302,7 @@
         "to": "hugh-john"
       },
       {
-        "from": "gilbert-telfer",
+        "from": "gilbert-telfer-1908",
         "to": "ian-telfer"
       },
       {
@@ -3388,6 +3380,14 @@
       {
         "from": "william-telfer-shepherd",
         "to": "andrew-telfer-1798"
+      },
+      {
+        "from": "julia-matilda-seebohm",
+        "to": "gilbert-telfer-1908"
+      },
+      {
+        "from": "mark-telfer-1877",
+        "to": "gilbert-telfer-1908"
       }
     ],
     "spouseOf": [
@@ -3536,10 +3536,6 @@
         "to": "ruth-penna"
       },
       {
-        "from": "gilbert-telfer",
-        "to": "jessie-allan"
-      },
-      {
         "from": "hannah-baker",
         "to": "william-humphrey-parker-1850"
       },
@@ -3658,6 +3654,10 @@
       {
         "from": "mary-ann-dillon",
         "to": "robert-telfer-dillon"
+      },
+      {
+        "from": "gilbert-telfer-1908",
+        "to": "jessie-allan"
       }
     ],
     "siblingOf": [
@@ -4631,7 +4631,7 @@
       },
       {
         "from": "floris-telfer",
-        "to": "gilbert-telfer"
+        "to": "gilbert-telfer-1908"
       },
       {
         "from": "floris-telfer",
@@ -4816,26 +4816,6 @@
       {
         "from": "george-telfer",
         "to": "margaret-telfer-1849"
-      },
-      {
-        "from": "gilbert-telfer",
-        "to": "jean-telfer-1910"
-      },
-      {
-        "from": "gilbert-telfer",
-        "to": "joyce-telfer"
-      },
-      {
-        "from": "gilbert-telfer",
-        "to": "kenneth-telfer"
-      },
-      {
-        "from": "gilbert-telfer",
-        "to": "lindsay-telfer"
-      },
-      {
-        "from": "gilbert-telfer",
-        "to": "maifie-telfer"
       },
       {
         "from": "gladys-merle-telfer",
@@ -5892,6 +5872,26 @@
       {
         "from": "andrew-telfer-1798",
         "to": "william-telfer-1802"
+      },
+      {
+        "from": "gilbert-telfer-1908",
+        "to": "jean-telfer-1910"
+      },
+      {
+        "from": "gilbert-telfer-1908",
+        "to": "joyce-telfer"
+      },
+      {
+        "from": "gilbert-telfer-1908",
+        "to": "kenneth-telfer"
+      },
+      {
+        "from": "gilbert-telfer-1908",
+        "to": "lindsay-telfer"
+      },
+      {
+        "from": "gilbert-telfer-1908",
+        "to": "maifie-telfer"
       }
     ]
   }
