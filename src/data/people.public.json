@@ -6762,16 +6762,16 @@
     "person_photo": null
   },
   {
-    "id": "Eva Rowena Rowena Telfer",
+    "id": "Eva Rowena Telfer",
     "slug": "eva-rowena-telfer",
     "first_name": "Eva Rowena",
-    "middle_name": "Rowena",
+    "middle_name": null,
     "last_name": "Telfer",
     "birth_year": 1885,
     "death_year": 1974,
     "birth_year_display": "1885",
     "death_year_display": "1974",
-    "display_name": "Eva Rowena Rowena Telfer",
+    "display_name": "Eva Rowena Telfer",
     "title": "Eva Rowena Telfer (1885–1974) — m. Easter",
     "lifespan": "1885 – 1974",
     "generation": 5,
@@ -7524,38 +7524,6 @@
     "person_photo": null
   },
   {
-    "id": "Beth Telfer",
-    "slug": "beth-telfer",
-    "first_name": "Beth",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Beth Telfer",
-    "title": "Beth Telfer",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Beth Telfer",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "parents": [
-      "gilbert-telfer-1908"
-    ],
-    "children": [],
-    "spouses": [
-      "edwin-ernest-clarke"
-    ],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Dorothy Dillon",
     "slug": "dorothy-dillon",
     "first_name": "Dorothy",
@@ -7669,7 +7637,6 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "beth-telfer",
       "elizabeth-telfer-1868"
     ],
     "siblings": [],
@@ -7861,38 +7828,6 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Ian Telfer",
-    "slug": "ian-telfer",
-    "first_name": "Ian",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Ian Telfer",
-    "title": "Ian Telfer",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Ian Telfer",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "parents": [
-      "gilbert-telfer-1908"
-    ],
-    "children": [],
-    "spouses": [
-      "kenneth-cornish"
-    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -8125,7 +8060,6 @@
     "parents": [],
     "children": [],
     "spouses": [
-      "ian-telfer",
       "marian-cornish"
     ],
     "siblings": [],
@@ -9239,6 +9173,37 @@
     "person_photo": null
   },
   {
+    "id": "James Gordon Steele",
+    "slug": "james-gordon-steele",
+    "first_name": "James Gordon",
+    "middle_name": null,
+    "last_name": "Steele",
+    "birth_year": 1892,
+    "death_year": 1951,
+    "birth_year_display": "1892",
+    "death_year_display": "1951",
+    "display_name": "James Gordon Steele",
+    "title": "James Gordon Steele",
+    "lifespan": "1892 – 1951",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# James Gordon Steele\n\n**Born:** 2 June 1892 — Mount Gambier, South Australia *(SA BDM + obituary; confirmed 2026-09-07)*\n**Died:** 3 August 1951 — Mount Gambier district (Grey), South Australia, aged 59 *(SA Death Reg 771/4098)*\n**Wife:** [[Ethel Edith Telfer]] (married at Mount Gambier)\n\n## Life Summary\n\nJames Gordon Steele was born at Mount Gambier in 1892, the son of Dugald and Elizabeth Steele. He was a keen footballer, cricketer and boxer. After a few years as a postal employee at Mount Gambier he joined the Navy; his naval service ended on 21 July 1914. He then re-entered the postal service at Port Augusta, and later joined the radio section of the Australian Expeditionary Forces during the First World War (1914–18). After the war he farmed land at The Bluff, and retired from there to Bertha Street, Mount Gambier.\n\nHe married **Ethel Edith Telfer** at Mount Gambier (the couple had two sons and two daughters). James died at his residence in Bertha Street on 3 August 1951, aged 59.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Father | Dugald Steele |\n| Mother | Elizabeth Steele |\n| Wife | [[Ethel Edith Telfer]] |\n| Children | Alex Steele (farmed The Bluff) |\n|  | Phyllis Steele, m. Harvey Kyle Ploenges |\n|  | Joan Steele, m. Lionel Dutschke |\n|  | Colin Steele (Mount Gambier) |\n| Siblings | Mrs Marion L. Kay (living Mt Gambier 1951); Dugald *(dec.)*; Major Alex *(dec.)*; Allan Stewart *(dec.)*; Mrs Jessie Burton Norman *(dec.)* |\n\n## Sources\n\n- **SA BDM Death Registration 771/4098** — James Gordon Steele, d. 3 Aug 1951, age 59, Grey district — accessed via Genealogy SA, 7 Sep 2026.\n- **Trove / *Border Watch* (Mount Gambier), \"OBITUARY. Mr. James Gordon Steele,\" 4 Oct 1951, p.5 (article 78660605)** — full life obituary quoted above: membership of Presbyterian Church, RS. L., Buff's Lodge, Caledonian Soc., early M.G.B.I. member.\n- **Trove / *Border Watch* Family Notices, 5 Aug 1952, p.6 (article 80766637)** — In Memoriam one-year anniversary notice placed by children (\"our dear father\").",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer",
+      "married-in"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "ethel-edith-telfer"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Leslie Frank Dillon",
     "slug": "leslie-frank-dillon",
     "first_name": "Leslie Frank",
@@ -9335,7 +9300,7 @@
     "lifespan": "1894 – ?",
     "generation": 6,
     "is_living": false,
-    "body_markdown": "# Ethel Edith Telfer\n\n**Born:** 8 March 1894 — Moorak, South Australia *(SA BDM Birth Reg 540/133; confirmed 2026-09-06)*\n**Died:** not confirmed\n\n## Life Summary\n\nEthel Edith Telfer was the daughter of James Robert Telfer (station hand at Moorak Station) and Hannah Peacock. She married **James Gordon Steele**, and the family's 1989 history records that the couple had two sons and two daughters.\n\nHer birth year (1894) is confirmed by the South Australian birth registration; the \"1884\" date printed in the *Supplement 2008* is a transcription slip (1894 → 1884). Her death is not yet confirmed from records.\n\n## Sources\n\n- **SA BDM Birth Registration 540/133** — Ethel Edith Telfer, 8 Mar 1894, Moorak, father James Robert Telfer, mother Hannah Peacock. Accessed via Genealogy SA 6 Sep 2026.\n- *From the Borders to the Bush* (1989 family history) — life/family narrative.\n- *A Telfer Family Tree — Supplement 2008* — for the \"1884\" date shown to be a slip.",
+    "body_markdown": "# Ethel Edith Telfer\n\n**Born:** 8 March 1894 — Moorak, South Australia *(SA BDM Birth Reg 540/133; confirmed 2026-09-06)*\n**Died:** before 3 August 1951 *(not confirmed from any SA register — see Notes)*\n**Husband:** [[James Gordon Steele (1892–1951)]] (m. at Mount Gambier)\n\n## Life Summary\n\nEthel Edith Telfer was the daughter of James Robert Telfer (station hand at Moorak Station) and Hannah Peacock. She married **James Gordon Steele**, and the family's 1989 history records that the couple had two sons and two daughters.\n\nHer birth year (1894) is confirmed by the South Australian birth registration; the \"1884\" date printed in the *Supplement 2008* is a transcription slip (1894 → 1884). Her death is not yet confirmed from records.\n\n## Sources\n\n- **SA BDM Birth Registration 540/133** — Ethel Edith Telfer, 8 Mar 1894, Moorak, father James Robert Telfer, mother Hannah Peacock. Accessed via Genealogy SA 6 Sep 2026.\n- **SA BDM Death Registration 771/4098** — husband James Gordon Steele, 3 Aug 1951, age 59, Grey district. Accessed via Genealogy SA 7 Sep 2026.\n- **Trove / *Border Watch* (Mount Gambier), \"OBITUARY. Mr. James Gordon Steele,\" 4 Oct 1951, p.5 (article 78660605)** — confirms Ethel married James Gordon Steele at Mount Gambier; she is absent from his list of survivors (indicating she predeceased him).\n- **Trove / *Border Watch* Family Notices, 5 Aug 1952, p.6 (article 80766637)** — In Memoriam to James Gordon Steele placed by children.\n- *From the Borders to the Bush* (1989 family history) — life/family narrative.\n- *A Telfer Family Tree — Supplement 2008* — for the \"1884\" date shown to be a slip.",
     "roles": [],
     "tags": [
       "family",
@@ -9346,7 +9311,9 @@
       "james-robert-telfer"
     ],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "james-gordon-steele"
+    ],
     "siblings": [
       "leslie-robert-telfer"
     ],
@@ -9580,8 +9547,8 @@
     ],
     "children": [
       "allan-telfer",
-      "beth-telfer",
-      "ian-telfer"
+      "beth-telfer-1946",
+      "ian-telfer-1947"
     ],
     "spouses": [
       "jessie-allan"
@@ -11606,6 +11573,66 @@
     "spouses": [
       "william-humphrey-parker-1926"
     ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Beth Telfer",
+    "slug": "beth-telfer-1946",
+    "first_name": "Beth",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1946,
+    "death_year": null,
+    "birth_year_display": "1946",
+    "death_year_display": "living",
+    "display_name": "Beth Telfer",
+    "title": "Beth Telfer",
+    "lifespan": "1946 – living",
+    "generation": 7,
+    "is_living": true,
+    "body_markdown": "# Beth Telfer\n\n**Born:** 10 April 1946 — Millicent, South Australia *(A Telfer Family Tree — Supplement 2008)*\n**Parents:** Gilbert Melville \"Mel\" Telfer and Jessie Doreen Allan\n**Spouse:** Clive Lipscombe (m. 2 Dec 1972, Mt Gambier)",
+    "roles": [],
+    "tags": [
+      "family",
+      "descendant"
+    ],
+    "parents": [
+      "gilbert-telfer-1908"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Ian Telfer",
+    "slug": "ian-telfer-1947",
+    "first_name": "Ian",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1947,
+    "death_year": null,
+    "birth_year_display": "1947",
+    "death_year_display": "living",
+    "display_name": "Ian Telfer",
+    "title": "Ian Telfer",
+    "lifespan": "1947 – living",
+    "generation": 7,
+    "is_living": true,
+    "body_markdown": "# Ian Telfer\n\n**Born:** 2 November 1947 — Millicent, South Australia *(A Telfer Family Tree — Supplement 2008)*\n**Parents:** Gilbert Melville \"Mel\" Telfer and Jessie Doreen Allan\n**Spouse:** Sally Taylor (m. 30 Nov 1974, Millicent)",
+    "roles": [],
+    "tags": [
+      "family",
+      "descendant"
+    ],
+    "parents": [
+      "gilbert-telfer-1908"
+    ],
+    "children": [],
+    "spouses": [],
     "siblings": [],
     "images": [],
     "person_photo": null

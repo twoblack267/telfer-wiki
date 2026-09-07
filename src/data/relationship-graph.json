@@ -146,11 +146,6 @@
       "generation": 5
     },
     {
-      "slug": "beth-telfer",
-      "id": "Beth Telfer",
-      "generation": 5
-    },
-    {
       "slug": "carissa-telfer",
       "id": "Carissa Telfer",
       "generation": 8
@@ -417,7 +412,7 @@
     },
     {
       "slug": "eva-rowena-telfer",
-      "id": "Eva Rowena Rowena Telfer",
+      "id": "Eva Rowena Telfer",
       "generation": 5
     },
     {
@@ -564,11 +559,6 @@
       "slug": "hugh-kelly-parker",
       "id": "Hugh Kelly Parker",
       "generation": 7
-    },
-    {
-      "slug": "ian-telfer",
-      "id": "Ian Telfer",
-      "generation": 5
     },
     {
       "slug": "inez-dillon",
@@ -1709,6 +1699,21 @@
       "slug": "gilbert-telfer-1908",
       "id": "Gilbert Telfer",
       "generation": 6
+    },
+    {
+      "slug": "james-gordon-steele",
+      "id": "James Gordon Steele",
+      "generation": 6
+    },
+    {
+      "slug": "beth-telfer-1946",
+      "id": "Beth Telfer",
+      "generation": 7
+    },
+    {
+      "slug": "ian-telfer-1947",
+      "id": "Ian Telfer",
+      "generation": 7
     }
   ],
   "edges": {
@@ -1852,10 +1857,6 @@
       {
         "from": "john-telfer-1847",
         "to": "bertha-telfer"
-      },
-      {
-        "from": "gilbert-telfer-1908",
-        "to": "beth-telfer"
       },
       {
         "from": "john-telfer-robert",
@@ -2300,10 +2301,6 @@
       {
         "from": "robert-dunlop-lawrie",
         "to": "hugh-john"
-      },
-      {
-        "from": "gilbert-telfer-1908",
-        "to": "ian-telfer"
       },
       {
         "from": "john-telfer-1840",
@@ -3388,6 +3385,14 @@
       {
         "from": "mark-telfer-1877",
         "to": "gilbert-telfer-1908"
+      },
+      {
+        "from": "gilbert-telfer-1908",
+        "to": "beth-telfer-1946"
+      },
+      {
+        "from": "gilbert-telfer-1908",
+        "to": "ian-telfer-1947"
       }
     ],
     "spouseOf": [
@@ -3438,10 +3443,6 @@
       {
         "from": "bertha-telfer",
         "to": "james-alexander-alcorn"
-      },
-      {
-        "from": "beth-telfer",
-        "to": "edwin-ernest-clarke"
       },
       {
         "from": "caroline-telfer",
@@ -3512,6 +3513,10 @@
         "to": "john-smith"
       },
       {
+        "from": "ethel-edith-telfer",
+        "to": "james-gordon-steele"
+      },
+      {
         "from": "floris-telfer",
         "to": "harry-bunston"
       },
@@ -3538,10 +3543,6 @@
       {
         "from": "hannah-baker",
         "to": "william-humphrey-parker-1850"
-      },
-      {
-        "from": "ian-telfer",
-        "to": "kenneth-cornish"
       },
       {
         "from": "james-telfer-1829",
