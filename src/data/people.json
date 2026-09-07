@@ -1457,9 +1457,7 @@
     "roles": [],
     "body_markdown": "# Andrew Telfer",
     "body_stripped": "",
-    "parents": [
-      "william-telfer-1802"
-    ],
+    "parents": [],
     "children": [],
     "siblings": [],
     "spouses": [],
@@ -6861,7 +6859,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "George Parker",
     "title": "George Parker",
     "tags": [
@@ -6891,8 +6889,8 @@
     ],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -9428,7 +9426,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Janet Nichol",
     "title": "Janet Nichol",
     "tags": [
@@ -9467,8 +9465,8 @@
     "spouses": [
       "william-telfer-shepherd"
     ],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -12991,7 +12989,7 @@
       {
         "type": "Children",
         "names": [
-          "James Telfer (bap.1762)",
+          "James Telfer (1762–?)",
           "Jean Telfer (1764–?)",
           "Francis Telfer (1768–1836)",
           "Jenet Telfer (1770–1842)",
@@ -13006,7 +13004,6 @@
     "children": [
       "adam-telfer-1771",
       "francis-telfer-1768",
-      "james-telfer",
       "james-telfer-1762",
       "jean-telfer-1764",
       "jenet-telfer"
@@ -15043,7 +15040,7 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Richard Paynter (of Calstock)",
     "title": "Richard Paynter (of Calstock)",
     "tags": [
@@ -15073,8 +15070,8 @@
     ],
     "siblings": [],
     "spouses": [],
-    "is_living": true,
-    "lifespan": "? – living",
+    "is_living": false,
+    "lifespan": "? – ?",
     "related_trees": [
       "telfer-tree"
     ],
@@ -15443,10 +15440,10 @@
       {
         "type": "Children",
         "names": [
-          "Elizabeth Telfer",
-          "James Telfer",
-          "Jean Telfer",
-          "John Telfer"
+          "Elizabeth Telfer (1834–?)",
+          "James Telfer (1836–?)",
+          "Jean Telfer (1838–?)",
+          "John Telfer (1839–?)"
         ]
       },
       {
@@ -15483,9 +15480,7 @@
       "elizabeth-telfer-1774",
       "james-telfer-1761"
     ],
-    "children": [
-      "james-telfer"
-    ],
+    "children": [],
     "siblings": [
       "adam-telfer-1799",
       "francis-telfer-1809",
@@ -18048,7 +18043,6 @@
       "william-telfer-shepherd"
     ],
     "children": [
-      "andrew-telfer-living",
       "edward-telfer",
       "william-telfer-1841"
     ],
@@ -22337,7 +22331,7 @@
       }
     ],
     "person_photo": null,
-    "generation": 4
+    "generation": 5
   },
   {
     "id": "Frances Margaret Oswald",
@@ -22408,7 +22402,7 @@
       }
     ],
     "person_photo": null,
-    "generation": 4
+    "generation": 5
   },
   {
     "id": "Herbert Clifford Holloway",

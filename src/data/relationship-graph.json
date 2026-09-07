@@ -1608,12 +1608,12 @@
     {
       "slug": "james-telfer",
       "id": "James Telfer",
-      "generation": 4
+      "generation": 5
     },
     {
       "slug": "frances-margaret-oswald",
       "id": "Frances Margaret Oswald",
-      "generation": 4
+      "generation": 5
     },
     {
       "slug": "herbert-clifford-holloway",
@@ -1821,10 +1821,6 @@
       {
         "from": "william-humphrey-parker-1850",
         "to": "andrew-kelly-parker"
-      },
-      {
-        "from": "william-telfer-1802",
-        "to": "andrew-telfer-living"
       },
       {
         "from": "john-telfer-robert",
