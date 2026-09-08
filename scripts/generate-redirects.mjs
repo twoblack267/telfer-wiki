@@ -118,6 +118,28 @@ for (const r of byBare.values()) {
   }
 }
 
+// Case M: MANUAL legacy aliases. These bare-name URLs were previously handled
+// only by public/_redirects (a Netlify convention that GitHub Pages ignores),
+// so they returned hard-404s. Emit real stub pages for them so every historical
+// alias resolves to its final LIVE person page (no more 404s). Targets are all
+// verified current canonical slugs (resolved to final live pages, never stubs).
+const MANUAL_ALIASES = [
+  { from: 'adam',           to: 'adam-telfer-1842',     display_name: 'Adam Francis Telfer' },
+  { from: 'amy-nicole-telfer', to: 'amy-telfer-nicole', display_name: 'Amy Nicole Telfer' },
+  { from: 'francis',        to: 'francis-telfer-1809',  display_name: 'Francis Telfer' },
+  { from: 'francis-180995', to: 'francis-telfer-1809',  display_name: 'Francis Telfer' },
+  { from: 'james',          to: 'james-telfer-1829',    display_name: 'James Telfer' },
+  { from: 'james-17961863', to: 'james-telfer-1796',    display_name: 'James Telfer' },
+  { from: 'john',           to: 'john-telfer-1840',     display_name: 'John Telfer' },  // was malformed 18401913
+  { from: 'robert',         to: 'robert-telfer',        display_name: 'Robert Telfer' },
+  // Post-flip legacy year aliases (Esther Jane birth-year corrected 1835→1834).
+  // These old URLs predate the correction; keep them resolving cleanly to the
+  // real page rather than leaving stale relative stubs / new 404s behind.
+  { from: 'esther-jane-telfer-1835', to: 'esther-jane-telfer', display_name: 'Esther Jane Telfer' },
+  { from: 'esther-telfer-1835',      to: 'esther-jane-telfer', display_name: 'Esther Jane Telfer' },
+];
+for (const a of MANUAL_ALIASES) redirects.push(a);
+
 // Deduplicate (same 'from' should only redirect to one destination)
 const seen = new Set();
 const uniqueRedirects = redirects.filter(r => {
@@ -160,26 +182,33 @@ function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
   const dir = path.join(baseDir, from);
   const filePath = path.join(dir, 'index.html');
 
-  // Depth from file's directory to dist/ root (number of segments past 'dist')
-  const segmentsFromDist = dir.split(path.sep).filter(Boolean).length - 1;
-  const prefix = '../'.repeat(Math.max(0, segmentsFromDist));
-
   fs.mkdirSync(dir, { recursive: true });
 
-  const targetUrl = `${prefix}people/${to}/`;
+  // ABSOLUTE canonical (was relative ../..) so search engines treat this as an
+  // alias of the real person page, NOT an independent thin page. Absolute URLs
+  // are unambiguous and are what the SEO audit flagged the old relative form as.
+  const absBase = 'https://telferwiki.com';
+  // People redirects -> /people/<slug>/; top-level (families) -> /<slug>/
+  const destPath = isPeopleRedirect ? `/people/${to}/` : `/${to}/`;
+  const targetUrl = `${absBase}${destPath}`;
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Redirecting to ${displayName}</title>
   <meta http-equiv="refresh" content="0;url=${targetUrl}">
   <link rel="canonical" href="${targetUrl}">
-  <title>Redirecting...</title>
+  <meta name="robots" content="noindex">   <!-- alias page: never index as a duplicate/pagination; the canonical profile is indexed instead -->
 </head>
 <body>
   <p>Redirecting to <a href="${targetUrl}">${displayName}</a>...</p>
 </body>
-</html>`;
+</html>
+<script>
+  // Fallback if meta-refresh is disabled
+  location.replace('${targetUrl}');
+</script>`;
 
   fs.writeFileSync(filePath, html);
   console.log(`  ${from} → ${to}  (${displayName})`);

@@ -2,16 +2,13 @@
  * Privacy exclusions — person slugs whose pages should NOT be indexed by search
  * engines (noindex) and excluded from the sitemap.
  *
- * Covers living members of the Ivory family (privacy request, 2026-08-25).
- * Paul Ivory (deceased) is deliberately NOT excluded — his page stays indexed.
+ * As of 2026-09-08 the Ivory youngest-generation members (Aaron, Joel, Jared,
+ * Lauren, Karina) are no longer excluded: Mark decided on this date to let them
+ * show on Google again, matching the rest of the living family whose pages are
+ * already indexed. Paul Ivory (deceased) stays a normal indexed page.
  *
- * Used by both the person page template (robots noindex meta) and
- * astro.config.ts (sitemap filter). Keep this the single source of truth.
+ * This set is intentionally EMPTY until a future privacy need arises. It is the
+ * single source of truth consumed by the person page template (robots noindex
+ * meta) and astro.config.ts (sitemap filter). Keep the two consumers in sync.
  */
-export const NOINDEX_SLUGS = new Set([
-  "aaron-ivory",
-  "joel-ivory",
-  "jared-ivory",
-  "lauren-ivory",
-  "karina-ivory",
-]);
+export const NOINDEX_SLUGS = new Set([]);

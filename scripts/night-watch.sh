@@ -222,7 +222,14 @@ if npm run build; then
   echo "  ✅ Build succeeded (incl. link check + redirects)"
 else
   echo "  🔴 Build failed — WILL NOT push broken state"
-  FAIL="${FAIL} build"
+  # A redirect/alias-layer violation (check-redirect-health.mjs postbuild gate) also
+  # lands here — surface it under a distinct token so the blocked-night card NAMES
+  # the SEO/redirect regression rather than reading as a generic compile failure.
+  if [ -f "$RUN_DIR/nw-redirect-fail" ]; then
+    FAIL="${FAIL} redirect-gate"
+  else
+    FAIL="${FAIL} build"
+  fi
   BLOCK_PUSH=1
 fi
 

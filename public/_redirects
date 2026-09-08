@@ -1,12 +1,28 @@
-# Redirect old slugs to new (clean) ones
-/people/sheryle-telfer-1961	/people/sheryle-telfer	301
-/people/amy-nicole-telfer	/people/amy-telfer	301
-
-# Redirect removed duplicate slug entries to their proper equivalents
-/people/adam	/people/adam-telfer-1842	301
-/people/francis	/people/francis-telfer-1809	301
-/people/francis-180995	/people/francis-telfer-1809	301
-/people/james	/people/james-telfer-1829	301
-/people/james-17961863	/people/james-telfer-1796	301
-/people/john	/people/john-telfer-18401913	301
-/people/robert	/people/robert-telfer-1835	301
+# NOTE: This file is NOT authoritative on this host.
+#
+# The telferwiki.com site is served from GitHub Pages behind a Cloudflare
+# proxy. GitHub Pages does NOT honour Netlify's public/_redirects format, so
+# the redirect declarations historically written here were silently IGNORED —
+# which is why old-slug URLs returned hard 404s (e.g. /people/amy-nicole-telfer)
+# and fed Google Search Console "Not found (404)" alerts.
+#
+# The AUTHORITATIVE redirect mechanism is repo-generated ALIAS PAGES:
+#
+#     scripts/generate-redirects.mjs
+#
+#   which runs in `postbuild` and writes dist/people/<from>/index.html stubs,
+#   each carrying: <meta http-equiv="refresh"> + absolute <link rel="canonical">
+#   + <meta name="robots" content="noindex">, pointing to the final LIVE page.
+#   GitHub Pages serves these static files directly, so they work on this host.
+#
+# The integrity of that whole alias layer is enforced every deploy by:
+#
+#     scripts/check-redirect-health.mjs    (also in postbuild; fails the build
+#                                           if any alias 404s, is relative, lacks
+#                                           noindex, or is a multi-hop/dead link)
+#
+# Alias → destination list: scripts/redirect-log.json (auto-regenerated).
+#
+# Do NOT add redirect rules here expecting them to apply — the generator +
+# health gate are the source of truth. Add legacy aliases to MANUAL_ALIASES
+# in scripts/generate-redirects.mjs instead.
