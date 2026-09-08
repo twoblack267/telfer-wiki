@@ -73,19 +73,37 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "$BUILD_ID" ]; then echo "::error::no build_id output from build job"; exit 1; fi
-          echo "Polling https://telferwiki.com for data-build-id=$BUILD_ID (Pages can take ~1-2 min to propagate)"
-          for i in $(seq 1 30); do
-            # Re-roll the cache-busting param each attempt so Cloudflare cannot
-            # serve a stale cached copy of a previously-seen URL. A fresh unique
-            # query string forces an origin fetch from GitHub Pages, which proves
-            # the deploy actually published this build — immune to CF edge TTL.
-            url="https://telferwiki.com/?cb=${BUILD_ID}_${i}"
+          echo "Polling https://telferwiki.com for data-build-id=$BUILD_ID (Pages + Cloudflare edge can take several minutes to fully propagate)"
+          # Re-roll the cache-busting param each attempt so Cloudflare cannot
+          # serve a stale cached copy of a previously-seen URL, AND so that a
+          # cache miss forces an origin fetch. Pages cold-propagation plus a
+          # 4h Cloudflare TTL has, in practice, sometimes exceeded the old
+          # ~5min window even though the deploy DID publish — producing
+          # false-red ("deploy did not publish") on pushes that were actually live.
+          # Longer window (90 retries x ~10s polling w/ an early fast pass) keeps
+          # the guard strict about a REAL stale deploy while not crying wolf on
+          # ordinary propagation lag. Failure still means: origin never served OUR
+          # build within (about) 15min -> genuine problem, FIX REQUIRED.
+          attempts=90
+          attempt=1
+          while [ "$attempt" -le "$attempts" ]; do
+            url="https://telferwiki.com/?cb=${BUILD_ID}_${attempt}_$(date +%s)"
             if curl -fsS --max-time 30 -A "Mozilla/5.0 (deploy-verify)" "$url" 2>/dev/null | grep -q "data-build-id=\"$BUILD_ID\""; then
-              echo "✅ LIVE SITE SERVES BUILD $BUILD_ID (attempt $i)"
+              echo "✅ LIVE SITE SERVES BUILD $BUILD_ID (attempt $attempt/$attempts)"
               exit 0
             fi
-            echo "  attempt $i: not yet live, waiting 10s..."
-            sleep 10
+            # Poll briskly at first (most publishes land within ~2-3min), then
+            # ease off so we cover a wider real-world window without hammering.
+            if [ "$attempt" -lt 20 ]; then
+              delay=10
+            elif [ "$attempt" -lt 50 ]; then
+              delay=12
+            else
+              delay=15
+            fi
+            echo "  attempt $attempt/$attempts: not yet live, waiting ${delay}s..."
+            sleep "$delay"
+            attempt=$((attempt+1))
           done
-          echo "::error::LIVE SITE DOES NOT SERVE BUILD $BUILD_ID after retries. Deploy did not publish. FIX REQUIRED."
+          echo "::error::LIVE SITE DOES NOT SERVE BUILD $BUILD_ID after $attempts retries (~15min). If the deploy DID publish this is a caching/propagation issue on telferwiki.com that needs investigation, NOT necessarily bad content. Investigate before re-deploying."
           exit 1
