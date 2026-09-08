@@ -31,10 +31,19 @@ const bodyHtml = formatBody(person.body_markdown || "", telferPeople);
 const importantTags = (person.tags || []).filter((t) => !["bio", "family", "person"].includes(t));
 
 // ── Photo gallery ──
-// Don't repeat the portrait avatar in the gallery when person_photo is also listed in images[].
-// Don't repeat in the gallery any photo that's already shown inline in the biography body
-// (body_markdown raw '![..](images/people/..)' embeds). Emit each photo once: gallery OR body,
-// never both (Card telw-20260902-001 systemic duplicate-image rendering).
+// Show every photo in images[] EXCEPT ones already rendered inline in the
+// biography body (the `## Photo`/`## Photos` body_markdown embeds that surface
+// as <figure> blocks). Never emit the same photo both as a body figure AND a
+// gallery tile (Card telw-20260902-001 duplicate-image rendering).
+//
+// IMPORTANT: we intentionally do NOT drop the person.person_photo (round avatar)
+// from the gallery here. The person_photo is browsable-page content, not only a
+// header crop — a profile whose ONLY image is its person_photo would otherwise
+// show just a tiny round thumbnail and miss the real photograph entirely (e.g.
+// Mark's wedding photo, which lives in a formatBody-stripped `## Photos` section
+// and so never reaches the body). The bodyImageFiles check below already prevents
+// a true visual duplicate for `## Photo`-style profiles whose portrait surfaces
+// as a body figure; for everyone else the photo must appear in the gallery.
 const bodyImageFiles = new Set(
   [...bodyHtml.matchAll(/src="([^"]*\/images\/people\/[^"]+)"/g)].map((m) =>
     decodeURIComponent(m[1].split("/").pop()?.toLowerCase() ?? "")
@@ -42,7 +51,6 @@ const bodyImageFiles = new Set(
 );
 const galleryImages = (person.images || []).filter(
   (img) =>
-    !(person.person_photo && img.src === person.person_photo) &&
     !bodyImageFiles.has(
       decodeURIComponent(String(img.src || "").split("/").pop()?.toLowerCase() ?? "")
     )

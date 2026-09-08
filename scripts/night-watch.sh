@@ -226,6 +226,39 @@ else
   BLOCK_PUSH=1
 fi
 
+# ── 3b. Rendered-photo guard → board card (folded in) ─────────
+# The rendered-photo guard (check-rendered-photos.mjs) runs in the build's postbuild.
+# When it trips, `npm run build` fails generic ("🔴 Build failed") and no board card
+# is filed. Combine the photo watch INTO Night Watch: re-run the guard against the
+# freshly built dist and FILE a can-do-board card (Backlog) naming each offender, so
+# the break surfaces in Mark's 7am Morning Can Do Board Check. The build step above
+# already blocks the push; this files the ticket for Skippy to fix. Never fixes — the
+# mechanic golden rule. Exit 0 always (firing a card is not a failure).
+echo "[3/7 → 3b] Rendered-photo guard → can-do board card (folded into Night Watch)..."
+RP_CARD_OUT=$(node scripts/rendered-photo-card.mjs 2>&1)
+printf '%s\n' "$RP_CARD_OUT" | grep -v '^$' | sed 's/^/    /'
+if printf '%s' "$RP_CARD_OUT" | grep -q '📌 FIRED'; then
+  RP_FIRED=$(printf '%s' "$RP_CARD_OUT" | grep -c '📌 FIRED')
+  echo "  🟠 $RP_FIRED rendered-photo problem(s) carded to Kanban Backlog — Skippy to fix the render source"
+  # If the build somehow passed yet the guard card found offenders, treat as FAIL (shouldn't
+  # normally happen since postbuild blocks, but belt-and-braces).
+  if [ "$BLOCK_PUSH" != "1" ]; then
+    FAIL="${FAIL} rendered-photo:$RP_FIRED"
+    BLOCK_PUSH=1
+  fi
+  WARN="${WARN} rendered-photo-card:${RP_FIRED}"
+elif printf '%s' "$RP_CARD_OUT" | grep -q 'all render full-size\|No card needed'; then
+  echo "  ✅ Rendered-photo guard clean — every photo renders full-size (no board card)"
+elif printf '%s' "$RP_CARD_OUT" | grep -qi 'guard produced no parseable verdict'; then
+  echo "  🟡 Rendered-photo carding couldn't parse guard verdict (non-fatal, infra)"
+  WARN="${WARN} rp-card-parse"
+else
+  # Unexpected output — surface it without failing the night.
+  echo "  🟡 Rendered-photo card step produced unexpected output (non-fatal)"
+  WARN="${WARN} rp-card-rc"
+fi
+
+
 # ── 4. Audit ──────────────────────────────────────────────────
 SCORE="?"
 PROFILES="?"
@@ -389,6 +422,27 @@ if node scripts/visual-flyby.mjs; then
 else
   echo "  🔴 Live site flyby flagged a page problem (see above)"
   FAIL="${FAIL} flyby"
+fi
+
+# ── 9. Consolidated blocker card (every hard failure -> can-do board) ──
+# Purpose-built cards already fire for rendered-photo (3b) and deceased-flip (2d).
+# THIS step makes sure EVERY OTHER hard failure that blocked the push ALSO gets a
+# reusable Backlog card (not just a raw Telegram ping), so the problem survives to
+# Mark's 7am Morning Can Do Board Check. Runs once per failed night; writes nothing
+# on an ALL CLEAR pass. Never fixes — it files (mechanic golden rule).
+echo "[9/9] Filing can-do-board card for any blocking issue(s)..."
+if [ -n "$FAIL" ]; then
+  NW_CARD_OUT=$(BLOCK_PUSH="$BLOCK_PUSH" FAIL="$FAIL" node scripts/night-watch-issue-card.mjs --run-dir "$RUN_DIR" 2>&1)
+  printf '%s\n' "$NW_CARD_OUT" | grep -v '^$' | sed 's/^/    /'
+  if printf '%s' "$NW_CARD_OUT" | grep -q '📌 FIRED'; then
+    NW_CARD_ID=$(printf '%s\n' "$NW_CARD_OUT" | grep -oE 'night-watch-issue-[0-9]+-[0-9]+' | tail -1)
+    echo "  🟠 Filed can-do-board card ${NW_CARD_ID:-} for the blocked night"
+  else
+    echo "  🟡 Blocked-night card step produced no card (see output above)"
+    WARN="${WARN} nw-card"
+  fi
+else
+  echo "  ✅ No blockers — no card needed (Night Watch ALL CLEAR)"
 fi
 
 echo ""
