@@ -39,6 +39,7 @@
  *
  * Usage:  node scripts/check-body-links.mjs   (run from repo root)
  */
+import { execSync } from 'node:child_process';
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 const REPO = process.cwd();
@@ -263,6 +264,10 @@ function fireCard(id, title, description, suggestedAction, severity) {
   const taskFile = path.join(TASKS_DIR, `${id}.yaml`);
   const yaml = `id: ${id}\ntitle: "${title}"\ndate: ${TODAY}\nseverity: ${severity}\nsource: "Skippy — check-body-links.mjs, build/night-watch auto-detection"\nstatus: Backlog\n\ndescription: >\n  ${description.split('\n').join('\n  ')}\n\nsuggested_action: >\n  ${suggestedAction.split('\n').join('\n  ')}\n`;
   writeFileSync(taskFile, yaml);
+  // Surface on the real board too (board.yaml is what the 7am Morning Can Do Board Check reads —
+  // check-body-links cards were reaching only tasks/ and staying invisible until their dead-link
+  // tickets were surfaced manually). Idempotent: no-op if this id is already on the board.
+  try { execSync(`python3 "${process.env.HOME}/.hermes/scripts/sync-task-cards-to-board.py" --id ${id}`, { cwd: REPO, stdio: 'ignore' }); } catch (_) {}
   fired.push(id);
 }
 

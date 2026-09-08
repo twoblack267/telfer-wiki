@@ -148,6 +148,9 @@ suggested_action: >
   4) Move this card to Done when uplift is complete.
 `.trim();
   writeFileSync(taskFile, taskYaml);
+  // Surface on the real board too (board.yaml is what the 7am Morning Can Do Board Check reads —
+  // a deceased-flip card in tasks/ alone is invisible to it). Idempotent.
+  try { execSync(`python3 "${process.env.HOME}/.hermes/scripts/sync-task-cards-to-board.py" --id ${cardId}`, { cwd: REPO, stdio: 'ignore' }); } catch (_) {}
   fired.push({ cardId, ...f });
 }
 

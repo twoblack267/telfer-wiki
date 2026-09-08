@@ -29,6 +29,7 @@
  *       --run-dir "$RUN_DIR"
  * Reads env: FAIL (space-separated blocker tokens), BLOCK_PUSH, and --run-dir.
  */
+import { execSync } from 'node:child_process';
 import { writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
@@ -104,6 +105,9 @@ suggested_action: >
 `.trim();
 
 writeFileSync(taskFile, taskYaml);
+// Surface on the real board too (board.yaml is what the 7am Morning Can Do Board Check reads).
+// Idempotent: sync-task-cards-to-board.py is a no-op if this id is already on the board.
+try { execSync(`python3 "${process.env.HOME}/.hermes/scripts/sync-task-cards-to-board.py" --id ${cardId}`, { stdio: 'ignore' }); } catch (_) {}
 log(`📌 FIRED card ${cardId} — Night Watch blocked on: ${details}`);
 log(`   Card: ~/.hermes/kanban/tasks/${cardId}.yaml → surfaces in the 7am Morning Can Do Board Check`);
 process.exit(0);

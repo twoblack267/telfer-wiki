@@ -122,6 +122,9 @@ suggested_action: >
      renders full-size again.
 `.trim();
   writeFileSync(taskFile, taskYaml);
+  // Surface on the real board too (board.yaml is what the 7am Morning Can Do Board Check reads
+  // — a card that lives only in tasks/ is invisible to it). Idempotent: no-op if already there.
+  try { execSync(`python3 "${process.env.HOME}/.hermes/scripts/sync-task-cards-to-board.py" --id ${cardId}`, { cwd: REPO, stdio: 'ignore' }); } catch (_) {}
   fired.push({ cardId, ...o });
   existingIds.add(cardId);
 }

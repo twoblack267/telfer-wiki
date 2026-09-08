@@ -386,11 +386,6 @@
       "generation": 5
     },
     {
-      "slug": "esther-jane-telfer",
-      "id": "Esther Jane Telfer",
-      "generation": 4
-    },
-    {
       "slug": "esther-telfer-smith",
       "id": "Esther Telfer Smith",
       "generation": 5
@@ -1719,6 +1714,11 @@
       "slug": "john-lindsay-cameron",
       "id": "John Lindsay Cameron",
       "generation": 6
+    },
+    {
+      "slug": "esther-jane-telfer",
+      "id": "Esther Jane Telfer",
+      "generation": 4
     }
   ],
   "edges": {
@@ -2086,14 +2086,6 @@
       {
         "from": "charles-farrow",
         "to": "esther-hannah-farrow"
-      },
-      {
-        "from": "francis-telfer-1809",
-        "to": "esther-jane-telfer"
-      },
-      {
-        "from": "jean-murray",
-        "to": "esther-jane-telfer"
       },
       {
         "from": "esther-jane-telfer",
@@ -3402,6 +3394,14 @@
       {
         "from": "martha-cameron",
         "to": "john-lindsay-cameron"
+      },
+      {
+        "from": "francis-telfer-1809",
+        "to": "esther-jane-telfer"
+      },
+      {
+        "from": "jean-murray",
+        "to": "esther-jane-telfer"
       }
     ],
     "spouseOf": [
@@ -3516,10 +3516,6 @@
       {
         "from": "esther-cowan",
         "to": "john-murray"
-      },
-      {
-        "from": "esther-jane-telfer",
-        "to": "john-smith"
       },
       {
         "from": "ethel-edith-telfer",
@@ -3668,6 +3664,10 @@
       {
         "from": "gilbert-telfer-1908",
         "to": "jessie-allan"
+      },
+      {
+        "from": "esther-jane-telfer",
+        "to": "john-smith"
       }
     ],
     "siblingOf": [
@@ -4546,14 +4546,6 @@
       {
         "from": "esther-farrow-latter",
         "to": "john-james-telfer-farrow"
-      },
-      {
-        "from": "esther-jane-telfer",
-        "to": "george-telfer"
-      },
-      {
-        "from": "esther-jane-telfer",
-        "to": "james-telfer-1832"
       },
       {
         "from": "esther-telfer-smith",
@@ -5906,6 +5898,14 @@
       {
         "from": "john-lindsay-cameron",
         "to": "malcolm-murray-cameron"
+      },
+      {
+        "from": "esther-jane-telfer",
+        "to": "george-telfer"
+      },
+      {
+        "from": "esther-jane-telfer",
+        "to": "james-telfer-1832"
       }
     ]
   }

@@ -55,20 +55,60 @@ function safeImageFilename(vaultPath) {
   return name;
 }
 
+/** Extract a human-readable alt/caption for an image from the vault source.
+ *
+ * Precedence:
+ *   1. An italic caption line (`*Grave of ... — Cemetery ...*`) sitting on the
+ *      line IMMEDIATELY after the image embed. The headstone batch job (2026-09-08)
+ *      writes captions naming cemetery + location directly under each grave photo,
+ *      and those captions should surface on the live site — not a filename-derived
+ *      stub. Use the caption text (stripped of its outer `*` emphasis markers) as alt.
+ *   2. Fall back to the current filename-derived text when no adjacent caption exists
+ *      (covers portraits / scenery plates / letter scans that embed without a caption).
+ *
+ * `nextLineRaw` must be the raw source line immediately following this image's embed
+ * (empty "" when the embed is the last line). Returns the alt string.
+ */
+function captionOrFilenameAlt(filename, nextLineRaw) {
+  const trimmed = (nextLineRaw || '').trim();
+  // Only adopt the caption when the whole next line is ONE italic phrase and does
+  // NOT itself start another embed (`![[`) — avoids stealing a neighbouring image's
+  // caption and avoids folding unrelated prose into the image label.
+  const italicCaption = /^\*(?!\*)((.+?))\*$/.exec(trimmed);
+  if (italicCaption && !trimmed.includes('![[[') && !/^!\[\[/.test(trimmed) && !/^\*?\!\[/.test(trimmed)) {
+    const cap = italicCaption[1].trim();
+    if (cap) return cap;
+  }
+  const ext = path.extname(filename);
+  const altBase = path.basename(filename, ext).replace(/[-_]/g, ' ');
+  return altBase.charAt(0).toUpperCase() + altBase.slice(1);
+}
+
 /** Convert ![[path|size]] in body markdown to standard markdown image syntax */
 function convertObsidianImages(body) {
   if (!body) return { body, images: [] };
 
   const images = [];
-  let result = body;
+  // Process line-by-line so we can peek the line that FOLLOWS each embed for a caption.
+  const srcLines = String(body).split('\n');
+  const outLines = [];
 
-  let match;
-  // Reset regex state
-  IMAGE_PATTERN.lastIndex = 0;
+  for (let i = 0; i < srcLines.length; i++) {
+    const line = srcLines[i];
+    outLines.push(line);
 
-  while ((match = IMAGE_PATTERN.exec(body)) !== null) {
-    const fullMatch = match[0];
-    const wikilink = match[1];
+    let match;
+    // Reset regex state for this line
+    IMAGE_PATTERN.lastIndex = 0;
+    const lineHasEmbed = IMAGE_PATTERN.test(line);
+    IMAGE_PATTERN.lastIndex = 0;
+    if (!lineHasEmbed) continue;
+
+    // One embed per line is the vault convention; handle the first embed on the line.
+    const m = IMAGE_PATTERN.exec(line);
+    if (!m) continue;
+    const fullMatch = m[0];
+    const wikilink = m[1];
     const vaultPath = resolveVaultImage(wikilink);
 
     if (!vaultPath) {
@@ -77,12 +117,11 @@ function convertObsidianImages(body) {
     }
 
     const filename = safeImageFilename(vaultPath);
-    const ext = path.extname(vaultPath).toLowerCase();
-    if (!['.jpg', '.jpeg', '.png', '.gif', '.webp'].includes(ext)) continue;
+    const ext2 = path.extname(vaultPath).toLowerCase();
+    if (!['.jpg', '.jpeg', '.png', '.gif', '.webp'].includes(ext2)) continue;
 
-    // Derive alt text from filename
-    const altBase = path.basename(filename, ext).replace(/[-_]/g, ' ');
-    const alt = altBase.charAt(0).toUpperCase() + altBase.slice(1);
+    const nextLineRaw = (i + 1 < srcLines.length) ? srcLines[i + 1] : '';
+    const alt = captionOrFilenameAlt(filename, nextLineRaw);
 
     const publicSrc = `images/people/${filename}`;
 
@@ -93,11 +132,14 @@ function convertObsidianImages(body) {
       filename
     });
 
-    // Replace Obsidian syntax with standard markdown image
-    result = result.replace(fullMatch, `![${alt}](${publicSrc})`);
+    // Remove this line's Obsidian embed so it isn't double-processed if the caption
+    // line (which never embeds) were somehow on the same physical line.
+    outLines[i] = outLines[i].replace(fullMatch, `![${alt}](${publicSrc})`);
+    // Clean up any leftover size bars that weren't part of the matched wikilink
+    outLines[i] = outLines[i].replace(/\|400\b|\|300\b|\|380\b|\|450\b/g, '').trim();
   }
 
-  return { body: result, images };
+  return { body: outLines.join('\n'), images };
 }
 
 // ── Helpers ──────────────────────────────────────────────
