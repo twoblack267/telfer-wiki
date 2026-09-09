@@ -6556,8 +6556,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": [],
-    "person_photo": null,
+    "images": [
+      {
+        "src": "images/people/Francis_Telfer_Smith_and_wife_Ellie_Valentine_nee_Forbes_portrait.jpg",
+        "alt": "Francis Telfer Smith and wife Ellie Valentine Smith nee Forbes",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Francis_Telfer_Smith_and_wife_Ellie_Valentine_nee_Forbes_portrait.jpg",
+        "filename": "Francis_Telfer_Smith_and_wife_Ellie_Valentine_nee_Forbes_portrait.jpg"
+      }
+    ],
+    "person_photo": "images/people/Francis_Telfer_Smith_and_wife_Ellie_Valentine_nee_Forbes_portrait.jpg",
     "generation": 5
   },
   {
