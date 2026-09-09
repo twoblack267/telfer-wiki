@@ -23959,8 +23959,15 @@
     "related_trees": [
       "telfer-tree"
     ],
-    "images": [],
-    "person_photo": null,
+    "images": [
+      {
+        "src": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
+        "alt": "David with his dad, Allen Merrick, holding a python at \"Bushy's\" wildlife attraction, 2005.",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Allen_Merrick_with_David_at_Bushys_2005.jpg",
+        "filename": "Allen_Merrick_with_David_at_Bushys_2005.jpg"
+      }
+    ],
+    "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
     "generation": 9
   }
 ]
