@@ -13055,8 +13055,8 @@
   {
     "id": "David Mark Kenneth Telfer-Merrick",
     "slug": "david-mark-kenneth-telfer-merrick",
-    "first_name": "David Mark Kenneth",
-    "middle_name": null,
+    "first_name": "David",
+    "middle_name": "Mark Kenneth",
     "last_name": "Telfer-Merrick",
     "birth_year": 2000,
     "death_year": null,
@@ -13087,7 +13087,14 @@
       "mark-telfer-1986",
       "amy-telfer-nicole"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
+        "alt": "David (~5, right) with his father Allen Merrick holding a python at Bushy's wildlife exhibit, 2005.",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Allen_Merrick_with_David_at_Bushys_2005.jpg",
+        "filename": "Allen_Merrick_with_David_at_Bushys_2005.jpg"
+      }
+    ],
     "person_photo": null
   },
   {
