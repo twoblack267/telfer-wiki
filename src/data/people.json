@@ -12157,6 +12157,12 @@
         ]
       },
       {
+        "type": "Spouse",
+        "names": [
+          "Sandra Lee Smith (m. 18 Aug 1974)"
+        ]
+      },
+      {
         "type": "Children",
         "names": [
           "Kylie Isabella Telfer (1982–?)"
@@ -12171,13 +12177,22 @@
       "kylie-telfer"
     ],
     "siblings": [],
-    "spouses": [],
+    "spouses": [
+      "sandra-lee-smith"
+    ],
     "is_living": true,
     "lifespan": "? – living",
     "related_trees": [
       "telfer-tree"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "images/people/Sandra_Smith_and_Leonard_Dance_wedding_clipping_1974.jpg",
+        "alt": "Sandra Lea Smith and Leonard Arthur Dance on their wedding day, signing the register at St Mary's Church of England, Redcliffe, 18 August 1974",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Sandra_Smith_and_Leonard_Dance_wedding_clipping_1974.jpg",
+        "filename": "Sandra_Smith_and_Leonard_Dance_wedding_clipping_1974.jpg"
+      }
+    ],
     "person_photo": null,
     "generation": 99
   },
@@ -15704,6 +15719,12 @@
         ]
       },
       {
+        "type": "Spouse",
+        "names": [
+          "Leonard Arthur Dance (m. 18 Aug 1974)"
+        ]
+      },
+      {
         "type": "Children",
         "names": [
           "Kylie Isabella Telfer (1982–?)"
@@ -15718,13 +15739,22 @@
       "kylie-telfer"
     ],
     "siblings": [],
-    "spouses": [],
+    "spouses": [
+      "leonard-arthur-dance"
+    ],
     "is_living": true,
     "lifespan": "? – living",
     "related_trees": [
       "telfer-tree"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "images/people/Sandra_Smith_and_Leonard_Dance_wedding_clipping_1974.jpg",
+        "alt": "Sandra Lea Smith and Leonard Arthur Dance on their wedding day, signing the register at St Mary's Church of England, Redcliffe, 18 August 1974",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Sandra_Smith_and_Leonard_Dance_wedding_clipping_1974.jpg",
+        "filename": "Sandra_Smith_and_Leonard_Dance_wedding_clipping_1974.jpg"
+      }
+    ],
     "person_photo": null,
     "generation": 99
   },
