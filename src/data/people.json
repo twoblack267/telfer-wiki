@@ -1307,22 +1307,24 @@
       {
         "type": "Siblings",
         "names": [
-          "Mark Kenneth Telfer"
+          "Mark Kenneth Telfer",
+          "David Telfer"
         ]
       }
     ],
     "roles": [
       "Daughter of Timothy Neil Telfer and Penny Telfer"
     ],
-    "body_markdown": "# Amy Nicole Telfer\n**Email:** [email redacted]\n**Role:** Daughter of Timothy Neil Telfer and Penny Telfer\n**Residence:** Redcliffe / Brisbane, Queensland\n\n## Photos\n\n![Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest](images/people/Amy-Telfer-Tiny-Tots-Quest.jpg)\n*Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest*\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] |\n\n---",
-    "body_stripped": "**Email:** [email redacted]\n**Role:** Daughter of Timothy Neil Telfer and Penny Telfer\n**Residence:** Redcliffe / Brisbane, Queensland\n\n## Photos\n\n!Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest\n*Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest*\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer \n **Father**  Timothy Neil Telfer (1959–?) \n **Siblings**  Mark Kenneth Telfer (1986–?)",
+    "body_markdown": "# Amy Nicole Telfer\n**Email:** [email redacted]\n**Role:** Daughter of Timothy Neil Telfer and Penny Telfer\n**Residence:** Redcliffe / Brisbane, Queensland\n\n## Photos\n\n![Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest](images/people/Amy-Telfer-Tiny-Tots-Quest.jpg)\n*Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest*\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]], [[David Telfer]] (half-brother) |\n\n---",
+    "body_stripped": "**Email:** [email redacted]\n**Role:** Daughter of Timothy Neil Telfer and Penny Telfer\n**Residence:** Redcliffe / Brisbane, Queensland\n\n## Photos\n\n!Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest\n*Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest*\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer \n **Father**  Timothy Neil Telfer (1959–?) \n **Siblings**  Mark Kenneth Telfer (1986–?), David Telfer (half-brother)",
     "parents": [
       "penny-telfer",
       "timothy-telfer"
     ],
     "children": [],
     "siblings": [
-      "mark-telfer-1986"
+      "mark-telfer-1986",
+      "david-mark-kenneth-telfer-merrick"
     ],
     "spouses": [],
     "is_living": true,
@@ -13555,7 +13557,8 @@
       {
         "type": "Siblings",
         "names": [
-          "Amy Nicole Telfer"
+          "Amy Nicole Telfer",
+          "David Telfer-Merrick"
         ]
       }
     ],
@@ -13574,7 +13577,8 @@
       "zabella-telfer"
     ],
     "siblings": [
-      "amy-telfer-nicole"
+      "amy-telfer-nicole",
+      "david-mark-kenneth-telfer-merrick"
     ],
     "spouses": [
       "kylie-telfer"
@@ -20304,16 +20308,26 @@
         "names": [
           "Penny Telfer"
         ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Mark Kenneth Telfer",
+          "Amy Nicole Telfer"
+        ]
       }
     ],
     "roles": [],
-    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n\n---\n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.\n\n---",
-    "body_stripped": "**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer \n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.",
+    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] (half-brother), [[Amy Nicole Telfer]] (half-sister) |\n\n---\n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.\n\n---",
+    "body_stripped": "**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer \n **Siblings**  Mark Kenneth Telfer (1986–?) (half-brother), Amy Nicole Telfer (half-sister) \n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.",
     "parents": [
       "penny-telfer"
     ],
     "children": [],
-    "siblings": [],
+    "siblings": [
+      "mark-telfer-1986",
+      "amy-telfer-nicole"
+    ],
     "spouses": [],
     "is_living": true,
     "lifespan": "2000 – living",

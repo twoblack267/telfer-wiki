@@ -12374,7 +12374,8 @@
       "kylie-telfer"
     ],
     "siblings": [
-      "amy-telfer-nicole"
+      "amy-telfer-nicole",
+      "david-mark-kenneth-telfer-merrick"
     ],
     "images": [
       {
@@ -12553,7 +12554,7 @@
     "lifespan": "? – living",
     "generation": 8,
     "is_living": true,
-    "body_markdown": "# Amy Nicole Telfer\n**Role:** Daughter of Timothy Neil Telfer and Penny Telfer\n\n## Photos\n\n![Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest](images/people/Amy-Telfer-Tiny-Tots-Quest.jpg)\n*Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest*\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] |\n\n---",
+    "body_markdown": "# Amy Nicole Telfer\n**Role:** Daughter of Timothy Neil Telfer and Penny Telfer\n\n## Photos\n\n![Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest](images/people/Amy-Telfer-Tiny-Tots-Quest.jpg)\n*Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest*\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]], [[David Telfer]] (half-brother) |\n\n---",
     "roles": [
       "Daughter of Timothy Neil Telfer and Penny Telfer"
     ],
@@ -12569,7 +12570,8 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "mark-telfer-1986"
+      "mark-telfer-1986",
+      "david-mark-kenneth-telfer-merrick"
     ],
     "images": [
       {
@@ -13028,7 +13030,7 @@
     "lifespan": "2000 – living",
     "generation": 10,
     "is_living": true,
-    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n\n---",
+    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] (half-brother), [[Amy Nicole Telfer]] (half-sister) |\n\n---",
     "roles": [],
     "tags": [
       "bio",
@@ -13040,7 +13042,10 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "mark-telfer-1986",
+      "amy-telfer-nicole"
+    ],
     "images": [],
     "person_photo": null
   },
