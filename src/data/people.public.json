@@ -13013,6 +13013,39 @@
     "person_photo": null
   },
   {
+    "id": "Allen Merrick",
+    "slug": "allen-merrick",
+    "first_name": "Allen",
+    "middle_name": null,
+    "last_name": "Merrick",
+    "birth_year": null,
+    "death_year": 2015,
+    "birth_year_display": "?",
+    "death_year_display": "2015",
+    "display_name": "Allen Merrick",
+    "title": "Allen Merrick — Family & Biography",
+    "lifespan": "? – 2015",
+    "generation": 9,
+    "is_living": false,
+    "body_markdown": "# Allen Merrick\n\n**Died:** circa 2015\n**Relationship:** Father of [[David Telfer]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Child** | [[David Telfer]] (mother: [[Penny Telfer]]) |\n\n---\n\n## Life Summary\n\nAllen Merrick — father of [[David Telfer]]. Identified from family records (September 2026). Died circa 2015. The mother of his son is [[Penny Telfer]]. Birth date, birthplace, and his own parents not yet established.",
+    "roles": [
+      "Father"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [],
+    "children": [
+      "david-mark-kenneth-telfer-merrick"
+    ],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "David Mark Kenneth Telfer-Merrick",
     "slug": "david-mark-kenneth-telfer-merrick",
     "first_name": "David Mark Kenneth",
@@ -13030,7 +13063,7 @@
     "lifespan": "2000 – living",
     "generation": 10,
     "is_living": true,
-    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] (half-brother), [[Amy Nicole Telfer]] (half-sister) |\n\n---",
+    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Allen Merrick]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] (half-brother), [[Amy Nicole Telfer]] (half-sister) |\n\n---",
     "roles": [],
     "tags": [
       "bio",
@@ -13038,7 +13071,8 @@
       "person"
     ],
     "parents": [
-      "penny-telfer"
+      "penny-telfer",
+      "allen-merrick"
     ],
     "children": [],
     "spouses": [],

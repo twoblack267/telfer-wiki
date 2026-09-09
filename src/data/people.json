@@ -20304,6 +20304,12 @@
         ]
       },
       {
+        "type": "Father",
+        "names": [
+          "Allen Merrick"
+        ]
+      },
+      {
         "type": "Mother",
         "names": [
           "Penny Telfer"
@@ -20318,10 +20324,11 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] (half-brother), [[Amy Nicole Telfer]] (half-sister) |\n\n---\n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.\n\n---",
-    "body_stripped": "**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer \n **Siblings**  Mark Kenneth Telfer (1986–?) (half-brother), Amy Nicole Telfer (half-sister) \n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.",
+    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Allen Merrick]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986–?)]] (half-brother), [[Amy Nicole Telfer]] (half-sister) |\n\n---\n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.\n\n---",
+    "body_stripped": "**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer\n **Father**  Allen Merrick \n **Siblings**  Mark Kenneth Telfer (1986–?) (half-brother), Amy Nicole Telfer (half-sister) \n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.",
     "parents": [
-      "penny-telfer"
+      "penny-telfer",
+      "allen-merrick"
     ],
     "children": [],
     "siblings": [
@@ -23903,5 +23910,57 @@
     ],
     "person_photo": "images/people/Esther_Jane_Smith_nee_Telfer_portrait.jpg",
     "generation": 4
+  },
+  {
+    "id": "Allen Merrick",
+    "slug": "allen-merrick",
+    "vault_file": "Allen Merrick.md",
+    "first_name": "Allen",
+    "middle_name": null,
+    "last_name": "Merrick",
+    "birth_year": null,
+    "death_year": 2015,
+    "birth_year_display": "?",
+    "death_year_display": "2015",
+    "display_name": "Allen Merrick",
+    "title": "Allen Merrick — Family & Biography",
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Allen Merrick"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "David Telfer-Merrick"
+        ]
+      }
+    ],
+    "roles": [
+      "Father"
+    ],
+    "body_markdown": "# Allen Merrick\n\n**Died:** circa 2015\n**Relationship:** Father of [[David Telfer]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Child** | [[David Telfer]] (mother: [[Penny Telfer]]) |\n\n---\n\n## Life Summary\n\nAllen Merrick — father of [[David Telfer]]. Identified from family records (September 2026). Died circa 2015. The mother of his son is [[Penny Telfer]]. Birth date, birthplace, and his own parents not yet established.\n",
+    "body_stripped": "Allen Merrick — father of David Telfer-Merrick. Died circa 2015. His son's mother is Penny Telfer. Birth date, birthplace and parents not yet established.\n",
+    "parents": [],
+    "children": [
+      "david-mark-kenneth-telfer-merrick"
+    ],
+    "siblings": [],
+    "spouses": [],
+    "is_living": false,
+    "lifespan": "? – 2015",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 9
   }
 ]
