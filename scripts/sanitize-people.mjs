@@ -513,6 +513,16 @@ for (const person of people) {
     publicPerson.body_markdown = stripLivingPrivateContent(publicPerson.body_markdown);
   }
 
+  // ── Lifespan reconciliation (owner decision, Sep 2026): `lifespan` is derived
+  //    fresh from birth_year_display / death_year_display every build, so a stale
+  //    stored string can never drift out of sync with the year fields again (the
+  //    Allen defect: chip kept "? – 2015" after birth 1956 was recorded).
+  //    Display fields are fully populated for all records and carry "~" circa,
+  //    "living", and "?" honestly, so this is a lossless pure derivation:
+  //        born_auth = birth_year_display   dead_auth = death_year_display
+  //        lifespan  = born_auth + " – " + dead_auth      (never drops "~")
+  publicPerson.lifespan =
+    `${publicPerson.birth_year_display} – ${publicPerson.death_year_display}`;
   publicPeople.push(publicPerson);
 }
 

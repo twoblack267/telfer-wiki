@@ -64,12 +64,19 @@ function ordinalSuffix(n) {
 }
 
 
+// Derive a display lifespan as a single lossless string, so a stale stored
+// `lifespan` can never leak a wrong "?" into the hero or meta (the Allen defect:
+// birth 1956 recorded but hero kept "? – 2015"). Mirrors sanitize exactly:
+//     lifespan = birth_year_display + " – " + death_year_display
+// Display fields are always populated and hold "~" circa / "living" / "?".
+function dLifespan(p) {
+  if (!p.birth_year_display && !p.death_year_display) return p.lifespan || "";
+  return `${p.birth_year_display ?? "?"} – ${p.death_year_display ?? "?"}`;
+}
+const heroLifespan = dLifespan(person);
+
 // ── SEO: unique per-person meta description ──
-const yearSpan = person.lifespan
-  ? person.lifespan
-  : [person.birth_year_display, person.is_living ? "living" : person.death_year_display]
-      .filter(Boolean)
-      .join(" – ");
+const yearSpan = heroLifespan;
 const genNote = (person.generation && person.generation < 90)
   ? ` ${person.generation}${ordinalSuffix(person.generation)} generation Telfer.`
   : "";
@@ -180,7 +187,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
 
           <!-- Lifespan -->
           <div class="text-sm text-[var(--color-ink-light)] mb-1">
-            {person.lifespan}
+            {heroLifespan}
           </div>
 
           <!-- Roles -->

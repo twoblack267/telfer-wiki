@@ -261,17 +261,27 @@ export function stripWikiLinks(text) {
   }).replace(/[\[\]]/g, "");
 }
 
+// Derive a lifespan fresh from the display fields, so a stale stored `lifespan`
+// string can never leak a wrong "?" onto a relationship row (the Allen defect:
+// birth 1956 recorded but chip still read "? – 2015"). Mirrors the sanitize
+// reconciliation exactly. birth_year_display / death_year_display are always
+// populated (hold "~" circa, "living", "?" honestly) → lossless, never drops "~".
+function derivedLifespan(p) {
+  if (!p.birth_year_display && !p.death_year_display) return p.lifespan || "";
+  return `${p.birth_year_display ?? "?"} – ${p.death_year_display ?? "?"}`;
+}
+
 export function getLinksForRelationships(relationshipNames, allPeople) {
   return relationshipNames.map((entry) => {
     const person = allPeople.find((p) => (p.slug || "") === entry.trim());
-    if (person) return { name: person.display_name, slug: person.slug, lifespan: person.lifespan };
+    if (person) return { name: person.display_name, slug: person.slug, lifespan: derivedLifespan(person) };
     // Not a slug — try resolving a display-name/wiki-link to a slug, keep the
     // original text as the link label.
     const slug = lookupSlug(entry, allPeople);
     let linkedLifespan;
     if (slug) {
       const linked = allPeople.find((p) => p.slug === slug);
-      if (linked) linkedLifespan = linked.lifespan;
+      if (linked) linkedLifespan = derivedLifespan(linked);
     }
     return { name: entry, slug, lifespan: linkedLifespan };
   });
