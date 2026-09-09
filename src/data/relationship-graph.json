@@ -1461,7 +1461,7 @@
       "generation": 7
     },
     {
-      "slug": "david-mark-kenneth-telfer-merrick",
+      "slug": "david-telfer-merrick",
       "id": "David Mark Kenneth Telfer-Merrick",
       "generation": 10
     },
@@ -1716,9 +1716,13 @@
       "generation": 6
     },
     {
+      "slug": "allen-merrick",
+      "id": "Allen Merrick",
+      "generation": 9
+    },
+    {
       "slug": "esther-jane-telfer",
-      "id": "Esther Jane Telfer",
-      "generation": 4
+      "id": "Esther Jane Telfer"
     }
   ],
   "edges": {
@@ -3204,8 +3208,12 @@
         "to": "trevor-andrew-thomson"
       },
       {
+        "from": "allen-merrick",
+        "to": "david-telfer-merrick"
+      },
+      {
         "from": "penny-telfer",
-        "to": "david-mark-kenneth-telfer-merrick"
+        "to": "david-telfer-merrick"
       },
       {
         "from": "elizabeth-beattie-1802",
@@ -3906,6 +3914,10 @@
       {
         "from": "amy-farrow-stribling",
         "to": "john-james-telfer-farrow"
+      },
+      {
+        "from": "amy-telfer-nicole",
+        "to": "david-telfer-merrick"
       },
       {
         "from": "amy-telfer-nicole",
@@ -5694,6 +5706,10 @@
       {
         "from": "edwin-telfer",
         "to": "william-telfer-1880"
+      },
+      {
+        "from": "david-telfer-merrick",
+        "to": "mark-telfer-1986"
       },
       {
         "from": "clara-blanche-telfer",
