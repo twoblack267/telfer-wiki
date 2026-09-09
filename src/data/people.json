@@ -20304,19 +20304,11 @@
         "names": [
           "Penny Telfer"
         ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "Unknown"
-        ]
       }
     ],
-    "roles": [
-      "Half-brother (Penny's son)"
-    ],
-    "body_markdown": "# David Telfer-Merrick\n\n**Role:** Brother (Penny's son)\n**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n**Relationship:** Single\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n\n---\n\n## Life Summary\n\nBrother through their mother Penny Telfer. Works as a labourer for BMD Group in Rockhampton, Queensland.\n\n---",
-    "body_stripped": "**Role:** Brother (Penny's son)\n**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n**Relationship:** Single\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer \n\n## Life Summary\n\nBrother through their mother Penny Telfer. Works as a labourer for BMD Group in Rockhampton, Queensland.",
+    "roles": [],
+    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n\n---\n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.\n\n---",
+    "body_stripped": "**Born:** 27 January 2000\n**Residence:** Rockhampton, Queensland\n**Occupation:** Labourer at BMD Group (since Oct 2023)\n\n## Family\n\n Relation  Name \n\n **Mother**  Penny Telfer \n\n## Life Summary\n\nDavid lives in Rockhampton, Queensland.",
     "parents": [
       "penny-telfer"
     ],

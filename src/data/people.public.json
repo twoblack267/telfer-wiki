@@ -13028,10 +13028,8 @@
     "lifespan": "2000 – living",
     "generation": 10,
     "is_living": true,
-    "body_markdown": "# David Telfer-Merrick\n\n**Role:** Brother (Penny's son)\n**Born:** 27 January 2000\n**Relationship:** Single\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n\n---",
-    "roles": [
-      "Half-brother (Penny's son)"
-    ],
+    "body_markdown": "# David Telfer-Merrick\n\n**Born:** 27 January 2000\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n\n---",
+    "roles": [],
     "tags": [
       "bio",
       "family",
