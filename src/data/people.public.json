@@ -12832,6 +12832,46 @@
     "person_photo": null
   },
   {
+    "id": "Allen Merrick",
+    "slug": "allen-merrick",
+    "first_name": "Allen",
+    "middle_name": null,
+    "last_name": "Merrick",
+    "birth_year": 1956,
+    "death_year": 2015,
+    "birth_year_display": "1956",
+    "death_year_display": "2015",
+    "display_name": "Allen Merrick",
+    "title": "Allen Merrick — Family & Biography",
+    "lifespan": "1956 – 2015",
+    "generation": 9,
+    "is_living": false,
+    "body_markdown": "# Allen Merrick\n\n**Died:** circa 2015\n**Relationship:** Father of [[David Telfer]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Child** | [[David Telfer]] (mother: [[Penny Telfer]]) |\n| **Partner** | [[Penny Telfer]] |\n| **Stepchildren** | [[Mark Kenneth Telfer (1986–?)]] & [[Amy Nicole Telfer]] |\n\n---\n\n## Life Summary\n\nAllen Merrick — father of [[David Telfer]] and partner of [[Penny Telfer]]; stepfather to Mark and Amy. Identified from family records (September 2026). Died circa 2015 (aged 58). Birth date, birthplace, and his own parents not yet established.",
+    "roles": [
+      "Father of David Telfer; partner of Penny Telfer; stepfather of Mark & Amy"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [],
+    "children": [
+      "david-mark-kenneth-telfer-merrick"
+    ],
+    "spouses": [],
+    "siblings": [],
+    "images": [
+      {
+        "src": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
+        "alt": "David with his dad, Allen Merrick, holding a python at \"Bushy's\" wildlife attraction, 2005.",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Allen_Merrick_with_David_at_Bushys_2005.jpg",
+        "filename": "Allen_Merrick_with_David_at_Bushys_2005.jpg"
+      }
+    ],
+    "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg"
+  },
+  {
     "id": "Penny Telfer",
     "slug": "penny-telfer",
     "first_name": "Penny",
@@ -13011,46 +13051,6 @@
     ],
     "images": [],
     "person_photo": null
-  },
-  {
-    "id": "Allen Merrick",
-    "slug": "allen-merrick",
-    "first_name": "Allen",
-    "middle_name": null,
-    "last_name": "Merrick",
-    "birth_year": null,
-    "death_year": 2015,
-    "birth_year_display": "?",
-    "death_year_display": "2015",
-    "display_name": "Allen Merrick",
-    "title": "Allen Merrick — Family & Biography",
-    "lifespan": "? – 2015",
-    "generation": 9,
-    "is_living": false,
-    "body_markdown": "# Allen Merrick\n\n**Died:** circa 2015\n**Relationship:** Father of [[David Telfer]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Child** | [[David Telfer]] (mother: [[Penny Telfer]]) |\n| **Partner** | [[Penny Telfer]] |\n| **Stepchildren** | [[Mark Kenneth Telfer (1986–?)]] & [[Amy Nicole Telfer]] |\n\n---\n\n## Life Summary\n\nAllen Merrick — father of [[David Telfer]] and partner of [[Penny Telfer]]; stepfather to Mark and Amy. Identified from family records (September 2026). Died circa 2015 (aged 58). Birth date, birthplace, and his own parents not yet established.",
-    "roles": [
-      "Father of David Telfer; partner of Penny Telfer; stepfather of Mark & Amy"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [],
-    "children": [
-      "david-mark-kenneth-telfer-merrick"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "images": [
-      {
-        "src": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
-        "alt": "David with his dad, Allen Merrick, holding a python at \"Bushy's\" wildlife attraction, 2005.",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Allen_Merrick_with_David_at_Bushys_2005.jpg",
-        "filename": "Allen_Merrick_with_David_at_Bushys_2005.jpg"
-      }
-    ],
-    "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg"
   },
   {
     "id": "David Mark Kenneth Telfer-Merrick",
