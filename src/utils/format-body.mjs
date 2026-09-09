@@ -9,6 +9,20 @@ export function formatBody(body, people) {
   const BASE = import.meta.env.BASE_URL || "/";
 
   let html = body
+    // Biography field-summary separator normalisation. Some profiles were generated
+    // with a single-line intro that joins labelled fields with literal pipes, e.g.
+    //     **Born:** 2 Oct 1868, Tungkillo SA | **Died:** 11 Oct 1950 ... | **Mother:** ... | **Father:** ...
+    // Those pipes are field SEPARATORS, not content, but they survive to render as
+    // literal " | " visible text on the page. Turn each separator pipe into a real
+    // line break so the fields render as separate labelled lines (matching the
+    // multi-line field summaries used by better-formed profiles).
+    //
+    // Safety: only a " | " immediately followed by a bold label containing a colon
+    // (**Label:**) is targeted — the exact field-summary signature. This can never
+    // touch real markdown table rows (those are "| **Name** |" / "| [[link]] |" cell
+    // syntax with NO colon after the bold), nor [[Link|Alias]] wikilinks (those carry
+    // a pipe but are followed by plain alias text, not "**Label:**"). Purely presentational.
+    .replace(/ \| (?=\*\*[A-Za-z][^*\n:]*?:\*\*)/g, "\n")
     // Strip leading blockquote markers (> ) from markdown first — fixes blockquote-wrapped images & notes
     .replace(/^>\s*/gm, "")
     // Strip social media profile URLs — safety net (primary strip is in convert-markdown.mjs)
