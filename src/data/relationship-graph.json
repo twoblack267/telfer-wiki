@@ -1513,7 +1513,7 @@
     {
       "slug": "kenneth-gregory-virgen",
       "id": "Kenneth Gregory Virgen",
-      "generation": 8
+      "generation": 7
     },
     {
       "slug": "noela-pauline-virgen",
@@ -1718,11 +1718,12 @@
     {
       "slug": "allen-merrick",
       "id": "Allen Merrick",
-      "generation": 9
+      "generation": 99
     },
     {
       "slug": "esther-jane-telfer",
-      "id": "Esther Jane Telfer"
+      "id": "Esther Jane Telfer",
+      "generation": 4
     }
   ],
   "edges": {
@@ -3604,6 +3605,10 @@
       {
         "from": "kylie-telfer",
         "to": "mark-telfer-1986"
+      },
+      {
+        "from": "leonard-arthur-dance",
+        "to": "sandra-lee-smith"
       },
       {
         "from": "malcolm-duncan-cameron",
