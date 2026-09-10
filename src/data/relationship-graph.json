@@ -591,11 +591,6 @@
       "generation": 5
     },
     {
-      "slug": "james-edgerston-telfer",
-      "id": "James Edgerston Telfer",
-      "generation": 5
-    },
-    {
       "slug": "james-farrow",
       "id": "James Farrow",
       "generation": 5
@@ -1724,6 +1719,11 @@
       "slug": "esther-jane-telfer",
       "id": "Esther Jane Telfer",
       "generation": 4
+    },
+    {
+      "slug": "james-edgerston-telfer",
+      "id": "James Edgerston Telfer",
+      "generation": 5
     }
   ],
   "edges": {
@@ -2323,14 +2323,6 @@
       {
         "from": "james-telfer-1761",
         "to": "isobel-telfer"
-      },
-      {
-        "from": "adam-telfer-1842",
-        "to": "james-edgerston-telfer"
-      },
-      {
-        "from": "margaret-telfer-1849",
-        "to": "james-edgerston-telfer"
       },
       {
         "from": "charles-farrow",
@@ -3411,6 +3403,14 @@
       {
         "from": "jean-murray",
         "to": "esther-jane-telfer"
+      },
+      {
+        "from": "adam-telfer-1842",
+        "to": "james-edgerston-telfer"
+      },
+      {
+        "from": "margaret-telfer-1849",
+        "to": "james-edgerston-telfer"
       }
     ],
     "spouseOf": [
@@ -5005,22 +5005,6 @@
         "to": "william-telfer-1811"
       },
       {
-        "from": "james-edgerston-telfer",
-        "to": "lillian-may-telfer"
-      },
-      {
-        "from": "james-edgerston-telfer",
-        "to": "margaret-telfer-1869"
-      },
-      {
-        "from": "james-edgerston-telfer",
-        "to": "vernon-ray-st-clair-telfer"
-      },
-      {
-        "from": "james-edgerston-telfer",
-        "to": "violet-hope-telfer"
-      },
-      {
         "from": "james-telfer-1796",
         "to": "john-telfer-1805"
       },
@@ -5927,6 +5911,22 @@
       {
         "from": "esther-jane-telfer",
         "to": "james-telfer-1832"
+      },
+      {
+        "from": "james-edgerston-telfer",
+        "to": "lillian-may-telfer"
+      },
+      {
+        "from": "james-edgerston-telfer",
+        "to": "margaret-telfer-1869"
+      },
+      {
+        "from": "james-edgerston-telfer",
+        "to": "vernon-ray-st-clair-telfer"
+      },
+      {
+        "from": "james-edgerston-telfer",
+        "to": "violet-hope-telfer"
       }
     ]
   }
