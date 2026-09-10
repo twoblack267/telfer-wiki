@@ -58,7 +58,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<BaseLayout title={`Family Group Sheet: ${person.display_name}`}>
+<BaseLayout title={`Family Group Sheet: ${person.display_name}`} canonicalPath={`/people/${slug}/family-sheet`} description={`Family group sheet for ${person.display_name} (${formatDateRange(person)}) — parents, spouse${spouses.length === 1 ? '' : 's'}, siblings and children, from the Telfer family history archive.`}>
   <div class="max-w-3xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">

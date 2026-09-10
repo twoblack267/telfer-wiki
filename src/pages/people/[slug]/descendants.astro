@@ -120,7 +120,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<BaseLayout title={`Descendants of ${person.display_name}`}>
+<BaseLayout title={`Descendants of ${person.display_name}`} canonicalPath={`/people/${slug}/descendants`} description={`Descendant chart for ${person.display_name}${lifespan(person)} — ${totalDescendants} descendant${totalDescendants === 1 ? '' : 's'} across ${generationsSpanned >= 0 ? generationsSpanned + 1 : '?'} generation${generationsSpanned === 0 ? '' : 's'}, from the Telfer family history archive.`}>
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">

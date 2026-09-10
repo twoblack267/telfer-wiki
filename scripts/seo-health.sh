@@ -94,13 +94,27 @@ EXPECTED_MIN=$(node -e '
     p.slug !== "families" && p.slug !== "full-tree" && !noindex.has(p.slug));
   console.log(real.length);
 ' 2>/dev/null || echo 0)
-CNT=$(grep -oE 'telferwiki\.com/people/[a-z0-9-]+/' dist/sitemap-0.xml 2>/dev/null | grep -vE '/family-sheet|/descendants' | sort -u | wc -l | tr -d ' ')
+CNT=$(grep -oE 'telferwiki\.com/people/[a-z0-9-]+/' dist/sitemap-0.xml 2>/dev/null | grep -vE '/family-sheet|/descendants' | sed -E 's#.*/people/([a-z0-9-]+)/#\1#' | grep -vE '^(dna|families|full-tree)$' | sort -u | wc -l | tr -d ' ')
+# Privacy gate: driven by the SAME source of truth as the sitemap filter
+# (src/data/privacy-exclusions.mjs). It is EMPTY as of 2026-09-08 — Mark decided
+# the youngest Ivory generation is indexable again — so an empty set must PASS.
+# Only if the set is non-empty do those slugs need to be absent from the sitemap.
 PRIVACY_OK=1
-for s in aaron-ivory joel-ivory jared-ivory lauren-ivory karina-ivory; do
+NOINDEX_LIST=$(node -e '
+  const fs=require("fs");
+  const src=fs.readFileSync("./src/data/privacy-exclusions.mjs","utf8");
+  console.log([...src.matchAll(/"([a-z0-9-]+)"/g)].map(m=>m[1]).join(" "));
+' 2>/dev/null)
+for s in $NOINDEX_LIST; do
   grep -qE "telferwiki\.com/people/$s/" dist/sitemap-0.xml 2>/dev/null && PRIVACY_OK=0
 done
+if [ -z "$NOINDEX_LIST" ]; then
+  ok "privacy-exclusions set is empty (2026-09-08 decision) — nothing to withhold"
+else
+  ok "privacy set: $(echo $NOINDEX_LIST | wc -w | tr -d ' ') slug(s) enforced"
+fi
 if [ "$EXPECTED_MIN" -gt 0 ] && [ "$CNT" -ge "$EXPECTED_MIN" ] && [ "$PRIVACY_OK" -eq 1 ]; then
-  ok "sitemap covers $CNT person pages (≥ $EXPECTED_MIN expected post-privacy); 5 Ivory noindex'ed"
+  ok "sitemap covers $CNT person pages (≥ $EXPECTED_MIN expected)"
 elif [ "$EXPECTED_MIN" -eq 0 ]; then
   bad "could not compute expected person count from people.public.json (step 5 can't validate)"
 else
