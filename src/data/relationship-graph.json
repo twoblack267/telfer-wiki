@@ -986,11 +986,6 @@
       "generation": 5
     },
     {
-      "slug": "mary-bayes-farrow",
-      "id": "Mary Bayes Farrow",
-      "generation": 5
-    },
-    {
       "slug": "mary-jane-paynter",
       "id": "Mary Jane Paynter",
       "generation": 5
@@ -1563,7 +1558,7 @@
     {
       "slug": "olive-mary-lillecrapp",
       "id": "Olive Mary Lillecrapp",
-      "generation": 7
+      "generation": 6
     },
     {
       "slug": "rose-rankin",
@@ -1583,7 +1578,7 @@
     {
       "slug": "alfred-edward-lillecrapp",
       "id": "Alfred Edward Lillecrapp",
-      "generation": 6
+      "generation": 5
     },
     {
       "slug": "margaret-telfer-1801",
@@ -1723,6 +1718,16 @@
     {
       "slug": "james-edgerston-telfer",
       "id": "James Edgerston Telfer",
+      "generation": 5
+    },
+    {
+      "slug": "ivan-frank-lillecrapp",
+      "id": "Ivan Frank Lillecrapp",
+      "generation": 6
+    },
+    {
+      "slug": "mary-bayes-farrow",
+      "id": "Mary Bayes Farrow",
       "generation": 5
     }
   ],
@@ -2749,10 +2754,6 @@
         "to": "martha-cameron"
       },
       {
-        "from": "elizabeth-hannah-telfer",
-        "to": "mary-bayes-farrow"
-      },
-      {
         "from": "jean-telfer-1840",
         "to": "mary-jane-paynter"
       },
@@ -3293,6 +3294,10 @@
         "to": "olive-mary-lillecrapp"
       },
       {
+        "from": "mary-bayes-farrow",
+        "to": "olive-mary-lillecrapp"
+      },
+      {
         "from": "adam-telfer-1842",
         "to": "margaret-telfer-1869"
       },
@@ -3411,6 +3416,22 @@
       {
         "from": "margaret-telfer-1849",
         "to": "james-edgerston-telfer"
+      },
+      {
+        "from": "alfred-edward-lillecrapp",
+        "to": "ivan-frank-lillecrapp"
+      },
+      {
+        "from": "mary-bayes-farrow",
+        "to": "ivan-frank-lillecrapp"
+      },
+      {
+        "from": "charles-farrow",
+        "to": "mary-bayes-farrow"
+      },
+      {
+        "from": "elizabeth-hannah-telfer",
+        "to": "mary-bayes-farrow"
       }
     ],
     "spouseOf": [
@@ -3657,6 +3678,10 @@
       {
         "from": "elizabeth-liebich",
         "to": "thomas-paynter"
+      },
+      {
+        "from": "alfred-edward-lillecrapp",
+        "to": "mary-bayes-farrow"
       },
       {
         "from": "hannah-peacock",
@@ -3919,6 +3944,10 @@
       {
         "from": "amy-farrow-stribling",
         "to": "john-james-telfer-farrow"
+      },
+      {
+        "from": "amy-farrow-stribling",
+        "to": "mary-bayes-farrow"
       },
       {
         "from": "amy-telfer-nicole",
@@ -4509,6 +4538,10 @@
         "to": "john-james-telfer-farrow"
       },
       {
+        "from": "elizabeth-telfer-farrow-holloway",
+        "to": "mary-bayes-farrow"
+      },
+      {
         "from": "emily-amelia-telfer",
         "to": "ethel-jean-telfer"
       },
@@ -4565,6 +4598,10 @@
         "to": "john-james-telfer-farrow"
       },
       {
+        "from": "esther-farrow-latter",
+        "to": "mary-bayes-farrow"
+      },
+      {
         "from": "esther-telfer-smith",
         "to": "francis-telfer-smith"
       },
@@ -4615,6 +4652,10 @@
       {
         "from": "eva-agnes-farrow",
         "to": "john-james-telfer-farrow"
+      },
+      {
+        "from": "eva-agnes-farrow",
+        "to": "mary-bayes-farrow"
       },
       {
         "from": "eva-rowena-telfer",
@@ -4819,6 +4860,10 @@
       {
         "from": "george-hope-farrow",
         "to": "john-james-telfer-farrow"
+      },
+      {
+        "from": "george-hope-farrow",
+        "to": "mary-bayes-farrow"
       },
       {
         "from": "george-telfer",
@@ -5065,6 +5110,10 @@
         "to": "john-james-telfer-farrow"
       },
       {
+        "from": "jane-murray-farrow",
+        "to": "mary-bayes-farrow"
+      },
+      {
         "from": "jane-sophie-smith",
         "to": "john-james-smith"
       },
@@ -5119,6 +5168,10 @@
       {
         "from": "john-james-smith",
         "to": "margaret-dougal-smith"
+      },
+      {
+        "from": "john-james-telfer-farrow",
+        "to": "mary-bayes-farrow"
       },
       {
         "from": "john-telfer-robert",
@@ -5877,6 +5930,10 @@
         "to": "john-james-telfer-farrow"
       },
       {
+        "from": "charles-farrow-jr",
+        "to": "mary-bayes-farrow"
+      },
+      {
         "from": "andrew-telfer-1798",
         "to": "william-telfer-1802"
       },
@@ -5927,6 +5984,10 @@
       {
         "from": "james-edgerston-telfer",
         "to": "violet-hope-telfer"
+      },
+      {
+        "from": "ivan-frank-lillecrapp",
+        "to": "olive-mary-lillecrapp"
       }
     ]
   }
