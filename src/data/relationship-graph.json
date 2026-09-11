@@ -646,11 +646,6 @@
       "generation": 5
     },
     {
-      "slug": "jane-sophie-smith",
-      "id": "Jane Sophie Smith",
-      "generation": 5
-    },
-    {
       "slug": "janet-dunlop-1811",
       "id": "Janet Dunlop",
       "generation": 4
@@ -1769,6 +1764,26 @@
       "slug": "rodger-peryman-wishart",
       "id": "Rodger Peryman Wishart",
       "generation": 7
+    },
+    {
+      "slug": "elisabeth-telfer",
+      "id": "Elisabeth Telfer",
+      "generation": 4
+    },
+    {
+      "slug": "jane-sophie-smith-1866",
+      "id": "Jane Sophie Smith",
+      "generation": 5
+    },
+    {
+      "slug": "john-telfer",
+      "id": "John Telfer",
+      "generation": 1
+    },
+    {
+      "slug": "thomas-telfer",
+      "id": "Thomas Telfer",
+      "generation": 99
     }
   ],
   "edges": {
@@ -2444,14 +2459,6 @@
       {
         "from": "elizabeth-hannah-telfer",
         "to": "jane-murray-farrow"
-      },
-      {
-        "from": "esther-jane-telfer",
-        "to": "jane-sophie-smith"
-      },
-      {
-        "from": "john-smith",
-        "to": "jane-sophie-smith"
       },
       {
         "from": "robert-dunlop",
@@ -3520,6 +3527,18 @@
       {
         "from": "harold-peryman-wishart",
         "to": "rodger-peryman-wishart"
+      },
+      {
+        "from": "thomas-telfer",
+        "to": "elisabeth-telfer"
+      },
+      {
+        "from": "esther-jane-telfer",
+        "to": "jane-sophie-smith-1866"
+      },
+      {
+        "from": "john-smith",
+        "to": "jane-sophie-smith-1866"
       }
     ],
     "spouseOf": [
@@ -3622,6 +3641,10 @@
       {
         "from": "elizabeth-oliver",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "elspeth-young",
+        "to": "john-telfer"
       },
       {
         "from": "elspeth-young",
@@ -4495,7 +4518,7 @@
       },
       {
         "from": "elizabeth-anne-smith",
-        "to": "jane-sophie-smith"
+        "to": "jane-sophie-smith-1866"
       },
       {
         "from": "elizabeth-anne-smith",
@@ -4715,7 +4738,7 @@
       },
       {
         "from": "esther-telfer-smith",
-        "to": "jane-sophie-smith"
+        "to": "jane-sophie-smith-1866"
       },
       {
         "from": "esther-telfer-smith",
@@ -4939,7 +4962,7 @@
       },
       {
         "from": "francis-telfer-smith",
-        "to": "jane-sophie-smith"
+        "to": "jane-sophie-smith-1866"
       },
       {
         "from": "francis-telfer-smith",
@@ -5220,14 +5243,6 @@
       {
         "from": "jane-murray-farrow",
         "to": "mary-bayes-farrow"
-      },
-      {
-        "from": "jane-sophie-smith",
-        "to": "john-james-smith"
-      },
-      {
-        "from": "jane-sophie-smith",
-        "to": "margaret-dougal-smith"
       },
       {
         "from": "janet-stevenson",
@@ -6124,6 +6139,14 @@
       {
         "from": "eva-agnes-farrow-1877",
         "to": "mary-bayes-farrow"
+      },
+      {
+        "from": "jane-sophie-smith-1866",
+        "to": "john-james-smith"
+      },
+      {
+        "from": "jane-sophie-smith-1866",
+        "to": "margaret-dougal-smith"
       }
     ]
   }

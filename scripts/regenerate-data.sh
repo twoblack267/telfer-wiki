@@ -33,9 +33,9 @@ fi
 
 echo
 echo "==> Step 3/3: verify gate-clean (validate-no-mark-refs.py)"
-OUT="$(python3 scripts/validate-no-mark-refs.py src/data/people.json src/data/people.public.json 2>&1)" || {
+VP="$(python3 scripts/validate-no-mark-refs.py src/data/people.json src/data/people.public.json 2>&1)" || {
   echo "GATE FAILED — regenerated data still contains 'Mark's' references:"
-  echo "$OUT" | head -20
+  echo "$VP" | head -20
   echo
   echo "Fix: review purge-mark-refs.py patterns or clean affected vault files."
   exit 1
@@ -63,3 +63,13 @@ node scripts/scan-cross-branch.mjs || {
   exit 1
 }
 echo "OK — no cross-branch sibling contamination, deploy gate passes."
+
+echo
+echo "==> Step 6/6: record vault content hashes (src/data/vault-manifest.json)"
+# Content-hash truth check. data-drift-monitor.py compares each vault .md against
+# this manifest instead of mtimes, so a benign touch/sync/git-checkout no longer
+# raises a false DRIFT, while a genuine un-regenerated vault edit still does.
+python3 "$HOME/.hermes/scripts/write-vault-manifest.py" || {
+  echo "WARNING — could not write vault-manifest.json; drift check will report 'none'."
+}
+echo "OK — vault manifest refreshed; content-hash drift check is authoritative."
