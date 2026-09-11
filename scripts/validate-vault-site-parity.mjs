@@ -86,12 +86,41 @@ function publishedRows() {
 }
 
 function main() {
-  if (!fs.existsSync(VAULT_PEOPLE_DIR)) {
-    console.error(`❌ Vault people dir not found: ${VAULT_PEOPLE_DIR}`);
+  // CI (GitHub Actions) has no vault — it builds from the committed people.json and the
+  // committed vault manifest. The vault is private and stays local, on purpose. So when the
+  // vault is absent we fall back to the manifest: it carries the authoritative filename list
+  // and per-file hashes, which is enough to catch phantoms, orphans and duplicates.
+  const vaultPresent = fs.existsSync(VAULT_PEOPLE_DIR);
+  const MANIFEST = path.resolve(process.cwd(), 'src/data/vault-manifest.json');
+  let real = [], stubs = [], empty = [], malformed = [];
+
+  if (vaultPresent) {
+    ({ real, stubs, empty, malformed } = vaultRecords());
+  } else if (fs.existsSync(MANIFEST)) {
+    const man = JSON.parse(fs.readFileSync(MANIFEST, 'utf-8'));
+    const rawFiles = man.files || man;
+    const entries = Array.isArray(rawFiles)
+      ? rawFiles.map((e) => (typeof e === 'string' ? { file: e } : e))
+      : Object.entries(rawFiles).map(([file, v]) => ({
+          file,
+          hash: typeof v === 'string' ? v : (v && v.sha256) || '',
+          kind: typeof v === 'object' && v ? (v.kind || '') : '',
+        }));
+    for (const e of entries) {
+      const f = (e.file || e.path || e.name || '').toString();
+      if (!f) continue;
+      // The manifest records a `kind` per file (real | redirect | empty), computed where the
+      // vault actually lives. Fall back to filename convention for older manifests.
+      const kind = (e.kind || '').toString().toLowerCase();
+      if (kind === 'redirect' || (!kind && REDIRECT_TITLE_PATTERN.test(f))) { stubs.push(f); continue; }
+      if (kind === 'empty') { empty.push(f); continue; }
+      real.push({ file: f, name: '', slug: null });
+    }
+    console.log(`  (vault absent → using committed manifest: ${entries.length} entries)`);
+  } else {
+    console.error(`❌ Vault absent and no manifest at ${MANIFEST} — cannot verify parity.`);
     process.exit(2);
   }
-
-  const { real, stubs, empty, malformed } = vaultRecords();
   const pub = publishedRows();
 
   // Published rows sourced from a redirect stub = a leaked phantom.
