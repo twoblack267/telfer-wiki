@@ -132,8 +132,20 @@ people.forEach(p => {
 });
 console.log(`\n10. IMPOSSIBLE-PARENT EDGES (birth gap < 11y): ${impossibleParent}`);
 
+// 11. DUPLICATE IDs (identity-key guard)
+// `id` is the identity key for graph/relationship wiring and per-person lookups.
+// It was historically just display_name, so same-named people collided (7x James
+// Telfer, 4x John Telfer, ...) and id lookups silently resolved to whichever
+// duplicate won. Fixed at the generator (convert-markdown.mjs toPersonId); this
+// guard stops the invariant rotting again. See card tw-2026-09-11-004.
+const idCounts = {};
+people.forEach(p => { idCounts[p.id] = (idCounts[p.id] || 0) + 1; });
+const dupIds = Object.entries(idCounts).filter(([_, c]) => c > 1);
+console.log(`\n11. DUPLICATE IDS: ${dupIds.length}`);
+dupIds.forEach(([id, count]) => console.log(`   ${id}: ${count}x`));
+
 console.log(`\n=== SUMMARY ===`);
-const criticalIssues = dupSlugs.length + suspect.length + selfRefs + cycles + impossibleParent;
+const criticalIssues = dupSlugs.length + suspect.length + selfRefs + cycles + impossibleParent + dupIds.length;
 // childMismatch excluded — expected for incomplete family trees; not a build blocker
 // Invalid refs are warnings only — side-branch entries reference long build-generated slugs
 // (e.g. francis-telfer-18091895) which get resolved via redirect system at build time

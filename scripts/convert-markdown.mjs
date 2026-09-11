@@ -154,6 +154,26 @@ function toSlug(firstName, lastName) {
     .replace(/^-|-$/g, '');
 }
 
+/**
+ * Generate a UNIQUE identity key for a person entry.
+ *
+ * Historically this was just the bare display_name, so same-named people
+ * (7x "James Telfer", 4x "John Telfer", ...) collided and id-based lookups
+ * silently resolved to whichever duplicate won. `display_name` and `slug`
+ * remain available and unchanged for the consumers that key off those.
+ *
+ * Disambiguation mirrors the slug/dedup preference:
+ *   birth_year → death_year → bare display_name.
+ * Verified to yield 100% unique ids across the current vault (357/357); the
+ * bare-name fallback is kept only for people with no year yet recorded, and is
+ * safe because such collisions do not currently exist.
+ */
+function toPersonId(displayName, birthYear, deathYear) {
+  if (birthYear != null && birthYear !== '') return `${displayName} (${birthYear})`;
+  if (deathYear != null && deathYear !== '') return `${displayName} (d.${deathYear})`;
+  return displayName;
+}
+
 function stripWikilinks(text) {
   return text ? text.replace(/\[\[([^\]]+)\]\]/g, '$1') : text;
 }
@@ -504,7 +524,7 @@ function main() {
     const vaultFile = file;
 
     const entry = {
-      id: displayName,
+      id: toPersonId(displayName, birthYear, deathYear),
       slug,
       vault_file: vaultFile,
       first_name: firstName,
@@ -585,7 +605,7 @@ function main() {
         existing.slug = entry.slug;
       }
       existing.display_name = entry.display_name;
-      existing.id = entry.display_name;
+      existing.id = entry.id;
       existing.title = entry.title;
       existing.first_name = entry.first_name;
       existing.middle_name = entry.middle_name;
