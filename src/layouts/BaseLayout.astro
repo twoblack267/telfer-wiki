@@ -455,6 +455,23 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
     white-space: nowrap;
   }
 
+  /* Mobile: let cells wrap. `white-space: nowrap` above means no cell can wrap,
+     so a wide column (e.g. Notes) pushes the table past the screen width, the
+     overflow container hides the rest, and the text appears cut off mid-word
+     with a stray vertical rule running through it. Phones have no visible
+     scrollbar, so the content is unreachable. Wrap on small screens only —
+     desktop has room and keeps the tidy single-line rows. Long unbroken tokens
+     (slugs, URLs) still need break-word or they re-create the same overflow. */
+  @media (max-width: 639px) {
+    .wiki-content table,
+    .wiki-content th,
+    .wiki-content td {
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+  }
+
   .wiki-content th {
     background-color: var(--color-heading); color: white;
     font-family: var(--font-sans); font-weight: 600;
