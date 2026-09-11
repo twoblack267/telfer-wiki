@@ -22,6 +22,59 @@ import matter from 'gray-matter';
 const VAULT_PEOPLE_DIR = path.resolve(process.env.HOME, 'ObsidianVault/Family History/People');
 const PEOPLE_JSON = path.resolve(process.cwd(), 'src/data/people.json');
 
+// ── Redirect-stub detection (SINGLE SOURCE OF TRUTH) ─────────────────────
+// A redirect stub is a vault file that exists only to point at a canonical
+// profile elsewhere — it is NOT a person. It must never be published.
+//
+// Detection is TAG-FIRST, title second:
+//   • frontmatter `tags:` contains an exact `redirect` entry  → authoritative
+//   • else `title` contains the word "redirect"               → legacy fallback
+//
+// Why tag-first: tags are structured data authored deliberately; titles are
+// free prose. Three stubs (`Elizabeth Hannah (1836–1916)`, `Elizabeth Telfer
+// Farrow`, `Sophia Parker`) carried the `redirect` TAG but a title with no
+// "redirect" word, so the old title-only test leaked them live as duplicate
+// person pages. Never test the title alone.
+const REDIRECT_TAG_PATTERN = /^\s*-\s*['"]?redirect['"]?\s*$/im;
+const REDIRECT_TITLE_PATTERN = /\bredirect\b/i;
+
+/** True if frontmatter marks this file as a redirect stub (tag-first). */
+function isRedirectStub(fm) {
+  if (!fm) return false;
+  const title = (fm.title || '').toString();
+  // Explicit title marker (legacy, but unambiguous when present).
+  if (REDIRECT_TITLE_PATTERN.test(title)) return true;
+  // Tag marker — authoritative. Handles `tags: [a, redirect]` and block lists.
+  const tags = fm.tags;
+  if (Array.isArray(tags)) {
+    return tags.some((t) => String(t).trim().toLowerCase() === 'redirect');
+  }
+  if (typeof tags === 'string') {
+    return tags.split(/[,\s]+/).some((t) => t.trim().toLowerCase() === 'redirect');
+  }
+  return false;
+}
+
+/** Parse a vault file's frontmatter, or null when unreadable/tiny. */
+function readFrontmatter(absPath) {
+  try {
+    return matter(fs.readFileSync(absPath, 'utf-8')).data || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * True if the raw frontmatter text contains a `- redirect` tag entry.
+ * Used for stubs whose YAML fails to parse (grey-matter returns tags as a
+ * raw string) so a malformed stub can still never leak.
+ */
+function rawHasRedirectTag(raw) {
+  const end = raw.indexOf('\n---', 3);
+  const head = raw.startsWith('---') ? raw.slice(3, end === -1 ? 800 : end) : raw.slice(0, 800);
+  return REDIRECT_TAG_PATTERN.test(head);
+}
+
 // ── Image handling ───────────────────────────────────────
 
 const IMAGE_PATTERN = /!\[\[([^\]]+)\]\]/g;
@@ -362,12 +415,16 @@ function main() {
     const { data: fm, content: body } = parsed;
 
     // ── Redirect stubs: skip files that are placeholders for a canonical profile ──
-    // A vault file whose title marks it as a "redirect" (e.g. "... (redirect)")
-    // is not a real profile — it points at a canonical entry elsewhere. Skipping
-    // them prevents phantom/stub records from regenerating, and lets the orphan
-    // purge below drop any previously-accumulated stub entries.
-    const rawTitle = (fm.title || '').toString().toLowerCase();
-    if (rawTitle.includes('redirect')) {
+    // A vault file marked as a "redirect" is not a real profile — it points at a
+    // canonical entry elsewhere. Skipping them prevents phantom/stub records from
+    // regenerating, and lets the orphan purge below drop any previously-accumulated
+    // stub entries.
+    //
+    // Detection is tag-first: the `redirect` TAG is authoritative, the title is
+    // only a fallback. (Title-only detection shipped 3 duplicate live pages —
+    // see isRedirectStub() at the top of this file.)
+    const isStub = isRedirectStub(fm) || rawHasRedirectTag(raw);
+    if (isStub) {
       console.log(`  ↩️  SKIP redirect stub: ${file}`);
       skipped++;
       continue;
@@ -670,19 +727,20 @@ function main() {
   const vaultFilesNow = vaultDirExists
     ? new Set(fs.readdirSync(VAULT_PEOPLE_DIR))
     : new Set();
-  // Redirect-stub filenames: files whose title marks them as placeholders for a
-  // canonical profile. Any record sourced from one of these is a phantom and
-  // must be purged even though the file itself still exists on disk.
+  // Redirect-stub filenames: files marked as placeholders for a canonical
+  // profile. Any record sourced from one of these is a phantom and must be
+  // purged even though the file itself still exists on disk.
+  // Tag-first detection (shared helper) so the purge set matches the skip set.
   const redirectStubFiles = new Set();
   if (vaultDirExists) {
     for (const f of vaultFilesNow) {
       if (!f.endsWith('.md')) continue;
-      try {
-        const fm = matter(fs.readFileSync(path.join(VAULT_PEOPLE_DIR, f), 'utf-8')).data;
-        if ((fm.title || '').toString().toLowerCase().includes('redirect')) {
-          redirectStubFiles.add(f);
-        }
-      } catch { /* unreadable/tiny stub — ignore */ }
+      const abs = path.join(VAULT_PEOPLE_DIR, f);
+      let raw = '';
+      try { raw = fs.readFileSync(abs, 'utf-8'); } catch { continue; }
+      if (isRedirectStub(readFrontmatter(abs)) || rawHasRedirectTag(raw)) {
+        redirectStubFiles.add(f);
+      }
     }
   }
   const processedFiles = new Set(mdFiles); // files we just parsed & merged
@@ -710,6 +768,55 @@ function main() {
     console.log(`  🧹 Orphan purge: removed ${purged} stale record(s)`);
   } else {
     console.log(`  🧹 Orphan purge: no stale records to remove`);
+  }
+
+  // ── Duplicate-twin purge: one vault file must yield exactly ONE record ──
+  // ROOT CAUSE (tw-2026-09-12-011): when a profile is upgraded in place (a stub
+  // is replaced with a full record, or the disambiguation suffix moves the slug
+  // to `name-year`), the OLD row survives in people.json under its previous slot
+  // and the NEW row is pushed alongside it. Both carry the SAME vault_file, so
+  // one human gets two live pages — e.g. Andrew Telfer.md (1798–1858, deceased)
+  // was published BOTH as /andrew-telfer-living/ (blank, generation 99, marked
+  // living) and /andrew-telfer-1798/. Same for Eva Agnes Farrow.
+  //
+  // A vault file is one person. Merge any group of records sharing a vault_file
+  // into the richest single record, preferring: known birth year > no birth year,
+  // then real generation over the 99 placeholder, then non-living over living.
+  const byVaultFile = new Map();
+  const noVaultFile = [];
+  for (const p of existingPeople) {
+    const vf = (p.vault_file || '').trim();
+    if (!vf) { noVaultFile.push(p); continue; }
+    if (!byVaultFile.has(vf)) byVaultFile.set(vf, []);
+    byVaultFile.get(vf).push(p);
+  }
+  const mergedPeople = [];
+  let twinsKilled = 0;
+  for (const [vf, group] of byVaultFile) {
+    if (group.length === 1) { mergedPeople.push(group[0]); continue; }
+    const scored = [...group].sort((a, b) => {
+      const aBorn = a.birth_year != null ? 1 : 0;
+      const bBorn = b.birth_year != null ? 1 : 0;
+      if (aBorn !== bBorn) return bBorn - aBorn;            // prefer known birth year
+      const aReal = a.generation !== 99 && a.generation != null ? 1 : 0;
+      const bReal = b.generation !== 99 && b.generation != null ? 1 : 0;
+      if (aReal !== bReal) return bReal - aReal;            // prefer a real generation
+      const aDead = a.is_living ? 0 : 1;
+      const bDead = b.is_living ? 0 : 1;
+      if (aDead !== bDead) return bDead - aDead;            // prefer confirmed-deceased
+      return (b.body_markdown || '').length - (a.body_markdown || '').length;
+    });
+    const winner = scored[0];
+    const losers = scored.slice(1);
+    for (const l of losers) {
+      console.log(`  🧹 PURGED duplicate twin: ${l.display_name || l.slug} [${l.slug}] — same vault file as [${winner.slug}] [${vf}]`);
+    }
+    twinsKilled += losers.length;
+    mergedPeople.push(winner);
+  }
+  existingPeople = [...mergedPeople, ...noVaultFile];
+  if (twinsKilled > 0) {
+    console.log(`  🧹 Duplicate-twin purge: removed ${twinsKilled} record(s) that duplicated a vault file`);
   }
 
   // ── Slug disambiguation: detect bare-slug conflicts, append year suffix ──

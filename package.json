@@ -15,7 +15,9 @@
     "self-heal": "node scripts/auto-fix-links.mjs && npm run build",
     "preview": "astro preview",
     "astro": "astro",
-    "regenerate-data": "bash scripts/regenerate-data.sh"
+    "regenerate-data": "bash scripts/regenerate-data.sh",
+    "prebuild": "node scripts/validate-vault-site-parity.mjs --strict",
+    "parity": "node scripts/validate-vault-site-parity.mjs --strict"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
