@@ -136,6 +136,10 @@ const PUBLIC_FIELDS = [
   'last_name',
   'birth_year',
   'death_year',
+  'birth_date',       // full date of birth — SAME rule for living and deceased
+  'death_date',
+  'birth_place',
+  'death_place',
   'birth_year_display',
   'death_year_display',
   'display_name',

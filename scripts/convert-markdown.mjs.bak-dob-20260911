@@ -405,51 +405,6 @@ function main() {
       : deceasedFlag ? false
       : birthYear != null ? (currentYear - birthYear < 120)
       : true;
-    // ── Full date of birth ──────────────────────────────────────────────
-    // SAME RULE for living and deceased: record the full date whenever the
-    // vault has one; fall back to the year when a year is all there is.
-    // Only a date that carries a day AND a month counts as a full date —
-    // a bare year (e.g. "1797") or an approximate ("~1800") is NOT a DOB.
-    const rawBirthDate = fm.birth_date || fm.birth || null;
-    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    const normaliseDate = (v) => {
-      if (v == null) return null;
-
-      // YAML auto-parses `1989-01-17` into a JS Date. Convert back to a
-      // clean ISO day, using LOCAL parts so a UTC shift can't move the day.
-      if (v instanceof Date && !isNaN(v)) {
-        const y = v.getFullYear();
-        const m = String(v.getMonth() + 1).padStart(2, '0');
-        const d = String(v.getDate()).padStart(2, '0');
-        return `${d} ${MONTHS[v.getMonth()]} ${y}`;
-      }
-
-      const str = String(v).trim().replace(/^["']|["']$/g, '');
-      if (!str) return null;
-      // Approximations and bare years are YEARS, not dates of birth.
-      if (/^[~c]\.?\s*/i.test(str) || /^approx/i.test(str)) return null;
-      if (/^\d{4}$/.test(str)) return null;
-      // ISO date (also catches a stringified Date)
-      const ISO = /^(\d{4})-(\d{2})-(\d{2})(?:T|$)/;
-      const mi = str.match(ISO);
-      if (mi) {
-        const y = +mi[1], mo = +mi[2], d = +mi[3];
-        if (mo >= 1 && mo <= 12 && d >= 1 && d <= 31) return `${d} ${MONTHS[mo-1]} ${y}`;
-        return null;
-      }
-      // "D Mon YYYY" / "D Month YYYY"
-      const dm = str.match(/^(\d{1,2})\s+([A-Za-z]+)\.?\s+(\d{4})$/);
-      if (dm) {
-        const d = +dm[1];
-        const idx = MONTHS.findIndex(mn => mn.toLowerCase().startsWith(dm[2].toLowerCase().slice(0,3)));
-        if (idx >= 0 && d >= 1 && d <= 31) return `${d} ${MONTHS[idx]} ${+dm[3]}`;
-      }
-      return null; // anything else is not a full date of birth
-    };
-    const birthDate = normaliseDate(rawBirthDate);
-    const rawDeathDate = fm.death_date || fm.death || null;
-    const deathDate = normaliseDate(rawDeathDate);
-
     const birthYearDisplay = birthYear != null ? (birthApprox ? `~${birthYear}` : String(birthYear)) : '?';
     const deathYearDisplay = deathYear != null ? (deathApprox ? `~${deathYear}` : String(deathYear)) : (isLiving ? 'living' : '?');
     const lifespan = `${birthYearDisplay} – ${deathYearDisplay}`;
@@ -512,10 +467,6 @@ function main() {
       last_name: lastName,
       birth_year: birthYear,
       death_year: deathYear,
-      birth_date: birthDate,
-      death_date: deathDate,
-      birth_place: fm.birth_place ? String(fm.birth_place).trim() : undefined,
-      death_place: fm.death_place ? String(fm.death_place).trim() : undefined,
       birth_year_display: birthYearDisplay,
       death_year_display: deathYearDisplay,
       display_name: displayName,
@@ -592,10 +543,6 @@ function main() {
       existing.last_name = entry.last_name;
       existing.birth_year = entry.birth_year;
       existing.death_year = entry.death_year;
-      existing.birth_date = entry.birth_date;
-      existing.death_date = entry.death_date;
-      existing.birth_place = entry.birth_place;
-      existing.death_place = entry.death_place;
       existing.birth_year_display = entry.birth_year_display;
       existing.death_year_display = entry.death_year_display;
       existing.is_living = entry.is_living;

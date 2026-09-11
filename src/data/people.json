@@ -82,7 +82,9 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-    "generation": 8
+    "generation": 8,
+    "birth_date": "17 January 1989",
+    "death_date": null
   },
   {
     "id": "Adam Dillon",
@@ -125,7 +127,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Adam Francis Telfer",
@@ -233,7 +237,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Adam Murray",
@@ -272,7 +278,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 1
+    "generation": 1,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Adam Telfer",
@@ -344,7 +352,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Adam Telfer",
@@ -424,7 +434,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Adelaide Elsie Pearl Telfer",
@@ -509,7 +521,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Alan Dale Telfer",
@@ -604,7 +618,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Albert George Telfer",
@@ -708,7 +724,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Alberta Grace Lawrie",
@@ -790,7 +808,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Alexander Brown Thomson",
@@ -841,7 +861,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Alexander Lawrie",
@@ -879,7 +901,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Alfred Baker",
@@ -914,7 +938,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": "1 August 1861",
+    "death_date": "1 February 1946",
+    "birth_place": "Peachy Belt, South Australia",
+    "death_place": "Seacliff, South Australia"
   },
   {
     "id": "Alfred George Stribling",
@@ -985,7 +1013,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Allan Telfer",
@@ -1028,7 +1058,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Alma Ida Sporer",
@@ -1092,7 +1124,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": "21 July 1880",
+    "death_date": "24 April 1965"
   },
   {
     "id": "Amy Ellen Telfer",
@@ -1210,7 +1244,9 @@
       }
     ],
     "person_photo": "images/people/francis-charles-amy-telfer-wedding-1909.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Amy Farrow Stribling",
@@ -1285,7 +1321,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Amy Nicole Telfer",
@@ -1361,7 +1399,9 @@
       }
     ],
     "person_photo": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg",
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Andrew Kelly Parker",
@@ -1449,7 +1489,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Andrew Telfer",
@@ -1552,7 +1594,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Ann Taylor",
@@ -1626,7 +1670,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Ann Telfer",
@@ -1669,7 +1715,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Arnold Cuthbert Lawrie",
@@ -1726,7 +1774,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Arthur Clifford Stribling",
@@ -1784,7 +1834,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Avis Muriel Nicholls",
@@ -1863,7 +1915,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Ben Stefanoff",
@@ -1912,7 +1966,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Bertha Telfer",
@@ -2000,7 +2056,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Carissa Telfer",
@@ -2068,7 +2126,9 @@
       }
     ],
     "person_photo": "images/people/Carissa-Telfer.jpg",
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Caroline Amelia Telfer",
@@ -2199,7 +2259,9 @@
       }
     ],
     "person_photo": "images/people/caroline-amelia-telfer-portrait-c1910.jpg",
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Caroline Edna Lawrie",
@@ -2298,7 +2360,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Caroline Hosking",
@@ -2389,7 +2453,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Catherine Leah",
@@ -2440,7 +2506,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Charles Farrow",
@@ -2541,7 +2609,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Clarice May Telfer",
@@ -2631,7 +2701,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Colin Roy Telfer",
@@ -2700,7 +2772,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Crystal Rose McDonald",
@@ -2749,7 +2823,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Daryll William Telfer",
@@ -2824,7 +2900,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "David Parker",
@@ -2911,7 +2989,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Dinah Flavel",
@@ -2972,7 +3052,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Dinah Flavel Paynter",
@@ -3039,7 +3121,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Doris Elma Telfer",
@@ -3129,7 +3213,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Dorothy Dillon",
@@ -3172,7 +3258,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Douglas Telfer",
@@ -3263,7 +3351,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Edith Farrow",
@@ -3306,7 +3396,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Edith Mary Kathleen Telfer",
@@ -3349,7 +3441,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Edward Albert Parker",
@@ -3437,7 +3531,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Edward Telfer",
@@ -3480,7 +3576,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Edwin Ernest Clarke",
@@ -3529,7 +3627,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Edwin Telfer",
@@ -3613,7 +3713,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Effie Olive Telfer",
@@ -3698,7 +3800,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Anne Smith",
@@ -3750,7 +3854,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Beattie",
@@ -3789,7 +3895,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 1
+    "generation": 1,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Beattie",
@@ -3859,7 +3967,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Beattie Telfer",
@@ -3954,7 +4064,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Beattie Telfer",
@@ -4054,7 +4166,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Farrow",
@@ -4097,7 +4211,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Hannah",
@@ -4143,7 +4259,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Hannah Telfer",
@@ -4243,7 +4361,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Hutton Telfer",
@@ -4325,7 +4445,9 @@
       }
     ],
     "person_photo": "images/people/elizabeth-betty-hutton-telfer.jpg",
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Oliver",
@@ -4379,7 +4501,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Parker",
@@ -4461,7 +4585,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Paynter",
@@ -4528,7 +4654,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Telfer",
@@ -4606,7 +4734,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Telfer Farrow Holloway",
@@ -4682,7 +4812,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Telfer Farrow",
@@ -4732,7 +4864,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elspeth Young",
@@ -4791,7 +4925,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 1
+    "generation": 1,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Emeline Couzens",
@@ -4826,7 +4962,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": "29 September 1857",
+    "death_date": "12 March 1949",
+    "birth_place": "Hundred of Port Adelaide, South Australia",
+    "death_place": "Forestville, South Australia"
   },
   {
     "id": "Emily Amelia Telfer",
@@ -4916,7 +5056,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Emily Ellen Thorpe",
@@ -4965,7 +5107,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Eric John Telfer",
@@ -5008,7 +5152,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Ernest Telfer",
@@ -5116,7 +5262,9 @@
       }
     ],
     "person_photo": "images/people/rev-ej-telfer-portrait.png",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Esther Cowan",
@@ -5195,7 +5343,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Esther Farrow Latter",
@@ -5271,7 +5421,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Esther Farrow",
@@ -5314,7 +5466,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Esther Hannah Farrow",
@@ -5357,7 +5511,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Esther Telfer Smith",
@@ -5427,7 +5583,9 @@
       }
     ],
     "person_photo": "images/people/Esther_Kent_nee_Smith_portrait.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Ethel Edith Telfer",
@@ -5494,7 +5652,10 @@
       }
     ],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": "18 January 1937",
+    "death_place": "Mount Gambier, South Australia"
   },
   {
     "id": "Ethel Jean Telfer",
@@ -5584,7 +5745,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Eva Agnes Farrow",
@@ -5660,7 +5823,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Eva Rowena Telfer",
@@ -5758,7 +5923,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Fanny Baker",
@@ -5793,7 +5960,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": "8 June 1863",
+    "death_date": "25 May 1955",
+    "birth_place": "Port Gawler, South Australia",
+    "death_place": "Unley Park, South Australia"
   },
   {
     "id": "Florence Nicholas",
@@ -5860,7 +6031,9 @@
       }
     ],
     "person_photo": "images/people/Mrs-E-J-Telfer.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Floris Telfer",
@@ -5955,7 +6128,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Francis Adam Telfer",
@@ -6057,7 +6232,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Francis Charles Telfer",
@@ -6177,7 +6354,9 @@
       }
     ],
     "person_photo": "images/people/francis-charles-amy-telfer-wedding-1909.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Francis Telfer",
@@ -6261,7 +6440,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Francis Telfer",
@@ -6333,7 +6514,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Francis Telfer",
@@ -6497,7 +6680,9 @@
       }
     ],
     "person_photo": "images/people/francis-telfer-headshot.jpg",
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Francis Telfer Dillon",
@@ -6559,7 +6744,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Francis Telfer Paynter",
@@ -6620,7 +6807,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Francis Telfer Smith",
@@ -6690,7 +6879,9 @@
       }
     ],
     "person_photo": "images/people/Francis_Telfer_Smith_and_wife_Ellie_Valentine_nee_Forbes_portrait.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Frank Lindsay",
@@ -6749,7 +6940,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Frederick Parker",
@@ -6811,7 +7004,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "George Hope Farrow",
@@ -6884,7 +7079,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "George Parker",
@@ -6933,7 +7130,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "George Provis",
@@ -6982,7 +7181,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "George Sidney Gilbert Stribling",
@@ -7033,7 +7234,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "George Telfer",
@@ -7124,7 +7327,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Gladys Merle Telfer",
@@ -7214,7 +7419,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Grantley Keith Telfer",
@@ -7301,7 +7508,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Hannah Baker",
@@ -7393,7 +7602,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Harry Bunston",
@@ -7442,7 +7653,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Hazel Rose Telfer",
@@ -7535,7 +7748,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Helen Telfer",
@@ -7578,7 +7793,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Henry Hatch Dillon",
@@ -7645,7 +7862,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Herbert Dougal Telfer",
@@ -7730,7 +7949,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Howard Lindsay Parker",
@@ -7814,7 +8035,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Hugh John",
@@ -7865,7 +8088,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Hugh Kelly Parker",
@@ -7927,7 +8152,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Inez Dillon",
@@ -7968,7 +8195,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Inez Priscilla Dillon",
@@ -8009,7 +8238,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Isabella Kelly",
@@ -8071,7 +8302,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Isabella Lucieton Telfer",
@@ -8172,7 +8405,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Isabella Mabel Parker Carne",
@@ -8261,7 +8496,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Isobel Telfer",
@@ -8341,7 +8578,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Baker",
@@ -8376,7 +8615,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": "12 August 1859",
+    "death_date": "14 August 1927",
+    "birth_place": "Port Gawler, South Australia",
+    "death_place": "Virginia, South Australia"
   },
   {
     "id": "James Farrow",
@@ -8419,7 +8662,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Robert Telfer",
@@ -8496,7 +8741,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer",
@@ -8610,7 +8857,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer",
@@ -8701,7 +8950,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer",
@@ -8792,7 +9043,9 @@
       }
     ],
     "person_photo": "images/people/james-telfer-1828-1913-portrait.jpg",
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer",
@@ -8863,7 +9116,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer",
@@ -8949,7 +9204,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer",
@@ -9013,7 +9270,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer (of Sorbietrees)",
@@ -9081,7 +9340,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 1
+    "generation": 1,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer Dillon",
@@ -9153,7 +9414,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jane Murray Farrow",
@@ -9248,7 +9511,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jane Sophie Smith",
@@ -9333,7 +9598,9 @@
       }
     ],
     "person_photo": "images/people/Jane_Sophie_Harper_nee_Smith_portrait.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Janet Dunlop",
@@ -9407,7 +9674,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Janet Nichol",
@@ -9465,7 +9734,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Janet Stevenson",
@@ -9516,7 +9787,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Janet Welsh",
@@ -9574,7 +9847,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jared Mitchell Ivory",
@@ -9663,7 +9938,9 @@
       }
     ],
     "person_photo": "images/people/Jared-Ivory---Kelly-Partners.jpg",
-    "generation": 8
+    "generation": 8,
+    "birth_date": "01 April 1993",
+    "death_date": null
   },
   {
     "id": "Jean Telfer",
@@ -9741,7 +10018,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jean Murray",
@@ -9827,7 +10106,9 @@
       }
     ],
     "person_photo": "images/people/eskdalemuir-chapel-francis-telfer-baptism.jpg",
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jean Telfer",
@@ -9899,7 +10180,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jean Telfer",
@@ -9998,7 +10281,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jenet Telfer",
@@ -10070,7 +10355,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jennifer Bunston",
@@ -10113,7 +10400,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jessie Allan",
@@ -10162,7 +10451,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jessie Telfer",
@@ -10205,7 +10496,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Joel Matthew Ivory",
@@ -10282,7 +10575,9 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-    "generation": 8
+    "generation": 8,
+    "birth_date": "07 December 1986",
+    "death_date": null
   },
   {
     "id": "John Charles Dillon",
@@ -10350,7 +10645,9 @@
       }
     ],
     "person_photo": "images/people/john-charles-dillon-photo1.png",
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Telfer",
@@ -10427,7 +10724,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John James Smith",
@@ -10484,7 +10783,9 @@
       }
     ],
     "person_photo": "images/people/John_James_Smith_and_cousin_Lillian_May_Telfer.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John James Telfer Farrow",
@@ -10550,7 +10851,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Lawrie",
@@ -10630,7 +10933,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Murray",
@@ -10714,7 +11019,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Robert Telfer",
@@ -10811,7 +11118,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Roland Telfer",
@@ -10895,7 +11204,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Smith",
@@ -10967,7 +11278,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Telfer",
@@ -11047,7 +11360,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Telfer",
@@ -11161,7 +11476,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Telfer",
@@ -11262,7 +11579,9 @@
       }
     ],
     "person_photo": "images/people/telfer-family-reunion-c1920.jpg",
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Telfer (of Castleton)",
@@ -11321,7 +11640,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 1
+    "generation": 1,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Johnnie Telfer",
@@ -11364,7 +11685,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jono Telfer",
@@ -11431,7 +11754,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Joseph Farrow",
@@ -11492,7 +11817,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Joseph Francis Farrow",
@@ -11535,7 +11862,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Joseph March",
@@ -11595,7 +11924,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null,
+    "birth_place": "Aylsham, Norfolk, England",
+    "death_place": "Aylsham, Norfolk, England"
   },
   {
     "id": "Joseph March",
@@ -11635,7 +11968,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": "30 October 1883",
+    "birth_place": "Aylsham, Norfolk, England",
+    "death_place": "Prospect, South Australia"
   },
   {
     "id": "Joyce Telfer",
@@ -11713,7 +12050,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Julia Matilda Seebohm",
@@ -11814,7 +12153,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Karina Ivory",
@@ -11863,7 +12204,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Kathryn Mavis Telfer",
@@ -11925,7 +12268,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Kenneth Cornish",
@@ -11974,7 +12319,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Kristin Stefanoff",
@@ -12050,7 +12397,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Kylie Isabella Telfer",
@@ -12134,7 +12483,9 @@
       }
     ],
     "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Lauren Maree Ivory",
@@ -12211,7 +12562,9 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-    "generation": 8
+    "generation": 8,
+    "birth_date": "25 February 1994",
+    "death_date": null
   },
   {
     "id": "Leonard Arthur Dance",
@@ -12279,7 +12632,9 @@
       }
     ],
     "person_photo": "images/people/Sandra_Smith_and_Leonard_Dance_wedding_clipping_1974.jpg",
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Leslie Robert Telfer",
@@ -12337,7 +12692,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Levi Leonard Timothy Telfer",
@@ -12406,7 +12763,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 9
+    "generation": 9,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Lilian Daisy Dawson",
@@ -12455,7 +12814,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Lilian Jean Parker",
@@ -12490,7 +12851,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Lillian May Telfer",
@@ -12582,7 +12945,9 @@
       }
     ],
     "person_photo": "images/people/John_James_Smith_and_cousin_Lillian_May_Telfer.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Lindsay Telfer",
@@ -12660,7 +13025,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Lucy Agnes Parker",
@@ -12742,7 +13109,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mabel Winifred Parker",
@@ -12824,7 +13193,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Maifie Telfer",
@@ -12902,7 +13273,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Malcolm Duncan Cameron",
@@ -12953,7 +13326,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Malcolm Murray Cameron",
@@ -12998,7 +13373,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Margaret Armstrong",
@@ -13066,7 +13443,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 1
+    "generation": 1,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Margaret Dougal Smith",
@@ -13169,7 +13548,9 @@
       }
     ],
     "person_photo": "images/people/Margaret_Dougal_Smith_portrait.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Margaret Dougal Telfer",
@@ -13268,7 +13649,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Margaret Farrow",
@@ -13311,7 +13694,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Margaret Wright Telfer",
@@ -13395,7 +13780,9 @@
       }
     ],
     "person_photo": "images/people/margaret-telfer-headshot.jpg",
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Maria Clara Telfer",
@@ -13478,7 +13865,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Marian Telfer Cornish",
@@ -13573,7 +13962,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Marion Vida",
@@ -13624,7 +14015,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mark Kenneth Telfer",
@@ -13726,7 +14119,9 @@
       }
     ],
     "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mark Telfer",
@@ -13842,7 +14237,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Martha Allen",
@@ -13906,7 +14303,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Martha Henstridge",
@@ -13972,7 +14371,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Martha Telfer Cameron",
@@ -14061,7 +14462,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mary Anne McIntyre",
@@ -14118,7 +14521,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mary Jane Paynter",
@@ -14197,7 +14602,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "May Foy",
@@ -14246,7 +14653,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mina Evelyn Parker",
@@ -14328,7 +14737,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mitchell Telfer",
@@ -14403,7 +14814,9 @@
       }
     ],
     "person_photo": "images/people/Mitchell-Telfer---16th-Birthday.jpg",
-    "generation": 9
+    "generation": 9,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Murray John Telfer",
@@ -14516,7 +14929,9 @@
       }
     ],
     "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg",
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Nick Telfer",
@@ -14584,7 +14999,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Paul Ivory",
@@ -14656,7 +15073,9 @@
       }
     ],
     "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Penny Telfer",
@@ -14734,7 +15153,9 @@
       }
     ],
     "person_photo": "images/people/Penny_Virgen_age14_Clontarf_High_School.jpg",
-    "generation": 9
+    "generation": 9,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Peter Farrow",
@@ -14777,7 +15198,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Peter Telfer",
@@ -14847,7 +15270,9 @@
       }
     ],
     "person_photo": "images/people/Peter-Telfer.jpg",
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Phineas Baker",
@@ -14882,7 +15307,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": "11 November 1870",
+    "death_date": "17 February 1959",
+    "birth_place": "Virginia, South Australia",
+    "death_place": "Virginia, South Australia"
   },
   {
     "id": "Ralph Drummond",
@@ -14920,7 +15349,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Haining",
@@ -14958,7 +15389,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Richard Paynter",
@@ -15036,7 +15469,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Richard Paynter (of Calstock)",
@@ -15085,7 +15520,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Agnew",
@@ -15134,7 +15571,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Dunlop Lawrie",
@@ -15227,7 +15666,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Dunlop",
@@ -15276,7 +15717,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Farrow",
@@ -15319,7 +15762,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Freddy Telfer",
@@ -15410,7 +15855,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Telfer",
@@ -15508,7 +15955,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robina Telfer",
@@ -15551,7 +16000,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robyn Telfer",
@@ -15603,7 +16054,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Ruth Penna",
@@ -15660,7 +16113,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Ruth Telfer",
@@ -15750,7 +16205,9 @@
       }
     ],
     "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg",
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Sandra Lee Smith",
@@ -15818,7 +16275,9 @@
       }
     ],
     "person_photo": "images/people/Sandra_Smith_and_Leonard_Dance_wedding_clipping_1974.jpg",
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Sarah Farrow",
@@ -15861,7 +16320,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Sarah Jacobs",
@@ -15921,7 +16382,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 2
+    "generation": 2,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Septimus Dillon",
@@ -15988,7 +16451,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Sheryle Telfer",
@@ -16072,7 +16537,9 @@
       }
     ],
     "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
-    "generation": 7
+    "generation": 7,
+    "birth_date": "25 November 1961",
+    "death_date": null
   },
   {
     "id": "Shirley Edna Telfer",
@@ -16166,7 +16633,9 @@
       }
     ],
     "person_photo": "images/people/Shirley-Telfer---Portrait.jpg",
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Sophia March",
@@ -16203,7 +16672,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": "18 June 1803",
+    "death_date": "6 October 1892",
+    "birth_place": "Tuttington, Norfolk, England",
+    "death_place": "Prospect, South Australia"
   },
   {
     "id": "Sophia Baker",
@@ -16242,7 +16715,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": "29 November 1829",
+    "death_date": "1 December 1901",
+    "birth_place": "Aylsham, Norfolk, England",
+    "death_place": "Hyde Park, South Australia"
   },
   {
     "id": "Sophia Harriett Ridgway",
@@ -16277,7 +16754,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": "10 August 1868",
+    "death_date": "13 August 1956",
+    "birth_place": "Port Gawler, South Australia",
+    "death_place": "Murray Bridge, South Australia"
   },
   {
     "id": "Sophia Parker Lawrie",
@@ -16368,7 +16849,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Sophia Parker",
@@ -16404,7 +16887,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Sophia Webster",
@@ -16442,7 +16927,10 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null,
+    "birth_place": "Norfolk, England"
   },
   {
     "id": "Stella Winifred Parker",
@@ -16524,7 +17012,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Susan Burton Telfer",
@@ -16582,7 +17072,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Susan Lawrie",
@@ -16664,7 +17156,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Susan Telfer",
@@ -16742,7 +17236,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Sydney Hugh Parker",
@@ -16784,7 +17280,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Thelma Ellen Parker",
@@ -16847,7 +17345,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Thomas Cleveland Dillon",
@@ -16888,7 +17388,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Thomas Paynter",
@@ -16959,7 +17461,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Timothy Neil Telfer",
@@ -17065,7 +17569,9 @@
       }
     ],
     "person_photo": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Vera Dillon",
@@ -17106,7 +17612,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Vernon Ray St. Clair Telfer",
@@ -17191,7 +17699,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Vida Telfer",
@@ -17248,7 +17758,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Violet Hope Telfer",
@@ -17333,7 +17845,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Walter Baker",
@@ -17368,7 +17882,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": "1 February 1865",
+    "death_date": "9 April 1937",
+    "birth_place": "Port Gawler, South Australia",
+    "death_place": "Manly, New South Wales"
   },
   {
     "id": "Walter Telfer",
@@ -17446,7 +17964,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Wilhelm Seebohm",
@@ -17510,7 +18030,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Baker",
@@ -17545,7 +18067,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": "17 December 1853",
+    "death_date": "18 October 1933",
+    "birth_place": "Port Gawler (Gawler Plains), South Australia",
+    "death_place": "College Park, South Australia"
   },
   {
     "id": "William Farrow",
@@ -17588,7 +18114,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Henry Parker",
@@ -17696,7 +18224,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Humphrey Parker",
@@ -17792,7 +18322,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Humphrey Parker",
@@ -17871,7 +18403,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 8
+    "generation": 8,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William James Telfer",
@@ -17950,7 +18484,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William John Baker",
@@ -17988,7 +18524,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": "14 April 1831",
+    "death_date": "3 June 1919",
+    "birth_place": "Bickleigh, Devon, England",
+    "death_place": "Hyde Park, Unley, South Australia"
   },
   {
     "id": "William John Dillon",
@@ -18033,7 +18573,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Telfer",
@@ -18116,7 +18658,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Telfer",
@@ -18196,7 +18740,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Telfer",
@@ -18253,7 +18799,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Zabella Violet Zelda Telfer",
@@ -18322,7 +18870,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 9
+    "generation": 9,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Charles Masters",
@@ -18405,7 +18955,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Martha Masters",
@@ -18488,7 +19040,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Emma Jane Masters",
@@ -18582,7 +19136,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Frederick Charles Masters",
@@ -18670,7 +19226,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "George Edward Masters",
@@ -18758,7 +19316,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "George Masters",
@@ -18846,7 +19406,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Masters",
@@ -18934,7 +19496,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Jemima Williams Masters",
@@ -19022,7 +19586,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Joseph Masters",
@@ -19110,7 +19676,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Joseph Robert Masters",
@@ -19198,7 +19766,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mary Ellen Masters",
@@ -19286,7 +19856,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Williams Masters",
@@ -19374,7 +19946,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Charles Frederick Masters",
@@ -19462,7 +20036,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Martha Ann Masters",
@@ -19550,7 +20126,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "slug": "beatrice-telfer-1877",
@@ -19619,7 +20197,9 @@
     ],
     "images": [],
     "generation": 5,
-    "person_photo": null
+    "person_photo": null,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "slug": "beatrice-telfer-1911",
@@ -19691,7 +20271,9 @@
     "images": [],
     "generation": 6,
     "roles": [],
-    "person_photo": null
+    "person_photo": null,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "slug": "douglas-telfer-1913",
@@ -19763,7 +20345,9 @@
     "images": [],
     "generation": 6,
     "roles": [],
-    "person_photo": null
+    "person_photo": null,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "slug": "murray-telfer-1920",
@@ -19835,7 +20419,9 @@
     "images": [],
     "generation": 6,
     "roles": [],
-    "person_photo": null
+    "person_photo": null,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Melville Bruce Telfer",
@@ -19907,7 +20493,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Rita Joyce Telfer",
@@ -19979,7 +20567,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Alick Ralph Telfer",
@@ -20051,7 +20641,9 @@
       "murray-telfer-1920",
       "rita-telfer"
     ],
-    "spouses": []
+    "spouses": [],
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Edwin Telfer",
@@ -20129,7 +20721,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Alexander Alcorn",
@@ -20187,7 +20781,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Leslie Frank Dillon",
@@ -20231,7 +20827,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Leslie James Dillon",
@@ -20292,7 +20890,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Koppio Telfer",
@@ -20360,7 +20960,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Trevor Andrew Thomson",
@@ -20426,7 +21028,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Colin Lindsay Beaton",
@@ -20494,7 +21098,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "David Mark Kenneth Telfer-Merrick",
@@ -20564,7 +21170,9 @@
       }
     ],
     "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
-    "generation": 10
+    "generation": 10,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Telfer",
@@ -20653,7 +21261,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Colin Louis Paynter",
@@ -20706,7 +21316,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Ralph Paynter",
@@ -20759,7 +21371,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Clara Blanche Telfer",
@@ -20857,7 +21471,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Watson",
@@ -20921,7 +21537,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Joseph Watson",
@@ -20978,7 +21596,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Lancelot Hobart Watson",
@@ -21035,7 +21655,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Richard Lancelot Watson",
@@ -21088,7 +21710,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Charles Telfer",
@@ -21184,7 +21808,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Kenneth Gregory Virgen",
@@ -21242,7 +21868,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": "04 May 2003"
   },
   {
     "id": "Noela Pauline Virgen",
@@ -21300,7 +21928,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": "17 September 2015"
   },
   {
     "id": "Elva May Southwood",
@@ -21370,7 +22000,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Janet Welsh Telfer",
@@ -21446,7 +22078,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Robert Telfer Dillon",
@@ -21558,7 +22192,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Hugh Parker",
@@ -21625,7 +22261,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Hugh Parker",
@@ -21692,7 +22330,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Telfer (shepherd)",
@@ -21756,7 +22396,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Agnes Paynter",
@@ -21817,7 +22459,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Elizabeth Liebich",
@@ -21878,7 +22522,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "George Hucks",
@@ -21945,7 +22591,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Olive Mary Lillecrapp",
@@ -22010,7 +22658,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Rose Isabel Margaret Paynter (Rankin)",
@@ -22058,7 +22708,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "John Hobart Watson",
@@ -22111,7 +22763,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Margaret Wright Telfer",
@@ -22198,7 +22852,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Alfred Edward Lillecrapp",
@@ -22269,7 +22925,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Margaret Telfer",
@@ -22349,7 +23007,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Hannah Peacock",
@@ -22409,7 +23069,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Telfer",
@@ -22495,7 +23157,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Frances Margaret Oswald",
@@ -22566,7 +23230,9 @@
       }
     ],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Herbert Clifford Holloway",
@@ -22623,7 +23289,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "William Francis Telfer",
@@ -22688,7 +23356,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Charlotte Beven",
@@ -22749,7 +23419,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Emma Turner",
@@ -22801,7 +23473,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Gwinfred Hucks",
@@ -22856,7 +23530,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Beatrice Mary Murray",
@@ -22928,7 +23604,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": "8 September 1919",
+    "death_date": "25 March 2006",
+    "birth_place": "Teatree Gully, South Australia",
+    "death_place": "South Australia"
   },
   {
     "id": "Mary Ann Dillon",
@@ -23019,7 +23699,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": "21 May 1887",
+    "death_date": "5 September 1954",
+    "birth_place": "Blyth, South Australia (Find A Grave date; birthplace single-source)",
+    "death_place": "Teatree Gully, South Australia"
   },
   {
     "id": "Gwendoline Victoria Telfer",
@@ -23081,7 +23765,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": "20 April 1910",
+    "death_date": "18 September 1966",
+    "birth_place": "Millicent, South Australia",
+    "death_place": "Millicent, South Australia"
   },
   {
     "id": "Jessie Kathleen Telfer",
@@ -23137,7 +23825,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": "26 July 1914",
+    "death_date": "26 June 1954",
+    "birth_place": "Adelaide, South Australia",
+    "death_place": "South Australia"
   },
   {
     "id": "Kenneth Telfer",
@@ -23222,7 +23914,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Reginald Masters Telfer",
@@ -23322,7 +24016,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Lesley Thomas Telfer",
@@ -23391,7 +24087,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Clara Ann Millicent Telfer",
@@ -23451,7 +24149,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": "1 September 1878",
+    "death_date": "24 May 1966",
+    "birth_place": "Millicent, South Australia",
+    "death_place": "Mount Gambier, South Australia"
   },
   {
     "id": "Charles Farrow Jr",
@@ -23524,7 +24226,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Andrew Telfer",
@@ -23606,7 +24310,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 3,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Norman Thomas Patten",
@@ -23662,7 +24368,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": "25 July 1917",
+    "death_date": "1 March 1942",
+    "birth_place": "Houghton, South Australia",
+    "death_place": "Sunda Strait, Netherlands East Indies (KIA)"
   },
   {
     "id": "Gilbert Telfer",
@@ -23760,7 +24470,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Gordon Steele",
@@ -23831,7 +24543,11 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": "02 June 1892",
+    "death_date": "03 August 1951",
+    "birth_place": "Mount Gambier, South Australia",
+    "death_place": "Mount Gambier, South Australia"
   },
   {
     "id": "Beth Telfer",
@@ -23892,7 +24608,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": "10 April 1946",
+    "death_date": null
   },
   {
     "id": "Ian Telfer",
@@ -23953,7 +24671,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 7,
+    "birth_date": "02 November 1947",
+    "death_date": null
   },
   {
     "id": "John Lindsay Cameron",
@@ -24022,7 +24742,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Allen Merrick",
@@ -24096,7 +24818,9 @@
       }
     ],
     "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
-    "generation": 99
+    "generation": 99,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Esther Jane Telfer",
@@ -24211,7 +24935,9 @@
       }
     ],
     "person_photo": "images/people/Esther_Jane_Smith_nee_Telfer_portrait.jpg",
-    "generation": 4
+    "generation": 4,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "James Edgerston Telfer",
@@ -24297,7 +25023,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Ivan Frank Lillecrapp",
@@ -24379,7 +25107,9 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 6,
+    "birth_date": null,
+    "death_date": null
   },
   {
     "id": "Mary Bayes Farrow",
@@ -24472,6 +25202,8 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 5,
+    "birth_date": null,
+    "death_date": null
   }
 ]
