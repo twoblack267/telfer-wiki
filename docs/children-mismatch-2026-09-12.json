@@ -1,0 +1,1555 @@
+{
+ "generated": "2026-09-12",
+ "count": 96,
+ "note": "frontmatter children: vs relationships Children: vs prose table. Reported by Skippy. NO vault edits made.",
+ "profiles": [
+  {
+   "name": "Adam Francis Telfer",
+   "vault_file": "Adam Francis Telfer (1842–1925).md",
+   "children_field": 11,
+   "relationships_children": 12,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Adelaide Elsie Pearl Telfer (1889–1976)",
+    "Effie Olive Telfer (1886–1969)",
+    "Eva Rowena Telfer (1885–1974)",
+    "Francis Adam Telfer (1875–1955)",
+    "Hazel Rose Telfer (1891–1939)",
+    "Herbert Dougal Telfer (1881–1976)",
+    "James Edgerston Telfer (1877–1959)",
+    "Lillian May Telfer (1872–1951)",
+    "Margaret Wright Telfer (1869–1890)",
+    "Vernon Ray St. Clair Telfer (1879–1960)",
+    "Violet Hope Telfer (1883–1967)"
+   ],
+   "relationships_names": [
+    "Margaret Wright Telfer (1869–1890)",
+    "Elizabeth Beattie Bessie Telfer (1871–1948)",
+    "Lillian May Telfer (1872–1951)",
+    "Francis Adam Telfer (1875–1955)",
+    "James Edgerston Telfer (1877–1959)",
+    "Vernon Ray St. Clair Telfer (1879–1960)",
+    "Herbert Dougal Telfer (1881–1976)",
+    "Violet Hope Telfer (1883–1967)",
+    "Eva Rowena Telfer (1885–1974)",
+    "Effie Olive Telfer (1886–1969)",
+    "Adelaide Elsie Pearl Telfer (1889–1976)",
+    "Hazel Rose Telfer (1891–1939)"
+   ]
+  },
+  {
+   "name": "Albert George Telfer",
+   "vault_file": "Albert George Telfer (1881–1970).md",
+   "children_field": 0,
+   "relationships_children": 6,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Rita Joyce Telfer (1909–1990)",
+    "Beatrice Sylvia Telfer (1911–1999)",
+    "Douglas Ivan Telfer (1913–1993)",
+    "Melville Bruce Telfer (1914–1997)",
+    "John Alick Ralph Telfer",
+    "Murray Keith Telfer (1920–2005)"
+   ]
+  },
+  {
+   "name": "Alfred George Stribling",
+   "vault_file": "Alfred George Stribling (c.1853–1928).md",
+   "children_field": 3,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Arthur Clifford Stribling (1890–1918)",
+    "Lindsay Ellis Stribling (1893–1979)",
+    "George Charles Stribling (1898–1988)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Alma Ida Sporer",
+   "vault_file": "Alma Ida Sporer.md",
+   "children_field": 1,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Vida Templer (1919–2021)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Amy Farrow Stribling",
+   "vault_file": "Amy Farrow Stribling (1868–1945).md",
+   "children_field": 3,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Annabel Doris Stribling",
+    "Sydney Glenroy Stribling",
+    "Frank Hope Stribling"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Andrew Kelly Parker",
+   "vault_file": "Andrew Kelly Parker (1883–1952).md",
+   "children_field": 0,
+   "relationships_children": 0,
+   "prose_table_rows": 9,
+   "children_field_names": [],
+   "relationships_names": []
+  },
+  {
+   "name": "Andrew Telfer",
+   "vault_file": "Andrew Telfer.md",
+   "children_field": 0,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "William Telfer (1847–?)",
+    "Mary (Telfer) Bowden",
+    "Andrew Telfer",
+    "Elizabeth (Telfer) Bolton"
+   ]
+  },
+  {
+   "name": "Ann Taylor",
+   "vault_file": "Ann Taylor (~1856–?).md",
+   "children_field": 0,
+   "relationships_children": 9,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Ann Telfer",
+    "Johnnie Telfer",
+    "Peter Telfer",
+    "Adam Telfer",
+    "Robina Telfer",
+    "Margaret Telfer",
+    "William Telfer",
+    "James Telfer",
+    "Jessie Telfer"
+   ]
+  },
+  {
+   "name": "Caroline Amelia Telfer",
+   "vault_file": "Caroline Amelia Telfer (1842–1929).md",
+   "children_field": 5,
+   "relationships_children": 8,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Albert George Telfer (1881–1970)",
+    "Edwin Gilbert Telfer (1887–1958)",
+    "Ernest John Telfer (1878–1953)",
+    "Walter William Telfer (1884–1966)",
+    "William James Telfer (1880–1880)"
+   ],
+   "relationships_names": [
+    "Francis Charles Telfer (1875–1954)",
+    "John Ernest Telfer (1877–1877)",
+    "Ernest John Telfer (1878–1953)",
+    "William James Telfer",
+    "Albert George Telfer",
+    "Walter William Telfer",
+    "Edwin Gilbert Telfer",
+    "Bertha Telfer (adopted)"
+   ]
+  },
+  {
+   "name": "Caroline Edna Lawrie",
+   "vault_file": "Caroline Edna Lawrie (1890–1957).md",
+   "children_field": 3,
+   "relationships_children": 5,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Avis Muriel Parker Nicholls (1918–2009)",
+    "Howard Lindsay Parker (1920–2003)",
+    "William Humphrey Parker (1926–1976)"
+   ],
+   "relationships_names": [
+    "Shirley Edna Parker",
+    "Sydney Hugh Parker",
+    "William Humphrey Parker",
+    "Avis Muriel Parker Nicholls (1918–2009)",
+    "Howard Lindsay Parker (1920–2003)"
+   ]
+  },
+  {
+   "name": "Caroline Hosking",
+   "vault_file": "Caroline Hosking (1851–1920).md",
+   "children_field": 1,
+   "relationships_children": 8,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Caroline Edna Lawrie (1890–1957)"
+   ],
+   "relationships_names": [
+    "Catherine Leah",
+    "Janet Stevenson",
+    "Alberta Grace",
+    "Hugh John",
+    "Frank Lindsay",
+    "Jeanette",
+    "Marion Vida",
+    "Caroline Edna Lawrie (1890–1957)"
+   ]
+  },
+  {
+   "name": "Charles Farrow",
+   "vault_file": "Charles Farrow (~1836–1884).md",
+   "children_field": 0,
+   "relationships_children": 15,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Jane Murray Farrow (1857–1934)",
+    "Peter Farrow",
+    "John Farrow",
+    "Charles Farrow Jr",
+    "Esther Hannah Farrow",
+    "Elizabeth Farrow",
+    "Margaret Farrow",
+    "Sarah Farrow",
+    "Edith Farrow",
+    "James Farrow",
+    "Robert Farrow",
+    "William Farrow",
+    "Eva Agnes Farrow",
+    "George Hope Farrow (1872–1919)",
+    "Mary Bayes Farrow (1875–1938)"
+   ]
+  },
+  {
+   "name": "David Parker",
+   "vault_file": "David Parker (1822–1888).md",
+   "children_field": 1,
+   "relationships_children": 12,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "William Humphrey Parker (1850–1926)"
+   ],
+   "relationships_names": [
+    "Christian Parker",
+    "William Humphrey Parker (1850–1926)",
+    "Henry Kelly Parker",
+    "Hugh Parker (1859–1861)",
+    "Agnes Parker",
+    "David Parker",
+    "Margaret Parker",
+    "Hugh Parker (1864–1891)",
+    "James Parker",
+    "Jeanie Humphrey Parker",
+    "Charlotte Stoddart Parker",
+    "John Albert Parker"
+   ]
+  },
+  {
+   "name": "Dinah Flavel",
+   "vault_file": "Dinah Flavel (1821–1844).md",
+   "children_field": 0,
+   "relationships_children": 1,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Jean Telfer"
+   ]
+  },
+  {
+   "name": "Edward Albert Parker",
+   "vault_file": "Edward Albert Parker (1888–1939).md",
+   "children_field": 0,
+   "relationships_children": 0,
+   "prose_table_rows": 6,
+   "children_field_names": [],
+   "relationships_names": []
+  },
+  {
+   "name": "Elizabeth Beattie",
+   "vault_file": "Elizabeth Beattie (1802–1891).md",
+   "children_field": 5,
+   "relationships_children": 7,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Adam Francis Telfer (1842–1925)",
+    "Elizabeth Beattie Telfer (1832–1896)",
+    "James Telfer (1829–1913)",
+    "John Telfer (1840–1913)",
+    "Robert Telfer (1835–1907)"
+   ],
+   "relationships_names": [
+    "James Telfer (1829–1913)",
+    "Elizabeth Beattie Telfer (1832–1896)",
+    "Robert Telfer (1835–1907)",
+    "John Telfer (1840–1913)",
+    "Adam Francis Telfer (1842–1925)",
+    "Margaret Telfer",
+    "Mary Telfer"
+   ]
+  },
+  {
+   "name": "Elizabeth Beattie Telfer",
+   "vault_file": "Elizabeth Beattie Telfer (1832–1896).md",
+   "children_field": 0,
+   "relationships_children": 7,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "William John Dillon",
+    "Septimus Dillon",
+    "Francis Telfer Dillon",
+    "Adam Dillon",
+    "Henry Hatch Dillon",
+    "Dorothy Dillon",
+    "James Telfer Dillon (1861–1951)"
+   ]
+  },
+  {
+   "name": "Elizabeth Hannah Telfer",
+   "vault_file": "Elizabeth Hannah Telfer (1836–1916).md",
+   "children_field": 0,
+   "relationships_children": 10,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Jane Murray Farrow",
+    "Esther Farrow",
+    "Elizabeth Telfer Farrow",
+    "Joseph Francis Farrow",
+    "Charles Farrow Jr",
+    "Amy Farrow",
+    "John James Telfer Farrow",
+    "George Hope Farrow",
+    "Mary Bayes Farrow",
+    "Eva Agnes Farrow"
+   ]
+  },
+  {
+   "name": "Ernest Telfer",
+   "vault_file": "Ernest John Telfer (1878–1953).md",
+   "children_field": 0,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "John Ernest Telfer",
+    "Jessica Veronica Telfer",
+    "Lloyd Wilbur Telfer",
+    "Gweneth Miranda Telfer"
+   ]
+  },
+  {
+   "name": "Esther Cowan",
+   "vault_file": "Esther Cowan (1783–1856).md",
+   "children_field": 0,
+   "relationships_children": 10,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "James",
+    "Janet",
+    "Jean",
+    "Adam",
+    "John",
+    "Pultney Malcolm",
+    "William",
+    "George",
+    "Elisabeth",
+    "Nancy"
+   ]
+  },
+  {
+   "name": "Eva Agnes Farrow",
+   "vault_file": "Eva Agnes Farrow.md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Laurel Mary Hookings",
+    "Donald Jack Hookings (1916–1943)"
+   ]
+  },
+  {
+   "name": "Eva Rowena Telfer",
+   "vault_file": "Eva Rowena Telfer (1885–1974).md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Ernest Richard \"Bob\" Easter",
+    "Marjorie Joyce \"Joyce\" Easter"
+   ]
+  },
+  {
+   "name": "Florence Nicholas",
+   "vault_file": "Florence Nicholas Telfer.md",
+   "children_field": 0,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "John Ernest Telfer",
+    "Jessica Veronica Telfer",
+    "Lloyd Wilbur Telfer",
+    "Gweneth Miranda Telfer"
+   ]
+  },
+  {
+   "name": "Francis Adam Telfer",
+   "vault_file": "Francis Adam Telfer (1875–1955).md",
+   "children_field": 0,
+   "relationships_children": 5,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Ronald Edgerston Telfer",
+    "Millicent Joyce Telfer",
+    "Dorothy Margaret Hope Telfer",
+    "Gordon Francis Telfer",
+    "Estelle May Telfer"
+   ]
+  },
+  {
+   "name": "Francis Telfer",
+   "vault_file": "Francis Telfer (1809–1895).md",
+   "children_field": 6,
+   "relationships_children": 9,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Elizabeth Hannah Telfer (1836–1916)",
+    "Esther Jane Telfer (1834–1909)",
+    "George Wright Telfer (1850–1913)",
+    "James Telfer (1832–1845)",
+    "Jean Telfer (1840–1892)",
+    "Margaret Dougal Telfer (1849–1936)"
+   ],
+   "relationships_names": [
+    "James Telfer (1832–?)",
+    "Esther Jane Telfer (1834–1909)",
+    "Elizabeth Hannah Telfer (1836–1916)",
+    "Jean Telfer (1840–?)",
+    "John Telfer (1847–1929)",
+    "Margaret Dougal Telfer (1849–1936)",
+    "George Wright Telfer (1850–1913)",
+    "James Telfer (1832–1845)",
+    "Jean Telfer (1840–1892)"
+   ]
+  },
+  {
+   "name": "George Sidney Gilbert Stribling",
+   "vault_file": "George Sidney Gilbert Stribling (1864–1901).md",
+   "children_field": 3,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Annabel Doris Stribling",
+    "Sydney Glenroy Stribling",
+    "Frank Hope Stribling"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Grantley Keith Telfer",
+   "vault_file": "Grantley Keith Telfer.md",
+   "children_field": 2,
+   "relationships_children": 3,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Kristin Stefanoff",
+    "Nick Telfer"
+   ],
+   "relationships_names": [
+    "Kristin Stefanoff",
+    "Jono Telfer",
+    "Nick Telfer"
+   ]
+  },
+  {
+   "name": "Hazel Rose Telfer",
+   "vault_file": "Hazel Rose Telfer (1891–1939).md",
+   "children_field": 2,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Barbara June Lawrie (1928–?)",
+    "Malcolm Roderick Lawrie (1931–?)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Howard Lindsay Parker",
+   "vault_file": "Howard Lindsay Parker (1920–2003).md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Donald James Parker (1951–1951)",
+    "Michael John Parker (1961–1961)"
+   ]
+  },
+  {
+   "name": "Isabella Lucieton Telfer",
+   "vault_file": "Isabella Lucieton Telfer (1880–1964).md",
+   "children_field": 0,
+   "relationships_children": 3,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Trevor Andrew Thomson (1914-1945)",
+    "Roma Thomson",
+    "Murray Thomson"
+   ]
+  },
+  {
+   "name": "Isabella Mabel Parker Carne",
+   "vault_file": "Isabella Mabel Parker Carne (1895–1954).md",
+   "children_field": 0,
+   "relationships_children": 0,
+   "prose_table_rows": 3,
+   "children_field_names": [],
+   "relationships_names": []
+  },
+  {
+   "name": "James Robert Telfer",
+   "vault_file": "James Robert Telfer (1866–1925).md",
+   "children_field": 0,
+   "relationships_children": 3,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Leslie Robert Telfer",
+    "Ethel Edith Telfer",
+    "Jean Telfer"
+   ]
+  },
+  {
+   "name": "James Telfer",
+   "vault_file": "James Telfer (1761–1845).md",
+   "children_field": 9,
+   "relationships_children": 8,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "James Telfer (1796–1863)",
+    "Isobel/Isabella Telfer (1798–?)",
+    "Adam Telfer (1799–?)",
+    "Margaret Telfer (1801–?)",
+    "Robert Telfer (1803–?)",
+    "John Telfer (1805–1839)",
+    "Francis Telfer (1809–1895)",
+    "William Telfer (1811–?)",
+    "Isobel Telfer (1798–?)"
+   ],
+   "relationships_names": [
+    "James Telfer (1796–1863)",
+    "Isobel/Isabella Telfer (1798–?)",
+    "Adam Telfer (1799–?)",
+    "Margaret Telfer (1801–?)",
+    "Robert Telfer (1803–1878)",
+    "John Telfer (1805–1839)",
+    "Francis Telfer (1809–1895)",
+    "William Telfer (1811–?)"
+   ]
+  },
+  {
+   "name": "James Telfer",
+   "vault_file": "James Telfer (1796–1863).md",
+   "children_field": 4,
+   "relationships_children": 5,
+   "prose_table_rows": 9,
+   "children_field_names": [
+    "Elizabeth Beattie Telfer (1832–1896)",
+    "James Telfer (1829–1913)",
+    "John Telfer (1840–1913)",
+    "Robert Telfer (1835–1907)"
+   ],
+   "relationships_names": [
+    "Adam Francis Telfer (1842–1925)",
+    "Elizabeth Beattie Telfer (1832–1896)",
+    "James Telfer (1829–1913)",
+    "John Telfer (1840–1913)",
+    "Robert Telfer (1835–1907)"
+   ]
+  },
+  {
+   "name": "James Telfer",
+   "vault_file": "James Telfer (1829–1913).md",
+   "children_field": 0,
+   "relationships_children": 3,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Margaret Rutherford Telfer",
+    "James Telfer",
+    "Janet Welsh Telfer"
+   ]
+  },
+  {
+   "name": "James Telfer (of Sorbietrees)",
+   "vault_file": "James Telfer (of Sorbietrees) (~1740–?).md",
+   "children_field": 0,
+   "relationships_children": 5,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "James Telfer (1762–?)",
+    "Jean Telfer (1764–?)",
+    "Francis Telfer (1768–1836)",
+    "Jenet Telfer (1770–1842)",
+    "Adam Telfer (1771–1846)"
+   ]
+  },
+  {
+   "name": "Jane Murray Farrow",
+   "vault_file": "Jane Murray Farrow (1857–1934).md",
+   "children_field": 3,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Arthur Clifford Stribling (1890–1918)",
+    "Lindsay Ellis Stribling (1893–1979)",
+    "George Charles Stribling (1898–1988)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Janet Dunlop",
+   "vault_file": "Janet Dunlop Lawrie (1811–1902).md",
+   "children_field": 1,
+   "relationships_children": 8,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Robert Dunlop Lawrie (1850–1917)"
+   ],
+   "relationships_names": [
+    "Jean \"Jane\" Lawrie (1836–1914)",
+    "Marion Lawrie (1838–?)",
+    "John Lawrie (1840–1841)",
+    "John Lawrie (1845–1921)",
+    "Janet Lawrie (1845–1845)",
+    "Elizabeth Lawrie (1847–?)",
+    "Robert Dunlop Lawrie (1850–1917)",
+    "Alexander Lawrie (1853–1853)"
+   ]
+  },
+  {
+   "name": "Jean Telfer",
+   "vault_file": "Jean Telfer (1840–1892).md",
+   "children_field": 0,
+   "relationships_children": 11,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Thomas Paynter (1859–1946)",
+    "Mary Jane Paynter (1861–1945)",
+    "Francis Telfer Paynter (1862–?)",
+    "Elizabeth Paynter (1864–1928)",
+    "Dinah Flavel Paynter (1869–1958)",
+    "Margaret Eliza Parker (1872–1938)",
+    "Frederick George Parker (1874–1946)",
+    "Annie Parker (1875–1895)",
+    "Martha Parker (1878–?)",
+    "Joanna Wittita Cordley Parker (1880–?)",
+    "Ethel May Parker (1881–?)"
+   ]
+  },
+  {
+   "name": "John Charles Dillon",
+   "vault_file": "John Charles Dillon (1827–1906).md",
+   "children_field": 1,
+   "relationships_children": 0,
+   "prose_table_rows": 9,
+   "children_field_names": [
+    "James Telfer Dillon (1861–1951)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "John Lawrie",
+   "vault_file": "John Lawrie (1810–1888).md",
+   "children_field": 1,
+   "relationships_children": 8,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Robert Dunlop Lawrie (1850–1917)"
+   ],
+   "relationships_names": [
+    "Jean \"Jane\" Lawrie (1836–1914)",
+    "Marion Lawrie (1838–1920)",
+    "John Lawrie (1840–1845)",
+    "Janet Lawrie (1842–1845)",
+    "John Lawrie (1845–1921)",
+    "Elizabeth Lawrie (1847–1907)",
+    "Robert Dunlop Lawrie (1850–1917)",
+    "Alexander Lawrie (1853–1853)"
+   ]
+  },
+  {
+   "name": "John Murray",
+   "vault_file": "John Murray (1779–1849).md",
+   "children_field": 0,
+   "relationships_children": 10,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "James Murray",
+    "Janet Murray",
+    "Jean Murray (1810–1839)",
+    "Adam Murray",
+    "John Murray",
+    "Pultney Malcolm Murray",
+    "William Murray",
+    "George Murray",
+    "Elisabeth Murray",
+    "Nancy Murray"
+   ]
+  },
+  {
+   "name": "John Robert Telfer",
+   "vault_file": "John Robert Telfer.md",
+   "children_field": 0,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Angela Telfer (adopted)",
+    "Peter Telfer (adopted)",
+    "Carissa Telfer (adopted",
+    "deceased)"
+   ]
+  },
+  {
+   "name": "John Smith",
+   "vault_file": "John Smith (~1827–1895).md",
+   "children_field": 2,
+   "relationships_children": 6,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Esther Telfer Smith (1870–1896)",
+    "Francis Telfer Smith (1874–1945)"
+   ],
+   "relationships_names": [
+    "Jane Sophie Smith",
+    "Margaret Dougal Smith",
+    "Esther Telfer Smith (1870–1896)",
+    "John James Smith (1871–?)",
+    "Francis Telfer Smith (1874–1945)",
+    "Elizabeth Anne Smith (1878–?)"
+   ]
+  },
+  {
+   "name": "John Telfer",
+   "vault_file": "John Telfer (1840–1913).md",
+   "children_field": 15,
+   "relationships_children": 18,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Alan Dale Telfer (1890–1937)",
+    "Clara Blanche Telfer (1883–1974)",
+    "Colin Roy Telfer (1889–1964)",
+    "Douglas Telfer (1887–1956)",
+    "Elizabeth Telfer (1868–1950)",
+    "Isabella Lucieton Telfer (1880–1964)",
+    "James Telfer (1866–1946)",
+    "John Roland Telfer (1882–1975)",
+    "Maria Clara Telfer (1878–1903)",
+    "Marian Telfer Cornish (1896–1977)",
+    "Mark Telfer (1877–1946)",
+    "Martha Telfer (1873–?)",
+    "Martha Telfer Cameron (1873–1964)",
+    "Robert Freddy Telfer (1886–1949)",
+    "Susan Telfer (1871–1952)"
+   ],
+   "relationships_names": [
+    "James Telfer (1866–1946)",
+    "Elizabeth Telfer (1868–?)",
+    "Susan Telfer (1871–1952)",
+    "Martha Telfer (1873–?)",
+    "Charles Telfer (1875–1954)",
+    "Eric John Telfer",
+    "Mark Telfer (1877–1946)",
+    "Alan Dale Telfer (1890–1937)",
+    "Clara Blanche Telfer (1883–1974)",
+    "Colin Roy Telfer (1889–1964)",
+    "Douglas Telfer (1887–1956)",
+    "Elizabeth Telfer (1868–1950)",
+    "Isabella Lucieton Telfer (1880–1964)",
+    "John Roland Telfer (1882–1975)",
+    "Maria Clara Telfer (1878–1903)",
+    "Marian Telfer Cornish (1896–1977)",
+    "Martha Telfer Cameron (1873–1964)",
+    "Robert Freddy Telfer (1886–1949)"
+   ]
+  },
+  {
+   "name": "John Telfer (of Castleton)",
+   "vault_file": "John Telfer (of Castleton) (1731–?).md",
+   "children_field": 0,
+   "relationships_children": 1,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "James Telfer (1761–1845)"
+   ]
+  },
+  {
+   "name": "Joseph Farrow",
+   "vault_file": "Joseph Farrow (1814–1899).md",
+   "children_field": 0,
+   "relationships_children": 1,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Charles Farrow (1836–1884) (mother unknown — prior wife)"
+   ]
+  },
+  {
+   "name": "Joseph March",
+   "vault_file": "Joseph March (1797–1883).md",
+   "children_field": 10,
+   "relationships_children": 0,
+   "prose_table_rows": 11,
+   "children_field_names": [
+    "Joseph March",
+    "Hannah March (m. Sloman)",
+    "Sophia March (1829–1901)",
+    "William March",
+    "William March",
+    "Susanna March",
+    "Charles March",
+    "Samuel March",
+    "Alfred March",
+    "John Henry March"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Julia Matilda Seebohm",
+   "vault_file": "Julia Matilda Seebohm (1876–1939).md",
+   "children_field": 7,
+   "relationships_children": 9,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Floris Ethel Victoria Telfer (1904–1951)",
+    "Gilbert Melville Telfer (1908–1973)",
+    "Jean Maryann Martha Telfer (1910–1984)",
+    "Joyce Elizabeth Telfer (1912–2012)",
+    "Kenneth William John Telfer (1906–1970)",
+    "Lindsay Roland Telfer (1920–1976)",
+    "Maifie Beryl Telfer (1913–1948)"
+   ],
+   "relationships_names": [
+    "Floris Ethel Victoria Telfer (1904–1951)",
+    "Kenneth William John Telfer (1904–?)",
+    "Gilbert Melville Telfer (1908–1973)",
+    "Jean Maryann Martha Telfer (1910–1984)",
+    "Joyce Elizabeth Telfer (1912–2012)",
+    "Maifie Beryl Telfer (1913–1948)",
+    "Lindsay Roland Telfer (1920–1976)",
+    "Murray John Telfer (1911–1982",
+    "adopted)"
+   ]
+  },
+  {
+   "name": "Margaret Dougal Smith",
+   "vault_file": "Margaret Dougal Smith.md",
+   "children_field": 2,
+   "relationships_children": 7,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Miriam Maida Parkins",
+    "Dougal Parkins"
+   ],
+   "relationships_names": [
+    "Esther Parkins",
+    "Irene Parkins",
+    "Miriam Maida Parkins",
+    "Dougal Parkins",
+    "Nell Parkins",
+    "Ruby Parkins",
+    "Daisy Parkins"
+   ]
+  },
+  {
+   "name": "Margaret Dougal Telfer",
+   "vault_file": "Margaret Dougal Telfer (1849–1936).md",
+   "children_field": 10,
+   "relationships_children": 12,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Adelaide Elsie Pearl Telfer (1889–1976)",
+    "Effie Olive Telfer (1886–1969)",
+    "Eva Rowena Telfer (1885–1974)",
+    "Francis Adam Telfer (1875–1955)",
+    "Hazel Rose Telfer (1891–1939)",
+    "Herbert Dougal Telfer (1881–1976)",
+    "James Edgerston Telfer (1877–1959)",
+    "Lillian May Telfer (1872–1951)",
+    "Vernon Ray St. Clair Telfer (1879–1960)",
+    "Violet Hope Telfer (1883–1967)"
+   ],
+   "relationships_names": [
+    "Margaret Wright Telfer (1869–1890)",
+    "Elizabeth Beattie Bessie Telfer (1871–1948)",
+    "Lillian May Telfer (1872–1951)",
+    "Francis Adam Telfer (1875–1955)",
+    "James Edgerston Telfer (1877–1959)",
+    "Vernon Ray St. Clair Telfer (1879–1960)",
+    "Herbert Dougal Telfer (1881–1976)",
+    "Violet Hope Telfer (1883–1967)",
+    "Eva Rowena Telfer (1885–1974)",
+    "Effie Olive Telfer (1886–1969)",
+    "Adelaide Elsie Pearl Telfer (1889–1976)",
+    "Hazel Rose Telfer (1891–1939)"
+   ]
+  },
+  {
+   "name": "Mark Telfer",
+   "vault_file": "Mark Telfer (1877–1946).md",
+   "children_field": 0,
+   "relationships_children": 7,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Floris Ethel Victoria Telfer (1904–1951)",
+    "Kenneth William John Telfer (1906–1970)",
+    "Gilbert Melville Telfer (1908–1973)",
+    "Jean Maryann Martha Telfer (1910–1984)",
+    "Joyce Elizabeth Telfer (1912–2012)",
+    "Maifie Beryl Telfer (1913–1948)",
+    "Lindsay Roland Telfer (1920–1976)"
+   ]
+  },
+  {
+   "name": "Martha Allen",
+   "vault_file": "Martha Allen (1840–1876).md",
+   "children_field": 5,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Elizabeth Telfer (1868–1950)",
+    "James Telfer (1866–1946)",
+    "Martha Telfer (1873–?)",
+    "Martha Telfer Cameron (1873–1964)",
+    "Susan Telfer (1871–1952)"
+   ],
+   "relationships_names": [
+    "James Telfer (1866–1946)",
+    "Elizabeth Telfer",
+    "Susan Telfer",
+    "Martha Telfer Cameron"
+   ]
+  },
+  {
+   "name": "Martha Telfer Cameron",
+   "vault_file": "Martha Telfer Cameron (1873–1964).md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Malcolm Murray Cameron",
+    "John Lindsay Cameron (1907–1942)"
+   ]
+  },
+  {
+   "name": "Mary Jane Paynter",
+   "vault_file": "Mary Jane Paynter (1861–1945).md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Joseph Watson (1883–1948)",
+    "Lancelot Hobart Watson (1888–1960)"
+   ]
+  },
+  {
+   "name": "Richard Paynter",
+   "vault_file": "Richard Paynter (1838–1869).md",
+   "children_field": 0,
+   "relationships_children": 5,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Thomas Paynter (1859–1946)",
+    "Mary Jane Paynter (1861–1945)",
+    "Francis Telfer Paynter (1862–?)",
+    "Elizabeth Paynter (1864–1928)",
+    "Dinah Flavel Paynter (1869–1958)"
+   ]
+  },
+  {
+   "name": "Richard Paynter (of Calstock)",
+   "vault_file": "Richard Paynter (of Calstock).md",
+   "children_field": 0,
+   "relationships_children": 1,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Richard Paynter (1838–1869)"
+   ]
+  },
+  {
+   "name": "Robert Dunlop Lawrie",
+   "vault_file": "Robert Dunlop Lawrie (1850–1917).md",
+   "children_field": 1,
+   "relationships_children": 8,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Caroline Edna Lawrie (1890–1957)"
+   ],
+   "relationships_names": [
+    "Catherine Leah",
+    "Janet Stevenson",
+    "Alberta Grace",
+    "Hugh John",
+    "Frank Lindsay",
+    "Jeanette",
+    "Marion Vida",
+    "Caroline Edna Lawrie (1890–1957)"
+   ]
+  },
+  {
+   "name": "Robert Dunlop",
+   "vault_file": "Robert Dunlop.md",
+   "children_field": 0,
+   "relationships_children": 1,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Janet Dunlop Lawrie (1811–1902)"
+   ]
+  },
+  {
+   "name": "Robert Telfer",
+   "vault_file": "Robert Telfer (1803–1878).md",
+   "children_field": 0,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Elizabeth Telfer (1834–?)",
+    "James Telfer (1836–?)",
+    "Jean Telfer (1838–?)",
+    "John Telfer (1839–?)"
+   ]
+  },
+  {
+   "name": "Sarah Jacobs",
+   "vault_file": "Sarah Jacobs (~1763–1811).md",
+   "children_field": 0,
+   "relationships_children": 1,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Joseph March (1797–1883)"
+   ]
+  },
+  {
+   "name": "Sophia March",
+   "vault_file": "Sophia (Webster) March (1803–1892).md",
+   "children_field": 10,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Joseph March (1826–1875)",
+    "Hannah March (1828–1922)",
+    "Sophia Baker (1829–1901)",
+    "William March (1832–1833)",
+    "William March (1833–1902)",
+    "Susanna March (1835–1902)",
+    "Charles March (1838–1921)",
+    "Samuel March (1843–1920)",
+    "Alfred March",
+    "John Henry March (1845–1928)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Sophia Baker",
+   "vault_file": "Sophia Baker (1829–1901).md",
+   "children_field": 9,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "William Baker (1853–1933)",
+    "Hannah Baker (1855–1948)",
+    "Emeline Couzens (1857–1949)",
+    "James Baker (1859–1927)",
+    "Alfred Baker (1861–1946)",
+    "Fanny Baker (1863–1955)",
+    "Walter Baker (1865–1937)",
+    "Sophia Harriett Ridgway (1868–1956)",
+    "Phineas Baker (1870–1959)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Sophia Webster",
+   "vault_file": "Sophia Webster (~1800–?).md",
+   "children_field": 9,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Joseph March",
+    "Hannah March (m. Sloman)",
+    "Sophia March (1829–1901)",
+    "William March",
+    "Susanna March",
+    "Charles March",
+    "Samuel March",
+    "Alfred March",
+    "John Henry March"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Susan Burton Telfer",
+   "vault_file": "Susan Burton Telfer (1844–1924).md",
+   "children_field": 0,
+   "relationships_children": 1,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "James Robert Telfer (1866–1925)"
+   ]
+  },
+  {
+   "name": "Timothy Neil Telfer",
+   "vault_file": "Timothy Neil Telfer (1959–?).md",
+   "children_field": 3,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Mark Kenneth Telfer (1986–living)",
+    "Amy Nicole Telfer (?–living)",
+    "Mark Kenneth Telfer (1986–?)"
+   ],
+   "relationships_names": [
+    "Mark Kenneth Telfer (1986–?)",
+    "Amy Nicole Telfer"
+   ]
+  },
+  {
+   "name": "William Henry Parker",
+   "vault_file": "William Henry Parker (1893–1968).md",
+   "children_field": 3,
+   "relationships_children": 7,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Avis Muriel Parker Nicholls (1918–2009)",
+    "Howard Lindsay Parker (1920–2003)",
+    "William Humphrey Parker (1926–1976)"
+   ],
+   "relationships_names": [
+    "Avis Parker",
+    "Howard Parker",
+    "Sydney Hugh Parker",
+    "William Humphrey Parker",
+    "Shirley Edna Telfer",
+    "Avis Muriel Parker Nicholls (1918–2009)",
+    "Howard Lindsay Parker (1920–2003)"
+   ]
+  },
+  {
+   "name": "William John Baker",
+   "vault_file": "William John Baker (1831–1919).md",
+   "children_field": 9,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "William Baker (1853–1933)",
+    "Hannah Baker (1855–1948)",
+    "Emeline Couzens (1857–1949)",
+    "James Baker (1859–1927)",
+    "Alfred Baker (1861–1946)",
+    "Fanny Baker (1863–1955)",
+    "Walter Baker (1865–1937)",
+    "Sophia Harriett Ridgway (1868–1956)",
+    "Phineas Baker (1870–1959)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "William Telfer",
+   "vault_file": "William Telfer (1802–1850).md",
+   "children_field": 1,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "William Telfer (1841–?)"
+   ],
+   "relationships_names": [
+    "William Telfer (1841–?)",
+    "Elizabeth Telfer (Mrs Mansfield)",
+    "Andrew Telfer",
+    "Edward Telfer"
+   ]
+  },
+  {
+   "name": "Beatrice Rowe Telfer",
+   "vault_file": "Beatrice Rowe Telfer (1877–1951).md",
+   "children_field": 0,
+   "relationships_children": 6,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Rita Joyce Telfer (1909–1990)",
+    "Beatrice Sylvia Telfer (1911–1999)",
+    "Douglas Ivan Telfer (1913–1993)",
+    "Melville Bruce Telfer (1914–1997)",
+    "John Alick Ralph Telfer",
+    "Murray Keith Telfer (1920–2005)"
+   ]
+  },
+  {
+   "name": "Robert Telfer",
+   "vault_file": "Robert Telfer (1835–1907).md",
+   "children_field": 1,
+   "relationships_children": 8,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "James Robert Telfer (1866–1925)"
+   ],
+   "relationships_names": [
+    "James Robert Telfer (1866–1925)",
+    "Elizabeth Telfer",
+    "Helen Telfer",
+    "Susan Telfer",
+    "William Telfer",
+    "Robert Allan Burton Telfer",
+    "Francis John Burton Telfer",
+    "Edith Mary Kathleen Telfer"
+   ]
+  },
+  {
+   "name": "Clara Blanche Telfer",
+   "vault_file": "Clara Blanche Telfer (1883–1974).md",
+   "children_field": 7,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Nina Amy Lane",
+    "Ethel Jean Lane",
+    "Derrice Elma Lane",
+    "Edna Mary Lane",
+    "Doris Elizabeth Lane",
+    "Albin Edward John Lane",
+    "June Lane"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "John Watson",
+   "vault_file": "John Watson (1851–1929).md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Joseph Watson (1883–1948)",
+    "Lancelot Hobart Watson (1888–1960)"
+   ]
+  },
+  {
+   "name": "Joseph Watson",
+   "vault_file": "Joseph Watson (1883–1948).md",
+   "children_field": 1,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Richard Lancelot Watson (1910–1942)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Lancelot Hobart Watson",
+   "vault_file": "Lancelot Hobart Watson (1888–1960).md",
+   "children_field": 1,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "John Hobart (Jack) Watson (1916–1943)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Charles Telfer",
+   "vault_file": "Charles Telfer (1875–1954).md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "(three sons",
+    "three daughters)"
+   ]
+  },
+  {
+   "name": "Kenneth Gregory Virgen",
+   "vault_file": "Kenneth Gregory Virgen (1925–2003).md",
+   "children_field": 1,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Penny Telfer"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Noela Pauline Virgen",
+   "vault_file": "Noela Pauline Virgen (1921–2015).md",
+   "children_field": 1,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Penny Telfer"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "William Telfer (shepherd)",
+   "vault_file": "William Telfer (shepherd).md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Andrew Telfer (1798–1858)",
+    "William Telfer (1802–1850)"
+   ]
+  },
+  {
+   "name": "Agnes Paynter",
+   "vault_file": "Agnes Letitia May Rose Paynter-Hucks (1895–1952).md",
+   "children_field": 2,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Linda Georgenia Elizabeth Hucks",
+    "George Leslie Roy Hucks"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Elizabeth Liebich",
+   "vault_file": "Elizabeth Jane Liebich (1859–1919).md",
+   "children_field": 8,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Richard William John Paynter",
+    "Lillian Ellen Jayne Paynter",
+    "Gustav Francis George Paynter",
+    "Ethel Emily Elizabeth Paynter",
+    "Dinah Alice Mary Paynter",
+    "Agnes Letitia May Rose Paynter",
+    "Thomas Frederick Edward Paynter",
+    "Helena Florence Daisy Paynter"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "George Hucks",
+   "vault_file": "George Herbert Hucks (1875–1947).md",
+   "children_field": 2,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Linda Georgenia Elizabeth Hucks",
+    "George Leslie Roy Hucks"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Hannah Peacock",
+   "vault_file": "Hannah Peacock (1862–1948).md",
+   "children_field": 0,
+   "relationships_children": 3,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Leslie Robert Telfer",
+    "Ethel Edith Telfer",
+    "Jean Telfer"
+   ]
+  },
+  {
+   "name": "Emma Turner",
+   "vault_file": "Emma Turner Hucks (1888–1910).md",
+   "children_field": 2,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Charlotte Emma Rubie Irene Beven",
+    "Gwinfred Gorden Herbert John Hucks"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Reginald Masters Telfer",
+   "vault_file": "Reginald Masters Telfer (1922–2011).md",
+   "children_field": 0,
+   "relationships_children": 5,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Vonda Joy",
+    "Brenda Janice",
+    "Lyndell Marie",
+    "Malvern Reginald",
+    "David Lyndon"
+   ]
+  },
+  {
+   "name": "Clara Ann Millicent Telfer",
+   "vault_file": "Clara Ann Millicent (Dunn) Telfer (1878–1966).md",
+   "children_field": 0,
+   "relationships_children": 5,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Ronald Edgerston Telfer",
+    "Millicent Joyce Telfer",
+    "Dorothy Margaret Hope Telfer",
+    "Gordon Francis Telfer",
+    "Estelle May Telfer"
+   ]
+  },
+  {
+   "name": "Charles Farrow Jr",
+   "vault_file": "Charles Farrow Jr.md",
+   "children_field": 1,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "(unknown)"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Andrew Telfer",
+   "vault_file": "Andrew Telfer.md",
+   "children_field": 0,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "William Telfer (1847–?)",
+    "Mary (Telfer) Bowden",
+    "Andrew Telfer",
+    "Elizabeth (Telfer) Bolton"
+   ]
+  },
+  {
+   "name": "Gilbert Telfer",
+   "vault_file": "Gilbert Melville Telfer (1908–1973).md",
+   "children_field": 0,
+   "relationships_children": 3,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Beth Telfer",
+    "Ian Telfer",
+    "Allan Telfer"
+   ]
+  },
+  {
+   "name": "James Gordon Steele",
+   "vault_file": "James Gordon Steele (1892–1951).md",
+   "children_field": 0,
+   "relationships_children": 4,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Alex",
+    "Phyllis",
+    "Joan",
+    "Colin"
+   ]
+  },
+  {
+   "name": "Allen Merrick",
+   "vault_file": "Allen Merrick.md",
+   "children_field": 1,
+   "relationships_children": 0,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "David Telfer-Merrick"
+   ],
+   "relationships_names": []
+  },
+  {
+   "name": "Esther Jane Telfer",
+   "vault_file": "Esther Jane Telfer (1834–1909).md",
+   "children_field": 2,
+   "relationships_children": 6,
+   "prose_table_rows": 0,
+   "children_field_names": [
+    "Esther Telfer Smith (1870–1896)",
+    "Francis Telfer Smith (1874–1945)"
+   ],
+   "relationships_names": [
+    "Jane Sophie Smith (b. S.A.)",
+    "Margaret Dougal Smith (b. Burra S.A.)",
+    "Esther Telfer Smith (1870–1896)",
+    "John James Smith (1871–?)",
+    "Francis Telfer Smith (1874–1945)",
+    "Elizabeth Anne Smith (1878–?)"
+   ]
+  },
+  {
+   "name": "Eva Agnes Farrow",
+   "vault_file": "Eva Agnes Farrow.md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Laurel Mary Hookings",
+    "Donald Jack Hookings (1916–1943)"
+   ]
+  },
+  {
+   "name": "Harold Peryman Wishart",
+   "vault_file": "Harold Peryman Wishart (1888–1965).md",
+   "children_field": 0,
+   "relationships_children": 3,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Alison Mary Wishart",
+    "Rodger Peryman Wishart (1920–1944)",
+    "David Wishart"
+   ]
+  },
+  {
+   "name": "Richard Pelling Latter",
+   "vault_file": "Richard Pelling Latter (~1860–1936).md",
+   "children_field": 0,
+   "relationships_children": 3,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Ida Jane Latter",
+    "Daisy Vera Latter",
+    "Kenneth Harry Latter"
+   ]
+  },
+  {
+   "name": "Thomas Telfer",
+   "vault_file": "Thomas Telfer (of Broadlee).md",
+   "children_field": 0,
+   "relationships_children": 2,
+   "prose_table_rows": 0,
+   "children_field_names": [],
+   "relationships_names": [
+    "Elisabeth Telfer (bap. 1774)",
+    "Adam Telfer (bap. 1775)"
+   ]
+  }
+ ]
+}
