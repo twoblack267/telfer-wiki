@@ -1,1484 +1,375 @@
 {
-  "generated_at": "2026-09-12T08:20:45+10:00",
+  "generated_at": "2026-09-12T08:23:40+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
   "count": 368,
-  "kinds": {
-    "real": 352,
-    "redirect": 15,
-    "empty": 1
-  },
   "files": {
-    "Aaron Paul Ivory (1989\u2013?).md": {
-      "sha256": "f9684332bca81fd60d4f9d767fa7be7454997adf1b110509b1e82b878dfc166b",
-      "kind": "real"
-    },
-    "Adam Dillon.md": {
-      "sha256": "7ea73de300e2f8994aa3723f3746c8fbc7742a9e8fddc5c90ec55fe43c42522f",
-      "kind": "real"
-    },
-    "Adam Francis Telfer (1842\u20131925).md": {
-      "sha256": "db2514b6f9f9b8c0a3bfcfef0975f398d9ab250a89fb196f525c3ae0b51c50bf",
-      "kind": "real"
-    },
-    "Adam Murray (1728\u20131816).md": {
-      "sha256": "bd3cbbd58e299ea0acccc8439fcd0a0eb3cc71c18fd94714b77059d238418d7a",
-      "kind": "real"
-    },
-    "Adam Telfer (1771\u20131846).md": {
-      "sha256": "fa8e54b40e9d93005d2378289199d6eac832b4329f1bcc95ebe226bde9169e7e",
-      "kind": "real"
-    },
-    "Adam Telfer (1799\u2013?).md": {
-      "sha256": "a1af97ad3b979b8af0e69ce89bbd2c9f890dbe731359f0151bd3d3bd49cbc882",
-      "kind": "real"
-    },
-    "Adelaide Elsie Pearl Telfer (1889\u20131976).md": {
-      "sha256": "b205419605476a70291362c2595cea22013c38941489d21c2715266ea492fc59",
-      "kind": "real"
-    },
-    "Agnes Letitia May Rose Paynter-Hucks (1895\u20131952).md": {
-      "sha256": "f06c8c127bca5bc003ecf129cb7207d1756b8ed4ce8832a1d059cfc9c202208e",
-      "kind": "real"
-    },
-    "Alan Dale Telfer (1890\u20131937).md": {
-      "sha256": "ba7eba47f78122fec859ebb8924897d0dcf174cb221df3602e98f0548931da05",
-      "kind": "real"
-    },
-    "Albert George Telfer (1881\u20131970).md": {
-      "sha256": "6ed8f6e7a8bd6b1e8172c5c35e1a28c1f9c6cae4ebe5b55d14e3309bc20b7a89",
-      "kind": "real"
-    },
-    "Alberta Grace Lawrie (1882\u20131954).md": {
-      "sha256": "28221a1d647799092fd7242b26db38549cc6da133bc42f6d0c4df978c9479874",
-      "kind": "real"
-    },
-    "Alexander Brown Thomson.md": {
-      "sha256": "511e6c3950038378d6489a74054b8295f9b99b38322774a7f4115b76d3f6e718",
-      "kind": "real"
-    },
-    "Alexander Lawrie (1776\u20131847).md": {
-      "sha256": "0c8f5e909529333e424281d406ffc67a616579618fd7557d830b2149d68128e8",
-      "kind": "real"
-    },
-    "Alfred Baker (1861\u20131946).md": {
-      "sha256": "c337708112371b4666dc4186b31624ceb1137747d5b41a4237a18b4850276c18",
-      "kind": "real"
-    },
-    "Alfred Edward Lillecrapp (1869\u20131934).md": {
-      "sha256": "c32ea173d1f675c5d114ee635157ce4b4b3f00f5251c0a377eab292b01e37de6",
-      "kind": "real"
-    },
-    "Alfred George Stribling (c.1853\u20131928).md": {
-      "sha256": "fcdc6cfb2fc9cd5c21605e613fae0e6ccfac4172c62be84d0d2e5b19c25abfce",
-      "kind": "real"
-    },
-    "Allan Telfer.md": {
-      "sha256": "df9d16bb3c11bfc4871136254be7e5b3dcbc92060154319daeb2d6b02d493164",
-      "kind": "real"
-    },
-    "Allen Merrick.md": {
-      "sha256": "195d70707767378159c3f91c9f5eff28f35de0c9273a340ca23f9998686639da",
-      "kind": "real"
-    },
-    "Alma Ida Sporer.md": {
-      "sha256": "b8bffcf074c409a2a7d1f5217b87771c0264f7da0b2579ea6e405db4c162c115",
-      "kind": "real"
-    },
-    "Amy Ellen Telfer (1884\u20131951).md": {
-      "sha256": "ae6c029dfc7c2421b8325836e01f1ecff15c422880e996990b51bbed77234f38",
-      "kind": "real"
-    },
-    "Amy Ellen Telfer (n\u00e9e Provis).md": {
-      "sha256": "f84dd411ca5fa0e274430cd179fee787bedee25f3ca85fc8730f388db94713ba",
-      "kind": "redirect"
-    },
-    "Amy Farrow Stribling (1868\u20131945).md": {
-      "sha256": "704cc8b80ccefab46ef89043c6492b346ddeb3980a61e8ca710a6f813163eaf0",
-      "kind": "real"
-    },
-    "Amy Nicole Telfer.md": {
-      "sha256": "fb768177891b7ba4e0eb5c7466beea20ce90e119290906069c5a99f4863c31fb",
-      "kind": "real"
-    },
-    "Andrew Kelly Parker (1883\u20131952).md": {
-      "sha256": "3c1f2c81cbb19a228a00d34101192cf83ea1e14a3a6677adda79e1dfbe583ed1",
-      "kind": "real"
-    },
-    "Andrew Telfer.md": {
-      "sha256": "5eeddc36651722e8a9ac6d74ebd39997245d66f7d925557793eab10bf07ce57c",
-      "kind": "real"
-    },
-    "Angela Telfer.md": {
-      "sha256": "21463dfda4e994a319538d3eee93c6744c82b9d01140413bb6b91f021c7a0e15",
-      "kind": "real"
-    },
-    "Ann Taylor (~1856\u2013?).md": {
-      "sha256": "3af58c2dcf3e550904a8470ac7a9fb3909303d722bd1bb7387d67a7fa72b9a18",
-      "kind": "real"
-    },
-    "Ann Telfer.md": {
-      "sha256": "ccde3de399b2c1a95dcb530ee2adfff1327a87b1c2b824913ff465ee2073f5c8",
-      "kind": "real"
-    },
-    "Arnold Cuthbert Lawrie.md": {
-      "sha256": "415d3f09f4c2794f81df99786a982329dd7fc510cae4ea14069b4803a7885f3c",
-      "kind": "real"
-    },
-    "Arthur Clifford Stribling (1890\u20131918).md": {
-      "sha256": "5afc38088657743c0a6ffc80d8e4e1f3d395f8343bc680e098143926b0c77674",
-      "kind": "real"
-    },
-    "Avis Muriel Parker Nicholls (1918\u20132009).md": {
-      "sha256": "dcfd0973fdaf5f903d5c6fd1c88859c08b995ce488948aa52162b5937eb30d32",
-      "kind": "real"
-    },
-    "Beatrice Mary (Dillon) Murray (1919\u20132006).md": {
-      "sha256": "36a1db2bbc077324d7d78b274da202e5f44a88bd852c6f28d5d7bcd58d35402a",
-      "kind": "real"
-    },
-    "Beatrice Rowe Telfer (1877\u20131951).md": {
-      "sha256": "84134389e93c4fe4fdf7e44c2244bc136e536539bea7c55b245fa88e6fca3bb1",
-      "kind": "real"
-    },
-    "Beatrice Sylvia Telfer (1911\u20131999).md": {
-      "sha256": "5423885b4ed89250caeeab0161e60e272cfb23239d212f6c0278aecb4a1d66f9",
-      "kind": "real"
-    },
-    "Ben Stefanoff.md": {
-      "sha256": "90dbb7eddf4c090f89aa6f776e08be370cc70638dad7a378f47b4e4cc98740f1",
-      "kind": "real"
-    },
-    "Bertha Telfer.md": {
-      "sha256": "0d03cd34f5bb9eee8eb8edd1aac4ebba7e24a0c93c5e901dfd088adacd35b348",
-      "kind": "real"
-    },
-    "Beth Telfer.md": {
-      "sha256": "f4743ea124a5c452235a400e5f182d4ad6d3c06e2f9c11f91aaa30d12ad054f0",
-      "kind": "real"
-    },
-    "Betty Hutton.md": {
-      "sha256": "51ba3950e2d06afd2950415eafd01df75c6a9e63f571b2af04280f66adbe5e0c",
-      "kind": "redirect"
-    },
-    "Carissa Telfer (?\u20132023).md": {
-      "sha256": "ae9f1d9cc874bf1545c1e41f4d75fa0bdfcb17efcd7096f351af5c8c68c6c9ce",
-      "kind": "real"
-    },
-    "Caroline Amelia Telfer (1842\u20131929).md": {
-      "sha256": "0792308cd07c1b575b927bf5d9e6a3ab04e431579b7585dc65116085f8b24676",
-      "kind": "real"
-    },
-    "Caroline Edna Lawrie (1890\u20131957).md": {
-      "sha256": "1f300f1554a3087eacbab8205aecb87b388442e1d1ca17687f8543a0d3c25cde",
-      "kind": "real"
-    },
-    "Caroline Edna.md": {
-      "sha256": "11f978afa0fc95514fcc9f8c79bd11fdd82afc416b276d6826bbdd67748c0f76",
-      "kind": "redirect"
-    },
-    "Caroline Hosking (1851\u20131920).md": {
-      "sha256": "960b1f3fe5b811339d3586e31e66b03007e6ed311f3dd64e6c891045f15035e1",
-      "kind": "real"
-    },
-    "Catherine Leah.md": {
-      "sha256": "f263006ba4a524403be1d78f1edf10c1001a061a5aed56f5a4cb6ce61fc5d98c",
-      "kind": "real"
-    },
-    "Charles Farrow (~1836\u20131884).md": {
-      "sha256": "e5b9643ba09ca85de8885aa391719dd6eea520299dc55e036fa003c2bf1869c1",
-      "kind": "real"
-    },
-    "Charles Farrow Jr.md": {
-      "sha256": "192a4a04d002cbdeec2edf76ef09e33b7a53ae572a4b881116057d2a060c4a1f",
-      "kind": "real"
-    },
-    "Charles Frederick Masters (1837\u20131845).md": {
-      "sha256": "b7472d983fbc34d856d968d5810fda7374723f11fef9f0d8660697865f8ab83a",
-      "kind": "real"
-    },
-    "Charles Masters (1809\u20131866).md": {
-      "sha256": "bc89ec6982eb1a87f9e4904fa5b5f10fd46e40e77b503f3abdca7d20285a2495",
-      "kind": "real"
-    },
-    "Charles Telfer (1875\u20131954).md": {
-      "sha256": "ea9f7f32d5c3e5901e9e6e935c70a0785da7e2d797f65fdd32cc4e9688dc83bb",
-      "kind": "real"
-    },
-    "Charlotte Emma Rubie Irene (Hucks) Beven (1906\u20131996).md": {
-      "sha256": "843bb1a373efffc0440e11f628be63f155ad6e8261bb07c92e2378d759f91c6a",
-      "kind": "real"
-    },
-    "Clara Ann Millicent (Dunn) Telfer (1878\u20131966).md": {
-      "sha256": "75ff7202c4dff7ef7aa06d9e17019d7762dac268705c73a0c7369ec4ae846191",
-      "kind": "real"
-    },
-    "Clara Blanche Telfer (1883\u20131974).md": {
-      "sha256": "e086001724ec36db13066c65946af1c802de38d52c92e22a6d1b772bdea6ec65",
-      "kind": "real"
-    },
-    "Clarice May Fatchen.md": {
-      "sha256": "fac616f16e06e44a8465ee7ff95371779d60cd472603f6dbedf9815c5ad1a2f6",
-      "kind": "redirect"
-    },
-    "Clarice May Telfer (1911\u20131997).md": {
-      "sha256": "2f3ec11d3b6f314ca5b968c14e55d3508358fb28dc1f8312bbde51144d7f41fd",
-      "kind": "real"
-    },
-    "Colin Lindsay Beaton (1915\u20131944).md": {
-      "sha256": "1e4a45ecc75c1ce48104142e0a6055074a0f4155f95e85d4e0a10f149f8e98a1",
-      "kind": "real"
-    },
-    "Colin Louis Paynter (1919\u20131942).md": {
-      "sha256": "f2fea6c6a4997e9e66ab89116254e17fcc3a75e6484bc3124c18ab4b4abbeb72",
-      "kind": "real"
-    },
-    "Colin Roy Telfer (1889\u20131964).md": {
-      "sha256": "b3b6ac117f5b31a978a7b6865adfc6cf4a3fc1b77f8405a1534d5ff136cf944c",
-      "kind": "real"
-    },
-    "Crystal Rose McDonald.md": {
-      "sha256": "50e9f5dca6b89e3e50144c964756d4901154bb7beecd83541f064c0a8c464456",
-      "kind": "real"
-    },
-    "Daisy Vera Latter (1886\u20131963).md": {
-      "sha256": "a4db35da94bd7931c5e7ff3130cf94d664dcca7413d113b1490ddb35e29b9cda",
-      "kind": "real"
-    },
-    "Daryll William Telfer.md": {
-      "sha256": "dce3de7ecaf60199aad7522a491abcdee80f4a67e28b1bc9c018b65317f3105d",
-      "kind": "real"
-    },
-    "David Parker (1822\u20131888).md": {
-      "sha256": "26157b9d2318618e387dc8baa3f7b4c1922ccbf77987e697f20085c77ca3e782",
-      "kind": "real"
-    },
-    "David Telfer-Merrick.md": {
-      "sha256": "9739bf9cf0804b1e352fa22cb7940bf26f5c7a220d4fb756983376f403fa5403",
-      "kind": "real"
-    },
-    "David Telfer.md": {
-      "sha256": "5b2b403850937c0159c99c5480e431cb0bdddd13ad33b594784180b55c2c3f4b",
-      "kind": "redirect"
-    },
-    "Dinah Flavel (1821\u20131844).md": {
-      "sha256": "20df4d33922a0e090d3df3b70991354a52b6526076b5f9ea2574c7c95e6cee47",
-      "kind": "real"
-    },
-    "Dinah Flavel Paynter (1869\u20131958).md": {
-      "sha256": "3df044306a1a30bd1de7f39259c48d203cc36e1414fddecafc6490026d5ac2fd",
-      "kind": "real"
-    },
-    "Donald Jack Hookings (1916\u20131943).md": {
-      "sha256": "36499802c5824bc6f97e20092b5b788f0d16133c30b2727ffb4129fd649aeb84",
-      "kind": "real"
-    },
-    "Doris Elma Telfer (1919\u2013living).md": {
-      "sha256": "45c048e6204769b55e118c9fc0d4333dd8b55ea16c362de252a6754420eb3514",
-      "kind": "real"
-    },
-    "Dorothy Dillon.md": {
-      "sha256": "0108e8ce68c8caa21c962bbd72f7674bf6b70e25820817b1887c69b805f919df",
-      "kind": "real"
-    },
-    "Douglas Ivan Telfer (1913\u20131993).md": {
-      "sha256": "c8d21de96240ec5ed6ef04b63946a887df7aeaf7013a243c70b30a8bb46a5383",
-      "kind": "real"
-    },
-    "Douglas Telfer (1887\u20131956).md": {
-      "sha256": "38f5f0571cb09779851e64a71ffc07369d727620dda1bda1fdf201624fcd90c2",
-      "kind": "real"
-    },
-    "Edith Farrow.md": {
-      "sha256": "7336681a752b757b61c93b2e623c1b6126ad34226bf9cbf792bc3694147e8316",
-      "kind": "real"
-    },
-    "Edith Mary Kathleen Telfer.md": {
-      "sha256": "c5b59af4fa0e20d6061e29aadf4f3f5946103d599727546177bf566db62aecde",
-      "kind": "real"
-    },
-    "Edward Albert Parker (1888\u20131939).md": {
-      "sha256": "f736c629d978ff5afe697f737cd9f72243fec4bd1483e371c942cbd494b260de",
-      "kind": "real"
-    },
-    "Edward Telfer.md": {
-      "sha256": "6d15d68a1dff839a2bf4d959622750fdb812e6ff914c074c7e956755e2a1c836",
-      "kind": "real"
-    },
-    "Edwin Ernest Clarke.md": {
-      "sha256": "005e2e059ae12052ccf4bcfa20b52a58eafaf638583e483530a47c6c975dee48",
-      "kind": "real"
-    },
-    "Edwin Gilbert Telfer (1887\u20131958).md": {
-      "sha256": "3dd26a258efaa205d1f70b7f544c59d07f625bbf144c31eeb5b1ad4eeaed326f",
-      "kind": "real"
-    },
-    "Edwin Roy Telfer (1921\u20132009).md": {
-      "sha256": "08bf9e799d919570ec787650041eef5cf6a7a8f846d09baa10b5d55e52cef4d0",
-      "kind": "real"
-    },
-    "Effie Olive Telfer (1886\u20131969).md": {
-      "sha256": "63dc383b64bf68f869d175c4f9a3d7d509438e038a2dc98ec9ab9bd02ad4b504",
-      "kind": "real"
-    },
-    "Elisabeth Telfer (b. ~1806, England).md": {
-      "sha256": "89b52b78208be7272361b1d035dcddf91dfeae9c553648ed70fb3d5189b80fa5",
-      "kind": "real"
-    },
-    "Elizabeth Anne Smith (1878\u2013?).md": {
-      "sha256": "c0203674e1edc3b5427963e87847aa6bcb75830d4244b307557ced7372bda6d8",
-      "kind": "real"
-    },
-    "Elizabeth Beattie (1741\u20131819).md": {
-      "sha256": "5d4afce92f43ace4c5b0fa7ad10702a3a213d2dab67f2aea9e7fa8511d4688cb",
-      "kind": "real"
-    },
-    "Elizabeth Beattie (1802\u20131891).md": {
-      "sha256": "44b8ddecacd4aacc4ee54c318f6a3f6e9d43f9b2e0271c5d6e7bfe5e8af35d5e",
-      "kind": "real"
-    },
-    "Elizabeth Beattie Bessie Telfer (1871\u20131948).md": {
-      "sha256": "9b6aaa6a7064787dfd0eb25b33f17e1d1502a26b33ba658137e7fc3e616fffa8",
-      "kind": "real"
-    },
-    "Elizabeth Beattie Telfer (1832\u20131896).md": {
-      "sha256": "36b9cc9f70da82868b5611a0da7eb2c9341618605e09d582353db4bb14cf949f",
-      "kind": "real"
-    },
-    "Elizabeth Farrow.md": {
-      "sha256": "801a70f75316ef353819e1fb7b2966539efb424215d844759c88a910d566b512",
-      "kind": "real"
-    },
-    "Elizabeth Hannah (1836\u20131916).md": {
-      "sha256": "60b60e8d750ebf5bd9b937ac5bf8a45dedbf9c79035fc16c13ed9782044f3814",
-      "kind": "redirect"
-    },
-    "Elizabeth Hannah Telfer (1836\u20131916).md": {
-      "sha256": "c3f2b10a3919f0e30c139ba09a49b973ac224cabd5dfff0bff57b501c9102a8f",
-      "kind": "real"
-    },
-    "Elizabeth Hutton Telfer (1774\u20131853).md": {
-      "sha256": "3ed1ca54b8286ff24981e15d1518c5b07713c6f3387e9958476d990a4d422fd6",
-      "kind": "real"
-    },
-    "Elizabeth Jane Liebich (1859\u20131919).md": {
-      "sha256": "05968e5e9b40651e8406a49f9c674211af5540c592242346918dd3e71011c21c",
-      "kind": "real"
-    },
-    "Elizabeth Oliver (1807\u20131846).md": {
-      "sha256": "20b11d207723a8da6bcf1004e3caebd9ddfc04236ca9358b4cd9416edd615c43",
-      "kind": "real"
-    },
-    "Elizabeth Parker (1879\u20131957).md": {
-      "sha256": "68dabe99e87c89d008c76b2e68764cca4482f0d4228a807872e1f1fb61cb2b2b",
-      "kind": "real"
-    },
-    "Elizabeth Paynter (1864\u20131928).md": {
-      "sha256": "9500b5f7b0f9bd779660c82d9c00ed29832f18ea4529de02e1ff76c04e11c85f",
-      "kind": "real"
-    },
-    "Elizabeth Telfer (1868\u20131950).md": {
-      "sha256": "8c140e6cfcca7ec3ebf4dc86807fb18d03dafc76632ab8a0ea07f46924dfa163",
-      "kind": "real"
-    },
-    "Elizabeth Telfer Farrow Holloway (1861\u20131946).md": {
-      "sha256": "80c921138fc625e2ee9e622a0c57618f0523de77dac47099ad6ab84f0fe7f5ff",
-      "kind": "real"
-    },
-    "Elizabeth Telfer Farrow.md": {
-      "sha256": "4220831ba779a386b46f387867f85194ba63cb2dcc72cdf267250d65a1553a8d",
-      "kind": "redirect"
-    },
-    "Elspeth Young (1722\u2013?).md": {
-      "sha256": "ad1e84575d23be568bd7461dfc605c3ac3ae5e02cc5ddfa654fdf8d8585799c1",
-      "kind": "real"
-    },
-    "Elva May Southwood (1896\u20131982).md": {
-      "sha256": "4fdd8b379b4bdb87dd2c3eeab8882d7d4e79f0d739bdc5c1eb685be3cbc3f7a0",
-      "kind": "real"
-    },
-    "Emeline Couzens (1857\u20131949).md": {
-      "sha256": "c40771a1b98faae71985d5639ad69a293d53aa3237c46fc4e1f03a68a95584c7",
-      "kind": "real"
-    },
-    "Emily Amelia Telfer (1913\u20132000).md": {
-      "sha256": "cad54b7298b25486251d5ca8cfa108ea2425f1b944015753eb0cac3019f4a5a5",
-      "kind": "real"
-    },
-    "Emily Ellen Thorpe.md": {
-      "sha256": "ffde637b2521e569366e98570fad7ef97f80fe218d7170ffa4853b9ee3124825",
-      "kind": "real"
-    },
-    "Emma Jane Masters Tuck (1855\u20131922).md": {
-      "sha256": "8a184136abbf874d153939a36c0fe13065d041656312b2575acdd03155bf5861",
-      "kind": "real"
-    },
-    "Emma Turner Hucks (1888\u20131910).md": {
-      "sha256": "9dfabe1e2c69f02b92b97de84bcf33d11bdcbd0c49a9b258970119776b4217aa",
-      "kind": "real"
-    },
-    "Eric John Telfer.md": {
-      "sha256": "aa680b02ce7dcc2030b08ee1f04a95f67fc92351022d76559e90daea0d2e374b",
-      "kind": "real"
-    },
-    "Ernest John Telfer (1878\u20131953).md": {
-      "sha256": "543640a785e536b90a22f99686d4ea0516be85a7ee20a0ea43dc99f5746ae2d1",
-      "kind": "real"
-    },
-    "Esther Cowan (1783\u20131856).md": {
-      "sha256": "76a43e0724d16f8bf3a3af5d6d7aab7bebeb1d0456fe8fc4fd5aeca755ba5647",
-      "kind": "real"
-    },
-    "Esther Farrow Latter (1859\u20131951).md": {
-      "sha256": "696d9ef0d501fe2696eff54cf633b53233372bb4207d541d6f321270aa7c2ed9",
-      "kind": "real"
-    },
-    "Esther Farrow.md": {
-      "sha256": "0d59e1304ffec2da770c4a99401fe4e5794865ced765f092bb96656b95eef31d",
-      "kind": "real"
-    },
-    "Esther Hannah Farrow.md": {
-      "sha256": "6fea2663d960f5e163b57fd2e1ccb94eb967661ee0237d628bf4318007faf40d",
-      "kind": "real"
-    },
-    "Esther Jane (1834\u20131909).md": {
-      "sha256": "e64d00aa3aa4023402aac41c1c05c1498ab49478acf25810544ed0e44b25d2df",
-      "kind": "redirect"
-    },
-    "Esther Jane Telfer (1834\u20131909).md": {
-      "sha256": "d658cfab7080cd22fe226249cd7c7fe579fc7e12a9cb0da049c09260e16941b2",
-      "kind": "real"
-    },
-    "Esther Telfer Smith (1870\u20131896).md": {
-      "sha256": "67b14b2c23ea3b2ceccb19d4bbbba389dae85620d9a9de78ce33f7eca1373178",
-      "kind": "real"
-    },
-    "Ethel Edith Telfer.md": {
-      "sha256": "9b637640c047ebacaa004dd8db46d65266d9a7c1c40ded72750ca37475610067",
-      "kind": "real"
-    },
-    "Ethel Jean Telfer (1915\u2013living).md": {
-      "sha256": "f58574bd309697e01dc262251e101ab2df6046e340c31127e39c0327aef33cca",
-      "kind": "real"
-    },
-    "Eva Agnes Farrow.md": {
-      "sha256": "d4dc49af4075ae5593214a7b7ad026822da4c5fd6cb05cc8dd9af37508783a46",
-      "kind": "real"
-    },
-    "Eva Rowena Telfer (1885\u20131974).md": {
-      "sha256": "fdedc20897a8a9b661d5540c43d1bcb137722b5f6deb789d6220d7398135edb5",
-      "kind": "real"
-    },
-    "Fanny Baker (1863\u20131955).md": {
-      "sha256": "caa1770164e677f3735367206b8d9ae324f9b85ea6ec116917b63784b073ee48",
-      "kind": "real"
-    },
-    "Florence Nicholas Telfer.md": {
-      "sha256": "87e17158ebc3e2664f323a9e7625b35abd29fd43d6e790569f5a79c974a2251b",
-      "kind": "real"
-    },
-    "Floris Ethel Victoria Telfer (1904\u20131951).md": {
-      "sha256": "6c9c7acd979e0d2367db1474fd007b7473c14ff5ef0445d2f14be99708b447df",
-      "kind": "real"
-    },
-    "Frances Margaret Oswald (1861\u20131931).md": {
-      "sha256": "dc1c93ae2e8da072f0b243f83692ada221a7b11d578f1e851b2c00f92fa5bb89",
-      "kind": "real"
-    },
-    "Francis Adam Telfer (1875\u20131955).md": {
-      "sha256": "fc7368465f8d74ebb3667a773c98648062ba1e10149856cccc6b0ca3d6acf7e1",
-      "kind": "real"
-    },
-    "Francis Charles Telfer (1875\u20131954).md": {
-      "sha256": "01d22e14e9c76070d119744dfd1bdcd7e7afe795074c29bf4dd3d83261fc556d",
-      "kind": "real"
-    },
-    "Francis Kelson Telfer (1910\u20131987).md": {
-      "sha256": "c5e3ab559182d9dc89f9faed0759384e315dd2c1814ce812c21fc3f724a7ef08",
-      "kind": "real"
-    },
-    "Francis Telfer (1768\u20131836).md": {
-      "sha256": "6032607b1d2383b4176cf8c37db56e7fec0f09299e298de9c357f0851c5a5611",
-      "kind": "real"
-    },
-    "Francis Telfer (1809\u20131895).md": {
-      "sha256": "ede499bd11150ab9164a3e54a5e1c4fe62311b3d5d3ca7d636a111a61df287e5",
-      "kind": "real"
-    },
-    "Francis Telfer Dillon.md": {
-      "sha256": "ce49ea476c0a52f5dddc1f0e2d7a618af2d513c2732532a05580ee4906a802f7",
-      "kind": "real"
-    },
-    "Francis Telfer Paynter (1862\u2013?).md": {
-      "sha256": "50457025c7e35962a273ec5408f6b67d8ea287a0cc496ff619909866967d0641",
-      "kind": "real"
-    },
-    "Francis Telfer Smith (1874\u20131945).md": {
-      "sha256": "f0a9769ca235ca57f7f2c16844074147a88a27ad736e9191ac45d2b96e5dc74b",
-      "kind": "real"
-    },
-    "Frank Lindsay.md": {
-      "sha256": "c1cda1488f776ef284a228c46da4ec4671f8b900f73e3cf06ddb34133fe1e34d",
-      "kind": "real"
-    },
-    "Frederick Charles Masters (1848\u20131939).md": {
-      "sha256": "09ca0dca63e170c171afccbf8812a37b2d3259b1509a55f8d18f18c95a7d6a33",
-      "kind": "real"
-    },
-    "Frederick Parker (~1838\u20131928).md": {
-      "sha256": "5d70b239e45ddf61ab55fba5dc2d7ad814ceec3f7e2f1ab7321a0944d32f9f84",
-      "kind": "real"
-    },
-    "George Edward Masters (1844\u20131912).md": {
-      "sha256": "f466b50d345bf6719eb35cd0c46e00a45e2d21bbcefb5cca515051fabe3f600a",
-      "kind": "real"
-    },
-    "George Herbert Hucks (1875\u20131947).md": {
-      "sha256": "ba79393d8b98dcff77d045a12c8b584b37a465865da8026dc0ca318f0ccaee17",
-      "kind": "real"
-    },
-    "George Hope Farrow (1872\u20131919).md": {
-      "sha256": "3b1c5ca82cffb925ecf01b31d5176420e930996bf8990c428de59b67ffeb00e4",
-      "kind": "real"
-    },
-    "George Masters (1841\u20131841).md": {
-      "sha256": "cb685d8fe5cbe11656685c7dc6474206d369a6badbeccff407d06af8daf6a6d7",
-      "kind": "real"
-    },
-    "George Parker.md": {
-      "sha256": "a11a8c27ad75dc6468940977ebc33aa42edaea0a7162b45191a883cc39416fb6",
-      "kind": "real"
-    },
-    "George Provis.md": {
-      "sha256": "afc6430ee5635d4bcbd8cc1595b13be60535985157204cb96eeb80b9ace8157b",
-      "kind": "real"
-    },
-    "George Sidney Gilbert Stribling (1864\u20131901).md": {
-      "sha256": "3df89d6deabb4a0f2cb5374aaa2f696ddb3608ed3f25d400c68dd1a0357c7736",
-      "kind": "real"
-    },
-    "George Wright Telfer (1850\u20131913).md": {
-      "sha256": "f79e426ade0c8c9cdce0a396278cce7f3511ed91a98fb4a25ded88225097c8de",
-      "kind": "real"
-    },
-    "Gilbert Melville Telfer (1908\u20131973).md": {
-      "sha256": "b96017fed9aca791c7768d7e53d28a444682b939af9d1a1add2117b28736a01d",
-      "kind": "real"
-    },
-    "Gladys Merle Telfer (1917\u2013living).md": {
-      "sha256": "2d906dec2473d5c99897c0bb807256031a5f791efd7e9da073e3ff2410bea985",
-      "kind": "real"
-    },
-    "Grantley Keith Telfer.md": {
-      "sha256": "eb87893383cc8b008586ff99871fc327cc2d5f383b441662237c2c5f537ac1b7",
-      "kind": "real"
-    },
-    "Gwendoline Victoria (Campbell) Telfer (1910\u20131966).md": {
-      "sha256": "e4136ca58b0b9aab96cc02a12e4feba5635fb83db903c83b83d337e5eb7fcb42",
-      "kind": "real"
-    },
-    "Gwinfred Gorden Herbert John Hucks (1908\u20132002).md": {
-      "sha256": "9c5a7ce34c6b8bb2bdb021e75f60a29d0261fa731dca445b261858ee34d957db",
-      "kind": "real"
-    },
-    "Hannah Baker (1855\u20131948).md": {
-      "sha256": "169591f524702185eff53ac6908b3e18e6e5fa896b74b5ecc048454b89c43f22",
-      "kind": "real"
-    },
-    "Hannah Peacock (1862\u20131948).md": {
-      "sha256": "7db5b4ad60232940add067d785beac6b6a9c22adac4149e9417b5b55154ffe9a",
-      "kind": "real"
-    },
-    "Hannah Peacock.md": {
-      "sha256": "d562a8d04b6ec66e8f57638ba3d94ab935c47bb52178f308925809fda6a44b4b",
-      "kind": "redirect"
-    },
-    "Harold Peryman Wishart (1888\u20131965).md": {
-      "sha256": "2e74bf53a1667a555fe8ee15fd7e8e75a77be1cfd913879aa389c902e4392177",
-      "kind": "real"
-    },
-    "Harry Bunston.md": {
-      "sha256": "5b84a2586525495e8dc1e20f5c7e2a6f3ca77739b49a32950c605fff42df47f0",
-      "kind": "real"
-    },
-    "Hazel Rose Telfer (1891\u20131939).md": {
-      "sha256": "23e447e2e25a168239af679f2bb1f9558ecc9b2cb25b29288e9d83071c4f9a26",
-      "kind": "real"
-    },
-    "Helen Telfer.md": {
-      "sha256": "1e4e65dfeeea91b94b1e44062e463a3ad6f7567edd8ee5ad8cec5d2d2ac88e3b",
-      "kind": "real"
-    },
-    "Henry Hatch Dillon.md": {
-      "sha256": "3f34cf5a39bf56805a3d627ead8916d0f26b69e92905a7723819ccdf4a879396",
-      "kind": "real"
-    },
-    "Herbert Clifford Holloway (1887\u20131918).md": {
-      "sha256": "1a0ae8f03a0dd382419cfd5923482cba714f0f28b3a87bd81af5ed2c8172db78",
-      "kind": "real"
-    },
-    "Herbert Dougal Telfer (1881\u20131976).md": {
-      "sha256": "7e22f8899337c80cb29cdf9343c3613143274b668ff5b8a1a7867906c9dd583c",
-      "kind": "real"
-    },
-    "Howard Lindsay Parker (1920\u20132003).md": {
-      "sha256": "a4d3e4cc41a07b4e4e365a636b35a08358c2e257974c415d570e89cc667371d9",
-      "kind": "real"
-    },
-    "Hugh John.md": {
-      "sha256": "8b56ba51fb2dfab2e809b2ba86a208c917398873f6ac41378095bf872d3d3488",
-      "kind": "real"
-    },
-    "Hugh Kelly Parker.md": {
-      "sha256": "777a263c9983a00ee6a3b63413d89d047757bac5c462b304315611697e52805a",
-      "kind": "real"
-    },
-    "Hugh Parker (1859\u20131861).md": {
-      "sha256": "2378e90f6d612849a1b5dc52480d0f3119649d01787f25ad88d3f11c5192158c",
-      "kind": "real"
-    },
-    "Hugh Parker (1864\u20131891).md": {
-      "sha256": "4a43463af356bfb3919ee77a90c28a353262eed0a4c5984c28edb17bc6901cd1",
-      "kind": "real"
-    },
-    "Ian Telfer.md": {
-      "sha256": "f7a3419a2979f4cf0117d925102e799da6deefb64eb4a81bbb876c1d6b0be18f",
-      "kind": "real"
-    },
-    "Inez Dillon.md": {
-      "sha256": "d87a412525b5a1581f3147e663278d71cbdd3a96c49d9959217bf81107a766ef",
-      "kind": "real"
-    },
-    "Inez Priscilla Dillon.md": {
-      "sha256": "9ec2fbb1b6ea2637da4d7db5b4bdc7b395b66672abdfa2d2f6504524c0a77675",
-      "kind": "real"
-    },
-    "Isabella Kelly (~1825\u20131867).md": {
-      "sha256": "23a5a817f9435929a43790a97839bdccb6a68fe54b80bfe6b39c037b4a07d6c0",
-      "kind": "real"
-    },
-    "Isabella Lucieton Telfer (1880\u20131964).md": {
-      "sha256": "6e6a7d740e4a267bfa29d0f5e1a4fa491d0bd8958b7602092bcf3bc2e6af33f4",
-      "kind": "real"
-    },
-    "Isabella Mabel Parker Carne (1895\u20131954).md": {
-      "sha256": "9da6cb9534c815a174db6e8e7740ce8d02b11d72f9749fd1c13fd7349d3b03c8",
-      "kind": "real"
-    },
-    "Isobel Telfer (1798\u2013?).md": {
-      "sha256": "0c761580fd143da6b55b9d2b52d443dfe82a359c080d4ddae49888bae600af6d",
-      "kind": "real"
-    },
-    "Ivan Frank Lillecrapp (1917\u20131996).md": {
-      "sha256": "6afcfcc8f3bc6f7993306ac0b7d00bd2dfd7ff59c3c051f60cdc5e1e7169aae9",
-      "kind": "real"
-    },
-    "James Alexander Alcorn (1915\u20131942).md": {
-      "sha256": "8ed0c322c46dadb23b5e37713608a1d33b078cf814b5c09f5a1d95c3e5c8fac3",
-      "kind": "real"
-    },
-    "James Baker (1859\u20131927).md": {
-      "sha256": "83c1057f9b08836eb046f63347d8208af650b2b893a9aea0f288a8673f7da457",
-      "kind": "real"
-    },
-    "James Edgerston Telfer (1877\u20131959).md": {
-      "sha256": "0959defbbc51db47f32ec272c3abde3e6dc5084eccd859bb9f7ff5688a054b4f",
-      "kind": "real"
-    },
-    "James Farrow.md": {
-      "sha256": "65fcd07fabbc62ec0a2224b3e6bd310689b70613700106e0e5bfdb1ef2410c4f",
-      "kind": "real"
-    },
-    "James Gordon Steele (1892\u20131951).md": {
-      "sha256": "8e34cbf6be3dfb9a167f1f0e62222a06e5d16b89caa3dbbb6ac6ca9b077403bc",
-      "kind": "real"
-    },
-    "James Masters (1846\u20131847).md": {
-      "sha256": "707f4eaa1e40c7683156e82af1befca261c583f6fc51bcd4d1e3fcefbd5380e2",
-      "kind": "real"
-    },
-    "James Robert Telfer (1866\u20131925).md": {
-      "sha256": "abbb68b156bea38081228c3b2cbf8f51bc0fd20a07de1a9c717b5bcc9446795b",
-      "kind": "real"
-    },
-    "James Telfer (1761-1845).md": {
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "kind": "empty"
-    },
-    "James Telfer (1761\u20131845).md": {
-      "sha256": "ca76b4ef88335951f5db3eee0d85bb0c5bc3c6cdfb217359ea163486ad29a7b8",
-      "kind": "real"
-    },
-    "James Telfer (1796\u20131863).md": {
-      "sha256": "d64f37eb507d186cbc87c7f1be3d0bdfdb2d82ead5bd8d339ea8dff2d760a842",
-      "kind": "real"
-    },
-    "James Telfer (1829\u20131913).md": {
-      "sha256": "70e0d66760a0054f1340a4aca67b4e01d6884d54ffed94a83bbf80902aa3bc73",
-      "kind": "real"
-    },
-    "James Telfer (1832\u20131845).md": {
-      "sha256": "4060d109936a45cfabd19fd3f546fc967a44542da2185c10d60a609a1f968391",
-      "kind": "real"
-    },
-    "James Telfer (1858\u20131944).md": {
-      "sha256": "e6c3cd52a997301046672fb9f4168988181c4527f3a21fd721c659b130d71774",
-      "kind": "real"
-    },
-    "James Telfer (1866\u20131946).md": {
-      "sha256": "0836b0b9c68de8b88931221bd8188a8517b1d31fbe658a3ee74eadbc89cd2c04",
-      "kind": "real"
-    },
-    "James Telfer (bap.1762).md": {
-      "sha256": "1fdf78f2c915f7ed9635b3e656614b8d6a3fbee762bdece90c0ba2eb272d6daf",
-      "kind": "real"
-    },
-    "James Telfer (of Sorbietrees) (~1740\u2013?).md": {
-      "sha256": "beae7384f0e1f60e97b17f429a684387ef4cd51e68d169af8b04b2d70c90e56f",
-      "kind": "real"
-    },
-    "James Telfer Dillon (1861\u20131951).md": {
-      "sha256": "a937f66d25858f69ae904f273e87dfda4229a038d50997a48cd7802d303143f8",
-      "kind": "real"
-    },
-    "Jane Murray Farrow (1857\u20131934).md": {
-      "sha256": "e6dcd0669b627109a887dd11c38689e21870f33aa256ee8efe660c1eec87f4c7",
-      "kind": "real"
-    },
-    "Jane Sophie Smith.md": {
-      "sha256": "935bc43f99999807b0a65f5e97e0e869e2b9b59df256ce882f274d5d3d783d89",
-      "kind": "real"
-    },
-    "Janet Dunlop Lawrie (1811\u20131902).md": {
-      "sha256": "9f5b963833056d9baaf3024ff57820603a3dbb1052c9b018f07614de6fb4763e",
-      "kind": "real"
-    },
-    "Janet Dunlop.md": {
-      "sha256": "e690a00f24e6c3906055236e274248a32cd10c71c9ab2ff6a5fbfccb5970ae05",
-      "kind": "redirect"
-    },
-    "Janet Nichol.md": {
-      "sha256": "fcd5540d2671de5571e36a744f44e1aa13c44ee670a993de1cfdd13b4380724f",
-      "kind": "real"
-    },
-    "Janet Stevenson.md": {
-      "sha256": "7c2b3c27fa430ba6650937e1f71b5328581da02e437cd1c7c05e9667d2d32b37",
-      "kind": "real"
-    },
-    "Janet Welsh (1826\u20131885).md": {
-      "sha256": "a63f88b9abd9ee9fbe276a568e3d71401bd0c380d829ddda1803352384563c34",
-      "kind": "real"
-    },
-    "Janet Welsh Telfer (1858\u20131921).md": {
-      "sha256": "231925e5cdb02e40456dfa41fc0dc49325b9e9d98ed3f926598bf1ab43446fdc",
-      "kind": "real"
-    },
-    "Jared Ivory.md": {
-      "sha256": "4ddd1a9ac9adbf47882aaac40c000a0c11a4f3991af8d49664d5a0e87cd9724f",
-      "kind": "real"
-    },
-    "Jean Maryann Martha Telfer (1910\u20131984).md": {
-      "sha256": "5bdd489855f88a079857c5a263be01f0ba3a5a3399d0f4770507c9f782c2d52e",
-      "kind": "real"
-    },
-    "Jean Murray (1810\u20131839).md": {
-      "sha256": "8a25b3884971eed06cb39cef9e56477d4256b29f2e25320a86f9ca9d1afbbd59",
-      "kind": "real"
-    },
-    "Jean Telfer (1764\u2013?).md": {
-      "sha256": "1a98eacedc1dfb1fe0fb568a3c1eff7cf475ece33ccd94e5a8daa5e066013965",
-      "kind": "real"
-    },
-    "Jean Telfer (1840\u20131892).md": {
-      "sha256": "4c8cc179ab57b7641cb8e03bdf0f53f85625107ce556feec980b2d1abee0364a",
-      "kind": "real"
-    },
-    "Jemima Williams Masters Grant (1850\u20131919).md": {
-      "sha256": "f99b15cb975a2b617ca5bce6d9282e83ceec903c76b9782b83ed95286ff8767d",
-      "kind": "real"
-    },
-    "Jenet Telfer (1770\u20131842).md": {
-      "sha256": "e82051814a8fd5d892c62113ed46e7dcd7d76f65ffa8943776522adec22e7200",
-      "kind": "real"
-    },
-    "Jennifer Bunston.md": {
-      "sha256": "b12f9e3f702da109c345bf3d4e83e41f18abbd40daa49f3d5c9adc1efad59064",
-      "kind": "real"
-    },
-    "Jessie Allan.md": {
-      "sha256": "2570fd8b2f1c15ffcd616d170b5ff05a5d1ef5548f279f3a3161ad2bcd0075a3",
-      "kind": "real"
-    },
-    "Jessie Kathleen (Sargent) Telfer (1914\u20131954).md": {
-      "sha256": "bfbdd82fd4d855cc6d9fe4ad73e4fe7fbefc4cce1fcaa2eab110e94d421c1f01",
-      "kind": "real"
-    },
-    "Jessie Telfer.md": {
-      "sha256": "d2eec6c232462c80496d49b2ee59a3c958362f0ee9858750053558dcb901b5a9",
-      "kind": "real"
-    },
-    "Joel Matthew Ivory (1986\u2013?).md": {
-      "sha256": "54d8894856e8bf20d2f526174922ec3c7501faed543d11e42883af9819e7db3e",
-      "kind": "real"
-    },
-    "John Alick Ralph Telfer.md": {
-      "sha256": "0b10275f11bc594d8a214e2199e03f0c42c69f9f64b03da11856512ad2f58fb3",
-      "kind": "real"
-    },
-    "John Charles Dillon (1827\u20131906).md": {
-      "sha256": "c085e9a6acc7291feb918512fd265c64109929cf56cc619ecec3da7fdd8d4958",
-      "kind": "real"
-    },
-    "John Ernest Telfer (1877\u20131877).md": {
-      "sha256": "3c2d209f50ffd671184e598fb5acbe53cb00adb6928d2d4e74bd44d92ee65b23",
-      "kind": "real"
-    },
-    "John Hobart (Jack) Watson (1916\u20131943).md": {
-      "sha256": "ee6b1b0c0cca8e4199ab01a26d2a6b04f4db9af0ce74c56b0ae1a96708a3cbd3",
-      "kind": "real"
-    },
-    "John James Smith (1871\u2013?).md": {
-      "sha256": "0f4c05f139865a924429b3dd18a7019b3d6e70bc90405a6285532ce42f8821a4",
-      "kind": "real"
-    },
-    "John James Telfer Farrow.md": {
-      "sha256": "30f9e67bc88ec4faf9919355ba6e6f66febb34208b2cf51014a192536121f02e",
-      "kind": "real"
-    },
-    "John Koppio Telfer (1862\u20131922).md": {
-      "sha256": "a2e7ab2aeab8bc84c443440c52adb2c693518d8e30bfa951d96acc845e54dc76",
-      "kind": "real"
-    },
-    "John Lawrie (1810\u20131888).md": {
-      "sha256": "2f4a0a1ae380773db059cad492b6bb040509fe067dfaf97ef019d9d296e33aa5",
-      "kind": "real"
-    },
-    "John Lawrie.md": {
-      "sha256": "2f7cb5521851dd99ca1b59c77fd4beb4df559079d2f2b58794ce911f79e1f77d",
-      "kind": "redirect"
-    },
-    "John Lindsay Cameron (1907\u20131942).md": {
-      "sha256": "8688bb6711f4d9ed62cfc474a986d5647eac69302c7f8fe545c4d90600ebb98c",
-      "kind": "real"
-    },
-    "John Murray (1779\u20131849).md": {
-      "sha256": "28f06aa79d0b5cb9f6f458f70425130b6ba0cb45f228e744625dc001d0cea689",
-      "kind": "real"
-    },
-    "John Ralph Paynter (1921\u20131941).md": {
-      "sha256": "b4bb3bf328b0c1f7a13a57b5c5a3fdb2627ffb1798cf2860d465f38c6b0d08ea",
-      "kind": "real"
-    },
-    "John Robert Telfer.md": {
-      "sha256": "ad39cf61a74d4db584f6426ef8ba0f85cc2b91e2c54c50b962f6182d467fafa9",
-      "kind": "real"
-    },
-    "John Roland Telfer (1882\u20131975).md": {
-      "sha256": "d08edfde9118a09c97c41e242aec98843a5e8abe78fe67e68fc7e0eda13efc9c",
-      "kind": "real"
-    },
-    "John Smith (~1827\u20131895).md": {
-      "sha256": "c6ec5a4b9db23517c798414b0af466772dfd48b4608dbf05da32e854bc4914d1",
-      "kind": "real"
-    },
-    "John Telfer (1805\u20131839).md": {
-      "sha256": "e9de8333f9e1466f51c4e2085f3de5cc1a9dfd571380de83b23b5921e7fbf11d",
-      "kind": "real"
-    },
-    "John Telfer (1840\u20131913).md": {
-      "sha256": "188577f70a7ee56e7d90b7cadf38b8085be4c9d30fe444ff7810abc6ca26b28e",
-      "kind": "real"
-    },
-    "John Telfer (1847\u20131929).md": {
-      "sha256": "d1ad9a421d478e1408b864dfc6f0a53b18c4816eee06c7a579f423e2ed175c86",
-      "kind": "real"
-    },
-    "John Telfer (b. ~1791, England).md": {
-      "sha256": "8a2ef2e9318151fa6cf14ba2de39500ccf49818fff11989b58c7ace875c6b3c4",
-      "kind": "real"
-    },
-    "John Telfer (of Castleton) (1731\u2013?).md": {
-      "sha256": "fb24a42d326108e0ae41fc3c48b1d69e83f0850d21f57696303142062a8572d9",
-      "kind": "real"
-    },
-    "John Watson (1851\u20131929).md": {
-      "sha256": "7da5310ffc6cc01f3b51d4065dc4830be77b82ea8b7c73d430c04756e90723ad",
-      "kind": "real"
-    },
-    "Johnnie Telfer.md": {
-      "sha256": "d2f6a748abd665fc0e535e0072b9bdf958f8d8cf2f1430b3ccf4b7262799bf87",
-      "kind": "real"
-    },
-    "Jono Telfer.md": {
-      "sha256": "8b988e21277e1d668b1daa0238aa9e02f61f4ab5782f9683479b531f5e87d7b2",
-      "kind": "real"
-    },
-    "Joseph Farrow (1814\u20131899).md": {
-      "sha256": "5adcc6f27b9eb8d3f2ee7a47715c7c0240eb3388ce863850d9e08940b24f7e57",
-      "kind": "real"
-    },
-    "Joseph Francis Farrow.md": {
-      "sha256": "801f935d25d0326289a9b739495178d8dee758a30119b7a11489ec47b5e8bdf0",
-      "kind": "real"
-    },
-    "Joseph March (1767\u20131831).md": {
-      "sha256": "9aa0e5c32abe24ef91fc0606339ba92282c536eae75edef8ea5ac1bbf5e60fd8",
-      "kind": "real"
-    },
-    "Joseph March (1797\u20131883).md": {
-      "sha256": "9a820b32782fd153874536fff2b006d7e3295688a7743819239e1dceec065ab9",
-      "kind": "real"
-    },
-    "Joseph Masters (1841\u20131841).md": {
-      "sha256": "5768215719a206b0728a3cd7d1ecedd4efb1b82d104573969e7fae7249784be3",
-      "kind": "real"
-    },
-    "Joseph Robert Masters (1853\u20131922).md": {
-      "sha256": "b64e1520b0e87aff8ed19e318a3b605161ee9406789f25a12a99e911314b991c",
-      "kind": "real"
-    },
-    "Joseph Watson (1883\u20131948).md": {
-      "sha256": "1419c7b8bdd6b302d1155e4df0a1f1a5d147fee87c2cf448428fed9a6a7fe71a",
-      "kind": "real"
-    },
-    "Joyce Elizabeth Telfer (1912\u20132012).md": {
-      "sha256": "47d57c8eee01b67d93248c87e42c72315ac5befa4576dc50a473992c2f6c716d",
-      "kind": "real"
-    },
-    "Julia Matilda Seebohm (1876\u20131939).md": {
-      "sha256": "ec3333dfb94ef9f1441bd77ff284355cd2af41cf0df26b111a10cf8941f99196",
-      "kind": "real"
-    },
-    "Karina Ivory.md": {
-      "sha256": "a3f46d99a04f903c4f87354bbb564ac42d25feb0beea81a00b0d4bcc98759a48",
-      "kind": "real"
-    },
-    "Kathryn Mavis Telfer (1961\u20131965).md": {
-      "sha256": "afeddbda1974a94699ac0694f7e8b9298e4dee41b0b8dff413ed1b8129615472",
-      "kind": "real"
-    },
-    "Kenneth Cornish.md": {
-      "sha256": "4310615bcd2b0a00da70e212bc925d81fc6899bdb431b17b30bde96b9e55b514",
-      "kind": "real"
-    },
-    "Kenneth Gregory Virgen (1925\u20132003).md": {
-      "sha256": "27595827f5a64c728f70224e40c51678c831207054f78c37f66c2664bd35e8d4",
-      "kind": "real"
-    },
-    "Kenneth Harry Latter (1888\u20131958).md": {
-      "sha256": "c9afc899eaba4a5f7d1443b6af9bd8014dcedfabd5b6225663230dffa9d56c68",
-      "kind": "real"
-    },
-    "Kenneth William John Telfer (1906\u20131970).md": {
-      "sha256": "cb207ce2e101eb731765f3e8538d6bbc37fa59eaf4224331544ead3b0581d146",
-      "kind": "real"
-    },
-    "Kristin Stefanoff.md": {
-      "sha256": "5779200311fbb2d3aa1ef715e2b9e0bdd42cd7390df098a7bba7bd748360f82e",
-      "kind": "real"
-    },
-    "Kylie Isabella Telfer (1982\u2013?).md": {
-      "sha256": "79839fdaab8f358502e672f88a619f1323b4c00d4159598a2582bf2b23a5597e",
-      "kind": "real"
-    },
-    "Lancelot Hobart Watson (1888\u20131960).md": {
-      "sha256": "18ec1e2ed36f806457b3df69ebd8b0984055bd0baeaa0d2db41b0ab3b96942dd",
-      "kind": "real"
-    },
-    "Lauren Maree Ivory (1994\u2013?).md": {
-      "sha256": "3168a49a6ff2d7804d66319df433c535c68c9bd73f92be43d7730712d5e094b4",
-      "kind": "real"
-    },
-    "Leonard Arthur Dance.md": {
-      "sha256": "6bbffebf889ddd865101b1eca561f205402b42fd9939734673a38b6a894288ff",
-      "kind": "real"
-    },
-    "Lesley Thomas Telfer (1891\u20131914).md": {
-      "sha256": "5f2cd4cfb4c4bee54c4a2fb96a49e236bcbe8f22f31b9837031eaddaef954d01",
-      "kind": "real"
-    },
-    "Leslie Frank Dillon (~1892\u20131915).md": {
-      "sha256": "b40a26d8d042e3690427123367ca60beb4858be9c78532a8db9396ac83956bbf",
-      "kind": "real"
-    },
-    "Leslie James Dillon (1916\u20131941).md": {
-      "sha256": "e072794d5adf1560082ca99e451b8d50632e95326671cac784d818038da56f26",
-      "kind": "real"
-    },
-    "Leslie Robert Telfer.md": {
-      "sha256": "a0261cd48760b4badba7073bb1820d343279576457b3d14aaa58ba55a7d79839",
-      "kind": "real"
-    },
-    "Levi Leonard Timothy Telfer (2017\u2013?).md": {
-      "sha256": "35d501f934930c2f9b4897e1fb590ce79aca156b412e21438bf82c169ce6847e",
-      "kind": "real"
-    },
-    "Lilian Daisy Dawson.md": {
-      "sha256": "2abcf4a52efb85a8fd847eeee6e427ffda202d36221feb609c330db0dcbb78ce",
-      "kind": "real"
-    },
-    "Lilian Jean Parker (1922\u20132001).md": {
-      "sha256": "262d9a62271ed5c269172f0914cc89afc7edde6a3be4fb389e6a16c50d98a84d",
-      "kind": "real"
-    },
-    "Lillian May Telfer (1872\u20131951).md": {
-      "sha256": "06107039f695116ba45144037a48cba6ff3d474ab68b9e3eea00f9fec46ed081",
-      "kind": "real"
-    },
-    "Lindsay Roland Telfer (1920\u20131976).md": {
-      "sha256": "ad5d18e88ba52e3ddca5acd389fe88776a8eee9cc444906cc6d0707e61638c7f",
-      "kind": "real"
-    },
-    "Lloyd Wilbur Telfer (1913\u20132001).md": {
-      "sha256": "b6e0ecfa28b84bfb0328a4ccc4c21711e1edfd325e835b27b4fc74bc26dc9d01",
-      "kind": "real"
-    },
-    "Lucy Agnes Parker (1881\u20131903).md": {
-      "sha256": "184927b604162a5795584bbc5797989ca68db173e3d916657d37aabcc7c41459",
-      "kind": "real"
-    },
-    "Mabel Winifred Parker (1890\u20131895).md": {
-      "sha256": "c43e9dcb42f1ae8c653917ffabb2a5cb57d867a5b0fca64e5e1cc41f623081ba",
-      "kind": "real"
-    },
-    "Maifie Beryl Telfer (1913\u20131948).md": {
-      "sha256": "2ae9ec8da26b095e34d9edefc0b63ae433469996b6d614fede4e20307e0dece5",
-      "kind": "real"
-    },
-    "Malcolm Duncan Cameron.md": {
-      "sha256": "4736d7940f2aae22c3dc65b572b37b3bf981da35f0218d907546c64112ea5d08",
-      "kind": "real"
-    },
-    "Malcolm Murray Cameron.md": {
-      "sha256": "f66d2522108d02140de1068d20d8e424d959e8e72fdb1c5ad3694132d6a9e1aa",
-      "kind": "real"
-    },
-    "Margaret Armstrong (~1745\u2013?).md": {
-      "sha256": "c1d7ddbf8663e083f666a9700a50dcf460fcf92caa93e2732c8809f82e514c15",
-      "kind": "real"
-    },
-    "Margaret Dougal Smith.md": {
-      "sha256": "4a79a7bf1b5a099f310aad93ec1f8499134147dd5e227d256d1bb1412b5df575",
-      "kind": "real"
-    },
-    "Margaret Dougal Telfer (1849\u20131936).md": {
-      "sha256": "7b6d4745714928b07358f3180eada76ed383be68d7efb0786e77733d7d57cc09",
-      "kind": "real"
-    },
-    "Margaret Farrow.md": {
-      "sha256": "e62283ad73187fc1bc58fff02f40d5e4c2bdefa3068c4282692a8a8add179225",
-      "kind": "real"
-    },
-    "Margaret Telfer (1801\u2013?).md": {
-      "sha256": "c3cd5849cefb07a650eb44c72f103b745712052adf4472dab73a85b8a6728a29",
-      "kind": "real"
-    },
-    "Margaret Wright Telfer (1810\u20131892).md": {
-      "sha256": "1663a2f95e172806e438c00ee28805cca019bc05499da52a857641c34e026f2a",
-      "kind": "real"
-    },
-    "Margaret Wright Telfer (1869\u20131890).md": {
-      "sha256": "ddcaa490f87cf9c844c0900a0ff01140f3f06367ede708576e1b776b36e0158a",
-      "kind": "real"
-    },
-    "Maria Clara Telfer (1878\u20131903).md": {
-      "sha256": "2ae4edf066312f1b5600e7fc902c6dc2c056bce402cf0aa16697751be85d5228",
-      "kind": "real"
-    },
-    "Marian Telfer Cornish (1896\u20131977).md": {
-      "sha256": "eca05f37dc92d290a617d0c86d3e997eaf4769e3fb24c62b320748ea7cf90e2f",
-      "kind": "real"
-    },
-    "Marion Vida.md": {
-      "sha256": "995a734146b141719aa650b3a32ba49a07d4ea3ddc6727ecba2f5a8d94fc2184",
-      "kind": "real"
-    },
-    "Mark Kenneth Telfer (1986\u2013?).md": {
-      "sha256": "544b7281939878686c427d70a4ac72bcbfabb2dd656e7105a1460e5f7f21ce2c",
-      "kind": "real"
-    },
-    "Mark Telfer (1877\u20131946).md": {
-      "sha256": "7ab6af30ce618eb76c7a5ba5fd5512cb2680a2965963a1152853490fca6da971",
-      "kind": "real"
-    },
-    "Martha Allen (1840\u20131876).md": {
-      "sha256": "a63316fd6242d6b9c23531bbe0d43569030040ef721ff8532f651a69fdb697ba",
-      "kind": "real"
-    },
-    "Martha Ann Masters Radford (1839\u20131912).md": {
-      "sha256": "5277738ef33152131ca9536cdde8162b362d56681b7f6e1c010d53f4e972bc15",
-      "kind": "real"
-    },
-    "Martha Henstridge (~1854\u20131921).md": {
-      "sha256": "9f25ed74b5248023f969d02d4ef295691363caa2e08865944a06258251c365ee",
-      "kind": "real"
-    },
-    "Martha Telfer (1873\u2013?).md": {
-      "sha256": "3873339c9564f2a90af0ca4c4715ad28ca3e70959f7df5e9e49f77f22871b8f5",
-      "kind": "redirect"
-    },
-    "Martha Telfer Cameron (1873\u20131964).md": {
-      "sha256": "44a0b857308c58889808d2cbc7c5940ed4d138ddefac5cc6f74f45ad42e1bf3a",
-      "kind": "real"
-    },
-    "Martha Williams Masters (1814\u20131896).md": {
-      "sha256": "83cc7f9085999997f00c6d6812bc12b9d05de6104d226eae26145dc3b8d7057e",
-      "kind": "real"
-    },
-    "Mary Ann (Gelligen) Dillon (1887\u20131954).md": {
-      "sha256": "7a43bc53e0b5790bb17971fa55fb99992c747674568351ceb5125fdd182334bd",
-      "kind": "real"
-    },
-    "Mary Anne McIntyre (1836\u20131913).md": {
-      "sha256": "889348905294101f128c6827d87c0a3ee2915b1a5c5628f68999c68ee7e1e1a0",
-      "kind": "real"
-    },
-    "Mary Anne McIntyre.md": {
-      "sha256": "eb85e33d8cca330ed868ad674f6825e77fe9fcb6bb448ac34903ff6eecce475a",
-      "kind": "redirect"
-    },
-    "Mary Bayes Farrow (1875\u20131938).md": {
-      "sha256": "f04bd857373539a15273e9ce98c07f6b2140fb911bd025782dafadfcbf290d9a",
-      "kind": "real"
-    },
-    "Mary Ellen Masters Roach (1852\u20131935).md": {
-      "sha256": "3745f78178e8053a8f70b124ee1e58f9627232a9a530117c8af3e98d2312bdf0",
-      "kind": "real"
-    },
-    "Mary Jane Paynter (1861\u20131945).md": {
-      "sha256": "07ff6085c916402a94106898532a1852aec797b5f3901e0b47a9cb8e1540ec99",
-      "kind": "real"
-    },
-    "May Foy.md": {
-      "sha256": "60a02560b9131d9b956a13f7c1eb7dfd64d93f9f7468809340cbe7a9e28c8ac5",
-      "kind": "real"
-    },
-    "Melville Bruce Telfer (1914\u20131997).md": {
-      "sha256": "e11cae94b95b3fa6469c573bad629e9f3bc7f61e771fc7cd0bdf9ba5c65cb2e0",
-      "kind": "real"
-    },
-    "Mina Evelyn Parker (1897\u20131982).md": {
-      "sha256": "39bc116d168810bdabe42303241ca7529bf9ef5a1b8d4a25e126031424ef7d52",
-      "kind": "real"
-    },
-    "Mitchell Telfer (2008\u2013?).md": {
-      "sha256": "886749fe6975011025bdc7e83648d5c2a81e13aca98abac5db26f9243d8482ce",
-      "kind": "real"
-    },
-    "Murray John Telfer (1911\u20131982).md": {
-      "sha256": "bb1d262e468c0a48faffa0e1616fa6d00c94bae7f6ccba7d6ebea0cba2f12a7d",
-      "kind": "redirect"
-    },
-    "Murray John Telfer (1924\u20132009).md": {
-      "sha256": "7f662528c04b523889a60ff61243b3f1512e93f609b00cfb6d033995b06a5b05",
-      "kind": "real"
-    },
-    "Murray Keith Telfer (1920\u20132005).md": {
-      "sha256": "5e13c644eb78ecb7f4ede41437c42106ee92df74c19d6661935ca9c4e4a6723f",
-      "kind": "real"
-    },
-    "Nick Telfer.md": {
-      "sha256": "f53aee937ff70d1ee6924b0788e4f86e8c28b7fc19d23279b7339e116c4b2d8c",
-      "kind": "real"
-    },
-    "Noela Pauline Virgen (1921\u20132015).md": {
-      "sha256": "a6ed2843e0e70b88119c1bb58c27c693965188aeec511c826a90f2ae10428620",
-      "kind": "real"
-    },
-    "Norman Thomas Patten (1917\u20131942).md": {
-      "sha256": "82099d194362265f68e2e2d04a3b43725a1009d6b739a66271a1ce1789afc5da",
-      "kind": "real"
-    },
-    "Olive Mary Lillecrapp (1899\u20131993).md": {
-      "sha256": "d3a646105ecbc654f12fbae2cb9a29e120080a1ea8e2148e8baf3fe7ae0e6ad0",
-      "kind": "real"
-    },
-    "Paul Ivory (1955\u20131996).md": {
-      "sha256": "3b511a43ec9b6a3ebc35cd8592c27f4d320a78a8d48c10a903b7713d2e92cc99",
-      "kind": "real"
-    },
-    "Penny Telfer.md": {
-      "sha256": "24a5a0755e3b24d9b690070ae018c6f6ccde90c9e74a09756d597adbe1f5b2e3",
-      "kind": "real"
-    },
-    "Peter Farrow.md": {
-      "sha256": "b97d7d1620c8368c289c944ec9c74dfb2279ac77f1209b479918173d75382fda",
-      "kind": "real"
-    },
-    "Peter Telfer.md": {
-      "sha256": "3ffdf2f852aefaece04916e91566ef892b9a8d75e0ed5482fc1e6934a5acf0cd",
-      "kind": "real"
-    },
-    "Phineas Baker (1870\u20131959).md": {
-      "sha256": "753e104ebcd27ce15529a237567a8e09ea30db83ab3cf70bb2fb2f086639156a",
-      "kind": "real"
-    },
-    "Reginald Masters Telfer (1922\u20132011).md": {
-      "sha256": "ee531bff21155c3116aeaede6d09d3f59f65d1632db36e085466fe410cd56f4a",
-      "kind": "real"
-    },
-    "Rev. Ralph Drummond (1792\u20131872).md": {
-      "sha256": "023edb37b4389842e11af2ba2de144c70e468c631a34bc71a432febd0f90535c",
-      "kind": "real"
-    },
-    "Rev. Robert Haining (1802\u20131874).md": {
-      "sha256": "83b812986e6f5d2964da99189f3083f93f3581526a720214438093219049158d",
-      "kind": "real"
-    },
-    "Richard Lancelot Watson (1910\u20131942).md": {
-      "sha256": "1840350d6030016ccdb3b1179a0e527b2fab6a568395b6e1b96cef89c8d357f2",
-      "kind": "real"
-    },
-    "Richard Paynter (1838\u20131869).md": {
-      "sha256": "bbd49637b8d67e8d2a6f87dd5bb98eb58b20b8e08f8c16e2cf5fe77e6f4177e9",
-      "kind": "real"
-    },
-    "Richard Paynter (of Calstock).md": {
-      "sha256": "bbe56b0e938135f81215325356db7ae4e1882e26f7bb96f5305714cf549020f5",
-      "kind": "real"
-    },
-    "Richard Pelling Latter (~1860\u20131936).md": {
-      "sha256": "d964f34316e06a90ddf80285a8e0779adf3e6d4b972c5315972f35897327bf3a",
-      "kind": "real"
-    },
-    "Rita Joyce Telfer (1909\u20131990).md": {
-      "sha256": "2971e1f928581620ba5a956c3dc4c02f95b47041d4bf37ebd57fc00333ab9a39",
-      "kind": "real"
-    },
-    "Robert Agnew.md": {
-      "sha256": "b90f0d4e4a9ba76be107766bd1b5418bd545be80a317cc1e4f00e89f268e0ea3",
-      "kind": "real"
-    },
-    "Robert Dunlop Lawrie (1850\u20131917).md": {
-      "sha256": "6601d4ba625c9300fa427a45e7cec8e59fb0696722c2aa9fbf399f9394d24fa8",
-      "kind": "real"
-    },
-    "Robert Dunlop.md": {
-      "sha256": "320bf04bf83eba2facd92c1ff23655ba021a34ad946f2b7c8bb6c19310dab580",
-      "kind": "real"
-    },
-    "Robert Farrow.md": {
-      "sha256": "fc88866a0fa64ebd0e0d675a51a2d9c1826471d08c78044e061645f2ee3def0c",
-      "kind": "real"
-    },
-    "Robert Freddy Telfer (1886\u20131949).md": {
-      "sha256": "77986482d64fc794a59ef0e3b672dd8f98a83bb4281f711cc27aa2c7b454b1f7",
-      "kind": "real"
-    },
-    "Robert Telfer (1803\u20131878).md": {
-      "sha256": "95409044b65a2a3068bfe71525ee1bddf5e6369b9b91f9d65a01414eb904322d",
-      "kind": "real"
-    },
-    "Robert Telfer (1835\u20131907).md": {
-      "sha256": "6f06dd7cdf7e6c6596d00e5226fe5e06a81fdc9da35f3c4a7bad1c50b2fb53aa",
-      "kind": "real"
-    },
-    "Robert Telfer Dillon (1862\u20131942).md": {
-      "sha256": "bdf96c88f24c7eeab7df599a823fc5ea9d92c5901b2289fe87d5a488840a0fa8",
-      "kind": "real"
-    },
-    "Robina Telfer.md": {
-      "sha256": "ca62fb2d399ce3c275ca9aa492fe3d9753ea65d57a47eee5eb3fb906d4dfd93e",
-      "kind": "real"
-    },
-    "Robyn Telfer.md": {
-      "sha256": "4b2ff22d3a25fb373f1393c3514720ce55f8c138eca2cb2d2c353984ffa02f00",
-      "kind": "real"
-    },
-    "Rodger Peryman Wishart (1920\u20131944).md": {
-      "sha256": "5683e26432682623a94b73784f85383e4965d53b622b7ceaadc502426c2317d9",
-      "kind": "real"
-    },
-    "Rose Isabel Margaret Paynter (Rankin) (1900\u20131988).md": {
-      "sha256": "089366e2bd1c2720af909b4f53f8a693c6b82f5e148e548c46ae44f1a7ff3d9a",
-      "kind": "real"
-    },
-    "Ruth Penna (1863\u20131908).md": {
-      "sha256": "b5cc897c4686d4644ba6c9eb7979d0422757e9acc3d7f204387e5705e888ab81",
-      "kind": "real"
-    },
-    "Ruth Telfer (1931\u2013?).md": {
-      "sha256": "c94cfaed5d1e1c6a719296d110ee24c269afff36d92ac4f768993989054f5fac",
-      "kind": "real"
-    },
-    "Sandra Lee Smith.md": {
-      "sha256": "158f09033f2d5ea81c2f378d72fe6ad609466713df47378a5bd5e66bc21fe4ea",
-      "kind": "real"
-    },
-    "Sarah Farrow.md": {
-      "sha256": "1b78b14a463df2b10cb9dbda86359219d175f152de39968db6ad31f0137e7109",
-      "kind": "real"
-    },
-    "Sarah Jacobs (~1763\u20131811).md": {
-      "sha256": "0b0cd671527fc98787bbcc8b75260f056ef01b19ec13decc05438f3dfd6fd3c7",
-      "kind": "real"
-    },
-    "Septimus Dillon.md": {
-      "sha256": "325e5cbb8a2f1b354e3e05e90b16fb1c02e78778b47ee5b7a11ca3b08c42a071",
-      "kind": "real"
-    },
-    "Sheryle Telfer (1961\u2013?).md": {
-      "sha256": "2cf00bcdd1092af0ef54d9141db02807acf15bed8a7e90139ff5c435f4c38830",
-      "kind": "real"
-    },
-    "Shirley Edna Telfer (1929\u20132017).md": {
-      "sha256": "6d014d6b9899039d37dd652ab710c4a826b72612c233f43d78b0c09615c3a5f3",
-      "kind": "real"
-    },
-    "Sophia (Webster) March (1803\u20131892).md": {
-      "sha256": "fad6b588b1f9168a1732b00a3edd16c93159632df9c7c784f6205f3ce1d5c18c",
-      "kind": "real"
-    },
-    "Sophia Baker (1829\u20131901).md": {
-      "sha256": "c83fc384d697b77de734d820cc76fcdedd3cbe26e3ef3ec001df3701a57c3261",
-      "kind": "real"
-    },
-    "Sophia Harriett Ridgway (1868\u20131956).md": {
-      "sha256": "d943fead5b3d93bb6d8aee868a357dbc84b7af5e48c6cf293a654946040161a1",
-      "kind": "real"
-    },
-    "Sophia Parker Lawrie (1886\u20131918).md": {
-      "sha256": "efd4a564fd7fbebbbf870ef3c38b5ef76918a5421c587c95434dcd5c7e39f42d",
-      "kind": "real"
-    },
-    "Sophia Parker.md": {
-      "sha256": "339f73d49ce6fc8ee945aff984655820b16b600a2270e5413226515378cb0826",
-      "kind": "redirect"
-    },
-    "Sophia Webster (~1800\u2013?).md": {
-      "sha256": "02f770ef339e30689b1fcf3ab0aec1535e8e6807e5d63f0eedeb3746da30a57a",
-      "kind": "real"
-    },
-    "Stella Winifred Parker (1899\u20131974).md": {
-      "sha256": "473f8787ac91f9fc790b6b5f7eee78c33a7014572fc785bb93f43cb5b2f4962b",
-      "kind": "real"
-    },
-    "Susan Burton Telfer (1844\u20131924).md": {
-      "sha256": "67e6be482f21a744b51a1d565d92537a78bc384e9ee0fb99d6739a8cf63f5ed6",
-      "kind": "real"
-    },
-    "Susan Shirley Lawrie (?\u2013living).md": {
-      "sha256": "6fa6167e3d0ae6deafd0f05c96e3dcde75585a16c1c5cbc34b6b7865354383fd",
-      "kind": "real"
-    },
-    "Susan Telfer (1871\u20131952).md": {
-      "sha256": "87b583555eff53849bd8f137e4ebba5e48ad02ca2713fb48b2248a06fc40857e",
-      "kind": "real"
-    },
-    "Sydney Hugh Parker (1922\u20131964).md": {
-      "sha256": "d9982b61fd7fa53ad29310e2d1fcaab9ce675aa6f65a4e80d8329ba61b92e15c",
-      "kind": "real"
-    },
-    "Thelma Ellen Parker (1924\u20132002).md": {
-      "sha256": "6e227964abfaee22a591bea875ef188a30cc546355a6958e97aa5406e5a54cb0",
-      "kind": "real"
-    },
-    "Thomas Cleveland Dillon.md": {
-      "sha256": "95648762488cf48a4dfc9e463afdbdb8d1b6f1d980ffc2e358eb58f6d8ae37d3",
-      "kind": "real"
-    },
-    "Thomas Paynter (1859\u20131946).md": {
-      "sha256": "cd2dd5dce3f1e1a099af801d9a8e886a8e1203a94980daa11af1d442ae18d229",
-      "kind": "real"
-    },
-    "Thomas Telfer (of Broadlee).md": {
-      "sha256": "1f87b1e1aa091b0c524f3768ebabc33ebb647015d15ab47865b05e37d4528cee",
-      "kind": "real"
-    },
-    "Timothy Neil Telfer (1959\u2013?).md": {
-      "sha256": "405fffb352e2b66b7f76ab56dc3fd6350ca2a6929a0687000d7de916eb072894",
-      "kind": "real"
-    },
-    "Trevor Andrew Thomson (1914\u20131945).md": {
-      "sha256": "f7ca464b3a4fd2139a7f85e32044e8c1f00ddb56b76cf35de86ff238b464f3e5",
-      "kind": "real"
-    },
-    "Vera Dillon.md": {
-      "sha256": "ef99258451b246b46d46b530bcb0ddc7c97f3b0ed8b94c1af0af74f7153c1b52",
-      "kind": "real"
-    },
-    "Vernon Ray St. Clair Telfer (1879\u20131960).md": {
-      "sha256": "8f1541b5c8e5266f2ed2d6835b519f7a78eb7847c3f636641dc3bd28352c3b03",
-      "kind": "real"
-    },
-    "Vida Telfer (1919\u20132021).md": {
-      "sha256": "10961989735debe46fcb2e127763b1566187c3c91f38bec6e072d1c935470396",
-      "kind": "real"
-    },
-    "Violet Hope Telfer (1883\u20131967).md": {
-      "sha256": "2b0107a69851ac0fef8a671f29dffc79cf887f26317a3d11d6056d7c30a8e88c",
-      "kind": "real"
-    },
-    "Walter Baker (1865\u20131937).md": {
-      "sha256": "cc160788b647cbc6b9f11b63b30b6fbed375edaa2b1526a5d3a82fdb4f4de7ec",
-      "kind": "real"
-    },
-    "Walter William Telfer (1884\u20131966).md": {
-      "sha256": "92ebe763da0282fa37542665a0fe94fa5c463b7915c38a516f48fadc8d554b4c",
-      "kind": "real"
-    },
-    "Wilhelm Seebohm (1833\u20131907).md": {
-      "sha256": "4d213ae4975c283b45df5af50ecf5be9d7b2cae4042763a96aba75d1d09ebb9f",
-      "kind": "real"
-    },
-    "William Baker (1853\u20131933).md": {
-      "sha256": "9501a980754dd263148cdad45b216eb9c885ed7cb1e6658dbcec18e423fc6c0e",
-      "kind": "real"
-    },
-    "William Farrow.md": {
-      "sha256": "b0406dc2efce0a378a7ca8f932da61fc91e687d85607766838f668dba39cbde1",
-      "kind": "real"
-    },
-    "William Francis \"Frank\" Telfer (1885\u20131955).md": {
-      "sha256": "08bc59cbfddba92ae669db259654d714aca25859985481389b314d41fc795b61",
-      "kind": "real"
-    },
-    "William Henry Parker (1893\u20131968).md": {
-      "sha256": "638407d1fcb5b27a59f3cb7c3bd1cdf0586cab4aaec8dfb5c88c9fd9f2782088",
-      "kind": "real"
-    },
-    "William Humphrey Parker (1850\u20131926).md": {
-      "sha256": "a127ba4758a9130e41d507e4ea948fe079c252b4ca7c8ace43db4db94969bd4f",
-      "kind": "real"
-    },
-    "William Humphrey Parker (1926\u20131976).md": {
-      "sha256": "14ca3c544a1e0d34c2f098266155f982d9d1b85974b2107a01ee26d80b1f48a3",
-      "kind": "real"
-    },
-    "William James Telfer (1880\u20131880).md": {
-      "sha256": "e32489a0969dac93797c41bc569f88f444abd0aa1bc5c7a694b98c97f1d637a2",
-      "kind": "real"
-    },
-    "William John Baker (1831\u20131919).md": {
-      "sha256": "429daf1656d19eec7655ac2bed493fd499f7a8b8d83bca6f1b8b14ab73f44783",
-      "kind": "real"
-    },
-    "William John Dillon.md": {
-      "sha256": "e67103e3e89041043ec63ebda4db611c051486fe44281328dfdbb7ec758eb601",
-      "kind": "real"
-    },
-    "William Telfer (1802\u20131850).md": {
-      "sha256": "b6dfb48a30f4e3fbaad746e3a25ee7026a9e6ec725a7b79118882be90e971ed3",
-      "kind": "real"
-    },
-    "William Telfer (1811\u2013?).md": {
-      "sha256": "2d8986ab755c1de4589ca1bb9f6a8c8c65e873ea17189b0c5c03cc2331abbfef",
-      "kind": "real"
-    },
-    "William Telfer (1841\u2013?).md": {
-      "sha256": "041da018647e64e901f79a81122b99929e5102d9c9143145083d62d35ee76084",
-      "kind": "real"
-    },
-    "William Telfer (shepherd).md": {
-      "sha256": "6900cbe1613f8ce9126a843001584ed5695b5d8d82466d451d6346a7b1595cf0",
-      "kind": "real"
-    },
-    "William Williams Masters (1838\u20131927).md": {
-      "sha256": "c9591634c530ea6a079833a55356ce1d52344cfadfcf80930c1db00708e81e45",
-      "kind": "real"
-    },
-    "Zabella Violet Zelda Telfer (2019\u2013?).md": {
-      "sha256": "26fa43fe26945f50f64274c85b5c70dd112614ba47c5433f22444a8e3cb32e27",
-      "kind": "real"
-    }
+    "Aaron Paul Ivory (1989\u2013?).md": "f9684332bca81fd60d4f9d767fa7be7454997adf1b110509b1e82b878dfc166b",
+    "Adam Dillon.md": "7ea73de300e2f8994aa3723f3746c8fbc7742a9e8fddc5c90ec55fe43c42522f",
+    "Adam Francis Telfer (1842\u20131925).md": "db2514b6f9f9b8c0a3bfcfef0975f398d9ab250a89fb196f525c3ae0b51c50bf",
+    "Adam Murray (1728\u20131816).md": "bd3cbbd58e299ea0acccc8439fcd0a0eb3cc71c18fd94714b77059d238418d7a",
+    "Adam Telfer (1771\u20131846).md": "fa8e54b40e9d93005d2378289199d6eac832b4329f1bcc95ebe226bde9169e7e",
+    "Adam Telfer (1799\u2013?).md": "a1af97ad3b979b8af0e69ce89bbd2c9f890dbe731359f0151bd3d3bd49cbc882",
+    "Adelaide Elsie Pearl Telfer (1889\u20131976).md": "b205419605476a70291362c2595cea22013c38941489d21c2715266ea492fc59",
+    "Agnes Letitia May Rose Paynter-Hucks (1895\u20131952).md": "f06c8c127bca5bc003ecf129cb7207d1756b8ed4ce8832a1d059cfc9c202208e",
+    "Alan Dale Telfer (1890\u20131937).md": "ba7eba47f78122fec859ebb8924897d0dcf174cb221df3602e98f0548931da05",
+    "Albert George Telfer (1881\u20131970).md": "6ed8f6e7a8bd6b1e8172c5c35e1a28c1f9c6cae4ebe5b55d14e3309bc20b7a89",
+    "Alberta Grace Lawrie (1882\u20131954).md": "28221a1d647799092fd7242b26db38549cc6da133bc42f6d0c4df978c9479874",
+    "Alexander Brown Thomson.md": "511e6c3950038378d6489a74054b8295f9b99b38322774a7f4115b76d3f6e718",
+    "Alexander Lawrie (1776\u20131847).md": "0c8f5e909529333e424281d406ffc67a616579618fd7557d830b2149d68128e8",
+    "Alfred Baker (1861\u20131946).md": "c337708112371b4666dc4186b31624ceb1137747d5b41a4237a18b4850276c18",
+    "Alfred Edward Lillecrapp (1869\u20131934).md": "c32ea173d1f675c5d114ee635157ce4b4b3f00f5251c0a377eab292b01e37de6",
+    "Alfred George Stribling (c.1853\u20131928).md": "fcdc6cfb2fc9cd5c21605e613fae0e6ccfac4172c62be84d0d2e5b19c25abfce",
+    "Allan Telfer.md": "df9d16bb3c11bfc4871136254be7e5b3dcbc92060154319daeb2d6b02d493164",
+    "Allen Merrick.md": "195d70707767378159c3f91c9f5eff28f35de0c9273a340ca23f9998686639da",
+    "Alma Ida Sporer.md": "b8bffcf074c409a2a7d1f5217b87771c0264f7da0b2579ea6e405db4c162c115",
+    "Amy Ellen Telfer (1884\u20131951).md": "ae6c029dfc7c2421b8325836e01f1ecff15c422880e996990b51bbed77234f38",
+    "Amy Ellen Telfer (n\u00e9e Provis).md": "f84dd411ca5fa0e274430cd179fee787bedee25f3ca85fc8730f388db94713ba",
+    "Amy Farrow Stribling (1868\u20131945).md": "704cc8b80ccefab46ef89043c6492b346ddeb3980a61e8ca710a6f813163eaf0",
+    "Amy Nicole Telfer.md": "fb768177891b7ba4e0eb5c7466beea20ce90e119290906069c5a99f4863c31fb",
+    "Andrew Kelly Parker (1883\u20131952).md": "3c1f2c81cbb19a228a00d34101192cf83ea1e14a3a6677adda79e1dfbe583ed1",
+    "Andrew Telfer.md": "5eeddc36651722e8a9ac6d74ebd39997245d66f7d925557793eab10bf07ce57c",
+    "Angela Telfer.md": "21463dfda4e994a319538d3eee93c6744c82b9d01140413bb6b91f021c7a0e15",
+    "Ann Taylor (~1856\u2013?).md": "3af58c2dcf3e550904a8470ac7a9fb3909303d722bd1bb7387d67a7fa72b9a18",
+    "Ann Telfer.md": "ccde3de399b2c1a95dcb530ee2adfff1327a87b1c2b824913ff465ee2073f5c8",
+    "Arnold Cuthbert Lawrie.md": "415d3f09f4c2794f81df99786a982329dd7fc510cae4ea14069b4803a7885f3c",
+    "Arthur Clifford Stribling (1890\u20131918).md": "5afc38088657743c0a6ffc80d8e4e1f3d395f8343bc680e098143926b0c77674",
+    "Avis Muriel Parker Nicholls (1918\u20132009).md": "dcfd0973fdaf5f903d5c6fd1c88859c08b995ce488948aa52162b5937eb30d32",
+    "Beatrice Mary (Dillon) Murray (1919\u20132006).md": "36a1db2bbc077324d7d78b274da202e5f44a88bd852c6f28d5d7bcd58d35402a",
+    "Beatrice Rowe Telfer (1877\u20131951).md": "84134389e93c4fe4fdf7e44c2244bc136e536539bea7c55b245fa88e6fca3bb1",
+    "Beatrice Sylvia Telfer (1911\u20131999).md": "5423885b4ed89250caeeab0161e60e272cfb23239d212f6c0278aecb4a1d66f9",
+    "Ben Stefanoff.md": "90dbb7eddf4c090f89aa6f776e08be370cc70638dad7a378f47b4e4cc98740f1",
+    "Bertha Telfer.md": "0d03cd34f5bb9eee8eb8edd1aac4ebba7e24a0c93c5e901dfd088adacd35b348",
+    "Beth Telfer.md": "f4743ea124a5c452235a400e5f182d4ad6d3c06e2f9c11f91aaa30d12ad054f0",
+    "Betty Hutton.md": "51ba3950e2d06afd2950415eafd01df75c6a9e63f571b2af04280f66adbe5e0c",
+    "Carissa Telfer (?\u20132023).md": "ae9f1d9cc874bf1545c1e41f4d75fa0bdfcb17efcd7096f351af5c8c68c6c9ce",
+    "Caroline Amelia Telfer (1842\u20131929).md": "0792308cd07c1b575b927bf5d9e6a3ab04e431579b7585dc65116085f8b24676",
+    "Caroline Edna Lawrie (1890\u20131957).md": "1f300f1554a3087eacbab8205aecb87b388442e1d1ca17687f8543a0d3c25cde",
+    "Caroline Edna.md": "11f978afa0fc95514fcc9f8c79bd11fdd82afc416b276d6826bbdd67748c0f76",
+    "Caroline Hosking (1851\u20131920).md": "960b1f3fe5b811339d3586e31e66b03007e6ed311f3dd64e6c891045f15035e1",
+    "Catherine Leah.md": "f263006ba4a524403be1d78f1edf10c1001a061a5aed56f5a4cb6ce61fc5d98c",
+    "Charles Farrow (~1836\u20131884).md": "e5b9643ba09ca85de8885aa391719dd6eea520299dc55e036fa003c2bf1869c1",
+    "Charles Farrow Jr.md": "192a4a04d002cbdeec2edf76ef09e33b7a53ae572a4b881116057d2a060c4a1f",
+    "Charles Frederick Masters (1837\u20131845).md": "b7472d983fbc34d856d968d5810fda7374723f11fef9f0d8660697865f8ab83a",
+    "Charles Masters (1809\u20131866).md": "bc89ec6982eb1a87f9e4904fa5b5f10fd46e40e77b503f3abdca7d20285a2495",
+    "Charles Telfer (1875\u20131954).md": "ea9f7f32d5c3e5901e9e6e935c70a0785da7e2d797f65fdd32cc4e9688dc83bb",
+    "Charlotte Emma Rubie Irene (Hucks) Beven (1906\u20131996).md": "843bb1a373efffc0440e11f628be63f155ad6e8261bb07c92e2378d759f91c6a",
+    "Clara Ann Millicent (Dunn) Telfer (1878\u20131966).md": "75ff7202c4dff7ef7aa06d9e17019d7762dac268705c73a0c7369ec4ae846191",
+    "Clara Blanche Telfer (1883\u20131974).md": "e086001724ec36db13066c65946af1c802de38d52c92e22a6d1b772bdea6ec65",
+    "Clarice May Fatchen.md": "fac616f16e06e44a8465ee7ff95371779d60cd472603f6dbedf9815c5ad1a2f6",
+    "Clarice May Telfer (1911\u20131997).md": "2f3ec11d3b6f314ca5b968c14e55d3508358fb28dc1f8312bbde51144d7f41fd",
+    "Colin Lindsay Beaton (1915\u20131944).md": "1e4a45ecc75c1ce48104142e0a6055074a0f4155f95e85d4e0a10f149f8e98a1",
+    "Colin Louis Paynter (1919\u20131942).md": "f2fea6c6a4997e9e66ab89116254e17fcc3a75e6484bc3124c18ab4b4abbeb72",
+    "Colin Roy Telfer (1889\u20131964).md": "b3b6ac117f5b31a978a7b6865adfc6cf4a3fc1b77f8405a1534d5ff136cf944c",
+    "Crystal Rose McDonald.md": "50e9f5dca6b89e3e50144c964756d4901154bb7beecd83541f064c0a8c464456",
+    "Daisy Vera Latter (1886\u20131963).md": "a4db35da94bd7931c5e7ff3130cf94d664dcca7413d113b1490ddb35e29b9cda",
+    "Daryll William Telfer.md": "dce3de7ecaf60199aad7522a491abcdee80f4a67e28b1bc9c018b65317f3105d",
+    "David Parker (1822\u20131888).md": "26157b9d2318618e387dc8baa3f7b4c1922ccbf77987e697f20085c77ca3e782",
+    "David Telfer-Merrick.md": "9739bf9cf0804b1e352fa22cb7940bf26f5c7a220d4fb756983376f403fa5403",
+    "David Telfer.md": "5b2b403850937c0159c99c5480e431cb0bdddd13ad33b594784180b55c2c3f4b",
+    "Dinah Flavel (1821\u20131844).md": "20df4d33922a0e090d3df3b70991354a52b6526076b5f9ea2574c7c95e6cee47",
+    "Dinah Flavel Paynter (1869\u20131958).md": "3df044306a1a30bd1de7f39259c48d203cc36e1414fddecafc6490026d5ac2fd",
+    "Donald Jack Hookings (1916\u20131943).md": "36499802c5824bc6f97e20092b5b788f0d16133c30b2727ffb4129fd649aeb84",
+    "Doris Elma Telfer (1919\u2013living).md": "45c048e6204769b55e118c9fc0d4333dd8b55ea16c362de252a6754420eb3514",
+    "Dorothy Dillon.md": "0108e8ce68c8caa21c962bbd72f7674bf6b70e25820817b1887c69b805f919df",
+    "Douglas Ivan Telfer (1913\u20131993).md": "c8d21de96240ec5ed6ef04b63946a887df7aeaf7013a243c70b30a8bb46a5383",
+    "Douglas Telfer (1887\u20131956).md": "38f5f0571cb09779851e64a71ffc07369d727620dda1bda1fdf201624fcd90c2",
+    "Edith Farrow.md": "7336681a752b757b61c93b2e623c1b6126ad34226bf9cbf792bc3694147e8316",
+    "Edith Mary Kathleen Telfer.md": "c5b59af4fa0e20d6061e29aadf4f3f5946103d599727546177bf566db62aecde",
+    "Edward Albert Parker (1888\u20131939).md": "f736c629d978ff5afe697f737cd9f72243fec4bd1483e371c942cbd494b260de",
+    "Edward Telfer.md": "6d15d68a1dff839a2bf4d959622750fdb812e6ff914c074c7e956755e2a1c836",
+    "Edwin Ernest Clarke.md": "005e2e059ae12052ccf4bcfa20b52a58eafaf638583e483530a47c6c975dee48",
+    "Edwin Gilbert Telfer (1887\u20131958).md": "3dd26a258efaa205d1f70b7f544c59d07f625bbf144c31eeb5b1ad4eeaed326f",
+    "Edwin Roy Telfer (1921\u20132009).md": "08bf9e799d919570ec787650041eef5cf6a7a8f846d09baa10b5d55e52cef4d0",
+    "Effie Olive Telfer (1886\u20131969).md": "63dc383b64bf68f869d175c4f9a3d7d509438e038a2dc98ec9ab9bd02ad4b504",
+    "Elisabeth Telfer (b. ~1806, England).md": "89b52b78208be7272361b1d035dcddf91dfeae9c553648ed70fb3d5189b80fa5",
+    "Elizabeth Anne Smith (1878\u2013?).md": "c0203674e1edc3b5427963e87847aa6bcb75830d4244b307557ced7372bda6d8",
+    "Elizabeth Beattie (1741\u20131819).md": "5d4afce92f43ace4c5b0fa7ad10702a3a213d2dab67f2aea9e7fa8511d4688cb",
+    "Elizabeth Beattie (1802\u20131891).md": "44b8ddecacd4aacc4ee54c318f6a3f6e9d43f9b2e0271c5d6e7bfe5e8af35d5e",
+    "Elizabeth Beattie Bessie Telfer (1871\u20131948).md": "9b6aaa6a7064787dfd0eb25b33f17e1d1502a26b33ba658137e7fc3e616fffa8",
+    "Elizabeth Beattie Telfer (1832\u20131896).md": "36b9cc9f70da82868b5611a0da7eb2c9341618605e09d582353db4bb14cf949f",
+    "Elizabeth Farrow.md": "801a70f75316ef353819e1fb7b2966539efb424215d844759c88a910d566b512",
+    "Elizabeth Hannah (1836\u20131916).md": "60b60e8d750ebf5bd9b937ac5bf8a45dedbf9c79035fc16c13ed9782044f3814",
+    "Elizabeth Hannah Telfer (1836\u20131916).md": "c3f2b10a3919f0e30c139ba09a49b973ac224cabd5dfff0bff57b501c9102a8f",
+    "Elizabeth Hutton Telfer (1774\u20131853).md": "3ed1ca54b8286ff24981e15d1518c5b07713c6f3387e9958476d990a4d422fd6",
+    "Elizabeth Jane Liebich (1859\u20131919).md": "05968e5e9b40651e8406a49f9c674211af5540c592242346918dd3e71011c21c",
+    "Elizabeth Oliver (1807\u20131846).md": "20b11d207723a8da6bcf1004e3caebd9ddfc04236ca9358b4cd9416edd615c43",
+    "Elizabeth Parker (1879\u20131957).md": "68dabe99e87c89d008c76b2e68764cca4482f0d4228a807872e1f1fb61cb2b2b",
+    "Elizabeth Paynter (1864\u20131928).md": "9500b5f7b0f9bd779660c82d9c00ed29832f18ea4529de02e1ff76c04e11c85f",
+    "Elizabeth Telfer (1868\u20131950).md": "8c140e6cfcca7ec3ebf4dc86807fb18d03dafc76632ab8a0ea07f46924dfa163",
+    "Elizabeth Telfer Farrow Holloway (1861\u20131946).md": "80c921138fc625e2ee9e622a0c57618f0523de77dac47099ad6ab84f0fe7f5ff",
+    "Elizabeth Telfer Farrow.md": "4220831ba779a386b46f387867f85194ba63cb2dcc72cdf267250d65a1553a8d",
+    "Elspeth Young (1722\u2013?).md": "ad1e84575d23be568bd7461dfc605c3ac3ae5e02cc5ddfa654fdf8d8585799c1",
+    "Elva May Southwood (1896\u20131982).md": "4fdd8b379b4bdb87dd2c3eeab8882d7d4e79f0d739bdc5c1eb685be3cbc3f7a0",
+    "Emeline Couzens (1857\u20131949).md": "c40771a1b98faae71985d5639ad69a293d53aa3237c46fc4e1f03a68a95584c7",
+    "Emily Amelia Telfer (1913\u20132000).md": "cad54b7298b25486251d5ca8cfa108ea2425f1b944015753eb0cac3019f4a5a5",
+    "Emily Ellen Thorpe.md": "ffde637b2521e569366e98570fad7ef97f80fe218d7170ffa4853b9ee3124825",
+    "Emma Jane Masters Tuck (1855\u20131922).md": "8a184136abbf874d153939a36c0fe13065d041656312b2575acdd03155bf5861",
+    "Emma Turner Hucks (1888\u20131910).md": "9dfabe1e2c69f02b92b97de84bcf33d11bdcbd0c49a9b258970119776b4217aa",
+    "Eric John Telfer.md": "aa680b02ce7dcc2030b08ee1f04a95f67fc92351022d76559e90daea0d2e374b",
+    "Ernest John Telfer (1878\u20131953).md": "543640a785e536b90a22f99686d4ea0516be85a7ee20a0ea43dc99f5746ae2d1",
+    "Esther Cowan (1783\u20131856).md": "76a43e0724d16f8bf3a3af5d6d7aab7bebeb1d0456fe8fc4fd5aeca755ba5647",
+    "Esther Farrow Latter (1859\u20131951).md": "696d9ef0d501fe2696eff54cf633b53233372bb4207d541d6f321270aa7c2ed9",
+    "Esther Farrow.md": "0d59e1304ffec2da770c4a99401fe4e5794865ced765f092bb96656b95eef31d",
+    "Esther Hannah Farrow.md": "6fea2663d960f5e163b57fd2e1ccb94eb967661ee0237d628bf4318007faf40d",
+    "Esther Jane (1834\u20131909).md": "e64d00aa3aa4023402aac41c1c05c1498ab49478acf25810544ed0e44b25d2df",
+    "Esther Jane Telfer (1834\u20131909).md": "d658cfab7080cd22fe226249cd7c7fe579fc7e12a9cb0da049c09260e16941b2",
+    "Esther Telfer Smith (1870\u20131896).md": "67b14b2c23ea3b2ceccb19d4bbbba389dae85620d9a9de78ce33f7eca1373178",
+    "Ethel Edith Telfer.md": "9b637640c047ebacaa004dd8db46d65266d9a7c1c40ded72750ca37475610067",
+    "Ethel Jean Telfer (1915\u2013living).md": "f58574bd309697e01dc262251e101ab2df6046e340c31127e39c0327aef33cca",
+    "Eva Agnes Farrow.md": "d4dc49af4075ae5593214a7b7ad026822da4c5fd6cb05cc8dd9af37508783a46",
+    "Eva Rowena Telfer (1885\u20131974).md": "fdedc20897a8a9b661d5540c43d1bcb137722b5f6deb789d6220d7398135edb5",
+    "Fanny Baker (1863\u20131955).md": "caa1770164e677f3735367206b8d9ae324f9b85ea6ec116917b63784b073ee48",
+    "Florence Nicholas Telfer.md": "87e17158ebc3e2664f323a9e7625b35abd29fd43d6e790569f5a79c974a2251b",
+    "Floris Ethel Victoria Telfer (1904\u20131951).md": "6c9c7acd979e0d2367db1474fd007b7473c14ff5ef0445d2f14be99708b447df",
+    "Frances Margaret Oswald (1861\u20131931).md": "dc1c93ae2e8da072f0b243f83692ada221a7b11d578f1e851b2c00f92fa5bb89",
+    "Francis Adam Telfer (1875\u20131955).md": "fc7368465f8d74ebb3667a773c98648062ba1e10149856cccc6b0ca3d6acf7e1",
+    "Francis Charles Telfer (1875\u20131954).md": "01d22e14e9c76070d119744dfd1bdcd7e7afe795074c29bf4dd3d83261fc556d",
+    "Francis Kelson Telfer (1910\u20131987).md": "c5e3ab559182d9dc89f9faed0759384e315dd2c1814ce812c21fc3f724a7ef08",
+    "Francis Telfer (1768\u20131836).md": "6032607b1d2383b4176cf8c37db56e7fec0f09299e298de9c357f0851c5a5611",
+    "Francis Telfer (1809\u20131895).md": "ede499bd11150ab9164a3e54a5e1c4fe62311b3d5d3ca7d636a111a61df287e5",
+    "Francis Telfer Dillon.md": "ce49ea476c0a52f5dddc1f0e2d7a618af2d513c2732532a05580ee4906a802f7",
+    "Francis Telfer Paynter (1862\u2013?).md": "50457025c7e35962a273ec5408f6b67d8ea287a0cc496ff619909866967d0641",
+    "Francis Telfer Smith (1874\u20131945).md": "f0a9769ca235ca57f7f2c16844074147a88a27ad736e9191ac45d2b96e5dc74b",
+    "Frank Lindsay.md": "c1cda1488f776ef284a228c46da4ec4671f8b900f73e3cf06ddb34133fe1e34d",
+    "Frederick Charles Masters (1848\u20131939).md": "09ca0dca63e170c171afccbf8812a37b2d3259b1509a55f8d18f18c95a7d6a33",
+    "Frederick Parker (~1838\u20131928).md": "5d70b239e45ddf61ab55fba5dc2d7ad814ceec3f7e2f1ab7321a0944d32f9f84",
+    "George Edward Masters (1844\u20131912).md": "f466b50d345bf6719eb35cd0c46e00a45e2d21bbcefb5cca515051fabe3f600a",
+    "George Herbert Hucks (1875\u20131947).md": "ba79393d8b98dcff77d045a12c8b584b37a465865da8026dc0ca318f0ccaee17",
+    "George Hope Farrow (1872\u20131919).md": "3b1c5ca82cffb925ecf01b31d5176420e930996bf8990c428de59b67ffeb00e4",
+    "George Masters (1841\u20131841).md": "cb685d8fe5cbe11656685c7dc6474206d369a6badbeccff407d06af8daf6a6d7",
+    "George Parker.md": "a11a8c27ad75dc6468940977ebc33aa42edaea0a7162b45191a883cc39416fb6",
+    "George Provis.md": "afc6430ee5635d4bcbd8cc1595b13be60535985157204cb96eeb80b9ace8157b",
+    "George Sidney Gilbert Stribling (1864\u20131901).md": "3df89d6deabb4a0f2cb5374aaa2f696ddb3608ed3f25d400c68dd1a0357c7736",
+    "George Wright Telfer (1850\u20131913).md": "f79e426ade0c8c9cdce0a396278cce7f3511ed91a98fb4a25ded88225097c8de",
+    "Gilbert Melville Telfer (1908\u20131973).md": "b96017fed9aca791c7768d7e53d28a444682b939af9d1a1add2117b28736a01d",
+    "Gladys Merle Telfer (1917\u2013living).md": "2d906dec2473d5c99897c0bb807256031a5f791efd7e9da073e3ff2410bea985",
+    "Grantley Keith Telfer.md": "eb87893383cc8b008586ff99871fc327cc2d5f383b441662237c2c5f537ac1b7",
+    "Gwendoline Victoria (Campbell) Telfer (1910\u20131966).md": "e4136ca58b0b9aab96cc02a12e4feba5635fb83db903c83b83d337e5eb7fcb42",
+    "Gwinfred Gorden Herbert John Hucks (1908\u20132002).md": "9c5a7ce34c6b8bb2bdb021e75f60a29d0261fa731dca445b261858ee34d957db",
+    "Hannah Baker (1855\u20131948).md": "169591f524702185eff53ac6908b3e18e6e5fa896b74b5ecc048454b89c43f22",
+    "Hannah Peacock (1862\u20131948).md": "7db5b4ad60232940add067d785beac6b6a9c22adac4149e9417b5b55154ffe9a",
+    "Hannah Peacock.md": "d562a8d04b6ec66e8f57638ba3d94ab935c47bb52178f308925809fda6a44b4b",
+    "Harold Peryman Wishart (1888\u20131965).md": "2e74bf53a1667a555fe8ee15fd7e8e75a77be1cfd913879aa389c902e4392177",
+    "Harry Bunston.md": "5b84a2586525495e8dc1e20f5c7e2a6f3ca77739b49a32950c605fff42df47f0",
+    "Hazel Rose Telfer (1891\u20131939).md": "23e447e2e25a168239af679f2bb1f9558ecc9b2cb25b29288e9d83071c4f9a26",
+    "Helen Telfer.md": "1e4e65dfeeea91b94b1e44062e463a3ad6f7567edd8ee5ad8cec5d2d2ac88e3b",
+    "Henry Hatch Dillon.md": "3f34cf5a39bf56805a3d627ead8916d0f26b69e92905a7723819ccdf4a879396",
+    "Herbert Clifford Holloway (1887\u20131918).md": "1a0ae8f03a0dd382419cfd5923482cba714f0f28b3a87bd81af5ed2c8172db78",
+    "Herbert Dougal Telfer (1881\u20131976).md": "7e22f8899337c80cb29cdf9343c3613143274b668ff5b8a1a7867906c9dd583c",
+    "Howard Lindsay Parker (1920\u20132003).md": "a4d3e4cc41a07b4e4e365a636b35a08358c2e257974c415d570e89cc667371d9",
+    "Hugh John.md": "8b56ba51fb2dfab2e809b2ba86a208c917398873f6ac41378095bf872d3d3488",
+    "Hugh Kelly Parker.md": "777a263c9983a00ee6a3b63413d89d047757bac5c462b304315611697e52805a",
+    "Hugh Parker (1859\u20131861).md": "2378e90f6d612849a1b5dc52480d0f3119649d01787f25ad88d3f11c5192158c",
+    "Hugh Parker (1864\u20131891).md": "4a43463af356bfb3919ee77a90c28a353262eed0a4c5984c28edb17bc6901cd1",
+    "Ian Telfer.md": "f7a3419a2979f4cf0117d925102e799da6deefb64eb4a81bbb876c1d6b0be18f",
+    "Inez Dillon.md": "d87a412525b5a1581f3147e663278d71cbdd3a96c49d9959217bf81107a766ef",
+    "Inez Priscilla Dillon.md": "9ec2fbb1b6ea2637da4d7db5b4bdc7b395b66672abdfa2d2f6504524c0a77675",
+    "Isabella Kelly (~1825\u20131867).md": "23a5a817f9435929a43790a97839bdccb6a68fe54b80bfe6b39c037b4a07d6c0",
+    "Isabella Lucieton Telfer (1880\u20131964).md": "6e6a7d740e4a267bfa29d0f5e1a4fa491d0bd8958b7602092bcf3bc2e6af33f4",
+    "Isabella Mabel Parker Carne (1895\u20131954).md": "9da6cb9534c815a174db6e8e7740ce8d02b11d72f9749fd1c13fd7349d3b03c8",
+    "Isobel Telfer (1798\u2013?).md": "0c761580fd143da6b55b9d2b52d443dfe82a359c080d4ddae49888bae600af6d",
+    "Ivan Frank Lillecrapp (1917\u20131996).md": "6afcfcc8f3bc6f7993306ac0b7d00bd2dfd7ff59c3c051f60cdc5e1e7169aae9",
+    "James Alexander Alcorn (1915\u20131942).md": "8ed0c322c46dadb23b5e37713608a1d33b078cf814b5c09f5a1d95c3e5c8fac3",
+    "James Baker (1859\u20131927).md": "83c1057f9b08836eb046f63347d8208af650b2b893a9aea0f288a8673f7da457",
+    "James Edgerston Telfer (1877\u20131959).md": "0959defbbc51db47f32ec272c3abde3e6dc5084eccd859bb9f7ff5688a054b4f",
+    "James Farrow.md": "65fcd07fabbc62ec0a2224b3e6bd310689b70613700106e0e5bfdb1ef2410c4f",
+    "James Gordon Steele (1892\u20131951).md": "8e34cbf6be3dfb9a167f1f0e62222a06e5d16b89caa3dbbb6ac6ca9b077403bc",
+    "James Masters (1846\u20131847).md": "707f4eaa1e40c7683156e82af1befca261c583f6fc51bcd4d1e3fcefbd5380e2",
+    "James Robert Telfer (1866\u20131925).md": "abbb68b156bea38081228c3b2cbf8f51bc0fd20a07de1a9c717b5bcc9446795b",
+    "James Telfer (1761-1845).md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "James Telfer (1761\u20131845).md": "ca76b4ef88335951f5db3eee0d85bb0c5bc3c6cdfb217359ea163486ad29a7b8",
+    "James Telfer (1796\u20131863).md": "d64f37eb507d186cbc87c7f1be3d0bdfdb2d82ead5bd8d339ea8dff2d760a842",
+    "James Telfer (1829\u20131913).md": "70e0d66760a0054f1340a4aca67b4e01d6884d54ffed94a83bbf80902aa3bc73",
+    "James Telfer (1832\u20131845).md": "4060d109936a45cfabd19fd3f546fc967a44542da2185c10d60a609a1f968391",
+    "James Telfer (1858\u20131944).md": "e6c3cd52a997301046672fb9f4168988181c4527f3a21fd721c659b130d71774",
+    "James Telfer (1866\u20131946).md": "0836b0b9c68de8b88931221bd8188a8517b1d31fbe658a3ee74eadbc89cd2c04",
+    "James Telfer (bap.1762).md": "1fdf78f2c915f7ed9635b3e656614b8d6a3fbee762bdece90c0ba2eb272d6daf",
+    "James Telfer (of Sorbietrees) (~1740\u2013?).md": "beae7384f0e1f60e97b17f429a684387ef4cd51e68d169af8b04b2d70c90e56f",
+    "James Telfer Dillon (1861\u20131951).md": "a937f66d25858f69ae904f273e87dfda4229a038d50997a48cd7802d303143f8",
+    "Jane Murray Farrow (1857\u20131934).md": "e6dcd0669b627109a887dd11c38689e21870f33aa256ee8efe660c1eec87f4c7",
+    "Jane Sophie Smith.md": "935bc43f99999807b0a65f5e97e0e869e2b9b59df256ce882f274d5d3d783d89",
+    "Janet Dunlop Lawrie (1811\u20131902).md": "9f5b963833056d9baaf3024ff57820603a3dbb1052c9b018f07614de6fb4763e",
+    "Janet Dunlop.md": "e690a00f24e6c3906055236e274248a32cd10c71c9ab2ff6a5fbfccb5970ae05",
+    "Janet Nichol.md": "fcd5540d2671de5571e36a744f44e1aa13c44ee670a993de1cfdd13b4380724f",
+    "Janet Stevenson.md": "7c2b3c27fa430ba6650937e1f71b5328581da02e437cd1c7c05e9667d2d32b37",
+    "Janet Welsh (1826\u20131885).md": "a63f88b9abd9ee9fbe276a568e3d71401bd0c380d829ddda1803352384563c34",
+    "Janet Welsh Telfer (1858\u20131921).md": "231925e5cdb02e40456dfa41fc0dc49325b9e9d98ed3f926598bf1ab43446fdc",
+    "Jared Ivory.md": "4ddd1a9ac9adbf47882aaac40c000a0c11a4f3991af8d49664d5a0e87cd9724f",
+    "Jean Maryann Martha Telfer (1910\u20131984).md": "5bdd489855f88a079857c5a263be01f0ba3a5a3399d0f4770507c9f782c2d52e",
+    "Jean Murray (1810\u20131839).md": "8a25b3884971eed06cb39cef9e56477d4256b29f2e25320a86f9ca9d1afbbd59",
+    "Jean Telfer (1764\u2013?).md": "1a98eacedc1dfb1fe0fb568a3c1eff7cf475ece33ccd94e5a8daa5e066013965",
+    "Jean Telfer (1840\u20131892).md": "4c8cc179ab57b7641cb8e03bdf0f53f85625107ce556feec980b2d1abee0364a",
+    "Jemima Williams Masters Grant (1850\u20131919).md": "f99b15cb975a2b617ca5bce6d9282e83ceec903c76b9782b83ed95286ff8767d",
+    "Jenet Telfer (1770\u20131842).md": "e82051814a8fd5d892c62113ed46e7dcd7d76f65ffa8943776522adec22e7200",
+    "Jennifer Bunston.md": "b12f9e3f702da109c345bf3d4e83e41f18abbd40daa49f3d5c9adc1efad59064",
+    "Jessie Allan.md": "2570fd8b2f1c15ffcd616d170b5ff05a5d1ef5548f279f3a3161ad2bcd0075a3",
+    "Jessie Kathleen (Sargent) Telfer (1914\u20131954).md": "bfbdd82fd4d855cc6d9fe4ad73e4fe7fbefc4cce1fcaa2eab110e94d421c1f01",
+    "Jessie Telfer.md": "d2eec6c232462c80496d49b2ee59a3c958362f0ee9858750053558dcb901b5a9",
+    "Joel Matthew Ivory (1986\u2013?).md": "54d8894856e8bf20d2f526174922ec3c7501faed543d11e42883af9819e7db3e",
+    "John Alick Ralph Telfer.md": "0b10275f11bc594d8a214e2199e03f0c42c69f9f64b03da11856512ad2f58fb3",
+    "John Charles Dillon (1827\u20131906).md": "c085e9a6acc7291feb918512fd265c64109929cf56cc619ecec3da7fdd8d4958",
+    "John Ernest Telfer (1877\u20131877).md": "3c2d209f50ffd671184e598fb5acbe53cb00adb6928d2d4e74bd44d92ee65b23",
+    "John Hobart (Jack) Watson (1916\u20131943).md": "ee6b1b0c0cca8e4199ab01a26d2a6b04f4db9af0ce74c56b0ae1a96708a3cbd3",
+    "John James Smith (1871\u2013?).md": "0f4c05f139865a924429b3dd18a7019b3d6e70bc90405a6285532ce42f8821a4",
+    "John James Telfer Farrow.md": "30f9e67bc88ec4faf9919355ba6e6f66febb34208b2cf51014a192536121f02e",
+    "John Koppio Telfer (1862\u20131922).md": "a2e7ab2aeab8bc84c443440c52adb2c693518d8e30bfa951d96acc845e54dc76",
+    "John Lawrie (1810\u20131888).md": "2f4a0a1ae380773db059cad492b6bb040509fe067dfaf97ef019d9d296e33aa5",
+    "John Lawrie.md": "2f7cb5521851dd99ca1b59c77fd4beb4df559079d2f2b58794ce911f79e1f77d",
+    "John Lindsay Cameron (1907\u20131942).md": "8688bb6711f4d9ed62cfc474a986d5647eac69302c7f8fe545c4d90600ebb98c",
+    "John Murray (1779\u20131849).md": "28f06aa79d0b5cb9f6f458f70425130b6ba0cb45f228e744625dc001d0cea689",
+    "John Ralph Paynter (1921\u20131941).md": "b4bb3bf328b0c1f7a13a57b5c5a3fdb2627ffb1798cf2860d465f38c6b0d08ea",
+    "John Robert Telfer.md": "ad39cf61a74d4db584f6426ef8ba0f85cc2b91e2c54c50b962f6182d467fafa9",
+    "John Roland Telfer (1882\u20131975).md": "d08edfde9118a09c97c41e242aec98843a5e8abe78fe67e68fc7e0eda13efc9c",
+    "John Smith (~1827\u20131895).md": "c6ec5a4b9db23517c798414b0af466772dfd48b4608dbf05da32e854bc4914d1",
+    "John Telfer (1805\u20131839).md": "e9de8333f9e1466f51c4e2085f3de5cc1a9dfd571380de83b23b5921e7fbf11d",
+    "John Telfer (1840\u20131913).md": "188577f70a7ee56e7d90b7cadf38b8085be4c9d30fe444ff7810abc6ca26b28e",
+    "John Telfer (1847\u20131929).md": "d1ad9a421d478e1408b864dfc6f0a53b18c4816eee06c7a579f423e2ed175c86",
+    "John Telfer (b. ~1791, England).md": "8a2ef2e9318151fa6cf14ba2de39500ccf49818fff11989b58c7ace875c6b3c4",
+    "John Telfer (of Castleton) (1731\u2013?).md": "fb24a42d326108e0ae41fc3c48b1d69e83f0850d21f57696303142062a8572d9",
+    "John Watson (1851\u20131929).md": "7da5310ffc6cc01f3b51d4065dc4830be77b82ea8b7c73d430c04756e90723ad",
+    "Johnnie Telfer.md": "d2f6a748abd665fc0e535e0072b9bdf958f8d8cf2f1430b3ccf4b7262799bf87",
+    "Jono Telfer.md": "8b988e21277e1d668b1daa0238aa9e02f61f4ab5782f9683479b531f5e87d7b2",
+    "Joseph Farrow (1814\u20131899).md": "5adcc6f27b9eb8d3f2ee7a47715c7c0240eb3388ce863850d9e08940b24f7e57",
+    "Joseph Francis Farrow.md": "801f935d25d0326289a9b739495178d8dee758a30119b7a11489ec47b5e8bdf0",
+    "Joseph March (1767\u20131831).md": "9aa0e5c32abe24ef91fc0606339ba92282c536eae75edef8ea5ac1bbf5e60fd8",
+    "Joseph March (1797\u20131883).md": "9a820b32782fd153874536fff2b006d7e3295688a7743819239e1dceec065ab9",
+    "Joseph Masters (1841\u20131841).md": "5768215719a206b0728a3cd7d1ecedd4efb1b82d104573969e7fae7249784be3",
+    "Joseph Robert Masters (1853\u20131922).md": "b64e1520b0e87aff8ed19e318a3b605161ee9406789f25a12a99e911314b991c",
+    "Joseph Watson (1883\u20131948).md": "1419c7b8bdd6b302d1155e4df0a1f1a5d147fee87c2cf448428fed9a6a7fe71a",
+    "Joyce Elizabeth Telfer (1912\u20132012).md": "47d57c8eee01b67d93248c87e42c72315ac5befa4576dc50a473992c2f6c716d",
+    "Julia Matilda Seebohm (1876\u20131939).md": "ec3333dfb94ef9f1441bd77ff284355cd2af41cf0df26b111a10cf8941f99196",
+    "Karina Ivory.md": "a3f46d99a04f903c4f87354bbb564ac42d25feb0beea81a00b0d4bcc98759a48",
+    "Kathryn Mavis Telfer (1961\u20131965).md": "afeddbda1974a94699ac0694f7e8b9298e4dee41b0b8dff413ed1b8129615472",
+    "Kenneth Cornish.md": "4310615bcd2b0a00da70e212bc925d81fc6899bdb431b17b30bde96b9e55b514",
+    "Kenneth Gregory Virgen (1925\u20132003).md": "27595827f5a64c728f70224e40c51678c831207054f78c37f66c2664bd35e8d4",
+    "Kenneth Harry Latter (1888\u20131958).md": "c9afc899eaba4a5f7d1443b6af9bd8014dcedfabd5b6225663230dffa9d56c68",
+    "Kenneth William John Telfer (1906\u20131970).md": "cb207ce2e101eb731765f3e8538d6bbc37fa59eaf4224331544ead3b0581d146",
+    "Kristin Stefanoff.md": "5779200311fbb2d3aa1ef715e2b9e0bdd42cd7390df098a7bba7bd748360f82e",
+    "Kylie Isabella Telfer (1982\u2013?).md": "79839fdaab8f358502e672f88a619f1323b4c00d4159598a2582bf2b23a5597e",
+    "Lancelot Hobart Watson (1888\u20131960).md": "18ec1e2ed36f806457b3df69ebd8b0984055bd0baeaa0d2db41b0ab3b96942dd",
+    "Lauren Maree Ivory (1994\u2013?).md": "3168a49a6ff2d7804d66319df433c535c68c9bd73f92be43d7730712d5e094b4",
+    "Leonard Arthur Dance.md": "6bbffebf889ddd865101b1eca561f205402b42fd9939734673a38b6a894288ff",
+    "Lesley Thomas Telfer (1891\u20131914).md": "5f2cd4cfb4c4bee54c4a2fb96a49e236bcbe8f22f31b9837031eaddaef954d01",
+    "Leslie Frank Dillon (~1892\u20131915).md": "b40a26d8d042e3690427123367ca60beb4858be9c78532a8db9396ac83956bbf",
+    "Leslie James Dillon (1916\u20131941).md": "e072794d5adf1560082ca99e451b8d50632e95326671cac784d818038da56f26",
+    "Leslie Robert Telfer.md": "a0261cd48760b4badba7073bb1820d343279576457b3d14aaa58ba55a7d79839",
+    "Levi Leonard Timothy Telfer (2017\u2013?).md": "35d501f934930c2f9b4897e1fb590ce79aca156b412e21438bf82c169ce6847e",
+    "Lilian Daisy Dawson.md": "2abcf4a52efb85a8fd847eeee6e427ffda202d36221feb609c330db0dcbb78ce",
+    "Lilian Jean Parker (1922\u20132001).md": "262d9a62271ed5c269172f0914cc89afc7edde6a3be4fb389e6a16c50d98a84d",
+    "Lillian May Telfer (1872\u20131951).md": "06107039f695116ba45144037a48cba6ff3d474ab68b9e3eea00f9fec46ed081",
+    "Lindsay Roland Telfer (1920\u20131976).md": "ad5d18e88ba52e3ddca5acd389fe88776a8eee9cc444906cc6d0707e61638c7f",
+    "Lloyd Wilbur Telfer (1913\u20132001).md": "b6e0ecfa28b84bfb0328a4ccc4c21711e1edfd325e835b27b4fc74bc26dc9d01",
+    "Lucy Agnes Parker (1881\u20131903).md": "184927b604162a5795584bbc5797989ca68db173e3d916657d37aabcc7c41459",
+    "Mabel Winifred Parker (1890\u20131895).md": "c43e9dcb42f1ae8c653917ffabb2a5cb57d867a5b0fca64e5e1cc41f623081ba",
+    "Maifie Beryl Telfer (1913\u20131948).md": "2ae9ec8da26b095e34d9edefc0b63ae433469996b6d614fede4e20307e0dece5",
+    "Malcolm Duncan Cameron.md": "4736d7940f2aae22c3dc65b572b37b3bf981da35f0218d907546c64112ea5d08",
+    "Malcolm Murray Cameron.md": "f66d2522108d02140de1068d20d8e424d959e8e72fdb1c5ad3694132d6a9e1aa",
+    "Margaret Armstrong (~1745\u2013?).md": "c1d7ddbf8663e083f666a9700a50dcf460fcf92caa93e2732c8809f82e514c15",
+    "Margaret Dougal Smith.md": "4a79a7bf1b5a099f310aad93ec1f8499134147dd5e227d256d1bb1412b5df575",
+    "Margaret Dougal Telfer (1849\u20131936).md": "7b6d4745714928b07358f3180eada76ed383be68d7efb0786e77733d7d57cc09",
+    "Margaret Farrow.md": "e62283ad73187fc1bc58fff02f40d5e4c2bdefa3068c4282692a8a8add179225",
+    "Margaret Telfer (1801\u2013?).md": "c3cd5849cefb07a650eb44c72f103b745712052adf4472dab73a85b8a6728a29",
+    "Margaret Wright Telfer (1810\u20131892).md": "1663a2f95e172806e438c00ee28805cca019bc05499da52a857641c34e026f2a",
+    "Margaret Wright Telfer (1869\u20131890).md": "ddcaa490f87cf9c844c0900a0ff01140f3f06367ede708576e1b776b36e0158a",
+    "Maria Clara Telfer (1878\u20131903).md": "2ae4edf066312f1b5600e7fc902c6dc2c056bce402cf0aa16697751be85d5228",
+    "Marian Telfer Cornish (1896\u20131977).md": "eca05f37dc92d290a617d0c86d3e997eaf4769e3fb24c62b320748ea7cf90e2f",
+    "Marion Vida.md": "995a734146b141719aa650b3a32ba49a07d4ea3ddc6727ecba2f5a8d94fc2184",
+    "Mark Kenneth Telfer (1986\u2013?).md": "544b7281939878686c427d70a4ac72bcbfabb2dd656e7105a1460e5f7f21ce2c",
+    "Mark Telfer (1877\u20131946).md": "7ab6af30ce618eb76c7a5ba5fd5512cb2680a2965963a1152853490fca6da971",
+    "Martha Allen (1840\u20131876).md": "a63316fd6242d6b9c23531bbe0d43569030040ef721ff8532f651a69fdb697ba",
+    "Martha Ann Masters Radford (1839\u20131912).md": "5277738ef33152131ca9536cdde8162b362d56681b7f6e1c010d53f4e972bc15",
+    "Martha Henstridge (~1854\u20131921).md": "9f25ed74b5248023f969d02d4ef295691363caa2e08865944a06258251c365ee",
+    "Martha Telfer (1873\u2013?).md": "3873339c9564f2a90af0ca4c4715ad28ca3e70959f7df5e9e49f77f22871b8f5",
+    "Martha Telfer Cameron (1873\u20131964).md": "44a0b857308c58889808d2cbc7c5940ed4d138ddefac5cc6f74f45ad42e1bf3a",
+    "Martha Williams Masters (1814\u20131896).md": "83cc7f9085999997f00c6d6812bc12b9d05de6104d226eae26145dc3b8d7057e",
+    "Mary Ann (Gelligen) Dillon (1887\u20131954).md": "7a43bc53e0b5790bb17971fa55fb99992c747674568351ceb5125fdd182334bd",
+    "Mary Anne McIntyre (1836\u20131913).md": "889348905294101f128c6827d87c0a3ee2915b1a5c5628f68999c68ee7e1e1a0",
+    "Mary Anne McIntyre.md": "eb85e33d8cca330ed868ad674f6825e77fe9fcb6bb448ac34903ff6eecce475a",
+    "Mary Bayes Farrow (1875\u20131938).md": "f04bd857373539a15273e9ce98c07f6b2140fb911bd025782dafadfcbf290d9a",
+    "Mary Ellen Masters Roach (1852\u20131935).md": "3745f78178e8053a8f70b124ee1e58f9627232a9a530117c8af3e98d2312bdf0",
+    "Mary Jane Paynter (1861\u20131945).md": "07ff6085c916402a94106898532a1852aec797b5f3901e0b47a9cb8e1540ec99",
+    "May Foy.md": "60a02560b9131d9b956a13f7c1eb7dfd64d93f9f7468809340cbe7a9e28c8ac5",
+    "Melville Bruce Telfer (1914\u20131997).md": "e11cae94b95b3fa6469c573bad629e9f3bc7f61e771fc7cd0bdf9ba5c65cb2e0",
+    "Mina Evelyn Parker (1897\u20131982).md": "39bc116d168810bdabe42303241ca7529bf9ef5a1b8d4a25e126031424ef7d52",
+    "Mitchell Telfer (2008\u2013?).md": "886749fe6975011025bdc7e83648d5c2a81e13aca98abac5db26f9243d8482ce",
+    "Murray John Telfer (1911\u20131982).md": "bb1d262e468c0a48faffa0e1616fa6d00c94bae7f6ccba7d6ebea0cba2f12a7d",
+    "Murray John Telfer (1924\u20132009).md": "7f662528c04b523889a60ff61243b3f1512e93f609b00cfb6d033995b06a5b05",
+    "Murray Keith Telfer (1920\u20132005).md": "5e13c644eb78ecb7f4ede41437c42106ee92df74c19d6661935ca9c4e4a6723f",
+    "Nick Telfer.md": "f53aee937ff70d1ee6924b0788e4f86e8c28b7fc19d23279b7339e116c4b2d8c",
+    "Noela Pauline Virgen (1921\u20132015).md": "a6ed2843e0e70b88119c1bb58c27c693965188aeec511c826a90f2ae10428620",
+    "Norman Thomas Patten (1917\u20131942).md": "82099d194362265f68e2e2d04a3b43725a1009d6b739a66271a1ce1789afc5da",
+    "Olive Mary Lillecrapp (1899\u20131993).md": "d3a646105ecbc654f12fbae2cb9a29e120080a1ea8e2148e8baf3fe7ae0e6ad0",
+    "Paul Ivory (1955\u20131996).md": "3b511a43ec9b6a3ebc35cd8592c27f4d320a78a8d48c10a903b7713d2e92cc99",
+    "Penny Telfer.md": "24a5a0755e3b24d9b690070ae018c6f6ccde90c9e74a09756d597adbe1f5b2e3",
+    "Peter Farrow.md": "b97d7d1620c8368c289c944ec9c74dfb2279ac77f1209b479918173d75382fda",
+    "Peter Telfer.md": "3ffdf2f852aefaece04916e91566ef892b9a8d75e0ed5482fc1e6934a5acf0cd",
+    "Phineas Baker (1870\u20131959).md": "753e104ebcd27ce15529a237567a8e09ea30db83ab3cf70bb2fb2f086639156a",
+    "Reginald Masters Telfer (1922\u20132011).md": "ee531bff21155c3116aeaede6d09d3f59f65d1632db36e085466fe410cd56f4a",
+    "Rev. Ralph Drummond (1792\u20131872).md": "023edb37b4389842e11af2ba2de144c70e468c631a34bc71a432febd0f90535c",
+    "Rev. Robert Haining (1802\u20131874).md": "83b812986e6f5d2964da99189f3083f93f3581526a720214438093219049158d",
+    "Richard Lancelot Watson (1910\u20131942).md": "1840350d6030016ccdb3b1179a0e527b2fab6a568395b6e1b96cef89c8d357f2",
+    "Richard Paynter (1838\u20131869).md": "bbd49637b8d67e8d2a6f87dd5bb98eb58b20b8e08f8c16e2cf5fe77e6f4177e9",
+    "Richard Paynter (of Calstock).md": "bbe56b0e938135f81215325356db7ae4e1882e26f7bb96f5305714cf549020f5",
+    "Richard Pelling Latter (~1860\u20131936).md": "d964f34316e06a90ddf80285a8e0779adf3e6d4b972c5315972f35897327bf3a",
+    "Rita Joyce Telfer (1909\u20131990).md": "2971e1f928581620ba5a956c3dc4c02f95b47041d4bf37ebd57fc00333ab9a39",
+    "Robert Agnew.md": "b90f0d4e4a9ba76be107766bd1b5418bd545be80a317cc1e4f00e89f268e0ea3",
+    "Robert Dunlop Lawrie (1850\u20131917).md": "6601d4ba625c9300fa427a45e7cec8e59fb0696722c2aa9fbf399f9394d24fa8",
+    "Robert Dunlop.md": "320bf04bf83eba2facd92c1ff23655ba021a34ad946f2b7c8bb6c19310dab580",
+    "Robert Farrow.md": "fc88866a0fa64ebd0e0d675a51a2d9c1826471d08c78044e061645f2ee3def0c",
+    "Robert Freddy Telfer (1886\u20131949).md": "77986482d64fc794a59ef0e3b672dd8f98a83bb4281f711cc27aa2c7b454b1f7",
+    "Robert Telfer (1803\u20131878).md": "95409044b65a2a3068bfe71525ee1bddf5e6369b9b91f9d65a01414eb904322d",
+    "Robert Telfer (1835\u20131907).md": "6f06dd7cdf7e6c6596d00e5226fe5e06a81fdc9da35f3c4a7bad1c50b2fb53aa",
+    "Robert Telfer Dillon (1862\u20131942).md": "bdf96c88f24c7eeab7df599a823fc5ea9d92c5901b2289fe87d5a488840a0fa8",
+    "Robina Telfer.md": "ca62fb2d399ce3c275ca9aa492fe3d9753ea65d57a47eee5eb3fb906d4dfd93e",
+    "Robyn Telfer.md": "4b2ff22d3a25fb373f1393c3514720ce55f8c138eca2cb2d2c353984ffa02f00",
+    "Rodger Peryman Wishart (1920\u20131944).md": "5683e26432682623a94b73784f85383e4965d53b622b7ceaadc502426c2317d9",
+    "Rose Isabel Margaret Paynter (Rankin) (1900\u20131988).md": "089366e2bd1c2720af909b4f53f8a693c6b82f5e148e548c46ae44f1a7ff3d9a",
+    "Ruth Penna (1863\u20131908).md": "b5cc897c4686d4644ba6c9eb7979d0422757e9acc3d7f204387e5705e888ab81",
+    "Ruth Telfer (1931\u2013?).md": "c94cfaed5d1e1c6a719296d110ee24c269afff36d92ac4f768993989054f5fac",
+    "Sandra Lee Smith.md": "158f09033f2d5ea81c2f378d72fe6ad609466713df47378a5bd5e66bc21fe4ea",
+    "Sarah Farrow.md": "1b78b14a463df2b10cb9dbda86359219d175f152de39968db6ad31f0137e7109",
+    "Sarah Jacobs (~1763\u20131811).md": "0b0cd671527fc98787bbcc8b75260f056ef01b19ec13decc05438f3dfd6fd3c7",
+    "Septimus Dillon.md": "325e5cbb8a2f1b354e3e05e90b16fb1c02e78778b47ee5b7a11ca3b08c42a071",
+    "Sheryle Telfer (1961\u2013?).md": "2cf00bcdd1092af0ef54d9141db02807acf15bed8a7e90139ff5c435f4c38830",
+    "Shirley Edna Telfer (1929\u20132017).md": "6d014d6b9899039d37dd652ab710c4a826b72612c233f43d78b0c09615c3a5f3",
+    "Sophia (Webster) March (1803\u20131892).md": "fad6b588b1f9168a1732b00a3edd16c93159632df9c7c784f6205f3ce1d5c18c",
+    "Sophia Baker (1829\u20131901).md": "c83fc384d697b77de734d820cc76fcdedd3cbe26e3ef3ec001df3701a57c3261",
+    "Sophia Harriett Ridgway (1868\u20131956).md": "d943fead5b3d93bb6d8aee868a357dbc84b7af5e48c6cf293a654946040161a1",
+    "Sophia Parker Lawrie (1886\u20131918).md": "efd4a564fd7fbebbbf870ef3c38b5ef76918a5421c587c95434dcd5c7e39f42d",
+    "Sophia Parker.md": "339f73d49ce6fc8ee945aff984655820b16b600a2270e5413226515378cb0826",
+    "Sophia Webster (~1800\u2013?).md": "02f770ef339e30689b1fcf3ab0aec1535e8e6807e5d63f0eedeb3746da30a57a",
+    "Stella Winifred Parker (1899\u20131974).md": "473f8787ac91f9fc790b6b5f7eee78c33a7014572fc785bb93f43cb5b2f4962b",
+    "Susan Burton Telfer (1844\u20131924).md": "67e6be482f21a744b51a1d565d92537a78bc384e9ee0fb99d6739a8cf63f5ed6",
+    "Susan Shirley Lawrie (?\u2013living).md": "6fa6167e3d0ae6deafd0f05c96e3dcde75585a16c1c5cbc34b6b7865354383fd",
+    "Susan Telfer (1871\u20131952).md": "87b583555eff53849bd8f137e4ebba5e48ad02ca2713fb48b2248a06fc40857e",
+    "Sydney Hugh Parker (1922\u20131964).md": "d9982b61fd7fa53ad29310e2d1fcaab9ce675aa6f65a4e80d8329ba61b92e15c",
+    "Thelma Ellen Parker (1924\u20132002).md": "6e227964abfaee22a591bea875ef188a30cc546355a6958e97aa5406e5a54cb0",
+    "Thomas Cleveland Dillon.md": "95648762488cf48a4dfc9e463afdbdb8d1b6f1d980ffc2e358eb58f6d8ae37d3",
+    "Thomas Paynter (1859\u20131946).md": "cd2dd5dce3f1e1a099af801d9a8e886a8e1203a94980daa11af1d442ae18d229",
+    "Thomas Telfer (of Broadlee).md": "1f87b1e1aa091b0c524f3768ebabc33ebb647015d15ab47865b05e37d4528cee",
+    "Timothy Neil Telfer (1959\u2013?).md": "405fffb352e2b66b7f76ab56dc3fd6350ca2a6929a0687000d7de916eb072894",
+    "Trevor Andrew Thomson (1914\u20131945).md": "f7ca464b3a4fd2139a7f85e32044e8c1f00ddb56b76cf35de86ff238b464f3e5",
+    "Vera Dillon.md": "ef99258451b246b46d46b530bcb0ddc7c97f3b0ed8b94c1af0af74f7153c1b52",
+    "Vernon Ray St. Clair Telfer (1879\u20131960).md": "8f1541b5c8e5266f2ed2d6835b519f7a78eb7847c3f636641dc3bd28352c3b03",
+    "Vida Telfer (1919\u20132021).md": "10961989735debe46fcb2e127763b1566187c3c91f38bec6e072d1c935470396",
+    "Violet Hope Telfer (1883\u20131967).md": "2b0107a69851ac0fef8a671f29dffc79cf887f26317a3d11d6056d7c30a8e88c",
+    "Walter Baker (1865\u20131937).md": "cc160788b647cbc6b9f11b63b30b6fbed375edaa2b1526a5d3a82fdb4f4de7ec",
+    "Walter William Telfer (1884\u20131966).md": "92ebe763da0282fa37542665a0fe94fa5c463b7915c38a516f48fadc8d554b4c",
+    "Wilhelm Seebohm (1833\u20131907).md": "4d213ae4975c283b45df5af50ecf5be9d7b2cae4042763a96aba75d1d09ebb9f",
+    "William Baker (1853\u20131933).md": "9501a980754dd263148cdad45b216eb9c885ed7cb1e6658dbcec18e423fc6c0e",
+    "William Farrow.md": "b0406dc2efce0a378a7ca8f932da61fc91e687d85607766838f668dba39cbde1",
+    "William Francis \"Frank\" Telfer (1885\u20131955).md": "08bc59cbfddba92ae669db259654d714aca25859985481389b314d41fc795b61",
+    "William Henry Parker (1893\u20131968).md": "638407d1fcb5b27a59f3cb7c3bd1cdf0586cab4aaec8dfb5c88c9fd9f2782088",
+    "William Humphrey Parker (1850\u20131926).md": "a127ba4758a9130e41d507e4ea948fe079c252b4ca7c8ace43db4db94969bd4f",
+    "William Humphrey Parker (1926\u20131976).md": "14ca3c544a1e0d34c2f098266155f982d9d1b85974b2107a01ee26d80b1f48a3",
+    "William James Telfer (1880\u20131880).md": "e32489a0969dac93797c41bc569f88f444abd0aa1bc5c7a694b98c97f1d637a2",
+    "William John Baker (1831\u20131919).md": "429daf1656d19eec7655ac2bed493fd499f7a8b8d83bca6f1b8b14ab73f44783",
+    "William John Dillon.md": "e67103e3e89041043ec63ebda4db611c051486fe44281328dfdbb7ec758eb601",
+    "William Telfer (1802\u20131850).md": "b6dfb48a30f4e3fbaad746e3a25ee7026a9e6ec725a7b79118882be90e971ed3",
+    "William Telfer (1811\u2013?).md": "2d8986ab755c1de4589ca1bb9f6a8c8c65e873ea17189b0c5c03cc2331abbfef",
+    "William Telfer (1841\u2013?).md": "041da018647e64e901f79a81122b99929e5102d9c9143145083d62d35ee76084",
+    "William Telfer (shepherd).md": "6900cbe1613f8ce9126a843001584ed5695b5d8d82466d451d6346a7b1595cf0",
+    "William Williams Masters (1838\u20131927).md": "c9591634c530ea6a079833a55356ce1d52344cfadfcf80930c1db00708e81e45",
+    "Zabella Violet Zelda Telfer (2019\u2013?).md": "26fa43fe26945f50f64274c85b5c70dd112614ba47c5433f22444a8e3cb32e27"
   }
 }
