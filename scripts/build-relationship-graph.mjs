@@ -121,8 +121,18 @@ function resolveNameToSlug(name, sourceSlug) {
     // b1832 d1845), so `if (death_year === refDeath) return ...` grabbed whichever
     // appeared first in list order and wired a wrong-generation sibling/parent/
     // child. Only a *unique* same-name+death-year candidate is safe by death alone.
+    // ── FIXED 2026-09-12 ──────────────────────────────────────────────────────
+    // `p.id` carries the years, e.g. "John Telfer (1840)". Comparing the whole id
+    // against the STRIPPED name ("john telfer") can NEVER match, so `candidates`
+    // was always empty and EVERY year-carrying vault ref fell through to
+    // `return null`. That silently destroyed 1604 relationship refs across 249
+    // records on every pipeline run — the reason /people/full-tree/ rendered a
+    // 2-node tree while the site advertised 355 people across 9 generations.
+    // Compare against the id's BASE name instead (years live in birth_year/death_year,
+    // which the logic below already uses).
+    const baseName = (id) => String(id || '').replace(/\s*\([^)]*\)\s*$/, '').trim().toLowerCase();
     const cleanedId = cleanName.toLowerCase();
-    const candidates = people.filter((p) => p.id.toLowerCase() === cleanedId);
+    const candidates = people.filter((p) => baseName(p.id) === cleanedId);
 
     // Exact both-years match is unequivocal.
     if (refDeath) {
