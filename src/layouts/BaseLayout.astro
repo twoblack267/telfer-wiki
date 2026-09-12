@@ -216,12 +216,12 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
           <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">← Back to all people</a>
           <div class="flex items-center gap-4">
             {navState.showDescendants && (
-              <a href={import.meta.env.BASE_URL + "people/" + navState.slug + "/descendants"} class="text-[var(--color-link)] hover:underline text-right">
+              <a href={import.meta.env.BASE_URL + "people/" + navState.slug + "/descendants/"} class="text-[var(--color-link)] hover:underline text-right">
                 📊 Descendant Chart →
               </a>
             )}
             {navState.showFamily && (
-              <a href={import.meta.env.BASE_URL + "people/" + navState.slug + "/family-sheet"} class="text-[var(--color-link)] hover:underline">
+              <a href={import.meta.env.BASE_URL + "people/" + navState.slug + "/family-sheet/"} class="text-[var(--color-link)] hover:underline">
                 👪 Family Sheet →
               </a>
             )}
