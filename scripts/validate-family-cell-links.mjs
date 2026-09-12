@@ -38,18 +38,72 @@ const ROOT = join(HERE, "..");
 const PEOPLE = join(ROOT, "src/data/people.json");
 const BASELINE = join(ROOT, "scripts/family-cell-links.baseline.json");
 const REPORT = join(ROOT, ".family-cell-links.json");
-const VAULT_PEOPLE = join(homedir(), "ObsidianVault", "Family History", "People");
+/**
+ * Where the vault lives. The vault is a SEPARATE directory that only exists on
+ * Mark's machine and on this runner when the workflow checks it out. Resolution
+ * order:
+ *   1. TELFER_VAULT_PEOPLE   — explicit override (CI sets this)
+ *   2. ~/ObsidianVault/...   — Mark's machine
+ *   3. <repo>/vault-checkout — CI fallback when the vault is checked out here
+ * If NONE exists we cannot audit. In CI that is a hard failure (a guard that
+ * silently no-ops is the exact bug this guard exists to prevent). Locally we
+ * still fail loudly rather than pretend.
+ */
+function resolveVaultPeople() {
+  const cands = [
+    process.env.TELFER_VAULT_PEOPLE,
+    join(homedir(), "ObsidianVault", "Family History", "People"),
+    join(ROOT, "vault-checkout", "Family History", "People"),
+    join(ROOT, "vault-checkout", "People"),
+    join(ROOT, "..", "ObsidianVault", "Family History", "People"),
+  ].filter(Boolean);
+  for (const c of cands) {
+    try {
+      if (existsSync(c) && readdirSync(c).some((f) => f.endsWith(".md"))) return c;
+    } catch { /* keep looking */ }
+  }
+  return null;
+}
+// `TELFER_VAULT_PEOPLE=@snapshot` forces the committed-snapshot path, so the CI-mode audit
+// can be exercised and negative-tested on the machine that owns the vault.
+const FORCE_SNAPSHOT = process.env.TELFER_VAULT_PEOPLE === "@snapshot";
+const VAULT_PEOPLE = FORCE_SNAPSHOT ? null : resolveVaultPeople();
+
+/**
+ * CI cannot see the vault. Rather than pass blind (or fail merely because the vault is
+ * absent, which would block every deploy), the guard falls back to a COMMITTED SNAPSHOT of
+ * the vault's Family rows — same rows, same labels. CI then audits FOR REAL against those
+ * rows. The snapshot is refreshed locally by scripts/make-family-rows-snapshot.mjs and is
+ * committed, so drift shows up in the diff instead of as silence.
+ */
+const SNAPSHOT = join(ROOT, "scripts/family-rows.snapshot.json");
+let snapshot = null;
+if (existsSync(SNAPSHOT)) {
+  try {
+    snapshot = JSON.parse(readFileSync(SNAPSHOT, "utf8")).files || {};
+  } catch (e) {
+    console.error(`❌ FAMILY-CELL GUARD: snapshot is corrupt (${e.message}) — refusing to pass blind.`);
+    process.exit(1);
+  }
+}
+if (!VAULT_PEOPLE && !snapshot) {
+  console.error(
+    "❌ FAMILY-CELL GUARD: no vault People dir (tried $TELFER_VAULT_PEOPLE, " +
+    "~/ObsidianVault/Family History/People, ./vault-checkout) and no committed snapshot at " +
+    SNAPSHOT + ".\n" +
+    "   Refusing to pass blind: a guard that cannot see the rows must not report success.\n" +
+    "   Fix: run `node scripts/make-family-rows-snapshot.mjs` where the vault lives, commit the result."
+  );
+  process.exit(1);
+}
+const AUDIT_SOURCE = VAULT_PEOPLE ? "vault" : "snapshot";
+
+// When the vault IS present, the committed snapshot must still agree with it — otherwise CI
+// would audit stale rows and quietly pass. Drift is a hard failure here, not a warning.
 
 // Family-sheet row labels. Only these rows are the sheet; other tables in a body
 // are prose and not this guard's business.
-const ROW_LABELS = new Set([
-  "father", "mother", "parents", "spouse", "spouses", "husband", "wife",
-  "children", "child", "siblings", "sibling", "brother", "sister", "brothers",
-  "sisters", "son", "daughter", "sons", "daughters",
-  "stepson", "stepdaughter", "stepfather", "stepmother", "stepchildren",
-  "grandson", "granddaughter", "grandfather", "grandmother", "grandchildren",
-  "nephew", "niece", "uncle", "aunt", "cousin", "partner", "de facto",
-]);
+import { ROW_LABELS } from "./family-row-labels.mjs";
 
 // Cells that are legitimately not a person and must never be "fixed" into a link.
 const NON_PERSON = /^(n\/?a|unknown|none|—|-|–|\?|unmarried|never married|see below|see notes|tbc|tbd)$/i;
@@ -61,13 +115,38 @@ function stripYears(s) {
   return s.replace(/\([^)]*\d{4}[^)]*\)/g, "").replace(/\b(18|19|20)\d{2}\b/g, "").replace(/[,\s]+$/, "").trim();
 }
 
-/** Names are comparable once years, possessives and punctuation noise are gone. */
+/** Names are comparable once possessives and punctuation noise are gone. Years are KEPT. */
 function nameKey(s) {
-  return norm(stripYears(s))
+  return norm(s)
     .replace(/[’']s\b/g, "")
     .replace(/[.,;:]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+/** Year digits mentioned anywhere in a string, e.g. "(~1836–)" -> [1836], "b. ~1839" -> [1839]. */
+const yearsIn = (s) => (norm(s).match(/\b(1[5-9]\d{2}|20\d{2})\b/g) || []).slice();
+
+/** Page identity: page names carry the lifespan, row text often does not. */
+const pageKey = (s) => nameKey(stripYears(s));
+
+/**
+ * A row text matches a page only when the NAME agrees AND the years do not contradict.
+ * e.g. row "James Telfer (~1836–)" must NOT match the page "James Telfer (1832–1845)".
+ * If the page has no years on it the name alone is enough.
+ */
+function matchesPage(rowText, pageName) {
+  const rk = nameKey(rowText);
+  const pk = nameKey(pageName);
+  if (rk !== pk && rk !== pageKey(pageName)) return false;
+  const py = yearsIn(stripYears(pageName) === pageName ? "" : pageName);
+  const ry = yearsIn(rowText);
+  if (py.length && ry.length && !py.some((y) => ry.includes(y))) return false;
+  // The row text gives NO year at all and several different people share this exact name
+  // (e.g. "Jean Telfer" vs pages 1764-? and 1840-1892). We cannot prove WHICH person the row
+  // means, so we must not claim the row is a dead link. Ambiguity is not evidence.
+  if (!ry.length && ambiguousNames.has(rk)) return false;
+  return true;
 }
 
 if (!existsSync(PEOPLE)) {
@@ -82,56 +161,126 @@ const list = Array.isArray(people) ? people : Object.values(people);
 // board card tw-2026-09-12-011 notes.
 const pageNames = new Set();
 for (const p of list) {
-  for (const cand of [p.vault_file, p.h1, p.display_name, p.title, p.name]) {
+  // Identity must be the PAGE, not the bare person name. display_name/title are year-stripped
+  // forms ("James Telfer"), so indexing them makes every same-named stranger a page match and
+  // floods the guard with false offenders (found 2026-09-12, 5 false positives).
+  for (const cand of [p.vault_file, p.h1, p.name]) {
     if (!cand) continue;
     const b = basename(String(cand)).replace(/\.md$/i, "");
-    const k = nameKey(b);
-    if (k) pageNames.add(k);
-    // Also index the name WITHOUT the trailing years, for "Parker (1893–1968)" -> "parker"
-    for (const piece of String(b).split(/\s{2,}|,\s*/)) {
-      const kk = nameKey(piece);
-      if (kk) pageNames.add(kk);
+    if (b) pageNames.add(b);
+    // NOTE (2026-09-12): do NOT index the bare surname/year-stripped form here. Doing so made
+    // "James Telfer" a matchable identity, so the guard demanded a link for unrelated children
+    // who never had a page. Only the FULL page name identifies a person.
+  }
+}
+
+/**
+ * Full name (year-stripped) -> how many DISTINCT pages carry it. When a name maps to more than
+ * one page we cannot say which person a bare-text row means, so the guard stays silent.
+ */
+const ambiguousNames = new Set();
+{
+  const byKey = new Map();
+  for (const n of pageNames) {
+    const k = pageKey(n);
+    if (!k) continue;
+    if (!byKey.has(k)) byKey.set(k, new Set());
+    byKey.get(k).add(n);
+  }
+  for (const [k, pageSet] of byKey) if (pageSet.size > 1) ambiguousNames.add(k);
+}
+
+// (superseded by the snapshot fallback above — see AUDIT_SOURCE)
+
+const files = VAULT_PEOPLE
+  ? readdirSync(VAULT_PEOPLE).filter((f) => f.endsWith(".md"))
+  : Object.keys(snapshot);
+
+if (!files.length) {
+  console.error(`❌ FAMILY-CELL GUARD: audit source "${AUDIT_SOURCE}" yielded no files — refusing to pass blind.`);
+  process.exit(1);
+}
+
+/** Yield {file, label, value} for every Family-table row, from vault or snapshot. */
+function* familyRows() {
+  for (const f of files) {
+    if (VAULT_PEOPLE) {
+      let txt;
+      try {
+        txt = readFileSync(join(VAULT_PEOPLE, f), "utf8");
+      } catch {
+        continue;
+      }
+      for (const rawLine of txt.split(/\r?\n/)) {
+        const line = rawLine.trim();
+        if (!line.startsWith("|")) continue;
+        const cells = line.split("|").map((c) => c.trim());
+        if (cells.length < 4) continue;
+        const label = norm(cells[1]).replace(/^\*+\s*|\s*\*+$/g, "").trim();
+        if (!ROW_LABELS.has(label)) continue;
+        yield { file: f, label, value: cells[2] };
+      }
+    } else {
+      for (const r of snapshot[f] || []) yield { file: f, label: r.row, value: r.value };
     }
   }
 }
 
-if (!existsSync(VAULT_PEOPLE)) {
-  console.error(`❌ FAMILY-CELL GUARD: vault people dir not found at ${VAULT_PEOPLE} — refusing to pass blind.`);
-  process.exit(1);
-}
-
-const files = readdirSync(VAULT_PEOPLE).filter((f) => f.endsWith(".md"));
-if (!files.length) {
-  console.error(`❌ FAMILY-CELL GUARD: no .md files in ${VAULT_PEOPLE} — refusing to pass blind.`);
-  process.exit(1);
+if (VAULT_PEOPLE && snapshot) {
+  const drift = [];
+  const snapFiles = new Set(Object.keys(snapshot));
+  const vaultRowsByFile = new Map();
+  for (const f of readdirSync(VAULT_PEOPLE).filter((x) => x.endsWith(".md"))) {
+    let txt;
+    try { txt = readFileSync(join(VAULT_PEOPLE, f), "utf8"); } catch { continue; }
+    const rows = [];
+    for (const raw of txt.split(/\r?\n/)) {
+      const line = raw.trim();
+      if (!line.startsWith("|")) continue;
+      const cells = line.split("|").map((c) => c.trim());
+      if (cells.length < 4) continue;
+      const label = norm(cells[1]).replace(/^\*+\s*|\s*\*+$/g, "").trim();
+      if (!ROW_LABELS.has(label)) continue;
+      rows.push(`${label}\u0000${cells[2]}`);
+    }
+    if (rows.length) vaultRowsByFile.set(f, rows);
+  }
+  for (const [f, rows] of vaultRowsByFile) {
+    const snap = snapshot[f];
+    if (!snap) { drift.push(`${f}: missing from snapshot`); continue; }
+    const sRows = snap.map((r) => `${r.row}\u0000${r.value}`);
+    if (sRows.length !== rows.length || sRows.some((v, i) => v !== rows[i])) drift.push(`${f}: rows differ`);
+  }
+  for (const f of snapFiles) if (!vaultRowsByFile.has(f)) drift.push(`${f}: stale in snapshot`);
+  if (drift.length) {
+    console.error(
+      `❌ FAMILY-CELL GUARD: committed snapshot has drifted from the vault (${drift.length} file(s)).\n` +
+      "   Run `node scripts/make-family-rows-snapshot.mjs` and commit scripts/family-rows.snapshot.json.\n" +
+      "   First few:\n" + drift.slice(0, 5).map((d) => `     - ${d}`).join("\n")
+    );
+    process.exit(1);
+  }
 }
 
 const offenders = [];
 let scannedRows = 0;
 let linkedCells = 0;
 
-for (const f of files) {
-  let txt;
-  try {
-    txt = readFileSync(join(VAULT_PEOPLE, f), "utf8");
-  } catch {
-    continue;
-  }
-  for (const rawLine of txt.split(/\r?\n/)) {
-    const line = rawLine.trim();
-    if (!line.startsWith("|")) continue;
-    const cells = line.split("|").map((c) => c.trim());
-    // A body table row: | Label | Value |
-    if (cells.length < 4) continue;
-    const label = norm(cells[1]);
-    if (!ROW_LABELS.has(label)) continue;
-    // separator row (|---|---|)
-    if (/^-{2,}$/.test(cells[2].replace(/[:\s]/g, "-"))) continue;
-
+{
+  // Labels are written as `| **Spouse** | ... |` in the vault and are normalised inside
+  // familyRows() (bold markers stripped), or every bolded row would be silently skipped
+  // (found 2026-09-12: 729 bold-labelled rows were outside the guard).
+  for (const { file: f, label, value: rawValue } of familyRows()) {
+    if (/^-{2,}$/.test(String(rawValue).replace(/[:\s]/g, "-"))) continue; // |---|---|
     scannedRows++;
-    const value = cells[2];
+    const value = rawValue;
     if (!value) continue;
-    if (value.includes("[[")) { linkedCells++; continue; }   // already a wikilink
+    // A row that already carries a wikilink is only PARTLY linked: these Family cells
+    // legitimately mix people who have pages with people who never will (unresearched
+    // children, spouses outside the family). A fully dead row is the real offence —
+    // flagging partial rows produces noise that gets ignored, and a guard nobody reads
+    // is worse than no guard. Offence = row with ZERO links whose name has a page.
+    if (value.includes("[[")) { linkedCells++; continue; }
     if (NON_PERSON.test(value)) continue;
 
     // Does this plain-text name correspond to a real page?
@@ -139,8 +288,9 @@ for (const f of files) {
     for (const cand of candidates) {
       const k = nameKey(cand);
       if (!k || k.length < 3) continue;
-      if (pageNames.has(k)) {
-        offenders.push({ file: f, row: label, text: cand });
+      const hit = [...pageNames].find((n) => matchesPage(cand, n));
+      if (hit) {
+        offenders.push({ file: f, row: label, text: cand, page: hit });
         break;
       }
     }
@@ -214,7 +364,7 @@ try {
 }
 
 console.log(`\nFAMILY-CELL LINKS: ${count} unlinked cell(s) whose name HAS a page — budget ${prev === null ? count : prev}`);
-console.log(`  vault files: ${files.length} · family rows scanned: ${scannedRows} · already linked: ${linkedCells}`);
+console.log(`  audit source: ${AUDIT_SOURCE} · files: ${files.length} · family rows scanned: ${scannedRows} · already linked: ${linkedCells}`);
 
 if (failures.length) {
   console.error(`\n❌ FAMILY-CELL LINK GUARD FAILED (${failures.length})`);

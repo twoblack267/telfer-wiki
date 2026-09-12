@@ -73,3 +73,15 @@ python3 "$HOME/.hermes/scripts/write-vault-manifest.py" || {
   echo "WARNING — could not write vault-manifest.json; drift check will report 'none'."
 }
 echo "OK — vault manifest refreshed; content-hash drift check is authoritative."
+
+echo
+echo "==> Step 7/7: refresh Family-row snapshot for the CI dead-link guard"
+# The dead-link guard (scripts/validate-family-cell-links.mjs) audits Family-table rows. CI has no
+# Obsidian vault, so the rows are committed as scripts/family-rows.snapshot.json and CI audits
+# those FOR REAL. Regenerating here keeps the snapshot from silently going stale; the guard also
+# hard-fails if the snapshot drifts from the live vault. (Added 2026-09-12.)
+if node scripts/make-family-rows-snapshot.mjs; then
+  echo "OK — snapshot refreshed (commit scripts/family-rows.snapshot.json if it changed)."
+else
+  echo "WARNING — snapshot not refreshed; CI guard will use the previously committed rows."
+fi
