@@ -18,3 +18,11 @@ scripts/sameas-candidates.json
 
 # Personal screenshots — never publish to the public wiki
 screenshot-evidence/
+
+# Resolver-coverage + escalation RUNTIME STATE (emitted by
+# scripts/validate-resolver-coverage.mjs / scripts/ci-escalate.py).
+# Artifacts, not source — they change every build and must never be committed.
+.resolver-coverage.json
+.ci-escalation.json
+__pycache__/
+*.pyc

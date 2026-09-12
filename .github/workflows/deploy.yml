@@ -42,6 +42,15 @@ jobs:
         # exercise those or broken/legacy person links get deployed as 404s / the
         # "Page with redirect" / duplicate-canonical alerts come back.
         run: npm run build
+      # ESCALATION — added 2026-09-12. `failure()` is false for a job that never
+      # started, and a failed "Install dependencies" or Playwright step skips
+      # everything after it; verifying the pager HERE (rather than at the end)
+      # means the alert path is exercised on every green deploy too.
+      - name: Escalation check (red build reaches the phone)
+        if: always()
+        env:
+          SKIPPY_GATE: build
+        run: python3 scripts/ci-escalate.py
       - name: Read stamped build id
         id: read-build-id
         run: echo "build_id=$(cat dist/.build-id)" >> "$GITHUB_OUTPUT"
@@ -109,3 +118,32 @@ jobs:
           done
           echo "::error::LIVE SITE DOES NOT SERVE BUILD $BUILD_ID after $attempts retries (~15min). If the deploy DID publish this is a caching/propagation issue on telferwiki.com that needs investigation, NOT necessarily bad content. Investigate before re-deploying."
           exit 1
+      # ─────────────────────────────────────────────────────────────────────
+      # ESCALATION — added 2026-09-12 ("we never want this to happen again").
+      # A red deploy was previously visible only to whoever happened to open the
+      # Actions tab. Now any failure anywhere in this workflow pings the Hermes
+      # ntfy topic (no secret in the repo) so it reaches the phone, and writes
+      # .ci-escalation.json for the local CI Mechanic cron to file a board card.
+      # Deliberately cannot fail the job: the red build is already the signal.
+      # ─────────────────────────────────────────────────────────────────────
+      - name: Escalation check
+        if: failure()
+        env:
+          SKIPPY_GATE: deploy/verify-live
+        run: python3 scripts/ci-escalate.py
+  escalate-on-start-failure:
+    # 2026-09-12: `needs: [build, deploy]` means that if the BUILD job dies, this
+    # job is SKIPPED — and a skipped job runs no steps, so the send-failure branch
+    # inside it can never fire. That is the exact silent-failure hole this whole
+    # change exists to close, so the pager gets its own job that runs whenever
+    # anything upstream did not succeed.
+    needs: [build, deploy, verify-live]
+    if: failure() || cancelled()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Escalation check (workflow did not complete cleanly)
+        env:
+          SKIPPY_GATE: deploy/upstream-failure
+        run: python3 scripts/ci-escalate.py

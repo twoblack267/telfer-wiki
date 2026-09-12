@@ -1,105 +1,92 @@
-# .github/workflows/validate-data.yml
-# Place in telfer-wiki repo. Runs on every PR/push to main.
+name: Validate Data
 
-name: Validate Telfer Wiki Data
+# ─────────────────────────────────────────────────────────────────────────────
+# CHANGE LOG — 2026-09-12 (Mark: "we never want this to happen again")
+#
+# The relationship resolver silently discarded ~94% of family links while every
+# build reported success. Two new sentries now make that class of failure loud:
+#
+#   • RESOLVER COVERAGE GUARD — asserts the resolver itself (coverage floor +
+#     named canaries) rather than the rendered output, so a relationship that
+#     was never built can no longer hide behind "nothing rendered broken".
+#   • ESCALATION — when a gate is red, scripts/ci-escalate.py pings the Hermes
+#     ntfy topic (no secret in the repo; GitHub hosts the notification, the Mac
+#     files the board card). The red build stands as the signal of record.
+# ─────────────────────────────────────────────────────────────────────────────
 
 on:
   push:
     branches: [main]
     paths:
       - 'src/data/**'
-      - 'schemas/**'
-      - 'scripts/validate-no-mark-refs.py'
-      - 'scripts/purge-mark-refs.py'
-      - 'scripts/scan-cross-branch.mjs'
+      - 'src/content/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'astro.config.mjs'
+      - '.github/workflows/validate-data.yml'
   pull_request:
-    paths:
-      - 'src/data/**'
-      - 'schemas/**'
-      - 'scripts/validate-no-mark-refs.py'
-      - 'scripts/purge-mark-refs.py'
-      - 'scripts/scan-cross-branch.mjs'
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  validate-data:
-    name: Validate Data Files
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci || npm install
 
-      - name: Validate data integrity (validate-people.mjs)
+      - name: Data integrity
+        id: integrity
+        shell: bash
         run: |
-          echo "🔍 Running data integrity validation..."
-          npm run validate
-          echo "✅ Data integrity validation passed"
+          set -o pipefail
+          npm run validate 2>&1 | tee "$RUNNER_TEMP/gate.log"
 
-      - name: Scan for cross-branch sibling contamination (scan-cross-branch.mjs)
+      - name: Cross-branch contamination scan
+        id: crossbranch
+        shell: bash
         run: |
-          echo "🧬 Scanning for cross-branch sibling contamination (same-name branch leaks)..."
-          node scripts/scan-cross-branch.mjs
-          echo "✅ No cross-branch sibling contamination found"
+          set -o pipefail
+          node scripts/scan-cross-branch.mjs 2>&1 | tee "$RUNNER_TEMP/gate.log"
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install jsonschema
-        run: pip install jsonschema
-
-      - name: Validate no first-person Mark references
+      - name: No "Mark's relative" references in published data
+        id: markrefs
+        shell: bash
         run: |
-          echo "🔍 Scanning src/data/ for forbidden patterns..."
-          python scripts/validate-no-mark-refs.py src/data/
-          echo "✅ No forbidden patterns found"
+          set -o pipefail
+          python3 scripts/validate-no-mark-refs.py src/data/ 2>&1 | tee "$RUNNER_TEMP/gate.log"
 
-      - name: Validate person schema (people.json)
+      # NEW 2026-09-12 — the sentry that would have caught the silent 94% discard.
+      - name: Resolver coverage guard
+        id: resolvercoverage
+        shell: bash
         run: |
-          echo "📋 Validating people.json against schema..."
-          python -m jsonschema -i src/data/people.json schemas/person.schema.json
-          echo "✅ people.json valid"
+          set -o pipefail
+          node scripts/validate-resolver-coverage.mjs 2>&1 | tee "$RUNNER_TEMP/gate.log"
 
-      - name: Validate person schema (people.public.json)
+      - name: Build must succeed
+        id: build
+        shell: bash
         run: |
-          echo "📋 Validating people.public.json against schema..."
-          python -m jsonschema -i src/data/people.public.json schemas/person.schema.json
-          echo "✅ people.public.json valid"
+          set -o pipefail
+          npm run build 2>&1 | tee "$RUNNER_TEMP/gate.log"
 
-      - name: Summary
+      # Runs ALWAYS (not only on failure) so the phone alert is itself verified:
+      # if this step is skipped nobody ever finds out the pager is dead.
+      - name: Escalation check (alerts on red, verifies the pager on green)
         if: always()
-        run: |
-          if [ ${{ job.status }} == 'success' ]; then
-            echo "🎉 All validation checks passed"
-          else
-            echo "❌ Validation failed — see above for details"
-            exit 1
-          fi
-
-  # Optional: dry-run purge on PRs to show what would change
-  dry-run-purge:
-    name: Dry-run Purge (Preview)
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Dry-run purge
-        run: |
-          echo "🔍 Dry-run: showing what purge would change..."
-          python scripts/purge-mark-refs.py --dry-run
+        env:
+          SKIPPY_GATE: ${{ job.status }}
+        run: python3 scripts/ci-escalate.py

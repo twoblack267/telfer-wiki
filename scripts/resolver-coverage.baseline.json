@@ -1,0 +1,9 @@
+{
+  "_comment": "Resolver-coverage FLOOR for scripts/validate-resolver-coverage.mjs. The guard fails the build when measured coverage drops below this. The floor only ever RATCHETS UP as the resolver gets fixed — never down to make a red build go green. Cards: tw-2026-09-12-011 (the resolver fix).",
+  "floor": 0.05,
+  "canary_floor": 0,
+  "measured_at": "2026-09-12",
+  "measured_coverage": 0.0561,
+  "canary_measured": null,
+  "note": "Baseline recorded 2026-09-12. canary_floor is 0 because the resolver bug is still OPEN (carded): James Telfer (1796)'s children are the known gap. When tw-2026-09-12-011 is fixed, set canary_floor to 8 and raise floor to the achieved coverage."
+}
