@@ -26,3 +26,6 @@ screenshot-evidence/
 .ci-escalation.json
 __pycache__/
 *.pyc
+
+# Family-cell link guard runtime report (generated; see validate-family-cell-links.mjs)
+.family-cell-links.json

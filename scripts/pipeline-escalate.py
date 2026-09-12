@@ -334,6 +334,14 @@ def gates_default():
          "kind": "run", "why": "same-name branch-leak assertions"},
         {"gate": "scripts/validate-no-mark-refs.py", "cmd": ["python3", "scripts/validate-no-mark-refs.py", "src/data/"],
          "kind": "run", "why": "no first-person Mark references in published data"},
+        # 2026-09-12: the "dead Family row" guard. A Family cell whose name HAS a
+        # person page but was left as plain text renders as invisible dead text
+        # (format-body.mjs:156 converts table cells VERBATIM). ~222 rows rotted
+        # that way while every gate passed, because nothing measured it.
+        {"gate": "scripts/validate-family-cell-links.mjs",
+         "cmd": ["node", "scripts/validate-family-cell-links.mjs"],
+         "kind": "run",
+         "why": "Family cells whose name has a page must be linked, not dead plain text"},
     ]
 
 
