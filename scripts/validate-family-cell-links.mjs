@@ -283,11 +283,50 @@ let linkedCells = 0;
     if (!value) continue;
     // A row that already carries a wikilink is only PARTLY linked: these Family cells
     // legitimately mix people who have pages with people who never will (unresearched
-    // children, spouses outside the family). A fully dead row is the real offence —
-    // flagging partial rows produces noise that gets ignored, and a guard nobody reads
-    // is worse than no guard. Offence = row with ZERO links whose name has a page.
-    if (value.includes("[[")) { linkedCells++; continue; }
+    // children, spouses outside the family).
+    //
+    // 2026-09-12 (card tw-2026-09-12-026): this check used to SKIP THE WHOLE ROW once it saw a
+    // single "[[", which made a row of 14 siblings with 3 links invisible — the guard reported
+    // "0 unlinked" while 112 dead names sat in exactly those rows (e.g. Alan Dale Telfer's
+    // Siblings row: 14 people, 3 linked, and his own Mother row plain text). The row is now
+    // SPLIT INTO PER-PERSON CELLS and each one is judged on its own.
     if (NON_PERSON.test(value)) continue;
+
+    // ---- per-person split (the fix for the blind spot) ----
+    // Cells are comma-separated; a comma inside parentheses belongs to a qualifier
+    // ("Baker (of Bickleigh, Devon)"), so only split on commas OUTSIDE parens. <br> also splits.
+    const personChunks = [];
+    {
+      let depth = 0, buf = "";
+      const text = String(value).replace(/<br\s*\/?>/gi, "\u0000");
+      for (const ch of text) {
+        if (ch === "(") depth++;
+        else if (ch === ")") depth = Math.max(0, depth - 1);
+        if (ch === "\u0000") { personChunks.push(buf); buf = ""; continue; }
+        if (ch === "," && depth === 0) { personChunks.push(buf); buf = ""; continue; }
+        buf += ch;
+      }
+      personChunks.push(buf);
+    }
+    const chunks = personChunks.map((s) => s.trim()).filter(Boolean);
+    if (chunks.length > 1) {
+      // Multi-person cell: judge every chunk. Already-linked chunks are fine; a PLAIN chunk
+      // whose name has a page is an offender, exactly as a wholly-plain row would be.
+      for (const ch of chunks) {
+        if (ch.includes("[[")) { linkedCells++; continue; }
+        if (NON_PERSON.test(ch)) continue;
+        const k = nameKey(ch);
+        if (!k || k.length < 3) continue;
+        const selfPg = basename(String(f.path || f)).replace(/\.md$/i, "");
+        const found2 = [...pageNames]
+          .filter((n) => !redirects.has(n) && n !== selfPg)
+          .find((n) => matchesPage(ch, n));
+        if (found2) offenders.push({ file: f, row: label, text: ch, page: found2 });
+        else linkedCells++;
+      }
+      continue;
+    }
+    if (value.includes("[[")) { linkedCells++; continue; }
 
     // Does this plain-text name correspond to a real page?
     // A cell can carry the person's name PLUS decoration: "Kenneth Cornish (m. 21 Jun 1924, ...)",
