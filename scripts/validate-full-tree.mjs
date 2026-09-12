@@ -84,3 +84,57 @@ if (fs.existsSync(PEOPLE)) {
 } else {
   console.log("⚠️  full-tree guard: src/data/people.json not found — source check skipped.");
 }
+
+// ── LAYER 3: EDGE-INTEGRITY CHECK (added 2026-09-12) ─────────────────────────────
+// Rationale: layers 1-2 catch an EMPTY tree. They cannot catch a tree that renders but is
+// SILENTLY WRONG — an edge pointing at a slug that does not exist (dangling), or a page that
+// renders fewer nodes than the data declares. The 2026-09-12 fault was exactly this shape:
+// the rendered page looked plausible while the underlying links had been gutted. A build that
+// "passes" while pointing at ghosts is worse than a loud failure, because nobody looks.
+//
+// Proven necessary by negative test: injecting a single bogus endpoint into
+// src/data/relationship-graph.json must make this guard EXIT 1. If it does not, the guard is
+// decoration. Never lower these to make a build pass — fix the graph builder.
+const GRAPH = path.join(process.cwd(), "src", "data", "relationship-graph.json");
+
+if (fs.existsSync(PEOPLE) && fs.existsSync(GRAPH)) {
+  const people = JSON.parse(fs.readFileSync(PEOPLE, "utf8"));
+  const graph = JSON.parse(fs.readFileSync(GRAPH, "utf8"));
+  const slugs = new Set(people.map((p) => p.slug));
+  const referenced = new Set();
+  let edgeCount = 0;
+  for (const list of Object.values(graph.edges ?? {})) {
+    for (const e of list ?? []) {
+      edgeCount++;
+      referenced.add(e.from);
+      referenced.add(e.to);
+    }
+  }
+  const dangling = [...referenced].filter((s) => !slugs.has(s));
+  console.log(`🕸  edge integrity: ${edgeCount} edges · ${referenced.size} endpoints · ${dangling.length} dangling`);
+
+  const probs = [];
+  if (dangling.length) {
+    probs.push(`${dangling.length} edge endpoint(s) point at a slug that does not exist: ${dangling.slice(0, 8).join(", ")}${dangling.length > 8 ? " …" : ""}`);
+  }
+  // The graph must never SHRINK the population it describes.
+  const nodes = (graph.nodes ?? []).length;
+  if (nodes < people.length) {
+    probs.push(`graph declares ${nodes} nodes but people.json has ${people.length} records — edges were dropped for ${people.length - nodes} people`);
+  }
+  // A dangling endpoint is a broken link on a rendered page. Zero tolerance.
+  if (probs.length) {
+    console.error(
+      `❌ full-tree guard: EDGE INTEGRITY FAILED — ${probs.join("; ")}\n` +
+      `   A rendered tree containing ghost links is silently wrong: it looks fine and shows the\n` +
+      `   wrong family. Cause is almost always the graph builder resolving a reference to a slug\n` +
+      `   that no longer exists (rename, slug change, deleted page).\n` +
+      `   Diagnose: node scripts/build-relationship-graph.mjs  →  re-run this script.\n` +
+      `   Do NOT delete a dangling ref to silence this — either the page is missing or the slug changed.`
+    );
+    process.exit(1);
+  }
+  console.log("🎉 full-tree guard: every relationship edge points at a real person.");
+} else {
+  console.log("⚠️  full-tree guard: graph/people source missing — edge-integrity check skipped.");
+}
