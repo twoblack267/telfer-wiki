@@ -200,11 +200,18 @@ function resolveSpouse(person: TreeNode): TreeNode | null {
 }
 
 // Build the complete tree starting from root
-const ROOT_ID = "John Telfer (of Castleton)";
-const realRoot = findPerson(ROOT_ID);
+// ROOT RESOLUTION — must be UNIQUE. `findPerson` falls back to display_name matching,
+// which is NON-UNIQUE (5 records share display_name "John Telfer"). On 2026-09-12 it resolved
+// the root to "John Telfer (1791)" — a namesake with NO children — collapsing the whole tree
+// to a single node. Always resolve the root by its UNIQUE slug; never by bare display name.
+const ROOT_SLUG = "john-telfer-of-castleton";
+const realRoot =
+  allPeople.find((p) => p.slug === ROOT_SLUG) ||
+  allPeople.find((p) => typeof p.id === "string" && p.id.startsWith("John Telfer (of Castleton)")) ||
+  findPerson(ROOT_SLUG);
 
 if (!realRoot) {
-  throw new Error("Root person not found: " + ROOT_ID);
+  throw new Error("Root person not found by slug: " + ROOT_SLUG);
 }
 
 // Create root TreeNode
