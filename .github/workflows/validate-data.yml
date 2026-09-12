@@ -76,6 +76,27 @@ jobs:
           set -o pipefail
           node scripts/validate-resolver-coverage.mjs 2>&1 | tee "$RUNNER_TEMP/gate.log"
 
+      # npm run build runs the FULL chain, and the chain includes the Playwright
+      # search-render e2e guard. Without browsers installed that guard throws
+      # "Executable doesn't exist at .../ms-playwright/chromium_headless_shell-*"
+      # and the build goes red for a reason that has NOTHING to do with the data.
+      # (Real failure 2026-09-12: run 34663363735 failed here on a false alarm.)
+      # deploy.yml has always installed Chromium; this job never did. Fixed.
+      # META-GUARD: the fix above must not be accidentally deleted. If the
+      # Chromium install step ever disappears, fail HERE with a clear message
+      # instead of deep inside a Playwright stack trace.
+      - name: Guard — Chromium install step must still exist
+        run: |
+          if ! grep -q 'playwright install chromium' .github/workflows/validate-data.yml; then
+            echo "::error::Playwright Chromium install step was removed from validate-data.yml."
+            echo "::error::npm run build runs the Playwright e2e guard; without browsers it fails."
+            exit 1
+          fi
+          echo "OK: Chromium install step present"
+
+      - name: Install Playwright Chromium (search-render e2e guard needs it)
+        run: npx playwright install chromium --with-deps
+
       - name: Build must succeed
         id: build
         shell: bash
