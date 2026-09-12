@@ -32,6 +32,23 @@ if [[ "$KEEP_BAK" != "1" ]]; then
 fi
 
 echo
+echo "==> Step 2b/3: prove the purge cannot CORRUPT prose (test-purge-mark-refs.py)"
+# tw-2026-09-12-043: purge-mark-refs.py rewrites "Mark's <role>" into a bare role word.
+# A rule of that shape shipped broken grammar to the live site ("...was Grandfather, who
+# died in 2009.") with every gate green. This test asserts the rewrites cannot delete
+# adjacent words, leave doubled spaces, or strand a possessive. Run it BEFORE the
+# gate-clean check so corruption is caught at the point it is introduced.
+PT="$(python3 scripts/tests/test-purge-mark-refs.py 2>&1)" || {
+  echo "PURGE CORRUPTION TEST FAILED — a rewrite breaks prose:"
+  echo "$PT" | grep -A2 FAIL | head -20
+  echo
+  echo "Fix: scripts/purge-mark-refs.py — a replacement must not consume words outside"
+  echo "the matched phrase, and must not collapse a mid-sentence phrase to a bare role word."
+  exit 1
+}
+echo "OK — purge rewrites do not corrupt prose"
+
+echo
 echo "==> Step 3/3: verify gate-clean (validate-no-mark-refs.py)"
 VP="$(python3 scripts/validate-no-mark-refs.py src/data/people.json src/data/people.public.json 2>&1)" || {
   echo "GATE FAILED — regenerated data still contains 'Mark's' references:"

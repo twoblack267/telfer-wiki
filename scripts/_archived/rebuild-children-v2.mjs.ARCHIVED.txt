@@ -1,3 +1,33 @@
+# ARCHIVED 2026-09-12 — DEAD CODE, DO NOT RUN
+#
+# tw-2026-09-12-023. This file was DELETED from `scripts/` and parked here instead,
+# so the work is recoverable but it can no longer be run by hand and silently corrupt
+# the tree. It was already orphaned — nothing referenced it.
+#
+# WHY IT WAS REMOVED (three independent defects, all verified):
+#
+#  1. IT WRITES TO A LINUX PATH. Line 151:
+#         const vaultDir = '/home/mark/ObsidianVault/Family History/People/';
+#     That path does not exist on this Mac, so every vault write silently did nothing.
+#
+#  2. IT WAS NOT IN THE PIPELINE. `rebuild-children-v2` appeared in NO shell script, NO
+#     package.json script, NO workflow and NO CI config. A normal rebuild never invoked it.
+#     The live `children` field is populated by `scripts/convert-markdown.mjs` instead —
+#     which is verified working (115 of 356 profiles carry children, e.g.
+#     elspeth-young -> ['james-telfer-1761']).
+#
+#  3. ITS PARENT LIST WAS HAND-TYPED. `correctParents` held 59 literal name pairs. Any
+#     typo, or any person renamed in the vault, hit a bare `continue` and SILENTLY ZEROED
+#     that person's children — no error, no warning, no diff. That is the same fault class
+#     as the monitor that reported green off a parser reading zero rows.
+#
+# A half-dead generator that can be run by hand and silently corrupt the tree is worse
+# than no generator. If this capability is ever wanted again, write it as a resolver that
+# DERIVES parents from the vault (single source of truth) and wire it into
+# `scripts/regenerate-data.sh` so it runs, or not at all.
+#
+# Original file follows.
+# ---------------------------------------------------------------------------
 import fs from 'fs';
 import path from 'path';
 import { parse, stringify } from 'yaml';

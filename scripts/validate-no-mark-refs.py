@@ -6,6 +6,28 @@ Exit codes:
   0 = clean
   1 = violations found
   2 = I/O or schema error
+
+WHY THE OLD PATTERNS WERE REPLACED (tw-2026-09-12-043)
+------------------------------------------------------
+The original implementation was an allow-list: it named specific family roles
+(cousin|uncle|aunt|niece|nephew|grandmother|grandfather|...) after "Mark's".
+It was O(1) per newly-invented phrasing and it leaked constantly. Verified misses:
+
+    "Mark's great-uncle"             -> MISS  (hyphen defeats the role alternation)
+    "Mark's paternal grandfather"    -> MISS  (qualifier between 's and the role)
+    "Mark Telfer's paternal grandfather" -> MISS
+    "Mark's decision"                -> MISS  (not a family role)
+    "Mark's line" / "Mark's approval" -> MISS
+
+Each of those shipped to the public site while this validator printed
+"✓ No forbidden patterns found" and exit 0. That is the same fault shape as the
+CI monitor that reported CI_STABLE for 12 days off a parser reading zero rows:
+a green verdict produced without the check actually being performed.
+
+THE RULE IS NOW A DENY-LIST, because the house rule is absolute —
+"never publish 'Mark's [relative]'" — not "never publish these twelve words".
+Any possessive reference to the archivist by name is a violation, EXCEPT the
+two documented, benign senses below.
 """
 
 import json
@@ -14,30 +36,41 @@ import sys
 from pathlib import Path
 from typing import Iterator, Tuple
 
-# ─── Forbidden Patterns ───
-# Each: (compiled_regex, human_description)
+# ─── The general rule ───
+# "Mark's", "Marks", "Mark Telfer's", "Mark Kenneth Telfer's" — any possessive of the
+# archivist's name. Substring-matching the bare word "Mark" would fire on the many
+# ancestors legitimately NAMED Mark (Mark Telfer 1877-1946, Mark Kenneth Telfer, etc.),
+# so a possessive is required.
+MARK_POSSESSIVE = re.compile(
+    r"\bmark(?:\s+(?:kenneth\s+)?telfer)?'s\b",
+    re.IGNORECASE,
+)
+
+# Also catch the bare "Mark's" with a typographic apostrophe.
+MARK_POSSESSIVE_ALT = re.compile(
+    r"\bmark(?:\s+(?:kenneth\s+)?telfer)?\u2019s\b",
+    re.IGNORECASE,
+)
+
+# ─── Documented, benign exceptions ───
+# These are possessive in form but do not assert a relationship to the archivist.
+# Each needs a REASON; an exception added without one is how the last leak happened.
+ALLOWED = [
+    # A named ancestor who is himself called Mark. "husband Mark's 1946 death notice"
+    # refers to Mark Telfer the ancestor, not to the archivist.
+    (re.compile(r"\bhusband\s+mark'?s\b", re.IGNORECASE),
+     "refers to an ancestor named Mark (e.g. husband Mark's death notice)"),
+    (re.compile(r"\bwife\s+mark'?s\b", re.IGNORECASE),
+     "refers to an ancestor named Mark"),
+]
+
+# Legacy specific patterns kept so previously-caught phrasings keep biting even if the
+# general rule is ever narrowed. Cheap redundancy on the highest-value shapes.
 FORBIDDEN_PATTERNS = [
-    # "Mark's cousin", "Mark's adopted cousin", "Mark's step-brother", etc.
-    (re.compile(r"\b(?:mark'?s?|my|me)\s+(?:adopted\s+)?(?:cousin|step[-\s]?brother|step[-\s]?sister|uncle|aunt|nephew|niece)\b", re.IGNORECASE),
-     "first-person relational (Mark's/my/me + cousin/step-brother/etc.)"),
-    # "I am Mark's cousin", "I am his cousin"
+    (re.compile(r"\bmaking\s+(?:him|her|them)\s+mark'?s?\s+(?:adopted\s+)?(?:cousin|step[-\s]?brother|step[-\s]?sister)\b", re.IGNORECASE),
+     "making someone Mark's cousin"),
     (re.compile(r"\bI\s+am\s+(?:mark'?s?|his|her)\s+(?:adopted\s+)?(?:cousin|step[-\s]?brother|step[-\s]?sister)\b", re.IGNORECASE),
      "first-person 'I am Mark's cousin'"),
-    # "making her Mark's cousin", "making him Mark's adopted cousin"
-    (re.compile(r"making\s+(?:him|her|them)\s+mark'?s?\s+(?:adopted\s+)?(?:cousin|step[-\s]?brother|step[-\s]?sister)\b", re.IGNORECASE),
-     "making someone Mark's cousin"),
-    # "Mark's great-grandmother", "Mark's great-great-grandfather", etc.
-    (re.compile(r"\bmark'?s?\s+(?:great[- ]?){0,2}grand(?:mother|father|parent|son|daughter|child|uncle|aunt)\b", re.IGNORECASE),
-     "Mark's great-grandparent/aunt/uncle/etc"),
-    # "Mark's wife/husband/mother/father/sister/brother/son/daughter"
-    (re.compile(r"\bmark'?s?\s+(?:wife|husband|mother|father|sister|brother|son|daughter|half[- ]?brother|half[- ]?sister|step[- ]?mother|step[- ]?father|grandmother|grandfather|grandparent)\b", re.IGNORECASE),
-     "Mark's nuclear/extended family role"),
-    # "Mark's niece/nephew" (already partly covered but explicit)
-    (re.compile(r"\bmark'?s?\s+(?:niece|nephew|great[- ]?niece|great[- ]?nephew)\b", re.IGNORECASE),
-     "Mark's niece/nephew"),
-    # Generic "Mark's [role]" where role indicates relationship to Mark
-    (re.compile(r"\bmark'?s?\s+(?:cousin|uncle|aunt|great[- ]?cousin|removed)\b", re.IGNORECASE),
-     "Mark's generic family role"),
 ]
 
 # Fields to scan in each person object
@@ -45,6 +78,21 @@ TARGET_FIELDS = {
     "roles", "body_markdown", "body_stripped", "summary",
     "biography", "description", "role", "title", "display_name", "slug"
 }
+
+
+def _scan_text(text: str):
+    """Yield (matched_text, description) for every violation in `text`."""
+    for pattern in (MARK_POSSESSIVE, MARK_POSSESSIVE_ALT):
+        for match in pattern.finditer(text):
+            # Is this occurrence inside a documented exception?
+            start = max(0, match.start() - 24)
+            window = text[start:match.end() + 4]
+            if any(ap.search(window) for ap, _ in ALLOWED):
+                continue
+            yield match.group(0), "possessive reference to the archivist by name"
+    for pattern, desc in FORBIDDEN_PATTERNS:
+        for match in pattern.finditer(text):
+            yield match.group(0), desc
 
 
 def iter_json_strings(obj: dict, prefix: str = "") -> Iterator[Tuple[str, str, int]]:
@@ -58,6 +106,8 @@ def iter_json_strings(obj: dict, prefix: str = "") -> Iterator[Tuple[str, str, i
                 for i, item in enumerate(v):
                     if isinstance(item, str):
                         yield f"{field_path}[{i}]", item, 0
+                    elif isinstance(item, dict):
+                        yield from iter_json_strings(item, f"{field_path}[{i}]")
             elif isinstance(v, dict):
                 yield from iter_json_strings(v, field_path)
     elif isinstance(obj, list):
@@ -75,15 +125,12 @@ def scan_file(path: Path) -> list[Tuple[str, int, str, str]]:
         print(f"ERROR reading {path}: {e}", file=sys.stderr)
         return violations
 
-    # For line numbers, we need to parse with line tracking
-    # Simpler: scan line-by-line for patterns, but also check JSON fields
-    lines = content.splitlines()
-    for line_no, line in enumerate(lines, 1):
-        for pattern, desc in FORBIDDEN_PATTERNS:
-            for match in pattern.finditer(line):
-                violations.append((str(path), line_no, "raw_line", match.group(0)))
+    # Raw line scan — gives real line numbers and covers non-JSON files.
+    for line_no, line in enumerate(content.splitlines(), 1):
+        for match_text, desc in _scan_text(line):
+            violations.append((str(path), line_no, desc, match_text))
 
-    # Also parse JSON for field-specific matches
+    # JSON field-aware scan (dedupe later by the caller if both fire).
     try:
         data = json.loads(content)
     except json.JSONDecodeError:
@@ -101,9 +148,8 @@ def scan_file(path: Path) -> list[Tuple[str, int, str, str]]:
             continue
         for field_path, value, _ in iter_json_strings(person):
             if any(tf in field_path for tf in TARGET_FIELDS):
-                for pattern, desc in FORBIDDEN_PATTERNS:
-                    for match in pattern.finditer(value):
-                        violations.append((str(path), 0, field_path, match.group(0)))
+                for match_text, desc in _scan_text(value):
+                    violations.append((str(path), 0, field_path, match_text))
     return violations
 
 
@@ -124,10 +170,21 @@ def main():
         else:
             print(f"WARNING: {arg} not found", file=sys.stderr)
 
-    if all_violations:
-        for file, line, field, match in all_violations:
+    # Dedupe: the same text can be hit by both the raw-line scan and the JSON scan.
+    seen = set()
+    unique = []
+    for file, line, field, match in all_violations:
+        key = (file, line, match)
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append((file, line, field, match))
+
+    if unique:
+        for file, line, field, match in unique:
             loc = f"{file}:{line}" if line else f"{file}:{field}"
             print(f"{loc} → {match}")
+        print(f"\n{len(unique)} violation(s)")
         sys.exit(1)
     else:
         print("✓ No forbidden patterns found")

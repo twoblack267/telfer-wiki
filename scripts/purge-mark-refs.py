@@ -56,10 +56,48 @@ BODY_REPLACEMENTS = [
     (re.compile(r"\bMark\s*&\s*Kylie's\s+(son|daughter)\b", re.IGNORECASE),
      lambda m: f"{m.group(1).capitalize()} of Mark and Kylie"),
     # "Mark's father/mother/grandfather/grandmother/etc" in body text (not names) → generic
-    # These appear in markdown body text, not as names — match word boundaries carefully
-    # Include qualifiers: eldest, youngest, paternal, maternal, biological, adopted, step, half-
-    (re.compile(r"(?<![A-Z][a-z])\bMark'?s?\s+(?:eldest|youngest|paternal|maternal|biological|adopted|step|half-)?\s*(father|mother|grandfather|grandmother|great-grandfather|great-grandmother|great-great-grandfather|great-great-grandmother|wife|husband|son|daughter|brother|sister|uncle|aunt|nephew|niece|cousin|stepfather|stepmother|stepbrother|stepsister|half-brother|half-sister)\b", re.IGNORECASE),
-     lambda m: m.group(1).capitalize()),
+    #
+    # SAFETY (tw-2026-09-12-043): this rule used to replace the WHOLE match with the bare
+    # capitalised role, which corrupts any sentence it lands inside:
+    #     "Murray John Telfer was Mark's paternal grandfather, who died in 2009."
+    #       -> "Murray John Telfer was Grandfather, who died in 2009."     <-- BROKEN
+    # That shipped a mangled sentence to the live site with every gate green.
+    #
+    # The bare-role collapse is only valid when the phrase IS the whole textual unit
+    # (a label such as "**Role:** Mark's father"). Everywhere else we substitute a neutral
+    # noun phrase that keeps the sentence grammatical. The qualifier is preserved.
+    # DELETED 2026-09-12 (tw-2026-09-12-043): this rule collapsed the WHOLE match to a bare
+    # capitalised role, DELETING the person from the sentence. Proven damage on live data:
+    #     in : "that is a conflation — Mark Telfer's father is a *different* John Telfer"
+    #     out: "that is a conflation — Father is a *different* John Telfer"      <-- owner gone
+    # It fired mid-sentence, not only on labels, so it corrupted prose as well as stripping
+    # the reference. Rule #12 below ("the X of the present line") covers every shape this
+    # rule reached, WITHOUT deleting anyone — verified rule-by-rule rather than assumed.
+    # SAFE rewrite — handles BOTH "Mark's father" and "Mark Telfer's father".
+    # The full-name form was previously only covered by the DELETED destructive rule, so
+    # extending this one is what keeps the leak closed without deleting anyone.
+    (re.compile(r"(?<![A-Za-z])Mark(?:\s+(?:Kenneth\s+)?Telfer)?'?s?\s+(?:(eldest|youngest|paternal|maternal|biological|adopted|step|half-)\s*)?(father|mother|grandfather|grandmother|great-grandfather|great-grandmother|great-great-grandfather|great-great-grandmother|wife|husband|son|daughter|brother|sister|uncle|aunt|nephew|niece|cousin)\b", re.IGNORECASE),
+     lambda m: ("the %s %s of the present line" % (m.group(1).strip(), m.group(2))
+                if m.group(1) else "a %s of the present line" % m.group(2))),
+    # CAUGHT LEAKS (tw-2026-09-12-043): two shapes the role list missed entirely.
+    #  1. "**Mark's great-uncle**" — 'great-uncle' is HYPHENATED and was absent from the
+    #     alternation, so nothing matched and the reflexive detector fired on live data.
+    #  2. "Per Mark's decision"    — 'decision' is not a family role, so no role rule fires.
+    # A catch-all is safe here because the forbidden thing is the POSSESSIVE FORM itself,
+    # and ancestors legitimately NAMED Mark are always written as plain names, never
+    # "Mark's". Any remaining "Mark's <word>" is therefore a house-rule breach.
+    (re.compile(r"\bMark'?s?\s+(great[- ]?uncle|great[- ]?aunt|great[- ]?grand(?:father|mother))\b", re.IGNORECASE),
+     lambda m: "a %s of the present line" % m.group(1).replace("-", " ")),
+    (re.compile(r"\bMark\s+Telfer'?s?\s+(great[- ]?uncle|great[- ]?aunt)\b", re.IGNORECASE),
+     lambda m: "a %s of the present line" % m.group(1).replace("-", " ")),
+    # "Per Mark's decision" / "Mark's approval" / "Mark's line" / "Mark's rule" -> drop the owner
+    (re.compile(r"\b(?:per|pending|following|by|after|before|with)\s+Mark'?s?\s+(decision|approval|rule|line|instruction|request)\b", re.IGNORECASE),
+     lambda m: "by the house %s" % m.group(1)),
+    (re.compile(r"\bMark'?s?\s+(decision|approval|rule|instruction|request)\b", re.IGNORECASE),
+     lambda m: "the house %s" % m.group(1)),
+    (re.compile(r"\bMark'?s?\s+line\b", re.IGNORECASE),
+     lambda m: "the present line"),
+
     # "one of Mark's uncles/aunts" in narrative → "one of Tim's uncles/aunts" or generic
     (re.compile(r"\bone of Mark'?s?\s+(uncles|aunts|brothers|sisters|cousins)\b", re.IGNORECASE),
      lambda m: f"one of Tim's {m.group(1)}"),

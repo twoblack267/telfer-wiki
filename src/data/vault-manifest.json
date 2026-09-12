@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-12T20:05:02+10:00",
+  "generated_at": "2026-09-12T22:06:12+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 371,
+  "count": 372,
   "kinds": {
-    "real": 355,
+    "real": 356,
     "redirect": 15,
     "empty": 1
   },
@@ -53,7 +53,7 @@
       "kind": "real"
     },
     "Alberta Grace Lawrie (1882\u20131954).md": {
-      "sha256": "4b92f268f81f971f988995823a7d985d2f2ab2e82a96cc57a1b72f7a5f781d07",
+      "sha256": "7d4010bd4b68c70a6783860a1b2880f997ad2001f2abb37fc4305770e09545bc",
       "kind": "real"
     },
     "Alexander Brown Thomson.md": {
@@ -273,7 +273,7 @@
       "kind": "real"
     },
     "Donald Jack Hookings (1916\u20131943).md": {
-      "sha256": "36499802c5824bc6f97e20092b5b788f0d16133c30b2727ffb4129fd649aeb84",
+      "sha256": "337a62bb69508b73cc35898086040e406ab4ec5d47336d3da46e414ccbf08f23",
       "kind": "real"
     },
     "Doris Elma Telfer (1919\u2013living).md": {
@@ -425,7 +425,7 @@
       "kind": "real"
     },
     "Ernest John Telfer (1878\u20131953).md": {
-      "sha256": "4463b939d3141976ded9882fc0e9a31a3a8a3b42db626f43cef3abc59d228e1e",
+      "sha256": "21c5ccf6b72032ef6c541f7c598b2db7f52ba4d8442d1f9d7b8975f197c92b99",
       "kind": "real"
     },
     "Esther Cowan (1783\u20131856).md": {
@@ -433,7 +433,7 @@
       "kind": "real"
     },
     "Esther Farrow Latter (1859\u20131951).md": {
-      "sha256": "d8d4b726f9fdd460e78d64536f850fd0ec8fe3e8892e94891e0b571e410ea324",
+      "sha256": "3b6a3a098d536173bb51cf25b158a12e65ed9af0b377c5b210a423e04c6d1cba",
       "kind": "real"
     },
     "Esther Farrow.md": {
@@ -465,7 +465,7 @@
       "kind": "real"
     },
     "Eva Agnes Farrow.md": {
-      "sha256": "8782e3b264dafa8fb515d245fa365ba853f27cb1c6345107d66792873985e882",
+      "sha256": "5f17f30bbaa96b4f335ef0c4c7c54c0e7ae09afa5ffc025cc94404ecb374c532",
       "kind": "real"
     },
     "Eva Rowena Telfer (1885\u20131974).md": {
@@ -697,7 +697,7 @@
       "kind": "real"
     },
     "James Gordon Steele (1892\u20131951).md": {
-      "sha256": "8e34cbf6be3dfb9a167f1f0e62222a06e5d16b89caa3dbbb6ac6ca9b077403bc",
+      "sha256": "9d216a11b491d5e5be96c0659c2e4e10be1b7646a2d3397d027d6231ec125665",
       "kind": "real"
     },
     "James Masters (1846\u20131847).md": {
@@ -877,7 +877,7 @@
       "kind": "real"
     },
     "John Robert Telfer.md": {
-      "sha256": "7eb4314df16278f29c9126a0cda08c23359e58ad57ba91dc65dd17293d42b524",
+      "sha256": "b85397263dcbf6e0ed7b12ca0f67eca0cbe2a33f177dda550bf0543fc7631073",
       "kind": "real"
     },
     "John Roland Telfer (1882\u20131975).md": {
@@ -1085,7 +1085,7 @@
       "kind": "real"
     },
     "Margaret Wright Telfer (1810\u20131892).md": {
-      "sha256": "4226e9b84a1f3573b87aea30d5ffbbc44b9a514f5c64f10f3b1c0c1642e201a6",
+      "sha256": "c7a0115e65ed0342066e2028bfe63b6f848d24f03e86f637e41254a66f984050",
       "kind": "real"
     },
     "Margaret Wright Telfer (1869\u20131890).md": {
@@ -1153,7 +1153,7 @@
       "kind": "real"
     },
     "Mary Ellen Masters Roach (1852\u20131935).md": {
-      "sha256": "3745f78178e8053a8f70b124ee1e58f9627232a9a530117c8af3e98d2312bdf0",
+      "sha256": "61fdda27f4f22d56a4f92ffcb1dfeb89eb4cc8343b720ba2bd4170303daa8930",
       "kind": "real"
     },
     "Mary Jane Paynter (1861\u20131945).md": {
@@ -1225,7 +1225,7 @@
       "kind": "real"
     },
     "Reginald Masters Telfer (1922\u20132011).md": {
-      "sha256": "ee531bff21155c3116aeaede6d09d3f59f65d1632db36e085466fe410cd56f4a",
+      "sha256": "9fd19680b15caf1e825919dab68f7f89d3adcbdfdcfbe8d1f630ae403f289ce4",
       "kind": "real"
     },
     "Rev. Ralph Drummond (1792\u20131872).md": {
@@ -1365,7 +1365,7 @@
       "kind": "real"
     },
     "Susan Burton Telfer (1844\u20131924).md": {
-      "sha256": "67e6be482f21a744b51a1d565d92537a78bc384e9ee0fb99d6739a8cf63f5ed6",
+      "sha256": "3bfef0847407ec77571ede75128c49ff443698ca9a154c47968b34f2a9d25877",
       "kind": "real"
     },
     "Susan Shirley Lawrie (?\u2013living).md": {
@@ -1422,6 +1422,10 @@
     },
     "Walter Baker (1865\u20131937).md": {
       "sha256": "bd2bde6e6ef489f1a926df65a54820d07208d28cb55d0e4d50b91d6c1a6aafc2",
+      "kind": "real"
+    },
+    "Walter John Hookings (1881\u20131962).md": {
+      "sha256": "1f2cea20087972eb6ef8198dc06d4fe3e309790dc6cd552d16152836a88924dc",
       "kind": "real"
     },
     "Walter William Telfer (1884\u20131966).md": {

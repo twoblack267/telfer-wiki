@@ -1774,6 +1774,11 @@
       "slug": "margaret-telfer",
       "id": "Margaret Telfer (1829)",
       "generation": 4
+    },
+    {
+      "slug": "walter-john-hookings",
+      "id": "Walter John Hookings (1881)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -3403,6 +3408,10 @@
         "to": "donald-jack-hookings"
       },
       {
+        "from": "walter-john-hookings",
+        "to": "donald-jack-hookings"
+      },
+      {
         "from": "esther-farrow-latter",
         "to": "kenneth-harry-latter"
       },
@@ -3579,6 +3588,10 @@
       {
         "from": "ethel-edith-telfer",
         "to": "james-gordon-steele"
+      },
+      {
+        "from": "eva-agnes-farrow-1877",
+        "to": "walter-john-hookings"
       },
       {
         "from": "floris-telfer",
