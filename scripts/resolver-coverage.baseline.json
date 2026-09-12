@@ -1,9 +1,9 @@
 {
   "_comment": "Resolver-coverage FLOOR for scripts/validate-resolver-coverage.mjs. The guard fails the build when measured coverage drops below this. The floor only ever RATCHETS UP as the resolver gets fixed — never down to make a red build go green. Cards: tw-2026-09-12-011 (the resolver fix).",
-  "floor": 0.05,
-  "canary_floor": 0,
+  "floor": 0.66,
+  "canary_floor": 5,
   "measured_at": "2026-09-12",
-  "measured_coverage": 0.0561,
-  "canary_measured": null,
-  "note": "Baseline recorded 2026-09-12. canary_floor is 0 because the resolver bug is still OPEN (carded): James Telfer (1796)'s children are the known gap. When tw-2026-09-12-011 is fixed, set canary_floor to 8 and raise floor to the achieved coverage."
+  "measured_coverage": 0.6625,
+  "canary_measured": 5,
+  "note": "Baseline RAISED 2026-09-12 (batch 044). The 0.05 floor and canary_floor 0 were never a test: the resolver had already been fixed by the 2026-09-12 graph-builder patch, so measured coverage was 0.6625 and all 5 canaries resolved, while the committed floor still sat at 0.05 (5%) and canary_floor at 0. A floor set an order of magnitude below reality is a guard that cannot fail — exactly the failure mode card tw-2026-09-12-034 was written about. Floors now sit just under measured so a regression bites: coverage 0.66 (measured 0.6625) and canary 5/5 (measured 5/5). Floors only ever ratchet UP. NOT raised to the theoretical maximum because the remaining gap is genuine — see card tw-2026-09-12-047: 638 of the 679 unresolved references name a real person who has no vault page, or carry a middle name the record's frontmatter never recorded."
 }
