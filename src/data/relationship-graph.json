@@ -561,7 +561,7 @@
       "generation": 4
     },
     {
-      "slug": "isabella-telfer",
+      "slug": "isabella-telfer-1880",
       "id": "Isabella Lucieton Telfer (1880)",
       "generation": 6
     },
@@ -1759,6 +1759,21 @@
       "slug": "thomas-telfer",
       "id": "Thomas Telfer",
       "generation": 99
+    },
+    {
+      "slug": "agnes-telfer",
+      "id": "Agnes Telfer (1848)",
+      "generation": 5
+    },
+    {
+      "slug": "isabella-telfer-1837",
+      "id": "Isabella Telfer (1837)",
+      "generation": 5
+    },
+    {
+      "slug": "margaret-telfer",
+      "id": "Margaret Telfer (1829)",
+      "generation": 4
     }
   ],
   "edges": {
@@ -2354,6 +2369,10 @@
       {
         "from": "thomas-telfer",
         "to": "elisabeth-telfer"
+      },
+      {
+        "from": "elizabeth-beattie-1802",
+        "to": "margaret-telfer"
       }
     ],
     "spouseOf": [
@@ -2363,7 +2382,7 @@
       },
       {
         "from": "alexander-brown-thomson",
-        "to": "isabella-telfer"
+        "to": "isabella-telfer-1880"
       },
       {
         "from": "alma-ida-sporer",

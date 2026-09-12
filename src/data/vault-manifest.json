@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-12T09:55:39+10:00",
+  "generated_at": "2026-09-12T10:31:04+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 368,
+  "count": 371,
   "kinds": {
-    "real": 352,
+    "real": 355,
     "redirect": 15,
     "empty": 1
   },
@@ -38,6 +38,10 @@
     },
     "Agnes Letitia May Rose Paynter-Hucks (1895\u20131952).md": {
       "sha256": "f06c8c127bca5bc003ecf129cb7207d1756b8ed4ce8832a1d059cfc9c202208e",
+      "kind": "real"
+    },
+    "Agnes Telfer (1848\u2013?).md": {
+      "sha256": "061c82cd99a56f03533600b5393ccc9ddd6151410d945e94dbf2b609439a3e04",
       "kind": "real"
     },
     "Alan Dale Telfer (1890\u20131937).md": {
@@ -664,6 +668,10 @@
       "sha256": "9da6cb9534c815a174db6e8e7740ce8d02b11d72f9749fd1c13fd7349d3b03c8",
       "kind": "real"
     },
+    "Isabella Telfer (1837\u2013?).md": {
+      "sha256": "885768d45be537d3581abac37e1cbfa3b2eb784253840c56cdaa9280561f5288",
+      "kind": "real"
+    },
     "Isobel Telfer (1798\u2013?).md": {
       "sha256": "0c761580fd143da6b55b9d2b52d443dfe82a359c080d4ddae49888bae600af6d",
       "kind": "real"
@@ -709,7 +717,7 @@
       "kind": "real"
     },
     "James Telfer (1796\u20131863).md": {
-      "sha256": "d64f37eb507d186cbc87c7f1be3d0bdfdb2d82ead5bd8d339ea8dff2d760a842",
+      "sha256": "f68753897969a472de3c43592d22c93be854cfcfb4a8858ae6f5911717134b40",
       "kind": "real"
     },
     "James Telfer (1829\u20131913).md": {
@@ -1070,6 +1078,10 @@
     },
     "Margaret Telfer (1801\u2013?).md": {
       "sha256": "c3cd5849cefb07a650eb44c72f103b745712052adf4472dab73a85b8a6728a29",
+      "kind": "real"
+    },
+    "Margaret Telfer (1829\u2013?).md": {
+      "sha256": "42411c8956f5f24438a373d829045fb95f142befe9134f92e57272c0ae3be4e6",
       "kind": "real"
     },
     "Margaret Wright Telfer (1810\u20131892).md": {
