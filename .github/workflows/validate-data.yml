@@ -110,4 +110,13 @@ jobs:
         if: always()
         env:
           SKIPPY_GATE: ${{ job.status }}
-        run: python3 scripts/ci-escalate.py
+        run: |
+          # An alerting hook must never be a failure mode. If this script is
+          # missing or broken the step must still go green, because the real
+          # signal is the build/job status itself.
+          # (Real failure 2026-09-12: run 34663363705 went red a 2nd time purely
+          #  because this file didn't exist in the checkout yet.)
+          python3 scripts/ci-escalate.py || {
+            echo "::warning::escalation hook unavailable — the red build status stands as the signal"
+            true
+          }
