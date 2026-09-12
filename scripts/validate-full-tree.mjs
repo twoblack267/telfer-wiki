@@ -34,3 +34,53 @@ if (uniq.size < MIN_NODES) {
   process.exit(1);
 }
 console.log("🎉 full-tree guard: the tree renders.");
+
+// ── SOURCE-SIDE CHECK: the graph itself, not just the rendered page ──────────────
+// Rationale (2026-09-12): the rendered symptom is "the tree is empty", but the CAUSE is always a
+// hollow relationship graph in people.json. Checking the source means the failure message names the
+// real problem, and it fires even if the page later learns to render without the graph.
+//
+// Baselines measured on a healthy build: 322/355 records carry relationships, 2041 total refs.
+// Floors are set well below that so genuine growth never trips them, but the 2026-09-12 fault
+// (207 records / 644 refs) fails hard.
+const MIN_RECORDS_WITH_RELATIONSHIPS = Number(process.env.MIN_RECORDS_WITH_RELATIONSHIPS ?? 280);
+const MIN_RELATIONSHIP_REFS = Number(process.env.MIN_RELATIONSHIP_REFS ?? 1500);
+const PEOPLE = path.join(process.cwd(), "src", "data", "people.json");
+
+if (fs.existsSync(PEOPLE)) {
+  const people = JSON.parse(fs.readFileSync(PEOPLE, "utf8"));
+  const FIELDS = ["parents", "children", "siblings", "spouses"];
+  let refs = 0;
+  let withRel = 0;
+  for (const p of people) {
+    let n = 0;
+    for (const f of FIELDS) n += Array.isArray(p[f]) ? p[f].length : 0;
+    refs += n;
+    if (n > 0) withRel++;
+  }
+  console.log(`🔗 relationship graph: ${withRel}/${people.length} records carry relationships · ${refs} refs`);
+
+  const problems = [];
+  if (withRel < MIN_RECORDS_WITH_RELATIONSHIPS) {
+    problems.push(`records with relationships ${withRel} < floor ${MIN_RECORDS_WITH_RELATIONSHIPS}`);
+  }
+  if (refs < MIN_RELATIONSHIP_REFS) {
+    problems.push(`total relationship refs ${refs} < floor ${MIN_RELATIONSHIP_REFS}`);
+  }
+  if (problems.length) {
+    console.error(
+      `❌ full-tree guard: the RELATIONSHIP GRAPH is hollow — ${problems.join("; ")}.\n` +
+      `   This is the data-layer cause of an empty tree, not a rendering bug.\n` +
+      `   Known cause (fixed 2c5f897): scripts/build-relationship-graph.mjs compared a year-stripped\n` +
+      `   name against a p.id that CARRIES the years, so every year-carrying vault reference fell\n` +
+      `   through to return null — 1604 refs destroyed across 249 records per run.\n` +
+      `   Diagnose: node scripts/convert-markdown.mjs  →  node scripts/build-relationship-graph.mjs\n` +
+      `   and compare the ref count before/after. Then run bash scripts/regenerate-data.sh.\n` +
+      `   Do NOT lower these floors and do NOT hand-edit people.json.`
+    );
+    process.exit(1);
+  }
+  console.log("🎉 full-tree guard: relationship graph is populated.");
+} else {
+  console.log("⚠️  full-tree guard: src/data/people.json not found — source check skipped.");
+}
