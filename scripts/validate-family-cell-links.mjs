@@ -155,11 +155,13 @@ if (!existsSync(PEOPLE)) {
 }
 const people = JSON.parse(readFileSync(PEOPLE, "utf8"));
 const list = Array.isArray(people) ? people : Object.values(people);
+// (redirect set is populated inside the loop below)
 
 // Build the set of names that HAVE a page. Filename, H1 and display_name all count,
 // because the resolver matches filenames/H1 (NOT the frontmatter title) — see
 // board card tw-2026-09-12-011 notes.
 const pageNames = new Set();
+const redirects = new Set();
 for (const p of list) {
   // Identity must be the PAGE, not the bare person name. display_name/title are year-stripped
   // forms ("James Telfer"), so indexing them makes every same-named stranger a page match and
@@ -168,6 +170,10 @@ for (const p of list) {
     if (!cand) continue;
     const b = basename(String(cand)).replace(/\.md$/i, "");
     if (b) pageNames.add(b);
+    // Redirect pages are ALIASES, not identities (15 of them, e.g. "John Lawrie.md" -> "John Lawrie
+    // (1810–1888)"). A row saying "John Lawrie" is not a dead link to a stub page; indexing the
+    // redirect made the guard demand self-links on the 1810 man's own "Son" rows. Found 2026-09-12.
+    if (/redirect/i.test(String(p.redirect || "") ) || /redirect/i.test(String(p.tags || ""))) redirects.add(b);
     // NOTE (2026-09-12): do NOT index the bare surname/year-stripped form here. Doing so made
     // "James Telfer" a matchable identity, so the guard demanded a link for unrelated children
     // who never had a page. Only the FULL page name identifies a person.
@@ -284,15 +290,42 @@ let linkedCells = 0;
     if (NON_PERSON.test(value)) continue;
 
     // Does this plain-text name correspond to a real page?
+    // A cell can carry the person's name PLUS decoration: "Kenneth Cornish (m. 21 Jun 1924, ...)",
+    // "William Humphrey Parker (1850–1926) — by Isabella Kelly". The whole-cell compare above
+    // never sees those people (found 2026-09-12 by a full-vault scan: 2 dead rows the guard
+    // called clean). So also test every PREFIX of the cell that ends on a boundary, using the
+    // SAME identity rules (year-qualified, ambiguity-safe) as the whole-cell compare.
     const candidates = value.split(/\s*(?:,| and | & )\s*/i).map((s) => s.trim()).filter(Boolean);
-    for (const cand of candidates) {
+    const prefixes = [];
+    {
+      const BOUNDARY = /\s*(?:[—–-]\s|\(|;|\bm\.|\bmarried\b|\bby\b|\bd\.|\bnée\b|$)/i;
+      // walk each boundary occurrence and keep the text before it
+      const re = new RegExp(BOUNDARY.source, "gi");
+      let m;
+      while ((m = re.exec(value)) !== null) {
+        const cut = value.slice(0, m.index).trim();
+        if (cut.length >= 3 && cut !== value) prefixes.push(cut);
+        if (re.lastIndex <= m.index) re.lastIndex = m.index + 1; // guard zero-length matches
+      }
+    }
+    // "James Baker (of Bickleigh, Devon)" is NOT "James Baker (1859–1927)" — a parenthetical that
+    // is a PLACE/descriptor qualifier identifies a different person, and the only same-named page
+    // may be his son (confirmed 2026-09-12). Treat such cells as naming nobody we have a page for.
+    const qualifier = /\((?!\s*(?:m\.|married|b\.|d\.|born|died|bur\.|n[eé]e|\d{3,4}\s*[-–—]))[^)]{4,}\)/i;
+    if (qualifier.test(value) && !/\d{4}/.test(qualifier.exec(value)[0])) { linkedCells++; continue; }
+
+    let hit = null, hitText = null;
+    for (const cand of [...prefixes, ...candidates]) {
       const k = nameKey(cand);
       if (!k || k.length < 3) continue;
-      const hit = [...pageNames].find((n) => matchesPage(cand, n));
-      if (hit) {
-        offenders.push({ file: f, row: label, text: cand, page: hit });
-        break;
-      }
+      const found = [...pageNames].filter((n) => !redirects.has(n)).find((n) => matchesPage(cand, n));
+      if (found) { hit = found; hitText = cand; break; }
+    }
+    if (hit) {
+      const selfPage = basename(String(f.path || f)).replace(/\.md$/i, "");
+      if (hit === selfPage) hit = null;  // a person cannot be their own father/son
+      else if (redirects.has(hit)) hit = null;  // never demand a link to an alias stub
+      else offenders.push({ file: f, row: label, text: hitText, page: hit });
     }
   }
 }
