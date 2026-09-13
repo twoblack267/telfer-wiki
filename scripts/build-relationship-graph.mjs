@@ -481,6 +481,43 @@ for (const [childSlug, parents] of parentEdges) {
 // Call deduplication after all edges are built, before converting to arrays
 deduplicateParents(people, parentEdges);
 
+// ─── Disputed parentage must not be asserted (card tw-2026-09-13-031) ─────────
+// The vault can declare `parentage_status: unproven` (Agnes Telfer (1848-?) is the
+// live case: she appears in none of the three gold family books and not in the 1851
+// Jedburgh census). convert-markdown.mjs carries that flag through, but THIS file
+// is the authority for parents[]/siblings[] — it rebuilds them from the graph,
+// so the gate has to be applied here too or it is silently discarded upstream.
+//
+// Chosen behaviour (option (b), 13 Sep 2026): an unproven parent link is NOT emitted
+// as a machine-readable relationship. It is recorded in disputed_parent_refs instead.
+// The body prose still carries the whole dispute, so nothing is hidden — it simply is
+// not asserted as fact.
+//
+// This also closes the second-order leak: the sibling-inference pass above builds
+// siblings from shared parents, so leaving the parent edge in place would have
+// silently manufactured brothers and sisters for a disputed person.
+const UNPROVEN = new Set(
+  people.filter(p => String(p.parentage_status || '').toLowerCase() === 'unproven').map(p => p.slug)
+);
+
+for (const slug of UNPROVEN) {
+  const claimed = parentEdges.get(slug);
+  if (claimed && claimed.size > 0) {
+    const rec = people.find(p => p.slug === slug);
+    if (rec) {
+      // slugs only — the display names are already in rec.relationships, and
+      // mixing both forms here produced duplicates on the first run.
+      rec.disputed_parent_refs = Array.from(claimed).sort();
+      rec.parents = [];
+    }
+  }
+  parentEdges.delete(slug);
+  // and drop the reverse edge so the disputed child is not listed as anyone's child
+  for (const [, kids] of childEdges) kids.delete(slug);
+}
+// rebuild sibling edges for disputed people: they have no asserted siblings from this
+for (const slug of UNPROVEN) siblingEdges.set(slug, new Set());
+
 // ─── Deduplicate and Convert to Arrays ────────────────────────────────────────
 
 for (const person of people) {

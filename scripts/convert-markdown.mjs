@@ -543,9 +543,37 @@ function main() {
     const children = [];
     const siblings = [];
     const spouses = [];
+
+    // Parent refs recorded but NOT asserted, because frontmatter says the
+    // parentage is unproven. See the parentageUnproven block below.
+    const disputedParentRefs = [];
+
+    // ── Disputed parentage (card tw-2026-09-13-031) ───────────────────────────
+    // The vault may declare `parentage_status: unproven` with the reasoning in
+    // `relationship_notes` (e.g. Agnes Telfer (1848-?), who appears in NONE of the
+    // three gold family books and NOT in the 1851 Jedburgh census). The vault page
+    // deliberately keeps the relationship NAMES clean so links resolve, and records
+    // the doubt in structured frontmatter instead.
+    //
+    // That doubt must survive into the generated data. Previously it did not:
+    // parentage_status was never read, so `parents[]` asserted an unproven pair as
+    // fact and the dispute lived only in prose. Option (b), chosen 13 Sep 2026:
+    // do NOT emit unproven parent links into the structured array. The body still
+    // carries the full dispute text, so nothing is hidden — it simply is not
+    // asserted as a machine-readable relationship.
+    //
+    // NOTE: never edit the VAULT to fix this. The vault is the source of truth and
+    // it is correct; this is a generator/schema gap.
+    const parentageUnproven = String(fm.parentage_status || '').trim().toLowerCase() === 'unproven';
+
     for (const rel of relationships) {
       const t = rel.type.toLowerCase();
       if (['mother', 'father', 'parent'].includes(t)) {
+        if (parentageUnproven) {
+          // recorded, not asserted
+          disputedParentRefs.push(...rel.names);
+          continue;
+        }
         parents.push(...rel.names);
       } else if (['children', 'child'].includes(t)) {
         children.push(...rel.names);
@@ -606,6 +634,10 @@ function main() {
       body_markdown: bodySanitized,
       body_stripped: bodyStripped,
       parents,
+      // Card tw-2026-09-13-031: surface the dispute so downstream consumers can
+      // tell "no parents recorded" apart from "parents recorded but disputed".
+      parentage_status: parentageUnproven ? 'unproven' : undefined,
+      disputed_parent_refs: disputedParentRefs.length > 0 ? disputedParentRefs : undefined,
       children,
       siblings,
       spouses,
@@ -704,6 +736,22 @@ function main() {
         existing.spouses = spouses.length > 0 ? spouses : existing.spouses;
       }
       existing.related_trees = entry.related_trees;
+      // Card tw-2026-09-13-031: this merge is an ALLOWLIST of copied fields, so a
+      // new field must be listed here or it is silently dropped. parentage_status
+      // describes the CURRENT vault frontmatter, so it must be overwritten each run
+      // (including to undefined, which allows a dispute to be cleared later).
+      if (parentageUnproven) {
+        existing.parentage_status = 'unproven';
+        // disputed_parent_refs is (re)derived as SLUGS by build-relationship-graph.mjs,
+        // which is the stage that actually holds the slug map. Set a placeholder here
+        // so the merge never leaves a stale/false value behind.
+        existing.disputed_parent_refs = [];
+        // the disputed parent links are recorded, never asserted
+        existing.parents = [];
+      } else if (existing.parentage_status) {
+        delete existing.parentage_status;
+        delete existing.disputed_parent_refs;
+      }
       // Images are source-of-truth from the vault body. If the processed vault
       // file no longer references any image, clear stale images/person_photo so
       // removed photos don't persist on the live page (privacy + correctness).
