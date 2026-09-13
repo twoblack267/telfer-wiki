@@ -227,6 +227,7 @@
       "margaret-telfer-1849"
     ],
     "siblings": [
+      "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
       "james-telfer-1829",
@@ -635,13 +636,13 @@
       {
         "type": "Father",
         "names": [
-          "James Telfer (1796–1863) — UNPROVEN"
+          "James Telfer (1796–1863)"
         ]
       },
       {
         "type": "Mother",
         "names": [
-          "Elizabeth Beattie (1802–1891) — UNPROVEN"
+          "Elizabeth Beattie (1802–1891)"
         ]
       }
     ],
@@ -650,10 +651,21 @@
     "body_stripped": "> **DISPUTED (logged 2026-09-13).** No birth register entry, no baptism, no census entry, and no mention in any of the three family books (1986, 1989, 2008) has been found for an Agnes Telfer in this family. **The vault's only source for her is the vault.** She is retained here as an open lead, **not** as an established daughter.\n\n**Born:** ~1848, Roxburghshire, Scotland — **unverified, and contradicted by the family books**  **Died:** Not known\n**Father:** James Telfer (1796–1863) — **unproven*",
     "is_living": false,
     "lifespan": "1848 – ?",
-    "parents": [],
+    "parents": [
+      "elizabeth-beattie-1802",
+      "james-telfer-1796"
+    ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "adam-telfer-1842",
+      "elizabeth-beattie-telfer-1832",
+      "isabella-telfer-1837",
+      "james-telfer-1829",
+      "john-telfer-1840",
+      "margaret-telfer-1829",
+      "robert-telfer-1835"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -662,7 +674,7 @@
     "vault_file": "Agnes Telfer (1848–?).md",
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 4
   },
   {
     "id": "Alan Dale Telfer (1890)",
@@ -5645,6 +5657,7 @@
     "parents": [],
     "children": [
       "adam-telfer-1842",
+      "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
       "james-telfer-1829",
@@ -5843,6 +5856,7 @@
     ],
     "siblings": [
       "adam-telfer-1842",
+      "agnes-telfer-1848",
       "isabella-telfer-1837",
       "james-telfer-1829",
       "john-telfer-1840",
@@ -11652,6 +11666,7 @@
     "spouses": [],
     "siblings": [
       "adam-telfer-1842",
+      "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "james-telfer-1829",
       "john-telfer-1840",
@@ -12518,6 +12533,7 @@
     ],
     "children": [
       "adam-telfer-1842",
+      "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
       "james-telfer-1829",
@@ -12619,6 +12635,7 @@
     ],
     "siblings": [
       "adam-telfer-1842",
+      "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
       "john-telfer-1840",
@@ -15724,6 +15741,7 @@
     ],
     "siblings": [
       "adam-telfer-1842",
+      "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
       "james-telfer-1829",
@@ -19012,6 +19030,7 @@
     "spouses": [],
     "siblings": [
       "adam-telfer-1842",
+      "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
       "james-telfer-1829",
@@ -22497,6 +22516,7 @@
     ],
     "siblings": [
       "adam-telfer-1842",
+      "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
       "james-telfer-1829",

@@ -43,7 +43,7 @@
     {
       "slug": "agnes-telfer-1848",
       "id": "Agnes Telfer (1848)",
-      "generation": 5
+      "generation": 4
     },
     {
       "slug": "alan-telfer-1890",
@@ -1840,6 +1840,14 @@
       {
         "from": "thomas-paynter-1859",
         "to": "agnes-paynter-1895"
+      },
+      {
+        "from": "elizabeth-beattie-1802",
+        "to": "agnes-telfer-1848"
+      },
+      {
+        "from": "james-telfer-1796",
+        "to": "agnes-telfer-1848"
       },
       {
         "from": "john-telfer-1840",
@@ -3763,6 +3771,10 @@
       },
       {
         "from": "adam-telfer-1842",
+        "to": "agnes-telfer-1848"
+      },
+      {
+        "from": "adam-telfer-1842",
         "to": "elizabeth-beattie-telfer-1832"
       },
       {
@@ -3872,6 +3884,30 @@
       {
         "from": "adelaide-elsie-pearl-telfer-1889",
         "to": "violet-hope-telfer-1883"
+      },
+      {
+        "from": "agnes-telfer-1848",
+        "to": "elizabeth-beattie-telfer-1832"
+      },
+      {
+        "from": "agnes-telfer-1848",
+        "to": "isabella-telfer-1837"
+      },
+      {
+        "from": "agnes-telfer-1848",
+        "to": "james-telfer-1829"
+      },
+      {
+        "from": "agnes-telfer-1848",
+        "to": "john-telfer-1840"
+      },
+      {
+        "from": "agnes-telfer-1848",
+        "to": "margaret-telfer-1829"
+      },
+      {
+        "from": "agnes-telfer-1848",
+        "to": "robert-telfer-1835"
       },
       {
         "from": "alan-telfer-1890",

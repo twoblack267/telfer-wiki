@@ -37,7 +37,10 @@ import os from 'node:os';
 import crypto from 'node:crypto';
 
 const REPO = process.env.TELFER_WIKI || path.join(os.homedir(), 'telfer-wiki');
-const VAULT = '/Users/marktelfer/ObsidianVault';
+// Card tw-2026-09-13-022: was hardcoded to '/Users/marktelfer/ObsidianVault',
+// which breaks on any other machine. Derive it like REPO above, and allow an
+// explicit override for tests/CI — mirrors TELFER_WIKI.
+const VAULT = process.env.TELFER_VAULT_ROOT || path.join(os.homedir(), 'ObsidianVault');
 const PEOPLE_DIR = path.join(VAULT, 'Family History/People');
 const PHOTOS_DIR = path.join(PEOPLE_DIR, 'Photos');
 const PUBLIC_IMG = path.join(REPO, 'public/images/people');
