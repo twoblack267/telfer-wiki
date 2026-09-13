@@ -67,6 +67,44 @@ echo "$CR" | head -4
 
 echo
 echo "==> Step 3/3: verify gate-clean (validate-no-mark-refs.py)"
+# tw-2026-09-13-023: the gate used to run ONLY on src/data/*.json -- the GENERATED
+# output. The vault markdown, which is the actual publishing source and the thing a
+# human edits, was never scanned by anything: not this script, not .pre-commit-config
+# (files: ^src/data/.*\.json$), not the CI workflow (src/data/). So an author could
+# write "Mark's grandfather" straight into a profile, and the first place it would be
+# noticed was a human reading the live site.
+#
+# purge-mark-refs.py does not cover this either -- it rewrites "Mark's <role>" into a
+# bare role word in the GENERATED data, which is a repair, not a detection. And a
+# possessive naming the archivist is not always a family role ("Mark's line",
+# "Mark's decision"), so a role-shaped purge cannot see all of them.
+#
+# CI cannot run this scan: the vault is deliberately outside the repo (local-only, no
+# third-party upload). This local pipeline is the only place both exist, so this is
+# where the source check belongs.
+#
+# Scope is deliberate: ONLY People/ is scanned, and it is a HARD FAIL (exit 1).
+# Private working notes elsewhere in the vault legitimately use "Mark's" as shorthand,
+# so they are not scanned. People/ contains the published profile pages -- the ones the
+# site renders verbatim -- and those must read as a record, never as a first-person
+# note. Verified fail-closed 2026-09-13: a planted "Mark's grandfather" in
+# People/Malcolm Duncan Cameron.md stopped the pipeline at exit 1 with the file and
+# line named, and never reached Step 4.
+VAULT_ROOT="${TELFER_VAULT_ROOT:-$HOME/ObsidianVault/Family History}"
+if [[ -d "$VAULT_ROOT" ]]; then
+  VSRC="$(python3 scripts/validate-no-mark-refs.py "$VAULT_ROOT/People" 2>&1)" || {
+    echo "SOURCE GATE FAILED — a published profile page under People/ contains a 'Mark's' reference:"
+    echo "$VSRC" | head -20
+    echo
+    echo "Fix: rewrite the sentence so it names the person instead of the archivist"
+    echo "(the vault is the archive; it must read as a record, not as a first-person note)."
+    exit 1
+  }
+  echo "OK — vault People/ is clean of archivist references"
+else
+  echo "NOTE: vault not found at $VAULT_ROOT — source scan skipped (CI has no vault either)"
+fi
+
 VP="$(python3 scripts/validate-no-mark-refs.py src/data/people.json src/data/people.public.json 2>&1)" || {
   echo "GATE FAILED — regenerated data still contains 'Mark's' references:"
   echo "$VP" | head -20

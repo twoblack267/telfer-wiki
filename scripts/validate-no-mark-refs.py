@@ -64,6 +64,49 @@ ALLOWED = [
      "refers to an ancestor named Mark"),
 ]
 
+# ─── Referent check (card tw-2026-09-13-023) ───
+# The old ALLOWED list was a PROXIMITY hack: it asked "is the word 'husband' or 'wife'
+# within ~24 chars of this possessive?" That is not the same question as "does this
+# possessive refer to the archivist?". Verified consequence before this fix:
+#
+#   "husband Mark's death notice"      -> PASSED  (ancestor, correct)
+#   "Mark Telfer's 1946 death notice"  -> FLAGGED (ancestor, WRONG -- same referent shape)
+#   "Mark's grandfather"               -> FLAGGED (archivist, correct)
+#
+# The two ancestor cases are structurally identical; only word order differed. So the
+# rule is now about the REFERENT, not the neighbourhood.
+#
+# The archivist is Mark Kenneth Telfer, born 21 Mar 1986, living. An ancestor named Mark
+# (e.g. Mark Telfer 1877-1946) is dead. So: a possessive naming the ancestor's FULL name
+# is benign when the surrounding text ties it to a historical event, and the bare
+# archivist forms ("Mark's", "Mark Kenneth Telfer's") always refer to the archivist.
+#
+# Narrow, evidence-based: only the ancestor's DISTINCTIVE full-name form is exempted,
+# and only when it is NOT the archivist's own middle name. "Mark's" and
+# "Mark Kenneth Telfer's" are never exempted -- those are the archivist, always.
+ARCHIVIST_POSSESSIVE = re.compile(
+    r"\bmark\s+kenneth\s+telfer'?s\b|\bmark'?s\b",
+    re.IGNORECASE,
+)
+
+# "Mark Telfer's" WITHOUT the middle name is the ambiguous one -- it is the ancestor's
+# name (Mark Telfer 1877-1946) AND a shortening of the archivist's. Treated as a
+# violation by default (fail-safe: publishing is the irreversible act), but this is the
+# one shape a human can whitelist inline with a marker.
+ANCESTOR_FULLNAME = re.compile(
+    r"\bmark\s+telfer'?s\b",
+    re.IGNORECASE,
+)
+
+# Inline, auditable escape hatch. A vault file that legitimately names the ANCESTOR
+# writes `<!-- mark-ref-ok: <reason> -->` on or above that line. An exception without a
+# stated reason is how the previous leak happened, so the reason is REQUIRED -- a bare
+# marker does not suppress anything.
+ANCESTOR_OK_MARKER = re.compile(
+    r"<!--\s*mark-ref-ok\s*:\s*(\S.*?)\s*-->",
+    re.IGNORECASE,
+)
+
 # Legacy specific patterns kept so previously-caught phrasings keep biting even if the
 # general rule is ever narrowed. Cheap redundancy on the highest-value shapes.
 FORBIDDEN_PATTERNS = [
@@ -80,16 +123,28 @@ TARGET_FIELDS = {
 }
 
 
-def _scan_text(text: str):
-    """Yield (matched_text, description) for every violation in `text`."""
+def _scan_text(text: str, allow_ancestor: bool = False):
+    """Yield (matched_text, description) for every violation in `text`.
+
+    `allow_ancestor` is set by the caller when an auditable
+    `<!-- mark-ref-ok: reason -->` marker covers this text. A marker does NOT blanket-
+    suppress: it only exempts the AMBIGUOUS ancestor form ("Mark Telfer's"). The
+    unambiguous archivist forms ("Mark's", "Mark Kenneth Telfer's") are still reported,
+    because a marker is not a licence to publish a first-person reference.
+    """
     for pattern in (MARK_POSSESSIVE, MARK_POSSESSIVE_ALT):
         for match in pattern.finditer(text):
-            # Is this occurrence inside a documented exception?
+            hit = match.group(0)
+            # Is this the ambiguous ancestor's full name, covered by a stated reason?
+            if allow_ancestor and ANCESTOR_FULLNAME.search(hit):
+                if not ARCHIVIST_POSSESSIVE.search(hit):
+                    continue
+            # Legacy proximity exceptions, kept for the documented husband/wife shapes.
             start = max(0, match.start() - 24)
             window = text[start:match.end() + 4]
             if any(ap.search(window) for ap, _ in ALLOWED):
                 continue
-            yield match.group(0), "possessive reference to the archivist by name"
+            yield hit, "possessive reference to the archivist by name"
     for pattern, desc in FORBIDDEN_PATTERNS:
         for match in pattern.finditer(text):
             yield match.group(0), desc
@@ -126,8 +181,17 @@ def scan_file(path: Path) -> list[Tuple[str, int, str, str]]:
         return violations
 
     # Raw line scan — gives real line numbers and covers non-JSON files.
-    for line_no, line in enumerate(content.splitlines(), 1):
-        for match_text, desc in _scan_text(line):
+    lines = content.splitlines()
+    marker_active = False
+    for line_no, line in enumerate(lines, 1):
+        # An inline `<!-- mark-ref-ok: reason -->` marker covers this line and the next
+        # few, so it can sit directly above the sentence it is excusing. Reason required.
+        if ANCESTOR_OK_MARKER.search(line):
+            marker_active = True
+            marker_line = line_no
+        elif marker_active and line_no - marker_line > 3:
+            marker_active = False
+        for match_text, desc in _scan_text(line, allow_ancestor=marker_active):
             violations.append((str(path), line_no, desc, match_text))
 
     # JSON field-aware scan (dedupe later by the caller if both fire).
@@ -148,7 +212,11 @@ def scan_file(path: Path) -> list[Tuple[str, int, str, str]]:
             continue
         for field_path, value, _ in iter_json_strings(person):
             if any(tf in field_path for tf in TARGET_FIELDS):
-                for match_text, desc in _scan_text(value):
+                # The field-aware pass must honour the inline marker too — otherwise a
+                # marker that silenced the raw-line scan would immediately be re-reported
+                # here, making the escape hatch useless.
+                field_allows_ancestor = bool(ANCESTOR_OK_MARKER.search(value))
+                for match_text, desc in _scan_text(value, allow_ancestor=field_allows_ancestor):
                     violations.append((str(path), 0, field_path, match_text))
     return violations
 
