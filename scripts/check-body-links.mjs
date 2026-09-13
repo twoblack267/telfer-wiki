@@ -104,6 +104,41 @@ function lookupSlug(name, people) {
   for (const p of people) {
     if (p.last_name?.toLowerCase() === clean) return p.slug;
   }
+
+  // FIX (Skippy, 2026-09-13): the vault note IS the truth and it is named with the family
+  // naming convention ("Mary Ann (Gelligen) Dillon (1887-1954)"), while display_name carries the
+  // shortened form ("Mary Ann Dillon") and omits married surnames the convention appends
+  // (Tuck / Hucks / Radford / Grant / Roach). The parenthetical stripper above removes only
+  // brackets CONTAINING A DIGIT, so the maiden-name bracket survives and the string-match finds
+  // nothing - 35 body [[wiki-links]] across 24 profiles were degrading to plain text on the live
+  // site. Fall back to the vault_file stem, which is the same name the author actually wrote.
+  // Deliberately LAST, so every existing resolution wins first and no current link changes.
+  // Index is built per call (people arrays are small) to avoid stale caches.
+  // MUST stay identical in scripts/check-body-links.mjs (guard) and src/utils/format-body.mjs
+  // (renderer): if the two diverge the guard stops mirroring what actually renders.
+  const stemOf = (v) => (v || "").split("/").pop().replace(/\.md$/i, "");
+  // Normalise BOTH sides the same way: drop the trailing "(dates)" the convention appends, and
+  // drop a bare "(living)/(deceased)/(?)". The target arriving here has ALREADY had its year
+  // bracket stripped by clean(), so the stem must lose its year too or the two can never meet.
+  const normStem = (s) => s
+    .replace(/\s*\([^)]*(?:\d|living|deceased|\?)[^)]*\)\s*$/i, "")
+    .replace(/\s*\((?:living|deceased|\?)\)\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+  const targetStem = normStem(clean.trim());
+  const stemMatches = people.filter((p) => normStem(stemOf(p.vault_file)) === targetStem && targetStem !== "");
+  if (stemMatches.length === 1) return stemMatches[0].slug;
+  if (stemMatches.length > 1) {
+    if (targetBirthYear) {
+      const yearStem = stemMatches.find((p) => p.birth_year === targetBirthYear);
+      if (yearStem) return yearStem.slug;
+    }
+    const livingStem = stemMatches.filter((p) => p.is_living);
+    if (livingStem.length === 1) return livingStem[0].slug;
+    return stemMatches[0].slug;
+  }
+
   return null;
 }
 

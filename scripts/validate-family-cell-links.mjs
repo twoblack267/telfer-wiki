@@ -194,6 +194,7 @@ const ambiguousNames = new Set();
     byKey.get(k).add(n);
   }
   for (const [k, pageSet] of byKey) if (pageSet.size > 1) ambiguousNames.add(k);
+
 }
 
 // (superseded by the snapshot fallback above — see AUDIT_SOURCE)
@@ -268,6 +269,34 @@ if (VAULT_PEOPLE && snapshot) {
   }
 }
 
+// ── ROLE CONSISTENCY (Skippy, 2026-09-13 — card tw-2026-09-13-025) ──────────────
+// The gard matched bare names without checking the RELATION WORD against who the
+// candidate already is on the same page. Real damage it produced:
+//   Janet Dunlop Lawrie (1811-1902) row "Son | John Lawrie" nominated
+//     "John Lawrie (1810-1888)" — who is her HUSBAND, already her Spouse row.
+//   her row "Son | Alexander Lawrie" nominated "Alexander Lawrie (1776-1847)",
+//     who died six years before that child was born.
+//   Elizabeth Oliver (1807-1846) row "Daughter | Elizabeth Telfer" nominated
+//     "Elizabeth Telfer (1868-1950)" — born 22 years after the subject died.
+// Rule: a candidate ALREADY NAMED in the subject's own Self or Spouse row cannot
+// also be that subject's parent, child or sibling. That is a logical impossibility,
+// not a matter of taste. (Death-before-birth is also excluded below.)
+const selfAndSpouse = new Map(); // subject page stem -> Set(page names claimed as Self/Spouse)
+for (const { file: f2, label: l2, value: v2 } of familyRows()) {
+  const stem = basename(String(f2 || "")).replace(/\.md$/i, "");
+  if (!/^(self|spouse|husband|wife|partner)$/i.test(String(l2 || "").trim())) continue;
+  const m = String(v2 || "").match(/\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/);
+  const name = m ? m[1].trim() : String(v2 || "").replace(/\([^)]*\)/g, "").trim();
+  if (!name) continue;
+  if (!selfAndSpouse.has(stem)) selfAndSpouse.set(stem, new Set());
+  selfAndSpouse.get(stem).add(nameKey(name));
+}
+/** Rows whose relation word makes the candidate a DESCENDANT/generation-below match. */
+const CHILD_ROLE = /^(son|daughter|child|children|stepson|stepdaughter|grandson|granddaughter)$/i;
+const PARENT_ROLE = /^(father|mother|parent|stepfather|stepmother|grandfather|grandmother)$/i;
+const SIB_ROLE = /^(brother|sister|sibling|siblings|half-brother|half-sister)$/i;
+/** Pull the FIRST year out of a page name or row text, for a crude plausibility test. */
+const firstYear = (s) => { const y = yearsIn(s); return y.length ? Number(String(y[0]).replace(/\D/g, "")) : null; };
 const offenders = [];
 let scannedRows = 0;
 let linkedCells = 0;
@@ -354,10 +383,41 @@ let linkedCells = 0;
     if (qualifier.test(value) && !/\d{4}/.test(qualifier.exec(value)[0])) { linkedCells++; continue; }
 
     let hit = null, hitText = null;
+    const subjectStem = basename(String(f.path || f)).replace(/\.md$/i, "");
+    const claimed = selfAndSpouse.get(subjectStem) || new Set();
+    const subjBirth = firstYear(subjectStem);
     for (const cand of [...prefixes, ...candidates]) {
       const k = nameKey(cand);
       if (!k || k.length < 3) continue;
-      const found = [...pageNames].filter((n) => !redirects.has(n)).find((n) => matchesPage(cand, n));
+      const found = [...pageNames]
+        .filter((n) => !redirects.has(n))
+        .find((n) => {
+          if (!matchesPage(cand, n)) return false;
+          // -- ROLE CONSISTENCY (card tw-2026-09-13-025) --
+          // 1) a person already named as the subject's Self/Spouse cannot be their kin below/above
+          if (claimed.has(nameKey(n)) &&
+              (CHILD_ROLE.test(String(label).trim()) ||
+               PARENT_ROLE.test(String(label).trim()) ||
+               SIB_ROLE.test(String(label).trim()))) return false;
+          // 2) generational plausibility on the FULL year range, not just the first year
+          const role = String(label).trim();
+          const cy = yearsIn(n).map((y) => Number(String(y).replace(/\D/g, "")));
+          const candBirth = cy.length ? cy[0] : null;
+          const candDeath = cy.length > 1 ? cy[cy.length - 1] : null;
+          const sy = yearsIn(subjectStem).map((y) => Number(String(y).replace(/\D/g, "")));
+          const subjDeath = sy.length > 1 ? sy[sy.length - 1] : null;
+          if (candBirth != null) {
+            if ((CHILD_ROLE.test(role) || SIB_ROLE.test(role)) && subjBirth != null && candBirth < subjBirth) return false;
+            if (PARENT_ROLE.test(role) && subjBirth != null && candBirth > subjBirth) return false;
+            // A child CANNOT be born after its parent died (allow 1 yr posthumous slack).
+            if (CHILD_ROLE.test(role) && subjDeath != null && candBirth > subjDeath + 1) return false;
+            // A sibling cannot be born after the subject died either.
+            if (SIB_ROLE.test(role) && subjDeath != null && candBirth > subjDeath + 1) return false;
+            // A parent cannot be born after the subject was born.
+            if (PARENT_ROLE.test(role) && subjBirth != null && candBirth >= subjBirth) return false;
+          }
+          return true;
+        });
       if (found) { hit = found; hitText = cand; break; }
     }
     if (hit) {

@@ -125,18 +125,22 @@ for (const r of byBare.values()) {
 // verified current canonical slugs (resolved to final live pages, never stubs).
 const MANUAL_ALIASES = [
   { from: 'adam',           to: 'adam-telfer-1842',     display_name: 'Adam Francis Telfer' },
-  { from: 'amy-nicole-telfer', to: 'amy-telfer-nicole', display_name: 'Amy Nicole Telfer' },
+  { from: 'amy-nicole-telfer', to: 'amy-telfer', display_name: 'Amy Nicole Telfer' },
   { from: 'francis',        to: 'francis-telfer-1809',  display_name: 'Francis Telfer' },
   { from: 'francis-180995', to: 'francis-telfer-1809',  display_name: 'Francis Telfer' },
   { from: 'james',          to: 'james-telfer-1829',    display_name: 'James Telfer' },
   { from: 'james-17961863', to: 'james-telfer-1796',    display_name: 'James Telfer' },
   { from: 'john',           to: 'john-telfer-1840',     display_name: 'John Telfer' },  // was malformed 18401913
-  { from: 'robert',         to: 'robert-telfer',        display_name: 'Robert Telfer' },
+  // 'robert' is AMBIGUOUS: three real people share the name (robert-telfer-1803,
+  // -1835, -1886). This alias previously pointed at a slug that does not exist, so it
+  // emitted a redirect to a 404. Pointing a bare first name at ONE of them would be an
+  // invented fact, so the alias is REMOVED. /people/robert/ 404s, which is truthful.
+  // Removed 2026-09-12 (tw-2026-09-12-064).
   // Post-flip legacy year aliases (Esther Jane birth-year corrected 1835→1834).
   // These old URLs predate the correction; keep them resolving cleanly to the
   // real page rather than leaving stale relative stubs / new 404s behind.
-  { from: 'esther-jane-telfer-1835', to: 'esther-jane-telfer', display_name: 'Esther Jane Telfer' },
-  { from: 'esther-telfer-1835',      to: 'esther-jane-telfer', display_name: 'Esther Jane Telfer' },
+  { from: 'esther-jane-telfer-1835', to: 'esther-jane-telfer-1834', display_name: 'Esther Jane Telfer' },
+  { from: 'esther-telfer-1835',      to: 'esther-jane-telfer-1834', display_name: 'Esther Jane Telfer' },
 ];
 for (const a of MANUAL_ALIASES) redirects.push(a);
 

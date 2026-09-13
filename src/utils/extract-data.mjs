@@ -13,7 +13,14 @@ import { parse as parseYaml } from "yaml";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // ── Config ──────────────────────────────────────────────
-const VAULT_PATH = "/home/mark/ObsidianVault/Family History";
+// RESOLVE THE VAULT PORTABLY (tw-2026-09-12-063, same fault class as -023).
+// This was hardcoded to "/home/mark/ObsidianVault/Family History" — a LINUX path that does
+// not exist on this Mac. The extractor therefore CRASHED with ENOENT, src/data/trees.json
+// was never regenerated, and a stale copy kept shipping "Mark's dad" to the live site until
+// CI finally caught it. A hardcoded home directory is a silent-failure generator: it works
+// on exactly one machine and fails invisibly everywhere else.
+const VAULT_PATH = process.env.TELFER_VAULT_PATH
+  || join(process.env.HOME || "", "ObsidianVault", "Family History");
 const OUTPUT_DIR = join(__dirname, "..", "data");
 const PEOPLE_DIR = join(VAULT_PATH, "People");
 const TREE_FILES = [
@@ -130,6 +137,14 @@ function parsePeopleFile(filepath) {
   const body = parts.slice(2).join("---").trim();
   const cleanBody = filterPII(body);
 
+  // REDIRECT STUBS ARE NOT PROFILES (tw-2026-09-12-064).
+  // A vault file tagged `redirect` exists only to point at a canonical page. Publishing it
+  // as a person collides its slug with the very page it redirects to and fails the parity
+  // gate. Honour the tag: return null and let the caller drop it.
+  if (Array.isArray(fm.tags) && fm.tags.map(String).map((t) => t.toLowerCase()).includes("redirect")) {
+    return null;
+  }
+
   const relationships = fm.relationships ? parseRelationships(fm.relationships) : [];
   const getNames = (type) => relationships.find((r) => r.type.toLowerCase().includes(type.toLowerCase()))?.names || [];
   const parents = [...getNames("mother"), ...getNames("father")];
@@ -181,8 +196,13 @@ function build() {
   const people = [];
   for (const file of files) {
     const p = parsePeopleFile(join(PEOPLE_DIR, file));
-    if (p) { people.push(p); console.log(`  OK ${p.display_name} (${p.lifespan})`); }
-    else console.warn(`  SKIP ${file}`);
+    if (p) {
+      people.push(p);
+      console.log(`  OK ${p.display_name} (${p.lifespan})`);
+    } else {
+      // Not an error: a redirect stub was deliberately skipped (see parsePeopleFile).
+      console.warn(`  SKIP (redirect record, not a profile) ${file}`);
+    }
   }
 
   // ── Trees ──

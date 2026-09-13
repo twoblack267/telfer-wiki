@@ -49,6 +49,23 @@ PT="$(python3 scripts/tests/test-purge-mark-refs.py 2>&1)" || {
 echo "OK — purge rewrites do not corrupt prose"
 
 echo
+echo "==> Step 2c/3: children reconciler (relationships: is canonical)"
+# tw-2026-09-12-008 / -052: convert-markdown.mjs reads `children:` and `relationships:`
+# independently, so both are valid YAML, both render, and every other gate stays green
+# while they drift. ~96 profiles (27% of the vault) had contradictory child data with
+# nothing reporting it. This makes that impossible.
+CR="$(python3 scripts/validate-children-reconcile.py 2>&1)" || {
+  echo "CHILDREN RECONCILE FAILED — a child name contradicts relationships::"
+  echo "$CR" | head -30
+  echo
+  echo "Fix: relationships: is canonical. Add the name there, or remove it from"
+  echo "children:/the prose table. Do NOT add a name to the canonical field just to"
+  echo "silence this check — that would invent a child."
+  exit 1
+}
+echo "$CR" | head -4
+
+echo
 echo "==> Step 3/3: verify gate-clean (validate-no-mark-refs.py)"
 VP="$(python3 scripts/validate-no-mark-refs.py src/data/people.json src/data/people.public.json 2>&1)" || {
   echo "GATE FAILED — regenerated data still contains 'Mark's' references:"

@@ -27,6 +27,16 @@ const siblingLinks = getLinksForRelationships(person.siblings, telferPeople);
 // ── Body content ──
 const bodyHtml = formatBody(person.body_markdown || "", telferPeople);
 
+// The h1 + leading empty paragraphs are stripped at render time, so the "has real
+// prose?" test must be applied to the STRIPPED form, not the raw bodyHtml - otherwise
+// a profile whose only body is a '# Name' heading plus '## Links' still looks non-empty.
+// (Skippy, 2026-09-13: fixes the empty Biography card, card tw-2026-09-12-015.)
+const bodyHtmlClean = bodyHtml
+  .replace(/^<h1[^>]*>.*?<\/h1>\s*/i, '')
+  .replace(/^(<p>\s*<\/p>\s*)+/i, '')
+  .replace(/^\s+/, '');
+const hasBio = bodyHtmlClean.replace(/<[^>]*>/g, '').trim().length > 0;
+
 // ── Tags ──
 const importantTags = (person.tags || []).filter((t) => !["bio", "family", "person"].includes(t));
 
@@ -233,17 +243,17 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
       <!-- Main Content -->
       <div class="md:col-span-2">
         <div class="person-card rounded-xl p-2.5">
-          <h2 class="font-serif text-base text-[var(--color-heading)] mb-0">Biography</h2>
+          {hasBio && (
+            <>
+              <h2 class="font-serif text-base text-[var(--color-heading)] mb-0">Biography</h2>
 
-          <!-- Wiki-formatted body (first h1 stripped, leading empty paragraphs + whitespace removed, prose tightened) -->
-          <div class="prose prose-sm max-w-none wiki-content" set:html={bodyHtml
-            .replace(/^<h1[^>]*>.*?<\/h1>\s*/i, '')
-            .replace(/^(<p>\s*<\/p>\s*)+/i, '')
-            .replace(/^\s+/, '')
-          }></div>
-          <style define:vars={{}}>
-            .wiki-content > :first-child { margin-top: 0 !important; }
-          </style>
+              <!-- Wiki-formatted body (first h1 stripped, leading empty paragraphs + whitespace removed, prose tightened) -->
+              <div class="prose prose-sm max-w-none wiki-content" set:html={bodyHtmlClean}></div>
+              <style define:vars={{}}>
+                .wiki-content > :first-child { margin-top: 0 !important; }
+              </style>
+            </>
+          )}
         </div>
 
         <!-- Photo Gallery -->
