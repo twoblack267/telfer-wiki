@@ -9,15 +9,40 @@
 
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const VAULT_PEOPLE_DIR = '/home/mark/ObsidianVault/Family History/People';
+// SUPERSEDED (2026-09-13): `convert-markdown.mjs` is the live vault -> people.json
+// generator, called by scripts/regenerate-data.sh. THIS FILE IS NOT WIRED INTO
+// ANY BUILD, CI STEP OR npm SCRIPT -- it is kept only for historical reference.
+//
+// It was hardcoded to the Linux vault path /home/mark/..., which does not exist on
+// this macOS machine. Fixed to derive the vault from the home directory.
+//
+// DANGER: this script writes src/data/people.json -- the SAME file the live
+// generator produces. Its output schema is older/stale, so running it would
+// REGRESS the live data (it produced 356 records where the live generator now
+// produces 358). A confirmation guard was added for that reason: it refuses to
+// run unless SKIPPY_ALLOW_STALE_GENERATOR=1 is explicitly set.
+if (!process.env.SKIPPY_ALLOW_STALE_GENERATOR) {
+  console.error(
+    'build-people-json.mjs is SUPERSEDED and must not be run casually:\n' +
+      '  it OVERWRITES src/data/people.json with stale output.\n' +
+      '  Use: bash scripts/regenerate-data.sh  (which calls convert-markdown.mjs)\n' +
+      '  To force anyway: SKIPPY_ALLOW_STALE_GENERATOR=1 node scripts/build-people-json.mjs'
+  );
+  process.exit(1);
+}
+
+const HOME_DIR = process.env.HOME || os.homedir();
+const VAULT_ROOT = process.env.TELFER_VAULT_ROOT || path.join(HOME_DIR, 'ObsidianVault');
+const VAULT_PEOPLE_DIR = path.join(VAULT_ROOT, 'Family History', 'People');
 const OUTPUT_PATH = path.resolve(__dirname, '../src/data/people.json');
-const IMAGES_BASE = '/home/mark/ObsidianVault/Family History';
+const IMAGES_BASE = path.join(VAULT_ROOT, 'Family History');
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
