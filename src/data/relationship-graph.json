@@ -1776,6 +1776,14 @@
       "generation": 6
     },
     {
+      "slug": "francis-bosanquet",
+      "id": "Francis James Bosanquet (1902)"
+    },
+    {
+      "slug": "laurel-bosanquet",
+      "id": "Laurel Mary Bosanquet (1911)"
+    },
+    {
       "slug": "charles-farrow-jr-~1865",
       "id": "Charles Farrow Jr",
       "generation": 5
@@ -3458,6 +3466,10 @@
         "to": "charles-farrow-jr"
       },
       {
+        "from": "walter-john-hookings-1881",
+        "to": "laurel-bosanquet"
+      },
+      {
         "from": "charles-farrow-1836",
         "to": "charles-farrow-jr-~1865"
       },
@@ -3750,6 +3762,10 @@
       {
         "from": "thelma-ellen-parker-1924",
         "to": "william-humphrey-parker-1926"
+      },
+      {
+        "from": "francis-bosanquet",
+        "to": "laurel-bosanquet"
       }
     ],
     "siblingOf": [
