@@ -386,13 +386,29 @@ let linkedCells = 0;
     const subjectStem = basename(String(f.path || f)).replace(/\.md$/i, "");
     const claimed = selfAndSpouse.get(subjectStem) || new Set();
     const subjBirth = firstYear(subjectStem);
+    // -- PREFIX YEAR-LOSS GUARD (card tw-2026-09-13-032) --
+    // A PREFIX is cut at a boundary ('(' , '—', ...), so it can throw away the years that
+    // identify the person: "Elizabeth Telfer (~1834–?)" yields the bare prefix "Elizabeth Telfer".
+    // A bare prefix with NO years must never be matched against a YEAR-QUALIFIED page when the
+    // parent cell it was cut from DOES carry years — the years are evidence the row means a
+    // different, usually same-named person (Robert Telfer 1803-1878's daughter Elizabeth, b.~1834,
+    // has no page; the only "Elizabeth Telfer" page is 1868-1950, a later generation). Without
+    // this, the guard demanded a link that would send readers to the WRONG PERSON. The
+    // year-bearing candidate ("Elizabeth Telfer (~1834–?)") is still judged below, where it is
+    // correctly rejected because no page carries a 1834 birth. Vault data is NOT edited to
+    // satisfy this — the guard was wrong, not the vault.
+    const cellYears = yearsIn(value);
+    const lostYears = prefixes.length > 0 && cellYears.length > 0;
     for (const cand of [...prefixes, ...candidates]) {
       const k = nameKey(cand);
       if (!k || k.length < 3) continue;
+      const isPrefix = prefixes.includes(cand);
       const found = [...pageNames]
         .filter((n) => !redirects.has(n))
         .find((n) => {
           if (!matchesPage(cand, n)) return false;
+          if (isPrefix && lostYears && !yearsIn(cand).length &&
+              yearsIn(stripYears(n) === n ? "" : n).length) return false;
           // -- ROLE CONSISTENCY (card tw-2026-09-13-025) --
           // 1) a person already named as the subject's Self/Spouse cannot be their kin below/above
           if (claimed.has(nameKey(n)) &&
