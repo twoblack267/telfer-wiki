@@ -162,6 +162,20 @@ const PUBLIC_FIELDS = [
 
 // ─── Deduplicate: keep per-(first,last,birth) the entry with year in slug ────
 
+/**
+ * A slug counts as "carrying a real year" only when the 4 digits are separated from
+ * the name by a hyphen — i.e. `charles-farrow-jr-1865`.
+ *
+ * The bare /^\d{4}$/ test was wrong: the legacy phantom slugs `…-jr-~1865` also END in
+ * four digits, so they scored as "the real entry with full data" and EVICTED the genuine
+ * `charles-farrow-jr` record (dropped as a "bare-slug stub"), leaving `birth_year:
+ * "~1865"` — a string in a numeric field — on the public site. Fixed 2026-09-14
+ * (site bug-hunter cards tw-2026-09-14-019 / -020).
+ */
+function hasRealYearSuffix(slug) {
+  return /-\d{4}$/.test(slug || '');
+}
+
 function deduplicatePeople(arr) {
   const seen = new Map(); // key -> best entry
   const dropped = [];
@@ -176,13 +190,13 @@ function deduplicatePeople(arr) {
       ? ((p.first_name || '') + (p.last_name || ''))
       : ((p.first_name || '') + (p.middle_name || '') + (p.last_name || ''));
     const key = (namePart + '|' + by).toLowerCase();
-    const hasYear = /\d{4}$/.test(p.slug || '');
+    const hasYear = hasRealYearSuffix(p.slug);
     const existing = seen.get(key);
 
     if (!existing) {
       seen.set(key, p);
     } else {
-      const existingHasYear = /\d{4}$/.test(existing.slug || '');
+      const existingHasYear = hasRealYearSuffix(existing.slug);
       // Prefer the one with year in slug — that's the 'real' entry with full data
       if (hasYear && !existingHasYear) {
         // Current has year, existing doesn't — swap
