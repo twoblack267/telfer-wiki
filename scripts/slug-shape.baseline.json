@@ -1,0 +1,12 @@
+{
+  "_comment": "Baseline for scripts/validate-slug-shape.mjs (card tw-2026-09-13-034). Refresh deliberately with --write-baseline and review the diff: a large drop is the defect, not the fix.",
+  "recorded_at": "2026-09-14T03:36:18.499Z",
+  "people": 360,
+  "relationship_entries": 1146,
+  "slug_shaped": 1146,
+  "profiles_with_slug_shaped": 339,
+  "previous": {
+    "slug_shaped": 988,
+    "recorded_at": "2026-09-14T03:33:11.611Z"
+  }
+}

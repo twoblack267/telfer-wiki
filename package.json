@@ -18,7 +18,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "regenerate-data": "bash scripts/regenerate-data.sh",
-    "prebuild": "node scripts/validate-vault-site-parity.mjs --strict",
+    "validate:slug-shape": "node scripts/validate-slug-shape.mjs",
+    "prebuild": "node scripts/validate-slug-shape.mjs && node scripts/validate-vault-site-parity.mjs --strict",
     "parity": "node scripts/validate-vault-site-parity.mjs --strict"
   },
   "dependencies": {

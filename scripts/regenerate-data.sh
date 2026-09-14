@@ -66,6 +66,26 @@ CR="$(python3 scripts/validate-children-reconcile.py 2>&1)" || {
 echo "$CR" | head -4
 
 echo
+echo "==> Step 2d/3: resolve-refs.mjs --write (name refs -> slugs) [tw-2026-09-13-034]"
+# convert-markdown.mjs imports the vault's relationship frontmatter as RAW NAME STRINGS
+# ("Levi Leonard Timothy Telfer (2017-?)"), not slugs. resolve-refs.mjs is the step that
+# converts those names back to slugs. It was referenced by NOTHING — not this script, not
+# package.json, not .github/ — so every regen silently re-imported raw names and the profiles
+# stopped being interlinked, with ALL FOUR validators still exiting 0 (validate-people does not
+# assert shape; children-reconcile compares two fields that both carried the same raw names).
+# That is the tw-2026-09-13-034 regression. This step closes it at the source.
+#
+# MUST run AFTER convert-markdown (which creates the name strings) and BEFORE sanitize-people
+# (people.public.json, what the site renders, is sanitized from people.json) — and before the
+# slug-shape guard below, so the guard verifies the RESOLVED data, not the raw import.
+RR="$(node scripts/resolve-refs.mjs --write 2>&1)" || {
+  echo "RESOLVE-REFS FAILED — slug resolution could not run:"
+  echo "$RR" | tail -20
+  exit 1
+}
+echo "$RR" | grep -E 'RESOLVED|Remaining unresolved|Wrote' | head -5
+
+echo
 echo "==> Step 3/3: verify gate-clean (validate-no-mark-refs.py)"
 # tw-2026-09-13-023: the gate used to run ONLY on src/data/*.json -- the GENERATED
 # output. The vault markdown, which is the actual publishing source and the thing a
@@ -163,4 +183,18 @@ if node scripts/make-family-rows-snapshot.mjs; then
   echo "OK — snapshot refreshed (commit scripts/family-rows.snapshot.json if it changed)."
 else
   echo "WARNING — snapshot not refreshed; CI guard will use the previously committed rows."
+fi
+
+echo
+echo "==> Step 8/8: slug-shape guard (relationship refs must stay slugs) [tw-2026-09-13-034]"
+# Fail the regen if the slug-shaped relationship count regressed below the committed baseline,
+# or if any relationship entry is a bare display name. Before this guard existed, a regen that
+# dropped back to raw vault names exited 0 through every gate in this script. We fail HERE, at
+# the end of a real regen, rather than leaving the degradation for a later commit to discover.
+if ! node scripts/validate-slug-shape.mjs; then
+  echo ""
+  echo "FAIL — regenerated data lost relationship slug resolution (tw-2026-09-13-034)."
+  echo "       Do NOT hand-edit src/data/people.json. Investigate why resolve-refs.mjs"
+  echo "       (Step 2d) did not restore the slugs, fix that, and re-run this pipeline."
+  exit 1
 fi

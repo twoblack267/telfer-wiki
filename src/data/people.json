@@ -65,6 +65,7 @@
       "karina-ivory"
     ],
     "siblings": [
+      "jared-ivory-1993",
       "joel-ivory-1986",
       "lauren-ivory-1994"
     ],
@@ -114,7 +115,9 @@
     "body_stripped": "## Lifespan\n\n**Born:** 16 January 1870 — Kersbrook, South Australia\n**Died:** 1 May 1948 — South Payneham, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008. **Independently corroborated (verified 26 Aug 2026):** identifies Adam **Telfer** Dillon, b. 1870, youngest son of Elizabeth Beattie Telfer (1834–1896) & John Charles Dillon (1827–1906) — MyHeritage record confirms death 1 May 1948 aged 78, buried Cente",
     "is_living": false,
     "lifespan": "1870 – 1948",
-    "parents": [],
+    "parents": [
+      "john-dillon-1827"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -126,7 +129,7 @@
     "vault_file": "Adam Dillon.md",
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 5
   },
   {
     "id": "Adam Francis Telfer (1842)",
@@ -213,6 +216,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -230,8 +234,6 @@
       "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
-      "james-telfer-1829",
-      "john-telfer-1840",
       "margaret-telfer-1829",
       "robert-telfer-1835"
     ],
@@ -434,9 +436,11 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -516,6 +520,7 @@
     "siblings": [
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -742,12 +747,21 @@
     "is_living": false,
     "lifespan": "1890 – 1937",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "related_trees": [
       "telfer-tree"
@@ -832,6 +846,7 @@
     "is_living": false,
     "lifespan": "1881 – 1970",
     "parents": [
+      "caroline-telfer-1842",
       "john-telfer-1847"
     ],
     "children": [
@@ -846,6 +861,12 @@
       "beatrice-telfer-1877"
     ],
     "siblings": [
+      "bertha-telfer",
+      "edwin-telfer-1887",
+      "ernest-telfer-1878",
+      "francis-telfer-1875",
+      "john-telfer-1877",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "related_trees": [
@@ -1063,7 +1084,10 @@
     "body_stripped": "**Born:** 1 Aug 1861 at Peachy Belt, South Australia  \n**Died:** 1 Feb 1946 at Seacliff, South Australia (aged 84)\n\n## Family\n\n Relation  Name \n\n **Father**  William John Baker (1831–1919) \n **Mother**  Sophia Baker (1829–1901) \n **Siblings**  William Baker (1853–1933), Hannah Baker (1855–1948), Emeline Couzens (1857–1949), James Baker (1859–1927), Fanny Baker (1863–1955), Walter Baker (1865–1937), Sophia Harriett Ridgway (1868–1956), Phineas Baker (1870–1959) \n\n## Life\n\nAlfred was the fifth chi",
     "is_living": false,
     "lifespan": "1861 – 1946",
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -1400,7 +1424,9 @@
     "is_living": false,
     "lifespan": "1880 – 1965",
     "parents": [],
-    "children": [],
+    "children": [
+      "vida-telfer-1919"
+    ],
     "spouses": [
       "james-telfer-1866"
     ],
@@ -1510,9 +1536,12 @@
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
-    "spouses": [],
+    "spouses": [
+      "francis-telfer-1875"
+    ],
     "siblings": [
       "amy-telfer"
     ],
@@ -1549,7 +1578,7 @@
       }
     ],
     "person_photo": "images/people/francis-charles-amy-telfer-wedding-1909.jpg",
-    "generation": 6
+    "generation": 5
   },
   {
     "id": "Amy Farrow Stribling (1868)",
@@ -1705,6 +1734,7 @@
     ],
     "siblings": [
       "amy-telfer-1884",
+      "david-telfer-merrick-2000",
       "mark-telfer-1986"
     ],
     "related_trees": [
@@ -1911,7 +1941,7 @@
     "vault_file": "Andrew Telfer (1798–1858).md",
     "images": [],
     "person_photo": null,
-    "generation": 3
+    "generation": 6
   },
   {
     "id": "Angela Telfer",
@@ -2036,8 +2066,10 @@
       "ann-telfer",
       "jessie-telfer",
       "johnnie-telfer",
+      "margaret-telfer-1869",
       "peter-telfer",
-      "robina-telfer"
+      "robina-telfer",
+      "william-telfer-1880"
     ],
     "spouses": [
       "john-telfer-1847"
@@ -2649,9 +2681,13 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "albert-telfer-1881",
+      "edwin-telfer-1887",
       "ernest-telfer-1878",
       "francis-telfer-1875",
-      "john-telfer-1877"
+      "john-telfer-1877",
+      "walter-telfer-1884",
+      "william-telfer-1880"
     ],
     "related_trees": [
       "telfer-tree"
@@ -2711,11 +2747,14 @@
     "is_living": true,
     "lifespan": "1946 – living",
     "parents": [
-      "gilbert-telfer-1908"
+      "gilbert-telfer-1908",
+      "jessie-allan"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "ian-telfer-1947"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -2881,10 +2920,14 @@
       "martha-masters-1814"
     ],
     "children": [
+      "albert-telfer-1881",
       "bertha-telfer",
+      "edwin-telfer-1887",
       "ernest-telfer-1878",
       "francis-telfer-1875",
-      "john-telfer-1877"
+      "john-telfer-1877",
+      "walter-telfer-1884",
+      "william-telfer-1880"
     ],
     "spouses": [
       "john-telfer-1847"
@@ -3007,6 +3050,7 @@
     "children": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
+      "shirley-telfer-1929",
       "sydney-parker-1922",
       "william-humphrey-parker-1926"
     ],
@@ -3095,7 +3139,9 @@
       "janet-stevenson",
       "marion-vida"
     ],
-    "spouses": [],
+    "spouses": [
+      "robert-dunlop-lawrie-1850"
+    ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
@@ -3523,12 +3569,21 @@
     "is_living": false,
     "lifespan": "1875 – 1954",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "related_trees": [
       "telfer-tree"
@@ -4044,12 +4099,21 @@
     "is_living": false,
     "lifespan": "1889 – 1964",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "related_trees": [
       "telfer-tree"
@@ -4395,11 +4459,14 @@
     "is_living": true,
     "lifespan": "2000 – living",
     "parents": [
-      "allen-merrick"
+      "allen-merrick",
+      "penny-telfer-1960"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "amy-telfer"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -4608,7 +4675,9 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "laurel-bosanquet"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -4698,6 +4767,7 @@
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "related_trees": [
@@ -4893,14 +4963,23 @@
     "is_living": false,
     "lifespan": "1887 – 1956",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [
       "lilian-daisy-dawson"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "related_trees": [
       "telfer-tree"
@@ -5149,7 +5228,7 @@
     "vault_file": "Edward Telfer.md",
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 4
   },
   {
     "id": "Edwin Ernest Clarke",
@@ -5200,7 +5279,7 @@
     "vault_file": "Edwin Ernest Clarke.md",
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 4
   },
   {
     "id": "Edwin Gilbert Telfer (1887)",
@@ -5258,11 +5337,18 @@
     "is_living": false,
     "lifespan": "1887 – 1958",
     "parents": [
+      "caroline-telfer-1842",
       "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
+      "albert-telfer-1881",
+      "bertha-telfer",
+      "ernest-telfer-1878",
+      "francis-telfer-1875",
+      "john-telfer-1877",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "related_trees": [
@@ -5428,6 +5514,7 @@
     "siblings": [
       "adelaide-elsie-pearl-telfer-1889",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -5486,7 +5573,9 @@
     "body_stripped": "**Role:** **English-born Telfer resident at Newcastleton, Castleton parish** — sister and housekeeper to John Telfer (b. ~1791, England)\n\n**Born:** ~1806 — **ENGLAND**\n**Died:** unknown\n**Occupation:** Housekeeper (1851)\n**Residence:** Newcastleton, Castleton parish, Roxburghshire (1851)\n**Sibling:** John Telfer (b. ~1791, England) — shepherd, head of the household she kept\n\n> ⚠️ **Not proven to be a relative of the main Telfer line.** Recorded because she is a sourced, documented Telfer born ou",
     "is_living": false,
     "lifespan": "1806 – ?",
-    "parents": [],
+    "parents": [
+      "thomas-telfer"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -5749,6 +5838,7 @@
     "siblings": [
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -6021,6 +6111,7 @@
     "siblings": [
       "esther-jane-telfer-1834",
       "george-telfer-1850",
+      "james-telfer-1829",
       "james-telfer-1832"
     ],
     "related_trees": [
@@ -6099,9 +6190,11 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "spouses": [
@@ -6469,14 +6562,32 @@
     "is_living": false,
     "lifespan": "1868 – 1950",
     "parents": [
-      "john-telfer-1840"
+      "adam-telfer-1842",
+      "john-telfer-1840",
+      "margaret-telfer-1849",
+      "martha-allen-1840",
+      "robert-telfer-1835"
     ],
     "children": [],
     "spouses": [
       "edwin-ernest-clarke"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "adelaide-elsie-pearl-telfer-1889",
+      "clara-blanche-telfer-1883",
+      "effie-olive-telfer-1886",
+      "elizabeth-beattie-telfer-1871",
+      "eva-rowena-telfer-1885",
+      "francis-adam-telfer-1875",
+      "hazel-rose-telfer-1891",
+      "herbert-dougal-telfer-1881",
+      "james-edgerston-telfer-1877",
+      "james-telfer-1866",
+      "lillian-may-telfer-1872",
+      "martha-cameron-1873",
+      "susan-telfer-1871",
+      "vernon-ray-st-clair-telfer-1879",
+      "violet-hope-telfer-1883"
     ],
     "related_trees": [
       "telfer-tree"
@@ -6486,7 +6597,7 @@
     "vault_file": "Elizabeth Telfer (1868–1950).md",
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 4
   },
   {
     "id": "Elizabeth Telfer Farrow Holloway (1861)",
@@ -6616,7 +6727,10 @@
     "children": [
       "james-telfer-1761"
     ],
-    "spouses": [],
+    "spouses": [
+      "john-telfer-alick-ralph",
+      "john-telfer-of-castleton-1731"
+    ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
@@ -6723,7 +6837,10 @@
     "body_stripped": "**Born:** 29 Sep 1857 at Hundred of Port Adelaide, South Australia  \n**Died:** 12 Mar 1949 at Forestville, South Australia (aged 91)  \n**Married name:** Couzens\n\n## Family\n\n Relation  Name \n\n **Father**  William John Baker (1831–1919) \n **Mother**  Sophia Baker (1829–1901) \n **Siblings**  William Baker (1853–1933), Hannah Baker (1855–1948), James Baker (1859–1927), Alfred Baker (1861–1946), Fanny Baker (1863–1955), Walter Baker (1865–1937), Sophia Harriett Ridgway (1868–1956), Phineas Baker (187",
     "is_living": false,
     "lifespan": "1857 – 1949",
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -6827,6 +6944,7 @@
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "related_trees": [
@@ -7176,9 +7294,12 @@
       "florence-nicholas-~1885"
     ],
     "siblings": [
+      "albert-telfer-1881",
       "bertha-telfer",
+      "edwin-telfer-1887",
       "francis-telfer-1875",
       "john-telfer-1877",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "related_trees": [
@@ -7542,6 +7663,7 @@
     "siblings": [
       "elizabeth-hannah-telfer-1836",
       "george-telfer-1850",
+      "james-telfer-1829",
       "james-telfer-1832"
     ],
     "related_trees": [
@@ -7800,6 +7922,7 @@
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "related_trees": [
@@ -7876,7 +7999,8 @@
       "elizabeth-hannah-telfer-1836"
     ],
     "children": [
-      "donald-jack-hookings-1916"
+      "donald-jack-hookings-1916",
+      "laurel-bosanquet"
     ],
     "spouses": [
       "walter-john-hookings-1881"
@@ -7984,6 +8108,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
       "herbert-dougal-telfer-1881",
@@ -8026,7 +8151,10 @@
     "body_stripped": "**Born:** 8 Jun 1863 at Port Gawler, South Australia  \n**Died:** 25 May 1955 at Unley Park, South Australia (aged 91)\n\n## Family\n\n Relation  Name \n\n **Father**  William John Baker (1831–1919) \n **Mother**  Sophia Baker (1829–1901) \n **Siblings**  William Baker (1853–1933), Hannah Baker (1855–1948), Emeline Couzens (1857–1949), James Baker (1859–1927), Alfred Baker (1861–1946), Walter Baker (1865–1937), Sophia Harriett Ridgway (1868–1956), Phineas Baker (1870–1959) \n\n## Life\n\nFanny was the sixth ",
     "is_living": false,
     "lifespan": "1863 – 1955",
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -8306,6 +8434,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "hazel-rose-telfer-1891",
       "herbert-dougal-telfer-1881",
@@ -8402,7 +8531,8 @@
     "lifespan": "1875 – 1954",
     "parents": [
       "caroline-telfer-1842",
-      "john-telfer-1847"
+      "john-telfer-1847",
+      "robert-telfer-1835"
     ],
     "children": [
       "clarice-may-telfer-1911",
@@ -8417,12 +8547,16 @@
       "ruth-telfer-1931"
     ],
     "spouses": [
-      "amy-telfer"
+      "amy-telfer",
+      "amy-telfer-1884"
     ],
     "siblings": [
+      "albert-telfer-1881",
       "bertha-telfer",
+      "edwin-telfer-1887",
       "ernest-telfer-1878",
       "john-telfer-1877",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "related_trees": [
@@ -8696,6 +8830,7 @@
       "elizabeth-hannah-telfer-1836",
       "esther-jane-telfer-1834",
       "george-telfer-1850",
+      "james-telfer-1829",
       "james-telfer-1832",
       "jean-telfer-1840",
       "john-telfer-1847",
@@ -8710,9 +8845,11 @@
       "adam-telfer-1799",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -9767,7 +9904,8 @@
     "is_living": false,
     "lifespan": "1850 – 1913",
     "parents": [
-      "francis-telfer-1809"
+      "francis-telfer-1809",
+      "margaret-telfer-1810"
     ],
     "children": [
       "lesley-thomas-telfer-1891",
@@ -9973,6 +10111,7 @@
       "ethel-jean-telfer-1915",
       "francis-telfer-1910",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "related_trees": [
@@ -10361,6 +10500,7 @@
     "parents": [],
     "children": [
       "ethel-edith-telfer-1894",
+      "jean-telfer-1910",
       "leslie-robert-telfer"
     ],
     "spouses": [
@@ -10575,6 +10715,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "herbert-dougal-telfer-1881",
@@ -10833,6 +10974,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -11243,11 +11385,14 @@
     "is_living": true,
     "lifespan": "1947 – living",
     "parents": [
-      "gilbert-telfer-1908"
+      "gilbert-telfer-1908",
+      "jessie-allan"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "beth-telfer-1946"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -11481,7 +11626,8 @@
     "is_living": false,
     "lifespan": "1880 – 1964",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [
       "trevor-andrew-thomson-1914"
@@ -11490,7 +11636,15 @@
       "alexander-brown-thomson"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "related_trees": [
       "telfer-tree"
@@ -11743,9 +11897,11 @@
       "adam-telfer-1799",
       "francis-telfer-1809",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -11923,7 +12079,10 @@
     "body_stripped": "**Born:** 12 Aug 1859 at Port Gawler, South Australia  \n**Died:** 14 Aug 1927 at Virginia, South Australia (aged 68)\n\n## Family\n\n Relation  Name \n\n **Father**  William John Baker (1831–1919) \n **Mother**  Sophia Baker (1829–1901) \n **Siblings**  William Baker (1853–1933), Hannah Baker (1855–1948), Emeline Couzens (1857–1949), Alfred Baker (1861–1946), Fanny Baker (1863–1955), Walter Baker (1865–1937), Sophia Harriett Ridgway (1868–1956), Phineas Baker (1870–1959) \n\n## Life\n\nJames was the fourth ",
     "is_living": false,
     "lifespan": "1859 – 1927",
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -12017,6 +12176,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -12399,16 +12559,19 @@
     "lifespan": "1761 – 1845",
     "parents": [
       "elspeth-young-1722",
-      "john-telfer-of-castleton-1731"
+      "john-telfer-of-castleton-1731",
+      "margaret-armstrong-1745"
     ],
     "children": [
       "adam-telfer-1799",
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "spouses": [
@@ -12527,8 +12690,10 @@
     "children": [
       "adam-telfer-1842",
       "elizabeth-beattie-telfer-1832",
+      "elizabeth-telfer-1868",
       "isabella-telfer-1837",
       "james-telfer-1829",
+      "jean-telfer-1840",
       "john-telfer-1840",
       "margaret-telfer-1829",
       "robert-telfer-1835"
@@ -12540,9 +12705,11 @@
       "adam-telfer-1799",
       "francis-telfer-1809",
       "isobel-telfer-1798",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -12615,22 +12782,27 @@
     "lifespan": "1829 – 1913",
     "parents": [
       "elizabeth-beattie-1802",
-      "james-telfer-1796"
+      "francis-telfer-1809",
+      "james-telfer-1796",
+      "jean-murray-1810",
+      "robert-telfer-1803"
     ],
     "children": [
       "james-telfer-1858",
       "janet-welsh-telfer-1858",
-      "john-koppio-telfer-1862"
+      "john-koppio-telfer-1862",
+      "margaret-telfer-1849"
     ],
     "spouses": [
       "janet-welsh-1826"
     ],
     "siblings": [
-      "adam-telfer-1842",
       "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
+      "elizabeth-hannah-telfer-1836",
+      "esther-jane-telfer-1834",
       "isabella-telfer-1837",
-      "john-telfer-1840",
+      "james-telfer-1832",
       "margaret-telfer-1829",
       "robert-telfer-1835"
     ],
@@ -12712,6 +12884,7 @@
       "elizabeth-hannah-telfer-1836",
       "esther-jane-telfer-1834",
       "george-telfer-1850",
+      "james-telfer-1829",
       "jean-telfer-1840"
     ],
     "related_trees": [
@@ -12785,15 +12958,20 @@
     "lifespan": "1858 – 1944",
     "parents": [
       "james-telfer-1829",
-      "janet-welsh-1826"
+      "janet-welsh-1826",
+      "john-telfer-1840",
+      "martha-allen-1840"
     ],
     "children": [],
     "spouses": [
       "frances-margaret-oswald-1861"
     ],
     "siblings": [
+      "james-telfer-1866",
       "janet-welsh-telfer-1858",
-      "john-koppio-telfer-1862"
+      "john-koppio-telfer-1862",
+      "martha-cameron-1873",
+      "susan-telfer-1871"
     ],
     "related_trees": [
       "telfer-tree"
@@ -12889,7 +13067,10 @@
     ],
     "siblings": [
       "clara-blanche-telfer-1883",
-      "martha-cameron-1873"
+      "elizabeth-telfer-1868",
+      "james-telfer-1858",
+      "martha-cameron-1873",
+      "susan-telfer-1871"
     ],
     "related_trees": [
       "telfer-tree"
@@ -12949,7 +13130,9 @@
       "james-telfer-of-sorbietrees-1740",
       "margaret-armstrong-1745"
     ],
-    "children": [],
+    "children": [
+      "robert-telfer-1803"
+    ],
     "spouses": [],
     "siblings": [
       "adam-telfer-1771",
@@ -13023,7 +13206,9 @@
       "jean-telfer-1764",
       "jenet-telfer-1770"
     ],
-    "spouses": [],
+    "spouses": [
+      "margaret-armstrong-1745"
+    ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
@@ -13415,9 +13600,11 @@
     "parents": [],
     "children": [
       "andrew-telfer-1798",
-      "william-telfer-1802"
+      "william-telfer-1802",
+      "william-telfer-1880"
     ],
     "spouses": [
+      "william-telfer-1880",
       "william-telfer-shepherd"
     ],
     "siblings": [],
@@ -13429,7 +13616,7 @@
     "vault_file": "Janet Nichol.md",
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 5
   },
   {
     "id": "Janet Stevenson",
@@ -13670,10 +13857,17 @@
     "body_stripped": "## Photos\n\n!Jared Ivory (Kelly Partners)\n*Jared Ivory (Kelly Partners)*\n\n!The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren\n*The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren*\n\n!Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018\n*Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018*\n\n## Life Summary\n\nJared is the son of Sheryle Telfer (1961–?) and her first husband Paul Ivory (1955–1996). An Honours Law graduate from Charles Darwin University, he was selected as a *",
     "is_living": true,
     "lifespan": "1993 – living",
-    "parents": [],
+    "parents": [
+      "paul-ivory-1955",
+      "sheryle-telfer-1961"
+    ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "aaron-ivory-1989",
+      "joel-ivory-1986",
+      "lauren-ivory-1994"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -13701,7 +13895,7 @@
       }
     ],
     "person_photo": "images/people/Jared-Ivory---Kelly-Partners.jpg",
-    "generation": 10
+    "generation": 8
   },
   {
     "id": "Jean Maryann Martha Telfer (1910)",
@@ -13760,6 +13954,7 @@
     "is_living": false,
     "lifespan": "1910 – 1984",
     "parents": [
+      "hannah-peacock-1862",
       "julia-matilda-seebohm-1876",
       "mark-telfer-1877"
     ],
@@ -13851,6 +14046,7 @@
     "children": [
       "elizabeth-hannah-telfer-1836",
       "esther-jane-telfer-1834",
+      "james-telfer-1829",
       "james-telfer-1832"
     ],
     "spouses": [
@@ -14024,7 +14220,9 @@
     "lifespan": "1840 – 1892",
     "parents": [
       "dinah-flavel-1821",
-      "francis-telfer-1809"
+      "francis-telfer-1809",
+      "james-telfer-1796",
+      "robert-telfer-1803"
     ],
     "children": [
       "dinah-flavel-paynter-1869",
@@ -14296,7 +14494,10 @@
     "is_living": false,
     "lifespan": "? – ?",
     "parents": [],
-    "children": [],
+    "children": [
+      "beth-telfer-1946",
+      "ian-telfer-1947"
+    ],
     "spouses": [
       "gilbert-telfer-1908"
     ],
@@ -14406,7 +14607,9 @@
       "ann-taylor-1856"
     ],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "kenneth-telfer-1906"
+    ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
@@ -14475,6 +14678,7 @@
     "spouses": [],
     "siblings": [
       "aaron-ivory-1989",
+      "jared-ivory-1993",
       "lauren-ivory-1994"
     ],
     "related_trees": [
@@ -14550,7 +14754,9 @@
       "beatrice-telfer-1877"
     ],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "elspeth-young-1722"
+    ],
     "siblings": [
       "beatrice-telfer-1911",
       "douglas-telfer-1913",
@@ -14566,7 +14772,7 @@
     "vault_file": "John Alick Ralph Telfer.md",
     "images": [],
     "person_photo": null,
-    "generation": 6
+    "generation": 1
   },
   {
     "id": "John Charles Dillon (1827)",
@@ -14619,6 +14825,7 @@
     "lifespan": "1827 – 1906",
     "parents": [],
     "children": [
+      "adam-dillon-1870",
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
@@ -14714,9 +14921,12 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "albert-telfer-1881",
       "bertha-telfer",
+      "edwin-telfer-1887",
       "ernest-telfer-1878",
       "francis-telfer-1875",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "related_trees": [
@@ -14770,7 +14980,9 @@
     "body_stripped": "**Role:** Second World War serviceman of the Watson (Telfer-descendant) branch — died of wounds at Lae, 1943\n\n**Born:** 1916 — Hawksburn, Victoria (AWM Roll of Honour circular, primary; supplement book gives Armadale — both inner-Melbourne, see Notes)\n**Died:** 5 July 1943 (aged 27) — New Guinea, died of wounds\n**Buried:** Lae War Cemetery, Lae, Papua New Guinea (Roll of Honour panel 32 / supplementary panel 6)\n**Service:** Corporal, VX102907, 58/59th Australian Infantry Battalion, Australian Ar",
     "is_living": false,
     "lifespan": "1916 – 1943",
-    "parents": [],
+    "parents": [
+      "lancelot-watson-1888"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -15441,12 +15653,21 @@
     "is_living": false,
     "lifespan": "1882 – 1975",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "related_trees": [
       "telfer-tree"
@@ -15602,8 +15823,10 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -15707,7 +15930,9 @@
     "lifespan": "1840 – 1913",
     "parents": [
       "elizabeth-beattie-1802",
-      "james-telfer-1796"
+      "james-telfer-1796",
+      "margaret-telfer-1810",
+      "robert-telfer-1803"
     ],
     "children": [
       "alan-telfer-1890",
@@ -15718,6 +15943,7 @@
       "elizabeth-telfer-1868",
       "eric-john-telfer",
       "isabella-telfer-1880",
+      "james-telfer-1858",
       "james-telfer-1866",
       "john-telfer-1882",
       "maria-clara-telfer-1878",
@@ -15732,11 +15958,9 @@
       "martha-henstridge-1854"
     ],
     "siblings": [
-      "adam-telfer-1842",
       "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
-      "james-telfer-1829",
       "margaret-telfer-1829",
       "robert-telfer-1835"
     ],
@@ -15836,7 +16060,8 @@
       "caroline-telfer-1842"
     ],
     "siblings": [
-      "george-telfer-1850"
+      "george-telfer-1850",
+      "margaret-telfer-1849"
     ],
     "related_trees": [
       "telfer-tree"
@@ -15893,10 +16118,23 @@
     "body_stripped": "**Role:** **English-born Telfer resident at Newcastleton, Castleton parish** — not a proven member of the main line, but documentary evidence that Telfer people crossed the border into Liddesdale\n\n**Born:** ~1791–1795 — **ENGLAND**\n**Died:** unknown\n**Occupation:** Shepherd (1851) — previously recorded as a pauper (1841)\n**Residence:** Newcastleton, Castleton parish, Roxburghshire (1841 and 1851)\n**Sibling:** Elisabeth Telfer (b. ~1806, England) — recorded as his sister, housekeeper to his house",
     "is_living": false,
     "lifespan": "1791 – ?",
-    "parents": [],
+    "parents": [
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
+    ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "adam-telfer-1799",
+      "francis-telfer-1809",
+      "isobel-telfer-1798",
+      "james-telfer-1796",
+      "john-telfer-1805",
+      "margaret-telfer-1801",
+      "robert-telfer-1803",
+      "william-telfer-1802",
+      "william-telfer-1811"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -15956,7 +16194,9 @@
     "children": [
       "james-telfer-1761"
     ],
-    "spouses": [],
+    "spouses": [
+      "elspeth-young-1722"
+    ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
@@ -16638,7 +16878,9 @@
       "john-watson-1851",
       "mary-jane-paynter-1861"
     ],
-    "children": [],
+    "children": [
+      "richard-watson-1910"
+    ],
     "spouses": [],
     "siblings": [
       "lancelot-watson-1888"
@@ -17207,7 +17449,8 @@
     "children": [],
     "spouses": [
       "gwendoline-victoria-telfer-1910",
-      "jessie-kathleen-telfer-1914"
+      "jessie-kathleen-telfer-1914",
+      "jessie-telfer"
     ],
     "siblings": [
       "floris-telfer-1904",
@@ -17443,7 +17686,9 @@
       "john-watson-1851",
       "mary-jane-paynter-1861"
     ],
-    "children": [],
+    "children": [
+      "john-watson-1916"
+    ],
     "spouses": [],
     "siblings": [
       "joseph-watson-1883"
@@ -17515,6 +17760,7 @@
     "spouses": [],
     "siblings": [
       "aaron-ivory-1989",
+      "jared-ivory-1993",
       "joel-ivory-1986"
     ],
     "related_trees": [
@@ -18026,6 +18272,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -18606,11 +18853,14 @@
     "children": [
       "adam-telfer-1771",
       "francis-telfer-1768",
+      "james-telfer-1761",
       "james-telfer-1762",
       "jean-telfer-1764",
       "jenet-telfer-1770"
     ],
-    "spouses": [],
+    "spouses": [
+      "james-telfer-of-sorbietrees-1740"
+    ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
@@ -18804,12 +19054,15 @@
     "is_living": false,
     "lifespan": "1849 – 1936",
     "parents": [
-      "francis-telfer-1809"
+      "francis-telfer-1809",
+      "james-telfer-1829",
+      "margaret-telfer-1810"
     ],
     "children": [
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -18824,7 +19077,8 @@
       "adam-telfer-1842"
     ],
     "siblings": [
-      "george-telfer-1850"
+      "george-telfer-1850",
+      "john-telfer-1847"
     ],
     "related_trees": [
       "telfer-tree"
@@ -18949,8 +19203,10 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -19089,7 +19345,10 @@
     "lifespan": "1810 – 1892",
     "parents": [],
     "children": [
-      "john-telfer-1847"
+      "george-telfer-1850",
+      "john-telfer-1840",
+      "john-telfer-1847",
+      "margaret-telfer-1849"
     ],
     "spouses": [
       "francis-telfer-1809"
@@ -19358,14 +19617,23 @@
     "is_living": false,
     "lifespan": "1896 – 1977",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [
       "kenneth-cornish"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "related_trees": [
       "telfer-tree"
@@ -19616,7 +19884,8 @@
     "is_living": false,
     "lifespan": "1877 – 1946",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [
       "floris-telfer-1904",
@@ -19631,7 +19900,15 @@
       "julia-matilda-seebohm-1876"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "robert-telfer-1886"
     ],
     "related_trees": [
       "telfer-tree"
@@ -19694,7 +19971,11 @@
     "lifespan": "1840 – 1876",
     "parents": [],
     "children": [
-      "james-telfer-1866"
+      "elizabeth-telfer-1868",
+      "james-telfer-1858",
+      "james-telfer-1866",
+      "martha-cameron-1873",
+      "susan-telfer-1871"
     ],
     "spouses": [
       "john-telfer-1840"
@@ -19841,7 +20122,17 @@
     "is_living": false,
     "lifespan": "1854 – 1921",
     "parents": [],
-    "children": [],
+    "children": [
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
+    ],
     "spouses": [
       "john-telfer-1840"
     ],
@@ -19923,7 +20214,8 @@
     "is_living": false,
     "lifespan": "1873 – 1964",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-allen-1840"
     ],
     "children": [
       "john-lindsay-cameron-1907",
@@ -19934,7 +20226,10 @@
     ],
     "siblings": [
       "clara-blanche-telfer-1883",
-      "james-telfer-1866"
+      "elizabeth-telfer-1868",
+      "james-telfer-1858",
+      "james-telfer-1866",
+      "susan-telfer-1871"
     ],
     "related_trees": [
       "telfer-tree"
@@ -20825,6 +21120,7 @@
       "ethel-jean-telfer-1915",
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "related_trees": [
@@ -21237,6 +21533,7 @@
     "parents": [],
     "children": [
       "aaron-ivory-1989",
+      "jared-ivory-1993",
       "joel-ivory-1986",
       "lauren-ivory-1994"
     ],
@@ -21305,6 +21602,7 @@
     "parents": [],
     "children": [
       "amy-telfer",
+      "david-telfer-merrick-2000",
       "mark-telfer-1986"
     ],
     "spouses": [],
@@ -21478,7 +21776,10 @@
     "body_stripped": "**Born:** 11 Nov 1870 at Virginia, South Australia  \n**Died:** 17 Feb 1959 at Virginia, South Australia (aged 88)\n\n## Family\n\n Relation  Name \n\n **Father**  William John Baker (1831–1919) \n **Mother**  Sophia Baker (1829–1901) \n **Siblings**  William Baker (1853–1933), Hannah Baker (1855–1948), Emeline Couzens (1857–1949), James Baker (1859–1927), Alfred Baker (1861–1946), Fanny Baker (1863–1955), Walter Baker (1865–1937), Sophia Harriett Ridgway (1868–1956) \n\n## Life\n\nPhineas was the ninth and ",
     "is_living": false,
     "lifespan": "1870 – 1959",
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -21579,15 +21880,20 @@
     "is_living": false,
     "lifespan": "1922 – 2011",
     "parents": [
-      "amy-telfer",
+      "amy-telfer-1884",
       "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
       "clarice-may-telfer-1911",
+      "doris-elma-telfer-1919",
       "edwin-telfer-1921",
+      "emily-amelia-telfer-1913",
+      "ethel-jean-telfer-1915",
       "francis-telfer-1910",
+      "gladys-merle-telfer-1917",
+      "murray-telfer-1924",
       "ruth-telfer-1931"
     ],
     "related_trees": [
@@ -21721,7 +22027,9 @@
     "body_stripped": "**Role:** Second World War serviceman of the Watson (Telfer-descendant) branch — killed in action at Rabaul, 1942\n\n**Born:** 23 December 1910 — Thornbury, Victoria (VWMA / Nominal Roll; supplement book gives 1912 — see Notes: book year is a transcription error, official rolls + age-at-death support 1910)\n**Died:** 23 January 1942 (aged 31) — Rabaul, East New Britain, Papua New Guinea, killed in action\n**Commemorated:** Rabaul Memorial, Rabaul, Papua New Guinea\n**Service:** Private, VX21590, 2/22",
     "is_living": false,
     "lifespan": "1910 – 1942",
-    "parents": [],
+    "parents": [
+      "joseph-watson-1883"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -22139,7 +22447,9 @@
       "janet-stevenson",
       "marion-vida"
     ],
-    "spouses": [],
+    "spouses": [
+      "caroline-hosking-1851"
+    ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
@@ -22311,14 +22621,23 @@
     "is_living": false,
     "lifespan": "1886 – 1949",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [
       "may-foy"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877"
     ],
     "related_trees": [
       "telfer-tree"
@@ -22405,9 +22724,15 @@
     "lifespan": "1803 – 1878",
     "parents": [
       "elizabeth-telfer-1774",
-      "james-telfer-1761"
+      "james-telfer-1761",
+      "james-telfer-1762"
     ],
-    "children": [],
+    "children": [
+      "elizabeth-telfer-1868",
+      "james-telfer-1829",
+      "jean-telfer-1840",
+      "john-telfer-1840"
+    ],
     "spouses": [
       "elizabeth-oliver-1807"
     ],
@@ -22416,6 +22741,7 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "william-telfer-1811"
@@ -22500,8 +22826,11 @@
     ],
     "children": [
       "edith-mary-kathleen-telfer",
+      "elizabeth-telfer-1868",
+      "francis-telfer-1875",
       "helen-telfer",
-      "james-robert-telfer-1866"
+      "james-robert-telfer-1866",
+      "robert-telfer-1886"
     ],
     "spouses": [
       "susan-telfer-1844"
@@ -23281,6 +23610,7 @@
     "parents": [],
     "children": [
       "aaron-ivory-1989",
+      "jared-ivory-1993",
       "joel-ivory-1986",
       "lauren-ivory-1994"
     ],
@@ -23368,7 +23698,10 @@
     "body_stripped": "**Lifespan:** 1929–2017\n\n**Branch:** Telfer (by marriage) / Parker (by birth)\n\n## Vital Information\n\n Field  Detail \n\n **Full Name**  Shirley Edna Telfer (née Parker) \n **Born**  28 Mar 1929, South Australia \n **Died**  23 Feb 2017 (age 87), Tumby Bay, South Australia \n **Spouse**  Murray John Telfer (1924–2009) (m. 18 Feb 1950, Prospect SA) \n\n## Family\n\n Relation  Name \n\n **Father**  William Henry Parker (1893–1968) \n **Mother**  Caroline Edna Lawrie (1890–1957) \n **Siblings**  Avis Parker (191",
     "is_living": false,
     "lifespan": "1929 – 2017",
-    "parents": [],
+    "parents": [
+      "caroline-edna-lawrie-1890",
+      "william-henry-parker-1893"
+    ],
     "children": [
       "daryll-telfer",
       "grantley-telfer",
@@ -23383,6 +23716,7 @@
     "siblings": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
+      "sydney-parker-1922",
       "william-humphrey-parker-1926"
     ],
     "related_trees": [
@@ -23480,7 +23814,9 @@
     "is_living": false,
     "lifespan": "1803 – 1892",
     "parents": [],
-    "children": [],
+    "children": [
+      "sophia-baker-1829"
+    ],
     "spouses": [
       "joseph-march-1797"
     ],
@@ -23562,10 +23898,19 @@
     "is_living": false,
     "lifespan": "1829 – 1901",
     "parents": [
-      "joseph-march-1797"
+      "joseph-march-1797",
+      "sophia-march-1803"
     ],
     "children": [
-      "hannah-baker-1855"
+      "alfred-baker-1861",
+      "emeline-couzens-1857",
+      "fanny-baker-1863",
+      "hannah-baker-1855",
+      "james-baker-1859",
+      "phineas-baker-1870",
+      "sophia-harriett-ridgway-1868",
+      "walter-baker-1865",
+      "william-baker-1853"
     ],
     "spouses": [
       "william-john-baker-1831"
@@ -23606,7 +23951,9 @@
     "body_stripped": "**Born:** 10 Aug 1868 at Port Gawler, South Australia  \n**Died:** 13 Aug 1956 at Murray Bridge, South Australia (aged 88)  \n**Married name:** Ridgway\n\n## Family\n\n Relation  Name \n\n **Father**  William John Baker (1831–1919) \n **Mother**  Sophia Baker (1829–1901) \n **Siblings**  William Baker (1853–1933), Hannah Baker (1855–1948), Emeline Couzens (1857–1949), James Baker (1859–1927), Alfred Baker (1861–1946), Fanny Baker (1863–1955), Walter Baker (1865–1937), Phineas Baker (1870–1959) \n\n## Life\n\n",
     "is_living": false,
     "lifespan": "1868 – 1956",
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -24009,14 +24356,19 @@
     "is_living": false,
     "lifespan": "1871 – 1952",
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-allen-1840"
     ],
     "children": [],
     "spouses": [
       "robert-agnew"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "clara-blanche-telfer-1883",
+      "elizabeth-telfer-1868",
+      "james-telfer-1858",
+      "james-telfer-1866",
+      "martha-cameron-1873"
     ],
     "related_trees": [
       "telfer-tree"
@@ -24060,6 +24412,7 @@
     "siblings": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
+      "shirley-telfer-1929",
       "william-humphrey-parker-1926"
     ],
     "related_trees": [
@@ -24306,7 +24659,10 @@
     "is_living": true,
     "lifespan": "? – living",
     "parents": [],
-    "children": [],
+    "children": [
+      "adam-telfer-1842",
+      "elisabeth-telfer-1806"
+    ],
     "spouses": [],
     "siblings": [],
     "related_trees": [
@@ -24608,6 +24964,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -24670,6 +25027,7 @@
     "is_living": false,
     "lifespan": "1919 – 2021",
     "parents": [
+      "alma-ida-sporer-1880",
       "james-telfer-1866"
     ],
     "children": [],
@@ -24753,6 +25111,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -24795,7 +25154,10 @@
     "body_stripped": "**Born:** 1 Feb 1865 at Port Gawler, South Australia  \n**Died:** 9 Apr 1937 at Manly, New South Wales (aged 72)  \n**Spouse:** Victoria Sophia White (m. 15 Mar 1893)\n\n## Family\n\n Relation  Name \n\n **Father**  William John Baker (1831–1919) \n **Mother**  Sophia Baker (1829–1901) \n **Siblings**  William Baker (1853–1933), Hannah Baker (1855–1948), Emeline Couzens (1857–1949), James Baker (1859–1927), Alfred Baker (1861–1946), Fanny Baker (1863–1955), Sophia Harriett Ridgway (1868–1956), Phineas Bak",
     "is_living": false,
     "lifespan": "1865 – 1937",
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -24954,11 +25316,18 @@
     "is_living": false,
     "lifespan": "1884 – 1966",
     "parents": [
+      "caroline-telfer-1842",
       "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
+      "albert-telfer-1881",
+      "bertha-telfer",
+      "edwin-telfer-1887",
+      "ernest-telfer-1878",
+      "francis-telfer-1875",
+      "john-telfer-1877",
       "william-telfer-1880"
     ],
     "related_trees": [
@@ -25061,7 +25430,10 @@
     "body_stripped": "**Born:** 17 Dec 1853 at Port Gawler (Gawler Plains), South Australia  \n**Died:** 18 Oct 1933 at College Park, South Australia (aged 79)\n\n## Family\n\n Relation  Name \n\n **Father**  William John Baker (1831–1919) \n **Mother**  Sophia Baker (1829–1901) \n **Siblings**  Hannah Baker (1855–1948) (m. Parker), Emeline Couzens (1857–1949), James Baker (1859–1927), Alfred Baker (1861–1946), Fanny Baker (1863–1955), Walter Baker (1865–1937), Sophia Harriett Ridgway (1868–1956), Phineas Baker (1870–1959) \n\n",
     "is_living": false,
     "lifespan": "1853 – 1933",
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -25285,6 +25657,7 @@
     "children": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
+      "shirley-telfer-1929",
       "sydney-parker-1922",
       "william-humphrey-parker-1926"
     ],
@@ -25562,12 +25935,17 @@
     "is_living": false,
     "lifespan": "1880 – 1880",
     "parents": [
+      "ann-taylor-1856",
+      "caroline-telfer-1842",
       "john-telfer-1847"
     ],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "janet-nichol"
+    ],
     "siblings": [
       "albert-telfer-1881",
+      "bertha-telfer",
       "edwin-telfer-1887",
       "ernest-telfer-1878",
       "francis-telfer-1875",
@@ -25643,7 +26021,14 @@
     "lifespan": "1831 – 1919",
     "parents": [],
     "children": [
-      "hannah-baker-1855"
+      "alfred-baker-1861",
+      "emeline-couzens-1857",
+      "fanny-baker-1863",
+      "hannah-baker-1855",
+      "james-baker-1859",
+      "phineas-baker-1870",
+      "walter-baker-1865",
+      "william-baker-1853"
     ],
     "spouses": [
       "sophia-baker-1829"
@@ -25775,16 +26160,25 @@
     "is_living": false,
     "lifespan": "1802 – 1850",
     "parents": [
-      "janet-nichol",
-      "william-telfer-shepherd"
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
     ],
     "children": [
       "edward-telfer",
+      "elizabeth-telfer-1868",
       "william-telfer-1841"
     ],
     "spouses": [],
     "siblings": [
-      "andrew-telfer-1798"
+      "adam-telfer-1799",
+      "andrew-telfer-1798",
+      "francis-telfer-1809",
+      "isobel-telfer-1798",
+      "james-telfer-1796",
+      "john-telfer-1791",
+      "john-telfer-1805",
+      "margaret-telfer-1801",
+      "william-telfer-1811"
     ],
     "related_trees": [
       "telfer-tree"
@@ -25864,9 +26258,11 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
-      "robert-telfer-1803"
+      "robert-telfer-1803",
+      "william-telfer-1802"
     ],
     "related_trees": [
       "telfer-tree"
@@ -25935,7 +26331,7 @@
     "vault_file": "William Telfer (1841–?).md",
     "images": [],
     "person_photo": null,
-    "generation": 5
+    "generation": 4
   },
   {
     "id": "William Telfer (shepherd)",
@@ -26001,7 +26397,7 @@
     "vault_file": "William Telfer (shepherd).md",
     "images": [],
     "person_photo": null,
-    "generation": 99
+    "generation": 5
   },
   {
     "id": "William Williams Masters (1838)",
@@ -26486,10 +26882,13 @@
     "body_markdown": "# Laurel Mary Bosanquet (1911–2000)\n\n**Role:** Granddaughter of the Telfer line — daughter of **[[Walter John Hookings (1881–1962)]]** and **[[Eva Agnes Farrow]]**, and therefore a great-granddaughter of **Elizabeth Hannah Telfer (1836–1916)**.\n\n**Born:** 27 October 1911 — Bridgewater, South Australia\n**Died:** 23 October 2000 (aged 88) — South Australia\n**Buried:** Centennial Park Cemetery, Pasadena, SA — Native Shrub Area, Section E, Plot 111\n**Spouse:** Francis James Bosanquet (1902–1989) — m. 1 January 1944, District of Talunga, SA\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Walter John Hookings (1881–1962)]] (26 Apr 1881 – 29 Apr 1962) |\n| **Mother** | [[Eva Agnes Farrow]] (1877 – 1956) |\n| **Husband** | Francis James Bosanquet (20 Aug 1902 – 26 Sep 1989) — m. 1 Jan 1944 |\n| **Brother** | [[Donald Jack Hookings (1916–1943)]] (26 Mar 1916 – 1943) |\n| **Paternal grandparents** | George Hookings (1841–1930) & Mary Ann Norton (1844–1905) |\n| **Maternal grandparents** | Charles Farrow & [[Elizabeth Hannah Telfer (1836–1916)]] |\n\n---\n\n## Life Summary\n\nLaurel Mary Hookings was born on 27 October 1911 at Bridgewater, South Australia, the first child of **Walter John Hookings** and **Eva Agnes Farrow** (née Farrow, of the Telfer line). Her birth is registered in the South Australian index at Book/Page 875/215, District of Adelaide, with her parents recorded as Walter John Hookings and Eva Agnes Farrow.\n\nShe married **Francis James Bosanquet** on 1 January 1944 in the District of Talunga, South Australia — the marriage recorded at Book/Page 467/1346, naming her father as Walter John Hookings and the groom's father as James Henry Bosanquet. (FamilySearch carries the groom's surname under the variant spelling *Bosanko*.)\n\nHer younger brother, **Donald Jack Hookings**, joined the Royal Australian Air Force and was killed in a flying accident off Bowen, Queensland, in 1943, aged 26.\n\nLaurel Mary Bosanquet died on 23 October 2000, four days short of her 89th birthday, and was buried at **Centennial Park Cemetery**, Pasadena, in the Native Shrub Area (Section E, Plot 111) — the same grave as her husband, Francis James, who had predeceased her by eleven years.\n\n---\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 27 Oct 1911 | Born — Bridgewater, SA |\n| 1 Jan 1944 | Married Francis James Bosanquet — District of Talunga, SA |\n| 26 Sep 1989 | Husband Francis James Bosanquet dies (aged 87) |\n| 23 Oct 2000 | Died (aged 88) — buried Centennial Park Cemetery, Pasadena, SA |\n\n---\n\n## Sources\n\n- **Source:** [Genealogy SA — South Australia BDM Birth Registrations](https://www.genealogysa.org.au/resources/online-database-search/) — HOOKINGS, Laurel Mary, born 27-Oct-1911, female, father Walter John HOOKINGS, mother Eva Agnes FARROW, birth residence Bridgewater, district Adelaide, Book/Page 875/215 — read live 13 September 2026.\n- **Source:** [Genealogy SA — South Australia BDM Marriage Registrations](https://www.genealogysa.org.au/resources/online-database-search/) — groom BOSANQUET, Francis James; bride HOOKINGS, Laurel Mary; married 01-Jan-1944; groom's father James Henry BOSANQUET; bride's father Walter John HOOKINGS; district Talunga, Book/Page 467/1346 — read live 13 September 2026.\n- **Source:** [Find a Grave — Laurel Mary Bosanquet (1911–2000), memorial 153979765](https://www.findagrave.com/memorial/153979765/laurel-mary-bosanquet) — born 27 Oct 1911, died 23 Oct 2000, buried Centennial Park Cemetery, Pasadena, SA, Native Shrub Area E 111; shared plot with Francis James Bosanquet — accessed 13 September 2026.\n- **Source:** [Find a Grave — Francis James Bosanquet (1902–1989), memorial 153979764](https://www.findagrave.com/memorial/153979764/francis-james-bosanquet) — born 20 Aug 1902, died 26 Sep 1989 (aged 87), buried Centennial Park Cemetery, Native Shrub Area E 111 — accessed 13 September 2026.\n- **Source:** [Genealogy SA — South Australia BDM Death Registrations](https://www.genealogysa.org.au/resources/online-database-search/) — BOSANQUET, Francis James, died 26-Sep-1989, aged 87, male, Book/Page 872A/8622 — read live 13 September 2026.\n\n---",
     "body_stripped": "**Role:** Granddaughter of the Telfer line — daughter of **Walter John Hookings (1881–1962)** and **Eva Agnes Farrow**, and therefore a great-granddaughter of **Elizabeth Hannah Telfer (1836–1916)**.\n\n**Born:** 27 October 1911 — Bridgewater, South Australia\n**Died:** 23 October 2000 (aged 88) — South Australia\n**Buried:** Centennial Park Cemetery, Pasadena, SA — Native Shrub Area, Section E, Plot 111\n**Spouse:** Francis James Bosanquet (1902–1989) — m. 1 January 1944, District of Talunga, SA\n\n##",
     "parents": [
+      "eva-agnes-farrow-1877",
       "walter-john-hookings-1881"
     ],
     "children": [],
-    "siblings": [],
+    "siblings": [
+      "donald-jack-hookings-1916"
+    ],
     "spouses": [
       "francis-bosanquet"
     ],

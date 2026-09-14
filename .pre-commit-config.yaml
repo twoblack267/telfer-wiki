@@ -26,3 +26,14 @@ repos:
         verbose: true
         stages: [manual]
         pass_filenames: false
+
+  # tw-2026-09-13-034: a regen re-imported RAW vault names into children/parents/spouses and
+  # every existing gate stayed green. This blocks a commit that has lost slug resolution.
+  - repo: local
+    hooks:
+      - id: validate-slug-shape
+        name: "Validate: relationship refs are slugs, not raw display names"
+        entry: node scripts/validate-slug-shape.mjs
+        language: system
+        files: ^src/data/people\.json$
+        pass_filenames: false

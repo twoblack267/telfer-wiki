@@ -28,7 +28,10 @@
     "children": [
       "james-telfer-1761"
     ],
-    "spouses": [],
+    "spouses": [
+      "john-telfer-alick-ralph",
+      "john-telfer-of-castleton-1731"
+    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -99,7 +102,9 @@
     "children": [
       "james-telfer-1761"
     ],
-    "spouses": [],
+    "spouses": [
+      "elspeth-young-1722"
+    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -138,7 +143,9 @@
       "jean-telfer-1764",
       "jenet-telfer-1770"
     ],
-    "spouses": [],
+    "spouses": [
+      "margaret-armstrong-1745"
+    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -208,12 +215,56 @@
     "children": [
       "adam-telfer-1771",
       "francis-telfer-1768",
+      "james-telfer-1761",
       "james-telfer-1762",
       "jean-telfer-1764",
       "jenet-telfer-1770"
     ],
-    "spouses": [],
+    "spouses": [
+      "james-telfer-of-sorbietrees-1740"
+    ],
     "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "John Alick Ralph Telfer",
+    "slug": "john-telfer-alick-ralph",
+    "first_name": "John",
+    "middle_name": "Alick Ralph",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "John Alick Ralph Telfer",
+    "title": "John Alick Ralph Telfer — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 1,
+    "is_living": false,
+    "body_markdown": "# John Alick Ralph Telfer\n\n**Lifespan:** born ? – died ? (dates unverified — left blank under the conflicting/unknown-dates rule)\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nJohn Alick Ralph Telfer was one of the six children of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]], born while the family lived at Warcowie before their 1923 move to Hill River (near Clare).\n\nHis birth and death dates are not yet verified, so they are left blank here rather than guessed.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Siblings** | [[Rita Joyce Telfer (1909–1990)]], [[Beatrice Sylvia Telfer (1911–1999)]], [[Douglas Ivan Telfer (1913–1993)]], [[Melville Bruce Telfer (1914–1997)]], [[Murray Keith Telfer (1920–2005)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — names John Alick Ralph as one of Albert & Beatrice's six children\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — confirms Albert & Beatrice's family at Clare (John Alick Ralph himself has no separate dated headstone listing / dates unverified) — accessed 10 Aug 2026",
+    "roles": [],
+    "tags": [
+      "person",
+      "telfer"
+    ],
+    "parents": [
+      "albert-telfer-1881",
+      "beatrice-telfer-1877"
+    ],
+    "children": [],
+    "spouses": [
+      "elspeth-young-1722"
+    ],
+    "siblings": [
+      "beatrice-telfer-1911",
+      "douglas-telfer-1913",
+      "melville-telfer-1914",
+      "murray-telfer-1920",
+      "rita-telfer-1909"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -274,16 +325,19 @@
     ],
     "parents": [
       "elspeth-young-1722",
-      "john-telfer-of-castleton-1731"
+      "john-telfer-of-castleton-1731",
+      "margaret-armstrong-1745"
     ],
     "children": [
       "adam-telfer-1799",
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "spouses": [
@@ -348,7 +402,9 @@
       "james-telfer-of-sorbietrees-1740",
       "margaret-armstrong-1745"
     ],
-    "children": [],
+    "children": [
+      "robert-telfer-1803"
+    ],
     "spouses": [],
     "siblings": [
       "adam-telfer-1771",
@@ -628,9 +684,11 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "spouses": [
@@ -786,10 +844,23 @@
       "telfer",
       "research-lead"
     ],
-    "parents": [],
+    "parents": [
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
+    ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "adam-telfer-1799",
+      "francis-telfer-1809",
+      "isobel-telfer-1798",
+      "james-telfer-1796",
+      "john-telfer-1805",
+      "margaret-telfer-1801",
+      "robert-telfer-1803",
+      "william-telfer-1802",
+      "william-telfer-1811"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -860,8 +931,10 @@
     "children": [
       "adam-telfer-1842",
       "elizabeth-beattie-telfer-1832",
+      "elizabeth-telfer-1868",
       "isabella-telfer-1837",
       "james-telfer-1829",
+      "jean-telfer-1840",
       "john-telfer-1840",
       "margaret-telfer-1829",
       "robert-telfer-1835"
@@ -873,9 +946,11 @@
       "adam-telfer-1799",
       "francis-telfer-1809",
       "isobel-telfer-1798",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "images": [],
@@ -924,44 +999,6 @@
     "person_photo": null
   },
   {
-    "id": "Andrew Telfer (1798)",
-    "slug": "andrew-telfer-1798",
-    "first_name": "Andrew",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1798,
-    "death_year": 1858,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1798",
-    "death_year_display": "1858",
-    "display_name": "Andrew Telfer",
-    "title": "Andrew Telfer (1798–1858)",
-    "lifespan": "1798 – 1858",
-    "generation": 3,
-    "is_living": false,
-    "body_markdown": "# Andrew Telfer (1798–1858)\n\n**Role:** NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager\n**Born:** 28 April 1798 — Oxnam Parish, Roxburghshire, Scotland\n**Died:** 11 March 1858 (aged 59) — buried Tamworth General Cemetery, New South Wales\n**Father:** [[William Telfer (shepherd)]]\n**Mother:** [[Janet Nichol]]\n**Brother:** [[William Telfer (1802–1850)]]\n**Spouse:** Mary Hayes (m. 10 May 1846, St Augustine's RC Church, Singleton NSW)\n\n## Life Summary\n\nAndrew Telfer was born 28 April 1798 in the Parish of Oxnam, Roxburghshire, Scotland, son of William Telfer, a shepherd, and Janet Nichol — four years older than his brother William (1802–1850). He signed on as an Indented Servant with the Australian Agricultural Company on 16 February 1825 and sailed to New South Wales on the \"Brothers\", arriving in Sydney Harbour two days after his brother William landed on the \"York\", both in November 1825.\n\nAndrew married **Mary Hayes** on 10 May 1846 at St. Augustine's Roman Catholic Church, Singleton, New South Wales. They had four children: William (b. 1847), Mary (b. 1849, married A.L. Bowden), Andrew (b. 1850) and Elizabeth \"Betsy\" (b. 1854, married A. Bolton). In 1851 he purchased Goonoo Goonoo Section J, Lots 3 and 12 (22 August 1851). He died on 11 March 1858 and was buried at Tamworth General Cemetery, where his headstone reads *\"Sacred to the Memory of ANDREW TELFER who departed this life March 11, 1858 ... Native of Roxburghshire, Scotland.\"*\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Self** | Andrew Telfer |\n| **Father** | [[William Telfer (shepherd)]] |\n| **Mother** | [[Janet Nichol]] |\n| **Brother** | [[William Telfer (1802–1850)]] |\n| **Sisters** | Helen Nichol (Telfer) Lillico; Mary Nichol (Telfer) Gibson |\n| **Spouse** | Mary Hayes (m. 10 May 1846, Singleton NSW) |\n| **Children** | William (b. 1847); Mary (m. A.L. Bowden, 1848–1933); Andrew (b. 1850); Elizabeth / Betsy (m. A. Bolton, 1854–1874) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 28 Apr 1798 | Born — Oxnam, Roxburghshire, Scotland |\n| 16 Feb 1825 | Signed AACo indenture |\n| Nov 1825 | Arrived Sydney Harbour on the \"Brothers\" |\n| 10 May 1846 | Married Mary Hayes — St Augustine's RC Church, Singleton NSW |\n| 1847–1854 | Children William, Mary, Andrew, Elizabeth born |\n| 22 Aug 1851 | Purchased Goonoo Goonoo Sec J Lots 3 & 12 |\n| 11 Mar 1858 | Died (aged 59) — buried Tamworth General Cemetery |\n\n## Sources\n\n- **Find A Grave:** [Andrew Nichol Telfer (1798–1858) — memorial 48579836](https://www.findagrave.com/memorial/48579836/andrew-telfer) — accessed 6 Sep 2026 (born 28 Apr 1798; died 11 Mar 1858; buried Tamworth General Cem; m. Mary Hayes 1846 Singleton; children William, Mary Bowden, Andrew, Elizabeth Bolton; headstone transcription)\n- **Book:** *From the Borders to the Bush* by Donald Telfer (1986), p.370 & pp.364–371 — AACo indentured-servant journey, brother of William, land purchase, adult fates\n- **ANU / Australian Agricultural Company records** — AACo indentured-servant record (brother of Warrah manager William)\n- **Geni profile (Andrew-Nichol-Telfer)** — compiled tree corroborating dates/children (secondary group)",
-    "roles": [
-      "NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager"
-    ],
-    "tags": [
-      "family",
-      "ancestor",
-      "telfer"
-    ],
-    "parents": [
-      "janet-nichol",
-      "william-telfer-shepherd"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "william-telfer-1802"
-    ],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Isobel Telfer (1798)",
     "slug": "isobel-telfer-1798",
     "first_name": "Isobel",
@@ -998,9 +1035,11 @@
       "adam-telfer-1799",
       "francis-telfer-1809",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "images": [],
@@ -1043,9 +1082,11 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "images": [],
@@ -1089,8 +1130,10 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "images": [],
@@ -1198,16 +1241,25 @@
       "person"
     ],
     "parents": [
-      "janet-nichol",
-      "william-telfer-shepherd"
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
     ],
     "children": [
       "edward-telfer",
+      "elizabeth-telfer-1868",
       "william-telfer-1841"
     ],
     "spouses": [],
     "siblings": [
-      "andrew-telfer-1798"
+      "adam-telfer-1799",
+      "andrew-telfer-1798",
+      "francis-telfer-1809",
+      "isobel-telfer-1798",
+      "james-telfer-1796",
+      "john-telfer-1791",
+      "john-telfer-1805",
+      "margaret-telfer-1801",
+      "william-telfer-1811"
     ],
     "images": [],
     "person_photo": null
@@ -1242,9 +1294,15 @@
     ],
     "parents": [
       "elizabeth-telfer-1774",
-      "james-telfer-1761"
+      "james-telfer-1761",
+      "james-telfer-1762"
     ],
-    "children": [],
+    "children": [
+      "elizabeth-telfer-1868",
+      "james-telfer-1829",
+      "jean-telfer-1840",
+      "john-telfer-1840"
+    ],
     "spouses": [
       "elizabeth-oliver-1807"
     ],
@@ -1253,6 +1311,7 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "william-telfer-1811"
@@ -1290,7 +1349,9 @@
       "brick-wall"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "sophia-baker-1829"
+    ],
     "spouses": [
       "joseph-march-1797"
     ],
@@ -1336,8 +1397,10 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "images": [],
@@ -1416,6 +1479,7 @@
       "elizabeth-hannah-telfer-1836",
       "esther-jane-telfer-1834",
       "george-telfer-1850",
+      "james-telfer-1829",
       "james-telfer-1832",
       "jean-telfer-1840",
       "john-telfer-1847",
@@ -1430,9 +1494,11 @@
       "adam-telfer-1799",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "images": [
@@ -1532,6 +1598,7 @@
     "children": [
       "elizabeth-hannah-telfer-1836",
       "esther-jane-telfer-1834",
+      "james-telfer-1829",
       "james-telfer-1832"
     ],
     "spouses": [
@@ -1577,7 +1644,10 @@
     ],
     "parents": [],
     "children": [
-      "john-telfer-1847"
+      "george-telfer-1850",
+      "john-telfer-1840",
+      "john-telfer-1847",
+      "margaret-telfer-1849"
     ],
     "spouses": [
       "francis-telfer-1809"
@@ -1643,9 +1713,11 @@
       "francis-telfer-1809",
       "isobel-telfer-1798",
       "james-telfer-1796",
+      "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
-      "robert-telfer-1803"
+      "robert-telfer-1803",
+      "william-telfer-1802"
     ],
     "images": [],
     "person_photo": null
@@ -1714,7 +1786,9 @@
       "telfer",
       "research-lead"
     ],
-    "parents": [],
+    "parents": [
+      "thomas-telfer"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -2076,6 +2150,7 @@
     ],
     "parents": [],
     "children": [
+      "adam-dillon-1870",
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
@@ -2174,22 +2249,27 @@
     ],
     "parents": [
       "elizabeth-beattie-1802",
-      "james-telfer-1796"
+      "francis-telfer-1809",
+      "james-telfer-1796",
+      "jean-murray-1810",
+      "robert-telfer-1803"
     ],
     "children": [
       "james-telfer-1858",
       "janet-welsh-telfer-1858",
-      "john-koppio-telfer-1862"
+      "john-koppio-telfer-1862",
+      "margaret-telfer-1849"
     ],
     "spouses": [
       "janet-welsh-1826"
     ],
     "siblings": [
-      "adam-telfer-1842",
       "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
+      "elizabeth-hannah-telfer-1836",
+      "esther-jane-telfer-1834",
       "isabella-telfer-1837",
-      "john-telfer-1840",
+      "james-telfer-1832",
       "margaret-telfer-1829",
       "robert-telfer-1835"
     ],
@@ -2273,10 +2353,19 @@
       "australian-immigrant"
     ],
     "parents": [
-      "joseph-march-1797"
+      "joseph-march-1797",
+      "sophia-march-1803"
     ],
     "children": [
-      "hannah-baker-1855"
+      "alfred-baker-1861",
+      "emeline-couzens-1857",
+      "fanny-baker-1863",
+      "hannah-baker-1855",
+      "james-baker-1859",
+      "phineas-baker-1870",
+      "sophia-harriett-ridgway-1868",
+      "walter-baker-1865",
+      "william-baker-1853"
     ],
     "spouses": [
       "william-john-baker-1831"
@@ -2314,7 +2403,14 @@
     ],
     "parents": [],
     "children": [
-      "hannah-baker-1855"
+      "alfred-baker-1861",
+      "emeline-couzens-1857",
+      "fanny-baker-1863",
+      "hannah-baker-1855",
+      "james-baker-1859",
+      "phineas-baker-1870",
+      "walter-baker-1865",
+      "william-baker-1853"
     ],
     "spouses": [
       "sophia-baker-1829"
@@ -2419,6 +2515,7 @@
       "elizabeth-hannah-telfer-1836",
       "esther-jane-telfer-1834",
       "george-telfer-1850",
+      "james-telfer-1829",
       "jean-telfer-1840"
     ],
     "images": [],
@@ -2510,6 +2607,7 @@
     "siblings": [
       "elizabeth-hannah-telfer-1836",
       "george-telfer-1850",
+      "james-telfer-1829",
       "james-telfer-1832"
     ],
     "images": [
@@ -2572,8 +2670,11 @@
     ],
     "children": [
       "edith-mary-kathleen-telfer",
+      "elizabeth-telfer-1868",
+      "francis-telfer-1875",
       "helen-telfer",
-      "james-robert-telfer-1866"
+      "james-robert-telfer-1866",
+      "robert-telfer-1886"
     ],
     "spouses": [
       "susan-telfer-1844"
@@ -2701,6 +2802,7 @@
     "siblings": [
       "esther-jane-telfer-1834",
       "george-telfer-1850",
+      "james-telfer-1829",
       "james-telfer-1832"
     ],
     "images": [],
@@ -2860,7 +2962,9 @@
     ],
     "parents": [
       "dinah-flavel-1821",
-      "francis-telfer-1809"
+      "francis-telfer-1809",
+      "james-telfer-1796",
+      "robert-telfer-1803"
     ],
     "children": [
       "dinah-flavel-paynter-1869",
@@ -2908,7 +3012,9 @@
     ],
     "parents": [
       "elizabeth-beattie-1802",
-      "james-telfer-1796"
+      "james-telfer-1796",
+      "margaret-telfer-1810",
+      "robert-telfer-1803"
     ],
     "children": [
       "alan-telfer-1890",
@@ -2919,6 +3025,7 @@
       "elizabeth-telfer-1868",
       "eric-john-telfer",
       "isabella-telfer-1880",
+      "james-telfer-1858",
       "james-telfer-1866",
       "john-telfer-1882",
       "maria-clara-telfer-1878",
@@ -2933,11 +3040,9 @@
       "martha-henstridge-1854"
     ],
     "siblings": [
-      "adam-telfer-1842",
       "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
-      "james-telfer-1829",
       "margaret-telfer-1829",
       "robert-telfer-1835"
     ],
@@ -2972,11 +3077,49 @@
     ],
     "parents": [],
     "children": [
-      "james-telfer-1866"
+      "elizabeth-telfer-1868",
+      "james-telfer-1858",
+      "james-telfer-1866",
+      "martha-cameron-1873",
+      "susan-telfer-1871"
     ],
     "spouses": [
       "john-telfer-1840"
     ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "William Telfer (1841)",
+    "slug": "william-telfer-1841",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1841,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1841",
+    "death_year_display": "?",
+    "display_name": "William Telfer",
+    "title": "William Telfer — Family & Biography",
+    "lifespan": "1841 – ?",
+    "generation": 4,
+    "is_living": false,
+    "body_markdown": "# William Telfer (1841–?)\n\n**Born:** 1841 — New South Wales, Australia\n**Father:** [[William Telfer (1802–1850)]]\n**Mother:** Margaret (surname unknown)\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370",
+    "roles": [],
+    "tags": [
+      "person",
+      "telfer",
+      "australian",
+      "stub"
+    ],
+    "parents": [
+      "william-telfer-1802"
+    ],
+    "children": [],
+    "spouses": [],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -3014,6 +3157,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -3031,8 +3175,6 @@
       "agnes-telfer-1848",
       "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
-      "james-telfer-1829",
-      "john-telfer-1840",
       "margaret-telfer-1829",
       "robert-telfer-1835"
     ],
@@ -3076,10 +3218,14 @@
       "martha-masters-1814"
     ],
     "children": [
+      "albert-telfer-1881",
       "bertha-telfer",
+      "edwin-telfer-1887",
       "ernest-telfer-1878",
       "francis-telfer-1875",
-      "john-telfer-1877"
+      "john-telfer-1877",
+      "walter-telfer-1884",
+      "william-telfer-1880"
     ],
     "spouses": [
       "john-telfer-1847"
@@ -3195,7 +3341,8 @@
       "caroline-telfer-1842"
     ],
     "siblings": [
-      "george-telfer-1850"
+      "george-telfer-1850",
+      "margaret-telfer-1849"
     ],
     "images": [
       {
@@ -3233,12 +3380,15 @@
       "telfer"
     ],
     "parents": [
-      "francis-telfer-1809"
+      "francis-telfer-1809",
+      "james-telfer-1829",
+      "margaret-telfer-1810"
     ],
     "children": [
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -3253,7 +3403,8 @@
       "adam-telfer-1842"
     ],
     "siblings": [
-      "george-telfer-1850"
+      "george-telfer-1850",
+      "john-telfer-1847"
     ],
     "images": [],
     "person_photo": null
@@ -3286,7 +3437,8 @@
       "telfer"
     ],
     "parents": [
-      "francis-telfer-1809"
+      "francis-telfer-1809",
+      "margaret-telfer-1810"
     ],
     "children": [
       "lesley-thomas-telfer-1891",
@@ -3335,7 +3487,17 @@
       "in-law"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
+    ],
     "spouses": [
       "john-telfer-1840"
     ],
@@ -3376,8 +3538,10 @@
       "ann-telfer",
       "jessie-telfer",
       "johnnie-telfer",
+      "margaret-telfer-1869",
       "peter-telfer",
-      "robina-telfer"
+      "robina-telfer",
+      "william-telfer-1880"
     ],
     "spouses": [
       "john-telfer-1847"
@@ -3421,6 +3585,125 @@
     ],
     "spouses": [
       "george-telfer-1850"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Elizabeth Telfer (1868)",
+    "slug": "elizabeth-telfer-1868",
+    "first_name": "Elizabeth",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1868,
+    "death_year": 1950,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1868",
+    "death_year_display": "1950",
+    "display_name": "Elizabeth Telfer",
+    "title": "Elizabeth Telfer (1868–1950) — Family & Biography",
+    "lifespan": "1868 – 1950",
+    "generation": 4,
+    "is_living": false,
+    "body_markdown": "# Elizabeth Telfer (1868–1950)\n\n**Born:** 2 Oct 1868, Black Heath, Tungkillo SA | **Died:** 11 Oct 1950, Gumeracha SA (age 82) | **Mother:** Martha Allen | **Father:** [[John Telfer (1840–1913)]] | **Spouse:** Edwin Ernest Clarke (m. 6 Jul 1899)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Elizabeth Telfer (m. Clarke) |\n| Father | [[John Telfer (1840–1913)]] |\n| Mother | [[Martha Allen (1840–1876)]] (m. 1865–1876) |\n| Spouse | [[Edwin Ernest Clarke]] |\n| Brother | [[James Telfer (1866–1946)]] |\n| Sister | [[Susan Telfer (1871–1952)]] |\n| Sister | [[Martha Telfer Cameron (1873–1964)]] |\n\n## Life Summary\n\nElizabeth was the first daughter and second child of John Telfer and [[Martha Allen (1840–1876)]]. Born at Black Heath, Tungkillo, South Australia on 2 October 1868, she married Edwin Ernest Clarke on 6 July 1899 and lived to 82 years of age, passing on 11 October 1950 at Gumeracha, South Australia. Her marriage into the Clarke family represents the Telfer lineage branching into parallel pastoral families in the South East region.\n\n## Family Stories\n\nElizabeth Telfer was the second child and eldest daughter of John and Martha Telfer, born on 2 October 1868. She married a Mr. Clarke (later identified as Edwin Ernest Clarke) and the couple settled into their life together, though they did not have any children. Elizabeth lived to the age of 82, passing away at Gumeracha in 1950 — the longest-lived of the four children from John Telfer's first marriage.\n\n*(From the Borders to the Bush, pp.236–237)*\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 2 Oct 1868 | Born at Black Heath, Tungkillo, South Australia |\n| 1871 | Birth of sister Susan |\n| 1873 | Birth of sister Martha |\n| 9 Mar 1876 | Death of mother [[Martha Allen (1840–1876)]] at German Flat, Mount Gambier |\n| 6 Jul 1899 | Married Edwin Ernest Clarke |\n| 11 Oct 1950 | Died at Gumeracha, South Australia (age 82) |\n\n## Sources\n\n- ✅ Approved Deep Research Report: \"The Descendants of John Telfer (1841–1913) of Tantanoola\" (Skippy review 29 May 2026) — via WikiTree, Trove cross-referencing\n- [[John Telfer (1840–1913)]] vault profile — children table",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "adam-telfer-1842",
+      "john-telfer-1840",
+      "margaret-telfer-1849",
+      "martha-allen-1840",
+      "robert-telfer-1835"
+    ],
+    "children": [],
+    "spouses": [
+      "edwin-ernest-clarke"
+    ],
+    "siblings": [
+      "adelaide-elsie-pearl-telfer-1889",
+      "clara-blanche-telfer-1883",
+      "effie-olive-telfer-1886",
+      "elizabeth-beattie-telfer-1871",
+      "eva-rowena-telfer-1885",
+      "francis-adam-telfer-1875",
+      "hazel-rose-telfer-1891",
+      "herbert-dougal-telfer-1881",
+      "james-edgerston-telfer-1877",
+      "james-telfer-1866",
+      "lillian-may-telfer-1872",
+      "martha-cameron-1873",
+      "susan-telfer-1871",
+      "vernon-ray-st-clair-telfer-1879",
+      "violet-hope-telfer-1883"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Edward Telfer",
+    "slug": "edward-telfer",
+    "first_name": "Edward",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "Edward Telfer",
+    "title": "Edward Telfer",
+    "lifespan": "? – living",
+    "generation": 4,
+    "is_living": true,
+    "body_markdown": "# Edward Telfer",
+    "roles": [],
+    "tags": [
+      "family",
+      "ancestor"
+    ],
+    "parents": [
+      "william-telfer-1802"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Edwin Ernest Clarke",
+    "slug": "edwin-ernest-clarke",
+    "first_name": "Edwin",
+    "middle_name": null,
+    "last_name": "Ernest Clarke",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Edwin Ernest Clarke",
+    "title": "Edwin Ernest Clarke",
+    "lifespan": "? – ?",
+    "generation": 4,
+    "is_living": false,
+    "body_markdown": "# Edwin Ernest Clarke",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "elizabeth-telfer-1868"
     ],
     "siblings": [],
     "images": [],
@@ -3701,40 +3984,6 @@
     "person_photo": null
   },
   {
-    "id": "William Telfer (1841)",
-    "slug": "william-telfer-1841",
-    "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1841,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1841",
-    "death_year_display": "?",
-    "display_name": "William Telfer",
-    "title": "William Telfer — Family & Biography",
-    "lifespan": "1841 – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# William Telfer (1841–?)\n\n**Born:** 1841 — New South Wales, Australia\n**Father:** [[William Telfer (1802–1850)]]\n**Mother:** Margaret (surname unknown)\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370",
-    "roles": [],
-    "tags": [
-      "person",
-      "telfer",
-      "australian",
-      "stub"
-    ],
-    "parents": [
-      "william-telfer-1802"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "George Edward Masters (1844)",
     "slug": "george-masters-1844",
     "first_name": "George",
@@ -3997,7 +4246,9 @@
       "janet-stevenson",
       "marion-vida"
     ],
-    "spouses": [],
+    "spouses": [
+      "caroline-hosking-1851"
+    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -4094,7 +4345,9 @@
       "janet-stevenson",
       "marion-vida"
     ],
-    "spouses": [],
+    "spouses": [
+      "robert-dunlop-lawrie-1850"
+    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -4297,7 +4550,10 @@
       "ancestor",
       "baker"
     ],
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -4444,7 +4700,10 @@
       "ancestor",
       "baker"
     ],
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -4538,15 +4797,20 @@
     ],
     "parents": [
       "james-telfer-1829",
-      "janet-welsh-1826"
+      "janet-welsh-1826",
+      "john-telfer-1840",
+      "martha-allen-1840"
     ],
     "children": [],
     "spouses": [
       "frances-margaret-oswald-1861"
     ],
     "siblings": [
+      "james-telfer-1866",
       "janet-welsh-telfer-1858",
-      "john-koppio-telfer-1862"
+      "john-koppio-telfer-1862",
+      "martha-cameron-1873",
+      "susan-telfer-1871"
     ],
     "images": [
       {
@@ -4749,7 +5013,10 @@
       "ancestor",
       "baker"
     ],
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -4870,7 +5137,10 @@
       "ancestor",
       "baker"
     ],
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -5124,6 +5394,7 @@
     "parents": [],
     "children": [
       "ethel-edith-telfer-1894",
+      "jean-telfer-1910",
       "leslie-robert-telfer"
     ],
     "spouses": [
@@ -5244,7 +5515,10 @@
       "ancestor",
       "baker"
     ],
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -5481,7 +5755,10 @@
       "ancestor",
       "baker"
     ],
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -5613,7 +5890,10 @@
     ],
     "siblings": [
       "clara-blanche-telfer-1883",
-      "martha-cameron-1873"
+      "elizabeth-telfer-1868",
+      "james-telfer-1858",
+      "martha-cameron-1873",
+      "susan-telfer-1871"
     ],
     "images": [],
     "person_photo": null
@@ -5708,43 +5988,6 @@
       "jane-murray-farrow-1857",
       "john-farrow",
       "mary-bayes-farrow-1875"
-    ],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Elizabeth Telfer (1868)",
-    "slug": "elizabeth-telfer-1868",
-    "first_name": "Elizabeth",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1868,
-    "death_year": 1950,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1868",
-    "death_year_display": "1950",
-    "display_name": "Elizabeth Telfer",
-    "title": "Elizabeth Telfer (1868–1950) — Family & Biography",
-    "lifespan": "1868 – 1950",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Elizabeth Telfer (1868–1950)\n\n**Born:** 2 Oct 1868, Black Heath, Tungkillo SA | **Died:** 11 Oct 1950, Gumeracha SA (age 82) | **Mother:** Martha Allen | **Father:** [[John Telfer (1840–1913)]] | **Spouse:** Edwin Ernest Clarke (m. 6 Jul 1899)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Elizabeth Telfer (m. Clarke) |\n| Father | [[John Telfer (1840–1913)]] |\n| Mother | [[Martha Allen (1840–1876)]] (m. 1865–1876) |\n| Spouse | [[Edwin Ernest Clarke]] |\n| Brother | [[James Telfer (1866–1946)]] |\n| Sister | [[Susan Telfer (1871–1952)]] |\n| Sister | [[Martha Telfer Cameron (1873–1964)]] |\n\n## Life Summary\n\nElizabeth was the first daughter and second child of John Telfer and [[Martha Allen (1840–1876)]]. Born at Black Heath, Tungkillo, South Australia on 2 October 1868, she married Edwin Ernest Clarke on 6 July 1899 and lived to 82 years of age, passing on 11 October 1950 at Gumeracha, South Australia. Her marriage into the Clarke family represents the Telfer lineage branching into parallel pastoral families in the South East region.\n\n## Family Stories\n\nElizabeth Telfer was the second child and eldest daughter of John and Martha Telfer, born on 2 October 1868. She married a Mr. Clarke (later identified as Edwin Ernest Clarke) and the couple settled into their life together, though they did not have any children. Elizabeth lived to the age of 82, passing away at Gumeracha in 1950 — the longest-lived of the four children from John Telfer's first marriage.\n\n*(From the Borders to the Bush, pp.236–237)*\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 2 Oct 1868 | Born at Black Heath, Tungkillo, South Australia |\n| 1871 | Birth of sister Susan |\n| 1873 | Birth of sister Martha |\n| 9 Mar 1876 | Death of mother [[Martha Allen (1840–1876)]] at German Flat, Mount Gambier |\n| 6 Jul 1899 | Married Edwin Ernest Clarke |\n| 11 Oct 1950 | Died at Gumeracha, South Australia (age 82) |\n\n## Sources\n\n- ✅ Approved Deep Research Report: \"The Descendants of John Telfer (1841–1913) of Tantanoola\" (Skippy review 29 May 2026) — via WikiTree, Trove cross-referencing\n- [[John Telfer (1840–1913)]] vault profile — children table",
-    "roles": [],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [
-      "john-telfer-1840"
-    ],
-    "children": [],
-    "spouses": [
-      "edwin-ernest-clarke"
-    ],
-    "siblings": [
-      "clara-blanche-telfer-1883"
     ],
     "images": [],
     "person_photo": null
@@ -5934,6 +6177,38 @@
     "person_photo": null
   },
   {
+    "id": "Adam Dillon (1870)",
+    "slug": "adam-dillon-1870",
+    "first_name": "Adam",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1870,
+    "death_year": 1948,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1870",
+    "death_year_display": "1948",
+    "display_name": "Adam Dillon",
+    "title": "Adam Dillon",
+    "lifespan": "1870 – 1948",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Adam Dillon\n\n## Lifespan\n\n**Born:** 16 January 1870 — Kersbrook, South Australia\n**Died:** 1 May 1948 — South Payneham, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008. **Independently corroborated (verified 26 Aug 2026):** identifies Adam **Telfer** Dillon, b. 1870, youngest son of Elizabeth Beattie Telfer (1834–1896) & John Charles Dillon (1827–1906) — MyHeritage record confirms death 1 May 1948 aged 78, buried Centennial Park, Pasadena SA; FamilySearch sibling tree (KFG7-GMN) confirms the family placement. Exact birth date (16 Jan) and death address (South Payneham) remain book-sourced.",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "john-dillon-1827"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Esther Telfer Smith (1870)",
     "slug": "esther-telfer-smith-1870",
     "first_name": "Esther Telfer",
@@ -6017,6 +6292,7 @@
     "siblings": [
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -6139,14 +6415,19 @@
       "person"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-allen-1840"
     ],
     "children": [],
     "spouses": [
       "robert-agnew"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "clara-blanche-telfer-1883",
+      "elizabeth-telfer-1868",
+      "james-telfer-1858",
+      "james-telfer-1866",
+      "martha-cameron-1873"
     ],
     "images": [],
     "person_photo": null
@@ -6231,6 +6512,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -6278,7 +6560,8 @@
       "ancestor"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-allen-1840"
     ],
     "children": [
       "john-lindsay-cameron-1907",
@@ -6289,7 +6572,10 @@
     ],
     "siblings": [
       "clara-blanche-telfer-1883",
-      "james-telfer-1866"
+      "elizabeth-telfer-1868",
+      "james-telfer-1858",
+      "james-telfer-1866",
+      "susan-telfer-1871"
     ],
     "images": [],
     "person_photo": null
@@ -6366,12 +6652,21 @@
       "person"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "images": [],
     "person_photo": null
@@ -6411,6 +6706,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "hazel-rose-telfer-1891",
       "herbert-dougal-telfer-1881",
@@ -6451,7 +6747,8 @@
     ],
     "parents": [
       "caroline-telfer-1842",
-      "john-telfer-1847"
+      "john-telfer-1847",
+      "robert-telfer-1835"
     ],
     "children": [
       "clarice-may-telfer-1911",
@@ -6466,12 +6763,16 @@
       "ruth-telfer-1931"
     ],
     "spouses": [
-      "amy-telfer"
+      "amy-telfer",
+      "amy-telfer-1884"
     ],
     "siblings": [
+      "albert-telfer-1881",
       "bertha-telfer",
+      "edwin-telfer-1887",
       "ernest-telfer-1878",
       "john-telfer-1877",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "images": [
@@ -6670,7 +6971,8 @@
       "elizabeth-hannah-telfer-1836"
     ],
     "children": [
-      "donald-jack-hookings-1916"
+      "donald-jack-hookings-1916",
+      "laurel-bosanquet"
     ],
     "spouses": [
       "walter-john-hookings-1881"
@@ -6725,6 +7027,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -6770,9 +7073,12 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "albert-telfer-1881",
       "bertha-telfer",
+      "edwin-telfer-1887",
       "ernest-telfer-1878",
       "francis-telfer-1875",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "images": [],
@@ -6804,7 +7110,8 @@
       "ancestor"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [
       "floris-telfer-1904",
@@ -6819,7 +7126,15 @@
       "julia-matilda-seebohm-1876"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "robert-telfer-1886"
     ],
     "images": [],
     "person_photo": null
@@ -6902,9 +7217,12 @@
       "florence-nicholas-~1885"
     ],
     "siblings": [
+      "albert-telfer-1881",
       "bertha-telfer",
+      "edwin-telfer-1887",
       "francis-telfer-1875",
       "john-telfer-1877",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "images": [
@@ -6992,6 +7310,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -7028,7 +7347,9 @@
       "non-telfer"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "vida-telfer-1919"
+    ],
     "spouses": [
       "james-telfer-1866"
     ],
@@ -7068,7 +7389,8 @@
       "person"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [
       "trevor-andrew-thomson-1914"
@@ -7077,7 +7399,15 @@
       "alexander-brown-thomson"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "images": [],
     "person_photo": null
@@ -7110,12 +7440,17 @@
       "ancestor"
     ],
     "parents": [
+      "ann-taylor-1856",
+      "caroline-telfer-1842",
       "john-telfer-1847"
     ],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "janet-nichol"
+    ],
     "siblings": [
       "albert-telfer-1881",
+      "bertha-telfer",
       "edwin-telfer-1887",
       "ernest-telfer-1878",
       "francis-telfer-1875",
@@ -7153,6 +7488,7 @@
       "descendant"
     ],
     "parents": [
+      "caroline-telfer-1842",
       "john-telfer-1847"
     ],
     "children": [
@@ -7167,6 +7503,12 @@
       "beatrice-telfer-1877"
     ],
     "siblings": [
+      "bertha-telfer",
+      "edwin-telfer-1887",
+      "ernest-telfer-1878",
+      "francis-telfer-1875",
+      "john-telfer-1877",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "images": [],
@@ -7206,6 +7548,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -7286,12 +7629,21 @@
       "tree"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "images": [],
     "person_photo": null
@@ -7378,6 +7730,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -7389,6 +7742,82 @@
     ],
     "images": [],
     "person_photo": null
+  },
+  {
+    "id": "Amy Ellen Telfer (1884)",
+    "slug": "amy-telfer-1884",
+    "first_name": "Amy",
+    "middle_name": "Ellen",
+    "last_name": "Telfer",
+    "birth_year": 1884,
+    "death_year": 1951,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1884",
+    "death_year_display": "1951",
+    "display_name": "Amy Ellen Telfer",
+    "title": "Amy Ellen Telfer (née Provis) — Family & Biography",
+    "lifespan": "1884 – 1951",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Amy Ellen Telfer (née Provis)\n\n**Role:** Wife of Francis Charles 'Charlie' Telfer\n**Also known as:** Possibly \"Amy May\" (family nickname)\n**Born:** 1884 — Stokes, South Australia\n**Died:** October 1951 (aged ~67)\n**Birthplace:** Stokes, South Australia\n**Grandson:** [[Murray John Telfer (1924–2009)]]\n**Great-grandson:** [[Timothy Neil Telfer (1959–?)]]\n**Great-great-grandson:** [[Mark Telfer (1877–1946)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Emily Ellen Thorpe]] |\n| **Father** | [[George Provis]] |\n| **Spouse** | [[Francis Charles Telfer (1875–1954)]] (m. 6 Apr 1909) |\n| **Children** | [[Francis Kelson Telfer (1910–1987)|Francis Kelson Telfer]], [[Clarice May Telfer (1911–1997)]], Emily Amelia Barton, Ethel Jean McMurtrie, Gladys Merle Pedler, Doris Elma Rowe, [[Edwin Roy Telfer (1921–2009)|Edwin Roy Telfer]], [[Reginald Masters Telfer (1922–2011)|Reginald Masters Telfer]], [[Murray John Telfer (1924–2009)]], [[Ruth Telfer (1931–?)|Ruth Telfer]] |\n| **Siblings** | Ella May Plew, Cecil Sidney Provis, Percy Valentine Provis, Alice Provis, Esther Amelia Lawrie, Janetta Ruth Lawrie, Gregory George Provis, Herbert Spencer Provis, Gertrude Emily Olston (+ others) |\n| **Grandparents** | Charles Robert Thorpe (1832–1893) & Amelia White (1833–1916); Josiah Tarry Provis & Janetta Rowe |\n\n---\n\n## Photos\n\n![Francis Charles 'Charlie' Telfer (aged 33) and Amy Ellen Provis (aged 25) on their wedding day, 6 April 1909, at Stokes, South Australia — studio portrait in sepia tones. Charlie in a dark three-piece suit with handlebar moustache, white pocket square, gold watch chain and floral boutonnière; Amy in an elaborate white lace gown with high ruffled collar, voluminous sleeves and floral headpiece, holding a small bouquet, against a painted tropical-foliage backdrop](images/people/francis-charles-amy-telfer-wedding-1909.jpg)\n*Francis Charles 'Charlie' Telfer (aged 33) and Amy Ellen Provis (aged 25) on their wedding day, 6 April 1909, at Stokes, South Australia — studio portrait in sepia tones. Charlie in a dark three-piece suit with handlebar moustache, white pocket square, gold watch chain and floral boutonnière; Amy in an elaborate white lace gown with high ruffled collar, voluminous sleeves and floral headpiece, holding a small bouquet, against a painted tropical-foliage backdrop*\n\n![Telfer family reunion, circa 1920 — a large multi-generational group portrait of about 25 people. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated centre with white beard and lace collar; their children and grandchildren stand around them in a studio setting with textured wallpaper backdrop on the left and dark curtain on the right](images/people/telfer-family-reunion-c1920.jpg)\n*Telfer family reunion, circa 1920 — a large multi-generational group portrait of about 25 people. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated centre with white beard and lace collar; their children and grandchildren stand around them in a studio setting with textured wallpaper backdrop on the left and dark curtain on the right*\n\n*Francis Charles 'Charlie' Telfer (aged 33) and Amy Ellen Provis (aged 25) on their wedding day, 6 April 1909, at Stokes, South Australia. Studio portrait in sepia tones. Charlie in dark three-piece suit with handlebar moustache, white pocket square, gold watch chain, and floral boutonnière. Amy in elaborate white lace gown with high ruffled collar, voluminous sleeves, and floral headpiece, holding a small bouquet. Painted tropical foliage backdrop and heavy draped curtain — classic studio setting of the era.*\n\n*Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. Amy Ellen Telfer (1884–1951, aged ~36) standing among the adults with her husband Francis Charles 'Charlie' Telfer (1875–1954, aged ~45), their children and grandchildren. Her parents-in-law John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated center with white beard and lace collar respectively. Studio setting with textured wallpaper backdrop on left, dark curtain on right.*\n\n> ### Portrait\n>\n> ![Amy ellen telfer](images/people/amy-ellen-telfer.jpg)\n>\n> ### Grave — Enfield Memorial Park, Clearview SA\n>\n> ![Amy ellen telfer grave](images/people/amy-ellen-telfer-grave.jpg)\n\n---\n\n## Family Stories\n\n### A Christmas Gift — Ernie's Book\n\nCharlie's brother Ernie (Ernest John Telfer) wrote a book about his missionary work titled *Amongst Australian Aborigines*. A copy was given to Charlie and Amy as a Christmas gift, inscribed \"Charlie & Amy, with love & Christmas wishes, from Eva.\" The book later passed to their son Murray and his wife Shirley at Ungarra. *(Inscription in front of \"Amongst Australian Aborigines\" by E.J. Telfer, 1939)*\n\nAmy Ellen Provis married Francis Charles Telfer at Stokes in 1909 and together they raised ten children on a pioneering farm at Ungarra on the Eyre Peninsula. Life was brutally hard for her — no electricity, no running water, no refrigeration, no washing machine. She cooked on a wood stove, baked all the family's bread using homemade yeast made from hops, potatoes, flour and water, and made butter that she had to drive 18 miles into Tumby Bay in a sulky with one horse before the heat of the day. The money from the butter bought whatever groceries she could manage. She did the family laundry with a copper that had to be stoked with wood, two tubs, a scrubbing board and homemade soap, and ironed with a box iron full of hot coals. She carried water from the sheds in four-gallon kerosene tin buckets for all household needs. With a baby every couple of years, she somehow kept the household running through it all. Her daughters remembered that there was no entertainment as such in those days, \"but plenty of hard work and just enough rest to keep us going.\" *(From the Borders to the Bush, pp.130–131)*\n\nOn **6 April 1909**, she married [[Francis Charles Telfer (1875–1954)]] at Stokes, South Australia. The wedding was reportedly covered by a local newspaper article — \"Family Wedding at Jamestown\" — which mentions the celebration.\n\nTogether they raised **ten children** on family farms, moving from the mid-north toward the Eyre Peninsula over the decades. Amy passed away in October 1951, predeceasing her husband Francis by about three years.\n\nHer name appears in Murray John Telfer's profile as \"Amy May\" in some vault records, but her registered birth name is **Amy Ellen Provis**.\n\n---\n\n## Parents: The Provis & Thorpe Families\n\n**George Provis** (Amy's father) — married **Emily Ellen Thorpe** on 15 June 1882. Emily's parents were **Charles Robert Thorpe** (1832–1893) and **Amelia White** (1833–1916).\n\n---\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 1884 | Born at Stokes, SA |\n| 15 Jun 1882 | Parents George & Emily married |\n| 6 Apr 1909 | Married [[Francis Charles Telfer (1875–1954)]] at Stokes, SA |\n| ~1910–1933 | Ten children born |\n| Oct 1951 | Died (aged ~67) |\n\n---\n\n## Sources\n\n- FamilySearch: [Amy Ellen Provis (9DHC-5K8)](https://ancestors.familysearch.org/en/9DHC-5K8/amy-ellen-provis-1884-1951) — confirms marriage to Francis Charles Telfer\n- WikiTree: [Amy Ellen (Provis) Telfer (1884–1951)](https://www.wikitree.com/wiki/Provis-64) — confirms parents, siblings\n- WikiTree: [Emily Ellen Thorpe (Thorpe-3345)](https://www.wikitree.com/wiki/Thorpe-3345) — Emily's parents Charles Robert Thorpe & Amelia White\n- Geni: [Francis Charles Telfer (1875–1954)](https://www.geni.com/people/Francis-Telfer/6000000037272985511) — confirms marriage\n- Find a Grave: [Amy Ellen Provis Telfer (1884–1951)](https://www.findagrave.com/memorial/197648124/amy-ellen-telfer) — buried Enfield Memorial Park (Rose Garden H8) — 1 headstone photo",
+    "roles": [
+      "Wife of Francis Charles 'Charlie' Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "emily-ellen-thorpe",
+      "george-provis"
+    ],
+    "children": [
+      "clarice-may-telfer-1911",
+      "doris-elma-telfer-1919",
+      "edwin-telfer-1921",
+      "emily-amelia-telfer-1913",
+      "ethel-jean-telfer-1915",
+      "francis-telfer-1910",
+      "gladys-merle-telfer-1917",
+      "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
+      "ruth-telfer-1931"
+    ],
+    "spouses": [
+      "francis-telfer-1875"
+    ],
+    "siblings": [
+      "amy-telfer"
+    ],
+    "images": [
+      {
+        "src": "images/people/francis-charles-amy-telfer-wedding-1909.jpg",
+        "alt": "Francis Charles 'Charlie' Telfer (aged 33) and Amy Ellen Provis (aged 25) on their wedding day, 6 April 1909, at Stokes, South Australia — studio portrait in sepia tones. Charlie in a dark three-piece suit with handlebar moustache, white pocket square, gold watch chain and floral boutonnière; Amy in an elaborate white lace gown with high ruffled collar, voluminous sleeves and floral headpiece, holding a small bouquet, against a painted tropical-foliage backdrop",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/francis-charles-amy-telfer-wedding-1909.jpg",
+        "filename": "francis-charles-amy-telfer-wedding-1909.jpg"
+      },
+      {
+        "src": "images/people/telfer-family-reunion-c1920.jpg",
+        "alt": "Telfer family reunion, circa 1920 — a large multi-generational group portrait of about 25 people. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated centre with white beard and lace collar; their children and grandchildren stand around them in a studio setting with textured wallpaper backdrop on the left and dark curtain on the right",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/telfer-family-reunion-c1920.jpg",
+        "filename": "telfer-family-reunion-c1920.jpg"
+      },
+      {
+        "src": "images/people/amy-ellen-telfer.jpg",
+        "alt": "Amy ellen telfer",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/amy-ellen-telfer.jpg",
+        "filename": "amy-ellen-telfer.jpg"
+      },
+      {
+        "src": "images/people/amy-ellen-telfer-grave.jpg",
+        "alt": "Amy ellen telfer grave",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/amy-ellen-telfer-grave.jpg",
+        "filename": "amy-ellen-telfer-grave.jpg"
+      }
+    ],
+    "person_photo": "images/people/francis-charles-amy-telfer-wedding-1909.jpg"
   },
   {
     "id": "Walter William Telfer (1884)",
@@ -7418,11 +7847,18 @@
       "descendant"
     ],
     "parents": [
+      "caroline-telfer-1842",
       "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
+      "albert-telfer-1881",
+      "bertha-telfer",
+      "edwin-telfer-1887",
+      "ernest-telfer-1878",
+      "francis-telfer-1875",
+      "john-telfer-1877",
       "william-telfer-1880"
     ],
     "images": [],
@@ -7462,6 +7898,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
       "herbert-dougal-telfer-1881",
@@ -7587,6 +8024,7 @@
     "siblings": [
       "adelaide-elsie-pearl-telfer-1889",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -7625,14 +8063,23 @@
       "person"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [
       "may-foy"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877"
     ],
     "images": [],
     "person_photo": null
@@ -7662,14 +8109,23 @@
       "person"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [
       "lilian-daisy-dawson"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "images": [],
     "person_photo": null
@@ -7702,11 +8158,18 @@
       "descendant"
     ],
     "parents": [
+      "caroline-telfer-1842",
       "john-telfer-1847"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
+      "albert-telfer-1881",
+      "bertha-telfer",
+      "ernest-telfer-1878",
+      "francis-telfer-1875",
+      "john-telfer-1877",
+      "walter-telfer-1884",
       "william-telfer-1880"
     ],
     "images": [],
@@ -7785,6 +8248,7 @@
     "siblings": [
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "hazel-rose-telfer-1891",
@@ -7826,12 +8290,21 @@
       "tree"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "images": [],
     "person_photo": null
@@ -7865,12 +8338,21 @@
       "mystery-resolved"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "images": [],
     "person_photo": null
@@ -7911,6 +8393,7 @@
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
       "elizabeth-beattie-telfer-1871",
+      "elizabeth-telfer-1868",
       "eva-rowena-telfer-1885",
       "francis-adam-telfer-1875",
       "herbert-dougal-telfer-1881",
@@ -8023,14 +8506,23 @@
       "person"
     ],
     "parents": [
-      "john-telfer-1840"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "spouses": [
       "kenneth-cornish"
     ],
     "siblings": [
-      "clara-blanche-telfer-1883"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "images": [],
     "person_photo": null
@@ -8111,6 +8603,7 @@
     ],
     "siblings": [
       "amy-telfer-1884",
+      "david-telfer-merrick-2000",
       "mark-telfer-1986"
     ],
     "images": [
@@ -8189,9 +8682,13 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "albert-telfer-1881",
+      "edwin-telfer-1887",
       "ernest-telfer-1878",
       "francis-telfer-1875",
-      "john-telfer-1877"
+      "john-telfer-1877",
+      "walter-telfer-1884",
+      "william-telfer-1880"
     ],
     "images": [],
     "person_photo": null
@@ -8288,38 +8785,6 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Edwin Ernest Clarke",
-    "slug": "edwin-ernest-clarke",
-    "first_name": "Edwin",
-    "middle_name": null,
-    "last_name": "Ernest Clarke",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Edwin Ernest Clarke",
-    "title": "Edwin Ernest Clarke",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Edwin Ernest Clarke",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "elizabeth-telfer-1868"
-    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -8529,6 +8994,43 @@
     "person_photo": null
   },
   {
+    "id": "Janet Nichol",
+    "slug": "janet-nichol",
+    "first_name": "Janet",
+    "middle_name": null,
+    "last_name": "Nichol",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Janet Nichol",
+    "title": "Janet Nichol",
+    "lifespan": "? – ?",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Janet Nichol",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [
+      "andrew-telfer-1798",
+      "william-telfer-1802",
+      "william-telfer-1880"
+    ],
+    "spouses": [
+      "william-telfer-1880",
+      "william-telfer-shepherd"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Jessie Telfer",
     "slug": "jessie-telfer",
     "first_name": "Jessie",
@@ -8555,7 +9057,9 @@
       "ann-taylor-1856"
     ],
     "children": [],
-    "spouses": [],
+    "spouses": [
+      "kenneth-telfer-1906"
+    ],
     "siblings": [],
     "images": [],
     "person_photo": null
@@ -9106,6 +9610,46 @@
     "person_photo": null
   },
   {
+    "id": "William Telfer (shepherd)",
+    "slug": "william-telfer-shepherd",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer (shepherd)",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "William Telfer (shepherd)",
+    "title": "William Telfer (shepherd) — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# William Telfer (shepherd)\n\n**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** [[Janet Nichol]]\n**Children:** Andrew Telfer (1798–1858), [[William Telfer (1802–1850)]]\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
+    "roles": [
+      "Shepherd in the Cheviot Hills region, Roxburghshire, Scotland"
+    ],
+    "tags": [
+      "person",
+      "telfer",
+      "shepherd",
+      "scotland",
+      "stub"
+    ],
+    "parents": [],
+    "children": [
+      "andrew-telfer-1798",
+      "william-telfer-1802"
+    ],
+    "spouses": [
+      "janet-nichol"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Charles Farrow Jr",
     "slug": "charles-farrow-jr-~1865",
     "first_name": "Charles",
@@ -9181,6 +9725,44 @@
     "siblings": []
   },
   {
+    "id": "Andrew Telfer (1798)",
+    "slug": "andrew-telfer-1798",
+    "first_name": "Andrew",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1798,
+    "death_year": 1858,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1798",
+    "death_year_display": "1858",
+    "display_name": "Andrew Telfer",
+    "title": "Andrew Telfer (1798–1858)",
+    "lifespan": "1798 – 1858",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Andrew Telfer (1798–1858)\n\n**Role:** NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager\n**Born:** 28 April 1798 — Oxnam Parish, Roxburghshire, Scotland\n**Died:** 11 March 1858 (aged 59) — buried Tamworth General Cemetery, New South Wales\n**Father:** [[William Telfer (shepherd)]]\n**Mother:** [[Janet Nichol]]\n**Brother:** [[William Telfer (1802–1850)]]\n**Spouse:** Mary Hayes (m. 10 May 1846, St Augustine's RC Church, Singleton NSW)\n\n## Life Summary\n\nAndrew Telfer was born 28 April 1798 in the Parish of Oxnam, Roxburghshire, Scotland, son of William Telfer, a shepherd, and Janet Nichol — four years older than his brother William (1802–1850). He signed on as an Indented Servant with the Australian Agricultural Company on 16 February 1825 and sailed to New South Wales on the \"Brothers\", arriving in Sydney Harbour two days after his brother William landed on the \"York\", both in November 1825.\n\nAndrew married **Mary Hayes** on 10 May 1846 at St. Augustine's Roman Catholic Church, Singleton, New South Wales. They had four children: William (b. 1847), Mary (b. 1849, married A.L. Bowden), Andrew (b. 1850) and Elizabeth \"Betsy\" (b. 1854, married A. Bolton). In 1851 he purchased Goonoo Goonoo Section J, Lots 3 and 12 (22 August 1851). He died on 11 March 1858 and was buried at Tamworth General Cemetery, where his headstone reads *\"Sacred to the Memory of ANDREW TELFER who departed this life March 11, 1858 ... Native of Roxburghshire, Scotland.\"*\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Self** | Andrew Telfer |\n| **Father** | [[William Telfer (shepherd)]] |\n| **Mother** | [[Janet Nichol]] |\n| **Brother** | [[William Telfer (1802–1850)]] |\n| **Sisters** | Helen Nichol (Telfer) Lillico; Mary Nichol (Telfer) Gibson |\n| **Spouse** | Mary Hayes (m. 10 May 1846, Singleton NSW) |\n| **Children** | William (b. 1847); Mary (m. A.L. Bowden, 1848–1933); Andrew (b. 1850); Elizabeth / Betsy (m. A. Bolton, 1854–1874) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 28 Apr 1798 | Born — Oxnam, Roxburghshire, Scotland |\n| 16 Feb 1825 | Signed AACo indenture |\n| Nov 1825 | Arrived Sydney Harbour on the \"Brothers\" |\n| 10 May 1846 | Married Mary Hayes — St Augustine's RC Church, Singleton NSW |\n| 1847–1854 | Children William, Mary, Andrew, Elizabeth born |\n| 22 Aug 1851 | Purchased Goonoo Goonoo Sec J Lots 3 & 12 |\n| 11 Mar 1858 | Died (aged 59) — buried Tamworth General Cemetery |\n\n## Sources\n\n- **Find A Grave:** [Andrew Nichol Telfer (1798–1858) — memorial 48579836](https://www.findagrave.com/memorial/48579836/andrew-telfer) — accessed 6 Sep 2026 (born 28 Apr 1798; died 11 Mar 1858; buried Tamworth General Cem; m. Mary Hayes 1846 Singleton; children William, Mary Bowden, Andrew, Elizabeth Bolton; headstone transcription)\n- **Book:** *From the Borders to the Bush* by Donald Telfer (1986), p.370 & pp.364–371 — AACo indentured-servant journey, brother of William, land purchase, adult fates\n- **ANU / Australian Agricultural Company records** — AACo indentured-servant record (brother of Warrah manager William)\n- **Geni profile (Andrew-Nichol-Telfer)** — compiled tree corroborating dates/children (secondary group)",
+    "roles": [
+      "NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager"
+    ],
+    "tags": [
+      "family",
+      "ancestor",
+      "telfer"
+    ],
+    "parents": [
+      "janet-nichol",
+      "william-telfer-shepherd"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "william-telfer-1802"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Sophia Harriett Ridgway (1868)",
     "slug": "sophia-harriett-ridgway-1868",
     "first_name": "Sophia Harriett",
@@ -9206,7 +9788,9 @@
       "ancestor",
       "baker"
     ],
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -9219,36 +9803,6 @@
       "walter-baker-1865",
       "william-baker-1853"
     ],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Adam Dillon (1870)",
-    "slug": "adam-dillon-1870",
-    "first_name": "Adam",
-    "middle_name": null,
-    "last_name": "Dillon",
-    "birth_year": 1870,
-    "death_year": 1948,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1870",
-    "death_year_display": "1948",
-    "display_name": "Adam Dillon",
-    "title": "Adam Dillon",
-    "lifespan": "1870 – 1948",
-    "generation": 6,
-    "is_living": false,
-    "body_markdown": "# Adam Dillon\n\n## Lifespan\n\n**Born:** 16 January 1870 — Kersbrook, South Australia\n**Died:** 1 May 1948 — South Payneham, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008. **Independently corroborated (verified 26 Aug 2026):** identifies Adam **Telfer** Dillon, b. 1870, youngest son of Elizabeth Beattie Telfer (1834–1896) & John Charles Dillon (1827–1906) — MyHeritage record confirms death 1 May 1948 aged 78, buried Centennial Park, Pasadena SA; FamilySearch sibling tree (KFG7-GMN) confirms the family placement. Exact birth date (16 Jan) and death address (South Payneham) remain book-sourced.",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -9278,7 +9832,10 @@
       "ancestor",
       "baker"
     ],
-    "parents": [],
+    "parents": [
+      "sophia-baker-1829",
+      "william-john-baker-1831"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -9576,86 +10133,15 @@
       "john-watson-1851",
       "mary-jane-paynter-1861"
     ],
-    "children": [],
+    "children": [
+      "richard-watson-1910"
+    ],
     "spouses": [],
     "siblings": [
       "lancelot-watson-1888"
     ],
     "images": [],
     "person_photo": null
-  },
-  {
-    "id": "Amy Ellen Telfer (1884)",
-    "slug": "amy-telfer-1884",
-    "first_name": "Amy",
-    "middle_name": "Ellen",
-    "last_name": "Telfer",
-    "birth_year": 1884,
-    "death_year": 1951,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1884",
-    "death_year_display": "1951",
-    "display_name": "Amy Ellen Telfer",
-    "title": "Amy Ellen Telfer (née Provis) — Family & Biography",
-    "lifespan": "1884 – 1951",
-    "generation": 6,
-    "is_living": false,
-    "body_markdown": "# Amy Ellen Telfer (née Provis)\n\n**Role:** Wife of Francis Charles 'Charlie' Telfer\n**Also known as:** Possibly \"Amy May\" (family nickname)\n**Born:** 1884 — Stokes, South Australia\n**Died:** October 1951 (aged ~67)\n**Birthplace:** Stokes, South Australia\n**Grandson:** [[Murray John Telfer (1924–2009)]]\n**Great-grandson:** [[Timothy Neil Telfer (1959–?)]]\n**Great-great-grandson:** [[Mark Telfer (1877–1946)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Emily Ellen Thorpe]] |\n| **Father** | [[George Provis]] |\n| **Spouse** | [[Francis Charles Telfer (1875–1954)]] (m. 6 Apr 1909) |\n| **Children** | [[Francis Kelson Telfer (1910–1987)|Francis Kelson Telfer]], [[Clarice May Telfer (1911–1997)]], Emily Amelia Barton, Ethel Jean McMurtrie, Gladys Merle Pedler, Doris Elma Rowe, [[Edwin Roy Telfer (1921–2009)|Edwin Roy Telfer]], [[Reginald Masters Telfer (1922–2011)|Reginald Masters Telfer]], [[Murray John Telfer (1924–2009)]], [[Ruth Telfer (1931–?)|Ruth Telfer]] |\n| **Siblings** | Ella May Plew, Cecil Sidney Provis, Percy Valentine Provis, Alice Provis, Esther Amelia Lawrie, Janetta Ruth Lawrie, Gregory George Provis, Herbert Spencer Provis, Gertrude Emily Olston (+ others) |\n| **Grandparents** | Charles Robert Thorpe (1832–1893) & Amelia White (1833–1916); Josiah Tarry Provis & Janetta Rowe |\n\n---\n\n## Photos\n\n![Francis Charles 'Charlie' Telfer (aged 33) and Amy Ellen Provis (aged 25) on their wedding day, 6 April 1909, at Stokes, South Australia — studio portrait in sepia tones. Charlie in a dark three-piece suit with handlebar moustache, white pocket square, gold watch chain and floral boutonnière; Amy in an elaborate white lace gown with high ruffled collar, voluminous sleeves and floral headpiece, holding a small bouquet, against a painted tropical-foliage backdrop](images/people/francis-charles-amy-telfer-wedding-1909.jpg)\n*Francis Charles 'Charlie' Telfer (aged 33) and Amy Ellen Provis (aged 25) on their wedding day, 6 April 1909, at Stokes, South Australia — studio portrait in sepia tones. Charlie in a dark three-piece suit with handlebar moustache, white pocket square, gold watch chain and floral boutonnière; Amy in an elaborate white lace gown with high ruffled collar, voluminous sleeves and floral headpiece, holding a small bouquet, against a painted tropical-foliage backdrop*\n\n![Telfer family reunion, circa 1920 — a large multi-generational group portrait of about 25 people. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated centre with white beard and lace collar; their children and grandchildren stand around them in a studio setting with textured wallpaper backdrop on the left and dark curtain on the right](images/people/telfer-family-reunion-c1920.jpg)\n*Telfer family reunion, circa 1920 — a large multi-generational group portrait of about 25 people. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated centre with white beard and lace collar; their children and grandchildren stand around them in a studio setting with textured wallpaper backdrop on the left and dark curtain on the right*\n\n*Francis Charles 'Charlie' Telfer (aged 33) and Amy Ellen Provis (aged 25) on their wedding day, 6 April 1909, at Stokes, South Australia. Studio portrait in sepia tones. Charlie in dark three-piece suit with handlebar moustache, white pocket square, gold watch chain, and floral boutonnière. Amy in elaborate white lace gown with high ruffled collar, voluminous sleeves, and floral headpiece, holding a small bouquet. Painted tropical foliage backdrop and heavy draped curtain — classic studio setting of the era.*\n\n*Telfer family reunion, circa 1920. Large multi-generational group portrait of ~25 individuals. Amy Ellen Telfer (1884–1951, aged ~36) standing among the adults with her husband Francis Charles 'Charlie' Telfer (1875–1954, aged ~45), their children and grandchildren. Her parents-in-law John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated center with white beard and lace collar respectively. Studio setting with textured wallpaper backdrop on left, dark curtain on right.*\n\n> ### Portrait\n>\n> ![Amy ellen telfer](images/people/amy-ellen-telfer.jpg)\n>\n> ### Grave — Enfield Memorial Park, Clearview SA\n>\n> ![Amy ellen telfer grave](images/people/amy-ellen-telfer-grave.jpg)\n\n---\n\n## Family Stories\n\n### A Christmas Gift — Ernie's Book\n\nCharlie's brother Ernie (Ernest John Telfer) wrote a book about his missionary work titled *Amongst Australian Aborigines*. A copy was given to Charlie and Amy as a Christmas gift, inscribed \"Charlie & Amy, with love & Christmas wishes, from Eva.\" The book later passed to their son Murray and his wife Shirley at Ungarra. *(Inscription in front of \"Amongst Australian Aborigines\" by E.J. Telfer, 1939)*\n\nAmy Ellen Provis married Francis Charles Telfer at Stokes in 1909 and together they raised ten children on a pioneering farm at Ungarra on the Eyre Peninsula. Life was brutally hard for her — no electricity, no running water, no refrigeration, no washing machine. She cooked on a wood stove, baked all the family's bread using homemade yeast made from hops, potatoes, flour and water, and made butter that she had to drive 18 miles into Tumby Bay in a sulky with one horse before the heat of the day. The money from the butter bought whatever groceries she could manage. She did the family laundry with a copper that had to be stoked with wood, two tubs, a scrubbing board and homemade soap, and ironed with a box iron full of hot coals. She carried water from the sheds in four-gallon kerosene tin buckets for all household needs. With a baby every couple of years, she somehow kept the household running through it all. Her daughters remembered that there was no entertainment as such in those days, \"but plenty of hard work and just enough rest to keep us going.\" *(From the Borders to the Bush, pp.130–131)*\n\nOn **6 April 1909**, she married [[Francis Charles Telfer (1875–1954)]] at Stokes, South Australia. The wedding was reportedly covered by a local newspaper article — \"Family Wedding at Jamestown\" — which mentions the celebration.\n\nTogether they raised **ten children** on family farms, moving from the mid-north toward the Eyre Peninsula over the decades. Amy passed away in October 1951, predeceasing her husband Francis by about three years.\n\nHer name appears in Murray John Telfer's profile as \"Amy May\" in some vault records, but her registered birth name is **Amy Ellen Provis**.\n\n---\n\n## Parents: The Provis & Thorpe Families\n\n**George Provis** (Amy's father) — married **Emily Ellen Thorpe** on 15 June 1882. Emily's parents were **Charles Robert Thorpe** (1832–1893) and **Amelia White** (1833–1916).\n\n---\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 1884 | Born at Stokes, SA |\n| 15 Jun 1882 | Parents George & Emily married |\n| 6 Apr 1909 | Married [[Francis Charles Telfer (1875–1954)]] at Stokes, SA |\n| ~1910–1933 | Ten children born |\n| Oct 1951 | Died (aged ~67) |\n\n---\n\n## Sources\n\n- FamilySearch: [Amy Ellen Provis (9DHC-5K8)](https://ancestors.familysearch.org/en/9DHC-5K8/amy-ellen-provis-1884-1951) — confirms marriage to Francis Charles Telfer\n- WikiTree: [Amy Ellen (Provis) Telfer (1884–1951)](https://www.wikitree.com/wiki/Provis-64) — confirms parents, siblings\n- WikiTree: [Emily Ellen Thorpe (Thorpe-3345)](https://www.wikitree.com/wiki/Thorpe-3345) — Emily's parents Charles Robert Thorpe & Amelia White\n- Geni: [Francis Charles Telfer (1875–1954)](https://www.geni.com/people/Francis-Telfer/6000000037272985511) — confirms marriage\n- Find a Grave: [Amy Ellen Provis Telfer (1884–1951)](https://www.findagrave.com/memorial/197648124/amy-ellen-telfer) — buried Enfield Memorial Park (Rose Garden H8) — 1 headstone photo",
-    "roles": [
-      "Wife of Francis Charles 'Charlie' Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [
-      "emily-ellen-thorpe",
-      "george-provis"
-    ],
-    "children": [
-      "clarice-may-telfer-1911",
-      "doris-elma-telfer-1919",
-      "edwin-telfer-1921",
-      "emily-amelia-telfer-1913",
-      "ethel-jean-telfer-1915",
-      "francis-telfer-1910",
-      "gladys-merle-telfer-1917",
-      "murray-telfer-1924",
-      "ruth-telfer-1931"
-    ],
-    "spouses": [],
-    "siblings": [
-      "amy-telfer"
-    ],
-    "images": [
-      {
-        "src": "images/people/francis-charles-amy-telfer-wedding-1909.jpg",
-        "alt": "Francis Charles 'Charlie' Telfer (aged 33) and Amy Ellen Provis (aged 25) on their wedding day, 6 April 1909, at Stokes, South Australia — studio portrait in sepia tones. Charlie in a dark three-piece suit with handlebar moustache, white pocket square, gold watch chain and floral boutonnière; Amy in an elaborate white lace gown with high ruffled collar, voluminous sleeves and floral headpiece, holding a small bouquet, against a painted tropical-foliage backdrop",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/francis-charles-amy-telfer-wedding-1909.jpg",
-        "filename": "francis-charles-amy-telfer-wedding-1909.jpg"
-      },
-      {
-        "src": "images/people/telfer-family-reunion-c1920.jpg",
-        "alt": "Telfer family reunion, circa 1920 — a large multi-generational group portrait of about 25 people. John Telfer (1847–1929, aged ~73) and Caroline Amelia Telfer (1842–1929, aged ~78) seated centre with white beard and lace collar; their children and grandchildren stand around them in a studio setting with textured wallpaper backdrop on the left and dark curtain on the right",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/telfer-family-reunion-c1920.jpg",
-        "filename": "telfer-family-reunion-c1920.jpg"
-      },
-      {
-        "src": "images/people/amy-ellen-telfer.jpg",
-        "alt": "Amy ellen telfer",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/amy-ellen-telfer.jpg",
-        "filename": "amy-ellen-telfer.jpg"
-      },
-      {
-        "src": "images/people/amy-ellen-telfer-grave.jpg",
-        "alt": "Amy ellen telfer grave",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/amy-ellen-telfer-grave.jpg",
-        "filename": "amy-ellen-telfer-grave.jpg"
-      }
-    ],
-    "person_photo": "images/people/francis-charles-amy-telfer-wedding-1909.jpg"
   },
   {
     "id": "Daisy Vera Latter (1886)",
@@ -9963,7 +10449,9 @@
       "john-watson-1851",
       "mary-jane-paynter-1861"
     ],
-    "children": [],
+    "children": [
+      "john-watson-1916"
+    ],
     "spouses": [],
     "siblings": [
       "joseph-watson-1883"
@@ -10039,6 +10527,7 @@
     "children": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
+      "shirley-telfer-1929",
       "sydney-parker-1922",
       "william-humphrey-parker-1926"
     ],
@@ -10203,6 +10692,7 @@
     "children": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
+      "shirley-telfer-1929",
       "sydney-parker-1922",
       "william-humphrey-parker-1926"
     ],
@@ -10540,7 +11030,8 @@
     "children": [],
     "spouses": [
       "gwendoline-victoria-telfer-1910",
-      "jessie-kathleen-telfer-1914"
+      "jessie-kathleen-telfer-1914",
+      "jessie-telfer"
     ],
     "siblings": [
       "floris-telfer-1904",
@@ -10793,6 +11284,7 @@
       "telfer"
     ],
     "parents": [
+      "hannah-peacock-1862",
       "julia-matilda-seebohm-1876",
       "mark-telfer-1877"
     ],
@@ -10925,13 +11417,16 @@
       "in-law"
     ],
     "parents": [
+      "eva-agnes-farrow-1877",
       "walter-john-hookings-1881"
     ],
     "children": [],
     "spouses": [
       "francis-bosanquet"
     ],
-    "siblings": [],
+    "siblings": [
+      "donald-jack-hookings-1916"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -11059,6 +11554,7 @@
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "images": [],
@@ -11300,6 +11796,7 @@
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "images": [],
@@ -11340,7 +11837,9 @@
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "laurel-bosanquet"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -11423,6 +11922,7 @@
       "ethel-jean-telfer-1915",
       "francis-telfer-1910",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "images": [],
@@ -11549,6 +12049,7 @@
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
       "murray-telfer-1924",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "images": [],
@@ -11579,6 +12080,7 @@
       "person"
     ],
     "parents": [
+      "alma-ida-sporer-1880",
       "james-telfer-1866"
     ],
     "children": [],
@@ -11745,15 +12247,20 @@
       "descendant"
     ],
     "parents": [
-      "amy-telfer",
+      "amy-telfer-1884",
       "francis-telfer-1875"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
       "clarice-may-telfer-1911",
+      "doris-elma-telfer-1919",
       "edwin-telfer-1921",
+      "emily-amelia-telfer-1913",
+      "ethel-jean-telfer-1915",
       "francis-telfer-1910",
+      "gladys-merle-telfer-1917",
+      "murray-telfer-1924",
       "ruth-telfer-1931"
     ],
     "images": [],
@@ -11807,6 +12314,7 @@
       "ethel-jean-telfer-1915",
       "francis-telfer-1910",
       "gladys-merle-telfer-1917",
+      "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
     "images": [
@@ -11856,7 +12364,10 @@
       "parker",
       "lawrie"
     ],
-    "parents": [],
+    "parents": [
+      "caroline-edna-lawrie-1890",
+      "william-henry-parker-1893"
+    ],
     "children": [
       "daryll-telfer",
       "grantley-telfer",
@@ -11871,6 +12382,7 @@
     "siblings": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
+      "sydney-parker-1922",
       "william-humphrey-parker-1926"
     ],
     "images": [
@@ -12005,50 +12517,14 @@
       "non-telfer"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "beth-telfer-1946",
+      "ian-telfer-1947"
+    ],
     "spouses": [
       "gilbert-telfer-1908"
     ],
     "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "John Alick Ralph Telfer",
-    "slug": "john-telfer-alick-ralph",
-    "first_name": "John",
-    "middle_name": "Alick Ralph",
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "John Alick Ralph Telfer",
-    "title": "John Alick Ralph Telfer — Family & Biography",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": false,
-    "body_markdown": "# John Alick Ralph Telfer\n\n**Lifespan:** born ? – died ? (dates unverified — left blank under the conflicting/unknown-dates rule)\n\n**Branch:** Telfer — son of Albert George & Beatrice Telfer (grandson of John & Caroline)\n\n## Biography\n\nJohn Alick Ralph Telfer was one of the six children of [[Albert George Telfer (1881–1970)]] and [[Beatrice Rowe Telfer (1877–1951)]], born while the family lived at Warcowie before their 1923 move to Hill River (near Clare).\n\nHis birth and death dates are not yet verified, so they are left blank here rather than guessed.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Albert George Telfer (1881–1970)]] |\n| **Mother** | [[Beatrice Rowe Telfer (1877–1951)]] (née Rowe) |\n| **Siblings** | [[Rita Joyce Telfer (1909–1990)]], [[Beatrice Sylvia Telfer (1911–1999)]], [[Douglas Ivan Telfer (1913–1993)]], [[Melville Bruce Telfer (1914–1997)]], [[Murray Keith Telfer (1920–2005)]] |\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* (Telfer, 2017), pp.144–146 — names John Alick Ralph as one of Albert & Beatrice's six children\n- **Source:** headstones2.weebly.com Clare Old Cemetery transcription — confirms Albert & Beatrice's family at Clare (John Alick Ralph himself has no separate dated headstone listing / dates unverified) — accessed 10 Aug 2026",
-    "roles": [],
-    "tags": [
-      "person",
-      "telfer"
-    ],
-    "parents": [
-      "albert-telfer-1881",
-      "beatrice-telfer-1877"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "beatrice-telfer-1911",
-      "douglas-telfer-1913",
-      "melville-telfer-1914",
-      "murray-telfer-1920",
-      "rita-telfer-1909"
-    ],
     "images": [],
     "person_photo": null
   },
@@ -12493,7 +12969,9 @@
       "watson",
       "war"
     ],
-    "parents": [],
+    "parents": [
+      "joseph-watson-1883"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -12594,7 +13072,9 @@
       "watson",
       "war"
     ],
-    "parents": [],
+    "parents": [
+      "lancelot-watson-1888"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -12930,6 +13410,7 @@
     "siblings": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
+      "shirley-telfer-1929",
       "william-humphrey-parker-1926"
     ],
     "images": [],
@@ -13032,11 +13513,14 @@
       "descendant"
     ],
     "parents": [
-      "gilbert-telfer-1908"
+      "gilbert-telfer-1908",
+      "jessie-allan"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "ian-telfer-1947"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -13064,11 +13548,14 @@
       "descendant"
     ],
     "parents": [
-      "gilbert-telfer-1908"
+      "gilbert-telfer-1908",
+      "jessie-allan"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "beth-telfer-1946"
+    ],
     "images": [],
     "person_photo": null
   },
@@ -13101,6 +13588,7 @@
     "parents": [],
     "children": [
       "aaron-ivory-1989",
+      "jared-ivory-1993",
       "joel-ivory-1986",
       "lauren-ivory-1994"
     ],
@@ -13243,6 +13731,7 @@
     "parents": [],
     "children": [
       "aaron-ivory-1989",
+      "jared-ivory-1993",
       "joel-ivory-1986",
       "lauren-ivory-1994"
     ],
@@ -13675,6 +14164,7 @@
     "spouses": [],
     "siblings": [
       "aaron-ivory-1989",
+      "jared-ivory-1993",
       "lauren-ivory-1994"
     ],
     "images": [
@@ -13778,6 +14268,7 @@
       "karina-ivory"
     ],
     "siblings": [
+      "jared-ivory-1993",
       "joel-ivory-1986",
       "lauren-ivory-1994"
     ],
@@ -13790,6 +14281,62 @@
       }
     ],
     "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+  },
+  {
+    "id": "Jared Mitchell Ivory (1993)",
+    "slug": "jared-ivory-1993",
+    "first_name": "Jared",
+    "middle_name": "Mitchell",
+    "last_name": "Ivory",
+    "birth_year": 1993,
+    "death_year": null,
+    "birth_date": "01 April 1993",
+    "death_date": null,
+    "birth_year_display": "1993",
+    "death_year_display": "living",
+    "display_name": "Jared Mitchell Ivory",
+    "title": "Jared Ivory — Family & Biography",
+    "lifespan": "1993 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Jared Ivory\n\n## Photos\n\n![Jared Ivory (Kelly Partners)](images/people/Jared-Ivory---Kelly-Partners.jpg)\n*Jared Ivory (Kelly Partners)*\n\n![The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n*The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren*\n\n![Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018](images/people/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg)\n*Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018*\n\n## Media\n\n[🎥 Jared Ivory — New Colombo Plan Alumni Profile (YouTube)](https://youtu.be/pOtVSJqP9y0)\n> A 2-minute profile of Jared's New Colombo Plan Scholarship journey, studying and working in Indonesia. Published by The Global Society.\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Stepfather** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Joel Matthew Ivory (1986–?)]], [[Aaron Paul Ivory (1989–?)]], [[Lauren Maree Ivory (1994–?)]] |",
+    "roles": [],
+    "tags": [
+      "family",
+      "person"
+    ],
+    "parents": [
+      "paul-ivory-1955",
+      "sheryle-telfer-1961"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "aaron-ivory-1989",
+      "joel-ivory-1986",
+      "lauren-ivory-1994"
+    ],
+    "images": [
+      {
+        "src": "images/people/Jared-Ivory---Kelly-Partners.jpg",
+        "alt": "Jared Ivory (Kelly Partners)",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Jared-Ivory---Kelly-Partners.jpg",
+        "filename": "Jared-Ivory---Kelly-Partners.jpg"
+      },
+      {
+        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+        "alt": "The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
+        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
+      },
+      {
+        "src": "images/people/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg",
+        "alt": "Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg",
+        "filename": "Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg"
+      }
+    ],
+    "person_photo": "images/people/Jared-Ivory---Kelly-Partners.jpg"
   },
   {
     "id": "Lauren Maree Ivory (1994)",
@@ -13822,6 +14369,7 @@
     "spouses": [],
     "siblings": [
       "aaron-ivory-1989",
+      "jared-ivory-1993",
       "joel-ivory-1986"
     ],
     "images": [
@@ -14125,6 +14673,7 @@
     "parents": [],
     "children": [
       "amy-telfer",
+      "david-telfer-merrick-2000",
       "mark-telfer-1986"
     ],
     "spouses": [],
@@ -14277,55 +14826,6 @@
     "person_photo": null
   },
   {
-    "id": "Jared Mitchell Ivory (1993)",
-    "slug": "jared-ivory-1993",
-    "first_name": "Jared",
-    "middle_name": "Mitchell",
-    "last_name": "Ivory",
-    "birth_year": 1993,
-    "death_year": null,
-    "birth_date": "01 April 1993",
-    "death_date": null,
-    "birth_year_display": "1993",
-    "death_year_display": "living",
-    "display_name": "Jared Mitchell Ivory",
-    "title": "Jared Ivory — Family & Biography",
-    "lifespan": "1993 – living",
-    "generation": 10,
-    "is_living": true,
-    "body_markdown": "# Jared Ivory\n\n## Photos\n\n![Jared Ivory (Kelly Partners)](images/people/Jared-Ivory---Kelly-Partners.jpg)\n*Jared Ivory (Kelly Partners)*\n\n![The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n*The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren*\n\n![Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018](images/people/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg)\n*Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018*\n\n## Media\n\n[🎥 Jared Ivory — New Colombo Plan Alumni Profile (YouTube)](https://youtu.be/pOtVSJqP9y0)\n> A 2-minute profile of Jared's New Colombo Plan Scholarship journey, studying and working in Indonesia. Published by The Global Society.\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Stepfather** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Joel Matthew Ivory (1986–?)]], [[Aaron Paul Ivory (1989–?)]], [[Lauren Maree Ivory (1994–?)]] |",
-    "roles": [],
-    "tags": [
-      "family",
-      "person"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [
-      {
-        "src": "images/people/Jared-Ivory---Kelly-Partners.jpg",
-        "alt": "Jared Ivory (Kelly Partners)",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Jared-Ivory---Kelly-Partners.jpg",
-        "filename": "Jared-Ivory---Kelly-Partners.jpg"
-      },
-      {
-        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "alt": "The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
-      },
-      {
-        "src": "images/people/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg",
-        "alt": "Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg",
-        "filename": "Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg"
-      }
-    ],
-    "person_photo": "images/people/Jared-Ivory---Kelly-Partners.jpg"
-  },
-  {
     "id": "David Mark Kenneth Telfer-Merrick (2000)",
     "slug": "david-telfer-merrick-2000",
     "first_name": "David",
@@ -14352,11 +14852,14 @@
       "person"
     ],
     "parents": [
-      "allen-merrick"
+      "allen-merrick",
+      "penny-telfer-1960"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "amy-telfer"
+    ],
     "images": [
       {
         "src": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
@@ -14477,38 +14980,6 @@
     "children": [
       "mitchell-telfer-2008"
     ],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Edward Telfer",
-    "slug": "edward-telfer",
-    "first_name": "Edward",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Edward Telfer",
-    "title": "Edward Telfer",
-    "lifespan": "? – living",
-    "generation": 99,
-    "is_living": true,
-    "body_markdown": "# Edward Telfer",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "parents": [
-      "william-telfer-1802"
-    ],
-    "children": [],
     "spouses": [],
     "siblings": [],
     "images": [],
@@ -14693,41 +15164,6 @@
       "janet-stevenson",
       "marion-vida"
     ],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Janet Nichol",
-    "slug": "janet-nichol",
-    "first_name": "Janet",
-    "middle_name": null,
-    "last_name": "Nichol",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Janet Nichol",
-    "title": "Janet Nichol",
-    "lifespan": "? – ?",
-    "generation": 99,
-    "is_living": false,
-    "body_markdown": "# Janet Nichol",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [
-      "andrew-telfer-1798",
-      "william-telfer-1802"
-    ],
-    "spouses": [
-      "william-telfer-shepherd"
-    ],
-    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -14992,48 +15428,11 @@
       "research-lead"
     ],
     "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "William Telfer (shepherd)",
-    "slug": "william-telfer-shepherd",
-    "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer (shepherd)",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "William Telfer (shepherd)",
-    "title": "William Telfer (shepherd) — Family & Biography",
-    "lifespan": "? – ?",
-    "generation": 99,
-    "is_living": false,
-    "body_markdown": "# William Telfer (shepherd)\n\n**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** [[Janet Nichol]]\n**Children:** Andrew Telfer (1798–1858), [[William Telfer (1802–1850)]]\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
-    "roles": [
-      "Shepherd in the Cheviot Hills region, Roxburghshire, Scotland"
-    ],
-    "tags": [
-      "person",
-      "telfer",
-      "shepherd",
-      "scotland",
-      "stub"
-    ],
-    "parents": [],
     "children": [
-      "andrew-telfer-1798",
-      "william-telfer-1802"
+      "adam-telfer-1842",
+      "elisabeth-telfer-1806"
     ],
-    "spouses": [
-      "janet-nichol"
-    ],
+    "spouses": [],
     "siblings": [],
     "images": [],
     "person_photo": null

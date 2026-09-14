@@ -197,6 +197,18 @@ function resolveRef(name, context = null) {
       const fnCands = byFullName.get(namePieces);
       fnCands.forEach(c => { if (!fuzzyCandidates.find(x => x.slug === c.slug)) fuzzyCandidates.push(c); });
     }
+
+    // tw-2026-09-13-034: a ref that names a MIDDLE NAME the profile doesn't record
+    // (vault: "Martha Williams Masters (1814–1896)", profile: first=Martha last=Masters,
+    // middle=null) misses both indexes above, so the lifespan was being thrown away and a
+    // same-named sibling won on file order. Retry on first+last WITH the extraction.
+    if (fuzzyCandidates.length === 0) {
+      const words = stripLifespan(clean).trim().split(/\s+/);
+      if (words.length > 2) {
+        const firstLast = getNamePieces(`${words[0]} ${words[words.length - 1]}`);
+        if (byName.has(firstLast)) fuzzyCandidates = fuzzyCandidates.concat(byName.get(firstLast));
+      }
+    }
     
     if (fuzzyCandidates.length > 0) {
       // Exact birth match
@@ -280,11 +292,23 @@ function resolveRef(name, context = null) {
     if (byDisplay.has(spName)) return byDisplay.get(spName);
     if (byFullName.has(spName)) {
       const candidates = byFullName.get(spName);
+      // tw-2026-09-13-034: a ref like "Martha Williams Masters (1814–1896)" fails the
+      // byName key (middle name), so it lands here. If the ref carried a lifespan, the
+      // birth year is the strongest disambiguator and MUST beat insertion order —
+      // otherwise a same-named sibling earlier in people.json wins (1839 over 1814).
+      if (years && years.birth != null) {
+        const exact = candidates.find(c => c.birth === years.birth);
+        if (exact) return exact.slug;
+      }
       const best = pickBestMatch(candidates, context);
       if (best) return best;
     }
     if (byName.has(spName)) {
       const candidates = byName.get(spName);
+      if (years && years.birth != null) {
+        const exact = candidates.find(c => c.birth === years.birth);
+        if (exact) return exact.slug;
+      }
       const best = pickBestMatch(candidates, context);
       if (best) return best;
     }
@@ -307,6 +331,12 @@ function resolveRef(name, context = null) {
       const flPieces = getNamePieces(firstLast);
       if (flPieces !== namePieces && byName.has(flPieces)) {
         const candidates = byName.get(flPieces);
+        // tw-2026-09-13-034: same insertion-order trap as step 6 — honour the lifespan
+        // the reference carried before falling back to contextual/order-based picking.
+        if (years && years.birth != null) {
+          const exact = candidates.find(c => c.birth === years.birth);
+          if (exact) return exact.slug;
+        }
         const best = pickBestMatch(candidates, context);
         if (best) return best;
       }
