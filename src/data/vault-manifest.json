@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-14T13:36:53+10:00",
+  "generated_at": "2026-09-14T14:13:20+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 373,
+  "count": 374,
   "kinds": {
-    "real": 357,
+    "real": 358,
     "redirect": 16,
     "empty": 0
   },
@@ -513,7 +513,7 @@
       "kind": "real"
     },
     "Francis Telfer Dillon.md": {
-      "sha256": "e2be54678165b2d581fb3bd4513ae8b99e59129806820ea61e1c36288ac48dd3",
+      "sha256": "efff126d5dbe532609f10e47b03fe9181d2d03dc91d86d4181af09d987279f67",
       "kind": "real"
     },
     "Francis Telfer Paynter (1862\u2013?).md": {
@@ -653,7 +653,7 @@
       "kind": "real"
     },
     "Inez Dillon.md": {
-      "sha256": "d87a412525b5a1581f3147e663278d71cbdd3a96c49d9959217bf81107a766ef",
+      "sha256": "9d9438cbdaa2c031693014beb3d4c3078903920e0a4178979264e910639c5679",
       "kind": "real"
     },
     "Inez Priscilla Dillon.md": {
@@ -801,7 +801,7 @@
       "kind": "real"
     },
     "Jean Telfer (1840\u20131892).md": {
-      "sha256": "4c8cc179ab57b7641cb8e03bdf0f53f85625107ce556feec980b2d1abee0364a",
+      "sha256": "7dd9a123959baf431d547ffb5310a28c13cc801585f904fc46be9d1a89a1dace",
       "kind": "real"
     },
     "Jemima Williams Masters Grant (1850\u20131919).md": {
@@ -1249,7 +1249,7 @@
       "kind": "real"
     },
     "Richard Paynter (1838\u20131869).md": {
-      "sha256": "bbd49637b8d67e8d2a6f87dd5bb98eb58b20b8e08f8c16e2cf5fe77e6f4177e9",
+      "sha256": "265677d8390825be6c8bb61dff6074f224306bf6a9432020e25db552c8edbf8d",
       "kind": "real"
     },
     "Richard Paynter (of Calstock).md": {
@@ -1318,6 +1318,10 @@
     },
     "Ruth Telfer (1931\u2013?).md": {
       "sha256": "c94cfaed5d1e1c6a719296d110ee24c269afff36d92ac4f768993989054f5fac",
+      "kind": "real"
+    },
+    "Sabina (Triplett) Dillon (1870\u20131968).md": {
+      "sha256": "e20796b5526d771f9b04444199dd1508c5765cd00e4bd28497b5b540d5bee1dc",
       "kind": "real"
     },
     "Sandra Lee Smith.md": {
@@ -1389,7 +1393,7 @@
       "kind": "real"
     },
     "Thomas Cleveland Dillon.md": {
-      "sha256": "95648762488cf48a4dfc9e463afdbdb8d1b6f1d980ffc2e358eb58f6d8ae37d3",
+      "sha256": "498d08bf61c04b326fc1e59c664278e2ffe9998980f2cd1a00fcf31c97465833",
       "kind": "real"
     },
     "Thomas Paynter (1859\u20131946).md": {
@@ -1409,7 +1413,7 @@
       "kind": "real"
     },
     "Vera Dillon.md": {
-      "sha256": "ef99258451b246b46d46b530bcb0ddc7c97f3b0ed8b94c1af0af74f7153c1b52",
+      "sha256": "741924f118e1dcb16da1f75e8386c04ace26fe902eae1c781f9701c3f8f5b984",
       "kind": "real"
     },
     "Vernon Ray St. Clair Telfer (1879\u20131960).md": {

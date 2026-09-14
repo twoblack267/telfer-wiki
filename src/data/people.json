@@ -8969,8 +8969,14 @@
       "elizabeth-beattie-telfer-1832",
       "john-dillon-1827"
     ],
-    "children": [],
-    "spouses": [],
+    "children": [
+      "inez-dillon-1905",
+      "thomas-cleveland-dillon-1900",
+      "vera-dillon-1905"
+    ],
+    "spouses": [
+      "sabina-dillon"
+    ],
     "siblings": [
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
@@ -11425,17 +11431,35 @@
         "names": [
           "Inez Dillon"
         ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Telfer Dillon"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Sabina (Triplett) Dillon (1870–1968)"
+        ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Inez Dillon\n\n## Lifespan\n\n**Born:** ~1905 — Adelaide, South Australia\n**Died:** 25 November 1978 — South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source). Birth year approximate (~1905), death date as recorded.",
-    "body_stripped": "## Lifespan\n\n**Born:** ~1905 — Adelaide, South Australia\n**Died:** 25 November 1978 — South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source). Birth year approximate (~1905), death date as recorded.",
+    "body_markdown": "# Inez Dillon\n\n## Lifespan\n\n**Born:** ~1905 — Adelaide, South Australia\n**Died:** 25 November 1978 — South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source). Birth year approximate (~1905), death date as recorded.\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Telfer Dillon]] (1864–1942) |\n| **Mother** | [[Sabina (Triplett) Dillon (1870–1968)]] |",
+    "body_stripped": "## Lifespan\n\n**Born:** ~1905 — Adelaide, South Australia\n**Died:** 25 November 1978 — South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source). Birth year approximate (~1905), death date as recorded.\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Telfer Dillon (1864–1942) \n **Mother**  Sabina (Triplett) Dillon (1870–1968)",
     "is_living": false,
     "lifespan": "1905 – 1978",
-    "parents": [],
+    "parents": [
+      "francis-telfer-dillon-1864",
+      "sabina-dillon"
+    ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "thomas-cleveland-dillon-1900",
+      "vera-dillon-1905"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -11444,7 +11468,7 @@
     "vault_file": "Inez Dillon.md",
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 6
   },
   {
     "id": "Inez Priscilla Dillon (1899)",
@@ -14201,6 +14225,7 @@
           "Mary Jane Paynter (1861–1945)",
           "Francis Telfer Paynter (1862–?)",
           "Elizabeth Paynter (1864–1928)",
+          "Thirza Paynter (1867–1869)",
           "Dinah Flavel Paynter (1869–1958)",
           "Margaret Eliza Parker (1872–1938)",
           "Frederick George Parker (1874–1946)",
@@ -14214,7 +14239,7 @@
     "roles": [
       "Leased/worked farmland at Arden Vale (near Quorn, SA). Later worked properties around Peterborough."
     ],
-    "body_markdown": "# Jean (Jane) Telfer (1840–1892)\n\nThird daughter of **[[Francis Telfer (1809–1895)]]** and **[[Dinah Flavel (1821–1844)]]** — named after her father's first wife who had died in 1839. After her mother Dinah's death in 1844, she was raised by her father's third wife Margaret Wright.\n\n## Vital Information\n\n- **Born:** 7 August 1840\n- **Birth name:** Jean Telfer (marriage certificate gives name as \"Jane\")\n- **Died:** 15 July 1892, Queens Own Town (Finniss Point), South Australia — heart disease\n- **Buried:** Strathalbyn Cemetery, South Australia\n\n## Marriage (1): Richard Paynter (1838–1869)\n\n- **Marriage date/location:** Solemnized by John Kither (Officiating Minister) at Chain of Ponds Parsonage. Witnessed by her father Francis Telfer and Henry Whiting of Chain of Ponds. Jean was several months pregnant at the time.\n- **Richard Paynter:** Son of Richard Paynter (from Calstock, Cornwall, died Jan 1856 aged 39 after \"protracted affliction\")\n- **Richard's occupation:** Initially a shepherd at Koppio (working for Jean's uncle James Telfer), later a school teacher at Saint Kitts (between Kapunda and Truro) — change due to poor health\n- **Richard died:** 7 February 1869, St. Kitts Creek, of pleurisy, aged 30. Newspaper: \"Mr Paynter, the Schoolmaster at St. Kitts Creek, died somewhat suddenly on Sunday last, by which a widow and five children have been left unprovided for.\"\n\n### Children of Richard Paynter and Jean Telfer\n\n#### 1. THOMAS PAYNTER\n- **Born:** 22 December 1859, Ward Farm, near Kersbrook\n- **Married:** Elizabeth Liebich, 1 December 1881, at Tarcowie\n- **Occupation:** Leased/worked farmland at Arden Vale (near Quorn, SA). Later worked properties around Peterborough.\n- **Accident:** Slipped under a train, had a leg amputated in 1946\n- **Died:** Shortly after amputation in 1946, aged 86. Buried Peterborough Cemetery.\n- **Children (9):** Richard, Lilian, Gustav, Ethel, Dinah, Agnes, Rose, Thomas, Helena\n\n##### 1a. Richard William John Paynter\n- Born 27 Apr 1882, Mannanarie. Bought own farm at Arden Vale at age 18. Married Lucy Arabella Hill. Died 23 Jul 1960.\n\n##### 1b. Lilian Ellen Jane Paynter\n- Born 1885, Arden Vale. Worked on stations. Married (1) Henry Alcock (railway worker, Quorn), (2) Herbert Mayer (station hand), (3) Alfred Hatchard (Iron Knob). Died 1 Mar 1954, Iron Knob.\n\n##### 1c. Gustav Francis George Paynter\n- Born 1888. Married (1) Sarah Jane Barbour, (2) Lily Olive Rowe. Worked for railways. Died 1 Jul 1946, aged 58.\n\n##### 1d. Ethel Emily Elizabeth Paynter\n- Born 1891, Arden Vale. Married (1) Frank Smith (railway worker — d. 1932), (2) David George Flavel (railway ganger). Died 19 May 1932, Peterborough.\n\n##### 1e. Dinah Alice Mary Paynter\n- Born 27 Sep 1894, Arden Vale. Married William Mundy (railway employee). Died 27 May 1963.\n\n##### 1f. Agnes Letitia May Rose Paynter\n- Born 1896, Arden Vale. Married George Hucks (railway worker). Died 28 May 1952, buried Loxton.\n\n##### 1g. Rose Isabel Margaret Paynter\n- Born 8 Aug 1900, Quorn nursing home. Married John Hunter Rankin (of Koolunga, son of Scottish migrants Angus and Jane Rankin) in 1918. Died 8 Jul 1988, Port Augusta.\n\n##### 1h. Thomas Frederick Edward Paynter\n- Born 31 Dec 1903, Arden Vale. Married Florence Catherine Donovan. Died 16 Sep 1940, aged 36.\n\n##### 1i. Helena Florence Daisy Paynter\n- Born 19 Aug 1906, Arden Vale. Married Harry Richmond Hill (northern station hand). Lived in Terowie, later Gawler.\n\n#### 2. MARY JANE PAYNTER\n- **Born:** 30 June 1861, Koppio (near Port Lincoln)\n- **Married:** John Watson, 1 March 1882. Ceremony by Rev. H. Chapman (first Wesleyan Minister of Hawker), witnessed by Mrs Anne Mapleton and John Telfer (Mary's uncle).\n- **John Watson:** Grandfather Charles Watson was a convict on \"Asia II\" (1827, Tasmania). John was a \"lime burner\" of Arkaba.\n- **Lived:** Willow Plains (share-farmed land owned by John Telfer). Moved to Olinda, Victoria in 1910.\n- **John died:** 10 September 1929\n- **Mary Jane died:** 14 July 1945, Preston, Victoria, aged 84. Buried Fawkner Cemetery.\n- **Children (10):** Joseph, Florence Beatrice, Lancelot Hobart, John Francis Percival, Blanche Olive May, Cecil Charles, Clifford, Vera Merle, Royal Ernest, Arthur\n\n#### 3. FRANCIS TELFER PAYNTER\n- **Born:** 27 October 1862, Koppio\n\n#### 4. ELIZABETH PAYNTER\n- **Born:** 31 December 1864, Chain of Ponds area\n\n#### 5. DINAH FLAVEL PAYNTER\n- **Born:** July 1869 (five months after Richard's death)\n\n## Marriage (2): Frederick Parker\n\n- **Marriage date/location:** Christmas Day, 25 December 1871, at Kapunda\n- **Frederick Parker:** Son of George Parker. Occupation: itinerant farm labourer / bullock driver\n- **Lived:** Hawker, Oraparinna area (far north SA), later Finniss Point\n- **Frederick died:** 12 August 1928, Berrima Hospital, NSW. Buried Bowral Cemetery, NSW. In later years he lived with his daughter Margaret and son-in-law Edward Liebich at Wildes Meadow, NSW.\n- **At Frederick's death, only 3 of his children survived him:** Margaret, Frederick (known as George), and Joanna\n\n### Children of Frederick Parker and Jean Telfer\n\n#### 1. MARGARET ELIZA PARKER\n- **Born:** 26 July 1872, Finniss Point\n- **Married:** Edward Liebich (26yo farmer of Arden Vale, son of Gustav Liebich), 22 February 1893, at Wesleyan Parsonage, Quorn\n- **Lived:** Moved to Handen, NSW (c.1911), then Robertson and Moss Vale districts\n- **Died:** 27 March 1938, Moss Vale. Buried Moss Vale Cemetery.\n- **Children (8):** Jean, Alice Mary, Martha Elizabeth, Emily Margaret, Edward Harold, Frederick Walter, Ruth Temperance, Ella\n\n#### 2. FREDERICK GEORGE PARKER (known as George)\n- **Born:** 5 April 1874, Oraparinna (father was bullock driver)\n- **Occupation:** Living at Wantiool at time of death\n- **Never married**\n- **Died:** 16 December 1946, Junee Hospital, NSW. Buried Church of England Cemetery, Junee, NSW.\n\n#### 3. ANNIE PARKER\n- **Born:** 18 November 1875, Oraparinna\n- **Died:** 6 November 1895, Adelaide\n\n#### 4. MARTHA PARKER\n- **Born:** January 1878 (estimated from school records — no birth certificate found)\n- **School:** Queens Own Town School, attended 1886–1892\n\n#### 5. JOANNA WITTITA CORDLEY PARKER\n- **Born:** 6 February 1880, Arkaba\n- **Still living** at father's death in 1928\n\n#### 6. ETHEL MAY PARKER\n- **Born:** 4 June 1881, Hawker\n- **School:** Until 1895\n\n## Family Stories\n\n### Left a Widow at 29\n\nWhen Jean's first husband Richard Paynter died of pleurisy in February 1869 at just 30, he left her with five children and no provision. The local paper put it bluntly — \"a widow and five children have been left unprovided for.\" Jean was pregnant with her fifth child Dinah Flavel Paynter, born five months after Richard died. A schoolteacher who'd been in poor health for some time, Richard's passing left the family scrambling.\n\n*(From the Borders to the Bush, pp.76-79)*\n\n### A Christmas Day Wedding\n\nOn Christmas Day 1871, Jean — now going by Jane — married Frederick Parker at Kapunda. Frederick was a bullock driver and itinerant farm labourer, and the marriage took Jean and her children from the relative comfort of Finniss Point to the far north of South Australia around Hawker and Oraparinna. Life in the north was hard and isolated.\n\n*(From the Borders to the Bush, pp.77-79)*\n\n### The Roof-Top Refuge\n\nJean's eldest son Thomas Paynter built a stone house with a thatched roof at Arden Vale near Quorn. When he and his wife Elizabeth had to walk five miles into town for supplies, they'd put the children on the roof of the house — safe from the dingoes and wild dogs that roamed the area. Years later, Thomas lost a leg slipping under a train and died shortly after at 86. The ruins of that stone house still stand among the peppertrees planted in those early days.\n\n*(From the Borders to the Bush, pp.79-81)*\n\n### The Convict Who Built Lighthouses\n\nJean's daughter Mary Jane Paynter married John Watson, whose grandfather Charles Watson arrived in Tasmania as a convict on the *Asia II* in 1827. Charles was an engineer assigned to Public Works, became Engineer in Charge of building lighthouses around Tasmania — Bruny Island, Swan Island, Goose Island, and Tow Head — and even built the causeway at Bridgewater. He got an unconditional pardon in 1834 after serving just 7 of his 14-year sentence. John himself ran away to sea at 12, served on whaling ships, and was a \"lime burner\" of Arkaba when he married Mary Jane.\n\n*(From the Borders to the Bush, pp.78-84)*\n\n### End of the Line at Finniss\n\nJean died of heart disease in 1892 at Queens Own Town (Finniss Point), aged just 51, and was buried at Strathalbyn Cemetery. Her husband Frederick outlived her by 36 years, spending his final days living with his daughter Margaret and son-in-law at Wildes Meadow, New South Wales. He was buried at Bowral in 1928.\n\n*(From the Borders to the Bush, pp.78-84)*|",
+    "body_markdown": "# Jean (Jane) Telfer (1840–1892)\n\nThird daughter of **[[Francis Telfer (1809–1895)]]** and **[[Dinah Flavel (1821–1844)]]** — named after her father's first wife who had died in 1839. After her mother Dinah's death in 1844, she was raised by her father's third wife Margaret Wright.\n\n## Vital Information\n\n- **Born:** 7 August 1840\n- **Birth name:** Jean Telfer (marriage certificate gives name as \"Jane\")\n- **Died:** 15 July 1892, Queens Own Town (Finniss Point), South Australia — heart disease\n- **Buried:** Strathalbyn Cemetery, South Australia\n\n## Marriage (1): Richard Paynter (1838–1869)\n\n- **Marriage date/location:** Solemnized by John Kither (Officiating Minister) at Chain of Ponds Parsonage. Witnessed by her father Francis Telfer and Henry Whiting of Chain of Ponds. Jean was several months pregnant at the time.\n- **Richard Paynter:** Son of Richard Paynter (from Calstock, Cornwall, died Jan 1856 aged 39 after \"protracted affliction\")\n- **Richard's occupation:** Initially a shepherd at Koppio (working for Jean's uncle James Telfer), later a school teacher at Saint Kitts (between Kapunda and Truro) — change due to poor health\n- **Richard died:** 7 February 1869, St. Kitts Creek, of pleurisy, aged 30. Newspaper: \"Mr Paynter, the Schoolmaster at St. Kitts Creek, died somewhat suddenly on Sunday last, by which a widow and five children have been left unprovided for.\"\n\n### Children of Richard Paynter and Jean Telfer\n\n#### 1. THOMAS PAYNTER\n- **Born:** 22 December 1859, Ward Farm, near Kersbrook\n- **Married:** Elizabeth Liebich, 1 December 1881, at Tarcowie\n- **Occupation:** Leased/worked farmland at Arden Vale (near Quorn, SA). Later worked properties around Peterborough.\n- **Accident:** Slipped under a train, had a leg amputated in 1946\n- **Died:** Shortly after amputation in 1946, aged 86. Buried Peterborough Cemetery.\n- **Children (9):** Richard, Lilian, Gustav, Ethel, Dinah, Agnes, Rose, Thomas, Helena\n\n##### 1a. Richard William John Paynter\n- Born 27 Apr 1882, Mannanarie. Bought own farm at Arden Vale at age 18. Married Lucy Arabella Hill. Died 23 Jul 1960.\n\n##### 1b. Lilian Ellen Jane Paynter\n- Born 1885, Arden Vale. Worked on stations. Married (1) Henry Alcock (railway worker, Quorn), (2) Herbert Mayer (station hand), (3) Alfred Hatchard (Iron Knob). Died 1 Mar 1954, Iron Knob.\n\n##### 1c. Gustav Francis George Paynter\n- Born 1888. Married (1) Sarah Jane Barbour, (2) Lily Olive Rowe. Worked for railways. Died 1 Jul 1946, aged 58.\n\n##### 1d. Ethel Emily Elizabeth Paynter\n- Born 1891, Arden Vale. Married (1) Frank Smith (railway worker — d. 1932), (2) David George Flavel (railway ganger). Died 19 May 1932, Peterborough.\n\n##### 1e. Dinah Alice Mary Paynter\n- Born 27 Sep 1894, Arden Vale. Married William Mundy (railway employee). Died 27 May 1963.\n\n##### 1f. Agnes Letitia May Rose Paynter\n- Born 1896, Arden Vale. Married George Hucks (railway worker). Died 28 May 1952, buried Loxton.\n\n##### 1g. Rose Isabel Margaret Paynter\n- Born 8 Aug 1900, Quorn nursing home. Married John Hunter Rankin (of Koolunga, son of Scottish migrants Angus and Jane Rankin) in 1918. Died 8 Jul 1988, Port Augusta.\n\n##### 1h. Thomas Frederick Edward Paynter\n- Born 31 Dec 1903, Arden Vale. Married Florence Catherine Donovan. Died 16 Sep 1940, aged 36.\n\n##### 1i. Helena Florence Daisy Paynter\n- Born 19 Aug 1906, Arden Vale. Married Harry Richmond Hill (northern station hand). Lived in Terowie, later Gawler.\n\n#### 2. MARY JANE PAYNTER\n- **Born:** 30 June 1861, Koppio (near Port Lincoln)\n- **Married:** John Watson, 1 March 1882. Ceremony by Rev. H. Chapman (first Wesleyan Minister of Hawker), witnessed by Mrs Anne Mapleton and John Telfer (Mary's uncle).\n- **John Watson:** Grandfather Charles Watson was a convict on \"Asia II\" (1827, Tasmania). John was a \"lime burner\" of Arkaba.\n- **Lived:** Willow Plains (share-farmed land owned by John Telfer). Moved to Olinda, Victoria in 1910.\n- **John died:** 10 September 1929\n- **Mary Jane died:** 14 July 1945, Preston, Victoria, aged 84. Buried Fawkner Cemetery.\n- **Children (10):** Joseph, Florence Beatrice, Lancelot Hobart, John Francis Percival, Blanche Olive May, Cecil Charles, Clifford, Vera Merle, Royal Ernest, Arthur\n\n#### 3. FRANCIS TELFER PAYNTER\n- **Born:** 27 October 1862, Koppio\n\n#### 4. ELIZABETH PAYNTER\n- **Born:** 31 December 1864, Chain of Ponds area\n\n#### 5. THIRZA PAYNTER\n- **Born:** 3 July 1867, St Kitts Creek, District of Kapunda, South Australia\n- **Died:** 22 March 1869, Finniss Point, South Australia — died as a child, aged 1\n- **Note:** Thirza died six weeks after her father Richard. She was alive when he died, so the family he left comprised six living children.\n\n#### 6. DINAH FLAVEL PAYNTER\n- **Born:** 18 July 1869, Finniss Point (five months after Richard's death)\n- **Died:** 10 June 1958, Mukinbudin, Western Australia\n\n## Marriage (2): Frederick Parker\n\n- **Marriage date/location:** Christmas Day, 25 December 1871, at Kapunda\n- **Frederick Parker:** Son of George Parker. Occupation: itinerant farm labourer / bullock driver\n- **Lived:** Hawker, Oraparinna area (far north SA), later Finniss Point\n- **Frederick died:** 12 August 1928, Berrima Hospital, NSW. Buried Bowral Cemetery, NSW. In later years he lived with his daughter Margaret and son-in-law Edward Liebich at Wildes Meadow, NSW.\n- **At Frederick's death, only 3 of his children survived him:** Margaret, Frederick (known as George), and Joanna\n\n### Children of Frederick Parker and Jean Telfer\n\n#### 1. MARGARET ELIZA PARKER\n- **Born:** 26 July 1872, Finniss Point\n- **Married:** Edward Liebich (26yo farmer of Arden Vale, son of Gustav Liebich), 22 February 1893, at Wesleyan Parsonage, Quorn\n- **Lived:** Moved to Handen, NSW (c.1911), then Robertson and Moss Vale districts\n- **Died:** 27 March 1938, Moss Vale. Buried Moss Vale Cemetery.\n- **Children (8):** Jean, Alice Mary, Martha Elizabeth, Emily Margaret, Edward Harold, Frederick Walter, Ruth Temperance, Ella\n\n#### 2. FREDERICK GEORGE PARKER (known as George)\n- **Born:** 5 April 1874, Oraparinna (father was bullock driver)\n- **Occupation:** Living at Wantiool at time of death\n- **Never married**\n- **Died:** 16 December 1946, Junee Hospital, NSW. Buried Church of England Cemetery, Junee, NSW.\n\n#### 3. ANNIE PARKER\n- **Born:** 18 November 1875, Oraparinna\n- **Died:** 6 November 1895, Adelaide\n\n#### 4. MARTHA PARKER\n- **Born:** January 1878 (estimated from school records — no birth certificate found)\n- **School:** Queens Own Town School, attended 1886–1892\n\n#### 5. JOANNA WITTITA CORDLEY PARKER\n- **Born:** 6 February 1880, Arkaba\n- **Still living** at father's death in 1928\n\n#### 6. ETHEL MAY PARKER\n- **Born:** 4 June 1881, Hawker\n- **School:** Until 1895\n\n## Family Stories\n\n### Left a Widow at 29\n\nWhen Jean's first husband Richard Paynter died of pleurisy in February 1869 at just 30, he left her with six living children and no provision. The local paper put it bluntly — \"a widow and five children have been left unprovided for.\" Jean was pregnant with her sixth and last child Dinah Flavel Paynter, born five months after Richard died. A schoolteacher who'd been in poor health for some time, Richard's passing left the family scrambling.\n\n*(From the Borders to the Bush, pp.76-79)*\n\n### A Christmas Day Wedding\n\nOn Christmas Day 1871, Jean — now going by Jane — married Frederick Parker at Kapunda. Frederick was a bullock driver and itinerant farm labourer, and the marriage took Jean and her children from the relative comfort of Finniss Point to the far north of South Australia around Hawker and Oraparinna. Life in the north was hard and isolated.\n\n*(From the Borders to the Bush, pp.77-79)*\n\n### The Roof-Top Refuge\n\nJean's eldest son Thomas Paynter built a stone house with a thatched roof at Arden Vale near Quorn. When he and his wife Elizabeth had to walk five miles into town for supplies, they'd put the children on the roof of the house — safe from the dingoes and wild dogs that roamed the area. Years later, Thomas lost a leg slipping under a train and died shortly after at 86. The ruins of that stone house still stand among the peppertrees planted in those early days.\n\n*(From the Borders to the Bush, pp.79-81)*\n\n### The Convict Who Built Lighthouses\n\nJean's daughter Mary Jane Paynter married John Watson, whose grandfather Charles Watson arrived in Tasmania as a convict on the *Asia II* in 1827. Charles was an engineer assigned to Public Works, became Engineer in Charge of building lighthouses around Tasmania — Bruny Island, Swan Island, Goose Island, and Tow Head — and even built the causeway at Bridgewater. He got an unconditional pardon in 1834 after serving just 7 of his 14-year sentence. John himself ran away to sea at 12, served on whaling ships, and was a \"lime burner\" of Arkaba when he married Mary Jane.\n\n*(From the Borders to the Bush, pp.78-84)*\n\n### End of the Line at Finniss\n\nJean died of heart disease in 1892 at Queens Own Town (Finniss Point), aged just 51, and was buried at Strathalbyn Cemetery. Her husband Frederick outlived her by 36 years, spending his final days living with his daughter Margaret and son-in-law at Wildes Meadow, New South Wales. He was buried at Bowral in 1928.\n\n*(From the Borders to the Bush, pp.78-84)*|",
     "body_stripped": "Third daughter of **Francis Telfer (1809–1895)** and **Dinah Flavel (1821–1844)** — named after her father's first wife who had died in 1839. After her mother Dinah's death in 1844, she was raised by her father's third wife Margaret Wright.\n\n## Vital Information\n\n- **Born:** 7 August 1840\n- **Birth name:** Jean Telfer (marriage certificate gives name as \"Jane\")\n- **Died:** 15 July 1892, Queens Own Town (Finniss Point), South Australia — heart disease\n- **Buried:** Strathalbyn Cemetery, South Aus",
     "is_living": false,
     "lifespan": "1840 – 1892",
@@ -22088,6 +22113,7 @@
           "Mary Jane Paynter (1861–1945)",
           "Francis Telfer Paynter (1862–?)",
           "Elizabeth Paynter (1864–1928)",
+          "Thirza Paynter (1867–1869)",
           "Dinah Flavel Paynter (1869–1958)"
         ]
       }
@@ -22095,7 +22121,7 @@
     "roles": [
       "First husband of Jean Telfer"
     ],
-    "body_markdown": "# Richard Paynter (1838–1869)\n\n**Role:** First husband of Jean Telfer\n**Born:** ~1838 — Cornwall, England\n**Died:** 7 February 1869 (aged 30) — St. Kitts Creek, pleurisy\n**Buried:** Kapunda area\n\nRichard Paynter was born in Cornwall, England, the son of Richard Paynter of Calstock. He emigrated to South Australia where he worked as a labourer at Chain of Ponds.\n\nHe married Jean Telfer on 12 September 1859 at the Chain of Ponds Parsonage, solemnised by John Kither and witnessed by her father Francis Telfer and Henry Whiting. Jean was several months pregnant at the time.\n\nAfter their first child Thomas was born, the family moved to Koppio near Port Lincoln where Richard worked as a shepherd for Jean's cousin James Telfer. They later returned to the Chain of Ponds area and then to St. Kitts between Kapunda and Truro, where Richard became the local school teacher — a change brought on by his failing health.\n\nRichard died of pleurisy at the age of 30, leaving a widow and five children unprovided for.\n\n**Source:** *From the Borders to the Bush* — Chapter on Jean/Jane Telfer\n\n## Family Stories\n\nRichard Paynter was born in Calstock, Cornwall, the son of Richard Paynter, who died in January 1856 aged 39 after \"a protracted affliction.\" Richard the younger emigrated to South Australia and worked as a labourer at Chain of Ponds. On 12 September 1859, at just 19 years old, Jean Telfer married 21-year-old Richard Paynter at the Chain of Ponds Parsonage — a different setting from her sisters, who were married in their father Francis's home. Jean was several months pregnant at the time. After their first son Thomas was born, the family moved to Koppio near Port Lincoln, where Richard worked as a shepherd for Jean's cousin James Telfer. They later returned to the Chain of Ponds area and eventually settled at St. Kitts, between Kapunda and Truro. There, as Richard's health began to fail, he made an unusual career change — from shepherd to school teacher. The book *From the Borders to the Bush* records that he died of pleurisy on 7 February 1869 at St. Kitts Creek, aged just 30, leaving his widow and five children unprovided for. An in memoriam notice was placed in a local newspaper. His first child Dinah was born at Finniss Point five months after his death.\n\n*(From the Borders to the Bush, p.16)*",
+    "body_markdown": "# Richard Paynter (1838–1869)\n\n**Role:** First husband of Jean Telfer\n**Born:** ~1838 — Cornwall, England\n**Died:** 7 February 1869 (aged 30) — St. Kitts Creek, pleurisy\n**Buried:** Kapunda area\n\nRichard Paynter was born in Cornwall, England, the son of Richard Paynter of Calstock. He emigrated to South Australia where he worked as a labourer at Chain of Ponds.\n\nHe married Jean Telfer on 12 September 1859 at the Chain of Ponds Parsonage, solemnised by John Kither and witnessed by her father Francis Telfer and Henry Whiting. Jean was several months pregnant at the time.\n\nAfter their first child Thomas was born, the family moved to Koppio near Port Lincoln where Richard worked as a shepherd for Jean's cousin James Telfer. They later returned to the Chain of Ponds area and then to St. Kitts between Kapunda and Truro, where Richard became the local school teacher — a change brought on by his failing health.\n\nRichard died of pleurisy at the age of 30, leaving a widow and six living children unprovided for. His daughter Thirza Paynter (1867–1869) — born 3 July 1867 at St Kitts Creek — died at Finniss Point on 22 March 1869, six weeks after her father. Jean was pregnant with their last child, Dinah Flavel, who was born that July.\n\n**Source:** *From the Borders to the Bush* — Chapter on Jean/Jane Telfer\n\n## Family Stories\n\nRichard Paynter was born in Calstock, Cornwall, the son of Richard Paynter, who died in January 1856 aged 39 after \"a protracted affliction.\" Richard the younger emigrated to South Australia and worked as a labourer at Chain of Ponds. On 12 September 1859, at just 19 years old, Jean Telfer married 21-year-old Richard Paynter at the Chain of Ponds Parsonage — a different setting from her sisters, who were married in their father Francis's home. Jean was several months pregnant at the time. After their first son Thomas was born, the family moved to Koppio near Port Lincoln, where Richard worked as a shepherd for Jean's cousin James Telfer. They later returned to the Chain of Ponds area and eventually settled at St. Kitts, between Kapunda and Truro. There, as Richard's health began to fail, he made an unusual career change — from shepherd to school teacher. The book *From the Borders to the Bush* records that he died of pleurisy on 7 February 1869 at St. Kitts Creek, aged just 30, leaving his widow and five children unprovided for — six, as the family record shows: the youngest, Thirza (born 3 July 1867), died at Finniss Point on 22 March 1869, only six weeks after her father. An in memoriam notice was placed in a local newspaper. His last child Dinah Flavel was born at Finniss Point on 18 July 1869, five months after his death.\n\n*(From the Borders to the Bush, p.16)*",
     "body_stripped": "**Role:** First husband of Jean Telfer\n**Born:** ~1838 — Cornwall, England\n**Died:** 7 February 1869 (aged 30) — St. Kitts Creek, pleurisy\n**Buried:** Kapunda area\n\nRichard Paynter was born in Cornwall, England, the son of Richard Paynter of Calstock. He emigrated to South Australia where he worked as a labourer at Chain of Ponds.\n\nHe married Jean Telfer on 12 September 1859 at the Chain of Ponds Parsonage, solemnised by John Kither and witnessed by her father Francis Telfer and Henry Whiting. J",
     "is_living": false,
     "lifespan": "1838 – 1869",
@@ -24512,17 +24538,35 @@
         "names": [
           "Thomas Cleveland Dillon"
         ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Telfer Dillon"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Sabina (Triplett) Dillon (1870–1968)"
+        ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Thomas Cleveland Dillon\n\n## Lifespan\n\n**Born:** 29 August 1900 — Adelaide, South Australia\n**Died:** 7 August 1976 — Bordertown, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
-    "body_stripped": "## Lifespan\n\n**Born:** 29 August 1900 — Adelaide, South Australia\n**Died:** 7 August 1976 — Bordertown, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
+    "body_markdown": "# Thomas Cleveland Dillon\n\n## Lifespan\n\n**Born:** 29 August 1900 — Adelaide, South Australia\n**Died:** 7 August 1976 — Bordertown, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Telfer Dillon]] (1864–1942) |\n| **Mother** | [[Sabina (Triplett) Dillon (1870–1968)]] |",
+    "body_stripped": "## Lifespan\n\n**Born:** 29 August 1900 — Adelaide, South Australia\n**Died:** 7 August 1976 — Bordertown, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Telfer Dillon (1864–1942) \n **Mother**  Sabina (Triplett) Dillon (1870–1968)",
     "is_living": false,
     "lifespan": "1900 – 1976",
-    "parents": [],
+    "parents": [
+      "francis-telfer-dillon-1864",
+      "sabina-dillon"
+    ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "inez-dillon-1905",
+      "vera-dillon-1905"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -24531,7 +24575,7 @@
     "vault_file": "Thomas Cleveland Dillon.md",
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 6
   },
   {
     "id": "Thomas Paynter (1859)",
@@ -24875,17 +24919,35 @@
         "names": [
           "Vera Dillon"
         ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Telfer Dillon"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Sabina (Triplett) Dillon (1870–1968)"
+        ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Vera Dillon\n\n## Lifespan\n\n**Born:** 15 August 1905 — Adelaide, South Australia\n**Died:** 15 July 1986 — Adelaide, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
-    "body_stripped": "## Lifespan\n\n**Born:** 15 August 1905 — Adelaide, South Australia\n**Died:** 15 July 1986 — Adelaide, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).",
+    "body_markdown": "# Vera Dillon\n\n## Lifespan\n\n**Born:** 15 August 1905 — Adelaide, South Australia\n**Died:** 15 July 1986 — Adelaide, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Telfer Dillon]] (1864–1942) |\n| **Mother** | [[Sabina (Triplett) Dillon (1870–1968)]] |",
+    "body_stripped": "## Lifespan\n\n**Born:** 15 August 1905 — Adelaide, South Australia\n**Died:** 15 July 1986 — Adelaide, South Australia\n\n> **Source note:** Birth and death years from the Telfer family history, \"From the Borders to the Bush\" / Supplement 2008 (single source — awaiting independent verification).\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Telfer Dillon (1864–1942) \n **Mother**  Sabina (Triplett) Dillon (1870–1968)",
     "is_living": false,
     "lifespan": "1905 – 1986",
-    "parents": [],
+    "parents": [
+      "francis-telfer-dillon-1864",
+      "sabina-dillon"
+    ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "inez-dillon-1905",
+      "thomas-cleveland-dillon-1900"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -24894,7 +24956,7 @@
     "vault_file": "Vera Dillon.md",
     "images": [],
     "person_photo": null,
-    "generation": 7
+    "generation": 6
   },
   {
     "id": "Vernon Ray St. Clair Telfer (1879)",
@@ -26900,6 +26962,97 @@
     "images": [],
     "person_photo": null,
     "generation": 6
+  },
+  {
+    "id": "Sabina Dillon (1870)",
+    "slug": "sabina-dillon",
+    "vault_file": "Sabina (Triplett) Dillon (1870–1968).md",
+    "first_name": "Sabina",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1870,
+    "death_year": 1968,
+    "birth_date": "18 October 1870",
+    "death_date": "18 February 1968",
+    "birth_place": "Kapunda, South Australia",
+    "death_place": "Adelaide, South Australia",
+    "birth_year_display": "1870",
+    "death_year_display": "1968",
+    "display_name": "Sabina Dillon",
+    "title": "Sabina (Triplett) Dillon (1870–1968)",
+    "tags": [
+      "person",
+      "dillon",
+      "triplett",
+      "ancestor"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Sabina (Triplett) Dillon"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Francis Telfer Dillon"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Thomas Cleveland Triplett"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Martha Triplett (nee Coleman)"
+        ]
+      },
+      {
+        "type": "Son",
+        "names": [
+          "Thomas Cleveland Dillon"
+        ]
+      },
+      {
+        "type": "Daughter",
+        "names": [
+          "Inez Dillon"
+        ]
+      },
+      {
+        "type": "Daughter",
+        "names": [
+          "Vera Dillon"
+        ]
+      }
+    ],
+    "roles": [
+      "Wife of Francis Telfer Dillon (1864–1942) — Dillon-branch ancestor"
+    ],
+    "body_markdown": "# Sabina (Triplett) Dillon (1870–1968)\n\n**Role:** Wife of Francis Telfer Dillon (1864–1942) — Dillon-branch ancestor\n**Born:** 18 October 1870 — Kapunda, South Australia\n**Died:** 18 February 1968 — Adelaide, South Australia (aged 97)\n**Married:** 26 March 1896 — Residence of JW Barrett, Eastwood, South Australia\n**Father:** Thomas Cleveland Triplett (of Cornwall, England)\n**Mother:** Martha Triplett (nee Coleman, of Glasgow, Scotland)\n**Spouse:** [[Francis Telfer Dillon]] (m. 26 March 1896)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | Thomas Cleveland Triplett (of Cornwall) |\n| **Mother** | Martha Triplett (nee Coleman, of Glasgow) |\n| **Husband** | [[Francis Telfer Dillon]] (1864–1942) |\n| **Daughter** | Martha Beattie Dillon (m. Carl Jorgensen) |\n| **Son** | [[Thomas Cleveland Dillon]] (1900–1976) |\n| **Daughter** | [[Inez Dillon]] (~1905–1978) — m. Horace Sampson Chappell |\n| **Daughter** | [[Vera Dillon]] (1905–1986) — m. Jack Corbin Williams |\n| **Child** | Youngest child (name not recorded) — stillborn |\n\n*(The family books do not agree on whether Sabina and Francis had five or six children — see Notes.)*\n\n## Life Summary\n\nSabina Triplett was born 18 October 1870 at Kapunda, South Australia, the daughter of **Thomas Cleveland Triplett** of Cornwall and his wife **Martha (nee Coleman)** of Glasgow. On **26 March 1896** she married **Francis Telfer Dillon** (1864–1942), a sharebroker with a seat on the Adelaide Stock Exchange and son of John Charles Dillon and Elizabeth Beattie Telfer. The marriage was solemnised at the residence of JW Barrett at Eastwood, South Australia, by the Methodist rite used by the family.\n\nShe and Francis raised their family in Adelaide. Francis died at Mitcham on 26 April 1942; Sabina outlived him by nearly twenty-six years, dying at Adelaide on **18 February 1968**, aged 97.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 18 Oct 1870 | Born — Kapunda, South Australia |\n| 26 Mar 1896 | Married [[Francis Telfer Dillon]] — Res. JW Barrett, Eastwood, SA |\n| 29 Aug 1900 | Son [[Thomas Cleveland Dillon]] born (Adelaide) |\n| ~1905 | Daughter [[Inez Dillon]] born (Adelaide) |\n| 15 Aug 1905 | Daughter [[Vera Dillon]] born (Adelaide) |\n| 26 Apr 1942 | Husband Francis Telfer Dillon died — Mitcham, SA |\n| 18 Feb 1968 | Sabina died (aged 97) — Adelaide, SA |\n\n## Sources\n\n- ***A Telfer Family Tree — Supplement 2008***, p.201 (typed entry): `Francis Telfer DILLON, b. 7 Jun 1864, Kersbrook, SA, d. 26 Apr 1942 Mitcham, SA` · `+ Sabina TRIPLET, b. 18 Oct 1870 Kapunda, SA` · `m, 26 Mar 1896 Res JW Barrett, Eastwood, SA, d. 18 Feb 1968, Adelaide, SA`\n- ***A Telfer Family Tree — Supplement 2008***, p.193 (child list of Elizabeth Beattie Telfer): `5. Francis Telfer Dillon (1864-1942) m. Sabina Triplett` — 6 children listed\n- ***From the Borders to the Bush***, p.26: *\"Francis was a sharebroker and had a seat on the Adelaide Stock Exchange… His wife, Sabina, was a very energetic lady, and worked tirelessly for many charities.\"*\n- ***From the Borders to the Bush***: *\"Francis Telfer Dillon was born at Kersbrook in 1864. He married Sabina Triplet, the daughter of Thomas Cleveland Triplet of Cornwall, and his wife, Martha Triplet (nee Coleman) of Glasgow.\"*",
+    "body_stripped": "**Role:** Wife of Francis Telfer Dillon (1864–1942) — Dillon-branch ancestor\n**Born:** 18 October 1870 — Kapunda, South Australia\n**Died:** 18 February 1968 — Adelaide, South Australia (aged 97)\n**Married:** 26 March 1896 — Residence of JW Barrett, Eastwood, South Australia\n**Father:** Thomas Cleveland Triplett (of Cornwall, England)\n**Mother:** Martha Triplett (nee Coleman, of Glasgow, Scotland)\n**Spouse:** Francis Telfer Dillon (m. 26 March 1896)\n\n## Family\n\n Relation  Name \n\n **Father**  Thom",
+    "parents": [],
+    "children": [
+      "inez-dillon-1905",
+      "thomas-cleveland-dillon-1900",
+      "vera-dillon-1905"
+    ],
+    "siblings": [],
+    "spouses": [
+      "francis-telfer-dillon-1864"
+    ],
+    "is_living": false,
+    "lifespan": "1870 – 1968",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
   },
   {
     "id": "Charles Farrow Jr",
