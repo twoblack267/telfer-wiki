@@ -94,7 +94,14 @@ EXPECTED_MIN=$(node -e '
     p.slug !== "families" && p.slug !== "full-tree" && !noindex.has(p.slug));
   console.log(real.length);
 ' 2>/dev/null || echo 0)
-CNT=$(grep -oE 'telferwiki\.com/people/[a-z0-9-]+/' dist/sitemap-0.xml 2>/dev/null | grep -vE '/family-sheet|/descendants' | sed -E 's#.*/people/([a-z0-9-]+)/#\1#' | grep -vE '^(dna|families|full-tree)$' | sort -u | wc -l | tr -d ' ')
+# Slug pattern: person slugs may contain a TILDE for uncertain dates
+# (`charles-farrow-jr-~1865`) and are otherwise [a-z0-9-]. The old class
+# `[a-z0-9-]` silently DROPPED every tilde slug from the count, so the script
+# compared 357 against an expected 360 and cried "sitemap mismatch" on a
+# perfectly healthy site. Measured 2026-09-14: old=357, true=360, expected=360.
+# kanban tw-2026-09-14-007.
+SLUG='[A-Za-z0-9~_-]'
+CNT=$(grep -oE "telferwiki\\.com/people/${SLUG}+/" dist/sitemap-0.xml 2>/dev/null | grep -vE '/family-sheet|/descendants' | sed -E "s#.*/people/(${SLUG}+)/#\\1#" | grep -vE '^(dna|families|full-tree)$' | sort -u | wc -l | tr -d ' ')
 # Privacy gate: driven by the SAME source of truth as the sitemap filter
 # (src/data/privacy-exclusions.mjs). It is EMPTY as of 2026-09-08 — Mark decided
 # the youngest Ivory generation is indexable again — so an empty set must PASS.

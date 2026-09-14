@@ -141,9 +141,16 @@ echo "==> Step 6/6: record vault content hashes (src/data/vault-manifest.json)"
 # Content-hash truth check. data-drift-monitor.py compares each vault .md against
 # this manifest instead of mtimes, so a benign touch/sync/git-checkout no longer
 # raises a false DRIFT, while a genuine un-regenerated vault edit still does.
-python3 "$HOME/.hermes/scripts/write-vault-manifest.py" || {
-  echo "WARNING — could not write vault-manifest.json; drift check will report 'none'."
-}
+# NON-OPTIONAL (tw-2026-09-14-008): this write must NOT be allowed to fail silently.
+# A swallowed failure left vault-manifest.json holding STALE hashes, which the drift
+# monitor then reported as a genuine DRIFT — a false positive with no underlying change.
+# Fail the regen loudly instead; a regen that cannot record truth is not a regen.
+if ! python3 "$HOME/.hermes/scripts/write-vault-manifest.py"; then
+  echo "FAIL — vault-manifest.json could not be written." >&2
+  echo "       Refusing to report success: the drift check would compare the vault" >&2
+  echo "       against STALE hashes and raise a false DRIFT (tw-2026-09-14-008)." >&2
+  exit 1
+fi
 echo "OK — vault manifest refreshed; content-hash drift check is authoritative."
 
 echo

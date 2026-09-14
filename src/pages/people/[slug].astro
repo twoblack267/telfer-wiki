@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatBody, getLinksForRelationships, inlineLinks, stripWikiLinks } from "../../utils/format-body.mjs";
 import { NOINDEX_SLUGS } from "../../data/privacy-exclusions.mjs";
+import { lookupByPersonSlug, resolvePersonKey } from "../../lib/resolve-person-key.mjs";
 
 export async function getStaticPaths() {
   const people = (await import("../../data/people.public.json")).default;
@@ -17,6 +18,8 @@ const { person } = Astro.props;
 const isNoIndex = NOINDEX_SLUGS.has(person.slug);
 const people = (await import("../../data/people.public.json")).default;
 const telferPeople = people.filter((p) => p.branch === "telfer" || !p.branch);
+// Every real page slug — the resolver's candidate set for manifest lookups.
+const allSlugs = new Set(people.map((p) => p.slug).filter(Boolean));
 
 // ── Relationship groupings ──
 const spouseLinks = getLinksForRelationships(person.spouses, telferPeople);
@@ -120,7 +123,14 @@ const seoOverride = SEO_OVERRIDES[person.slug] || null;
 // come from the data-driven manifest src/data/sameas.json — only ancestors Mark has
 // verified get entries; everyone else simply emits no sameAs.
 const sameas = (await import("../../data/sameas.json")).default;
-const sameAsLinks = (sameas.people || {})[person.slug] || [];
+// RESOLVED, not exact-matched: the manifest is keyed by short name
+// (`adam-murray`) while slugs are dated (`adam-murray-1728`). An exact lookup
+// silently returned [] for 6 of 8 people and emitted no sameAs at all.
+// See src/lib/resolve-person-key.mjs — kanban tw-2026-09-14-004.
+const sameAsLinks = lookupByPersonSlug(sameas, person.slug, allSlugs, {
+  label: "sameas.json",
+  strict: import.meta.env?.DEV,
+}) || [];
 
 // Enrich with given/family names, gender, spouse links when the data is available.
 const spouseSchema = (person.spouses || [])
@@ -152,7 +162,13 @@ const personSchema = {
 // Only curated ancestors get a FAQ section. Renders BOTH a visible Q&A block AND
 // FAQPage JSON-LD (the most-cited format for AI answers), when present.
 const faqs = (await import("../../data/faqs.json")).default;
-const thisFaq = (faqs.people || {})[person.slug] || null;
+// Resolved the same way — `faqs.json` shares the short-name key shape.
+// Exact lookup left FAQPage JSON-LD + the visible FAQ dead on 4 of 6 people.
+// kanban tw-2026-09-14-005.
+const thisFaq = lookupByPersonSlug(faqs, person.slug, allSlugs, {
+  label: "faqs.json",
+  strict: import.meta.env?.DEV,
+}) || null;
 const faqItems = thisFaq?.faqs || [];
 const storyBlurb = thisFaq?.blurb || "";
 const faqSchema = faqItems.length
@@ -215,7 +231,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
           {person.roles?.length > 0 && (
             <div class="space-y-0">
               {person.roles.map((role) => (
-                <div key={stripWikiLinks(role)} class="text-xs text-[var(--color-ink-light)] italic" set:html={inlineLinks(role, telferPeople)} />
+                <div class="text-xs text-[var(--color-ink-light)] italic" set:html={inlineLinks(role, telferPeople)} />
               ))}
             </div>
           )}
@@ -262,7 +278,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
             <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">Photos</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {galleryImages.map((img) => (
-                <figure key={img.src} class="m-0">
+                <figure class="m-0">
                   <img
                     src={import.meta.env.BASE_URL + img.src}
                     alt={img.alt}
@@ -283,7 +299,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
             <h2 class="font-serif text-sm text-[var(--color-heading)] mb-1.5">Tags</h2>
             <div class="flex flex-wrap gap-1">
               {importantTags.map((tag) => (
-                <span key={tag} class="text-xs px-2 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">{tag}</span>
+                <span class="text-xs px-2 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">{tag}</span>
               ))}
             </div>
           </div>
@@ -295,7 +311,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
             <h2 class="font-serif text-sm text-[var(--color-heading)] mb-2">DNA Matches</h2>
             <dl class="space-y-3">
               {person.dna_matches.map((match, i) => (
-                <div key={i} class="border-l-2 border-[var(--color-highlight)] pl-3">
+                <div class="border-l-2 border-[var(--color-highlight)] pl-3">
                   <dt class="font-medium text-sm">{match.name}</dt>
                   <dd class="text-xs text-[var(--color-ink-light)] mt-0.5">
                     {match.relationship} — {match.centimorgans} cM
@@ -331,7 +347,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
             <h3 class="font-serif text-[var(--color-heading)] mb-1">Spouse{spouseLinks.length > 1 ? "s" : ""}</h3>
             <ul class="space-y-0">
               {spouseLinks.map(({ name, slug, lifespan }) => (
-                <li key={slug || name}>
+                <li>
                   {slug ? (
                     <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
@@ -350,7 +366,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
             <h3 class="font-serif text-[var(--color-heading)] mb-1">Parents</h3>
             <ul class="space-y-0">
               {parentLinks.map(({ name, slug, lifespan }) => (
-                <li key={slug || name}>
+                <li>
                   {slug ? (
                     <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
@@ -369,7 +385,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
             <h3 class="font-serif text-[var(--color-heading)] mb-1">Children</h3>
             <ul class="space-y-0">
               {childLinks.map(({ name, slug, lifespan }) => (
-                <li key={slug || name}>
+                <li>
                   {slug ? (
                     <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
@@ -388,7 +404,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
             <h3 class="font-serif text-[var(--color-heading)] mb-1">Siblings</h3>
             <ul class="space-y-0">
               {siblingLinks.map(({ name, slug, lifespan }) => (
-                <li key={slug || name}>
+                <li>
                   {slug ? (
                     <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
