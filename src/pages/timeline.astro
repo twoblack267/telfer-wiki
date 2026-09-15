@@ -8,6 +8,7 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
 // Build a timeline of all events
 interface TimelineEvent {
   year: number;
+  sortYear: number;
   dateLabel: string;
   type: "birth" | "death" | "marriage" | "event";
   personName: string;
@@ -17,44 +18,91 @@ interface TimelineEvent {
 
 const timeline: TimelineEvent[] = [];
 
+// tw-2026-09-14-020: birth_year / death_year may be an APPROXIMATE string
+// ("~1892", "~1885", "~1960") rather than a number — the vault marks estimates
+// with a leading tilde. Pushing those straight into `year` produced
+// Math.floor("~1892"/10)*10 = NaN, which built a literal 'NaNs' decade chip
+// labelled "NaNs" pointing at href="#decade-NaN" (3 timeline entries: Leslie
+// Frank Dillon, Charles Farrow Jr, Florence Nicholas). A non-numeric year must
+// never mint a decade anchor — parse it, and fall back to the raw string only
+// for display (new Date() keeps the entries sorted instead of collapsing).
+function parseYearValue(value: unknown): number | null {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value !== "string") return null;
+  const match = value.match(/-?\d{3,4}/);
+  if (!match) return null;
+  const parsed = Number.parseInt(match[0], 10);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function makeEvent(
+  raw: unknown,
+  display: unknown,
+  type: TimelineEvent["type"],
+  personName: string,
+  personSlug: string,
+  detail: string,
+): TimelineEvent {
+  const numeric = parseYearValue(raw);
+  return {
+    year: numeric ?? (raw as any),
+    dateLabel: `${display}`,
+    type,
+    personName,
+    personSlug,
+    detail,
+    sortYear: numeric ?? Number.MAX_SAFE_INTEGER,
+  };
+}
+
 for (const p of telferPeople) {
   if (p.birth_year) {
-    const detail = p.birth_year ? `Born in ${p.birth_year}` : "";
-    timeline.push({
-      year: p.birth_year,
-      dateLabel: `${p.birth_year}`,
-      type: "birth",
-      personName: p.display_name,
-      personSlug: p.slug,
-      detail: `${p.display_name} born`,
-    });
+    timeline.push(
+      makeEvent(
+        p.birth_year,
+        p.birth_year,
+        "birth",
+        p.display_name,
+        p.slug,
+        `${p.display_name} born`,
+      ),
+    );
   }
 
   if (p.death_year) {
-    timeline.push({
-      year: p.death_year,
-      dateLabel: `${p.death_year}`,
-      type: "death",
-      personName: p.display_name,
-      personSlug: p.slug,
-      detail: `${p.display_name} died (aged ${p.death_year && p.birth_year ? p.death_year - p.birth_year : "?"})`,
-    });
+    const birthNumeric = parseYearValue(p.birth_year);
+    const deathNumeric = parseYearValue(p.death_year);
+    const aged =
+      birthNumeric !== null && deathNumeric !== null
+        ? deathNumeric - birthNumeric
+        : "?";
+    timeline.push(
+      makeEvent(
+        p.death_year,
+        p.death_year,
+        "death",
+        p.display_name,
+        p.slug,
+        `${p.display_name} died (aged ${aged})`,
+      ),
+    );
   }
 }
 
 // Add key historical events from tree content
-timeline.push({ year: 1839, dateLabel: "1839", type: "event", personName: "Francis Telfer", personSlug: "francis-telfer-1809", detail: "Francis Telfer emigrates to South Australia" });
-timeline.push({ year: 1845, dateLabel: "1845", type: "event", personName: "Telfer Family", personSlug: "", detail: "Telfer family settles in the Tantanoola district, SA" });
-timeline.push({ year: 1874, dateLabel: "1874", type: "event", personName: "John Telfer", personSlug: "john-telfer-1847", detail: "John Telfer marries Caroline Masters" });
+timeline.push({ year: 1839, sortYear: 1839, dateLabel: "1839", type: "event", personName: "Francis Telfer", personSlug: "francis-telfer-1809", detail: "Francis Telfer emigrates to South Australia" });
+timeline.push({ year: 1845, sortYear: 1845, dateLabel: "1845", type: "event", personName: "Telfer Family", personSlug: "", detail: "Telfer family settles in the Tantanoola district, SA" });
+timeline.push({ year: 1874, sortYear: 1874, dateLabel: "1874", type: "event", personName: "John Telfer", personSlug: "john-telfer-1847", detail: "John Telfer marries Caroline Masters" });
 
-// Sort by year
-timeline.sort((a, b) => a.year - b.year);
+// Sort by year (sortYear guarantees finite numerics; unparseable years sink to the end)
+timeline.sort((a, b) => a.sortYear - b.sortYear);
 
 // Group by decade for navigation
 const decades: { label: string; year: number }[] = [];
 const seenDecades = new Set<number>();
 for (const t of timeline) {
-  const decade = Math.floor(t.year / 10) * 10;
+  const decade = Math.floor(t.sortYear / 10) * 10;
+  if (!Number.isFinite(decade)) continue;
   if (!seenDecades.has(decade)) {
     seenDecades.add(decade);
     decades.push({ label: `${decade}s`, year: decade });
@@ -83,12 +131,13 @@ for (const t of timeline) {
   <div class="space-y-0">
     {timeline.map((event, i) => {
       // Check if decade header needed
-      const decade = Math.floor(event.year / 10) * 10;
-      const prevDecade = i > 0 ? Math.floor(timeline[i - 1].year / 10) * 10 : -1;
+      const decade = Math.floor(event.sortYear / 10) * 10;
+      const prevDecade = i > 0 ? Math.floor(timeline[i - 1].sortYear / 10) * 10 : -1;
+      const showHeader = decade !== prevDecade && Number.isFinite(decade);
 
       return (
         <>
-          {decade !== prevDecade && (
+          {showHeader && (
             <div id={`decade-${decade}`} class="py-4 -ml-0">
               <h2 class="text-2xl font-bold font-serif text-[var(--color-navy)] border-b-2 border-[var(--color-gold)] pb-1 inline-block">
                 {decade}s

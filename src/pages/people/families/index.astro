@@ -5,12 +5,26 @@ import type { PersonData } from "../../../utils/extract-data.mjs";
 const people = (await import("../../../data/people.public.json")).default as PersonData[];
 const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) && p.id);
 
+// tw-2026-09-14-019: birth_year may be an APPROXIMATE string ("~1892"), not a
+// number. Passing the raw value into Math.floor(year/10)*10 and Math.min/max
+// produced NaN ("NaNs" generation buckets, an empty "Year Span" tile, and
+// "Unknown" ordering collapse). Parse the first 3-4 digit run; return null when
+// there is no usable year so callers can bucket it explicitly.
+function parseBirthYear(value: unknown): number | null {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value !== "string") return null;
+  const match = value.match(/-?\d{3,4}/);
+  if (!match) return null;
+  const parsed = Number.parseInt(match[0], 10);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
 // Get unique birth decades for generation grouping
 const generations: Record<string, PersonData[]> = {};
 for (const p of telferPeople) {
-  const year = p.birth_year;
+  const year = parseBirthYear(p.birth_year);
   let decade: string;
-  if (year == null) {
+  if (year === null) {
     decade = "Unknown";
   } else if (year < 1800) {
     decade = "Before 1800";
@@ -35,12 +49,18 @@ const sortedGenerations = Object.entries(generations)
   })
   .map(([decade, members]) => [
     decade,
-    members.sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999))
+    members.sort(
+      (a, b) =>
+        (parseBirthYear(a.birth_year) ?? 9999) - (parseBirthYear(b.birth_year) ?? 9999),
+    ),
   ]);
 
-const years = telferPeople.filter(p => p.birth_year).map(p => p.birth_year);
-const minYear = Math.min(...years);
-const maxYear = Math.max(...years);
+const years = telferPeople
+  .map((p) => parseBirthYear(p.birth_year))
+  .filter((y): y is number => y !== null && Number.isFinite(y));
+const minYear = years.length ? Math.min(...years) : null;
+const maxYear = years.length ? Math.max(...years) : null;
+const yearSpan = minYear !== null && maxYear !== null ? `${minYear}–${maxYear}` : "Unknown";
 const livingCount = telferPeople.filter(p => p.is_living).length;
 const deceasedCount = telferPeople.length - livingCount;
 const surnameCounts: Record<string, number> = {};
@@ -82,7 +102,7 @@ const otherSurnames = Object.entries(surnameCounts)
       <div class="text-xs text-[var(--color-muted)] mt-1">Living</div>
     </div>
     <div class="person-card rounded-xl p-4 text-center">
-      <div class="text-2xl font-bold font-serif text-[var(--color-burgundy)]">{(maxYear - minYear)}</div>
+      <div class="text-2xl font-bold font-serif text-[var(--color-burgundy)]">{yearSpan}</div>
       <div class="text-xs text-[var(--color-muted)] mt-1">Year Span</div>
     </div>
   </div>
