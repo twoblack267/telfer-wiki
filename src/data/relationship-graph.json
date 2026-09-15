@@ -1791,6 +1791,11 @@
       "generation": 5
     },
     {
+      "slug": "george-holloway",
+      "id": "George Hope Holloway (1899)",
+      "generation": 6
+    },
+    {
       "slug": "charles-farrow-jr-~1865",
       "id": "Charles Farrow Jr",
       "generation": 5
@@ -3767,6 +3772,10 @@
       {
         "from": "walter-john-hookings-1881",
         "to": "laurel-bosanquet"
+      },
+      {
+        "from": "elizabeth-telfer-farrow-holloway-1861",
+        "to": "george-holloway"
       },
       {
         "from": "charles-farrow-1836",

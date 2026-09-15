@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-15T20:05:52+10:00",
+  "generated_at": "2026-09-15T21:38:53+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 374,
+  "count": 375,
   "kinds": {
-    "real": 358,
+    "real": 359,
     "redirect": 16,
     "empty": 0
   },
@@ -153,7 +153,7 @@
       "kind": "real"
     },
     "Bertha Telfer.md": {
-      "sha256": "0d03cd34f5bb9eee8eb8edd1aac4ebba7e24a0c93c5e901dfd088adacd35b348",
+      "sha256": "cc5027c687e78481f0ac5d8a3662b75d46856412b61c5219dd59615c5d18ba25",
       "kind": "real"
     },
     "Beth Telfer.md": {
@@ -477,7 +477,7 @@
       "kind": "real"
     },
     "Florence Nicholas Telfer.md": {
-      "sha256": "87b647fd134e1fac55e3c95f60fea2db1f0f045ab52045dc0dd02421b027bef1",
+      "sha256": "5b102c8665f1207fc639d9d02516e6f9a2d3e688d542eecb8006bcdffde128e8",
       "kind": "real"
     },
     "Floris Ethel Victoria Telfer (1904\u20131951).md": {
@@ -546,6 +546,10 @@
     },
     "George Hope Farrow (1872\u20131919).md": {
       "sha256": "56119c3f24a2c8e0ec2596b9d703dbfc1343fb1b6842d48ddbced6844e4289a8",
+      "kind": "real"
+    },
+    "George Hope Holloway (1899\u20131919).md": {
+      "sha256": "2b62233b57d8f4ea156736034fc4ee7e2f14cc8871fa9496bb64765c93d30cea",
       "kind": "real"
     },
     "George Masters (1841\u20131841).md": {
@@ -1437,7 +1441,7 @@
       "kind": "real"
     },
     "Walter William Telfer (1884\u20131966).md": {
-      "sha256": "cde00ac6925d17ad43a0420879215dbef5420e1e18b738c7f20d2545929e5068",
+      "sha256": "c683210da1af98f64972b026f734f3713ed9c181a146c12dd747327ee6db4601",
       "kind": "real"
     },
     "Wilhelm Seebohm (1833\u20131907).md": {
