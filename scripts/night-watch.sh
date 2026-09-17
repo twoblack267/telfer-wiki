@@ -37,6 +37,37 @@ echo "============================"
 echo "Started: $(date '+%Y-%m-%d %H:%M:%S %Z')"
 echo ""
 
+# ── Vault→site freshness receipt (added 2026-09-17, tw-2026-09-17-001) ──
+# WHY: on 2026-09-17 three vault files were corrected at 17:32/17:40 and the generated
+# data still held the old ordinals. That was NOT drift — Night Watch was going to pick
+# them up at 20:05 anyway. Nothing SAID so, so a false alarm was raised. This prints ONE
+# line: how many vault files differ from the last build. >0 mid-day is NORMAL (edits wait
+# for the next run); it is only a problem if still >0 AFTER Night Watch has run.
+MAN="$HOME/telfer-wiki/src/data/vault-manifest.json"
+if [ -f "$MAN" ]; then
+  FRESH=$(python3 - "$MAN" <<'PYPY'
+import json,sys,os,hashlib
+m=json.load(open(sys.argv[1]))
+vault=m.get("vault_dir") or ""
+bad=0; n=0
+for rel,meta in (m.get("files") or {}).items():
+    h=meta.get("sha256") if isinstance(meta,dict) else meta
+    p=os.path.join(vault,rel)
+    n+=1
+    if not os.path.exists(p):
+        bad+=1; continue
+    try:
+        if h and hashlib.sha256(open(p,'rb').read()).hexdigest()!=str(h).replace("sha256:",""):
+            bad+=1
+    except Exception:
+        pass
+print(bad)
+PYPY
+)
+  echo "🚦 Vault→site freshness: $FRESH of 375 vault file(s) differ from the last build. Mid-day that is NORMAL (edits wait for the next Night Watch). Only a problem if still >0 AFTER this run."
+fi
+
+
 # ── 1. Vault sync (SAFE: convert + purge 'Mark's X' + gate-verify) ──
 # Use regenerate-data.sh, NOT raw convert-markdown.mjs — running convert alone
 # re-imports "Mark's X" first-person strings from vault files into people.json,
