@@ -281,12 +281,12 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
                 <figure class="m-0">
                   <img
                     src={import.meta.env.BASE_URL + img.src}
-                    alt={img.alt}
+                    alt={stripWikiLinks(img.alt)}
                     class="w-full h-auto rounded-lg border border-[var(--color-border)] object-contain bg-[var(--color-surface)]"
                     loading="lazy"
                     style="max-height: 300px;"
                   />
-                  <figcaption class="text-xs text-[var(--color-muted)] mt-1 text-center line-clamp-2">{img.alt}</figcaption>
+                  <figcaption class="text-xs text-[var(--color-muted)] mt-1 text-center line-clamp-2" set:html={inlineLinks(img.alt, telferPeople)} />
                 </figure>
               ))}
             </div>
