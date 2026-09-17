@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-17T20:05:56+10:00",
+  "generated_at": "2026-09-17T21:36:38+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 375,
+  "count": 376,
   "kinds": {
-    "real": 359,
+    "real": 360,
     "redirect": 16,
     "empty": 0
   },
@@ -17,7 +17,7 @@
       "kind": "real"
     },
     "Adam Francis Telfer (1842\u20131925).md": {
-      "sha256": "082f896ee12513f3396709145d953fc643677584e3674af20ab83d6615370db5",
+      "sha256": "21bcaecee3e346b8a0af4d2e5b9c7e7f4fbc858a44219a07fcc40ba759078280",
       "kind": "real"
     },
     "Adam Murray (1728\u20131816).md": {
@@ -37,7 +37,7 @@
       "kind": "real"
     },
     "Agnes Letitia May Rose Paynter-Hucks (1895\u20131952).md": {
-      "sha256": "458bb54b0682f502680d25dfae9e4110cee0602fa0ba9fb3cda61ee36647d0f4",
+      "sha256": "81fe732756d71a898ba5cbfd6c0a3c9620532b816609122daee8c67bdb1ca470",
       "kind": "real"
     },
     "Agnes Telfer (1848\u2013?).md": {
@@ -269,7 +269,7 @@
       "kind": "real"
     },
     "Dinah Flavel Paynter (1869\u20131958).md": {
-      "sha256": "1cc90302db28e577273a204aa825b5e8b63fa30ef48a82ce67c1beda33ac3245",
+      "sha256": "f17092ec81adf43a0c7ba9d816cc38ac61f61be8ea001a9aa85ea6012a306f7b",
       "kind": "real"
     },
     "Donald Jack Hookings (1916\u20131943).md": {
@@ -345,7 +345,7 @@
       "kind": "real"
     },
     "Elizabeth Beattie Telfer (1832\u20131896).md": {
-      "sha256": "f3e4efccebd0ec2f4f8e9931c5eca023eb84ab102bb0de0ec6ecd736b22af84a",
+      "sha256": "2190b1c393b2ad6305b4e73722606c5a179e5ae433f6822aa5622ebbc7dba1e1",
       "kind": "real"
     },
     "Elizabeth Farrow.md": {
@@ -377,7 +377,7 @@
       "kind": "real"
     },
     "Elizabeth Paynter (1864\u20131928).md": {
-      "sha256": "78b927e2a79db8bf91f84ee1eedc21c3de288e583b54bf262e6b3146042db270",
+      "sha256": "e6e6eac4c5442943bd8d193c285553f6c9349c6a4c6a3da3fcbd04dccd7d8566",
       "kind": "real"
     },
     "Elizabeth Telfer (1868\u20131950).md": {
@@ -449,11 +449,11 @@
       "kind": "redirect"
     },
     "Esther Jane Telfer (1834\u20131909).md": {
-      "sha256": "2df47b95e00fa3e27454f97946444a988073c6eedaf003a6ecab81822c78dae4",
+      "sha256": "28ed7e84246040b54c8935f5d5951df5ebaa58aa0d29acff51225fc56fc6b4c0",
       "kind": "real"
     },
     "Esther Telfer Smith (1870\u20131896).md": {
-      "sha256": "60c1ce836ec9a77c1dbe2949ea2065c5241a44b97f601c7801b5e0261cd9fbe4",
+      "sha256": "650456b57be3dfe207632b9c1f24a28e44511374951fc68f3687876146764778",
       "kind": "real"
     },
     "Ethel Edith Telfer.md": {
@@ -489,7 +489,7 @@
       "kind": "real"
     },
     "Francis Adam Telfer (1875\u20131955).md": {
-      "sha256": "61a497b771a736149f3e11269fc7e9151e5828d00b422ad9a058cd2fac4ec03d",
+      "sha256": "e89bcb5d105bd9ea326f758d162c0265df955922121952b24ee6cfcaf89335c5",
       "kind": "real"
     },
     "Francis Charles Telfer (1875\u20131954).md": {
@@ -541,7 +541,7 @@
       "kind": "real"
     },
     "George Herbert Hucks (1875\u20131947).md": {
-      "sha256": "2b69f0a796460e320eaacd2fed7799f66c4422a8fab465d22841239e68095bae",
+      "sha256": "12ad1848fbfad283e8816580be3b310b463fb9d930b317be36a2ed6b91bede65",
       "kind": "real"
     },
     "George Hope Farrow (1872\u20131919).md": {
@@ -549,7 +549,7 @@
       "kind": "real"
     },
     "George Hope Holloway (1899\u20131919).md": {
-      "sha256": "2b62233b57d8f4ea156736034fc4ee7e2f14cc8871fa9496bb64765c93d30cea",
+      "sha256": "e7a3042d2b62adcdf8df9f05d8b56a0118f105f2c5f2ce639a4550550300ba00",
       "kind": "real"
     },
     "George Masters (1841\u20131841).md": {
@@ -569,7 +569,7 @@
       "kind": "real"
     },
     "George Wright Telfer (1850\u20131913).md": {
-      "sha256": "29c5a159a7ea23b3dfc755a18467bb983e38990f5904f348564508f5e972179d",
+      "sha256": "957d4688e779d69ceb717fd9af0a5ee1af3d56d741c8bd2bc515593c8cd08ef9",
       "kind": "real"
     },
     "Gilbert Melville Telfer (1908\u20131973).md": {
@@ -605,7 +605,7 @@
       "kind": "redirect"
     },
     "Harold Peryman Wishart (1888\u20131965).md": {
-      "sha256": "75f22a3b35261fd60859d4027625b0334d03818d946d17699c9625c8f9135ace",
+      "sha256": "88be45a3a97d6e506d9baa83569059d0220c9a98b58c6b832fef75202a862371",
       "kind": "real"
     },
     "Harry Bunston.md": {
@@ -713,7 +713,7 @@
       "kind": "real"
     },
     "James Robert Telfer (1866\u20131925).md": {
-      "sha256": "53150961e7a3b9b8409be70d4adcf590c1173ae240064e66babccb0b9ffd7eaa",
+      "sha256": "0954a435ea395bc32076cf89a733b8711f341a818a883525b104c35a2216b61a",
       "kind": "real"
     },
     "James Telfer (1761-1845).md": {
@@ -729,7 +729,7 @@
       "kind": "real"
     },
     "James Telfer (1829\u20131913).md": {
-      "sha256": "314ace74e26cbb63833f60bf5b3e5dbbf7507995a564630817bfd6df3f9f84ac",
+      "sha256": "116ba561c61b63598b0c4c0d03accaae52e271cd826fb77657d742d923dd812a",
       "kind": "real"
     },
     "James Telfer (1832\u20131845).md": {
@@ -761,7 +761,7 @@
       "kind": "real"
     },
     "Jane Sophie Smith.md": {
-      "sha256": "55184395967581d77549973264c6a0137fec619e0a4e52bc1c06642ece258f55",
+      "sha256": "b7fc02363d4d778890ab554fcdd5701b571e11ced97adf617b9a3037517dc253",
       "kind": "real"
     },
     "Janet Dunlop Lawrie (1811\u20131902).md": {
@@ -805,7 +805,7 @@
       "kind": "real"
     },
     "Jean Telfer (1840\u20131892).md": {
-      "sha256": "7dd9a123959baf431d547ffb5310a28c13cc801585f904fc46be9d1a89a1dace",
+      "sha256": "e56ed091ae64d4abb9dea1526a428847d812a1db284cc87ed7edbddffcd50141",
       "kind": "real"
     },
     "Jemima Williams Masters Grant (1850\u20131919).md": {
@@ -852,8 +852,8 @@
       "sha256": "fc14f4f0cff14f358f74caab91bdc7c458e0e0df0a56c50692b7e8709871fef0",
       "kind": "real"
     },
-    "John James Smith (1871\u2013?).md": {
-      "sha256": "0f4c05f139865a924429b3dd18a7019b3d6e70bc90405a6285532ce42f8821a4",
+    "John James Smith (1871\u20131943).md": {
+      "sha256": "865ebd42e3dbbfba6ef677b42130fe4327d81cb20b1d0502c8d100b98f42ede9",
       "kind": "real"
     },
     "John James Telfer Farrow.md": {
@@ -861,7 +861,7 @@
       "kind": "real"
     },
     "John Koppio Telfer (1862\u20131922).md": {
-      "sha256": "b2e34f4ab22d87d5fe6a8a881f82dc288d2b53e0ea5459cece7c93e4068791ee",
+      "sha256": "f010b197635e7ff0d689fafc674f0bae5d87f3a3b4a8ed408fa7ce5fa0633416",
       "kind": "real"
     },
     "John Lawrie (1810\u20131888).md": {
@@ -893,7 +893,7 @@
       "kind": "real"
     },
     "John Smith (~1827\u20131895).md": {
-      "sha256": "feb88fa0cc81791855ec7d5db4190690ad0f1fcbf55094cac309634002853357",
+      "sha256": "c20ca1473aa860c204d702d65a6d8b3f5b578c528acd2d81739c061004c20b59",
       "kind": "real"
     },
     "John Telfer (1805\u20131839).md": {
@@ -905,7 +905,7 @@
       "kind": "real"
     },
     "John Telfer (1847\u20131929).md": {
-      "sha256": "e65cd61f63aede558d3c2b8dd7a748bfb06eb8523f41acd0141a2ed089532a15",
+      "sha256": "01c6218ad61591bc0a5f4270aa168afa9c91cea4949a786d8faea9b5bca7ef79",
       "kind": "real"
     },
     "John Telfer (b. ~1791, England).md": {
@@ -1169,7 +1169,7 @@
       "kind": "real"
     },
     "Mary Jane Paynter (1861\u20131945).md": {
-      "sha256": "090e75465ff08ed352d69be83ac50d78c505114a3b2363d0a318b3b06f76a529",
+      "sha256": "af14b4c289a9a2220dc19c0d4966be41f52476753a41208f4c9712603617afb4",
       "kind": "real"
     },
     "May Foy.md": {
@@ -1253,11 +1253,11 @@
       "kind": "real"
     },
     "Richard Paynter (1838\u20131869).md": {
-      "sha256": "265677d8390825be6c8bb61dff6074f224306bf6a9432020e25db552c8edbf8d",
+      "sha256": "36e1501e033e79ad3dfccf3fb606f1fd9c523844b1ba1804d34133cafcc5aa1d",
       "kind": "real"
     },
     "Richard Paynter (of Calstock).md": {
-      "sha256": "bbe56b0e938135f81215325356db7ae4e1882e26f7bb96f5305714cf549020f5",
+      "sha256": "2739464f033ea3d0d0e7af93e7203223ea786bd37be6430edf7c6630db8d4d0b",
       "kind": "real"
     },
     "Richard Pelling Latter (~1860\u20131936).md": {
@@ -1293,7 +1293,7 @@
       "kind": "real"
     },
     "Robert Telfer (1835\u20131907).md": {
-      "sha256": "c1ecd400fd395aec15c85a96dacbc755d75d21b4f628cdcbd7742de1e0bb28e6",
+      "sha256": "e8b3abd58ca112cd06c92d5db7a4f46e659daf20a35867c9d56d8f101758d724",
       "kind": "real"
     },
     "Robert Telfer Dillon (1862\u20131942).md": {
@@ -1313,7 +1313,7 @@
       "kind": "real"
     },
     "Rose Isabel Margaret Paynter (Rankin) (1900\u20131988).md": {
-      "sha256": "089366e2bd1c2720af909b4f53f8a693c6b82f5e148e548c46ae44f1a7ff3d9a",
+      "sha256": "1268a266f4a5925bb3a4685a04d234f623aa8545f8f5d08caf2e25d41a6c63d1",
       "kind": "real"
     },
     "Ruth Penna (1863\u20131908).md": {
@@ -1377,7 +1377,7 @@
       "kind": "real"
     },
     "Susan Burton Telfer (1844\u20131924).md": {
-      "sha256": "3bfef0847407ec77571ede75128c49ff443698ca9a154c47968b34f2a9d25877",
+      "sha256": "d3586d7cc3380fb25c77ca6949a94cb6a6efac1821c4e95835f72bf7a0e4b4d3",
       "kind": "real"
     },
     "Susan Shirley Lawrie (?\u2013living).md": {
@@ -1401,7 +1401,7 @@
       "kind": "real"
     },
     "Thomas Paynter (1859\u20131946).md": {
-      "sha256": "cc543871498b97e771d07a282e3d18c07f7ebd72f2ba7f8cade2ef6f59925c54",
+      "sha256": "74ed855fbd946cd22652ad12af182f824f0491ba4d73575461cf32f9674fb118",
       "kind": "real"
     },
     "Thomas Telfer (of Broadlee).md": {
@@ -1446,6 +1446,10 @@
     },
     "Wilhelm Seebohm (1833\u20131907).md": {
       "sha256": "8ee095a109501d88b2b8e9608ca500e9e1b474c92831a6df04fdfa98eae739c5",
+      "kind": "real"
+    },
+    "William Adam Francis Telfer (b. 1869).md": {
+      "sha256": "d72fc0dc828a0fd54cca1038b33f1e061d4caf9a708f33a3f61f4082dce87a46",
       "kind": "real"
     },
     "William Baker (1853\u20131933).md": {

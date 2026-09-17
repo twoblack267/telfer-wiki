@@ -981,11 +981,6 @@
       "generation": 7
     },
     {
-      "slug": "john-james-smith-1871",
-      "id": "John James Smith (1871)",
-      "generation": 5
-    },
-    {
       "slug": "john-farrow",
       "id": "John James Telfer Farrow",
       "generation": 5
@@ -1457,8 +1452,7 @@
     },
     {
       "slug": "richard-paynter-of-calstock",
-      "id": "Richard Paynter (of Calstock)",
-      "generation": 99
+      "id": "Richard Paynter (of Calstock) (1816)"
     },
     {
       "slug": "richard-pelling-latter-1860",
@@ -1794,6 +1788,14 @@
       "slug": "george-holloway",
       "id": "George Hope Holloway (1899)",
       "generation": 6
+    },
+    {
+      "slug": "john-smith",
+      "id": "John James Smith (1871)"
+    },
+    {
+      "slug": "william-telfer",
+      "id": "William Adam Francis Telfer (1869)"
     },
     {
       "slug": "charles-farrow-jr-~1865",
@@ -2235,6 +2237,10 @@
       },
       {
         "from": "richard-paynter-1838",
+        "to": "elizabeth-paynter-1864"
+      },
+      {
+        "from": "richard-paynter-of-calstock",
         "to": "elizabeth-paynter-1864"
       },
       {
@@ -2930,14 +2936,6 @@
         "to": "john-watson-1916"
       },
       {
-        "from": "esther-jane-telfer-1834",
-        "to": "john-james-smith-1871"
-      },
-      {
-        "from": "john-smith-1827",
-        "to": "john-james-smith-1871"
-      },
-      {
         "from": "charles-farrow-1836",
         "to": "john-farrow"
       },
@@ -2968,6 +2966,10 @@
       {
         "from": "elizabeth-beattie-1741",
         "to": "john-murray-1779"
+      },
+      {
+        "from": "richard-paynter-of-calstock",
+        "to": "john-paynter-1921"
       },
       {
         "from": "murray-telfer-1924",
@@ -3706,10 +3708,6 @@
         "to": "william-humphrey-parker-1926"
       },
       {
-        "from": "ann-taylor-1856",
-        "to": "william-telfer-1880"
-      },
-      {
         "from": "caroline-telfer-1842",
         "to": "william-telfer-1880"
       },
@@ -3776,6 +3774,22 @@
       {
         "from": "elizabeth-telfer-farrow-holloway-1861",
         "to": "george-holloway"
+      },
+      {
+        "from": "esther-jane-telfer-1834",
+        "to": "john-smith"
+      },
+      {
+        "from": "john-smith-1827",
+        "to": "john-smith"
+      },
+      {
+        "from": "robert-telfer-1835",
+        "to": "william-telfer"
+      },
+      {
+        "from": "susan-telfer-1844",
+        "to": "william-telfer"
       },
       {
         "from": "charles-farrow-1836",
@@ -4001,6 +4015,10 @@
       },
       {
         "from": "janet-nichol",
+        "to": "william-telfer"
+      },
+      {
+        "from": "janet-nichol",
         "to": "william-telfer-1880"
       },
       {
@@ -4184,6 +4202,10 @@
       {
         "from": "adam-telfer-1799",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "adam-telfer-1799",
+        "to": "william-telfer"
       },
       {
         "from": "adam-telfer-1799",
@@ -5051,7 +5073,7 @@
       },
       {
         "from": "elizabeth-anne-smith-1878",
-        "to": "john-james-smith-1871"
+        "to": "john-smith"
       },
       {
         "from": "elizabeth-anne-smith-1878",
@@ -5419,7 +5441,7 @@
       },
       {
         "from": "esther-telfer-smith-1870",
-        "to": "john-james-smith-1871"
+        "to": "john-smith"
       },
       {
         "from": "esther-telfer-smith-1870",
@@ -5639,6 +5661,10 @@
       },
       {
         "from": "francis-telfer-1809",
+        "to": "william-telfer"
+      },
+      {
+        "from": "francis-telfer-1809",
         "to": "william-telfer-1802"
       },
       {
@@ -5675,7 +5701,7 @@
       },
       {
         "from": "francis-telfer-smith-1874",
-        "to": "john-james-smith-1871"
+        "to": "john-smith"
       },
       {
         "from": "francis-telfer-smith-1874",
@@ -6059,6 +6085,10 @@
       },
       {
         "from": "isobel-telfer-1798",
+        "to": "william-telfer"
+      },
+      {
+        "from": "isobel-telfer-1798",
         "to": "william-telfer-1802"
       },
       {
@@ -6126,6 +6156,10 @@
         "to": "william-masters-1838"
       },
       {
+        "from": "james-robert-telfer-1866",
+        "to": "william-telfer"
+      },
+      {
         "from": "james-telfer-1796",
         "to": "john-telfer-1791"
       },
@@ -6140,6 +6174,10 @@
       {
         "from": "james-telfer-1796",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "james-telfer-1796",
+        "to": "william-telfer"
       },
       {
         "from": "james-telfer-1796",
@@ -6223,7 +6261,7 @@
       },
       {
         "from": "jane-sophie-smith-1866",
-        "to": "john-james-smith-1871"
+        "to": "john-smith"
       },
       {
         "from": "jane-sophie-smith-1866",
@@ -6310,10 +6348,6 @@
         "to": "william-telfer-1880"
       },
       {
-        "from": "john-james-smith-1871",
-        "to": "margaret-dougal-smith-1868"
-      },
-      {
         "from": "john-farrow",
         "to": "mary-bayes-farrow-1875"
       },
@@ -6355,6 +6389,10 @@
       },
       {
         "from": "john-telfer-1805",
+        "to": "william-telfer"
+      },
+      {
+        "from": "john-telfer-1805",
         "to": "william-telfer-1802"
       },
       {
@@ -6384,6 +6422,10 @@
       {
         "from": "john-telfer-1791",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "john-telfer-1791",
+        "to": "william-telfer"
       },
       {
         "from": "john-telfer-1791",
@@ -6528,6 +6570,10 @@
       {
         "from": "margaret-telfer-1801",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "margaret-telfer-1801",
+        "to": "william-telfer"
       },
       {
         "from": "margaret-telfer-1801",
@@ -6728,6 +6774,14 @@
       {
         "from": "charles-farrow-jr",
         "to": "mary-bayes-farrow-1875"
+      },
+      {
+        "from": "john-smith",
+        "to": "margaret-dougal-smith-1868"
+      },
+      {
+        "from": "william-telfer",
+        "to": "william-telfer-1811"
       },
       {
         "from": "charles-farrow-jr-~1865",
