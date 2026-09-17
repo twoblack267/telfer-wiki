@@ -100,11 +100,22 @@ jobs:
           # 4h Cloudflare TTL has, in practice, sometimes exceeded the old
           # ~5min window even though the deploy DID publish — producing
           # false-red ("deploy did not publish") on pushes that were actually live.
-          # Longer window (90 retries x ~10s polling w/ an early fast pass) keeps
-          # the guard strict about a REAL stale deploy while not crying wolf on
-          # ordinary propagation lag. Failure still means: origin never served OUR
-          # build within (about) 15min -> genuine problem, FIX REQUIRED.
-          attempts=90
+          # Longer window keeps the guard strict about a REAL stale deploy while
+          # not crying wolf on ordinary propagation lag. Failure still means:
+          # origin never served OUR build within the window -> genuine problem.
+          #
+          # ── RAISED 90 -> 180 ATTEMPTS, 2026-09-18 ──────────────────────────
+          # Red run #35225365913 (2026-09-17) exhausted 90 retries (~15min) and
+          # failed, yet the build WAS live: the deploy job finished 13:11:16Z and
+          # Cloudflare's last-modified read 13:11:10Z. Re-probed the next morning
+          # with the guard's own URL shape and the site served the asserted id
+          # 3/3 times. So this was a REAL >15min edge-propagation lag on
+          # telferwiki.com — a false-red, not a stale deploy. The guard's own
+          # error text anticipates exactly this ("this is a caching/propagation
+          # issue ... NOT necessarily bad content").
+          # 180 retries x ~10-15s ≈ 35-40min covers Cloudflare's 4h TTL cold-path
+          # with margin while still failing a genuinely unpublished deploy.
+          attempts=180
           attempt=1
           while [ "$attempt" -le "$attempts" ]; do
             url="https://telferwiki.com/?cb=${BUILD_ID}_${attempt}_$(date +%s)"
