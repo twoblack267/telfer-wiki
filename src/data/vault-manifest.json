@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-17T21:36:38+10:00",
+  "generated_at": "2026-09-17T22:52:44+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 376,
+  "count": 378,
   "kinds": {
-    "real": 360,
+    "real": 362,
     "redirect": 16,
     "empty": 0
   },
@@ -410,6 +410,10 @@
     },
     "Emily Ellen Thorpe.md": {
       "sha256": "0491c92b4e690a8ce0c7c3242b91fc2cccc2dcd9d611b23ebde56e01f6062ece",
+      "kind": "real"
+    },
+    "Emily Jane Goodwin (1859\u20131941).md": {
+      "sha256": "59e9e0f9e723a46e8e986790bdbde2abab8802027e2daeddae87d7240f4a658e",
       "kind": "real"
     },
     "Emma Jane Masters Tuck (1855\u20131922).md": {
@@ -840,6 +844,10 @@
       "sha256": "7f9c50c54a09f67714c746a6415890982c0847b1dde599b5ff0f525256caf49b",
       "kind": "real"
     },
+    "John Boswell Dillon (1859\u20131926).md": {
+      "sha256": "a9107a6a99f0e0ff014b220b49a7b75b694b77e84248d47e3d9eb5252ea8d12c",
+      "kind": "real"
+    },
     "John Charles Dillon (1827\u20131906).md": {
       "sha256": "04643927fec4a64f5659cd99604fc1aa54c17dd645eb06d5510eda683105ab59",
       "kind": "real"
@@ -1017,7 +1025,7 @@
       "kind": "real"
     },
     "Leslie Frank Dillon (~1892\u20131915).md": {
-      "sha256": "1ccd2af892db41f30e0054ccec731558a16882af9d77266a4a0afd7aa04a76ef",
+      "sha256": "a90a8ddb75da9091897b6a6c69361aaaf8e39f91077e3819f14148d196d8a0f6",
       "kind": "real"
     },
     "Leslie James Dillon (1916\u20131941).md": {

@@ -2364,6 +2364,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
+      "john-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871"
     ],
@@ -2664,6 +2665,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
+      "john-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871",
       "william-dillon"
@@ -5108,6 +5110,40 @@
     "person_photo": null
   },
   {
+    "id": "Emily Jane Goodwin (1859)",
+    "slug": "emily-goodwin",
+    "first_name": "Emily",
+    "middle_name": "Jane",
+    "last_name": "Goodwin",
+    "birth_year": 1859,
+    "death_year": 1941,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1859",
+    "death_year_display": "1941",
+    "display_name": "Emily Jane Goodwin",
+    "title": "Emily Jane Goodwin — Family & Biography",
+    "lifespan": "1859 – 1941",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Emily Jane Goodwin (1859–1941)\n\n**Lifespan:** 1859–1941\n\n**Branch:** Dillon line of Elizabeth Beattie Telfer — married into the family\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Spouse | [[John Boswell Dillon (1859–1926)|John Boswell Dillon (1859–1926)]] |\n| Daughter | Beatrice Maud Dillon (1884–1966) |\n| Son | [[Leslie Frank Dillon (~1892–1915)|Leslie Frank Dillon (~1892–1915)]] |\n\n## Life Summary\n\nEmily Jane Goodwin was born on 19 January 1859 at Chain of Ponds, South Australia.\n\nShe married [[John Boswell Dillon (1859–1926)]] on 18 November 1882 at Glanville, South Australia. Emily and John raised their family first at Millbrook — where their first two children were born, including a son John who died in infancy in 1882 — and later on the orchard property near Glen Ewin, Houghton, at Lower Hermitage.\n\nHer youngest child, [[Leslie Frank Dillon (~1892–1915)]], was killed in action at Gallipoli in April 1915.\n\nEmily Jane Goodwin died on 1 December 1941, and is buried with her husband and son at Payneham Cemetery, Section SE, Path 5, Site 135 S — one family headstone reading \"DILLON, John & Emily & L F DILLON\".\n\n## Children\n\n| Child | Birth | Death | Notes |\n|---|---|---|---|\n| John Dillon | 1882 | 1882 | Died in infancy, Millbrook SA |\n| Beatrice Maud Dillon (1884–1966) | 24 Jun 1884 | 30 Nov 1966 | m. Thomas Henry (Harry) Patten, 19 Aug 1908 |\n| [[Leslie Frank Dillon (~1892–1915)]] | 4 Jun 1893 | 25 Apr 1915 | KIA Gallipoli, Pte 1330, 10th Bn AIF |\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 19 Jan 1859 | Born, Chain of Ponds, SA |\n| 18 Nov 1882 | Married John Boswell Dillon, Glanville, SA |\n| 20 Nov 1882 | Son John born, Millbrook SA (d. 6 Dec 1882, infant) |\n| 24 Jun 1884 | Daughter Beatrice Maud born, Millbrook SA |\n| 4 Jun 1893 | Son Leslie Frank born, Hilton, SA |\n| 25 Apr 1915 | Son Leslie Frank killed in action, Gallipoli |\n| 28 Apr 1926 | Husband John died, aged 66 |\n| 1 Dec 1941 | Died, aged 82 — buried Payneham Cemetery with husband and son |\n\n## Sources\n\n- *A Telfer Family Tree* (Supplement 2008), p. 195 — numbered descendant chart under \"Elizabeth Beattie TELFER (1832–1896) m. John Charles DILLON (1827–1906)\": *\"Emily Jane GOODVIN, b. 19 Jan 1859 Chain of Ponds, SA, m. 18 Nov 1882 Res W Goodin, Glanville, SA, d. 1 Dec 1941\"* — **gold book source**\n- FamilySearch — spouse record under John Boswell Dillon (1859–1926), KFG7-GMN\n- Payneham Cemetery headstone index — family stone \"DILLON, John & Emily & L F DILLON\"",
+    "roles": [],
+    "tags": [
+      "person",
+      "dillon"
+    ],
+    "parents": [],
+    "children": [
+      "leslie-frank-dillon"
+    ],
+    "spouses": [
+      "john-dillon"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Esther Farrow Latter (1859)",
     "slug": "esther-farrow-latter-1859",
     "first_name": "Esther",
@@ -5240,6 +5276,49 @@
       "sophia-harriett-ridgway-1868",
       "walter-baker-1865",
       "william-baker-1853"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "John Boswell Dillon (1859)",
+    "slug": "john-dillon",
+    "first_name": "John",
+    "middle_name": "Boswell",
+    "last_name": "Dillon",
+    "birth_year": 1859,
+    "death_year": 1926,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1859",
+    "death_year_display": "1926",
+    "display_name": "John Boswell Dillon",
+    "title": "John Boswell Dillon — Family & Biography",
+    "lifespan": "1859 – 1926",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# John Boswell Dillon (1859–1926)\n\n**Lifespan:** 1859–1926\n\n**Branch:** Dillon line of Elizabeth Beattie Telfer — Tea Tree Gully / Houghton, South Australia\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Father | [[John Charles Dillon (1827–1906)|John Charles Dillon (1827–1906)]] |\n| Mother | [[Elizabeth Beattie Telfer (1832–1896)|Elizabeth Beattie Telfer (1832–1896)]] |\n| Spouse | [[Emily Jane Goodwin (1859–1941)|Emily Jane Goodwin (1859–1941)]] |\n| Daughter | Beatrice Maud Dillon (1884–1966) |\n| Son | [[Leslie Frank Dillon (~1892–1915)|Leslie Frank Dillon (~1892–1915)]] |\n\n## Life Summary\n\nJohn Boswell Dillon was born on 3 August 1859 at Lake Albert, South Australia, the son of [[John Charles Dillon (1827–1906)]] and [[Elizabeth Beattie Telfer (1832–1896)]]. He was the second of their nine children, and the first son.\n\nHe married Emily Jane Goodwin on 18 November 1882 at Glanville, South Australia. The couple's early married life was spent at Millbrook, where their first two children were born — John in 1882, who died in infancy, and Beatrice Maud in 1884.\n\nThe family later moved to the Houghton district, where John bought and worked an orchard property near Glen Ewin, at Lower Hermitage, five kilometres up the same road from the family's old Millbrook land. He ran the property in partnership with his son-in-law Harry Patten, who had married his daughter Beatrice in 1908.\n\nTheir third child, [[Leslie Frank Dillon (~1892–1915)]], was born at Hilton in 1893 and was killed in action at Gallipoli in April 1915 — the family's WWI loss.\n\nJohn Boswell Dillon died on 28 April 1926, aged 66, and was buried at Payneham Cemetery, Section SE, Path 5, Site 135 S. He shares one family headstone with his wife Emily and their son Leslie Frank.\n\n## Children\n\n| Child | Birth | Death | Notes |\n|---|---|---|---|\n| John Dillon | 1882 | 1882 | Died in infancy, Millbrook SA |\n| Beatrice Maud Dillon (1884–1966) | 24 Jun 1884 | 30 Nov 1966 | m. Thomas Henry (Harry) Patten, 19 Aug 1908 |\n| [[Leslie Frank Dillon (~1892–1915)]] | 4 Jun 1893 | 25 Apr 1915 | KIA Gallipoli, Pte 1330, 10th Bn AIF |\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 3 Aug 1859 | Born, Lake Albert, SA |\n| 18 Nov 1882 | Married Emily Jane Goodwin, Glanville, SA |\n| 20 Nov 1882 | Son John born, Millbrook SA (d. 6 Dec 1882, infant) |\n| 24 Jun 1884 | Daughter Beatrice Maud born, Millbrook SA |\n| 4 Jun 1893 | Son Leslie Frank born, Hilton, SA |\n| 25 Apr 1915 | Son Leslie Frank killed in action, Gallipoli |\n| 28 Apr 1926 | Died, aged 66 — buried Payneham Cemetery, Sec SE Path 5 Site 135 S |\n\n## Sources\n\n- *A Telfer Family Tree* (Supplement 2008), pp. 195–196 — numbered descendant chart under \"Elizabeth Beattie TELFER (1832–1896) m. John Charles DILLON (1827–1906)\" — **gold book source**\n- FamilySearch: [John Boswell Dillon (1859–1926), KFG7-GMN](https://ancestors.familysearch.org/en/KFG7-GMN/john-boswell-dillon-1859-1926) — names parents and children\n- FindAGrave: [John Boswell Dillon (memorial 241206859)](https://www.findagrave.com/memorial/241206859/john-boswell-dillon) — d. 28 Apr 1926, Payneham Cemetery\n- Payneham Cemetery headstone index — family stone \"DILLON, John & Emily & L F DILLON\"\n- Trove: *The Chronicle* (Adelaide), 15 May 1926, \"OBITUARY. — MR. JOHN DILLON\" (article 166323844) — age 66, property near Glen Ewin, Houghton, worked with son-in-law Harry Patten\n- Trove: *The Chronicle* (Adelaide), 21 Aug 1915 (articles 89146324 / 89146344) — refers to him as \"Mr. John Dillon, of Constantia, Houghton, and formerly of Millbrook\"\n\n## Open Item\n\n⚠️ **Place of death unresolved.** The 1926 obituary states John died at \"his residence at **Gaza**\". FamilySearch and FindAGrave both record **Klemzig**, SA. \"Gaza\" has not been found as a documented South Australian locality — it may be a farm or house name used by the family, a vanished place name, or an OCR fault in Trove. **Not written as a place of death.** Flagged for a future check of the printed newspaper page or an SA death registration.",
+    "roles": [],
+    "tags": [
+      "person",
+      "dillon"
+    ],
+    "parents": [
+      "elizabeth-beattie-telfer-1832",
+      "john-dillon-1827"
+    ],
+    "children": [
+      "leslie-frank-dillon"
+    ],
+    "spouses": [
+      "emily-goodwin"
+    ],
+    "siblings": [
+      "francis-telfer-dillon-1864",
+      "henry-hatch-dillon-1866",
+      "james-dillon-1861",
+      "robert-telfer-dillon-1862",
+      "septimus-dillon-1871"
     ],
     "images": [],
     "person_photo": null
@@ -5494,6 +5573,7 @@
     "siblings": [
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
+      "john-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871",
       "william-dillon"
@@ -5698,6 +5778,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
+      "john-dillon",
       "septimus-dillon-1871"
     ],
     "images": [],
@@ -5826,6 +5907,7 @@
     "siblings": [
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
+      "john-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871"
     ],
@@ -6027,6 +6109,7 @@
     "siblings": [
       "francis-telfer-dillon-1864",
       "james-dillon-1861",
+      "john-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871"
     ],
@@ -6650,6 +6733,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
+      "john-dillon",
       "robert-telfer-dillon-1862"
     ],
     "images": [],
@@ -10800,7 +10884,10 @@
       "dillon",
       "war-casualty"
     ],
-    "parents": [],
+    "parents": [
+      "emily-goodwin",
+      "john-dillon"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [],

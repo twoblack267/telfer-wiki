@@ -123,7 +123,7 @@
     {
       "slug": "andrew-telfer-1798",
       "id": "Andrew Telfer (1798)",
-      "generation": 6
+      "generation": 4
     },
     {
       "slug": "angela-telfer",
@@ -883,7 +883,7 @@
     {
       "slug": "janet-nichol",
       "id": "Janet Nichol",
-      "generation": 5
+      "generation": 3
     },
     {
       "slug": "janet-stevenson",
@@ -1452,7 +1452,8 @@
     },
     {
       "slug": "richard-paynter-of-calstock",
-      "id": "Richard Paynter (of Calstock) (1816)"
+      "id": "Richard Paynter (of Calstock) (1816)",
+      "generation": 4
     },
     {
       "slug": "richard-pelling-latter-1860",
@@ -1742,7 +1743,7 @@
     {
       "slug": "william-telfer-shepherd",
       "id": "William Telfer (shepherd)",
-      "generation": 5
+      "generation": 3
     },
     {
       "slug": "william-masters-1838",
@@ -1791,11 +1792,23 @@
     },
     {
       "slug": "john-smith",
-      "id": "John James Smith (1871)"
+      "id": "John James Smith (1871)",
+      "generation": 5
     },
     {
       "slug": "william-telfer",
-      "id": "William Adam Francis Telfer (1869)"
+      "id": "William Adam Francis Telfer (1869)",
+      "generation": 3
+    },
+    {
+      "slug": "emily-goodwin",
+      "id": "Emily Jane Goodwin (1859)",
+      "generation": 5
+    },
+    {
+      "slug": "john-dillon",
+      "id": "John Boswell Dillon (1859)",
+      "generation": 5
     },
     {
       "slug": "charles-farrow-jr-~1865",
@@ -3764,6 +3777,14 @@
         "to": "charles-farrow-jr"
       },
       {
+        "from": "emily-goodwin",
+        "to": "leslie-frank-dillon"
+      },
+      {
+        "from": "john-dillon",
+        "to": "leslie-frank-dillon"
+      },
+      {
         "from": "eva-agnes-farrow-1877",
         "to": "laurel-bosanquet"
       },
@@ -3790,6 +3811,14 @@
       {
         "from": "susan-telfer-1844",
         "to": "william-telfer"
+      },
+      {
+        "from": "elizabeth-beattie-telfer-1832",
+        "to": "john-dillon"
+      },
+      {
+        "from": "john-dillon-1827",
+        "to": "john-dillon"
       },
       {
         "from": "charles-farrow-1836",
@@ -4124,6 +4153,10 @@
       {
         "from": "francis-bosanquet",
         "to": "laurel-bosanquet"
+      },
+      {
+        "from": "emily-goodwin",
+        "to": "john-dillon"
       }
     ],
     "siblingOf": [
@@ -5681,6 +5714,10 @@
       },
       {
         "from": "francis-telfer-dillon-1864",
+        "to": "john-dillon"
+      },
+      {
+        "from": "francis-telfer-dillon-1864",
         "to": "robert-telfer-dillon-1862"
       },
       {
@@ -5938,6 +5975,10 @@
       {
         "from": "henry-hatch-dillon-1866",
         "to": "james-dillon-1861"
+      },
+      {
+        "from": "henry-hatch-dillon-1866",
+        "to": "john-dillon"
       },
       {
         "from": "henry-hatch-dillon-1866",
@@ -6238,6 +6279,10 @@
       {
         "from": "james-telfer-1762",
         "to": "jenet-telfer-1770"
+      },
+      {
+        "from": "james-dillon-1861",
+        "to": "john-dillon"
       },
       {
         "from": "james-dillon-1861",
@@ -6782,6 +6827,14 @@
       {
         "from": "william-telfer",
         "to": "william-telfer-1811"
+      },
+      {
+        "from": "john-dillon",
+        "to": "robert-telfer-dillon-1862"
+      },
+      {
+        "from": "john-dillon",
+        "to": "septimus-dillon-1871"
       },
       {
         "from": "charles-farrow-jr-~1865",
