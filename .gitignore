@@ -29,3 +29,7 @@ __pycache__/
 
 # Family-cell link guard runtime report (generated; see validate-family-cell-links.mjs)
 .family-cell-links.json
+
+# local edit backups - never commit
+scripts/*.bak-*
+*.bak-avatar-*
