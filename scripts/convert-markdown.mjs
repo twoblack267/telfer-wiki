@@ -362,13 +362,19 @@ function main() {
   // wrong person or spawns a duplicate.
   const existingByKey = new Map();
   for (const p of existingPeople) {
-    // Include middle_name in the key ONLY when birth_year is absent. Two people with
-    // the same first+last AND no birth year collide under a first+last-only key (they
-    // cover the same key). Adding the middle name disambiguates them (e.g. John Alick
-    // Ralph Telfer vs John Robert Telfer). People WITH a birth year keep the exact
-    // first+last+year key, so they are unaffected (zero regression).
+    // ALWAYS include middle_name, including when a birth_year is present.
+    // Reason (2026-09-18): the vault frontmatter splits given names into
+    // first_name + middle_name, but older people.json records still hold the
+    // COMBINED form (first_name="Maria Clara", middle_name=null). With the old
+    // year-bearing key (first+last|year) the two forms produced DIFFERENT keys
+    // ("maria"+"telfer" vs "mariaclaratelfer"), so a body-only vault edit was
+    // treated as a brand-new person: the new record was appended and the
+    // duplicate-twin purge then discarded the CORRECT (longer) body, silently
+    // reverting the edit. Including middle_name makes both forms collapse to the
+    // same key. Measured 2026-09-18: this also removes the single remaining key
+    // collision in people.json (1 -> 0), so it is strictly more specific.
     const by = p.birth_year ?? '';
-    const namePart = by ? `${(p.first_name || '')}${(p.last_name || '')}` : `${(p.first_name || '')}${(p.middle_name || '')}${(p.last_name || '')}`;
+    const namePart = `${(p.first_name || '')}${(p.middle_name || '')}${(p.last_name || '')}`;
     const key = `${namePart}|${by}`;
     const keyLower = key.toLowerCase().replace(/\s+/g, '');
     const existing = existingByKey.get(keyLower);
@@ -657,12 +663,19 @@ function main() {
     // 3. Find matching existing entry
     // Priority: key match first, then slug match (fallback).
     // Key must concatenate name exactly as the index builder does, so first/last
-    // split inconsistencies still merge to the same person. For people with a birth
-    // year the key is first+last+birth_year (unchanged). For people WITHOUT a birth
-    // year the middle name is included so two no-year same-first+last people do not
-    // collide (e.g. John Alick Ralph Telfer vs John Robert Telfer).
+    // split inconsistencies still merge to the same person.
+    // CRITICAL (fixed 2026-09-18): middle_name MUST be included in BOTH branches,
+    // for exactly the same reason the index builder includes it unconditionally.
+    // The vault frontmatter splits given names (first_name="Maria",
+    // middle_name="Clara") while older people.json records hold the COMBINED form
+    // (first_name="Maria Clara", middle_name=null). Those two forms must collapse
+    // to ONE key. The year-bearing branch previously omitted middle_name, so
+    // `mariaclaratelfer|1878` (index) != `mariatelfer|1878` (lookup) -> the lookup
+    // missed -> a body-only vault edit was appended as a brand-new person -> the
+    // duplicate-twin purge then discarded the CORRECT (longer) body, silently
+    // reverting the edit every single run.
     const matchKey = (birthYear
-      ? `${firstName}${lastName}|${birthYear}`
+      ? `${firstName}${middleName || ''}${lastName}|${birthYear}`
       : `${firstName}${middleName || ''}${lastName}|`
     ).toLowerCase().replace(/\s+/g, '');
     let existing = existingByKey.get(matchKey);
@@ -687,13 +700,31 @@ function main() {
       // never merges distinct profiles or shortens a URL the committed scheme
       // deliberately disambiguated. Rule: preserve whenever the existing slug is
       // "incoming bare slug" + a disambiguating suffix (any suffix after a dash).
-      const existingIsStrictSuperset =
-        existing.slug && entry.slug &&
-        existing.slug.startsWith(entry.slug) &&
-        existing.slug.length > entry.slug.length &&
-        existing.slug[entry.slug.length] === '-';
-      const incomingBare = !/-\d{4}$/.test(entry.slug || '');
-      if (!(existingIsStrictSuperset && incomingBare)) {
+      // ── SLUG PRESERVATION (Option 1, decided 2026-09-18) ─────────────────
+      // When this entry matched an EXISTING record — by identity key OR by slug
+      // fallback — that record's slug is authoritative and is NEVER overwritten.
+      //
+      // Root cause (measured 2026-09-18): toSlug() builds the bare form from
+      // firstName+lastName ONLY, with no disambiguating suffix. people.json
+      // carries TWO kinds of suffix the vault cannot reproduce:
+      //   (a) combined given names — vault frontmatter splits
+      //       (first_name="Maria", middle_name="Clara") while the stored record
+      //       holds the COMBINED form (first_name="Maria Clara"), so toSlug emits
+      //       "maria-telfer" against a stored "maria-clara-telfer-1878".
+      //   (b) approximate year markers — the stored record may hold the year as a
+      //       STRING with a tilde (birth_year="~1892", "~1885", "~1865") while the
+      //       vault now carries a plain numeric year (1893, 1885, 1865). The
+      //       identity key compares year textually, so "…dillon|~1892" != "…dillon|1893"
+      //       and the key MISSES; the entry then matched by the slug fallback and its
+      //       stored slug "leslie-frank-dillon-~1892" was replaced by the bare
+      //       "leslie-frank-dillon" — a live URL change on a page with real inbound
+      //       links. Same class as (a).
+      // In both cases letting entry.slug win renames a live URL. Measured: a full
+      // rebuild renamed 99 slugs in one run before this guard; after it, 0.
+      //
+      // New people (no existing match) still get entry.slug from toSlug(), and the
+      // later bare-slug disambiguation pass still year-suffixes genuine conflicts.
+      if (!existing.slug) {
         existing.slug = entry.slug;
       }
       existing.display_name = entry.display_name;
