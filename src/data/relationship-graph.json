@@ -1767,7 +1767,7 @@
     },
     {
       "slug": "leslie-frank-dillon",
-      "id": "Leslie Frank Dillon (1892)",
+      "id": "Leslie Frank Dillon (1893)",
       "generation": 6
     },
     {
@@ -1809,21 +1809,6 @@
       "slug": "john-dillon",
       "id": "John Boswell Dillon (1859)",
       "generation": 5
-    },
-    {
-      "slug": "charles-farrow-jr-~1865",
-      "id": "Charles Farrow Jr",
-      "generation": 5
-    },
-    {
-      "slug": "florence-nicholas-~1885",
-      "id": "Florence Nicholas Telfer",
-      "generation": 5
-    },
-    {
-      "slug": "leslie-frank-dillon-~1892",
-      "id": "Leslie Frank Dillon (~1892–1915)",
-      "generation": 1
     }
   ],
   "edges": {
@@ -2973,10 +2958,6 @@
         "to": "john-telfer-1877"
       },
       {
-        "from": "florence-nicholas-~1885",
-        "to": "john-telfer-1877"
-      },
-      {
         "from": "john-telfer-1847",
         "to": "john-telfer-1877"
       },
@@ -3246,10 +3227,6 @@
       },
       {
         "from": "florence-nicholas",
-        "to": "lloyd-wilbur-telfer-1913"
-      },
-      {
-        "from": "florence-nicholas-~1885",
         "to": "lloyd-wilbur-telfer-1913"
       },
       {
@@ -3887,14 +3864,6 @@
       {
         "from": "john-dillon-1827",
         "to": "john-dillon"
-      },
-      {
-        "from": "charles-farrow-1836",
-        "to": "charles-farrow-jr-~1865"
-      },
-      {
-        "from": "elizabeth-hannah-telfer-1836",
-        "to": "charles-farrow-jr-~1865"
       }
     ],
     "spouseOf": [
@@ -4037,10 +4006,6 @@
       {
         "from": "ernest-telfer-1878",
         "to": "florence-nicholas"
-      },
-      {
-        "from": "ernest-telfer-1878",
-        "to": "florence-nicholas-~1885"
       },
       {
         "from": "esther-cowan-1783",
@@ -4515,10 +4480,6 @@
       {
         "from": "amy-farrow-stribling-1868",
         "to": "charles-farrow-jr"
-      },
-      {
-        "from": "amy-farrow-stribling-1868",
-        "to": "charles-farrow-jr-~1865"
       },
       {
         "from": "amy-farrow-stribling-1868",
@@ -6862,10 +6823,6 @@
       },
       {
         "from": "charles-farrow-jr",
-        "to": "charles-farrow-jr-~1865"
-      },
-      {
-        "from": "charles-farrow-jr",
         "to": "elizabeth-farrow"
       },
       {
@@ -6911,38 +6868,6 @@
       {
         "from": "john-dillon",
         "to": "septimus-dillon-1871"
-      },
-      {
-        "from": "charles-farrow-jr-~1865",
-        "to": "elizabeth-farrow"
-      },
-      {
-        "from": "charles-farrow-jr-~1865",
-        "to": "elizabeth-telfer-farrow-holloway-1861"
-      },
-      {
-        "from": "charles-farrow-jr-~1865",
-        "to": "esther-farrow-latter-1859"
-      },
-      {
-        "from": "charles-farrow-jr-~1865",
-        "to": "eva-agnes-farrow-1877"
-      },
-      {
-        "from": "charles-farrow-jr-~1865",
-        "to": "george-hope-farrow-1872"
-      },
-      {
-        "from": "charles-farrow-jr-~1865",
-        "to": "jane-murray-farrow-1857"
-      },
-      {
-        "from": "charles-farrow-jr-~1865",
-        "to": "john-farrow"
-      },
-      {
-        "from": "charles-farrow-jr-~1865",
-        "to": "mary-bayes-farrow-1875"
       }
     ]
   }

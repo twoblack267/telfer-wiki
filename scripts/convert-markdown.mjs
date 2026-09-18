@@ -391,6 +391,19 @@ function main() {
     }
   }
 
+  // ── Name-only index (added 2026-09-18, card tw-2026-09-18-009) ───────────
+  // Used ONLY as the vault-file-anchored fallback at the match site: it recovers
+  // a record whose birth_year the vault has since CORRECTED (the year-bearing key
+  // then misses). Never used on its own — a candidate is accepted only when it is
+  // the unique record whose vault_file is the file currently being converted.
+  const nameOnlyIndex = new Map();
+  for (const p of existingPeople) {
+    const k = `${(p.first_name || '')}${(p.middle_name || '')}${(p.last_name || '')}|`
+      .toLowerCase().replace(/\s+/g, '');
+    if (!nameOnlyIndex.has(k)) nameOnlyIndex.set(k, []);
+    nameOnlyIndex.get(k).push(p);
+  }
+
   // 2. Scan vault markdown files
   if (!fs.existsSync(VAULT_PEOPLE_DIR)) {
     console.error(`❌ Vault directory not found: ${VAULT_PEOPLE_DIR}`);
@@ -686,8 +699,38 @@ function main() {
     // falling back to the bare slug would let a same-name-different-year profile
     // capture (and overwrite) the wrong generation's record. No-year profiles
     // have no year discriminator, so the bare slug is their correct match.
+    // ── BIRTH-YEAR-CORRECTION FALLBACK (added 2026-09-18, card tw-2026-09-18-009) ─
+    // The identity key includes birth_year, so a vault edit that CORRECTS a birth
+    // year breaks its own matching: the vault now builds `name|1893` while the
+    // stored record still builds `name|1892` -> miss -> the update path never runs
+    // -> the correction is silently discarded on every regen, forever.
+    // Measured 2026-09-18: Leslie Frank Dillon, vault `birth_year: 1893` vs
+    // published 1892 — the ONLY mismatch in 362 records, but the mechanism is
+    // general (any future year correction, and every same-name record).
+    //
+    // A name-only fallback is normally UNSAFE (see the note above: it would let a
+    // same-name-different-generation profile capture the wrong record). It becomes
+    // safe when anchored to the vault file, because ONE VAULT FILE = ONE PERSON:
+    // we accept the name-only candidate only when it is UNIQUE, it is not already
+    // claimed by a different vault file, and its vault_file is the very file being
+    // converted. The year key still takes priority, so distinct same-name people
+    // of different generations can never be conflated.
     if (!existing && birthYear == null) {
       existing = existingBySlug.get(slug);
+    }
+    if (!existing) {
+      const nameOnlyKey = `${firstName}${middleName || ''}${lastName}|`
+        .toLowerCase().replace(/\s+/g, '');
+      const cands = (nameOnlyIndex.get(nameOnlyKey) || []).filter(
+        (c) => (c.vault_file || '').trim() === vaultFile
+      );
+      if (cands.length === 1) {
+        existing = cands[0];
+        console.log(
+          `  ↻ Year-correction merge: ${entry.display_name || slug} — vault ${birthYear} ` +
+          `re-joined record ${existing.slug} (was ${existing.birth_year}) via vault_file`
+        );
+      }
     }
 
     if (existing) {

@@ -101,7 +101,16 @@ const idx = {
   tagset: new Map(),
   namekey: new Map(),
 };
-for (const s of appeared) {
+// NOTE (2026-09-18, tw-2026-09-17-007): this index used to be built from `appeared`
+// ONLY — slugs that are new in this regen. That made the fallback chain blind to the
+// commonest rename of all: one where the OLD slug vanishes and the NEW slug is a page
+// that ALREADY EXISTED (e.g. a phantom `name-~1892` twin is purged and the true
+// `name` page survives). `appeared` is empty in exactly that case, so the index was
+// empty, so every vanished slug became "unresolvable" and the build refused — or worse,
+// on a run where `appeared` was non-empty by luck, matched against the wrong person.
+// Index ALL current slugs. A slug that exists today is a legitimate redirect target
+// whether it is brand new or pre-existing.
+for (const s of newBySlug.keys()) {
   const p = newBySlug.get(s);
   const push = (map, key) => {
     if (!key) return;

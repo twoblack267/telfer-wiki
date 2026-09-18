@@ -1655,7 +1655,6 @@
     ],
     "siblings": [
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
@@ -3290,7 +3289,6 @@
     "children": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "edith-farrow",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
@@ -6022,7 +6020,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -6114,7 +6111,6 @@
     "children": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow",
@@ -6672,7 +6668,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -7294,8 +7289,7 @@
       "lloyd-wilbur-telfer-1913"
     ],
     "spouses": [
-      "florence-nicholas",
-      "florence-nicholas-~1885"
+      "florence-nicholas"
     ],
     "siblings": [
       "albert-telfer-1881",
@@ -7476,7 +7470,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "eva-agnes-farrow-1877",
@@ -8005,7 +7998,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
@@ -9571,7 +9563,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
@@ -13422,7 +13413,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
@@ -14973,7 +14963,6 @@
     "lifespan": "1877 – 1877",
     "parents": [
       "caroline-telfer-1842",
-      "florence-nicholas-~1885",
       "john-telfer-1847"
     ],
     "children": [],
@@ -15105,7 +15094,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
@@ -18441,8 +18429,7 @@
     "lifespan": "1913 – 2001",
     "parents": [
       "ernest-telfer-1878",
-      "florence-nicholas",
-      "florence-nicholas-~1885"
+      "florence-nicholas"
     ],
     "children": [],
     "spouses": [],
@@ -20586,7 +20573,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
@@ -26697,7 +26683,6 @@
     "children": [],
     "siblings": [
       "amy-farrow-stribling-1868",
-      "charles-farrow-jr-~1865",
       "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
@@ -26789,20 +26774,20 @@
     "generation": 5
   },
   {
-    "id": "Leslie Frank Dillon (1892)",
+    "id": "Leslie Frank Dillon (1893)",
     "slug": "leslie-frank-dillon",
     "vault_file": "Leslie Frank Dillon (~1892–1915).md",
-    "first_name": "Leslie Frank",
-    "middle_name": null,
+    "first_name": "Leslie",
+    "middle_name": "Frank",
     "last_name": "Dillon",
-    "birth_year": 1892,
+    "birth_year": 1893,
     "death_year": 1915,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "~1892",
+    "birth_date": "4 June 1893",
+    "death_date": "25 April 1915",
+    "birth_year_display": "1893",
     "death_year_display": "1915",
     "display_name": "Leslie Frank Dillon",
-    "title": "Leslie Frank Dillon (~1892–1915) — WWI casualty, Gallipoli",
+    "title": "Leslie Frank Dillon (1893–1915) — WWI casualty, Gallipoli",
     "tags": [
       "person",
       "dillon",
@@ -26814,13 +26799,32 @@
         "names": [
           "Leslie Frank Dillon"
         ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "John Boswell Dillon (1859–1926)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Emily Jane Goodwin (1859–1941)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "John Dillon (1882–1882)",
+          "Beatrice Maud Dillon (1884–1966)"
+        ]
       }
     ],
     "roles": [
-      "Dillon-branch descendant of Elizabeth Beattie Telfer — killed at Gallipoli, WWI"
+      "Dillon-branch descendant of Elizabeth Beattie Telfer — grandson; killed at Gallipoli, WWI"
     ],
-    "body_markdown": "# Leslie Frank Dillon (~1892–1915)\n\n**Role:** Dillon-branch descendant of Elizabeth Beattie Telfer — killed at Gallipoli, WWI\n**Died:** 1915 (ANZAC landings, late April) — Gallipoli, **no known grave**\n**Branch:** Tea Tree Gully, South Australia (Dillon line of Elizabeth Beattie Telfer)\n\n## War Service\n\nPrivate **Leslie Frank Dillon**, Australian Imperial Force, killed at **Gallipoli** during the ANZAC landings of late April 1915. He has **no known grave** — his name is commemorated on the **Lone Pine Memorial, Gallipoli**.\n\nHis name appears on the Australian War Memorial Gallipoli Peninsula commemorative roll alongside other DILLON servicemen of the branch (incl. Francis William, Herbert, Martin Michael Dillon).\n\n## Life Summary\n\nLeslie Frank Dillon belonged to the Tea Tree Gully DILLON branch (descendants of Elizabeth Beattie Telfer's marriage to John Charles Dillon). He was killed at Gallipoli in 1915 and — having no known grave — his name is recorded on the Lone Pine Memorial.\n\n## Anecdote\n\n🖊️ **Anecdote — as told in *From the Borders to the Bush* / *A Telfer Family Tree* (2008, p.197):** Leslie Frank Dillon of the Telfer line was killed at Gallipoli in the ANZAC landings of late April 1915 and has no known grave — his name sits on the Lone Pine Memorial. *(Exact date 25–29 April 1915 is the family-book recollection; the AWM confirms his Gallipoli commemoration and name on the Lone Pine roll.)*\n\n## Sources\n\n- **Source:** [Australian War Memorial — Private Leslie Frank Dillon, P10327985](https://www.awm.gov.au/collection/P10327985) — accessed 12 Aug 2026 (verified: Private, AWM People record)\n- **Source:** [Australian War Memorial — Gallipoli Peninsula (Lone Pine) commemorative roll, PL503649](https://www.awm.gov.au/collection/PL503649) — accessed 12 Aug 2026 (verified: \"Dillon, Leslie Frank\" appears on the Gallipoli Peninsula commemorative roll)\n- **Source:** *From the Borders to the Bush* / *A Telfer Family Tree* (Supplement 2008), p.197 — family book record of the service and death at Gallipoli, no known grave",
-    "body_stripped": "**Role:** Dillon-branch descendant of Elizabeth Beattie Telfer — killed at Gallipoli, WWI\n**Died:** 1915 (ANZAC landings, late April) — Gallipoli, **no known grave**\n**Branch:** Tea Tree Gully, South Australia (Dillon line of Elizabeth Beattie Telfer)\n\n## War Service\n\nPrivate **Leslie Frank Dillon**, Australian Imperial Force, killed at **Gallipoli** during the ANZAC landings of late April 1915. He has **no known grave** — his name is commemorated on the **Lone Pine Memorial, Gallipoli**.\n\nHis n",
+    "body_markdown": "# Leslie Frank Dillon (1893–1915)\n\n**Role:** Dillon-branch descendant of Elizabeth Beattie Telfer — grandson; killed at Gallipoli, WWI\n**Born:** 4 June 1893, Hilton, South Australia\n**Died:** 25 April 1915 (aged 21) — Gallipoli, **no known grave**\n**Branch:** Tea Tree Gully / Houghton, South Australia (Dillon line of Elizabeth Beattie Telfer)\n\n## War Service\n\nPrivate **Leslie Frank Dillon**, service number **1330**, **10th Australian Infantry Battalion**, 2nd Reinforcements, Australian Imperial Force.\n\n- Enlisted **7 December 1914**, aged 21, a labourer by occupation.\n- Address at enlistment: **Lower Hermitage via Houghton**, South Australia.\n- Next of kin: **Father, J. Dillon, Millbrook, SA**.\n- Embarked **2 February 1915** from Melbourne aboard **HMAT A46 *Clan Macgillivray***.\n- **Killed in action at Gallipoli on 25 April 1915** — among the first Australians to land. He was reported missing for some time before confirmation of his death reached the family.\n- He has **no known grave**. His name is commemorated on the **Lone Pine Memorial, Gallipoli**, Panel 32.\n\n## Life Summary\n\nLeslie Frank Dillon was born at Hilton, South Australia, on 4 June 1893, the youngest child of [[John Boswell Dillon (1859–1926)]] and [[Emily Jane Goodwin (1859–1941)]]. He was a grandson of [[John Charles Dillon (1827–1906)]] and [[Elizabeth Beattie Telfer (1832–1896)]].\n\nThe family lived first at Millbrook and later on an orchard property near Glen Ewin, Houghton — at Lower Hermitage, which is the address Leslie gave when he enlisted in December 1914. Before the war he was an active member of the Para Quartet Club.\n\nHe was killed in action at Gallipoli on 25 April 1915, aged 21, and has no known grave. He is remembered on the Lone Pine Memorial, and shares a family headstone with his parents at Payneham Cemetery.\n\n## Siblings\n\n| Sibling | Birth | Death | Notes |\n|---|---|---|---|\n| John Dillon | 1882 | 1882 | Died in infancy, Millbrook SA |\n| Beatrice Maud (Dillon) Patten (1884–1966) | 24 Jun 1884 | 30 Nov 1966 | m. Thomas Henry (Harry) Patten, 19 Aug 1908, St Luke's Church, Adelaide |\n\n## Anecdote\n\n🖊️ **Anecdote — *From the Borders to the Bush* / *A Telfer Family Tree* (2008, p.197):** Leslie Frank Dillon of the Telfer line was killed at Gallipoli in the ANZAC landings of late April 1915 and has no known grave — his name sits on the Lone Pine Memorial. The 1915 press remembered him as *\"of a bright and genial disposition\"*, an active member of the Para Quartet Club.\n\n## Sources\n\n- *A Telfer Family Tree* (Supplement 2008), pp. 195–196 and p. 197 — descendant chart entry *\"(2.) Leslie Frank DILLON, b. 4 Jun 1893 Hilton, SA, d. 25–29/4/1915, bur. Lone Pine Memorial, Gallipoli\"* — **gold book source**\n- FindAGrave: [Leslie Frank Dillon (memorial 56799588)](https://www.findagrave.com/memorial/56799588/leslie-frank-dillon) — Lone Pine Memorial; b. 4 Jun 1893, Hilton, City of West Torrens SA; d. 25 Apr 1915 aged 21; Panel 32\n- AWM: [Private Leslie Frank Dillon, P10327985](https://www.awm.gov.au/collection/P10327985) — Private, 10th Australian Infantry Battalion, service no. 1330, KIA 25/04/1915\n- AWM Nominal Roll R2186717 — enlisted 7 Dec 1914; fate 25 Apr 1915\n- AWM Gallipoli Peninsula (Lone Pine) commemorative roll, [PL503649](https://www.awm.gov.au/collection/PL503649)\n- The AIF Project (UNSW Canberra), [pid 79288](https://aif.adfa.edu.au/aif/showPerson?pid=79288) — address Lower Hermitage via Houghton; next of kin Father, J Dillon, Millbrook SA; embarked 2 Feb 1915 HMAT A46 *Clan Macgillivray*\n- Trove: *The Chronicle* (Adelaide), 21 Aug 1915, p.43, \"THE LATE PRIVATE LESLIE FRANK DILLON\" (article 89146324) and p.42 (article 89146344) — one article, two page locations\n- Payneham Cemetery headstone index — family stone \"DILLON, John & Emily & L F DILLON\"",
+    "body_stripped": "**Role:** Dillon-branch descendant of Elizabeth Beattie Telfer — grandson; killed at Gallipoli, WWI\n**Born:** 4 June 1893, Hilton, South Australia\n**Died:** 25 April 1915 (aged 21) — Gallipoli, **no known grave**\n**Branch:** Tea Tree Gully / Houghton, South Australia (Dillon line of Elizabeth Beattie Telfer)\n\n## War Service\n\nPrivate **Leslie Frank Dillon**, service number **1330**, **10th Australian Infantry Battalion**, 2nd Reinforcements, Australian Imperial Force.\n\n- Enlisted **7 December 191",
     "parents": [
       "emily-goodwin",
       "john-dillon"
@@ -26829,7 +26833,7 @@
     "siblings": [],
     "spouses": [],
     "is_living": false,
-    "lifespan": "~1892 – 1915",
+    "lifespan": "1893 – 1915",
     "related_trees": [
       "telfer-tree"
     ],
@@ -27430,172 +27434,5 @@
     "images": [],
     "person_photo": null,
     "generation": 5
-  },
-  {
-    "id": "Charles Farrow Jr",
-    "slug": "charles-farrow-jr-~1865",
-    "first_name": "Charles",
-    "middle_name": null,
-    "last_name": "Farrow Jr",
-    "birth_year": "~1865",
-    "death_year": 1936,
-    "birth_year_display": "~1865",
-    "death_year_display": "1936",
-    "display_name": "Charles Farrow Jr",
-    "title": "Charles Farrow Jr",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Charles Farrow Jr"
-        ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "Charles Farrow (~1836–1884)"
-        ]
-      },
-      {
-        "type": "Mother",
-        "names": [
-          "Elizabeth Hannah Telfer (1836–1916)"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "Ethel Mary Sambell"
-        ]
-      }
-    ],
-    "roles": [
-      "Son of Charles Farrow and Elizabeth Hannah Telfer — Hope Farm, Tarlee"
-    ],
-    "body_markdown": "# Charles Farrow Jr (~1865–1936)\n\n**Role:** Son of Charles Farrow and Elizabeth Hannah Telfer — Hope Farm, Tarlee\n**Born:** ~1865 — Hope Farm, Tarlee, South Australia\n**Died:** 21 September 1936 (aged 71) — Tarlee, South Australia\n**Buried:** Tarlee Cemetery\n**Spouse:** Ethel Mary Sambell\n\nCharles Farrow Jr was the sixth child and third son of Charles Farrow and Elizabeth Hannah Telfer. He grew up at Hope Farm, Finniss Point, near Tarlee, and married **Ethel Mary Sambell**.\n\n## Newspaper References\n\n### Death Notice\n\n- **The Advertiser (Adelaide), 22 September 1936:** Charles Farrow died 21 September 1936 at Tarlee, aged 71 years — interred in Tarlee Cemetery.\n  **Source:** [Ozburials — Tarlee Cemetery](http://www.ozburials.com/CemsSA/tarlee.htm) — accessed 28 July 2026\n\n## Sources\n\n1. **\"From the Borders to the Bush\"** — Chapter on Elizabeth Hannah Telfer (pp. 93, 110). Elizabeth's children list includes Charles Farrow Jr, noting his marriage to Ethel Mary Sambell.\n2. **Ozburials.com — Tarlee Cemetery transcription:** \"FARROW, Charles — 21 September 1936, aged 71 years.\" Transcribed by Lorraine Larment from photographs by Marylin and Steve Jones.\n   **Source:** [Ozburials Tarlee Cemetery](http://www.ozburials.com/CemsSA/tarlee.htm) — accessed 28 July 2026\n\n## Links\n\n- [[Elizabeth Hannah Telfer (1836–1916)]] — Mother\n- [[Charles Farrow (~1836–1884)]] — Father",
-    "body_stripped": "Charles Farrow Jr ~1865–1936\n\nRole: Son of Charles Farrow and Elizabeth Hannah Telfer — Hope Farm, Tarlee\nBorn: ~1865 — Hope Farm, Tarlee, South Australia\nDied: 21 September 1936 aged 71 — Tarlee, South Australia\nBuried: Tarlee Cemetery\nSpouse: Ethel Mary Sambell\n\nCharles Farrow Jr was the sixth child and third son of Charles Farrow and Elizabeth Hannah Telfer. He grew up at Hope Farm, Finniss Point, near Tarlee, and married Ethel Mary Sambell.\n\nNewspaper References\n\nDeath Notice\n\nThe Advertiser",
-    "is_living": false,
-    "lifespan": "~1865 – 1936",
-    "parents": [
-      "charles-farrow-1836",
-      "elizabeth-hannah-telfer-1836"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "amy-farrow-stribling-1868",
-      "charles-farrow-jr",
-      "elizabeth-farrow",
-      "elizabeth-telfer-farrow-holloway-1861",
-      "esther-farrow-latter-1859",
-      "eva-agnes-farrow-1877",
-      "george-hope-farrow-1872",
-      "jane-murray-farrow-1857",
-      "john-farrow",
-      "mary-bayes-farrow-1875"
-    ],
-    "related_trees": [],
-    "generation": 5
-  },
-  {
-    "id": "Florence Nicholas Telfer",
-    "slug": "florence-nicholas-~1885",
-    "first_name": "Florence",
-    "middle_name": null,
-    "last_name": "Nicholas",
-    "birth_year": "~1885",
-    "death_year": "~1960",
-    "birth_year_display": "~1885",
-    "death_year_display": "~1960",
-    "display_name": "Florence Nicholas",
-    "title": "Florence Nicholas",
-    "tags": [
-      "bio",
-      "person"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Florence Nicholas Telfer"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "Ernest John Telfer"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "John Ernest Telfer",
-          "Jessica Veronica Telfer",
-          "Lloyd Wilbur Telfer",
-          "Gweneth Miranda Telfer"
-        ]
-      }
-    ],
-    "roles": [
-      "Wife of Rev. Ernest John Telfer — First Matron of Dulhi-Gunyah Orphanage"
-    ],
-    "body_markdown": "# Florence Nicholas Telfer\n\n**Role:** Wife of Rev. Ernest John Telfer — First Matron of Dulhi-Gunyah Orphanage\n**Born:** ~1885 — Boulder City, Western Australia (estimated from marriage in 1909)\n**Died:** Unknown — likely New South Wales\n**Spouse:** [[Ernest John Telfer (1878–1953)]] (m. 24 Feb 1909)\n**Children:** John Ernest, Jessica Veronica, Lloyd Wilbur, Gweneth Miranda\n\n![[Family History/People/Photos/Mrs-E-J-Telfer.jpg|400]]\n*Mrs. E.J. Telfer (Florence) — First Matron of Dulhi-Gunyah Orphanage, East Perth — portrait from \"Amongst Australian Aborigines\" (c.1939)*\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Ernest John Telfer (1878–1953)]] |\n| **Children** | [[John Ernest Telfer (1877–1877)]], Jessica Veronica Telfer, [[Lloyd Wilbur Telfer (1913–2001)]], Gweneth Miranda Telfer |\n\n---\n\n## Life Summary\n\nFlorence Nicholas married Rev. Ernest John Telfer on 24 February 1909 at Boulder City, Western Australia. The following day they began work together at Dulhi-Gunyah (meaning \"little child's home\") Orphanage in East Perth, where Florence served as the first Matron of the home. While Ernie travelled inland on missionary journeys to remote stations, Florence remained in charge of the orphanage, caring for Aboriginal children brought in from the far interior — some from as far as 900 miles inland.\n\nIn March 1911, Florence and Ernie resigned from the United Aborigines' Mission staff. Ernie subsequently entered the Baptist ministry, serving pastorates at Terowie (SA), in Tasmania, and in New South Wales. Florence likely accompanied him through these postings.\n\nA photograph of Florence in academic regalia (mortarboard and gown) appears in Ernie's 1939 book *Amongst Australian Aborigines*, which she helped make possible by \"supplying material\" and supporting the work of the mission.\n\n*(Details on Florence's parentage, birth year, and death date remain unverified — information needed from birth/marriage certificates or family records.)*\n\n---\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| ~1885 | Born at Boulder City, Western Australia (estimated) |\n| 24 Feb 1909 | Married Ernest John Telfer at Boulder City, WA |\n| 25 Feb 1909 | Began as first Matron, Dulhi-Gunyah Orphanage, East Perth |\n| Mar 1911 | Resigned from UAM staff with Ernie |\n| 1912–1916 | Lived at Terowie, SA (Baptist pastorate) |\n| ~1939 | Photo published in *Amongst Australian Aborigines* |\n\n---\n\n## Notes\n\n- **Parentage unknown:** Florence's parents are not recorded in available family history sources. Her marriage to Ernie at Boulder City suggests her family may have been based in the Western Australian goldfields region.\n- **Death details unknown:** Where and when Florence died is not recorded in vault sources. Her husband Ernie died at Waverley, NSW in 1953 and was buried at Rookwood — she may have predeceased him or been buried elsewhere.\n- Photo extracted from *Amongst Australian Aborigines* (c.1939), p.138 — via vision_analyze 26 Jul 2026\n\n---\n\n## Sources\n\n- **Source:** E.J. Telfer, *Amongst Australian Aborigines* (1939), p.138 — photo and caption \"Mrs. E.J. Telfer, First Matron of the Dulhi-Gunyah Orphanage\" — via vision_analyze 26 Jul 2026\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp.141–142 — marriage and mission details — via OCR 25 Jul 2026\n- **Source:** Group photograph caption in *Amongst Australian Aborigines* (c.1939), pp.199–200 — \"Rev. E.J. Telfer, Miss V.E. Turner, Mr. T. Graham, Mr. J. Jago, Mr. G.L. Aitken, Mr. H. Rotherham\" — via vision_analyze 26 Jul 2026\n\n---\n\n## Links\n\n- [[Ernest John Telfer (1878–1953)]]\n- [[John Ernest Telfer (1877–1877)]]",
-    "body_stripped": "Florence Nicholas Telfer\n\nRole: Wife of Rev. Ernest John Telfer — First Matron of Dulhi-Gunyah Orphanage\nBorn: ~1885 — Boulder City, Western Australia estimated from marriage in 1909\nDied: Unknown — likely New South Wales\nSpouse: Ernest John Telfer 1878–1953 m. 24 Feb 1909\nChildren: John Ernest, Jessica Veronica, Lloyd Wilbur, Gweneth Miranda\n\n!Family History/People/Photos/Mrs-E-J-Telfer.jpg|400\nMrs. E.J. Telfer Florence — First Matron of Dulhi-Gunyah Orphanage, East Perth — portrait from \"Among",
-    "is_living": false,
-    "lifespan": "~1885 – ~1960",
-    "parents": [],
-    "children": [
-      "john-telfer-1877",
-      "lloyd-wilbur-telfer-1913"
-    ],
-    "spouses": [
-      "ernest-telfer-1878"
-    ],
-    "siblings": [],
-    "related_trees": [],
-    "generation": 5
-  },
-  {
-    "id": "Leslie Frank Dillon (~1892–1915)",
-    "slug": "leslie-frank-dillon-~1892",
-    "first_name": "Leslie Frank",
-    "middle_name": null,
-    "last_name": "Dillon",
-    "birth_year": "~1892",
-    "death_year": 1915,
-    "birth_year_display": "~1892",
-    "death_year_display": "1915",
-    "display_name": "Leslie Frank Dillon",
-    "title": "Leslie Frank Dillon (~1892–1915) — WWI casualty, Gallipoli",
-    "tags": [
-      "person",
-      "dillon",
-      "war-casualty"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Leslie Frank Dillon"
-        ]
-      }
-    ],
-    "roles": [
-      "Dillon-branch descendant of Elizabeth Beattie Telfer — killed at Gallipoli, WWI"
-    ],
-    "body_markdown": "# Leslie Frank Dillon (~1892–1915)\n\n**Role:** Dillon-branch descendant of Elizabeth Beattie Telfer — killed at Gallipoli, WWI\n**Died:** 1915 (ANZAC landings, late April) — Gallipoli, **no known grave**\n**Branch:** Tea Tree Gully, South Australia (Dillon line of Elizabeth Beattie Telfer)\n\n## War Service\n\nPrivate **Leslie Frank Dillon**, Australian Imperial Force, killed at **Gallipoli** during the ANZAC landings of late April 1915. He has **no known grave** — his name is commemorated on the **Lone Pine Memorial, Gallipoli**.\n\nHis name appears on the Australian War Memorial Gallipoli Peninsula commemorative roll alongside other DILLON servicemen of the branch (incl. Francis William, Herbert, Martin Michael Dillon).\n\n## Life Summary\n\nLeslie Frank Dillon belonged to the Tea Tree Gully DILLON branch (descendants of Elizabeth Beattie Telfer's marriage to John Charles Dillon). He was killed at Gallipoli in 1915 and — having no known grave — his name is recorded on the Lone Pine Memorial.\n\n## Notes\n\n- **⚠️ Parentage corrected (Skippy, 3 Sep 2026).** This profile previously listed **Robert Telfer Dillon (1862–1942) and Mary Ann (Gelligen) Dillon** as Leslie Frank's parents. That was a **chronological impossibility** and has been removed: Robert only married Mary Ann on **29 May 1915**, and Leslie Frank was killed at Gallipoli in **late April 1915** — before that marriage existed — and was born ~1892. Robert's actual son of that later family was the *other* Leslie, **Pte Leslie James Dillon (1916–1941, KIA Tobruk)**. Leslie Frank's true parentage is not yet established (likely another couple in the Tea Tree Gully Dillon line); it is a **data gap, not evidence he had no family** — logged for a future SA-record investigation.\n\n## Anecdote\n\n🖊️ **Anecdote — as told in *From the Borders to the Bush* / *A Telfer Family Tree* (2008, p.197):** Leslie Frank Dillon of the Telfer line was killed at Gallipoli in the ANZAC landings of late April 1915 and has no known grave — his name sits on the Lone Pine Memorial. *(Exact date 25–29 April 1915 is the family-book recollection; the AWM confirms his Gallipoli commemoration and name on the Lone Pine roll.)*\n\n## Sources\n\n- **Source:** [Australian War Memorial — Private Leslie Frank Dillon, P10327985](https://www.awm.gov.au/collection/P10327985) — accessed 12 Aug 2026 (verified: Private, AWM People record)\n- **Source:** [Australian War Memorial — Gallipoli Peninsula (Lone Pine) commemorative roll, PL503649](https://www.awm.gov.au/collection/PL503649) — accessed 12 Aug 2026 (verified: \"Dillon, Leslie Frank\" appears on the Gallipoli Peninsula commemorative roll)\n- **Source:** *From the Borders to the Bush* / *A Telfer Family Tree* (Supplement 2008), p.197 — family book record of the service and death at Gallipoli, no known grave\n\n## Links\n\n- [[Elizabeth Beattie Telfer (1832–1896)]] — ancestor (Dillon branch)\n- [[John Charles Dillon (1827–1906)]] — ancestor",
-    "body_stripped": "Leslie Frank Dillon ~1892–1915\n\nRole: Dillon-branch descendant of Elizabeth Beattie Telfer — killed at Gallipoli, WWI\nDied: 1915 ANZAC landings, late April — Gallipoli, no known grave\nBranch: Tea Tree Gully, South Australia Dillon line of Elizabeth Beattie Telfer\n\nWar Service\n\nPrivate Leslie Frank Dillon, Australian Imperial Force, killed at Gallipoli during the ANZAC landings of late April 1915. He has no known grave — his name is commemorated on the Lone Pine Memorial, Gallipoli.\n\nHis name app",
-    "is_living": false,
-    "lifespan": "~1892 – 1915",
-    "parents": [],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [],
-    "generation": 1
   }
 ]
