@@ -212,3 +212,65 @@ if ! node scripts/validate-slug-shape.mjs; then
   echo "       (Step 2d) did not restore the slugs, fix that, and re-run this pipeline."
   exit 1
 fi
+
+echo
+echo "==> Step 9/9: LINK-INTEGRITY GATE CHAIN (fail-closed) [tw-2026-09-18-008]"
+# WHY THIS EXISTS
+# ---------------
+# Every link guard in this repo lives in package.json's `postbuild` chain, which only runs
+# on `npm run build`. The nightly job ('Genealogy Verification Pass', 21:30) runs THIS script
+# and then `git commit && git push` -- it never builds. So a regen could be committed and
+# DEPLOYED to telferwiki.com while check-body-links / the redirect guard / the slug-regression
+# guard were all red, and nothing on the nightly path would ever say so.
+#
+# That is not hypothetical: it is exactly how three ghost URLs
+#   /people/charles-farrow-jr-~1865/  /people/florence-nicholas-~1885/  /people/leslie-frank-dillon-~1892/
+# were purged from the data, deployed, and then orphaned. The redirect emitter refused to emit
+# a partial redirect set -- but only when a human ran a build. The nightly path was silent.
+#
+# So: run the guards HERE, where both the generated data and the vault exist, and fail the
+# regen. A regen that cannot prove its links resolve is not a regen.
+#
+# ORDER MATTERS: emit-git-slug-redirects.mjs must run BEFORE the guards that check redirect
+# coverage -- it is what WRITES the alias pages those guards then verify. --write-pages (not
+# bare) is what actually emits dist/people/<old>/index.html; without it the guard sees nothing.
+LINK_GATES=(
+  "redirects:node scripts/generate-redirects.mjs"
+  "git-slug-redirects:node scripts/emit-git-slug-redirects.mjs --write-pages"
+  "redirect-health:node scripts/check-redirect-health.mjs"
+  "live-slug-regression:node scripts/check-live-slug-regression.mjs"
+  "people-links:node scripts/validate-people-links.mjs"
+  "links:node scripts/validate-links.mjs"
+  "relationship-links:node scripts/validate-relationship-links.mjs"
+  "resolver-coverage:node scripts/validate-resolver-coverage.mjs"
+  "family-cell-links:node scripts/validate-family-cell-links.mjs"
+  "full-tree:node scripts/validate-full-tree.mjs"
+  "body-links:node scripts/check-body-links.mjs"
+)
+
+GATE_FAILED=0
+for entry in "${LINK_GATES[@]}"; do
+  NAME="${entry%%:*}"
+  CMD="${entry#*:}"
+  OUT="$($CMD 2>&1)" || {
+    echo ""
+    echo "GATE FAILED — $NAME"
+    echo "$OUT" | tail -25
+    GATE_FAILED=1
+  }
+  if [[ "$GATE_FAILED" == "0" ]]; then
+    echo "OK — $NAME"
+  fi
+done
+
+if [[ "$GATE_FAILED" != "0" ]]; then
+  echo ""
+  echo "LINK-INTEGRITY GATE FAILED — refusing to report success (tw-2026-09-18-008)."
+  echo "Do NOT commit or push this regen: the nightly job's push deploys straight to"
+  echo "telferwiki.com, and a red link guard means the site would ship broken links."
+  echo "Fix the underlying cause (usually: a vault profile rename that orphaned a live URL —"
+  echo "add the old->new pair to the redirect source, do NOT hand-edit src/data/*.json),"
+  echo "then re-run this script."
+  exit 1
+fi
+echo "OK — link-integrity gate chain clean."
