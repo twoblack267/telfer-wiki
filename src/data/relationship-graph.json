@@ -1809,6 +1809,21 @@
       "slug": "john-dillon",
       "id": "John Boswell Dillon (1859)",
       "generation": 5
+    },
+    {
+      "slug": "alan-downs",
+      "id": "Alan Theodore Downs",
+      "generation": 99
+    },
+    {
+      "slug": "nita-mutton",
+      "id": "Nita Leah Mutton (1889)",
+      "generation": 6
+    },
+    {
+      "slug": "robert-campbell",
+      "id": "Robert Mewett Campbell (1878)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -2556,6 +2571,14 @@
       {
         "from": "shirley-telfer-1929",
         "to": "grantley-telfer"
+      },
+      {
+        "from": "nita-mutton",
+        "to": "gwendoline-victoria-telfer-1910"
+      },
+      {
+        "from": "robert-campbell",
+        "to": "gwendoline-victoria-telfer-1910"
       },
       {
         "from": "emma-turner-1888",
@@ -4198,6 +4221,10 @@
       {
         "from": "emily-goodwin",
         "to": "john-dillon"
+      },
+      {
+        "from": "nita-mutton",
+        "to": "robert-campbell"
       }
     ],
     "siblingOf": [

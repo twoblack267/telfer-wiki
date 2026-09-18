@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-18T19:17:05+10:00",
+  "generated_at": "2026-09-18T19:27:50+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 378,
+  "count": 381,
   "kinds": {
-    "real": 362,
+    "real": 365,
     "redirect": 16,
     "empty": 0
   },
@@ -46,6 +46,10 @@
     },
     "Alan Dale Telfer (1890\u20131937).md": {
       "sha256": "d1a0706e4961b573b562a53d05918b6ed78c293c334049b39fe69759f653dba6",
+      "kind": "real"
+    },
+    "Alan Theodore Downs (?\u2013?).md": {
+      "sha256": "c9102d897e45906b5ae85972e009026e46eec2c4fd07a78ebb6f836dffc16457",
       "kind": "real"
     },
     "Albert George Telfer (1881\u20131970).md": {
@@ -589,7 +593,7 @@
       "kind": "real"
     },
     "Gwendoline Victoria (Campbell) Telfer (1910\u20131966).md": {
-      "sha256": "a21fa61c58f95c22fdeaab0d3d11138faece89a6ebdafb705223cc7fcfa7ebab",
+      "sha256": "e3c86a0b77fd7689ece6b5a370e5dcc6263ba0d24be51b3cc7fbdcca3a2f8b65",
       "kind": "real"
     },
     "Gwinfred Gorden Herbert John Hucks (1908\u20132002).md": {
@@ -1212,6 +1216,10 @@
       "sha256": "43af0360aaa563f2f4f104a3b260e5e151ecba8e39b6acb454af06dda59b9186",
       "kind": "real"
     },
+    "Nita Leah Mutton (1889\u2013?).md": {
+      "sha256": "a176f148336266fe0f58b016b1476d558e8cce059810d0b939e8f84503a2ee0b",
+      "kind": "real"
+    },
     "Noela Pauline Virgen (1921\u20132015).md": {
       "sha256": "217d542d51dfe50a04194c1ddc7c28786ee03c4422cb0d4f6fee01ad6a2e7823",
       "kind": "real"
@@ -1294,6 +1302,10 @@
     },
     "Robert Freddy Telfer (1886\u20131949).md": {
       "sha256": "725b21f7d9f75fb3327bcc240f04ac79684f0b63e258d407726ebb7ff3dba926",
+      "kind": "real"
+    },
+    "Robert Mewett Campbell (1878\u2013?).md": {
+      "sha256": "f91f335aa9015323a69108a224f3d22a3cb195c4d9506821a5f0877ce37cda42",
       "kind": "real"
     },
     "Robert Telfer (1803\u20131878).md": {

@@ -10003,6 +10003,42 @@
     "person_photo": null
   },
   {
+    "id": "Robert Mewett Campbell (1878)",
+    "slug": "robert-campbell",
+    "first_name": "Robert",
+    "middle_name": "Mewett",
+    "last_name": "Campbell",
+    "birth_year": 1878,
+    "death_year": null,
+    "birth_date": "20 December 1878",
+    "death_date": null,
+    "birth_place": "Millicent, South Australia",
+    "birth_year_display": "1878",
+    "death_year_display": "?",
+    "display_name": "Robert Mewett Campbell",
+    "title": "Robert Mewett Campbell (1878–?)",
+    "lifespan": "1878 – ?",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Robert Mewett Campbell\n\n**Born:** 20 December 1878 in Millicent, South Australia.\n**Father:** John Campbell.\n**Mother:** Emely Mewett.\n**Spouse:** Nita Leah Mutton — married 31 December 1907, District Grey, South Australia.\n**Daughter:** [[Gwendoline Victoria (Campbell) Telfer (1910–1966)]]\n\nRobert Mewett Campbell was born at Millicent, South Australia on 20 December 1878, the son of John Campbell and Emely Mewett (SA Birth **Book 212/Page 364**). He married **Nita Leah Mutton** at Millicent on 31 December 1907, District Grey (SA Marriage **Book 233/Page 1656**); the register records his father as John Campbell and hers as George Mutton. Their daughter **[[Gwendoline Victoria (Campbell) Telfer (1910–1966)|Gwendoline Victoria Campbell]]** was born at Millicent on 20 April 1910.\n\n## Sources\n\n- Genealogy SA — **Birth Registrations, Book/Page 212/364**: CAMPBELL, Robert Mewett, b. 20-Dec-1878, Millicent, father John CAMPBELL, mother Emely MEWETT. Read from the online index as a member (#24964), 18 Sep 2026.\n- Genealogy SA — **Marriage Registrations, Book/Page 233/1656**: CAMPBELL, Robert Mewett × MUTTON, Nita Leah, 31-Dec-1907, District Grey; groom's father John CAMPBELL, bride's father George MUTTON. Read 18 Sep 2026.\n- Genealogy SA — **Birth Registrations, Book/Page 842/210**: CAMPBELL, Gwendoline Victoria, b. 20-Apr-1910, Millicent, parents Robert Mewett CAMPBELL and Neta Leah MUTTON. Read 3 Sep 2026.",
+    "roles": [],
+    "tags": [
+      "person",
+      "family",
+      "campbell"
+    ],
+    "parents": [],
+    "children": [
+      "gwendoline-victoria-telfer-1910"
+    ],
+    "spouses": [
+      "nita-mutton"
+    ],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Elizabeth Parker (1879)",
     "slug": "elizabeth-parker-1879",
     "first_name": "Elizabeth",
@@ -10550,6 +10586,42 @@
     "siblings": [
       "joseph-watson-1883"
     ],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Nita Leah Mutton (1889)",
+    "slug": "nita-mutton",
+    "first_name": "Nita",
+    "middle_name": "Leah",
+    "last_name": "Mutton",
+    "birth_year": 1889,
+    "death_year": null,
+    "birth_date": "12 May 1889",
+    "death_date": null,
+    "birth_place": "Millicent, South Australia",
+    "birth_year_display": "1889",
+    "death_year_display": "?",
+    "display_name": "Nita Leah Mutton",
+    "title": "Nita Leah Mutton (1889–?)",
+    "lifespan": "1889 – ?",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Nita Leah Mutton\n\n**Born:** 12 May 1889 in Millicent, South Australia.\n**Father:** George Mutton.\n**Mother:** Elizabeth Ann Bottrill.\n**Spouse:** Robert Mewett Campbell — married 31 December 1907, District Grey, South Australia.\n**Daughter:** [[Gwendoline Victoria (Campbell) Telfer (1910–1966)]]\n\nNita Leah Mutton was born at Millicent, South Australia on 12 May 1889, the daughter of George Mutton and Elizabeth Ann Bottrill (SA Birth **Book 439/Page 132**). She married **Robert Mewett Campbell** at Millicent on 31 December 1907 (SA Marriage **Book 233/Page 1656**). Their daughter **Gwendoline Victoria Campbell** was born at Millicent on 20 April 1910.\n\n**A note on her name.** The family record and her daughter's birth registration give her name as **\"Neta Leah Mutton\"**; the marriage index and her own birth registration give **\"Nita Leah\"**. Both spellings refer to the same woman. The registers are followed here.\n\n## Sources\n\n- Genealogy SA — **Birth Registrations, Book/Page 439/132**: MUTTON, Nita Leah, b. 12-May-1889, Millicent, father George MUTTON, mother Elizabeth Ann BOTTRILL. Read from the online index as a member (#24964), 18 Sep 2026.\n- Genealogy SA — **Marriage Registrations, Book/Page 233/1656**: CAMPBELL, Robert Mewett × MUTTON, Nita Leah, 31-Dec-1907, District Grey. Read 18 Sep 2026.\n- Genealogy SA — **Birth Registrations, Book/Page 842/210**: CAMPBELL, Gwendoline Victoria, b. 20-Apr-1910, parents Robert Mewett CAMPBELL and Neta Leah MUTTON. Read 3 Sep 2026.",
+    "roles": [],
+    "tags": [
+      "person",
+      "family",
+      "mutton"
+    ],
+    "parents": [],
+    "children": [
+      "gwendoline-victoria-telfer-1910"
+    ],
+    "spouses": [
+      "robert-campbell"
+    ],
+    "siblings": [],
     "images": [],
     "person_photo": null
   },
@@ -11477,7 +11549,7 @@
     "lifespan": "1910 – 1966",
     "generation": 6,
     "is_living": false,
-    "body_markdown": "# Gwendoline Victoria (Campbell) Telfer\n\n**Role:** Second wife of Kenneth William John Telfer (1906–1970)\n\n**Born:** 20 April 1910 in Millicent, South Australia.\n**Died:** 18 September 1966 in Millicent, South Australia.\n**Parents:** Robert Mewett Campbell and Neta Leah Mutton.\n**Spouse:** Kenneth William John Telfer (her second marriage; he was previously married to [[Jessie Kathleen (Sargent) Telfer (1914–1954)|Jessie Kathleen Sargent]]).\n\nGwendoline Victoria Campbell was born 20 April 1910 at Millicent (SA Birth **Book 842/Page 210**), daughter of Robert Mewett Campbell and Neta Leah Mutton. She first married **Alan Theodore Downs** on 5 December 1930 at Mount Gambier (SA Marriage **Book 325/Page 514**), and by that register was about 20.\n\nAfter Jessie Sargent Telfer's death in 1954, Kenneth William John Telfer remarried. Gwendoline and Kenneth were married (the marriage sits outside the SA Marriage index coverage window, which is why no Telfer–Campbell marriage row is indexed). Gwendoline died 18 September 1966 at Millicent, aged 56, recorded on her SA Death register as **Gwendoline Victoria TELFER** with relative **Kenneth William John TELFER** (husband) — SA Death **Book 17A/Page 6787**. Kenneth's own later death registration (9 Nov 1970) records him as a widower with relative \"Gwendoline Victoria TELFER (deceased wife)\", confirming Gwendoline predeceased him.\n\n**A note on unlinked names.** Three people named on this page — Gwendoline's father **Robert Mewett Campbell**, her mother **Neta Leah Mutton**, and her first husband **Alan Theodore Downs** — have no pages of their own, because **no death record for any of them has been found in the South Australia registrations index**. It is therefore not established that they are deceased, and this archive does not create a public page for someone who may still be living. The index was checked and works (it returns 122 Downs deaths and 183 Mutton deaths elsewhere in the state); there is simply no entry for these three, so they may have died outside South Australia or their deaths may fall outside the index's coverage. If a death record or a burial for any of them is ever found, that person can be given a page and linked from here.\n\n- Two wives are recorded across the Telfer and Campbell/Brown family trees. Gwendoline is the second wife of Kenneth — identified via the mutual husband/wife [H] and [DW] relations on their respective SA death registrations.\n- Her death registration is under her married surname **Telfer**, with husband Kenneth named — this is how her identity as Kenneth's second wife is established from the primary record.\n- Gwendoline's first marriage (1930, to Alan Theodore Downs) is prior context; recorded here for clarity but she is linked in the tree as Kenneth's wife.\n\n## Sources\n\n- Genealogy SA (member), accessed 3 Sep 2026 — SA Birth Reg **Book 842/Page 210** (CAMPBELL, Gwendoline Victoria, b. 20 Apr 1910 Millicent, father Robert Mewett CAMPBELL, mother Neta Leah MUTTON); SA Marriage Reg **Book 325/Page 514** (Gwendoline Victoria CAMPBELL × Alan Theodore DOWNS, 5 Dec 1930, Mount Gambier); SA Death Reg **Book 17A/Page 6787** (Gwendoline Victoria TELFER, d. 18 Sep 1966, relative Kenneth William John TELFER)\n- SA Death Reg **Book 106A/Page 8861** (Kenneth William John TELFER, d. 9 Nov 1970, widower, relative \"Gwendoline Victoria TELFER (deceased wife)\" [DW])",
+    "body_markdown": "# Gwendoline Victoria (Campbell) Telfer\n\n**Role:** Second wife of Kenneth William John Telfer (1906–1970)\n\n**Born:** 20 April 1910 in Millicent, South Australia.\n**Died:** 18 September 1966 in Millicent, South Australia.\n**Parents:** [[Robert Mewett Campbell (1878–?)|Robert Mewett Campbell]] and [[Nita Leah Mutton (1889–?)|Nita Leah Mutton]].\n**Spouse:** Kenneth William John Telfer (her second marriage; he was previously married to [[Jessie Kathleen (Sargent) Telfer (1914–1954)|Jessie Kathleen Sargent]]).\n\nGwendoline Victoria Campbell was born 20 April 1910 at Millicent (SA Birth **Book 842/Page 210**), daughter of [[Robert Mewett Campbell (1878–?)|Robert Mewett Campbell]] and [[Nita Leah Mutton (1889–?)|Nita Leah Mutton]]. She first married **[[Alan Theodore Downs (?–?)|Alan Theodore Downs]]** on 5 December 1930 at Mount Gambier (SA Marriage **Book 325/Page 514**), and by that register was about 20.\n\nAfter Jessie Sargent Telfer's death in 1954, Kenneth William John Telfer remarried. Gwendoline and Kenneth were married (the marriage sits outside the SA Marriage index coverage window, which is why no Telfer–Campbell marriage row is indexed). Gwendoline died 18 September 1966 at Millicent, aged 56, recorded on her SA Death register as **Gwendoline Victoria TELFER** with relative **Kenneth William John TELFER** (husband) — SA Death **Book 17A/Page 6787**. Kenneth's own later death registration (9 Nov 1970) records him as a widower with relative \"Gwendoline Victoria TELFER (deceased wife)\", confirming Gwendoline predeceased him.\n\n- Two wives are recorded across the Telfer and Campbell/Brown family trees. Gwendoline is the second wife of Kenneth — identified via the mutual husband/wife [H] and [DW] relations on their respective SA death registrations.\n- Her death registration is under her married surname **Telfer**, with husband Kenneth named — this is how her identity as Kenneth's second wife is established from the primary record.\n- Gwendoline's first marriage (1930, to Alan Theodore Downs) is prior context; recorded here for clarity but she is linked in the tree as Kenneth's wife.\n\n## Sources\n\n- Genealogy SA (member), accessed 3 Sep 2026 — SA Birth Reg **Book 842/Page 210** (CAMPBELL, Gwendoline Victoria, b. 20 Apr 1910 Millicent, father Robert Mewett CAMPBELL, mother Neta Leah MUTTON); SA Marriage Reg **Book 325/Page 514** (Gwendoline Victoria CAMPBELL × Alan Theodore DOWNS, 5 Dec 1930, Mount Gambier); SA Death Reg **Book 17A/Page 6787** (Gwendoline Victoria TELFER, d. 18 Sep 1966, relative Kenneth William John TELFER)\n- SA Death Reg **Book 106A/Page 8861** (Kenneth William John TELFER, d. 9 Nov 1970, widower, relative \"Gwendoline Victoria TELFER (deceased wife)\" [DW])",
     "roles": [
       "Second wife of Kenneth William John Telfer (1906–1970)"
     ],
@@ -11486,7 +11558,10 @@
       "family",
       "campbell"
     ],
-    "parents": [],
+    "parents": [
+      "nita-mutton",
+      "robert-campbell"
+    ],
     "children": [],
     "spouses": [
       "kenneth-telfer-1906"
@@ -14948,6 +15023,37 @@
       }
     ],
     "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg"
+  },
+  {
+    "id": "Alan Theodore Downs",
+    "slug": "alan-downs",
+    "first_name": "Alan",
+    "middle_name": "Theodore",
+    "last_name": "Downs",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "Alan Theodore Downs",
+    "title": "Alan Theodore Downs (?–?)",
+    "lifespan": "? – living",
+    "generation": 99,
+    "is_living": true,
+    "body_markdown": "# Alan Theodore Downs\n\n**Spouse:** [[Gwendoline Victoria (Campbell) Telfer (1910–1966)|Gwendoline Victoria Campbell]] — married 5 December 1930 at Mount Gambier, South Australia.\n\nAlan Theodore Downs married **Gwendoline Victoria Campbell** on 5 December 1930 at Mount Gambier, South Australia (SA Marriage **Book 325/Page 514**). She was about 20 at the time. That marriage was her first; she later married [[Kenneth William John Telfer (1906–1970)|Kenneth William John Telfer]].\n\n**Little else is established about him.** No death registration for him has been found in the South Australia index, and no birth registration either — the South Australian birth index does not cover the most recent decades, and he may have been born or died outside the state. Nothing further is recorded here rather than guessed at.",
+    "roles": [],
+    "tags": [
+      "person",
+      "family",
+      "downs"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "images": [],
+    "person_photo": null
   },
   {
     "id": "Allen Merrick",
