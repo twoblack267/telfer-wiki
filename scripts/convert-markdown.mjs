@@ -670,7 +670,14 @@ function main() {
       // those are historical-place illustrations for the Photos GALLERY, not a
       // portrait. If every image is a grave or scenery plate (no photograph of
       // the person survives), fall back to the initials avatar (null).
-      person_photo: bodyImages.find(img => !img.src.includes('grave') && !/_[pP]\d+\.jpg$/.test(img.src))?.src || null
+      // A photo OF the person only. Never a grave, cemetery view, map, or a
+      // scenery/place book-plate (_p{N} suffix). If nothing qualifies, null ->
+      // initials avatar. (Widened 2026-09-18: 'cemetery'/'map'/'scenery-plate'
+      // were slipping through and being promoted to the circular avatar.)
+      person_photo: bodyImages.find(img =>
+        !/grave|cemetery|map|scenery[-_]plate/i.test(img.src) &&
+        !/_[pP]\d+\.jpg$/.test(img.src)
+      )?.src || null
     };
 
     // 3. Find matching existing entry
