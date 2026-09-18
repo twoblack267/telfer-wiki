@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-09-18T04:45:01.029Z",
+  "vault_root_basename": "Family History",
+  "note_count": 17,
+  "scope": {
+    "included_dirs": [
+      "History",
+      "Reference",
+      "References",
+      "Events"
+    ],
+    "included_top_level": [
+      "_index",
+      "family tree",
+      "telfer tree",
+      "corrections log",
+      "how we work (telfer wiki rules)"
+    ],
+    "excluded_by_rule": [
+      "Documents",
+      "Websites",
+      "People",
+      "Templates"
+    ],
+    "note": "Titles only. No note content is read or stored. Documents/ and Websites/ are excluded by rule."
+  },
+  "notes": [
+    "_index",
+    "celebrating the life of murray john telfer",
+    "corrections log",
+    "events/wedding - mark & kylie telfer (12 mar 2016)",
+    "events/wedding - tim & sheryle telfer (28 aug 1999)",
+    "family tree",
+    "history/celebrating the life of murray john telfer",
+    "history/lawrie family - carslake connection",
+    "history/telfer surname origin",
+    "how we work (telfer wiki rules)",
+    "lawrie family - carslake connection",
+    "prince george - 1830 barque",
+    "reference/prince george - 1830 barque",
+    "telfer surname origin",
+    "telfer tree",
+    "wedding - mark & kylie telfer (12 mar 2016)",
+    "wedding - tim & sheryle telfer (28 aug 1999)"
+  ]
+}

@@ -186,6 +186,20 @@ else
 fi
 
 echo
+echo "==> Step 7b/8: refresh vault-notes snapshot for the body-link guard"
+# The body-link guard (scripts/check-body-links.mjs) resolves [[wikilinks]] against
+# people.json, but a body link may deliberately point at a NON-PERSON vault note
+# (e.g. [[Lawrie Family - Carslake Connection]] in History/). CI has no Obsidian vault,
+# so the resolvable note titles are committed as scripts/vault-notes.snapshot.json and
+# audited FOR REAL in CI — the same pattern as the family-rows snapshot above.
+# (Added 2026-09-18 for tw-2026-09-18-006.)
+if node scripts/make-vault-notes-snapshot.mjs; then
+  echo "OK — vault-notes snapshot refreshed (commit scripts/vault-notes.snapshot.json if it changed)."
+else
+  echo "WARNING — snapshot not refreshed; body-link guard will resolve against the previously committed notes."
+fi
+
+echo
 echo "==> Step 8/8: slug-shape guard (relationship refs must stay slugs) [tw-2026-09-13-034]"
 # Fail the regen if the slug-shaped relationship count regressed below the committed baseline,
 # or if any relationship entry is a bare display name. Before this guard existed, a regen that
