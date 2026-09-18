@@ -22,8 +22,37 @@ const REDIRECT_LOG = 'scripts/redirect-log.json';
 
 const people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
 
+// ─────────────────────────────────────────────────────────────────────────────
+// SAFETY: every canonical slug in THIS run. A redirect whose `from` is one of
+// these is not an alias — it is a LIVE PAGE, and emitting it overwrites a real
+// person's profile with a meta-refresh stub that sends visitors to a DIFFERENT
+// person. That is a silent wrong-person 200: no 404, so no link checker sees it.
+//
+// Real case (tw-2026-09-19-001): 'Francis Charles Telfer' (b.1875, d.1954) holds
+// the canonical slug `francis-telfer-1875`. 'Francis Adam Telfer' (b.1875,
+// d.1955) collides on first+last+birth_year, so Case 1 computed his "old slug"
+// as `francis-telfer-1875` and emitted an alias straight over Charles's page.
+// Same for `james-telfer-1866` (James Telfer, d.1946) hijacked by James Robert
+// Telfer (d.1925). Both were live and wrong.
+//
+// A redirect may only ever point FROM a URL nobody currently owns. If the slug
+// is claimed by a live page, the alias is not needed (the URL already resolves
+// to the right person) and emitting it is destructive. This guard is deliberately
+// placed here, before any emission, so no downstream stage can re-introduce it.
+// ─────────────────────────────────────────────────────────────────────────────
+const canonicalSlugs = new Set(people.map(p => p.slug));
+const suppressed = [];
+
 // Build map: old-format slug → actual person
 const redirects = [];
+
+function pushRedirect(r) {
+  if (canonicalSlugs.has(r.from)) {
+    suppressed.push(r);
+    return;
+  }
+  redirects.push(r);
+}
 
 for (const p of people) {
   const newSlug = p.slug;
@@ -37,7 +66,7 @@ for (const p of people) {
 
   // Case 1: Old year-suffixed slug is different from new slug → redirect
   if (oldSlug !== newSlug) {
-    redirects.push({
+    pushRedirect({
       from: oldSlug,
       to: newSlug,
       reason: oldSlug.includes(String(birthYear || '')) ? 'lost-year' : 'slug-changed',
@@ -57,7 +86,7 @@ for (const p of people) {
     const collapsedBare = `${firstWords[0]}-${lastName}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
     const collapsedOld = birthYear ? `${collapsedBare}-${birthYear}` : collapsedBare;
     if (collapsedOld !== newSlug && collapsedOld !== oldSlug) {
-      redirects.push({
+      pushRedirect({
         from: collapsedOld,
         to: newSlug,
         reason: 'collapsed-first-name',
@@ -114,7 +143,7 @@ for (const r of bareToNew) {
 const existingFrom = new Set(redirects.map(r => r.from));
 for (const r of byBare.values()) {
   if (!existingFrom.has(r.from)) {
-    redirects.push({ from: r.from, to: r.to, display_name: r.display_name });
+    pushRedirect({ from: r.from, to: r.to, display_name: r.display_name });
   }
 }
 
@@ -142,7 +171,7 @@ const MANUAL_ALIASES = [
   { from: 'esther-jane-telfer-1835', to: 'esther-jane-telfer-1834', display_name: 'Esther Jane Telfer' },
   { from: 'esther-telfer-1835',      to: 'esther-jane-telfer-1834', display_name: 'Esther Jane Telfer' },
 ];
-for (const a of MANUAL_ALIASES) redirects.push(a);
+for (const a of MANUAL_ALIASES) pushRedirect(a);
 
 // Deduplicate (same 'from' should only redirect to one destination)
 const seen = new Set();
@@ -180,6 +209,18 @@ const filteredRedirects = uniqueRedirects.filter(r => {
 
 // Write redirect pages
 console.log(`\n📝 Generating ${filteredRedirects.length} redirect(s) (${uniqueRedirects.length - filteredRedirects.length} skipped)...`);
+
+// ── SUPPRESSED: origin slugs that belong to a LIVE page (tw-2026-09-19-001) ──
+// Loud on purpose. Suppression is the fix working, but a silent fix rots: if this
+// number ever jumps, a slug collision has appeared between two real people and the
+// disambiguator needs looking at, not the guard. Never auto-silence this.
+if (suppressed.length > 0) {
+  console.log(`\n🛡️  SUPPRESSED ${suppressed.length} redirect(s) — origin slug is a LIVE page:`);
+  for (const r of suppressed) {
+    console.log(`   ${r.from} ✗ (would have hijacked a real page → ${r.to}, ${r.display_name})`);
+  }
+  console.log(`   These people KEEP their own URLs. No alias emitted.`);
+}
 
 function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
   const baseDir = isPeopleRedirect ? DIST_DIR : 'dist';
