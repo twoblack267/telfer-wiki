@@ -182,13 +182,18 @@ function deduplicatePeople(arr) {
 
   for (const p of arr) {
     const by = p.birth_year ?? '';
-    // Include middle_name ONLY when birth_year is absent, matching convert-markdown.mjs.
-    // Two no-year same first+last people (e.g. John Alick Ralph Telfer vs John Robert
-    // Telfer) share a first+last-only key and would wrongly deduplicate — this mirrors
-    // the converter's collision fix so the two Johns coexist.
-    const namePart = by
-      ? ((p.first_name || '') + (p.last_name || ''))
-      : ((p.first_name || '') + (p.middle_name || '') + (p.last_name || ''));
+    // ALWAYS include middle_name, including when a birth_year is present.
+    // MUST match convert-markdown.mjs (line ~377) exactly: the converter was fixed
+    // on 2026-09-18 (7635c6a) to always include middle_name, but this file was NOT
+    // touched by that commit — the two implementations of the same key diverged.
+    // The consequence was concrete: a year-bearing first+last-only key collapsed
+    // genuinely distinct same-name twins and the LATER record was discarded. That
+    // evicted two published, fully-evidenced deceased people from people.public.json
+    // (francis-telfer-1875 Francis Charles Telfer 1875-1954, and james-telfer-1866
+    // James Telfer 1866-1946 — different parents from their namesakes) and hid them
+    // from the live site. Making the key unconditional distinguishes them, so fewer
+    // records are dropped and both survive. Restores content; mints no new slugs.
+    const namePart = (p.first_name || '') + (p.middle_name || '') + (p.last_name || '');
     const key = (namePart + '|' + by).toLowerCase();
     const hasYear = hasRealYearSuffix(p.slug);
     const existing = seen.get(key);
