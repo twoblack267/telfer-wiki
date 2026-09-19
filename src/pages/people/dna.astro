@@ -81,7 +81,7 @@ const haplogroupsY = [...new Set(people.filter(p => p.haplogroup_y).map(p => ({ 
             <div class="person-card rounded-xl p-3">
               <dl class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {haplogroupsMt.map((h, i) => (
-                  <div key={i} class="border-l-2 border-[var(--color-highlight)] pl-3">
+                  <div class="border-l-2 border-[var(--color-highlight)] pl-3">
                     <dt class="font-medium text-sm">{h.name}</dt>
                     <dd class="font-mono text-sm text-[var(--color-heading)]">{h.haplogroup}</dd>
                   </div>
@@ -100,7 +100,7 @@ const haplogroupsY = [...new Set(people.filter(p => p.haplogroup_y).map(p => ({ 
             <div class="person-card rounded-xl p-3">
               <dl class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {haplogroupsY.map((h, i) => (
-                  <div key={i} class="border-l-2 border-[var(--color-highlight)] pl-3">
+                  <div class="border-l-2 border-[var(--color-highlight)] pl-3">
                     <dt class="font-medium text-sm">{h.name}</dt>
                     <dd class="font-mono text-sm text-[var(--color-heading)]">{h.haplogroup}</dd>
                   </div>
@@ -115,14 +115,14 @@ const haplogroupsY = [...new Set(people.filter(p => p.haplogroup_y).map(p => ({ 
           <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3">All DNA Matches</h2>
           <div class="space-y-3">
             {peopleWithDna.map(person => (
-              <details key={person.slug} class="person-card rounded-xl p-3 group">
+              <details class="person-card rounded-xl p-3 group">
                 <summary class="cursor-pointer select-none flex items-center justify-between">
                   <span class="font-medium">{person.display_name}</span>
                   <svg class="w-5 h-5 text-[var(--color-muted)] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </summary>
                 <div class="mt-3 space-y-2 border-l-2 border-[var(--color-border)] pl-3">
                   {person.dna_matches?.map((match, i) => (
-                    <div key={i} class="py-2">
+                    <div class="py-2">
                       <div class="flex flex-wrap items-baseline gap-2">
                         <span class="font-medium">{match.name}</span>
                         <span class="text-[var(--color-muted)]">→</span>

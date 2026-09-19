@@ -82,7 +82,7 @@ export async function getStaticPaths() {
         <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Parents</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {parents.map(p => (
-            <article key={p.slug} class="person-card rounded-xl p-3">
+            <article class="person-card rounded-xl p-3">
               <h3 class="font-serif text-sm text-[var(--color-heading)] mb-1">
                 <a href={`/people/${p.slug}`} class="text-[var(--color-link)] hover:underline">{p.display_name}</a>
               </h3>
@@ -100,7 +100,7 @@ export async function getStaticPaths() {
         <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Spouse{spouses.length > 1 ? 's' : ''} &amp; Marriage{spouses.length > 1 ? 's' : ''}</h2>
         <div class="space-y-3">
           {spouses.map(spouse => (
-            <article key={spouse.slug} class="person-card rounded-xl p-3">
+            <article class="person-card rounded-xl p-3">
               <div class="flex items-start justify-between gap-3">
                 <div>
                   <h3 class="font-serif text-sm text-[var(--color-heading)] mb-1">
@@ -125,7 +125,7 @@ export async function getStaticPaths() {
         <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Children ({children.length})</h2>
         <div class="space-y-2">
           {children.map(child => (
-            <article key={child.slug} class="person-card rounded-xl p-2.5">
+            <article class="person-card rounded-xl p-2.5">
               <div class="flex items-center justify-between gap-2">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[var(--color-highlight)]"></span>
@@ -156,7 +156,7 @@ export async function getStaticPaths() {
         <h2 class="font-serif text-lg text-[var(--color-heading)] mb-3 border-b border-[var(--color-border)] pb-1">Siblings ({siblings.length})</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {siblings.map(sib => (
-            <article key={sib.slug} class="person-card rounded-xl p-2.5">
+            <article class="person-card rounded-xl p-2.5">
               <div class="flex items-center justify-between">
                 <a href={`/people/${sib.slug}`} class="text-sm font-medium text-[var(--color-link)] hover:underline">{sib.display_name}</a>
                 <span class="text-xs text-[var(--color-muted)]">{formatDateRange(sib)}</span>
