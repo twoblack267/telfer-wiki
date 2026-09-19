@@ -1824,6 +1824,11 @@
       "slug": "robert-campbell",
       "id": "Robert Mewett Campbell (1878)",
       "generation": 6
+    },
+    {
+      "slug": "thirza-paynter",
+      "id": "Thirza Paynter (1867)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -3887,6 +3892,14 @@
       {
         "from": "john-dillon-1827",
         "to": "john-dillon"
+      },
+      {
+        "from": "jean-telfer-1840",
+        "to": "thirza-paynter"
+      },
+      {
+        "from": "richard-paynter-1838",
+        "to": "thirza-paynter"
       }
     ],
     "spouseOf": [
@@ -4986,6 +4999,10 @@
       },
       {
         "from": "dinah-flavel-paynter-1869",
+        "to": "thirza-paynter"
+      },
+      {
+        "from": "dinah-flavel-paynter-1869",
         "to": "thomas-paynter-1859"
       },
       {
@@ -5327,6 +5344,10 @@
       {
         "from": "elizabeth-paynter-1864",
         "to": "mary-jane-paynter-1861"
+      },
+      {
+        "from": "elizabeth-paynter-1864",
+        "to": "thirza-paynter"
       },
       {
         "from": "elizabeth-paynter-1864",
@@ -5775,6 +5796,10 @@
       {
         "from": "francis-telfer-paynter-1862",
         "to": "mary-jane-paynter-1861"
+      },
+      {
+        "from": "francis-telfer-paynter-1862",
+        "to": "thirza-paynter"
       },
       {
         "from": "francis-telfer-paynter-1862",
@@ -6742,6 +6767,10 @@
       },
       {
         "from": "mary-jane-paynter-1861",
+        "to": "thirza-paynter"
+      },
+      {
+        "from": "mary-jane-paynter-1861",
         "to": "thomas-paynter-1859"
       },
       {
@@ -6895,6 +6924,10 @@
       {
         "from": "john-dillon",
         "to": "septimus-dillon-1871"
+      },
+      {
+        "from": "thirza-paynter",
+        "to": "thomas-paynter-1859"
       }
     ]
   }

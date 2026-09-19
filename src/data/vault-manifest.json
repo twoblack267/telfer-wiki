@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-19T12:53:08+10:00",
+  "generated_at": "2026-09-20T07:32:08+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 381,
+  "count": 382,
   "kinds": {
-    "real": 365,
+    "real": 366,
     "redirect": 16,
     "empty": 0
   },
@@ -1414,6 +1414,10 @@
     },
     "Thelma Ellen Parker (1924\u20132002).md": {
       "sha256": "3903270f516222a318a3f8e1a8c189450d8ebd4ea60012e4e64b262d91b6c830",
+      "kind": "real"
+    },
+    "Thirza Paynter (1867\u20131869).md": {
+      "sha256": "0d9e6f2eac436fa2c346ec419f88db2f0669236adb4d93879c74f023661b8705",
       "kind": "real"
     },
     "Thomas Cleveland Dillon.md": {

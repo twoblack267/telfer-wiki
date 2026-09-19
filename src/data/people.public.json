@@ -3106,6 +3106,7 @@
       "elizabeth-paynter-1864",
       "francis-telfer-paynter-1862",
       "mary-jane-paynter-1861",
+      "thirza-paynter",
       "thomas-paynter-1859"
     ],
     "spouses": [
@@ -3153,6 +3154,7 @@
       "elizabeth-paynter-1864",
       "francis-telfer-paynter-1862",
       "mary-jane-paynter-1861",
+      "thirza-paynter",
       "thomas-paynter-1859"
     ],
     "spouses": [
@@ -5249,7 +5251,8 @@
       "dinah-flavel-paynter-1869",
       "elizabeth-paynter-1864",
       "francis-telfer-paynter-1862",
-      "mary-jane-paynter-1861"
+      "mary-jane-paynter-1861",
+      "thirza-paynter"
     ],
     "images": [],
     "person_photo": null
@@ -5511,6 +5514,7 @@
       "dinah-flavel-paynter-1869",
       "elizabeth-paynter-1864",
       "francis-telfer-paynter-1862",
+      "thirza-paynter",
       "thomas-paynter-1859"
     ],
     "images": [],
@@ -5549,6 +5553,7 @@
       "dinah-flavel-paynter-1869",
       "elizabeth-paynter-1864",
       "mary-jane-paynter-1861",
+      "thirza-paynter",
       "thomas-paynter-1859"
     ],
     "images": [],
@@ -5757,6 +5762,7 @@
       "dinah-flavel-paynter-1869",
       "francis-telfer-paynter-1862",
       "mary-jane-paynter-1861",
+      "thirza-paynter",
       "thomas-paynter-1859"
     ],
     "images": [],
@@ -6149,6 +6155,49 @@
     "person_photo": "images/people/Jane_Sophie_Harper_nee_Smith_portrait.jpg"
   },
   {
+    "id": "Thirza Paynter (1867)",
+    "slug": "thirza-paynter",
+    "first_name": "Thirza",
+    "middle_name": null,
+    "last_name": "Paynter",
+    "birth_year": 1867,
+    "death_year": 1869,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1867",
+    "death_year_display": "1869",
+    "display_name": "Thirza Paynter",
+    "title": "Thirza Paynter — Family & Biography",
+    "lifespan": "1867 – 1869",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Thirza Paynter (1867–1869)\n\n**Role:** Infant daughter of Richard Paynter and Jean Telfer\n**Born:** 3 July 1867 — St Kitts Creek, South Australia\n**Died:** 22 March 1869 (aged 20 months) — Finniss Point, South Australia\n**Parents:** [[Richard Paynter (1838–1869)]] & [[Jean Telfer (1840–1892)]]\n**Siblings:** Thomas, Mary Jane, Francis Telfer, Elizabeth, Dinah Flavel\n\n---\n\nThirza Paynter was the fifth child of Richard Paynter and Jean Telfer, born at St Kitts Creek (between Kapunda and Truro) on 3 July 1867.\n\nHer father died of pleurisy on 7 February 1869, aged 30, leaving the family unprovided for. Thirza followed him **six weeks later**, dying at Finniss Point on 22 March 1869. An in memoriam notice was placed in a local newspaper.\n\nHer mother Jean was pregnant at the time with the family's last child, **Dinah Flavel Paynter**, who was born at Finniss Point on 18 July 1869 — five months after her father's death.\n\n**Source:** *From the Borders to the Bush* — Chapter on Jean/Jane Telfer, p.16\n\n## Sources\n\n- **Source:** *From the Borders to the Bush* — Chapter on Jean/Jane Telfer, p.16 (Thirza's birth, death and the six-week interval)\n- **Source:** Genealogy SA — Death Registrations, `PAYNTER, Thirza — 1869 — 34/365` — accessed 17 Sep 2026 (registry confirmation of the death)",
+    "roles": [
+      "Infant daughter of Richard Paynter and Jean Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "paynter"
+    ],
+    "parents": [
+      "jean-telfer-1840",
+      "richard-paynter-1838"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "dinah-flavel-paynter-1869",
+      "elizabeth-paynter-1864",
+      "francis-telfer-paynter-1862",
+      "mary-jane-paynter-1861",
+      "thomas-paynter-1859"
+    ],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Amy Farrow Stribling (1868)",
     "slug": "amy-farrow-stribling-1868",
     "first_name": "Amy",
@@ -6368,6 +6417,7 @@
       "elizabeth-paynter-1864",
       "francis-telfer-paynter-1862",
       "mary-jane-paynter-1861",
+      "thirza-paynter",
       "thomas-paynter-1859"
     ],
     "images": [],
