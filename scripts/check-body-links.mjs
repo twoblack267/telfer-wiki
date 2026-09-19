@@ -39,7 +39,7 @@
  *
  * Usage:  node scripts/check-body-links.mjs   (run from repo root)
  */
-import { execSync } from 'node:child_process';
+import { execSync, execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 const REPO = process.cwd();
@@ -335,6 +335,16 @@ const alreadyPending = [];
 
 function fireCard(id, title, description, suggestedAction, severity) {
   if (existingIds.has(id)) { alreadyPending.push(id); return; }
+  // ── Duplicate gate (2026-09-20): refuse to file a twin card ──────────
+  // fireCard() is NOT async — use the sync API (an awaited import here is a SyntaxError).
+  try {
+    execFileSync('python3', [`${process.env.HOME}/.hermes/scripts/check-duplicate-card.py`,
+      '--title', title, '--id', id, '--file', taskFile], { stdio: 'pipe' });
+  } catch (e) {
+    console.error('DUPLICATE CARD REFUSED — existing card already tracks this fault.');
+    console.error(String(e.stderr || e.message || ''));
+    return;   // do not file
+  }
   const taskFile = path.join(TASKS_DIR, `${id}.yaml`);
   const yaml = `id: ${id}\ntitle: "${title}"\ndate: ${TODAY}\nseverity: ${severity}\nsource: "Skippy — check-body-links.mjs, build/night-watch auto-detection"\nstatus: Backlog\n\ndescription: >\n  ${description.split('\n').join('\n  ')}\n\nsuggested_action: >\n  ${suggestedAction.split('\n').join('\n  ')}\n`;
   writeFileSync(taskFile, yaml);

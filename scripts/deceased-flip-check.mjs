@@ -147,6 +147,16 @@ suggested_action: >
      so add the full bio/story/obituary the person deserves.
   4) Move this card to Done when uplift is complete.
 `.trim();
+    // ── Duplicate gate (2026-09-20): refuse to file a twin card ──────────
+  try {
+    const { execFileSync } = await import('node:child_process');
+    execFileSync('python3', [`${process.env.HOME}/.hermes/scripts/check-duplicate-card.py`,
+      '--title', `${cardId} — ${title}`, '--id', cardId, '--file', taskFile], { stdio: 'pipe' });
+  } catch (e) {
+    console.error('DUPLICATE CARD REFUSED — existing card already tracks this fault.');
+    console.error(String(e.stderr || e.message || ''));
+    process.exit(0);
+  }
   writeFileSync(taskFile, taskYaml);
   // Surface on the real board too (board.yaml is what the 7am Morning Can Do Board Check reads —
   // a deceased-flip card in tasks/ alone is invisible to it). Idempotent.

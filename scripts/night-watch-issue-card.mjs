@@ -104,6 +104,23 @@ suggested_action: >
      it comes back ALL CLEAR (exit 0).
 `.trim();
 
+// ── Duplicate gate (2026-09-20) ─────────────────────────────────────────────
+// The board tracks a card by its `board_card_id` (tw-*), but this file is named
+// itcrew-*/other. Re-scanning a still-broken site therefore minted a SECOND card for
+// the same fault (itcrew-2026-09-14-00N twins of tw-2026-09-14-00N). Refuse to file.
+{
+  const { execFileSync } = await import('node:child_process');
+  try {
+    execFileSync('python3', [`${process.env.HOME}/.hermes/scripts/check-duplicate-card.py`,
+      '--title', `Night Watch BLOCKED — issues: ${details}`, '--id', cardId,
+      '--file', taskFile], { stdio: 'pipe' });
+  } catch (e) {
+    const msg = String(e.stderr || e.message || '');
+    console.error('DUPLICATE CARD REFUSED — appending note instead of filing a twin:');
+    console.error(msg);
+    process.exit(0);   // do NOT file; the existing card already tracks this fault
+  }
+}
 writeFileSync(taskFile, taskYaml);
 // Surface on the real board too (board.yaml is what the 7am Morning Can Do Board Check reads).
 // Idempotent: sync-task-cards-to-board.py is a no-op if this id is already on the board.
