@@ -674,8 +674,12 @@ function main() {
       // scenery/place book-plate (_p{N} suffix). If nothing qualifies, null ->
       // initials avatar. (Widened 2026-09-18: 'cemetery'/'map'/'scenery-plate'
       // were slipping through and being promoted to the circular avatar.)
+      // (Widened 2026-09-19: newspaper clippings/obituaries are now publishable
+      // content for living AND deceased people — Mark's ruling — so they MUST be
+      // excluded here or a column of newsprint becomes somebody's face. Per the
+      // rules file: a clipping is never an avatar; fall back to initials.)
       person_photo: bodyImages.find(img =>
-        !/grave|cemetery|map|scenery[-_]plate/i.test(img.src) &&
+        !/grave|cemetery|map|scenery[-_]plate|clipping|newspaper|obituar|trove|in[-_]?memoriam|death[-_]?notice/i.test(img.src) &&
         !/_[pP]\d+\.jpg$/.test(img.src)
       )?.src || null
     };

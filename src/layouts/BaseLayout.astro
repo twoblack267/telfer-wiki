@@ -52,6 +52,27 @@ const CURATED_MAPS = {
     z: 13,
     caption: 'Allen Russell Merrick spent his later years in the Glass House Mountains area of Queensland\'s Sunshine Coast hinterland — his April 2015 funeral notice named him "late of Glasshouse Camping Ground."',
   },
+  "john-telfer-1840": {
+    label: "Where John Telfer is buried — Tantanoola Cemetery, South Australia",
+    title: "Map of Tantanoola Cemetery, South Australia",
+    latlng: "-37.68028,140.47338",
+    z: 14,
+    caption: "John Telfer, who died at Tantanoola on 5 January 1913, is buried in the Tantanoola Cemetery in the South East of South Australia, alongside his second wife Martha Clara (Henstridge). The town was known as Lucieton when the family settled there in 1874.",
+  },
+  "martha-henstridge-1854": {
+    label: "Where Martha Clara is buried — Tantanoola Cemetery, South Australia",
+    title: "Map of Tantanoola Cemetery, South Australia",
+    latlng: "-37.68028,140.47338",
+    z: 14,
+    caption: "Martha Clara (Henstridge) Telfer, who died at Tantanoola on 13 November 1921 aged 67, is buried in the Tantanoola Cemetery beside her husband John Telfer.",
+  },
+  "robert-campbell": {
+    label: "Where the Campbells lived and died — Millicent and Mount Gambier, South Australia",
+    title: "Map of Millicent, South Australia — birthplace of Robert Mewett Campbell",
+    latlng: "-37.62227,140.38200",
+    z: 13,
+    caption: "Robert Mewett Campbell was born at Millicent, South Australia, on 20 December 1878, the son of John Campbell and Emily Mewett. Both of his parents died at Mount Gambier — his father John on 27 January 1892, his mother Emily on 13 September 1925.",
+  },
 };
 const curatedMapSlug = Object.keys(CURATED_MAPS).find((s) => currentPath.includes(`/people/${s}/`));
 const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
