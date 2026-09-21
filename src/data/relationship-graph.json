@@ -1811,11 +1811,6 @@
       "generation": 5
     },
     {
-      "slug": "alan-downs",
-      "id": "Alan Theodore Downs",
-      "generation": 99
-    },
-    {
       "slug": "nita-mutton",
       "id": "Nita Leah Mutton (1889)",
       "generation": 6
@@ -1829,6 +1824,11 @@
       "slug": "thirza-paynter",
       "id": "Thirza Paynter (1867)",
       "generation": 5
+    },
+    {
+      "slug": "alan-downs",
+      "id": "Alan Theodore Downs (1905)",
+      "generation": 7
     }
   ],
   "edges": {
