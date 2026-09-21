@@ -53,13 +53,26 @@ note "Cloudflare cache purge for ${ZONE_NAME}"
 note "──────────────────────────────────────────────────────────────"
 
 # --- 1. Token must authenticate -------------------------------------------------
+# DO NOT use ${API}/user/tokens/verify here. That endpoint ONLY accepts
+# user-scoped tokens (prefix cfut_). An ACCOUNT-scoped token (prefix cfat_)
+# returns {"code":1000,"message":"Invalid API Token"} from it even when it is
+# perfectly valid — measured in CI on 2026-09-21, run 35574157521, which
+# silently skipped the purge because of exactly this false negative.
+#
+# The real liveness test is a zone probe: if the token can see the zone we
+# care about, it can purge it. This works for both cfut_ and cfat_ tokens.
 verify_resp=$(curl -sS --max-time 30 -H "Authorization: Bearer ${TOKEN}" \
-  "${API}/user/tokens/verify" 2>&1) || true
+  "${API}/zones?name=${ZONE_NAME}" 2>&1) || true
 if ! printf '%s' "$verify_resp" | grep -q '"success":true'; then
   warn "Cloudflare token did not authenticate (purge skipped, deploy unaffected): $(printf '%s' "$verify_resp" | head -c 300)"
   exit 0
 fi
-note "✅ token authenticates"
+# Confirm it actually returned OUR zone, not just a 200 with an empty list.
+if ! printf '%s' "$verify_resp" | grep -q "\"name\":\"${ZONE_NAME}\""; then
+  warn "Cloudflare token authenticated but cannot see zone ${ZONE_NAME} (purge skipped, deploy unaffected)"
+  exit 0
+fi
+note "✅ token authenticates (account/user token accepted via zone probe)"
 
 # --- 2. Resolve the zone id -----------------------------------------------------
 zone_resp=$(curl -sS --max-time 30 -H "Authorization: Bearer ${TOKEN}" \
@@ -108,17 +121,28 @@ CHECK_PATHS=(
 )
 
 edge_state() {
-  # echo "<cf-cache-status> <age> <last-modified>"
+  # echo "<cf-cache-status>| <age>| <last-modified>"
+  #
+  # FIXED 2026-09-21 (two real bugs, found by measuring in CI run 35574157521):
+  #   1. `print(f"{st or '?'}")` — the literal '?' CLOSED the shell's single-quoted
+  #      -c string, so python received `(st or ?)` and died with
+  #      "SyntaxError: f-string: invalid syntax". Replaced with chr(63).
+  #   2. the trailing `2>/dev/null` swallowed that traceback, so the function
+  #      returned an EMPTY string on every call. The verify loop then never
+  #      matched MISS/DYNAMIC, burned all 12 passes, and printed a FALSE
+  #      "edge still reporting a cached copy" warning.
+  # Symptom to recognise: `cf-cache-status=` with nothing after it.
   curl -sI --max-time 30 "$1" 2>/dev/null | tr -d '\r' | python3 -c '
 import sys
+Q = chr(63)   # "?" — a literal ? in single quotes would CLOSE the shell -c string
 st=age=lm=""
 for line in sys.stdin:
     low=line.lower()
     if low.startswith("cf-cache-status:"): st=line.split(":",1)[1].strip()
     elif low.startswith("age:"): age=line.split(":",1)[1].strip()
     elif low.startswith("last-modified:"): lm=line.split(":",1)[1].strip()
-print(f"{st or '?'}|{age or '?'}|{lm or '?'}")
-' 2>/dev/null
+print(f"{st or Q}|{age or Q}|{lm or Q}")
+'
 }
 
 verified=1
