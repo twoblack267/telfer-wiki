@@ -76,9 +76,32 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      # ─────────────────────────────────────────────────────────────────────
+      # CACHE PURGE — added 2026-09-21 (card tw-2026-09-12-041).
+      # Root cause: Cloudflare stamps cache-control: max-age=14400 on every
+      # response, overriding the origin. A finish deploy — including a PRIVACY
+      # fix — stays invisible at the edge for up to 4 hours, and the verify-live
+      # job below was previously tuned to TOLERATE that (180 retries ≈ 40min)
+      # rather than fixing it. Purging here makes a stale edge impossible
+      # regardless of what any Cloudflare cache rule does.
+      #
+      # This step CANNOT fail the deploy: scripts/cf-purge-verify.sh exits 0
+      # when the token is absent, invalid, or when the edge has not visibly
+      # refreshed. A missing secret degrades protection, it does not break
+      # publishing. (Same principle as the ci-escalate.py hooks.)
+      #
+      # Requires repo secret CLOUDFLARE_PURGE_TOKEN (Zone > Cache Purge > Purge).
+      # ─────────────────────────────────────────────────────────────────────
+      - name: Purge Cloudflare cache (best-effort, never fails the deploy)
+        if: always()
+        env:
+          CLOUDFLARE_PURGE_TOKEN: ${{ secrets.CLOUDFLARE_PURGE_TOKEN }}
+        run: bash scripts/cf-purge-verify.sh || true
   verify-live:
     # THE GUARD. Root cause this fix exists for: the old pipeline "succeeded" for
     # months while Pages served a stale branch — no check compared what users got
@@ -117,10 +140,31 @@ jobs:
           # with margin while still failing a genuinely unpublished deploy.
           attempts=180
           attempt=1
+          # ── MULTI-PATH CHECK, added 2026-09-21 (card tw-2026-09-12-041) ────
+          # This guard used to poll the HOMEPAGE ONLY. That is a blind spot: on
+          # 2026-09-21 a privacy fix was live at origin while the plain URL for
+          # /people/mitchell-telfer-2008/ still served the OLD page — and a
+          # homepage-only check cannot see it. Demonstrating it: a homepage-only
+          # guard passes while a deep page is stale. Now we assert the build id
+          # on a deep people page as well, so "the site is fresh" means more than
+          # "the front door is fresh".
+          PATHS=(
+            "/"
+            "/people/mitchell-telfer-2008/"
+          )
           while [ "$attempt" -le "$attempts" ]; do
-            url="https://telferwiki.com/?cb=${BUILD_ID}_${attempt}_$(date +%s)"
-            if curl -fsS --max-time 30 -A "Mozilla/5.0 (deploy-verify)" "$url" 2>/dev/null | grep -q "data-build-id=\"$BUILD_ID\""; then
-              echo "✅ LIVE SITE SERVES BUILD $BUILD_ID (attempt $attempt/$attempts)"
+            all_ok=1
+            for p in "${PATHS[@]}"; do
+              url="https://telferwiki.com${p}?cb=${BUILD_ID}_${attempt}_$(date +%s)_${RANDOM}"
+              if curl -fsS --max-time 30 -A "Mozilla/5.0 (deploy-verify)" "$url" 2>/dev/null | grep -q "data-build-id=\"$BUILD_ID\""; then
+                :
+              else
+                all_ok=0
+              fi
+            done
+            if [ "$all_ok" -eq 1 ]; then
+              echo "✅ LIVE SITE SERVES BUILD $BUILD_ID on all checked paths (attempt $attempt/$attempts)"
+              printf '   checked: %s\n' "${PATHS[@]}"
               exit 0
             fi
             # Poll briskly at first (most publishes land within ~2-3min), then
