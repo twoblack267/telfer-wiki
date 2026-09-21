@@ -9062,6 +9062,7 @@
       "person"
     ],
     "parents": [
+      "allen-merrick",
       "penny-telfer-1960",
       "timothy-telfer-1959"
     ],
@@ -15041,6 +15042,49 @@
     "person_photo": null
   },
   {
+    "id": "Allen Russell Merrick (1956)",
+    "slug": "allen-merrick",
+    "first_name": "Allen",
+    "middle_name": "Russell",
+    "last_name": "Merrick",
+    "birth_year": 1956,
+    "death_year": 2015,
+    "birth_date": "22 July 1956",
+    "death_date": "12 April 2015",
+    "birth_year_display": "1956",
+    "death_year_display": "2015",
+    "display_name": "Allen Russell Merrick",
+    "title": "Allen Merrick — Family & Biography",
+    "lifespan": "1956 – 2015",
+    "generation": 9,
+    "is_living": false,
+    "body_markdown": "# Allen Merrick (1956–2015)\n\n**Full name:** Allen Russell Merrick\n**Born:** 22 July 1956\n**Died:** 12 April 2015 — aged 58, Caboolture, Queensland\n**Role:** Father of David; stepfather to Mark and Amy\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Child** | [[David Telfer-Merrick]] (mother: [[Penny Telfer]]) |\n| **Partner** | [[Penny Telfer]] |\n| **Stepchildren** | [[Mark Kenneth Telfer (1986–?)]] & [[Amy Nicole Telfer]] |\n\n---\n\n## Life Summary\n\nAllen Merrick — father of [[David Telfer-Merrick]] and partner of [[Penny Telfer]]; stepfather to Mark and Amy. Allen Russell Merrick was born on 22 July 1956 and died on 12 April 2015, aged 58, in Queensland.\n\nHis death is confirmed by his stepson, Mark Kenneth Telfer, who was present: Allen was on life support and the family made the decision to turn it off. That is first-hand family testimony from the man who was there, and it is the primary source for this.\n\nHe is buried at Caboolture & Districts Lawn cemetery, Queensland (Australian Cemeteries Index, inscription 16508424).\n\n---\n\n## Photograph\n\n![Allen Merrick with David at Bushys 2005](images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg)\n\nDavid with his dad, Allen Merrick, holding a python at \"Bushy's\" (a wildlife attraction), 2005. David ~5 years old (badge: \"I HELD A SNAKE / BUSHY'S 2005\"). Souvenir photo sent by Mark Telfer, September 2026.\n\n---",
+    "roles": [
+      "Father of David; stepfather to Mark and Amy"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [],
+    "children": [
+      "amy-telfer",
+      "david-telfer-merrick-2000"
+    ],
+    "spouses": [],
+    "siblings": [],
+    "images": [
+      {
+        "src": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
+        "alt": "Allen Merrick with David at Bushys 2005",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Allen_Merrick_with_David_at_Bushys_2005.jpg",
+        "filename": "Allen_Merrick_with_David_at_Bushys_2005.jpg"
+      }
+    ],
+    "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg"
+  },
+  {
     "id": "Penny Telfer (1960)",
     "slug": "penny-telfer-1960",
     "first_name": "Penny",
@@ -15253,49 +15297,6 @@
     "siblings": [
       "amy-telfer"
     ],
-    "images": [
-      {
-        "src": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",
-        "alt": "Allen Merrick with David at Bushys 2005",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Allen_Merrick_with_David_at_Bushys_2005.jpg",
-        "filename": "Allen_Merrick_with_David_at_Bushys_2005.jpg"
-      }
-    ],
-    "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg"
-  },
-  {
-    "id": "Allen Merrick",
-    "slug": "allen-merrick",
-    "first_name": "Allen",
-    "middle_name": null,
-    "last_name": "Merrick",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Allen Merrick",
-    "title": "Allen Merrick — Family & Biography",
-    "lifespan": "? – living",
-    "generation": 99,
-    "is_living": true,
-    "body_markdown": "# Allen Merrick\n\n**Died:** ~2015\n**Role:** David's father\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Child** | [[David Telfer-Merrick]] (mother: [[Penny Telfer]]) |\n| **Partner** | [[Penny Telfer]] |\n| **Stepchildren** | [[Mark Kenneth Telfer (1986–?)]] & [[Amy Nicole Telfer]] |\n\n---\n\n## Photograph\n\n![Allen Merrick with David at Bushys 2005](images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg)\n\nDavid with his dad, Allen Merrick, holding a python at \"Bushy's\" (a wildlife attraction), 2005. David ~5 years old (badge: \"I HELD A SNAKE / BUSHY'S 2005\"). Souvenir photo sent by Mark Telfer, September 2026.\n\n---",
-    "roles": [
-      "David's father"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [],
-    "children": [
-      "amy-telfer",
-      "david-telfer-merrick-2000"
-    ],
-    "spouses": [],
-    "siblings": [],
     "images": [
       {
         "src": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg",

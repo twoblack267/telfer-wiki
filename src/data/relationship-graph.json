@@ -92,8 +92,8 @@
     },
     {
       "slug": "allen-merrick",
-      "id": "Allen Merrick",
-      "generation": 99
+      "id": "Allen Russell Merrick (1956)",
+      "generation": 9
     },
     {
       "slug": "alma-ida-sporer-1880",
@@ -1940,6 +1940,10 @@
       {
         "from": "elizabeth-hannah-telfer-1836",
         "to": "amy-farrow-stribling-1868"
+      },
+      {
+        "from": "allen-merrick",
+        "to": "amy-telfer"
       },
       {
         "from": "penny-telfer-1960",
