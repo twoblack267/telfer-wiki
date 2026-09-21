@@ -246,6 +246,7 @@ LINK_GATES=(
   "family-cell-links:node scripts/validate-family-cell-links.mjs"
   "full-tree:node scripts/validate-full-tree.mjs"
   "body-links:node scripts/check-body-links.mjs"
+  "living-privacy:node scripts/check-living-privacy.mjs"
 )
 
 GATE_FAILED=0
