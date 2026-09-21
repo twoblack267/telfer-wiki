@@ -49,6 +49,9 @@ const RULES = [
   ['POSTCODE',        /\b(?:QLD|NSW|VIC|SA|WA|TAS|NT|ACT)\s?\d{4}\b/],
   ['RESIDENCE-PROSE', /\b(?:lives?|resides?|residing)\s+in\s+[A-Z][a-z]+/],
   ['WORKS-PROSE',     /\bworks?\s+(?:for|at)\s+[A-Z]/],
+  ['PHONE',           /\b(?:\+61|0[45])\d[\d\s\-]{7,}\b/],
+  ['EMAIL',           /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/],
+  ['CONTACT-LABEL',   /^\*\*(?:Email|Contact|Phone|Mobile|Tel)\s*:/i],
 ];
 
 const ALLOW = [
