@@ -140,6 +140,13 @@ jobs:
           # with margin while still failing a genuinely unpublished deploy.
           attempts=180
           attempt=1
+          DIAG=()
+          # A probe that cannot return a positive is BROKEN, and a broken probe
+          # must not cost 42 minutes. If the first FASTFAIL_AT attempts ALL fail
+          # while the origin is provably serving the new build (purge step proved
+          # cf-cache-status DYNAMIC), the probe itself is the suspect — dump the
+          # diagnostics and bail early. See tw-2026-09-21-002.
+          FASTFAIL_AT=20
           # ── MULTI-PATH CHECK, added 2026-09-21 (card tw-2026-09-12-041) ────
           # This guard used to poll the HOMEPAGE ONLY. That is a blind spot: on
           # 2026-09-21 a privacy fix was live at origin while the plain URL for
@@ -168,11 +175,36 @@ jobs:
               #
               # Fixed by capturing the body into a variable first, then grep'ing
               # the variable — no pipeline, no SIGPIPE, no pipefail interaction.
-              body="$(curl -fsS --max-time 30 -A "Mozilla/5.0 (deploy-verify)" "$url" 2>/dev/null)" || body=""
+              #
+              # ── PER-ATTEMPT DIAGNOSTICS, added 2026-09-22 (tw-2026-09-21-002)
+              # Second lesson from the SAME red run: even with the SIGPIPE bug
+              # fixed, a failure printed only "attempt N/180: not yet live" —
+              # no HTTP status, no cache status, no body size, no indication of
+              # WHICH path failed. The next red would again be undebuggable after
+              # the fact. So every failed attempt now captures the response
+              # metadata. The BODY IS NEVER PRINTED (the page is family data);
+              # only headers and a byte count.
+              hdr="$(mktemp)"
+              code="$(curl -sS -o /tmp/_vl_body -D "$hdr" --max-time 30 \
+                        -A "Mozilla/5.0 (deploy-verify)" \
+                        -w '%{http_code} %{url_effective} %{size_download} %{redirect_url}' \
+                        "$url" 2>/dev/null)" || code=""
+              set -- $code
+              http_c="${1:-000}"; eff_url="${2:-?}"; bytes="${3:-0}"; redir="${4:-}"
+              cf="$(grep -i '^cf-cache-status:' "$hdr" 2>/dev/null | tr -d '\r' | awk '{print $2}')"
+              age="$(grep -i '^age:' "$hdr" 2>/dev/null | tr -d '\r' | awk '{print $2}')"
+              lm="$(grep -i '^last-modified:' "$hdr" 2>/dev/null | tr -d '\r' | cut -d' ' -f2-)"
+              got_id="$(grep -o 'data-build-id="[^"]*"' /tmp/_vl_body 2>/dev/null | head -1)"
+              rm -f "$hdr"
+              body="$(cat /tmp/_vl_body 2>/dev/null)" || body=""
               if printf '%s' "$body" | grep -q "data-build-id=\"$BUILD_ID\""; then
                 :
               else
                 all_ok=0
+                DIAG+=("attempt=$attempt path=$p http=$http_c cf=${cf:-?} age=${age:-?} bytes=$bytes got=${got_id:-<none>} redir=${redir:-<none>}")
+                echo "    ✗ attempt=$attempt path=$p http=$http_c cf=${cf:-?} age=${age:-?} bytes=$bytes got=${got_id:-<none>}"
+                [ -n "$redir" ] && echo "        redirect -> $redir"
+                echo "        last-modified: ${lm:-<none>}"
               fi
             done
             if [ "$all_ok" -eq 1 ]; then
@@ -182,6 +214,20 @@ jobs:
             fi
             # Poll briskly at first (most publishes land within ~2-3min), then
             # ease off so we cover a wider real-world window without hammering.
+            #
+            # ── FAST-FAIL ON A BROKEN PROBE, added 2026-09-22 ────────────────
+            # A probe that cannot return a positive must not burn 42 minutes.
+            # If EVERY attempt so far failed, dump the collected diagnostics
+            # immediately: whoever reads the red run then knows the HTTP status,
+            # cache status, byte count and the id actually served — which is the
+            # difference between "investigate" and "re-run it and hope".
+            if [ "$attempt" -ge "$FASTFAIL_AT" ]; then
+              echo "::error::verify-live failed $attempt consecutive attempts. Diagnostics (response metadata only — page body NOT printed):"
+              printf '    - %s\n' "${DIAG[@]}"
+              echo "    If 'got' shows a DIFFERENT build id, the edge is serving a stale copy -> propagation."
+              echo "    If 'http' is not 200, or 'bytes' is tiny, the PROBE or the route is broken, NOT the deploy."
+              exit 1
+            fi
             if [ "$attempt" -lt 20 ]; then
               delay=10
             elif [ "$attempt" -lt 50 ]; then
@@ -193,7 +239,9 @@ jobs:
             sleep "$delay"
             attempt=$((attempt+1))
           done
-          echo "::error::LIVE SITE DOES NOT SERVE BUILD $BUILD_ID after $attempts retries (~15min). If the deploy DID publish this is a caching/propagation issue on telferwiki.com that needs investigation, NOT necessarily bad content. Investigate before re-deploying."
+          echo "::error::LIVE SITE DOES NOT SERVE BUILD $BUILD_ID after $attempts retries (~40min). If the deploy DID publish this is a caching/propagation issue on telferwiki.com that needs investigation, NOT necessarily bad content. Investigate before re-deploying."
+          echo "── last-observed diagnostics (response metadata only) ──"
+          printf '    - %s\n' "${DIAG[@]}"
           exit 1
       # ─────────────────────────────────────────────────────────────────────
       # ESCALATION — added 2026-09-12 ("we never want this to happen again").
