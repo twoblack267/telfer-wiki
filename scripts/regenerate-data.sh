@@ -274,3 +274,28 @@ if [[ "$GATE_FAILED" != "0" ]]; then
   exit 1
 fi
 echo "OK — link-integrity gate chain clean."
+
+# ---------------------------------------------------------------------------
+# Sitemap <lastmod> map (added 2026-09-21).
+#
+# WHY HERE: gen-lastmod.mjs reads the git last-commit date of each person's
+# markdown file in the Obsidian vault and writes src/data/lastmod.json. It must
+# run AFTER the people data is final (so slugs exist) and BEFORE the build, so
+# the published sitemap carries real per-page freshness.
+#
+# WHY IT MUST EXIST AT ALL: dates cannot be resolved inside the Astro build —
+# CI checks out only this repo, so the vault (a separate repo at an absolute
+# local path) is absent there. Resolving dates here and committing the result
+# is what makes local and CI builds agree. v2 tried it in astro.config.ts and
+# the published sitemap carried ONE identical timestamp across all 981 URLs.
+#
+# NON-FATAL: a failure here leaves the previous lastmod.json in place, which is
+# stale-but-valid. It never blocks the regen or corrupts the sitemap.
+# ---------------------------------------------------------------------------
+echo "==> gen-lastmod.mjs (sitemap per-page lastmod)"
+if node scripts/gen-lastmod.mjs; then
+  echo "OK — src/data/lastmod.json refreshed"
+else
+  echo "WARN — gen-lastmod.mjs failed; keeping the previous src/data/lastmod.json"
+  echo "       (dates will be stale until this runs clean; site still builds)"
+fi
