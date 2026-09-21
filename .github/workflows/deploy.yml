@@ -156,7 +156,20 @@ jobs:
             all_ok=1
             for p in "${PATHS[@]}"; do
               url="https://telferwiki.com${p}?cb=${BUILD_ID}_${attempt}_$(date +%s)_${RANDOM}"
-              if curl -fsS --max-time 30 -A "Mozilla/5.0 (deploy-verify)" "$url" 2>/dev/null | grep -q "data-build-id=\"$BUILD_ID\""; then
+              # ── DO NOT pipe curl into `grep -q` HERE ──────────────────────
+              # `grep -q` exits on the FIRST match and closes the pipe. curl then
+              # dies of SIGPIPE with a non-zero status, and `set -o pipefail`
+              # makes the whole pipeline report FAILURE — even though the match
+              # SUCCEEDED. Result: a guard that can never pass, on any site, ever.
+              #
+              # This is exactly what happened in run 35575312095 (2026-09-21):
+              # 180/180 attempts "not yet live" for 44 minutes on a deploy that
+              # was live the whole time, producing a false-red build.
+              #
+              # Fixed by capturing the body into a variable first, then grep'ing
+              # the variable — no pipeline, no SIGPIPE, no pipefail interaction.
+              body="$(curl -fsS --max-time 30 -A "Mozilla/5.0 (deploy-verify)" "$url" 2>/dev/null)" || body=""
+              if printf '%s' "$body" | grep -q "data-build-id=\"$BUILD_ID\""; then
                 :
               else
                 all_ok=0
