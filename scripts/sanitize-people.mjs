@@ -441,7 +441,7 @@ function stripLivingPrivateContent(text) {
 
   // Sections dropped wholesale for living people (narrative/residence/
   // occupation/research-provenance).
-  const DROP_SECTIONS = /^##\s*(Life Summary|Notable Event|Family Stories|Timeline|Timeline\s*\([^)]*\)|Notes|Residence|Residences|Residency|Occupations?|Qualifications?|Career|Employment|Work History|Education|Diagnoses?|Health|Aliases?|Also Known As|Source|Sources|Evidence|Research Notes|Research Notes[\s&]*Decisions|Leads?|Tracking|Facebook Lead|Profile URL|Citations?|References)\b/i;
+  const DROP_SECTIONS = /^\s*##\s*(Life Summary|Stories\s*(&|and)\s*Memories|Memories|Notable Event|Family Stories|Timeline|Timeline\s*\([^)]*\)|Notes?|Residence|Residences|Residency|Occupations?|Qualifications?|Career|Employment|Work History|Education|Diagnoses?|Health|Aliases?|Also Known As|Source|Sources|Evidence|Research Notes|Research Notes[\s&]*Decisions|Research Needed|Research\s+Required|To Do|TODO|Leads?|Tracking|Facebook Lead|Profile URL|Citations?|References)\b/i;
 
   // Explicitly-labelled bolded field lines dropped wholesale (covers
   // `**Field:**`, `- **Field:**`).
@@ -471,10 +471,102 @@ function stripLivingPrivateContent(text) {
     // Drop labelled sensitive field-lines (bolded, bare, or bullet forms).
     if (DROP_FIELDS.test(raw) || DROP_FIELDS_BARE.test(raw) || DROP_QUAL.test(raw) || DROP_BARE_BULLET.test(raw)) continue;
 
-    out.push(raw);
+    // Scrub a social-media SOURCE CREDIT embedded in a caption or line.
+    // A photo is on the keep-list, but the credit beneath it can name a
+    // private person's social account, e.g.:
+    //   "... Source: Post by Crystal McDonald (@mummyof587) on TikTok, 3 days prior. [Link](https://vt.tiktok.com/...)"
+    // The photo and its genuine caption stay; only the credit is removed.
+    // NOTE: scrubSocialCredit returns the line BYTE-IDENTICAL when no credit
+    // signal is present — see its doc-comment for why that matters.
+    out.push(scrubSocialCredit(raw));
   }
 
   return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+
+// Platform names that can appear as part of a source credit.
+const SOCIAL_PLATFORMS =
+  'TikTok|Facebook|Instagram|Twitter|LinkedIn|Snapchat|Threads|Reddit|Pinterest';
+
+// A social-platform URL — the strongest credit signal.
+const SOCIAL_URL =
+  /https?:\/\/[^\s)]*(?:tiktok|facebook|instagram|twitter|linkedin|snapchat|threads|reddit|pinterest)\./i;
+
+// An @handle — a social account handle.
+const AT_HANDLE = /(?<![A-Za-z0-9._-])@[A-Za-z0-9._]{3,}\b/;
+
+/**
+ * Remove a social-media source credit from a line, keeping everything else
+ * unchanged.
+ *
+ * HARD RULE: if the line carries NO credit signal — no social-platform URL,
+ * no "Source:"/"via"/"posted on" clause naming a social platform, and no
+ * @handle — the line is returned EXACTLY as it came in, character for
+ * character. This prevents the regression where ordinary content (image
+ * alt-text padding, "[Title](youtube-url)" link text, filenames) was
+ * silently rewritten. Note YouTube is deliberately NOT a credit signal:
+ * YouTube is a publication venue, not a personal social account.
+ */
+function scrubSocialCredit(line) {
+  if (!line) return line;
+
+  const hasSourceClause = new RegExp(
+    `\\b(?:source|via|from|per|posted\\s+on|post\\s+by)\\b[^.]*\\b(?:${SOCIAL_PLATFORMS})\\b`,
+    'i'
+  ).test(line);
+
+  const creditSignal =
+    SOCIAL_URL.test(line) || AT_HANDLE.test(line) || hasSourceClause;
+
+  // No credit signal → untouched. Not one character changes.
+  if (!creditSignal) return line;
+
+  let s = line;
+
+  // 1) A markdown link whose URL is a social platform: drop the whole link.
+  s = s.replace(
+    /\[[^\]]*\]\((https?:\/\/[^\s)]*(?:tiktok|facebook|instagram|twitter|linkedin|snapchat|threads|reddit|pinterest)\.[^\s)]*)\)/gi,
+    ''
+  );
+
+  // 2) A bare social URL.
+  s = s.replace(
+    /https?:\/\/[^\s)]*(?:tiktok|facebook|instagram|twitter|linkedin|snapchat|threads|reddit|pinterest)\.[^\s)]*/gi,
+    ''
+  );
+
+  // 3) A "Source: … <platform> …" clause (to end of sentence).
+  s = s.replace(
+    new RegExp(`\\bSource\\s*:\\s*[^.]*\\b(?:${SOCIAL_PLATFORMS})\\b[^.]*\\.?`, 'gi'),
+    ''
+  );
+  s = s.replace(
+    new RegExp(`\\b(?:via|from|per|posted\\s+on|post\\s+by)\\b[^.]*\\b(?:${SOCIAL_PLATFORMS})\\b[^.]*\\.?`, 'gi'),
+    ''
+  );
+
+  // 4) A parenthetical naming a platform: "(Facebook: Name)" / "(Name on TikTok)".
+  s = s.replace(
+    new RegExp(`\\(\\s*[^)]*\\b(?:${SOCIAL_PLATFORMS})\\b[^)]*\\)`, 'gi'),
+    ''
+  );
+
+  // 5) Any remaining @handle.
+  s = s.replace(/(?<![A-Za-z0-9._-])@[A-Za-z0-9._]{3,}\b/g, '');
+
+  // Tidy ONLY the artefacts the removals above created.
+  s = s.replace(/\[[^\]]*\]\(\s*\)/g, '')      // markdown link with empty target
+       .replace(/\s+\(\s*\)/g, '')              // stray " ()"
+       .replace(/[ \t]{2,}/g, ' ')
+       .replace(/\s+([.,;*])/g, '$1')
+       .replace(/([.,;])\s*\./g, '$1')
+       .replace(/\.\s*\./g, '.')
+       .replace(/\(\s*\)/g, '')
+       .replace(/\*{2,}/g, '*')
+       .replace(/[ \t]+$/g, '')
+       .trim();
+
+  return s;
 }
 
 // ─── Build Public Output ────────────────────────────────────────────────────
