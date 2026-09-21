@@ -52,8 +52,8 @@ function gitDate(repoDir, relPath) {
   }
 }
 
-/** "Adam Murray (1728–1816) — Father of..." -> "adam murray" */
-function personKey(s) {
+/** "Adam Murray (1728–1816) — Father of..." -> "adam murray" (name only). */
+function personName(s) {
   return s
     .split("—")[0]
     .split(" - ")[0]
@@ -62,13 +62,47 @@ function personKey(s) {
     .toLowerCase();
 }
 
-/** "Adam Murray (1728–1816).md" -> "adam murray" */
-function manifestKey(fname) {
-  return fname
-    .replace(/\.md$/i, "")
-    .replace(/\s*\([^)]*\)\s*$/, "")
-    .trim()
-    .toLowerCase();
+/**
+ * "Adam Murray (1728–1816).md" -> { name:"adam murray", first:"adam",
+ * last:"murray", year:"1728" }
+ */
+function manifestParts(fname) {
+  const bare = fname.replace(/\.md$/i, "").trim();
+  const name = bare.replace(/\s*\([^)]*\)\s*$/, "").trim().toLowerCase();
+  const years = bare.match(/\((\d{3,4})[–\-]/);
+  return { name, first: name.split(/\s+/)[0] || "", last: name.split(/\s+/).pop() || "", year: years ? years[1] : null };
+}
+
+/**
+ * Match a wiki person to a vault file, using the person's OWN birth_year field.
+ *
+ * NOTE: do NOT extract the year from the title. Titles look like
+ *   "Joel Ivory — Family & Biography"
+ * with no year at all, while the record carries birth_year: 1986 separately.
+ * An earlier version parsed the title and silently matched almost nothing.
+ *
+ * PASS 1 — exact full-name match, so nothing that already worked can regress.
+ * PASS 2 — first name + last name + birth_year. Needed because some vault
+ * filenames carry a middle name the wiki title omits:
+ *   wiki  "Joel Ivory"  birth_year 1986   (slug joel-ivory-1986)
+ *   vault "Joel Matthew Ivory (1986–?).md"
+ * First+last+year rather than fuzzy matching: a near-match could stamp a LIVING
+ * person's page with a stranger's date. Ambiguous candidates -> no match at all.
+ */
+function matchVaultFile(person, byName, byTriple) {
+  const full = personName(person.title || person.name || "");
+  const exact = byName.get(full);
+  if (exact) return { file: exact, how: "exact" };
+
+  const y = String(person.birth_year || "").trim();
+  if (!/^\d{3,4}$/.test(y)) return null;
+  const first = full.split(/\s+/)[0] || "";
+  const last = full.split(/\s+/).pop() || "";
+  if (!first || !last) return null;
+
+  const cands = byTriple.get(`${first}|${last}|${y}`);
+  if (!cands || cands.length !== 1) return null; // ambiguous -> no guess
+  return { file: cands[0], how: "first+last+year" };
 }
 
 // 1. vault filename -> git date, once per file (cheap: ~380 git calls max).
@@ -89,30 +123,50 @@ for (const f of vaultFiles) {
 }
 console.log(`vault files: ${vaultFiles.length}, with git dates: ${fileDate.size}`);
 
-// 2. name-key -> newest date across vault files carrying that name.
-const dateByName = new Map();
+// 2. Build both lookup indexes from the vault filenames:
+//    byName   : "adam murray"       -> file  (exact match, pass 1)
+//    byTriple : "adam|murray|1728"  -> [file] (first+last+year, pass 2)
+//
+// NOTE: byName is keyed on the FULL vault name and picks the NEWEST date when
+// several files share a name. An earlier rewrite used a plain .set() (last file
+// won) and silently reset 16 people to the oldest date in the whole set — keep
+// the "newest wins" comparison.
+const byName = new Map();
+const byTriple = new Map();
 for (const [f, d] of fileDate) {
-  const k = manifestKey(f);
-  if (!k) continue;
-  const prev = dateByName.get(k);
-  if (!prev || d > prev) dateByName.set(k, d);
+  const m = manifestParts(f);
+  if (!m.name) continue;
+  const prev = byName.get(m.name);
+  if (!prev || d > fileDate.get(prev)) byName.set(m.name, f);
+
+  if (m.year && m.first && m.last) {
+    const k = `${m.first}|${m.last}|${m.year}`;
+    const arr = byTriple.get(k) || [];
+    arr.push(f);
+    byTriple.set(k, arr);
+  }
 }
 
 // 3. slug -> date, via the people data the pages actually render from.
 const people = JSON.parse(readFileSync(resolve(ROOT, "src/data/people.public.json"), "utf-8"));
 const out = {};
 let hit = 0;
+let hitExact = 0;
+let hitTriple = 0;
 const misses = [];
 for (const p of people) {
   if (!p.slug) continue;
-  const rawName = (p.name || p.title || "").trim();
-  if (!rawName) continue;
-  const d = dateByName.get(personKey(rawName));
+  const human = (p.title || p.name || "").trim();
+  if (!human) continue;
+  const m = matchVaultFile(p, byName, byTriple);
+  const d = m ? fileDate.get(m.file) : null;
   if (d) {
     out[p.slug] = d;
     hit++;
+    if (m.how === "exact") hitExact++;
+    else hitTriple++;
   } else {
-    misses.push(`${p.slug}  (${rawName})`);
+    misses.push(`${p.slug}  (${human})`);
   }
 }
 
@@ -128,7 +182,7 @@ const dest = resolve(ROOT, "src/data/lastmod.json");
 writeFileSync(dest, JSON.stringify(payload, null, 2) + "\n");
 
 const pct = ((100 * hit) / people.length).toFixed(1);
-console.log(`matched ${hit}/${people.length} people (${pct}%)`);
+console.log(`matched ${hit}/${people.length} people (${pct}%)  [exact ${hitExact}, first+last+year ${hitTriple}]`);
 console.log(`wrote ${dest}`);
 if (misses.length) {
   console.log(`\nno vault match (${misses.length}) — these get NO <lastmod>, not a guessed one:`);
