@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
-import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
@@ -10,110 +9,46 @@ import { NOINDEX_SLUGS } from "./src/data/privacy-exclusions.mjs";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // ---------------------------------------------------------------------------
-// lastmod source (added 2026-09-21, revised same day)
+// lastmod source (added 2026-09-21; v3)
 //
 // WHY: the sitemap previously carried ZERO <lastmod> entries across 981 URLs.
 // Google uses <lastmod> to decide which URLs to recrawl. Without it every page
 // looks equally stale forever and no update signal ever reaches Google — the
 // most plausible cause of the Search Console "pages not indexed" alert.
 //
-// HOW (revised): v1 read only the wiki's own data files, so every one of 981
-// URLs got the SAME timestamp (measured: 1 distinct value x981). That is barely
-// better than no dates. v2 resolves each person to the markdown file that
-// actually holds their content, in the OBSIDIAN VAULT (a separate git repo),
-// and stamps that file's last-commit date. Result: genuinely varied per-page
-// dates, so Google can tell what actually changed.
+// HISTORY (each version measured, not assumed):
+//   v1 read the wiki's own data files  -> 1 distinct date across 981 URLs.
+//   v2 shelled out to git against the OBSIDIAN VAULT from this config.
+//      Worked locally (11 distinct dates) but COLLAPSED IN CI: the vault is a
+//      separate repo at an absolute local path that does not exist on an Ubuntu
+//      runner, so every person fell back to the wiki date. Published sitemap:
+//      981 URLs, 1 identical timestamp = the CI checkout time. Fails-safe had
+//      quietly become fails-silently.
+//   v3 (this) reads src/data/lastmod.json — a COMMITTED map generated on the
+//      machine that actually has the vault, by scripts/gen-lastmod.mjs.
+//      Result: identical dates locally and in CI, no git needed at build time.
 //
-// Mapping: vault-manifest.json (path with a space, hence quoted execFileSync
-// args) keys files as "<Name> (<years>).md". pages -> slug is done by matching
-// the person's display name against the manifest key prefix, which is what the
-// generator does. Unmatched pages fall back to the wiki data file date.
+// REGENERATE after any vault change:   node scripts/gen-lastmod.mjs
 //
-// SAFETY: any git failure (no repo, no history, shallow clone, CI) returns the
-// fallback and the entry keeps a sane date; a total failure omits <lastmod>
-// rather than failing the build. Build never breaks because of this.
+// PRIVACY NOTE: lastmod.json contains only slug -> date. No vault content,
+// names, or paths beyond what the sitemap already publishes.
+//
+// SAFETY: if the file is missing/empty the sitemap simply omits <lastmod>,
+// rather than inventing a value. The build never breaks because of this.
 // ---------------------------------------------------------------------------
-const WIKI_DATA_FILES = [
-  "src/data/people.public.json",
-  "src/data/site-meta.json",
-];
+type LastmodFile = { people?: Record<string, string> };
 
-const VAULT_DIR = "/Users/marktelfer/ObsidianVault";
-const VAULT_PEOPLE_DIR = "Family History/People";
-
-/** git last-commit date for a path inside a given repo. undefined on any failure. */
-function gitDate(repoDir: string, relPath: string): Date | undefined {
-  try {
-    const out = execFileSync("git", ["log", "-1", "--format=%cI", "--", relPath], {
-      cwd: repoDir,
-      encoding: "utf-8",
-      stdio: ["ignore", "pipe", "ignore"],
-      timeout: 5000,
-    }).trim();
-    if (!out) return undefined;
-    const d = new Date(out);
-    return Number.isNaN(d.getTime()) ? undefined : d;
-  } catch {
-    return undefined;
-  }
-}
-
-/** most recent git date across the wiki's own data files. */
-const WIKI_DATA_LATEST = (() => {
-  let latest: Date | undefined;
-  for (const f of WIKI_DATA_FILES) {
-    const d = gitDate(__dirname, f);
-    if (d && (!latest || d > latest)) latest = d;
-  }
-  return latest;
-})();
-
-// Build slug -> vault filename once, from the manifest (cheap, one read).
-// Manifest files are keyed "Name (years).md" / "Name.md"; we index by the
-// name-part so a person's display name can find their file.
-const VAULT_BY_NAME = (() => {
+const LAST_MOD_BY_SLUG = (() => {
   const map = new Map<string, string>();
   try {
-    const raw = readFileSync(resolve(__dirname, "src/data/vault-manifest.json"), "utf-8");
-    const man = JSON.parse(raw) as { files?: Record<string, unknown> };
-    for (const fname of Object.keys(man.files || {})) {
-      // "Aaron Paul Ivory (1989–?).md" -> "Aaron Paul Ivory"
-      const name = fname.replace(/\.md$/i, "").replace(/\s*\([^)]*\)\s*$/, "").trim();
-      if (name) map.set(name.toLowerCase(), fname);
+    const raw = readFileSync(resolve(__dirname, "src/data/lastmod.json"), "utf-8");
+    const data = JSON.parse(raw) as LastmodFile;
+    for (const [slug, iso] of Object.entries(data.people || {})) {
+      const d = new Date(iso);
+      if (!Number.isNaN(d.getTime())) map.set(slug, d.toISOString());
     }
   } catch {
-    // no manifest -> every person falls back to the wiki data date; fine.
-  }
-  return map;
-})();
-
-/** per-person vault file git date, by display name. */
-function vaultDateForName(name: string | undefined): Date | undefined {
-  if (!name) return undefined;
-  const fname = VAULT_BY_NAME.get(name.trim().toLowerCase());
-  if (!fname) return undefined;
-  return gitDate(VAULT_DIR, `${VAULT_PEOPLE_DIR}/${fname}`);
-}
-
-// slug -> display name, straight from the data the pages render from.
-// NOTE: people.public.json uses `title` (not `name`) and titles look like
-//   "Adam Murray (1728–1816) — Father of John Murray of Langshawburn"
-// so we take everything BEFORE the em-dash, then strip a trailing "(years)".
-// (v2 of this function used p.name||p.title and matched only 17% of people.)
-const PERSON_NAME_BY_SLUG = (() => {
-  const map = new Map<string, string>();
-  const clean = (s: string) =>
-    s.split("—")[0].split(" - ")[0].replace(/\s*\([^)]*\)\s*$/, "").trim();
-  try {
-    const raw = readFileSync(resolve(__dirname, "src/data/people.public.json"), "utf-8");
-    const arr = JSON.parse(raw) as Array<{ slug?: string; name?: string; title?: string }>;
-    for (const p of arr) {
-      if (!p.slug) continue;
-      const rawName = (p.name || p.title || "").trim();
-      if (rawName) map.set(p.slug, clean(rawName));
-    }
-  } catch {
-    // no data -> all person pages fall back to the wiki data date; fine.
+    // no map -> pages get no <lastmod>; build continues.
   }
   return map;
 })();
@@ -133,25 +68,21 @@ export default defineConfig({
         const m = page.match(/\/people\/([^/?]+)/);
         return !(m && NOINDEX_SLUGS.has(m[1]));
       },
-      // Per-URL <lastmod>: each person is stamped with the date their own vault
-      // markdown file last changed (a different git repo), so dates genuinely
-      // vary per page. Non-person pages use the wiki data-file date.
+      // Per-URL <lastmod>, from the committed slug -> date map.
+      // A URL whose slug is absent (15 people have no vault file match) gets NO
+      // <lastmod> at all — we omit rather than invent a date.
       serialize(item) {
-        let best = WIKI_DATA_LATEST;
         try {
           const pathname = new URL(item.url).pathname;
-          const m = pathname.match(/^\/people\/([^/]+)\//);
+          const m = pathname.match(/^\/people\/([^/]+)(\/|$)/);
           if (m) {
-            // Resolve the slug to its display name via the public people data,
-            // then to its vault file. Both lookups are cached maps.
-            const name = PERSON_NAME_BY_SLUG.get(m[1]);
-            const d = vaultDateForName(name);
-            if (d) best = d;
+            const iso = LAST_MOD_BY_SLUG.get(m[1]);
+            if (iso) return { ...item, lastmod: iso };
           }
         } catch {
-          // any lookup problem -> keep the wiki data-file fallback
+          // malformed URL -> no lastmod for this entry
         }
-        return best ? { ...item, lastmod: best.toISOString() } : item;
+        return item;
       },
     }),
   ],
