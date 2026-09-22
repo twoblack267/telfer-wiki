@@ -14636,10 +14636,10 @@
     "person_photo": null
   },
   {
-    "id": "Sheryle Telfer (1961)",
+    "id": "Sheryle Joy Telfer (1961)",
     "slug": "sheryle-telfer-1961",
     "first_name": "Sheryle",
-    "middle_name": null,
+    "middle_name": "Joy",
     "last_name": "Telfer",
     "birth_year": 1961,
     "death_year": null,
@@ -14647,8 +14647,8 @@
     "death_date": null,
     "birth_year_display": "1961",
     "death_year_display": "living",
-    "display_name": "Sheryle Telfer",
-    "title": "Sheryle Telfer — Family & Biography",
+    "display_name": "Sheryle Joy Telfer",
+    "title": "Sheryle Joy Telfer — Family & Biography",
     "lifespan": "1961 – living",
     "generation": 7,
     "is_living": true,
@@ -14671,7 +14671,10 @@
     ],
     "siblings": [],
     "step_parents": [],
-    "step_children": [],
+    "step_children": [
+      "amy-telfer",
+      "mark-telfer-1986"
+    ],
     "images": [
       {
         "src": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
@@ -16073,18 +16076,18 @@
     "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg"
   },
   {
-    "id": "Penny Telfer (1960)",
+    "id": "Penny Ann Telfer (1960)",
     "slug": "penny-telfer-1960",
     "first_name": "Penny",
-    "middle_name": null,
+    "middle_name": "Ann",
     "last_name": "Telfer",
     "birth_year": 1960,
     "death_year": null,
-    "birth_date": null,
+    "birth_date": "14 January 1960",
     "death_date": null,
     "birth_year_display": "1960",
     "death_year_display": "living",
-    "display_name": "Penny Telfer",
+    "display_name": "Penny Ann Telfer",
     "title": "Penny Telfer — Family & Biography",
     "lifespan": "1960 – living",
     "generation": 9,

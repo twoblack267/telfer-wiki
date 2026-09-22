@@ -343,7 +343,7 @@
     {
       "slug": "edward-telfer",
       "id": "Edward Telfer",
-      "generation": 4
+      "generation": 7
     },
     {
       "slug": "edwin-ernest-clarke",
@@ -1407,7 +1407,7 @@
     },
     {
       "slug": "penny-telfer-1960",
-      "id": "Penny Telfer (1960)",
+      "id": "Penny Ann Telfer (1960)",
       "generation": 9
     },
     {
@@ -1418,7 +1418,7 @@
     {
       "slug": "peter-telfer",
       "id": "Peter Telfer",
-      "generation": 5
+      "generation": 8
     },
     {
       "slug": "phineas-baker-1870",
@@ -1557,7 +1557,7 @@
     },
     {
       "slug": "sheryle-telfer-1961",
-      "id": "Sheryle Telfer (1961)",
+      "id": "Sheryle Joy Telfer (1961)",
       "generation": 7
     },
     {
@@ -1723,7 +1723,7 @@
     {
       "slug": "william-telfer-1802",
       "id": "William Telfer (1802)",
-      "generation": 3
+      "generation": 6
     },
     {
       "slug": "william-telfer-1811",
@@ -1733,7 +1733,7 @@
     {
       "slug": "william-telfer-1841",
       "id": "William Telfer (1841)",
-      "generation": 4
+      "generation": 7
     },
     {
       "slug": "william-telfer-shepherd",
@@ -6988,6 +6988,14 @@
       },
       {
         "from": "allen-merrick",
+        "to": "mark-telfer-1986"
+      },
+      {
+        "from": "sheryle-telfer-1961",
+        "to": "amy-telfer"
+      },
+      {
+        "from": "sheryle-telfer-1961",
         "to": "mark-telfer-1986"
       },
       {

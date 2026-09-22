@@ -835,6 +835,37 @@ function main() {
     if (!existing && birthYear == null) {
       existing = existingBySlug.get(slug);
     }
+    // ── VAULT-FILE FALLBACK (added 2026-09-22, card tw-2026-09-22-011) ─────────
+    // ONE VAULT FILE = ONE PERSON. When the identity key misses, the vault file
+    // itself is the strongest available match — a record whose vault_file is the
+    // very file being converted IS this person, whatever the name fields say.
+    //
+    // WHY THIS IS NEEDED: the identity key includes middle_name. Adding a middle
+    // name to a vault file therefore breaks its own record match. Observed live:
+    // the vault gained `middle_name: Joy` for Sheryle, so the vault now builds
+    // "sherylejoytelfer|1961" while the stored record still built
+    // "sheryletelfer|1961" -> miss -> no merge -> the entry was pushed as a NEW
+    // record -> the duplicate-twin purge discarded it -> every field only present
+    // in her file (step_children) was silently lost every run.
+    //
+    // The existing year-correction fallback below covers this shape only when
+    // birthYear is null; this person HAS a birth year, so it never fired.
+    //
+    // SAFETY: matched on vault_file equality, which is unique by definition — the
+    // file list has no duplicates. It cannot conflate two same-name people,
+    // because two people cannot share one file.
+    if (!existing) {
+      const byFile = existingPeople.filter(
+        (p) => (p.vault_file || '').trim() && (p.vault_file || '').trim() === vaultFile
+      );
+      if (byFile.length === 1) {
+        existing = byFile[0];
+        console.log(
+          `  ↻ Vault-file merge: ${entry.display_name || slug} — re-joined record ` +
+          `${existing.slug} via vault_file (identity key missed)`
+        );
+      }
+    }
     if (!existing) {
       const nameOnlyKey = `${firstName}${middleName || ''}${lastName}|`
         .toLowerCase().replace(/\s+/g, '');
