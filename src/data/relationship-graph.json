@@ -131,16 +131,6 @@
       "generation": 8
     },
     {
-      "slug": "ann-taylor-1856",
-      "id": "Ann Taylor (1856)",
-      "generation": 4
-    },
-    {
-      "slug": "ann-telfer",
-      "id": "Ann Telfer",
-      "generation": 5
-    },
-    {
       "slug": "arnold-cuthbert-lawrie-1895",
       "id": "Arnold Cuthbert Lawrie (1895)",
       "generation": 5
@@ -948,12 +938,7 @@
     {
       "slug": "jessie-kathleen-telfer-1914",
       "id": "Jessie Kathleen Telfer (1914)",
-      "generation": 5
-    },
-    {
-      "slug": "jessie-telfer",
-      "id": "Jessie Telfer",
-      "generation": 5
+      "generation": 6
     },
     {
       "slug": "joel-ivory-1986",
@@ -1053,11 +1038,6 @@
     {
       "slug": "john-watson-1851",
       "id": "John Watson (1851)",
-      "generation": 5
-    },
-    {
-      "slug": "johnnie-telfer",
-      "id": "Johnnie Telfer",
       "generation": 5
     },
     {
@@ -1503,11 +1483,6 @@
     {
       "slug": "robert-telfer-dillon-1862",
       "id": "Robert Telfer Dillon (1862)",
-      "generation": 5
-    },
-    {
-      "slug": "robina-telfer",
-      "id": "Robina Telfer",
       "generation": 5
     },
     {
@@ -2009,10 +1984,6 @@
       {
         "from": "john-telfer-robert",
         "to": "angela-telfer"
-      },
-      {
-        "from": "ann-taylor-1856",
-        "to": "ann-telfer"
       },
       {
         "from": "alfred-george-stribling-1853",
@@ -2959,14 +2930,6 @@
         "to": "jennifer-bunston"
       },
       {
-        "from": "ann-taylor-1856",
-        "to": "jessie-kathleen-telfer-1914"
-      },
-      {
-        "from": "ann-taylor-1856",
-        "to": "jessie-telfer"
-      },
-      {
         "from": "paul-ivory-1955",
         "to": "joel-ivory-1986"
       },
@@ -3085,10 +3048,6 @@
       {
         "from": "james-telfer-1761",
         "to": "john-telfer-1791"
-      },
-      {
-        "from": "ann-taylor-1856",
-        "to": "johnnie-telfer"
       },
       {
         "from": "grantley-telfer",
@@ -3567,10 +3526,6 @@
         "to": "robert-telfer-dillon-1862"
       },
       {
-        "from": "ann-taylor-1856",
-        "to": "robina-telfer"
-      },
-      {
         "from": "daisy-vera-latter-1886",
         "to": "rodger-peryman-wishart-1920"
       },
@@ -3967,10 +3922,6 @@
       {
         "from": "amy-farrow-stribling-1868",
         "to": "george-sidney-gilbert-stribling-1864"
-      },
-      {
-        "from": "ann-taylor-1856",
-        "to": "john-telfer-1847"
       },
       {
         "from": "arnold-cuthbert-lawrie-1895",

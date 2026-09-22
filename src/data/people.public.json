@@ -3392,7 +3392,6 @@
       "william-telfer-1880"
     ],
     "spouses": [
-      "ann-taylor-1856",
       "caroline-telfer-1842"
     ],
     "siblings": [
@@ -3562,51 +3561,6 @@
     ],
     "spouses": [
       "john-telfer-1840"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Ann Taylor (1856)",
-    "slug": "ann-taylor-1856",
-    "first_name": "Ann",
-    "middle_name": null,
-    "last_name": "Taylor",
-    "birth_year": 1856,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1856",
-    "death_year_display": "?",
-    "display_name": "Ann Taylor",
-    "title": "Ann Taylor — Family & Biography",
-    "lifespan": "1856 – ?",
-    "generation": 4,
-    "is_living": false,
-    "body_markdown": "# Ann Taylor (~1856–?)\n\n**Role:** Wife of John Telfer (1847–1923)\n\nAnn Taylor married John Telfer at St John's Church, Kapunda in 1881. Together they had nine children: Ann, Johnnie, Peter, Adam, Robina, Margaret, William, James, and Jessie.\n\n**Source:** *From the Borders to the Bush* — Chapter on John Telfer",
-    "roles": [
-      "Wife of John Telfer (1847–1923)"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "taylor",
-      "in-law"
-    ],
-    "parents": [],
-    "children": [
-      "ann-telfer",
-      "jessie-kathleen-telfer-1914",
-      "jessie-telfer",
-      "johnnie-telfer",
-      "robina-telfer"
-    ],
-    "spouses": [
-      "john-telfer-1847"
     ],
     "siblings": [],
     "step_parents": [],
@@ -9018,47 +8972,6 @@
     "person_photo": null
   },
   {
-    "id": "Jessie Kathleen Telfer (1914)",
-    "slug": "jessie-kathleen-telfer-1914",
-    "first_name": "Jessie",
-    "middle_name": "Kathleen",
-    "last_name": "Telfer",
-    "birth_year": 1914,
-    "death_year": 1954,
-    "birth_date": "26 July 1914",
-    "death_date": "26 June 1954",
-    "birth_place": "Adelaide, South Australia",
-    "death_place": "South Australia",
-    "birth_year_display": "1914",
-    "death_year_display": "1954",
-    "display_name": "Jessie Kathleen Telfer",
-    "title": "Jessie Kathleen (Sargent) Telfer (1914–1954)",
-    "lifespan": "1914 – 1954",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Jessie Kathleen (Sargent) Telfer\n\n**Role:** First wife of Kenneth William John Telfer (1906–1970); mother of son Murray\n\n**Born:** 26 July 1914 in Adelaide, South Australia.\n**Died:** 26 June 1954, buried at Tantanoola Cemetery beside husband Kenneth.\n**Mother:** Jane Stewart Sargent.\n**Spouse:** Kenneth William John Telfer — married **4 February 1939** at the Presbyterian Church, Millicent.\n\nJessie Kathleen Sargent was born 26 July 1914 in Adelaide, daughter of Jane Stewart Sargent (father not recorded on the registration). She married Kenneth William John Telfer on **4 February 1939** at the Presbyterian Church, Millicent — SA Marriage Record Register **Book 396/Page 456**. The couple lived in the Millicent / Tantanoola area, where they had a son, **Murray**, who married Susanne Maloney. Jessie died on **26 June 1954** and is buried at Tantanoola Cemetery; Kenneth remarried after her death.\n\n## Sources\n\n- Genealogy SA (member), accessed 3 Sep 2026 — SA Birth Reg **Book 941/Page 179** (Jessie Kathleen SARGENT, b. 26 Jul 1914, mother Jane Stewart SARGENT); SA Marriage Reg **Book 396/Page 456** (Jessie Kathleen SARGENT × Kenneth William John TELFER, 4 Feb 1939, Millicent)\n- Tantanoola Cemetery headstone transcription and memorial — beside Kenneth William John Telfer",
-    "roles": [
-      "First wife of Kenneth William John Telfer (1906–1970); mother of son Murray"
-    ],
-    "tags": [
-      "person",
-      "family",
-      "sargent"
-    ],
-    "parents": [
-      "ann-taylor-1856"
-    ],
-    "children": [],
-    "spouses": [
-      "kenneth-telfer-1906"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "James Alexander Alcorn (1915)",
     "slug": "james-alexander-alcorn-1915",
     "first_name": "James",
@@ -9125,40 +9038,6 @@
     "spouses": [
       "isabella-telfer-1880"
     ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Ann Telfer",
-    "slug": "ann-telfer",
-    "first_name": "Ann",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Ann Telfer",
-    "title": "Ann Telfer",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Ann Telfer",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "parents": [
-      "ann-taylor-1856"
-    ],
-    "children": [],
-    "spouses": [],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
@@ -9606,40 +9485,6 @@
     "person_photo": null
   },
   {
-    "id": "Jessie Telfer",
-    "slug": "jessie-telfer",
-    "first_name": "Jessie",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Jessie Telfer",
-    "title": "Jessie Telfer",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Jessie Telfer",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "parents": [
-      "ann-taylor-1856"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "John James Telfer Farrow",
     "slug": "john-farrow",
     "first_name": "John",
@@ -9680,40 +9525,6 @@
       "jane-murray-farrow-1857",
       "mary-bayes-farrow-1875"
     ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Johnnie Telfer",
-    "slug": "johnnie-telfer",
-    "first_name": "Johnnie",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Johnnie Telfer",
-    "title": "Johnnie Telfer",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Johnnie Telfer",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "parents": [
-      "ann-taylor-1856"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -10018,40 +9829,6 @@
     ],
     "parents": [
       "charles-farrow-1836"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Robina Telfer",
-    "slug": "robina-telfer",
-    "first_name": "Robina",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Robina Telfer",
-    "title": "Robina Telfer",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": false,
-    "body_markdown": "# Robina Telfer",
-    "roles": [],
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "parents": [
-      "ann-taylor-1856"
     ],
     "children": [],
     "spouses": [],
@@ -12460,6 +12237,45 @@
       "kenneth-telfer-1906",
       "lindsay-telfer-1920"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Jessie Kathleen Telfer (1914)",
+    "slug": "jessie-kathleen-telfer-1914",
+    "first_name": "Jessie",
+    "middle_name": "Kathleen",
+    "last_name": "Telfer",
+    "birth_year": 1914,
+    "death_year": 1954,
+    "birth_date": "26 July 1914",
+    "death_date": "26 June 1954",
+    "birth_place": "Adelaide, South Australia",
+    "death_place": "South Australia",
+    "birth_year_display": "1914",
+    "death_year_display": "1954",
+    "display_name": "Jessie Kathleen Telfer",
+    "title": "Jessie Kathleen (Sargent) Telfer (1914–1954)",
+    "lifespan": "1914 – 1954",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Jessie Kathleen (Sargent) Telfer\n\n**Role:** First wife of Kenneth William John Telfer (1906–1970); mother of son Murray\n\n**Born:** 26 July 1914 in Adelaide, South Australia.\n**Died:** 26 June 1954, buried at Tantanoola Cemetery beside husband Kenneth.\n**Mother:** Jane Stewart Sargent.\n**Spouse:** Kenneth William John Telfer — married **4 February 1939** at the Presbyterian Church, Millicent.\n\nJessie Kathleen Sargent was born 26 July 1914 in Adelaide, daughter of Jane Stewart Sargent (father not recorded on the registration). She married Kenneth William John Telfer on **4 February 1939** at the Presbyterian Church, Millicent — SA Marriage Record Register **Book 396/Page 456**. The couple lived in the Millicent / Tantanoola area, where they had a son, **Murray**, who married Susanne Maloney. Jessie died on **26 June 1954** and is buried at Tantanoola Cemetery; Kenneth remarried after her death.\n\n## Sources\n\n- Genealogy SA (member), accessed 3 Sep 2026 — SA Birth Reg **Book 941/Page 179** (Jessie Kathleen SARGENT, b. 26 Jul 1914, mother Jane Stewart SARGENT); SA Marriage Reg **Book 396/Page 456** (Jessie Kathleen SARGENT × Kenneth William John TELFER, 4 Feb 1939, Millicent)\n- Tantanoola Cemetery headstone transcription and memorial — beside Kenneth William John Telfer",
+    "roles": [
+      "First wife of Kenneth William John Telfer (1906–1970); mother of son Murray"
+    ],
+    "tags": [
+      "person",
+      "family",
+      "sargent"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "kenneth-telfer-1906"
+    ],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],

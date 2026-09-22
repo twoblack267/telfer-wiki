@@ -2066,131 +2066,6 @@
     "step_children": []
   },
   {
-    "id": "Ann Taylor (1856)",
-    "slug": "ann-taylor-1856",
-    "first_name": "Ann",
-    "middle_name": null,
-    "last_name": "Taylor",
-    "birth_year": 1856,
-    "death_year": null,
-    "birth_year_display": "1856",
-    "death_year_display": "?",
-    "display_name": "Ann Taylor",
-    "title": "Ann Taylor — Family & Biography",
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "taylor",
-      "in-law"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Ann Taylor"
-        ]
-      },
-      {
-        "type": "Spouse",
-        "names": [
-          "John Telfer (1847–1923)"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "Ann Telfer",
-          "Johnnie Telfer",
-          "Peter Telfer",
-          "Adam Telfer",
-          "Robina Telfer",
-          "Margaret Telfer",
-          "William Telfer",
-          "James Telfer",
-          "Jessie Telfer"
-        ]
-      }
-    ],
-    "roles": [
-      "Wife of John Telfer (1847–1923)"
-    ],
-    "body_markdown": "# Ann Taylor (~1856–?)\n\n**Role:** Wife of John Telfer (1847–1923)\n\nAnn Taylor married John Telfer at St John's Church, Kapunda in 1881. Together they had nine children: Ann, Johnnie, Peter, Adam, Robina, Margaret, William, James, and Jessie.\n\n**Source:** *From the Borders to the Bush* — Chapter on John Telfer",
-    "body_stripped": "**Role:** Wife of John Telfer (1847–1923)\n\nAnn Taylor married John Telfer at St John's Church, Kapunda in 1881. Together they had nine children: Ann, Johnnie, Peter, Adam, Robina, Margaret, William, James, and Jessie.\n\n**Source:** *From the Borders to the Bush* — Chapter on John Telfer",
-    "is_living": false,
-    "lifespan": "1856 – ?",
-    "parents": [],
-    "children": [
-      "ann-telfer",
-      "jessie-kathleen-telfer-1914",
-      "jessie-telfer",
-      "johnnie-telfer",
-      "robina-telfer"
-    ],
-    "spouses": [
-      "john-telfer-1847"
-    ],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "birth_date": null,
-    "death_date": null,
-    "vault_file": "Ann Taylor (~1856–?).md",
-    "images": [],
-    "person_photo": null,
-    "generation": 4,
-    "step_parents": [],
-    "step_children": []
-  },
-  {
-    "id": "Ann Telfer",
-    "slug": "ann-telfer",
-    "first_name": "Ann",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Ann Telfer",
-    "title": "Ann Telfer",
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Ann Telfer"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Ann Telfer",
-    "body_stripped": "",
-    "is_living": false,
-    "lifespan": "? – ?",
-    "parents": [
-      "ann-taylor-1856"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "birth_date": null,
-    "death_date": null,
-    "vault_file": "Ann Telfer.md",
-    "images": [],
-    "person_photo": null,
-    "generation": 5,
-    "step_parents": [],
-    "step_children": []
-  },
-  {
     "id": "Arnold Cuthbert Lawrie (1895)",
     "slug": "arnold-cuthbert-lawrie-1895",
     "first_name": "Arnold",
@@ -14985,9 +14860,7 @@
     "body_stripped": "**Role:** First wife of Kenneth William John Telfer (1906–1970); mother of son Murray\n\n**Born:** 26 July 1914 in Adelaide, South Australia.\n**Died:** 26 June 1954, buried at Tantanoola Cemetery beside husband Kenneth.\n**Mother:** Jane Stewart Sargent.\n**Spouse:** Kenneth William John Telfer — married **4 February 1939** at the Presbyterian Church, Millicent.\n\nJessie Kathleen Sargent was born 26 July 1914 in Adelaide, daughter of Jane Stewart Sargent (father not recorded on the registration). She",
     "is_living": false,
     "lifespan": "1914 – 1954",
-    "parents": [
-      "ann-taylor-1856"
-    ],
+    "parents": [],
     "children": [],
     "spouses": [
       "kenneth-telfer-1906"
@@ -15003,54 +14876,7 @@
     "vault_file": "Jessie Kathleen (Sargent) Telfer (1914–1954).md",
     "images": [],
     "person_photo": null,
-    "generation": 5,
-    "step_parents": [],
-    "step_children": []
-  },
-  {
-    "id": "Jessie Telfer",
-    "slug": "jessie-telfer",
-    "first_name": "Jessie",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Jessie Telfer",
-    "title": "Jessie Telfer",
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Jessie Telfer"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Jessie Telfer",
-    "body_stripped": "",
-    "is_living": false,
-    "lifespan": "? – ?",
-    "parents": [
-      "ann-taylor-1856"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "birth_date": null,
-    "death_date": null,
-    "vault_file": "Jessie Telfer.md",
-    "images": [],
-    "person_photo": null,
-    "generation": 5,
+    "generation": 6,
     "step_parents": [],
     "step_children": []
   },
@@ -16472,7 +16298,6 @@
       "william-telfer-1880"
     ],
     "spouses": [
-      "ann-taylor-1856",
       "caroline-telfer-1842"
     ],
     "siblings": [
@@ -16691,53 +16516,6 @@
     "birth_date": null,
     "death_date": null,
     "vault_file": "John Watson (1851–1929).md",
-    "images": [],
-    "person_photo": null,
-    "generation": 5,
-    "step_parents": [],
-    "step_children": []
-  },
-  {
-    "id": "Johnnie Telfer",
-    "slug": "johnnie-telfer",
-    "first_name": "Johnnie",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Johnnie Telfer",
-    "title": "Johnnie Telfer",
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Johnnie Telfer"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Johnnie Telfer",
-    "body_stripped": "",
-    "is_living": false,
-    "lifespan": "? – ?",
-    "parents": [
-      "ann-taylor-1856"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "birth_date": null,
-    "death_date": null,
-    "vault_file": "Johnnie Telfer.md",
     "images": [],
     "person_photo": null,
     "generation": 5,
@@ -23591,53 +23369,6 @@
     "birth_date": null,
     "death_date": null,
     "vault_file": "Robert Telfer Dillon (1862–1942).md",
-    "images": [],
-    "person_photo": null,
-    "generation": 5,
-    "step_parents": [],
-    "step_children": []
-  },
-  {
-    "id": "Robina Telfer",
-    "slug": "robina-telfer",
-    "first_name": "Robina",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Robina Telfer",
-    "title": "Robina Telfer",
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Robina Telfer"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Robina Telfer",
-    "body_stripped": "",
-    "is_living": false,
-    "lifespan": "? – ?",
-    "parents": [
-      "ann-taylor-1856"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "birth_date": null,
-    "death_date": null,
-    "vault_file": "Robina Telfer.md",
     "images": [],
     "person_photo": null,
     "generation": 5,

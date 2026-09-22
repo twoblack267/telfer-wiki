@@ -125,8 +125,53 @@ for (const s of newBySlug.keys()) {
 
 const matched = [];
 const unresolved = [];
+
+// ── EXPLICIT REMOVALS (added 2026-09-22, card tw-2026-09-22-011) ─────────────
+// A profile can be REMOVED from the vault on purpose — not renamed, not purged as a
+// phantom twin, but genuinely withdrawn because the evidence did not support it.
+// Such a person has NO successor by any of the keys below (display_name, vault_file,
+// tagset, namekey), so the gate would fail closed and the whole regen would stop.
+// That behaviour is correct — a silent 404 is worse — but a deliberate removal needs
+// a declared destination instead of an invented one. src/data/removed-redirects.json
+// carries those declarations, each with a reason, a date and the Corrections Log
+// heading that records it. Consulted FIRST, before any heuristic matching.
+const REMOVED_ABS = path.join(REPO, 'src/data/removed-redirects.json');
+let REMOVED = {};
+try {
+  REMOVED = JSON.parse(fs.readFileSync(REMOVED_ABS, 'utf-8')).removed || {};
+} catch {
+  // No declarations yet — fine, fall through to normal matching.
+}
+
 for (const oldSlug of vanished) {
   const o = oldBySlug.get(oldSlug);
+
+  // 1. Explicitly-removed profile: use the declared destination.
+  const declared = REMOVED[oldSlug];
+  if (declared) {
+    if (declared.to && newBySlug.has(declared.to)) {
+      matched.push({
+        from: oldSlug,
+        to: declared.to,
+        matched_by: 'removed-declared',
+        display_name: o.display_name,
+        reason: declared.reason,
+      });
+      continue;
+    }
+    // Declared as removed with no successor (or a successor that no longer exists):
+    // record it and do NOT invent a target.
+    unresolved.push({
+      from: oldSlug,
+      display_name: o.display_name,
+      vault_file: o.vault_file,
+      tags: o.tags,
+      removed: true,
+      reason: declared.reason,
+    });
+    continue;
+  }
+
   const attempts = [
     ['display_name', (o.display_name || '').trim()],
     ['vault_file', o.vault_file],

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-22T20:04:10+10:00",
+  "generated_at": "2026-09-22T20:30:09+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 391,
+  "count": 386,
   "kinds": {
-    "real": 375,
+    "real": 370,
     "redirect": 16,
     "empty": 0
   },
@@ -126,14 +126,6 @@
     },
     "Angela Telfer.md": {
       "sha256": "04636b22fec15fbb60a59a4f947dd103cd327b36e5822b15ffee259087f2f4d5",
-      "kind": "real"
-    },
-    "Ann Taylor (~1856\u2013?).md": {
-      "sha256": "3af58c2dcf3e550904a8470ac7a9fb3909303d722bd1bb7387d67a7fa72b9a18",
-      "kind": "real"
-    },
-    "Ann Telfer.md": {
-      "sha256": "ccde3de399b2c1a95dcb530ee2adfff1327a87b1c2b824913ff465ee2073f5c8",
       "kind": "real"
     },
     "Arnold Cuthbert Lawrie.md": {
@@ -445,7 +437,7 @@
       "kind": "real"
     },
     "Ernest John Telfer (1878\u20131953).md": {
-      "sha256": "16c7bcc315da1e465df0cca1f63fe3a3ce8afd4e0456002ee55062bfe82b4f93",
+      "sha256": "0616f61cec30612663c9ac9e1356deb74a565e00e203a742ddd087ce2cbcf455",
       "kind": "real"
     },
     "Esther Cowan (1783\u20131856).md": {
@@ -848,10 +840,6 @@
       "sha256": "8e2d11e89880587234fcf005b96a88c4565878dc776b6466f950b8c530501354",
       "kind": "real"
     },
-    "Jessie Telfer.md": {
-      "sha256": "d2eec6c232462c80496d49b2ee59a3c958362f0ee9858750053558dcb901b5a9",
-      "kind": "real"
-    },
     "Joel Matthew Ivory (1986\u2013?).md": {
       "sha256": "54d8894856e8bf20d2f526174922ec3c7501faed543d11e42883af9819e7db3e",
       "kind": "real"
@@ -942,10 +930,6 @@
     },
     "John Watson (1851\u20131929).md": {
       "sha256": "7da5310ffc6cc01f3b51d4065dc4830be77b82ea8b7c73d430c04756e90723ad",
-      "kind": "real"
-    },
-    "Johnnie Telfer.md": {
-      "sha256": "d2f6a748abd665fc0e535e0072b9bdf958f8d8cf2f1430b3ccf4b7262799bf87",
       "kind": "real"
     },
     "Jono Telfer.md": {
@@ -1342,10 +1326,6 @@
     },
     "Robert Telfer Dillon (1862\u20131942).md": {
       "sha256": "0c327960223213739418f914fee579b689e2185c41e0385a19a9700b3229bdae",
-      "kind": "real"
-    },
-    "Robina Telfer.md": {
-      "sha256": "ca62fb2d399ce3c275ca9aa492fe3d9753ea65d57a47eee5eb3fb906d4dfd93e",
       "kind": "real"
     },
     "Robyn Telfer.md": {
