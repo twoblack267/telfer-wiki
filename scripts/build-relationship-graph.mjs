@@ -383,6 +383,25 @@ function addParentChild(parentSlug, childSlug, sourceSlug) {
   return true;
 }
 
+// ─── Self-declared parents (2026-09-22, card tw-2026-09-22-011) ───────────────
+// A person's OWN file declaring Father/Mother is the strongest evidence of their
+// parentage. Previously it competed on equal terms with an INCOMING claim from
+// someone else's Children list, and order decided the winner — so Ann Taylor
+// (~1856) naming a "Peter Telfer" child silently REPLACED the modern Peter Telfer's
+// own declared parents (John Robert Telfer + Robyn Telfer) with herself.
+// Collect every slug that self-declares a parent, so the Children case below can
+// refuse to overwrite it.
+const SELF_DECLARED_PARENT = new Set();
+for (const p of people) {
+  for (const rel of p.relationships || []) {
+    const t = String(rel.type || '').toLowerCase();
+    if (t === 'father' || t === 'mother' || t === 'parent' || t === 'parents') {
+      SELF_DECLARED_PARENT.add(p.slug);
+      break;
+    }
+  }
+}
+
 for (const person of people) {
   const sourceSlug = person.slug;
 
@@ -413,6 +432,26 @@ for (const person of people) {
         case 'Child':
         case 'Son':
         case 'Daughter':
+          // SELF-DECLARATION WINS (2026-09-22, card tw-2026-09-22-011). If the target
+          // already declares its own parents, an INCOMING claim from this person's
+          // Children list must not overwrite that. It may still ADD itself when the
+          // target declares nothing or only one parent (a person can have two, and
+          // one side may simply not be recorded) — but where the target has declared
+          // BOTH parents and this person is neither, the claim is a same-name
+          // collision and is refused.
+          {
+            const target = slugToPerson.get(targetSlug);
+            const declared = (target?.relationships || [])
+              .filter(r => ['father', 'mother', 'parent', 'parents'].includes(String(r.type || '').toLowerCase()))
+              .flatMap(r => r.names || [])
+              .map(n => resolveNameToSlug(n, targetSlug))
+              .filter(Boolean);
+            if (declared.length >= 2 && !declared.includes(sourceSlug) &&
+                SELF_DECLARED_PARENT.has(targetSlug)) {
+              console.warn(`   ⚠️ refused incoming parent claim: ${sourceSlug} -> ${targetSlug} (target declares ${declared.join(', ')})`);
+              break;
+            }
+          }
           addParentChild(sourceSlug, targetSlug);
           resolved++;
           break;
@@ -504,6 +543,22 @@ for (const person of people) {
   }
   for (const childSlug of person.children || []) {
     if (slugToPerson.has(childSlug)) {
+      // Same self-declaration rule as the Children case above (2026-09-22): a stored
+      // children array must not overwrite a child that declares its own parents.
+      // This array is itself derived, so it can carry the same collision.
+      {
+        const target = slugToPerson.get(childSlug);
+        const declared = (target?.relationships || [])
+          .filter(r => ['father', 'mother', 'parent', 'parents'].includes(String(r.type || '').toLowerCase()))
+          .flatMap(r => r.names || [])
+          .map(n => resolveNameToSlug(n, childSlug))
+          .filter(Boolean);
+        if (declared.length >= 2 && !declared.includes(sourceSlug) &&
+            SELF_DECLARED_PARENT.has(childSlug)) {
+          console.warn(`   ⚠️ refused stored parent claim: ${sourceSlug} -> ${childSlug} (target declares ${declared.join(', ')})`);
+          continue;
+        }
+      }
       addParentChild(sourceSlug, childSlug);
       resolved++;
     }
