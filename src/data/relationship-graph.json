@@ -1828,7 +1828,7 @@
     {
       "slug": "alexa-telfer",
       "id": "Alexa Telfer",
-      "generation": 5
+      "generation": 99
     },
     {
       "slug": "amanda-lawrie",
@@ -2479,10 +2479,6 @@
         "to": "francis-adam-telfer-1875"
       },
       {
-        "from": "robert-telfer-1835",
-        "to": "francis-adam-telfer-1875"
-      },
-      {
         "from": "caroline-telfer-1842",
         "to": "francis-telfer-1875"
       },
@@ -2693,10 +2689,6 @@
       {
         "from": "robert-dunlop-lawrie-1850",
         "to": "hugh-john"
-      },
-      {
-        "from": "david-parker-1822",
-        "to": "hugh-kelly-parker-1896"
       },
       {
         "from": "david-parker-1822",
@@ -3073,10 +3065,6 @@
       {
         "from": "elizabeth-beattie-1741",
         "to": "john-murray-1779"
-      },
-      {
-        "from": "richard-paynter-of-calstock",
-        "to": "john-paynter-1921"
       },
       {
         "from": "murray-telfer-1924",
@@ -4202,10 +4190,6 @@
       },
       {
         "from": "janet-nichol",
-        "to": "william-francis-telfer-1885"
-      },
-      {
-        "from": "janet-nichol",
         "to": "william-telfer"
       },
       {
@@ -4317,10 +4301,6 @@
         "to": "robert-campbell"
       },
       {
-        "from": "alexa-telfer",
-        "to": "james-edgerston-telfer-1877"
-      },
-      {
         "from": "dale-telfer",
         "to": "grantley-telfer"
       },
@@ -4372,7 +4352,19 @@
       },
       {
         "from": "adam-telfer-1842",
+        "to": "elizabeth-beattie-telfer-1832"
+      },
+      {
+        "from": "adam-telfer-1842",
         "to": "isabella-telfer-1837"
+      },
+      {
+        "from": "adam-telfer-1842",
+        "to": "james-telfer-1829"
+      },
+      {
+        "from": "adam-telfer-1842",
+        "to": "john-telfer-1840"
       },
       {
         "from": "adam-telfer-1842",
@@ -4425,10 +4417,6 @@
       {
         "from": "adam-telfer-1799",
         "to": "robert-telfer-1803"
-      },
-      {
-        "from": "adam-telfer-1799",
-        "to": "william-telfer"
       },
       {
         "from": "adam-telfer-1799",
@@ -5880,10 +5868,6 @@
       },
       {
         "from": "francis-telfer-1809",
-        "to": "william-telfer"
-      },
-      {
-        "from": "francis-telfer-1809",
         "to": "william-telfer-1802"
       },
       {
@@ -6320,10 +6304,6 @@
       },
       {
         "from": "isobel-telfer-1798",
-        "to": "william-telfer"
-      },
-      {
-        "from": "isobel-telfer-1798",
         "to": "william-telfer-1802"
       },
       {
@@ -6409,10 +6389,6 @@
       {
         "from": "james-telfer-1796",
         "to": "robert-telfer-1803"
-      },
-      {
-        "from": "james-telfer-1796",
-        "to": "william-telfer"
       },
       {
         "from": "james-telfer-1796",
@@ -6636,10 +6612,6 @@
       },
       {
         "from": "john-telfer-1805",
-        "to": "william-telfer"
-      },
-      {
-        "from": "john-telfer-1805",
         "to": "william-telfer-1802"
       },
       {
@@ -6669,10 +6641,6 @@
       {
         "from": "john-telfer-1791",
         "to": "robert-telfer-1803"
-      },
-      {
-        "from": "john-telfer-1791",
-        "to": "william-telfer"
       },
       {
         "from": "john-telfer-1791",
@@ -6821,10 +6789,6 @@
       {
         "from": "margaret-telfer-1801",
         "to": "robert-telfer-1803"
-      },
-      {
-        "from": "margaret-telfer-1801",
-        "to": "william-telfer"
       },
       {
         "from": "margaret-telfer-1801",
@@ -7049,10 +7013,6 @@
       {
         "from": "john-smith",
         "to": "margaret-dougal-smith-1868"
-      },
-      {
-        "from": "william-telfer",
-        "to": "william-telfer-1811"
       },
       {
         "from": "john-dillon",

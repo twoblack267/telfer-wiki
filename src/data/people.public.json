@@ -322,7 +322,6 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -690,7 +689,6 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -869,7 +867,6 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -965,7 +962,6 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -1059,7 +1055,6 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -1109,7 +1104,6 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -1159,7 +1153,6 @@
       "john-telfer-1791",
       "john-telfer-1805",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -1280,7 +1273,6 @@
     "children": [
       "edward-telfer",
       "elizabeth-beattie-telfer-1832",
-      "william-telfer",
       "william-telfer-1841"
     ],
     "spouses": [],
@@ -1440,7 +1432,6 @@
       "john-telfer-1791",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -1543,7 +1534,6 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802",
       "william-telfer-1811"
     ],
@@ -1769,7 +1759,6 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer",
       "william-telfer-1802"
     ],
     "step_parents": [],
@@ -1812,179 +1801,6 @@
       "francis-telfer-1809"
     ],
     "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "William Adam Francis Telfer (1869)",
-    "slug": "william-telfer",
-    "first_name": "William",
-    "middle_name": "Adam Francis",
-    "last_name": "Telfer",
-    "birth_year": 1869,
-    "death_year": null,
-    "birth_date": "15 July 1869",
-    "death_date": null,
-    "birth_year_display": "1869",
-    "death_year_display": "?",
-    "display_name": "William Adam Francis Telfer",
-    "title": "William Adam Francis Telfer (b. 1869)",
-    "lifespan": "1869 – ?",
-    "generation": 3,
-    "is_living": false,
-    "body_markdown": "# William Adam Francis Telfer (b. 1869)\n\n**Role:** Son of Robert Telfer and Susan Burton — born in the **German Creek** section of the Grey district, the birthplace later given as the family's South Australian base.\n\n**Born:** 15 July 1869 — German Creek, Grey district, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Robert Telfer (1835–1907)]] |\n| **Mother** | [[Susan Burton Telfer (1844–1924)]] |\n\n## Life Summary\n\nWilliam Adam Francis Telfer was born on 15 July 1869 in the **German Creek** section of South Australia's Grey district, the son of Robert Telfer (1835–1907) and Susan Burton. His birth registration corroborates the family's long-held association with the German Creek area — a detail the 1986 booklet *A Brief Account of the First Telfer Families to Settle in SA* records (p.15) as the \"German Creek section\" from which the Robert Telfer branch later moved.\n\nHe is listed as a child of Robert and Susan in *A Brief Account*; nothing further about his adult life has yet been located.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 15 Jul 1869 | Born — German Creek, Grey district, SA |\n\n## Sources\n\n- **Source:** Genealogy SA — Birth Registrations: `TELFER, William Adam Francis — 15-Jul-1869 — father Robert TELFER, mother Susan BURTON — German Creek, Grey — 75/202` — accessed 17 Sep 2026\n- **Source:** *A Brief Account of the First Telfer Families to Settle in SA* (1986), p.15 — accessed 17 Sep 2026",
-    "roles": [
-      "Son of Robert Telfer and Susan Burton — born in the **German Creek** section of the Grey district, the birthplace later given as the family's South Australian base."
-    ],
-    "tags": [
-      "family",
-      "telfer",
-      "south-australia"
-    ],
-    "parents": [
-      "robert-telfer-1835",
-      "susan-telfer-1844"
-    ],
-    "children": [],
-    "spouses": [
-      "janet-nichol"
-    ],
-    "siblings": [
-      "adam-telfer-1799",
-      "francis-telfer-1809",
-      "isobel-telfer-1798",
-      "james-robert-telfer-1866",
-      "james-telfer-1796",
-      "john-telfer-1791",
-      "john-telfer-1805",
-      "margaret-telfer-1801",
-      "william-telfer-1811"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Janet Nichol",
-    "slug": "janet-nichol",
-    "first_name": "Janet",
-    "middle_name": null,
-    "last_name": "Nichol",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Janet Nichol",
-    "title": "Janet Nichol",
-    "lifespan": "? – ?",
-    "generation": 3,
-    "is_living": false,
-    "body_markdown": "# Janet Nichol",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [
-      "andrew-telfer-1798",
-      "william-francis-telfer-1885",
-      "william-telfer",
-      "william-telfer-1802"
-    ],
-    "spouses": [
-      "william-francis-telfer-1885",
-      "william-telfer",
-      "william-telfer-shepherd"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "William Telfer (shepherd)",
-    "slug": "william-telfer-shepherd",
-    "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer (shepherd)",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "William Telfer (shepherd)",
-    "title": "William Telfer (shepherd) — Family & Biography",
-    "lifespan": "? – ?",
-    "generation": 3,
-    "is_living": false,
-    "body_markdown": "# William Telfer (shepherd)\n\n**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** [[Janet Nichol]]\n**Children:** Andrew Telfer (1798–1858), [[William Telfer (1802–1850)]]\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
-    "roles": [
-      "Shepherd in the Cheviot Hills region, Roxburghshire, Scotland"
-    ],
-    "tags": [
-      "person",
-      "telfer",
-      "shepherd",
-      "scotland",
-      "stub"
-    ],
-    "parents": [],
-    "children": [
-      "andrew-telfer-1798",
-      "william-telfer-1802"
-    ],
-    "spouses": [
-      "janet-nichol"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Andrew Telfer (1798)",
-    "slug": "andrew-telfer-1798",
-    "first_name": "Andrew",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1798,
-    "death_year": 1858,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1798",
-    "death_year_display": "1858",
-    "display_name": "Andrew Telfer",
-    "title": "Andrew Telfer (1798–1858)",
-    "lifespan": "1798 – 1858",
-    "generation": 4,
-    "is_living": false,
-    "body_markdown": "# Andrew Telfer (1798–1858)\n\n**Role:** NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager\n**Born:** 28 April 1798 — Oxnam Parish, Roxburghshire, Scotland\n**Died:** 11 March 1858 (aged 59) — buried Tamworth General Cemetery, New South Wales\n**Father:** [[William Telfer (shepherd)]]\n**Mother:** [[Janet Nichol]]\n**Brother:** [[William Telfer (1802–1850)]]\n**Spouse:** Mary Hayes (m. 10 May 1846, St Augustine's RC Church, Singleton NSW)\n\n## Life Summary\n\nAndrew Telfer was born 28 April 1798 in the Parish of Oxnam, Roxburghshire, Scotland, son of William Telfer, a shepherd, and Janet Nichol — four years older than his brother William (1802–1850). He signed on as an Indented Servant with the Australian Agricultural Company on 16 February 1825 and sailed to New South Wales on the \"Brothers\", arriving in Sydney Harbour two days after his brother William landed on the \"York\", both in November 1825.\n\nAndrew married **Mary Hayes** on 10 May 1846 at St. Augustine's Roman Catholic Church, Singleton, New South Wales. They had four children: William (b. 1847), Mary (b. 1849, married A.L. Bowden), Andrew (b. 1850) and Elizabeth \"Betsy\" (b. 1854, married A. Bolton). In 1851 he purchased Goonoo Goonoo Section J, Lots 3 and 12 (22 August 1851). He died on 11 March 1858 and was buried at Tamworth General Cemetery, where his headstone reads *\"Sacred to the Memory of ANDREW TELFER who departed this life March 11, 1858 ... Native of Roxburghshire, Scotland.\"*\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Self** | Andrew Telfer |\n| **Father** | [[William Telfer (shepherd)]] |\n| **Mother** | [[Janet Nichol]] |\n| **Brother** | [[William Telfer (1802–1850)]] |\n| **Sisters** | Helen Nichol (Telfer) Lillico; Mary Nichol (Telfer) Gibson |\n| **Spouse** | Mary Hayes (m. 10 May 1846, Singleton NSW) |\n| **Children** | William (b. 1847); Mary (m. A.L. Bowden, 1848–1933); Andrew (b. 1850); Elizabeth / Betsy (m. A. Bolton, 1854–1874) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 28 Apr 1798 | Born — Oxnam, Roxburghshire, Scotland |\n| 16 Feb 1825 | Signed AACo indenture |\n| Nov 1825 | Arrived Sydney Harbour on the \"Brothers\" |\n| 10 May 1846 | Married Mary Hayes — St Augustine's RC Church, Singleton NSW |\n| 1847–1854 | Children William, Mary, Andrew, Elizabeth born |\n| 22 Aug 1851 | Purchased Goonoo Goonoo Sec J Lots 3 & 12 |\n| 11 Mar 1858 | Died (aged 59) — buried Tamworth General Cemetery |\n\n## Sources\n\n- **Find A Grave:** [Andrew Nichol Telfer (1798–1858) — memorial 48579836](https://www.findagrave.com/memorial/48579836/andrew-telfer) — accessed 6 Sep 2026 (born 28 Apr 1798; died 11 Mar 1858; buried Tamworth General Cem; m. Mary Hayes 1846 Singleton; children William, Mary Bowden, Andrew, Elizabeth Bolton; headstone transcription)\n- **Book:** *From the Borders to the Bush* by Donald Telfer (1986), p.370 & pp.364–371 — AACo indentured-servant journey, brother of William, land purchase, adult fates\n- **ANU / Australian Agricultural Company records** — AACo indentured-servant record (brother of Warrah manager William)\n- **Geni profile (Andrew-Nichol-Telfer)** — compiled tree corroborating dates/children (secondary group)",
-    "roles": [
-      "NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager"
-    ],
-    "tags": [
-      "family",
-      "ancestor",
-      "telfer"
-    ],
-    "parents": [
-      "janet-nichol",
-      "william-telfer-shepherd"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "william-telfer-1802"
-    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -2272,7 +2088,6 @@
     "parents": [],
     "children": [
       "elizabeth-paynter-1864",
-      "john-paynter-1921",
       "richard-paynter-1838"
     ],
     "spouses": [],
@@ -2313,7 +2128,6 @@
     ],
     "parents": [],
     "children": [
-      "hugh-kelly-parker-1896",
       "hugh-parker-1859",
       "hugh-parker-1864",
       "william-humphrey-parker-1850"
@@ -2555,6 +2369,7 @@
       "janet-welsh-1826"
     ],
     "siblings": [
+      "adam-telfer-1842",
       "agnes-telfer-1848",
       "elizabeth-hannah-telfer-1836",
       "esther-jane-telfer-1834",
@@ -2765,6 +2580,7 @@
       "john-dillon-1827"
     ],
     "siblings": [
+      "adam-telfer-1842",
       "agnes-telfer-1848",
       "isabella-telfer-1837",
       "margaret-telfer-1829",
@@ -2981,7 +2797,6 @@
     ],
     "children": [
       "edith-mary-kathleen-telfer",
-      "francis-adam-telfer-1875",
       "helen-telfer",
       "james-robert-telfer-1866",
       "robert-telfer-1886",
@@ -3365,6 +3180,7 @@
       "martha-henstridge-1854"
     ],
     "siblings": [
+      "adam-telfer-1842",
       "agnes-telfer-1848",
       "isabella-telfer-1837",
       "margaret-telfer-1829",
@@ -3509,7 +3325,10 @@
     ],
     "siblings": [
       "agnes-telfer-1848",
+      "elizabeth-beattie-telfer-1832",
       "isabella-telfer-1837",
+      "james-telfer-1829",
+      "john-telfer-1840",
       "margaret-telfer-1829",
       "robert-telfer-1835"
     ],
@@ -6760,6 +6579,48 @@
     "person_photo": null
   },
   {
+    "id": "William Adam Francis Telfer (1869)",
+    "slug": "william-telfer",
+    "first_name": "William",
+    "middle_name": "Adam Francis",
+    "last_name": "Telfer",
+    "birth_year": 1869,
+    "death_year": null,
+    "birth_date": "15 July 1869",
+    "death_date": null,
+    "birth_year_display": "1869",
+    "death_year_display": "?",
+    "display_name": "William Adam Francis Telfer",
+    "title": "William Adam Francis Telfer (b. 1869)",
+    "lifespan": "1869 – ?",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# William Adam Francis Telfer (b. 1869)\n\n**Role:** Son of Robert Telfer and Susan Burton — born in the **German Creek** section of the Grey district, the birthplace later given as the family's South Australian base.\n\n**Born:** 15 July 1869 — German Creek, Grey district, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Robert Telfer (1835–1907)]] |\n| **Mother** | [[Susan Burton Telfer (1844–1924)]] |\n\n## Life Summary\n\nWilliam Adam Francis Telfer was born on 15 July 1869 in the **German Creek** section of South Australia's Grey district, the son of Robert Telfer (1835–1907) and Susan Burton. His birth registration corroborates the family's long-held association with the German Creek area — a detail the 1986 booklet *A Brief Account of the First Telfer Families to Settle in SA* records (p.15) as the \"German Creek section\" from which the Robert Telfer branch later moved.\n\nHe is listed as a child of Robert and Susan in *A Brief Account*; nothing further about his adult life has yet been located.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 15 Jul 1869 | Born — German Creek, Grey district, SA |\n\n## Sources\n\n- **Source:** Genealogy SA — Birth Registrations: `TELFER, William Adam Francis — 15-Jul-1869 — father Robert TELFER, mother Susan BURTON — German Creek, Grey — 75/202` — accessed 17 Sep 2026\n- **Source:** *A Brief Account of the First Telfer Families to Settle in SA* (1986), p.15 — accessed 17 Sep 2026",
+    "roles": [
+      "Son of Robert Telfer and Susan Burton — born in the **German Creek** section of the Grey district, the birthplace later given as the family's South Australian base."
+    ],
+    "tags": [
+      "family",
+      "telfer",
+      "south-australia"
+    ],
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "spouses": [
+      "janet-nichol"
+    ],
+    "siblings": [
+      "james-robert-telfer-1866"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Adam Dillon (1870)",
     "slug": "adam-dillon-1870",
     "first_name": "Adam",
@@ -7357,8 +7218,7 @@
     ],
     "parents": [
       "adam-telfer-1842",
-      "margaret-telfer-1849",
-      "robert-telfer-1835"
+      "margaret-telfer-1849"
     ],
     "children": [],
     "spouses": [
@@ -7692,9 +7552,7 @@
       "margaret-telfer-1849"
     ],
     "children": [],
-    "spouses": [
-      "alexa-telfer"
-    ],
+    "spouses": [],
     "siblings": [
       "adelaide-elsie-pearl-telfer-1889",
       "effie-olive-telfer-1886",
@@ -8744,9 +8602,7 @@
       "ruth-penna-1863"
     ],
     "children": [],
-    "spouses": [
-      "janet-nichol"
-    ],
+    "spouses": [],
     "siblings": [
       "lesley-thomas-telfer-1891"
     ],
@@ -9397,43 +9253,6 @@
     "person_photo": null
   },
   {
-    "id": "Alexa Telfer",
-    "slug": "alexa-telfer",
-    "first_name": "Alexa",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Alexa Telfer",
-    "title": "Alexa Telfer",
-    "lifespan": "? – living",
-    "generation": 5,
-    "is_living": true,
-    "body_markdown": "# Alexa Telfer\n\n**Role:** Wife of James John Drew Telfer\n**Maiden Name:** Day\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[James John Drew Telfer]] (m. 15 Oct 2005) |\n\n---",
-    "roles": [
-      "Wife of James John Drew Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "james-edgerston-telfer-1877"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Alexander Brown Thomson",
     "slug": "alexander-brown-thomson",
     "first_name": "Alexander",
@@ -9899,6 +9718,45 @@
     ],
     "children": [],
     "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Janet Nichol",
+    "slug": "janet-nichol",
+    "first_name": "Janet",
+    "middle_name": null,
+    "last_name": "Nichol",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Janet Nichol",
+    "title": "Janet Nichol",
+    "lifespan": "? – ?",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Janet Nichol",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [],
+    "children": [
+      "andrew-telfer-1798",
+      "william-telfer",
+      "william-telfer-1802"
+    ],
+    "spouses": [
+      "william-telfer",
+      "william-telfer-shepherd"
+    ],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
@@ -10510,6 +10368,88 @@
     "spouses": [],
     "siblings": [
       "james-dillon-1861"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "William Telfer (shepherd)",
+    "slug": "william-telfer-shepherd",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer (shepherd)",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "William Telfer (shepherd)",
+    "title": "William Telfer (shepherd) — Family & Biography",
+    "lifespan": "? – ?",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# William Telfer (shepherd)\n\n**Role:** Shepherd in the Cheviot Hills region, Roxburghshire, Scotland\n**Spouse:** [[Janet Nichol]]\n**Children:** Andrew Telfer (1798–1858), [[William Telfer (1802–1850)]]\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370 — references to William Telfer (shepherd) as father of the Australian Agricultural Company immigrants",
+    "roles": [
+      "Shepherd in the Cheviot Hills region, Roxburghshire, Scotland"
+    ],
+    "tags": [
+      "person",
+      "telfer",
+      "shepherd",
+      "scotland",
+      "stub"
+    ],
+    "parents": [],
+    "children": [
+      "andrew-telfer-1798",
+      "william-telfer-1802"
+    ],
+    "spouses": [
+      "janet-nichol"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Andrew Telfer (1798)",
+    "slug": "andrew-telfer-1798",
+    "first_name": "Andrew",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1798,
+    "death_year": 1858,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1798",
+    "death_year_display": "1858",
+    "display_name": "Andrew Telfer",
+    "title": "Andrew Telfer (1798–1858)",
+    "lifespan": "1798 – 1858",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Andrew Telfer (1798–1858)\n\n**Role:** NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager\n**Born:** 28 April 1798 — Oxnam Parish, Roxburghshire, Scotland\n**Died:** 11 March 1858 (aged 59) — buried Tamworth General Cemetery, New South Wales\n**Father:** [[William Telfer (shepherd)]]\n**Mother:** [[Janet Nichol]]\n**Brother:** [[William Telfer (1802–1850)]]\n**Spouse:** Mary Hayes (m. 10 May 1846, St Augustine's RC Church, Singleton NSW)\n\n## Life Summary\n\nAndrew Telfer was born 28 April 1798 in the Parish of Oxnam, Roxburghshire, Scotland, son of William Telfer, a shepherd, and Janet Nichol — four years older than his brother William (1802–1850). He signed on as an Indented Servant with the Australian Agricultural Company on 16 February 1825 and sailed to New South Wales on the \"Brothers\", arriving in Sydney Harbour two days after his brother William landed on the \"York\", both in November 1825.\n\nAndrew married **Mary Hayes** on 10 May 1846 at St. Augustine's Roman Catholic Church, Singleton, New South Wales. They had four children: William (b. 1847), Mary (b. 1849, married A.L. Bowden), Andrew (b. 1850) and Elizabeth \"Betsy\" (b. 1854, married A. Bolton). In 1851 he purchased Goonoo Goonoo Section J, Lots 3 and 12 (22 August 1851). He died on 11 March 1858 and was buried at Tamworth General Cemetery, where his headstone reads *\"Sacred to the Memory of ANDREW TELFER who departed this life March 11, 1858 ... Native of Roxburghshire, Scotland.\"*\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Self** | Andrew Telfer |\n| **Father** | [[William Telfer (shepherd)]] |\n| **Mother** | [[Janet Nichol]] |\n| **Brother** | [[William Telfer (1802–1850)]] |\n| **Sisters** | Helen Nichol (Telfer) Lillico; Mary Nichol (Telfer) Gibson |\n| **Spouse** | Mary Hayes (m. 10 May 1846, Singleton NSW) |\n| **Children** | William (b. 1847); Mary (m. A.L. Bowden, 1848–1933); Andrew (b. 1850); Elizabeth / Betsy (m. A. Bolton, 1854–1874) |\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 28 Apr 1798 | Born — Oxnam, Roxburghshire, Scotland |\n| 16 Feb 1825 | Signed AACo indenture |\n| Nov 1825 | Arrived Sydney Harbour on the \"Brothers\" |\n| 10 May 1846 | Married Mary Hayes — St Augustine's RC Church, Singleton NSW |\n| 1847–1854 | Children William, Mary, Andrew, Elizabeth born |\n| 22 Aug 1851 | Purchased Goonoo Goonoo Sec J Lots 3 & 12 |\n| 11 Mar 1858 | Died (aged 59) — buried Tamworth General Cemetery |\n\n## Sources\n\n- **Find A Grave:** [Andrew Nichol Telfer (1798–1858) — memorial 48579836](https://www.findagrave.com/memorial/48579836/andrew-telfer) — accessed 6 Sep 2026 (born 28 Apr 1798; died 11 Mar 1858; buried Tamworth General Cem; m. Mary Hayes 1846 Singleton; children William, Mary Bowden, Andrew, Elizabeth Bolton; headstone transcription)\n- **Book:** *From the Borders to the Bush* by Donald Telfer (1986), p.370 & pp.364–371 — AACo indentured-servant journey, brother of William, land purchase, adult fates\n- **ANU / Australian Agricultural Company records** — AACo indentured-servant record (brother of Warrah manager William)\n- **Geni profile (Andrew-Nichol-Telfer)** — compiled tree corroborating dates/children (secondary group)",
+    "roles": [
+      "NSW-line brother of William Telfer (1802–1850), the Australian Agricultural Company Warrah manager"
+    ],
+    "tags": [
+      "family",
+      "ancestor",
+      "telfer"
+    ],
+    "parents": [
+      "janet-nichol",
+      "william-telfer-shepherd"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "william-telfer-1802"
     ],
     "step_parents": [],
     "step_children": [],
@@ -13725,9 +13665,7 @@
       "parker",
       "correction"
     ],
-    "parents": [
-      "david-parker-1822"
-    ],
+    "parents": [],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -14311,9 +14249,7 @@
       "paynter",
       "war"
     ],
-    "parents": [
-      "richard-paynter-of-calstock"
-    ],
+    "parents": [],
     "children": [],
     "spouses": [],
     "siblings": [],
@@ -15234,7 +15170,6 @@
     ],
     "parents": [],
     "children": [
-      "james-edgerston-telfer-1877",
       "rosemary-telfer-miriam"
     ],
     "spouses": [
@@ -16434,6 +16369,41 @@
     "person_photo": "images/people/Allen_Merrick_with_David_at_Bushys_2005.jpg"
   },
   {
+    "id": "Alexa Telfer",
+    "slug": "alexa-telfer",
+    "first_name": "Alexa",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "Alexa Telfer",
+    "title": "Alexa Telfer",
+    "lifespan": "? – living",
+    "generation": 99,
+    "is_living": true,
+    "body_markdown": "# Alexa Telfer\n\n**Role:** Wife of James John Drew Telfer\n**Maiden Name:** Day\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[James John Drew Telfer]] (m. 15 Oct 2005) |\n\n---",
+    "roles": [
+      "Wife of James John Drew Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Catherine Leah",
     "slug": "catherine-leah",
     "first_name": "Catherine",
@@ -16939,7 +16909,6 @@
     ],
     "parents": [],
     "children": [
-      "adam-telfer-1842",
       "elisabeth-telfer-1806"
     ],
     "spouses": [],

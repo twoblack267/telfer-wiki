@@ -332,12 +332,26 @@ function addParentChild(parentSlug, childSlug, sourceSlug) {
   // the child is born. When both years are known and the parent is not ≥13y older,
   // reject the edge outright (catches cross-branch false parents like a wife or
   // cousin wired as a child, or a bare-name ref resolving across generations).
+  // UPPER BOUND ADDED 2026-09-22 (card tw-2026-09-22-011): the guard below only
+  // rejected a child who was NOT OLDER than the parent — it placed NO ceiling on the
+  // gap, so a man born 1774 could "father" a child born 1869 (95y) and one born 1761
+  // a child born 1869 (108y). Those exact two edges were live. Measured against the
+  // live tree: reciprocated parent->child gaps cluster at 58y and below, with clear
+  // outliers at 67/74/95/105/108. 65 sits in that gap — comfortably above every
+  // ordinary real gap while rejecting the generational collisions this card is about.
+  // NOTE: this clears ONE-WAY implausible edges. Edges where BOTH files agree on a
+  // wrong fact are a source problem and are not silently rewritten here.
+  const MAX_PARENT_CHILD_GAP = 65;
   {
     const child = slugToPerson.get(childSlug);
     const parent = slugToPerson.get(parentSlug);
     const cBy = child?.birth_year, pBy = parent?.birth_year;
     if (cBy && pBy && (cBy - pBy) < 11) {
       console.warn(`   ⚠️ rejected impossible parent edge: ${childSlug}(b${cBy}) <- ${parentSlug}(b${pBy})`);
+      return false;
+    }
+    if (cBy && pBy && (cBy - pBy) > MAX_PARENT_CHILD_GAP) {
+      console.warn(`   ⚠️ rejected implausible parent gap: ${childSlug}(b${cBy}) <- ${parentSlug}(b${pBy}) [${cBy - pBy}y]`);
       return false;
     }
   }

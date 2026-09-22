@@ -119,17 +119,39 @@ function pickBestMatch(candidates, context) {
     if (sorted.length > 0) return sorted[0].slug;
   }
   
-  // Child: must be born AFTER parent — prefer closest birth year
+  // Child: must be born AFTER parent.
   if (relation === 'child' && subjectBirth != null) {
     const valid = candidates.filter(c => {
       if (c.birth == null) return true;
       return c.birth > subjectBirth;
     });
     if (valid.length === 1) return valid[0].slug;
-    if (valid.length > 0) {
-      // Sort by proximity to subject — closest birth after parent wins
-      valid.sort((a, b) => (a.birth ?? Infinity) - (b.birth ?? Infinity));
-      return valid[0].slug;
+    if (valid.length > 1) {
+      // AMBIGUITY RULE (2026-09-22, card tw-2026-09-22-011). Previously this sorted
+      // by proximity and returned the first — a SILENT bind that fabricated edges.
+      // Observed: four people (b.1774, b.1761, b.1802, b.1856) each claimed the same
+      // 1869 William Telfer as a child, because a bare "William Telfer" ref matched
+      // several same-named people and order decided the winner.
+      // Both external reviewers (Nemotron 3 Ultra, Grok 4.20) gave the same ruling:
+      // when a ref is genuinely ambiguous, keep the RAW NAME and leave a visible gap
+      // rather than invent a relationship. A missing link can be researched later; a
+      // fabricated one silently corrupts the tree.
+      // Guard: only refuse when NO candidate is uniquely closest — i.e. two or more
+      // are equally plausible. If one is clearly nearest, that is still a judgement
+      // call the data supports, so keep the existing behaviour.
+      const dated = valid.filter(c => c.birth != null);
+      if (dated.length > 1) {
+        dated.sort((a, b) => a.birth - b.birth);
+        const uniqueNearest = dated.length === 1 ||
+          (dated[1].birth - subjectBirth) !== (dated[0].birth - subjectBirth);
+        const undatedCount = valid.length - dated.length;
+        // Refuse only when several DATED candidates survive AND undated ones cannot
+        // tip the balance — that is the genuinely-ambiguous case.
+        if (dated.length > 1 && undatedCount === 0 && !uniqueNearest) return null;
+        // Multiple dated candidates with a clearly-closest one: keep it.
+        return dated[0].slug;
+      }
+      if (dated.length === 1) return dated[0].slug;
     }
   }
   
@@ -149,8 +171,12 @@ function pickBestMatch(candidates, context) {
     if (wide.length > 0) return wide[0].slug;
   }
   
-  // Last resort: pick first
-  return candidates[0].slug;
+  // Last resort. Previously `return candidates[0].slug` — a blind pick, which is the
+  // exact silent-bind the external review flagged. Refuse to guess when several
+  // distinct people remain: leaving the raw name surfaces the gap instead of
+  // fabricating a relationship. A single candidate is still returned.
+  if (candidates.length === 1) return candidates[0].slug;
+  return null;
 }
 
 function getNamePieces(name) {
@@ -279,7 +305,49 @@ function resolveRef(name, context = null) {
     seen.add(c.slug);
     return true;
   });
-  
+
+  // ── GENERATION PREFERENCE (2026-09-22, card tw-2026-09-22-011) ─────────────
+  // Two independent models reviewing this resolver (Nemotron 3 Ultra, Grok 4.20)
+  // both recommended constraining candidates by generation, and both warned that an
+  // age check applied AFTER binding is a band-aid. This is applied to the candidate
+  // POOL, before one is chosen.
+  //
+  // DELIBERATELY A PREFERENCE, NOT A FILTER. An earlier attempt FILTERED the pool
+  // and stranded legitimate refs. A filter can only ever remove options; a
+  // preference can only reorder them. So this changes WHICH of several same-name
+  // candidates wins and can never leave a ref unresolved.
+  //
+  // NOTE: the subject's birth year arrives on `context` (see the call site:
+  // `resolveRef(ref, { subjectBirth, relation })`) — NOT as a bare `subjectBirth`.
+  // Referencing it directly threw ReferenceError and crashed the whole script on the
+  // first attempt, which corrupted people.json mid-write and produced a bogus
+  // "1725 research gaps" reading. Verify the pipeline actually RUNS, not just that
+  // it exits non-zero for a reason you assumed.
+  const subjectBirth = context?.subjectBirth ?? null;
+  const relation = context?.relation ?? null;
+  if (subjectBirth && candidates.length > 1) {
+
+    const YOUNGEST_GAP = 11;   // a parent is at least ~11y older than their child
+    // MEASURED 2026-09-22 against the live tree: the LARGEST genuine father-child
+    // birth gap in the whole dataset is 51 years (adam-murray-1728 -> john-murray-1779);
+    // median 33, n=9 known dated pairs. 60 is therefore safely above every real gap
+    // while rejecting the collision cases (67y, 95y, 108y). 70 was tried first and
+    // changed nothing because 67 fit inside it.
+    const MAX_CHILD_SPAN = 60;
+    const SIBLING_SPAN = 40;   // widest plausible sibling birth spread
+    const consistent = candidates.filter((c) => {
+      const cy = c.birth;
+      if (!cy) return true; // undated — cannot judge, always acceptable
+      if (relation === 'child') return cy > subjectBirth && (cy - subjectBirth) <= MAX_CHILD_SPAN;
+      if (relation === 'parent') return cy < subjectBirth && (subjectBirth - cy) >= YOUNGEST_GAP;
+      if (relation === 'sibling') return Math.abs(cy - subjectBirth) <= SIBLING_SPAN;
+      return true;
+    });
+    // Prefer the generation-consistent subset, but ONLY when it is non-empty.
+    // Otherwise keep the full pool — a preference must never strand a reference.
+    if (consistent.length > 0) candidates = consistent;
+  }
+
   if (candidates.length === 0) {
     // No name match — try display_name directly
     if (byDisplay.has(namePieces)) {
