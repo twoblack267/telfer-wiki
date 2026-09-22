@@ -59,6 +59,7 @@ const REF_IDX = args.indexOf('--ref');
 // knows better.
 const OLD_JSON_REL = 'src/data/people.json';
 function resolveBaseRef() {
+  if (process.env.REDIRECT_FORCE_SNAPSHOT) return '__SNAPSHOT__';
   if (REF_IDX !== -1) return args[REF_IDX + 1];
   try {
     if (process.env.REDIRECT_DIAG) console.error('[diag] resolveBaseRef: starting');
@@ -83,6 +84,12 @@ function resolveBaseRef() {
         console.log(`\u2139\ufe0f  working tree matches HEAD; comparing against previous commit ${prev.slice(0, 8)} (the last-deployed state)`);
         return prev;
       }
+      // No previous commit available — the CI runner is a shallow clone, so even
+      // fetch-depth 2 can leave nothing that CHANGED people.json in range (a commit
+      // that only touched a workflow does not count). Fall back to the COMMITTED
+      // SLUG SNAPSHOT, which carries no history requirement at all.
+      if (process.env.REDIRECT_DIAG) console.error('[diag] no previous commit; will use the committed slug snapshot');
+      return '__SNAPSHOT__';
     }
   } catch (e) {
     // git absent or shallow — fall back to HEAD, the original behaviour.
@@ -113,9 +120,21 @@ function asPeople(parsed) {
 }
 
 // --- read the OLD data straight out of git ---------------------------------
+// The snapshot path (REF === '__SNAPSHOT__') is used when git history is too shallow
+// to contain the previous people.json. scripts/slug-baseline.snapshot.json holds the
+// slug set as at the last published state, so the guard still knows which URLs were
+// live. See resolveBaseRef above.
 let oldRaw;
 try {
-  oldRaw = execFileSync('git', ['-C', REPO, 'show', `${REF}:${OLD_JSON_REL}`], { encoding: 'utf-8', maxBuffer: 1 << 28 });
+  if (REF === '__SNAPSHOT__') {
+    const snap = JSON.parse(fs.readFileSync(path.join(REPO, 'scripts/slug-baseline.snapshot.json'), 'utf-8'));
+    console.log(`\u2139\ufe0f  comparing against the committed slug snapshot (${snap.count} slugs, generated ${snap.generated_at})`);
+    // Synthesise just enough shape: the matcher only needs slug/display_name/tags/vault_file.
+    const bySlug = new Map(asPeople(JSON.parse(fs.readFileSync(NEW_JSON_ABS, 'utf-8'))).map((p) => [p.slug, p]));
+    oldRaw = JSON.stringify(snap.slugs.map((s) => bySlug.get(s) || { slug: s, display_name: s, tags: [], vault_file: null }));
+  } else {
+    oldRaw = execFileSync('git', ['-C', REPO, 'show', `${REF}:${OLD_JSON_REL}`], { encoding: 'utf-8', maxBuffer: 1 << 28 });
+  }
 } catch (e) {
   bail(`git could not read ${REF}:${OLD_JSON_REL} (${e.message.split('\n')[0]}). Refusing to guess.`);
 }
