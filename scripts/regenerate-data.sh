@@ -249,10 +249,63 @@ LINK_GATES=(
   "living-privacy:node scripts/check-living-privacy.mjs"
 )
 
+# ── STALE-DIST GUARD (added 2026-09-22, card tw-2026-09-22-010) ───────────────
+# Five of the gates above inspect the BUILT site in dist/ — they walk the rendered
+# HTML. But dist/ is only produced by `npm run build`, which this script does NOT
+# run. So they were grading whatever build happened to be on disk.
+#
+# That is wrong in BOTH directions:
+#   FALSE FAIL — a dist/ older than the data fails the chain for something that is
+#                not a defect. Observed 2026-09-22: 20 "broken links" reported
+#                against a build stamped 14:23 while the data was already correct;
+#                after `npm run build` the same guard passed 2616/2616.
+#   FALSE PASS — a dist/ that PREDATES a regression passes, so the chain reports
+#                clean while the site would ship broken. This is the dangerous one.
+#
+# A stale read must never be reported as a PASS. The dist-reading gates are
+# SKIPPED with an explicit notice instead, and the final success line says so.
+# 5th occurrence of this trap on this repo.
+#
+# COMPARISON USED: a data CONTENT HASH, not mtime. mtime cannot work here —
+# this script rewrites people.public.json a few lines above, so the data file is
+# ALWAYS newer than any existing dist/ and an mtime check skips forever (measured
+# 2026-09-22; a permanently-skipped gate is a silent hole, worse than the bug).
+# `npm run build` writes dist/.data-hash = sha256(people.public.json)[0:16].
+# The gates are safe to run only when that marker matches the file on disk now.
+DIST_GATES=" redirect-health live-slug-regression people-links links relationship-links "
+
+DIST_STALE=0
+if [[ ! -d dist ]]; then
+  DIST_STALE=1
+  echo "WARN — dist/ does not exist; the dist-reading gates will be SKIPPED."
+elif [[ ! -f dist/.data-hash ]]; then
+  DIST_STALE=1
+  echo "WARN — dist/.data-hash missing (build predates the stale-dist guard, or was not"
+  echo "       made by 'npm run build'); the dist-reading gates will be SKIPPED."
+elif [[ -f src/data/people.public.json ]]; then
+  CUR_HASH="$(shasum -a 256 src/data/people.public.json | cut -c1-16)"
+  DIST_HASH="$(tr -d '[:space:]' < dist/.data-hash)"
+  if [[ "$CUR_HASH" != "$DIST_HASH" ]]; then
+    DIST_STALE=1
+    echo "WARN — dist/ was built from DIFFERENT data (build=$DIST_HASH now=$CUR_HASH)."
+    echo "       The dist-reading gates cannot judge the current data and will be SKIPPED."
+    echo "       Run 'npm run build' first if you want them to run."
+  fi
+fi
+
 GATE_FAILED=0
+GATE_SKIPPED=0
 for entry in "${LINK_GATES[@]}"; do
   NAME="${entry%%:*}"
   CMD="${entry#*:}"
+
+  # A dist-reading gate against a stale (or absent) build must SKIP, not pass.
+  if [[ "$DIST_STALE" == "1" && "$DIST_GATES" == *" $NAME "* ]]; then
+    echo "SKIP — $NAME (stale dist; re-run after 'npm run build')"
+    GATE_SKIPPED=$((GATE_SKIPPED + 1))
+    continue
+  fi
+
   OUT="$($CMD 2>&1)" || {
     echo ""
     echo "GATE FAILED — $NAME"
@@ -274,7 +327,13 @@ if [[ "$GATE_FAILED" != "0" ]]; then
   echo "then re-run this script."
   exit 1
 fi
-echo "OK — link-integrity gate chain clean."
+if [[ "$GATE_SKIPPED" != "0" ]]; then
+  # Honest reporting: a skipped gate is NOT a passed gate. Say which, and how to run them.
+  echo "OK — link-integrity gate chain clean ($GATE_SKIPPED gate(s) SKIPPED: stale dist)."
+  echo "     Those gates inspect the BUILT site. Run 'npm run build' to check them."
+else
+  echo "OK — link-integrity gate chain clean."
+fi
 
 # ---------------------------------------------------------------------------
 # Sitemap <lastmod> map (added 2026-09-21).

@@ -91,3 +91,22 @@ for (const f of files) {
 
 console.log(`[stamp-build] BUILD_ID=${buildId} stamped onto ${stamped} HTML file(s)`);
 writeFileSync(join(DIST, '.build-id'), buildId);
+
+// ── DATA-HASH MARKER (added 2026-09-22, card tw-2026-09-22-010) ───────────────
+// Records WHICH people.public.json this dist/ was built from, so a downstream
+// guard can tell a fresh build from a stale one. mtime is NOT usable for that:
+// regenerate-data.sh rewrites people.public.json immediately before the gates
+// run, so the data file is always newer than any existing dist/ and an
+// mtime-based check skips FOREVER (measured 2026-09-22 — a permanently skipped
+// gate is a silent hole, worse than the bug it was meant to fix).
+// A content hash is stable across rewrites and answers the real question:
+// "was this dist/ built from the data that is on disk right now?"
+import { createHash } from 'node:crypto';
+const PUB = 'src/data/people.public.json';
+try {
+  const h = createHash('sha256').update(readFileSync(PUB)).digest('hex').slice(0, 16);
+  writeFileSync(join(DIST, '.data-hash'), h);
+  console.log(`[stamp-build] dist/.data-hash=${h} (people.public.json)`);
+} catch {
+  console.log('[stamp-build] WARN — could not hash people.public.json; stale-dist guard will not run');
+}
