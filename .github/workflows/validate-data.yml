@@ -37,6 +37,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # fetch-depth 2 — required by emit-git-slug-redirects.mjs, which diffs the
+          # current people.json against the PREVIOUS commit that changed it (the
+          # last-deployed state). A shallow depth-1 clone has no previous commit, so
+          # that diff is 0 -> 0 and a deliberately removed profile gets no redirect
+          # page, producing a live 404. Same fix as deploy.yml.
+          fetch-depth: 2
 
       - name: Setup Node
         uses: actions/setup-node@v4
