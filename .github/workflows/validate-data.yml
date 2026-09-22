@@ -107,6 +107,11 @@ jobs:
       - name: Build must succeed
         id: build
         shell: bash
+        env:
+          # See deploy.yml. Prints which comparison base the redirect guard chose —
+          # a 0-vanished diff in CI while the local run sees five means the base is
+          # wrong, and this says exactly which of the three cases it hit.
+          REDIRECT_DIAG: 1
         run: |
           set -o pipefail
           npm run build 2>&1 | tee "$RUNNER_TEMP/gate.log"
