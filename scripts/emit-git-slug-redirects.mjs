@@ -61,8 +61,11 @@ const OLD_JSON_REL = 'src/data/people.json';
 function resolveBaseRef() {
   if (REF_IDX !== -1) return args[REF_IDX + 1];
   try {
+    // maxBuffer: people.json is ~2 MB, larger than execFileSync's 1 MB default —
+    // without this the call throws ENOBUFS and the fallback silently never engages
+    // (measured: "spawnSync git ENOBUFS"). 64 MB is ample.
     const headJson = execFileSync('git', ['show', 'HEAD:' + OLD_JSON_REL], {
-      cwd: REPO, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'],
+      cwd: REPO, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'],
     });
     const workJson = fs.readFileSync(NEW_JSON_ABS, 'utf-8');
     if (headJson === workJson) {
@@ -70,23 +73,28 @@ function resolveBaseRef() {
       // commit that actually changed people.json.
       const prev = execFileSync(
         'git', ['log', '-2', '--format=%H', '--', OLD_JSON_REL],
-        { cwd: REPO, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] },
+        { cwd: REPO, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] },
       ).trim().split('\n')[1];
       if (prev) {
         console.log(`\u2139\ufe0f  working tree matches HEAD; comparing against previous commit ${prev.slice(0, 8)} (the last-deployed state)`);
         return prev;
       }
     }
-  } catch {
+  } catch (e) {
     // git absent or shallow — fall back to HEAD, the original behaviour.
+    // Surface the reason when DIAG is set: a silent fallback here produced a
+    // production 404 once already (buffer overflow, ENOBUFS).
+    if (process.env.REDIRECT_DIAG) console.error(`[diag] resolveBaseRef fell back to HEAD: ${e && e.message}`);
   }
   return 'HEAD';
 }
-const REF = resolveBaseRef();
-
 const NEW_JSON_ABS = path.join(REPO, OLD_JSON_REL);
 const DIST_DIR = path.join(REPO, 'dist/people');
 const LOG_ABS = path.join(REPO, 'scripts/redirect-log-git.json');
+// NOTE: resolveBaseRef() is invoked HERE, after the constants it reads are
+// initialised. Calling it at the top threw "Cannot access 'NEW_JSON_ABS' before
+// initialization" — swallowed by the catch, so the fallback silently never ran.
+const REF = resolveBaseRef();
 const ABS_BASE = 'https://telferwiki.com';
 
 function bail(msg) {
