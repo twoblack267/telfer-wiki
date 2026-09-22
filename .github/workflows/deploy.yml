@@ -25,6 +25,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # fetch-depth 2 (not the default shallow depth-1) FOR THE REDIRECT GUARD.
+          # emit-git-slug-redirects.mjs must diff the CURRENT people.json against the
+          # PREVIOUS commit that changed it — that is what the live site was last built
+          # from. With a depth-1 clone there is no previous commit, so the diff is
+          # 0 -> 0, no redirect page is emitted, and a deliberately removed profile
+          # 404s in production (measured 2026-09-22: four of five removals 404'd live
+          # while the same run emitted them locally). Two commits is all it needs.
+          fetch-depth: 2
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
