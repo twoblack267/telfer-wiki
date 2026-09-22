@@ -60,20 +60,83 @@ const orphans = people.filter(p =>
 console.log(`\n5. ORPHANS (no connections): ${orphans.length}`);
 orphans.slice(0, 20).forEach(p => console.log(`   ${p.slug} (${p.display_name || 'unnamed'})`));
 
-// 6. Children without parents linked back
+// 6. Reciprocal-link integrity, SPLIT defect vs research gap (2026-09-22).
+// Card tw-2026-09-22-011. Two independent external models (Nemotron 3 Ultra, Grok 4.20)
+// recommended this split after a blind design review; the numbers below are Skippy's own
+// live measurement, not the models' claims.
+//
+//   DEFECT — the source claims the relation, the TARGET RECORD EXISTS, and the target does
+//            not link back. Both files are in the vault and disagree. That is a data fault
+//            (most often a same-name binding: a bare/dateless record capturing a historical
+//            bare-name reference). Measured 2026-09-22: 25 (14 children, 8 siblings, 3 step).
+//
+//   GAP    — the target record is absent entirely, or has no vault file. That is an expected
+//            state during research (the other half of the link has not been written yet).
+//            Measured 2026-09-22: 0.
+//
+// NOTE: a defect is NOT currently fatal — see the summary block. Turning it into a hard build
+// failure is a deliberate policy change that needs Mark's ruling (25 pre-existing defects would
+// otherwise block every deploy). Reported loudly until then.
+const targetExists = (slug) => {
+  const t = people.find(c => c.slug === slug);
+  if (!t) return false;
+  // A record with a vault_file that is missing on disk is a GAP, not a defect. We cannot
+  // stat the vault from here, so treat "has a vault_file" as "is a maintained profile".
+  return Boolean(t.vault_file);
+};
+
+const RECIP_PAIRS = [
+  ['children', 'parents', 'child', 'parent'],
+  ['siblings', 'siblings', 'sibling', 'sibling'],
+  ['step_children', 'step_parents', 'stepchild', 'step-parent'],
+  ['step_parents', 'step_children', 'step-parent', 'stepchild'],
+];
+
+let recipDefects = 0, recipGaps = 0, recipDisputed = 0;
+const recipDefectList = [];
+const recipDisputedList = [];
+people.forEach(p => {
+  RECIP_PAIRS.forEach(([field, back, labelA, labelB]) => {
+    (p[field] || []).forEach(otherSlug => {
+      if (otherSlug === p.slug) return;
+      const other = people.find(c => c.slug === otherSlug);
+      if (!other) {
+        recipGaps++;
+        return;
+      }
+      if ((other[back] || []).includes(p.slug)) return; // reciprocal — fine
+      if (!targetExists(otherSlug)) {
+        recipGaps++;
+        return;
+      }
+      // A target whose parentage/siblinghood is DELIBERATELY held out of the arrays
+      // (parentage_status: unproven) is the dispute system working as designed: the
+      // vault asserts the link in prose, the machine arrays refuse to. Not a defect.
+      if (other.parentage_status === 'unproven' || (other.disputed_parent_refs || []).length > 0) {
+        recipDisputed++;
+        recipDisputedList.push(`${p.slug} claims ${labelA} ${otherSlug} (unproven parentage — recorded, not asserted)`);
+        return;
+      }
+      recipDefects++;
+      recipDefectList.push(`${p.slug} claims ${labelA} ${otherSlug} (${labelB} does not link back)`);
+    });
+  });
+});
+console.log(`\n6. RECIPROCAL LINKS — DEFECTS: ${recipDefects}  (target record exists and is maintained, link not mirrored AND not disputed)`);
+recipDefectList.forEach(l => console.log(`   DEFECT: ${l}`));
+console.log(`6b. RECIPROCAL LINKS — RESEARCH GAPS: ${recipGaps}  (target record absent — expected)`);
+console.log(`6d. RECIPROCAL LINKS — DISPUTED/UNPROVEN: ${recipDisputed}  (deliberate hold-out — expected)`);
+recipDisputedList.forEach(l => console.log(`   DISPUTED: ${l}`));
+
+// Legacy count kept for continuity: children->parents mismatches only.
 let childMismatch = 0;
 people.forEach(p => {
-  if (p.children) {
-    p.children.forEach(childSlug => {
-      const child = people.find(c => c.slug === childSlug);
-      if (child && (!child.parents || !child.parents.includes(p.slug))) {
-        console.log(`   CHILD MISMATCH: ${p.slug} claims child ${childSlug} but child doesn't link back`);
-        childMismatch++;
-      }
-    });
-  }
+  (p.children || []).forEach(childSlug => {
+    const child = people.find(c => c.slug === childSlug);
+    if (child && (!child.parents || !child.parents.includes(p.slug))) childMismatch++;
+  });
 });
-console.log(`\n6. CHILDREN WITHOUT RECIPROCAL PARENT LINK: ${childMismatch}`);
+console.log(`6c. (legacy) CHILDREN WITHOUT RECIPROCAL PARENT LINK: ${childMismatch}`);
 
 // 7. Suspect years
 const suspect = people.filter(p =>
@@ -151,6 +214,9 @@ const criticalIssues = dupSlugs.length + suspect.length + selfRefs + cycles + im
 // (e.g. francis-telfer-18091895) which get resolved via redirect system at build time
 console.log(`Critical issues (fail build): ${criticalIssues}`);
 console.log(`Invalid refs (warnings, handled by redirects): ${invalidRefs}`);
+console.log(`Reciprocal DEFECTS (non-fatal, reported): ${recipDefects}`);
+console.log(`Reciprocal research GAPS (expected): ${recipGaps}`);
+console.log(`Reciprocal DISPUTED/UNPROVEN hold-outs (expected): ${recipDisputed}`);
 if (criticalIssues === 0) {
   console.log(`\n✅ Data is clean for build!`);
   process.exit(0);

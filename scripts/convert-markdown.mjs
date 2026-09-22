@@ -331,6 +331,63 @@ function extractRoles(body) {
   return match ? [match[1].trim()] : [];
 }
 
+// Body-table step relationships (added 2026-09-22).
+// Some vault profiles record a step relation ONLY in the body's relationship table
+// ("| **Stepfather** | [[Allen Merrick]] |") or as a prose line ("Stepfather: [[X]]"),
+// while the frontmatter `relationships:` string omits it. Those links were previously
+// invisible to the converter, so the step relation vanished from the build.
+//
+// SCOPE: this reader ONLY ever returns step relations, and its results are only ever
+// pushed into step_parents/step_children. It can never assert a biological link, so
+// it is safe to run over prose. Wikilinks are preferred when present (they are the
+// vault's own unambiguous form); a bare "Stepfather: Name" line is also accepted.
+function extractBodyStepRelations(body) {
+  const out = { stepParents: [], stepChildren: [] };
+  if (!body) return out;
+
+  const pushWikilinks = (target, text) => {
+    const re = /\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g;
+    let m;
+    while ((m = re.exec(text)) !== null) {
+      const name = m[1].trim();
+      if (name) target.push(name);
+    }
+  };
+
+  // 1) Table rows:  | **Stepfather** | [[X]] |   or   | Stepchildren | [[A]], [[B]] |
+  const rowRe = /^\s*\|[^|\n]*\*{0,2}(Step(?:father|mother|parent|children|child|son|daughter)s?)\*{0,2}[^|\n]*\|([^\n]*)\|/gim;
+  let row;
+  while ((row = rowRe.exec(body)) !== null) {
+    const label = row[1].toLowerCase();
+    const cell = row[2];
+    if (label.startsWith('stepchild') || label.startsWith('stepson') || label.startsWith('stepdaughter')) {
+      pushWikilinks(out.stepChildren, cell);
+    } else {
+      pushWikilinks(out.stepParents, cell);
+    }
+  }
+
+  // 2) Prose lines:  Stepfather: [[X]]  /  Stepmother: X (annotation)
+  const lineRe = /^\s*(Step(?:father|mother|parent|children|child)s?)\s*:\s*(.+)$/gim;
+  let line;
+  while ((line = lineRe.exec(body)) !== null) {
+    const label = line[1].toLowerCase();
+    const rest = line[2].trim();
+    const names = [];
+    pushWikilinks(names, rest);
+    if (names.length === 0) {
+      // Bare name, possibly with a trailing "(...)" annotation — strip the annotation.
+      const bare = rest.replace(/\s*\([^)]*\)\s*$/, '').trim();
+      if (bare && /^[A-Z]/.test(bare)) names.push(bare);
+    }
+    if (label.startsWith('stepchild') || label.startsWith('stepchild')) out.stepChildren.push(...names);
+    else out.stepParents.push(...names);
+  }
+
+  const uniq = (a) => [...new Set(a)];
+  return { stepParents: uniq(out.stepParents), stepChildren: uniq(out.stepChildren) };
+}
+
 function bioSummary(bodyMarkdown) {
   if (!bodyMarkdown) return '';
   return bodyMarkdown
@@ -585,6 +642,9 @@ function main() {
     // it is correct; this is a generator/schema gap.
     const parentageUnproven = String(fm.parentage_status || '').trim().toLowerCase() === 'unproven';
 
+    const stepParents = [];
+    const stepChildren = [];
+
     for (const rel of relationships) {
       const t = rel.type.toLowerCase();
       if (['mother', 'father', 'parent'].includes(t)) {
@@ -600,6 +660,16 @@ function main() {
         siblings.push(...rel.names);
       } else if (['spouse', 'spouses', 'husband', 'wife'].includes(t)) {
         spouses.push(...rel.names);
+      } else if (['stepfather', 'stepmother', 'stepparent', 'step-parent'].includes(t)) {
+        // FIXED 2026-09-22: step-parents were UNHANDLED and silently dropped, or —
+        // where a body table supplied the link — flattened into `parents`, which
+        // asserts a biological parent that the vault explicitly denies. Rex's file
+        // literally reads "Robert is his STEPFATHER, not his father", yet the graph
+        // listed Robert as a parent. Step relationships are their own thing: keep
+        // them out of the biological arrays so nothing false is asserted.
+        stepParents.push(...rel.names);
+      } else if (['stepchildren', 'stepchild', 'step-children'].includes(t)) {
+        stepChildren.push(...rel.names);
       }
     }
 
@@ -617,6 +687,14 @@ function main() {
     if (parents.length === 0 && flatParent.length > 0) parents.push(...flatParent);
     if (spouses.length === 0 && flatSpouses.length > 0) spouses.push(...flatSpouses);
     if (children.length === 0 && flatChildren.length > 0) children.push(...flatChildren);
+
+    // Step-relationship flat fields (added 2026-09-22). Sheryle's file carries a
+    // `stepchildren:` frontmatter list; others carry no frontmatter key at all and
+    // record the relation only in the body table (read further down). Accept both,
+    // array or string. Deduplicated after all three sources have contributed.
+    const toArr = (v) => (Array.isArray(v) ? v.map(String) : (v ? [String(v)] : []));
+    stepChildren.push(...toArr(fm.stepchildren));
+    stepParents.push(...toArr(fm.stepfather), ...toArr(fm.stepmother));
     // No flat-field sibling support: sibling lists only come from the string form.
 
 
@@ -626,6 +704,27 @@ function main() {
     const bodySanitized = stripSocialMedia(stripNotesAndLinks(bodyWithImages));
     const title = fm.title || `${displayName} — Family & Biography`;
     const bodyStripped = bioSummary(bodySanitized);
+
+    // Step relations recorded only in the BODY (table row or prose line) — added
+    // 2026-09-22. Runs on the raw body so wikilinks are still intact. Pushed into
+    // the step arrays only; never into parents/children.
+    {
+      const fromBody = extractBodyStepRelations(body);
+      stepParents.push(...fromBody.stepParents);
+      stepChildren.push(...fromBody.stepChildren);
+    }
+
+    // Deduplicate the step arrays: the frontmatter string, the flat fields and the
+    // body reader can each report the same relation. One person, one entry.
+    // NOTE: dedupe into a NEW array BEFORE clearing in place. Clearing first and
+    // then spreading from the same (now empty) array silently wipes the data.
+    {
+      const dedupe = (a) => [...new Set(a.map(s => String(s).trim()).filter(Boolean))];
+      const dp = dedupe(stepParents);
+      const dc = dedupe(stepChildren);
+      stepParents.length = 0; stepParents.push(...dp);
+      stepChildren.length = 0; stepChildren.push(...dc);
+    }
 
     // Record vault filename for traceability
     const vaultFile = file;
@@ -660,6 +759,13 @@ function main() {
       children,
       siblings,
       spouses,
+      // Step relationships (added 2026-09-22). Kept SEPARATE from the biological
+      // arrays on purpose: asserting a step-parent as a biological parent is a
+      // factual error the vault explicitly contradicts, and silently dropping the
+      // link loses family truth. Names here are resolved to slugs downstream
+      // (resolve-refs.mjs) and rendered in their own labelled section.
+      step_parents: stepParents,
+      step_children: stepChildren,
       is_living: isLiving,
       lifespan,
       related_trees: fm.related_trees || ['telfer-tree'],
@@ -819,6 +925,15 @@ function main() {
         existing.children = children.length > 0 ? children : existing.children;
         existing.siblings = siblings.length > 0 ? siblings : existing.siblings;
         existing.spouses = spouses.length > 0 ? spouses : existing.spouses;
+      }
+      // Step arrays carry the same trust rule as the biological ones: a vault file
+      // that declares relationships is authoritative for what it omits (2026-09-22).
+      if (fm.relationships && typeof fm.relationships === 'string') {
+        existing.step_parents = stepParents;
+        existing.step_children = stepChildren;
+      } else {
+        existing.step_parents = stepParents.length > 0 ? stepParents : (existing.step_parents || []);
+        existing.step_children = stepChildren.length > 0 ? stepChildren : (existing.step_children || []);
       }
       existing.related_trees = entry.related_trees;
       // Card tw-2026-09-13-031: this merge is an ALLOWLIST of copied fields, so a

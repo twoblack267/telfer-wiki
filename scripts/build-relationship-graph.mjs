@@ -71,7 +71,16 @@ for (const person of people) {
   const name = person.id.toLowerCase(); // id has clean name
   if (!nameIndex.has(name)) nameIndex.set(name, person.slug);
   // Also try first + last name
-  const parts = person.id.split(' ');
+  // FIXED 2026-09-22 ("robert (1850)" key): person.id carries the year suffix —
+  // "Robert Dunlop Lawrie (1850)" — so parts[parts.length - 1] was the YEAR, not
+  // the surname. The dated ancestor therefore registered under the garbage key
+  // "robert (1850)" and NEVER claimed its own bare name "robert lawrie". The
+  // year-less modern namesake was left as the sole claimant, so every bare
+  // reference ("Robert Dunlop Lawrie" on Caroline's file, his own Self: line)
+  // fuzzy-matched the WRONG generation. Strip the trailing "(...)" before
+  // splitting so a dated person registers for its real first+last key too.
+  const idBare = String(person.id || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
+  const parts = idBare.split(' ');
   if (parts.length >= 2) {
     const fn = parts[0].toLowerCase();
     const ln = parts[parts.length - 1].toLowerCase();
@@ -213,12 +222,18 @@ const parentEdges = new Map();    // childSlug -> Set(parentSlug)
 const childEdges = new Map();     // parentSlug -> Set(childSlug)
 const spouseEdges = new Map();    // slug -> Set(spouseSlug)
 const siblingEdges = new Map();   // slug -> Set(siblingSlug)
+// Step relationships (added 2026-09-22) — deliberately SEPARATE from the biological
+// sets so a step-parent/stepchild can never be asserted as a blood relation.
+const stepParentEdges = new Map(); // slug(child) -> Set(stepParentSlug)
+const stepChildEdges = new Map();  // slug(stepParent) -> Set(stepChildSlug)
 
 for (const person of people) {
   const slug = person.slug;
   parentEdges.set(slug, new Set());
   childEdges.set(slug, new Set());
   spouseEdges.set(slug, new Set());
+  stepParentEdges.set(slug, new Set());
+  stepChildEdges.set(slug, new Set());
   siblingEdges.set(slug, new Set());
 }
 
@@ -391,6 +406,24 @@ for (const person of people) {
         case 'Spouse':
         case 'Wife':
         case 'Husband':
+          // GUARD (2026-09-22): spouse plausibility. The parent-edge guard has a
+          // biology check; spouse edges had NONE, so a fuzzy first+last collision
+          // married across generations. Observed: Joseph Farrow (1814–1899)'s vault
+          // ref "Elizabeth Float Smith (m. 1870)" resolved to Elizabeth Anne Smith
+          // (b. 1878) — a 64-year age gap — because both fuzzy-key to
+          // "elizabeth smith". Two people cannot marry across such a gap; treat it
+          // as a name collision and reject the edge rather than assert a false
+          // marriage. Threshold is deliberately generous (a real marriage can span
+          // ~40y) so only impossible pairings are dropped.
+          {
+            const a = slugToPerson.get(sourceSlug);
+            const b = slugToPerson.get(targetSlug);
+            const ay = a?.birth_year, by = b?.birth_year;
+            if (ay && by && Math.abs(ay - by) > 55) {
+              console.warn(`   ⚠️ rejected implausible spouse edge: ${sourceSlug}(b${ay}) <-> ${targetSlug}(b${by})`);
+              break;
+            }
+          }
           spouseEdges.get(sourceSlug).add(targetSlug);
           spouseEdges.get(targetSlug).add(sourceSlug);
           resolved++;
@@ -421,8 +454,23 @@ for (const person of people) {
           break;
 
         case 'Stepchildren':
-          childEdges.get(sourceSlug).add(targetSlug);
-          parentEdges.get(targetSlug).add(sourceSlug);
+          // FIXED 2026-09-22: this used to add a full parent->child edge, identical
+          // to `Children`, so a stepchild rendered as a BIOLOGICAL child. Rex's vault
+          // file states outright "Robert is his STEPFATHER, not his father" while the
+          // graph asserted the opposite. Step edges are tracked separately and never
+          // enter childEdges/parentEdges.
+          stepChildEdges.get(sourceSlug).add(targetSlug);
+          stepParentEdges.get(targetSlug).add(sourceSlug);
+          resolved++;
+          break;
+
+        case 'Stepfather':
+        case 'Stepmother':
+        case 'Stepparent':
+        case 'Step-parent':
+          // Previously UNHANDLED — fell to `default:` and was silently dropped.
+          stepParentEdges.get(sourceSlug).add(targetSlug);
+          stepChildEdges.get(targetSlug).add(sourceSlug);
           resolved++;
           break;
 
@@ -448,6 +496,15 @@ for (const person of people) {
   }
   for (const spouseSlug of person.spouses || []) {
     if (slugToPerson.has(spouseSlug)) {
+      // Same spouse-plausibility guard as the Spouse case above: a stored array
+      // can carry a cross-generation collision just as a vault ref can.
+      const a = slugToPerson.get(sourceSlug);
+      const b = slugToPerson.get(spouseSlug);
+      const ay = a?.birth_year, by = b?.birth_year;
+      if (ay && by && Math.abs(ay - by) > 55) {
+        console.warn(`   ⚠️ rejected implausible spouse edge (stored): ${sourceSlug}(b${ay}) <-> ${spouseSlug}(b${by})`);
+        continue;
+      }
       spouseEdges.get(sourceSlug).add(spouseSlug);
       spouseEdges.get(spouseSlug).add(sourceSlug);
       resolved++;
@@ -459,6 +516,14 @@ for (const person of people) {
       siblingEdges.get(siblingSlug).add(sourceSlug);
       resolved++;
     }
+  }
+  // Stored step arrays (added 2026-09-22) — same origin as the vault refs above,
+  // kept out of the biological edge sets.
+  for (const sp of person.step_parents || []) {
+    if (slugToPerson.has(sp)) { stepParentEdges.get(sourceSlug).add(sp); resolved++; }
+  }
+  for (const sc of person.step_children || []) {
+    if (slugToPerson.has(sc)) { stepChildEdges.get(sourceSlug).add(sc); resolved++; }
   }
 }
 
@@ -526,6 +591,20 @@ for (const person of people) {
   person.children = Array.from(childEdges.get(slug) || []).sort();
   person.spouses = Array.from(spouseEdges.get(slug) || []).sort();
   person.siblings = Array.from(siblingEdges.get(slug) || []).sort();
+  // Step arrays (added 2026-09-22). Emitted alongside the biological ones so the
+  // renderer can show a labelled "Step-parent(s)"/"Stepchildren" section. A slug
+  // must never appear in BOTH a biological and a step array — Rex's page claimed
+  // Robert as a parent while his own file says Robert is his STEPFATHER, not his
+  // father. If a person is recorded as a step relation, that wins.
+  const stepP = Array.from(stepParentEdges.get(slug) || []).sort();
+  const stepC = Array.from(stepChildEdges.get(slug) || []).sort();
+  if (stepP.length || stepC.length) {
+    const stepSet = new Set([...stepP, ...stepC]);
+    person.parents = person.parents.filter(s => !stepSet.has(s));
+    person.children = person.children.filter(s => !stepSet.has(s));
+  }
+  person.step_parents = stepP;
+  person.step_children = stepC;
 }
 
 // ─── Build Graph Output ──────────────────────────────────────────────────────
@@ -535,7 +614,9 @@ const graph = {
   edges: {
     parentOf: [],
     spouseOf: [],
-    siblingOf: []
+    siblingOf: [],
+    stepParentOf: [],
+    stepChildOf: []
   }
 };
 
@@ -552,6 +633,14 @@ for (const person of people) {
     if (person.slug < sibling) {
       graph.edges.siblingOf.push({ from: person.slug, to: sibling });
     }
+  }
+  // Step edges (added 2026-09-22). Emitted separately and NEVER merged into
+  // parentOf, so a consumer cannot mistake a step relation for a blood relation.
+  for (const sp of person.step_parents || []) {
+    graph.edges.stepParentOf.push({ from: sp, to: person.slug });
+  }
+  for (const sc of person.step_children || []) {
+    graph.edges.stepChildOf.push({ from: person.slug, to: sc });
   }
 }
 

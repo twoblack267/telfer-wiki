@@ -156,6 +156,10 @@ const PUBLIC_FIELDS = [
   'children',
   'spouses',
   'siblings',
+  // Step relationships (added 2026-09-22). Rendered in their own labelled section
+  // so a step-parent/stepchild is never presented as a blood relation.
+  'step_parents',
+  'step_children',
   'images',
   'person_photo',
 ];
@@ -720,6 +724,10 @@ for (const person of people) {
   publicPerson.children = (person.children || []).map(resolveToVisible).filter(Boolean);
   publicPerson.spouses = (person.spouses || []).map(resolveToVisible).filter(Boolean);
   publicPerson.siblings = (person.siblings || []).map(resolveToVisible).filter(Boolean);
+  // Step relations (added 2026-09-22) — same visibility rule as the biological
+  // arrays: a step relation to a non-visible person is dropped, never leaked.
+  publicPerson.step_parents = (person.step_parents || []).map(resolveToVisible).filter(Boolean);
+  publicPerson.step_children = (person.step_children || []).map(resolveToVisible).filter(Boolean);
 
   // ── Age gate (owner decision, Aug 2026): UNDER-18s get school/occupation/
   //    location detail stripped from their public bio. Gate recomputes every

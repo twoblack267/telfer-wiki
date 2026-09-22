@@ -68,7 +68,14 @@ people.forEach(p => {
 
 function stripLifespan(name) {
   // Matches (1761–1845), (1761–living), (1761–?), (1840-1913), (~1731–?)
-  return name.replace(/\s*\([~]?\d{4}\s*[–-]\s*[\d?living-]+\s*\)\s*$/, '').trim();
+  // FIXED 2026-09-22: also strip non-lifespan annotations such as "(fl. 1998)"
+  // — the vault's form for a living person with no birth year. Without this the
+  // ref kept its parenthetical, matched no record, fell through to a bare/fuzzy
+  // match, and captured a same-named 19th-century namesake.
+  const lifespanned = name.replace(/\s*\([~]?\d{4}\s*[–-]\s*[\d?living-]+\s*\)\s*$/, '').trim();
+  if (lifespanned !== name.trim()) return lifespanned;
+  // "(fl. 1998)", "(fl 1998)", "(--? d. 1998)"
+  return name.replace(/\s*\(fl\.?\s*\d{3,4}\)\s*$/i, '').trim();
 }
 
 function extractYears(name) {
@@ -222,6 +229,35 @@ function resolveRef(name, context = null) {
   
   // 3. Collect all candidates (display + name-based) for context-aware resolution
   const namePieces = getNamePieces(name);
+
+  // FIXED 2026-09-22 ("fl." annotation shadow): the vault disambiguates a living
+  // person who has no birth year by writing "(fl. 1998)" — e.g. Amanda's father
+  // "Robert Lawrie (fl. 1998)". extractYears() cannot parse a floruit, so `years`
+  // is null, the exact-birth disambiguation is skipped, and a same-named
+  // 19th-century namesake (Robert Dunlop Lawrie (1850–1917)) wins on insertion
+  // order. Amanda ended up the 1850 man's daughter; Susan's husband "Rob Lawrie"
+  // matched nothing at all. When the ref carried an annotation that is NOT a
+  // lifespan, the bare name must beat every namesake — the annotation exists
+  // precisely to mark the person who has no dates.
+  const hadAnnotation = stripAnnotation(clean) !== clean;
+  if (hadAnnotation && !extractYears(clean)) {
+    const bareName = lowerTrim(stripAnnotation(stripLifespan(clean)));
+    const bareExact = [];
+    if (byDisplay.has(bareName)) bareExact.push(byDisplay.get(bareName));
+    if (byFullName.has(bareName)) byFullName.get(bareName).forEach(c => bareExact.push(c.slug));
+    if (byName.has(bareName)) byName.get(bareName).forEach(c => bareExact.push(c.slug));
+    const distinct = [...new Set(bareExact)];
+    // Exactly one person → unambiguous.
+    if (distinct.length === 1) return distinct[0];
+    // Several namesakes → the annotation is the tie-breaker. "(fl. 1998)" marks the
+    // dateless person, so a candidate with NO birth year is the one meant; a
+    // namesake carrying a lifespan is a different generation and must not win.
+    if (distinct.length > 1) {
+      const dateless = distinct.filter(s => byBirthYear.get(s) == null);
+      if (dateless.length === 1) return dateless[0];
+    }
+  }
+
   let candidates = [];
   
   // Always collect byName candidates (first + last name)
@@ -349,7 +385,10 @@ function resolveRef(name, context = null) {
 // ── Main ─────────────────────────────────────────
 
 let totalFixed = 0;
-const fields = ['parents', 'children', 'spouses'];
+// Step fields carry the same raw-name→slug resolution contract as the biological
+// ones (added 2026-09-22). They resolve as ordinary parent/child relations; only
+// the EDGE they produce differs, and that is decided in build-relationship-graph.
+const fields = ['parents', 'children', 'spouses', 'step_parents', 'step_children'];
 const changes = [];
 const selfRefs = [];
 
@@ -359,7 +398,9 @@ people.forEach(p => {
   fields.forEach(field => {
     if (!p[field] || !Array.isArray(p[field])) return;
     
-    const relation = field === 'parents' ? 'parent' : field === 'children' ? 'child' : 'spouse';
+    const relation = field === 'parents' || field === 'step_parents' ? 'parent'
+                   : field === 'children' || field === 'step_children' ? 'child'
+                   : 'spouse';
     
     const newRefs = p[field].map(ref => {
       if (slugSet.has(ref)) return ref;

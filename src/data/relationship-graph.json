@@ -113,7 +113,7 @@
     {
       "slug": "amy-telfer",
       "id": "Amy Nicole Telfer",
-      "generation": 5
+      "generation": 8
     },
     {
       "slug": "andrew-kelly-parker-1883",
@@ -277,7 +277,7 @@
     },
     {
       "slug": "daryll-telfer",
-      "id": "Daryll William Telfer",
+      "id": "Daryll William Telfer (1951)",
       "generation": 7
     },
     {
@@ -1142,7 +1142,7 @@
     },
     {
       "slug": "kristin-stefanoff",
-      "id": "Kristin Stefanoff",
+      "id": "Kristin Holly Stefanoff",
       "generation": 8
     },
     {
@@ -1596,11 +1596,6 @@
       "generation": 4
     },
     {
-      "slug": "susan-lawrie",
-      "id": "Susan Shirley Lawrie",
-      "generation": 7
-    },
-    {
       "slug": "susan-telfer-1871",
       "id": "Susan Telfer (1871)",
       "generation": 5
@@ -1829,6 +1824,56 @@
       "slug": "alan-downs",
       "id": "Alan Theodore Downs (1905)",
       "generation": 7
+    },
+    {
+      "slug": "alexa-telfer",
+      "id": "Alexa Telfer",
+      "generation": 5
+    },
+    {
+      "slug": "amanda-lawrie",
+      "id": "Amanda Nicolle Lawrie",
+      "generation": 8
+    },
+    {
+      "slug": "dale-telfer",
+      "id": "Dale Helen Telfer (1959)",
+      "generation": 7
+    },
+    {
+      "slug": "rebecca-telfer",
+      "id": "Rebecca Telfer",
+      "generation": 8
+    },
+    {
+      "slug": "rex-lawrie",
+      "id": "Rex Murray Telfer Lawrie",
+      "generation": 8
+    },
+    {
+      "slug": "robert-lawrie",
+      "id": "Robert Lawrie",
+      "generation": 7
+    },
+    {
+      "slug": "rosemary-telfer-miriam",
+      "id": "Rosemary Miriam Telfer (1976)",
+      "generation": 8
+    },
+    {
+      "slug": "sophia-telfer",
+      "id": "Sophia Telfer",
+      "generation": 8
+    },
+    {
+      "slug": "susan-lawrie",
+      "id": "Susan Shirley Lawrie (1967)",
+      "generation": 7
+    },
+    {
+      "slug": "rosemary-curtis",
+      "id": "Rosemary Ruth Curtis",
+      "generation": 7
     }
   ],
   "edges": {
@@ -1940,10 +1985,6 @@
       {
         "from": "elizabeth-hannah-telfer-1836",
         "to": "amy-farrow-stribling-1868"
-      },
-      {
-        "from": "allen-merrick",
-        "to": "amy-telfer"
       },
       {
         "from": "penny-telfer-1960",
@@ -3178,6 +3219,10 @@
         "to": "kenneth-telfer-1906"
       },
       {
+        "from": "dale-telfer",
+        "to": "kristin-stefanoff"
+      },
+      {
         "from": "grantley-telfer",
         "to": "kristin-stefanoff"
       },
@@ -3490,10 +3535,6 @@
         "to": "peter-telfer"
       },
       {
-        "from": "john-telfer-robert",
-        "to": "peter-telfer"
-      },
-      {
         "from": "sophia-baker-1829",
         "to": "phineas-baker-1870"
       },
@@ -3586,10 +3627,6 @@
         "to": "rodger-peryman-wishart-1920"
       },
       {
-        "from": "amy-telfer",
-        "to": "ruth-telfer-1931"
-      },
-      {
         "from": "amy-telfer-1884",
         "to": "ruth-telfer-1931"
       },
@@ -3648,14 +3685,6 @@
       {
         "from": "william-humphrey-parker-1850",
         "to": "stella-winifred-parker-1899"
-      },
-      {
-        "from": "murray-telfer-1924",
-        "to": "susan-lawrie"
-      },
-      {
-        "from": "shirley-telfer-1929",
-        "to": "susan-lawrie"
       },
       {
         "from": "john-telfer-1840",
@@ -3904,6 +3933,50 @@
       {
         "from": "richard-paynter-1838",
         "to": "thirza-paynter"
+      },
+      {
+        "from": "robert-lawrie",
+        "to": "amanda-lawrie"
+      },
+      {
+        "from": "susan-lawrie",
+        "to": "amanda-lawrie"
+      },
+      {
+        "from": "john-telfer-robert",
+        "to": "rebecca-telfer"
+      },
+      {
+        "from": "robyn-telfer",
+        "to": "rebecca-telfer"
+      },
+      {
+        "from": "susan-lawrie",
+        "to": "rex-lawrie"
+      },
+      {
+        "from": "daryll-telfer",
+        "to": "rosemary-telfer-miriam"
+      },
+      {
+        "from": "rosemary-curtis",
+        "to": "rosemary-telfer-miriam"
+      },
+      {
+        "from": "john-telfer-robert",
+        "to": "sophia-telfer"
+      },
+      {
+        "from": "robyn-telfer",
+        "to": "sophia-telfer"
+      },
+      {
+        "from": "murray-telfer-1924",
+        "to": "susan-lawrie"
+      },
+      {
+        "from": "shirley-telfer-1929",
+        "to": "susan-lawrie"
       }
     ],
     "spouseOf": [
@@ -3948,10 +4021,6 @@
         "to": "george-sidney-gilbert-stribling-1864"
       },
       {
-        "from": "amy-telfer",
-        "to": "francis-telfer-1875"
-      },
-      {
         "from": "ann-taylor-1856",
         "to": "john-telfer-1847"
       },
@@ -3994,6 +4063,10 @@
       {
         "from": "daisy-vera-latter-1886",
         "to": "harold-peryman-wishart-1888"
+      },
+      {
+        "from": "daryll-telfer",
+        "to": "rosemary-curtis"
       },
       {
         "from": "david-parker-1822",
@@ -4242,6 +4315,18 @@
       {
         "from": "nita-mutton",
         "to": "robert-campbell"
+      },
+      {
+        "from": "alexa-telfer",
+        "to": "james-edgerston-telfer-1877"
+      },
+      {
+        "from": "dale-telfer",
+        "to": "grantley-telfer"
+      },
+      {
+        "from": "robert-lawrie",
+        "to": "susan-lawrie"
       }
     ],
     "siblingOf": [
@@ -4559,10 +4644,6 @@
       },
       {
         "from": "amy-telfer",
-        "to": "amy-telfer-1884"
-      },
-      {
-        "from": "amy-telfer",
         "to": "david-telfer-merrick-2000"
       },
       {
@@ -4616,6 +4697,14 @@
       {
         "from": "angela-telfer",
         "to": "peter-telfer"
+      },
+      {
+        "from": "angela-telfer",
+        "to": "rebecca-telfer"
+      },
+      {
+        "from": "angela-telfer",
+        "to": "sophia-telfer"
       },
       {
         "from": "avis-muriel-nicholls-1918",
@@ -4688,6 +4777,14 @@
       {
         "from": "carissa-telfer",
         "to": "peter-telfer"
+      },
+      {
+        "from": "carissa-telfer",
+        "to": "rebecca-telfer"
+      },
+      {
+        "from": "carissa-telfer",
+        "to": "sophia-telfer"
       },
       {
         "from": "caroline-telfer-1842",
@@ -4931,6 +5028,10 @@
       },
       {
         "from": "clarice-may-telfer-1911",
+        "to": "murray-telfer-1924"
+      },
+      {
+        "from": "clarice-may-telfer-1911",
         "to": "reginald-masters-telfer-1922"
       },
       {
@@ -4988,6 +5089,10 @@
       {
         "from": "daryll-telfer",
         "to": "timothy-telfer-1959"
+      },
+      {
+        "from": "david-telfer-merrick-2000",
+        "to": "mark-telfer-1986"
       },
       {
         "from": "dinah-flavel-paynter-1869",
@@ -5152,6 +5257,10 @@
       {
         "from": "edwin-telfer-1921",
         "to": "gladys-merle-telfer-1917"
+      },
+      {
+        "from": "edwin-telfer-1921",
+        "to": "murray-telfer-1924"
       },
       {
         "from": "edwin-telfer-1921",
@@ -5720,6 +5829,10 @@
       {
         "from": "francis-telfer-1910",
         "to": "gladys-merle-telfer-1917"
+      },
+      {
+        "from": "francis-telfer-1910",
+        "to": "murray-telfer-1924"
       },
       {
         "from": "francis-telfer-1910",
@@ -6647,6 +6760,10 @@
       },
       {
         "from": "levi-telfer-2017",
+        "to": "mitchell-telfer-2008"
+      },
+      {
+        "from": "levi-telfer-2017",
         "to": "zabella-telfer-2019"
       },
       {
@@ -6798,8 +6915,28 @@
         "to": "william-henry-parker-1893"
       },
       {
+        "from": "mitchell-telfer-2008",
+        "to": "zabella-telfer-2019"
+      },
+      {
+        "from": "murray-telfer-1924",
+        "to": "reginald-masters-telfer-1922"
+      },
+      {
+        "from": "murray-telfer-1924",
+        "to": "ruth-telfer-1931"
+      },
+      {
         "from": "murray-telfer-1920",
         "to": "rita-telfer-1909"
+      },
+      {
+        "from": "peter-telfer",
+        "to": "rebecca-telfer"
+      },
+      {
+        "from": "peter-telfer",
+        "to": "sophia-telfer"
       },
       {
         "from": "phineas-baker-1870",
@@ -6852,10 +6989,6 @@
       {
         "from": "stella-winifred-parker-1899",
         "to": "william-henry-parker-1893"
-      },
-      {
-        "from": "susan-lawrie",
-        "to": "timothy-telfer-1959"
       },
       {
         "from": "sydney-parker-1922",
@@ -6932,6 +7065,86 @@
       {
         "from": "thirza-paynter",
         "to": "thomas-paynter-1859"
+      },
+      {
+        "from": "rebecca-telfer",
+        "to": "sophia-telfer"
+      },
+      {
+        "from": "susan-lawrie",
+        "to": "timothy-telfer-1959"
+      }
+    ],
+    "stepParentOf": [
+      {
+        "from": "timothy-telfer-1959",
+        "to": "aaron-ivory-1989"
+      },
+      {
+        "from": "allen-merrick",
+        "to": "amy-telfer"
+      },
+      {
+        "from": "sheryle-telfer-1961",
+        "to": "amy-telfer"
+      },
+      {
+        "from": "dinah-flavel-1821",
+        "to": "james-telfer-1832"
+      },
+      {
+        "from": "margaret-telfer-1810",
+        "to": "james-telfer-1832"
+      },
+      {
+        "from": "timothy-telfer-1959",
+        "to": "jared-ivory-1993"
+      },
+      {
+        "from": "timothy-telfer-1959",
+        "to": "joel-ivory-1986"
+      },
+      {
+        "from": "timothy-telfer-1959",
+        "to": "lauren-ivory-1994"
+      },
+      {
+        "from": "allen-merrick",
+        "to": "mark-telfer-1986"
+      },
+      {
+        "from": "robert-lawrie",
+        "to": "rex-lawrie"
+      }
+    ],
+    "stepChildOf": [
+      {
+        "from": "allen-merrick",
+        "to": "amy-telfer"
+      },
+      {
+        "from": "allen-merrick",
+        "to": "mark-telfer-1986"
+      },
+      {
+        "from": "timothy-telfer-1959",
+        "to": "aaron-ivory-1989"
+      },
+      {
+        "from": "timothy-telfer-1959",
+        "to": "jared-ivory-1993"
+      },
+      {
+        "from": "timothy-telfer-1959",
+        "to": "joel-ivory-1986"
+      },
+      {
+        "from": "timothy-telfer-1959",
+        "to": "lauren-ivory-1994"
+      },
+      {
+        "from": "robert-lawrie",
+        "to": "rex-lawrie"
       }
     ]
   }
