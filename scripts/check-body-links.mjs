@@ -435,7 +435,17 @@ function fireCard(id, title, description, suggestedAction, severity) {
   // Surface on the real board too (board.yaml is what the 7am Morning Can Do Board Check reads —
   // check-body-links cards were reaching only tasks/ and staying invisible until their dead-link
   // tickets were surfaced manually). Idempotent: no-op if this id is already on the board.
-  try { execSync(`python3 "${process.env.HOME}/.hermes/scripts/sync-task-cards-to-board.py" --id ${id}`, { cwd: REPO, stdio: 'ignore' }); } catch (_) {}
+  // LOUD (Skippy, 2026-09-23): this call used to swallow every failure — including the
+  // sync helper CRASHING, which left cards filed in tasks/ but invisible on board.yaml.
+  // That is exactly what happened to card phantom-living-20260922 (filed 22 Sep, never
+  // surfaced). A card that is not on the board is work nobody can see, so a failure here
+  // must SCREAM, not vanish.
+  try {
+    execSync(`python3 "${process.env.HOME}/.hermes/scripts/sync-task-cards-to-board.py" --id ${id}`, { cwd: REPO, stdio: 'pipe' });
+  } catch (e) {
+    console.error(`🔴 BOARD SURFACE FAILED for ${id} — the card is in tasks/ but NOT on the board (invisible to the 7am check).`);
+    console.error(`   ${String((e && (e.stderr || e.message)) || e).trim().slice(0, 500)}`);
+  }
   fired.push(id);
 }
 

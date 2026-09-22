@@ -160,7 +160,14 @@ suggested_action: >
   writeFileSync(taskFile, taskYaml);
   // Surface on the real board too (board.yaml is what the 7am Morning Can Do Board Check reads —
   // a deceased-flip card in tasks/ alone is invisible to it). Idempotent.
-  try { execSync(`python3 "${process.env.HOME}/.hermes/scripts/sync-task-cards-to-board.py" --id ${cardId}`, { cwd: REPO, stdio: 'ignore' }); } catch (_) {}
+  // LOUD (Skippy, 2026-09-23): was `catch (_) {}` — a sync crash left cards in tasks/ but
+  // INVISIBLE on board.yaml (card phantom-living-20260922, 22 Sep). Failure must be seen.
+  try {
+    execSync(`python3 "${process.env.HOME}/.hermes/scripts/sync-task-cards-to-board.py" --id ${cardId}`, { cwd: REPO, stdio: 'pipe' });
+  } catch (e) {
+    console.error(`🔴 BOARD SURFACE FAILED for ${cardId} — card is in tasks/ but NOT on the board.`);
+    console.error(`   ${String((e && (e.stderr || e.message)) || e).trim().slice(0, 500)}`);
+  }
   fired.push({ cardId, ...f });
 }
 
