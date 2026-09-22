@@ -412,6 +412,54 @@ function redactLivingAddresses(text) {
 }
 
 /**
+ * PUBLIC-FIGURE EXCEPTION (owner decision, 22 Sep 2026).
+ *
+ * The working rules allow a LIVING person to be named on the site for the
+ * public work they have genuinely done — the precedent is Graham Carslake,
+ * named as the author of a family-history work. Mark's ruling of 22 Sep 2026
+ * extended this to a public ministry: Daryll William Telfer's church role.
+ *
+ * This is deliberately NOT a general loosening. It works like this:
+ *   - The exception is opt-in PER PERSON, by slug, in the list below. Nothing
+ *     applies automatically and no heuristic decides it.
+ *   - It preserves ONE section and one only: a section whose heading is
+ *     literally `## Public Role`. Every other section is still dropped by
+ *     DROP_SECTIONS exactly as before.
+ *   - Everything else about that person is still stripped — residence,
+ *     schooling, personal stories, notes, sources, the lot. Adding a person to
+ *     this list cannot leak any of it, because the code only ever copies the
+ *     `## Public Role` section.
+ *   - Required fields inside that section are checked, so a section that
+ *     accidentally carries a residence or an employer field is refused rather
+ *     than published.
+ *
+ * To use the exception for someone new, the family decision must be recorded
+ * in the vault's Corrections Log first (the rules require that for every use),
+ * and only then is the slug added here.
+ */
+const PUBLIC_FIGURE_SLUGS = new Set([
+  'daryll-telfer',   // Public ministry — family decision 2026-09-22, corrected in Corrections Log.
+]);
+
+const PUBLIC_ROLE_HEADING = /^\s*##\s+Public Role\s*$/i;
+
+/**
+ * Extract the `## Public Role` section from a living person's body, if present.
+ * Returns the section text (heading included) or null. Nothing else is read.
+ */
+function extractPublicRoleSection(text) {
+  if (!text) return null;
+  const lines = text.split('\n');
+  const start = lines.findIndex((l) => PUBLIC_ROLE_HEADING.test(l));
+  if (start === -1) return null;
+  let end = lines.length;
+  for (let i = start + 1; i < lines.length; i++) {
+    if (/^##\s/.test(lines[i])) { end = i; break; }
+  }
+  return lines.slice(start, end).join('\n').trim();
+}
+
+/**
  * Strip private/personal detail from a LIVING person's public bio down to the
  * owner-approved keep-list (owner decision, Mark, Aug 2026):
  *   KEEP   — full name, full DOB, family relationships (parents/siblings/
@@ -435,13 +483,55 @@ function redactLivingAddresses(text) {
  * table + `## Marriage` sections (spouse row, "m. date", ceremony) are
  * untouched. Family-table rows are pipe-delimited — never matched by the
  * dash-bullet field drops.
+ *
+ * SLUG: when the slug is on PUBLIC_FIGURE_SLUGS, a `## Public Role` section is
+ * preserved (see the block-comment above). Everything else is unchanged.
  */
-function stripLivingPrivateContent(text) {
+function stripLivingPrivateContent(text, slug) {
   if (!text) return text;
+
+  const allowPublicRole =
+    Boolean(slug) && PUBLIC_FIGURE_SLUGS.has(String(slug).trim());
 
   // Sections dropped wholesale for living people (narrative/residence/
   // occupation/research-provenance).
-  const DROP_SECTIONS = /^\s*##\s*(Life Summary|Stories\s*(&|and)\s*Memories|Memories|Notable Event|Family Stories|Timeline|Timeline\s*\([^)]*\)|Notes?|Residence|Residences|Residency|Occupations?|Qualifications?|Career|Employment|Work History|Education|Diagnoses?|Health|Aliases?|Also Known As|Source|Sources|Evidence|Research Notes|Research Notes[\s&]*Decisions|Research Needed|Research\s+Required|To Do|TODO|Leads?|Tracking|Facebook Lead|Profile URL|Citations?|References)\b/i;
+  const DROP_SECTIONS = /^\s*##\s*(Life Summary|Stories\s*(&|and)\s*Memories|Memories|Notable Event|Family Stories|Timeline|Timeline\s*\([^)]*\)|Notes?|Residence|Residences|Residency|Occupations?|Qualifications?|Career|Employment|Work History|Ministry|Education|Diagnoses?|Health|Aliases?|Also Known As|Source|Sources|Evidence|Research Notes|Research Notes[\s&]*Decisions|Research Needed|Research\s+Required|To Do|TODO|Leads?|Tracking|Facebook Lead|Profile URL|Citations?|References|Public Role)\b/i;
+
+  // ── POSITIVE keep-list (fix, 22 Sep 2026) ───────────────────────────────
+  // The guard used to be a BLOCK-list: anything not named in DROP_SECTIONS
+  // passed straight through. That is backwards for a privacy control — a
+  // future author inventing a new heading (say "## Ministry") would publish
+  // silently. It did exactly that during the public-figure work: a section
+  // headed "## Ministry (vault record — not published)" published in full.
+  // Now only headings on this POSITIVE list survive for a living person.
+  // Unknown heading -> dropped. Fail-closed by construction.
+  //
+  // Suffixed forms matter: the vault uses "## Marriage — Sandra Lea Smith &
+  // Leonard Arthur Dance (18 Aug 1974)" and "## Baptism — 12 September 1982"
+  // for document-grade records, which the keep-list ruling KEEPS. So these
+  // match on the leading word followed by the END of the heading or a
+  // separator (— / - / : / (). That matters: a bare \b would let
+  // "## Family Stories" match "Family", publishing a personal story on a
+  // living person's page — which is exactly what happened on 22 Sep 2026.
+  // Match rule (deliberately strict — a loose regex here published a living
+  // person's "## Family Stories" on 22 Sep 2026):
+  //   BARE headings must match the WHOLE heading: "## Family", "## Photos".
+  //   SUFFIXED headings must be one of the known document forms, i.e. the
+  //     leading word followed by a separator: "## Marriage — ...",
+  //     "## Marriage Certificate — ...", "## Baptism — ...".
+  // Anything else — "## Family Stories", "## Ministry", a brand-new heading —
+  // does not match and is therefore dropped.
+  const KEEP_SECTIONS = new RegExp(
+    '^\\s*##\\s*(' +
+      [
+        // bare-only headings
+        '(?:Family|Families|Relationships?|Photos?|Photographs?|Photography|Gallery|Media)\\s*',
+        // document headings, bare or with a separator + anything after
+        '(?:Marriage(?:\\s+Certificate)?|Divorce(?:\\s+Certificate)?|Baptism|Christening|Wedding)\\s*(?:[—–:\\-].*)?',
+      ].join('|') +
+    ')\\s*$',
+    'i'
+  );
 
   // Explicitly-labelled bolded field lines dropped wholesale (covers
   // `**Field:**`, `- **Field:**`).
@@ -462,11 +552,20 @@ function stripLivingPrivateContent(text) {
 
     // Enter/exit section stripping at `## ` headings.
     if (/^##\s/.test(trimmed)) {
-      inDropSection = DROP_SECTIONS.test(trimmed);
+      // POSITIVE keep-list: a heading survives ONLY if it is Family /
+      // Marriage / Divorce / Photos. Everything else — including any heading
+      // we have never seen before — is dropped. Fail-closed.
+      const keep = KEEP_SECTIONS.test(trimmed);
+      inDropSection = !keep;
       if (inDropSection) continue;         // heading itself dropped
     } else if (inDropSection) {
       continue;                            // content inside a dropped section
     }
+
+    // Drop a horizontal rule that has become a dangling separator. With the
+    // positive keep-list, whole section runs are now removed, so their `---`
+    // lines would otherwise survive as orphans at the top of the bio.
+    if (/^\s*---+\s*$/.test(raw) && out.length === 0) continue;
 
     // Drop labelled sensitive field-lines (bolded, bare, or bullet forms).
     if (DROP_FIELDS.test(raw) || DROP_FIELDS_BARE.test(raw) || DROP_QUAL.test(raw) || DROP_BARE_BULLET.test(raw)) continue;
@@ -481,7 +580,31 @@ function stripLivingPrivateContent(text) {
     out.push(scrubSocialCredit(raw));
   }
 
-  return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+  let result = out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+
+  // ── PUBLIC-FIGURE EXCEPTION ────────────────────────────────────────────
+  // Re-attach ONLY the `## Public Role` section, and only for a slug the
+  // family has ruled on. Safety checks run first: if the section carries a
+  // residence/address/contact field or a social handle, it is refused outright
+  // rather than published. Fail-closed — a refused section publishes nothing.
+  if (allowPublicRole) {
+    const roleSection = extractPublicRoleSection(text);
+    if (roleSection) {
+      const FORBIDDEN_IN_ROLE =
+        /^\s*(?:-|\*)?\s*\**\s*(Residence|Resides|Lives?|Lived at|Address|Postal Address|Location|Phone|Mobile|Contact|Email|School|Schooling|Education|Facebook|Instagram|TikTok|Twitter|LinkedIn|Social|Aliases?|Also known as)\s*\**\s*:/im;
+      const hasHandle = AT_HANDLE.test(roleSection);
+      if (FORBIDDEN_IN_ROLE.test(roleSection) || hasHandle) {
+        console.warn(
+          `  ⚠ public-figure exception REFUSED for "${slug}": the ## Public Role ` +
+          `section contains a residence/contact/social field. Nothing added.`
+        );
+      } else {
+        result = `${result}\n\n${roleSection}`;
+      }
+    }
+  }
+
+  return result;
 }
 
 // Platform names that can appear as part of a source credit.
@@ -625,7 +748,7 @@ for (const person of people) {
   //    Runs last, for every living person, after PII/minor/address passes.
   //    Deceased people are never touched.
   if (person.is_living && publicPerson.body_markdown) {
-    publicPerson.body_markdown = stripLivingPrivateContent(publicPerson.body_markdown);
+    publicPerson.body_markdown = stripLivingPrivateContent(publicPerson.body_markdown, person.slug);
   }
 
   // ── Lifespan reconciliation (owner decision, Sep 2026): `lifespan` is derived
