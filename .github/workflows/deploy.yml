@@ -51,6 +51,13 @@ jobs:
         # exercise those or broken/legacy person links get deployed as 404s / the
         # "Page with redirect" / duplicate-canonical alerts come back.
         run: npm run build
+        env:
+          # Diagnostic for the redirect comparison base. emit-git-slug-redirects.mjs
+          # must diff people.json against the PREVIOUS commit (the last-deployed
+          # state). If that diff ever sees 0 vanished URLs in CI while the same run
+          # sees them locally, this prints exactly which of the three cases it hit:
+          # a git failure, unequal head/work, or no previous commit available.
+          REDIRECT_DIAG: 1
       # ESCALATION — added 2026-09-12. `failure()` is false for a job that never
       # started, and a failed "Install dependencies" or Playwright step skips
       # everything after it; verifying the pager HERE (rather than at the end)
