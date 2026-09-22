@@ -45,9 +45,45 @@ const REPO = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 const WRITE_PAGES = args.includes('--write-pages');
 const REF_IDX = args.indexOf('--ref');
-const REF = REF_IDX !== -1 ? args[REF_IDX + 1] : 'HEAD';
-
+// ── COMPARISON BASE (fixed 2026-09-22) ────────────────────────────────────────
+// The design assumed "HEAD == what the live site serves". That holds when this
+// script runs BEFORE the commit (local regen). It BREAKS in CI, where the commit
+// containing the removal has already been made: HEAD and the working tree are then
+// identical, so `vanished` is empty, no redirect page is emitted, and a deliberately
+// removed profile 404s in production. Observed exactly that: five removals produced
+// "wrote 0 redirect page(s) ... 0/0 live URLs covered" in CI while the same run had
+// emitted all five locally.
+// Fix: when the working tree's people.json is IDENTICAL to HEAD's, step back to the
+// previous commit that changed it — that is the state the live site was last built
+// from. An explicit --ref still wins, so nothing is taken away from a caller who
+// knows better.
 const OLD_JSON_REL = 'src/data/people.json';
+function resolveBaseRef() {
+  if (REF_IDX !== -1) return args[REF_IDX + 1];
+  try {
+    const headJson = execFileSync('git', ['show', 'HEAD:' + OLD_JSON_REL], {
+      cwd: REPO, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'],
+    });
+    const workJson = fs.readFileSync(NEW_JSON_ABS, 'utf-8');
+    if (headJson === workJson) {
+      // Working tree matches HEAD: we are post-commit (CI). Use the previous
+      // commit that actually changed people.json.
+      const prev = execFileSync(
+        'git', ['log', '-2', '--format=%H', '--', OLD_JSON_REL],
+        { cwd: REPO, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] },
+      ).trim().split('\n')[1];
+      if (prev) {
+        console.log(`\u2139\ufe0f  working tree matches HEAD; comparing against previous commit ${prev.slice(0, 8)} (the last-deployed state)`);
+        return prev;
+      }
+    }
+  } catch {
+    // git absent or shallow — fall back to HEAD, the original behaviour.
+  }
+  return 'HEAD';
+}
+const REF = resolveBaseRef();
+
 const NEW_JSON_ABS = path.join(REPO, OLD_JSON_REL);
 const DIST_DIR = path.join(REPO, 'dist/people');
 const LOG_ABS = path.join(REPO, 'scripts/redirect-log-git.json');
