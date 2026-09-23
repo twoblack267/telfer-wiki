@@ -63,14 +63,59 @@ function personName(s) {
 }
 
 /**
+ * Normalise a person key so a wiki title can be matched against a vault
+ * filename that spells the same person differently.
+ *
+ * Two shapes occur in the data (measured 2026-09-24 — exactly one person each):
+ *   "noela pauline virgen, née wode"  -> "noela pauline virgen"
+ *   "clara blanche telfer/lane"       -> allowed as BOTH "clara blanche telfer"
+ *                                        and "clara blanche lane"
+ *
+ * Returns an ARRAY of acceptable keys (usually one). Every key is only ever
+ * ADDED to the search space; nothing that matches today can stop matching.
+ */
+function personKeys(s) {
+  // strip a mid-string nickname before anything else:
+  //   "francis charles 'charlie' telfer" -> "francis charles telfer"
+  //   "william francis \"frank\" telfer"  -> "william francis telfer"
+  const bare = personName(s.replace(/['"‘’“”]/g, " "));
+  const keys = [];
+  // strip a trailing ", née X" / ", nee X" married-name annotation
+  const noNee = bare.replace(/,\s*n(?:é|e)e\s+.*$/, "").trim();
+  if (noNee) keys.push(noNee);
+  // "telfer/lane" -> try "… telfer" and "… lane"
+  if (noNee.includes("/")) {
+    const parts = noNee.split("/").map((p) => p.trim()).filter(Boolean);
+    // "clara blanche telfer" + "lane"  =>  rebuild with the alternate surname
+    if (parts.length >= 2) {
+      const head = parts[0].split(/\s+/);
+      head.pop(); // drop the first surname
+      for (const alt of parts) {
+        const tail = alt.split(/\s+/).pop();
+        const rebuilt = [...head, tail].join(" ").trim();
+        if (rebuilt) keys.push(rebuilt);
+      }
+    }
+  }
+  return [...new Set(keys.filter(Boolean))];
+}
+
+/**
  * "Adam Murray (1728–1816).md" -> { name:"adam murray", first:"adam",
- * last:"murray", year:"1728" }
+ * last:"murray", tokens:[...], year:"1728" }
  */
 function manifestParts(fname) {
   const bare = fname.replace(/\.md$/i, "").trim();
   const name = bare.replace(/\s*\([^)]*\)\s*$/, "").trim().toLowerCase();
   const years = bare.match(/\((\d{3,4})[–\-]/);
-  return { name, first: name.split(/\s+/)[0] || "", last: name.split(/\s+/).pop() || "", year: years ? years[1] : null };
+  const tokens = name.split(/\s+/).filter(Boolean);
+  return {
+    name,
+    first: tokens[0] || "",
+    last: tokens[tokens.length - 1] || "",
+    tokens,
+    year: years ? years[1] : null,
+  };
 }
 
 /**
@@ -82,27 +127,40 @@ function manifestParts(fname) {
  * An earlier version parsed the title and silently matched almost nothing.
  *
  * PASS 1 — exact full-name match, so nothing that already worked can regress.
- * PASS 2 — first name + last name + birth_year. Needed because some vault
- * filenames carry a middle name the wiki title omits:
- *   wiki  "Joel Ivory"  birth_year 1986   (slug joel-ivory-1986)
- *   vault "Joel Matthew Ivory (1986–?).md"
- * First+last+year rather than fuzzy matching: a near-match could stamp a LIVING
+ * PASS 2 — first name + surname + birth_year, trying EVERY surname token of the
+ * vault filename (not just the last). Needed because vault filenames carry
+ * MAIDEN surnames the wiki title omits:
+ *   wiki  "Martha Ann Masters"  birth_year 1839  (slug martha-masters-1839)
+ *   vault "Martha Ann Masters Radford (1839–1912).md"
+ * Matching on the exact triple (never fuzzy): a near-match could stamp a LIVING
  * person's page with a stranger's date. Ambiguous candidates -> no match at all.
+ * This is deliberate, not a gap. Example:
+ *   francis-telfer-1875 -> "francis|telfer|1875" matches BOTH
+ *   "Francis Adam Telfer (1875–1955).md" and "Francis Charles Telfer (1875–1954).md".
+ * Two different men, same first name, same surname, same birth year. No code can
+ * tell which page belongs to which, so this page gets NO <lastmod> — honestly.
  */
 function matchVaultFile(person, byName, byTriple) {
-  const full = personName(person.title || person.name || "");
-  const exact = byName.get(full);
-  if (exact) return { file: exact, how: "exact" };
+  const keys = personKeys(person.title || person.name || "");
+
+  for (const k of keys) {
+    const exact = byName.get(k);
+    if (exact) return { file: exact, how: "exact" };
+  }
 
   const y = String(person.birth_year || "").trim();
   if (!/^\d{3,4}$/.test(y)) return null;
-  const first = full.split(/\s+/)[0] || "";
-  const last = full.split(/\s+/).pop() || "";
-  if (!first || !last) return null;
 
-  const cands = byTriple.get(`${first}|${last}|${y}`);
-  if (!cands || cands.length !== 1) return null; // ambiguous -> no guess
-  return { file: cands[0], how: "first+last+year" };
+  for (const k of keys) {
+    const toks = k.split(/\s+/).filter(Boolean);
+    const first = toks[0] || "";
+    const last = toks[toks.length - 1] || "";
+    if (!first || !last) continue;
+    const cands = byTriple.get(`${first}|${last}|${y}`);
+    if (!cands || cands.length !== 1) continue; // ambiguous -> try next key shape
+    return { file: cands[0], how: "first+last+year" };
+  }
+  return null;
 }
 
 // 1. vault filename -> git date, once per file (cheap: ~380 git calls max).
@@ -125,12 +183,20 @@ console.log(`vault files: ${vaultFiles.length}, with git dates: ${fileDate.size}
 
 // 2. Build both lookup indexes from the vault filenames:
 //    byName   : "adam murray"       -> file  (exact match, pass 1)
-//    byTriple : "adam|murray|1728"  -> [file] (first+last+year, pass 2)
+//    byTriple : "adam|murray|1728"  -> [file] (first+surname-token+year, pass 2)
 //
 // NOTE: byName is keyed on the FULL vault name and picks the NEWEST date when
 // several files share a name. An earlier rewrite used a plain .set() (last file
 // won) and silently reset 16 people to the oldest date in the whole set — keep
 // the "newest wins" comparison.
+//
+// byTriple indexes EVERY surname token, not just the last one, so a maiden name
+// carried mid-filename is reachable:
+//   "Martha Ann Masters Radford (1839–1912).md" -> martha|masters|1839  AND
+//                                                  martha|radford|1839
+// This was checked against all 370 people (2026-09-24): it closes 4 gaps and
+// creates ZERO multiple-candidate keys. Keeping the `length !== 1` guard means a
+// token that names two different people still refuses rather than guessing.
 const byName = new Map();
 const byTriple = new Map();
 for (const [f, d] of fileDate) {
@@ -139,11 +205,13 @@ for (const [f, d] of fileDate) {
   const prev = byName.get(m.name);
   if (!prev || d > fileDate.get(prev)) byName.set(m.name, f);
 
-  if (m.year && m.first && m.last) {
-    const k = `${m.first}|${m.last}|${m.year}`;
-    const arr = byTriple.get(k) || [];
-    arr.push(f);
-    byTriple.set(k, arr);
+  if (m.year && m.first && m.tokens.length >= 2) {
+    for (let i = 1; i < m.tokens.length; i++) {
+      const k = `${m.first}|${m.tokens[i]}|${m.year}`;
+      const arr = byTriple.get(k) || [];
+      arr.push(f);
+      byTriple.set(k, arr);
+    }
   }
 }
 
