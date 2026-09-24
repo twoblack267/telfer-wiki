@@ -23,6 +23,11 @@ for (const p of allPeople) {
   }
 }
 
+// id -> slug, so every rendered name can link to its profile page (added 2026-09-24).
+const slugById = new Map(
+  allPeople.filter((p) => p.id && p.slug).map((p) => [p.id, p.slug])
+);
+
 // Also index by (first_name, last_name) for matching shorthand references like "Levi Telfer"
 const personByFirstLast = new Map();
 for (const p of allPeople) {
@@ -382,7 +387,12 @@ function renderTree(person: TreeNode, depth = 0, options = {}) {
 ${indent}<details class="tree-node ${highlightClass}" ${openAttr} data-id="${person.id}">
 ${indent}  <summary class="cursor-pointer select-none flex items-center gap-2 px-2 py-1 rounded ${highlightClass}" tabindex="0">
 ${indent}    <span class="font-mono text-[var(--color-heading)] shrink-0">${"│  ".repeat(depth)}├─</span>
-${indent}    <strong>${person.display_name}</strong>
+${indent}    <strong>${(() => {
+      const slug = slugById.get(person.id);
+      return slug
+        ? `<a class="hover:text-[var(--color-heading)] underline decoration-dotted" href="${import.meta.env.BASE_URL}people/${slug}/">${person.display_name}</a>`
+        : person.display_name;
+    })()}</strong>
 ${indent}    <span class="text-xs text-[var(--color-muted)] shrink-0">(${lifespan})</span>${livingBadge}${virtualBadge}${spouseName}${surnameLabel}
 ${indent}  </summary>`;
 
