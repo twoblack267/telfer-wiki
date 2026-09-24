@@ -122,6 +122,7 @@ interface TreeNode {
   virtual: boolean;
   _resolvedChildren?: TreeNode[];
   _resolvedSpouse?: TreeNode | null;
+  _resolvedSpouses?: TreeNode[];
 }
 
 function createVirtualPerson(name: string, parentBirthYear?: number, parentLastName?: string): TreeNode {
@@ -179,24 +180,41 @@ function resolveChildren(person: TreeNode, depth = 0): TreeNode[] {
   return resolved.sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
 }
 
-function resolveSpouse(person: TreeNode): TreeNode | null {
-  if (!person.spouses || person.spouses.length === 0) return null;
-  const spouseId = person.spouses[0];
-  const realSpouse = findPerson(spouseId);
-  if (realSpouse) {
-    return {
-      display_name: realSpouse.display_name,
-      birth_year: realSpouse.birth_year,
-      death_year: realSpouse.death_year,
-      is_living: realSpouse.is_living || false,
-      last_name: realSpouse.last_name,
-      spouses: realSpouse.spouses,
-      children: realSpouse.children,
-      id: realSpouse.id,
-      virtual: false
-    };
+function toNode(realSpouse: any): TreeNode {
+  return {
+    display_name: realSpouse.display_name,
+    birth_year: realSpouse.birth_year,
+    death_year: realSpouse.death_year,
+    is_living: realSpouse.is_living || false,
+    last_name: realSpouse.last_name,
+    spouses: realSpouse.spouses,
+    children: realSpouse.children,
+    id: realSpouse.id,
+    virtual: false
+  };
+}
+
+// ALL spouses, not just the first. Before 2026-09-24 this read spouses[0] only, so every
+// later marriage silently vanished from the tree — e.g. Kenneth William John Telfer had two
+// wives (Gwendoline 1910 and Jessie Kathleen 1914) and only the first was ever rendered.
+function resolveSpouses(person: TreeNode): TreeNode[] {
+  if (!person.spouses || person.spouses.length === 0) return [];
+  const out: TreeNode[] = [];
+  const seen = new Set<string>();
+  for (const spouseId of person.spouses) {
+    const real = findPerson(spouseId);
+    if (!real) continue;
+    const key = real.id || real.slug || real.display_name;
+    if (seen.has(key)) continue;   // defensive: the data does contain duplicate refs
+    seen.add(key);
+    out.push(toNode(real));
   }
-  return null;
+  return out;
+}
+
+function resolveSpouse(person: TreeNode): TreeNode | null {
+  const list = resolveSpouses(person);
+  return list.length ? list[0] : null;
 }
 
 // Build the complete tree starting from root
@@ -228,20 +246,75 @@ const root: TreeNode = {
 };
 
 // Pre-resolve entire tree for rendering
-function buildFullTree(node: TreeNode, visited = new Set<string>()): TreeNode {
+function buildFullTree(
+  node: TreeNode,
+  ancestors: Set<string> = new Set<string>(),
+  budget: Map<string, number> = new Map<string, number>()
+): TreeNode {
   // Use id + birth_year as unique key — there are 91 duplicate IDs in the data
   // (e.g. 5 different "James Telfer" entries all with id="James Telfer").
   // Using just node.id would kill every James/John/William Telfer after the first one,
   // hiding entire sibling branches.
   const visitedKey = `${node.id}|${node.birth_year || '?'}`;
-  if (visited.has(visitedKey)) {
-    // Return a shallow copy without children/spouse to break cycle
-    return { ...node, _resolvedChildren: [], _resolvedSpouse: null };
+
+  // A person may be EXPANDED at most MAX_EXPANSIONS times across the whole tree, and never
+  // twice on the same ancestor path.
+  //   - ancestor repeat  => a true cycle: collapse immediately
+  //   - budget exhausted => already shown with their line elsewhere: show as a bare leaf
+  // Before 2026-09-24 the rule was "first sighting only", so the 2nd appearance of anyone
+  // rendered as a childless, spouseless stub — bare names with rails running past them and
+  // no way to expand. Relaxing that to "ancestors only" instead exploded the tree to 2,289
+  // nodes (measured 2026-09-24), so a small expansion budget is the correct middle ground.
+  // Tuned by measurement (2026-09-24): 1 = 715 nodes / 266 people (chosen);
+  // 2 = 1,228 nodes / same 266 people (bloated, 962 duplicate renderings). Coverage is
+  // identical, so 1 is strictly better - the duplicates were pure visual noise.
+  const MAX_EXPANSIONS = 1;
+  const used = budget.get(visitedKey) || 0;
+  if (ancestors.has(visitedKey) || used >= MAX_EXPANSIONS) {
+    return { ...node, _resolvedChildren: [], _resolvedSpouse: null, _resolvedSpouses: [] };
   }
-  visited.add(visitedKey);
-  
-  node._resolvedChildren = resolveChildren(node).map(child => buildFullTree(child, visited));
-  node._resolvedSpouse = resolveSpouse(node);
+  budget.set(visitedKey, used + 1);
+
+  const nextAncestors = new Set(ancestors);
+  nextAncestors.add(visitedKey);
+
+  node._resolvedChildren = resolveChildren(node).map(child => buildFullTree(child, nextAncestors, budget));
+  // Resolve spouses and recurse into them when they can carry a Telfer line:
+  //   (a) the spouse is a Telfer by birth -> their own line belongs to this tree, or
+  //   (b) the spouse is a non-Telfer who is the PARENT OF TELFER CHILDREN -> those children
+  //       are Telfers and must be reachable (e.g. Janet Nichol, mother of Andrew 1798 and
+  //       William 1802 Telfer; previously she rendered as a childless leaf and both sons were
+  //       unreachable — diagnosed 2026-09-24).
+  node._resolvedSpouses = resolveSpouses(node).map((sp) => {
+    const isTelfer = (sp.last_name || "").toLowerCase() === "telfer";
+    // Decide from the RAW child list + the dataset, not from _resolvedChildren (which is only
+    // populated by buildFullTree and would make this check circular).
+    const rawKids: string[] = (sp as any).children || [];
+    const hasTelferKids = rawKids.some((cid) => {
+      const cp: any = findPerson(cid);
+      if (!cp) return "telfer" === String(cp).toLowerCase();
+      const cn = (cp.display_name || "").toLowerCase();
+      return cn.includes("telfer") || (cp.last_name || "").toLowerCase() === "telfer";
+    });
+    if (!isTelfer && !hasTelferKids) return sp;
+    const built = buildFullTree(sp, nextAncestors, budget);
+    // Keep only Telfer children for a non-Telfer spouse — the page's contract is the Telfer name.
+    if (!isTelfer) {
+      built._resolvedChildren = (built._resolvedChildren || []).filter(
+        (k) => (k.last_name || "").toLowerCase() === "telfer"
+      );
+    }
+    return built;
+  });
+  node._resolvedSpouse = node._resolvedSpouses.length ? node._resolvedSpouses[0] : null;
+  // De-duplicate: if a spouse is already rendered as one of this node's children, don't repeat.
+  if (node._resolvedChildren?.length && node._resolvedSpouses.length) {
+    const childKeys = new Set(node._resolvedChildren.map(c => `${c.id}|${c.birth_year || "?"}`));
+    node._resolvedSpouses = node._resolvedSpouses.filter(
+      s => !childKeys.has(`${s.id}|${s.birth_year || "?"}`)
+    );
+    node._resolvedSpouse = node._resolvedSpouses.length ? node._resolvedSpouses[0] : null;
+  }
   return node;
 }
 
@@ -276,11 +349,25 @@ function renderTree(person: TreeNode, depth = 0, options = {}) {
   const virtualBadge = person.virtual
     ? ' <span class="badge badge-virtual text-xs" style="background: var(--color-warning); color: var(--color-surface);">virtual</span>'
     : "";
-  const spouseName = spouse
-    ? ` + ${spouse.display_name} (${spouse.birth_year || "?"}–${
-        spouse.death_year ?? (spouse.is_living ? "living" : "?")
-      })`
+  const spouses = person._resolvedSpouses && person._resolvedSpouses.length
+    ? person._resolvedSpouses
+    : (spouse ? [spouse] : []);
+  const spouseName = spouses.length
+    ? " + " + spouses
+        .map(s => `${s.display_name} (${s.birth_year || "?"}–${
+          s.death_year ?? (s.is_living ? "living" : "?")})`)
+        .join(" + ")
     : "";
+
+  // A spouse who is themselves a Telfer by birth carries their own line (children). Render
+  // those as nested nodes so the branch is reachable — this is what makes people like
+  // Gwendoline and Jessie Kathleen (who married INTO the name) expandable rather than dead ends.
+  // EVERY spouse becomes a real node in the branch list, so they carry a data-id, are
+  // reachable, and can hold their own line. Previously the first spouse was only ever
+  // appended as inline SUMMARY TEXT ("+ Name (1900–1980)") with no node at all — which is
+  // why people who married into the family (Gwendoline, Jessie Kathleen) could be seen on
+  // their husband's line but never reached or clicked (diagnosed 2026-09-24).
+  const spouseBranches = spouses;
   const surnameLabel =
     person.last_name?.toLowerCase() !== "telfer"
       ? ` <span class="text-xs text-[var(--color-muted)]">[${person.last_name}]</span>`
@@ -288,8 +375,8 @@ function renderTree(person: TreeNode, depth = 0, options = {}) {
   const isCurrent = currentId && person.id === currentId;
   const highlightClass = isCurrent ? "bg-[var(--color-highlight)]/10" : "";
 
-  const hasChildren = allChildren.length > 0;
-  const openAttr = hasChildren && depth === 0 ? "open" : "";
+  const hasChildren = allChildren.length > 0 || spouseBranches.length > 0;
+  const openAttr = depth === 0 ? "open" : "";
 
   let html = `
 ${indent}<details class="tree-node ${highlightClass}" ${openAttr} data-id="${person.id}">
@@ -299,11 +386,14 @@ ${indent}    <strong>${person.display_name}</strong>
 ${indent}    <span class="text-xs text-[var(--color-muted)] shrink-0">(${lifespan})</span>${livingBadge}${virtualBadge}${spouseName}${surnameLabel}
 ${indent}  </summary>`;
 
-  if (hasChildren) {
+  if (hasChildren || spouseBranches.length) {
     html += `
 ${indent}  <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">`;
     for (const child of allChildren) {
       html += renderTree(child, depth + 1, { showAll, currentId });
+    }
+    for (const sp of spouseBranches) {
+      html += renderTree(sp, depth + 1, { showAll, currentId });
     }
     html += `
 ${indent}  </div>`;
@@ -314,8 +404,103 @@ ${indent}</details>`;
   return html;
 }
 
+// ---------------------------------------------------------------------------
+// DETACHED TELFER BRANCHES (added 2026-09-24)
+// The main tree walks down from John Telfer of Castleton. Some Telfer lines have no upward
+// link into it at all — e.g. "James Telfer (of Sorbietrees)" (1740) has a wife and five
+// children but nobody lists him as a child, so his whole branch was unreachable and the
+// family simply could not be found on the page. Collect any Telfer-named person who has
+// descendants and is not reachable from the root, and render them as their own sub-tree so
+// no Telfer line is orphaned. (Non-Telfer families that married in are still out of scope —
+// the page's contract is the Telfer name.)
+// ---------------------------------------------------------------------------
+function collectReachable(node: TreeNode, acc = new Set<string>()): Set<string> {
+  if (!node) return acc;
+  const key = `${node.id}|${node.birth_year || "?"}`;
+  if (acc.has(key)) return acc;
+  acc.add(key);
+  for (const c of node._resolvedChildren || []) collectReachable(c, acc);
+  for (const s of node._resolvedSpouses || []) collectReachable(s, acc);
+  return acc;
+}
+
+const reachable = collectReachable(root);
+const reachableIds = new Set(
+  [...reachable].map((k) => k.split("|")[0])
+);
+
+const hasParentLink = new Set<string>();
+for (const p of allPeople) {
+  for (const c of (p as any).children || []) hasParentLink.add(c);
+}
+
+const detached: TreeNode[] = [];
+const detachedLoose: TreeNode[] = [];   // Telfer, unreachable, no descendants of their own
+for (const p of allPeople) {
+  const name = (p.display_name || "").toLowerCase();
+  if (!name.includes("telfer")) continue;
+  if (reachableIds.has(p.id)) continue;
+  const kidCount = ((p as any).children || []).length;
+  // Skip only if the person's parent is BOTH present AND itself reachable — then they belong
+  // in the main line (and their absence means a different bug).
+  const parentSlugs = allPeople
+    .filter((q: any) => (q.children || []).includes(p.slug))
+    .map((q: any) => q.id);
+  const parentReachable = parentSlugs.some((id: string) => reachableIds.has(id));
+  if (parentReachable) continue;
+
+  // A childless Telfer with a parent who is rendered but who does NOT list them (a genuine
+  // data inconsistency in the vault — e.g. Agnes Telfer (1848) names James Telfer (1796) as
+  // her father, but his children array omits her) still gets listed so she is findable.
+  const parentSlugs0 = allPeople
+    .filter((q: any) => (q.children || []).includes(p.slug))
+    .map((q: any) => q.id);
+  const parentRendered = parentSlugs0.some((id: string) => reachableIds.has(id));
+  const listedByParent = parentSlugs0.length > 0;
+
+  if (kidCount === 0) {
+    detachedLoose.push({
+      display_name: p.display_name,
+      birth_year: p.birth_year,
+      death_year: p.death_year,
+      is_living: p.is_living || false,
+      last_name: p.last_name,
+      spouses: p.spouses,
+      children: [],
+      id: p.id,
+      virtual: false,
+    });
+    continue;
+  }
+  detached.push({
+    display_name: p.display_name,
+    birth_year: p.birth_year,
+    death_year: p.death_year,
+    is_living: p.is_living || false,
+    last_name: p.last_name,
+    spouses: p.spouses,
+    children: p.children,
+    id: p.id,
+    virtual: false,
+  });
+}
+detached.sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
+detached.forEach((d) => buildFullTree(d, new Set<string>(), new Map<string, number>()));
+
 // Generate the tree HTML
 const treeHtml = renderTree(root);
+const detachedHtml = detached.map((d) => renderTree(d)).join("\n");
+const looseHtml = detachedLoose.length
+  ? `<ul class="list-disc pl-5 text-sm text-[var(--color-ink-light)] space-y-1">` +
+    detachedLoose
+      .sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999))
+      .map(
+        (d) =>
+          `<li><a class="hover:text-[var(--color-heading)] underline decoration-dotted" href="/people/${allPeople.find((p: any) => p.id === d.id)?.slug || ""}/">${d.display_name}</a> <span class="text-xs text-[var(--color-muted)]">(${d.birth_year || "?"}–${d.death_year ?? (d.is_living ? "living" : "?")})</span></li>`
+      )
+      .join("") +
+    `</ul>`
+  : "";
 
 const pageTitle = "Telfer Family Tree — All Generations";
 ---
@@ -406,6 +591,19 @@ const pageTitle = "Telfer Family Tree — All Generations";
     <div class="person-card rounded-xl p-4">
       <div class="tree-container prose prose-sm max-w-none" style="font-size: 0.85rem; line-height: 1.7;">
         <div id="family-tree" set:html={treeHtml} />
+
+        {(detachedHtml || looseHtml) && (
+          <section class="mt-8" aria-labelledby="detached-heading">
+            <h2 id="detached-heading" class="font-serif text-lg md:text-xl text-[var(--color-heading)] mb-2">
+              Other Telfer branches
+            </h2>
+            <p class="text-xs text-[var(--color-muted)] mb-3">
+              Telfer lines with no surviving link into the Castleton tree. Kept here so nobody is lost.
+            </p>
+            <div set:html={detachedHtml} />
+            {looseHtml && <div class="mt-3" set:html={looseHtml} />}
+          </section>
+        )}
       </div>
     </div>
 
