@@ -986,12 +986,29 @@ const pageTitle = "Telfer Family Tree — All Generations";
         // the summary could never be followed on touch (measured 2026-09-24: Playwright
         // reported "<summary> intercepts pointer events" at 390px). Let a link tap navigate
         // and stop the toggle from also firing.
+        // A person link can be reached two ways, and both must work:
+        //  1. the click lands ON the anchor (or a descendant of it) -> closest() finds it;
+        //  2. the click lands on the <summary> itself, because the anchor is a *sibling* inside
+        //     the summary and the summary's own box sits over the name. Measured 2026-09-24 at
+        //     1920px: elementFromPoint returned SUMMARY, mousedown/click traced to SUMMARY, and
+        //     closest('a[href]') was null, so nothing navigated and the branch just toggled.
+        // So fall back to querying the anchors INSIDE the summary the pointer hit.
         const profileHref = (target) => {
-          const anchor = target && target.closest ? target.closest('a[href]') : null;
-          const href = anchor ? anchor.getAttribute('href') : null;
-          return href && href.indexOf('/people/') !== -1 && href.indexOf('/people/full-tree') === -1
-            ? anchor.href
-            : null;
+          if (!target) return null;
+          const isPerson = (a) => {
+            const h = a && a.getAttribute ? a.getAttribute('href') : null;
+            return h && h.indexOf('/people/') !== -1 && h.indexOf('/people/full-tree') === -1 ? a : null;
+          };
+          // 1. direct hit or a nearby descendant/ancestor of the anchor
+          const direct = isPerson(target.closest ? target.closest('a[href]') : null);
+          if (direct) return direct.href;
+          // 2. hit the <summary>: take the person anchor inside it (the name link)
+          const summary = target.closest ? target.closest('summary') : null;
+          if (summary) {
+            const inside = [...summary.querySelectorAll('a[href]')].map(isPerson).find(Boolean);
+            if (inside) return inside.href;
+          }
+          return null;
         };
 
         // `click` alone is not enough on touch: a tap inside <summary> is consumed by the
