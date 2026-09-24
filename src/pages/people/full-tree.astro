@@ -705,7 +705,12 @@ const pageTitle = "Telfer Family Tree — All Generations";
         scroll-snap-align: start;
         flex-shrink: 0;
       }
-      /* Phone: single open branch + touch-friendly + horizontal scroll for deep nodes */
+      /* Phone: single open branch + touch-friendly + no horizontal overflow.
+         MEASURED 2026-09-24: at depth 7 the ASCII rail ("│  " x7) plus name and years made a
+         row 1270px wide on a 390px screen, pushing every link off the right edge where it
+         could not be tapped. `min-width: max-content` deliberately allowed that overflow;
+         it is removed and the rail is hidden on phones instead — depth is already obvious
+         from the indentation, so the rail adds cost without information. */
       @media (max-width: 639px) {
         .person-card {
           overflow-x: auto;
@@ -714,7 +719,15 @@ const pageTitle = "Telfer Family Tree — All Generations";
         .tree-container {
           font-size: 0.8rem;
           line-height: 1.7;
-          min-width: max-content; /* ensures content wider than viewport is scrollable */
+          min-width: 0;              /* was max-content -> 1270px rows */
+        }
+        /* Hide the decorative tree rail on phones; the ml-6 indent still shows depth. */
+        .tree-node summary > span.font-mono {
+          display: none;
+        }
+        .tree-node summary strong {
+          min-width: 0;
+          overflow-wrap: anywhere;
         }
         .tree-node summary {
           padding: 0.75rem 1rem;
@@ -887,6 +900,21 @@ const pageTitle = "Telfer Family Tree — All Generations";
             btn.classList.add('active');
           });
         });
+
+        // ─── Name links must WIN over the summary toggle ───
+        // A <summary> toggles open/closed on any click inside it, so a profile link nested in
+        // the summary could never be followed on touch (measured 2026-09-24: Playwright
+        // reported "<summary> intercepts pointer events" at 390px). Let a link tap navigate
+        // and stop the toggle from also firing.
+        tree.addEventListener('click', (e) => {
+          const anchor = e.target.closest('a[href]');
+          if (anchor && anchor.getAttribute('href').startsWith('/people/')) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = anchor.href;
+            return;
+          }
+        }, true); // capture phase, so this runs before the toggle default
 
         // ─── Click name to focus + scroll ───
         tree.addEventListener('click', (e) => {
