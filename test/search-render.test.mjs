@@ -39,12 +39,49 @@ function assert(cond, msg) {
   }
 }
 
-// Serve dist/ statically so the page + its JS bundle load over http
+// Serve dist/ statically so the page + its JS bundle load over http.
+//
+// CI FLAKE ROOT CAUSE (tw-2026-09-25-002, fixed 2026-09-25): the built page carries
+// THIRD-PARTY scripts in <head> — Google AdSense
+// (pagead2.googlesyndication.com) and the Cloudflare insights beacon
+// (static.cloudflareinsights.com). `page.goto(..., waitUntil: "networkidle")`
+// waits for ZERO network connections for 500ms, and a third-party beacon/analytics
+// script that keeps a connection open (or retries from a GitHub runner that cannot
+// reach it) prevents that quiescence window from ever arriving. Result: a 30s
+// navigation TIMEOUT, the build goes red, and the failure has NOTHING to do with
+// the data or the page code — the exact class of false alarm this repo refuses to
+// tolerate (cf. the 2026-09-12 Chromium-install false alarm).
+//
+// Fix: answer every EXTERNAL host from the local test server itself, so the page's
+// own assets load and third-party beacons resolve instantly to a local no-op. The
+// test then measures the RENDER (which is what it exists to guard) and does not
+// depend on the network reachability of Google or Cloudflare.
+const LOCAL_HOSTS = new Set(["127.0.0.1", "localhost", "::1"]);
+
 function serve(distDir) {
   return new Promise((resolve) => {
     const mime = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".svg": "image/svg+xml", ".png": "image/png" };
     const server = createServer((req, res) => {
-      let file = join(distDir, decodeURIComponent(req.url.split("?")[0]));
+      // Absolute-URL request (a proxy CONNECT or a direct absolute-form GET) for a
+      // non-local host => third-party asset. Never let the test server act as a
+      // proxy: fail it closed so no third-party byte ever enters the run.
+      let host = "";
+      try {
+        if (/^https?:\/\//i.test(req.url)) host = new URL(req.url).hostname;
+      } catch {}
+      if (host && !LOCAL_HOSTS.has(host)) {
+        res.writeHead(403);
+        res.end("external host blocked in test");
+        return;
+      }
+
+      // Strip a query string and any absolute prefix before touching the filesystem.
+      let rel = req.url.split("?")[0];
+      if (/^https?:\/\//i.test(rel)) {
+        try { rel = new URL(rel).pathname; } catch { rel = "/"; }
+      }
+
+      let file = join(distDir, decodeURIComponent(rel));
       if (file.endsWith("/")) file = join(file, "index.html");
       try {
         const data = readFileSync(file);
@@ -88,6 +125,15 @@ try {
 
   browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+
+  // Fulfil every EXTERNAL request from the local server (see the serve() comment).
+  // Third-party beacons/ads then resolve instantly and cannot hold a socket open,
+  // which is what broke `networkidle` on the GitHub runner.
+  await page.route("**/*", async (route) => {
+    const u = new URL(route.request().url());
+    if (LOCAL_HOSTS.has(u.hostname)) return route.continue();
+    return route.fulfill({ status: 204, body: "" });
+  });
 
   await page.goto(url, { waitUntil: "networkidle", timeout: 30000 });
 
