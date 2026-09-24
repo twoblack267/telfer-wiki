@@ -705,6 +705,23 @@ const pageTitle = "Telfer Family Tree — All Generations";
         scroll-snap-align: start;
         flex-shrink: 0;
       }
+      /* Tablet (640-1023): the rail is kept but rows must still fit — the deep rows overflowed
+         by 7px at 768px because the phone rules stopped at 639. Measured 2026-09-24. */
+      @media (min-width: 640px) and (max-width: 1023px) {
+        .tree-node summary {
+          flex-wrap: wrap;
+        }
+        .tree-node summary strong {
+          min-width: 4.5rem;
+          flex: 1 1 auto;
+          overflow-wrap: anywhere;
+        }
+        .tree-node summary > span.font-mono {
+          flex-shrink: 1;
+          overflow: hidden;
+        }
+      }
+
       /* Phone: single open branch + touch-friendly + no horizontal overflow.
          MEASURED 2026-09-24: at depth 7 the ASCII rail ("│  " x7) plus name and years made a
          row 1270px wide on a 390px screen, pushing every link off the right edge where it
