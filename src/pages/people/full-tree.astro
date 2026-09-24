@@ -751,6 +751,20 @@ const pageTitle = "Telfer Family Tree — All Generations";
         .tree-node summary > span.font-mono {
           display: none;
         }
+        /* The <strong> is a flex item wrapping the name anchor. If it keeps its own hit box the
+           touch lands on the STRONG and the anchor never receives it (measured 2026-09-24 on a
+           390px viewport: elementFromPoint returned STRONG, navigation dead). So the strong is
+           hit-transparent and the anchor owns the only interactive box in the row. */
+        .tree-node summary strong {
+          pointer-events: none;
+          display: inline;
+        }
+        .tree-node summary strong > a {
+          pointer-events: auto;
+          display: inline-block;
+          touch-action: manipulation;
+          -webkit-tap-highlight-color: transparent;
+        }
         /* The <strong> holds ONLY the name anchor. It must keep an intrinsic minimum or the
            anchor collapses to an ~8px sliver (measured: 134 sliver links at 360px when this was
            min-width:0). Let the anchor wrap internally instead. */
