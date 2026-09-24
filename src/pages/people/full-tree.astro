@@ -600,6 +600,15 @@ const pageTitle = "Telfer Family Tree — All Generations";
     <!-- Tree Container -->
     <div class="person-card rounded-xl p-4">
       <div class="tree-container prose prose-sm max-w-none" style="font-size: 0.85rem; line-height: 1.7;">
+        <div class="flex flex-wrap items-center gap-2 mb-3 lg:hidden">
+          <button
+            id="tree-expand-all"
+            type="button"
+            aria-expanded="false"
+            class="px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-light)] hover:border-[var(--color-heading)] hover:text-[var(--color-heading)] transition-colors"
+          >Expand all</button>
+          <span class="text-xs text-[var(--color-muted)]">Show every branch at once</span>
+        </div>
         <div id="family-tree" set:html={treeHtml} />
 
         {(detachedHtml || looseHtml) && (
@@ -813,6 +822,7 @@ const pageTitle = "Telfer Family Tree — All Generations";
 
         // Get all details elements
         const allDetails = tree.querySelectorAll('details.tree-node');
+        let suppressAccordion = false;
 
         function getLevel(detail) {
           let level = 0;
@@ -824,10 +834,14 @@ const pageTitle = "Telfer Family Tree — All Generations";
           return level;
         }
 
-        // Single-open per level: when one opens, close all other OPEN siblings at same level
+        // Single-open per level was hostile on a phone: measured 2026-09-24, a single tap on the
+        // only open branch took totalOpen 1 -> 0 leaving the user with NO visible names.
+        // So: apply the accordion ONLY on wide screens, where a big viewport can afford it.
+        // On phones every branch stays independently expandable.
+        const wideScreen = () => window.matchMedia('(min-width: 1024px)').matches;
         allDetails.forEach(detail => {
           detail.addEventListener('toggle', (e) => {
-            if (detail.open) {
+            if (detail.open && wideScreen()) {
               const myLevel = getLevel(detail);
               allDetails.forEach(other => {
                 if (other !== detail && other.open && getLevel(other) === myLevel) {
@@ -837,6 +851,22 @@ const pageTitle = "Telfer Family Tree — All Generations";
             }
           });
         });
+
+        // ─── Expand all / Collapse all (makes every person reachable on a phone) ───
+        const expandAllBtn = document.getElementById('tree-expand-all');
+        if (expandAllBtn) {
+          const setAll = (open) => {
+            suppressAccordion = true;
+            allDetails.forEach(d => { d.open = open; });
+            suppressAccordion = false;
+            expandAllBtn.textContent = open ? 'Collapse all' : 'Expand all';
+            expandAllBtn.setAttribute('aria-expanded', String(open));
+          };
+          expandAllBtn.addEventListener('click', () => {
+            const anyClosed = [...allDetails].some(d => !d.open);
+            setAll(anyClosed);
+          });
+        }
 
         // ─── Generation jump buttons ───
         const genButtons = document.querySelectorAll('.gen-jump-btn');
