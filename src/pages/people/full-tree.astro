@@ -942,13 +942,47 @@ const pageTitle = "Telfer Family Tree — All Generations";
         // the summary could never be followed on touch (measured 2026-09-24: Playwright
         // reported "<summary> intercepts pointer events" at 390px). Let a link tap navigate
         // and stop the toggle from also firing.
-        tree.addEventListener('click', (e) => {
-          const anchor = e.target.closest('a[href]');
-          if (anchor && anchor.getAttribute('href').startsWith('/people/')) {
+        const profileHref = (target) => {
+          const anchor = target && target.closest ? target.closest('a[href]') : null;
+          const href = anchor ? anchor.getAttribute('href') : null;
+          return href && href.indexOf('/people/') !== -1 && href.indexOf('/people/full-tree') === -1
+            ? anchor.href
+            : null;
+        };
+
+        // `click` alone is not enough on touch: a tap inside <summary> is consumed by the
+        // details toggle and the follow-up synthetic click may never reach the anchor.
+        // Measured 2026-09-24: a CDP touchStart/touchEnd on the Gwendoline link navigated back
+        // to /people/full-tree/ while the same link's .click() worked. So navigate on
+        // `pointerup`/`touchend` directly, and suppress the toggle that would follow.
+        let tappedHref = null;
+        tree.addEventListener('pointerdown', (e) => {
+          tappedHref = profileHref(e.target);
+        }, true);
+        tree.addEventListener('pointerup', (e) => {
+          const href = profileHref(e.target);
+          if (href) {
             e.preventDefault();
             e.stopPropagation();
-            window.location.href = anchor.href;
-            return;
+            tappedHref = null;
+            window.location.href = href;
+          }
+        }, true);
+        tree.addEventListener('touchend', (e) => {
+          const href = profileHref(e.target);
+          if (href) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = href;
+            tappedHref = null;
+          }
+        }, true);
+        tree.addEventListener('click', (e) => {
+          const href = profileHref(e.target);
+          if (href || tappedHref) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = (href || tappedHref);
           }
         }, true); // capture phase, so this runs before the toggle default
 
