@@ -160,7 +160,25 @@ function matchVaultFile(person, byName, byTriple) {
     if (!cands || cands.length !== 1) continue; // ambiguous -> try next key shape
     return { file: cands[0], how: "first+last+year" };
   }
+
+  // Pass 3 (added 2026-09-25): the wiki title may DROP the family surname that the vault
+  // filename carries. "Florence Nicholas — Family & Biography" (slug florence-nicholas) is
+  // Florence Nicholas TELFER on disk, so free-text matching finds neither a full-name key nor
+  // a first|last|year triple. Match only when the wiki key is a PREFIX-WORD-RUN of exactly one
+  // vault name key, and refuse if more than one vault file answers. Same refusal-not-guess rule.
+  const prefixCands = [];
+  for (const [vk, vf] of byName) {
+    const vt = vk.split(/\s+/).filter(Boolean);
+    if (vt.length <= toks2len(keys)) continue;
+    if (vt.slice(0, toks2len(keys)).join(" ") === keys[0]) prefixCands.push(vf);
+  }
+  if (prefixCands.length === 1) return { file: prefixCands[0], how: "wiki-key-is-prefix-of-vault-name" };
+
   return null;
+}
+
+function toks2len(keys) {
+  return (keys[0] || "").split(/\s+/).filter(Boolean).length;
 }
 
 // 1. vault filename -> git date, once per file (cheap: ~380 git calls max).
