@@ -190,6 +190,27 @@ function convertObsidianImages(body) {
     outLines[i] = outLines[i].replace(fullMatch, `![${alt}](${publicSrc})`);
     // Clean up any leftover size bars that weren't part of the matched wikilink
     outLines[i] = outLines[i].replace(/\|400\b|\|300\b|\|380\b|\|450\b/g, '').trim();
+
+    // Consume the caption SOURCE line when we adopted it as the alt (2026-09-25).
+    //
+    // The alt becomes the <figcaption>, but the original italic line was left in the
+    // body, so every captioned photo rendered its caption TWICE: once under the image
+    // and once again as a stray italic paragraph beneath it. Measured on the live page
+    // for all four Stribling images before this fix.
+    //
+    // Only blank the line when captionOrFilenameAlt actually ADOPTED it (the alt is
+    // exactly the caption text, stripped of its outer asterisks). When the alt fell
+    // back to the filename stub the italic line is genuine prose and must be kept.
+    // NOTE: outLines is built with push(), so outLines[i + 1] does not exist yet at this
+    // (outLines is push()-built, so outLines[i + 1] does not exist yet at this point.)
+    const capLine = (srcLines[i + 1] || '').trim();
+    const capMatch = /^\*(?!\*)(.+?)\*$/.exec(capLine);
+    // Mutate the SOURCE line in place rather than skipping an outLines slot: outLines is
+    // push()-built but indexed as outLines[i] further up, so it must stay 1:1 with srcLines.
+    // (First attempt used a skip marker; that desynced the indexes and threw on line 195.)
+    if (capMatch && capMatch[1].trim() === alt) {
+      srcLines[i + 1] = '';
+    }
   }
 
   return { body: outLines.join('\n'), images };
