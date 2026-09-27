@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-25T14:14:26+10:00",
+  "generated_at": "2026-09-27T21:04:36+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 386,
+  "count": 389,
   "kinds": {
-    "real": 370,
+    "real": 373,
     "redirect": 16,
     "empty": 0
   },
@@ -332,6 +332,10 @@
       "sha256": "74946106a13477692330eea0530abe7a99b902e23e83a3b430cfb33c6e169567",
       "kind": "real"
     },
+    "Elaine Burdett Sheridan Telfer (1913\u20131987).md": {
+      "sha256": "5822aa8502769c82a010962e084f901c3f9da83815d3c02cc473f56b8322e9b9",
+      "kind": "real"
+    },
     "Elisabeth Telfer (b. ~1806, England).md": {
       "sha256": "89b52b78208be7272361b1d035dcddf91dfeae9c553648ed70fb3d5189b80fa5",
       "kind": "real"
@@ -365,7 +369,7 @@
       "kind": "redirect"
     },
     "Elizabeth Hannah Telfer (1836\u20131916).md": {
-      "sha256": "de368824113c75f2feec79730d389522236497e81eb413a48fb87726a32293c6",
+      "sha256": "4b58ab2883243fc39c13e0d6f1aa0ab7f446c6876cbf2d549cfd7c1deeab46bd",
       "kind": "real"
     },
     "Elizabeth Hutton Telfer (1774\u20131853).md": {
@@ -393,7 +397,7 @@
       "kind": "real"
     },
     "Elizabeth Telfer Farrow Holloway (1861\u20131946).md": {
-      "sha256": "f19b0dd0bb871ff43d28e66c3f8ed0ea4a55fd0ca4df7cda4417d4ad186ea2c8",
+      "sha256": "87ea9b030d85830e0bc45a82e7ca6d37e6a103f9ffebb01097dba12f607a0ed3",
       "kind": "real"
     },
     "Elizabeth Telfer Farrow.md": {
@@ -548,6 +552,10 @@
       "sha256": "5d70b239e45ddf61ab55fba5dc2d7ad814ceec3f7e2f1ab7321a0944d32f9f84",
       "kind": "real"
     },
+    "Geoffrey Francis Telfer (1914\u20131975).md": {
+      "sha256": "0642795ac4c2e24faa18e372319d8d285d5926dbdace71f58f81ddab2e61acfe",
+      "kind": "real"
+    },
     "George Edward Masters (1844\u20131912).md": {
       "sha256": "f466b50d345bf6719eb35cd0c46e00a45e2d21bbcefb5cca515051fabe3f600a",
       "kind": "real"
@@ -561,7 +569,7 @@
       "kind": "real"
     },
     "George Hope Holloway (1899\u20131919).md": {
-      "sha256": "e7a3042d2b62adcdf8df9f05d8b56a0118f105f2c5f2ce639a4550550300ba00",
+      "sha256": "1c684b9638a57a3be52fdd70c26d93d991b6ae14e819fddfaa2971f53b2e3983",
       "kind": "real"
     },
     "George Masters (1841\u20131841).md": {
@@ -637,7 +645,7 @@
       "kind": "real"
     },
     "Herbert Clifford Holloway (1887\u20131918).md": {
-      "sha256": "7e6c29ee8358911a167faa9003bf78edb57fb3bba3729afd5c8b886b865a168e",
+      "sha256": "bc77610a065040e1dfd51c7bd326080b4ba48edab03341de1f6a009381c34f43",
       "kind": "real"
     },
     "Herbert Dougal Telfer (1881\u20131976).md": {
@@ -1281,7 +1289,7 @@
       "kind": "real"
     },
     "Richard Pelling Latter (~1860\u20131936).md": {
-      "sha256": "35794b38efe941e587146f65070c6b3009ce288e46a0165984527da2d5d42b81",
+      "sha256": "4e512535b28ebbf9f8faeb9c5c9fb7a157b728a448c5d0c5c870a7e4baa46239",
       "kind": "real"
     },
     "Rita Joyce Telfer (1909\u20131990).md": {
@@ -1440,6 +1448,10 @@
       "sha256": "e8649ed9897bba991d0a541967741817e28cf45ff442ecc77048873e12bd8093",
       "kind": "real"
     },
+    "Thomas Holloway (1856\u20131922).md": {
+      "sha256": "77d2fb185cd2e80197d466298f9d0bb145fecd70b175be9d2bedab39110393c5",
+      "kind": "real"
+    },
     "Thomas Paynter (1859\u20131946).md": {
       "sha256": "74ed855fbd946cd22652ad12af182f824f0491ba4d73575461cf32f9674fb118",
       "kind": "real"
@@ -1501,7 +1513,7 @@
       "kind": "real"
     },
     "William Francis \"Frank\" Telfer (1885\u20131955).md": {
-      "sha256": "15031fac8843bf7095e110d541b6c444670f1499da294b39f473d83b5c306faa",
+      "sha256": "f2e8f9d1207b79bc28e19516102918e124856becd87220e989f02a54878af47b",
       "kind": "real"
     },
     "William Henry Parker (1893\u20131968).md": {

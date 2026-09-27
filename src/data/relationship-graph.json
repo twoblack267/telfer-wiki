@@ -1849,6 +1849,21 @@
       "slug": "rosemary-curtis",
       "id": "Rosemary Ruth Curtis",
       "generation": 7
+    },
+    {
+      "slug": "elaine-telfer",
+      "id": "Elaine Burdett Sheridan Telfer (1913)",
+      "generation": 6
+    },
+    {
+      "slug": "geoffrey-telfer",
+      "id": "Geoffrey Francis Telfer (1914)",
+      "generation": 6
+    },
+    {
+      "slug": "thomas-holloway",
+      "id": "Thomas Holloway (1856)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -2627,6 +2642,10 @@
       },
       {
         "from": "elizabeth-farrow",
+        "to": "herbert-clifford-holloway-1887"
+      },
+      {
+        "from": "thomas-holloway",
         "to": "herbert-clifford-holloway-1887"
       },
       {
@@ -3806,6 +3825,10 @@
         "to": "george-holloway"
       },
       {
+        "from": "thomas-holloway",
+        "to": "george-holloway"
+      },
+      {
         "from": "esther-jane-telfer-1834",
         "to": "john-smith"
       },
@@ -3880,6 +3903,10 @@
       {
         "from": "shirley-telfer-1929",
         "to": "susan-lawrie"
+      },
+      {
+        "from": "william-francis-telfer-1885",
+        "to": "geoffrey-telfer"
       }
     ],
     "spouseOf": [
@@ -3992,6 +4019,10 @@
         "to": "john-dillon-1827"
       },
       {
+        "from": "elizabeth-farrow",
+        "to": "thomas-holloway"
+      },
+      {
         "from": "elizabeth-telfer-1774",
         "to": "james-telfer-1761"
       },
@@ -4002,6 +4033,10 @@
       {
         "from": "elizabeth-oliver-1807",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "elizabeth-telfer-farrow-holloway-1861",
+        "to": "thomas-holloway"
       },
       {
         "from": "elspeth-young-1722",
@@ -4218,6 +4253,10 @@
       {
         "from": "robert-lawrie",
         "to": "susan-lawrie"
+      },
+      {
+        "from": "elaine-telfer",
+        "to": "geoffrey-telfer"
       }
     ],
     "siblingOf": [
