@@ -3,7 +3,8 @@
 # Cloudflare cache purge + VERIFY, for the telferwiki.com deploy.
 #
 # WHY THIS EXISTS (card tw-2026-09-12-041, reopened 2026-09-21):
-#   Cloudflare stamps cache-control: max-age=14400 on every response, overriding
+#   Cloudflare was BELIEVED to stamp cache-control: max-age=14400 on every
+#   response, overriding
 #   the origin's `no-cache, must-revalidate` for HTML. A finished deploy —
 #   including a PRIVACY fix — stays invisible at the edge for up to 4 hours.
 #   Measured 2026-09-21: cf-cache-status HIT, age 3200s, last-modified pointing
