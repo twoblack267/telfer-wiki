@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-28T20:05:07+10:00",
+  "generated_at": "2026-09-30T07:03:58+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 389,
+  "count": 390,
   "kinds": {
-    "real": 373,
+    "real": 374,
     "redirect": 16,
     "empty": 0
   },
@@ -21,7 +21,7 @@
       "kind": "real"
     },
     "Adam Murray (1728\u20131816).md": {
-      "sha256": "bd3cbbd58e299ea0acccc8439fcd0a0eb3cc71c18fd94714b77059d238418d7a",
+      "sha256": "0d1ee5f963ad258f36455c191b546bd45c092130d33a1001065c0819243a70b4",
       "kind": "real"
     },
     "Adam Telfer (1771\u20131846).md": {
@@ -345,7 +345,7 @@
       "kind": "real"
     },
     "Elizabeth Beattie (1741\u20131819).md": {
-      "sha256": "5d4afce92f43ace4c5b0fa7ad10702a3a213d2dab67f2aea9e7fa8511d4688cb",
+      "sha256": "ed7e5edbb15560a44cca06bee051a75682c3045167ea5cae4316f4aa6ece33d1",
       "kind": "real"
     },
     "Elizabeth Beattie (1802\u20131891).md": {
@@ -445,7 +445,7 @@
       "kind": "real"
     },
     "Esther Cowan (1783\u20131856).md": {
-      "sha256": "76a43e0724d16f8bf3a3af5d6d7aab7bebeb1d0456fe8fc4fd5aeca755ba5647",
+      "sha256": "c21baee467cbfd8ba4a781fec73817d9d83b2b5de80cf33ddfbe938d49814b46",
       "kind": "real"
     },
     "Esther Farrow Latter (1859\u20131951).md": {
@@ -728,6 +728,10 @@
       "sha256": "c8dae178e42abb4d57333fd9866ae322f71012cde1d3934b1859cc0f23de1998",
       "kind": "real"
     },
+    "James John Drew Telfer.md": {
+      "sha256": "ac3ff0d469a12290fc77dbf74f1e65d043c381fdb6a7e433ae96a07c58adac72",
+      "kind": "real"
+    },
     "James Masters (1846\u20131847).md": {
       "sha256": "707f4eaa1e40c7683156e82af1befca261c583f6fc51bcd4d1e3fcefbd5380e2",
       "kind": "real"
@@ -897,7 +901,7 @@
       "kind": "real"
     },
     "John Murray (1779\u20131849).md": {
-      "sha256": "28f06aa79d0b5cb9f6f458f70425130b6ba0cb45f228e744625dc001d0cea689",
+      "sha256": "ae0dff05e0a98b473de34d813dbb83e71948d89ec426838968a2f2970405b029",
       "kind": "real"
     },
     "John Ralph Paynter (1921\u20131941).md": {
@@ -1385,7 +1389,7 @@
       "kind": "real"
     },
     "Sheryle Telfer (1961\u2013?).md": {
-      "sha256": "d500e4de8188a815440653c49a5bbb95495f7127f3cde4bfd300c7a768ed45cb",
+      "sha256": "67850561b2a99e691e75324d2d771b0f3e5d00085cef61f6589568adcc757d09",
       "kind": "real"
     },
     "Shirley Edna Telfer (1929\u20132017).md": {

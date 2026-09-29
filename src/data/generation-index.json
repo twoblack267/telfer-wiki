@@ -28,8 +28,10 @@
     "james-telfer-1796",
     "joseph-march-1797",
     "isobel-telfer-1798",
+    "andrew-telfer-1798",
     "adam-telfer-1799",
     "margaret-telfer-1801",
+    "william-telfer-1802",
     "elizabeth-beattie-1802",
     "robert-haining-1802",
     "robert-telfer-1803",
@@ -72,6 +74,7 @@
     "jean-telfer-1840",
     "john-telfer-1840",
     "martha-allen-1840",
+    "william-telfer-1841",
     "adam-telfer-1842",
     "caroline-telfer-1842",
     "susan-telfer-1844",
@@ -79,7 +82,8 @@
     "margaret-telfer-1849",
     "george-telfer-1850",
     "martha-henstridge-1854",
-    "ruth-penna-1863"
+    "ruth-penna-1863",
+    "edward-telfer"
   ],
   "5": [
     "mary-anne-mcintyre-1836",
@@ -221,13 +225,9 @@
     "kenneth-cornish",
     "malcolm-duncan-cameron",
     "may-foy",
-    "robert-agnew",
-    "janet-nichol",
-    "william-telfer-shepherd"
+    "robert-agnew"
   ],
   "6": [
-    "andrew-telfer-1798",
-    "william-telfer-1802",
     "sophia-harriett-ridgway-1868",
     "phineas-baker-1870",
     "george-hucks-1875",
@@ -305,7 +305,6 @@
     "jessie-allan"
   ],
   "7": [
-    "william-telfer-1841",
     "hugh-kelly-parker-1896",
     "mina-evelyn-parker-1897",
     "inez-priscilla-dillon-1899",
@@ -342,8 +341,7 @@
     "allan-telfer",
     "rosemary-curtis",
     "robyn-telfer",
-    "robert-lawrie",
-    "edward-telfer"
+    "robert-lawrie"
   ],
   "8": [
     "william-humphrey-parker-1926",
@@ -354,6 +352,7 @@
     "aaron-ivory-1989",
     "jared-ivory-1993",
     "lauren-ivory-1994",
+    "james-telfer",
     "jono-telfer",
     "kristin-stefanoff",
     "nick-telfer",
@@ -365,6 +364,7 @@
     "amanda-lawrie",
     "rex-lawrie",
     "amy-telfer",
+    "alexa-telfer",
     "ben-stefanoff",
     "karina-ivory"
   ],
@@ -386,12 +386,13 @@
     "george-parker",
     "george-provis",
     "hugh-john",
+    "janet-nichol",
     "janet-stevenson",
     "leonard-arthur-dance",
     "marion-vida",
     "robert-dunlop",
     "sandra-lee-smith",
     "thomas-telfer",
-    "alexa-telfer"
+    "william-telfer-shepherd"
   ]
 }

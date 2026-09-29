@@ -1864,6 +1864,10 @@
       "slug": "thomas-holloway",
       "id": "Thomas Holloway (1856)",
       "generation": 5
+    },
+    {
+      "slug": "james-telfer",
+      "id": "James John Drew Telfer"
     }
   ],
   "edges": {
@@ -1994,6 +1998,10 @@
       },
       {
         "from": "janet-nichol",
+        "to": "andrew-telfer-1798"
+      },
+      {
+        "from": "william-telfer-shepherd",
         "to": "andrew-telfer-1798"
       },
       {
@@ -3765,7 +3773,11 @@
         "to": "william-dillon"
       },
       {
-        "from": "janet-nichol",
+        "from": "elizabeth-telfer-1774",
+        "to": "william-telfer-1802"
+      },
+      {
+        "from": "james-telfer-1761",
         "to": "william-telfer-1802"
       },
       {
@@ -3907,6 +3919,14 @@
       {
         "from": "william-francis-telfer-1885",
         "to": "geoffrey-telfer"
+      },
+      {
+        "from": "daryll-telfer",
+        "to": "james-telfer"
+      },
+      {
+        "from": "rosemary-curtis",
+        "to": "james-telfer"
       }
     ],
     "spouseOf": [
@@ -4136,10 +4156,6 @@
       },
       {
         "from": "janet-nichol",
-        "to": "william-telfer"
-      },
-      {
-        "from": "janet-nichol",
         "to": "william-telfer-shepherd"
       },
       {
@@ -4245,6 +4261,10 @@
       {
         "from": "nita-mutton",
         "to": "robert-campbell"
+      },
+      {
+        "from": "alexa-telfer",
+        "to": "james-telfer"
       },
       {
         "from": "dale-telfer",
@@ -4367,6 +4387,10 @@
       {
         "from": "adam-telfer-1799",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "adam-telfer-1799",
+        "to": "william-telfer-1802"
       },
       {
         "from": "adam-telfer-1799",
@@ -5806,6 +5830,10 @@
       },
       {
         "from": "francis-telfer-1809",
+        "to": "william-telfer-1802"
+      },
+      {
+        "from": "francis-telfer-1809",
         "to": "william-telfer-1811"
       },
       {
@@ -6238,6 +6266,10 @@
       },
       {
         "from": "isobel-telfer-1798",
+        "to": "william-telfer-1802"
+      },
+      {
+        "from": "isobel-telfer-1798",
         "to": "william-telfer-1811"
       },
       {
@@ -6319,6 +6351,10 @@
       {
         "from": "james-telfer-1796",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "james-telfer-1796",
+        "to": "william-telfer-1802"
       },
       {
         "from": "james-telfer-1796",
@@ -6522,6 +6558,10 @@
       },
       {
         "from": "john-telfer-1805",
+        "to": "william-telfer-1802"
+      },
+      {
+        "from": "john-telfer-1805",
         "to": "william-telfer-1811"
       },
       {
@@ -6547,6 +6587,10 @@
       {
         "from": "john-telfer-1791",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "john-telfer-1791",
+        "to": "william-telfer-1802"
       },
       {
         "from": "john-telfer-1791",
@@ -6691,6 +6735,10 @@
       {
         "from": "margaret-telfer-1801",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "margaret-telfer-1801",
+        "to": "william-telfer-1802"
       },
       {
         "from": "margaret-telfer-1801",
@@ -6873,6 +6921,10 @@
         "to": "william-telfer-1880"
       },
       {
+        "from": "william-telfer-1802",
+        "to": "william-telfer-1811"
+      },
+      {
         "from": "charles-farrow-jr",
         "to": "elizabeth-farrow"
       },
@@ -6927,6 +6979,10 @@
       {
         "from": "susan-lawrie",
         "to": "timothy-telfer-1959"
+      },
+      {
+        "from": "james-telfer",
+        "to": "rosemary-telfer-miriam"
       }
     ],
     "stepParentOf": [

@@ -292,7 +292,7 @@
     ],
     "relationships": [],
     "roles": [],
-    "body_markdown": "# Adam Murray (1728–1816)\n\n**Born:** 1728 — Castleton, Roxburghshire, Scotland\n**Died:** 1816 — Castleton, Roxburghshire, Scotland\n\n## Family\n\n Relation | Name |\n----------|------|\n **Spouse** | [[Elizabeth Beattie (1741–1819)]] |\n **Son** | [[John Murray (1779–1849)]] — m. Esther Cowan, father of Jean Murray Telfer |\n\n## Life Summary\n\nAdam Murray lived at Castleton, Roxburghshire, Scotland. He was the father of John Murray (1779–1849) of Langshawburn. His wife was Elizabeth Beattie.\n\nAdam's memorial is at Eskdalemuir Churchyard (FindAGrave memorial 224698711), recorded on the same stone as his son John Murray.\n\n## Additional Research\n\n- Found additional information on Adam Murray (1728–1816) via WikiTree profile [Murray-30876](https://www.wikitree.com/wiki/Murray-30876). This profile provides further details about Adam's lineage and descendants.\n- Adam Murray was likely born and died in Castleton, Roxburghshire. An older Adam Murray is recorded in the Eskdalemuir OPRs but further verification via Scotland's People is needed.\n\n## Sources\n\n- **Source:** FindAGrave memorial [224698711](https://www.findagrave.com/memorial/224698711/adam-murray) — Adam Murray (1728–1816), citing Eskdalemuir Churchyard. Accessed 26 July 2026.\n- **Source:** WikiTree profile [Murray-30104](https://www.wikitree.com/wiki/Murray-30104) — John Murray (1779–1849), parents section. Accessed 26 July 2026.",
+    "body_markdown": "# Adam Murray (1728–1816)\n\n**Born:** 1728 — Castleton, Roxburghshire, Scotland\n**Died:** 1816 — Castleton, Roxburghshire, Scotland\n\n## Family\n\n| Relation | Name |\n|----------|------|\n **Spouse** | [[Elizabeth Beattie (1741–1819)]] |\n **Son** | [[John Murray (1779–1849)]] — m. Esther Cowan, father of Jean Murray Telfer |\n\n## Life Summary\n\nAdam Murray lived at Castleton, Roxburghshire, Scotland. He was the father of John Murray (1779–1849) of Langshawburn. His wife was Elizabeth Beattie.\n\nAdam's memorial is at Eskdalemuir Churchyard (FindAGrave memorial 224698711), recorded on the same stone as his son John Murray.\n\n## Additional Research\n\n- Found additional information on Adam Murray (1728–1816) via WikiTree profile [Murray-30876](https://www.wikitree.com/wiki/Murray-30876). This profile provides further details about Adam's lineage and descendants.\n- Adam Murray was likely born and died in Castleton, Roxburghshire. An older Adam Murray is recorded in the Eskdalemuir OPRs but further verification via Scotland's People is needed.\n\n## Sources\n\n- **Source:** FindAGrave memorial [224698711](https://www.findagrave.com/memorial/224698711/adam-murray) — Adam Murray (1728–1816), citing Eskdalemuir Churchyard. Accessed 26 July 2026.\n- **Source:** WikiTree profile [Murray-30104](https://www.wikitree.com/wiki/Murray-30104) — John Murray (1779–1849), parents section. Accessed 26 July 2026.",
     "body_stripped": "**Born:** 1728 — Castleton, Roxburghshire, Scotland\n**Died:** 1816 — Castleton, Roxburghshire, Scotland\n\n## Family\n\n Relation  Name \n\n **Spouse**  Elizabeth Beattie (1741–1819) \n **Son**  John Murray (1779–1849) — m. Esther Cowan, father of Jean Murray Telfer \n\n## Life Summary\n\nAdam Murray lived at Castleton, Roxburghshire, Scotland. He was the father of John Murray (1779–1849) of Langshawburn. His wife was Elizabeth Beattie.\n\nAdam's memorial is at Eskdalemuir Churchyard (FindAGrave memorial 224",
     "is_living": false,
     "lifespan": "1728 – 1816",
@@ -461,6 +461,7 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -1978,7 +1979,8 @@
     "is_living": false,
     "lifespan": "1798 – 1858",
     "parents": [
-      "janet-nichol"
+      "janet-nichol",
+      "william-telfer-shepherd"
     ],
     "children": [],
     "spouses": [],
@@ -1993,7 +1995,7 @@
     "vault_file": "Andrew Telfer (1798–1858).md",
     "images": [],
     "person_photo": null,
-    "generation": 6,
+    "generation": 3,
     "step_parents": [],
     "step_children": []
   },
@@ -4341,6 +4343,7 @@
       "shirley-telfer-1929"
     ],
     "children": [
+      "james-telfer",
       "rosemary-telfer-miriam"
     ],
     "spouses": [
@@ -5299,7 +5302,7 @@
     "vault_file": "Edward Telfer.md",
     "images": [],
     "person_photo": null,
-    "generation": 7,
+    "generation": 4,
     "step_parents": [],
     "step_children": []
   },
@@ -5746,7 +5749,7 @@
     ],
     "relationships": [],
     "roles": [],
-    "body_markdown": "# Elizabeth Beattie (1741–1819)\n\n**Died:** 1819 — Castleton, Roxburghshire, Scotland\n\n## Family\n\n Relation | Name |\n----------|------|\n **Spouse** | [[Adam Murray (1728–1816)]] |\n **Son** | [[John Murray (1779–1849)]] — m. Esther Cowan, father of Jean Murray Telfer |\n\n## Life Summary\n\nElizabeth Beattie was the wife of Adam Murray of Castleton, Roxburghshire, and mother of John Murray (1779–1849). Her name is recorded on the family headstone at Eskdalemuir Churchyard alongside her husband and son.\n\n## Sources\n\n- **Source:** FindAGrave memorial [224698711](https://www.findagrave.com/memorial/224698711/adam-murray) — Adam Murray (1728–1816), citing Eskdalemuir Churchyard. Accessed 26 July 2026. Elizabeth Beattie is listed as spouse on this memorial.\n- **Source:** WikiTree profile [Murray-30104](https://www.wikitree.com/wiki/Murray-30104) — John Murray (1779–1849), parents section. Accessed 26 July 2026.",
+    "body_markdown": "# Elizabeth Beattie (1741–1819)\n\n**Died:** 1819 — Castleton, Roxburghshire, Scotland\n\n## Family\n\n| Relation | Name |\n|----------|------|\n **Spouse** | [[Adam Murray (1728–1816)]] |\n **Son** | [[John Murray (1779–1849)]] — m. Esther Cowan, father of Jean Murray Telfer |\n\n## Life Summary\n\nElizabeth Beattie was the wife of Adam Murray of Castleton, Roxburghshire, and mother of John Murray (1779–1849). Her name is recorded on the family headstone at Eskdalemuir Churchyard alongside her husband and son.\n\n## Sources\n\n- **Source:** FindAGrave memorial [224698711](https://www.findagrave.com/memorial/224698711/adam-murray) — Adam Murray (1728–1816), citing Eskdalemuir Churchyard. Accessed 26 July 2026. Elizabeth Beattie is listed as spouse on this memorial.\n- **Source:** WikiTree profile [Murray-30104](https://www.wikitree.com/wiki/Murray-30104) — John Murray (1779–1849), parents section. Accessed 26 July 2026.",
     "body_stripped": "**Died:** 1819 — Castleton, Roxburghshire, Scotland\n\n## Family\n\n Relation  Name \n\n **Spouse**  Adam Murray (1728–1816) \n **Son**  John Murray (1779–1849) — m. Esther Cowan, father of Jean Murray Telfer \n\n## Life Summary\n\nElizabeth Beattie was the wife of Adam Murray of Castleton, Roxburghshire, and mother of John Murray (1779–1849). Her name is recorded on the family headstone at Eskdalemuir Churchyard alongside her husband and son.\n\n## Sources\n\n- **Source:** FindAGrave memorial 224698711 — Adam",
     "is_living": false,
     "lifespan": "1741 – 1819",
@@ -6295,6 +6298,7 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "spouses": [
@@ -7498,7 +7502,7 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Esther Cowan (1783–1856)\n\n**Born:** 31 March 1783 — Langholm, Dumfriesshire, Scotland\n**Baptised:** 6 April 1783 — Langholm, Dumfriesshire\n**Died:** 4 August 1856 — Langshawburn, Eskdalemuir, Dumfriesshire, Scotland (aged 73)\n**Buried:** Eskdalemuir Churchyard, Eskdalemuir, Dumfries and Galloway, Scotland\n\n---\n\n## Family\n\n Relation | Name |\n----------|------|\n **Father** | James Cowan (baker) |\n **Mother** | Jean Hinshelwood |\n **Spouse** | [[John Murray (1779–1849)]] (m. 21 May 1806, Ewes, Dumfriesshire) |\n **Daughter** | [[Jean Murray (1810–1839)]] — m. Francis Telfer, emigrated SA |\n\n## Life Summary\n\nEsther Cowan was born on 31 March 1783 in Langholm, Dumfriesshire, Scotland, the third daughter of James Cowan (a baker by trade) and Jean Hinshelwood. She was baptised on 6 April 1783.\n\nOn or after 21 May 1806, Esther married [[John Murray (1779–1849)|John Murray]] in Ewes, Dumfriesshire. John was a widower — his first wife Janet Little had died earlier that year. John and Esther settled at Langshawburn in Eskdalemuir parish, where John worked as a shepherd and agricultural labourer.\n\nEsther and John had at least ten children together, including [[Jean Murray (1810–1839)|Jean]] (who married Francis Telfer and emigrated to South Australia in 1838), Pultney Malcolm Murray (who also emigrated to SA and became a prominent colonist), and William Murray (who also emigrated to SA).\n\nAfter John's death in 1849, Esther continued living at Langshawburn. She died there on 4 August 1856 at age 73 and was buried at Eskdalemuir Churchyard alongside her husband.\n\n## Timeline\n\n Date | Event |\n------|-------|\n 31 Mar 1783 | Born — Langholm, Dumfriesshire, Scotland |\n 6 Apr 1783 | Baptised — Langholm, Dumfriesshire |\n 21 May 1806 | Married [[John Murray (1779–1849)]] — Ewes, Dumfriesshire |\n 1810 | Daughter [[Jean Murray (1810–1839)|Jean]] born — Eskdalemuir |\n 1 Apr 1849 | Husband John Murray died — Langshawburn |\n 4 Aug 1856 | Died — Langshawburn, Eskdalemuir (aged 73) |\n 1856 | Buried — Eskdalemuir Churchyard |\n\n## Sources\n\n- **Source:** FindAGrave memorial [31324827](https://www.findagrave.com/memorial/31324827/esther-cowan) — Esther Cowan (1783–1856), citing Eskdalemuir Churchyard with headstone inscription photograph. Accessed 26 July 2026.\n- **Source:** WikiTree profile [Cowan-7830](https://www.wikitree.com/wiki/Cowan-7830) — Esther Cowan (1783–1858). Accessed 26 July 2026.\n- **Source:** Scotland's People (OPR 839/1) — Esther Cowan baptism 6 Apr 1783, daughter of James Cowan & Jean Hinshelwood, in Langholm, Dumfriesshire, via FindMyPast transcription cited on WikiTree. Accessed via secondary source.\n- **Source:** WikiTree profile [Murray-30104](https://www.wikitree.com/wiki/Murray-30104) — John Murray, confirms marriage and children. Accessed 26 July 2026.",
+    "body_markdown": "# Esther Cowan (1783–1856)\n\n**Born:** 31 March 1783 — Langholm, Dumfriesshire, Scotland\n**Baptised:** 6 April 1783 — Langholm, Dumfriesshire\n**Died:** 4 August 1856 — Langshawburn, Eskdalemuir, Dumfriesshire, Scotland (aged 73)\n**Buried:** Eskdalemuir Churchyard, Eskdalemuir, Dumfries and Galloway, Scotland\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n **Father** | James Cowan (baker) |\n **Mother** | Jean Hinshelwood |\n **Spouse** | [[John Murray (1779–1849)]] (m. 21 May 1806, Ewes, Dumfriesshire) |\n **Daughter** | [[Jean Murray (1810–1839)]] — m. Francis Telfer, emigrated SA |\n\n## Life Summary\n\nEsther Cowan was born on 31 March 1783 in Langholm, Dumfriesshire, Scotland, the third daughter of James Cowan (a baker by trade) and Jean Hinshelwood. She was baptised on 6 April 1783.\n\nOn or after 21 May 1806, Esther married [[John Murray (1779–1849)|John Murray]] in Ewes, Dumfriesshire. John was a widower — his first wife Janet Little had died earlier that year. John and Esther settled at Langshawburn in Eskdalemuir parish, where John worked as a shepherd and agricultural labourer.\n\nEsther and John had at least ten children together, including [[Jean Murray (1810–1839)|Jean]] (who married Francis Telfer and emigrated to South Australia in 1838), Pultney Malcolm Murray (who also emigrated to SA and became a prominent colonist), and William Murray (who also emigrated to SA).\n\nAfter John's death in 1849, Esther continued living at Langshawburn. She died there on 4 August 1856 at age 73 and was buried at Eskdalemuir Churchyard alongside her husband.\n\n## Timeline\n\n Date | Event |\n------|-------|\n 31 Mar 1783 | Born — Langholm, Dumfriesshire, Scotland |\n 6 Apr 1783 | Baptised — Langholm, Dumfriesshire |\n 21 May 1806 | Married [[John Murray (1779–1849)]] — Ewes, Dumfriesshire |\n 1810 | Daughter [[Jean Murray (1810–1839)|Jean]] born — Eskdalemuir |\n 1 Apr 1849 | Husband John Murray died — Langshawburn |\n 4 Aug 1856 | Died — Langshawburn, Eskdalemuir (aged 73) |\n 1856 | Buried — Eskdalemuir Churchyard |\n\n## Sources\n\n- **Source:** FindAGrave memorial [31324827](https://www.findagrave.com/memorial/31324827/esther-cowan) — Esther Cowan (1783–1856), citing Eskdalemuir Churchyard with headstone inscription photograph. Accessed 26 July 2026.\n- **Source:** WikiTree profile [Cowan-7830](https://www.wikitree.com/wiki/Cowan-7830) — Esther Cowan (1783–1858). Accessed 26 July 2026.\n- **Source:** Scotland's People (OPR 839/1) — Esther Cowan baptism 6 Apr 1783, daughter of James Cowan & Jean Hinshelwood, in Langholm, Dumfriesshire, via FindMyPast transcription cited on WikiTree. Accessed via secondary source.\n- **Source:** WikiTree profile [Murray-30104](https://www.wikitree.com/wiki/Murray-30104) — John Murray, confirms marriage and children. Accessed 26 July 2026.",
     "body_stripped": "**Born:** 31 March 1783 — Langholm, Dumfriesshire, Scotland\n**Baptised:** 6 April 1783 — Langholm, Dumfriesshire\n**Died:** 4 August 1856 — Langshawburn, Eskdalemuir, Dumfriesshire, Scotland (aged 73)\n**Buried:** Eskdalemuir Churchyard, Eskdalemuir, Dumfries and Galloway, Scotland\n\n## Family\n\n Relation  Name \n\n **Father**  James Cowan (baker) \n **Mother**  Jean Hinshelwood \n **Spouse**  John Murray (1779–1849) (m. 21 May 1806, Ewes, Dumfriesshire) \n **Daughter**  Jean Murray (1810–1839) — m. Fran",
     "is_living": false,
     "lifespan": "1783 – 1856",
@@ -8983,6 +8987,7 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -12171,6 +12176,7 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -12860,6 +12866,7 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "spouses": [
@@ -12997,6 +13004,7 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -13909,7 +13917,6 @@
       "william-telfer-1802"
     ],
     "spouses": [
-      "william-telfer",
       "william-telfer-shepherd"
     ],
     "siblings": [],
@@ -13921,7 +13928,7 @@
     "vault_file": "Janet Nichol.md",
     "images": [],
     "person_photo": null,
-    "generation": 5,
+    "generation": 99,
     "step_parents": [],
     "step_children": []
   },
@@ -15662,7 +15669,7 @@
     "roles": [
       "Shepherd and Agricultural Labourer"
     ],
-    "body_markdown": "# John Murray (1779–1849)\n\n**Born:** 15 July 1779 — Castleton, Roxburghshire, Scotland\n**Baptised:** 27 July 1779 — Castleton, Roxburghshire\n**Died:** 1 April 1849 — Langshawburn, Eskdalemuir, Dumfriesshire, Scotland (aged 69)\n**Buried:** Eskdalemuir Churchyard, Eskdalemuir, Dumfries and Galloway, Scotland\n**Occupation:** Shepherd and Agricultural Labourer\n\n---\n\n## Family\n\n Relation | Name |\n----------|------|\n **Father** | [[Adam Murray (1728–1816)]] |\n **Mother** | [[Elizabeth Beattie (1741–1819)]] |\n **Spouse (1st)** | Janet Little (1775–1806, m. ~1804) |\n **Spouse (2nd)** | [[Esther Cowan (1783–1856)]] (m. 21 May 1806, Ewes, Dumfriesshire) |\n **Daughter** | [[Jean Murray (1810–1839)]] — m. Francis Telfer, emigrated SA 1838 |\n\n## Life Summary\n\nJohn Murray was born on 15 July 1779 in Castleton, Roxburghshire, Scotland, the son of Adam Murray and Elizabeth Beattie. He worked as a shepherd and agricultural labourer, living at Langshawburn in Eskdalemuir parish — the same area his father had farmed at Castleton.\n\nHe was married twice. His first wife, Janet Little, died at Sorby (Castleton) on 23 February 1806 at age 31. They had at least two children — Adam and Michael — who both died young. Later in 1806, John married [[Esther Cowan (1783–1856)|Esther Cowan]] at Ewes, Dumfriesshire. Together they had a large family of at least ten children.\n\nThe 1841 census records John Murray (age 61) as an agricultural labourer living at Langshawburn, Eskdalemuir, with his wife Esther and several children still at home.\n\nJohn died at Langshawburn on 1 April 1849 at age 69. He was buried at Eskdalemuir Churchyard, where the family headstone also commemorates his wife, several children who predeceased him, and his mother Elizabeth Beattie.\n\nHis daughter [[Jean Murray (1810–1839)|Jean]] married [[Francis Telfer (1809–1895)]] in Scotland and emigrated to South Australia in 1838 aboard the *Prince George*. She died just 27 days after arrival, but through her the Murray line connects to the Australian Telfer family.\n\nSeveral of John and Esther's other children also emigrated to Australia, including Pultney Malcolm Murray (1819–1879) who became a prominent early colonist in South Australia.\n\n## Timeline\n\n Date | Event |\n------|-------|\n 15 Jul 1779 | Born — Castleton, Roxburghshire, Scotland |\n 27 Jul 1779 | Baptised — Castleton, Roxburghshire |\n ~1804 | Married (1st) Janet Little |\n 23 Feb 1806 | First wife Janet Little died aged 31, Sorby, Castleton |\n 21 May 1806 | Married (2nd) Esther Cowan — Ewes, Dumfriesshire |\n 1810 | Daughter [[Jean Murray (1810–1839)|Jean]] born — Eskdalemuir, Dumfriesshire |\n 1841 | Recorded in census as Shepherd/Ag Lab at Langshawburn, Eskdalemuir |\n 1 Apr 1849 | Died — Langshawburn, Eskdalemuir, Dumfriesshire (aged 69) |\n 1849 | Buried — Eskdalemuir Churchyard, Dumfries and Galloway |\n\n## Sources\n\n- **Source:** WikiTree profile [Murray-30104](https://www.wikitree.com/wiki/Murray-30104) — John Murray (1779–1849). Accessed 26 July 2026.\n- **Source:** FindAGrave memorial [31324826](https://www.findagrave.com/memorial/31324826/john-murray) — John Murray (1779–1849), citing Eskdalemuir Churchyard. Accessed 26 July 2026.\n- **Source:** WikiTree profile [Cowan-7830](https://www.wikitree.com/wiki/Cowan-7830) — Esther Cowan (1783–1858), confirms marriage and children. Accessed 26 July 2026.\n- **Source:** Scotland's People (OPR 784/1, Page 59) — John Murray baptism 27 Jul 1779, via FindMyPast transcription cited on WikiTree. Accessed via secondary source.",
+    "body_markdown": "# John Murray (1779–1849)\n\n**Born:** 15 July 1779 — Castleton, Roxburghshire, Scotland\n**Baptised:** 27 July 1779 — Castleton, Roxburghshire\n**Died:** 1 April 1849 — Langshawburn, Eskdalemuir, Dumfriesshire, Scotland (aged 69)\n**Buried:** Eskdalemuir Churchyard, Eskdalemuir, Dumfries and Galloway, Scotland\n**Occupation:** Shepherd and Agricultural Labourer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n **Father** | [[Adam Murray (1728–1816)]] |\n **Mother** | [[Elizabeth Beattie (1741–1819)]] |\n **Spouse (1st)** | Janet Little (1775–1806, m. ~1804) |\n **Spouse (2nd)** | [[Esther Cowan (1783–1856)]] (m. 21 May 1806, Ewes, Dumfriesshire) |\n **Daughter** | [[Jean Murray (1810–1839)]] — m. Francis Telfer, emigrated SA 1838 |\n\n## Life Summary\n\nJohn Murray was born on 15 July 1779 in Castleton, Roxburghshire, Scotland, the son of Adam Murray and Elizabeth Beattie. He worked as a shepherd and agricultural labourer, living at Langshawburn in Eskdalemuir parish — the same area his father had farmed at Castleton.\n\nHe was married twice. His first wife, Janet Little, died at Sorby (Castleton) on 23 February 1806 at age 31. They had at least two children — Adam and Michael — who both died young. Later in 1806, John married [[Esther Cowan (1783–1856)|Esther Cowan]] at Ewes, Dumfriesshire. Together they had a large family of at least ten children.\n\nThe 1841 census records John Murray (age 61) as an agricultural labourer living at Langshawburn, Eskdalemuir, with his wife Esther and several children still at home.\n\nJohn died at Langshawburn on 1 April 1849 at age 69. He was buried at Eskdalemuir Churchyard, where the family headstone also commemorates his wife, several children who predeceased him, and his mother Elizabeth Beattie.\n\nHis daughter [[Jean Murray (1810–1839)|Jean]] married [[Francis Telfer (1809–1895)]] in Scotland and emigrated to South Australia in 1838 aboard the *Prince George*. She died just 27 days after arrival, but through her the Murray line connects to the Australian Telfer family.\n\nSeveral of John and Esther's other children also emigrated to Australia, including Pultney Malcolm Murray (1819–1879) who became a prominent early colonist in South Australia.\n\n## Timeline\n\n Date | Event |\n------|-------|\n 15 Jul 1779 | Born — Castleton, Roxburghshire, Scotland |\n 27 Jul 1779 | Baptised — Castleton, Roxburghshire |\n ~1804 | Married (1st) Janet Little |\n 23 Feb 1806 | First wife Janet Little died aged 31, Sorby, Castleton |\n 21 May 1806 | Married (2nd) Esther Cowan — Ewes, Dumfriesshire |\n 1810 | Daughter [[Jean Murray (1810–1839)|Jean]] born — Eskdalemuir, Dumfriesshire |\n 1841 | Recorded in census as Shepherd/Ag Lab at Langshawburn, Eskdalemuir |\n 1 Apr 1849 | Died — Langshawburn, Eskdalemuir, Dumfriesshire (aged 69) |\n 1849 | Buried — Eskdalemuir Churchyard, Dumfries and Galloway |\n\n## Sources\n\n- **Source:** WikiTree profile [Murray-30104](https://www.wikitree.com/wiki/Murray-30104) — John Murray (1779–1849). Accessed 26 July 2026.\n- **Source:** FindAGrave memorial [31324826](https://www.findagrave.com/memorial/31324826/john-murray) — John Murray (1779–1849), citing Eskdalemuir Churchyard. Accessed 26 July 2026.\n- **Source:** WikiTree profile [Cowan-7830](https://www.wikitree.com/wiki/Cowan-7830) — Esther Cowan (1783–1858), confirms marriage and children. Accessed 26 July 2026.\n- **Source:** Scotland's People (OPR 784/1, Page 59) — John Murray baptism 27 Jul 1779, via FindMyPast transcription cited on WikiTree. Accessed via secondary source.",
     "body_stripped": "**Born:** 15 July 1779 — Castleton, Roxburghshire, Scotland\n**Baptised:** 27 July 1779 — Castleton, Roxburghshire\n**Died:** 1 April 1849 — Langshawburn, Eskdalemuir, Dumfriesshire, Scotland (aged 69)\n**Buried:** Eskdalemuir Churchyard, Eskdalemuir, Dumfries and Galloway, Scotland\n**Occupation:** Shepherd and Agricultural Labourer\n\n## Family\n\n Relation  Name \n\n **Father**  Adam Murray (1728–1816) \n **Mother**  Elizabeth Beattie (1741–1819) \n **Spouse (1st)**  Janet Little (1775–1806, m. ~1804) \n ",
     "is_living": false,
     "lifespan": "1779 – 1849",
@@ -16089,6 +16096,7 @@
       "john-telfer-1791",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -16405,6 +16413,7 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -19522,6 +19531,7 @@
       "john-telfer-1791",
       "john-telfer-1805",
       "robert-telfer-1803",
+      "william-telfer-1802",
       "william-telfer-1811"
     ],
     "related_trees": [
@@ -26622,7 +26632,8 @@
     "is_living": false,
     "lifespan": "1802 – 1850",
     "parents": [
-      "janet-nichol"
+      "elizabeth-telfer-1774",
+      "james-telfer-1761"
     ],
     "children": [
       "edward-telfer",
@@ -26631,7 +26642,15 @@
     ],
     "spouses": [],
     "siblings": [
-      "andrew-telfer-1798"
+      "adam-telfer-1799",
+      "andrew-telfer-1798",
+      "francis-telfer-1809",
+      "isobel-telfer-1798",
+      "james-telfer-1796",
+      "john-telfer-1791",
+      "john-telfer-1805",
+      "margaret-telfer-1801",
+      "william-telfer-1811"
     ],
     "related_trees": [
       "telfer-tree"
@@ -26641,7 +26660,7 @@
     "vault_file": "William Telfer (1802–1850).md",
     "images": [],
     "person_photo": null,
-    "generation": 6,
+    "generation": 3,
     "step_parents": [],
     "step_children": []
   },
@@ -26716,7 +26735,8 @@
       "john-telfer-1791",
       "john-telfer-1805",
       "margaret-telfer-1801",
-      "robert-telfer-1803"
+      "robert-telfer-1803",
+      "william-telfer-1802"
     ],
     "related_trees": [
       "telfer-tree"
@@ -26787,7 +26807,7 @@
     "vault_file": "William Telfer (1841–?).md",
     "images": [],
     "person_photo": null,
-    "generation": 7,
+    "generation": 4,
     "step_parents": [],
     "step_children": []
   },
@@ -26839,7 +26859,10 @@
     "is_living": false,
     "lifespan": "? – ?",
     "parents": [],
-    "children": [],
+    "children": [
+      "andrew-telfer-1798",
+      "william-telfer-1802"
+    ],
     "spouses": [
       "janet-nichol"
     ],
@@ -26852,7 +26875,7 @@
     "vault_file": "William Telfer (shepherd).md",
     "images": [],
     "person_photo": null,
-    "generation": 5,
+    "generation": 99,
     "step_parents": [],
     "step_children": []
   },
@@ -27683,9 +27706,7 @@
     "siblings": [
       "james-robert-telfer-1866"
     ],
-    "spouses": [
-      "janet-nichol"
-    ],
+    "spouses": [],
     "is_living": false,
     "lifespan": "1869 – ?",
     "related_trees": [
@@ -28192,7 +28213,9 @@
     "parents": [],
     "children": [],
     "siblings": [],
-    "spouses": [],
+    "spouses": [
+      "james-telfer"
+    ],
     "is_living": true,
     "lifespan": "? – living",
     "related_trees": [
@@ -28200,7 +28223,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 99,
+    "generation": 8,
     "step_parents": [],
     "step_children": []
   },
@@ -28609,7 +28632,9 @@
       "rosemary-curtis"
     ],
     "children": [],
-    "siblings": [],
+    "siblings": [
+      "james-telfer"
+    ],
     "spouses": [],
     "is_living": true,
     "lifespan": "1976 – living",
@@ -28838,6 +28863,7 @@
     "body_stripped": "**Role:** Wife of Daryll William Telfer\n**Married Name:** Telfer\n\n## Family\n\n Relation  Name \n\n **Spouse**  Daryll William Telfer (m. 12 Jan 1974, Torrensville, South Australia) \n **Children**  Rosemary Miriam Telfer, James John Drew Telfer",
     "parents": [],
     "children": [
+      "james-telfer",
       "rosemary-telfer-miriam"
     ],
     "siblings": [],
@@ -29051,5 +29077,84 @@
     "images": [],
     "person_photo": null,
     "generation": 5
+  },
+  {
+    "id": "James John Drew Telfer",
+    "slug": "james-telfer",
+    "vault_file": "James John Drew Telfer.md",
+    "first_name": "James",
+    "middle_name": "John Drew",
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "James John Drew Telfer",
+    "title": "James John Drew Telfer",
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "James John Drew Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Daryll William Telfer"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Rosemary Ruth Curtis"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Alexa Telfer (née Day, m. 15 Oct 2005)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Rosemary Miriam Telfer"
+        ]
+      }
+    ],
+    "roles": [
+      "Son of Daryll William Telfer and Rosemary Ruth Curtis"
+    ],
+    "body_markdown": "# James John Drew Telfer\n\n**Role:** Son of Daryll William Telfer and Rosemary Ruth Curtis\n**Married:** Alexa Day, 15 October 2005\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Daryll William Telfer]] |\n| **Mother** | [[Rosemary Ruth Curtis]] |\n| **Spouse** | [[Alexa Telfer]] (née Day, m. 15 Oct 2005) |\n| **Siblings** | [[Rosemary Miriam Telfer]] |\n\n---",
+    "body_stripped": "**Role:** Son of Daryll William Telfer and Rosemary Ruth Curtis\n**Married:** Alexa Day, 15 October 2005\n\n## Family\n\n Relation  Name \n\n **Father**  Daryll William Telfer \n **Mother**  Rosemary Ruth Curtis \n **Spouse**  Alexa Telfer (née Day, m. 15 Oct 2005) \n **Siblings**  Rosemary Miriam Telfer",
+    "parents": [
+      "daryll-telfer",
+      "rosemary-curtis"
+    ],
+    "children": [],
+    "siblings": [
+      "rosemary-telfer-miriam"
+    ],
+    "spouses": [
+      "alexa-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": true,
+    "lifespan": "? – living",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 8
   }
 ]

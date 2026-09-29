@@ -176,8 +176,23 @@ function resolveNameToSlug(name, sourceSlug) {
 
   // 1) Exact slug match (slugified clean name) — only safe when the ref carries no
   // years, because a bare slug match ignores generations entirely.
+  //
+  // FIXED 2026-09-30 (bare-slug hijack of an ambiguous name): a NEW person whose
+  // slug happens to equal the bare name (e.g. James John Drew Telfer -> `james-telfer`)
+  // made `slugIndex` return that newcomer for EVERY bare historical reference to the
+  // name "James Telfer". Because step 1 fires BEFORE the nameIndex ambiguity check,
+  // a reference such as Robert Telfer (1803)'s `Father: James Telfer` was rewritten
+  // to point at the living 8th-generation newcomer instead of the historical record.
+  // That self-reinforcing cycle then inflated his descendant depth past 4 and tripped
+  // the PHANTOM-LIVING build gate three times over (james-telfer, daryll-telfer,
+  // rosemary-curtis), blocking the build. A bare name that is known-AMBIGUOUS must
+  // never be resolved by a bare-slug coincidence — refuse rather than guess wrong.
   const slugified = slugify(cleanName);
-  if (slugIndex.has(slugified)) return slugIndex.get(slugified);
+  if (slugIndex.has(slugified)) {
+    const bareKey = cleanName.toLowerCase();
+    if (nameIndex.get(bareKey) === AMBIGUOUS) return null;
+    return slugIndex.get(slugified);
+  }
 
   // 2) Exact name match
   const exactKey = cleanName.toLowerCase();
