@@ -123,7 +123,7 @@
     {
       "slug": "andrew-telfer-1798",
       "id": "Andrew Telfer (1798)",
-      "generation": 6
+      "generation": 3
     },
     {
       "slug": "angela-telfer",
@@ -333,7 +333,7 @@
     {
       "slug": "edward-telfer",
       "id": "Edward Telfer",
-      "generation": 7
+      "generation": 4
     },
     {
       "slug": "edwin-ernest-clarke",
@@ -873,7 +873,7 @@
     {
       "slug": "janet-nichol",
       "id": "Janet Nichol",
-      "generation": 5
+      "generation": 99
     },
     {
       "slug": "janet-stevenson",
@@ -1698,7 +1698,7 @@
     {
       "slug": "william-telfer-1802",
       "id": "William Telfer (1802)",
-      "generation": 6
+      "generation": 3
     },
     {
       "slug": "william-telfer-1811",
@@ -1708,12 +1708,12 @@
     {
       "slug": "william-telfer-1841",
       "id": "William Telfer (1841)",
-      "generation": 7
+      "generation": 4
     },
     {
       "slug": "william-telfer-shepherd",
       "id": "William Telfer (shepherd)",
-      "generation": 5
+      "generation": 99
     },
     {
       "slug": "william-masters-1838",
@@ -1803,7 +1803,7 @@
     {
       "slug": "alexa-telfer",
       "id": "Alexa Telfer",
-      "generation": 99
+      "generation": 8
     },
     {
       "slug": "amanda-lawrie",
@@ -1867,7 +1867,8 @@
     },
     {
       "slug": "james-telfer",
-      "id": "James John Drew Telfer"
+      "id": "James John Drew Telfer",
+      "generation": 8
     }
   ],
   "edges": {
