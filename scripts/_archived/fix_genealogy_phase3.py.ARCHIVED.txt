@@ -1,3 +1,31 @@
+# ARCHIVED 2026-09-30 (Skippy) — unguarded vault writer, superseded, dead Linux path
+#
+# WHY THIS IS PARKED HERE INSTEAD OF RUNNING FROM THE REPO ROOT:
+#
+#  1. DEAD PATH. Hardcoded to /home/mark/ObsidianVault/... — a LINUX path.
+#     On this Mac the directory does not exist, so the script is a no-op at best
+#     (silent write failure) and a crash at worst. Fault class = tw-2026-09-12-023 /
+#     tw-2026-09-13-022 (dead hardcoded home directory). See skill reference
+#     telfer-genealogy-data/references/dead-hardcoded-paths.md.
+#
+#  2. UNGUARDED VAULT WRITER. It opens vault .md files with mode 'w' and rewrites them
+#     with hardcoded logic from June 2026. There is no --dry-run, no --apply gate, no
+#     confirmation. Anything that can rewrite the family archive unattended is exactly the
+#     failure mode card tw-2026-09-16-020 describes (unidentified writer clobbering vault
+#     profiles on 13 Sep 18:37).
+#
+#  3. SUPERSEDED. The live pipeline is scripts/regenerate-data.sh ->
+#     convert-markdown.mjs + build-relationship-graph.mjs + sanitize-people.mjs.
+#     Nothing references this file (not package.json, not regenerate-data.sh, not CI).
+#
+#  4. LAST COMMITTED 2026-06-25 (57dc7c4). Its one-off repair job is long done.
+#
+# RECOVERY: the original file is intact below the header, and in git history
+# (git log -- fix_genealogy.py). If the capability is ever wanted again, port the path
+# (os.path.expanduser / TELFER_VAULT_PATH), add a --dry-run gate, and wire it into
+# regenerate-data.sh deliberately. Do not just move it back.
+#
+# ---------------------------------------------------------------------------
 #!/usr/bin/env python3
 """
 Genealogy Data Fix Script — Phase 3

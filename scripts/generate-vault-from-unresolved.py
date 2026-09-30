@@ -6,8 +6,24 @@ Creates missing person files with proper frontmatter extracted from relationship
 import os, re, subprocess, yaml
 from datetime import datetime
 
-VAULT_DIR = '/home/mark/ObsidianVault/Family History/People/'
-BUILD_SCRIPT = '/home/mark/telfer-wiki/scripts/build-people-json.mjs'
+# ---- WRITE GATE (added 2026-09-30, Skippy) -----------------------------------
+# THIS SCRIPT WRITES TO THE FAMILY VAULT (*.md, mode 'w', line ~272). It had no
+# guard and no dry run. An unguarded writer that can rewrite the archive is the
+# exact failure mode card tw-2026-09-16-020 records (unidentified writer clobbered
+# two vault profiles). Dry run is now the DEFAULT; --apply is required to write.
+import argparse as _argparse
+_ap = _argparse.ArgumentParser(description="writes vault .md files — dry run by default")
+_ap.add_argument("--apply", action="store_true", help="actually write to the vault")
+_ap.add_argument("--check", action="store_true", help="report only (default behaviour)")
+_args, _ = _ap.parse_known_args()
+WRITE_MODE = bool(_args.apply)
+if not WRITE_MODE:
+    print("DRY RUN — no vault files will be written. Re-run with --apply to write.")
+
+VAULT_DIR = os.environ.get("TELFER_VAULT_PATH") or os.path.expanduser(
+    "~/ObsidianVault/Family History/People")
+BUILD_SCRIPT = os.environ.get("TELFER_BUILD_SCRIPT") or os.path.expanduser(
+    "~/telfer-wiki/scripts/build-people-json.mjs")
 
 def slugify(name):
     """Generate slug from name, matching build script logic"""
@@ -62,7 +78,7 @@ def parse_relationship_list(name_detail, rel_type):
 
 def extract_people_from_unresolved():
     """Run build script and extract all unique person references"""
-    result = subprocess.run(['node', BUILD_SCRIPT], capture_output=True, text=True, cwd='/home/mark/telfer-wiki')
+    result = subprocess.run(['node', BUILD_SCRIPT], capture_output=True, text=True, cwd=os.path.expanduser("~/telfer-wiki"))
     lines = [line for line in result.stdout.split('\n') if '⚠️  Unresolved:' in line]
     
     people = {}  # name -> {details}
@@ -267,6 +283,9 @@ def main():
         frontmatter = generate_frontmatter(data)
         content = generate_markdown(data, frontmatter)
         
+        if not WRITE_MODE:
+            print(f"  [dry-run] would write vault file: {fpath}")
+            continue
         with open(fpath, 'w') as f:
             f.write(content)
         created += 1

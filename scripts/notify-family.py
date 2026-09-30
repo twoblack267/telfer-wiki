@@ -74,7 +74,7 @@ def has_changed():
 
 def get_smtp_config(account="main"):
     """Read SMTP config from Himalaya's config.toml."""
-    config_path = "/home/mark/.config/himalaya/config.toml"
+    config_path = os.environ.get("HIMALAYA_CONFIG") or os.path.expanduser("~/.config/himalaya/config.toml")
     with open(config_path, "rb") as f:
         config = tomllib.load(f)
     return config["accounts"][account]["message"]["send"]["backend"]

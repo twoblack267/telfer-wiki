@@ -14,7 +14,14 @@ import { join, basename } from "path";
 import { parse } from "yaml";
 
 // ── Config ──────────────────────────────────────────────
-const VAULT_PATH = "/home/mark/ObsidianVault/Family History";
+// RESOLVE THE VAULT PORTABLY (2026-09-30). This was hardcoded to
+// "/home/mark/ObsidianVault/Family History" — a LINUX path that does not exist on this Mac.
+// Same fault class as tw-2026-09-12-023 / -063; the .mjs twin was fixed 2026-09-12 and this
+// .ts copy was left behind. An env override plus a home-relative default is correct on any
+// machine and overridable for testing. Nothing imports this file today — it is kept as the
+// TypeScript twin of extract-data.mjs, so it must not rot into a broken state.
+const VAULT_PATH = process.env.TELFER_VAULT_PATH
+  || join(process.env.HOME || "", "ObsidianVault", "Family History");
 const OUTPUT_DIR = join(import.meta.dirname, "..", "data");
 const PEOPLE_DIR = join(VAULT_PATH, "People");
 const TREE_FILES = [

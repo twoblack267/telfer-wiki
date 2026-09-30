@@ -10,8 +10,26 @@
 import fs from 'fs';
 import path from 'path';
 
+// ---- WRITE GATE (added 2026-09-30, Skippy) ---------------------------------
+// This script rewrites LIVE data (people.json and/or vault .md files) with no
+// guard and no dry run. Running it once silently overwrote live data — that is
+// the unguarded-writer class (card tw-2026-09-16-020: an unidentified writer
+// clobbered vault profiles). Dry run is now the DEFAULT; pass --apply to write.
+const APPLY = process.argv.includes('--apply');
+const CHECK = process.argv.includes('--check');
+if (!APPLY) {
+  console.log('DRY RUN — nothing will be written. Re-run with --apply to write.');
+}
+function guardWrite(fn, label) {
+  if (!APPLY) { console.log(`  [dry-run] would write: ${label}`); return; }
+  fn();
+}
+
+
 const PEOPLE_JSON = 'src/data/people.json';
-const VAULT_DIR = '/home/mark/ObsidianVault/Family History/People/';
+const VAULT_DIR = process.env.TELFER_VAULT_PATH
+  ? process.env.TELFER_VAULT_PATH + "/Family History/People/"
+  : path.join(process.env.HOME || "", "ObsidianVault", "Family History", "People") + "/";
 
 const people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
 const slugSet = new Set(people.map(p => p.slug));
@@ -136,7 +154,7 @@ children: []
 - [[Family Tree]]
 `;
 
-  fs.writeFileSync(path.join(VAULT_DIR, vaultFile), content);
+  guardWrite(() => fs.writeFileSync(path.join(VAULT_DIR, vaultFile), content), 'writeFileSync')
   created.slug++;
   console.log(`  ✅ ${vaultFile}`);
 }
@@ -193,7 +211,7 @@ children: []
 - [[Family Tree]]
 `;
 
-  fs.writeFileSync(path.join(VAULT_DIR, vaultFile), content);
+  guardWrite(() => fs.writeFileSync(path.join(VAULT_DIR, vaultFile), content), 'writeFileSync')
   created.named++;
   if (created.named % 25 === 0) console.log(`   ... ${created.named} named stubs created`);
 }

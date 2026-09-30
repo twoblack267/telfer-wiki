@@ -16,8 +16,26 @@
 import fs from 'fs';
 import path from 'path';
 
+// ---- WRITE GATE (added 2026-09-30, Skippy) ---------------------------------
+// This script rewrites LIVE data (people.json and/or vault .md files) with no
+// guard and no dry run. Running it once silently overwrote live data — that is
+// the unguarded-writer class (card tw-2026-09-16-020: an unidentified writer
+// clobbered vault profiles). Dry run is now the DEFAULT; pass --apply to write.
+const APPLY = process.argv.includes('--apply');
+const CHECK = process.argv.includes('--check');
+if (!APPLY) {
+  console.log('DRY RUN — nothing will be written. Re-run with --apply to write.');
+}
+function guardWrite(fn, label) {
+  if (!APPLY) { console.log(`  [dry-run] would write: ${label}`); return; }
+  fn();
+}
+
+
 const PEOPLE_JSON = 'src/data/people.json';
-const VAULT_DIR = '/home/mark/ObsidianVault/Family History/People/';
+const VAULT_DIR = process.env.TELFER_VAULT_PATH
+  ? process.env.TELFER_VAULT_PATH + "/Family History/People/"
+  : path.join(process.env.HOME || "", "ObsidianVault", "Family History", "People") + "/";
 
 // Load existing data
 const people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
@@ -243,7 +261,7 @@ ${d.note}
 `;
 
     const displayName = slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-    fs.writeFileSync(vaultPath, content);
+    guardWrite(() => fs.writeFileSync(vaultPath, content), 'writeFileSync')
     createdFiles.push(vaultFilename);
 
     // Create people.json entry
@@ -373,7 +391,7 @@ children: []
 - [[Family Tree]]
 `;
 
-  fs.writeFileSync(vaultPath, content);
+  guardWrite(() => fs.writeFileSync(vaultPath, content), 'writeFileSync')
   existingVaultFiles.add(vaultFilename.toLowerCase());
   const slugLower = slug.toLowerCase();
 
@@ -407,7 +425,7 @@ console.log(`✅ Created ${namedCreated} named-people vault files`);
 console.log(`📝 Total people.json entries: ${people.length}`);
 
 // Write updated people.json
-fs.writeFileSync(PEOPLE_JSON, JSON.stringify(people, null, 2));
+guardWrite(() => fs.writeFileSync(PEOPLE_JSON, JSON.stringify(people, null, 2)), 'writeFileSync')
 console.log(`💾 Wrote updated ${PEOPLE_JSON}`);
 
 // ── SUMMARY ──

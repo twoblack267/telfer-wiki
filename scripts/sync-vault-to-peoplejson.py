@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """
+import os
 sync-vault-to-peoplejson.py
 For every .md file in the vault directory, ensure a matching entry exists in people.json.
 Reads the vault file's YAML frontmatter to populate the entry.
@@ -7,8 +8,10 @@ Reads the vault file's YAML frontmatter to populate the entry.
 import json, os, glob, re, yaml
 from collections import OrderedDict
 
-VAULT_DIR = '/home/mark/ObsidianVault/Family History/People/'
-PEOPLE_JSON = '/home/mark/telfer-wiki/src/data/people.json'
+VAULT_DIR = os.environ.get("TELFER_VAULT_PATH") or os.path.expanduser(
+    "~/ObsidianVault/Family History/People")
+PEOPLE_JSON = os.environ.get("TELFER_PEOPLE_JSON") or os.path.expanduser(
+    "~/telfer-wiki/src/data/people.json")
 
 # Load existing people.json
 with open(PEOPLE_JSON) as f:
@@ -107,6 +110,39 @@ for vf in vault_files:
 
 print(f'✅ Added {added} new entries to people.json')
 print(f'📝 Total: {len(people)} entries')
+
+# ---- WRITE GATE (added 2026-09-30, Skippy) ------------------------------------
+# This script OVERWRITES the live src/data/people.json. It previously had no guard,
+# no --check, no dry run — running it once (even to "test") silently rewrote live
+# data (374 -> 503 entries). That is the unguarded-writer class: a script that can
+# rewrite live data with no confirmation is a footgun, not a tool.
+#
+# New behaviour: DRY RUN BY DEFAULT. It prints what it WOULD change and writes
+# nothing. You must pass --apply to actually write. A backup of the target file is
+# taken before any real write.
+# ------------------------------------------------------------------------------
+import argparse as _argparse
+
+_ap = _argparse.ArgumentParser(description="Sync vault -> people.json (safe by default)")
+_ap.add_argument("--apply", action="store_true",
+                 help="actually write people.json (default: dry run, writes nothing)")
+_ap.add_argument("--check", action="store_true",
+                 help="alias for dry run: report only, write nothing (this is the default)")
+_args, _ = _ap.parse_known_args()
+
+if not _args.apply:
+    print(f'🔎 DRY RUN — nothing written. {added} new entries WOULD be added; '
+          f'total would go {len(people) - added} -> {len(people)}.')
+    print(f'   Target (untouched): {PEOPLE_JSON}')
+    print('   Re-run with --apply to write.')
+    raise SystemExit(0)
+
+# take a timestamped backup before overwriting live data
+import shutil as _shutil, time as _time
+if os.path.exists(PEOPLE_JSON):
+    _bak = PEOPLE_JSON + _time.strftime('.bak-sync-%Y%m%d-%H%M%S')
+    _shutil.copy2(PEOPLE_JSON, _bak)
+    print(f'🗄️  Backup: {_bak}')
 
 with open(PEOPLE_JSON, 'w') as f:
     json.dump(people, f, indent=2, ensure_ascii=False)

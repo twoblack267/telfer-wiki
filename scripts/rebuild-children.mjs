@@ -2,6 +2,22 @@ import fs from 'fs';
 import path from 'path';
 import { parse, stringify } from 'yaml';
 
+// ---- WRITE GATE (added 2026-09-30, Skippy) ---------------------------------
+// This script rewrites LIVE data (people.json and/or vault .md files) with no
+// guard and no dry run. Running it once silently overwrote live data — that is
+// the unguarded-writer class (card tw-2026-09-16-020: an unidentified writer
+// clobbered vault profiles). Dry run is now the DEFAULT; pass --apply to write.
+const APPLY = process.argv.includes('--apply');
+const CHECK = process.argv.includes('--check');
+if (!APPLY) {
+  console.log('DRY RUN — nothing will be written. Re-run with --apply to write.');
+}
+function guardWrite(fn, label) {
+  if (!APPLY) { console.log(`  [dry-run] would write: ${label}`); return; }
+  fn();
+}
+
+
 // Load the private people.json (has all data including children arrays)
 const people = JSON.parse(fs.readFileSync('src/data/people.json', 'utf-8'));
 
@@ -173,11 +189,13 @@ for (const p of people) {
 }
 
 // Save updated people.json
-fs.writeFileSync('src/data/people.json', JSON.stringify(people, null, 2));
+guardWrite(() => fs.writeFileSync('src/data/people.json', JSON.stringify(people, null, 2)), 'writeFileSync')
 console.log('Updated people.json with corrected children');
 
 // Now update the vault YAML files
-const vaultDir = '/home/mark/ObsidianVault/Family History/People/';
+const vaultDir = process.env.TELFER_VAULT_PATH
+  ? process.env.TELFER_VAULT_PATH + "/Family History/People/"
+  : path.join(process.env.HOME || "", "ObsidianVault", "Family History", "People") + "/";
 const yamlFiles = fs.readdirSync(vaultDir).filter(f => f.endsWith('.md'));
 
 let updated = 0;
@@ -208,7 +226,7 @@ for (const file of yamlFiles) {
     fm.children = newChildren;
     const newFm = stringify(fm);
     const newContent = content.replace(/^---\n[\s\S]*?\n---/, `---\n${newFm}---`);
-    fs.writeFileSync(filePath, newContent);
+    guardWrite(() => fs.writeFileSync(filePath, newContent), 'writeFileSync')
     updated++;
   }
 }
