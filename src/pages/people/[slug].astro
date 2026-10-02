@@ -140,7 +140,7 @@ const sameAsLinks = lookupByPersonSlug(sameas, person.slug, allSlugs, {
 const spouseSchema = (person.spouses || [])
   .map((s) => telferPeople.find((p) => p.id === s))
   .filter(Boolean)
-  .map((s) => ({ "@type": "Person", name: s.display_name, url: `https://telferwiki.com/people/${s.slug}` }));
+  .map((s) => ({ "@type": "Person", name: s.display_name, url: `https://telferwiki.com/people/${s.slug}/` }));
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -149,7 +149,7 @@ const personSchema = {
   ...(person.first_name ? { givenName: person.first_name } : {}),
   ...(person.last_name ? { familyName: person.last_name } : {}),
   ...(person.gender ? { gender: person.gender } : {}),
-  url: `https://telferwiki.com/people/${person.slug}`,
+  url: `https://telferwiki.com/people/${person.slug}/`,
   ...(person.birth_date ? { birthDate: person.birth_date }
      : person.birth_year_display ? { birthDate: person.birth_year_display } : {}),
   ...(person.death_year_display && !person.is_living ? { deathDate: person.death_year_display } : {}),
@@ -157,8 +157,8 @@ const personSchema = {
   // person as the SAME entity Google/AI already knows — the key genealogy entity boost.
   ...(sameAsLinks.length ? { sameAs: sameAsLinks } : {}),
   // Relatives live at their own URLs on this same site
-  ...(parentLinks.length ? { parent: parentLinks.map((p) => ({ "@type": "Person", name: p.name, url: `https://telferwiki.com/people/${p.slug}` })) } : {}),
-  ...(childLinks.length ? { children: childLinks.map((c) => ({ "@type": "Person", name: c.name, url: `https://telferwiki.com/people/${c.slug}` })) } : {}),
+  ...(parentLinks.length ? { parent: parentLinks.map((p) => ({ "@type": "Person", name: p.name, url: `https://telferwiki.com/people/${p.slug}/` })) } : {}),
+  ...(childLinks.length ? { children: childLinks.map((c) => ({ "@type": "Person", name: c.name, url: `https://telferwiki.com/people/${c.slug}/` })) } : {}),
   ...(spouseSchema.length ? { spouse: spouseSchema } : {}),
 };
 
