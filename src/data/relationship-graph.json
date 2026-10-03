@@ -1176,11 +1176,6 @@
       "generation": 7
     },
     {
-      "slug": "lillian-may-telfer-1872",
-      "id": "Lillian May Telfer (1872)",
-      "generation": 5
-    },
-    {
       "slug": "lindsay-telfer-1920",
       "id": "Lindsay Roland Telfer (1920)",
       "generation": 6
@@ -1222,7 +1217,7 @@
     },
     {
       "slug": "margaret-dougal-smith-1868",
-      "id": "Margaret Dougal Smith (1868)",
+      "id": "Margaret Dougal Smith (1867)",
       "generation": 5
     },
     {
@@ -1869,6 +1864,11 @@
       "slug": "james-telfer",
       "id": "James John Drew Telfer",
       "generation": 8
+    },
+    {
+      "slug": "lillian-telfer",
+      "id": "Lillian May Telfer (1873)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -3222,14 +3222,6 @@
         "to": "levi-telfer-2017"
       },
       {
-        "from": "adam-telfer-1842",
-        "to": "lillian-may-telfer-1872"
-      },
-      {
-        "from": "margaret-telfer-1849",
-        "to": "lillian-may-telfer-1872"
-      },
-      {
         "from": "julia-matilda-seebohm-1876",
         "to": "lindsay-telfer-1920"
       },
@@ -3928,6 +3920,14 @@
       {
         "from": "rosemary-curtis",
         "to": "james-telfer"
+      },
+      {
+        "from": "adam-telfer-1842",
+        "to": "lillian-telfer"
+      },
+      {
+        "from": "margaret-telfer-1849",
+        "to": "lillian-telfer"
       }
     ],
     "spouseOf": [
@@ -4427,7 +4427,7 @@
       },
       {
         "from": "adelaide-elsie-pearl-telfer-1889",
-        "to": "lillian-may-telfer-1872"
+        "to": "lillian-telfer"
       },
       {
         "from": "adelaide-elsie-pearl-telfer-1889",
@@ -5255,7 +5255,7 @@
       },
       {
         "from": "effie-olive-telfer-1886",
-        "to": "lillian-may-telfer-1872"
+        "to": "lillian-telfer"
       },
       {
         "from": "effie-olive-telfer-1886",
@@ -5311,7 +5311,7 @@
       },
       {
         "from": "elizabeth-beattie-telfer-1871",
-        "to": "lillian-may-telfer-1872"
+        "to": "lillian-telfer"
       },
       {
         "from": "elizabeth-beattie-telfer-1871",
@@ -5675,7 +5675,7 @@
       },
       {
         "from": "eva-rowena-telfer-1885",
-        "to": "lillian-may-telfer-1872"
+        "to": "lillian-telfer"
       },
       {
         "from": "eva-rowena-telfer-1885",
@@ -5751,7 +5751,7 @@
       },
       {
         "from": "francis-adam-telfer-1875",
-        "to": "lillian-may-telfer-1872"
+        "to": "lillian-telfer"
       },
       {
         "from": "francis-adam-telfer-1875",
@@ -6095,7 +6095,7 @@
       },
       {
         "from": "hazel-rose-telfer-1891",
-        "to": "lillian-may-telfer-1872"
+        "to": "lillian-telfer"
       },
       {
         "from": "hazel-rose-telfer-1891",
@@ -6131,7 +6131,7 @@
       },
       {
         "from": "herbert-dougal-telfer-1881",
-        "to": "lillian-may-telfer-1872"
+        "to": "lillian-telfer"
       },
       {
         "from": "herbert-dougal-telfer-1881",
@@ -6295,7 +6295,7 @@
       },
       {
         "from": "james-edgerston-telfer-1877",
-        "to": "lillian-may-telfer-1872"
+        "to": "lillian-telfer"
       },
       {
         "from": "james-edgerston-telfer-1877",
@@ -6682,18 +6682,6 @@
         "to": "zabella-telfer-2019"
       },
       {
-        "from": "lillian-may-telfer-1872",
-        "to": "margaret-telfer-1869"
-      },
-      {
-        "from": "lillian-may-telfer-1872",
-        "to": "vernon-ray-st-clair-telfer-1879"
-      },
-      {
-        "from": "lillian-may-telfer-1872",
-        "to": "violet-hope-telfer-1883"
-      },
-      {
         "from": "lindsay-telfer-1920",
         "to": "maifie-telfer-1913"
       },
@@ -6984,6 +6972,18 @@
       {
         "from": "james-telfer",
         "to": "rosemary-telfer-miriam"
+      },
+      {
+        "from": "lillian-telfer",
+        "to": "margaret-telfer-1869"
+      },
+      {
+        "from": "lillian-telfer",
+        "to": "vernon-ray-st-clair-telfer-1879"
+      },
+      {
+        "from": "lillian-telfer",
+        "to": "violet-hope-telfer-1883"
       }
     ],
     "stepParentOf": [
