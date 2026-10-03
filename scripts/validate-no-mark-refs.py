@@ -62,6 +62,18 @@ ALLOWED = [
      "refers to an ancestor named Mark (e.g. husband Mark's death notice)"),
     (re.compile(r"\bwife\s+mark'?s\b", re.IGNORECASE),
      "refers to an ancestor named Mark"),
+    # 2026-10-04: the ancestor's OWN family references. The archivist (Mark Kenneth
+    # Telfer, b. 21 Mar 1986) has no children born in the 1890s-1930s, so a possessive
+    # naming a historical child/descendant of Mark Telfer (1877-1946) is the ancestor.
+    # Found live in the Borders OCR dump (lines 14074/14147/16485):
+    #   "Mark's daughter, Mrs. Joyce Downs"        (Joyce = the ancestor's 5th child)
+    #   "Mark's fifth child was Joyce Elizabeth..." (same referent)
+    #   "Mark's grandson, Ian Telfer"              (Ian's father = Gilbert Melville
+    #       Telfer 1908-1973, the ancestor's son, confirmed in the vault)
+    (re.compile(r"\bmark'?s\s+(?:daughter|son|child|children|grandson|granddaughter|"
+                r"first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth)\b",
+                re.IGNORECASE),
+     "refers to Mark Telfer the ancestor's own historical family, not the archivist's"),
 ]
 
 # ─── Referent check (card tw-2026-09-13-023) ───
@@ -98,15 +110,6 @@ ANCESTOR_FULLNAME = re.compile(
     re.IGNORECASE,
 )
 
-# Inline, auditable escape hatch. A vault file that legitimately names the ANCESTOR
-# writes `<!-- mark-ref-ok: <reason> -->` on or above that line. An exception without a
-# stated reason is how the previous leak happened, so the reason is REQUIRED -- a bare
-# marker does not suppress anything.
-ANCESTOR_OK_MARKER = re.compile(
-    r"<!--\s*mark-ref-ok\s*:\s*(\S.*?)\s*-->",
-    re.IGNORECASE,
-)
-
 # Legacy specific patterns kept so previously-caught phrasings keep biting even if the
 # general rule is ever narrowed. Cheap redundancy on the highest-value shapes.
 FORBIDDEN_PATTERNS = [
@@ -123,26 +126,33 @@ TARGET_FIELDS = {
 }
 
 
-def _scan_text(text: str, allow_ancestor: bool = False):
+def _scan_text(text: str):
     """Yield (matched_text, description) for every violation in `text`.
 
-    `allow_ancestor` is set by the caller when an auditable
-    `<!-- mark-ref-ok: reason -->` marker covers this text. A marker does NOT blanket-
-    suppress: it only exempts the AMBIGUOUS ancestor form ("Mark Telfer's"). The
-    unambiguous archivist forms ("Mark's", "Mark Kenneth Telfer's") are still reported,
-    because a marker is not a licence to publish a first-person reference.
+    Two exemption routes, both referent-based (card tw-2026-09-13-023):
+      1. The ambiguous ancestor full name ("Mark Telfer's") is exempt unless it also
+         carries an archivist shortening (the "mark telfer's ... mark kenneth" leak).
+      2. The documented ALLOWED shapes -- husband/wife Mark's, and the ancestor's own
+         historical family ("Mark's daughter", "Mark's grandson"). See ALLOWED for why
+         each is safe. Nothing here exempts an unambiguous first-person reference.
     """
     for pattern in (MARK_POSSESSIVE, MARK_POSSESSIVE_ALT):
         for match in pattern.finditer(text):
             hit = match.group(0)
-            # Is this the ambiguous ancestor's full name, covered by a stated reason?
-            if allow_ancestor and ANCESTOR_FULLNAME.search(hit):
+            # Is this the ambiguous ancestor's full name?
+            if ANCESTOR_FULLNAME.search(hit):
                 if not ARCHIVIST_POSSESSIVE.search(hit):
                     continue
-            # Legacy proximity exceptions, kept for the documented husband/wife shapes.
-            start = max(0, match.start() - 24)
-            window = text[start:match.end() + 4]
-            if any(ap.search(window) for ap, _ in ALLOWED):
+            # Proximity exceptions. These must look BOTH ways: the ancestor's own family
+            # shapes put the relation AFTER the possessive ("Mark's daughter"), while the
+            # husband/wife shapes put it before ("husband Mark's"). A backwards-only window
+            # can never see a forward relation word -- verified 2026-10-04: MATCH is the
+            # literal "Mark's" (2 words), so "daughter" was structurally unreachable.
+            start = max(0, match.start() - 32)
+            window = text[start:match.end() + 48]
+            matched_exception = next(
+                (reason for ap, reason in ALLOWED if ap.search(window)), None)
+            if matched_exception:
                 continue
             yield hit, "possessive reference to the archivist by name"
     for pattern, desc in FORBIDDEN_PATTERNS:
@@ -182,16 +192,8 @@ def scan_file(path: Path) -> list[Tuple[str, int, str, str]]:
 
     # Raw line scan — gives real line numbers and covers non-JSON files.
     lines = content.splitlines()
-    marker_active = False
     for line_no, line in enumerate(lines, 1):
-        # An inline `<!-- mark-ref-ok: reason -->` marker covers this line and the next
-        # few, so it can sit directly above the sentence it is excusing. Reason required.
-        if ANCESTOR_OK_MARKER.search(line):
-            marker_active = True
-            marker_line = line_no
-        elif marker_active and line_no - marker_line > 3:
-            marker_active = False
-        for match_text, desc in _scan_text(line, allow_ancestor=marker_active):
+        for match_text, desc in _scan_text(line):
             violations.append((str(path), line_no, desc, match_text))
 
     # JSON field-aware scan (dedupe later by the caller if both fire).
@@ -212,11 +214,7 @@ def scan_file(path: Path) -> list[Tuple[str, int, str, str]]:
             continue
         for field_path, value, _ in iter_json_strings(person):
             if any(tf in field_path for tf in TARGET_FIELDS):
-                # The field-aware pass must honour the inline marker too — otherwise a
-                # marker that silenced the raw-line scan would immediately be re-reported
-                # here, making the escape hatch useless.
-                field_allows_ancestor = bool(ANCESTOR_OK_MARKER.search(value))
-                for match_text, desc in _scan_text(value, allow_ancestor=field_allows_ancestor):
+                for match_text, desc in _scan_text(value):
                     violations.append((str(path), 0, field_path, match_text))
     return violations
 

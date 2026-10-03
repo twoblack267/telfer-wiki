@@ -2834,6 +2834,7 @@
       "edith-mary-kathleen-telfer",
       "helen-telfer",
       "james-robert-telfer-1866",
+      "roland-telfer",
       "william-telfer"
     ],
     "spouses": [
@@ -3475,6 +3476,7 @@
     "parents": [],
     "children": [
       "james-robert-telfer-1866",
+      "roland-telfer",
       "william-telfer"
     ],
     "spouses": [
@@ -6161,6 +6163,7 @@
       "hannah-peacock-1862"
     ],
     "siblings": [
+      "roland-telfer",
       "william-telfer"
     ],
     "step_parents": [],
@@ -6490,8 +6493,10 @@
     ],
     "parents": [],
     "children": [
+      "gwen-lillecrapp",
       "ivan-frank-lillecrapp-1917",
-      "olive-mary-lillecrapp-1899"
+      "olive-mary-lillecrapp-1899",
+      "vera-lillecrapp"
     ],
     "spouses": [
       "mary-bayes-farrow-1875"
@@ -6529,7 +6534,10 @@
       "jean-telfer-1840",
       "richard-paynter-1838"
     ],
-    "children": [],
+    "children": [
+      "dalby-dennis",
+      "gordon-dennis"
+    ],
     "spouses": [],
     "siblings": [
       "elizabeth-paynter-1864",
@@ -6626,7 +6634,8 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "james-robert-telfer-1866"
+      "james-robert-telfer-1866",
+      "roland-telfer"
     ],
     "step_parents": [],
     "step_children": [],
@@ -7610,7 +7619,9 @@
       "caroline-telfer-1842",
       "john-telfer-1847"
     ],
-    "children": [],
+    "children": [
+      "neil-telfer"
+    ],
     "spouses": [],
     "siblings": [
       "albert-telfer-1881",
@@ -8268,6 +8279,44 @@
     "person_photo": null
   },
   {
+    "id": "Roland Telfer (1882)",
+    "slug": "roland-telfer",
+    "first_name": "Roland",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1882,
+    "death_year": 1975,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1882",
+    "death_year_display": "1975",
+    "display_name": "Roland Telfer",
+    "title": "Roland John Telfer (1882–1975)",
+    "lifespan": "1882 – 1975",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# Roland John Telfer (1882–1975)\n\n> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 20 January 1882 — Tantanoola, South Australia\n**Died:** 7 March 1975 — Royal Adelaide Hospital, Adelaide, South Australia\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of the Woodlands, Yahl\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n- **Spouse:** none recorded in the tree\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.265**:\n\n> 9. Roland John TELFER, b. 20 Jan 1882 Tantanoola, d. 7 Mar 1975 RAH, Adelaide, SA\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.265:** printed entry — *9. Roland John TELFER, b. 20 Jan 1882 Tantanoola, d. 7 Mar 1975 RAH, Adelaide, SA*\n\n---",
+    "roles": [],
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "james-robert-telfer-1866",
+      "william-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Clara Blanche Telfer (1883)",
     "slug": "clara-blanche-telfer-1883",
     "first_name": "Clara",
@@ -8748,7 +8797,10 @@
       "john-telfer-1840",
       "martha-henstridge-1854"
     ],
-    "children": [],
+    "children": [
+      "effie-telfer",
+      "keith-telfer"
+    ],
     "spouses": [
       "lilian-daisy-dawson"
     ],
@@ -11373,6 +11425,40 @@
     "person_photo": null
   },
   {
+    "id": "Dalby Dennis (1897)",
+    "slug": "dalby-dennis",
+    "first_name": "Dalby",
+    "middle_name": null,
+    "last_name": "Dennis",
+    "birth_year": 1897,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1897",
+    "death_year_display": "?",
+    "display_name": "Dalby Dennis",
+    "title": "Dalby Cecil Dennis (1897–?)",
+    "lifespan": "1897 – ?",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Dalby Cecil Dennis (1897–?)\n\n> Living person — details limited to the printed record (name, dates, places, immediate family).\n\n## Lifespan\n\n**Born:** 1 October 1897 — White Cliffs, South Australia\n**Died:** *not printed in the tree* — recorded here as a living/unstated person\n\n## Family\n\n- **Mother:** [[Dinah Flavel Paynter (1869–1958)]]\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.116**:\n\n> 2. Dalby Cecil DENNIS, b. 1 Oct 1897 White Cliffs, SA,\n\nAlready named in the vault on the parent page — Children list on Dinah's page.\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.116:** printed entry — *2. Dalby Cecil DENNIS, b. 1 Oct 1897 White Cliffs, SA,*\n\n---",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "dinah-flavel-paynter-1869"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "George Hope Holloway (1899)",
     "slug": "george-holloway",
     "first_name": "George",
@@ -11578,6 +11664,40 @@
     "person_photo": null
   },
   {
+    "id": "Gordon Dennis (1904)",
+    "slug": "gordon-dennis",
+    "first_name": "Gordon",
+    "middle_name": null,
+    "last_name": "Dennis",
+    "birth_year": 1904,
+    "death_year": 1986,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1904",
+    "death_year_display": "1986",
+    "display_name": "Gordon Dennis",
+    "title": "Gordon Percival Dennis (1904–1986)",
+    "lifespan": "1904 – 1986",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Gordon Percival Dennis (1904–1986)\n\n> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 18 September 1904 — White Cliffs, South Australia\n**Died:** 9 October 1986 — Port Lincoln, South Australia\n\n## Family\n\n- **Mother:** [[Dinah Flavel Paynter (1869–1958)]]\n- **Spouse:** Muriel Irene Johnson\n- **Married:** 26 April 1933 — Methodist Church, Port Lincoln, South Australia\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.120**:\n\n> 6. Gordon Percival DENNIS, b. 18 Sep 1904 White Cliffs, SA, d. 9 Oct 1986 Pt Lincoln, SA +Muriel Irene JOHNSON, b. 27 Aug 1909 Pt Lincoln, SA, m. 26 Apr 1933 Methodist Church, Pt Lincoln, SA, d. 19 Sep 1982 Pt Lincoln, SA\n\nAlready named in the vault on the parent page — Children list on Dinah's page.\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.120:** printed entry — *6. Gordon Percival DENNIS, b. 18 Sep 1904 White Cliffs, SA, d. 9 Oct 1986 Pt Lincoln, SA +Muriel Irene JOHNSON, b. 27 Aug 1909 Pt Lincoln, SA, m. 26 A*\n\n---",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "dinah-flavel-paynter-1869"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Inez Dillon (1905)",
     "slug": "inez-dillon-1905",
     "first_name": "Inez",
@@ -11648,6 +11768,40 @@
       "inez-dillon-1905",
       "thomas-cleveland-dillon-1900"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Gwen Lillecrapp (1906)",
+    "slug": "gwen-lillecrapp",
+    "first_name": "Gwen",
+    "middle_name": null,
+    "last_name": "Lillecrapp",
+    "birth_year": 1906,
+    "death_year": 1980,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1906",
+    "death_year_display": "1980",
+    "display_name": "Gwen Lillecrapp",
+    "title": "Gwen Emma Lillecrapp (1906–1980)",
+    "lifespan": "1906 – 1980",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Gwen Emma Lillecrapp (1906–1980)\n\n> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 6 December 1906 — Taylors Gap near Kapunda, South Australia\n**Died:** 2 August 1980 — Gawler, South Australia\n\n## Family\n\n- **Father:** [[Alfred Edward Lillecrapp (1869–1934)]]\n- **Spouse:** Eldred Henry Verco Riggs (printed as *Eldred Verco Riggs* / *Eláred H. Riggs*; no vault page yet — not linked)\n- **Married:** 26 July 1930 — Methodist Church, Malvern, South Australia\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.64**:\n\n> 5. Gwen Emma LILLECRAPP, b. 6 Dec 1906 Taylors Gap nr Kapunda, SA, d. 2 Aug 1980 Gawler, SA\n\nAlready named in the vault on the parent page — Children (⚠️ lead, NOT confirmed) list on Alfred Edward's page.\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.64:** printed entry — *5. Gwen Emma LILLECRAPP, b. 6 Dec 1906 Taylors Gap nr Kapunda, SA, d. 2 Aug 1980 Gawler, SA*\n\n---",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "alfred-edward-lillecrapp-1869"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -11831,6 +11985,40 @@
       "melville-telfer-1914",
       "murray-telfer-1920"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Vera Lillecrapp (1909)",
+    "slug": "vera-lillecrapp",
+    "first_name": "Vera",
+    "middle_name": null,
+    "last_name": "Lillecrapp",
+    "birth_year": 1909,
+    "death_year": 2009,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1909",
+    "death_year_display": "2009",
+    "display_name": "Vera Lillecrapp",
+    "title": "Vera Jean Lillecrapp (1909–2009)",
+    "lifespan": "1909 – 2009",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Vera Jean Lillecrapp (1909–2009)\n\n> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 17 November 1909 — Kapunda, South Australia\n**Died:** 2009 — (place not printed in the tree)\n\n## Family\n\n- **Father:** [[Alfred Edward Lillecrapp (1869–1934)]]\n- **Spouse:** none recorded in the tree\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.65**:\n\n> 6. Vera Jean LILLECRAPP, b. 17 Nov 1909 Kapunda, SA\n\nAlready named in the vault on the parent page — Children (⚠️ lead, NOT confirmed) list on Alfred Edward's page.\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.65:** printed entry — *6. Vera Jean LILLECRAPP, b. 17 Nov 1909 Kapunda, SA*\n\n---",
+    "roles": [],
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "parents": [
+      "alfred-edward-lillecrapp-1869"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -12058,6 +12246,40 @@
       "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Keith Telfer (1911)",
+    "slug": "keith-telfer",
+    "first_name": "Keith",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1911,
+    "death_year": 1958,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1911",
+    "death_year_display": "1958",
+    "display_name": "Keith Telfer",
+    "title": "Keith Telfer (1911–1958)",
+    "lifespan": "1911 – 1958",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Keith Telfer (1911–1958)\n\n> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 10 August 1911 — (place not printed in the tree)\n**Died:** 24 December 1958 — Melbourne, Victoria\n\n## Family\n\n- **Father:** [[Douglas Telfer (1887–1956)]]\n- **Spouse:** Elsie Hoskins\n- **Married:** 24 January 1936\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.275**:\n\n> 1. Keith TELFER, b. 10 Aug 1911, d. 24 Dec 1958 Melbourne, Vic\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.275:** printed entry — *1. Keith TELFER, b. 10 Aug 1911, d. 24 Dec 1958 Melbourne, Vic*\n   Continuation lines: +Elsie HOSKINS, b. 8 Apr 1913, m. 24 Jan 1936, d. 16 May 2005 Melbourne, Vic\n\n---",
+    "roles": [],
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "parents": [
+      "douglas-telfer-1887"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -12363,6 +12585,40 @@
       "kenneth-telfer-1906",
       "lindsay-telfer-1920"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Effie Telfer (1914)",
+    "slug": "effie-telfer",
+    "first_name": "Effie",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1914,
+    "death_year": 1994,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1914",
+    "death_year_display": "1994",
+    "display_name": "Effie Telfer",
+    "title": "Effie Telfer (1914–1994)",
+    "lifespan": "1914 – 1994",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Effie Telfer (1914–1994)\n\n> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 13 November 1914 — Melbourne, Victoria\n**Died:** 6 November 1994 — Diamond Creek, Victoria\n\n## Family\n\n- **Father:** [[Douglas Telfer (1887–1956)]]\n- **Spouse:** Les Dawson\n- **Married:** 5 April 1938 — Brunswick, Victoria\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.275**:\n\n> 2. Effie TELFER, b. 13 Nov 1914 Melbourne, Vic, d. 6 Nov 1994 Diamond Creek, Vic\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.275:** printed entry — *2. Effie TELFER, b. 13 Nov 1914 Melbourne, Vic, d. 6 Nov 1994 Diamond Creek, Vic*\n   Continuation lines: +Les DAWSON, b. 8 Oct 1914 Robe, SA, m. 5 Apr 1938 Brunswick, Vic, d. 22 Apr 1994 Barham, NSW\n\n---",
+    "roles": [],
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "parents": [
+      "douglas-telfer-1887"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -13299,6 +13555,40 @@
       }
     ],
     "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg"
+  },
+  {
+    "id": "Neil Telfer (1936)",
+    "slug": "neil-telfer",
+    "first_name": "Neil",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1936,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1936",
+    "death_year_display": "living",
+    "display_name": "Neil Telfer",
+    "title": "Neil Ronald Telfer (1936–)",
+    "lifespan": "1936 – living",
+    "generation": 6,
+    "is_living": true,
+    "body_markdown": "# Neil Ronald Telfer (1936–)\n\n> Living person — details limited to the printed record (name, dates, places, immediate family).\n\n## Family\n\n- **Father:** John Ernest Telfer\n- **Mother:** Gwendoline May Hinder\n- **Spouse:** Sandra Jean Mahala Philpott\n- **Married:** 19 January 1965 — Haberfield, New South Wales",
+    "roles": [],
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "parents": [
+      "john-telfer-1877"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
   },
   {
     "id": "Harry Bunston",

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-03T20:38:23+10:00",
+  "generated_at": "2026-10-04T05:38:00+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 390,
+  "count": 398,
   "kinds": {
-    "real": 374,
+    "real": 382,
     "redirect": 16,
     "empty": 0
   },
@@ -77,7 +77,7 @@
       "kind": "real"
     },
     "Alfred Edward Lillecrapp (1869\u20131934).md": {
-      "sha256": "d53ff1981eb3cdc87eb6a39ce212d60672180c034d485d095e9843aecde8c5c7",
+      "sha256": "5bc8abeed47d2947c2422798542263060bd1a66d8864bbd964cc2a3e5d1efb26",
       "kind": "real"
     },
     "Alfred George Stribling (c.1853\u20131928).md": {
@@ -252,6 +252,10 @@
       "sha256": "7edb4829f504c3e365cd24e4f05b01ec82ecc582f117f62dc7fb2b1f6ef81ead",
       "kind": "real"
     },
+    "Dalby Cecil Dennis (1897\u2013?).md": {
+      "sha256": "dab793f75eaafe29855c7891fde1da6d69c97c0a547dee6f03d22465c2417174",
+      "kind": "real"
+    },
     "Dale Helen Telfer.md": {
       "sha256": "68c96e294d40fc713b8a4373f3c9f965fd1ac81d596af812dfe9d789a0ff95b8",
       "kind": "real"
@@ -277,7 +281,7 @@
       "kind": "real"
     },
     "Dinah Flavel Paynter (1869\u20131958).md": {
-      "sha256": "f17092ec81adf43a0c7ba9d816cc38ac61f61be8ea001a9aa85ea6012a306f7b",
+      "sha256": "de8f736d369e1f0aea058ff26fa2cba45d704d5e9b6bd396b3fa259673aa6966",
       "kind": "real"
     },
     "Donald Jack Hookings (1916\u20131943).md": {
@@ -297,7 +301,7 @@
       "kind": "real"
     },
     "Douglas Telfer (1887\u20131956).md": {
-      "sha256": "6b7393e5df2e111d0da88fb4d9be2faeb5232161ef0b16769447c5d3fd2a9cac",
+      "sha256": "e411d5316192ee8678322297989f550323789868d27ae2d8e0cb997590bc5e05",
       "kind": "real"
     },
     "Edith Farrow.md": {
@@ -330,6 +334,10 @@
     },
     "Effie Olive Telfer (1886\u20131969).md": {
       "sha256": "eafc79c9fe3661c1ad4647e951d5a5009b54702c4c3f9fe6d7c1cc16cdd82cfa",
+      "kind": "real"
+    },
+    "Effie Telfer (1914\u20131994).md": {
+      "sha256": "55bafba2c6285e08c390714488aa6308e78cb39c9c770cdc5bb42f7180b1ab3d",
       "kind": "real"
     },
     "Elaine Burdett Sheridan Telfer (1913\u20131987).md": {
@@ -441,7 +449,7 @@
       "kind": "real"
     },
     "Ernest John Telfer (1878\u20131953).md": {
-      "sha256": "0616f61cec30612663c9ac9e1356deb74a565e00e203a742ddd087ce2cbcf455",
+      "sha256": "f3d62cfa57d1675a0b31cbdbd64ccdc27c172c0515610a82e74d5a8b66efef50",
       "kind": "real"
     },
     "Esther Cowan (1783\u20131856).md": {
@@ -600,8 +608,16 @@
       "sha256": "01bdc8df4300d35bb2660ee996ab486ce44b147466b4fdf1cec9c3d257347b12",
       "kind": "real"
     },
+    "Gordon Percival Dennis (1904\u20131986).md": {
+      "sha256": "16b9f51323eab6e530f96b49e07ee4d43d295dc50391039a86efb7203037f091",
+      "kind": "real"
+    },
     "Grantley Keith Telfer.md": {
       "sha256": "9d5c8b324e9a72a77b63ffe40140c99e0d347a0c9f44c3171c3825e83f8b7114",
+      "kind": "real"
+    },
+    "Gwen Emma Lillecrapp (1906\u20131980).md": {
+      "sha256": "f7f0d3db9ff15ddd9aaad79e2871483777f255f29f9839054748ebee4493e94c",
       "kind": "real"
     },
     "Gwendoline Victoria (Campbell) Telfer (1910\u20131966).md": {
@@ -992,6 +1008,10 @@
       "sha256": "672a44f4bd4b9d91e6eb713c6ea910152f55f3d75270099caf6730761c9f6120",
       "kind": "real"
     },
+    "Keith Telfer (1911\u20131958).md": {
+      "sha256": "2cbc5d0d93796c4118f86e90c1fa10774137638baa37df9045cc5afec9ce84f0",
+      "kind": "real"
+    },
     "Kenneth Cornish.md": {
       "sha256": "4310615bcd2b0a00da70e212bc925d81fc6899bdb431b17b30bde96b9e55b514",
       "kind": "real"
@@ -1220,6 +1240,10 @@
       "sha256": "0091f40073effd2c7540111b4adef0ef3872d4d525e0caf739e1b1afb75c6066",
       "kind": "real"
     },
+    "Neil Ronald Telfer (1936\u2013).md": {
+      "sha256": "976cc87a865859b4d82c48ec429ffd5f73d3cb99d10837d34f2f3b97b3cd62a7",
+      "kind": "real"
+    },
     "Nick Telfer.md": {
       "sha256": "6c82b80f788ef2997afed43c0f9dc148e3a2b987b5c812711a416f837f841617",
       "kind": "real"
@@ -1333,7 +1357,7 @@
       "kind": "real"
     },
     "Robert Telfer (1835\u20131907).md": {
-      "sha256": "e8b3abd58ca112cd06c92d5db7a4f46e659daf20a35867c9d56d8f101758d724",
+      "sha256": "77e1760ee73826dccd4768adeb7bc26b811d68ccb831416d16ddf3ea4b914f89",
       "kind": "real"
     },
     "Robert Telfer Dillon (1862\u20131942).md": {
@@ -1346,6 +1370,10 @@
     },
     "Rodger Peryman Wishart (1920\u20131944).md": {
       "sha256": "8e6f578f5456f5ae401c55b5d9973cad5f4c2049106805f39b94b2ea89e8a184",
+      "kind": "real"
+    },
+    "Roland John Telfer (1882\u20131975).md": {
+      "sha256": "36960f6443f1a50f615f621ac42383d0be2a486bae7f406f669f46b6efdfb6b8",
       "kind": "real"
     },
     "Rose Isabel Margaret Paynter (Rankin) (1900\u20131988).md": {
@@ -1425,7 +1453,7 @@
       "kind": "real"
     },
     "Susan Burton Telfer (1844\u20131924).md": {
-      "sha256": "a351db7814af21b99dce246fd986396d48f1201d44cfde30c33afc593e276d63",
+      "sha256": "1494a4649578b222333f7801f5e1be9c588079ca25db27c62d1bbf2c4ab53c66",
       "kind": "real"
     },
     "Susan Shirley Lawrie (1967\u2013living).md": {
@@ -1474,6 +1502,10 @@
     },
     "Vera Dillon.md": {
       "sha256": "d85c387a1435f0de9712a47e3fc7e6450bda7ff5bf1ffca32367bf2a411f7871",
+      "kind": "real"
+    },
+    "Vera Jean Lillecrapp (1909\u20132009).md": {
+      "sha256": "e445b9eb3a12a5b789725b9540529bd6fcae06247e86f018ef3712abc4052536",
       "kind": "real"
     },
     "Vernon Ray St. Clair Telfer (1879\u20131960).md": {
