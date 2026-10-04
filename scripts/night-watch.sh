@@ -420,9 +420,41 @@ fi
 # and fail if it 404s or renders empty. Read-only, advisory about *what was
 # actually shipped* — the update the user just pushed.
 echo "[8/8] Visual flyby of live site (desktop + mobile)..."
+# FIXED 2026-10-05: this slept 60s whenever a push happened. That is not a
+# sync guarantee: GitHub Pages deploy propagation can exceed 60s, and the
+# LIVE 404 scan immediately below then reads the OLD deployment and files a
+# false "broken-links:1" for a page that was merely mid-deploy. That is
+# exactly what happened on 2026-10-04 20:10 (ronald-telfer reported 404;
+# it returned 200 minutes later, no deploy having failed). Instead of
+# guessing, poll the live origin until it actually serves the pushed
+# commit — and if it never does, say so loudly rather than silently
+# scanning the stale site.
 if [ "$PUSHED" = "1" ]; then
-  echo "  Waiting for GitHub Pages redeploy to settle (~60s)..."
-  sleep 60
+  if git rev-parse --verify HEAD >/dev/null 2>&1; then
+    WANT_SHA=$(git rev-parse HEAD)
+    echo "  Waiting for GitHub Pages to serve commit ${WANT_SHA:0:8} (up to 300s)..."
+    SETTLED=0
+    for i in $(seq 1 60); do
+      LIVE_BODY=$(curl -fsS -m 20 "$SITE/" 2>/dev/null || true)
+      if printf '%s' "$LIVE_BODY" | grep -qF "$WANT_SHA"; then
+        echo "  ✅ Live origin is serving push ${WANT_SHA:0:8} (after ~$((i*5))s)"
+        SETTLED=1
+        break
+      fi
+      sleep 5
+    done
+    if [ "$SETTLED" != "1" ]; then
+      # Do NOT claim the site is broken: we simply could not confirm the
+      # deploy. Report it as an unresolved condition, not a 404.
+      echo "  🟠 Could not confirm live origin is serving ${WANT_SHA:0:8} within 300s."
+      echo "     The live 404 scan below may read a STALE deployment — treat any"
+      echo "     broken-links result in this run as UNRELIABLE and re-run before acting."
+      FAIL="${FAIL} deploy-unconfirmed"
+    fi
+  else
+    echo "  Waiting for GitHub Pages redeploy to settle (~60s)..."
+    sleep 60
+  fi
 else
   echo "  (Nothing pushed — checking current live site anyway)"
 fi
