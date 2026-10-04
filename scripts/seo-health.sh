@@ -100,21 +100,31 @@ EXPECTED_MIN=$(node -e '
 # compared 357 against an expected 360 and cried "sitemap mismatch" on a
 # perfectly healthy site. Measured 2026-09-14: old=357, true=360, expected=360.
 # kanban tw-2026-09-14-007.
+# Astro emits a SITEMAP INDEX: sitemap-index.xml references sitemap-0.xml AND
+# sitemap-1.xml (the latter spills past the 1000-url-per-file cap). Counting
+# only sitemap-0.xml made the script read 375 against an expected 382 and cry
+# "mismatch" on a byte-correct live site (IT Crew QA 2026-10-04, task
+# itcrew-2026-10-04-1). Count across EVERY sitemap-N.xml the index lists.
 SLUG='[A-Za-z0-9~_-]'
-CNT=$(grep -oE "telferwiki\\.com/people/${SLUG}+/" dist/sitemap-0.xml 2>/dev/null | grep -vE '/family-sheet|/descendants' | sed -E "s#.*/people/(${SLUG}+)/#\\1#" | grep -vE '^(dna|families|full-tree)$' | sort -u | wc -l | tr -d ' ')
+CNT=$(cat dist/sitemap-*.xml 2>/dev/null | grep -oE "telferwiki\\.com/people/${SLUG}+/" | grep -vE '/family-sheet|/descendants' | sed -E "s#.*/people/(${SLUG}+)/#\\1#" | grep -vE '^(dna|families|full-tree)$' | sort -u | wc -l | tr -d ' ')
 # Privacy gate: driven by the SAME source of truth as the sitemap filter
 # (src/data/privacy-exclusions.mjs). It is EMPTY as of 2026-09-08 — Mark decided
-# the youngest Ivory generation is indexable again — so an empty set must PASS.
-# Only if the set is non-empty do those slugs need to be absent from the sitemap.
-PRIVACY_OK=1
+# the youngest Ivory generation is indexable again — so an empty set must PASS
+# (zero leaked slugs). A non-empty set must have EVERY slug absent from the
+# sitemap. The old code set PRIVACY_OK=1 up front and only ever flipped it to 0
+# inside the loop, so the variable was a static 1 and the gate could not fail
+# (IT Crew QA 2026-10-04, task itcrew-2026-10-04-2). Derive it from the check:
+# count any noindex slug that leaks into the sitemap and fail on a non-zero leak.
 NOINDEX_LIST=$(node -e '
   const fs=require("fs");
   const src=fs.readFileSync("./src/data/privacy-exclusions.mjs","utf8");
   console.log([...src.matchAll(/"([a-z0-9-]+)"/g)].map(m=>m[1]).join(" "));
 ' 2>/dev/null)
+LEAKED=0
 for s in $NOINDEX_LIST; do
-  grep -qE "telferwiki\.com/people/$s/" dist/sitemap-0.xml 2>/dev/null && PRIVACY_OK=0
+  grep -qE "telferwiki\.com/people/$s/" dist/sitemap-*.xml 2>/dev/null && LEAKED=$((LEAKED+1))
 done
+if [ "$LEAKED" -eq 0 ]; then PRIVACY_OK=1; else PRIVACY_OK=0; fi
 if [ -z "$NOINDEX_LIST" ]; then
   ok "privacy-exclusions set is empty (2026-09-08 decision) — nothing to withhold"
 else
