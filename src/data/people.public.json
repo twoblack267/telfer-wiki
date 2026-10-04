@@ -3017,47 +3017,6 @@
     "person_photo": null
   },
   {
-    "id": "Frederick Parker (1838)",
-    "slug": "frederick-parker-1838",
-    "first_name": "Frederick",
-    "middle_name": null,
-    "last_name": "Parker",
-    "birth_year": 1838,
-    "death_year": 1928,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1838",
-    "death_year_display": "1928",
-    "display_name": "Frederick Parker",
-    "title": "Frederick Parker — Family & Biography",
-    "lifespan": "1838 – 1928",
-    "generation": 4,
-    "is_living": false,
-    "body_markdown": "# Frederick Parker (~1838–1928)\n\n**Role:** Second husband of Jean Telfer\n**Died:** 1928 — Wildes Meadow, New South Wales\n**Buried:** Bowral Cemetery, NSW\n\nFrederick Parker, son of George Parker, married Jean (who had by then adopted the name Jane) on Christmas Day 1871 at Kapunda. They lived at Finniss Point before moving to the far north of South Australia around Hawker and Oraparinna.\n\nAfter Jane died in 1892 from heart disease, Frederick later went to live with his elder daughter Margaret and son-in-law Edward Liebich at Wildes Meadow, New South Wales. He died in 1928 and is buried in Bowral Cemetery.\n\n**Source:** *From the Borders to the Bush* — Chapter on Jean/Jane Telfer\n\n## Family Stories\n\nAfter Jean Telfer, by then known as Jane, lost her first husband Richard Paynter to pleurisy in 1869, she remarried on Christmas Day 1871. Her new husband was Frederick Parker, described in the book *From the Borders to the Bush* as an itinerant farm labourer and bullock driver, son of George Parker. They were married at the Wesleyan Church in Kapunda, with Jane's brother-in-law Charles Farrow and niece Jane Farrow as witnesses. The family left Finniss Point and moved to the far north of South Australia, living around Hawker and Oraparinna. Their children — Margaret Eliza, Frederick George, Annie, Martha, Joanna Wittita Cordley, and Ethel May — were born at various places across that remote country. Frederick is believed to have worked as a railway ganger at Finniss during the later years. Jane died of heart disease on 15 July 1892 at Queens Own Town and was buried at Strathalbyn Cemetery. After many years, Frederick went to live with his eldest daughter Margaret and her husband Edward Liebich at Wildes Meadow, New South Wales. He died in Berrima Hospital on 12 August 1928 and is buried in Bowral Cemetery. At the time of his death, only three of his children — Margaret, Frederick (known as George), and Joanna — survived him.\n\n*(From the Borders to the Bush, p.93)*",
-    "roles": [
-      "Second husband of Jean Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "parker",
-      "in-law"
-    ],
-    "parents": [
-      "george-parker"
-    ],
-    "children": [],
-    "spouses": [
-      "jean-telfer-1840"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Richard Paynter (1838)",
     "slug": "richard-paynter-1838",
     "first_name": "Richard",
@@ -3145,7 +3104,7 @@
       "thomas-paynter-1859"
     ],
     "spouses": [
-      "frederick-parker-1838",
+      "frederick-parker",
       "richard-paynter-1838"
     ],
     "siblings": [
@@ -3549,6 +3508,47 @@
     "person_photo": "images/people/telfer-family-reunion-c1920.jpg"
   },
   {
+    "id": "Frederick Parker (1848)",
+    "slug": "frederick-parker",
+    "first_name": "Frederick",
+    "middle_name": null,
+    "last_name": "Parker",
+    "birth_year": 1848,
+    "death_year": 1928,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1848",
+    "death_year_display": "1928",
+    "display_name": "Frederick Parker",
+    "title": "Frederick Parker — Family & Biography",
+    "lifespan": "1848 – 1928",
+    "generation": 4,
+    "is_living": false,
+    "body_markdown": "# Frederick Parker (1848–1928)\n\n**Role:** Second husband of Jean Telfer\n**Born:** ~1848 — *(age 23 at his 25 Dec 1871 marriage — Genealogy SA Marriage 89/759)*\n**Died:** 1928 — Wildes Meadow, New South Wales\n**Buried:** Bowral Cemetery, NSW\n\nFrederick Parker, son of George Parker, married Jean (who had by then adopted the name Jane) on Christmas Day 1871 at Kapunda. They lived at Finniss Point before moving to the far north of South Australia around Hawker and Oraparinna.\n\nAfter Jane died in 1892 from heart disease, Frederick later went to live with his elder daughter Margaret and son-in-law Edward Liebich at Wildes Meadow, New South Wales. He died in 1928 and is buried in Bowral Cemetery.\n\n**Source:** *From the Borders to the Bush* — Chapter on Jean/Jane Telfer\n\n## Family Stories\n\nAfter Jean Telfer, by then known as Jane, lost her first husband Richard Paynter to pleurisy in 1869, she remarried on Christmas Day 1871. Her new husband was Frederick Parker, described in the book *From the Borders to the Bush* as an itinerant farm labourer and bullock driver, son of George Parker. They were married at the Wesleyan Church in Kapunda, with Jane's brother-in-law Charles Farrow and niece Jane Farrow as witnesses. The family left Finniss Point and moved to the far north of South Australia, living around Hawker and Oraparinna. Their children — Margaret Eliza, Frederick George, Annie, Martha, Joanna Wittita Cordley, and Ethel May — were born at various places across that remote country. Frederick is believed to have worked as a railway ganger at Finniss during the later years. Jane died of heart disease on 15 July 1892 at Queens Own Town and was buried at Strathalbyn Cemetery. After many years, Frederick went to live with his eldest daughter Margaret and her husband Edward Liebich at Wildes Meadow, New South Wales. He died in Berrima Hospital on 12 August 1928 and is buried in Bowral Cemetery. At the time of his death, only three of his children — Margaret, Frederick (known as George), and Joanna — survived him.\n\n*(From the Borders to the Bush, p.93)*",
+    "roles": [
+      "Second husband of Jean Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "parker",
+      "in-law"
+    ],
+    "parents": [
+      "george-parker"
+    ],
+    "children": [],
+    "spouses": [
+      "jean-telfer-1840"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Margaret Dougal Telfer (1849)",
     "slug": "margaret-telfer-1849",
     "first_name": "Margaret",
@@ -3621,7 +3621,7 @@
     "lifespan": "1850 – 1913",
     "generation": 4,
     "is_living": false,
-    "body_markdown": "# George Wright Telfer (1850–1913)\n\n**Role:** Youngest child of Francis Telfer and Margaret Wright — the one who went west\n\n**Born:** 22 November 1850 — Macoota, Kersbrook, South Australia\n**Died:** 1913 — Nungarin, Western Australia\n**Occupation:** Farmer, grocer, butter maker, steam laundry proprietor\n**Spouse:** Ruth Penna (m. 17 Sept 1884, d. 1908)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Margaret Wright Telfer (1810–1892)]] |\n| **Father** | [[Francis Telfer (1809–1895)]] |\n| **Spouse** | [[Ruth Penna (1863–1908)]] (m. 17 Sep 1884) |\n| **Children** | [[William Francis \"Frank\" Telfer (1885–1955)]], Olive Millie Telfer (1890–1890), [[Lesley Thomas Telfer (1891–1914)]], Olive Netta Telfer (1894–1986) |\n| **Siblings** | [[John Telfer (1847–1929)]], [[Margaret Dougal Telfer (1849–1936)]] |\n\n---\n\n## Family Stories\n\n### The Youngest Son\n\nGeorge Wright was the baby of the family — born at Macoota, Kersbrook on 22nd November 1850, the youngest son of Francis and Margaret. He grew up working his father's farm alongside brother John, learning the market gardening trade from the ground up. When he was old enough, he bought land of his own in the Kersbrook area and built himself a home. He wasn't one to stay in someone else's shadow. *(From the Borders to the Bush, p.180)*\n\n### The Grocer Who Went the Distance\n\nLong before road trains and highways, George ran a grocery van all the way to Port Augusta. That's a hell of a trip from Kersbrook — hundreds of miles of rough track, dirt roads, and outback settlements. He'd load up his van with supplies and make the journey north, peddling his goods to the scattered communities along the way. It was the kind of work that built character, or at least a strong back. *(From the Borders to the Bush, p.180)*\n\n### The Land Speculator\n\nGeorge had an eye for a deal. He wasn't content with just farming — he bought and sold land like a man who could see which way the wind was blowing. He picked up blocks at Kensington that had once belonged to his mother, took out a mining lease at Kadina, and bought several sections at Hawker which he later sold to his brother John. He was always looking for the next opportunity, never one to sit still. *(From the Borders to the Bush, p.180)*\n\n### Ruth Penna of Kersbrook\n\nOn 17th September 1884, at the age of 33, George married Ruth Penna. She was 21, the daughter of William and Ruth Penna, also market gardeners from Kersbrook. The wedding was in her parents' home, solemnized by the Rev. John Hall, Presbyterian minister. Ruth must have known what she was signing up for — life with George was never going to be quiet. *(From the Borders to the Bush, p.180)*\n\n### The Salem Baptist Years\n\nIn December 1885, George and Ruth were welcomed into the fellowship of Salem Baptist Church at Gumeracha. George wasn't just a pew-warmer either — he was soon elected secretary of the church. This was the same faith that ran through the whole Telfer family, that same Baptist thread that had followed them from Scotland through Kersbrook and beyond. *(From the Borders to the Bush, p.180)*\n\n### Three Children, Two Continents\n\nWhile they were at Kersbrook, Ruth gave George three children: William Francis in August 1885, Olive Millie in March 1890, and Lesley Thomas in 1891. Little Olive only lived about two months — she was buried in the Gawler Cemetery on 5th May 1890, her parents' address listed as Mount Pleasant. It was a hard loss, the kind that marked a family. But life pushed on, and George kept moving. *(From the Borders to the Bush, p.180 — note: the Borders narrative gives 1892; the *A Telfer Family Tree* supplement p.160 gives \"24 Sep 1891\". See [[Lesley Thomas Telfer (1891–1914)]] Notes — birth year single-source, flagged.)*\n\n### Father Francis Comes to Stay\n\nAfter Margaret Wright died in 1892, old Francis came to live with George and Ruth. He was getting on by then, his health fading. In 1893 they all packed up and moved to Willaston, near Gawler, where George turned his hand to running a butter factory. It was a complete change from market gardening — but that was George, always ready to try something new. A year later, in June 1894, Ruth gave birth to another daughter, Olive Netta. *(From the Borders to the Bush, p.180)*\n\n### The Westward Gamble\n\nSome time in 1896, George made the biggest decision of his life. He packed up Ruth, the children, and the remnants of the household and moved the whole family to Western Australia. They lived in Albany for a few years first, then moved to Perth where they ran a boarding house overlooking the Swan River. From market gardener to butter maker to boarding house proprietor — George wasn't afraid to reinvent himself. *(From the Borders to the Bush, p.180)*\n\n### The City Steam Laundry\n\nFrom boarding house to laundry — George established the City Steam Laundry in Leederville, and by 1901 he was listed as manager. By 1902-03 it was \"Telfer & Penna, proprietors,\" with his brother-in-law Thomas Penna as partner. Their ads boasted \"Special quotations for Hotels\" and a telephone number — number 464, which was something in those days. In 1908 they opened a branch on Hay Street in Perth, and the name changed to City Steam Laundry & Dye Works. The place was still operating as the Monarch Laundry as late as 1981, long after George was gone. *(From the Borders to the Bush, p.180)*\n\n### The Loss of Ruth\n\n1908 was a hard year. Ruth died, leaving George with three children to raise and a business to run. The laundry was split — son Frank took over Telfer's City Steam Laundry with two Hay Street branches, while George kept Telfer's Cleaning & Dye Works at Newcastle Street, Leederville. He pushed on, but something must have gone out of him with Ruth. *(From the Borders to the Bush, p.180-181)*\n\n### The Merredin Years\n\nAround 1912, George sold the laundry business and moved east along the railway line to Merredin. He opened a store there and bought a farming property at nearby Nungarin. He and his sons ran both for a year or so — a final attempt to build something in this new country. But George died in 1913, not long after they'd settled. The following year his younger son Lesley Thomas was killed in an accident on the same farm. Within two years, George and both his sons were gone from the land he'd tried so hard to work. *(From the Borders to the Bush, p.181)*\n\n---\n\n## Life Story\n\nGeorge Wright Telfer was the youngest child of Francis Telfer (1809–1895) and his third wife, Margaret Wright. He was born at Macoota, Kersbrook on 22nd November 1850.\n\nHe spent his early years working his father's farm at Kersbrook, then bought land of his own and built a home. He ran a grocery van to Port Augusta, speculated in land across Kensington, Kadina, and Hawker, and married Ruth Penna in 1884.\n\nAfter his mother's death in 1892, his father Francis came to live with them, and in 1893 the family moved to Willaston where George ran a butter factory. In 1896 he moved the entire family to Western Australia — first Albany, then Perth, where he ran a boarding house before establishing the City Steam Laundry in Leederville.\n\nAfter Ruth's death in 1908, George carried on the business, then sold up around 1912 and moved to Merredin where he opened a store and bought a farm at Nungarin. He died in 1913. His son Lesley was killed in an accident the following year.\n\n**Source:** *From the Borders to the Bush* — pages 30, 180-181\n\n---\n\n## Sources\n\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 30, 180–181 — family narrative; laundry proprietor ~1901, business to Merredin/Nungarin by 1912\n- **Source:** [Collections WA — HEAVY DUTY LAUNDRY IRON](https://collectionswa.net.au/items/9621843c-5e5d-4d6c-9100-aef622a545b3) — Merredin Railway Museum, registrar cwa-org-156-1994.638 — donor provenance corroborating GW Telfer's Leederville laundry (early 1900s) and the Olive Thomas / Frank Telfer sibling links — accessed 3 Sep 2026\n- **Source:** Genealogy SA — Marriage Registrations: `TELFER, George Wright × PENNA, Ruth — 17-Sep-1884 — groom father Francis TELFER, bride father William PENNA — Talunga — 140/1174` — accessed 17 Sep 2026",
+    "body_markdown": "# George Wright Telfer (1850–1913)\n\n**Role:** Youngest child of Francis Telfer and Margaret Wright — the one who went west\n\n**Born:** 22 November 1850 — Macoota, Kersbrook, South Australia\n**Died:** 1913 — Nungarin, Western Australia\n**Occupation:** Farmer, grocer, butter maker, steam laundry proprietor\n**Spouse:** Ruth Penna (m. 17 Sept 1884, d. 1908)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Margaret Wright Telfer (1810–1892)]] |\n| **Father** | [[Francis Telfer (1809–1895)]] |\n| **Spouse** | [[Ruth Penna (1863–1908)]] (m. 17 Sep 1884) |\n| **Children** | [[William Francis \"Frank\" Telfer (1885–1955)]], Olive Millie Telfer (1890–1890), [[Lesley Thomas Telfer (1891–1914)]], Olive Netta Telfer (1894–1986) |\n| **Grandchildren** | [[Geoffrey Francis Telfer (1914–1975)]], [[Ruth Margaret Telfer Carson (1915–2000)]], [[Basil William Telfer (1920–1981)]], Stewart Alan Telfer |\n| **Siblings** | [[John Telfer (1847–1929)]], [[Margaret Dougal Telfer (1849–1936)]] |\n\n---\n\n## Family Stories\n\n### The Youngest Son\n\nGeorge Wright was the baby of the family — born at Macoota, Kersbrook on 22nd November 1850, the youngest son of Francis and Margaret. He grew up working his father's farm alongside brother John, learning the market gardening trade from the ground up. When he was old enough, he bought land of his own in the Kersbrook area and built himself a home. He wasn't one to stay in someone else's shadow. *(From the Borders to the Bush, p.180)*\n\n### The Grocer Who Went the Distance\n\nLong before road trains and highways, George ran a grocery van all the way to Port Augusta. That's a hell of a trip from Kersbrook — hundreds of miles of rough track, dirt roads, and outback settlements. He'd load up his van with supplies and make the journey north, peddling his goods to the scattered communities along the way. It was the kind of work that built character, or at least a strong back. *(From the Borders to the Bush, p.180)*\n\n### The Land Speculator\n\nGeorge had an eye for a deal. He wasn't content with just farming — he bought and sold land like a man who could see which way the wind was blowing. He picked up blocks at Kensington that had once belonged to his mother, took out a mining lease at Kadina, and bought several sections at Hawker which he later sold to his brother John. He was always looking for the next opportunity, never one to sit still. *(From the Borders to the Bush, p.180)*\n\n### Ruth Penna of Kersbrook\n\nOn 17th September 1884, at the age of 33, George married Ruth Penna. She was 21, the daughter of William and Ruth Penna, also market gardeners from Kersbrook. The wedding was in her parents' home, solemnized by the Rev. John Hall, Presbyterian minister. Ruth must have known what she was signing up for — life with George was never going to be quiet. *(From the Borders to the Bush, p.180)*\n\n### The Salem Baptist Years\n\nIn December 1885, George and Ruth were welcomed into the fellowship of Salem Baptist Church at Gumeracha. George wasn't just a pew-warmer either — he was soon elected secretary of the church. This was the same faith that ran through the whole Telfer family, that same Baptist thread that had followed them from Scotland through Kersbrook and beyond. *(From the Borders to the Bush, p.180)*\n\n### Three Children, Two Continents\n\nWhile they were at Kersbrook, Ruth gave George three children: William Francis in August 1885, Olive Millie in March 1890, and Lesley Thomas in 1891. Little Olive only lived about two months — she was buried in the Gawler Cemetery on 5th May 1890, her parents' address listed as Mount Pleasant. It was a hard loss, the kind that marked a family. But life pushed on, and George kept moving. *(From the Borders to the Bush, p.180 — note: the Borders narrative gives 1892; the *A Telfer Family Tree* supplement p.160 gives \"24 Sep 1891\". See [[Lesley Thomas Telfer (1891–1914)]] Notes — birth year single-source, flagged.)*\n\n### Father Francis Comes to Stay\n\nAfter Margaret Wright died in 1892, old Francis came to live with George and Ruth. He was getting on by then, his health fading. In 1893 they all packed up and moved to Willaston, near Gawler, where George turned his hand to running a butter factory. It was a complete change from market gardening — but that was George, always ready to try something new. A year later, in June 1894, Ruth gave birth to another daughter, Olive Netta. *(From the Borders to the Bush, p.180)*\n\n### The Westward Gamble\n\nSome time in 1896, George made the biggest decision of his life. He packed up Ruth, the children, and the remnants of the household and moved the whole family to Western Australia. They lived in Albany for a few years first, then moved to Perth where they ran a boarding house overlooking the Swan River. From market gardener to butter maker to boarding house proprietor — George wasn't afraid to reinvent himself. *(From the Borders to the Bush, p.180)*\n\n### The City Steam Laundry\n\nFrom boarding house to laundry — George established the City Steam Laundry in Leederville, and by 1901 he was listed as manager. By 1902-03 it was \"Telfer & Penna, proprietors,\" with his brother-in-law Thomas Penna as partner. Their ads boasted \"Special quotations for Hotels\" and a telephone number — number 464, which was something in those days. In 1908 they opened a branch on Hay Street in Perth, and the name changed to City Steam Laundry & Dye Works. The place was still operating as the Monarch Laundry as late as 1981, long after George was gone. *(From the Borders to the Bush, p.180)*\n\n### The Loss of Ruth\n\n1908 was a hard year. Ruth died, leaving George with three children to raise and a business to run. The laundry was split — son Frank took over Telfer's City Steam Laundry with two Hay Street branches, while George kept Telfer's Cleaning & Dye Works at Newcastle Street, Leederville. He pushed on, but something must have gone out of him with Ruth. *(From the Borders to the Bush, p.180-181)*\n\n### The Merredin Years\n\nAround 1912, George sold the laundry business and moved east along the railway line to Merredin. He opened a store there and bought a farming property at nearby Nungarin. He and his sons ran both for a year or so — a final attempt to build something in this new country. But George died in 1913, not long after they'd settled. The following year his younger son Lesley Thomas was killed in an accident on the same farm. Within two years, George and both his sons were gone from the land he'd tried so hard to work. *(From the Borders to the Bush, p.181)*\n\n---\n\n## Life Story\n\nGeorge Wright Telfer was the youngest child of Francis Telfer (1809–1895) and his third wife, Margaret Wright. He was born at Macoota, Kersbrook on 22nd November 1850.\n\nHe spent his early years working his father's farm at Kersbrook, then bought land of his own and built a home. He ran a grocery van to Port Augusta, speculated in land across Kensington, Kadina, and Hawker, and married Ruth Penna in 1884.\n\nAfter his mother's death in 1892, his father Francis came to live with them, and in 1893 the family moved to Willaston where George ran a butter factory. In 1896 he moved the entire family to Western Australia — first Albany, then Perth, where he ran a boarding house before establishing the City Steam Laundry in Leederville.\n\nAfter Ruth's death in 1908, George carried on the business, then sold up around 1912 and moved to Merredin where he opened a store and bought a farm at Nungarin. He died in 1913. His son Lesley was killed in an accident the following year.\n\n**Source:** *From the Borders to the Bush* — pages 30, 180-181\n\n---\n\n## Sources\n\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 30, 180–181 — family narrative; laundry proprietor ~1901, business to Merredin/Nungarin by 1912\n- **Source:** [Collections WA — HEAVY DUTY LAUNDRY IRON](https://collectionswa.net.au/items/9621843c-5e5d-4d6c-9100-aef622a545b3) — Merredin Railway Museum, registrar cwa-org-156-1994.638 — donor provenance corroborating GW Telfer's Leederville laundry (early 1900s) and the Olive Thomas / Frank Telfer sibling links — accessed 3 Sep 2026\n- **Source:** Genealogy SA — Marriage Registrations: `TELFER, George Wright × PENNA, Ruth — 17-Sep-1884 — groom father Francis TELFER, bride father William PENNA — Talunga — 140/1174` — accessed 17 Sep 2026",
     "roles": [
       "Youngest child of Francis Telfer and Margaret Wright — the one who went west"
     ],
@@ -7240,7 +7240,9 @@
       "adam-telfer-1842",
       "margaret-telfer-1849"
     ],
-    "children": [],
+    "children": [
+      "ronald-telfer"
+    ],
     "spouses": [
       "clara-ann-millicent-telfer-1878"
     ],
@@ -7724,7 +7726,9 @@
       "dunn"
     ],
     "parents": [],
-    "children": [],
+    "children": [
+      "ronald-telfer"
+    ],
     "spouses": [
       "francis-adam-telfer-1875"
     ],
@@ -7856,7 +7860,7 @@
     "lifespan": "1878 – 1903",
     "generation": 5,
     "is_living": false,
-    "body_markdown": "# Maria Clara Telfer (1878–1903)\n\n**Born:** ~1878 (South Australia) | **Died:** 22 Dec 1903, Tantanoola SA (age ~25) | **Buried:** 24 Dec 1903, Millicent St Michael's Church of England Cemetery, SA | **Mother:** [[Martha Henstridge (~1854–1921)]] | **Father:** [[John Telfer (1840–1913)]] | **Marital status:** Never married\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Maria Clara Telfer |\n| Father | [[John Telfer (1840–1913)]] |\n| Mother | [[Martha Henstridge (~1854–1921)|Martha Clara Henstridge]] (1854–1921) |\n| Brother | [[Mark Telfer (1877–1946)]] |\n| Sister | [[Isabella Lucieton Telfer (1880–1964)]] |\n| Brother | [[John Roland Telfer (1882–1975)]] |\n| Sister | Clara Blanche Lane (1883–1974) |\n| Brother | [[Robert Freddy Telfer (1886–1949)]] |\n| Brother | [[Douglas Telfer (1887–1956)]] |\n| Brother | [[Colin Roy Telfer (1889–1964)]] |\n| Brother | [[Alan Dale Telfer (1890–1937)]] |\n| Sister | Alma Tressy Cullen (1893–1976) |\n| Sister | [[Marian Telfer Cornish (1896–1977)]] |\n\n## Life Summary\n\nMaria Clara Telfer was the seventh child of John Telfer and Martha Clara Henstridge — the third of Martha Henstridge's twelve children — born around 1878. She was named with the middle name Clara after her mother. She died young, on 22 December 1903 at Tantanoola, South Australia, at approximately 25 years of age, never having married. She predeceased both her mother (who died in 1921) and father (who died in 1913) by ten and eight years respectively — an unusually early passing that cut short a life that might have continued long enough to see the family's later expansion.\n\n## Family Stories\n\nMaria Clara Telfer died young at just 25 years of age, never having married. **Burial.** She was buried at **Millicent St Michael's Church of England Cemetery**, South Australia — the Genealogy SA *South Australia Cemeteries* burial register records **TELFER, Maria Clara**, burial date **24-Dec-1903**, age **25**, cemetery **Millicent St Michaels CE**, source **Burial Register**, district code 22, with the note ***\"Of Tantanoola.\"*** Her death was registered at Tantanoola on 22 Dec 1903 (district Nor, Book 313/Page 474); the two-day gap between death (22 Dec) and burial (24 Dec) is the ordinary death-to-interment interval, not a conflict. The burial place agrees with the compiled Find a Grave memorial 255689773 (also Millicent) — two independent source groups, so the burial place is recorded as **fact**. Her memorial card — printed in black with gold lettering — bore her photograph circled with the poignant words \"Though lost to sight, To memory dear.\" Below the photograph was inscribed: \"In Loving Memory of Maria Clara Telfer.\" Her early passing in December 1903 at Tantanoola was a sadness visited upon the family well before her mother's death in 1921 and her father's in 1913.\n\n*(From the Borders to the Bush, pp.242, 248–249)*\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| ~1878 | Born in South Australia |\n| 17 Jul 1880 | Birth of sister Isabella at Edgerston |\n| 20 Jan 1882 | Birth of brother John Roland at Tantanoola |\n| 19 Nov 1883 | Birth of sister Clara Blanche at Tantanoola |\n| 4 Jan 1886 | Birth of brother Robert Freddy at Rosaville |\n| 7 Oct 1887 | Birth of brother Douglas at Mount Gambier |\n| 19 Jan 1889 | Birth of brother Colin Roy at Tantanoola |\n| 27 Oct 1890 | Birth of brother Alan Dale at Tantanoola |\n| 27 Nov 1893 | Birth of sister Alma Tressy at Tantanoola |\n| ~1896 | Birth of sister Marian at Tantanoola |\n| 22 Dec 1903 | Died at Tantanoola, South Australia (age ~25) |\n\n## Sources\n\n- ✅ **Register (primary):** Genealogy SA — *South Australia Cemeteries*, **Burial Register**: TELFER, Maria Clara — burial 24-Dec-1903, age 25, **Millicent St Michaels CE**, note \"Of Tantanoola\", district code 22. Read as member #24964, 18 Sep 2026.\n- ✅ **Register (primary):** Genealogy SA — *Death Registrations*: TELFER Maria Clara, death 22-Dec-1903, age 25, place/residence Tantanoola, relative John TELFER (F).\n- ✅ **Corroborating (compiled):** Find a Grave memorial 255689773 (Millicent) — agrees on the burial place. NOT cited alone; the register above is the authority.\n- ✅ Approved Deep Research Report: \"The Descendants of John Telfer (1841–1913) of Tantanoola\" (Skippy review 29 May 2026) — via WikiTree, Trove cross-referencing\n- [[John Telfer (1840–1913)]] vault profile — children table\n- *(From the Borders to the Bush, p.260; A Telfer Family Tree, p.236)* — John Telfer household numbering: Maria Clara as **seventh child of John Telfer**, the third of Martha Henstridge's twelve children.",
+    "body_markdown": "# Maria Clara Telfer (1878–1903)\n\n**Born:** ~1878 (South Australia) | **Died:** 22 Dec 1903, Tantanoola SA (age ~25) | **Buried:** 24 Dec 1903, Millicent St Michael's Church of England Cemetery, SA | **Mother:** [[Martha Henstridge (~1854–1921)]] | **Father:** [[John Telfer (1840–1913)]] | **Marital status:** Never married\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Maria Clara Telfer |\n| Son | [[Ronald Telfer (1898–1898)]] |\n| Father | [[John Telfer (1840–1913)]] |\n| Mother | [[Martha Henstridge (~1854–1921)|Martha Clara Henstridge]] (1854–1921) |\n| Brother | [[Mark Telfer (1877–1946)]] |\n| Sister | [[Isabella Lucieton Telfer (1880–1964)]] |\n| Brother | [[John Roland Telfer (1882–1975)]] |\n| Sister | [[Clara Blanche Telfer (1883–1974)|Clara Blanche Lane (1883–1974)]] |\n| Brother | [[Robert Freddy Telfer (1886–1949)]] |\n| Brother | [[Douglas Telfer (1887–1956)]] |\n| Brother | [[Colin Roy Telfer (1889–1964)]] |\n| Brother | [[Alan Dale Telfer (1890–1937)]] |\n| Sister | Alma Tressy Cullen (1893–1976) |\n| Sister | [[Marian Telfer Cornish (1896–1977)]] |\n\n## Life Summary\n\nMaria Clara Telfer was the seventh child of John Telfer and Martha Clara Henstridge — the third of Martha Henstridge's twelve children — born around 1878. She was named with the middle name Clara after her mother. She died young, on 22 December 1903 at Tantanoola, South Australia, at approximately 25 years of age, never having married. She predeceased both her mother (who died in 1921) and father (who died in 1913) by ten and eight years respectively — an unusually early passing that cut short a life that might have continued long enough to see the family's later expansion.\n\n## Family Stories\n\nMaria Clara Telfer died young at just 25 years of age, never having married. **Her son.** The family tree (*A Telfer Family Tree*, p.263) records one child under her entry — **Ronald Telfer**, born 24 August 1898 at Adelaide, SA, and died there three days later on 27 August 1898. He is numbered `1.` directly beneath her, the book's standard placement for a woman's child. He was born and died four years before his mother, and is buried with the family line on page 263 immediately preceding the entry for her sister Isabella. *Evidence: A Telfer Family Tree*, p.263 (entry `7.` + child `1. Ronald TELFER`); index p.236 records her as **\"1 child\"**. **Burial.** She was buried at **Millicent St Michael's Church of England Cemetery**, South Australia — the Genealogy SA *South Australia Cemeteries* burial register records **TELFER, Maria Clara**, burial date **24-Dec-1903**, age **25**, cemetery **Millicent St Michaels CE**, source **Burial Register**, district code 22, with the note ***\"Of Tantanoola.\"*** Her death was registered at Tantanoola on 22 Dec 1903 (district Nor, Book 313/Page 474); the two-day gap between death (22 Dec) and burial (24 Dec) is the ordinary death-to-interment interval, not a conflict. The burial place agrees with the compiled Find a Grave memorial 255689773 (also Millicent) — two independent source groups, so the burial place is recorded as **fact**. Her memorial card — printed in black with gold lettering — bore her photograph circled with the poignant words \"Though lost to sight, To memory dear.\" Below the photograph was inscribed: \"In Loving Memory of Maria Clara Telfer.\" Her early passing in December 1903 at Tantanoola was a sadness visited upon the family well before her mother's death in 1921 and her father's in 1913.\n\n*(From the Borders to the Bush, pp.242, 248–249)*\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| ~1878 | Born in South Australia |\n| 17 Jul 1880 | Birth of sister Isabella at Edgerston |\n| 20 Jan 1882 | Birth of brother John Roland at Tantanoola |\n| 19 Nov 1883 | Birth of sister Clara Blanche at Tantanoola |\n| 4 Jan 1886 | Birth of brother Robert Freddy at Rosaville |\n| 7 Oct 1887 | Birth of brother Douglas at Mount Gambier |\n| 19 Jan 1889 | Birth of brother Colin Roy at Tantanoola |\n| 27 Oct 1890 | Birth of brother Alan Dale at Tantanoola |\n| 27 Nov 1893 | Birth of sister Alma Tressy at Tantanoola |\n| ~1896 | Birth of sister Marian at Tantanoola |\n| 22 Dec 1903 | Died at Tantanoola, South Australia (age ~25) |\n\n## Sources\n\n- ✅ **Register (primary):** Genealogy SA — *South Australia Cemeteries*, **Burial Register**: TELFER, Maria Clara — burial 24-Dec-1903, age 25, **Millicent St Michaels CE**, note \"Of Tantanoola\", district code 22. Read as member #24964, 18 Sep 2026.\n- ✅ **Register (primary):** Genealogy SA — *Death Registrations*: TELFER Maria Clara, death 22-Dec-1903, age 25, place/residence Tantanoola, relative John TELFER (F).\n- ✅ **Corroborating (compiled):** Find a Grave memorial 255689773 (Millicent) — agrees on the burial place. NOT cited alone; the register above is the authority.\n- ✅ Approved Deep Research Report: \"The Descendants of John Telfer (1841–1913) of Tantanoola\" (Skippy review 29 May 2026) — via WikiTree, Trove cross-referencing\n- [[John Telfer (1840–1913)]] vault profile — children table\n- *(From the Borders to the Bush, p.260; A Telfer Family Tree, p.236)* — John Telfer household numbering: Maria Clara as **seventh child of John Telfer**, the third of Martha Henstridge's twelve children.",
     "roles": [],
     "tags": [
       "bio",
@@ -7867,7 +7871,9 @@
       "john-telfer-1840",
       "martha-henstridge-1854"
     ],
-    "children": [],
+    "children": [
+      "ronald-telfer"
+    ],
     "spouses": [],
     "siblings": [
       "alan-telfer-1890",
@@ -8648,7 +8654,7 @@
     "lifespan": "1885 – 1955",
     "generation": 5,
     "is_living": false,
-    "body_markdown": "# William Francis \"Frank\" Telfer (1885–1955)\n\n**Role:** Elder son of George Wright Telfer and Ruth Penna — Merredin storekeeper, Road Board chairman, and MLA for Avon (1943–47). The son who carried the family westward branch into Western Australia's Wheatbelt.\n\n**Born:** 21 August 1885 — Gawler, South Australia\n**Died:** 25 August 1955 (aged 70) — Subiaco, Western Australia\n**Buried:** Merredin Cemetery, Western Australia\n**Occupation:** Storekeeper, farmer, politician (MLA Avon 1943–47), Merredin Road Board member & chairman\n**Spouse:** Ethel May Wisher (m. 17 March 1913, Lake St Chapel, Perth)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[George Wright Telfer (1850–1913)]] |\n| **Mother** | [[Ruth Penna (1863–1908)]] |\n| **Spouse** | Ethel May Wisher (m. 17 Mar 1913, d. 1944) |\n| **Children** | [[Geoffrey Francis Telfer (1914–1975)]], Ruth Margaret Telfer Carson (1915–2000), Basil William Telfer, Stewart Alan Telfer |\n\n**Siblings:** Olive Millie Telfer (1890–1890), Lesley Thomas Telfer (1892–1914), Olive Netta Telfer Thomas (1894–1986)\n\n## Life Summary\n\nWilliam Francis \"Frank\" Telfer was born on **21 August 1885** at Gawler, South Australia, the eldest son of **George Wright Telfer** and **Ruth (Penna) Telfer**. He grew up at Kersbrook and Willaston before his father moved the whole family west to Western Australia. Frank came to the eastern Wheatbelt with his father around **1910**, settling in **Merredin**, where he opened the Telfer store and agency and took up wheat farming.\n\nHe served the Merredin community for decades: **Merredin Road Board 1936–1955, chairman from 1938**, member of the executive of the Road Board Association 1943–1950, and Secretary of the Merredin Agricultural Society for many years.\n\n### Political Career\n\nFrank was elected to the **Western Australian Legislative Assembly** as the **Labor member for Avon** at the **1943 state election**, defeating the sitting Country member Ignatius Boyle by 15 votes. That result was overturned in the Court of Disputed Returns, but Frank again defeated Boyle at the resulting by-election in **1944**. At the **1947 election**, as the Labor government fell, he lost the seat to Country candidate George Cornell. He retired from the road board after 1947.\n\nFrank died at **St John of God Hospital, Subiaco**, on **25 August 1955**, aged 70, and was buried at **Merredin Cemetery**. *(Note: the family book *From the Borders to the Bush* gives his death as 1956; the verified record is 1955 — Wikipedia and the WA Parliament register agree on 25 Aug 1955.)*\n\n## Family Stories\n\n### Frank the Politician *(as told in From the Borders to the Bush, p.183)*\n\nFrank served on the Merredin Road Board from 1936 to 1955 (chairman 1938–55) and was MLA for Avon from 1943 to 1947. He was instrumental in local development of the Merredin district — the storekeeper who rose to represent the Wheatbelt in parliament.\n\n> **🖊️ Anecdote — as told in *From the Borders to the Bush* (p.183)** — the portrait of Frank in his Merredin political prime: from the family store and wheat paddocks to the floor of the Western Australian parliament.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 21 Aug 1885 | Born, Gawler, South Australia |\n| c. 1896 | Family moves to Western Australia with father George |\n| 1910 | Arrives in the eastern Wheatbelt (Merredin) with his father |\n| 17 Mar 1913 | Married Ethel May Wisher, Lake St Chapel, Perth (Church of Christ) |\n| 1936 | Elected to Merredin Road Board |\n| 1938 | Becomes Road Board chairman |\n| 15 Aug 1944 | Wife Ethel died (Widowed) |\n| 1943–1947 | MLA for Avon (Labor), contested/held seat 1943–47 |\n| 1947 | Lost seat; retired from active politics |\n| 25 Aug 1955 | Died, Subiaco, Western Australia; buried Merredin Cemetery |\n\n## Sources\n\n1. **Wikipedia:** [William Telfer (politician)](https://en.wikipedia.org/wiki/William_Telfer_(politician)) — born 21 Aug 1885 Gawler SA; died 25 Aug 1955 Subiaco WA aged 70; son of Ruth (née Penna) and George Wright Telfer; Merredin storekeeper/farmer; Road Board 1936–1955 chairman 1938; MLA Avon 1943–47 — accessed 31 August 2026\n2. **Parliament of Western Australia — Members' Biographical Register:** [William Telfer](https://www.parliament.wa.gov.au/parliament/library/MPHistoricalData.nsf/(Lookup)/74A5FC9EF69A30F3482577E50028A7F9?OpenDocument) — DOB 21 Aug 1885 Gawler; son of George Wright Telfer & Ruth Penna; m. Ethel May Wisher 17 Mar 1913; widowed 15 Aug 1944; three sons & one daughter; d. 25 Aug 1955, buried Merredin Cemetery; Road Board 1936–1955 chairman 1938 — accessed 31 August 2026\n3. **Book:** *From the Borders to the Bush* (chapter 8), pp.183 — Frank's Merredin political career & family colour — accessed via Book Digester chapter-8 report, 31 August 2026\n4. **Collections WA (Merredin Railway Museum):** [HEAVY DUTY LAUNDRY IRON](https://collectionswa.net.au/items/9621843c-5e5d-4d6c-9100-aef622a545b3) (registrar cwa-org-156-1994.638, donor Ruth Stagg) — provenance states Frank (Mr Frank Telfer of Merredin) & Olive Thomas were brother & sister, the iron used in grandfather GW Telfer's Leederville laundry (early 1900s) — independent museum corroboration of Frank's Merredin identity — accessed 3 Sep 2026",
+    "body_markdown": "# William Francis \"Frank\" Telfer (1885–1955)\n\n**Role:** Elder son of George Wright Telfer and Ruth Penna — Merredin storekeeper, Road Board chairman, and MLA for Avon (1943–47). The son who carried the family westward branch into Western Australia's Wheatbelt.\n\n**Born:** 21 August 1885 — Gawler, South Australia\n**Died:** 25 August 1955 (aged 70) — Subiaco, Western Australia\n**Buried:** Merredin Cemetery, Western Australia\n**Occupation:** Storekeeper, farmer, politician (MLA Avon 1943–47), Merredin Road Board member & chairman\n**Spouse:** Ethel May Wisher (m. 17 March 1913, Lake St Chapel, Perth)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[George Wright Telfer (1850–1913)]] |\n| **Mother** | [[Ruth Penna (1863–1908)]] |\n| **Spouse** | Ethel May Wisher (m. 17 Mar 1913, d. 1944) |\n| **Children** | [[Geoffrey Francis Telfer (1914–1975)]], [[Ruth Margaret Telfer Carson (1915–2000)]], [[Basil William Telfer (1920–1981)]], Stewart Alan Telfer |\n\n**Siblings:** Olive Millie Telfer (1890–1890), Lesley Thomas Telfer (1892–1914), Olive Netta Telfer Thomas (1894–1986)\n\n## Life Summary\n\nWilliam Francis \"Frank\" Telfer was born on **21 August 1885** at Gawler, South Australia, the eldest son of **George Wright Telfer** and **Ruth (Penna) Telfer**. He grew up at Kersbrook and Willaston before his father moved the whole family west to Western Australia. Frank came to the eastern Wheatbelt with his father around **1910**, settling in **Merredin**, where he opened the Telfer store and agency and took up wheat farming.\n\nHe served the Merredin community for decades: **Merredin Road Board 1936–1955, chairman from 1938**, member of the executive of the Road Board Association 1943–1950, and Secretary of the Merredin Agricultural Society for many years.\n\n### Political Career\n\nFrank was elected to the **Western Australian Legislative Assembly** as the **Labor member for Avon** at the **1943 state election**, defeating the sitting Country member Ignatius Boyle by 15 votes. That result was overturned in the Court of Disputed Returns, but Frank again defeated Boyle at the resulting by-election in **1944**. At the **1947 election**, as the Labor government fell, he lost the seat to Country candidate George Cornell. He retired from the road board after 1947.\n\nFrank died at **St John of God Hospital, Subiaco**, on **25 August 1955**, aged 70, and was buried at **Merredin Cemetery**. *(Note: the family book *From the Borders to the Bush* gives his death as 1956; the verified record is 1955 — Wikipedia and the WA Parliament register agree on 25 Aug 1955.)*\n\n## Family Stories\n\n### Frank the Politician *(as told in From the Borders to the Bush, p.183)*\n\nFrank served on the Merredin Road Board from 1936 to 1955 (chairman 1938–55) and was MLA for Avon from 1943 to 1947. He was instrumental in local development of the Merredin district — the storekeeper who rose to represent the Wheatbelt in parliament.\n\n> **🖊️ Anecdote — as told in *From the Borders to the Bush* (p.183)** — the portrait of Frank in his Merredin political prime: from the family store and wheat paddocks to the floor of the Western Australian parliament.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 21 Aug 1885 | Born, Gawler, South Australia |\n| c. 1896 | Family moves to Western Australia with father George |\n| 1910 | Arrives in the eastern Wheatbelt (Merredin) with his father |\n| 17 Mar 1913 | Married Ethel May Wisher, Lake St Chapel, Perth (Church of Christ) |\n| 1936 | Elected to Merredin Road Board |\n| 1938 | Becomes Road Board chairman |\n| 15 Aug 1944 | Wife Ethel died (Widowed) |\n| 1943–1947 | MLA for Avon (Labor), contested/held seat 1943–47 |\n| 1947 | Lost seat; retired from active politics |\n| 25 Aug 1955 | Died, Subiaco, Western Australia; buried Merredin Cemetery |\n\n## Sources\n\n1. **Wikipedia:** [William Telfer (politician)](https://en.wikipedia.org/wiki/William_Telfer_(politician)) — born 21 Aug 1885 Gawler SA; died 25 Aug 1955 Subiaco WA aged 70; son of Ruth (née Penna) and George Wright Telfer; Merredin storekeeper/farmer; Road Board 1936–1955 chairman 1938; MLA Avon 1943–47 — accessed 31 August 2026\n2. **Parliament of Western Australia — Members' Biographical Register:** [William Telfer](https://www.parliament.wa.gov.au/parliament/library/MPHistoricalData.nsf/(Lookup)/74A5FC9EF69A30F3482577E50028A7F9?OpenDocument) — DOB 21 Aug 1885 Gawler; son of George Wright Telfer & Ruth Penna; m. Ethel May Wisher 17 Mar 1913; widowed 15 Aug 1944; three sons & one daughter; d. 25 Aug 1955, buried Merredin Cemetery; Road Board 1936–1955 chairman 1938 — accessed 31 August 2026\n3. **Book:** *From the Borders to the Bush* (chapter 8), pp.183 — Frank's Merredin political career & family colour — accessed via Book Digester chapter-8 report, 31 August 2026\n4. **Collections WA (Merredin Railway Museum):** [HEAVY DUTY LAUNDRY IRON](https://collectionswa.net.au/items/9621843c-5e5d-4d6c-9100-aef622a545b3) (registrar cwa-org-156-1994.638, donor Ruth Stagg) — provenance states Frank (Mr Frank Telfer of Merredin) & Olive Thomas were brother & sister, the iron used in grandfather GW Telfer's Leederville laundry (early 1900s) — independent museum corroboration of Frank's Merredin identity — accessed 3 Sep 2026",
     "roles": [
       "Elder son of George Wright Telfer and Ruth Penna — Merredin storekeeper, Road Board chairman, and MLA for Avon (1943–47). The son who carried the family westward branch into Western Australia's Wheatbelt."
     ],
@@ -8661,7 +8667,9 @@
       "ruth-penna-1863"
     ],
     "children": [
-      "geoffrey-telfer"
+      "basil-telfer",
+      "geoffrey-telfer",
+      "ruth-carson"
     ],
     "spouses": [],
     "siblings": [
@@ -9144,6 +9152,8 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "basil-telfer",
+      "ruth-carson",
       "william-francis-telfer-1885"
     ],
     "step_parents": [],
@@ -11459,6 +11469,43 @@
     "person_photo": null
   },
   {
+    "id": "Ronald Telfer (1898)",
+    "slug": "ronald-telfer",
+    "first_name": "Ronald",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1898,
+    "death_year": 1898,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1898",
+    "death_year_display": "1898",
+    "display_name": "Ronald Telfer",
+    "title": "Ronald Telfer (1898–1898) — Family & Biography",
+    "lifespan": "1898 – 1898",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Ronald Telfer (1898–1898)\n\n**Born:** 24 August 1898, Adelaide, South Australia | **Died:** 27 August 1898, Adelaide, South Australia (aged 3 days) | **Mother:** [[Maria Clara Telfer (1878–1903)]] | **Father:** not recorded\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Ronald Telfer |\n| Mother | [[Maria Clara Telfer (1878–1903)]] |\n\n## Life Summary\n\nRonald Telfer lived three days. He was born on 24 August 1898 at Adelaide, South Australia, and died there on 27 August 1898. His mother, [[Maria Clara Telfer (1878–1903)]], was twenty years old and unmarried; she died five years later, in December 1903, aged about 25. He is recorded in *A Telfer Family Tree* (p.263) as the sole child of her entry, numbered `1.` immediately beneath her, and the book's index (p.236) records her as having **1 child**.\n\n## Sources\n\n- ✅ **Printed book (primary for this family):** *A Telfer Family Tree*, **p.263** — entry `7. Martha Clara TELFER, b. 26 Sep 1878, d. 22 Dec 1903 Tantanoola, SA` followed immediately by `1. Ronald TELFER, b. 24 Aug 1898 Adelaide, SA, d. 27 Aug 1898 Adelaide, SA`.\n- ✅ **Printed book (index):** *A Telfer Family Tree*, **p.236** — index entry `7. Maria Clara Telfer (1878-1903)` recorded as **\"1 child\"**, corroborating one child and confirming the name **Maria** (the p.263 entry prints `Martha`, a one-letter transcription slip — same number, same birth year, same death date and place).\n- [[Maria Clara Telfer (1878–1903)]] vault profile.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "clara-ann-millicent-telfer-1878",
+      "francis-adam-telfer-1875",
+      "maria-clara-telfer-1878"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "George Hope Holloway (1899)",
     "slug": "george-holloway",
     "first_name": "George",
@@ -12641,7 +12688,7 @@
     "lifespan": "1914 – 1975",
     "generation": 6,
     "is_living": false,
-    "body_markdown": "# Geoffrey Francis Telfer (1914–1975)\n\n**Role:** Son of William Francis \"Frank\" Telfer and Ethel May Wisher — Merredin, Western Australia.\n\n**Born:** 9 January 1914 — Western Australia\n**Died:** 25 August 1975 (aged 61) — Western Australia\n**Buried:** Merredin Cemetery, Merredin, Western Australia\n**Spouse:** Elaine Burdett Sheridan (m. 8 November 1939)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[William Francis \"Frank\" Telfer (1885–1955)]] |\n| **Mother** | Ethel May Wisher (1890–1944) |\n| **Spouse** | [[Elaine Burdett Sheridan Telfer (1913–1987)]] (m. 8 Nov 1939) |\n| **Siblings** | Ruth Margaret Telfer Carson (1915–2000), Basil William Telfer, Olive Netta Telfer Thomas* (1894–1986), Stewart Alan Telfer |\n\n\\* See Notes — Olive Netta is recorded in the vault as Frank's **sister**, not his daughter (the chapter-8 book text mis-places her in the wrong generation; the death dates rule out the daughter reading).\n\n## Life Summary\n\nGeoffrey Francis Telfer was born on **9 January 1914**, the son of **William Francis \"Frank\" Telfer** and **Ethel May Wisher** of Merredin, in Western Australia's eastern Wheatbelt. He married **Elaine Burdett Sheridan** on **8 November 1939**. Both are interred at **Merredin Cemetery**, where their headstone records their dates side by side. He died on **25 August 1975**, aged 61.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 9 Jan 1914 | Born, Western Australia |\n| 8 Nov 1939 | Married Elaine Burdett Sheridan |\n| 25 Aug 1975 | Died, Western Australia (aged 61); buried Merredin Cemetery |\n\n## Sources\n\n- **Source:** [Find a Grave — Geoffrey Francis Telfer (9 Jan 1914 – 25 Aug 1975), Memorial 235846893](https://www.findagrave.com/memorial/235846893) — Merredin Cemetery, Merredin Shire, WA — accessed 27 September 2026\n- **Source:** *From the Borders to the Bush* (Donald Telfer, ISBN 0 7316 6387 X), chapter 8, book p.187 — family narrative: son of Frank and Ethel, m. Elaine Burdett Sheridan 1939 — accessed via Book Digester chapter-8 report, 22 September 2026",
+    "body_markdown": "# Geoffrey Francis Telfer (1914–1975)\n\n**Role:** Son of William Francis \"Frank\" Telfer and Ethel May Wisher — Merredin, Western Australia.\n\n**Born:** 9 January 1914 — Western Australia\n**Died:** 25 August 1975 (aged 61) — Western Australia\n**Buried:** Merredin Cemetery, Merredin, Western Australia\n**Spouse:** Elaine Burdett Sheridan (m. 8 November 1939)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[William Francis \"Frank\" Telfer (1885–1955)]] |\n| **Mother** | Ethel May Wisher (1890–1944) |\n| **Spouse** | [[Elaine Burdett Sheridan Telfer (1913–1987)]] (m. 8 Nov 1939) |\n| **Siblings** | [[Ruth Margaret Telfer Carson (1915–2000)]], [[Basil William Telfer (1920–1981)]], Olive Netta Telfer Thomas* (1894–1986), Stewart Alan Telfer |\n\n\\* See Notes — Olive Netta is recorded in the vault as Frank's **sister**, not his daughter (the chapter-8 book text mis-places her in the wrong generation; the death dates rule out the daughter reading).\n\n## Life Summary\n\nGeoffrey Francis Telfer was born on **9 January 1914**, the son of **William Francis \"Frank\" Telfer** and **Ethel May Wisher** of Merredin, in Western Australia's eastern Wheatbelt. He married **Elaine Burdett Sheridan** on **8 November 1939**. Both are interred at **Merredin Cemetery**, where their headstone records their dates side by side. He died on **25 August 1975**, aged 61.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 9 Jan 1914 | Born, Western Australia |\n| 8 Nov 1939 | Married Elaine Burdett Sheridan |\n| 25 Aug 1975 | Died, Western Australia (aged 61); buried Merredin Cemetery |\n\n## Sources\n\n- **Source:** [Find a Grave — Geoffrey Francis Telfer (9 Jan 1914 – 25 Aug 1975), Memorial 235846893](https://www.findagrave.com/memorial/235846893) — Merredin Cemetery, Merredin Shire, WA — accessed 27 September 2026\n- **Source:** *From the Borders to the Bush* (Donald Telfer, ISBN 0 7316 6387 X), chapter 8, book p.187 — family narrative: son of Frank and Ethel, m. Elaine Burdett Sheridan 1939 — accessed via Book Digester chapter-8 report, 22 September 2026",
     "roles": [
       "Son of William Francis \"Frank\" Telfer and Ethel May Wisher — Merredin, Western Australia."
     ],
@@ -12658,7 +12705,10 @@
     "spouses": [
       "elaine-telfer"
     ],
-    "siblings": [],
+    "siblings": [
+      "basil-telfer",
+      "ruth-carson"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -12863,6 +12913,49 @@
       "murray-telfer-1924",
       "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Ruth Margaret Carson (1915)",
+    "slug": "ruth-carson",
+    "first_name": "Ruth",
+    "middle_name": "Margaret",
+    "last_name": "Carson",
+    "birth_year": 1915,
+    "death_year": 2000,
+    "birth_date": "22 November 1915",
+    "death_date": null,
+    "birth_year_display": "1915",
+    "death_year_display": "2000",
+    "display_name": "Ruth Margaret Carson",
+    "title": "Ruth Margaret Telfer Carson (1915–2000)",
+    "lifespan": "1915 – 2000",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Ruth Margaret Telfer Carson (1915–2000)\n\n**Role:** Daughter of [[William Francis \"Frank\" Telfer (1885–1955)]] and Ethel May Wisher — Merredin, Western Australia.\n\n**Born:** 22 November 1915\n**Died:** 15 August 2000 (aged 84) — Merredin district, Western Australia\n**Buried:** Merredin Cemetery, Western Australia\n**Spouse:** Gilbert Hadley Carson (1907–1965) — m. 1941\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[William Francis \"Frank\" Telfer (1885–1955)]] |\n| **Mother** | Ethel May Wisher (1890–1944) |\n| **Husband** | Gilbert Hadley Carson (1907–1965) — m. 1941 |\n| **Siblings** | [[Geoffrey Francis Telfer (1914–1975)]], [[Basil William Telfer (1920–1981)]], Stewart Alan Telfer, [[Lesley Thomas Telfer (1891–1914)]], Olive Netta Telfer |\n\n---\n\n## Life Summary\n\nRuth Margaret Telfer was a daughter of William Francis \"Frank\" Telfer and Ethel May Wisher, raised in the Merredin district of Western Australia's wheatbelt. She married Gilbert Hadley Carson (1907–1965) in 1941 and lived out her long life in the Merredin district, dying in 2000 at the age of eighty-four. *(From the Borders to the Bush, p.184.)*\n\n---\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 22 Nov 1915 | Born |\n| 1941 | Married Gilbert Hadley Carson |\n| 1965 | Husband Gilbert died (aged 58) |\n| 15 Aug 2000 | Died (aged 84); buried Merredin Cemetery, WA |\n\n---\n\n## Sources\n\n- **Source:** Ozburials — [Merredin Cemetery headstone transcriptions](https://www.ozburials.com/CemsWA/Merredin/merredin.htm), `CARSON, Ruth Margaret . 22 November 1915 - 15 August 2000` — transcribed by Lorraine Larment, from photographs by Marylin and Steve Jones — accessed 4 October 2026\n- **Source:** [Find a Grave — memorial 234810756, Ruth Margaret Telfer Carson (1915–2000), Merredin Cemetery WA](https://www.findagrave.com/memorial/234810756) — b. 22 Nov 1915, d. 15 Aug 2000 — accessed 4 October 2026\n- **Source:** [Find a Grave — memorial 234810737, Gilbert Hadley Carson (1907–1965), Merredin Cemetery WA](https://www.findagrave.com/memorial/234810737) — accessed 4 October 2026\n- **Source:** *From the Borders to the Bush* (Donald Telfer), Chapter 8 — George Wright Telfer & Ruth Penna, p.184 — Ruth Margaret m. Gilbert Hadley Carson 1941 — accessed 4 October 2026\n- **Source:** *A Telfer Family Tree* (Supplement 2008) — George Wright Telfer & Ruth Penna descendant list — accessed 4 October 2026\n\n---",
+    "roles": [
+      "Daughter of [[William Francis \"Frank\" Telfer (1885–1955)]] and Ethel May Wisher — Merredin, Western Australia."
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "telfer",
+      "in-law"
+    ],
+    "parents": [
+      "william-francis-telfer-1885"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "basil-telfer",
+      "geoffrey-telfer",
+      "lesley-thomas-telfer-1891"
     ],
     "step_parents": [],
     "step_children": [],
@@ -13166,6 +13259,49 @@
     "children": [],
     "spouses": [],
     "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Basil William Telfer (1920)",
+    "slug": "basil-telfer",
+    "first_name": "Basil",
+    "middle_name": "William",
+    "last_name": "Telfer",
+    "birth_year": 1920,
+    "death_year": 1981,
+    "birth_date": "20 January 1920",
+    "death_date": null,
+    "birth_year_display": "1920",
+    "death_year_display": "1981",
+    "display_name": "Basil William Telfer",
+    "title": "Basil William Telfer (1920–1981)",
+    "lifespan": "1920 – 1981",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Basil William Telfer (1920–1981)\n\n**Role:** Son of [[William Francis \"Frank\" Telfer (1885–1955)]] and Ethel May Wisher — Merredin, Western Australia. **RAAF Flight Lieutenant, WW2.**\n\n**Born:** 20 January 1920\n**Died:** 12 July 1981 (aged 61)\n**Buried:** Karrakatta Cemetery, Western Australia\n**Spouse:** Eileen Louise Harrison\n**Occupation:** Soldier then RAAF airman (WW2); farmer/storekeeper of the Merredin district\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[William Francis \"Frank\" Telfer (1885–1955)]] |\n| **Mother** | Ethel May Wisher (1890–1944) |\n| **Wife** | Eileen Louise Harrison |\n| **Siblings** | [[Geoffrey Francis Telfer (1914–1975)]], [[Ruth Margaret Telfer Carson (1915–2000)]], Stewart Alan Telfer, [[Lesley Thomas Telfer (1891–1914)]], Olive Netta Telfer |\n\n---\n\n## Life Summary\n\nBasil William Telfer was born on 20 January 1920, one of the Merredin children of William Francis \"Frank\" Telfer and Ethel May Wisher.\n\nHe served Australia in the Second World War, first enlisting in the Australian Army as **WX12766** (1941–43), then transferring to the **RAAF**, where he was paid off as a **Flight Lieutenant** (service no. 432035). *(From the Borders to the Bush, p.185.)*\n\nHe married Eileen Louise Harrison and died on 12 July 1981, aged 61, and is buried at Karrakatta Cemetery, Western Australia.\n\n---\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 20 Jan 1920 | Born |\n| 1941–43 | Australian Army service — WX12766 |\n| 1942–46 | RAAF service — paid off as Flight Lieutenant (432035) |\n| — | Married Eileen Louise Harrison |\n| 12 Jul 1981 | Died (aged 61); buried Karrakatta Cemetery, WA |\n\n---\n\n## Sources\n\n- **Source:** [Find a Grave — memorial 213549577, Basil William Telfer (1920–1981), Karrakatta WA](https://www.findagrave.com/memorial/213549577) — b. 20 Jan 1920, d. 12 Jul 1981 — accessed 4 October 2026\n- **Source:** [Virtual War Memorial Australia — Basil William Telfer](https://vwma.org.au/explore/people/1517467) — Army WX12766 (1941–43), RAAF 432035 (1942–46), Flight Lieutenant — accessed 4 October 2026\n- **Source:** *From the Borders to the Bush* (Donald Telfer), Chapter 8 — George Wright Telfer & Ruth Penna, p.185 — accessed 4 October 2026\n\n---",
+    "roles": [
+      "Son of [[William Francis \"Frank\" Telfer (1885–1955)]] and Ethel May Wisher — Merredin, Western Australia. **RAAF Flight Lieutenant, WW2.**"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "telfer",
+      "ww2"
+    ],
+    "parents": [
+      "william-francis-telfer-1885"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "geoffrey-telfer",
+      "lesley-thomas-telfer-1891",
+      "ruth-carson"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -16780,7 +16916,7 @@
       "edward-albert-parker-1888"
     ],
     "children": [
-      "frederick-parker-1838"
+      "frederick-parker"
     ],
     "spouses": [],
     "siblings": [],

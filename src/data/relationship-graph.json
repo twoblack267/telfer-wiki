@@ -591,11 +591,6 @@
       "generation": 5
     },
     {
-      "slug": "frederick-parker-1838",
-      "id": "Frederick Parker (1838)",
-      "generation": 4
-    },
-    {
       "slug": "george-masters-1844",
       "id": "George Edward Masters (1844)",
       "generation": 5
@@ -1909,6 +1904,26 @@
       "slug": "vera-lillecrapp",
       "id": "Vera Lillecrapp (1909)",
       "generation": 6
+    },
+    {
+      "slug": "ronald-telfer",
+      "id": "Ronald Telfer (1898)",
+      "generation": 6
+    },
+    {
+      "slug": "basil-telfer",
+      "id": "Basil William Telfer (1920)",
+      "generation": 6
+    },
+    {
+      "slug": "frederick-parker",
+      "id": "Frederick Parker (1848)",
+      "generation": 4
+    },
+    {
+      "slug": "ruth-carson",
+      "id": "Ruth Margaret Carson (1915)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -2576,10 +2591,6 @@
       {
         "from": "martha-masters-1814",
         "to": "frederick-masters-1848"
-      },
-      {
-        "from": "george-parker",
-        "to": "frederick-parker-1838"
       },
       {
         "from": "charles-masters-1809",
@@ -4004,6 +4015,30 @@
       {
         "from": "alfred-edward-lillecrapp-1869",
         "to": "vera-lillecrapp"
+      },
+      {
+        "from": "clara-ann-millicent-telfer-1878",
+        "to": "ronald-telfer"
+      },
+      {
+        "from": "francis-adam-telfer-1875",
+        "to": "ronald-telfer"
+      },
+      {
+        "from": "maria-clara-telfer-1878",
+        "to": "ronald-telfer"
+      },
+      {
+        "from": "william-francis-telfer-1885",
+        "to": "basil-telfer"
+      },
+      {
+        "from": "george-parker",
+        "to": "frederick-parker"
+      },
+      {
+        "from": "william-francis-telfer-1885",
+        "to": "ruth-carson"
       }
     ],
     "spouseOf": [
@@ -4196,10 +4231,6 @@
         "to": "sophia-parker-lawrie-1886"
       },
       {
-        "from": "frederick-parker-1838",
-        "to": "jean-telfer-1840"
-      },
-      {
         "from": "george-telfer-1850",
         "to": "ruth-penna-1863"
       },
@@ -4354,6 +4385,10 @@
       {
         "from": "elaine-telfer",
         "to": "geoffrey-telfer"
+      },
+      {
+        "from": "frederick-parker",
+        "to": "jean-telfer-1840"
       }
     ],
     "siblingOf": [
@@ -6751,6 +6786,10 @@
       },
       {
         "from": "lesley-thomas-telfer-1891",
+        "to": "ruth-carson"
+      },
+      {
+        "from": "lesley-thomas-telfer-1891",
         "to": "william-francis-telfer-1885"
       },
       {
@@ -7050,6 +7089,10 @@
         "to": "timothy-telfer-1959"
       },
       {
+        "from": "geoffrey-telfer",
+        "to": "ruth-carson"
+      },
+      {
         "from": "james-telfer",
         "to": "rosemary-telfer-miriam"
       },
@@ -7068,6 +7111,18 @@
       {
         "from": "roland-telfer",
         "to": "william-telfer"
+      },
+      {
+        "from": "basil-telfer",
+        "to": "geoffrey-telfer"
+      },
+      {
+        "from": "basil-telfer",
+        "to": "lesley-thomas-telfer-1891"
+      },
+      {
+        "from": "basil-telfer",
+        "to": "ruth-carson"
       }
     ],
     "stepParentOf": [

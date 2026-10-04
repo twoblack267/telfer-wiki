@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-04T05:38:00+10:00",
+  "generated_at": "2026-10-04T21:07:11+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 398,
+  "count": 401,
   "kinds": {
-    "real": 382,
+    "real": 385,
     "redirect": 16,
     "empty": 0
   },
@@ -138,6 +138,10 @@
     },
     "Avis Muriel Parker Nicholls (1918\u20132009).md": {
       "sha256": "1424a5a839058acc1d22f584123a6943c826173eba6ed782c7f9387fc83be008",
+      "kind": "real"
+    },
+    "Basil William Telfer (1920\u20131981).md": {
+      "sha256": "5f17a753948341e0be749ad07dcc26f8d6a8afce3cb79e09ae5740756342b868",
       "kind": "real"
     },
     "Beatrice Mary (Dillon) Murray (1919\u20132006).md": {
@@ -556,12 +560,12 @@
       "sha256": "09ca0dca63e170c171afccbf8812a37b2d3259b1509a55f8d18f18c95a7d6a33",
       "kind": "real"
     },
-    "Frederick Parker (~1838\u20131928).md": {
-      "sha256": "5d70b239e45ddf61ab55fba5dc2d7ad814ceec3f7e2f1ab7321a0944d32f9f84",
+    "Frederick Parker (1848\u20131928).md": {
+      "sha256": "3664638a15969f334708d4545703d8f1aa78fc93f3f1482ef84cd3b7459a036c",
       "kind": "real"
     },
     "Geoffrey Francis Telfer (1914\u20131975).md": {
-      "sha256": "0642795ac4c2e24faa18e372319d8d285d5926dbdace71f58f81ddab2e61acfe",
+      "sha256": "1f7fc88ffb28d84f0311244f4775cbcfd4227e93223eb40a372918c76abf454f",
       "kind": "real"
     },
     "George Edward Masters (1844\u20131912).md": {
@@ -585,7 +589,7 @@
       "kind": "real"
     },
     "George Parker.md": {
-      "sha256": "6d2b3eb9f1c8bcfea022d64d7ab4485478d0fcf239877518287010d5e2f50635",
+      "sha256": "d3061e2996847f1e8ace825b41a9dba4f7f25f9b6352f7bfb1e8fa4b76b7cf8c",
       "kind": "real"
     },
     "George Provis.md": {
@@ -597,7 +601,7 @@
       "kind": "real"
     },
     "George Wright Telfer (1850\u20131913).md": {
-      "sha256": "957d4688e779d69ceb717fd9af0a5ee1af3d56d741c8bd2bc515593c8cd08ef9",
+      "sha256": "c3d225893dc4d23bac24483228be8c2ad402e17f2ce8e615fce9e47c6384822b",
       "kind": "real"
     },
     "Gilbert Melville Telfer (1908\u20131973).md": {
@@ -845,7 +849,7 @@
       "kind": "real"
     },
     "Jean Telfer (1840\u20131892).md": {
-      "sha256": "e56ed091ae64d4abb9dea1526a428847d812a1db284cc87ed7edbddffcd50141",
+      "sha256": "bfd67d8e47f1aef20cf2f7e5f8b1f9bfe674bca6b5d23a4472584d91a76c895b",
       "kind": "real"
     },
     "Jemima Williams Masters Grant (1850\u20131919).md": {
@@ -921,7 +925,7 @@
       "kind": "real"
     },
     "John Ralph Paynter (1921\u20131941).md": {
-      "sha256": "b4bb3bf328b0c1f7a13a57b5c5a3fdb2627ffb1798cf2860d465f38c6b0d08ea",
+      "sha256": "a5f1779cf217a68ccf51bcae1589de8d26cbe92482b625f26efc42352a7d311b",
       "kind": "real"
     },
     "John Robert Telfer.md": {
@@ -1145,7 +1149,7 @@
       "kind": "real"
     },
     "Maria Clara Telfer (1878\u20131903).md": {
-      "sha256": "b533afcd0da5a711e32b317568c27e70529c9d65c9eafeb4e47a68de4da07e81",
+      "sha256": "4d4f7327ee38dccd1019dd9cb52065162758c46bea0f32de378c6a22a55a3b5e",
       "kind": "real"
     },
     "Marian Telfer Cornish (1896\u20131977).md": {
@@ -1376,6 +1380,10 @@
       "sha256": "36960f6443f1a50f615f621ac42383d0be2a486bae7f406f669f46b6efdfb6b8",
       "kind": "real"
     },
+    "Ronald Telfer (1898\u20131898).md": {
+      "sha256": "3173223167d1a4d9c89e23ec7fd4210d6e7ed4c42f5862a872b5c855146d15d0",
+      "kind": "real"
+    },
     "Rose Isabel Margaret Paynter (Rankin) (1900\u20131988).md": {
       "sha256": "1268a266f4a5925bb3a4685a04d234f623aa8545f8f5d08caf2e25d41a6c63d1",
       "kind": "real"
@@ -1386,6 +1394,10 @@
     },
     "Rosemary Ruth Curtis.md": {
       "sha256": "c11972684f6b0f15f55d8f2bdb6c5912e424cc4aca9815ca8131d423f4f9f5b3",
+      "kind": "real"
+    },
+    "Ruth Margaret Telfer Carson (1915\u20132000).md": {
+      "sha256": "1e574c71fdfe896f2cb2380d0ccd23301c565f28acf1e68f8765262b5b425313",
       "kind": "real"
     },
     "Ruth Penna (1863\u20131908).md": {
@@ -1549,7 +1561,7 @@
       "kind": "real"
     },
     "William Francis \"Frank\" Telfer (1885\u20131955).md": {
-      "sha256": "f2e8f9d1207b79bc28e19516102918e124856becd87220e989f02a54878af47b",
+      "sha256": "99c5092ca80ae71962006a4bfb72e1f491d9e80ef47ddc4c6e2eb5dd7151b1ce",
       "kind": "real"
     },
     "William Henry Parker (1893\u20131968).md": {
@@ -1581,7 +1593,7 @@
       "kind": "real"
     },
     "William Telfer (1811\u2013?).md": {
-      "sha256": "2d8986ab755c1de4589ca1bb9f6a8c8c65e873ea17189b0c5c03cc2331abbfef",
+      "sha256": "fe4617e0a7eafccbd8de20f40dbafe1282900f0d7a2f8a1906be3d5c44ce1dca",
       "kind": "real"
     },
     "William Telfer (1841\u2013?).md": {
