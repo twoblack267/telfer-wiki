@@ -38,6 +38,18 @@
       "reason": "Fabricated child of the Ann Taylor stub. No Jessie among John Telfer (1847-1929)'s children in the books. Empty 224-byte shell with no dates.",
       "date": "2026-09-22",
       "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
+    },
+    "frederick-parker-1838": {
+      "to": "frederick-parker",
+      "reason": "Stale slug from the pre-correction state. Frederick Parker's birth year was corrected 1838 -> 1848 (Corrections Log item 1; Genealogy SA Marriage Reg 89/759, groom age 23 in 1871). The vault file was renamed and the slug scheme later moved to a yearless 'frederick-parker'. The old 'frederick-parker-1838' URL must resolve to the corrected page.",
+      "date": "2026-10-05",
+      "corrections_log": "### 1. Frederick Parker — birth year CORRECTED 1838 → 1848"
+    },
+    "lillian-may-telfer-1872": {
+      "to": "lillian-telfer",
+      "reason": "Stale slug from the pre-correction state. Lillian May Telfer's birth was corrected 1872 -> 7 Aug 1873 (Corrections Log item 2; Tree pp. 287 & 291). Her current slug is derived from the NAME ('lillian-telfer'), so the old year-suffixed URL must resolve to the corrected page.",
+      "date": "2026-10-05",
+      "corrections_log": "### 2. Lillian May Telfer — birth 1872 → 7 Aug 1873; file renamed"
     }
   }
 }
