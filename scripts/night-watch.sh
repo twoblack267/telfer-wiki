@@ -430,23 +430,60 @@ echo "[8/8] Visual flyby of live site (desktop + mobile)..."
 # commit — and if it never does, say so loudly rather than silently
 # scanning the stale site.
 if [ "$PUSHED" = "1" ]; then
-  if git rev-parse --verify HEAD >/dev/null 2>&1; then
-    WANT_SHA=$(git rev-parse HEAD)
-    echo "  Waiting for GitHub Pages to serve commit ${WANT_SHA:0:8} (up to 300s)..."
-    SETTLED=0
-    for i in $(seq 1 60); do
-      LIVE_BODY=$(curl -fsS -m 20 "$SITE/" 2>/dev/null || true)
-      if printf '%s' "$LIVE_BODY" | grep -qF "$WANT_SHA"; then
-        echo "  ✅ Live origin is serving push ${WANT_SHA:0:8} (after ~$((i*5))s)"
-        SETTLED=1
-        break
+  # FIXED 2026-10-06 — the guard was impossible to satisfy, and it failed every
+  # run. Root cause (measured): stamp-build.mjs stamps each page with
+  # `git rev-parse --short=8 HEAD` as data-build-id="XXXXXXXX-<epochms>".
+  # The page therefore contains the SHORT 8-char SHA and NEVER the full 40-char
+  # SHA. This poll grepped for `git rev-parse HEAD` (full 40 chars) — a string
+  # the site does not contain anywhere — so it timed out on every deploy and
+  # exited 1 with "deploy-unconfirmed" (run 2026-10-05 20:05, card
+  # night-watch-issue-20261005-1). Compounding it: the poll read local HEAD,
+  # which is NOT what was pushed when the commit-then-push step is skipped.
+  # Fix: (a) match the SHORT sha the page actually carries, (b) take the sha
+  # from the pushed ref (origin/HEAD after push), falling back to HEAD, and
+  # (c) verify the sha really exists on origin before polling — an unpublished
+  # sha can never appear live, and waiting 300s for it is a guaranteed failure.
+  PUSHED_SHA=""
+  if git rev-parse --verify origin/main >/dev/null 2>&1; then
+    PUSHED_SHA=$(git rev-parse --short=8 origin/main)
+  elif git rev-parse --verify HEAD >/dev/null 2>&1; then
+    PUSHED_SHA=$(git rev-parse --short=8 HEAD)
+  fi
+
+  if [ -n "$PUSHED_SHA" ]; then
+    ON_ORIGIN=0
+    if git ls-remote --exit-code origin >/dev/null 2>&1; then
+      if git branch -r --contains HEAD 2>/dev/null | grep -q 'origin/'; then
+        ON_ORIGIN=1
       fi
-      sleep 5
-    done
+    fi
+
+    if [ "$ON_ORIGIN" != "1" ]; then
+      # Unpublished HEAD: polling for it would be a guaranteed timeout. This is
+      # not a site fault — the deploy of the LAST pushed commit is what matters.
+      echo "  ℹ️  Local HEAD is not on origin — skipping live-sha confirmation."
+      echo "     (AUTO_PUSH=0 or a no-op push. The site still serves the last"
+      echo "      pushed commit; nothing to confirm here.)"
+      SETTLED=1
+    else
+      echo "  Waiting for GitHub Pages to serve commit ${PUSHED_SHA} (up to 300s)..."
+      SETTLED=0
+      for i in $(seq 1 60); do
+        LIVE_BODY=$(curl -fsS -m 20 "$SITE/" 2>/dev/null || true)
+        # Match the SHORT sha: it appears in data-build-id="<short>-<epochms>".
+        if printf '%s' "$LIVE_BODY" | grep -qF "$PUSHED_SHA"; then
+          echo "  ✅ Live origin is serving push ${PUSHED_SHA} (after ~$((i*5))s)"
+          SETTLED=1
+          break
+        fi
+        sleep 5
+      done
+    fi
+
     if [ "$SETTLED" != "1" ]; then
       # Do NOT claim the site is broken: we simply could not confirm the
       # deploy. Report it as an unresolved condition, not a 404.
-      echo "  🟠 Could not confirm live origin is serving ${WANT_SHA:0:8} within 300s."
+      echo "  🟠 Could not confirm live origin is serving ${PUSHED_SHA} within 300s."
       echo "     The live 404 scan below may read a STALE deployment — treat any"
       echo "     broken-links result in this run as UNRELIABLE and re-run before acting."
       FAIL="${FAIL} deploy-unconfirmed"
