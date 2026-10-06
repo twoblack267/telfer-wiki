@@ -46,7 +46,10 @@ const roles = [...new Set(members.flatMap((p) => p.roles || []))].sort();
 const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["bio", "family", "person"].includes(t))))].sort();
 ---
 
-<BaseLayout title={`${surname} Family`}>
+<BaseLayout
+  title={`${surname} Family`}
+  description={`The ${surname} family in the Telfer line — ${members.length} profile${members.length !== 1 ? "s" : ""}${oldest && youngest ? ` spanning ${oldest}–${youngest}` : ""}, including ${deceased.length} deceased and ${living.length} living. Part of the Telfer Family Wiki, tracing nine generations from Scotland to South Australia.`}
+>
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-4">

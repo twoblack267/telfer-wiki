@@ -150,9 +150,11 @@ const personSchema = {
   ...(person.last_name ? { familyName: person.last_name } : {}),
   ...(person.gender ? { gender: person.gender } : {}),
   url: `https://telferwiki.com/people/${person.slug}/`,
+  // Schema.org Date values must be valid ISO-8601; a "?" placeholder (unknown year)
+  // is NOT a valid Date and fails validators, so the field is omitted entirely.
   ...(person.birth_date ? { birthDate: person.birth_date }
-     : person.birth_year_display ? { birthDate: person.birth_year_display } : {}),
-  ...(person.death_year_display && !person.is_living ? { deathDate: person.death_year_display } : {}),
+     : person.birth_year_display && person.birth_year_display !== "?" ? { birthDate: person.birth_year_display } : {}),
+  ...(person.death_year_display && person.death_year_display !== "?" && !person.is_living ? { deathDate: person.death_year_display } : {}),
   // Public-tree matches (wikiTree / FamilySearch / FindAGrave / WikiData) anchor this
   // person as the SAME entity Google/AI already knows — the key genealogy entity boost.
   ...(sameAsLinks.length ? { sameAs: sameAsLinks } : {}),

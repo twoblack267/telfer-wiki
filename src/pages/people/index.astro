@@ -20,7 +20,10 @@ const TELFER_TREE_ENABLED = import.meta.env.TELFER_TREE_ENABLED === "true";
 const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
 ---
 
-<BaseLayout title="People">
+<BaseLayout
+  title="People"
+  description={`Browse all ${telferPeople.length} profiles in the Telfer line — ${telferPeople.filter(p => p.is_living).length} living and ${telferPeople.filter(p => !p.is_living).length} deceased — from John Telfer of Castleton (b. 1731) to the present day. Part of the Telfer Family Wiki.`}
+>
   <div class="page-header">
     <h1>All People</h1>
     <p class="text-[var(--color-ink-light)] mt-2">

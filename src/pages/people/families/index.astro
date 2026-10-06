@@ -73,7 +73,10 @@ const otherSurnames = Object.entries(surnameCounts)
   .sort((a, b) => b[1] - a[1]);
 ---
 
-<BaseLayout title="The Telfer Family">
+<BaseLayout
+  title="The Telfer Family"
+  description={`The Telfer family line from Scotland to Australia — ${telferPeople.length} profiles spanning ${minYear}–${maxYear}, including ${livingCount} living and ${deceasedCount} deceased, plus the ${otherSurnames.length} allied surnames who married in.`}
+>
   <div class="page-header">
     <h1>The Telfer Family</h1>
     <p class="text-[var(--color-ink-light)] mt-2">

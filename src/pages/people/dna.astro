@@ -15,7 +15,10 @@ const haplogroupsMt = [...new Set(people.filter(p => p.haplogroup_mt).map(p => (
 const haplogroupsY = [...new Set(people.filter(p => p.haplogroup_y).map(p => ({ name: p.display_name, haplogroup: p.haplogroup_y })))];
 ---
 
-<BaseLayout title="DNA Connections">
+<BaseLayout
+  title="DNA Connections"
+  description="DNA connections for the Telfer family line — how living descendants link across branches and generations. Part of the Telfer Family Wiki."
+>
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">
