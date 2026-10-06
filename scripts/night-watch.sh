@@ -22,6 +22,17 @@ cd "$HOME/telfer-wiki" || { echo "🔴 Night Watch: repo dir not found"; exit 1;
 AUTO_PUSH="${AUTO_PUSH:-1}"   # 1 = git push on its own, 0 = stop & report
 VERBOSE="${VERBOSE:-0}"
 
+# FIXED 2026-10-06 — $SITE was never defined. Step 8's deploy-confirm poll uses
+# "$SITE/" (line ~472), and this script runs `set -u`, so the unbound variable
+# was FATAL: the script died the instant it reached the poll, immediately after
+# a push. The cron surfaced that death as "🟠 Could not confirm live origin is
+# serving <sha> within 300s" and exited 1 with deploy-unconfirmed — which read
+# as a slow-deploy timeout and was in fact a crash. That is the TRUE root cause
+# behind card night-watch-issue-20261005-1; the full-vs-short SHA mismatch fixed
+# in e321c99 was a real second bug standing in the same place, not the cause.
+# Same convention as scripts/cf-purge-verify.sh:37.
+SITE="${SITE:-https://telferwiki.com}"
+
 # Runtime/log dir — NOT /tmp (macOS TCC sandbox blocks some scripts there).
 # Use a gitignored dir inside the repo so logs persist and are TCC-safe.
 RUN_DIR="$HOME/telfer-wiki/runtime"
