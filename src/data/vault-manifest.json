@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-07T20:05:13+10:00",
+  "generated_at": "2026-10-08T05:04:00+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 401,
+  "count": 402,
   "kinds": {
-    "real": 385,
+    "real": 386,
     "redirect": 16,
     "empty": 0
   },
@@ -256,8 +256,8 @@
       "sha256": "7edb4829f504c3e365cd24e4f05b01ec82ecc582f117f62dc7fb2b1f6ef81ead",
       "kind": "real"
     },
-    "Dalby Cecil Dennis (1897\u2013?).md": {
-      "sha256": "48af354570e16986a15d36731d7ba6d4fba3576270425ea287842994aab13a80",
+    "Dalby Cecil Dennis (1897\u20131918).md": {
+      "sha256": "139110aef8d7b27d3a51eae5db56d4fba843fa64f132ea617bba1f437d336426",
       "kind": "real"
     },
     "Dale Helen Telfer.md": {
@@ -285,7 +285,7 @@
       "kind": "real"
     },
     "Dinah Flavel Paynter (1869\u20131958).md": {
-      "sha256": "de8f736d369e1f0aea058ff26fa2cba45d704d5e9b6bd396b3fa259673aa6966",
+      "sha256": "879678b4a4f9922834a54735456b240bea0dccc8707dbc47b8ec2c416a5b03c3",
       "kind": "real"
     },
     "Donald Jack Hookings (1916\u20131943).md": {
@@ -544,8 +544,8 @@
       "sha256": "df0435f9be7d0db9acb31d1de8482be7ffce74c5d315de3ebb9e0d679e5e802e",
       "kind": "real"
     },
-    "Francis Telfer Paynter (1862\u2013?).md": {
-      "sha256": "50457025c7e35962a273ec5408f6b67d8ea287a0cc496ff619909866967d0641",
+    "Francis Telfer Paynter (1862\u20131900).md": {
+      "sha256": "e1c9e6ce8d55268c50426a9323a92b621e8f352619e04e56426a24c5fa328856",
       "kind": "real"
     },
     "Francis Telfer Smith (1874\u20131945).md": {
@@ -1492,6 +1492,10 @@
       "sha256": "e8649ed9897bba991d0a541967741817e28cf45ff442ecc77048873e12bd8093",
       "kind": "real"
     },
+    "Thomas Dennis (1862\u20131914).md": {
+      "sha256": "26d85d72ab6fc1223032d4520b1aa9b940b15b9db2255f632b99d661b2d2564b",
+      "kind": "real"
+    },
     "Thomas Holloway (1856\u20131922).md": {
       "sha256": "77d2fb185cd2e80197d466298f9d0bb145fecd70b175be9d2bedab39110393c5",
       "kind": "real"
@@ -1593,7 +1597,7 @@
       "kind": "real"
     },
     "William Telfer (1811\u2013?).md": {
-      "sha256": "fe4617e0a7eafccbd8de20f40dbafe1282900f0d7a2f8a1906be3d5c44ce1dca",
+      "sha256": "22eecc3a165071bfaf927024efc414430d1f17ee257abf6743031c19d2556aa0",
       "kind": "real"
     },
     "William Telfer (1841\u2013?).md": {

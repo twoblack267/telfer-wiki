@@ -1924,6 +1924,11 @@
       "slug": "ruth-carson",
       "id": "Ruth Margaret Carson (1915)",
       "generation": 6
+    },
+    {
+      "slug": "thomas-dennis",
+      "id": "Thomas Dennis (1862)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -3973,6 +3978,10 @@
         "to": "dalby-dennis"
       },
       {
+        "from": "thomas-dennis",
+        "to": "dalby-dennis"
+      },
+      {
         "from": "douglas-telfer-1887",
         "to": "effie-telfer"
       },
@@ -4121,6 +4130,10 @@
       {
         "from": "dinah-flavel-1821",
         "to": "francis-telfer-1809"
+      },
+      {
+        "from": "dinah-flavel-paynter-1869",
+        "to": "thomas-dennis"
       },
       {
         "from": "douglas-telfer-1887",
