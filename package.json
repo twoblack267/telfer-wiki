@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "astro dev",
     "sanitize": "node scripts/sanitize-people.mjs",
+    "check:snapshots": "node scripts/check-snapshot-freshness.mjs",
+    "check:snapshots:ci": "node scripts/check-snapshot-freshness.mjs --no-vault",
     "validate": "node validate-people.mjs && node scripts/scan-cross-branch.mjs",
     "scan:cross-branch": "node scripts/scan-cross-branch.mjs",
     "body-links": "node scripts/check-body-links.mjs",

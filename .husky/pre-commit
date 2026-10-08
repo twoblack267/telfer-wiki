@@ -1,4 +1,16 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+# telfer-wiki pre-commit — dependency-free (no husky runtime required).
+#
+# Repaired 2026-10-09: the previous version sourced .husky/_/husky.sh, which did
+# not exist and husky was not installed, and core.hooksPath was unset — so this
+# file NEVER RAN. It was 58 bytes of placebo sitting where a guard was supposed
+# to be. It now does the one job that has gone red three times (tw-2026-09-27-001):
+# refuse a commit that would leave the committed CI snapshots stale.
 
-npm run validate
+echo "pre-commit: snapshot freshness…"
+if ! node scripts/check-snapshot-freshness.mjs; then
+  echo ""
+  echo "pre-commit BLOCKED: stage the regenerated snapshot(s) before committing."
+  echo "  git add scripts/family-rows.snapshot.json scripts/vault-notes.snapshot.json"
+  exit 1
+fi

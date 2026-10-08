@@ -180,9 +180,22 @@ echo "==> Step 7/7: refresh Family-row snapshot for the CI dead-link guard"
 # those FOR REAL. Regenerating here keeps the snapshot from silently going stale; the guard also
 # hard-fails if the snapshot drifts from the live vault. (Added 2026-09-12.)
 if node scripts/make-family-rows-snapshot.mjs; then
-  echo "OK — snapshot refreshed (commit scripts/family-rows.snapshot.json if it changed)."
+  # HARD GATE, not an advisory echo (tw-2026-09-27-001 class, 3rd recurrence via
+  # 9f78e6f/5ccb013): a regen that leaves the committed snapshot stale is a regen
+  # that will turn the CI family-cell guard red on a vault that is actually correct.
+  # We refuse to report success. The operator stages the snapshot and re-runs.
+  if ! node scripts/check-snapshot-freshness.mjs --quiet; then
+    echo "" >&2
+    echo "FAIL — snapshot regenerated but NOT staged (tw-2026-09-27-001 class)." >&2
+    echo "       Stage it, then commit the vault/data change and the snapshot TOGETHER:" >&2
+    echo "         git add scripts/family-rows.snapshot.json scripts/vault-notes.snapshot.json" >&2
+    echo "       (Do NOT hand-edit people.json — the vault is the source of truth.)" >&2
+    exit 1
+  fi
+  echo "OK — snapshot refreshed and staged clean."
 else
-  echo "WARNING — snapshot not refreshed; CI guard will use the previously committed rows."
+  echo "FAIL — snapshot not refreshed; CI guard would audit previously committed rows." >&2
+  exit 1
 fi
 
 echo
