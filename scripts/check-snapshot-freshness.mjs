@@ -54,11 +54,20 @@ const say = (m) => { if (!QUIET) console.log(m); };
 const problems = [];
 
 // --- Mode 2: is the snapshot dirty in git? (checkable everywhere) -------------
+// A file that is MODIFIED BUT STAGED belongs in the coming commit — that is the
+// correct pre-commit state and must NOT be reported. What we must catch is a
+// snapshot with UNSTAGED changes (regenerated on disk, not `git add`ed): that is
+// the 9f78e6f mistake, because the commit then carries the stale copy.
+// So the test is "is there a difference between the working tree and the INDEX?",
+// not "does the file show up in git status at all".
 function dirty(path) {
   try {
-    return execFileSync("git", ["-C", ROOT, "status", "--porcelain", "--", path], { encoding: "utf8" }).trim().length > 0;
-  } catch {
-    return false; // not a git repo / git missing — do not block on our own inability to look
+    // --quiet exits 1 when the working tree differs from the index (unstaged edits).
+    execFileSync("git", ["-C", ROOT, "diff", "--quiet", "--", path], { stdio: "ignore" });
+    return false; // exit 0 = working tree matches the index = nothing unstaged
+  } catch (e) {
+    // exit 1 = unstaged differences exist; anything else = we could not look.
+    return e && e.status === 1;
   }
 }
 
