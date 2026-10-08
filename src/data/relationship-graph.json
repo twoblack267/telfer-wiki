@@ -1929,6 +1929,10 @@
       "slug": "thomas-dennis",
       "id": "Thomas Dennis (1862)",
       "generation": 5
+    },
+    {
+      "slug": "ellen-liebich",
+      "id": "Ellen Jane Liebich (1865)"
     }
   ],
   "edges": {
@@ -4386,6 +4390,10 @@
       {
         "from": "frederick-parker",
         "to": "jean-telfer-1840"
+      },
+      {
+        "from": "ellen-liebich",
+        "to": "francis-telfer-paynter-1862"
       }
     ],
     "siblingOf": [
@@ -5476,6 +5484,10 @@
       {
         "from": "elizabeth-hannah-telfer-1836",
         "to": "james-telfer-1832"
+      },
+      {
+        "from": "elizabeth-liebich-1859",
+        "to": "ellen-liebich"
       },
       {
         "from": "elizabeth-parker-1879",

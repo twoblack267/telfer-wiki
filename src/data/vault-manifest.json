@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-08T20:05:27+10:00",
+  "generated_at": "2026-10-09T05:05:07+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 402,
+  "count": 403,
   "kinds": {
-    "real": 386,
+    "real": 387,
     "redirect": 16,
     "empty": 0
   },
@@ -389,7 +389,7 @@
       "kind": "real"
     },
     "Elizabeth Jane Liebich (1859\u20131919).md": {
-      "sha256": "c43045f5d70c21aed6ce10683fd9e48f9aa39fff9c2ba53d0718ad89bb2cd056",
+      "sha256": "fe9131be2544d4d7e8ce14f3994f54d6dca640eb0c2fe0167aa5750122d372c1",
       "kind": "real"
     },
     "Elizabeth Oliver (1807\u20131846).md": {
@@ -415,6 +415,10 @@
     "Elizabeth Telfer Farrow.md": {
       "sha256": "faa91b7140ceb562ad9219fb5c746673e44059c99abfcd00fd092569a7465a0a",
       "kind": "redirect"
+    },
+    "Ellen Jane Liebich (1865\u20131894).md": {
+      "sha256": "4a2422b899b2afbe88c11a163fdbe3bae30cde3d5a836b3dc167d33aca814e78",
+      "kind": "real"
     },
     "Elspeth Young (1722\u2013?).md": {
       "sha256": "8995a8565da7d2a2a41ee6998339931ec1f9775bb31e1b8566f3ed89e99f5eeb",
@@ -545,7 +549,7 @@
       "kind": "real"
     },
     "Francis Telfer Paynter (1862\u20131900).md": {
-      "sha256": "e1c9e6ce8d55268c50426a9323a92b621e8f352619e04e56426a24c5fa328856",
+      "sha256": "539aa2935e4d0e5ab6307696e0a937e0f1dd29e633f22fe4727f5fb597a1a15f",
       "kind": "real"
     },
     "Francis Telfer Smith (1874\u20131945).md": {
