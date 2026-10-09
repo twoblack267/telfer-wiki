@@ -108,8 +108,24 @@ function slugify(name) {
     .replace(/^-|-$/g, '');
 }
 
-function checkBrokenWikiLinks(text, knownSlugs) {
+// FIX (Skippy, 2026-10-10): this audit used a slug-name-part heuristic that did NOT mirror the
+// renderer. src/utils/format-body.mjs (and the guard scripts/check-body-links.mjs) fall back to
+// the vault_file STEM when the display form carries a parenthetical maiden name that the slug
+// omits ("Mary Ann (Gelligen) Dillon" -> slug "mary-ann-dillon-1887"). The audit lacked that
+// fallback, so ~50 links that RENDER correctly (<a class="wiki-link">) were reported as broken,
+// tanking the audit score to 0.0/10 every night. Same class as the 2026-09-13 renderer fix:
+// a loop ran, the answer came back wrong, the fix is code. Kept identical to format-body.mjs.
+const normStem = (s) => s
+  .replace(/\s*\([^)]*(?:\d|living|deceased|\?)[^)]*\)\s*$/i, '')
+  .replace(/\s*\((?:living|deceased|\?)\)\s*$/i, '')
+  .replace(/\s+/g, ' ')
+  .trim()
+  .toLowerCase();
+const stemOf = (v) => (v || '').split('/').pop().replace(/\.md$/i, '');
+
+function checkBrokenWikiLinks(text, people) {
   const issues = [];
+  const knownSlugs = people.map(p => p.slug);
   const regex = /\[\[([^\]]+)\]\]/g;
   let match;
   while ((match = regex.exec(text)) !== null) {
@@ -157,6 +173,15 @@ function checkBrokenWikiLinks(text, knownSlugs) {
 
       return false;
     });
+
+    // Stem fallback (mirrors src/utils/format-body.mjs, deliberately LAST so every existing
+    // resolution wins first). The vault note IS the truth and carries the family naming
+    // convention; the slug may omit a parenthetical maiden name the convention appends.
+    if (!found) {
+      const targetStem = normStem(linkTarget.replace(/\s*\([^)]*\d[^)]*\)\s*$/g, '').trim());
+      const stemMatch = people.some(p => normStem(stemOf(p.vault_file)) === targetStem && targetStem !== '');
+      if (stemMatch) continue;
+    }
 
     if (!found) {
       issues.push({
@@ -251,7 +276,7 @@ async function main() {
   const knownSlugs = people.map(p => p.slug);
   for (const p of people) {
     if (p.body_markdown) {
-      allIssues.push(...checkBrokenWikiLinks(p.body_markdown, knownSlugs));
+      allIssues.push(...checkBrokenWikiLinks(p.body_markdown, people));
     }
   }
 
