@@ -13,13 +13,29 @@
  *   the STALE committed snapshot and the family-cell link guard goes red on a
  *   vault that is actually correct.
  *
- * WHAT IT CHECKS (two independent failure modes, both real, neither guessed)
+ * WHAT IT CHECKS (three independent failure modes, all real, none guessed)
  *   1. UNREGENERATED DRIFT — the snapshot on disk does not match what the live
  *      vault would produce. Only checkable where the vault lives (no vault in CI,
  *      and we must not fake it). When the vault IS present we regenerate and
- *      compare the parsed `files`/`notes` payload (never the formatting).
+ *      compare the parsed `files`/`notes` payload (never the formatting, and
+ *      never the `generated` timestamp, which churns on every run by design).
  *   2. UNSTAGED REGEN — the snapshot file is dirty in git at commit time. This
- *      is checkable everywhere and is exactly the 9f78e6f mistake.
+ *      is exactly the 9f78e6f mistake. ONLY meaningful at commit time, so it is
+ *      SKIPPED under --pipeline (see below).
+ *   3. MISSING — the snapshot is not committed at all. Fatal everywhere.
+ *
+ * MODES (--pipeline)
+ *   The gate is called from two places with opposite needs:
+ *     • pre-commit hook / CI  — a human or a clean checkout is about to commit.
+ *       A dirty snapshot here IS the bug. Run the staging check.
+ *     • regenerate-data.sh    — the pipeline has JUST written the snapshot on
+ *       purpose, and night-watch.sh commits with `git add -A` afterwards. The
+ *       file is *always* dirty at this instant, so the staging check is not
+ *       merely unhelpful, it is unsatisfiable: it guaranteed a nightly exit 1
+ *       that blocked the very commit that would have staged the file.
+ *       tw-2026-10-09-00X — 4th recurrence of this class, self-inflicted by the
+ *       3rd fix. Under --pipeline we check CONTENT ONLY and skip the staging
+ *       check; the pre-commit hook still enforces staging at the real commit.
  *
  * THIS IS A CHECK, NOT A WRITER. Mode 1 runs the maker, which rewrites the file
  * on disk. So we capture the ORIGINAL RAW BYTES before, and write those exact
@@ -34,6 +50,7 @@
  *   node scripts/check-snapshot-freshness.mjs            # gate
  *   node scripts/check-snapshot-freshness.mjs --quiet     # only speak on failure
  *   node scripts/check-snapshot-freshness.mjs --no-vault  # skip mode 1 (CI)
+ *   node scripts/check-snapshot-freshness.mjs --pipeline  # skip mode 2 (regen)
  */
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
@@ -43,6 +60,10 @@ import { homedir } from "node:os";
 const ROOT = join(import.meta.dirname, "..");
 const QUIET = process.argv.includes("--quiet");
 const NO_VAULT = process.argv.includes("--no-vault");
+// --pipeline: we were called BY the regen pipeline, which has just written the
+// snapshot on purpose. The staging check (mode 2) is unsatisfiable here — see the
+// header. Skip it; the pre-commit hook enforces staging at the real commit.
+const PIPELINE = process.argv.includes("--pipeline");
 
 // `payloadKey` is the field the maker writes that carries the audited content.
 const SNAPSHOTS = [
@@ -92,14 +113,19 @@ for (const snap of SNAPSHOTS) {
     continue;
   }
 
-  if (dirty(snap.file)) {
+  if (!PIPELINE && dirty(snap.file)) {
     problems.push(
       `${snap.file}: DIRTY in git — regenerated but not staged. ` +
         `Stage it before committing (this is the 9f78e6f mistake).`
     );
   }
 
-  if (!VAULT) continue;
+  if (!VAULT) {
+    if (PIPELINE) {
+      say(`${snap.file}: pipeline mode — staging check skipped (content-only).`);
+    }
+    continue;
+  }
 
   // Capture the ORIGINAL RAW BYTES so we can restore exactly (not re-serialise).
   const originalBytes = readFileSync(path);

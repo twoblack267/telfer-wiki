@@ -183,8 +183,16 @@ if node scripts/make-family-rows-snapshot.mjs; then
   # HARD GATE, not an advisory echo (tw-2026-09-27-001 class, 3rd recurrence via
   # 9f78e6f/5ccb013): a regen that leaves the committed snapshot stale is a regen
   # that will turn the CI family-cell guard red on a vault that is actually correct.
-  # We refuse to report success. The operator stages the snapshot and re-runs.
-  if ! node scripts/check-snapshot-freshness.mjs --quiet; then
+  #
+  # --pipeline is REQUIRED here (tw-2026-10-09-00X, 4th recurrence — self-inflicted
+  # by the 3rd fix). This script has just written the snapshot seconds ago and
+  # night-watch.sh stages it with `git add -A` later, so the "is it staged?" check
+  # was ALWAYS true here and could never be satisfied: it forced a nightly exit 1
+  # which set BLOCK_PUSH=1, which skipped the very commit that would have staged
+  # the file. The gate still checks CONTENT (genuine vault drift) in this mode, and
+  # the pre-commit hook still enforces staging at the real commit. Do NOT drop
+  # --pipeline: without it the nightly job fails forever while the site is correct.
+  if ! node scripts/check-snapshot-freshness.mjs --quiet --pipeline; then
     echo "" >&2
     echo "FAIL — snapshot regenerated but NOT staged (tw-2026-09-27-001 class)." >&2
     echo "       Stage it, then commit the vault/data change and the snapshot TOGETHER:" >&2
