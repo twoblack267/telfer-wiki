@@ -59,6 +59,9 @@ function checkPII(text, label, severity = 'high', opts = {}) {
   let body = typeof text === 'string' ? text : JSON.stringify(text);
   // Strip URLs to avoid false positives from transcript IDs, etc.
   body = body.replace(/https?:\/\/[^\s"'<>]+/g, '[URL REMOVED]');
+  // The site's OWN published contact address (contact.astro / privacy.astro) is
+  // intentional public information, not a PII leak. Allowlist it before scanning.
+  body = body.replace(/contact@telferwiki\.com/gi, '[SITE CONTACT]');
 
   for (const { regex, type, label, skip = false } of checks) {
     if (skip) continue;
