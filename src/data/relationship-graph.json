@@ -1934,6 +1934,16 @@
       "slug": "ellen-liebich",
       "id": "Ellen Jane Liebich (1865)",
       "generation": 5
+    },
+    {
+      "slug": "david-telfer",
+      "id": "David Lyndon Telfer (1957)",
+      "generation": 7
+    },
+    {
+      "slug": "ryan-telfer",
+      "id": "Ryan David Telfer (1982)",
+      "generation": 8
     }
   ],
   "edges": {
@@ -4041,6 +4051,14 @@
       {
         "from": "william-francis-telfer-1885",
         "to": "ruth-carson"
+      },
+      {
+        "from": "reginald-masters-telfer-1922",
+        "to": "david-telfer"
+      },
+      {
+        "from": "david-telfer",
+        "to": "ryan-telfer"
       }
     ],
     "spouseOf": [

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-14T03:00:48+10:00",
+  "generated_at": "2026-10-14T05:07:29+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 403,
+  "count": 405,
   "kinds": {
-    "real": 387,
+    "real": 389,
     "redirect": 16,
     "empty": 0
   },
@@ -266,6 +266,10 @@
     },
     "Daryll William Telfer.md": {
       "sha256": "9f818092a1c17557e2abb3be8d0fe63931b02d8ac4a3245ee4d89ff79c76bac8",
+      "kind": "real"
+    },
+    "David Lyndon Telfer (1957\u20131996).md": {
+      "sha256": "a4da58423614aa661a5cc91da43108afebe3d238f406fe619723b006ee5e0de7",
       "kind": "real"
     },
     "David Parker (1822\u20131888).md": {
@@ -1297,7 +1301,7 @@
       "kind": "real"
     },
     "Reginald Masters Telfer (1922\u20132011).md": {
-      "sha256": "5c45c7a41d522c18a1bac8e591e8e5a73be10c9357ec2eb458b7fff3c57deeaf",
+      "sha256": "780b2cc937bc7719db3ccecc24ababff5d15c38c2c5629c3d6380ac5e219b598",
       "kind": "real"
     },
     "Rev. Ralph Drummond (1792\u20131872).md": {
@@ -1410,6 +1414,10 @@
     },
     "Ruth Telfer (1931\u2013?).md": {
       "sha256": "c94cfaed5d1e1c6a719296d110ee24c269afff36d92ac4f768993989054f5fac",
+      "kind": "real"
+    },
+    "Ryan David Telfer (1982\u20131982).md": {
+      "sha256": "125c65ed8960f12621e9be5b478859e4021f0701aab6cb88acb625ff8448fb79",
       "kind": "real"
     },
     "Sabina (Triplett) Dillon (1870\u20131961).md": {
