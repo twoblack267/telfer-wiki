@@ -1974,6 +1974,16 @@
       "slug": "lindsay-stribling",
       "id": "Lindsay Ellis Stribling (1893)",
       "generation": 6
+    },
+    {
+      "slug": "james-cowan",
+      "id": "James Cowan (1741)",
+      "generation": 1
+    },
+    {
+      "slug": "jean-hinshelwood",
+      "id": "Jean Hinshelwood (1750)",
+      "generation": 2
     }
   ],
   "edges": {
@@ -2481,6 +2491,14 @@
       {
         "from": "john-telfer-1847",
         "to": "ernest-telfer-1878"
+      },
+      {
+        "from": "james-cowan",
+        "to": "esther-cowan-1783"
+      },
+      {
+        "from": "jean-hinshelwood",
+        "to": "esther-cowan-1783"
       },
       {
         "from": "charles-farrow-1836",
@@ -3009,6 +3027,10 @@
       {
         "from": "mark-telfer-1877",
         "to": "jean-telfer-1910"
+      },
+      {
+        "from": "esther-cowan-1783",
+        "to": "jean-murray-1810"
       },
       {
         "from": "john-murray-1779",
@@ -4487,6 +4509,10 @@
       {
         "from": "ellen-liebich",
         "to": "francis-telfer-paynter-1862"
+      },
+      {
+        "from": "james-cowan",
+        "to": "jean-hinshelwood"
       }
     ],
     "siblingOf": [

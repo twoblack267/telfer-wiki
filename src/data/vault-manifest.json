@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-15T16:08:37+10:00",
+  "generated_at": "2026-10-16T05:05:28+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 411,
+  "count": 413,
   "kinds": {
-    "real": 395,
+    "real": 397,
     "redirect": 16,
     "empty": 0
   },
@@ -473,7 +473,7 @@
       "kind": "real"
     },
     "Esther Cowan (1783\u20131856).md": {
-      "sha256": "c21baee467cbfd8ba4a781fec73817d9d83b2b5de80cf33ddfbe938d49814b46",
+      "sha256": "aa351deb59aa56aa678d6dd03b0da9f18902a69ee7b399717dcf4e9acd440f58",
       "kind": "real"
     },
     "Esther Farrow Latter (1859\u20131951).md": {
@@ -764,6 +764,10 @@
       "sha256": "e98c2492b241147f224762a40acb3986de35cd90a9257d20e9fec0486c4ccee2",
       "kind": "real"
     },
+    "James Cowan (~1741\u20131786).md": {
+      "sha256": "7c9bac665cf4a0fa5dd424cf9b6b4dd0ad8177a4baeb3a822d808b7cde57f86c",
+      "kind": "real"
+    },
     "James Edgerston Telfer (1877\u20131959).md": {
       "sha256": "63cc3d4fa6425c9ad91ad082779e759487798fdc679353c11dda12c1156e3f9b",
       "kind": "real"
@@ -864,12 +868,16 @@
       "sha256": "65cb80f87ef6f33ded59ec46bde6f254926fcd492a9b36f742b91872feab61e8",
       "kind": "real"
     },
+    "Jean Hinshelwood (~1750\u20131809).md": {
+      "sha256": "e55b1fb73b9aec1c46dbf2657f23f490d7e3e3c8f60d6822ff845e5116e2c414",
+      "kind": "real"
+    },
     "Jean Maryann Martha Telfer (1910\u20131984).md": {
       "sha256": "2b2ee488297a40044cdaed75703188d07edc8160c4e72cf82a25bee4d5dc01cf",
       "kind": "real"
     },
     "Jean Murray (1810\u20131839).md": {
-      "sha256": "66ef9ce2fef9ce0c785469b5f2f2cd82375137604279f4f721fb3d12a2704c40",
+      "sha256": "828cc25f30d81ff6dc073c3c8a5cb4a22236c5fb538b2de56768fa5b4b23254e",
       "kind": "real"
     },
     "Jean Telfer (1764\u2013?).md": {
@@ -949,7 +957,7 @@
       "kind": "real"
     },
     "John Murray (1779\u20131849).md": {
-      "sha256": "ae0dff05e0a98b473de34d813dbb83e71948d89ec426838968a2f2970405b029",
+      "sha256": "e4322398fa709509f8f1a3cff661eb84998692083af6ebf007709a5c9b624c2d",
       "kind": "real"
     },
     "John Ralph Paynter (1921\u20131941).md": {
