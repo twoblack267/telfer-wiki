@@ -44,6 +44,29 @@ import os
 import re
 import sys
 
+# PyYAML is required to read profile frontmatter. Import it EAGERLY, at module
+# load, so a missing module reports ONE clear error instead of poisoning every
+# profile: the old lazy import inside the per-file loop turned a missing PyYAML
+# into 413 identical "frontmatter did not parse: No module named 'yaml'"
+# contradictions, exit 1, and a blocked deploy with no push.
+#
+# 2026-10-16: this job failed at 03:05 because the cron shell had the Hermes
+# 3.14 toolchain python first on PATH, and that interpreter ships WITHOUT
+# PyYAML. /usr/bin/python3 has it. Guard here so the failure names itself.
+try:
+    import yaml  # noqa: F401
+except ModuleNotFoundError:  # pragma: no cover - environment fault, not logic
+    sys.stderr.write(
+        "FATAL: PyYAML is not installed for this interpreter:\n"
+        f"  {sys.executable}\n"
+        "The cron/PATH environment resolved `python3` to an interpreter without\n"
+        "PyYAML (the Hermes 3.14 toolchain python is known to lack it).\n"
+        "Run this script with /usr/bin/python3, or install PyYAML for the\n"
+        "interpreter above. Refusing to continue: without PyYAML every profile\n"
+        "would falsely report a frontmatter contradiction.\n"
+    )
+    sys.exit(2)
+
 HOME = os.path.expanduser("~")
 DEFAULT_VAULT = os.path.join(HOME, "ObsidianVault", "Family History", "People")
 
@@ -200,7 +223,6 @@ def check_profile(path):
     body = txt[fm.end():]
 
     try:
-        import yaml
         fmdata = yaml.safe_load(fm.group(1)) or {}
     except Exception as e:                                             # noqa: BLE001
         return [f"frontmatter did not parse: {e}"], []

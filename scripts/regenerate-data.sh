@@ -15,6 +15,11 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+# PATH HARDENING — 2026-10-16. Same fault as night-watch.sh: a Hermes 3.14
+# toolchain python earlier on PATH has no PyYAML, and this script's `python3`
+# calls must not resolve to it. See the guard in validate-children-reconcile.py.
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
 KEEP_BAK=0
 [[ "${1:-}" == "--keep-bak" ]] && KEEP_BAK=1
 

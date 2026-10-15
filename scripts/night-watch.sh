@@ -19,6 +19,20 @@
 set -uo pipefail
 cd "$HOME/telfer-wiki" || { echo "🔴 Night Watch: repo dir not found"; exit 1; }
 
+# PATH HARDENING — 2026-10-16. The 03:05 run failed with 413 phantom
+# "frontmatter did not parse: No module named 'yaml'" contradictions because the
+# cron shell had /Users/marktelfer/.hermes/tools/python-3.14.7*/bin/python3 first
+# on PATH, and that interpreter ships WITHOUT PyYAML. /usr/bin/python3 has it.
+# Every `python3` call below is part of the pipeline, so prepend the system
+# interpreter's directory and make the resolution deterministic.
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
+if ! /usr/bin/python3 -c "import yaml" 2>/dev/null; then
+  echo "🔴 Night Watch: /usr/bin/python3 lacks PyYAML — refusing to run."
+  echo "   The pipeline would report every profile as a false contradiction."
+  exit 1
+fi
+
 AUTO_PUSH="${AUTO_PUSH:-1}"   # 1 = git push on its own, 0 = stop & report
 VERBOSE="${VERBOSE:-0}"
 
