@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-15T05:13:26+10:00",
+  "generated_at": "2026-10-15T16:08:37+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 405,
+  "count": 411,
   "kinds": {
-    "real": 389,
+    "real": 395,
     "redirect": 16,
     "empty": 0
   },
@@ -81,7 +81,7 @@
       "kind": "real"
     },
     "Alfred George Stribling (c.1853\u20131928).md": {
-      "sha256": "2fce3f2a8234f87da63948560048d30c46e182b5732d80118ef1cb5bdc830fee",
+      "sha256": "6b33e4d1c64496efc58d6bddd5c485d5a7030ce50ae818eed5398d31bee1ee04",
       "kind": "real"
     },
     "Allan Telfer.md": {
@@ -94,6 +94,10 @@
     },
     "Alma Ida Sporer.md": {
       "sha256": "8bf52b9f70ecb4dd8c8deca73fa3292878e8fd31fcbb99c442885f935d00cede",
+      "kind": "real"
+    },
+    "Alma Maud Stribling (1891\u20131987).md": {
+      "sha256": "76552e003ab3511764cd26ffe552c8e965fdac9fee1267da5863df5db5c7fdaf",
       "kind": "real"
     },
     "Amanda Nicolle Lawrie.md": {
@@ -420,6 +424,10 @@
       "sha256": "faa91b7140ceb562ad9219fb5c746673e44059c99abfcd00fd092569a7465a0a",
       "kind": "redirect"
     },
+    "Ella Agnes Stribling (1888\u20131975).md": {
+      "sha256": "77b76b40eb0806177df9ace31e6ec9c628390ae5f6ee81e6ae56dd8d2562ea8c",
+      "kind": "real"
+    },
     "Ellen Jane Liebich (1865\u20131894).md": {
       "sha256": "4a2422b899b2afbe88c11a163fdbe3bae30cde3d5a836b3dc167d33aca814e78",
       "kind": "real"
@@ -576,6 +584,10 @@
       "sha256": "1f7fc88ffb28d84f0311244f4775cbcfd4227e93223eb40a372918c76abf454f",
       "kind": "real"
     },
+    "George Charles Stribling (1898\u20131988).md": {
+      "sha256": "81941ec814d4d8c236c8c5880d9c99b846351ec6d1131183b15645f43a992552",
+      "kind": "real"
+    },
     "George Edward Masters (1844\u20131912).md": {
       "sha256": "f466b50d345bf6719eb35cd0c46e00a45e2d21bbcefb5cca515051fabe3f600a",
       "kind": "real"
@@ -660,6 +672,10 @@
       "sha256": "5b84a2586525495e8dc1e20f5c7e2a6f3ca77739b49a32950c605fff42df47f0",
       "kind": "real"
     },
+    "Hazel Jean Stribling (1895\u20131983).md": {
+      "sha256": "8846c9dc34703ae0edca12f494179cfc6aea0fb035d0393b6f0dca34d0a6293f",
+      "kind": "real"
+    },
     "Hazel Rose Telfer (1891\u20131939).md": {
       "sha256": "27c34645d2ba3e4dd4f2b5ee171a74c004bbc6b2d4d563359a123f495ae8f971",
       "kind": "real"
@@ -710,6 +726,10 @@
     },
     "Inez Priscilla Dillon.md": {
       "sha256": "8d4590bbe1c6fa7c694f135db25f829a493a2dbab95ff81ad308c36e6eece06c",
+      "kind": "real"
+    },
+    "Isa Katie Stribling (1886\u20131973).md": {
+      "sha256": "7f62984b5da34a83cd15f23cf23e9a0c4a692c95511a410e58d5863273cc7389",
       "kind": "real"
     },
     "Isabella Kelly (~1825\u20131867).md": {
@@ -809,7 +829,7 @@
       "kind": "real"
     },
     "Jane Murray Farrow (1857\u20131934).md": {
-      "sha256": "deaabfd0a2533b1399be822ef700550ff9f904a208133a342634f8dc00347420",
+      "sha256": "6fddf466295c318e5370e493c1e442d5f8df59c089207344de010d5898256d6c",
       "kind": "real"
     },
     "Jane Sophie Smith.md": {
@@ -1094,6 +1114,10 @@
     },
     "Lillian May Telfer (1873\u20131951).md": {
       "sha256": "efdd37f5fd81837c3988211e195d753fca17ec2af0c6c6af0e86b25940153b8e",
+      "kind": "real"
+    },
+    "Lindsay Ellis Stribling (1893\u20131979).md": {
+      "sha256": "d469bd92f1ee1966ab3f25ab430f3a1dfb86024235cc52de56704e6957c5c70d",
       "kind": "real"
     },
     "Lindsay Roland Telfer (1920\u20131976).md": {

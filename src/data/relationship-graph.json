@@ -1944,6 +1944,36 @@
       "slug": "ryan-telfer",
       "id": "Ryan David Telfer (1982)",
       "generation": 8
+    },
+    {
+      "slug": "alma-stribling",
+      "id": "Alma Maud Stribling (1891)",
+      "generation": 6
+    },
+    {
+      "slug": "ella-stribling",
+      "id": "Ella Agnes Stribling (1888)",
+      "generation": 6
+    },
+    {
+      "slug": "george-stribling",
+      "id": "George Charles Stribling (1898)",
+      "generation": 6
+    },
+    {
+      "slug": "hazel-stribling",
+      "id": "Hazel Jean Stribling (1895)",
+      "generation": 6
+    },
+    {
+      "slug": "isa-stribling",
+      "id": "Isa Katie Stribling (1886)",
+      "generation": 6
+    },
+    {
+      "slug": "lindsay-stribling",
+      "id": "Lindsay Ellis Stribling (1893)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -2639,10 +2669,6 @@
       {
         "from": "edward-albert-parker-1888",
         "to": "george-parker"
-      },
-      {
-        "from": "alfred-george-stribling-1853",
-        "to": "george-sidney-gilbert-stribling-1864"
       },
       {
         "from": "francis-telfer-1809",
@@ -4059,6 +4085,54 @@
       {
         "from": "david-telfer",
         "to": "ryan-telfer"
+      },
+      {
+        "from": "alfred-george-stribling-1853",
+        "to": "alma-stribling"
+      },
+      {
+        "from": "jane-murray-farrow-1857",
+        "to": "alma-stribling"
+      },
+      {
+        "from": "alfred-george-stribling-1853",
+        "to": "ella-stribling"
+      },
+      {
+        "from": "jane-murray-farrow-1857",
+        "to": "ella-stribling"
+      },
+      {
+        "from": "alfred-george-stribling-1853",
+        "to": "george-stribling"
+      },
+      {
+        "from": "jane-murray-farrow-1857",
+        "to": "george-stribling"
+      },
+      {
+        "from": "alfred-george-stribling-1853",
+        "to": "hazel-stribling"
+      },
+      {
+        "from": "jane-murray-farrow-1857",
+        "to": "hazel-stribling"
+      },
+      {
+        "from": "alfred-george-stribling-1853",
+        "to": "isa-stribling"
+      },
+      {
+        "from": "jane-murray-farrow-1857",
+        "to": "isa-stribling"
+      },
+      {
+        "from": "alfred-george-stribling-1853",
+        "to": "lindsay-stribling"
+      },
+      {
+        "from": "jane-murray-farrow-1857",
+        "to": "lindsay-stribling"
       }
     ],
     "spouseOf": [
@@ -4791,6 +4865,26 @@
       {
         "from": "angela-telfer",
         "to": "sophia-telfer"
+      },
+      {
+        "from": "arthur-clifford-stribling-1890",
+        "to": "ella-stribling"
+      },
+      {
+        "from": "arthur-clifford-stribling-1890",
+        "to": "george-stribling"
+      },
+      {
+        "from": "arthur-clifford-stribling-1890",
+        "to": "hazel-stribling"
+      },
+      {
+        "from": "arthur-clifford-stribling-1890",
+        "to": "isa-stribling"
+      },
+      {
+        "from": "arthur-clifford-stribling-1890",
+        "to": "lindsay-stribling"
       },
       {
         "from": "avis-muriel-nicholls-1918",
@@ -7075,6 +7169,70 @@
       {
         "from": "basil-telfer",
         "to": "ruth-carson"
+      },
+      {
+        "from": "alma-stribling",
+        "to": "arthur-clifford-stribling-1890"
+      },
+      {
+        "from": "alma-stribling",
+        "to": "ella-stribling"
+      },
+      {
+        "from": "alma-stribling",
+        "to": "george-stribling"
+      },
+      {
+        "from": "alma-stribling",
+        "to": "hazel-stribling"
+      },
+      {
+        "from": "alma-stribling",
+        "to": "isa-stribling"
+      },
+      {
+        "from": "alma-stribling",
+        "to": "lindsay-stribling"
+      },
+      {
+        "from": "ella-stribling",
+        "to": "george-stribling"
+      },
+      {
+        "from": "ella-stribling",
+        "to": "hazel-stribling"
+      },
+      {
+        "from": "ella-stribling",
+        "to": "isa-stribling"
+      },
+      {
+        "from": "ella-stribling",
+        "to": "lindsay-stribling"
+      },
+      {
+        "from": "george-stribling",
+        "to": "hazel-stribling"
+      },
+      {
+        "from": "george-stribling",
+        "to": "isa-stribling"
+      },
+      {
+        "from": "george-stribling",
+        "to": "lindsay-stribling"
+      },
+      {
+        "from": "hazel-stribling",
+        "to": "isa-stribling"
+      },
+      {
+        "from": "hazel-stribling",
+        "to": "lindsay-stribling"
+      },
+      {
+        "from": "isa-stribling",
+        "to": "lindsay-stribling"
       }
     ],
     "stepParentOf": [
