@@ -142,17 +142,17 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
         <!-- Desktop nav -->
         <div class="hidden lg:flex gap-1 items-center">
           <a href={import.meta.env.BASE_URL} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath === import.meta.env.BASE_URL && "active"]}>Home</a>
-          <a href={import.meta.env.BASE_URL + "people"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people") && "active"]}>People</a>
-          <a href={import.meta.env.BASE_URL + "timeline"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "timeline") && "active"]}>Timeline</a>
-          <a href={import.meta.env.BASE_URL + "people/full-tree"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/full-tree") && "active"]}>Full Tree</a>
-          <a href={import.meta.env.BASE_URL + "search"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "search") && "active"]}>Search</a>
-          <a href={import.meta.env.BASE_URL + "people/families"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/families") && "active"]}>Families</a>
-          <a href={import.meta.env.BASE_URL + "people/dna"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/dna") && "active"]}>DNA</a>
-          <a href={import.meta.env.BASE_URL + "ballads"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "ballads") && "active"]}>Ballads</a>
-          <a href={import.meta.env.BASE_URL + "about"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "about") && "active"]}>About</a>
-          <a href={import.meta.env.BASE_URL + "contact"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "contact") && "active"]}>Contact</a>
-          <a href={import.meta.env.BASE_URL + "privacy"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "privacy") && "active"]}>Privacy</a>
-          <a href={import.meta.env.BASE_URL + "terms"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "terms") && "active"]}>Terms</a>
+          <a href={import.meta.env.BASE_URL + "people/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/") && "active"]}>People</a>
+          <a href={import.meta.env.BASE_URL + "timeline/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "timeline/") && "active"]}>Timeline</a>
+          <a href={import.meta.env.BASE_URL + "people/full-tree/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/full-tree") && "active"]}>Full Tree</a>
+          <a href={import.meta.env.BASE_URL + "search/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "search/") && "active"]}>Search</a>
+          <a href={import.meta.env.BASE_URL + "people/families/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/families") && "active"]}>Families</a>
+          <a href={import.meta.env.BASE_URL + "people/dna/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/dna") && "active"]}>DNA</a>
+          <a href={import.meta.env.BASE_URL + "ballads/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "ballads/") && "active"]}>Ballads</a>
+          <a href={import.meta.env.BASE_URL + "about/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "about/") && "active"]}>About</a>
+          <a href={import.meta.env.BASE_URL + "contact/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "contact/") && "active"]}>Contact</a>
+          <a href={import.meta.env.BASE_URL + "privacy/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "privacy/") && "active"]}>Privacy</a>
+          <a href={import.meta.env.BASE_URL + "terms/"} class="nav-link px-3 py-2 rounded-lg" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "terms/") && "active"]}>Terms</a>
         </div>
 
         <!-- Dark Mode Toggle -->
@@ -171,17 +171,17 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
       <div id="nav-panel" class="hidden lg:hidden border-t border-[var(--color-border)] bg-[var(--color-nav-bg)] shadow-lg">
         <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-1">
           <a href={import.meta.env.BASE_URL} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath === import.meta.env.BASE_URL && "active"]}>🏠 Home</a>
-          <a href={import.meta.env.BASE_URL + "people"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people") && "active"]}>👤 People</a>
-          <a href={import.meta.env.BASE_URL + "timeline"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "timeline") && "active"]}>📅 Timeline</a>
-          <a href={import.meta.env.BASE_URL + "people/full-tree"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/full-tree") && "active"]}>🕰 Full Tree</a>
-          <a href={import.meta.env.BASE_URL + "search"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "search") && "active"]}>🔍 Search</a>
-          <a href={import.meta.env.BASE_URL + "people/families"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/families") && "active"]}>👪 Families</a>
-          <a href={import.meta.env.BASE_URL + "people/dna"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/dna") && "active"]}>🧬 DNA</a>
-          <a href={import.meta.env.BASE_URL + "ballads"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "ballads") && "active"]}>🎵 Ballads</a>
-          <a href={import.meta.env.BASE_URL + "about"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "about") && "active"]}>📖 About</a>
-          <a href={import.meta.env.BASE_URL + "contact"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "contact") && "active"]}>✉️ Contact</a>
-          <a href={import.meta.env.BASE_URL + "privacy"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "privacy") && "active"]}>🔒 Privacy</a>
-          <a href={import.meta.env.BASE_URL + "terms"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "terms") && "active"]}>📜 Terms</a>
+          <a href={import.meta.env.BASE_URL + "people/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people") && "active"]}>👤 People</a>
+          <a href={import.meta.env.BASE_URL + "timeline/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "timeline") && "active"]}>📅 Timeline</a>
+          <a href={import.meta.env.BASE_URL + "people/full-tree/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/full-tree") && "active"]}>🕰 Full Tree</a>
+          <a href={import.meta.env.BASE_URL + "search/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "search") && "active"]}>🔍 Search</a>
+          <a href={import.meta.env.BASE_URL + "people/families/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/families") && "active"]}>👪 Families</a>
+          <a href={import.meta.env.BASE_URL + "people/dna/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "people/dna") && "active"]}>🧬 DNA</a>
+          <a href={import.meta.env.BASE_URL + "ballads/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "ballads") && "active"]}>🎵 Ballads</a>
+          <a href={import.meta.env.BASE_URL + "about/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "about") && "active"]}>📖 About</a>
+          <a href={import.meta.env.BASE_URL + "contact/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "contact") && "active"]}>✉️ Contact</a>
+          <a href={import.meta.env.BASE_URL + "privacy/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "privacy") && "active"]}>🔒 Privacy</a>
+          <a href={import.meta.env.BASE_URL + "terms/"} class="nav-link block py-2.5 px-3 rounded-lg hover:bg-[var(--color-surface)] transition-colors" class:list={[currentPath.startsWith(import.meta.env.BASE_URL + "terms") && "active"]}>📜 Terms</a>
         </div>
       </div>
     </nav>
@@ -234,7 +234,7 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
            so these three links are always at the very bottom (Mark 2026-08-30). -->
       {navState && (
         <div class="mt-3 flex justify-between items-center border-t border-[var(--color-border)] pt-2 text-sm">
-          <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">← Back to all people</a>
+          <a href={import.meta.env.BASE_URL + "people/"} class="text-[var(--color-link)]">← Back to all people</a>
           <div class="flex items-center gap-4">
             {navState.showDescendants && (
               <a href={import.meta.env.BASE_URL + "people/" + navState.slug + "/descendants/"} class="text-[var(--color-link)] hover:underline text-right">
@@ -260,9 +260,9 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
           <span class="text-xs">Built by Skippy the Magnificent &amp; The Librarian.</span>
         </p>
         <nav class="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs">
-          <a href={import.meta.env.BASE_URL + "contact"} class="nav-link">Contact</a>
-          <a href={import.meta.env.BASE_URL + "privacy"} class="nav-link">Privacy</a>
-          <a href={import.meta.env.BASE_URL + "terms"} class="nav-link">Terms</a>
+          <a href={import.meta.env.BASE_URL + "contact/"} class="nav-link">Contact</a>
+          <a href={import.meta.env.BASE_URL + "privacy/"} class="nav-link">Privacy</a>
+          <a href={import.meta.env.BASE_URL + "terms/"} class="nav-link">Terms</a>
         </nav>
       </div>
     </footer>

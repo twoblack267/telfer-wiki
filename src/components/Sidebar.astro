@@ -80,7 +80,7 @@ const uniqueSuggestions = [...new Set(searchSuggestions)].sort();
               {azIndex.get(letter)?.map(person => (
                 <li>
                   <a
-                    href={`/people/${person.slug}`}
+                    href={`/people/${person.slug}/`}
                     class="person-link block px-2 py-1 text-sm text-[var(--color-ink)] hover:text-[var(--color-link)] hover:bg-[var(--color-surface)] rounded transition-colors"
                     data-person-id={person.id}
                     data-person-slug={person.slug}
@@ -204,7 +204,7 @@ const uniqueSuggestions = [...new Set(searchSuggestions)].sort();
             searchResults.innerHTML = '<div class="search-result-item text-[var(--color-muted)] text-center py-3">No matches</div>';
           } else {
             searchResults.innerHTML = matches.map(p => `
-              <a href="/people/${p.slug}" class="search-result-item block" tabindex="0">
+              <a href="/people/${p.slug}/" class="search-result-item block" tabindex="0">
                 <div class="search-result-name">${p.display_name}</div>
                 <div class="search-result-meta">
                   ${p.lifespan ? `(${p.lifespan})` : ''}

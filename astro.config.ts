@@ -56,6 +56,17 @@ const LAST_MOD_BY_SLUG = (() => {
 export default defineConfig({
   site: "https://telferwiki.com",
   output: "static",
+  // canonical link form (added 2026-10-17; card tw-2026-10-16-001).
+  // WHY: every rendered internal href was emitted slashless (e.g.
+  // "/people/william-telfer-shepherd") while canonical tags and the sitemap
+  // both publish the slashed form ("/people/william-telfer-shepherd/").
+  // Live measurement: the slashless URL 301s to the slashed one, so every
+  // in-site click paid a redirect hop (~400+ links on the /people/ index).
+  // 'always' makes Astro emit the canonical slashed form directly, so no
+  // internal navigation relies on a redirect. The static host already
+  // redirects slashless -> slashed, so existing external inbound links keep
+  // working; only the rendered hrefs change.
+  trailingSlash: "always",
   integrations: [
     sitemap({
       entryLimit: 1000,

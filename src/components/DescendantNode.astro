@@ -25,7 +25,7 @@ const Self = DescendantNode;
 <details class="descendant-node" open>
   <summary class="flex items-center gap-2 cursor-pointer select-none py-1">
     <span class={dotClass} title={root.branch || ''}></span>
-    <a href={`/people/${root.slug}`} class="text-sm font-medium text-[var(--color-link)] hover:underline">{root.display_name}</a>
+    <a href={`/people/${root.slug}/`} class="text-sm font-medium text-[var(--color-link)] hover:underline">{root.display_name}</a>
     {root.generation && <span class="text-xs text-[var(--color-muted)] font-mono">Gen {root.generation}</span>}
     {root.is_living && <span class="text-xs badge-living">Living</span>}
   </summary>

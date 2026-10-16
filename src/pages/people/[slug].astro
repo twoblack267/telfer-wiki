@@ -206,7 +206,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">
-      <a href={import.meta.env.BASE_URL + "people"} class="text-[var(--color-link)]">People</a>
+      <a href={import.meta.env.BASE_URL + "people/"} class="text-[var(--color-link)]">People</a>
       <span class="mx-2">/</span>
       <span>{person.display_name}</span>
     </div>
@@ -356,7 +356,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
               {spouseLinks.map(({ name, slug, lifespan }) => (
                 <li>
                   {slug ? (
-                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}/`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -375,7 +375,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
               {parentLinks.map(({ name, slug, lifespan }) => (
                 <li>
                   {slug ? (
-                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}/`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -394,7 +394,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
               {childLinks.map(({ name, slug, lifespan }) => (
                 <li>
                   {slug ? (
-                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}/`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -413,7 +413,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
               {stepParentLinks.map(({ name, slug, lifespan }) => (
                 <li>
                   {slug ? (
-                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}/`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -432,7 +432,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
               {stepChildLinks.map(({ name, slug, lifespan }) => (
                 <li>
                   {slug ? (
-                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}/`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}
@@ -451,7 +451,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
               {siblingLinks.map(({ name, slug, lifespan }) => (
                 <li>
                   {slug ? (
-                    <a href={`${import.meta.env.BASE_URL}people/${slug}`} class="text-[var(--color-link)] text-sm">{name}</a>
+                    <a href={`${import.meta.env.BASE_URL}people/${slug}/`} class="text-[var(--color-link)] text-sm">{name}</a>
                   ) : (
                     <span class="text-sm text-[var(--color-ink-light)]">{name}</span>
                   )}

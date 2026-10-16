@@ -137,7 +137,7 @@ const otherSurnames = Object.entries(surnameCounts)
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {members.map((p) => (
           <a
-            href={`${import.meta.env.BASE_URL}people/${p.slug}`}
+            href={`${import.meta.env.BASE_URL}people/${p.slug}/`}
             class="person-card rounded-xl p-3 no-underline block hover:border-[var(--color-gold)] transition-all"
           >
             <div class="flex items-center gap-3">
