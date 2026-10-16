@@ -50,6 +50,54 @@
       "reason": "Stale slug from the pre-correction state. Lillian May Telfer's birth was corrected 1872 -> 7 Aug 1873 (Corrections Log item 2; Tree pp. 287 & 291). Her current slug is derived from the NAME ('lillian-telfer'), so the old year-suffixed URL must resolve to the corrected page.",
       "date": "2026-10-05",
       "corrections_log": "### 2. Lillian May Telfer — birth 1872 → 7 Aug 1873; file renamed"
+    },
+    "aaron-ivory-1989": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Aaron Paul Ivory"
+    },
+    "joel-ivory-1986": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Joel Matthew Ivory"
+    },
+    "jared-ivory-1993": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Jared Mitchell Ivory"
+    },
+    "lauren-ivory-1994": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Lauren Maree Ivory"
+    },
+    "karina-ivory": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Karina Ivory"
+    },
+    "sheryle-telfer-1961": {
+      "to": "timothy-telfer-1959",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Sheryle Joy Telfer"
     }
   }
 }

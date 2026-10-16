@@ -322,6 +322,13 @@ function derivedLifespan(p) {
 
 export function getLinksForRelationships(relationshipNames, allPeople) {
   return relationshipNames.map((entry) => {
+    // A WITHDRAWN relative (privacy strip) arrives as { plain_name } — the
+    // person has no page, so this renders as plain text with NO link. Set
+    // deliberately: a father's page must still name his children.
+    if (entry && typeof entry === "object") {
+      const plain = entry.plain_name || entry.name || "";
+      return { name: plain, slug: null, lifespan: undefined, plain: true };
+    }
     const person = allPeople.find((p) => (p.slug || "") === entry.trim());
     if (person) return { name: person.display_name, slug: person.slug, lifespan: derivedLifespan(person) };
     // Not a slug — try resolving a display-name/wiki-link to a slug, keep the

@@ -52,9 +52,15 @@ function renderPhotos(photos?: Array<{slug: string, caption: string}>): string {
   `).join("");
 }
 
-function renderChildren(children?: string[]): string {
+function renderChildren(children?: any[]): string {
   if (!children || children.length === 0) return "";
   return children.map(child => {
+    // A WITHDRAWN relative (privacy strip) arrives as { plain_name } — no page,
+    // so it renders as unclickable text. See src/data/privacy-exclusions.mjs.
+    if (child && typeof child === "object") {
+      const n = (child as any).plain_name || "";
+      return `<span class="block py-1 text-sm text-[var(--color-ink-light)]">${n}</span>`;
+    }
     const childPerson = people.find(p => p.id === child || p.display_name === child);
     if (childPerson) {
       return `<a href="/people/${childPerson.slug}" class="block py-1 text-sm text-[var(--color-link)] hover:underline">${childPerson.display_name} (${childPerson.lifespan})</a>`;
@@ -63,9 +69,13 @@ function renderChildren(children?: string[]): string {
   }).join("");
 }
 
-function renderSpouses(spouses?: string[]): string {
+function renderSpouses(spouses?: any[]): string {
   if (!spouses || spouses.length === 0) return "";
   return spouses.map(spouse => {
+    if (spouse && typeof spouse === "object") {
+      const n = (spouse as any).plain_name || "";
+      return `<span class="block py-1 text-sm text-[var(--color-ink-light)]">${n}</span>`;
+    }
     const spousePerson = people.find(p => p.id === spouse || p.display_name === spouse);
     if (spousePerson) {
       return `<a href="/people/${spousePerson.slug}" class="block py-1 text-sm text-[var(--color-link)] hover:underline">${spousePerson.display_name} (${spousePerson.lifespan})</a>`;

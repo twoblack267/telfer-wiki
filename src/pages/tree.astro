@@ -28,8 +28,16 @@ const panelPeople = telferPeople.map((p) => ({
   death_place: p.death_place,
   branch: p.branch,
   roles: p.roles || [],
-  spouses: (p.spouses || []).map((s) => telferPeople.find((q) => q.id === s)?.display_name || s),
-  children: (p.children || []).map((c) => telferPeople.find((q) => q.id === c)?.display_name || null).filter(Boolean),
+  // A withdrawn relative (privacy strip) arrives as { plain_name } — rendered as
+  // plain text, never as "[object Object]" and never as a link.
+  spouses: (p.spouses || []).map((s: any) =>
+    s && typeof s === "object"
+      ? (s.plain_name || "")
+      : telferPeople.find((q) => q.id === s)?.display_name || s),
+  children: (p.children || []).map((c: any) =>
+    c && typeof c === "object"
+      ? (c.plain_name || null)
+      : telferPeople.find((q) => q.id === c)?.display_name || null).filter(Boolean),
   biography: typeof p.biography === "string" ? stripWikiLinks(p.biography) : "",
 }));
 

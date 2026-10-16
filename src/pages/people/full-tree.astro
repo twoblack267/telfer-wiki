@@ -2,6 +2,7 @@
 // FullTree.astro — Complete Telfer Family Tree from John Telfer of Castleton (~1715)
 // Phone-first: single branch open at a time, collapsible accordion
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { PRIVACY_STRIP_SLUGS } from "../../data/privacy-exclusions.mjs";
 
 const people = (await import("../../data/people.json")).default;
 const allPeople = people.filter((p) => p.id);
@@ -24,8 +25,14 @@ for (const p of allPeople) {
 }
 
 // id -> slug, so every rendered name can link to its profile page (added 2026-09-24).
+// A PRIVACY-WITHDRAWN person (see src/data/privacy-exclusions.mjs) has no page, so
+// they get no mapping: the node renders their NAME with no link, which is the
+// required state — the tree still shows the family shape, it just cannot click
+// through to a profile that does not exist.
 const slugById = new Map(
-  allPeople.filter((p) => p.id && p.slug).map((p) => [p.id, p.slug])
+  allPeople
+    .filter((p) => p.id && p.slug && !PRIVACY_STRIP_SLUGS.has(p.slug))
+    .map((p) => [p.id, p.slug])
 );
 
 // Also index by (first_name, last_name) for matching shorthand references like "Levi Telfer"

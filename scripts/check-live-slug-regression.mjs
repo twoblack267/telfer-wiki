@@ -33,6 +33,8 @@ import path from 'path';
 import { execFileSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
+import { PRIVACY_STRIP_SLUGS } from '../src/data/privacy-exclusions.mjs';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(__dirname, '..');
 const DIST_PEOPLE = path.join(REPO, 'dist/people');
@@ -76,7 +78,33 @@ for (const entry of fs.readdirSync(DIST_PEOPLE, { withFileTypes: true })) {
   else real.add(entry.name);
 }
 
-const lost = [...expected].filter((s) => !real.has(s) && !stubs.has(s)).sort();
+// A PRIVACY-WITHDRAWN person (owner ruling — the family asked; see
+// src/data/privacy-exclusions.mjs) is deliberately no longer published. Their
+// old URL is still served as an alias to a named, living page, so it is never a
+// silent 404 — but the page itself MUST be gone, and asserting that is the
+// whole point of this gate for this case: if a withdrawn slug reappears as a
+// real page or as a stub, we want to know loudly.
+const withdrawnWithAlias = [];
+const withdrawnLeaked = [];
+const lost = [...expected].filter((s) => {
+  if (PRIVACY_STRIP_SLUGS.has(s)) {
+    if (real.has(s)) withdrawnLeaked.push(s);
+    else if (stubs.has(s)) withdrawnWithAlias.push(s);
+    return false;
+  }
+  return !real.has(s) && !stubs.has(s);
+}).sort();
+
+if (withdrawnWithAlias.length) {
+  console.log(`\n\ud83d\udd12 ${withdrawnWithAlias.length} URL(s) withheld by a privacy ruling, still served as an alias to a live page:`);
+  for (const s of withdrawnWithAlias) console.log(`   /people/${s}/  → alias (not a profile)`);
+}
+if (withdrawnLeaked.length) {
+  console.error(`\n\u274c ${withdrawnLeaked.length} PRIVACY-WITHDRAWN slug(s) are being served as a REAL page — the withdrawal is broken:\n`);
+  for (const s of withdrawnLeaked) console.error(`   /people/${s}/`);
+  markFailure(withdrawnLeaked);
+  process.exitCode = 1;
+}
 
 function markFailure(list) {
   try {

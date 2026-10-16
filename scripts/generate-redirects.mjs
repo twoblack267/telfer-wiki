@@ -15,6 +15,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { PRIVACY_STRIP_SLUGS } from '../src/data/privacy-exclusions.mjs';
 
 const PEOPLE_JSON = 'src/data/people.json';
 const DIST_DIR = 'dist/people';
@@ -42,6 +43,8 @@ const people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
 // ─────────────────────────────────────────────────────────────────────────────
 const canonicalSlugs = new Set(people.map(p => p.slug));
 const suppressed = [];
+/** Aliases dropped because their destination is withdrawn (privacy strip). */
+const strippedAliases = [];
 
 // Build map: old-format slug → actual person
 const redirects = [];
@@ -49,6 +52,15 @@ const redirects = [];
 function pushRedirect(r) {
   if (canonicalSlugs.has(r.from)) {
     suppressed.push(r);
+    return;
+  }
+  // PRIVACY STRIP: a withdrawn person has no page, so ANY alias pointing at
+  // them would be a hard 404 and the redirect-health gate would (correctly)
+  // refuse the deploy. Dropped here, at the single choke point every case
+  // funnels through. Reversible — remove the slug from the privacy list and
+  // the alias is regenerated on the next build. See src/data/privacy-exclusions.mjs.
+  if (PRIVACY_STRIP_SLUGS.has(r.to)) {
+    strippedAliases.push(r);
     return;
   }
   redirects.push(r);
@@ -108,6 +120,11 @@ for (const p of people) {
 // bare slug is not claimed as the real page of another person in this run.
 const bareToNew = [];
 for (const p of people) {
+  // PRIVACY STRIP: never manufacture an alias pointing at a withdrawn page —
+  // the destination does not exist, so the alias would be a hard 404 and the
+  // redirect-health gate correctly blocks the deploy. See
+  // src/data/privacy-exclusions.mjs.
+  if (PRIVACY_STRIP_SLUGS.has(p.slug)) continue;
   const firstName = (p.first_name || '').toLowerCase();
   const lastName = (p.last_name || '').toLowerCase();
   const bareSlug = `${firstName}-${lastName}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
@@ -198,14 +215,52 @@ if (fs.existsSync(DIST_DIR)) {
   }
 }
 
-// Filter out redirects whose source slug already exists as a real page
+// Filter out redirects whose source slug already exists as a real page, and
+// any alias pointing at a WITHDRAWN page (privacy strip) — the destination does
+// not exist, so the alias would be a hard 404. Loud on purpose: the strip is
+// supposed to remove these, and a silent skip rots. See
+// src/data/privacy-exclusions.mjs.
 const filteredRedirects = uniqueRedirects.filter(r => {
   if (existingPages.has(r.from)) {
     console.log(`  ⏭️  SKIP (page exists): ${r.from} → ${r.to}  (${r.display_name})`);
     return false;
   }
+  // A withdrawn destination (privacy strip) is handled by the declared
+  // removed-redirects.json set below — that declaration supplies a LIVING
+  // destination page, so the alias is not a 404. Anything else pointing at a
+  // withdrawn page is dropped: the alternative is shipping a link to nothing.
+  if (PRIVACY_STRIP_SLUGS.has(r.to) && !REMOVED_DECLARED.has(r.from)) {
+    console.log(`  🔒 SKIP (destination withdrawn by privacy strip): ${r.from} → ${r.to}`);
+    return false;
+  }
   return true;
 });
+
+// ── PRIVACY-WITHDRAWN PAGES (declared destinations) ──────────────────────────
+// A page withdrawn by an owner privacy ruling while the URL was live gets a
+// stub pointing at the named, LIVING page that declares it (normally the
+// parent). Declared in src/data/removed-redirects.json, never inferred: the
+// whole point is that a person whose page was removed still resolves to a real
+// page, without the site publishing them. See src/data/privacy-exclusions.mjs.
+let REMOVED_DECLARED = new Set();
+try {
+  const removedJson = JSON.parse(fs.readFileSync('src/data/removed-redirects.json', 'utf-8')).removed || {};
+  REMOVED_DECLARED = new Set(Object.keys(removedJson));
+  for (const [from, decl] of Object.entries(removedJson)) {
+    if (!decl || !decl.to) continue;
+    if (!PRIVACY_STRIP_SLUGS.has(from)) continue;   // normal removals handled by emit-git-slug-redirects
+    if (existingPages.has(from)) continue;          // the page still exists — never shadow it
+    filteredRedirects.push({
+      from,
+      to: decl.to,
+      display_name: decl.person || decl.to,
+      reason: 'privacy-withdrawal',
+    });
+    console.log(`  🔒 alias for privacy-withdrawn page: ${from} → ${decl.to}`);
+  }
+} catch (e) {
+  console.log(`  ⚠️  could not read src/data/removed-redirects.json (${e.message}) — no privacy aliases emitted`);
+}
 
 // Write redirect pages
 console.log(`\n📝 Generating ${filteredRedirects.length} redirect(s) (${uniqueRedirects.length - filteredRedirects.length} skipped)...`);

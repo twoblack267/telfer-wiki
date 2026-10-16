@@ -24,12 +24,17 @@ function buildDescendants(rootSlug, people, maxDepth = 6, currentDepth = 0) {
   
   const children = (root.children || [])
     .map(child => {
+      // A WITHDRAWN child (privacy strip) arrives as { plain_name } — they have
+      // no page, so there is no node to recurse into. Skipped for the CHART
+      // only; their name still appears in the person's sidebar and on their
+      // relatives' pages. See src/data/privacy-exclusions.mjs.
+      if (child && typeof child === 'object') return null;
       // child might be a slug or a display name — resolve to child's slug first
       let childSlug = people.find(p => p.slug === child)?.slug
         || people.find(p => p.display_name === child)?.slug;
       // If still not found, try stripping birth/death years "(YYYY–YYYY)" from display name
       if (!childSlug) {
-        const nameOnly = child.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        const nameOnly = String(child).replace(/\s*\([^)]*\)\s*$/, '').trim();
         childSlug = people.find(p => p.display_name === nameOnly)?.slug;
       }
       if (!childSlug) return null;

@@ -15,6 +15,9 @@ const peopleById = new Map(people.map(p => [p.id, p]));
 const peopleBySlug = new Map(people.map(p => [p.slug, p]));
 
 function findPerson(id: string | undefined, dataset = people) {
+  // A WITHDRAWN relative (privacy strip) arrives as { plain_name } — it has no
+  // profile, so it resolves to nothing and is skipped by the caller. Matches
+  // findPerson's existing "unresolvable -> undefined" contract.
   if (!id || typeof id !== "string") return undefined;
   let person = dataset.find(p => p.id === id || p.display_name === id || p.slug === id);
   if (!person) {

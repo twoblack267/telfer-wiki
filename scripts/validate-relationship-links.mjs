@@ -27,6 +27,7 @@
  */
 import { readFileSync, readdirSync, statSync } from "fs";
 import { join, basename, dirname } from "path";
+import { PRIVACY_STRIP_SLUGS } from "../src/data/privacy-exclusions.mjs";
 
 const DIST = new URL("../dist/", import.meta.url).pathname;
 const PEOPLE_FILE = new URL("../src/data/people.public.json", import.meta.url).pathname;
@@ -36,6 +37,18 @@ const basePrefix = BASE ? `/${BASE}/` : "/";
 
 const people = JSON.parse(readFileSync(PEOPLE_FILE, "utf-8"));
 const bySlug = new Map(people.map((p) => [p.slug, p]));
+
+/**
+ * A relationship entry may be either a link target (string) or a WITHDRAWN
+ * relative, published as `{ plain_name }` because the person was removed from
+ * publication by an owner privacy ruling (see src/data/privacy-exclusions.mjs).
+ * A withdrawn relative is REQUIRED to render as plain text — that is the
+ * intended state, not a broken link. Guard below asserts exactly that.
+ */
+function plainNameOf(rel) {
+  if (rel && typeof rel === "object") return rel.plain_name || rel.name || null;
+  return null;
+}
 
 // Relationship slug arrays that must all render as links on the sidebar.
 const REL_FIELDS = ["spouses", "parents", "children", "siblings"];
@@ -93,6 +106,40 @@ function checkPage(file) {
     const slugs = person[field];
     if (!Array.isArray(slugs) || slugs.length === 0) continue;
     for (const relSlug of slugs) {
+      // ── WITHDRAWN RELATIVE (owner privacy ruling) ───────────────────────
+      // Published as { plain_name } because the person is deliberately not on
+      // the site. The sidebar MUST show the name as unclickable text and MUST
+      // NOT contain a link to a page that does not exist. Asserted here, both
+      // ways — a missing name is still a failure, and a link is now the
+      // failure. See src/data/privacy-exclusions.mjs (PRIVACY_STRIP_SLUGS).
+      const withdrawn = plainNameOf(relSlug);
+      if (withdrawn) {
+        checkedRelations++;
+        const nameOk = section.includes(withdrawn);
+        // Look for a link whose text is the withdrawn person's name.
+        const linkToThem = new RegExp(
+          `<a\\s[^>]*href="[^"]*people\\/[^"]*"[^>]*>[^<]*${escapeRegExp(withdrawn)}`
+        );
+        const noLink = !linkToThem.test(section);
+        if (!nameOk) {
+          failures.push({
+            file: file.replace(DIST, ""),
+            page: slug,
+            field: SECTION_LABEL[field],
+            relationship: `${withdrawn} (withdrawn)`,
+            reason: "withdrawn relative's name MISSING from the sidebar — a hidden person must still be named",
+          });
+        } else if (!noLink) {
+          failures.push({
+            file: file.replace(DIST, ""),
+            page: slug,
+            field: SECTION_LABEL[field],
+            relationship: `${withdrawn} (withdrawn)`,
+            reason: "withdrawn relative rendered as a LINK — must be plain text",
+          });
+        }
+        continue;
+      }
       checkedRelations++;
       const name = bySlug.get(relSlug)?.display_name || relSlug;
       // Correct render = an <a> whose href targets people/<relSlug>.

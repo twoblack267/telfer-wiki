@@ -14,6 +14,7 @@
  */
 
 import fs from 'fs';
+import { PRIVACY_STRIP_SLUGS } from '../src/data/privacy-exclusions.mjs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -343,6 +344,60 @@ function resolveToVisible(entry) {
     }
   }
   return null;
+}
+
+/**
+ * Resolve a relationship entry to a PUBLICATION decision.
+ *
+ * Returns one of:
+ *   { slug }            — normal case, renders as a clickable link.
+ *   { plainName }       — the person is on PRIVACY_STRIP_SLUGS: they are NOT
+ *                         published, but their NAME must still appear as plain
+ *                         text on this page (owner ruling: a father's page must
+ *                         not read as childless).
+ *   null                — unresolvable or genuinely absent; drop as before.
+ *
+ * Order matters: the privacy check runs FIRST so a withdrawn person can never
+ * be re-introduced to the published data by a later name match.
+ */
+function resolveRelationship(entry) {
+  if (!entry) return null;
+
+  const entryLC = String(entry).toLowerCase();
+  let slug = null;
+  if (slugToPerson.has(entryLC) || slugToPerson.has(entry)) {
+    const exists = slugToPerson.has(entry) ? slugToPerson.get(entry) : slugToPerson.get(entryLC);
+    slug = exists ? (exists.slug || entry) : entry;
+  } else if (nameToSlug.has(entryLC)) {
+    slug = nameToSlug.get(entryLC);
+  } else {
+    const noDate = stripDates(entry).toLowerCase();
+    if (noDate && noDate !== entryLC && nameToSlug.has(noDate)) slug = nameToSlug.get(noDate);
+    else {
+      const parts = entryLC.split(/\s+/);
+      if (parts.length >= 2) {
+        const firstLast = `${parts[0]} ${parts[parts.length - 1]}`;
+        if (nameToSlug.has(firstLast)) slug = nameToSlug.get(firstLast);
+      }
+    }
+  }
+
+  if (!slug) return null;
+
+  if (PRIVACY_STRIP_SLUGS.has(slug)) {
+    const person = slugToPerson.get(slug);
+    return { plainName: person?.display_name || stripDates(String(entry)) };
+  }
+
+  return visible.has(slug) ? { slug: String(entry) } : null;
+}
+
+/** Map a relationship array through resolveRelationship, keeping plain names. */
+function resolveRelationshipArray(arr) {
+  return (arr || [])
+    .map(resolveRelationship)
+    .filter(Boolean)
+    .map((r) => (r.slug !== undefined ? r.slug : { plain_name: r.plainName }));
 }
 
 // ─── Age-Gate Privacy Guardian ────────────────────────────────────────────────
@@ -704,6 +759,18 @@ export function buildPublicPeople() {
 const publicPeople = [];
 
 for (const person of people) {
+  // ── PRIVACY STRIP (owner ruling, Mark, 16 Oct 2026 — Ivory branch) ────────
+  // A slug on PRIVACY_STRIP_SLUGS is NOT published: no page is generated, no
+  // photo, no index entry, no sitemap row. Their NAME survives on the pages of
+  // relatives via resolveRelationship()'s plain-text path (see below), so a
+  // father's page never reads as childless. Reversible: remove the slug from
+  // src/data/privacy-exclusions.mjs and rebuild.
+  if (PRIVACY_STRIP_SLUGS.has(person.slug)) {
+    console.log(`🔒 Privacy strip: withholding ${person.slug} from publication` +
+      (person.is_living ? '' : ' (NOT LIVING — check the list)'));
+    continue;
+  }
+
   const publicPerson = {};
 
   // Copy public fields
@@ -720,14 +787,17 @@ for (const person of people) {
 
   // Filter relationship display names to only visible people
   // (data stores display names like "Adelaide Elsie Pearl", not slugs)
-  publicPerson.parents = (person.parents || []).map(resolveToVisible).filter(Boolean);
-  publicPerson.children = (person.children || []).map(resolveToVisible).filter(Boolean);
-  publicPerson.spouses = (person.spouses || []).map(resolveToVisible).filter(Boolean);
-  publicPerson.siblings = (person.siblings || []).map(resolveToVisible).filter(Boolean);
+  // Relationship arrays carry EITHER a link target (string slug/display name)
+  // OR a `{ plain_name: "…" }` object for a withdrawn (privacy-stripped)
+  // relative — the latter renders as unclickable text. See resolveRelationship.
+  publicPerson.parents = resolveRelationshipArray(person.parents);
+  publicPerson.children = resolveRelationshipArray(person.children);
+  publicPerson.spouses = resolveRelationshipArray(person.spouses);
+  publicPerson.siblings = resolveRelationshipArray(person.siblings);
   // Step relations (added 2026-09-22) — same visibility rule as the biological
   // arrays: a step relation to a non-visible person is dropped, never leaked.
-  publicPerson.step_parents = (person.step_parents || []).map(resolveToVisible).filter(Boolean);
-  publicPerson.step_children = (person.step_children || []).map(resolveToVisible).filter(Boolean);
+  publicPerson.step_parents = resolveRelationshipArray(person.step_parents);
+  publicPerson.step_children = resolveRelationshipArray(person.step_children);
 
   // ── Age gate (owner decision, Aug 2026): UNDER-18s get school/occupation/
   //    location detail stripped from their public bio. Gate recomputes every

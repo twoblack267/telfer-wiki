@@ -15312,13 +15312,23 @@
     ],
     "parents": [],
     "children": [
-      "aaron-ivory-1989",
-      "jared-ivory-1993",
-      "joel-ivory-1986",
-      "lauren-ivory-1994"
+      {
+        "plain_name": "Aaron Paul Ivory"
+      },
+      {
+        "plain_name": "Jared Mitchell Ivory"
+      },
+      {
+        "plain_name": "Joel Matthew Ivory"
+      },
+      {
+        "plain_name": "Lauren Maree Ivory"
+      }
     ],
     "spouses": [
-      "sheryle-telfer-1961"
+      {
+        "plain_name": "Sheryle Joy Telfer"
+      }
     ],
     "siblings": [],
     "step_parents": [],
@@ -15499,7 +15509,9 @@
       "mark-telfer-1986"
     ],
     "spouses": [
-      "sheryle-telfer-1961"
+      {
+        "plain_name": "Sheryle Joy Telfer"
+      }
     ],
     "siblings": [
       "daryll-telfer",
@@ -15510,10 +15522,18 @@
     ],
     "step_parents": [],
     "step_children": [
-      "aaron-ivory-1989",
-      "jared-ivory-1993",
-      "joel-ivory-1986",
-      "lauren-ivory-1994"
+      {
+        "plain_name": "Aaron Paul Ivory"
+      },
+      {
+        "plain_name": "Jared Mitchell Ivory"
+      },
+      {
+        "plain_name": "Joel Matthew Ivory"
+      },
+      {
+        "plain_name": "Lauren Maree Ivory"
+      }
     ],
     "images": [
       {
@@ -15585,68 +15605,6 @@
       }
     ],
     "person_photo": "images/people/kathryn-mavis-telfer-headstone-tumby-bay.jpg"
-  },
-  {
-    "id": "Sheryle Joy Telfer (1961)",
-    "slug": "sheryle-telfer-1961",
-    "first_name": "Sheryle",
-    "middle_name": "Joy",
-    "last_name": "Telfer",
-    "birth_year": 1961,
-    "death_year": null,
-    "birth_date": "25 November 1961",
-    "death_date": null,
-    "birth_year_display": "1961",
-    "death_year_display": "living",
-    "display_name": "Sheryle Joy Telfer",
-    "title": "Sheryle Joy Telfer — Family & Biography",
-    "lifespan": "1961 – living",
-    "generation": 7,
-    "is_living": true,
-    "body_markdown": "# Sheryle Telfer (née Ivory, 1961–)\n\n**Lifespan:** 1961–present\n**Branch:** Telfer (by marriage)\n**Maiden name:** Ivory\n\n## Photos\n\n![Paul and Sheryle Ivory on their wedding day](images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg)\n\n![Tim and Sheryle Telfer on their wedding day, 28 August 1999](images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg)\n\n![The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n\n## Relationships\n\n| Relation | Name |\n|---|---|\n| Spouse | [[Paul Ivory (1955–1996)|Paul Ivory († 1996)]] |\n| Spouse | [[Timothy Neil Telfer (1959–?)|Timothy Neil Telfer (m. 1999)]] |\n| Child | [[Aaron Paul Ivory (1989–?)|Aaron Paul Ivory (1989–)]] |\n| Child | [[Jared Ivory|Jared Ivory]] |\n| Child | [[Joel Matthew Ivory (1986–?)|Joel Matthew Ivory (1986–)]] |\n| Child | [[Lauren Maree Ivory (1994–?)|Lauren Maree Ivory (1994–)]] |\n| Stepson | [[Mark Kenneth Telfer (1986–?)|Mark Kenneth Telfer (1986–)]] |\n| Stepdaughter | [[Amy Nicole Telfer|Amy Nicole Telfer]] |",
-    "roles": [],
-    "tags": [
-      "person",
-      "telfer"
-    ],
-    "parents": [],
-    "children": [
-      "aaron-ivory-1989",
-      "jared-ivory-1993",
-      "joel-ivory-1986",
-      "lauren-ivory-1994"
-    ],
-    "spouses": [
-      "paul-ivory-1955",
-      "timothy-telfer-1959"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [
-      "amy-telfer",
-      "mark-telfer-1986"
-    ],
-    "images": [
-      {
-        "src": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
-        "alt": "Paul and Sheryle Ivory on their wedding day",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
-        "filename": "Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
-      },
-      {
-        "src": "images/people/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
-        "alt": "Tim and Sheryle Telfer on their wedding day, 28 August 1999",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg",
-        "filename": "Wedding---Tim---Sheryle-Telfer--28-Aug-1999-.jpg"
-      },
-      {
-        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "alt": "The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
-      }
-    ],
-    "person_photo": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
   },
   {
     "id": "Susan Shirley Lawrie (1967)",
@@ -16101,54 +16059,6 @@
     "person_photo": null
   },
   {
-    "id": "Joel Matthew Ivory (1986)",
-    "slug": "joel-ivory-1986",
-    "first_name": "Joel",
-    "middle_name": "Matthew",
-    "last_name": "Ivory",
-    "birth_year": 1986,
-    "death_year": null,
-    "birth_date": "07 December 1986",
-    "death_date": null,
-    "birth_year_display": "1986",
-    "death_year_display": "living",
-    "display_name": "Joel Matthew Ivory",
-    "title": "Joel Ivory — Family & Biography",
-    "lifespan": "1986 – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Joel Ivory\n\n## Photos\n\n![The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Stepfather** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Aaron Paul Ivory (1989–?)]], [[Jared Ivory]], [[Lauren Maree Ivory (1994–?)]] |",
-    "roles": [],
-    "tags": [
-      "family",
-      "person"
-    ],
-    "parents": [
-      "paul-ivory-1955",
-      "sheryle-telfer-1961"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "aaron-ivory-1989",
-      "jared-ivory-1993",
-      "lauren-ivory-1994"
-    ],
-    "step_parents": [
-      "timothy-telfer-1959"
-    ],
-    "step_children": [],
-    "images": [
-      {
-        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "alt": "The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
-      }
-    ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
-  },
-  {
     "id": "Mark Kenneth Telfer (1986)",
     "slug": "mark-telfer-1986",
     "first_name": "Mark",
@@ -16212,58 +16122,6 @@
     "person_photo": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
   },
   {
-    "id": "Aaron Paul Ivory (1989)",
-    "slug": "aaron-ivory-1989",
-    "first_name": "Aaron",
-    "middle_name": "Paul",
-    "last_name": "Ivory",
-    "birth_year": 1989,
-    "death_year": null,
-    "birth_date": "17 January 1989",
-    "death_date": null,
-    "birth_year_display": "1989",
-    "death_year_display": "living",
-    "display_name": "Aaron Paul Ivory",
-    "title": "Aaron Ivory — Family & Biography",
-    "lifespan": "1989 – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Aaron Ivory\n\n**Role:** Son of [[Sheryle Telfer (1961–?)]] and [[Paul Ivory (1955–1996)]]\n\n## Photos\n\n![The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n\n*Aaron (second from left) with mother Sheryle and siblings Joel, Jared and Lauren. Date unknown.*\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Stepfather** | [[Timothy Neil Telfer (1959–?)]] |\n| **Spouse** | [[Karina Ivory]] |\n| **Siblings** | [[Jared Ivory]], [[Lauren Maree Ivory (1994–?)]], [[Joel Matthew Ivory (1986–?)]] |",
-    "roles": [
-      "Son of [[Sheryle Telfer (1961–?)]] and [[Paul Ivory (1955–1996)]]"
-    ],
-    "tags": [
-      "family",
-      "person"
-    ],
-    "parents": [
-      "paul-ivory-1955",
-      "sheryle-telfer-1961"
-    ],
-    "children": [],
-    "spouses": [
-      "karina-ivory"
-    ],
-    "siblings": [
-      "jared-ivory-1993",
-      "joel-ivory-1986",
-      "lauren-ivory-1994"
-    ],
-    "step_parents": [
-      "timothy-telfer-1959"
-    ],
-    "step_children": [],
-    "images": [
-      {
-        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "alt": "The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
-      }
-    ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
-  },
-  {
     "id": "Sophia Telfer (1992)",
     "slug": "sophia-telfer",
     "first_name": "Sophia",
@@ -16305,114 +16163,6 @@
     "step_children": [],
     "images": [],
     "person_photo": null
-  },
-  {
-    "id": "Jared Mitchell Ivory (1993)",
-    "slug": "jared-ivory-1993",
-    "first_name": "Jared",
-    "middle_name": "Mitchell",
-    "last_name": "Ivory",
-    "birth_year": 1993,
-    "death_year": null,
-    "birth_date": "01 April 1993",
-    "death_date": null,
-    "birth_year_display": "1993",
-    "death_year_display": "living",
-    "display_name": "Jared Mitchell Ivory",
-    "title": "Jared Ivory — Family & Biography",
-    "lifespan": "1993 – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Jared Ivory\n\n## Photos\n\n![Jared Ivory (Kelly Partners)](images/people/Jared-Ivory---Kelly-Partners.jpg)\n\n![The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n\n![Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018](images/people/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg)\n\n## Media\n\n[🎥 Jared Ivory — New Colombo Plan Alumni Profile (YouTube)](https://youtu.be/pOtVSJqP9y0)\n> A 2-minute profile of Jared's New Colombo Plan Scholarship journey, studying and working in Indonesia. Published by The Global Society.\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Stepfather** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Joel Matthew Ivory (1986–?)]], [[Aaron Paul Ivory (1989–?)]], [[Lauren Maree Ivory (1994–?)]] |",
-    "roles": [],
-    "tags": [
-      "family",
-      "person"
-    ],
-    "parents": [
-      "paul-ivory-1955",
-      "sheryle-telfer-1961"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "aaron-ivory-1989",
-      "joel-ivory-1986",
-      "lauren-ivory-1994"
-    ],
-    "step_parents": [
-      "timothy-telfer-1959"
-    ],
-    "step_children": [],
-    "images": [
-      {
-        "src": "images/people/Jared-Ivory---Kelly-Partners.jpg",
-        "alt": "Jared Ivory (Kelly Partners)",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Jared-Ivory---Kelly-Partners.jpg",
-        "filename": "Jared-Ivory---Kelly-Partners.jpg"
-      },
-      {
-        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "alt": "The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
-      },
-      {
-        "src": "images/people/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg",
-        "alt": "Jared with Malcolm Turnbull and Joko Widodo, 21 March 2018",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg",
-        "filename": "Jared-with-Turnbull-and-Widodo---21-Mar-2018.jpg"
-      }
-    ],
-    "person_photo": "images/people/Jared-Ivory---Kelly-Partners.jpg"
-  },
-  {
-    "id": "Lauren Maree Ivory (1994)",
-    "slug": "lauren-ivory-1994",
-    "first_name": "Lauren",
-    "middle_name": "Maree",
-    "last_name": "Ivory",
-    "birth_year": 1994,
-    "death_year": null,
-    "birth_date": "25 February 1994",
-    "death_date": null,
-    "birth_year_display": "1994",
-    "death_year_display": "living",
-    "display_name": "Lauren Maree Ivory",
-    "title": "Lauren Ivory — Family & Biography",
-    "lifespan": "1994 – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Lauren Ivory\n\n## Photos\n\n![The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren](images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg)\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Sheryle Telfer (1961–?)]] |\n| **Father** | [[Paul Ivory (1955–1996)]] |\n| **Stepfather** | [[Timothy Neil Telfer (1959–?)]] |\n| **Siblings** | [[Aaron Paul Ivory (1989–?)]], [[Jared Ivory]], [[Joel Matthew Ivory (1986–?)]] |",
-    "roles": [],
-    "tags": [
-      "family",
-      "person"
-    ],
-    "parents": [
-      "paul-ivory-1955",
-      "sheryle-telfer-1961"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "aaron-ivory-1989",
-      "jared-ivory-1993",
-      "joel-ivory-1986"
-    ],
-    "step_parents": [
-      "timothy-telfer-1959"
-    ],
-    "step_children": [],
-    "images": [
-      {
-        "src": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "alt": "The Ivory family — Sheryle, Joel, Aaron, Jared and Lauren",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg",
-        "filename": "Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
-      }
-    ],
-    "person_photo": "images/people/Ivory-Family---Sheryle--Joel--Aaron--Jared--Lauren.jpg"
   },
   {
     "id": "Rebecca Telfer (1996)",
@@ -16572,7 +16322,9 @@
     ],
     "step_parents": [
       "allen-merrick",
-      "sheryle-telfer-1961"
+      {
+        "plain_name": "Sheryle Joy Telfer"
+      }
     ],
     "step_children": [],
     "images": [
@@ -16786,40 +16538,6 @@
       "kristin-stefanoff",
       "nick-telfer"
     ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Karina Ivory",
-    "slug": "karina-ivory",
-    "first_name": "Karina",
-    "middle_name": null,
-    "last_name": "Ivory",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Karina Ivory",
-    "title": "Karina Ivory",
-    "lifespan": "? – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Karina Ivory",
-    "roles": [],
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "aaron-ivory-1989"
-    ],
-    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],

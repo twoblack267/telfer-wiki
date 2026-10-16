@@ -159,8 +159,9 @@ const personSchema = {
   // person as the SAME entity Google/AI already knows — the key genealogy entity boost.
   ...(sameAsLinks.length ? { sameAs: sameAsLinks } : {}),
   // Relatives live at their own URLs on this same site
-  ...(parentLinks.length ? { parent: parentLinks.map((p) => ({ "@type": "Person", name: p.name, url: `https://telferwiki.com/people/${p.slug}/` })) } : {}),
-  ...(childLinks.length ? { children: childLinks.map((c) => ({ "@type": "Person", name: c.name, url: `https://telferwiki.com/people/${c.slug}/` })) } : {}),
+  // A withdrawn relative (privacy strip) has NO page — name only, never a url.
+  ...(parentLinks.length ? { parent: parentLinks.map((p) => (p.slug ? { "@type": "Person", name: p.name, url: `https://telferwiki.com/people/${p.slug}/` } : { "@type": "Person", name: p.name })) } : {}),
+  ...(childLinks.length ? { children: childLinks.map((c) => (c.slug ? { "@type": "Person", name: c.name, url: `https://telferwiki.com/people/${c.slug}/` } : { "@type": "Person", name: c.name })) } : {}),
   ...(spouseSchema.length ? { spouse: spouseSchema } : {}),
 };
 
