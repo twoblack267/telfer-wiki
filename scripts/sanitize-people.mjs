@@ -500,6 +500,13 @@ const PUBLIC_FIGURE_SLUGS = new Set([
   'daryll-telfer',   // Public ministry — family decision 2026-09-22, corrected in Corrections Log.
 ]);
 
+// Slugs whose `## Education` section is published despite being living
+// (owner decision, Mark, 18 Oct 2026 — he supplies the facts himself).
+const EDUCATION_OK_SLUGS = new Set([
+  'mark-telfer-1986',
+  'amy-telfer',
+]);
+
 const PUBLIC_ROLE_HEADING = /^\s*##\s+Public Role\s*$/i;
 
 /**
@@ -551,6 +558,9 @@ function stripLivingPrivateContent(text, slug) {
 
   const allowPublicRole =
     Boolean(slug) && PUBLIC_FIGURE_SLUGS.has(String(slug).trim());
+
+  const allowEducation =
+    Boolean(slug) && EDUCATION_OK_SLUGS.has(String(slug).trim());
 
   // Sections dropped wholesale for living people (narrative/residence/
   // occupation/research-provenance).
@@ -614,7 +624,11 @@ function stripLivingPrivateContent(text, slug) {
       // POSITIVE keep-list: a heading survives ONLY if it is Family /
       // Marriage / Divorce / Photos. Everything else — including any heading
       // we have never seen before — is dropped. Fail-closed.
-      const keep = KEEP_SECTIONS.test(trimmed);
+      // EXCEPTION: `## Education` survives for slugs on EDUCATION_OK_SLUGS
+      // (owner decision, 18 Oct 2026).
+      const keep =
+        KEEP_SECTIONS.test(trimmed) ||
+        (allowEducation && /^\s*##\s*Education\s*$/i.test(trimmed));
       inDropSection = !keep;
       if (inDropSection) continue;         // heading itself dropped
     } else if (inDropSection) {
