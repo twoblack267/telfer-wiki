@@ -1984,6 +1984,21 @@
       "slug": "jean-hinshelwood",
       "id": "Jean Hinshelwood (1750)",
       "generation": 2
+    },
+    {
+      "slug": "agnes-parker",
+      "id": "Agnes Parker (1853)",
+      "generation": 5
+    },
+    {
+      "slug": "henry-parker",
+      "id": "Henry Kelly Parker (1851)",
+      "generation": 5
+    },
+    {
+      "slug": "margaret-parker",
+      "id": "Margaret Parker (1857)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -4155,6 +4170,30 @@
       {
         "from": "jane-murray-farrow-1857",
         "to": "lindsay-stribling"
+      },
+      {
+        "from": "david-parker-1822",
+        "to": "agnes-parker"
+      },
+      {
+        "from": "isabella-kelly-1825",
+        "to": "agnes-parker"
+      },
+      {
+        "from": "david-parker-1822",
+        "to": "henry-parker"
+      },
+      {
+        "from": "isabella-kelly-1825",
+        "to": "henry-parker"
+      },
+      {
+        "from": "david-parker-1822",
+        "to": "margaret-parker"
+      },
+      {
+        "from": "isabella-kelly-1825",
+        "to": "margaret-parker"
       }
     ],
     "spouseOf": [
@@ -4285,6 +4324,10 @@
       {
         "from": "elizabeth-oliver-1807",
         "to": "robert-telfer-1803"
+      },
+      {
+        "from": "elizabeth-parker-1879",
+        "to": "henry-parker"
       },
       {
         "from": "elizabeth-telfer-farrow-holloway-1861",
@@ -6406,7 +6449,15 @@
       },
       {
         "from": "hugh-parker-1859",
+        "to": "margaret-parker"
+      },
+      {
+        "from": "hugh-parker-1859",
         "to": "william-humphrey-parker-1850"
+      },
+      {
+        "from": "hugh-parker-1864",
+        "to": "margaret-parker"
       },
       {
         "from": "hugh-parker-1864",
@@ -7259,6 +7310,46 @@
       {
         "from": "isa-stribling",
         "to": "lindsay-stribling"
+      },
+      {
+        "from": "agnes-parker",
+        "to": "henry-parker"
+      },
+      {
+        "from": "agnes-parker",
+        "to": "hugh-parker-1859"
+      },
+      {
+        "from": "agnes-parker",
+        "to": "hugh-parker-1864"
+      },
+      {
+        "from": "agnes-parker",
+        "to": "margaret-parker"
+      },
+      {
+        "from": "agnes-parker",
+        "to": "william-humphrey-parker-1850"
+      },
+      {
+        "from": "henry-parker",
+        "to": "hugh-parker-1859"
+      },
+      {
+        "from": "henry-parker",
+        "to": "hugh-parker-1864"
+      },
+      {
+        "from": "henry-parker",
+        "to": "margaret-parker"
+      },
+      {
+        "from": "henry-parker",
+        "to": "william-humphrey-parker-1850"
+      },
+      {
+        "from": "margaret-parker",
+        "to": "william-humphrey-parker-1850"
       }
     ],
     "stepParentOf": [
