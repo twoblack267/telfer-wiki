@@ -987,7 +987,12 @@
     "step_parents": [],
     "step_children": [],
     "images": [
-      "images/people/james-telfer-1796-1863-grave.jpg"
+      {
+        "src": "images/people/james-telfer-1796-1863-grave.jpg",
+        "alt": "Headstone of James Telfer (1796–1863) and Elizabeth Beattie (1802–1891), Southdean Churchyard, Roxburghshire, Scotland — \"In MEMORY of JAMES TELFER who died at Falside 9th Decr. 1863 aged 66 years. Also ELIZABETH BEATTIE who died at Jedburgh 9th Decr 1891 aged 88 years.\" Find a Grave memorial 179710779.",
+        "vault_path": "/Users/marktelfer/telfer-wiki/public/images/people/james-telfer-1796-1863-grave.jpg",
+        "filename": "james-telfer-1796-1863-grave.jpg"
+      }
     ],
     "person_photo": null
   },
