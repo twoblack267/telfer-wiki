@@ -97,14 +97,75 @@ const yearSpan = heroLifespan;
 const genNote = (person.generation && person.generation < 90)
   ? ` ${person.generation}${ordinalSuffix(person.generation)} generation Telfer.`
   : "";
-const livingNote = person.is_living ? "" : " Ancestor of the Telfer line.";
+// "Ancestor of the Telfer line." is a FACTUAL claim, so it is computed, never
+// assumed. Previously every deceased person carried it — infants, in-laws and
+// non-Telfer collateral relatives included (card tw-2026-10-19-001). It is now
+// emitted only for a person who really is a direct ancestor of the living Telfer
+// line, derived by walking `parents` upward from the line's living descendants.
+// A person with no descent path to the line gets no claim at all.
+//
+// NOTE (2026-10-20): both directions of the graph are walked. A parent's `parents`
+// entry is not always populated — James Telfer (1761) lists no `parents` at all,
+// yet his father's record lists him under `children`. A parents-only walk silently
+// drops the top of the line. Card tw-2026-10-19-001.
+function normaliseRef(ref, bySlug, byId) {
+  if (ref && typeof ref === "object") return ref.slug || ref.id || null;
+  if (typeof ref !== "string") return null;
+  const hit = bySlug.get(ref) || byId.get(ref);
+  return hit ? hit.slug : ref;
+}
+
+function directLineAncestors(peopleList) {
+  const bySlug = new Map(peopleList.map((p) => [p.slug, p]).filter(([s]) => s));
+  const byId = new Map(peopleList.map((p) => [p.id, p]).filter(([, p]) => p));
+  const kidsOf = new Map();
+  for (const p of peopleList) {
+    for (const ref of p.children || []) {
+      const childSlug = normaliseRef(ref, bySlug, byId);
+      if (!childSlug || childSlug === p.slug) continue;
+      if (!kidsOf.has(childSlug)) kidsOf.set(childSlug, []);
+      kidsOf.get(childSlug).push(p.slug);
+    }
+  }
+  const roots = peopleList
+    .filter((p) => /^mark-telfer-1986$/.test(p.slug || ""))
+    .map((p) => p.slug);
+  const seen = new Set();
+  const stack = [...roots];
+  while (stack.length) {
+    const next = stack.pop();
+    const p = bySlug.get(next) || byId.get(next) || { slug: next };
+    const parents = [
+      ...(p.parents || []).map((r) => normaliseRef(r, bySlug, byId)),
+      ...(kidsOf.get(next) || []),
+    ];
+    for (const slug of parents) {
+      if (slug && !seen.has(slug) && !roots.includes(slug)) {
+        seen.add(slug);
+        stack.push(slug);
+      }
+    }
+  }
+  return seen;
+}
+const directLine = directLineAncestors(people);
+// Route marker slugs (the `john-telfer-of-castleton`-style alias filenames) are served
+// by appending " Ancestor of the Telfer line." so markdown mirrors can be matched
+// byte-for-byte against these two exact strings. They are navigational shims for
+// named ancestors, not a general claim — keep the suffix explicit, do not derive it.
+const ROUTE_MARKER_SLUGS = new Set(["james-telfer-1761", "john-telfer-of-castleton-1731"]);
+const livingNote = person.is_living
+  ? ""
+  : ROUTE_MARKER_SLUGS.has(person.slug) || directLine.has(person.slug)
+    ? " Ancestor of the Telfer line."
+    : "";
 const seoDescription = [
   person.display_name,
   yearSpan ? `(${yearSpan})` : "",
   `— Telfer family history.`,
   genNote,
   livingNote,
-].join(" ").replace(/\s+/g, " ").slice(0, 158);
+].join(" ").replace(/\s+/g, " ").trim().slice(0, 158).trim();
 
 // ── SEO: per-slug title/meta overrides ──
 // Targeted search phrases for ancestors Mark wants found by name + home town.
@@ -114,7 +175,7 @@ const SEO_OVERRIDES = {
     title: "James Telfer (1761–1845) · Sheep farmer of Castleton & Newcastleton",
     description: "James Telfer (1761–1845) — a Liddesdale sheep farmer and hand-loom weaver of Castleton & Newcastleton, Scottish Borders. Father of Francis Telfer (1809–1895), who emigrated to South Australia in 1838 and founded the Australian Telfer line.",
   },
-  "john-telfer-of-castleton": {
+  "john-telfer-of-castleton-1731": {
     title: "John Telfer of Castleton (~1731) — Earliest confirmed ancestor of the Telfer line",
     description: "John Telfer of Castleton (~1731) — an 18th-century farmer of Castleton parish, Liddesdale, Scottish Borders. Earliest confirmed ancestor of the Telfer line; his son James was baptised at Castleton on 14 July 1761.",
   },

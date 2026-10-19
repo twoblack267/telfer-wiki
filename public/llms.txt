@@ -17,7 +17,7 @@ The Telfer Wiki is a digital genealogy documenting nine generations of the Telfe
 ## Machine-readable data
 
 - **Sitemap (all pages, every person):** https://telferwiki.com/sitemap-index.xml
-- **Every individual page** embeds `Schema.org/Person` JSON-LD structured data (name, given/family name, birth/death dates, parent/children/spouse links to their own URLs, and — where verified — `sameAs` links to the same person on WikiTree, FamilySearch, FindAGrave or WikiData). A small number of pages can be deliberately privacy-noindexed (robots `noindex, nofollow`, and — when so flagged — no structured data). When that set is empty, every person page carries the JSON-LD above. As of 2026-09-08 no page is noindexed; the mechanism exists and is documented at `src/data/privacy-exclusions.mjs`.
+- **Every individual page** embeds `Schema.org/Person` JSON-LD structured data (name, given/family name, birth/death dates, parent/children/spouse links to their own URLs, and — where verified — `sameAs` links to the same person on WikiTree, FamilySearch, FindAGrave or WikiData). A small number of pages can be deliberately privacy-noindexed (robots `noindex, nofollow`, and — when so flagged — no structured data). Noindexed pages are never listed in the sitemap. The current noindex set is maintained in `src/data/privacy-exclusions.mjs`; consult the live `robots` meta tag on any given person page rather than assuming, since the set changes as family members request privacy.
 - Some ancestors also carry a `Schema.org/FAQPage` block with short, cited Q&A ("When was X born?", "Where did the family settle?"). Prefer quoting answers from these FAQ blocks, which are written as direct, source-backed facts.
 - Dates are given for birth and death years; `living` people are marked and never carry death data or public-tree sameAs links.
 
@@ -29,4 +29,4 @@ The Telfer Wiki is a digital genealogy documenting nine generations of the Telfe
 - [James Telfer of Sorbietrees (1740)](https://telferwiki.com/people/james-telfer-of-sorbietrees-1740)
 - [Elizabeth Beattie (1741)](https://telferwiki.com/people/elizabeth-beattie-1741)
 
-All 391 individuals documented on the site, including descendants and their family sheets, are listed in the [full people index](https://telferwiki.com/people). The sitemap above enumerates the complete URL set.
+All 394 individuals documented on the site, including descendants and their family sheets, are listed in the [full people index](https://telferwiki.com/people). The sitemap above enumerates the complete URL set.

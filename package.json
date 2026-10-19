@@ -21,7 +21,7 @@
     "astro": "astro",
     "regenerate-data": "bash scripts/regenerate-data.sh",
     "validate:slug-shape": "node scripts/validate-slug-shape.mjs",
-    "prebuild": "node scripts/validate-slug-shape.mjs && node scripts/validate-vault-site-parity.mjs --strict",
+    "prebuild": "node scripts/validate-slug-shape.mjs && node scripts/validate-seo-overrides.mjs && node scripts/validate-vault-site-parity.mjs --strict",
     "parity": "node scripts/validate-vault-site-parity.mjs --strict"
   },
   "dependencies": {
