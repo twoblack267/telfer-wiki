@@ -45,7 +45,6 @@ const getArg = (name, dflt) => {
 const COUNT = parseInt(getArg('--count', '3'), 10);
 const FORCE_SLUG = getArg('--slug', null);
 const SETTLE_MS = parseInt(getArg('--settle', '2500'), 10);
-
 // ── the candidate pool: profiles the BUILD says carry photos ────────────────
 // Read from people.json, but only to CHOOSE which pages to visit. The verdict
 // comes from the live page alone — we never compare against this file.
@@ -65,6 +64,13 @@ if (existsSync(STATE_FILE)) {
   try { state = { ...state, ...JSON.parse(readFileSync(STATE_FILE, 'utf8')) }; } catch { /* corrupt state = start fresh */ }
 }
 
+// A rotating sample of 3 pages can sail past a single broken page for days —
+// proven live: one page 404'd its grave photo and three consecutive samples
+// reported ALL CLEAR. So every run also checks the LAST-KNOWN-BAD pages first.
+// A page that failed yesterday gets re-tested today before anything else, which
+// means a real fault is confirmed-or-cleared, never forgotten.
+const regressionQueue = (state.failing || []).filter((s) => pool.some((p) => p.slug === s));
+
 function pickPages() {
   if (FORCE_SLUG) {
     const hit = pool.find((p) => p.slug === FORCE_SLUG);
@@ -74,10 +80,22 @@ function pickPages() {
     }
     return [hit];
   }
-  // rotate through the pool so every page eventually gets checked
   const picked = [];
-  for (let i = 0; i < Math.min(COUNT, pool.length); i++) {
-    picked.push(pool[(state.lastIndex + 1 + i) % pool.length]);
+  const seen = new Set();
+
+  // 1. re-test anything that failed last time
+  for (const slug of regressionQueue) {
+    if (picked.length >= COUNT) break;
+    const p = pool.find((x) => x.slug === slug);
+    if (p && !seen.has(slug)) { picked.push(p); seen.add(slug); }
+  }
+
+  // 2. fill the rest by rotating forward through the pool
+  let guard = 0;
+  while (picked.length < Math.min(COUNT, pool.length) && guard < pool.length * 2) {
+    const cand = pool[(state.lastIndex + 1 + guard) % pool.length];
+    if (!seen.has(cand.slug)) { picked.push(cand); seen.add(cand.slug); }
+    guard++;
   }
   state.lastIndex = (state.lastIndex + COUNT) % pool.length;
   return picked;
@@ -213,6 +231,9 @@ async function run() {
 
   state.runs += 1;
   state.lastRun = out.checked_at;
+  // Carry failures forward so the NEXT run re-tests them before sampling afresh.
+  // Cleared automatically once a page passes again.
+  state.failing = failures.filter((f) => f.verdict !== 'ERROR' && f.verdict !== 'PAGE_UNAVAILABLE').map((f) => f.slug);
   state.history = [
     { at: out.checked_at, checked: results.length, failures: failures.length, verdicts: results.map((r) => `${r.slug}:${r.verdict}`) },
     ...(state.history || []),
