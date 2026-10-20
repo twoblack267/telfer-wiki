@@ -521,13 +521,34 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
      `display:block` + `overflow-x:auto` above gives the table its own scroll
      container, so wrapping only needs to handle long unbroken tokens.
      The first-column nowrap/floor above is deliberately NOT relaxed here:
-     short labels must never split. */
+     short labels must never split.
+
+     MEASURED FAILURE (20 Oct 2026, 390px iPhone screenshot): "Born/Baptised"
+     rendered as "Bor/n/B/apti/sed" and "Baptised 14 Jul 1761, Castleton" as
+     "Bap/tise/d 14/Jul/1761/'/Cast/leto/n". Cause: three columns at
+     table-layout:auto with `word-break: break-word` + `overflow-wrap: anywhere`
+     — the browser satisfies the header's min-content width by hyphen-less
+     CRACKING words instead of sizing columns sensibly, because `anywhere`
+     removes every word's minimum width. Fix: use `overflow-wrap: break-word`
+     (normal min-content, still breaks a genuinely over-long token) and give
+     short word-like headers a min-width floor so they wrap on SPACES only.
+
+     Do NOT reintroduce `overflow-wrap: anywhere` on table cells — it looks like
+     a harmless safety net and is in fact what shreds these tables on phones. */
   @media (max-width: 639px) {
     .wiki-content th,
     .wiki-content td {
       white-space: normal;
-      word-break: break-word;
-      overflow-wrap: anywhere;
+      word-break: normal;
+      overflow-wrap: break-word;
+      hyphens: manual;
+    }
+    /* Short headers are words, not sentences: never split them mid-word.
+       Their column then takes its natural min-content width (widest single
+       word) and the browser wraps on the space instead. */
+    .wiki-content th {
+      min-width: 3.5rem;
+      word-break: keep-all;
     }
   }
 
