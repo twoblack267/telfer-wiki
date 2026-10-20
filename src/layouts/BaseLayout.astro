@@ -94,8 +94,14 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
     <!-- Canonical URL (prevents duplicate-content across URL variants) -->
     <link rel="canonical" href={canonicalUrl} />
 
-    <!-- Privacy: keep this page out of search engine indexes (living persons) -->
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {/* Comment is CONDITIONAL, deliberately. Emitted unconditionally it claimed a
+        privacy intent on /tree/ (which never passed noindex), so the document
+        advertised an exclusion it did not carry — card tw-2026-10-20-001. A
+        comment that describes an action must not be able to outlive the action. */}
+    {noindex && <Fragment>
+    <!-- Privacy: this page IS excluded from search engine indexes (living persons) -->
+    <meta name="robots" content="noindex, nofollow" />
+    </Fragment>}
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content={resolvedOgType} />
