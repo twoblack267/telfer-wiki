@@ -155,7 +155,9 @@ const wiredForPerson = (slug,f) => (out.wired_people[slug]||[]).includes(f);
 if (fs.existsSync(PEOPLE_DIR)) for (const f of fs.readdirSync(PEOPLE_DIR)) {
   if (!f.endsWith('.md')) continue;
   const body = fs.readFileSync(path.join(PEOPLE_DIR,f),'utf-8');
-  const plain = [...body.matchAll(/\[\[([^\]!][^\]|]*\.(?:jpg|jpeg|png|gif|webp))\]\]/gi)];
+  const plain = [
+    ...body.matchAll(/(^|[^!])\[\[([^\]|]*\.(?:jpg|jpeg|png|gif|webp))\]\]/gi)
+  ].map((m) => [m[0], m[2]]);
   if (plain.length) for (const m of plain) {
     const base = path.basename(m[1].trim());
     if (!base.endsWith('.jpg')) continue;
