@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-21T03:00:29+10:00",
+  "generated_at": "2026-10-21T05:10:42+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 416,
+  "count": 418,
   "kinds": {
-    "real": 400,
+    "real": 402,
     "redirect": 16,
     "empty": 0
   },
@@ -125,7 +125,7 @@
       "kind": "real"
     },
     "Andrew Kelly Parker (1883\u20131952).md": {
-      "sha256": "a8309c5644e497b6dfc34e4715aedb382ba347d76a1ce29e628df048c5001d83",
+      "sha256": "e4bed4362856efa56af3d674c8e9e14d2317e1ce44d2c8666cf862c4f59bfe6d",
       "kind": "real"
     },
     "Andrew Telfer (1798\u20131858).md": {
@@ -281,7 +281,7 @@
       "kind": "real"
     },
     "David Parker (1822\u20131888).md": {
-      "sha256": "d434f2698731a3b946bfadc4326a1141325045ee922a0f53f6b10378b60a1fbe",
+      "sha256": "ea6e8c724da269eb95cdcd89c1388d77c4202163654a72e98f2d4b41503404a5",
       "kind": "real"
     },
     "David Telfer-Merrick.md": {
@@ -406,6 +406,10 @@
     },
     "Elizabeth Oliver (1807\u20131846).md": {
       "sha256": "7ae5c3081dc2f9129662ee9d9a092909f322481fa9ecf08a8879760acb7e9cf3",
+      "kind": "real"
+    },
+    "Elizabeth Parker (1847\u20131886).md": {
+      "sha256": "5a4faa0e3fe3b498c32bf3472ba2f8e9be1a7dfd572c4d9d95554846cf4259fe",
       "kind": "real"
     },
     "Elizabeth Parker (1879\u20131957).md": {
@@ -721,7 +725,7 @@
       "kind": "real"
     },
     "Hugh Parker (1864\u20131891).md": {
-      "sha256": "4a43463af356bfb3919ee77a90c28a353262eed0a4c5984c28edb17bc6901cd1",
+      "sha256": "e9cd3ed0fedaa64f668ac2aaf04a5ebf38cfed49e3038991e80be3c1570a2b5f",
       "kind": "real"
     },
     "Ian Telfer.md": {
@@ -929,7 +933,7 @@
       "kind": "real"
     },
     "John Charles Dillon (1827\u20131906).md": {
-      "sha256": "b649fb7bd0ed7a92d62e2bd3549807e9eb1b914a2da6e53320e5ed0e3790956a",
+      "sha256": "ebe1a58b2fc55a4be0373fe02498ffe327ee010cb064ef723bdcf926a4b31fb3",
       "kind": "real"
     },
     "John Ernest Telfer (1877\u20131877).md": {
@@ -1166,6 +1170,10 @@
     },
     "Margaret Armstrong (~1745\u2013?).md": {
       "sha256": "208ad019bee9cfdd4a3c7e1450e5fdff25ecf38cc6eae32aca23203e128029e3",
+      "kind": "real"
+    },
+    "Margaret Dillon (1869\u20131869).md": {
+      "sha256": "6d5b92150e93fe6f8e6014b05d2e3f837d5585068a5c9ebce028d85ae2ced50c",
       "kind": "real"
     },
     "Margaret Dougal Smith.md": {
