@@ -151,6 +151,26 @@ else
   fi
 fi
 
+# ── 1d. Photo RATCHET (block silent LOSS, not just breakage) ─────────────
+# 1c above asks "is every photo we have still correct?" It cannot see a photo
+# that has stopped existing: an un-embedded note or a dropped images[] entry
+# leaves 1c green. That is precisely how James Telfer (1796-1863)'s headstone
+# stayed missing for ~2 months and how 0618fb1 shipped a blank profile.
+# scripts/photo-floor.json is the committed floor; anything below it is a LOSS
+# and the push is refused. Additions are free — the ratchet only goes one way.
+echo "[1/7 → img] Photo ratchet (block silent losses)..."
+if node scripts/check-photo-ratchet.mjs > "$RUN_DIR/nw-ratchet.log" 2>&1; then
+  echo "  ✅ No photo went missing — every profile is at or above its floor"
+else
+  echo "  🔴 PHOTO LOSS DETECTED — refusing to push"
+  sed -n '1,12p' "$RUN_DIR/nw-ratchet.log" | sed 's/^/       /'
+  FAIL="${FAIL} photo-ratchet"
+  BLOCK_PUSH=1
+  # Restore from the vault-side truth if the loss is mechanical
+  node scripts/image-integrity-check.mjs --autofix >> "$RUN_DIR/nw-ratchet.log" 2>&1 \
+    && echo "       (auto-fix attempted — re-run the pipeline to confirm)" || true
+fi
+
 # ── 2. Duplicate scan ─────────────────────────────────────────
 echo "[2/7] Scanning for duplicate IDs / people..."
 DUP_OUT=$(python3 - <<'PY'
