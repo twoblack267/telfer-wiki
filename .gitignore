@@ -33,3 +33,4 @@ __pycache__/
 # local edit backups - never commit
 scripts/*.bak-*
 *.bak-avatar-*
+scripts/.sentinel/
