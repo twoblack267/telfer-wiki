@@ -218,6 +218,52 @@ for (const md of mdFiles) {
 }
 out.stats.vault_embeds = embedCount;
 
+// ── E. vault photos that NOBODY embeds (vault-only = will never reach the page)
+// The mirror image of A. A photo dropped into Family History/People/Photos/ with
+// no ![[...]] in any profile is invisible: it is not broken, it is simply never
+// published, and nothing else complains. That silent drop is the exact failure
+// mode this whole guard exists to prevent, so it must be reported.
+//
+// Reported, NOT fatal: the vault legitimately holds images that are not meant to
+// be published (full-res originals kept for print, per-profile working scans,
+// site-1600px-* derivatives backing a published file). Flagging every one of
+// those would make the gate useless noise. So each unembedded file is listed for
+// a human to confirm, and only a file that looks like a NEW photo intended for a
+// page is called out loudly.
+const embeddedBasenames = new Set();
+const unembedded = [];
+if (VAULT_PRESENT) {
+  // every basename referenced by any ![[...]] anywhere in the vault
+  const walkAllMd = (dir) => {
+    if (!fs.existsSync(dir)) return;
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const fp = path.join(dir, e.name);
+      if (e.isDirectory()) { walkAllMd(fp); continue; }
+      if (!e.name.endsWith('.md')) continue;
+      const txt = fs.readFileSync(fp, 'utf8');
+      for (const m of txt.matchAll(EMBED)) {
+        const t = m[1].split('|')[0].trim();
+        embeddedBasenames.add(path.basename(t).toLowerCase());
+      }
+    }
+  };
+  walkAllMd(VAULT_PEOPLE);
+  walkAllMd(path.join(VAULT, 'Family History'));
+
+  if (fs.existsSync(PHOTOS_DIR)) {
+    for (const f of fs.readdirSync(PHOTOS_DIR).filter((x) => IMG_EXT.test(x))) {
+      const lower = f.toLowerCase();
+      if (embeddedBasenames.has(lower)) continue;
+      // derivatives and originals are deliberately not embedded — they back a
+      // published file rather than being one
+      if (/^(orig-|site-\d+px-)/i.test(f)) continue;
+      unembedded.push({ file: f, reason: 'no ![[...]] anywhere in the vault — will not appear on any page' });
+    }
+  }
+}
+out.unembedded_vault_photos = unembedded;
+out.stats.unembedded = unembedded.length;
+
 // ── D. every attached filename must exist in public/ ──────────────────────
 for (const p of people || []) {
   for (const im of p.images || []) {
@@ -270,6 +316,12 @@ if (out.ok) {
   console.log(
     `🖼️  vault-photo-parity: OK — ${out.stats.public_images} site images / ${out.stats.vault_images} vault images / ${out.stats.vault_embeds} embeds, all reachable from the vault.`
   );
+  if (unembedded.length > 0) {
+    console.log(`⚠️  ${unembedded.length} vault photo(s) are embedded in NO note — they will never reach a page:`);
+    for (const u of unembedded.slice(0, 10)) console.log(`    • ${u.file}`);
+    if (unembedded.length > 10) console.log(`    … and ${unembedded.length - 10} more`);
+    console.log('    If one is meant for a profile: ![[Family History/People/Photos/<name>]] then bash scripts/regenerate-data.sh');
+  }
   process.exit(0);
 }
 

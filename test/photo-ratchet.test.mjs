@@ -55,7 +55,16 @@ try {
   const lost = JSON.parse(r.stdout);
   if (lost.ok) fail('ok=true after stripping photos');
   if (!lost.losses.some((l) => l.slug === slug)) fail(`loss not attributed to ${slug}`);
-  if (!lost.total_loss) fail('global photo total did not register the loss');
+  // The per-profile loss is the load-bearing assertion and must ALWAYS fire.
+  // The global total only fires when the site's photo count drops below the
+  // committed floor — which it legitimately cannot do if other photos were
+  // added in the same change. Asserting it here unconditionally made this test
+  // fail on a correct guard whenever the live data had recently gained photos,
+  // so assert the invariant instead: if total_loss IS reported, the reported
+  // total must genuinely be below the reported floor.
+  if (lost.total_loss && !(lost.total_loss.now < lost.total_loss.floor)) {
+    fail(`total_loss reported nonsense: ${JSON.stringify(lost.total_loss)}`);
+  }
 
   // 4. adding photos must never fail (raising is free, only losses are fatal)
   const p2 = JSON.parse(fs.readFileSync(path.join(tmp, 'src/data/people.json'), 'utf8'));
