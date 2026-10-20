@@ -73,10 +73,42 @@ const PEOPLE_JSON = path.join(REPO, 'src', 'data', 'people.json');
 const IMG_EXT = /\.(jpe?g|png|gif|webp)$/i;
 const EMBED = /!\[\[([^\]]+)\]\]/g;
 
+/**
+ * CI / no-vault mode.
+ * ──────────────────
+ * CI checks out the SITE REPO ONLY — there is no ObsidianVault in the runner.
+ * Unguarded, checks A–C would report every published image as an orphan (91 of
+ * 91), producing a red build that says nothing about the photos. That is
+ * exactly what happened on run 39386727114.
+ *
+ * Rather than skip the guard there, CI runs it in manifest mode: the vault-derived
+ * inventory is committed to the repo (photo-vault-manifest.json) by a local run,
+ * and CI re-verifies the published files against THAT. This keeps a real assertion
+ * in CI (site images must still match the committed vault inventory) while the
+ * full four-direction check runs on the machine that actually has the vault.
+ *
+ * The manifest is deliberately NOT auto-written on every run: writing it on each
+ * local build would make it always self-consistent and therefore worthless — it
+ * would "prove" whatever the current state happens to be. It is written only when
+ * --write-manifest is passed, i.e. after a human-meaningful change to the photos.
+ */
+const WRITE_MANIFEST = process.argv.includes('--write-manifest');
+const MANIFEST_PATH = path.join(REPO, 'scripts', 'photo-vault-manifest.json');
+const VAULT_PRESENT = fs.existsSync(VAULT_FH);
+
+if (!VAULT_PRESENT && !fs.existsSync(MANIFEST_PATH)) {
+  console.error(
+    '🖼️  vault-photo-parity: no vault and no committed manifest — cannot verify anything.\n' +
+    '    Run "node scripts/check-vault-photo-parity.mjs --write-manifest" on the machine holding the vault.'
+  );
+  process.exit(1);
+}
+
 const sha = (p) => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
 
 const out = {
   ok: true,
+  mode: VAULT_PRESENT ? 'vault' : 'manifest',
   stats: {},
   orphan_site_files: [],
   broken_embeds: [],
@@ -103,22 +135,39 @@ const walkImages = (dir) => {
 };
 walkImages(VAULT_FH);
 
+// In manifest mode the vault-derived byte inventory comes from the committed file.
+let manifestShas = null;
+if (!VAULT_PRESENT) {
+  try {
+    manifestShas = new Set(JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8')).vault_sha256 || []);
+  } catch (e) {
+    console.error(`🖼️  vault-photo-parity: manifest unreadable (${e.message.split('\n')[0]})`);
+    process.exit(1);
+  }
+}
+const bytesKnownToVault = (fileSha) =>
+  manifestShas ? manifestShas.has(fileSha) : vaultBySha.has(fileSha);
+
 // ── A. orphan site files (site-only = unrecoverable by regeneration) ────────
 const publicFiles = fs.existsSync(PUBLIC_IMG)
   ? fs.readdirSync(PUBLIC_IMG).filter((f) => IMG_EXT.test(f))
   : [];
 for (const f of publicFiles) {
   const fp = path.join(PUBLIC_IMG, f);
-  if (vaultBySha.has(sha(fp))) continue;           // bytes exist in vault — safe
+  if (bytesKnownToVault(sha(fp))) continue;        // bytes exist in vault — safe
   out.orphan_site_files.push({
     file: f,
-    note: 'no vault image has these bytes — a clean rebuild can drop this photo',
+    note: manifestShas
+      ? 'bytes not in the committed vault manifest — cannot be reproduced from the vault'
+      : 'no vault image has these bytes — a clean rebuild can drop this photo',
   });
 }
 out.stats.public_images = publicFiles.length;
-out.stats.vault_images = [...vaultBySha.values()].flat().length;
+out.stats.vault_images = manifestShas ? manifestShas.size : [...vaultBySha.values()].flat().length;
 
 // ── B/C. embeds: resolve on disk AND reach the profile's images[] ──────────
+// Vault-only checks: skipped in manifest mode (no vault to walk). Check D below
+// still runs in both modes, so CI keeps a real assertion.
 let people = [];
 try { people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf8')); } catch { people = []; }
 const byVaultFile = new Map((people || []).map((p) => [p.vault_file, p]));
@@ -132,7 +181,7 @@ const walkMd = (dir) => {
     if (e.name.endsWith('.md')) mdFiles.push(fp);
   }
 };
-walkMd(VAULT_PEOPLE);
+if (VAULT_PRESENT) walkMd(VAULT_PEOPLE);
 
 let embedCount = 0;
 for (const md of mdFiles) {
@@ -191,6 +240,26 @@ out.ok =
   out.broken_embeds.length === 0 &&
   out.embed_not_attached.length === 0 &&
   out.missing_published_files.length === 0;
+
+// ── manifest write (only with --write-manifest, only where a vault exists) ──
+if (WRITE_MANIFEST) {
+  if (!VAULT_PRESENT) {
+    console.error('🖼️  --write-manifest requires the vault; run it on the machine that holds ObsidianVault.');
+    process.exit(1);
+  }
+  const shas = [...vaultBySha.keys()].sort();
+  const manifest = {
+    _comment:
+      'Vault-derived photo inventory for CI, which has no ObsidianVault checkout. ' +
+      'sha256 of every image under Family History/. Regenerate with ' +
+      '"node scripts/check-vault-photo-parity.mjs --write-manifest" AFTER changing photos.',
+    generated: new Date().toISOString(),
+    vault_images: shas.length,
+    vault_sha256: shas,
+  };
+  fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 1) + '\n');
+  console.log(`🖼️  wrote ${path.relative(REPO, MANIFEST_PATH)} — ${shas.length} vault image hashes`);
+}
 
 if (process.argv.includes('--json')) {
   process.stdout.write(JSON.stringify(out, null, 1));
