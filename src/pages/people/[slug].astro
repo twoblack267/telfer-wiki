@@ -354,7 +354,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
                     loading="lazy"
                     style="max-height: 300px;"
                   />
-                  <figcaption class="text-xs text-[var(--color-muted)] mt-1 text-center line-clamp-2" set:html={inlineLinks(img.alt, telferPeople)} />
+                  <figcaption class="text-xs text-[var(--color-muted)] mt-1 text-center" set:html={inlineLinks(img.alt, telferPeople)} />
                 </figure>
               ))}
             </div>
