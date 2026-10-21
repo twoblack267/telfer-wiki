@@ -93,6 +93,12 @@ function dLifespan(p) {
 const heroLifespan = dLifespan(person);
 
 // ── SEO: unique per-person meta description ──
+// Template-only descriptions ("Name (years) — Telfer family history. Nth generation
+// Telfer.") are technically unique but say nothing a searcher cannot already read in
+// the title, and 28 of them printed the unknown-date placeholder "(? – ?)".
+// So: lead with the person's own first prose sentence, which is real page content and
+// is where the occupation / place / story lives. Fall back to the template only when
+// the profile has no prose. Card itcrew-20261021-template-descs.
 const yearSpan = heroLifespan;
 const genNote = (person.generation && person.generation < 90)
   ? ` ${person.generation}${ordinalSuffix(person.generation)} generation Telfer.`
@@ -159,13 +165,120 @@ const livingNote = person.is_living
   : ROUTE_MARKER_SLUGS.has(person.slug) || directLine.has(person.slug)
     ? " Ancestor of the Telfer line."
     : "";
-const seoDescription = [
+
+// Extract a year from a free-text fact line like "**Born:** ~1872 (aged 93 …)".
+// Handles ~ / c. / ca. / plain, and 3–4 digit years. Returns "" when absent.
+function yearFromLine(markdown, label) {
+  // NOTE: this regex is built with new RegExp and a template literal, so every
+  // backslash must be DOUBLED. A single \s inside a template literal collapses to
+  // a bare "s", which silently turns the pattern into garbage and returns "" for
+  // every profile — the exact failure this card was filed for. Do not "tidy" this.
+  const re = new RegExp(`\\*\\*${label}:\\*\\*\\s*([^\\n]*)`, "i");
+  const m = String(markdown || "").match(re);
+  if (!m) return "";
+  const y = m[1].match(/\b(\d{3,4})\b/);
+  return y ? y[1] : "";
+}
+// Some profiles state their dates in the body while the structured fields are "?"
+// (e.g. Bertha Telfer: born ~1872, died 10 Aug 1965, fields both "?"). Read the
+// profile's own stated facts rather than inventing anything: the numbers come from
+// its own text, never from arithmetic.
+// yearSpan is the BARE pair ("? – ?"), not "(? – ?)" — the parentheses are added at
+// render. Testing for literal parens here never matched and silently left every
+// unknown-date profile on the placeholder path. Match the bare form.
+const unknownSpan = !yearSpan || /^\s*[~?]?\s*–\s*[~?]?\s*$/.test(yearSpan.trim());
+const bodyBirth = unknownSpan ? yearFromLine(person.body_markdown, "Born") : "";
+const bodyDeath = unknownSpan ? yearFromLine(person.body_markdown, "Died") : "";
+const yearText = !unknownSpan
+  ? yearSpan
+  : bodyBirth && bodyDeath
+    ? `${bodyBirth} – ${bodyDeath}`
+    : bodyBirth
+      ? `b. ${bodyBirth}`
+      : bodyDeath
+        ? `d. ${bodyDeath}`
+        : "";
+
+// Template form — kept as the FALLBACK for profiles with no prose, and with the
+// unknown-date placeholder suppressed so it never prints "(? – ?)".
+const templateDescription = [
   person.display_name,
-  yearSpan ? `(${yearSpan})` : "",
+  yearText ? `(${yearText})` : "",
   `— Telfer family history.`,
   genNote,
   livingNote,
 ].join(" ").replace(/\s+/g, " ").trim().slice(0, 158).trim();
+
+// FIRST PROSE SENTENCE from the person's own body. formatBody has already turned the
+// vault markdown into HTML with inline links; strip the tags, drop a leading heading,
+// and take the first real sentence. This is page content, not boilerplate, so it
+// carries the occupation/place/story the template never could.
+function firstProseSentence(html) {
+  const text = String(html || "")
+    .replace(/<figcaption[\s\S]*?<\/figcaption>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    // DO NOT decode "&amp;" to a raw "&". Astro escapes the attribute on write, so a
+    // raw & comes back out as "&#38;" inside <meta> — which is what was leaking into
+    // search results. Convert entities to their PLAIN TEXT meaning instead, and to
+    // nothing at all for & < >, which are never wanted in a sentence of prose.
+    .replace(/&amp;/g, " and ")
+    .replace(/&#38;/g, " and ")
+    .replace(/&lt;|&gt;|&#60;|&#62;/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#39;|&rsquo;|&lsquo;|&#8217;|&#8216;/g, "'")
+    .replace(/&quot;|&ldquo;|&rdquo;|&#34;|&#8220;|&#8221;/g, '"')
+    .replace(/&mdash;|&#8212;/g, "—")
+    .replace(/&ndash;|&#8211;/g, "–")
+    .replace(/&#(\d+);/g, (_, n) => {
+      const c = Number(n);
+      // Only fold safe punctuation/letters; drop control-ish codes entirely.
+      return c === 39 || c === 8217 ? "'" : c === 34 || c === 8220 || c === 8221 ? '"' : " ";
+    })
+    .replace(/\s+/g, " ")
+    .trim();
+  // A sentence ends at . ! or ? followed by space+capital, or at end of text.
+  // Bail out on abbreviations that end mid-sentence (Mr. Mrs. b. d. m. etc.).
+  const m = text.match(/^(.{40,}?[.!?])(?=\s+[A-Z“"'(]|\s*$)/);
+  if (!m) return "";
+  const s = m[1].trim();
+  if (/\b(Mr|Mrs|Ms|Dr|Rev|St|b|d|m|m\.|b\.|d\.|c|ca|cf|no|vol|p|pp)\.$/.test(s)) return "";
+  return s;
+}
+
+// Extract a year from a free-text fact line like "**Born:** ~1872 (aged 93 …)".
+const proseSentence = firstProseSentence(bodyHtml);
+// The body's first sentence usually repeats the person's own name (the profile
+// heading is stripped, so "James Telfer (bap.1762) Baptised: …" leads). Leading with
+// name + name reads as a stutter in a search result, so drop a sentence that is
+// nothing but the name plus dates when the person has no OTHER prose to offer.
+const nameOnly = (() => {
+  const norm = (t) => String(t || "").toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
+  const n = norm(person.display_name);
+  let s = norm(proseSentence);
+  if (!n || !s) return false;
+  // Strip any leading occurrence of the display name ("Bertha Telfer (Alcorn)
+  // Role: Adopted daughter…" → "Role: Adopted daughter…"). Only a PREFIX is
+  // stripped, and only the longest match, so "Robert Dunlop Sr, father of…" keeps
+  // its "Sr" instead of being truncated to the bare name.
+  if (s.startsWith(n)) s = s.slice(n.length).trim();
+  // The remainder must be EMPTY for this to be a pure name echo.
+  return s.length === 0;
+})();
+// When the body merely restates the name, strip that echo from the front of the
+// sentence rather than throwing the whole sentence away — "Robert Dunlop Stub entry
+// — …" becomes "Stub entry — …", which is the part that actually says something.
+const stripNamePrefix = (t) => {
+  const n = String(person.display_name || "").trim();
+  if (!n || !t) return t;
+  const m = t.match(new RegExp("^\\s*" + n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\s*(?:\\(([^)]*)\\))?[\\s.:—-]*", "i"));
+  if (!m) return t;
+  return t.slice(m[0].length).trim();
+};
+const leadSentence = nameOnly ? "" : stripNamePrefix(proseSentence);
+const seoDescription = leadSentence && leadSentence.length >= 40
+  ? `${person.display_name}${yearText ? ` (${yearText})` : ""}. ${leadSentence}`
+      .slice(0, 158).trim()
+  : templateDescription;
 
 // ── SEO: per-slug title/meta overrides ──
 // Targeted search phrases for ancestors Mark wants found by name + home town.
@@ -180,7 +293,27 @@ const SEO_OVERRIDES = {
     description: "John Telfer of Castleton (~1731) — an 18th-century farmer of Castleton parish, Liddesdale, Scottish Borders. Earliest confirmed ancestor of the Telfer line; his son James was baptised at Castleton on 14 July 1761.",
   },
 };
+// ── SEO: disambiguated title ──
+// Same-name people are common in this tree (six James Telfers, four Johns), and a
+// bare `{{display_name}} — Telfer Wiki` title made 37 of 396 pages share 15 titles
+// with no way for a crawler or a browser tab to tell James (1762) from James (1866).
+// The lifespan is already computed above for the hero; reuse it here so the fix
+// cannot drift from the displayed dates. Card itcrew-20261021-dup-titles.
+// Unknown dates are suppressed, never printed as "(? – ?)": a title is not a place
+// to advertise that we know nothing.
+function titleYears(p) {
+  const b = p.birth_year_display && p.birth_year_display !== "?" ? String(p.birth_year_display) : "";
+  const d = !p.is_living && p.death_year_display && p.death_year_display !== "?" ? String(p.death_year_display) : "";
+  if (b && d) return `${b}–${d}`;
+  if (b) return `b. ${b}`;
+  if (d) return `d. ${d}`;
+  return "";
+}
+const titleYearsText = titleYears(person);
+const personTitle = titleYearsText ? `${person.display_name} (${titleYearsText})` : person.display_name;
+
 const seoOverride = SEO_OVERRIDES[person.slug] || null;
+const seoTitle = seoOverride?.title || personTitle;
 
 
 // ── SEO: Schema.org Person structured data ──
@@ -254,7 +387,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
 ---
  
 <BaseLayout
-  title={seoOverride?.title || person.display_name}
+  title={seoTitle}
   description={seoOverride?.description || seoDescription}
   canonicalPath={`/people/${person.slug}/`}
   ogType="profile"
