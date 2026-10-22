@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-23T03:00:28+10:00",
+  "generated_at": "2026-10-23T05:07:11+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 418,
+  "count": 419,
   "kinds": {
-    "real": 402,
+    "real": 403,
     "redirect": 16,
     "empty": 0
   },
@@ -284,6 +284,10 @@
       "sha256": "ea6e8c724da269eb95cdcd89c1388d77c4202163654a72e98f2d4b41503404a5",
       "kind": "real"
     },
+    "David Parker (1856\u20131906).md": {
+      "sha256": "fa2f9d39e6e9bf04a3ef2591ca35dedb2e54366d346c2c78d7316aa739c34ff1",
+      "kind": "real"
+    },
     "David Telfer-Merrick.md": {
       "sha256": "b7cef7644db7c51c2a465e101ee9fdcaf4b41c038e0d2e2a23a13551afebd226",
       "kind": "real"
@@ -409,7 +413,7 @@
       "kind": "real"
     },
     "Elizabeth Parker (1847\u20131886).md": {
-      "sha256": "5a4faa0e3fe3b498c32bf3472ba2f8e9be1a7dfd572c4d9d95554846cf4259fe",
+      "sha256": "300d2bcb17605806d0bddef6bded1e2400f0c9fca799e46d7007f73a40b45263",
       "kind": "real"
     },
     "Elizabeth Parker (1879\u20131957).md": {
@@ -717,7 +721,7 @@
       "kind": "real"
     },
     "Hugh Kelly Parker.md": {
-      "sha256": "e8f144fa197eb129da94dfe9035ea0ef88df283a604ac9c63eabc606d6f4e89d",
+      "sha256": "7f71578fe5ece4b18398e7401bc620fc418bde83f7ec82e09a186c24f231f6c7",
       "kind": "real"
     },
     "Hugh Parker (1859\u20131861).md": {
@@ -745,7 +749,7 @@
       "kind": "real"
     },
     "Isabella Kelly (~1825\u20131867).md": {
-      "sha256": "a829f3d475d95c0bdf13d3c04a08ae83e91216049fe7af7a3bba469e28dce6cf",
+      "sha256": "10928d318b8bf02a27f27cff5d4d23a329b2ed8696b30e8e463a66b511a4e5ff",
       "kind": "real"
     },
     "Isabella Lucieton Telfer (1880\u20131964).md": {

@@ -2009,6 +2009,11 @@
       "slug": "margaret-dillon",
       "id": "Margaret Dillon (1869)",
       "generation": 5
+    },
+    {
+      "slug": "david-parker",
+      "id": "David Parker (1856)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -2820,6 +2825,10 @@
       {
         "from": "robert-dunlop-lawrie-1850",
         "to": "hugh-john"
+      },
+      {
+        "from": "david-parker",
+        "to": "hugh-kelly-parker-1896"
       },
       {
         "from": "david-parker-1822",
@@ -4220,6 +4229,14 @@
       {
         "from": "john-dillon-1827",
         "to": "margaret-dillon"
+      },
+      {
+        "from": "david-parker-1822",
+        "to": "david-parker"
+      },
+      {
+        "from": "isabella-kelly-1825",
+        "to": "david-parker"
       }
     ],
     "spouseOf": [
@@ -7359,6 +7376,10 @@
       },
       {
         "from": "agnes-parker",
+        "to": "david-parker"
+      },
+      {
+        "from": "agnes-parker",
         "to": "elizabeth-parker"
       },
       {
@@ -7428,6 +7449,30 @@
       {
         "from": "margaret-dillon",
         "to": "septimus-dillon-1871"
+      },
+      {
+        "from": "david-parker",
+        "to": "elizabeth-parker"
+      },
+      {
+        "from": "david-parker",
+        "to": "henry-parker"
+      },
+      {
+        "from": "david-parker",
+        "to": "hugh-parker-1859"
+      },
+      {
+        "from": "david-parker",
+        "to": "hugh-parker-1864"
+      },
+      {
+        "from": "david-parker",
+        "to": "margaret-parker"
+      },
+      {
+        "from": "david-parker",
+        "to": "william-humphrey-parker-1850"
       }
     ],
     "stepParentOf": [
