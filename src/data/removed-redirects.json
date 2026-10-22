@@ -98,6 +98,36 @@
       "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
       "privacy_withdrawal": true,
       "person": "Sheryle Joy Telfer"
+    },
+    "catherine-leah": {
+      "to": "catherine-lawrie",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Catherine Leah' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "hugh-john": {
+      "to": "hugh-lawrie",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Hugh John' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "frank-lindsay": {
+      "to": "frank-lawrie",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Frank Lindsay' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "marion-vida": {
+      "to": "marion-lawrie",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Marion Vida' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "janet-stevenson": {
+      "to": "janet-lawrie",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME ('Janet Stevenson'), and she had NO dates at all, so the page defaulted to LIVING. Her birth (19 May 1881) and death (1959) were confirmed from her father Robert Dunlop Lawrie's timeline; the surname was corrected to Lawrie. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
     }
   }
 }

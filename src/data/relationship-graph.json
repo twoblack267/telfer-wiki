@@ -196,11 +196,6 @@
       "generation": 5
     },
     {
-      "slug": "catherine-leah",
-      "id": "Catherine Leah",
-      "generation": 99
-    },
-    {
       "slug": "charles-farrow-1836",
       "id": "Charles Farrow (1836)",
       "generation": 4
@@ -581,11 +576,6 @@
       "generation": 5
     },
     {
-      "slug": "frank-lindsay",
-      "id": "Frank Lindsay",
-      "generation": 99
-    },
-    {
       "slug": "frederick-masters-1848",
       "id": "Frederick Charles Masters (1848)",
       "generation": 5
@@ -704,11 +694,6 @@
       "slug": "howard-lindsay-parker-1920",
       "id": "Howard Lindsay Parker (1920)",
       "generation": 7
-    },
-    {
-      "slug": "hugh-john",
-      "id": "Hugh John",
-      "generation": 99
     },
     {
       "slug": "hugh-kelly-parker-1896",
@@ -868,11 +853,6 @@
     {
       "slug": "janet-nichol",
       "id": "Janet Nichol",
-      "generation": 99
-    },
-    {
-      "slug": "janet-stevenson",
-      "id": "Janet Stevenson",
       "generation": 99
     },
     {
@@ -1254,11 +1234,6 @@
       "slug": "marian-cornish-1896",
       "id": "Marian Telfer Cornish (1896)",
       "generation": 5
-    },
-    {
-      "slug": "marion-vida",
-      "id": "Marion Vida",
-      "generation": 99
     },
     {
       "slug": "mark-telfer-1986",
@@ -2014,6 +1989,31 @@
       "slug": "david-parker",
       "id": "David Parker (1856)",
       "generation": 5
+    },
+    {
+      "slug": "catherine-lawrie",
+      "id": "Catherine Leah Lawrie (1880)",
+      "generation": 6
+    },
+    {
+      "slug": "frank-lawrie",
+      "id": "Frank Lindsay Lawrie (1886)",
+      "generation": 6
+    },
+    {
+      "slug": "hugh-lawrie",
+      "id": "Hugh John Lawrie (1885)",
+      "generation": 6
+    },
+    {
+      "slug": "marion-lawrie",
+      "id": "Marion Vida Lawrie (1888)",
+      "generation": 6
+    },
+    {
+      "slug": "janet-lawrie",
+      "id": "Janet Stevenson Lawrie (1881)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -2221,14 +2221,6 @@
       {
         "from": "robert-dunlop-lawrie-1850",
         "to": "caroline-edna-lawrie-1890"
-      },
-      {
-        "from": "caroline-hosking-1851",
-        "to": "catherine-leah"
-      },
-      {
-        "from": "robert-dunlop-lawrie-1850",
-        "to": "catherine-leah"
       },
       {
         "from": "joseph-farrow-1814",
@@ -2675,14 +2667,6 @@
         "to": "francis-telfer-smith-1874"
       },
       {
-        "from": "caroline-hosking-1851",
-        "to": "frank-lindsay"
-      },
-      {
-        "from": "robert-dunlop-lawrie-1850",
-        "to": "frank-lindsay"
-      },
-      {
         "from": "charles-masters-1809",
         "to": "frederick-masters-1848"
       },
@@ -2817,14 +2801,6 @@
       {
         "from": "william-henry-parker-1893",
         "to": "howard-lindsay-parker-1920"
-      },
-      {
-        "from": "caroline-hosking-1851",
-        "to": "hugh-john"
-      },
-      {
-        "from": "robert-dunlop-lawrie-1850",
-        "to": "hugh-john"
       },
       {
         "from": "david-parker",
@@ -3029,14 +3005,6 @@
       {
         "from": "robert-dunlop",
         "to": "janet-dunlop-1811"
-      },
-      {
-        "from": "caroline-hosking-1851",
-        "to": "janet-stevenson"
-      },
-      {
-        "from": "robert-dunlop-lawrie-1850",
-        "to": "janet-stevenson"
       },
       {
         "from": "james-telfer-1829",
@@ -3473,14 +3441,6 @@
       {
         "from": "martha-henstridge-1854",
         "to": "marian-cornish-1896"
-      },
-      {
-        "from": "caroline-hosking-1851",
-        "to": "marion-vida"
-      },
-      {
-        "from": "robert-dunlop-lawrie-1850",
-        "to": "marion-vida"
       },
       {
         "from": "penny-telfer-1960",
@@ -4237,6 +4197,46 @@
       {
         "from": "isabella-kelly-1825",
         "to": "david-parker"
+      },
+      {
+        "from": "caroline-hosking-1851",
+        "to": "catherine-lawrie"
+      },
+      {
+        "from": "robert-dunlop-lawrie-1850",
+        "to": "catherine-lawrie"
+      },
+      {
+        "from": "caroline-hosking-1851",
+        "to": "frank-lawrie"
+      },
+      {
+        "from": "robert-dunlop-lawrie-1850",
+        "to": "frank-lawrie"
+      },
+      {
+        "from": "caroline-hosking-1851",
+        "to": "hugh-lawrie"
+      },
+      {
+        "from": "robert-dunlop-lawrie-1850",
+        "to": "hugh-lawrie"
+      },
+      {
+        "from": "caroline-hosking-1851",
+        "to": "marion-lawrie"
+      },
+      {
+        "from": "robert-dunlop-lawrie-1850",
+        "to": "marion-lawrie"
+      },
+      {
+        "from": "caroline-hosking-1851",
+        "to": "janet-lawrie"
+      },
+      {
+        "from": "robert-dunlop-lawrie-1850",
+        "to": "janet-lawrie"
       }
     ],
     "spouseOf": [
@@ -4429,10 +4429,6 @@
         "to": "sabina-dillon"
       },
       {
-        "from": "frank-lindsay",
-        "to": "sophia-parker-lawrie-1886"
-      },
-      {
         "from": "george-telfer-1850",
         "to": "ruth-penna-1863"
       },
@@ -4599,6 +4595,10 @@
       {
         "from": "james-cowan",
         "to": "jean-hinshelwood"
+      },
+      {
+        "from": "frank-lawrie",
+        "to": "sophia-parker-lawrie-1886"
       }
     ],
     "siblingOf": [
@@ -4832,23 +4832,23 @@
       },
       {
         "from": "alberta-grace-lawrie-1882",
-        "to": "catherine-leah"
+        "to": "catherine-lawrie"
       },
       {
         "from": "alberta-grace-lawrie-1882",
-        "to": "frank-lindsay"
+        "to": "frank-lawrie"
       },
       {
         "from": "alberta-grace-lawrie-1882",
-        "to": "hugh-john"
+        "to": "hugh-lawrie"
       },
       {
         "from": "alberta-grace-lawrie-1882",
-        "to": "janet-stevenson"
+        "to": "janet-lawrie"
       },
       {
         "from": "alberta-grace-lawrie-1882",
-        "to": "marion-vida"
+        "to": "marion-lawrie"
       },
       {
         "from": "alfred-baker-1861",
@@ -5132,39 +5132,23 @@
       },
       {
         "from": "caroline-edna-lawrie-1890",
-        "to": "catherine-leah"
+        "to": "catherine-lawrie"
       },
       {
         "from": "caroline-edna-lawrie-1890",
-        "to": "frank-lindsay"
+        "to": "frank-lawrie"
       },
       {
         "from": "caroline-edna-lawrie-1890",
-        "to": "hugh-john"
+        "to": "hugh-lawrie"
       },
       {
         "from": "caroline-edna-lawrie-1890",
-        "to": "janet-stevenson"
+        "to": "janet-lawrie"
       },
       {
         "from": "caroline-edna-lawrie-1890",
-        "to": "marion-vida"
-      },
-      {
-        "from": "catherine-leah",
-        "to": "frank-lindsay"
-      },
-      {
-        "from": "catherine-leah",
-        "to": "hugh-john"
-      },
-      {
-        "from": "catherine-leah",
-        "to": "janet-stevenson"
-      },
-      {
-        "from": "catherine-leah",
-        "to": "marion-vida"
+        "to": "marion-lawrie"
       },
       {
         "from": "charles-masters-1837",
@@ -6211,18 +6195,6 @@
         "to": "margaret-dougal-smith-1868"
       },
       {
-        "from": "frank-lindsay",
-        "to": "hugh-john"
-      },
-      {
-        "from": "frank-lindsay",
-        "to": "janet-stevenson"
-      },
-      {
-        "from": "frank-lindsay",
-        "to": "marion-vida"
-      },
-      {
         "from": "frederick-masters-1848",
         "to": "george-masters-1841"
       },
@@ -6491,14 +6463,6 @@
         "to": "william-humphrey-parker-1926"
       },
       {
-        "from": "hugh-john",
-        "to": "janet-stevenson"
-      },
-      {
-        "from": "hugh-john",
-        "to": "marion-vida"
-      },
-      {
         "from": "hugh-parker-1859",
         "to": "hugh-parker-1864"
       },
@@ -6761,10 +6725,6 @@
       {
         "from": "jane-sophie-smith-1866",
         "to": "margaret-dougal-smith-1868"
-      },
-      {
-        "from": "janet-stevenson",
-        "to": "marion-vida"
       },
       {
         "from": "janet-welsh-telfer-1858",
@@ -7473,6 +7433,46 @@
       {
         "from": "david-parker",
         "to": "william-humphrey-parker-1850"
+      },
+      {
+        "from": "catherine-lawrie",
+        "to": "frank-lawrie"
+      },
+      {
+        "from": "catherine-lawrie",
+        "to": "hugh-lawrie"
+      },
+      {
+        "from": "catherine-lawrie",
+        "to": "janet-lawrie"
+      },
+      {
+        "from": "catherine-lawrie",
+        "to": "marion-lawrie"
+      },
+      {
+        "from": "frank-lawrie",
+        "to": "hugh-lawrie"
+      },
+      {
+        "from": "frank-lawrie",
+        "to": "janet-lawrie"
+      },
+      {
+        "from": "frank-lawrie",
+        "to": "marion-lawrie"
+      },
+      {
+        "from": "hugh-lawrie",
+        "to": "janet-lawrie"
+      },
+      {
+        "from": "hugh-lawrie",
+        "to": "marion-lawrie"
+      },
+      {
+        "from": "janet-lawrie",
+        "to": "marion-lawrie"
       }
     ],
     "stepParentOf": [

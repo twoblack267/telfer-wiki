@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T05:07:11+10:00",
+  "generated_at": "2026-10-23T08:11:59+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
   "count": 419,
   "kinds": {
@@ -197,11 +197,11 @@
       "kind": "redirect"
     },
     "Caroline Hosking (1851\u20131920).md": {
-      "sha256": "87fccead59360cb46891fa43f332ca9b47f19bf64eb62d00088f35e064e263e7",
+      "sha256": "1d62459d4a7e79bb2289ae437a835b5795efc5125c2c8f3833d62ed8aed8fd32",
       "kind": "real"
     },
-    "Catherine Leah.md": {
-      "sha256": "f263006ba4a524403be1d78f1edf10c1001a061a5aed56f5a4cb6ce61fc5d98c",
+    "Catherine Leah Lawrie (1880\u20131962).md": {
+      "sha256": "dcef67f3e04be9ef28c1b982ca0c94f09a5bbde4e3d372bda7cdbbc06105f984",
       "kind": "real"
     },
     "Charles Farrow (~1836\u20131884).md": {
@@ -257,7 +257,7 @@
       "kind": "real"
     },
     "Crystal Rose McDonald.md": {
-      "sha256": "19dd2febc13b17ee9a1283ef2464b8a6fe74026775475d05dce67119644fc0d3",
+      "sha256": "56ad587c844d4082a2e022508307d7b77fdff1aa7389e9e901b589055e30e224",
       "kind": "real"
     },
     "Daisy Vera Latter (1886\u20131963).md": {
@@ -580,8 +580,8 @@
       "sha256": "b57596373318b3a62c510b605b3df23818fd754a4d02e786a7ef880934b3f062",
       "kind": "real"
     },
-    "Frank Lindsay.md": {
-      "sha256": "c1cda1488f776ef284a228c46da4ec4671f8b900f73e3cf06ddb34133fe1e34d",
+    "Frank Lindsay Lawrie (1886\u20131920).md": {
+      "sha256": "aa2d3fb6b4ad6fbe099d92d6d77e1791fa10da0994441e9c7a68a8c0bcf7ad07",
       "kind": "real"
     },
     "Frederick Charles Masters (1848\u20131939).md": {
@@ -716,8 +716,8 @@
       "sha256": "bd18f35a37148c2520e7dbe836450e0b69dc38e7134c781156bf8da1aea35707",
       "kind": "real"
     },
-    "Hugh John.md": {
-      "sha256": "8b56ba51fb2dfab2e809b2ba86a208c917398873f6ac41378095bf872d3d3488",
+    "Hugh John Lawrie (1885\u20131960).md": {
+      "sha256": "fcd318a345aaa37b99a99ad80494082a7649789b5a9d4b2999d1d1b8625b5150",
       "kind": "real"
     },
     "Hugh Kelly Parker.md": {
@@ -868,8 +868,8 @@
       "sha256": "fff0d39c314eacb259322f55e29f843d4a880d035e936843955503016e270867",
       "kind": "real"
     },
-    "Janet Stevenson.md": {
-      "sha256": "7c2b3c27fa430ba6650937e1f71b5328581da02e437cd1c7c05e9667d2d32b37",
+    "Janet Stevenson Lawrie (1881\u20131959).md": {
+      "sha256": "9226b0562fe560cd510c98f92a0710b18e265277e9c6aa5ef8fe158ad014d76b",
       "kind": "real"
     },
     "Janet Welsh (1826\u20131885).md": {
@@ -1105,7 +1105,7 @@
       "kind": "real"
     },
     "Leonard Arthur Dance.md": {
-      "sha256": "a8704d415dae62bbeb67d79e04cdcfa5339d0a0df7b69981bcefba296a88a65d",
+      "sha256": "9e00816c05308b773492c93cf5a7ec952b74d857251a337c78c11a26a50e7f1a",
       "kind": "real"
     },
     "Lesley Thomas Telfer (1891\u20131914).md": {
@@ -1220,8 +1220,8 @@
       "sha256": "f81b8287563dab060851629ccf3984607a35d32fb1d591c46850e46fbd56a3f2",
       "kind": "real"
     },
-    "Marion Vida.md": {
-      "sha256": "995a734146b141719aa650b3a32ba49a07d4ea3ddc6727ecba2f5a8d94fc2184",
+    "Marion Vida Lawrie (1888\u20131955).md": {
+      "sha256": "328376d86c11206e2045bf9a7f439b7253df9bb5b18c1d2912cef482d10a62dc",
       "kind": "real"
     },
     "Mark Kenneth Telfer (1986\u2013?).md": {
@@ -1397,7 +1397,7 @@
       "kind": "real"
     },
     "Robert Dunlop Lawrie (1850\u20131917).md": {
-      "sha256": "c771bde81d7f5800036ae71243ca4cef790cada3e0b5cef3f9293ee9acefc48d",
+      "sha256": "fe01fb922c1204c3141f63438566bbec2ade47fff074aceba4899ca47e5f8058",
       "kind": "real"
     },
     "Robert Dunlop.md": {
@@ -1481,7 +1481,7 @@
       "kind": "real"
     },
     "Sandra Lee Smith.md": {
-      "sha256": "e9623e47509aef132977e68b6d51b9e09d2095e113b97ad51cb98dc4566ec215",
+      "sha256": "103600457282660b1c2f55ea421d177c5cc425676fb563c5f08f492a3205b467",
       "kind": "real"
     },
     "Sarah Farrow.md": {
