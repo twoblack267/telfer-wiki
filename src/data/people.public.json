@@ -30,7 +30,14 @@
     "siblings": [],
     "step_parents": [],
     "step_children": [],
-    "images": [],
+    "images": [
+      {
+        "src": "images/people/OPR_baptism_Alexander_Telfer_Lamington_1841_FR776.jpg",
+        "alt": "Old Parish Register, baptism of Alexander Telfer, Lamington, Lanarkshire, 2 May 1841 (NRS 659/40/53, frame FR776)",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/OPR_baptism_Alexander_Telfer_Lamington_1841_FR776.jpg",
+        "filename": "OPR_baptism_Alexander_Telfer_Lamington_1841_FR776.jpg"
+      }
+    ],
     "person_photo": "images/people/OPR_baptism_Alexander_Telfer_Lamington_1841_FR776.jpg"
   },
   {
