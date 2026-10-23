@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-24T05:14:05+10:00",
+  "generated_at": "2026-10-24T09:54:43+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 419,
+  "count": 420,
   "kinds": {
-    "real": 403,
+    "real": 404,
     "redirect": 16,
     "empty": 0
   },
@@ -74,6 +74,10 @@
     },
     "Alexander Lawrie (1776\u20131847).md": {
       "sha256": "bbf2c5d731a94bbe67bd174dbab2bfba79d3b70b9de2e3019c9da86681a67625",
+      "kind": "real"
+    },
+    "Alexander Telfer (1841\u2013?).md": {
+      "sha256": "fb82686bd020aa58b215433fc56fd15412871cdac39ad903fc8547e2af6a355c",
       "kind": "real"
     },
     "Alfred Baker (1861\u20131946).md": {
