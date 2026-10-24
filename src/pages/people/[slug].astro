@@ -293,6 +293,31 @@ const seoDescription = leadSentence && decodeEntities(leadSentence).length >= 40
     ))
   : templateDescription;
 
+// ── Duplicate-lead suppression for the hero role chip (itc-20261024-2) ──────
+// The vault often writes the same one-liner twice: once as the profile's opening
+// prose (which the template lifts into the lead paragraph under the name) and once
+// as a `**Role:** …` field line (which renders as the italic chip below it). The
+// reader then sees the identical sentences back to back, separated only by the
+// Biography heading. Fix it at DISPLAY time by dropping a role whose text already
+// appears in the lead — do not delete the prose and do not edit the vault, because
+// both copies are legitimate content; only the duplication is the defect.
+const roleText = (t) => String(t || "")
+  .replace(/^\s*role\s*:\s*/i, "")
+  .replace(/\*\*/g, "")
+  .replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2")
+  .replace(/\[\[([^\]]+)\]\]/g, "$1")
+  .replace(/[\s.,;:—–-]+/g, " ")
+  .trim()
+  .toLowerCase();
+const leadNorm = roleText(leadSentence || proseSentence || "");
+const visibleRoles = (Array.isArray(person.roles) ? person.roles : []).filter((role) => {
+  const r = roleText(role);
+  if (!r) return false;
+  // Exact echo of the lead sentence, or the lead is this role with a tail on it.
+  if (leadNorm && (leadNorm === r || leadNorm.startsWith(r))) return false;
+  return true;
+});
+
 // ── SEO: per-slug title/meta overrides ──
 // Targeted search phrases for ancestors Mark wants found by name + home town.
 // Wording drawn ONLY from verified vault/FAQ content — no invented facts.
@@ -442,9 +467,9 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
           )}
 
           <!-- Roles -->
-          {person.roles?.length > 0 && (
+          {visibleRoles.length > 0 && (
             <div class="space-y-0">
-              {person.roles.map((role) => (
+              {visibleRoles.map((role) => (
                 <div class="text-xs text-[var(--color-ink-light)] italic" set:html={inlineLinks(role, telferPeople)} />
               ))}
             </div>

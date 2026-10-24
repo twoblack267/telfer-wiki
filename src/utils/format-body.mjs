@@ -9,6 +9,18 @@ export function formatBody(body, people) {
   const BASE = import.meta.env.BASE_URL || "/";
 
   let html = body
+    // ── Drop the duplicate `**Role:**` line (itc-20261024-2) ─────────────────
+    // The person template renders `person.roles` as the italic chip directly
+    // under the name, and many vault profiles ALSO open their body with the same
+    // sentence as a `**Role:** …` field line. The reader got the identical
+    // paragraph twice, separated only by the "Biography" heading. The chip is the
+    // canonical render of that field, so the body copy is the duplicate — remove
+    // it here rather than deleting content from the vault. Anchored to a line that
+    // STARTS with the label, so a `Role:` mentioned mid-sentence is untouched.
+    .replace(/^[ \t]*\*\*Role:?\*\*[^\n]*(?:\n(?![ \t]*\n)[^\n]*)*\n?/gim, '')
+    // Same duplicate in its plain/unlabelled form: an opening line that is exactly
+    // the role text. Guarded by the caller having a role to render.
+    .replace(/^[ \t]*Role:[^\n]*\n?/gim, '')
     // Biography field-summary separator normalisation. Some profiles were generated
     // with a single-line intro that joins labelled fields with literal pipes, e.g.
     //     **Born:** 2 Oct 1868, Tungkillo SA | **Died:** 11 Oct 1950 ... | **Mother:** ... | **Father:** ...
@@ -51,9 +63,14 @@ export function formatBody(body, people) {
       return link.trim();
     })
     // Bold **text**
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    // `[\s\S]` not `.`: the vault is HARD-WRAPPED at ~80 columns, so an emphasised
+    // phrase routinely straddles a newline ("**Until such an entry is\nsighted**").
+    // A dot matched no newline, so those pairs survived to the page as literal "**"
+    // (itc-20261024-1, the last 3 of 400 pages). Tolerant match, and the captured
+    // text keeps its line break so paragraph flow is unchanged.
+    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>")
     // Italic *text*
-    .replace(/\*(.+?)\*/g, "<em>$1</em>")
+    .replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g, "$1<em>$2</em>")
     // Convert headings
     .replace(/^### (.+)$/gm, "<h3 class='font-serif text-lg text-[var(--color-burgundy)] mt-4 mb-0'>$1</h3>")
     .replace(/^## (.+)$/gm, "<h2 class='font-serif text-xl text-[var(--color-burgundy)] mt-4 mb-0'>$1</h2>")
@@ -327,7 +344,16 @@ export function inlineLinks(text, people) {
       const slug = lookupSlug(link.trim(), people);
       if (slug) return `<a href="${BASE}people/${slug}/" class="wiki-link">${link.trim()}</a>`;
       return link.trim();
-    });
+    })
+    // Inline EMPHASIS — the role/tagline line is vault markdown like everything
+    // else, but this lighter path never ran the bold/italic passes that formatBody
+    // applies to paragraph bodies. So "**Role:** Daughter of … **single physical
+    // link** …" reached the page with its asterisks intact, and readers saw raw
+    // "**" on 26 of 400 person pages (itc-20261024-1). A one-liner is still
+    // markdown; convert it here. Bold BEFORE italic so "**x**" is not eaten as
+    // two nested italics. Asterisks inside an existing <a> are left alone.
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g, "$1<em>$2</em>");
 }
 
 /**
