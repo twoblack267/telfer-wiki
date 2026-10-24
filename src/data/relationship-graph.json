@@ -2006,18 +2006,53 @@
       "generation": 6
     },
     {
-      "slug": "marion-lawrie",
+      "slug": "marion-lawrie-1888",
       "id": "Marion Vida Lawrie (1888)",
       "generation": 6
     },
     {
-      "slug": "janet-lawrie",
+      "slug": "janet-lawrie-1881",
       "id": "Janet Stevenson Lawrie (1881)",
       "generation": 6
     },
     {
       "slug": "alexander-telfer-1841",
       "id": "Alexander Telfer (1841)",
+      "generation": 5
+    },
+    {
+      "slug": "alexander-lawrie",
+      "id": "Alexander Lawrie (1853)",
+      "generation": 5
+    },
+    {
+      "slug": "elizabeth-lawrie",
+      "id": "Elizabeth Lawrie (1847)",
+      "generation": 5
+    },
+    {
+      "slug": "janet-lawrie-1842",
+      "id": "Janet Lawrie (1842)",
+      "generation": 5
+    },
+    {
+      "slug": "jean-lawrie",
+      "id": "Jean Lawrie (1836)",
+      "generation": 5
+    },
+    {
+      "slug": "john-lawrie-1840",
+      "id": "John Lawrie (1840)",
+      "generation": 5
+    },
+    {
+      "slug": "john-lawrie-1845",
+      "id": "John Lawrie (1845)",
+      "generation": 5
+    },
+    {
+      "slug": "marion-lawrie-1838",
+      "id": "Marion Lawrie (1838)",
       "generation": 5
     }
   ],
@@ -4169,19 +4204,75 @@
       },
       {
         "from": "caroline-hosking-1851",
-        "to": "marion-lawrie"
+        "to": "marion-lawrie-1888"
       },
       {
         "from": "robert-dunlop-lawrie-1850",
-        "to": "marion-lawrie"
+        "to": "marion-lawrie-1888"
       },
       {
         "from": "caroline-hosking-1851",
-        "to": "janet-lawrie"
+        "to": "janet-lawrie-1881"
       },
       {
         "from": "robert-dunlop-lawrie-1850",
-        "to": "janet-lawrie"
+        "to": "janet-lawrie-1881"
+      },
+      {
+        "from": "janet-dunlop-1811",
+        "to": "alexander-lawrie"
+      },
+      {
+        "from": "john-lawrie-1810",
+        "to": "alexander-lawrie"
+      },
+      {
+        "from": "janet-dunlop-1811",
+        "to": "elizabeth-lawrie"
+      },
+      {
+        "from": "john-lawrie-1810",
+        "to": "elizabeth-lawrie"
+      },
+      {
+        "from": "janet-dunlop-1811",
+        "to": "janet-lawrie-1842"
+      },
+      {
+        "from": "john-lawrie-1810",
+        "to": "janet-lawrie-1842"
+      },
+      {
+        "from": "janet-dunlop-1811",
+        "to": "jean-lawrie"
+      },
+      {
+        "from": "john-lawrie-1810",
+        "to": "jean-lawrie"
+      },
+      {
+        "from": "janet-dunlop-1811",
+        "to": "john-lawrie-1840"
+      },
+      {
+        "from": "john-lawrie-1810",
+        "to": "john-lawrie-1840"
+      },
+      {
+        "from": "janet-dunlop-1811",
+        "to": "john-lawrie-1845"
+      },
+      {
+        "from": "john-lawrie-1810",
+        "to": "john-lawrie-1845"
+      },
+      {
+        "from": "janet-dunlop-1811",
+        "to": "marion-lawrie-1838"
+      },
+      {
+        "from": "john-lawrie-1810",
+        "to": "marion-lawrie-1838"
       }
     ],
     "spouseOf": [
@@ -4212,6 +4303,10 @@
       {
         "from": "alfred-george-stribling-1853",
         "to": "jane-murray-farrow-1857"
+      },
+      {
+        "from": "allen-merrick",
+        "to": "penny-telfer-1960"
       },
       {
         "from": "alma-ida-sporer-1880",
@@ -4781,11 +4876,11 @@
       },
       {
         "from": "alberta-grace-lawrie-1882",
-        "to": "janet-lawrie"
+        "to": "janet-lawrie-1881"
       },
       {
         "from": "alberta-grace-lawrie-1882",
-        "to": "marion-lawrie"
+        "to": "marion-lawrie-1888"
       },
       {
         "from": "alfred-baker-1861",
@@ -5077,11 +5172,11 @@
       },
       {
         "from": "caroline-edna-lawrie-1890",
-        "to": "janet-lawrie"
+        "to": "janet-lawrie-1881"
       },
       {
         "from": "caroline-edna-lawrie-1890",
-        "to": "marion-lawrie"
+        "to": "marion-lawrie-1888"
       },
       {
         "from": "charles-masters-1837",
@@ -5522,6 +5617,10 @@
       {
         "from": "effie-olive-telfer-1886",
         "to": "violet-hope-telfer-1883"
+      },
+      {
+        "from": "elisabeth-telfer-1806",
+        "to": "john-telfer-1791"
       },
       {
         "from": "elizabeth-anne-smith-1878",
@@ -7172,6 +7271,10 @@
         "to": "thomas-paynter-1859"
       },
       {
+        "from": "amanda-lawrie",
+        "to": "rex-lawrie"
+      },
+      {
         "from": "rebecca-telfer",
         "to": "sophia-telfer"
       },
@@ -7389,11 +7492,11 @@
       },
       {
         "from": "catherine-lawrie",
-        "to": "janet-lawrie"
+        "to": "janet-lawrie-1881"
       },
       {
         "from": "catherine-lawrie",
-        "to": "marion-lawrie"
+        "to": "marion-lawrie-1888"
       },
       {
         "from": "frank-lawrie",
@@ -7401,23 +7504,135 @@
       },
       {
         "from": "frank-lawrie",
-        "to": "janet-lawrie"
+        "to": "janet-lawrie-1881"
       },
       {
         "from": "frank-lawrie",
-        "to": "marion-lawrie"
+        "to": "marion-lawrie-1888"
       },
       {
         "from": "hugh-lawrie",
-        "to": "janet-lawrie"
+        "to": "janet-lawrie-1881"
       },
       {
         "from": "hugh-lawrie",
-        "to": "marion-lawrie"
+        "to": "marion-lawrie-1888"
       },
       {
-        "from": "janet-lawrie",
-        "to": "marion-lawrie"
+        "from": "janet-lawrie-1881",
+        "to": "marion-lawrie-1888"
+      },
+      {
+        "from": "alexander-lawrie",
+        "to": "elizabeth-lawrie"
+      },
+      {
+        "from": "alexander-lawrie",
+        "to": "janet-lawrie-1842"
+      },
+      {
+        "from": "alexander-lawrie",
+        "to": "jean-lawrie"
+      },
+      {
+        "from": "alexander-lawrie",
+        "to": "john-lawrie-1840"
+      },
+      {
+        "from": "alexander-lawrie",
+        "to": "john-lawrie-1845"
+      },
+      {
+        "from": "alexander-lawrie",
+        "to": "marion-lawrie-1838"
+      },
+      {
+        "from": "alexander-lawrie",
+        "to": "robert-dunlop-lawrie-1850"
+      },
+      {
+        "from": "elizabeth-lawrie",
+        "to": "janet-lawrie-1842"
+      },
+      {
+        "from": "elizabeth-lawrie",
+        "to": "jean-lawrie"
+      },
+      {
+        "from": "elizabeth-lawrie",
+        "to": "john-lawrie-1840"
+      },
+      {
+        "from": "elizabeth-lawrie",
+        "to": "john-lawrie-1845"
+      },
+      {
+        "from": "elizabeth-lawrie",
+        "to": "marion-lawrie-1838"
+      },
+      {
+        "from": "elizabeth-lawrie",
+        "to": "robert-dunlop-lawrie-1850"
+      },
+      {
+        "from": "janet-lawrie-1842",
+        "to": "jean-lawrie"
+      },
+      {
+        "from": "janet-lawrie-1842",
+        "to": "john-lawrie-1840"
+      },
+      {
+        "from": "janet-lawrie-1842",
+        "to": "john-lawrie-1845"
+      },
+      {
+        "from": "janet-lawrie-1842",
+        "to": "marion-lawrie-1838"
+      },
+      {
+        "from": "janet-lawrie-1842",
+        "to": "robert-dunlop-lawrie-1850"
+      },
+      {
+        "from": "jean-lawrie",
+        "to": "john-lawrie-1840"
+      },
+      {
+        "from": "jean-lawrie",
+        "to": "john-lawrie-1845"
+      },
+      {
+        "from": "jean-lawrie",
+        "to": "marion-lawrie-1838"
+      },
+      {
+        "from": "jean-lawrie",
+        "to": "robert-dunlop-lawrie-1850"
+      },
+      {
+        "from": "john-lawrie-1840",
+        "to": "john-lawrie-1845"
+      },
+      {
+        "from": "john-lawrie-1840",
+        "to": "marion-lawrie-1838"
+      },
+      {
+        "from": "john-lawrie-1840",
+        "to": "robert-dunlop-lawrie-1850"
+      },
+      {
+        "from": "john-lawrie-1845",
+        "to": "marion-lawrie-1838"
+      },
+      {
+        "from": "john-lawrie-1845",
+        "to": "robert-dunlop-lawrie-1850"
+      },
+      {
+        "from": "marion-lawrie-1838",
+        "to": "robert-dunlop-lawrie-1850"
       }
     ],
     "stepParentOf": [
@@ -7444,6 +7659,10 @@
       {
         "from": "timothy-telfer-1959",
         "to": "jared-ivory-1993"
+      },
+      {
+        "from": "jean-murray-1810",
+        "to": "jean-telfer-1840"
       },
       {
         "from": "timothy-telfer-1959",
@@ -7474,6 +7693,10 @@
       {
         "from": "allen-merrick",
         "to": "mark-telfer-1986"
+      },
+      {
+        "from": "jean-murray-1810",
+        "to": "jean-telfer-1840"
       },
       {
         "from": "sheryle-telfer-1961",

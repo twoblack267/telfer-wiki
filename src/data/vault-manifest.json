@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-25T06:09:31+10:00",
+  "generated_at": "2026-10-25T07:08:48+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 420,
+  "count": 427,
   "kinds": {
-    "real": 404,
+    "real": 411,
     "redirect": 16,
     "empty": 0
   },
@@ -74,6 +74,10 @@
     },
     "Alexander Lawrie (1776\u20131847).md": {
       "sha256": "bbf2c5d731a94bbe67bd174dbab2bfba79d3b70b9de2e3019c9da86681a67625",
+      "kind": "real"
+    },
+    "Alexander Lawrie (1853\u20131853).md": {
+      "sha256": "3c7c93a9bef9c482e2223bedc1b23583f77ff10c163ab0510c124c0f6c33e16d",
       "kind": "real"
     },
     "Alexander Telfer (1841\u2013?).md": {
@@ -410,6 +414,10 @@
     },
     "Elizabeth Jane Liebich (1859\u20131919).md": {
       "sha256": "fe9131be2544d4d7e8ce14f3994f54d6dca640eb0c2fe0167aa5750122d372c1",
+      "kind": "real"
+    },
+    "Elizabeth Lawrie (1847\u20131907).md": {
+      "sha256": "44c71093fcc227c838a2f4db59268b29671e532c2887c68b3fd9dcfd0e7f4cf5",
       "kind": "real"
     },
     "Elizabeth Oliver (1807\u20131846).md": {
@@ -861,12 +869,16 @@
       "kind": "real"
     },
     "Janet Dunlop Lawrie (1811\u20131902).md": {
-      "sha256": "e51e725e42148d77526b2346af7b345dbd74a4f0471bac090858ccea7d82a4ce",
+      "sha256": "a1f11e7b6a01668354828b609c1620abd351496d986f6ca269b0b3ac0c5232b1",
       "kind": "real"
     },
     "Janet Dunlop.md": {
       "sha256": "9c8399c13b6da108863495fd7ea6981ca52fdf30c4c9a649688ae79e9502699a",
       "kind": "redirect"
+    },
+    "Janet Lawrie (1842\u20131845).md": {
+      "sha256": "4c908fe51f65153d055bae62e07e86b9a09d5a51b340dd71d76008c7ed2d17b5",
+      "kind": "real"
     },
     "Janet Nichol.md": {
       "sha256": "bb796b394dd6589b4fa29b4165fae1ccff5102c3788d112635132a79d1c42111",
@@ -890,6 +902,10 @@
     },
     "Jean Hinshelwood (~1750\u20131809).md": {
       "sha256": "e55b1fb73b9aec1c46dbf2657f23f490d7e3e3c8f60d6822ff845e5116e2c414",
+      "kind": "real"
+    },
+    "Jean Jane Lawrie (1836\u20131914).md": {
+      "sha256": "c8bfb04abb800113daf51eba2fc9cfc8e661dca7e0c7098104b77e135ffa81ed",
       "kind": "real"
     },
     "Jean Maryann Martha Telfer (1910\u20131984).md": {
@@ -965,7 +981,15 @@
       "kind": "real"
     },
     "John Lawrie (1810\u20131888).md": {
-      "sha256": "802dace9b2d3a0c3428e4bf45aa229c3c129304fdb9e53f7dde94b31ba92803f",
+      "sha256": "727c540e408be16ca886a6b18ec9ca805686e6709a018553db2909ed87d77093",
+      "kind": "real"
+    },
+    "John Lawrie (1840\u20131845).md": {
+      "sha256": "5c18bf08c29330680583c42c4c822b9ec3a0a53288e3414391ee75ed5b5de5ad",
+      "kind": "real"
+    },
+    "John Lawrie (1845\u20131921).md": {
+      "sha256": "d3e07d097b0774bbbeec83b1e9b2598fcabaedc250b01988bc31460814582315",
       "kind": "real"
     },
     "John Lawrie.md": {
@@ -1222,6 +1246,10 @@
     },
     "Marian Telfer Cornish (1896\u20131977).md": {
       "sha256": "f81b8287563dab060851629ccf3984607a35d32fb1d591c46850e46fbd56a3f2",
+      "kind": "real"
+    },
+    "Marion Lawrie (1838\u20131920).md": {
+      "sha256": "e18ce4e923606853793bbd0d9b79d370c35b1cfc61d9a12f59a064742054bb26",
       "kind": "real"
     },
     "Marion Vida Lawrie (1888\u20131955).md": {

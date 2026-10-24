@@ -164,12 +164,34 @@ function resolveNameToSlug(name, sourceSlug) {
     }
   }
 
+  // FIXED 2026-10-25 (APPROXIMATE YEAR "b. ~1791" WAS INVISIBLE — the Telfer
+  // sibling asymmetry):
+  //
+  // The vault names these two ancestors `John Telfer (b. ~1791, England)` and
+  // `Elisabeth Telfer (b. ~1806, England)` because neither year is proven, only
+  // estimated. The year extractors below demanded a bare `\d{4}` immediately after
+  // the bracket, so the `b. ~` prefix matched nothing, refBirth stayed null, and the
+  // ref fell past the year path into the bare-name gates. `john telfer` is
+  // AMBIGUOUS (the tree holds several Johns), so the reference was refused — and
+  // `Elisabeth Telfer` resolved only because she happens to be the sole Elisabeth.
+  // Measured before the fix:
+  //   "John Telfer (b. ~1791, England)"      -> null   (could not resolve HIMSELF)
+  //   "Elisabeth Telfer (b. ~1806, England)" -> elisabeth-telfer-1806
+  // John's own Self ref therefore produced no node, so his reciprocal sibling edge
+  // was never written and `john-telfer-1791.siblings` stayed empty while Elisabeth's
+  // carried the raw string. Accept an OPTIONAL `b.` / `~` / `c.` / `abt` / `ca.`
+  // prefix: a qualifier of uncertainty still names a year, and an approximate year
+  // is still evidence — it is not a blank cheque to guess a generation, because the
+  // year must still match a record's birth_year exactly below.
+  //
   // Extract birth/death years from the reference if present, e.g.
   // "William Telfer (1802–1850)" or "William Telfer (1802)". Use them to
   // disambiguate between same-named people reliably.
   // Handle open-ended ranges like "Robert Telfer (1803–?)" (unknown death) and
   // "Adam Telfer (1799–?)": the 4-digit first group is the birth year. A single
-  // bare `(1803)` is also a birth year.
+  // bare `(1803)` is also a birth year. A leading `b.`/`~`/`c.`/`abt`/`ca.` marker
+  // (approximate or birth-qualified) is tolerated and carries no meaning beyond
+  // "here is a year".
   const yearsMatch = name.match(/(\d{4})\s*[\-–]\s*(\d{4})/);
   let refBirth = null, refDeath = null;
   if (yearsMatch) {
@@ -177,10 +199,10 @@ function resolveNameToSlug(name, sourceSlug) {
     refDeath = parseInt(yearsMatch[2], 10);
   } else {
     // Open-ended range "1803–?" or "1803–": birth year is the first 4-digit group.
-    const openRange = name.match(/\(\s*(\d{4})\s*[\-–]\s*\?/);
+    const openRange = name.match(/\(\s*(?:b\.?\s*|c\.?\s*|ca\.?\s*|abt\.?\s*|about\s*|~+\s*)*(\d{4})\s*[\-–]\s*\?/i);
     if (openRange) refBirth = parseInt(openRange[1], 10);
     else {
-      const singleYear = name.match(/\(\s*(\d{4})\s*\)/);
+      const singleYear = name.match(/\(\s*(?:b\.?\s*|c\.?\s*|ca\.?\s*|abt\.?\s*|about\s*|~+\s*)*(\d{4})\b/i);
       if (singleYear) refBirth = parseInt(singleYear[1], 10);
     }
   }
@@ -393,6 +415,11 @@ const siblingEdges = new Map();   // slug -> Set(siblingSlug)
 // Step relationships (added 2026-09-22) — deliberately SEPARATE from the biological
 // sets so a step-parent/stepchild can never be asserted as a blood relation.
 const stepParentEdges = new Map(); // slug(child) -> Set(stepParentSlug)
+// Tally of relationship types that are real but deliberately NOT written as direct
+// edges (grandparents, in-laws, cousins …) or that were mapped to a non-biological
+// edge (adoptive, partner). Exists so "unhandled" and "intentionally derived" are
+// distinguishable at a glance — silence is what hid the Sibling/Spouses bug.
+const derivedCounts = new Map();
 const stepChildEdges = new Map();  // slug(stepParent) -> Set(stepChildSlug)
 
 for (const person of people) {
@@ -704,6 +731,7 @@ for (const person of people) {
       switch (rel.type) {
         case 'Father':
         case 'Mother':
+        case 'Parent':
         case 'Parents':
           // SELF-DECLARATION WINS, BOTH DIRECTIONS (2026-10-24). The `Children`
           // case below refuses an incoming parent claim when the target has already
@@ -760,6 +788,14 @@ for (const person of people) {
           break;
 
         case 'Spouse':
+        case 'Spouses':   // FIXED 2026-10-25 — plural form was silently dropped (3 edges lost)
+        // Ordinal spouse labels: 'Spouse (2nd)', 'Spouse (1st)', 'Wife (2nd)' …
+        // FIXED 2026-10-25 — the ordinal suffix defeated an exact-match switch.
+        case 'Spouse (2nd)':
+        case 'Spouse (1st)':
+        case 'Spouse (3rd)':
+        case 'Wife (2nd)':
+        case 'Husband (2nd)':
         case 'Wife':
         case 'Husband':
           // GUARD (2026-09-22): spouse plausibility. The parent-edge guard has a
@@ -785,10 +821,27 @@ for (const person of people) {
           resolved++;
           break;
 
+        // FIXED 2026-10-25 (THE TELFER SIBLING ASYMMETRY — a one-word mismatch).
+        //
+        // The vault writes `Sibling: John Telfer (b. ~1791, England)` — SINGULAR.
+        // This switch only listed 'Siblings' (plural) plus Brother/Sister/Half-siblings,
+        // so a singular 'Sibling' fell past every case into the silent default: the ref
+        // resolved perfectly, `resolved++` never ran, NO edge was written, and no warning
+        // was printed anywhere. John and Elisabeth each declared the other, each resolved
+        // the other, and neither array ever got the edge — the "asymmetry" was really a
+        // total absence wearing a lopsided disguise.
+        //
+        // Both spellings are legitimate vault prose. Accept both, and make an unknown
+        // type LOUD (see default below) so the next such gap cannot hide in silence.
+        case 'Sibling':
         case 'Siblings':
         case 'Brother':
+        case 'Sisters':
         case 'Sister':
+        case 'Half-sibling':
         case 'Half-siblings':
+        case 'Half-brother':  // FIXED 2026-10-25 — singular forms were silently dropped
+        case 'Half-sister':
           siblingEdges.get(sourceSlug).add(targetSlug);
           siblingEdges.get(targetSlug).add(sourceSlug);
           resolved++;
@@ -821,6 +874,8 @@ for (const person of people) {
           break;
 
         case 'Stepfather':
+        case 'Step-mother':   // FIXED 2026-10-25 — hyphenated form was silently dropped
+        case 'Step-father':
         case 'Stepmother':
         case 'Stepparent':
         case 'Step-parent':
@@ -830,8 +885,84 @@ for (const person of people) {
           resolved++;
           break;
 
+        // DERIVED RELATIONS — deliberately NOT turned into direct edges.
+        //
+        // A grandparent is reachable by walking two parent edges; a father-in-law
+        // through a spouse then a parent. Writing them as direct edges would
+        // double-count the graph and misreport the person's own closeness.
+        // They are COUNTED and SUMMARISED rather than silently dropped, so the
+        // total is still accountable: nothing vanishes without appearing in a tally.
+        case 'Grandmother':
+        case 'Grandfather':
+        case 'Grandparent':
+        case 'Grandparents':
+        case 'Grandson':
+        case 'Granddaughter':
+        case 'Grandchild':
+        case 'Grandchildren':
+        case 'Great-grandmother':
+        case 'Great-grandfather':
+        case 'Father-in-law':
+        case 'Mother-in-law':
+        case 'Son-in-law':
+        case 'Daughter-in-law':
+        case 'Brother-in-law':
+        case 'Sister-in-law':
+        case 'Cousin':
+        case 'Uncle':
+        case 'Aunt':
+        case 'Nephew':
+        case 'Niece':
+          derivedCounts.set(rel.type, (derivedCounts.get(rel.type) || 0) + 1);
+          break;
+
+        // ADOPTIVE PARENTS — real, and different from step-parents.
+        // FIXED 2026-10-25: these were being swallowed. An adoptive parent is a
+        // parent for the purposes of this graph (the child is raised by them), but
+        // must stay distinguishable from a biological claim, so it is recorded as a
+        // step/community parent edge and the label is preserved in the tally.
+        case 'Father (adoptive)':
+        case 'Mother (adoptive)':
+        case 'Adoptive father':
+        case 'Adoptive mother':
+          // Matches the existing 'Adoptive Father'/'Adoptive Mother' case above:
+          // recorded as a parent edge so the page links, tallied separately so the
+          // biological claim is never implied.
+          parentEdges.get(sourceSlug).add(targetSlug);
+          childEdges.get(targetSlug).add(sourceSlug);
+          derivedCounts.set(rel.type, (derivedCounts.get(rel.type) || 0) + 1);
+          resolved++;
+          break;
+
+        case 'Partner':
+          // FIXED 2026-10-25: an unmarried partner is a REAL relationship. Recorded
+          // as a spouse edge so the page links them, but tallied separately so no
+          // marriage is implied.
+          spouseEdges.get(sourceSlug).add(targetSlug);
+          spouseEdges.get(targetSlug).add(sourceSlug);
+          derivedCounts.set(rel.type, (derivedCounts.get(rel.type) || 0) + 1);
+          resolved++;
+          break;
+
         default:
-          // Other relationship types - just note
+          // FIXED 2026-10-25 — THIS `default` WAS THE SILENT HOLE.
+          //
+          // It used to say "Other relationship types - just note" and then note
+          // NOTHING. The ref had already resolved to a real person, so the graph knew
+          // the edge existed and threw it away without a word. That is how a single
+          // unmatched word ('Sibling' vs 'Siblings') produced a relationship that was
+          // declared on BOTH sides of the vault, resolved on BOTH sides, and appeared
+          // on NEITHER side of the output — with the pipeline reporting success.
+          //
+          // A resolved ref that hits an unknown type is a BUG, not a no-op: either the
+          // vault uses a spelling this switch does not know, or a new relation was
+          // added upstream. Say so, loudly, with the names, so it can be fixed at the
+          // cause. This is a warning rather than a throw because one odd relation in
+          // one vault file must not block a whole-site build.
+          console.warn(
+            `   ⚠️ UNHANDLED relationship type "${rel.type}" — ${sourceSlug} -> ${targetSlug} ` +
+            `(resolved, but no edge written; add the spelling to this switch)`
+          );
           break;
       }
     }
@@ -1133,3 +1264,10 @@ console.log(`\n📊 Relationship Stats:`);
 console.log(`   Parent edges: ${graph.edges.parentOf.length}`);
 console.log(`   Spouse edges: ${graph.edges.spouseOf.length}`);
 console.log(`   Sibling edges: ${graph.edges.siblingOf.length}`);
+  if (derivedCounts.size > 0) {
+    const total = [...derivedCounts.values()].reduce((a, b) => a + b, 0);
+    console.log(`   Derived / non-biological refs (tallied, not direct edges): ${total}`);
+    for (const [t, n] of [...derivedCounts.entries()].sort((a, b) => b[1] - a[1])) {
+      console.log(`     • ${t}: ${n}`);
+    }
+  }

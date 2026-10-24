@@ -46,8 +46,21 @@ const PEOPLE = [
     display_name: 'Francis Charles Telfer'
   },
   {
+    // NOTE (2026-10-25): first_name is 'Francis Adam', NOT 'Francis'.
+    //
+    // This fixture must keep reaching the suppression path. With first_name 'Francis'
+    // the collision is caught earlier — generate-redirects.mjs Case 1 now refuses to
+    // emit an alias whose `from` is a canonical slug (`!canonicalSlugs.has(...)`), so
+    // pushRedirect() is never called and nothing is suppressed. The guard was still
+    // correct; the fixture had silently stopped testing it, and assertion 2 caught it.
+    //
+    // A MULTI-WORD first name reaches the guard through Case 1b (collapsed first name):
+    // 'Francis Adam' -> collapsedBare 'francis-telfer' -> collapsedOld 'francis-telfer-1875',
+    // which is Francis Charles's LIVE canonical slug. That is a true hijack, and the
+    // guard must refuse it. Do not "simplify" this back to 'Francis' — that reintroduces
+    // a test that passes without exercising the thing it claims to test.
     slug: 'francis-adam-telfer-1875',
-    first_name: 'Francis',
+    first_name: 'Francis Adam',
     last_name: 'Telfer',
     birth_year: 1875,
     death_year: 1955,

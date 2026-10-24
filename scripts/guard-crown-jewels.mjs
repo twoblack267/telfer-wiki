@@ -290,19 +290,60 @@ function main() {
   const base = indexBySlug(baseArr);
   const now = indexBySlug(currentArr);
 
+  // ── 0. Follow declared redirects before judging a rename as data loss ───────
+  // A slug can legitimately change when a NEW vault profile makes a previously
+  // bare slug ambiguous. On 2026-10-25 the profile `Marion Lawrie (1838–1920)`
+  // was added next to the existing `Marion Vida Lawrie (1888–1955)`; both slugify
+  // to `marion-lawrie`, so the pipeline gave the 1888 woman her year-qualified
+  // slug `marion-lawrie-1888` and wrote the collision to scripts/redirect-log.json.
+  // Her record did not vanish — it was RENAMED, and the redirect proves it. The
+  // guard used to read only raw slugs, so a legitimate rename fired
+  // PROFILE_VANISHED (and the build refused to deploy) even though every person
+  // was accounted for. Resolve the baseline slug through the redirect log first;
+  // a rename is only excused when the redirect actually lands on a live profile,
+  // so a genuine disappearance still fails loudly.
+  const REDIRECT_LOG = resolvePath(HERE, "redirect-log.json");
+  const redirects = new Map();
+  try {
+    const log = JSON.parse(readFileSync(REDIRECT_LOG, "utf-8"));
+    for (const r of Array.isArray(log) ? log : []) {
+      if (r && r.from && r.to) redirects.set(String(r.from), String(r.to));
+    }
+  } catch {
+    // No redirect log — every vanished slug is judged as-is.
+  }
+  const redirectTarget = (slug) => {
+    let cur = slug;
+    const seen = new Set();
+    while (redirects.has(cur) && !seen.has(cur)) {
+      seen.add(cur);
+      cur = redirects.get(cur);
+    }
+    return cur;
+  };
+
   const failures = [];
   const warnings = [];
+  const renames = [];
 
   // ── 1. Vanished profiles ────────────────────────────────────────────────────
   for (const [slug, before] of base) {
-    if (!now.has(slug)) {
-      failures.push({
-        kind: "PROFILE_VANISHED",
-        slug,
-        name: before.display_name || before.name || slug,
-        detail: `profile exists in ${baseLabel} but is GONE from the working data`,
-      });
+    if (now.has(slug)) continue;
+    const target = redirectTarget(slug);
+    if (target !== slug && now.has(target)) {
+      // A declared rename that lands on a live record — not data loss. Record it
+      // so the run still reports what moved.
+      renames.push({ from: slug, to: target, name: before.display_name || before.name || slug });
+      continue;
     }
+    failures.push({
+      kind: "PROFILE_VANISHED",
+      slug,
+      name: before.display_name || before.name || slug,
+      detail: redirects.has(slug)
+        ? `profile exists in ${baseLabel} but is GONE; its redirect points to "${redirectTarget(slug)}" which is ALSO missing`
+        : `profile exists in ${baseLabel} but is GONE from the working data`,
+    });
   }
 
   // ── 2. Relationship counts that shrank ──────────────────────────────────────
@@ -379,6 +420,7 @@ function main() {
     baseline: baseLabel,
     people: { before: baseArr.length, after: currentArr.length },
     crownJewelsChecked: Object.keys(CROWN_JEWELS).length,
+    renames,
     failures,
     warnings,
   };
@@ -395,6 +437,13 @@ function main() {
           : "")
     );
     console.log(`  crown jewels checked: ${result.crownJewelsChecked}`);
+
+    // Renames are reported, never silent: the slug moved, the person did not.
+    if (renames.length > 0) {
+      console.log("");
+      console.log(`ℹ️  ${renames.length} profile slug RENAMED (declared in scripts/redirect-log.json):`);
+      for (const r of renames) console.log(`     • ${r.from} -> ${r.to}  (${r.name})`);
+    }
 
     if (failures.length === 0 && warnings.length === 0) {
       console.log("");

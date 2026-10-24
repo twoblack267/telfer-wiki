@@ -111,6 +111,23 @@ echo "==> Step 2e/3: CROWN-JEWEL DATA-LOSS GUARD (added 2026-10-24)"
 # who are not his (his brother and two others the vault places elsewhere), and
 # andrew-telfer-1798 is his BROTHER, not his son. The refusals are the fix. Declaring
 # them keeps the guard meaningful for every other field instead of lowering its floor.
+# RENAME EVIDENCE MUST BE CURRENT (2026-10-25). This guard reads
+# scripts/redirect-log.json to tell a legitimate slug RENAME (a new vault profile
+# made a bare slug ambiguous) from a vanished profile. That log is written further
+# down by generate-redirects.mjs, so a guard that runs first judges today's rename
+# against YESTERDAY's log and fails the pipeline for a person who is still there.
+# The script only WRITES the log (no dist/ emission yet — writeRedirect's pages are
+# emitted in the link-gate chain below), so running it here is safe and keeps the
+# guard honest. A failure here is non-fatal: without the log the guard simply
+# judges every vanished slug as data loss, which is the safe direction.
+node scripts/generate-redirects.mjs > /tmp/redirect-log-refresh.log 2>&1 || {
+  # NOT `|| true` (2026-10-25): a syntax/ReferenceError here was swallowed, and the
+  # guard then reported two people as VANISHED when the redirect log was simply
+  # never rebuilt. A failed log refresh is evidence-backed ignorance — say so and
+  # keep the guard's strict judgement, never hide the breakage.
+  echo "⚠️  redirect-log refresh failed — crown-jewel guard will judge renames as data loss:"
+  tail -5 /tmp/redirect-log-refresh.log
+}
 GJ="$(node scripts/guard-crown-jewels.mjs 2>&1)" || {
   echo "$GJ"
   echo ""

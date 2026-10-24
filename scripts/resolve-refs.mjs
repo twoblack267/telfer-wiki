@@ -96,16 +96,33 @@ function stripLifespan(name) {
   return name.replace(/\s*\(fl\.?\s*\d{3,4}\)\s*$/i, '').trim();
 }
 
+// FIXED 2026-10-25 (the `b. ~YYYY` form is a YEAR, not a name).
+//
+// The Telfer ancestors are written `John Telfer (b. ~1791, England)` and
+// `Elisabeth Telfer (b. ~1806, England)` — the `b.` marks an ESTIMATE, and the
+// vault is honest enough to say so. Both resolvers demanded a bare digit straight
+// after the bracket, so this form matched no year pattern at all: the ref was
+// treated as a NAME, reduced to the bare "john telfer" (shared by several Johns →
+// ambiguous → refused) and the reciprocal sibling edge was never written. Measured
+// before the fix: `resolveNameToSlug("John Telfer (b. ~1791, England)")` → null,
+// i.e. John could not resolve his own Self line, so `john-telfer-1791.siblings`
+// stayed [] while Elisabeth's held the raw string.
+//
+// An approximate year is still evidence. Accepting `b.` / `~` / `c.` / `ca.` /
+// `abt` here does not license guessing: the year is still matched EXACTLY against
+// a record's birth_year, so a ref carrying 1791 binds only to a person recorded
+// 1791 — never to a same-named ancestor from another generation.
 function extractYears(name) {
-  // Extract birth from "James Telfer (1761–1845)", "Mark Telfer (1986–living)", "John Telfer (~1731–?)"
+  // Extract birth from "James Telfer (1761–1845)", "Mark Telfer (1986–living)",
+  // "John Telfer (~1731–?)", or "John Telfer (b. ~1791, England)".
   // First try full lifespan: YYYY–YYYY or YYYY–living or YYYY–?
-  const match = name.match(/\s*\(~?(\d{4})\s*[–-]\s*(\d{4}|living|\?)\)\s*$/);
+  const match = name.match(/\(\s*(?:b\.?\s*|c\.?\s*|ca\.?\s*|abt\.?\s*|about\s*|~+\s*)*(\d{4})\s*[–-]\s*(\d{4}|living|\?)\s*[,)]/i);
   if (match) {
     const death = match[2] === 'living' || match[2] === '?' ? null : parseInt(match[2]);
     return { birth: parseInt(match[1]), death };
   }
-  // Just a single year: "John Telfer (1847)"
-  const single = name.match(/\s*\(~?(\d{4})\)\s*$/);
+  // Just a single year: "John Telfer (1847)" — also "(b. ~1791, England)".
+  const single = name.match(/\(\s*(?:b\.?\s*|c\.?\s*|ca\.?\s*|abt\.?\s*|about\s*|~+\s*)*(\d{4})\b/i);
   if (single) return { birth: parseInt(single[1]), death: null };
   return null;
 }
@@ -545,7 +562,27 @@ people.forEach(p => {
                    : field === 'siblings' ? 'sibling'
                    : 'spouse';
     
-    const newRefs = p[field].map(ref => {
+    // SIBLINGS DECLARED ONLY IN `relationships:` (2026-10-25).
+    // `relationships:` is the canonical field, but a profile may name a sibling ONLY
+    // there — as both Telfer ancestors do ("Self: … | Sibling: …") — leaving the
+    // derived `siblings:` array empty. Iterating `siblings` alone meant that edge
+    // could never form: John Telfer (~1791) ended with no sibling while Elisabeth
+    // (~1806) carried the raw string, which is exactly the asymmetry reported.
+    // When the derived array is empty, fall back to the sibling names declared in
+    // `relationships:`. The resolution rules are IDENTICAL — same resolveRef, same
+    // year and ambiguity gates — so an unresolvable name still stays a raw string
+    // rather than being guessed into a relative.
+    let source = Array.isArray(p[field]) ? p[field] : [];
+    if (source.length === 0 && field === 'siblings' && Array.isArray(p.relationships)) {
+      const declared = [];
+      for (const rel of p.relationships) {
+        if (!rel || String(rel.type || '').toLowerCase() !== 'sibling') continue;
+        for (const n of rel.names || []) if (n) declared.push(n);
+      }
+      source = declared;
+    }
+
+    const newRefs = source.map(ref => {
       if (slugSet.has(ref)) return ref;
       
       const resolved = resolveRef(ref, { subjectBirth, subjectDeath, relation });

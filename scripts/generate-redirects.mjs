@@ -77,11 +77,36 @@ for (const p of people) {
   const oldSlug = birthYear ? `${bareSlug}-${birthYear}` : bareSlug;
 
   // Case 1: Old year-suffixed slug is different from new slug → redirect
-  if (oldSlug !== newSlug) {
+  //
+  // FIXED 2026-10-25 (the redirect log claimed a direction the site never had).
+  // `oldSlug` is GUESSED from first+last+birth_year; it is not a record of the URL
+  // that actually existed. When `Marion Lawrie (1838–1920)` was added, the group
+  // "marion lawrie" went from one member to two, so the colliding member who had
+  // held the BARE slug `marion-lawrie` became `marion-lawrie-1888` — and the new
+  // arrival took the bare slug. This branch then computed oldSlug
+  // `marion-lawrie-1888` and "redirected" it to `marion-lawrie`: exactly BACKWARDS,
+  // and it pointed a live page at a different woman. Case 3 (which exists for this
+  // very situation) never fired because the bare slug was claimed in this run.
+  // Still worse, `janet-lawrie` got no entry at all: her guessed oldSlug equalled
+  // her new slug, so nothing was emitted and the old URL was left with no redirect.
+  //
+  // The rule that actually holds: the real old URL is the BARE slug when the
+  // person's group is now conflicted, and the year-suffixed form when it is not.
+  // Identity lives in the SLUG, never in a plausible-looking derivation.
+  const groupMembers = people.filter((q) => {
+    const qf = (q.first_name || '').toLowerCase();
+    const ql = (q.last_name || '').toLowerCase();
+    return `${qf}-${ql}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-') === bareSlug;
+  });
+  const groupConflicted = groupMembers.length > 1;
+  // In a conflicted group, the URL that used to be this person's is the bare slug —
+  // unless they still hold the bare slug, in which case their URL has not changed.
+  const actualOldSlug = groupConflicted && newSlug !== bareSlug ? bareSlug : oldSlug;
+  if (actualOldSlug !== newSlug && !canonicalSlugs.has(actualOldSlug)) {
     pushRedirect({
-      from: oldSlug,
+      from: actualOldSlug,
       to: newSlug,
-      reason: oldSlug.includes(String(birthYear || '')) ? 'lost-year' : 'slug-changed',
+      reason: actualOldSlug.includes(String(birthYear || '')) ? 'lost-year' : 'slug-changed',
       display_name: p.display_name
     });
   }
@@ -199,16 +224,31 @@ const uniqueRedirects = redirects.filter(r => {
 });
 
 // Load existing Astro-generated pages to avoid collisions
-const existingPages = new Set();
+//
+// FIXED 2026-10-25 (stale dist/ silently deleted a needed redirect).
+// `dist/people/marion-lawrie/` still held a REAL page from the previous build,
+// from when Marion Vida Lawrie held the bare slug. The new build gives that URL
+// to Marion Lawrie (1838–1920), so the alias `marion-lawrie → marion-lawrie-1888`
+// is exactly what legacy links need. But this scan saw the OLD file, called it a
+// live page, and skipped the redirect — then wrote the SKIP into redirect-log.json,
+// so the crown-jewel guard was told "nothing was renamed" and reported the person
+// as VANISHED. One stale build directory, two misleading failures.
+//
+// The build output is a DERIVED artefact: dist/ describes the LAST build, never the
+// data in hand. Treat a page as existing only when its slug is still canonical
+// TODAY; a slug the current people.json no longer claims cannot be owned by the
+// current build, whatever yesterday left on disk.
+const DROP_IF_PAGE_EXISTS = new Set();
 if (fs.existsSync(DIST_DIR)) {
   const entries = fs.readdirSync(DIST_DIR, { withFileTypes: true });
   for (const entry of entries) {
+    if (!canonicalSlugs.has(entry.name)) continue; // stale page — not this build's
     if (entry.isDirectory()) {
       const pageFile = path.join(DIST_DIR, entry.name, 'index.html');
       if (fs.existsSync(pageFile)) {
         const content = fs.readFileSync(pageFile, 'utf-8');
         if (!content.includes('http-equiv="refresh"')) {
-          existingPages.add(entry.name);
+          DROP_IF_PAGE_EXISTS.add(entry.name);
         }
       }
     }
@@ -221,7 +261,7 @@ if (fs.existsSync(DIST_DIR)) {
 // supposed to remove these, and a silent skip rots. See
 // src/data/privacy-exclusions.mjs.
 const filteredRedirects = uniqueRedirects.filter(r => {
-  if (existingPages.has(r.from)) {
+  if (DROP_IF_PAGE_EXISTS.has(r.from)) {
     console.log(`  ⏭️  SKIP (page exists): ${r.from} → ${r.to}  (${r.display_name})`);
     return false;
   }
