@@ -91,6 +91,35 @@ RR="$(node scripts/resolve-refs.mjs --write 2>&1)" || {
 echo "$RR" | grep -E 'RESOLVED|Remaining unresolved|Wrote' | head -5
 
 echo
+echo "==> Step 2e/3: CROWN-JEWEL DATA-LOSS GUARD (added 2026-10-24)"
+# WHY HERE, IMMEDIATELY AFTER resolve-refs.mjs
+# -------------------------------------------------
+# resolve-refs.mjs is the step that destroyed family data on 2026-10-24. It
+# resolves a display name to a slug by NAME, ignoring birth/death years, so
+# 'Alexander Lawrie (1853–1853)' resolved to alexander-lawrie-1776 — the man's own
+# grandfather. The result was a resolver that quietly produced a SMALLER set of
+# correct-looking relationships, and every downstream gate exited 0.
+#
+# The guard compares the working people.json against git HEAD. A shrink fails the
+# regen HERE — before sanitize writes people.public.json, before the snapshot
+# refresh, before anything can be committed or pushed to telferwiki.com.
+#
+# It also files a Can Do Board card on failure, per Mark's 24 Oct rule: a fired
+# data-loss guard must be waiting for him at the 07:00 check, not buried in a log.
+GJ="$(node scripts/guard-crown-jewels.mjs 2>&1)" || {
+  echo "$GJ"
+  echo ""
+  echo "CROWN-JEWEL GUARD FAILED — the pipeline just tried to LOSE family data."
+  echo "Filing the Can Do Board card for the 07:00 check…"
+  node scripts/crown-jewel-alarm.mjs || true
+  echo ""
+  echo "Recover with:  git checkout -- src/data/people.json"
+  echo "Then fix the RESOLVER (date/generation sanity), not the data."
+  exit 1
+}
+echo "$GJ" | tail -3
+
+echo
 echo "==> Step 3/3: verify gate-clean (validate-no-mark-refs.py)"
 # tw-2026-09-13-023: the gate used to run ONLY on src/data/*.json -- the GENERATED
 # output. The vault markdown, which is the actual publishing source and the thing a

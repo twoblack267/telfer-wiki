@@ -1,0 +1,55 @@
+#!/bin/sh
+# telfer-wiki pre-commit (repo-local). Installed 2026-10-09 alongside the fix for
+# tw-2026-09-27-001 (stale committed CI snapshots, 3rd recurrence). Deliberately
+# a plain shell hook with no dependency on husky being installed or
+# core.hooksPath being set — that dependency is exactly why the .husky/pre-commit
+# version silently never ran.
+#
+# Bypass in a genuine emergency only:  git commit --no-verify
+
+# ── CROWN-JEWEL / DATA-LOSS GATE (added 2026-10-24) ───────────────────────────
+# WHY THIS IS FIRST: regenerate-data.sh destroyed real family data twice on
+# 2026-10-24 (john-lawrie-1810 lost 7 of 8 children; william-telfer-1802 lost his
+# wife and both parents) and BOTH times every other guard stayed green. Nothing in
+# the pipeline asserted that a generated record may not lose relatives it had.
+#
+# This compares the STAGED src/data/people.json against git HEAD and fails the
+# commit when a relationship count shrank or a profile vanished. A push deploys to
+# telferwiki.com, so the commit is the last gate before damage goes public.
+#
+# Mark's rule (24 Oct 2026): a fired guard must land on the Can Do Board for the
+# 07:00 check, not just print to a log. crown-jewel-alarm.mjs files the card and
+# proves it landed. It is called here so the card exists the moment the damage is
+# first noticed — including when the commit is refused and the human walks away.
+#
+# The guard exits 0 clean / 1 regression / 2 blind. Blind must not be confused
+# with clean, so 2 is treated as a refusal too.
+if git diff --cached --name-only | grep -q '^src/data/people\.json$'; then
+  echo "pre-commit: crown-jewel data-loss guard (people.json is staged)…"
+  node scripts/guard-crown-jewels.mjs
+  GJ=$?
+  if [ "$GJ" -ne 0 ]; then
+    echo ""
+    if [ "$GJ" -eq 2 ]; then
+      echo "pre-commit BLOCKED: the guard could not run. That is BLIND, not clean."
+    else
+      echo "pre-commit BLOCKED: family data would be LOST by this commit."
+      echo "Filing a Can Do Board card so the 07:00 check picks it up…"
+      node scripts/crown-jewel-alarm.mjs || true
+    fi
+    echo ""
+    echo "Recover with:  git checkout -- src/data/people.json"
+    echo "Then find which pipeline step dropped the entries — do NOT hand-edit the JSON."
+    echo "If the shrink is a deliberate vault correction:"
+    echo "  node scripts/guard-crown-jewels.mjs --allow-shrink <slug>:<field>"
+    exit 1
+  fi
+fi
+
+echo "pre-commit: snapshot freshness…"
+if ! node scripts/check-snapshot-freshness.mjs; then
+  echo ""
+  echo "pre-commit BLOCKED: stage the regenerated snapshot(s) before committing."
+  echo "  git add scripts/family-rows.snapshot.json scripts/vault-notes.snapshot.json"
+  exit 1
+fi
