@@ -388,12 +388,17 @@ function extractBodyStepRelations(body) {
     }
   }
 
-  // 2) Prose lines:  Stepfather: [[X]]  /  Stepmother: X (annotation)
-  const lineRe = /^\s*(Step(?:father|mother|parent|children|child)s?)\s*:\s*(.+)$/gim;
+  // 2) Prose lines:  Stepfather: [[X]]  /  **Stepfather:** [[X]]  /  Stepmother: X (annotation)
+  //    The markdown-bold form (`**Stepfather:** [[X]]`, colon INSIDE the bold) is the
+  //    style used by Mark's own profile and by most modern pages in this vault. The
+  //    original pattern required the label to be immediately followed by ":", so every
+  //    bolded declaration was invisible — which is how Mark Kenneth Telfer's two
+  //    step-parents vanished from the data despite being written plainly in the vault.
+  const lineRe = /^\s*\*{0,2}(Step(?:father|mother|parent|children|child)s?)\s*:?\*{0,2}\s*:\s*(.+)$/gim;
   let line;
   while ((line = lineRe.exec(body)) !== null) {
     const label = line[1].toLowerCase();
-    const rest = line[2].trim();
+    const rest = line[2].trim().replace(/^\*{1,2}\s*/, '').replace(/\s*\*{1,2}$/, '');
     const names = [];
     pushWikilinks(names, rest);
     if (names.length === 0) {
@@ -716,7 +721,12 @@ function main() {
     const toArr = (v) => (Array.isArray(v) ? v.map(String) : (v ? [String(v)] : []));
     stepChildren.push(...toArr(fm.stepchildren));
     stepParents.push(...toArr(fm.stepfather), ...toArr(fm.stepmother));
-    // No flat-field sibling support: sibling lists only come from the string form.
+    // Flat-field siblings (added 2026-10-24). Sibling lists previously came ONLY from
+    // the `relationships:` string, so with the derived arrays no longer re-ingested
+    // there was no way to rebuild them for flat-schema files. Accept `siblings:` in
+    // frontmatter, array or string, and merge only when the string form is silent.
+    const flatSiblings = toArr(fm.siblings);
+    if (siblings.length === 0 && flatSiblings.length > 0) siblings.push(...flatSiblings);
 
 
     const roles = extractRoles(body);
@@ -963,30 +973,31 @@ function main() {
         existing.body_markdown = entry.body_markdown;
         existing.body_stripped = entry.body_stripped;
       }
-      // If the vault file explicitly had a relationships field, trust what we parsed
-      // (even if empty — this allows removing children/spouses etc by omitting them).
-      // Only fall back to existing data when relationships was entirely absent.
-      if (fm.relationships && typeof fm.relationships === 'string') {
-        existing.parents = parents;
-        existing.children = children;
-        existing.siblings = siblings;
-        existing.spouses = spouses;
-      } else {
-        // No relationships field in vault — keep existing denormalized data
-        existing.parents = parents.length > 0 ? parents : existing.parents;
-        existing.children = children.length > 0 ? children : existing.children;
-        existing.siblings = siblings.length > 0 ? siblings : existing.siblings;
-        existing.spouses = spouses.length > 0 ? spouses : existing.spouses;
-      }
+      // THE VAULT IS TRUTH — ALWAYS (2026-10-24).
+      //
+      // This used to fall back to `existing.*` whenever the file had no
+      // `relationships:` string, e.g. the 7 Baker files that use the older flat
+      // schema (`father:` / `mother:`). That fallback kept a *stale derived* value
+      // alive whenever the vault legitimately resolved to nothing, so a wrong
+      // parent/sibling could never be cleaned up by editing the vault — the merge
+      // quietly reinstated it. Combined with build-relationship-graph.mjs
+      // re-ingesting the same arrays (removed the same day), those arrays had become
+      // self-confirming: derived values feeding themselves back as evidence.
+      //
+      // A vault file is the source of truth for what it does and does not declare,
+      // whether it declares that in the `relationships:` string, in flat
+      // `father:`/`mother:`/`children:` fields, or not at all. An empty result is a
+      // real answer, not a reason to restore yesterday's guess. Everything in these
+      // four arrays is either an unresolved raw name (preserved on the record) or a
+      // slug rebuilt from the vault this run.
+      existing.parents = parents;
+      existing.children = children;
+      existing.siblings = siblings;
+      existing.spouses = spouses;
       // Step arrays carry the same trust rule as the biological ones: a vault file
       // that declares relationships is authoritative for what it omits (2026-09-22).
-      if (fm.relationships && typeof fm.relationships === 'string') {
-        existing.step_parents = stepParents;
-        existing.step_children = stepChildren;
-      } else {
-        existing.step_parents = stepParents.length > 0 ? stepParents : (existing.step_parents || []);
-        existing.step_children = stepChildren.length > 0 ? stepChildren : (existing.step_children || []);
-      }
+      existing.step_parents = stepParents;
+      existing.step_children = stepChildren;
       existing.related_trees = entry.related_trees;
       // Card tw-2026-09-13-031: this merge is an ALLOWLIST of copied fields, so a
       // new field must be listed here or it is silently dropped. parentage_status

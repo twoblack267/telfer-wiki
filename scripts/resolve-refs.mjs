@@ -9,6 +9,15 @@
  */
 
 import fs from 'fs';
+import { checkYears } from './lib/date-gate.mjs';
+
+/**
+ * Relations whose dates can be judged against. Must stay in step with date-gate.mjs
+ * (which exports its own copy as a private constant); 'spouse' is included because
+ * date-gate bounds it, but no spouse reference is ever REFUSED on dates alone here —
+ * date-gate only rejects gaps beyond SPOUSE_SPAN.
+ */
+const JUDGEABLE_RELATIONS = new Set(['parent', 'child', 'sibling', 'spouse']);
 
 const PEOPLE_JSON = './src/data/people.json';
 const people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
@@ -306,46 +315,51 @@ function resolveRef(name, context = null) {
     return true;
   });
 
-  // ── GENERATION PREFERENCE (2026-09-22, card tw-2026-09-22-011) ─────────────
-  // Two independent models reviewing this resolver (Nemotron 3 Ultra, Grok 4.20)
-  // both recommended constraining candidates by generation, and both warned that an
-  // age check applied AFTER binding is a band-aid. This is applied to the candidate
-  // POOL, before one is chosen.
+  // ── GENERATION FILTER (2026-10-24, the alexander-lawrie-1776 fix) ─────────
+  // This WAS a preference, not a filter. That was the bug.
   //
-  // DELIBERATELY A PREFERENCE, NOT A FILTER. An earlier attempt FILTERED the pool
-  // and stranded legitimate refs. A filter can only ever remove options; a
-  // preference can only reorder them. So this changes WHICH of several same-name
-  // candidates wins and can never leave a ref unresolved.
+  // The 2026-09-22 note below argued a filter "can only ever remove options" and
+  // so this stayed a reorder. But when the pool offered NO generation-consistent
+  // candidate — which is exactly what happens when the intended person has no
+  // profile — the preference did nothing and the code fell through to a name-only
+  // pick. Result on the live site: john-lawrie-1810 (b.1810) recorded as the
+  // father of alexander-lawrie-1776 (b.1776), his own grandfather, and as the
+  // father of two granddaughters born 1881 and 1888.
   //
-  // NOTE: the subject's birth year arrives on `context` (see the call site:
-  // `resolveRef(ref, { subjectBirth, relation })`) — NOT as a bare `subjectBirth`.
-  // Referencing it directly threw ReferenceError and crashed the whole script on the
-  // first attempt, which corrupted people.json mid-write and produced a bogus
-  // "1725 research gaps" reading. Verify the pipeline actually RUNS, not just that
-  // it exits non-zero for a reason you assumed.
+  // The 2026-09-22 conclusion was still right about the SYMPTOM it was fixing —
+  // don't take options away. It was wrong about the remedy, because the refs it
+  // was protecting were refs where SOME candidate fit. A ref where NO dated
+  // candidate fits is not a ref that needs a preference; it is a ref whose person
+  // does not exist in the data, and binding it to the closest namesake fabricates
+  // an edge. Refusing it keeps the raw name and leaves a visible research gap,
+  // which is the same principle, applied consistently.
+  //
+  // So: hard-filter when the pool contains at least one DATED candidate. If every
+  // dated candidate is contradicted, the ref cannot resolve → return null → the
+  // raw name is preserved by the caller. Undated candidates are never filtered
+  // (no evidence either way), so a wholly-undated pool behaves exactly as before.
   const subjectBirth = context?.subjectBirth ?? null;
+  const subjectDeath = context?.subjectDeath ?? null;
   const relation = context?.relation ?? null;
-  if (subjectBirth && candidates.length > 1) {
-
-    const YOUNGEST_GAP = 11;   // a parent is at least ~11y older than their child
-    // MEASURED 2026-09-22 against the live tree: the LARGEST genuine father-child
-    // birth gap in the whole dataset is 51 years (adam-murray-1728 -> john-murray-1779);
-    // median 33, n=9 known dated pairs. 60 is therefore safely above every real gap
-    // while rejecting the collision cases (67y, 95y, 108y). 70 was tried first and
-    // changed nothing because 67 fit inside it.
-    const MAX_CHILD_SPAN = 60;
-    const SIBLING_SPAN = 40;   // widest plausible sibling birth spread
-    const consistent = candidates.filter((c) => {
-      const cy = c.birth;
-      if (!cy) return true; // undated — cannot judge, always acceptable
-      if (relation === 'child') return cy > subjectBirth && (cy - subjectBirth) <= MAX_CHILD_SPAN;
-      if (relation === 'parent') return cy < subjectBirth && (subjectBirth - cy) >= YOUNGEST_GAP;
-      if (relation === 'sibling') return Math.abs(cy - subjectBirth) <= SIBLING_SPAN;
-      return true;
-    });
-    // Prefer the generation-consistent subset, but ONLY when it is non-empty.
-    // Otherwise keep the full pool — a preference must never strand a reference.
-    if (consistent.length > 0) candidates = consistent;
+  if (subjectBirth != null && candidates.length > 0 && JUDGEABLE_RELATIONS.has(relation)) {
+    const dated = candidates.filter((c) => c.birth != null);
+    if (dated.length > 0) {
+      const consistent = candidates.filter(
+        (c) =>
+          checkYears({
+            relation,
+            subjectBirth,
+            subjectDeath,
+            candBirth: c.birth,
+            candDeath: c.death,
+          }).ok
+      );
+      if (consistent.length === 0) {
+        // Every dated namesake contradicts the dates. Refuse rather than fabricate.
+        return null;
+      }
+      candidates = consistent;
+    }
   }
 
   if (candidates.length === 0) {
@@ -362,6 +376,28 @@ function resolveRef(name, context = null) {
       }
     }
   } else if (candidates.length === 1) {
+    // FIXED 2026-10-24 (the neil-telfer father, and the reason this gate kept leaking):
+    // A SINGLE candidate used to return here, BEFORE the generation filter above ran.
+    // That made the date gate decorative in the most common case — a full-name ref that
+    // matches one person. Neil Ronald Telfer (b.1936) names his father as "John Ernest
+    // Telfer"; exactly one record answers to that name (john-telfer-1877, b.1877,
+    // d.1877), so this branch fired and gave him a father who died 59 years before his
+    // birth. The multi-candidate branch was filtered; the single-candidate branch was
+    // not. Any ref whose namesake pool happened to collapse to one person bypassed the
+    // gate entirely — including the impossible ones.
+    //
+    // The gate now runs HERE too. A single dated candidate that contradicts the dates is
+    // refused (returns null → raw name preserved → a visible research gap), because the
+    // intended person has no profile. An undated single candidate is still accepted;
+    // absence of dates is not evidence of impossibility.
+    if (subjectBirth != null && JUDGEABLE_RELATIONS.has(relation)) {
+      const one = candidates[0];
+      if (one.birth != null) {
+        if (!checkYears({ relation, subjectBirth, subjectDeath, candBirth: one.birth, candDeath: one.death }).ok) {
+          return null;
+        }
+      }
+    }
     // Single candidate, verify with years if available
     if (years && years.birth) {
       // If years match, use it
@@ -462,6 +498,8 @@ const selfRefs = [];
 
 people.forEach(p => {
   const subjectBirth = p.birth_year;
+  // subjectDeath is needed so a child born AFTER their parent died is refused.
+  const subjectDeath = p.death_year;
   
   fields.forEach(field => {
     if (!p[field] || !Array.isArray(p[field])) return;
@@ -473,7 +511,7 @@ people.forEach(p => {
     const newRefs = p[field].map(ref => {
       if (slugSet.has(ref)) return ref;
       
-      const resolved = resolveRef(ref, { subjectBirth, relation });
+      const resolved = resolveRef(ref, { subjectBirth, subjectDeath, relation });
       
       if (resolved && resolved !== ref) {
         // Check for self-reference

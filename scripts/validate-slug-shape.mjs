@@ -131,14 +131,40 @@ const MIN_PARENT_GAP = 11; // a parent younger than this is impossible
 /** Birth year of a person, or null. */
 const birthOf = (p) => (p && typeof p.birth_year === 'number' ? p.birth_year : null);
 
+/** Death year of a person, or null. Added 2026-10-24 — see generationPlausible. */
+const deathOf = (p) => (p && typeof p.death_year === 'number' ? p.death_year : null);
+
 /**
  * Does `candidate` make sense as the `field` relation of `person`?
  * Only used for the bare-name test, where the years are the sole evidence we have.
  * Unknown years never disqualify (they cannot contradict) — silence is not a defect.
+ *
+ * ADDED 2026-10-24 — DEATH DATES AND EXISTING EVIDENCE NOW COUNT.
+ * This function previously read only birth_year, so it demanded bindings the resolver
+ * had correctly refused. Four live false positives, and two of them were dangerous:
+ *   • neil-telfer (b.1936) → "John Ernest Telfer" offered john-telfer-1877, who DIED
+ *     in 1877. A man dead 59 years before the child was born is not his father.
+ *   • richard-paynter-of-calstock → "Elizabeth Paynter" offered elizabeth-paynter-1864,
+ *     who ALREADY has richard-paynter-1838 as her father. Binding it gives her three
+ *     parents and lists her grandfather as a father.
+ * A guard that demands a fabricated edge is worse than no guard: it trains you to
+ * ignore it, and then it cannot protect you from anything.
  */
 function generationPlausible(person, field, candidate) {
   const self = birthOf(person);
   const other = birthOf(candidate);
+  const selfDeath = deathOf(person);
+  const otherDeath = deathOf(candidate);
+
+  // A parent who died before their child was born is impossible, whatever the births say.
+  if (field === 'children' && selfDeath != null && other != null && other > selfDeath) return false;
+  if (field === 'parents' && otherDeath != null && self != null && self > otherDeath) return false;
+  // Two people whose lifespans never overlap cannot be spouses or siblings.
+  if ((field === 'spouses' || field === 'siblings') &&
+      self != null && selfDeath != null && other != null && otherDeath != null) {
+    if (otherDeath < self || selfDeath < other) return false;
+  }
+
   if (self == null || other == null) return true; // no evidence either way
   const gap = other - self; // positive = other is younger than person
   if (field === 'parents') {
@@ -171,6 +197,7 @@ function resolvableName(ref, person, field) {
   if (displayLower.has(lower)) {
     const slug = displayLower.get(lower);
     if (person && field && !generationPlausible(person, field, bySlug.get(slug))) return null;
+    if (person && field && !evidenceFree(person, field, bySlug.get(slug))) return null;
     return { slug, how: 'display_name' };
   }
   const bare = stripAnnotation(ref).toLowerCase().trim();
@@ -178,13 +205,50 @@ function resolvableName(ref, person, field) {
   if (!candidates) return null;
   // keep only candidates whose years do not contradict the relationship
   const plausible = person && field
-    ? candidates.filter((s) => generationPlausible(person, field, bySlug.get(s)))
+    ? candidates.filter((s) => generationPlausible(person, field, bySlug.get(s)) &&
+                               evidenceFree(person, field, bySlug.get(s)))
     : candidates;
   if (plausible.length === 1) return { slug: plausible[0], how: 'first+last' };
   if (plausible.length > 1) {
     return { slug: null, how: `first+last (${plausible.length} candidates)`, ambiguous: true };
   }
   return null; // every namesake is the wrong generation → this person has no profile
+}
+
+/**
+ * ADDED 2026-10-24 — would binding this candidate claim something the data already
+ * contradicts or already answers otherwise?
+ *
+ * The live case: richard-paynter-of-calstock (b.1816) lists a raw child "Elizabeth
+ * Paynter", and elizabeth-paynter-1864 is the only namesake. Dates alone say the link
+ * is possible (48-year gap), but she ALREADY has richard-paynter-1838 recorded as her
+ * father — so of-calstock is her GRANDFATHER. Binding the raw name would give her
+ * three parents and a grandparent as a father.
+ *
+ * The resolver refuses this because a raw name with a competing confirmed parent is
+ * not evidence of a missing edge. The guard must apply the same reasoning, or it
+ * spends its life demanding fabrications.
+ */
+function evidenceFree(person, field, candidate) {
+  if (!person || !candidate) return true;
+  // Accept either a slug or a person object. Callers in this file pass an already
+  // resolved object (bySlug.get(s)); a version that resolved it a SECOND time here
+  // silently returned true for every input, so the check never fired. Handle both.
+  const target = typeof candidate === 'string' ? bySlug.get(candidate) : candidate;
+  if (!target) return true;
+  // Only parent/child can be "already answered". Someone can have many spouses and
+  // siblings; nobody has a second biological father.
+  if (field === 'children') {
+    const existingParents = Array.isArray(target.parents) ? target.parents : [];
+    const confirmed = existingParents.filter((s) => typeof s === 'string' && bySlug.has(s));
+    if (confirmed.length && !confirmed.includes(person.slug)) return false;
+  }
+  if (field === 'parents') {
+    const existingChildren = Array.isArray(target.children) ? target.children : [];
+    const confirmed = existingChildren.filter((s) => typeof s === 'string' && bySlug.has(s));
+    if (confirmed.length && !confirmed.includes(person.slug)) return false;
+  }
+  return true;
 }
 
 // ── Measure ──────────────────────────────────────────────────────────────────

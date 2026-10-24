@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-24T08:49:07.400Z",
+  "checkedAt": "2026-10-24T13:58:20.797Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -8,5 +8,264 @@
   },
   "crownJewelsChecked": 5,
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "agnes-paynter-1895",
+      "name": "Agnes Paynter",
+      "field": "children",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "george-hucks-1875"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "beth-telfer-1946",
+      "name": "Beth Telfer",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "jessie-allan"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "colin-lindsay-beaton-1915",
+      "name": "Colin Lindsay Beaton",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "elizabeth-beattie-telfer-1871"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "elizabeth-liebich-1859",
+      "name": "Elizabeth Jane Liebich",
+      "field": "children",
+      "before": 8,
+      "after": 6,
+      "lost": 2,
+      "lostEntries": [
+        "richard-paynter-1838",
+        "thomas-paynter-1859"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "francis-telfer-1809",
+      "name": "Francis Telfer",
+      "field": "children",
+      "before": 8,
+      "after": 7,
+      "lost": 1,
+      "lostEntries": [
+        "james-telfer-1829"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "hannah-peacock-1862",
+      "name": "Hannah Peacock",
+      "field": "children",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "jean-telfer-1910"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "herbert-clifford-holloway-1887",
+      "name": "Herbert Clifford Holloway",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "elizabeth-farrow"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "ian-telfer-1947",
+      "name": "Ian Telfer",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "jessie-allan"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "james-robert-telfer-1866",
+      "name": "James Robert Telfer",
+      "field": "children",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "jean-telfer-1910"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "james-telfer-1761",
+      "name": "James Telfer",
+      "field": "children",
+      "before": 15,
+      "after": 10,
+      "lost": 5,
+      "lostEntries": [
+        "james-telfer-1762",
+        "adam-telfer-1771",
+        "john-telfer-1791",
+        "francis-telfer-1768",
+        "william-telfer-1802"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "james-telfer-1796",
+      "name": "James Telfer",
+      "field": "children",
+      "before": 12,
+      "after": 7,
+      "lost": 5,
+      "lostEntries": [
+        "john-telfer-1805",
+        "robert-telfer-1803",
+        "margaret-telfer-1801",
+        "adam-telfer-1799",
+        "jean-telfer-1840",
+        "agnes-telfer-1848"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "jean-telfer-1840",
+      "name": "Jean Telfer",
+      "field": "children",
+      "before": 12,
+      "after": 10,
+      "lost": 2,
+      "lostEntries": [
+        "margaret-parker",
+        "frederick-parker"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "joseph-march-1797",
+      "name": "Joseph March",
+      "field": "children",
+      "before": 11,
+      "after": 10,
+      "lost": 1,
+      "lostEntries": [
+        "sophia-march-1803"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "julia-matilda-seebohm-1876",
+      "name": "Julia Matilda Seebohm",
+      "field": "children",
+      "before": 8,
+      "after": 7,
+      "lost": 1,
+      "lostEntries": [
+        "murray-telfer-1924"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "lancelot-watson-1888",
+      "name": "Lancelot Hobart Watson",
+      "field": "children",
+      "before": 1,
+      "after": 0,
+      "lost": 1,
+      "lostEntries": [
+        "john-watson-1916"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "margaret-telfer-1810",
+      "name": "Margaret Wright Telfer",
+      "field": "children",
+      "before": 4,
+      "after": 3,
+      "lost": 1,
+      "lostEntries": [
+        "john-telfer-1840"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "martha-allen-1840",
+      "name": "Martha Allen",
+      "field": "children",
+      "before": 6,
+      "after": 5,
+      "lost": 1,
+      "lostEntries": [
+        "susan-telfer-1844",
+        "james-telfer-1858"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "robert-telfer-1803",
+      "name": "Robert Telfer",
+      "field": "children",
+      "before": 4,
+      "after": 0,
+      "lost": 4,
+      "lostEntries": [
+        "elizabeth-beattie-telfer-1832",
+        "james-telfer-1829",
+        "jean-telfer-1840",
+        "john-telfer-1840"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "robert-telfer-1835",
+      "name": "Robert Telfer",
+      "field": "children",
+      "before": 9,
+      "after": 6,
+      "lost": 3,
+      "lostEntries": [
+        "elizabeth-hannah-telfer-1836",
+        "susan-telfer-1844",
+        "william-telfer-1841",
+        "robert-telfer-1886"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "henry-parker",
+      "name": "Henry Kelly Parker",
+      "field": "spouses",
+      "before": 1,
+      "after": 0,
+      "lost": 1,
+      "lostEntries": [
+        "elizabeth-parker-1879"
+      ]
+    }
+  ]
 }

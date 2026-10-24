@@ -106,7 +106,12 @@ echo "==> Step 2e/3: CROWN-JEWEL DATA-LOSS GUARD (added 2026-10-24)"
 #
 # It also files a Can Do Board card on failure, per Mark's 24 Oct rule: a fired
 # data-loss guard must be waiting for him at the 07:00 check, not buried in a log.
-GJ="$(node scripts/guard-crown-jewels.mjs 2>&1)" || {
+# DECLARED SHRINK CORRECTIONS (2026-10-24). These two crown fields were corrected
+# against the vault, not lost: william-telfer-1802's 5 "children" included 3 people
+# who are not his (his brother and two others the vault places elsewhere), and
+# andrew-telfer-1798 is his BROTHER, not his son. The refusals are the fix. Declaring
+# them keeps the guard meaningful for every other field instead of lowering its floor.
+GJ="$(node scripts/guard-crown-jewels.mjs --allow-shrink william-telfer-1802:children --allow-shrink andrew-telfer-1798:children 2>&1)" || {
   echo "$GJ"
   echo ""
   echo "CROWN-JEWEL GUARD FAILED — the pipeline just tried to LOSE family data."

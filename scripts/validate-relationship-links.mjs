@@ -127,10 +127,31 @@ function checkPage(file) {
       const withdrawn = plainNameOf(relSlug);
       if (withdrawn) {
         checkedRelations++;
-        const nameOk = section.includes(withdrawn);
-        // Look for a link whose text is the withdrawn person's name.
+        // HTML-ESCAPING (fixed 2026-10-24). Names containing quotes arrive in the
+        // markup as &quot; — `Ernest Richard "Bob" Easter` is rendered
+        // `Ernest Richard &quot;Bob&quot; Easter`. Comparing the raw name against
+        // escaped HTML reported seven correctly-rendered names as MISSING. The
+        // renderer was right; the checker was comparing two different alphabets.
+        const withdrawnHtml = withdrawn
+          .replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+        const nameOk = section.includes(withdrawn) || section.includes(withdrawnHtml);
+        // Look for a link whose TEXT IS the withdrawn person's name.
+        //
+        // FIXED 2026-10-24: this used to be `[^>]*>[^<]*NAME` — "any link whose text
+        // contains NAME". That is not the same claim. On Douglas Telfer's page the
+        // Siblings list holds a genuine link to Mark Telfer 1877 (`>Mark Telfer<`)
+        // followed later by the withdrawn `{plain_name:"Mark"}` rendered correctly
+        // as a <span>. `[^<]*Mark` walked from the real link's text straight past
+        // its closing tag into the span and reported a false positive — 109 of them
+        // across the site, every one of them a page that was rendering correctly.
+        // A checker that cries wolf 109 times gets ignored, which is worse than no
+        // checker at all.
+        //
+        // Correct assertion: the link's inner text must BE the name, not contain it.
+        // Anchored after `>` and closed by the next `<`, so it cannot cross a tag
+        // boundary; optional trailing whitespace tolerates pretty-printing.
         const linkToThem = new RegExp(
-          `<a\\s[^>]*href="[^"]*people\\/[^"]*"[^>]*>[^<]*${escapeRegExp(withdrawn)}`
+          `<a\\s[^>]*href="[^"]*people\\/[^"]*"[^>]*>\\s*${escapeRegExp(withdrawn)}\\s*<`
         );
         const noLink = !linkToThem.test(section);
         if (!nameOk) {

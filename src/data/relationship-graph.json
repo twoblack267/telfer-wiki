@@ -238,7 +238,7 @@
     {
       "slug": "colin-lindsay-beaton-1915",
       "id": "Colin Lindsay Beaton (1915)",
-      "generation": 6
+      "generation": 7
     },
     {
       "slug": "colin-paynter-1919",
@@ -328,7 +328,7 @@
     {
       "slug": "edward-telfer",
       "id": "Edward Telfer",
-      "generation": 4
+      "generation": 99
     },
     {
       "slug": "edwin-ernest-clarke",
@@ -483,7 +483,7 @@
     {
       "slug": "esther-farrow",
       "id": "Esther Farrow",
-      "generation": 5
+      "generation": 99
     },
     {
       "slug": "esther-hannah-farrow",
@@ -1673,7 +1673,7 @@
     {
       "slug": "william-telfer-1841",
       "id": "William Telfer (1841)",
-      "generation": 4
+      "generation": 5
     },
     {
       "slug": "william-telfer-shepherd",
@@ -1868,7 +1868,7 @@
     {
       "slug": "neil-telfer",
       "id": "Neil Telfer (1936)",
-      "generation": 6
+      "generation": 8
     },
     {
       "slug": "roland-telfer",
@@ -2017,8 +2017,8 @@
     },
     {
       "slug": "alexander-telfer-1841",
-      "id": "Alexander Telfer (1841–?)",
-      "generation": null
+      "id": "Alexander Telfer (1841)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -2204,10 +2204,6 @@
         "to": "beth-telfer-1946"
       },
       {
-        "from": "jessie-allan",
-        "to": "beth-telfer-1946"
-      },
-      {
         "from": "john-telfer-robert",
         "to": "carissa-telfer"
       },
@@ -2270,10 +2266,6 @@
       {
         "from": "francis-telfer-1875",
         "to": "clarice-may-telfer-1911"
-      },
-      {
-        "from": "elizabeth-beattie-telfer-1871",
-        "to": "colin-lindsay-beaton-1915"
       },
       {
         "from": "john-telfer-1840",
@@ -2424,14 +2416,6 @@
         "to": "elizabeth-beattie-telfer-1832"
       },
       {
-        "from": "robert-telfer-1803",
-        "to": "elizabeth-beattie-telfer-1832"
-      },
-      {
-        "from": "william-telfer-1802",
-        "to": "elizabeth-beattie-telfer-1832"
-      },
-      {
         "from": "charles-farrow-1836",
         "to": "elizabeth-farrow"
       },
@@ -2534,10 +2518,6 @@
       {
         "from": "elizabeth-hannah-telfer-1836",
         "to": "esther-farrow-latter-1859"
-      },
-      {
-        "from": "elizabeth-hannah-telfer-1836",
-        "to": "esther-farrow"
       },
       {
         "from": "charles-farrow-1836",
@@ -2784,10 +2764,6 @@
         "to": "henry-hatch-dillon-1866"
       },
       {
-        "from": "elizabeth-farrow",
-        "to": "herbert-clifford-holloway-1887"
-      },
-      {
         "from": "thomas-holloway",
         "to": "herbert-clifford-holloway-1887"
       },
@@ -2829,10 +2805,6 @@
       },
       {
         "from": "gilbert-telfer-1908",
-        "to": "ian-telfer-1947"
-      },
-      {
-        "from": "jessie-allan",
         "to": "ian-telfer-1947"
       },
       {
@@ -2940,15 +2912,7 @@
         "to": "james-telfer-1829"
       },
       {
-        "from": "francis-telfer-1809",
-        "to": "james-telfer-1829"
-      },
-      {
         "from": "james-telfer-1796",
-        "to": "james-telfer-1829"
-      },
-      {
-        "from": "robert-telfer-1803",
         "to": "james-telfer-1829"
       },
       {
@@ -3104,10 +3068,6 @@
         "to": "john-telfer-1877"
       },
       {
-        "from": "lancelot-watson-1888",
-        "to": "john-watson-1916"
-      },
-      {
         "from": "charles-farrow-1836",
         "to": "john-farrow"
       },
@@ -3176,24 +3136,12 @@
         "to": "john-telfer-1840"
       },
       {
-        "from": "margaret-telfer-1810",
-        "to": "john-telfer-1840"
-      },
-      {
-        "from": "robert-telfer-1803",
-        "to": "john-telfer-1840"
-      },
-      {
         "from": "francis-telfer-1809",
         "to": "john-telfer-1847"
       },
       {
         "from": "margaret-telfer-1810",
         "to": "john-telfer-1847"
-      },
-      {
-        "from": "james-telfer-1761",
-        "to": "john-telfer-1791"
       },
       {
         "from": "grantley-telfer",
@@ -3393,10 +3341,6 @@
       },
       {
         "from": "francis-telfer-1809",
-        "to": "margaret-telfer-1849"
-      },
-      {
-        "from": "james-telfer-1829",
         "to": "margaret-telfer-1849"
       },
       {
@@ -3636,10 +3580,6 @@
         "to": "robert-telfer-1803"
       },
       {
-        "from": "james-telfer-1762",
-        "to": "robert-telfer-1803"
-      },
-      {
         "from": "elizabeth-beattie-1802",
         "to": "robert-telfer-1835"
       },
@@ -3876,7 +3816,11 @@
         "to": "william-dillon"
       },
       {
-        "from": "james-telfer-1761",
+        "from": "janet-nichol",
+        "to": "william-telfer-1802"
+      },
+      {
+        "from": "william-telfer-shepherd",
         "to": "william-telfer-1802"
       },
       {
@@ -4058,10 +4002,6 @@
       {
         "from": "douglas-telfer-1887",
         "to": "keith-telfer"
-      },
-      {
-        "from": "john-telfer-1877",
-        "to": "neil-telfer"
       },
       {
         "from": "robert-telfer-1835",
@@ -4358,10 +4298,6 @@
         "to": "john-dillon-1827"
       },
       {
-        "from": "elizabeth-farrow",
-        "to": "thomas-holloway"
-      },
-      {
         "from": "elizabeth-telfer-1774",
         "to": "james-telfer-1761"
       },
@@ -4372,10 +4308,6 @@
       {
         "from": "elizabeth-oliver-1807",
         "to": "robert-telfer-1803"
-      },
-      {
-        "from": "elizabeth-parker-1879",
-        "to": "henry-parker"
       },
       {
         "from": "elizabeth-telfer-farrow-holloway-1861",
@@ -5072,10 +5004,6 @@
         "to": "william-telfer-1880"
       },
       {
-        "from": "beth-telfer-1946",
-        "to": "ian-telfer-1947"
-      },
-      {
         "from": "carissa-telfer",
         "to": "peter-telfer"
       },
@@ -5654,6 +5582,14 @@
       {
         "from": "elizabeth-beattie-telfer-1832",
         "to": "isabella-telfer-1837"
+      },
+      {
+        "from": "elizabeth-beattie-telfer-1832",
+        "to": "james-telfer-1829"
+      },
+      {
+        "from": "elizabeth-beattie-telfer-1832",
+        "to": "john-telfer-1840"
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
@@ -6661,6 +6597,10 @@
       },
       {
         "from": "james-telfer-1829",
+        "to": "john-telfer-1840"
+      },
+      {
+        "from": "james-telfer-1829",
         "to": "margaret-telfer-1829"
       },
       {
@@ -7518,6 +7458,10 @@
         "to": "mark-telfer-1986"
       },
       {
+        "from": "sheryle-telfer-1961",
+        "to": "mark-telfer-1986"
+      },
+      {
         "from": "robert-lawrie",
         "to": "rex-lawrie"
       }
@@ -7533,11 +7477,11 @@
       },
       {
         "from": "sheryle-telfer-1961",
-        "to": "amy-telfer"
+        "to": "mark-telfer-1986"
       },
       {
         "from": "sheryle-telfer-1961",
-        "to": "mark-telfer-1986"
+        "to": "amy-telfer"
       },
       {
         "from": "timothy-telfer-1959",
@@ -7545,11 +7489,11 @@
       },
       {
         "from": "timothy-telfer-1959",
-        "to": "jared-ivory-1993"
+        "to": "joel-ivory-1986"
       },
       {
         "from": "timothy-telfer-1959",
-        "to": "joel-ivory-1986"
+        "to": "jared-ivory-1993"
       },
       {
         "from": "timothy-telfer-1959",

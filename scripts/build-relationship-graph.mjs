@@ -12,6 +12,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { checkYears } from './lib/date-gate.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -85,6 +86,35 @@ for (const person of people) {
     const fn = parts[0].toLowerCase();
     const ln = parts[parts.length - 1].toLowerCase();
     setPrefersComplete(`${fn} ${ln}`, person.slug);
+    // FIXED 2026-10-24 (bare full-name key never registered):
+    // Only the first+last key was ever registered from `id`. Because `id` carries the
+    // year suffix ("John Robert Telfer (1952)"), the FULL year-stripped name was never
+    // a key — so the distinctive-name check (`nameIndex.has('john robert telfer')`)
+    // was false for a two-middle-name person who is genuinely unique, and the resolver
+    // fell back to the shared "john telfer" key (5 records) and refused. Rebecca and
+    // Sophia Telfer lost their father that way. Register the whole year-stripped id
+    // through the same collision logic so a unique full name claims its own key, and a
+    // full name shared by two distinct people still goes AMBIGUOUS.
+    setPrefersComplete(idBare.toLowerCase(), person.slug);
+    // FIXED 2026-10-24 (nickname/quote variant broke parentage):
+    // A person's OWN id may omit a nickname that every other reference carries.
+    // William Francis "Frank" Telfer's id is `William Francis Telfer (1885)`, but his
+    // three children all name him `William Francis "Frank" Telfer (1885–1955)`. The
+    // quoted form slugified to `william-francis-frank-telfer-1885`, which matches no
+    // slug, and no name key contained the quotations — so Geoffrey, Basil and Ruth
+    // were left with a mother and no father, silently. Register the nickname-stripped
+    // aliases against THIS person only:
+    //   "william francis frank telfer"  (quotes removed, word kept)
+    //   "william francis telfer"        (the person's own legal form)
+    // Both go through setPrefersComplete, so if any other record answers to the same
+    // alias the key becomes AMBIGUOUS and the resolver refuses — no guessing.
+    const aliases = [
+      idBare.replace(/["“”]/g, '').replace(/\s+/g, ' ').trim().toLowerCase(),
+      idBare.replace(/["“”][^"“”]*["“”]/g, '').replace(/\s+/g, ' ').trim().toLowerCase(),
+    ];
+    for (const alias of aliases) {
+      if (alias && alias !== idBare.toLowerCase()) setPrefersComplete(alias, person.slug);
+    }
   }
 }
 
@@ -96,8 +126,15 @@ function resolveNameToSlug(name, sourceSlug) {
   if (name.match(/^(Self|Spouse|Father|Mother|Children|Siblings)$/i)) return null;
 
   // Extract clean name (remove dates in parens)
-  const cleanName = name.replace(/[\(（]\d{4}[\-–]\d{2,4}.{0,2}\d{0,4}[\)）]/g, '').replace(/\s*\([^)]+\)$/, '').trim();
-
+  const cleanName = name.replace(/[\(（]\d{4}[\-–]\d{2,4}.{0,2}\d{0,4}[\)）]/g, '').replace(/\s*\([^)]+\)$/, '').trim()
+    // FIXED 2026-10-24 (nickname quotes broke identity):
+    // A quoted nickname — William Francis "Frank" Telfer — is part of the NAME in the
+    // vault but carries no identity in the index. Leaving the quotes on meant this
+    // reference matched nothing: the slug `william-francis-frank-telfer-1885-1955` did
+    // not exist and no name key contained quotes, so three children of Frank Telfer
+    // (Geoffrey, Basil, Ruth) silently lost their father. Quotes are typographic
+    // decoration around a preferred name, not information: strip them, keep the word.
+    .replace(/["“”]/g, '').replace(/\s+/g, ' ').trim();
   // Extract birth/death years from the reference if present, e.g.
   // "William Telfer (1802–1850)" or "William Telfer (1802)". Use them to
   // disambiguate between same-named people reliably.
@@ -141,7 +178,28 @@ function resolveNameToSlug(name, sourceSlug) {
     // which the logic below already uses).
     const baseName = (id) => String(id || '').replace(/\s*\([^)]*\)\s*$/, '').trim().toLowerCase();
     const cleanedId = cleanName.toLowerCase();
-    const candidates = people.filter((p) => baseName(p.id) === cleanedId);
+    // NICKNAME TOLERANCE in the YEAR path (2026-10-24). Same defect as the year-less
+    // path, but reached FIRST whenever the reference carries a lifespan. Frank
+    // Telfer's id is `William Francis Telfer (1885)` while his children write
+    // `William Francis "Frank" Telfer (1885–1955)`; `cleanName` becomes
+    // "William Francis Frank Telfer", no record's base name matches it, `candidates`
+    // stayed empty and the function returned null — three children silently lost
+    // their father. If no direct candidate exists, try dropping each single interior
+    // word (a nickname is one extra token the record itself does not carry) and accept
+    // the result ONLY when the remaining name matches exactly one record. Anything
+    // less certain stays unresolved — no guessing.
+    const candidates = (() => {
+      const direct = people.filter((p) => baseName(p.id) === cleanedId);
+      if (direct.length > 0) return direct;
+      const words = cleanedId.split(' ').filter(Boolean);
+      if (words.length < 3) return direct;
+      const matches = new Map();
+      for (let i = 1; i < words.length - 1; i++) {
+        const variant = words.slice(0, i).concat(words.slice(i + 1)).join(' ');
+        for (const p of people) if (baseName(p.id) === variant) matches.set(p.slug, p);
+      }
+      return matches.size === 1 ? [...matches.values()] : direct;
+    })();
 
     // Exact both-years match is unequivocal.
     if (refDeath) {
@@ -174,8 +232,45 @@ function resolveNameToSlug(name, sourceSlug) {
     return null;
   }
 
-  // 1) Exact slug match (slugified clean name) — only safe when the ref carries no
-  // years, because a bare slug match ignores generations entirely.
+  // 0) YEAR-LESS REF TO A SHARED NAME: REFUSE ENTIRELY (2026-10-24).
+  // A bare "William Telfer" with no year identifies nobody when the tree holds
+  // three of them (1802 / 1811 / 1841). Step 1 rescued this case via slugIndex
+  // when the slugified name happened to exist — even though nameIndex already
+  // knew the name was AMBIGUOUS. That is exactly how James Telfer 1761's
+  // de-dated "William Telfer" child ref hijacked William Telfer 1802 (a
+  // different branch, 200+ km and one generation away), destroying his real
+  // parents and two sibling edges. A year-less ref to a shared name must stay
+  // an unbound raw string. If ANY distinct person shares this bare name, the
+  // ref cannot be pinned and must not be guessed.
+  {
+    const bareKey = cleanName.toLowerCase();
+    const parts = cleanName.split(' ').filter(Boolean);
+    const key = parts.length >= 2 ? `${parts[0].toLowerCase()} ${parts[parts.length - 1].toLowerCase()}` : bareKey;
+    const baseName = (id) => String(id || '').replace(/\s*\([^)]*\)\s*$/, '').trim().toLowerCase();
+    // A DISTINCTIVE FULL NAME IS NOT AMBIGUOUS (2026-10-24).
+    //
+    // This guard used to test the first+last key unconditionally, so "John Robert
+    // Telfer" was judged by the key "john telfer" — shared by 5 historical records —
+    // and refused, even though the FULL name "john robert telfer" identifies exactly
+    // ONE person. Rebecca Telfer's father silently vanished that way, which in turn
+    // made the guard report a "shrink" that looked like data loss but was really a
+    // resolver refusal. When the full name is itself a distinct record, honour it and
+    // only fall back to the first+last key when the full name is not distinctive.
+    const fullIsDistinct = (() => {
+      if (nameIndex.get(bareKey) === AMBIGUOUS) return false;
+      const sameFull = new Set(people.filter((p) => baseName(p.id) === bareKey).map((p) => p.slug));
+      return sameFull.size === 1 && nameIndex.has(bareKey);
+    })();
+    if (!fullIsDistinct) {
+      if (nameIndex.get(bareKey) === AMBIGUOUS || nameIndex.get(key) === AMBIGUOUS) return null;
+      const sameNamed = new Set(
+        people.filter((p) => baseName(p.id) === bareKey || baseName(p.id) === key).map((p) => p.slug)
+      );
+      if (sameNamed.size > 1) return null;
+    }
+  }
+
+  // 1) Exact slug match (slugified clean name) — only safe when the ref carries no years, because a bare slug match ignores generations entirely.
   //
   // FIXED 2026-09-30 (bare-slug hijack of an ambiguous name): a NEW person whose
   // slug happens to equal the bare name (e.g. James John Drew Telfer -> `james-telfer`)
@@ -341,6 +436,20 @@ let resolved = 0, unresolved = 0;
 // reasonable margin); if neither direction is checkable (no years), keep the
 // newly-added direction.
 function addParentChild(parentSlug, childSlug, sourceSlug) {
+  // A SIBLING IS NEVER A CHILD (2026-10-24).
+  // If `parentSlug` already declares `childSlug` as its sibling, then `childSlug`
+  // is the same generation as `parentSlug` and cannot also be its child. This is a
+  // category error, not an edge case — and it is EXACTLY what the vault's own body
+  // table does for William Telfer (1802–1850): its Children row wikilinks "Andrew
+  // Telfer" to [[Andrew Telfer (1798–1858)]], who the same file declares as his
+  // BROTHER (the page's own research note warns "Do NOT conflate with William's
+  // sons of the same names"). Resolving that link wired a man as his own brother's
+  // son. Refuse: a declared sibling edge outranks a bare same-name child ref, and
+  // the ref stays on the record as an unbound raw name.
+  if (siblingEdges.get(parentSlug)?.has(childSlug)) {
+    console.warn(`   ⚠️ refused child claim: ${childSlug} -> ${parentSlug} (declared SIBLING of the parent)`);
+    return false;
+  }
   // If child already has this parent, nothing to do.
   if (parentEdges.get(childSlug)?.has(parentSlug)) return false;
   // GUARD (26 Aug 2026): biological plausibility — a parent must be an adult when
@@ -406,6 +515,16 @@ function addParentChild(parentSlug, childSlug, sourceSlug) {
 // own declared parents (John Robert Telfer + Robyn Telfer) with herself.
 // Collect every slug that self-declares a parent, so the Children case below can
 // refuse to overwrite it.
+//
+// FLAT-SCHEMA FILES COUNT TOO (2026-10-24). This set was built from
+// `p.relationships` alone, which is EMPTY for the 8 vault files that use the older
+// flat `father:`/`mother:` frontmatter — the converter puts those into
+// `p.parents` and leaves `relationships` as []. Such a person therefore never
+// registered as self-declared, and because the whole edge build below iterates
+// `person.relationships`, their parentage produced NO EDGE AT ALL. William Baker
+// (1853–1933) had the right parents in `parents[]` and still ended up an orphan
+// with zero siblings, dragging 8 sibling links down with him. Treat a populated
+// `parents` array as an equivalent self-declaration.
 const SELF_DECLARED_PARENT = new Set();
 for (const p of people) {
   for (const rel of p.relationships || []) {
@@ -415,19 +534,92 @@ for (const p of people) {
       break;
     }
   }
+  if ((p.parents || []).length > 0) SELF_DECLARED_PARENT.add(p.slug);
 }
 
 for (const person of people) {
   const sourceSlug = person.slug;
 
   // Process relationships from vault files
-  for (const rel of person.relationships || []) {
+  // FLAT-SCHEMA SYNTHESIS (2026-10-24). The 8 vault files that use flat
+  // `father:`/`mother:` frontmatter carry an EMPTY `relationships` array — the
+  // converter put their parentage into `parents[]` instead. Iterating only
+  // `relationships` therefore built no edges for them, so a correctly-parented
+  // person rendered as an orphan and their siblings' links collapsed with them.
+  // Synthesise equivalent Father/Mother entries from `parents[]` so the one edge
+  // builder treats both vault schemas identically. Only used when `relationships`
+  // produced no parent role at all, so the string form always stays authoritative.
+  const relsForEdges = (() => {
+    const declaredParentNames = (person.relationships || [])
+      .filter(r => ['father', 'mother', 'parent', 'parents'].includes(String(r.type || '').toLowerCase()))
+      .flatMap(r => r.names || []);
+    if (declaredParentNames.length > 0) return person.relationships || [];
+    const slugs = (person.parents || []).filter(x => slugToPerson.has(x));
+    if (slugs.length === 0) return person.relationships || [];
+    return [...(person.relationships || []), { type: 'Parents', names: slugs }];
+  })();
+
+  for (const rel of relsForEdges) {
     for (const name of rel.names || []) {
       const targetSlug = resolveNameToSlug(name, sourceSlug);
       if (!targetSlug) continue;
 
       // Skip self-references
       if (targetSlug === sourceSlug) continue;
+
+      // ── GENERATION GATE (2026-10-24, the neil-telfer father fix) ──────────
+      // resolveNameToSlug is a NAME matcher: it has no idea whether the person it
+      // found could possibly hold the relationship being asked for. resolve-refs.mjs
+      // gates the raw-name→slug step, but a ref that arrives here from a parsed
+      // `relationships:` string never passes through resolve-refs — so this path had
+      // NO biology check at all.
+      //
+      // Consequence observed: Neil Ronald Telfer (b.1936) declares his father as
+      // "John Ernest Telfer". Exactly one record answers to that name —
+      // john-telfer-1877, born 1877 and died 1877 — so the name matched, and a man
+      // who had been dead 59 years became the boy's father. The date-consistency
+      // guard caught it, but a guard that only DETECTS is not a fix: the wrong edge
+      // was already written. Refuse it at the source instead.
+      //
+      // Rules: only judge biological, dated relations; never touch step edges (a step
+      // parent is not constrained by biology); if either side is undated, allow it —
+      // absent dates are not evidence of impossibility.
+      {
+        // Only PARENT/CHILD claims are judged here. Sibling and spouse gaps have their
+        // own bounds inside date-gate (SIBLING_SPAN, SPOUSE_SPAN) and the first version
+        // of this gate wrongly ran them through the parent-child biology rule,
+        // producing 776 bogus refusals like "siblings 2 years apart". A sibling is not
+        // a parent; never apply a parent rule to them.
+        const KIND = { Father: 'parent', Mother: 'parent', Parents: 'parent', Parent: 'parent',
+                       Children: 'child', Child: 'child', Son: 'child', Daughter: 'child' }[rel.type];
+        if (KIND) {
+          const subj = slugToPerson.get(sourceSlug);
+          const cand = slugToPerson.get(targetSlug);
+          if (subj && cand && subj.birth_year != null && cand.birth_year != null) {
+            // checkYears(relation, subject, candidate): `subject` is always the CHILD
+            // and `candidate` is always the PARENT for relation 'parent'.
+            //   Father/Mother claim: source declares the target as parent
+            //                        → source is the child, target is the parent.
+            //   Children claim:      source declares the target as a child
+            //                        → source is the PARENT, target is the CHILD.
+            // Getting this backwards silently refuses every legitimate child edge,
+            // which is exactly what the first version of this gate did.
+            const child  = KIND === 'parent' ? subj : cand;
+            const parent = KIND === 'parent' ? cand : subj;
+            const plaus = checkYears({
+              relation: 'parent',
+              subjectBirth: child.birth_year,
+              subjectDeath: child.death_year,
+              candBirth: parent.birth_year,
+              candDeath: parent.death_year,
+            });
+            if (!plaus.ok) {
+              console.warn(`   ⛔ refused impossible ${rel.type}: ${sourceSlug} -> ${targetSlug} (${plaus.reason})`);
+              continue;
+            }
+          }
+        }
+      }
 
       // Ensure target exists in maps
       if (!parentEdges.has(targetSlug)) parentEdges.set(targetSlug, new Set());
@@ -439,6 +631,28 @@ for (const person of people) {
         case 'Father':
         case 'Mother':
         case 'Parents':
+          // SELF-DECLARATION WINS, BOTH DIRECTIONS (2026-10-24). The `Children`
+          // case below refuses an incoming parent claim when the target has already
+          // declared its own two parents — but this OUTGOING direction had no such
+          // guard, so a bad `Children` entry on person A could still reach B and
+          // rewrite B's parents through the unguarded side (observed: James
+          // Telfer 1761's de-dated "William Telfer" child ref overwrote William
+          // Telfer 1802's real parents, which in turn destroyed two sibling edges).
+          // If the target has declared BOTH parents itself and neither is the
+          // source, this claim is a same-name collision. Refuse it.
+          {
+            const target = slugToPerson.get(sourceSlug);
+            const declared = (target?.relationships || [])
+              .filter(r => ['father', 'mother', 'parent', 'parents'].includes(String(r.type || '').toLowerCase()))
+              .flatMap(r => r.names || [])
+              .map(n => resolveNameToSlug(n, sourceSlug))
+              .filter(Boolean);
+            if (declared.length >= 2 && !declared.includes(targetSlug) &&
+                SELF_DECLARED_PARENT.has(sourceSlug)) {
+              console.warn(`   ⚠️ refused outgoing parent claim: ${sourceSlug} -> ${targetSlug} (declares ${declared.join(', ')})`);
+              break;
+            }
+          }
           addParentChild(targetSlug, sourceSlug);
           resolved++;
           break;
@@ -549,66 +763,26 @@ for (const person of people) {
     }
   }
 
-  // Also process existing parents/children/spouses/siblings arrays (from vault files)
-  for (const parentSlug of person.parents || []) {
-    if (slugToPerson.has(parentSlug)) {
-      addParentChild(parentSlug, sourceSlug);
-      resolved++;
-    }
-  }
-  for (const childSlug of person.children || []) {
-    if (slugToPerson.has(childSlug)) {
-      // Same self-declaration rule as the Children case above (2026-09-22): a stored
-      // children array must not overwrite a child that declares its own parents.
-      // This array is itself derived, so it can carry the same collision.
-      {
-        const target = slugToPerson.get(childSlug);
-        const declared = (target?.relationships || [])
-          .filter(r => ['father', 'mother', 'parent', 'parents'].includes(String(r.type || '').toLowerCase()))
-          .flatMap(r => r.names || [])
-          .map(n => resolveNameToSlug(n, childSlug))
-          .filter(Boolean);
-        if (declared.length >= 2 && !declared.includes(sourceSlug) &&
-            SELF_DECLARED_PARENT.has(childSlug)) {
-          console.warn(`   ⚠️ refused stored parent claim: ${sourceSlug} -> ${childSlug} (target declares ${declared.join(', ')})`);
-          continue;
-        }
-      }
-      addParentChild(sourceSlug, childSlug);
-      resolved++;
-    }
-  }
-  for (const spouseSlug of person.spouses || []) {
-    if (slugToPerson.has(spouseSlug)) {
-      // Same spouse-plausibility guard as the Spouse case above: a stored array
-      // can carry a cross-generation collision just as a vault ref can.
-      const a = slugToPerson.get(sourceSlug);
-      const b = slugToPerson.get(spouseSlug);
-      const ay = a?.birth_year, by = b?.birth_year;
-      if (ay && by && Math.abs(ay - by) > 55) {
-        console.warn(`   ⚠️ rejected implausible spouse edge (stored): ${sourceSlug}(b${ay}) <-> ${spouseSlug}(b${by})`);
-        continue;
-      }
-      spouseEdges.get(sourceSlug).add(spouseSlug);
-      spouseEdges.get(spouseSlug).add(sourceSlug);
-      resolved++;
-    }
-  }
-  for (const siblingSlug of person.siblings || []) {
-    if (slugToPerson.has(siblingSlug)) {
-      siblingEdges.get(sourceSlug).add(siblingSlug);
-      siblingEdges.get(siblingSlug).add(sourceSlug);
-      resolved++;
-    }
-  }
-  // Stored step arrays (added 2026-09-22) — same origin as the vault refs above,
-  // kept out of the biological edge sets.
-  for (const sp of person.step_parents || []) {
-    if (slugToPerson.has(sp)) { stepParentEdges.get(sourceSlug).add(sp); resolved++; }
-  }
-  for (const sc of person.step_children || []) {
-    if (slugToPerson.has(sc)) { stepChildEdges.get(sourceSlug).add(sc); resolved++; }
-  }
+  // DO NOT RE-INGEST THE DERIVED ARRAYS (2026-10-24 — root cause of the
+  // self-perpetuating false edge).
+  //
+  // This block used to walk `person.parents` / `person.children` / `person.spouses`
+  // / `person.siblings` / `person.step_*` and re-assert every slug it found. Those
+  // arrays are OUTPUT of this very script — they are written back into people.json
+  // at the end of every run — so reading them at the start made every edge
+  // SELF-CONFIRMING: once one bad edge existed, it survived every future
+  // regeneration no matter how good the name resolver became, because the derived
+  // array fed it straight back in. That is exactly how
+  // `william-telfer-1802.parents = ["james-telfer-1761"]` (created by one de-dated
+  // "William Telfer" ref in James 1761's Children list) became permanent, stripping
+  // William's real parents and two sibling edges and turning the crown-jewel guard
+  // red on every run.
+  //
+  // The vault frontmatter (`relationships:`) is the ONLY source of truth. The arrays
+  // are derived; derived values must never be treated as evidence. Every genuine
+  // edge is rebuilt from `relationships:` above, on every run. An edge that cannot
+  // be rebuilt from the vault simply does not exist — which is the correct outcome,
+  // because the vault is the thing that gets to say so.
 }
 
 // ─── Second Pass: Infer Siblings from Shared Parents ──────────────────────────
@@ -668,13 +842,126 @@ for (const slug of UNPROVEN) {
 for (const slug of UNPROVEN) siblingEdges.set(slug, new Set());
 
 // ─── Deduplicate and Convert to Arrays ────────────────────────────────────────
+//
+// 2026-10-24 — THE DATA-LOSS FIX. Read this before changing anything below.
+//
+// These arrays used to be OVERWRITTEN wholesale from the edge maps:
+//     person.children = Array.from(childEdges.get(slug) || []).sort();
+// So any relationship entry that resolveNameToSlug() could not bind was DELETED
+// from people.json. resolveNameToSlug() refusing a ref is CORRECT — it declines to
+// guess a generation. But refusing to RESOLVE is not permission to ERASE: the raw
+// name is the only surviving record that the relationship exists.
+//
+// Measured consequence on the same day: john-lawrie-1810 went from 8 children to 1
+// because "Marion Lawrie (1838–1920)", "Janet Lawrie (1842–1845)" and others have
+// no profile yet. The people were never wrong and the vault never changed; the
+// graph step simply had nowhere to put them and dropped them. Every previous
+// "the pipeline lost my family" incident traces to this line.
+//
+// RULE: THE EDGE MAPS ARE THE TRUTH FOR SLUGS; THEY ARE NOT THE TRUTH FOR PEOPLE.
+// Slugs get rebuilt from scratch (that is what keeps the graph consistent), but an
+// entry that is still a RAW NAME — i.e. one the resolver could not bind — is
+// CARRIED FORWARD untouched. It renders as a research gap, exactly as designed.
+// A person can never be silently deleted by a failed name lookup again.
+const RAW_REF = (s) => typeof s === 'string' && !slugToPerson.has(s);
+
+// ── Is this raw name the SAME PERSON as a slug already in the rebuilt list? ───
+// Added 2026-10-24. Without this, carryUnresolved preserved a raw name that
+// duplicated a slug it plainly meant. Live example: janet-nichol.spouses came out
+// as ["william-telfer-shepherd", "William Telfer (shepherd)"] — the same man twice,
+// one resolved one not, because ONE vault line wrote the slug and another wrote the
+// raw name. Carrying that forward is not preserving a research gap; it is
+// double-listing a person, and the renderer shows him married to her twice.
+// Rule: a raw name that resolves to a slug ALREADY PRESENT is a duplicate, not a gap.
+const normName = (s) => String(s)
+  .replace(/\s*\([^)]*\)\s*$/, '')      // drop a trailing "(shepherd)" / "(1802–1850)"
+  .toLowerCase()
+  .replace(/[^a-z0-9]/g, '');
+
+function duplicateOfPresentSlug(ref, rebuilt) {
+  const key = normName(ref);
+  if (!key) return false;
+  for (const s of rebuilt) {
+    const target = slugToPerson.get(s);
+    if (!target) continue;
+    if (normName(target.display_name || '') === key) return true;
+    if (normName(target.name || '') === key) return true;
+  }
+  return false;
+}
+
+function carryUnresolved(person, field, rebuilt, keepResolvedSlugs = false) {
+  const previous = Array.isArray(person[field]) ? person[field] : [];
+  const rebuiltSet = new Set(rebuilt);
+  // TWO RULES, ONE FIELD-LOCAL DIFFERENCE (2026-10-24). The step arrays arrive here
+  // ALREADY RESOLVED to slugs (resolve-refs.mjs runs before this script) and their
+  // step edge maps are only ever filled from `relationships:` frontmatter, so a
+  // correct slug like "allen-merrick" is not in `rebuilt` yet must be kept —
+  // otherwise Mark Kenneth Telfer loses both step-parents and Tim loses his four
+  // Ivory stepchildren. Biological arrays are different: they are rebuilt from the
+  // relationship string this run, so anything not in `rebuilt` is genuinely
+  // unresolved and must be a RAW name. Applying the step rule to biological fields
+  // preserved stale slugs that had been correctly superseded — the same-name
+  // contamination gate caught exactly that (siblings that are really children).
+  const kept = previous.filter(ref =>
+    typeof ref === 'string' && ref.trim() &&
+    (keepResolvedSlugs ? !rebuiltSet.has(ref) : (RAW_REF(ref) && !rebuiltSet.has(ref)))
+  );
+  if (kept.length === 0) return rebuilt;
+  // Preserve any raw name the rebuilt list does not already contain, keeping the
+  // vault's original order for the raw entries after the resolved ones.
+  const out = [...rebuilt];
+  for (const ref of kept) {
+    if (out.includes(ref)) continue;              // exact duplicate of a surviving raw name
+    if (duplicateOfPresentSlug(ref, out)) continue; // same PERSON as a slug already listed
+    if (reciprocallyRecorded(ref, person, field, out)) continue; // edge already exists, resolved
+    out.push(ref);
+  }
+  return out;
+}
+
+/**
+ * ADDED 2026-10-24 — is the relationship already on the OTHER person as a slug?
+ *
+ * Live case: william-telfer-1802 lists parent "William Telfer (shepherd)", while
+ * william-telfer-shepherd already lists william-telfer-1802 in his children. Both
+ * halves describe ONE edge, but this side never got resolved. carryUnresolved only
+ * compares within one person's own field, so it kept the raw name and the site showed
+ * a father listed twice — once by slug, once by name.
+ *
+ * If the target already claims this person in the reciprocal field, the edge is not
+ * missing; it is recorded. Drop the raw name and let the slug side speak.
+ * One-directional evidence is NOT enough: we only skip when the target itself
+ * asserts the relationship, never on a name guess.
+ */
+function reciprocallyRecorded(ref, person, field, rebuilt) {
+  const target = resolveNameToSlug(ref, person, field) || slugByExactDisplay(ref);
+  if (!target) return false;
+  const t = slugToPerson.get(target);
+  if (!t) return false;
+  const wantsUs = (arr) => Array.isArray(arr) && arr.includes(person.slug);
+  if (field === 'parents') return wantsUs(t.children);
+  if (field === 'children') return wantsUs(t.parents);
+  if (field === 'spouses') return wantsUs(t.spouses);
+  if (field === 'siblings') return wantsUs(t.siblings);
+  return false;
+}
+
+/** Exact display_name match → slug. Used only for the reciprocity test above. */
+function slugByExactDisplay(ref) {
+  const key = String(ref).toLowerCase().trim();
+  for (const [slug, p] of slugToPerson) {
+    if (String(p.display_name || '').toLowerCase().trim() === key) return slug;
+  }
+  return null;
+}
 
 for (const person of people) {
   const slug = person.slug;
-  person.parents = Array.from(parentEdges.get(slug) || []).sort();
-  person.children = Array.from(childEdges.get(slug) || []).sort();
-  person.spouses = Array.from(spouseEdges.get(slug) || []).sort();
-  person.siblings = Array.from(siblingEdges.get(slug) || []).sort();
+  person.parents = carryUnresolved(person, 'parents', Array.from(parentEdges.get(slug) || []).sort());
+  person.children = carryUnresolved(person, 'children', Array.from(childEdges.get(slug) || []).sort());
+  person.spouses = carryUnresolved(person, 'spouses', Array.from(spouseEdges.get(slug) || []).sort());
+  person.siblings = carryUnresolved(person, 'siblings', Array.from(siblingEdges.get(slug) || []).sort());
   // Step arrays (added 2026-09-22). Emitted alongside the biological ones so the
   // renderer can show a labelled "Step-parent(s)"/"Stepchildren" section. A slug
   // must never appear in BOTH a biological and a step array — Rex's page claimed
@@ -687,8 +974,21 @@ for (const person of people) {
     person.parents = person.parents.filter(s => !stepSet.has(s));
     person.children = person.children.filter(s => !stepSet.has(s));
   }
-  person.step_parents = stepP;
-  person.step_children = stepC;
+  // STEP RELATIONS GET THE SAME CARRY RULE AS BIOLOGICAL ONES (2026-10-24).
+  //
+  // stepP/stepC above are built ONLY from stepParentEdges/stepChildEdges, which are
+  // populated when a raw name RESOLVES to a slug. An unresolved step relation —
+  // "**Stepfather:** [[Allen Merrick]]" where no profile exists yet, or a name the
+  // resolver correctly refuses — therefore vanished completely: the raw name was
+  // thrown away and the assignment below wrote an empty array over it. Mark Kenneth
+  // Telfer's own step-parents, Tim's four Ivory stepchildren and the Lawrie step-link
+  // all disappeared this way while the vault still said so in plain English.
+  //
+  // The blank slate is fine for SLUGS (the edge maps are truth for slugs) but it is
+  // not licence to delete a PERSON. Same rule as every other field: carry raw names
+  // forward, keep them unbound, render them as a research gap.
+  person.step_parents = carryUnresolved(person, 'step_parents', stepP, true);
+  person.step_children = carryUnresolved(person, 'step_children', stepC, true);
 }
 
 // ─── Build Graph Output ──────────────────────────────────────────────────────
@@ -704,28 +1004,48 @@ const graph = {
   }
 };
 
+// ── EDGES ARE SLUG-ONLY (added 2026-10-24) ───────────────────────────────────
+// A raw name is preserved on the person record so a research gap stays visible and
+// nothing is lost — but a raw name is NOT a node, so an edge to one renders as a
+// ghost link pointing at nobody. The 63 endpoints that failed the edge-integrity
+// guard on 2026-10-24 were exactly this: carryUnresolved() doing its job, then the
+// edge builder treating every preserved name as if it were a person.
+// Rule: an edge requires BOTH ends to be real slugs. Unresolved names stay on the
+// person record (where the UI can show "no profile yet") and never enter the graph.
+const knownSlugs = new Set(people.map(p => p.slug));
+const emit = (bucket, from, to) => {
+  if (!knownSlugs.has(from) || !knownSlugs.has(to)) return false;
+  bucket.push({ from, to });
+  return true;
+};
+let skippedEdges = 0;
+
 for (const person of people) {
   for (const parent of person.parents) {
-    graph.edges.parentOf.push({ from: parent, to: person.slug });
+    if (!emit(graph.edges.parentOf, parent, person.slug)) skippedEdges++;
   }
   for (const spouse of person.spouses) {
     if (person.slug < spouse) { // avoid duplicates
-      graph.edges.spouseOf.push({ from: person.slug, to: spouse });
+      if (!emit(graph.edges.spouseOf, person.slug, spouse)) skippedEdges++;
     }
   }
   for (const sibling of person.siblings) {
     if (person.slug < sibling) {
-      graph.edges.siblingOf.push({ from: person.slug, to: sibling });
+      if (!emit(graph.edges.siblingOf, person.slug, sibling)) skippedEdges++;
     }
   }
   // Step edges (added 2026-09-22). Emitted separately and NEVER merged into
   // parentOf, so a consumer cannot mistake a step relation for a blood relation.
   for (const sp of person.step_parents || []) {
-    graph.edges.stepParentOf.push({ from: sp, to: person.slug });
+    if (!emit(graph.edges.stepParentOf, sp, person.slug)) skippedEdges++;
   }
   for (const sc of person.step_children || []) {
-    graph.edges.stepChildOf.push({ from: person.slug, to: sc });
+    if (!emit(graph.edges.stepChildOf, person.slug, sc)) skippedEdges++;
   }
+}
+
+if (skippedEdges > 0) {
+  console.log(`   Skipped ${skippedEdges} edge(s) whose other end has no profile (raw names stay on the person record, never in the graph).`);
 }
 
 // ─── Save ────────────────────────────────────────────────────────────────────

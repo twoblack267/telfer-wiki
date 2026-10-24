@@ -382,7 +382,19 @@ function resolveRelationship(entry) {
     }
   }
 
-  if (!slug) return null;
+  // NO SILENT DELETION (2026-10-24). This used to `return null` for any name it
+  // could not bind to a visible profile, and resolveRelationshipArray() filtered
+  // those nulls away. That is how Mark Kenneth Telfer lost Allen Merrick and
+  // Sheryle as step-parents, Tim lost his four Ivory stepchildren, and the Lawrie
+  // step-link vanished: the vault said it in plain English, the resolver genuinely
+  // could not bind the name to a profile, and the pipeline DELETED THE PERSON
+  // instead of recording an unresolved ref. A name we cannot bind is a research
+  // gap, not a non-relationship — carry it as a plain_name so the page still
+  // renders it (unlinked) and it stays visible as work to do.
+  if (!slug) {
+    const plain = stripDates(String(entry)).trim();
+    return plain ? { plainName: plain } : null;
+  }
 
   if (PRIVACY_STRIP_SLUGS.has(slug)) {
     const person = slugToPerson.get(slug);

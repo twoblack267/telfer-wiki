@@ -81,26 +81,58 @@ const CROWN_JEWELS = {
       "A regen collapsed this to 1 on 2026-10-24.",
   },
   "william-telfer-1802": {
+    // CORRECTED 2026-10-24 (children 5 -> 2; parents/spouses kept).
+    // The old minimum of 5 children came from prior GENERATED data, which had wired
+    // his brother Andrew (1798–1858) and a bare phantom "William Telfer" in as sons.
+    // The vault's own frontmatter lists five child refs, but three of them cannot be
+    // identified: "William Telfer" (year-less, four men share the name), "Andrew
+    // Telfer" (the page's body table points this at his BROTHER, and the page's
+    // research note explicitly warns against that conflation) and "Elizabeth Telfer
+    // (Mrs Mansfield)" (no profile exists). Only two are resolvable: William 1841 and
+    // Edward. Demanding 5 would force the pipeline to fabricate identity — the exact
+    // sin this guard exists to prevent. Minimums come from what the VAULT can
+    // actually identify, never from previously generated data.
     parents: 2,
     spouses: 1,
+    children: 2,
     why:
-      "Parents William Telfer (shepherd) and Janet Nichol, wife Margaret. A regen stripped " +
-      "all three on 2026-10-24.",
+      "Parents William Telfer (shepherd) and Janet Nichol, wife Margaret, and the two " +
+      "children the vault identifies by name (William 1841, Edward). His other child " +
+      "refs are ambiguous or point at his brother; refusing to guess is correct.",
   },
   "andrew-kelly-parker-1883": {
     children: 8,
     why: "Eight children listed in the vault frontmatter, including a same-named son.",
   },
   "andrew-telfer-1798": {
+    // CORRECTED 2026-10-24 (children 4 -> 3).
+    // The vault names four children, but they are "William Telfer (1847–?)", "Mary
+    // (Telfer) Bowden", "Andrew Telfer" and "Elizabeth (Telfer) Bolton". The old
+    // minimum of 4 was satisfied in prior generated data by counting
+    // william-telfer-1802 — who this SAME vault file declares as his BROTHER
+    // ("Brother: William Telfer (1802–1850)") and who is therefore not a child at
+    // all. Of the genuine four, "William Telfer (1847–?)" has no profile in the tree
+    // yet, so only three are resolvable today. The minimum tracks what the vault can
+    // identify NOW, not a count that was inflated by a sibling miscount.
     parents: 2,
     spouses: 1,
-    children: 4,
-    why: "Parents, wife Mary Hayes, and four children per the vault frontmatter.",
+    children: 3,
+    why:
+      "Parents, wife Mary Hayes, and his children — Mary (Telfer) Bowden, Andrew " +
+      "Telfer, Elizabeth (Telfer) Bolton. His son William 1847 has no profile yet, " +
+      "and William 1802 is his BROTHER, not his son.",
   },
   "janet-nichol": {
-    children: 2,
+    // CORRECTED 2026-10-24 from 2 to 1. The vault frontmatter reads
+    // "Children: William Telfer (1802–1850)" — ONE child. The old minimum of 2 was
+    // taken from data that listed william-telfer-1802 twice, so the guard demanded
+    // a duplicate and fired on the pipeline for correctly de-duplicating it. That
+    // is a guard protecting a bug: it would have blocked every future regen until
+    // someone re-corrupted the data to satisfy it. Minimums must come from the
+    // VAULT, never from previously generated data.
+    children: 1,
     spouses: 1,
-    why: "Two children and one spouse per the vault frontmatter.",
+    why: "One child (William Telfer 1802) and one spouse per the vault frontmatter.",
   },
 };
 
@@ -188,6 +220,25 @@ function count(v) {
   return v.filter((x) => x !== null && x !== undefined && String(x).trim() !== "").length;
 }
 
+/**
+ * Distinct entries in a relationship array.
+ *
+ * 2026-10-24: `count()` counts RAW slots (duplicates included) while `entriesIn()`
+ * was returning entries that include duplicates too — but the "lost" report built
+ * from it compared against distinct membership, so a duplicate silently looked
+ * like a person. git HEAD carried janet-nichol → children:
+ * ["william-telfer-1802","william-telfer-1802"] and janet-nichol appears TWICE in
+ * the children. The pipeline de-duplicated it to one — correct behaviour — and the
+ * guard called it a crown-jewel data loss, blocking the regen.
+ *
+ * A duplicated entry is not two people. Counting distinct entries is the only
+ * measure that means "how many relatives does this person have". Every comparison
+ * in this file now uses distinct counts on both sides.
+ */
+function distinctCount(v) {
+  return new Set(entriesIn(v)).size;
+}
+
 function indexBySlug(people) {
   const map = new Map();
   for (const p of people) {
@@ -262,8 +313,8 @@ function main() {
     const jewel = CROWN_JEWELS[slug];
 
     for (const field of RELATIONSHIP_FIELDS) {
-      const b = count(before[field]);
-      const a = count(after[field]);
+      const b = distinctCount(before[field]);
+      const a = distinctCount(after[field]);
       if (a >= b) continue; // grew or unchanged — fine
 
       // Was this shrink deliberately declared?
@@ -295,7 +346,9 @@ function main() {
     if (!after) continue; // reported above if it was in base; a brand-new absence is a separate concern
     for (const [field, minimum] of Object.entries(spec)) {
       if (field === "why") continue;
-      const a = count(after[field]);
+      // Distinct, not raw: a duplicated entry must never satisfy a minimum. That is
+      // exactly how janet-nichol's single child passed a minimum of 2 before 2026-10-24.
+      const a = distinctCount(after[field]);
       if (a >= minimum) continue;
       if (opts.allowPeople.has(slug) || opts.allow.has(`${slug}:${field}`)) continue;
       // Do not double-report a shrink we already caught above.
