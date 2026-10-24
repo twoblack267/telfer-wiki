@@ -150,7 +150,10 @@ export function formatBody(body, people) {
   return html;
 }
 
-function lookupSlug(name, people) {
+// Exported so the relationship-link guard (scripts/validate-relationship-links.mjs)
+// resolves names through EXACTLY this function instead of re-implementing it and
+// drifting. The guard asserts a href only after resolving the same way the page does.
+export function lookupSlug(name, people) {
   if (!name || !people) return null;
 
   // Relationship fields (parents/children/spouses/siblings) store SLUGS, not display

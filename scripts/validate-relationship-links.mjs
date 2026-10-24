@@ -28,6 +28,13 @@
 import { readFileSync, readdirSync, statSync } from "fs";
 import { join, basename, dirname } from "path";
 import { PRIVACY_STRIP_SLUGS } from "../src/data/privacy-exclusions.mjs";
+// The template does NOT require relationship entries to already be slugs: it hands
+// each one to getLinksForRelationships(), which resolves raw display names through
+// lookupSlug(). This guard used to skip that step, so every raw name — all 944 of
+// the `siblings` entries, which resolve-refs never converts — was reported as
+// "rendered as PLAIN TEXT" even though the page rendered a correct <a href>. Read
+// the href the page ACTUALLY produced by resolving the same way the page does.
+import { lookupSlug } from "../src/utils/format-body.mjs";
 
 const DIST = new URL("../dist/", import.meta.url).pathname;
 const PEOPLE_FILE = new URL("../src/data/people.public.json", import.meta.url).pathname;
@@ -60,6 +67,11 @@ const SECTION_LABEL = {
 };
 
 let failures = [];
+// Relations whose person has no profile at all. Not a link defect — there is no
+// page to link to. Counted and reported so the gap stays visible instead of being
+// silently swallowed, but it does not fail the build (failing would block every
+// deploy on research that has not been done yet).
+const unresolved = [];
 let checkedPages = 0;
 let checkedRelations = 0;
 
@@ -141,10 +153,20 @@ function checkPage(file) {
         continue;
       }
       checkedRelations++;
-      const name = bySlug.get(relSlug)?.display_name || relSlug;
+      // Resolve exactly as the template does. A raw display name is a legitimate
+      // stored form; only the RESOLVED slug can be asserted against the HTML.
+      const resolvedSlug = bySlug.has(relSlug) ? relSlug : lookupSlug(relSlug, people);
+      if (!resolvedSlug) {
+        // Genuinely unresolvable: no profile exists for this person, so the page
+        // cannot link them. That is a research gap, reported separately from a
+        // broken link, and it must not masquerade as a rendering defect.
+        unresolved.push({ page: slug, field: SECTION_LABEL[field], relationship: relSlug });
+        continue;
+      }
+      const name = bySlug.get(resolvedSlug)?.display_name || relSlug;
       // Correct render = an <a> whose href targets people/<relSlug>.
       const linked = new RegExp(
-        `<a href="${escapeRegExp(basePrefix)}people/${escapeRegExp(relSlug)}[^"]*"[^>]*>`
+        `<a href="${escapeRegExp(basePrefix)}people/${escapeRegExp(resolvedSlug)}[^"]*"[^>]*>`
       );
       // Plain-text fallback = a <span> holding the relationship name.
       const asPlainText = new RegExp(
@@ -155,7 +177,7 @@ function checkPage(file) {
         // relatives show their life DATES, not a bare name. Assert the linked
         // row carries its lifespan when the person has one in the data. If the
         // person has no lifespan/birth at all, that's a DATA gap we surface too.
-        const relPerson = bySlug.get(relSlug);
+        const relPerson = bySlug.get(resolvedSlug);
         const hasDates = !!(relPerson?.lifespan || relPerson?.birth_year);
         // The lifespan renders as: </a> <span class="...">(LIFESPAN)</span>
         const ls = relPerson?.lifespan;

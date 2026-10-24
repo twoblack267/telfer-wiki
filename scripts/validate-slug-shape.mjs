@@ -51,6 +51,22 @@ const WRITE_BASELINE = process.argv.includes('--write-baseline');
 const QUIET = process.argv.includes('--quiet');
 
 const FIELDS = ['children', 'parents', 'spouses'];
+
+// ── Documented unresolved names (a named exception, not a blanket pass) ──────
+// A relation pointing at a person who has NO profile cannot be written as a slug —
+// there is nothing to point at. That is a research gap, not a defect in the refs,
+// and the guard's own contract says so ("unresolvable label"). The list is explicit
+// and reviewed so every entry states who the missing person is and why the closest
+// same-named profile is NOT them. Never add an entry to silence a wrong-person match.
+const UNRESOLVED_OK = new Map([
+  [
+    'Adam Telfer (bap. 1775)',
+    'Child of Thomas Telfer (of Broadlee) and Agnes Mair, baptised 1775. Not ' +
+      'adam-telfer-1771 (parents: James Telfer of Sorbietrees + Margaret Armstrong) ' +
+      'and not adam-telfer-1799 (parents: james-telfer-1761 + Elizabeth Hutton) — ' +
+      'different families. Profile not yet written.',
+  ],
+]);
 // Tolerance: relationship data genuinely shrinks a little when vault records are corrected
 // (a disproven child removed, a merge). 3% + 5 absolute absorbs legitimate curation while
 // still firing loudly on a mass regression (the card's event would have removed ~85%).
@@ -66,17 +82,34 @@ const people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
 
 // ── Index helpers ────────────────────────────────────────────────────────────
 const slugSet = new Set(people.map((p) => p.slug));
+const bySlug = new Map(people.map((p) => [p.slug, p]));
 const displayLower = new Map(); // lowercased display_name -> slug
 const shortLower = new Map();   // "first last" (lower) -> [slug, ...]
+// Some vault profiles carry a disambiguating parenthetical inside last_name:
+// last_name: "Telfer (shepherd)", "Telfer (of Castleton)", "Paynter (of Calstock)".
+// The bare display name "William Telfer (shepherd)" is then NOT a match for the
+// key "william telfer (shepherd)", so the name is reported as unresolved and the
+// guard demands a regeneration — which is how the tw-2026-09-13-034 data loss gets
+// triggered. Index the SURNAME BOTH WAYS instead: qualified and stripped. Nothing
+// in the data changes, and the qualified surname still disambiguates.
+const splitSurname = (last) => {
+  const m = String(last || '').match(/^(.*?)\s*\(([^)]*)\)\s*$/);
+  return m ? { base: m[1].trim(), qualifier: m[2].trim() } : { base: String(last || '').trim(), qualifier: '' };
+};
 for (const p of people) {
   if (p.display_name) {
     const d = p.display_name.toLowerCase().trim();
     if (!displayLower.has(d)) displayLower.set(d, p.slug);
   }
-  const short = `${p.first_name || ''} ${p.last_name || ''}`.toLowerCase().trim();
-  if (short && short !== ' ') {
-    if (!shortLower.has(short)) shortLower.set(short, []);
-    shortLower.get(short).push(p.slug);
+  const { base } = splitSurname(p.last_name);
+  const keys = new Set();
+  const raw = `${p.first_name || ''} ${p.last_name || ''}`.toLowerCase().trim();
+  if (raw && raw !== ' ') keys.add(raw);
+  const stripped = `${p.first_name || ''} ${base}`.toLowerCase().trim();
+  if (stripped && stripped !== ' ') keys.add(stripped);
+  for (const k of keys) {
+    if (!shortLower.has(k)) shortLower.set(k, []);
+    if (!shortLower.get(k).includes(p.slug)) shortLower.get(k).push(p.slug);
   }
 }
 
@@ -85,23 +118,73 @@ const stripAnnotation = (s) => s.replace(/\s*\([^)]*\)\s*$/, '').trim();
 /** Is this entry usable as a resolvable slug? */
 const isSlug = (ref) => typeof ref === 'string' && SLUG_RE.test(ref);
 
+// ── Generation sanity ────────────────────────────────────────────────────────
+// A first-name+surname match that lands on a person born AFTER the referrer, or
+// more than one generation away, is not a resolution — it is a collision. The
+// vault is full of repeated forenames (two Hugh Parkers, two John Lawries, three
+// Joseph Marches). Matching "Hugh Parker" to whichever Hugh Parker exists is how
+// a father ends up born 37 years after his son. Only a year-plausible match counts.
+const MAX_PARENT_GAP = 70; // years a parent may be older than their child
+const MAX_CHILD_GAP = 70;  // years a child may be younger than their parent
+const MIN_PARENT_GAP = 11; // a parent younger than this is impossible
+
+/** Birth year of a person, or null. */
+const birthOf = (p) => (p && typeof p.birth_year === 'number' ? p.birth_year : null);
+
+/**
+ * Does `candidate` make sense as the `field` relation of `person`?
+ * Only used for the bare-name test, where the years are the sole evidence we have.
+ * Unknown years never disqualify (they cannot contradict) — silence is not a defect.
+ */
+function generationPlausible(person, field, candidate) {
+  const self = birthOf(person);
+  const other = birthOf(candidate);
+  if (self == null || other == null) return true; // no evidence either way
+  const gap = other - self; // positive = other is younger than person
+  if (field === 'parents') {
+    // parent must be older: gap should be negative
+    if (gap > 0) return false;                     // parent born after the child
+    return -gap >= MIN_PARENT_GAP && -gap <= MAX_PARENT_GAP;
+  }
+  if (field === 'children') {
+    if (gap < 0) return false;                     // child born before the parent
+    return gap >= MIN_PARENT_GAP && gap <= MAX_CHILD_GAP;
+  }
+  if (field === 'spouses' || field === 'siblings') {
+    // contemporaries: no one marries or siblings someone born a century away
+    return Math.abs(gap) <= MAX_PARENT_GAP;
+  }
+  return true;
+}
+
 /**
  * Could this raw name have been written as a slug (i.e. is there a person it points at)?
  * Only then is a raw name a DEFECT rather than a legitimately-unresolvable label.
+ *
+ * `person` and `field` are supplied so a name match that contradicts the years is
+ * reported as UNRESOLVABLE rather than as a resolution. A bare name whose only
+ * candidates are the wrong generation is a missing profile, not a slug defect.
  */
-function resolvableName(ref) {
+function resolvableName(ref, person, field) {
   if (!ref || typeof ref !== 'string') return null;
   const lower = ref.toLowerCase().trim();
-  if (displayLower.has(lower)) return { slug: displayLower.get(lower), how: 'display_name' };
+  if (displayLower.has(lower)) {
+    const slug = displayLower.get(lower);
+    if (person && field && !generationPlausible(person, field, bySlug.get(slug))) return null;
+    return { slug, how: 'display_name' };
+  }
   const bare = stripAnnotation(ref).toLowerCase().trim();
-  if (shortLower.has(bare) && shortLower.get(bare).length === 1) {
-    return { slug: shortLower.get(bare)[0], how: 'first+last' };
+  const candidates = shortLower.get(bare);
+  if (!candidates) return null;
+  // keep only candidates whose years do not contradict the relationship
+  const plausible = person && field
+    ? candidates.filter((s) => generationPlausible(person, field, bySlug.get(s)))
+    : candidates;
+  if (plausible.length === 1) return { slug: plausible[0], how: 'first+last' };
+  if (plausible.length > 1) {
+    return { slug: null, how: `first+last (${plausible.length} candidates)`, ambiguous: true };
   }
-  if (shortLower.has(bare) && shortLower.get(bare).length > 1) {
-    // ambiguous but still name-shaped-and-resolvable-in-principle
-    return { slug: null, how: `first+last (${shortLower.get(bare).length} candidates)`, ambiguous: true };
-  }
-  return null;
+  return null; // every namesake is the wrong generation → this person has no profile
 }
 
 // ── Measure ──────────────────────────────────────────────────────────────────
@@ -201,7 +284,8 @@ for (const p of people) {
 
     for (const ref of v) {
       if (isSlug(ref) || typeof ref !== 'string') continue;
-      const res = resolvableName(ref);
+      if (UNRESOLVED_OK.has(ref)) continue; // documented missing profile — see UNRESOLVED_OK
+      const res = resolvableName(ref, p, f);
       if (!res) continue; // unresolvable label (e.g. a non-person note) — not this defect
       bareTotal++;
       if (bareSamples.length < 15) {
@@ -210,10 +294,15 @@ for (const p of people) {
 
       // C. bare name duplicating a qualified sibling in the SAME field
       const bareKey = stripAnnotation(ref).toLowerCase().replace(/[^a-z0-9]/g, '');
-      if (qualified.has(bareKey)) {
+      // A "duplicate" needs a DIFFERENT entry in the same field. When the only
+      // qualified match is this very string, the check is comparing the name to
+      // itself and reporting a duplicate that does not exist — e.g. andrew-telfer-1798
+      // parents ["William Telfer (shepherd)", "janet-nichol"]: one William, listed once.
+      const rivals = (qualified.get(bareKey) || []).filter((q) => q !== ref);
+      if (rivals.length) {
         problems.push(
           `BARE DUPLICATE: ${p.slug} → ${f} has bare "${ref}" alongside qualified ` +
-          `${JSON.stringify(qualified.get(bareKey))} — same person written twice, one unresolved.`,
+          `${JSON.stringify(rivals)} — same person written twice, one unresolved.`,
         );
       }
     }

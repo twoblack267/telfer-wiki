@@ -75,7 +75,7 @@
       "james-telfer-1761"
     ],
     "spouses": [
-      "John Telfer (of Castleton)"
+      "john-telfer-of-castleton-1731"
     ],
     "siblings": [],
     "step_parents": [],
@@ -1112,7 +1112,7 @@
       "telfer"
     ],
     "parents": [
-      "William Telfer (shepherd)",
+      "william-telfer-shepherd",
       "janet-nichol"
     ],
     "children": [
@@ -1369,7 +1369,7 @@
       "person"
     ],
     "parents": [
-      "William Telfer (shepherd)",
+      "william-telfer-shepherd",
       "janet-nichol"
     ],
     "children": [
@@ -3070,7 +3070,9 @@
       "paynter",
       "in-law"
     ],
-    "parents": [],
+    "parents": [
+      "richard-paynter-of-calstock"
+    ],
     "children": [
       "thomas-paynter-1859",
       "mary-jane-paynter-1861",
@@ -16930,10 +16932,10 @@
     "parents": [],
     "children": [
       "william-telfer-1802",
-      "William Telfer"
+      "william-telfer-1802"
     ],
     "spouses": [
-      "William Telfer (shepherd)"
+      "william-telfer-shepherd"
     ],
     "siblings": [],
     "step_parents": [],

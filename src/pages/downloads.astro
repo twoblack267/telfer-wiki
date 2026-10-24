@@ -1,0 +1,269 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// ---------------------------------------------------------------------------
+// FAMILY RESOURCES — downloads page
+//
+// Ordered deliberately: free-and-clear material first, then progressively more
+// encumbered material. Everything below is data, so adding a book is a one-line
+// edit rather than a markup change.
+//
+// ORPHAN WORKS (Copyright Amendment Act 2026, Sch 1 Div 2AAA, ss 116AAB-116AAF):
+// any item whose owner cannot be identified or located MUST carry a clear and
+// reasonably prominent notice (s 116AAE(6)) and must have a Diligent Search
+// Record kept (s 116AAE(1)(c)). Add `orphan: true` and the notice renders.
+// ---------------------------------------------------------------------------
+
+type Item = {
+  title: string;
+  year?: string;
+  author?: string;
+  pages?: string;
+  size?: string;
+  file?: string;          // path under /public, URL-safe
+  external?: string;      // or an off-site link
+  note?: string;          // short plain-English description
+  orphan?: boolean;       // owner identified but not locatable
+  rightsUnknown?: boolean;// owner not yet established — hold, don't publish
+  searchRecord?: string;  // filename/path of the Diligent Search Record
+};
+
+type Tier = {
+  id: string;
+  heading: string;
+  badge: string;
+  blurb: string;
+  items: Item[];
+};
+
+const tiers: Tier[] = [
+  {
+    id: "free",
+    heading: "Free to share",
+    badge: "No restrictions",
+    blurb:
+      "Material the family owns outright, or that is old enough to be in the public domain. Download freely, share with anyone, no permission needed. Where a book is out of copyright, the author and publication details are given so the source can be cited.",
+    items: [
+      {
+        title: "A Brief Account of the First Telfer Families to Settle in South Australia",
+        year: "1986",
+        pages: "19 pages",
+        size: "8.2 MB",
+        file: "/research/A%20Brief%20Account%20of%20the%20First%20Telfer%20Families%20to%20Settle%20in%20SA%20(1986).pdf",
+        note:
+          "The 1986 reunion booklet — the earliest of the family's printed histories, compiled for the reunion of that year. Scanned from a family-held copy.",
+      },
+      {
+        title: "The Boy Who Was Not Ours",
+        year: "2026",
+        author: "Mark Telfer",
+        pages: "25 pages",
+        size: "8.1 MB",
+        file: "/downloads/the-boy-who-was-not-ours-2026.pdf",
+        note:
+          "The Alexander Telfer of Lamington research: what was proven, what wasn't, and why a man who appears in the family books is not actually ours. Written in 2026 from the parish register and the family books.",
+      },
+      {
+        title: "Amongst Australian Aborigines — Forty Years of Missionary Work",
+        year: "1939",
+        author: "Rev. E. J. Telfer",
+        pages: "117 pages",
+        size: "58 MB",
+        file: "/downloads/amongst-australian-aborigines-1939.pdf",
+        note:
+          "The Rev. Ernest John Telfer's account of forty years of missionary work with the United Aborigines' Mission, published in Melbourne in 1939. Reproduced full text with searchable OCR. In the public domain: the author died in 1953, so Australian copyright expired on 31 December 2023.",
+      },
+    ],
+  },
+  {
+    id: "orphan",
+    heading: "Published works — copyright owner identified but not locatable",
+    badge: "Orphan works notice",
+    blurb:
+      "These are still in copyright. The copyright owner has been identified but cannot currently be located. When one of these is digitised it will be offered under Australia's orphan works scheme, with the record of the search made. The notices below are in place now so that a rights holder can identify themselves before, not after, publication.",
+    items: [
+      {
+        title: "From the Borders to the Bush",
+        year: "1989",
+        orphan: true,
+        searchRecord: "From the Borders to the Bush",
+        note:
+          "The second of the family's printed histories, covering the family's Scottish origins and the move to South Australia. Not yet digitised for download.",
+        rightsUnknown: true,
+      },
+      {
+        title: "A Telfer Family Tree — Supplement 2008",
+        year: "2008",
+        author: "Telfer Family History Association Inc.",
+        orphan: true,
+        searchRecord: "A Telfer Family Tree — Supplement 2008",
+        note:
+          "The genealogical supplement to From the Borders to the Bush, published by the Telfer Family History Association. Not yet digitised for download.",
+        rightsUnknown: true,
+      },
+    ],
+  },
+];
+
+// Every tier renders, including held items — a tier must never disappear
+// silently because nothing in it is downloadable yet. Held items render with
+// their orphan notice and no download button, which is the honest state.
+const publishedTiers = tiers;
+const heldCount = tiers.reduce(
+  (n, t) => n + t.items.filter((i) => !i.file && !i.external).length,
+  0
+);
+---
+
+<BaseLayout
+  title="Family Resource Downloads"
+  description="Downloadable family history material from the Telfer family archive — books, booklets and research. Free material first, with clear notices where a copyright owner cannot be located."
+  canonicalPath="/downloads"
+>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <article class="prose prose-lg dark:prose-invert max-w-none">
+      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[var(--color-heading)] mb-2">
+        Family Resource Downloads
+      </h1>
+      <p class="text-sm text-[var(--color-muted)] mb-8">
+        Books, booklets and research from the family archive — free to download
+      </p>
+
+      <p class="mb-6">
+        Over the years the family has printed several histories. Those books are out of print and
+        the copies are wearing out, so they are being made available here as PDFs for anyone
+        researching the family. Nothing here costs anything, and nothing requires an account.
+      </p>
+
+      <p class="mb-10">
+        The items are listed in order of how freely they can be shared — starting with material the
+        family owns outright, and moving down to material that is still in copyright. Where a
+        copyright owner exists but cannot be found, the item carries a notice explaining the search
+        that was made and how to reach us.
+      </p>
+
+      {publishedTiers.map((tier) => (
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)] mb-1">
+            {tier.heading}
+          </h2>
+          <p class="text-xs uppercase tracking-wide text-[var(--color-muted)] mb-3">
+            {tier.badge}
+          </p>
+          <p class="text-sm text-[var(--color-muted)] mb-6">{tier.blurb}</p>
+
+          <ul class="space-y-6 list-none pl-0">
+            {tier.items.map((item) => (
+              <li class="border border-[var(--color-border)] rounded-lg p-4">
+                <h3 class="font-serif text-lg font-semibold text-[var(--color-heading)] mt-0 mb-1">
+                  {item.title}
+                </h3>
+                <p class="text-sm text-[var(--color-muted)] mt-0 mb-2">
+                  {[item.author, item.year, item.pages, item.size]
+                    .filter(Boolean)
+                    .join(" · ")}
+                </p>
+                {item.note && <p class="text-sm mt-0 mb-3">{item.note}</p>}
+
+                {item.file && (
+                  <a
+                    href={item.file}
+                    class="inline-block px-4 py-2 rounded-lg bg-[var(--color-highlight)] text-white font-medium no-underline hover:opacity-90"
+                    download
+                  >
+                    Download PDF
+                  </a>
+                )}
+                {item.external && (
+                  <a
+                    href={item.external}
+                    class="inline-block px-4 py-2 rounded-lg bg-[var(--color-highlight)] text-white font-medium no-underline hover:opacity-90"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Read or download (Google Drive)
+                  </a>
+                )}
+
+                {item.orphan && (
+                  <div class="mt-4 border-l-4 border-[var(--color-highlight)] pl-4 py-2 bg-[var(--color-surface)] rounded-r">
+                    <p class="text-sm font-semibold mt-0 mb-2">
+                      Orphan works notice — copyright owner not located
+                    </p>
+                    <p class="text-sm mt-0 mb-2">
+                      This work is still in copyright. The copyright owner has been identified
+                      but could not be located after a reasonably diligent search. When digitised,
+                      it will be made available under the orphan works provisions of the
+                      <em>Copyright Act 1968</em> (Cth), inserted by the
+                      <em>Copyright Amendment Act 2026</em>.
+                    </p>
+                    <p class="text-sm mt-0 mb-2">
+                      A written record of the search made for the rights holder is kept by the
+                      family and is available on request. If you are the copyright owner, or act
+                      for them, please{" "}
+                      <a href="/contact/">contact us</a> — we will respond promptly, and will
+                      either agree terms or remove the item on request.
+                    </p>
+                    {item.searchRecord && (
+                      <p class="text-xs text-[var(--color-muted)] mt-0 mb-0">
+                        Diligent search record: {item.searchRecord}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+
+      <section class="mb-10">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">
+          Why some books aren&rsquo;t here yet
+        </h2>
+        <p>
+          Two of the family&rsquo;s printed histories are still in copyright, and the body that
+          published them can no longer be reached. Before either is offered for download, a
+          documented search for the rights holder is completed and kept on file, so that the
+          position is clear to anyone who asks — including a rights holder who turns up later.
+        </p>
+        <p class="mt-3">
+          Nothing is published here on the assumption that nobody will mind. If we can&rsquo;t
+          show the search we made, the book waits.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">
+          Copyright and re-use
+        </h2>
+        <p>
+          The genealogical facts in these books — names, dates, places, relationships — are
+          historical record and can be used freely. The books themselves, as printed works, are
+          not the same thing: their text and arrangement belong to whoever wrote and published
+          them. If you want to reproduce a substantial part of one, please{" "}
+          <a href="/contact/">ask first</a>.
+        </p>
+        <p class="mt-3">
+          For personal family research, you generally don&rsquo;t need to ask. See our{" "}
+          <a href="/terms/">Terms of Use</a> for the detail.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">
+          Something missing, or something wrong?
+        </h2>
+        <p>
+          If you hold a copy of a family book that isn&rsquo;t here, or you know who owns the
+          rights to one of the orphan works above, we would genuinely like to hear from you —{" "}
+          <a href="/contact/">get in touch</a>.
+        </p>
+      </section>
+
+      <p class="text-sm text-[var(--color-muted)] italic mt-8">
+        Last updated October 2026. Family resources for telferwiki.com.
+      </p>
+    </article>
+  </main>
+</BaseLayout>
