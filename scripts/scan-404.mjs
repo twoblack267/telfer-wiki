@@ -39,7 +39,18 @@ async function checkUrl(url, label) {
 }
 
 async function main() {
-  const peopleJsonPath = path.resolve(import.meta.dirname, '../src/data/people.json');
+  // Read the PUBLIC data file, not people.json.
+  // FIXED 2026-10-25: this read people.json (411 people, including living and
+  // deliberately-unpublished profiles) and probed all of them on the live site.
+  // Six profiles are intentionally withheld from the public dataset —
+  // aaron-ivory-1989, jared-ivory-1993, joel-ivory-1986, karina-ivory,
+  // lauren-ivory-1994, sheryle-telfer-1961 — so they 404 by design. Probing
+  // them produced a standing "broken-links:11" failure EVERY night (5 pages +
+  // their 5 redirect re-checks), which set BLOCK_PUSH on an otherwise healthy
+  // night and filed a can-do card for a non-problem. Night Watch has been
+  // reporting a false fault since those people were unpublished.
+  // people.public.json is the authoritative list of pages that SHOULD exist.
+  const peopleJsonPath = path.resolve(import.meta.dirname, '../src/data/people.public.json');
   const peopleJson = JSON.parse(fs.readFileSync(peopleJsonPath, 'utf-8'));
 
   const slugs = [...new Set(peopleJson.map(p => p.slug).filter(Boolean))];

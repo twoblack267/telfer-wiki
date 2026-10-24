@@ -45,8 +45,11 @@ import path from 'node:path';
 const HOME = process.env.HOME || '/Users/marktelfer';
 const KANBAN = path.join(HOME, '.hermes', 'kanban');
 const TASKS_DIR = path.join(KANBAN, 'tasks');
-// BOARD_FILE deliberately unused: board.yaml is only ever written by
-// sync-task-cards-to-board.py. Kept as a comment so nobody re-adds string surgery.
+// Read-only handle on the board. board.yaml is only ever WRITTEN by
+// sync-task-cards-to-board.py — never by this script (see the corruption
+// post-mortem at the board-sync section below). Reading it is fine and is how
+// the suppression rule detects that Night Watch already filed its own card.
+const BOARD_FILE = path.join(KANBAN, 'board.yaml');
 
 const RAW_EXIT = (process.env.NW_EXIT ?? '0').trim();
 const STAGE = (process.env.NW_STAGE || 'night-watch.sh').trim();
@@ -79,21 +82,34 @@ mkdirSync(TASKS_DIR, { recursive: true });
 // ── Already filed by Night Watch itself? Then we are redundant. ─────────────
 // night-watch.sh files a DETAILED card (night-watch-issue-YYYYMMDD-N naming the
 // exact blockers) at its step 9. That card is strictly better than this
-// fallback. Firing ours too would put two cards for one night in front of Mark
-// at 7am — noise that trains him to ignore the board.
-// So: if any night-watch-issue-YYYYMMDD-* card exists for today, stand down.
-// We only exist for the nights where Night Watch DIED BEFORE step 9.
-if (existsSync(TASKS_DIR)) {
-  const todaysDetailed = readdirSync(TASKS_DIR).some(
-    (f) => f.startsWith(`night-watch-issue-${DAY}-`) && /\.ya?ml$/.test(f),
-  );
-  if (todaysDetailed) {
+// fallback, and firing ours too would put two cards for one night in front of
+// Mark at 7am — noise that trains him to ignore the board.
+//
+// Rule: if ANY night-watch-issue-* card is still OPEN, Night Watch's own
+// detailed card is already carrying this fault. Stand down.
+// We only exist for nights Night Watch DIED BEFORE step 9 and filed nothing.
+// (Scoped to open cards, not just today's, because a persisting fault keeps the
+// same detailed card open across nights — refiling a fallback each night would
+// leak one card per day for one unchanged problem.)
+try {
+  const boardTxt = readFileSync(BOARD_FILE, 'utf8');
+  const openIssue = /- id: night-watch-issue-[0-9]{8}-\d+[\s\S]{0,2000}?status: open/.test(boardTxt);
+  if (openIssue) {
     console.log(
-      `✅ night-watch-fallback-card: night-watch.sh already filed its detailed ` +
-        `night-watch-issue-${DAY}-* card for today — fallback standing down (no duplicate).`,
+      '✅ night-watch-fallback-card: an open night-watch-issue-* card already carries ' +
+        "tonight's blockers — fallback standing down (no duplicate).",
     );
     process.exit(0);
   }
+} catch (e) {
+  // A caught exception must NEVER do the work of `|| true`. This catch
+  // previously swallowed a ReferenceError (BOARD_FILE had been commented out),
+  // which silently disabled suppression and let duplicate cards through.
+  // Now: say it out loud before degrading.
+  console.error(
+    `🟡 Suppression check failed (${String(e.message || e).slice(0, 160)}) — ` +
+      `falling through and filing. Fix this; it is masking a bug, not a condition.`,
+  );
 }
 
 // ── Already filed today? Note the repeat, never mint a twin. ────────────────
