@@ -45,7 +45,8 @@ import path from 'node:path';
 const HOME = process.env.HOME || '/Users/marktelfer';
 const KANBAN = path.join(HOME, '.hermes', 'kanban');
 const TASKS_DIR = path.join(KANBAN, 'tasks');
-const BOARD_FILE = path.join(KANBAN, 'board.yaml');
+// BOARD_FILE deliberately unused: board.yaml is only ever written by
+// sync-task-cards-to-board.py. Kept as a comment so nobody re-adds string surgery.
 
 const RAW_EXIT = (process.env.NW_EXIT ?? '0').trim();
 const STAGE = (process.env.NW_STAGE || 'night-watch.sh').trim();
@@ -74,6 +75,26 @@ const DAY = TODAY_STR.replace(/-/g, '');
 const cardId = `night-watch-fallback-${DAY}`;
 
 mkdirSync(TASKS_DIR, { recursive: true });
+
+// ── Already filed by Night Watch itself? Then we are redundant. ─────────────
+// night-watch.sh files a DETAILED card (night-watch-issue-YYYYMMDD-N naming the
+// exact blockers) at its step 9. That card is strictly better than this
+// fallback. Firing ours too would put two cards for one night in front of Mark
+// at 7am — noise that trains him to ignore the board.
+// So: if any night-watch-issue-YYYYMMDD-* card exists for today, stand down.
+// We only exist for the nights where Night Watch DIED BEFORE step 9.
+if (existsSync(TASKS_DIR)) {
+  const todaysDetailed = readdirSync(TASKS_DIR).some(
+    (f) => f.startsWith(`night-watch-issue-${DAY}-`) && /\.ya?ml$/.test(f),
+  );
+  if (todaysDetailed) {
+    console.log(
+      `✅ night-watch-fallback-card: night-watch.sh already filed its detailed ` +
+        `night-watch-issue-${DAY}-* card for today — fallback standing down (no duplicate).`,
+    );
+    process.exit(0);
+  }
+}
 
 // ── Already filed today? Note the repeat, never mint a twin. ────────────────
 if (existsSync(TASKS_DIR)) {
@@ -133,48 +154,36 @@ const taskFile = path.join(TASKS_DIR, `${cardId}.yaml`);
 writeFileSync(taskFile, taskYaml + '\n');
 
 // ── Surface on board.yaml so the 7am reader actually sees it ────────────────
-// Deliberately hand-rolled YAML: this must work when the python toolchain is
-// exactly what's broken. Matches the row shape sync-task-cards-to-board.py emits.
-function yamlStr(s) {
-  return `'${String(s).replace(/'/g, "''")}'`;
-}
+// CRITICAL LESSON (2026-10-25): the first version of this file hand-appended a
+// YAML row to board.yaml by string surgery, inserting after the first line
+// containing the word "Backlog". That inserted our row between `- name: Backlog`
+// and `tasks:` and CORRUPTED the whole board — 534 cards unparseable, caught
+// only when board-set.py refused to run. Never hand-edit a shared YAML board.
+//
+// The board has exactly one blessed writer: sync-task-cards-to-board.py, which
+// takes the lock, appends a correctly-shaped row, and validates the parse. We
+// delegate to it. If it cannot run (it needs python3 + PyYAML, which may be
+// precisely what is broken) we degrade to task-file-only: the 7am reader also
+// reads tasks/ via that same sync, so the card still surfaces on the next sync.
+// A missing board row is recoverable; a corrupted board is not.
+const SYNC = path.join(HOME, '.hermes', 'scripts', 'sync-task-cards-to-board.py');
 try {
-  if (existsSync(BOARD_FILE)) {
-    const board = readFileSync(BOARD_FILE, 'utf8');
-    if (board.includes(`id: ${cardId}`)) {
-      console.log(`   board.yaml already lists ${cardId} — not appending again.`);
+  if (existsSync(SYNC)) {
+    const { spawnSync } = await import('node:child_process');
+    const r = spawnSync('/usr/bin/python3', [SYNC], { encoding: 'utf8', timeout: 60_000 });
+    const out = `${r.stdout || ''}${r.stderr || ''}`.trim();
+    if (r.status === 0) {
+      console.log(`   ✅ Board synced via sync-task-cards-to-board.py — 7am reader will surface it.`);
     } else {
-      const row = [
-        `    - id: ${cardId}`,
-        `      title: ${yamlStr(`Night Watch died before it could file a card — ${detail}`)}`,
-        `      type: task`,
-        `      severity: high`,
-        `      source: ${yamlStr('Skippy — night-watch-fallback-card.mjs')}`,
-        `      date: ${TODAY_STR}`,
-        `      status: open`,
-        '',
-      ].join('\n');
-      // Append into the Backlog column if we can find it, else append to EOF.
-      const backlog = board.indexOf('    - id: ');
-      const marker = board.indexOf('Backlog');
-      let out;
-      if (marker !== -1) {
-        // insert right after the Backlog heading line
-        const lineEnd = board.indexOf('\n', marker);
-        out = board.slice(0, lineEnd + 1) + row + board.slice(lineEnd + 1);
-      } else {
-        out = board + '\n' + row;
-      }
-      writeFileSync(BOARD_FILE, out);
-      console.log(`   ✅ Appended ${cardId} to board.yaml (7am reader will surface it).`);
-      void backlog;
+      console.error(`🟡 Board sync exited ${r.status} — card is in tasks/ and will surface on next sync.`);
+      if (out) console.error(`   ${out.split('\n').slice(-3).join('\n   ')}`);
     }
   } else {
-    console.error(`🟡 board.yaml not found at ${BOARD_FILE} — card in tasks/ only.`);
+    console.error(`🟡 sync-task-cards-to-board.py not found — card is in tasks/ only.`);
   }
 } catch (e) {
-  console.error(`🔴 BOARD SURFACE FAILED for ${cardId}: ${String(e.message || e).slice(0, 300)}`);
-  console.error(`   Card is in tasks/ but may not appear on the board.`);
+  console.error(`🟡 Board sync could not run: ${String(e.message || e).slice(0, 200)}`);
+  console.error(`   Card is in tasks/ and will surface on the next successful sync.`);
 }
 
 console.log(`📌 FIRED fallback card ${cardId} — ${detail}`);
