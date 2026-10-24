@@ -170,6 +170,30 @@ export function lookupSlug(name, people) {
   const targetBirthYear = yearMatch ? parseInt(yearMatch[1]) : null;
 
   let clean = name.replace(/\([^)]*(?:\d|living|deceased|\?)[^)]*\)/g, "").trim().toLowerCase();
+
+  // ── "b. ~1791" IS A BIRTH YEAR, NOT DECORATION (2026-10-25) ────────────
+  // The strip above only removes brackets CONTAINING A DIGIT, so "Elisabeth
+  // Telfer (b. ~1806, England)" kept its whole parenthetical and could never equal
+  // a display_name. Worse, the year regex above is anchored to the bracket's first
+  // character, so "b. ~1791" yields targetBirthYear = null even though the vault is
+  // telling us exactly which John this is.
+  //
+  // Consequence, MEASURED not guessed: "John Telfer (b. ~1791, England)" matched no
+  // exact display_name (four other men are called plain "John Telfer"), fell through
+  // to array order, and returned john-telfer-1805 — a DIFFERENT MAN, born 14 years
+  // later. A silently wrong link is the Neil Telfer defect.
+  //
+  // So: pull a birth year out of "b. YYYY" / "born YYYY" / "c. YYYY" / "~YYYY", strip
+  // such an annotation from the comparable name, and use the year to pick the right
+  // namesake.
+  let annotatedBirth = null;
+  const bMatch = name.match(/\([^)]*?\b(?:b\.|born|c\.|~|approx\.?)\s*~?\s*(\d{4})[^)]*\)/i);
+  if (bMatch) {
+    annotatedBirth = parseInt(bMatch[1], 10);
+    clean = clean.replace(/\s*\([^)]*\b(?:b\.|born|c\.|~|approx\.?)[^)]*\)\s*/i, " ").replace(/\s+/g, " ").trim();
+  }
+  const wantedBirth = annotatedBirth ?? targetBirthYear;
+
   // Strip leading honorific titles so "Rev. Robert Haining" matches profile "Robert Haining".
   // Titles include a trailing period + space OR a bare space. Safe: only strips at the very
   // start; "Rev. Robert Haining" → "robert haining", never touches a surname or middle name.
@@ -184,9 +208,13 @@ export function lookupSlug(name, people) {
   if (exactMatches.length === 1) return exactMatches[0].slug;
   if (exactMatches.length > 1) {
     // Among multiple exact matches, prefer by target birth year
-    if (targetBirthYear) {
-      const yearExact = exactMatches.find(p => p.birth_year === targetBirthYear);
+    if (wantedBirth) {
+      const yearExact = exactMatches.find(p => p.birth_year === wantedBirth);
       if (yearExact) return yearExact.slug;
+      // The name matches several people and the ref names a year that NONE of them
+      // carries. That person is not in the data: refuse rather than let array order
+      // hand back a namesake (2026-10-25).
+      if (annotatedBirth) return null;
     }
     // Prefer living over deceased
     const living = exactMatches.filter(p => p.is_living);
@@ -210,9 +238,10 @@ export function lookupSlug(name, people) {
   if (matches.length === 1) return matches[0].slug;
   if (matches.length > 1) {
     // Prefer by birth year if we have one from the name
-    if (targetBirthYear) {
-      const yearMatch = matches.filter(p => p.birth_year === targetBirthYear);
+    if (wantedBirth) {
+      const yearMatch = matches.filter(p => p.birth_year === wantedBirth);
       if (yearMatch.length === 1) return yearMatch[0].slug;
+      if (annotatedBirth) return null;
     }
     // Prefer people with a matching middle name
     const middle = rest.join(" ").toLowerCase();
@@ -258,8 +287,8 @@ export function lookupSlug(name, people) {
   const stemMatches = people.filter((p) => normStem(stemOf(p.vault_file)) === targetStem && targetStem !== "");
   if (stemMatches.length === 1) return stemMatches[0].slug;
   if (stemMatches.length > 1) {
-    if (targetBirthYear) {
-      const yearStem = stemMatches.find((p) => p.birth_year === targetBirthYear);
+    if (wantedBirth) {
+      const yearStem = stemMatches.find((p) => p.birth_year === wantedBirth);
       if (yearStem) return yearStem.slug;
     }
     const livingStem = stemMatches.filter((p) => p.is_living);
@@ -323,7 +352,64 @@ function derivedLifespan(p) {
   return `${p.birth_year_display ?? "?"} – ${p.death_year_display ?? "?"}`;
 }
 
-export function getLinksForRelationships(relationshipNames, allPeople) {
+/**
+ * ── GENERATION SANITY FOR RAW NAME REFS (2026-10-25) ──────────────────────────
+ *
+ * `lookupSlug` is a NAME matcher with no biology in it. The graph builder has had a
+ * generation gate since the Neil Telfer defect (a father who died 59 years before
+ * his son was born) — but a RAW NAME left in a relationship array never goes back
+ * through that builder, so the RENDERER resolved it by name alone and linked it.
+ *
+ * Measured on live data, before this gate existed:
+ *   • david-parker-1822 (b.1822).parents → "Hugh Parker" → hugh-parker-1859,
+ *     his own SON, born 37 years after him.
+ *   • robert-telfer-1835 (b.1835).children → "Francis John Burton Telfer"
+ *     → francis-telfer-1768, born 67 years BEFORE him.
+ *   • james-telfer-1858 (b.1858).siblings → "Margaret Rutherford Telfer"
+ *     → margaret-telfer-1801, born 57 years earlier.
+ *   • joseph-march-1797 (b.1797).children → "Joseph March" → joseph-march-1767,
+ *     his own FATHER rendered as his child.
+ *
+ * Each of those printed a confident, clickable link asserting a family fact that is
+ * impossible. A wrong link is worse than no link: it is a fabrication with a URL.
+ *
+ * Deliberately NOT a full date gate — the builder owns biology. This only catches the
+ * blatant, undeniable case: a person can never be their own ancestor, a parent/child
+ * edge can never run backwards, and a sibling can never be two generations away.
+ * Undated people are never judged; absence of dates is not evidence.
+ */
+export function generationPlausible(relation, subject, candidate) {
+  if (!subject || !candidate) return true;
+  const sBorn = subject.birth_year, cBorn = candidate.birth_year;
+  if (sBorn == null || cBorn == null) return true;   // undated: no evidence, allow
+  const gap = sBorn - cBorn;                          // positive = candidate older
+  // A parent must still have been ALIVE when the child was conceived. This is the
+  // Neil Telfer case exactly: his father was written as "John Ernest Telfer", which
+  // is john-telfer-1877 — born 1877 and died 1877 — for a boy born in 1936. The birth
+  // gap alone (59 years) sat inside the window below, so the link survived. Dying
+  // 59 years before the child's birth is not a large gap, it is an impossibility.
+  const cDied = candidate.death_year;
+  if (relation === 'parents') {
+    if (cDied != null && cDied < sBorn - 1) return false;
+    // A parent must be older — by at least a decade in this family's records — and
+    // not so much older that the link is plainly cross-generational.
+    return gap >= 10 && gap <= 60;
+  }
+  if (relation === 'children') {
+    // The CHILD must be born while the subject was alive.
+    const sDied = subject.death_year;
+    if (sDied != null && cBorn > sDied + 1) return false;
+    return gap <= -10 && gap >= -60;
+  }
+  if (relation === 'siblings') {
+    return Math.abs(gap) <= 30;
+  }
+  return true; // spouses: age spreads are real, never judged here
+}
+
+export function getLinksForRelationships(relationshipNames, allPeople, context = null) {
+  const subject = context?.subject || null;
+  const relation = context?.relation || null;
   return relationshipNames.map((entry) => {
     // A WITHDRAWN relative (privacy strip) arrives as { plain_name } — the
     // person has no page, so this renders as plain text with NO link. Set
@@ -334,14 +420,69 @@ export function getLinksForRelationships(relationshipNames, allPeople) {
     }
     const person = allPeople.find((p) => (p.slug || "") === entry.trim());
     if (person) return { name: person.display_name, slug: person.slug, lifespan: derivedLifespan(person) };
-    // Not a slug — try resolving a display-name/wiki-link to a slug, keep the
-    // original text as the link label.
+    // A RAW NAME WITH EXPLICIT YEARS IS NEVER RE-RESOLVED (fixed 2026-10-24).
+    // The pipeline writes a raw display name into a relationship field only when
+    // it REFUSED to bind that ref. Two refusals exist and they need opposite
+    // handling:
+    //
+    //   1. UNDATED raw name — the vault gave nothing but a name, and the name did
+    //      not match exactly one profile. Nothing was disproved, it merely could
+    //      not be proven: "James Cowan", "Andrew Telfer". These legitimately
+    //      re-resolve; the guard below would otherwise hide 30 real relatives.
+    //
+    //   2. YEARS ON THE NAME — "John Ernest Telfer (1877-1877)",
+    //      "Adam Murray (1812-1882)". The years ARE the evidence that let the
+    //      pipeline test the candidate and reject it. Re-binding such a ref by
+    //      bare name is how Neil Ronald Telfer (b.1936) was handed a father who
+    //      died 59 years before he was born: `lookupSlug` is a pure NAME matcher
+    //      with no dates, so it cheerfully overruled the gate. It must not.
+    //
+    // So: dates present ⇒ plain text, always. No dates ⇒ resolve, as before.
+    //
+    // FIXED 2026-10-25: the rule above was over-broad and it broke 12 real links.
+    // A NON-LIFESPAN PARENTHETICAL IS PART OF THE NAME, not evidence of refusal.
+    // "John Telfer (b. ~1791, England)" carries a birth PLACE and a "~" — that is a
+    // disambiguator the vault author wrote to distinguish him from other Johns, and
+    // `lookupSlug` resolves it correctly. But the old test (`\d{3,4}` inside any
+    // parenthetical) saw the 1791, classified the ref as a REJECTED lifespan, and
+    // printed the man as plain text on his sister's page — a real relative silently
+    // unlinked, while his page linked fine the other way.
+    //
+    // Only a PROPER LIFESPAN is evidence of refusal: (1877–1877), (1812-1882),
+    // (1853–1853) — year, dash, year/death-word. A "(b. ~1791, England)" or
+    // "(fl. 1998)" style annotation denotes identity and must be resolved.
+    const LIFESPAN_SHAPE = /\(\s*~?\d{4}\s*[–-]\s*(?:\d{4}|living|\?)\s*\)/;
+    const hasYears = LIFESPAN_SHAPE.test(entry);
+    if (hasYears) {
+      // Show the bare name: the years belonged to the candidate the gate
+      // REJECTED, so printing them beside this person would assert the very
+      // match that was refused.
+      //
+      // FIXED 2026-10-25: the old strip removed EVERY dated parenthetical and
+      // collapsed all whitespace, which turned `Jean "Jane" Lawrie (1836–1914)`
+      // into `Jean "Jane" Lawrie` — and the guard's text is what a reader sees.
+      // Strip only a TRAILING lifespan, so the name the vault author wrote is
+      // preserved verbatim and only the refused annotation goes.
+      const bare = entry.replace(/\s*\(\s*~?\d{4}\s*[–-]\s*(?:\d{4}|living|\?)\s*\)\s*$/, "").trim();
+      return { name: bare || entry, slug: null, lifespan: undefined, plain: true };
+    }
+    // Not a slug and not a refused dated ref — try resolving a display-name/
+    // wiki-link to a slug, keep the original text as the link label.
     const slug = lookupSlug(entry, allPeople);
     let linkedLifespan;
     if (slug) {
       const linked = allPeople.find((p) => p.slug === slug);
+      // ── THE LAST LINE OF DEFENCE (2026-10-25) ──────────────────────────────
+      // A name match is not a relationship. If the name resolved but the DATES make
+      // the claim impossible, print the name and refuse the link. This is where a
+      // father stops being rendered as his son's child, and where a man born 67
+      // years after another stops being his father. See generationPlausible().
+      if (linked && !generationPlausible(relation, subject, linked)) {
+        return { name: entry, slug: null, lifespan: undefined, plain: true };
+      }
       if (linked) linkedLifespan = derivedLifespan(linked);
     }
+    if (!slug) return { name: entry, slug: null, lifespan: undefined, plain: true };
     return { name: entry, slug, lifespan: linkedLifespan };
   });
 }

@@ -135,6 +135,35 @@ function resolveNameToSlug(name, sourceSlug) {
     // (Geoffrey, Basil, Ruth) silently lost their father. Quotes are typographic
     // decoration around a preferred name, not information: strip them, keep the word.
     .replace(/["“”]/g, '').replace(/\s+/g, ' ').trim();
+  // ── 0) A DISAMBIGUATING QUALIFIER IS IDENTITY (2026-10-25) ──────────────────
+  //
+  // `cleanName` below strips a trailing parenthetical because years there are not
+  // part of a name. But it strips NON-YEAR qualifiers too, and some of those are the
+  // only thing identifying the person. "William Telfer (shepherd)" reduces to
+  // "William Telfer", a bare name claimed by FOUR records (1802/1811/1841/the
+  // shepherd). Every ambiguity gate then refuses it and the ref resolves to null:
+  //   • andrew-telfer-1798 lost his Father          → janet-nichol lost a child
+  //   • william-telfer-1802 lost his Father         → crown jewel shrank
+  //   • the shepherd could not resolve his OWN name → his Spouse edge vanished
+  //   • janet-nichol lost her Spouse
+  // Three crown-jewel failures from one over-eager strip.
+  //
+  // "(shepherd)" is not decoration — no other record answers to it, and people.json
+  // registers the full string as a unique key. Consult the qualified key BEFORE the
+  // qualifier is discarded, and only accept an unambiguous hit, so no generation of
+  // William is ever guessed at.
+  {
+    const q = String(name || '').match(/\(([^)]*)\)\s*$/);
+    if (q) {
+      const words = q[1].replace(/[\d\u2013\-?]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+      if (words) {
+        const bare = String(name).replace(/\s*\([^)]*\)\s*$/, '').replace(/["\u201c\u201d]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+        const qualified = nameIndex.get(`${bare} (${words})`);
+        if (qualified && qualified !== AMBIGUOUS) return qualified;
+      }
+    }
+  }
+
   // Extract birth/death years from the reference if present, e.g.
   // "William Telfer (1802–1850)" or "William Telfer (1802)". Use them to
   // disambiguate between same-named people reliably.
@@ -257,7 +286,36 @@ function resolveNameToSlug(name, sourceSlug) {
     // resolver refusal. When the full name is itself a distinct record, honour it and
     // only fall back to the first+last key when the full name is not distinctive.
     const fullIsDistinct = (() => {
-      if (nameIndex.get(bareKey) === AMBIGUOUS) return false;
+      if (nameIndex.get(bareKey) === AMBIGUOUS) {
+        // A DISAMBIGUATING qUALIFIER IS IDENTITY, NOT DECORATION (2026-10-25).
+        //
+        // `"William Telfer (shepherd)"` strips to the bare name "William Telfer",
+        // which is claimed by four records (1802 / 1811 / 1841 / the shepherd) and so
+        // is refused as ambiguous. But the qualifier "(shepherd)" is exactly what
+        // identifies THIS man — no other record carries it. Refusing the ref threw
+        // away the one piece of evidence that made it resolvable.
+        //
+        // Measured consequence: andrew-telfer-1798's Father edge was never written to
+        // childEdges, so janet-nichol's children dropped from 2 to 1 and the
+        // crown-jewel guard fired. The pre-existing green build had only been passing
+        // because the PREVIOUS people.json still carried the edge — a derived value
+        // being treated as evidence. Rebuilding from scratch exposed it.
+        //
+        // The parenthesised qualifier is registered against the id itself
+        // ("william telfer (shepherd)") and is unambiguous, so honour it. Never guess:
+        // only accept the qualifier when it maps to exactly one record and that record
+        // is the one and only claimant of the qualifier.
+        const qualifierKey = (() => {
+          const q = String(name || '').match(/\(([^)]*)\)\s*$/);
+          if (!q) return '';
+          const qClean = q[1].replace(/[\d–\-?]/g, '').trim(); // years are not identity
+          if (!qClean) return '';
+          return `${bareKey} (${qClean.toLowerCase()})`;
+        })();
+        const qualified = qualifierKey ? nameIndex.get(qualifierKey) : undefined;
+        if (qualified && qualified !== AMBIGUOUS) return true;
+        return false;
+      }
       const sameFull = new Set(people.filter((p) => baseName(p.id) === bareKey).map((p) => p.slug));
       return sameFull.size === 1 && nameIndex.has(bareKey);
     })();
@@ -566,6 +624,22 @@ for (const person of people) {
 
       // Skip self-references
       if (targetSlug === sourceSlug) continue;
+      // SELF-REFERENCE: DELIBERATELY NOT CHECKED BY NAME (corrected 2026-10-25).
+      //
+      // I previously added a name-text guard here to strip rows like "Catherine Leah
+      // Lawrie" from Catherine's own sibling list. It was the wrong instrument and it
+      // caused real damage: 21 legitimate refs were dropped, because THIS check runs
+      // after `targetSlug === sourceSlug` has already handled true self-reference, so
+      // everything it caught was a ref naming a DIFFERENT person who happens to share
+      // a name. Fathers called after their sons are ordinary in this family —
+      // "james-telfer-1796 lists itself as Father" was his father James, not himself.
+      // Name equality is not identity; a name shared across generations is evidence of
+      // a real relationship, not a duplicate row.
+      //
+      // The Lawrie display artefact is a RENDERER concern and is fixed where it
+      // belongs, in the profile page: a resolved self-link is drawn as plain text.
+      // The graph keeps every real edge, and the crown-jewel guard stays honest.
+      //
 
       // ── GENERATION GATE (2026-10-24, the neil-telfer father fix) ──────────
       // resolveNameToSlug is a NAME matcher: it has no idea whether the person it

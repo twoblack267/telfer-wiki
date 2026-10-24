@@ -34,7 +34,7 @@ import { PRIVACY_STRIP_SLUGS } from "../src/data/privacy-exclusions.mjs";
 // the `siblings` entries, which resolve-refs never converts — was reported as
 // "rendered as PLAIN TEXT" even though the page rendered a correct <a href>. Read
 // the href the page ACTUALLY produced by resolving the same way the page does.
-import { lookupSlug } from "../src/utils/format-body.mjs";
+import { lookupSlug, generationPlausible } from "../src/utils/format-body.mjs";
 
 const DIST = new URL("../dist/", import.meta.url).pathname;
 const PEOPLE_FILE = new URL("../src/data/people.public.json", import.meta.url).pathname;
@@ -177,12 +177,69 @@ function checkPage(file) {
       // Resolve exactly as the template does. A raw display name is a legitimate
       // stored form; only the RESOLVED slug can be asserted against the HTML.
       const resolvedSlug = bySlug.has(relSlug) ? relSlug : lookupSlug(relSlug, people);
+      // ── A REFUSED DATED REF IS A RESEARCH GAP, NOT A RENDERING DEFECT (2026-10-25)
+      //
+      // `lookupSlug` is a pure NAME matcher: it has no dates. So a raw vault ref like
+      // "John Lawrie (1840–1845)" — a boy who died aged five — resolves by name to
+      // john-lawrie-1810, his FATHER born in 1810. The page is RIGHT to print that
+      // as plain text: linking it would hand a dead child to the wrong man, which is
+      // exactly the Neil Telfer defect (a father who died 59 years before his son was
+      // born). This guard must not demand the wrong thing.
+      //
+      // The renderer refuses such a ref precisely because it carries a LIFESPAN. So:
+      // if the ref carries a lifespan and the name-matched candidate's dates
+      // CONTRADICT it, this is an unresolvable person — no profile exists for them
+      // yet — and it belongs in `unresolved`, the research-gap list, not in
+      // `failures`. A ref whose dates AGREE with the candidate must still link.
+      const LIFESPAN_SHAPE = /\(\s*~?(\d{4})\s*[–-]\s*(\d{4}|living|\?)\s*\)/;
+      const refYears = LIFESPAN_SHAPE.exec(relSlug);
+      if (resolvedSlug && refYears && !bySlug.has(relSlug)) {
+        const cand = bySlug.get(resolvedSlug);
+        const refBirth = parseInt(refYears[1], 10);
+        const refDeath = /^\d{4}$/.test(refYears[2]) ? parseInt(refYears[2], 10) : null;
+        const birthConflict = cand?.birth_year != null && refBirth !== cand.birth_year;
+        const deathConflict = refDeath != null && cand?.death_year != null && refDeath !== cand.death_year;
+        if (birthConflict || deathConflict) {
+          // Dates contradict → the named person is not this candidate. Research gap.
+          unresolved.push({
+            page: slug,
+            field: SECTION_LABEL[field],
+            relationship: relSlug,
+            reason: `dates contradict ${resolvedSlug} (${cand?.birth_year}–${cand?.death_year}); no profile for this person yet`,
+          });
+          continue;
+        }
+      }
       if (!resolvedSlug) {
         // Genuinely unresolvable: no profile exists for this person, so the page
         // cannot link them. That is a research gap, reported separately from a
         // broken link, and it must not masquerade as a rendering defect.
         unresolved.push({ page: slug, field: SECTION_LABEL[field], relationship: relSlug });
         continue;
+      }
+      // ── ASK THE SAME BIOLOGICAL QUESTION THE RENDERER ASKS (2026-10-25) ──────
+      // The template now refuses a name-matched link when the DATES make the relation
+      // impossible (generationPlausible). That refusal is CORRECT, so the guard must
+      // not report it as a broken link. `neil-telfer` (b.1936) naming "John Ernest
+      // Telfer" is the standing example: the only profile by that name died in 1877,
+      // and the page rightly prints a name instead of handing a boy a father who died
+      // 59 years before he was born. This is a DATA gap — someone to research — not a
+      // rendering defect, exactly like the dated-contradiction branch above.
+      {
+        const subject = bySlug.get(slug);
+        const candidate = bySlug.get(resolvedSlug);
+        const REL = { Parents: "parents", Children: "children", Siblings: "siblings" }[SECTION_LABEL[field]];
+        if (REL && candidate && !generationPlausible(REL, subject, candidate)) {
+          unresolved.push({
+            page: slug,
+            field: SECTION_LABEL[field],
+            relationship: relSlug,
+            reason:
+              `only profile by this name is ${resolvedSlug} (${candidate.birth_year}–${candidate.death_year}), ` +
+              `which the dates rule out as a ${REL.replace(/s$/, "")}; needs research`,
+          });
+          continue;
+        }
       }
       const name = bySlug.get(resolvedSlug)?.display_name || relSlug;
       // Correct render = an <a> whose href targets people/<relSlug>.
@@ -212,7 +269,7 @@ function checkPage(file) {
             file: file.replace(DIST, ""),
             page: slug,
             field: SECTION_LABEL[field],
-            relationship: `${name} (${relSlug})`,
+            relationship: name && name !== relSlug ? `${relSlug} → ${name}` : relSlug,
             reason: `linked but lifespan "${relPerson.lifespan}" NOT rendered on row`,
           });
         } else if (!hasDates) {
@@ -220,7 +277,7 @@ function checkPage(file) {
             file: file.replace(DIST, ""),
             page: slug,
             field: SECTION_LABEL[field],
-            relationship: `${name} (${relSlug})`,
+            relationship: name && name !== relSlug ? `${relSlug} → ${name}` : relSlug,
             reason: "linked person has NO lifespan/birth date in data — renders as bare name",
           });
         }
@@ -231,7 +288,7 @@ function checkPage(file) {
           file: file.replace(DIST, ""),
           page: slug,
           field: SECTION_LABEL[field],
-          relationship: `${name} (${relSlug})`,
+          relationship: name && name !== relSlug ? `${relSlug} → ${name}` : relSlug,
           reason: "rendered as PLAIN TEXT, not a link",
         });
       } else {
@@ -239,7 +296,7 @@ function checkPage(file) {
           file: file.replace(DIST, ""),
           page: slug,
           field: SECTION_LABEL[field],
-          relationship: `${name} (${relSlug})`,
+          relationship: name && name !== relSlug ? `${relSlug} → ${name}` : relSlug,
           reason: "not found as a link target in sidebar output",
         });
       }
@@ -284,3 +341,22 @@ console.log(
   `\n✅ RELATIONSHIP-LINK GUARD PASSED — all relationships linked across ` +
     `${checkedPages} profile pages (${checkedRelations} checked)\n`
 );
+
+// ── RESEARCH GAPS ARE REPORTED, NEVER SWALLOWED (2026-10-25) ─────────────────
+// `unresolved` used to be collected and then never printed, which is how a real
+// relative can sit unlinked forever while the guard reports a clean pass. A gap is
+// not a failure — there is no profile to link to — but it must be VISIBLE so the
+// person gets researched instead of forgotten. Grouped by name so 8 gaps read as 8.
+if (unresolved.length > 0) {
+  const byName = new Map();
+  for (const u of unresolved) {
+    const key = u.relationship;
+    if (!byName.has(key)) byName.set(key, { ...u, pages: [] });
+    byName.get(key).pages.push(u.page);
+  }
+  console.log(`ℹ️  ${byName.size} relationship(s) have no profile yet — research gaps, not link defects:`);
+  for (const [name, info] of byName) {
+    console.log(`   • ${name} — named on ${info.pages.length} page(s): ${[...new Set(info.pages)].slice(0, 4).join(", ")}${info.pages.length > 4 ? "…" : ""}`);
+  }
+  console.log("");
+}

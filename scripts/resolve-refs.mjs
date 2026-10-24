@@ -28,6 +28,8 @@ const slugSet = new Set(people.map(p => p.slug));
 // ── Build comprehensive lookup indices ───────────
 
 const byDisplay = new Map();           // exact display_name → slug
+const byDisplayCollisions = new Set(); // display_name claimed by more than one slug
+const yearAnnotatedKeys = new Set();   // display strings that ARE year annotations, not name qualifiers
 const byDisplayWithYears = new Map();  // "Display Name (YYYY–YYYY)" → slug
 const byName = new Map();              // "first last" → [{slug, birth, death, display}, ...]
 const byFullName = new Map();          // "first middle last" → [{slug, birth, death, display}, ...]
@@ -59,7 +61,14 @@ people.forEach(p => {
     });
   }
   
-  byDisplay.set(display, p.slug);
+  if (byDisplay.has(display)) {
+    if (byDisplay.get(display) !== p.slug) byDisplayCollisions.add(display);
+  } else {
+    byDisplay.set(display, p.slug);
+  }
+  // A display_name ending in a parenthetical lifespan/year is an ANNOTATION, not a name
+  // qualifier — it must never win the qualifier short-circuit above.
+  if (/\s*\([~]?\d{3,4}\s*[–-]?[^)]*\)\s*$/.test(p.display_name || '')) yearAnnotatedKeys.add(display);
   
   // Store all matches for short names (duplicates)
   if (!byName.has(short)) byName.set(short, []);
@@ -207,6 +216,33 @@ function resolveRef(name, context = null) {
   
   // Already a slug?
   if (slugSet.has(clean)) return clean;
+  
+  // 0) A DISAMBIGUATING QUALIFIER IS IDENTITY, NOT DECORATION.  2026-10-25
+  //
+  // The bug this fixes: "William Telfer (shepherd)" returned null, so the shepherd's
+  // child edges never formed and janet-nichol silently lost a son (crown-jewel guard
+  // fired, correctly). Cause: byDisplay is keyed on the FULL display_name, so the
+  // shepherd's only entry is "william telfer (shepherd)". The bare name "william telfer"
+  // is shared by four Williams and is therefore __AMBIGUOUS__ by design. Every gate
+  // below strips the parenthetical (stripLifespan / stripAnnotation / getNamePieces),
+  // which throws away the one token that identifies WHICH William this is — leaving the
+  // ref indistinguishable from the three dated namesakes and resolved to nothing.
+  //
+  // So: if the ref carries a non-date qualifier AND that exact decorated string is the
+  // unique display_name of exactly one profile, that profile IS the referent. This runs
+  // BEFORE any bare-name ambiguity gate, because the ambiguity is an artefact of having
+  // discarded the qualifier. Date qualifiers (1772–1850) and "(fl. 1998)" never reach
+  // here — extractYears/stripLifespan handle those — so this cannot hijack a lifespan.
+  const qualifier = stripLifespan(clean);
+  const qualifierKey = lowerTrim(clean);
+  if (qualifier === clean && qualifierKey !== lowerTrim(stripAnnotation(clean))) {
+    // Refs always carry the parenthetical; only act when it is a *name* qualifier.
+    if (byDisplay.has(qualifierKey) && !yearAnnotatedKeys.has(qualifierKey)) {
+      const qualifiedSlug = byDisplay.get(qualifierKey);
+      // Only trust it if no other profile claims a colliding display form.
+      if (!byDisplayCollisions.has(qualifierKey)) return qualifiedSlug;
+    }
+  }
   
   const lowered = lowerTrim(clean);
   
@@ -492,7 +528,7 @@ let totalFixed = 0;
 // Step fields carry the same raw-name→slug resolution contract as the biological
 // ones (added 2026-09-22). They resolve as ordinary parent/child relations; only
 // the EDGE they produce differs, and that is decided in build-relationship-graph.
-const fields = ['parents', 'children', 'spouses', 'step_parents', 'step_children'];
+const fields = ['parents', 'children', 'spouses', 'siblings', 'step_parents', 'step_children'];
 const changes = [];
 const selfRefs = [];
 
@@ -506,6 +542,7 @@ people.forEach(p => {
     
     const relation = field === 'parents' || field === 'step_parents' ? 'parent'
                    : field === 'children' || field === 'step_children' ? 'child'
+                   : field === 'siblings' ? 'sibling'
                    : 'spouse';
     
     const newRefs = p[field].map(ref => {

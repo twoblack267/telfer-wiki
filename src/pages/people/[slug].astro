@@ -23,12 +23,16 @@ const telferPeople = people.filter((p) => p.branch === "telfer" || !p.branch);
 const allSlugs = new Set(people.map((p) => p.slug).filter(Boolean));
 
 // ── Relationship groupings ──
-const spouseLinks = getLinksForRelationships(person.spouses, telferPeople);
-const parentLinks = getLinksForRelationships(person.parents, telferPeople);
-const childLinks = getLinksForRelationships(person.children, telferPeople);
-const siblingLinks = getLinksForRelationships(person.siblings, telferPeople);
+// `context` carries WHOSE page this is and WHICH relation each list holds, so the
+// renderer can refuse a link the DATES make impossible (2026-10-25). Without it a
+// raw name resolved by name alone and could hand a man his own son as his father.
+const spouseLinks = getLinksForRelationships(person.spouses, telferPeople, { subject: person, relation: "spouses" });
+const parentLinks = getLinksForRelationships(person.parents, telferPeople, { subject: person, relation: "parents" });
+const childLinks = getLinksForRelationships(person.children, telferPeople, { subject: person, relation: "children" });
+const siblingLinks = getLinksForRelationships(person.siblings, telferPeople, { subject: person, relation: "siblings" });
 // Step relationships (added 2026-09-22) — rendered in their OWN sections so a
-// step-parent/stepchild is never presented as a blood relation.
+// step-parent/stepchild is never presented as a blood relation. No generation gate:
+// a step relation has no biological bounds.
 const stepParentLinks = getLinksForRelationships(person.step_parents || [], telferPeople);
 const stepChildLinks = getLinksForRelationships(person.step_children || [], telferPeople);
 
