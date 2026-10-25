@@ -47,6 +47,15 @@ for (const p of allPeople) {
   }
 }
 
+// Helper: escape a string for safe use inside an HTML attribute (used for data-name).
+function escapeAttr(s: string): string {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 // Helper: find person by ID (handles various formats)
 // CRITICAL: When the input contains a birth year (e.g., "James (1796–1863)"),
 // ALWAYS use firstName:birthYear matching to disambiguate same-name people.
@@ -397,7 +406,7 @@ ${indent}    <span class="font-mono text-[var(--color-heading)] shrink-0">${"│
 ${indent}    <strong>${(() => {
       const slug = slugById.get(person.id);
       return slug
-        ? `<a class="hover:text-[var(--color-heading)] underline decoration-dotted" href="${import.meta.env.BASE_URL}people/${slug}/">${person.display_name}</a>`
+        ? `<a class="person-name" data-name="${escapeAttr(person.display_name)}" href="${import.meta.env.BASE_URL}people/${slug}/">${person.display_name}</a>`
         : person.display_name;
     })()}</strong>
 ${indent}    <span class="text-xs text-[var(--color-muted)] shrink-0">(${lifespan})</span>${livingBadge}${virtualBadge}${spouseName}${surnameLabel}
@@ -629,8 +638,8 @@ const pageTitle = "Telfer Family Tree — All Generations";
             <p class="text-xs text-[var(--color-muted)] mb-3">
               Telfer lines with no surviving link into the Castleton tree. Kept here so nobody is lost.
             </p>
-            <div set:html={detachedHtml} />
-            {looseHtml && <div class="mt-3" set:html={looseHtml} />}
+            <div id="detached-tree" set:html={detachedHtml} />
+            {looseHtml && <div id="loose-tree" class="mt-3" set:html={looseHtml} />}
           </section>
         )}
       </div>
@@ -697,6 +706,117 @@ const pageTitle = "Telfer Family Tree — All Generations";
         border-color: var(--color-heading);
         background-color: var(--color-heading);
         color: white;
+      }
+      /* ─── Tap targets + long-press confirm (Mark's ruling 2026-10-25) ─────────
+         Measured 2026-10-25: 483 person links, 281 of them under 28px tall, every one of
+         them a bare inline <a> only as wide as its text. A thumb cannot hit that reliably
+         and, worse, a scroll drag started on a name used to navigate on finger-lift.
+         Person names are now inline-block with padding so the touchable box is thumb-sized,
+         and touch-action: pan-y tells the browser "vertical drags belong to the page". */
+      a.person-name {
+        display: inline-block;
+        padding: 6px 4px;
+        margin: -6px -4px;
+        min-height: 28px;
+        line-height: 1.35;
+        touch-action: pan-y;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 3px;
+        transition: background-color 120ms ease, color 120ms ease, transform 120ms ease;
+      }
+      a.person-name:hover {
+        color: var(--color-heading);
+      }
+      /* Visible "the hold registered" feedback — without it the reader is guessing. */
+      a.person-name.pc-pressing {
+        background-color: var(--color-highlight);
+        color: var(--color-surface);
+        border-radius: 4px;
+        transform: scale(0.97);
+      }
+      /* Desktop has a mouse; hold-to-open would be an insult to the species. */
+      @media (hover: hover) and (pointer: fine) {
+        a.person-name {
+          padding: 0;
+          margin: 0;
+          min-height: 0;
+          touch-action: auto;
+        }
+      }
+      /* Confirm sheet */
+      #profile-confirm {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: none;
+      }
+      #profile-confirm.pc-shown {
+        display: block;
+      }
+      #profile-confirm .pc-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+      #profile-confirm .pc-card {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 26rem;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 12px 12px 0 0;
+        padding: 1.1rem 1.1rem calc(1.1rem + env(safe-area-inset-bottom));
+        box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.25);
+        animation: pc-rise 160ms ease-out;
+      }
+      @keyframes pc-rise {
+        from { transform: translate(-50%, 12px); opacity: 0; }
+        to   { transform: translate(-50%, 0);    opacity: 1; }
+      }
+      @media (min-width: 640px) {
+        #profile-confirm .pc-card {
+          bottom: 50%;
+          transform: translate(-50%, 50%);
+          border-radius: 12px;
+        }
+        @keyframes pc-rise {
+          from { transform: translate(-50%, 40%); opacity: 0; }
+          to   { transform: translate(-50%, 50%); opacity: 1; }
+        }
+      }
+      #profile-confirm .pc-q {
+        margin: 0 0 0.9rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: var(--color-text);
+      }
+      #profile-confirm .pc-actions {
+        display: flex;
+        gap: 0.6rem;
+        justify-content: flex-end;
+      }
+      #profile-confirm button {
+        font: inherit;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 0.65rem 1.1rem;
+        min-height: 44px;
+        border: 1px solid var(--color-border);
+        background: transparent;
+        color: var(--color-text);
+      }
+      #profile-confirm .pc-open {
+        background: var(--color-heading);
+        border-color: var(--color-heading);
+        color: white;
+        font-weight: 600;
       }
       /* Highlight class for generation jump target */
       .tree-node.highlight-target > summary {
@@ -991,71 +1111,182 @@ const pageTitle = "Telfer Family Tree — All Generations";
           });
         });
 
-        // ─── Name links must WIN over the summary toggle ───
-        // A <summary> toggles open/closed on any click inside it, so a profile link nested in
-        // the summary could never be followed on touch (measured 2026-09-24: Playwright
-        // reported "<summary> intercepts pointer events" at 390px). Let a link tap navigate
-        // and stop the toggle from also firing.
-        // A person link can be reached two ways, and both must work:
-        //  1. the click lands ON the anchor (or a descendant of it) -> closest() finds it;
-        //  2. the click lands on the <summary> itself, because the anchor is a *sibling* inside
-        //     the summary and the summary's own box sits over the name. Measured 2026-09-24 at
-        //     1920px: elementFromPoint returned SUMMARY, mousedown/click traced to SUMMARY, and
-        //     closest('a[href]') was null, so nothing navigated and the branch just toggled.
-        // So fall back to querying the anchors INSIDE the summary the pointer hit.
-        const profileHref = (target) => {
-          if (!target) return null;
-          const isPerson = (a) => {
-            const h = a && a.getAttribute ? a.getAttribute('href') : null;
-            return h && h.indexOf('/people/') !== -1 && h.indexOf('/people/full-tree') === -1 ? a : null;
-          };
-          // 1. direct hit or a nearby descendant/ancestor of the anchor
-          const direct = isPerson(target.closest ? target.closest('a[href]') : null);
-          if (direct) return direct.href;
-          // 2. hit the <summary>: take the person anchor inside it (the name link)
-          const summary = target.closest ? target.closest('summary') : null;
-          if (summary) {
-            const inside = [...summary.querySelectorAll('a[href]')].map(isPerson).find(Boolean);
-            if (inside) return inside.href;
-          }
-          return null;
+        // ─── LONG-PRESS to open a profile (Mark's ruling 2026-10-25) ───
+        // REPLACES the old navigate-on-pointerup code. That code navigated the moment the
+        // finger LIFTED anywhere inside the row, with no movement check — so dragging to
+        // scroll while starting on a name threw the reader onto a profile page mid-scroll.
+        // New contract, in Mark's words: "hold it and then it opens... with a do you want to
+        // open this screen."
+        //   1. SCROLL  -> finger moves > 10px: nothing happens, ever.
+        //   2. TAP     -> finger lifts before 400ms: nothing happens (branches have their own
+        //                 +/-, so a tap on a name must not silently expand it).
+        //   3. HOLD    -> 400ms still and still: the name pulses, then a confirm dialog asks
+        //                 "Open <name>'s profile?" — Open navigates, Cancel does nothing.
+        //   4. KEYBOARD/desktop Ctrl-or-Enter, or a mouse click -> navigate directly; holding a
+        //                 mouse button to read a page is nonsense and desktop users expect one click.
+        const HOLD_MS = 400;
+        const MOVE_TOLERANCE = 10;
+
+        const slugHref = (a) => {
+          if (!a) return null;
+          const h = a.getAttribute('href');
+          return h && h.indexOf('/people/') !== -1 && h.indexOf('/people/full-tree') === -1 ? h : null;
         };
 
-        // `click` alone is not enough on touch: a tap inside <summary> is consumed by the
-        // details toggle and the follow-up synthetic click may never reach the anchor.
-        // Measured 2026-09-24: a CDP touchStart/touchEnd on the Gwendoline link navigated back
-        // to /people/full-tree/ while the same link's .click() worked. So navigate on
-        // `pointerup`/`touchend` directly, and suppress the toggle that would follow.
-        let tappedHref = null;
-        tree.addEventListener('pointerdown', (e) => {
-          tappedHref = profileHref(e.target);
-        }, true);
-        tree.addEventListener('pointerup', (e) => {
-          const href = profileHref(e.target);
-          if (href) {
+        // A name link, either hit directly or (phone layout) hit via an ancestor inside <strong>.
+        const nameLinkFrom = (target) => {
+          if (!target || !target.closest) return null;
+          const a = target.closest('a.person-name');
+          return a && slugHref(a) ? a : null;
+        };
+
+        const personNameOf = (a) => {
+          const raw = (a.dataset && a.dataset.name) || a.textContent || 'this person';
+          return raw.trim();
+        };
+
+        // ---- Confirm sheet -------------------------------------------------
+        let sheet = null;
+        let sheetOpenedAt = 0;
+        const SHEET_GUARD_MS = 450;   // ignore the synthetic click that ends the long-press
+        const buildSheet = () => {
+          const el = document.createElement('div');
+          el.id = 'profile-confirm';
+          el.setAttribute('role', 'dialog');
+          el.setAttribute('aria-modal', 'true');
+          el.innerHTML =
+            '<div class="pc-backdrop"></div>' +
+            '<div class="pc-card">' +
+            '  <p class="pc-q"></p>' +
+            '  <div class="pc-actions">' +
+            '    <button type="button" class="pc-cancel">Cancel</button>' +
+            '    <button type="button" class="pc-open">Open</button>' +
+            '  </div>' +
+            '</div>';
+          document.body.appendChild(el);
+          el.querySelector('.pc-backdrop').addEventListener('click', (ev) => {
+            // The finger-lift that ENDS the long-press lands on this backdrop and fires a
+            // synthetic click a few ms later, which used to dismiss the sheet the instant it
+            // appeared. Ignore any click in the first moments after opening.
+            if (Date.now() - sheetOpenedAt < SHEET_GUARD_MS) { ev.preventDefault(); ev.stopPropagation(); return; }
+            closeSheet();
+          });
+          el.querySelector('.pc-cancel').addEventListener('click', closeSheet);
+          el.querySelector('.pc-open').addEventListener('click', () => {
+            const href = sheetHref;
+            closeSheet();
+            if (href) window.location.href = href;
+          });
+          el.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') { e.preventDefault(); closeSheet(); }
+          });
+          return el;
+        };
+
+        let sheetHref = null;
+        let lastFocus = null;
+
+        const openSheet = (href, name) => {
+          if (!sheet) sheet = buildSheet();
+          sheetHref = href;
+          sheet.querySelector('.pc-q').textContent = 'Open ' + name + '\u2019s profile?';
+          sheet.classList.add('pc-shown');
+          sheetOpenedAt = Date.now();
+          lastFocus = document.activeElement;
+          sheet.querySelector('.pc-cancel').focus();
+        };
+
+        function closeSheet() {
+          if (!sheet) return;
+          sheet.classList.remove('pc-shown');
+          sheetHref = null;
+          if (lastFocus && lastFocus.focus) lastFocus.focus();
+        }
+
+        // ---- Pointer state machine -----------------------------------------
+        let press = null;   // {x, y, link, timer, moved}
+        let suppressClick = false;
+
+        const clearPress = () => {
+          if (press && press.timer) clearTimeout(press.timer);
+          if (press && press.link) press.link.classList.remove('pc-pressing');
+          press = null;
+        };
+
+        // Bind to every tree container on the page, not just #family-tree: measured
+        // 2026-10-25, 47 of 461 name links live in the "Other Telfer branches" section,
+        // which is a SEPARATE container. A listener bound only to #family-tree left those
+        // 47 names navigating on finger-lift while the main 414 did not.
+        const trees = ['family-tree', 'detached-tree', 'loose-tree']
+          .map((id) => document.getElementById(id))
+          .filter(Boolean);
+        if (!trees.length) return;
+
+        const bindTree = (tree) => {
+          tree.addEventListener('pointerdown', (e) => {
+            const link = nameLinkFrom(e.target);
+            if (!link) {
+              // A press on the row itself (rail, years, whitespace) — let the summary toggle.
+              clearPress();
+              return;
+            }
+            // Mouse: keep classic one-click behaviour, don't make desktop users hold.
+            if (e.pointerType === 'mouse') return;
+
+            press = { x: e.clientX, y: e.clientY, link, timer: null, moved: false };
+            link.classList.add('pc-pressing');
+            const href = slugHref(link);
+            const name = personNameOf(link);
+            press.timer = setTimeout(() => {
+              if (!press || press.moved) return;
+              press.link.classList.remove('pc-pressing');
+              if (navigator.vibrate) navigator.vibrate(15);
+              openSheet(href, name);
+              suppressClick = true;
+              clearPress();
+            }, HOLD_MS);
+          }, true);
+
+          tree.addEventListener('pointermove', (e) => {
+            if (!press) return;
+            const dx = Math.abs(e.clientX - press.x);
+            const dy = Math.abs(e.clientY - press.y);
+            if (dx > MOVE_TOLERANCE || dy > MOVE_TOLERANCE) {
+              press.moved = true;
+              clearPress();          // it's a scroll, not a press — never navigate
+            }
+          }, true);
+
+          tree.addEventListener('pointerup', (e) => {
+            if (!press) return;
+            const wasHold = press.moved;
+            clearPress();
+            if (wasHold) return;      // dragged: do nothing at all
+            // Short tap: do NOT navigate and do NOT toggle. Swallow it.
+            suppressClick = true;
             e.preventDefault();
             e.stopPropagation();
-            tappedHref = null;
-            window.location.href = href;
-          }
-        }, true);
-        tree.addEventListener('touchend', (e) => {
-          const href = profileHref(e.target);
-          if (href) {
+          }, true);
+
+          tree.addEventListener('pointercancel', () => { clearPress(); }, true);
+
+          // Swallow the synthetic click that follows a tap/hold so the <summary> doesn't toggle
+          // and the anchor doesn't navigate behind the dialog.
+          tree.addEventListener('click', (e) => {
+            const link = nameLinkFrom(e.target);
+            if (!link) { suppressClick = false; return; }
             e.preventDefault();
             e.stopPropagation();
-            window.location.href = href;
-            tappedHref = null;
-          }
-        }, true);
-        tree.addEventListener('click', (e) => {
-          const href = profileHref(e.target);
-          if (href || tappedHref) {
-            e.preventDefault();
-            e.stopPropagation();
-            window.location.href = (href || tappedHref);
-          }
-        }, true); // capture phase, so this runs before the toggle default
+            if (suppressClick) { suppressClick = false; return; }
+            // Keyboard activation or a mouse click: navigate directly (no hold on a desktop).
+            if (e.detail === 0 || e.pointerType === 'mouse' || !('ontouchstart' in window)) {
+              const h = slugHref(link);
+              if (h) window.location.href = h;
+            }
+          }, true);
+        };
+
+        trees.forEach(bindTree);
 
         // ─── Click name to focus + scroll ───
         tree.addEventListener('click', (e) => {
