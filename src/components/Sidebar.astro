@@ -258,7 +258,9 @@ const uniqueSuggestions = [...new Set(searchSuggestions)].sort();
     if (!document.querySelector('.mobile-menu-btn') && window.innerWidth < 1024) {
       const btn = document.createElement('button');
       btn.className = 'mobile-menu-btn fixed top-4 left-4 z-50 p-2 rounded bg-[var(--color-surface)] border border-[var(--color-border)] shadow-lg';
-      btn.innerHTML = '☰';
+      // Hamburger as inline SVG, not the ☰ text glyph — the glyph renders at
+      // whatever weight the OS font picks, which looked wrong on mobile.
+      btn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
       btn.setAttribute('aria-label', 'Open navigation');
       btn.addEventListener('click', openSidebar);
       document.body.appendChild(btn);
