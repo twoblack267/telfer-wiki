@@ -358,7 +358,28 @@ const finalRedirects = [];
 for (const r of filteredRedirects) {
   if (!r || !r.to) { console.log(`  ⏭️  SKIP (no destination): ${r.from}`); continue; }
   if (r.from === r.to) { console.log(`  ⏭️  SKIP (self-alias): ${r.from}`); continue; }
-  if (canonicalSlugs.has(r.from)) { console.log(`  ⏭️  SKIP (origin is a LIVE page): ${r.from} → ${r.to}`); continue; }
+
+  // PRIVACY EXEMPTION (fixed 2026-10-26). A withdrawn person's slug is STILL in
+  // people.json — the strip removes them from the PUBLISHED output, never from
+  // the source data. So `canonicalSlugs` claims an owner for a URL that has no
+  // page, and the "would hijack a live page" tests below rejected all six
+  // privacy aliases on every build while the 🔒 line above had already printed
+  // a success message for each one. Net effect: six announcements, zero aliases,
+  // and a green receipt. That is precisely the fabricated-receipt failure this
+  // guard was added to prevent, so the guard itself was wrong, not the aliases.
+  //
+  // The correct test is NOT "is this slug in people.json" (it always will be)
+  // but "does a page for it exist in THIS build" — which is what
+  // DROP_IF_PAGE_EXISTS already answers, and it is empty for withdrawn slugs
+  // because they are not in canonicalSlugs. Declared privacy aliases have one
+  // legitimate shape: withdrawn origin -> a destination the block above has
+  // already verified is a live page. They still get the chain check below.
+  const isPrivacyAlias = r.reason === 'privacy-withdrawal';
+
+  if (!isPrivacyAlias && canonicalSlugs.has(r.from)) {
+    console.log(`  ⏭️  SKIP (origin is a LIVE page): ${r.from} → ${r.to}`);
+    continue;
+  }
   if (!canonicalSlugs.has(r.to)) {
     console.log(`  ⛔ DROP (destination is not a live page in this build — a 200 here would be a dead end): ${r.from} → ${r.to}`);
     continue;
@@ -422,13 +443,31 @@ function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
   console.log(`  ${from} → ${to}  (${displayName})`);
 }
 
+const written = [];
 for (const r of finalRedirects) {
   writeRedirect(r.from, r.to, r.display_name, true);
+  written.push(r);
 }
 
 // Static redirect for /families/ → /people/families/
 writeRedirect('families', 'families', 'Families', false);
+written.push({ from: 'families', to: 'families', display_name: 'Families' });
 
 // Write log for reference
 fs.writeFileSync(REDIRECT_LOG, JSON.stringify(filteredRedirects, null, 2));
-console.log(`\n✅ ${filteredRedirects.length} redirect(s) written to dist/\n📋 Log saved to ${REDIRECT_LOG}`);
+
+// VERIFY FROM DISK, do not count intentions (fixed 2026-10-26).
+// This line used to report `filteredRedirects.length` — the number the script
+// HOPED to write. Every dropped alias was still counted, so the build printed
+// "407 written" while silently shipping zero of the six privacy aliases. A
+// receipt must be read back off the disk, never off the plan.
+const onDisk = written.filter((r) => {
+  const base = r.display_name === 'Families' ? 'dist' : DIST_DIR;
+  return fs.existsSync(path.join(base, r.from, 'index.html'));
+});
+const missing = written.length - onDisk.length;
+console.log(`\n✅ ${onDisk.length} redirect(s) verified on disk (${filteredRedirects.length} considered, ${missing} missing)\n📋 Log saved to ${REDIRECT_LOG}`);
+if (missing > 0) {
+  console.log(`⛔ ${missing} redirect(s) were emitted but are NOT on disk — refusing to report success`);
+  process.exitCode = 1;
+}
