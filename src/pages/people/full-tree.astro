@@ -84,17 +84,17 @@ function findPerson(id: string | undefined, dataset = allPeople) {
     }
   }
   
-  // Fallback: try display_name match (only safe for unique names)
+  // Fallback: try display_name match — but ONLY if it does not contradict a stated birth year.
+  // BUG (fixed 2026-10-25): this ignored the years entirely, so "Adam Murray (1812–1882)" — a
+  // man absent from the dataset — silently resolved to adam-murray-1728 (b.1728), 84 years wrong,
+  // and "John Murray (1814–1886)" resolved to john-murray-1779, i.e. his own father. If the caller
+  // states a birth year and the candidate has a different one, the match is a namesake, not a hit.
   if (personByDisplayName.has(nameOnly)) {
     const candidate = personByDisplayName.get(nameOnly);
-    // Verify this candidate isn't ambiguous by checking if firstName:birthYear would give different result
-    if (candidate?.birth_year) {
-      const firstName = nameOnly.split(' ')[0].toLowerCase();
-      const key = `${firstName}:${candidate.birth_year}`;
-      const preciseMatch = personByFirstNameAndBirth.get(key);
-      if (preciseMatch && preciseMatch !== candidate) {
-        // There's a more precise match available, but we don't have the birth year from input
-        // Return the display_name match (best we can do)
+    if (candidate && hasBirthYear && yearMatch && candidate.birth_year) {
+      if (candidate.birth_year !== parseInt(yearMatch[1])) {
+        // Wrong namesake — refuse rather than link to the wrong person.
+        return undefined;
       }
     }
     return candidate;
@@ -140,6 +140,7 @@ interface TreeNode {
   spouses?: string[];
   children?: string[];
   id: string;
+  slug?: string;
   virtual: boolean;
   _resolvedChildren?: TreeNode[];
   _resolvedSpouse?: TreeNode | null;
@@ -181,6 +182,16 @@ function resolveChildren(person: TreeNode, depth = 0): TreeNode[] {
     // Try to find real person first
     const realPerson = findPerson(childName);
     if (realPerson) {
+      // BUG (fixed 2026-10-25): 5 people were rendered as their OWN child — e.g. John Murray's
+      // children listed "John Murray (1814–1886)", which the fuzzy resolver matched back to
+      // john-murray-1779 himself. A person cannot be their own child; treat as unlinked name.
+      if (realPerson.slug && person.slug && realPerson.slug === person.slug) {
+        return createVirtualPerson(childName, person.birth_year || undefined, person.last_name);
+      }
+      if (realPerson.id && person.id && realPerson.id === person.id &&
+          realPerson.birth_year === person.birth_year) {
+        return createVirtualPerson(childName, person.birth_year || undefined, person.last_name);
+      }
       return {
         display_name: realPerson.display_name,
         birth_year: realPerson.birth_year,
@@ -190,6 +201,7 @@ function resolveChildren(person: TreeNode, depth = 0): TreeNode[] {
         spouses: realPerson.spouses,
         children: realPerson.children,
         id: realPerson.id,
+        slug: realPerson.slug,
         virtual: false
       };
     }
@@ -211,6 +223,7 @@ function toNode(realSpouse: any): TreeNode {
     spouses: realSpouse.spouses,
     children: realSpouse.children,
     id: realSpouse.id,
+    slug: realSpouse.slug,
     virtual: false
   };
 }
@@ -263,6 +276,7 @@ const root: TreeNode = {
   spouses: realRoot.spouses,
   children: realRoot.children,
   id: realRoot.id,
+  slug: realRoot.slug,
   virtual: false
 };
 
@@ -547,33 +561,42 @@ const pageTitle = "Telfer Family Tree — All Generations";
       </ol>
     </nav>
 
-    <header class="mb-6">
-      <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-3">
+    <header class="mb-4 sm:mb-6">
+      <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-2 sm:mb-3">
         The Telfer Line — Family Tree
       </h1>
 
-      <!-- What this site is about -->
-      <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 sm:p-5 mb-4">
-        <div class="font-serif italic text-sm sm:text-base text-[var(--color-ink-light)] leading-relaxed space-y-2">
-          <p>
-            This is the <strong>Telfer Family Wiki</strong> — a digital archive for the descendants of
-            <strong>John Telfer of Castleton</strong> (~1715, Scottish Lowlands). What started in the hills
-            of Roxburghshire became a story that crossed oceans: from Scotland to the copper mines of South Australia,
-            across the Eyre Peninsula, and down to the present day.
-          </p>
-          <p>
-            This tree follows the <strong>Telfer name</strong> — every known Telfer
-            by birth and the people they married, from John Telfer of Castleton (~1715)
-            through to the latest generation. We track each couple and their children,
-            but once a daughter marries and her children take a different surname, that
-            branch ends here. It's the Telfer line — not every family that married into it.
-          </p>
-          <p class="text-xs text-[var(--color-muted)]">
-            Click ▸ to expand a branch, ▾ to collapse it. Tap a name to focus and scroll.
-            <span class="block mt-1">Currently: <strong>{allPeople.length} people</strong> across <strong>{GENERATIONS.length} generations</strong> — all connected through the Telfer name.</span>
-          </p>
+      <!-- What this site is about.
+           Collapsed by default on mobile: measured 2026-10-25, this block was 678px tall,
+           which pushed the first person name to y=980 on a 390x844 phone. The whole purpose
+           of the page (the tree) sat entirely below the fold on every phone. -->
+      <details class="intro-details bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl mb-3 sm:mb-4">
+        <summary class="intro-summary px-4 py-2.5 cursor-pointer text-sm font-medium text-[var(--color-heading)] select-none">
+          About this tree
+        </summary>
+        <div class="px-4 pb-4 pt-0">
+          <div class="font-serif italic text-sm sm:text-base text-[var(--color-ink-light)] leading-relaxed space-y-2">
+            <p>
+              This is the <strong>Telfer Family Wiki</strong> — a digital archive for the descendants of
+              <strong>John Telfer of Castleton</strong> (~1715, Scottish Lowlands). What started in the hills
+              of Roxburghshire became a story that crossed oceans: from Scotland to the copper mines of South Australia,
+              across the Eyre Peninsula, and down to the present day.
+            </p>
+            <p>
+              This tree follows the <strong>Telfer name</strong> — every known Telfer
+              by birth and the people they married, from John Telfer of Castleton (~1715)
+              through to the latest generation. We track each couple and their children,
+              but once a daughter marries and her children take a different surname, that
+              branch ends here. It's the Telfer line — not every family that married into it.
+            </p>
+            <p class="text-xs text-[var(--color-muted)]">
+              Hold a name for a moment to open that person's page. Drag to scroll.
+              <span class="block mt-1">Currently: <strong>{allPeople.length} people</strong> across <strong>{GENERATIONS.length} generations</strong> — all connected through the Telfer name.</span>
+            </p>
+          </div>
         </div>
-      </div>
+      </details>
+
 
       <!-- Quick stats row -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
@@ -964,8 +987,12 @@ const pageTitle = "Telfer Family Tree — All Generations";
         const tree = document.getElementById('family-tree');
         if (!tree) return;
 
-        // Get all details elements
-        const allDetails = tree.querySelectorAll('details.tree-node');
+        // Get all details elements — from EVERY tree container. Before 2026-10-25 this only
+        // read #family-tree, so "Expand all" left the "Other Telfer branches" section shut.
+        const allTrees = ['family-tree', 'detached-tree', 'loose-tree']
+          .map((id) => document.getElementById(id))
+          .filter(Boolean);
+        const allDetails = allTrees.flatMap((t) => [...t.querySelectorAll('details.tree-node')]);
         let suppressAccordion = false;
 
         function getLevel(detail) {
@@ -1289,7 +1316,10 @@ const pageTitle = "Telfer Family Tree — All Generations";
         trees.forEach(bindTree);
 
         // ─── Click name to focus + scroll ───
-        tree.addEventListener('click', (e) => {
+        // NOTE: binds to every tree container. Before 2026-10-25 these used a bare `tree`
+        // variable that only existed while a single container was supported, so once the
+        // 'Other Telfer branches' section was added these handlers were dead code.
+        trees.forEach((treeEl) => treeEl.addEventListener('click', (e) => {
           const summary = e.target.closest('summary');
           if (summary && !e.target.closest('details[open] > summary')) {
             // Clicked on a closed summary - will open, then scroll
@@ -1301,33 +1331,42 @@ const pageTitle = "Telfer Family Tree — All Generations";
               window.scrollTo({ top: Math.max(0, targetY), behavior: isMobile ? 'auto' : 'smooth' });
             }, 50);
           }
-        });
+        }));
 
         // ─── Keyboard support ───
-        tree.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            const summary = e.target.closest('summary');
-            if (summary) {
-              e.preventDefault();
-              summary.click();
-            }
+        // Enter on a NAME must navigate to that person; Enter on a summary toggles the branch.
+        trees.forEach((treeEl) => treeEl.addEventListener('keydown', (e) => {
+          if (e.key !== 'Enter' && e.key !== ' ') return;
+          const link = e.target.closest('a.person-name');
+          if (link) {
+            e.preventDefault();
+            e.stopPropagation();
+            const h = slugHref(link);
+            if (h) window.location.href = h;
+            return;
           }
-        });
+          const summary = e.target.closest('summary');
+          if (summary) {
+            e.preventDefault();
+            summary.click();
+          }
+        }));
 
         // ─── URL hash support for deep linking ───
         // If URL has #person-slug, open that branch and scroll
         const hash = window.location.hash.slice(1);
-        if (hash) {
+        if (hash && trees.length) {
           setTimeout(() => {
-            let targetSummary = tree.querySelector(`summary:has(strong:contains("${hash}"))`);
-            // Fallback: find by text content
-            if (!targetSummary) {
-              tree.querySelectorAll('summary strong').forEach(strong => {
-                if (strong.textContent.toLowerCase().includes(hash.toLowerCase().replace(/-/g, ' '))) {
+            let targetSummary = null;
+            // Find by text content across every tree container
+            trees.forEach((treeEl) => {
+              if (targetSummary) return;
+              treeEl.querySelectorAll('summary strong').forEach(strong => {
+                if (!targetSummary && strong.textContent.toLowerCase().includes(hash.toLowerCase().replace(/-/g, ' '))) {
                   targetSummary = strong.closest('summary');
                 }
               });
-            }
+            });
             if (targetSummary) {
               const detail = targetSummary.closest('details');
               if (detail) {
