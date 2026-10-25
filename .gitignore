@@ -34,3 +34,6 @@ __pycache__/
 scripts/*.bak-*
 *.bak-avatar-*
 scripts/.sentinel/
+
+# table-clip-check.py writes this probe into the repo on every run
+.table-clip-probe.cjs
