@@ -9,6 +9,12 @@
     }
   },
   "removed": {
+    "esther-naomi-lynette-telfer-1983": {
+      "to": "esther-naomi-lynette-telfer-1993",
+      "reason": "Date correction, not a removal. The page was titled (b. 1983) from a bad OCR read of '6 Mar 1983' in the 2008 Supplement's scan-derived text layer. Two independent sources print 1993: the 1989 book's text layer ('b. 6 Mar 1993 Tumby Bay, SA') and a direct reading of the Supplement's printed page 145. The Supplement scan's OCR layer misread the 9 as an 8. Page retitled to 1993.",
+      "date": "2026-10-25",
+      "corrections_log": "2026-10-25 — CORRECTION: Esther Naomi Lynette Telfer birth year 1983 → 1993 (OCR misread, two sources agree)"
+    },
     "ann-taylor-1856": {
       "to": "john-telfer-1847",
       "reason": "Fabricated spouse. No 'Ann Taylor' exists in any of the three gold books; her stated husband 'John Telfer (1847-1923)' does not exist either (all three books give 1847-1929 and print his marriage to Caroline Amelia Masters six times in the Supplement alone). Her nine children have no book support. Visitors land on the man her stub was wrongly attached to.",

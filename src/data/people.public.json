@@ -17785,7 +17785,7 @@
     "lifespan": "1953 – living",
     "generation": 7,
     "is_living": true,
-    "body_markdown": "# Malvern Reginald Telfer (b. 1953)\n\n**Role:** Son of Reginald Masters Telfer and Elma Ellen Martina Telfer (née Pugsley) — father of **Samuel Joel \"Sam\" Telfer MP**, Member for Flinders\n**Born:** 24 Apr 1953 — Tumby Bay, SA\n**Parents:** [[Reginald Masters Telfer (1922–2011)]] & Elma Ellen Martina (née Pugsley) (1923–1996)\n**Wife:** Lynette Ruth (née Gordge) — b. 16 Apr 1954, Hindmarsh SA; married 15 Feb 1975, Flinders Park SA\n**Children:** Luke Caleb, Joshua Paul, Esther Naomi Lynette, [[Samuel Joel Telfer (b. 1985)]] (Sam, MP for Flinders), Isaac Nathaniel\n**Siblings:** Vonda Joy, Brenda Janice, Lyndell Marie, [[David Lyndon Telfer (1957–1996)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Reginald Masters Telfer (1922–2011)]] |\n| **Mother** | Elma Ellen Martina (née Pugsley) (1923–1996) |\n| **Wife** | Lynette Ruth (née Gordge) (b. 1954) |\n| **Son** | [[Luke Caleb Telfer (b. 1980)|Luke Caleb Telfer]] |\n| **Son** | [[Joshua Paul Telfer (b. 1982)|Joshua Paul Telfer]] |\n| **Son** | [[Samuel Joel Telfer (b. 1985)]] — MP for Flinders |\n| **Son** | [[Isaac Nathaniel Telfer (b. 1988)|Isaac Nathaniel Telfer]] |\n| **Daughter** | [[Esther Naomi Lynette Telfer (b. 1983)|Esther Naomi Lynette Telfer]] |\n\n---",
+    "body_markdown": "# Malvern Reginald Telfer (b. 1953)\n\n**Role:** Son of Reginald Masters Telfer and Elma Ellen Martina Telfer (née Pugsley) — father of **Samuel Joel \"Sam\" Telfer MP**, Member for Flinders\n**Born:** 24 Apr 1953 — Tumby Bay, SA\n**Parents:** [[Reginald Masters Telfer (1922–2011)]] & Elma Ellen Martina (née Pugsley) (1923–1996)\n**Wife:** Lynette Ruth (née Gordge) — b. 16 Apr 1954, Hindmarsh SA; married 15 Feb 1975, Flinders Park SA\n**Children:** Luke Caleb, Joshua Paul, Esther Naomi Lynette, [[Samuel Joel Telfer (b. 1985)]] (Sam, MP for Flinders), Isaac Nathaniel\n**Siblings:** Vonda Joy, Brenda Janice, Lyndell Marie, [[David Lyndon Telfer (1957–1996)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Reginald Masters Telfer (1922–2011)]] |\n| **Mother** | Elma Ellen Martina (née Pugsley) (1923–1996) |\n| **Wife** | Lynette Ruth (née Gordge) (b. 1954) |\n| **Son** | [[Luke Caleb Telfer (b. 1980)|Luke Caleb Telfer]] |\n| **Son** | [[Joshua Paul Telfer (b. 1982)|Joshua Paul Telfer]] |\n| **Son** | [[Samuel Joel Telfer (b. 1985)]] — MP for Flinders |\n| **Son** | [[Isaac Nathaniel Telfer (b. 1988)|Isaac Nathaniel Telfer]] |\n| **Daughter** | [[Esther Naomi Lynette Telfer (b. 1993)|Esther Naomi Lynette Telfer]] |\n\n---",
     "roles": [
       "Son of Reginald Masters Telfer and Elma Ellen Martina Telfer (née Pugsley) — father of **Samuel Joel \"Sam\" Telfer MP**, Member for Flinders"
     ],
@@ -18567,6 +18567,48 @@
     "person_photo": null
   },
   {
+    "id": "James John Drew Telfer (1978)",
+    "slug": "james-telfer",
+    "first_name": "James",
+    "middle_name": "John Drew",
+    "last_name": "Telfer",
+    "birth_year": 1978,
+    "death_year": null,
+    "birth_date": "13 November 1978",
+    "death_date": null,
+    "birth_year_display": "1978",
+    "death_year_display": "living",
+    "display_name": "James John Drew Telfer",
+    "title": "James John Drew Telfer",
+    "lifespan": "1978 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# James John Drew Telfer\n\n**Role:** Son of Daryll William Telfer and Rosemary Ruth Curtis\n**Born:** 13 November 1978\n**Married:** Alexa Day, 15 October 2005\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Daryll William Telfer]] |\n| **Mother** | [[Rosemary Ruth Curtis]] |\n| **Spouse** | [[Alexa Telfer]] (née Day, m. 15 Oct 2005) |\n| **Siblings** | [[Rosemary Miriam Telfer]] |\n\n---",
+    "roles": [
+      "Son of Daryll William Telfer and Rosemary Ruth Curtis"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "daryll-telfer",
+      "rosemary-curtis"
+    ],
+    "children": [],
+    "spouses": [
+      "alexa-telfer"
+    ],
+    "siblings": [
+      "rosemary-telfer-miriam"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Luke Caleb Telfer (1980)",
     "slug": "luke-caleb-telfer",
     "first_name": "Luke Caleb",
@@ -18747,51 +18789,6 @@
     "person_photo": null
   },
   {
-    "id": "Esther Naomi Lynette Telfer (1983)",
-    "slug": "esther-naomi-lynette-telfer",
-    "first_name": "Esther Naomi Lynette",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1983,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1983",
-    "death_year_display": "living",
-    "display_name": "Esther Naomi Lynette Telfer",
-    "title": "Esther Naomi Lynette Telfer — Family & Biography",
-    "lifespan": "1983 – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Esther Naomi Lynette Telfer (b. 1983)\n\n**Role:** Daughter of Malvern Reginald Telfer and Lynette Ruth Telfer (née Gordge) — grandchild of Reginald Masters Telfer\n**Born:** 6 Mar 1983 — Tumby Bay, SA\n**Parents:** [[Malvern Reginald Telfer (b. 1953)]] & Lynette Ruth (née Gordge) (b. 1954)\n\n**Siblings:** Luke Caleb, Joshua Paul, [[Samuel Joel Telfer (b. 1985)]] (MP for Flinders), Isaac Nathaniel, Esther Naomi Lynette\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Malvern Reginald Telfer (b. 1953)]] |\n| **Mother** | Lynette Ruth (née Gordge) (b. 1954) |\n| **Grandfather** | [[Reginald Masters Telfer (1922–2011)]] |\n\n---",
-    "roles": [
-      "Daughter of Malvern Reginald Telfer and Lynette Ruth Telfer (née Gordge) — grandchild of Reginald Masters Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "malvern-reginald-telfer",
-      {
-        "plain_name": "Lynette Ruth Telfer (née Gordge)"
-      }
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "isaac-nathaniel-telfer",
-      "joshua-paul-telfer",
-      "luke-caleb-telfer"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Karla Jayde Telfer (1985)",
     "slug": "karla-telfer",
     "first_name": "Karla",
@@ -18931,7 +18928,7 @@
     "lifespan": "1985 – living",
     "generation": 8,
     "is_living": true,
-    "body_markdown": "# Samuel Joel \"Sam\" Telfer (b. 1985)\n\n**Role:** Member for Flinders, South Australian House of Assembly (Liberal) since 2022 — grandson of Reginald Masters Telfer, fourth-generation Eyre Peninsula farmer\n**Born:** 12 Sep 1985 — Tumby Bay, SA\n**Parents:** [[Malvern Reginald Telfer (b. 1953)]] & Lynette Ruth (née Gordge) (b. 1954)\n**Wife:** [[Karla Jayde (Vandenbroek) Telfer (b. 1985)]] — b. 31 Jul 1985, Kojonup WA; married 12 Jan 2006, Kimba SA\n**Siblings:** Luke Caleb, Joshua Paul, Isaac Nathaniel, Esther Naomi Lynette\n**Grandfather:** [[Reginald Masters Telfer (1922–2011)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Malvern Reginald Telfer (b. 1953)]] |\n| **Mother** | Lynette Ruth (née Gordge) (b. 1954) |\n| **Wife** | [[Karla Jayde (Vandenbroek) Telfer (b. 1985)]] (b. 1985) |\n| **Grandfather** | [[Reginald Masters Telfer (1922–2011)]] |\n| **Brothers** | [[Luke Caleb Telfer (b. 1980)|Luke Caleb]]; [[Joshua Paul Telfer (b. 1982)|Joshua Paul]]; [[Isaac Nathaniel Telfer (b. 1988)|Isaac Nathaniel]] |\n| **Sister** | [[Esther Naomi Lynette Telfer (b. 1983)|Esther Naomi Lynette]] |\n\n---",
+    "body_markdown": "# Samuel Joel \"Sam\" Telfer (b. 1985)\n\n**Role:** Member for Flinders, South Australian House of Assembly (Liberal) since 2022 — grandson of Reginald Masters Telfer, fourth-generation Eyre Peninsula farmer\n**Born:** 12 Sep 1985 — Tumby Bay, SA\n**Parents:** [[Malvern Reginald Telfer (b. 1953)]] & Lynette Ruth (née Gordge) (b. 1954)\n**Wife:** [[Karla Jayde (Vandenbroek) Telfer (b. 1985)]] — b. 31 Jul 1985, Kojonup WA; married 12 Jan 2006, Kimba SA\n**Siblings:** Luke Caleb, Joshua Paul, Isaac Nathaniel, Esther Naomi Lynette\n**Grandfather:** [[Reginald Masters Telfer (1922–2011)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Malvern Reginald Telfer (b. 1953)]] |\n| **Mother** | Lynette Ruth (née Gordge) (b. 1954) |\n| **Wife** | [[Karla Jayde (Vandenbroek) Telfer (b. 1985)]] (b. 1985) |\n| **Grandfather** | [[Reginald Masters Telfer (1922–2011)]] |\n| **Brothers** | [[Luke Caleb Telfer (b. 1980)|Luke Caleb]]; [[Joshua Paul Telfer (b. 1982)|Joshua Paul]]; [[Isaac Nathaniel Telfer (b. 1988)|Isaac Nathaniel]] |\n| **Sister** | [[Esther Naomi Lynette Telfer (b. 1993)|Esther Naomi Lynette]] |\n\n---",
     "roles": [
       "Member for Flinders, South Australian House of Assembly (Liberal) since 2022 — grandson of Reginald Masters Telfer, fourth-generation Eyre Peninsula farmer"
     ],
@@ -19135,10 +19132,7 @@
     "spouses": [],
     "siblings": [
       "jonathon-telfer",
-      "kristin-stefanoff",
-      {
-        "plain_name": "Kristin Holly Telfer"
-      }
+      "kristin-stefanoff"
     ],
     "step_parents": [],
     "step_children": [],
@@ -19189,6 +19183,51 @@
     "person_photo": null
   },
   {
+    "id": "Esther Naomi Lynette Telfer (1993)",
+    "slug": "esther-naomi-lynette-telfer",
+    "first_name": "Esther Naomi Lynette",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1993,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1993",
+    "death_year_display": "living",
+    "display_name": "Esther Naomi Lynette Telfer",
+    "title": "Esther Naomi Lynette Telfer — Family & Biography",
+    "lifespan": "1993 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Esther Naomi Lynette Telfer (b. 1993)\n\n**Role:** Daughter of Malvern Reginald Telfer and Lynette Ruth Telfer (née Gordge) — grandchild of Reginald Masters Telfer\n**Born:** 6 March 1993 — Tumby Bay, SA\n**Parents:** [[Malvern Reginald Telfer (b. 1953)]] & Lynette Ruth (née Gordge) (b. 1954)\n\n**Siblings:** [[Luke Caleb Telfer (b. 1980)]], [[Joshua Paul Telfer (b. 1982)]], [[Samuel Joel Telfer (b. 1985)]] (MP for Flinders), [[Isaac Nathaniel Telfer (b. 1988)]]\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Father** | [[Malvern Reginald Telfer (b. 1953)]] |\n| **Mother** | Lynette Ruth (née Gordge) (b. 1954) |\n| **Grandfather** | [[Reginald Masters Telfer (1922–2011)]] |\n\n---",
+    "roles": [
+      "Daughter of Malvern Reginald Telfer and Lynette Ruth Telfer (née Gordge) — grandchild of Reginald Masters Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "malvern-reginald-telfer",
+      {
+        "plain_name": "Lynette Ruth Telfer (née Gordge)"
+      }
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "isaac-nathaniel-telfer",
+      "joshua-paul-telfer",
+      "luke-caleb-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Jonathon Scott Telfer (1995)",
     "slug": "jonathon-telfer",
     "first_name": "Jonathon",
@@ -19223,10 +19262,7 @@
     "spouses": [],
     "siblings": [
       "kristin-stefanoff",
-      "nicholas-telfer",
-      {
-        "plain_name": "Kristin Holly Telfer"
-      }
+      "nicholas-telfer"
     ],
     "step_parents": [],
     "step_children": [],
@@ -19540,48 +19576,6 @@
       }
     ],
     "person_photo": "images/people/Carissa-Telfer.jpg"
-  },
-  {
-    "id": "James John Drew Telfer",
-    "slug": "james-telfer",
-    "first_name": "James",
-    "middle_name": "John Drew",
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "James John Drew Telfer",
-    "title": "James John Drew Telfer",
-    "lifespan": "? – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# James John Drew Telfer\n\n**Role:** Son of Daryll William Telfer and Rosemary Ruth Curtis\n**Married:** Alexa Day, 15 October 2005\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Daryll William Telfer]] |\n| **Mother** | [[Rosemary Ruth Curtis]] |\n| **Spouse** | [[Alexa Telfer]] (née Day, m. 15 Oct 2005) |\n| **Siblings** | [[Rosemary Miriam Telfer]] |\n\n---",
-    "roles": [
-      "Son of Daryll William Telfer and Rosemary Ruth Curtis"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [
-      "daryll-telfer",
-      "rosemary-curtis"
-    ],
-    "children": [],
-    "spouses": [
-      "alexa-telfer"
-    ],
-    "siblings": [
-      "rosemary-telfer-miriam"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
   },
   {
     "id": "Peter Telfer",
