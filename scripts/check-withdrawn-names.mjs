@@ -44,6 +44,32 @@ const NAME_VISIBLE_ON = new Set([
   'people/timothy-telfer-1959/index.html',
 ]);
 
+/**
+ * True when EVERY occurrence of `name` in `html` is unlinked plain text.
+ *
+ * WHY this exists (26 Oct 2026): the ruling permits a withdrawn name to appear
+ * as plain text on a profile page — it forbids a PAGE, a LINK, and a sitemap
+ * entry. The old gate conflated that with an allowlist of three specific files,
+ * so Mark's and Amy's own profiles tripped it merely for listing Sheryle as a
+ * stepchild — the exact behaviour the ruling permits.
+ *
+ * The distinction that actually matters is linked vs unlinked, so test that
+ * directly instead of naming files. A bare <span> is compliant; an <a href>
+ * pointing at a live page is not.
+ */
+function allOccurrencesUnlinked(html, name) {
+  const re = new RegExp(escRe(name), 'gi');
+  let m;
+  let seen = 0;
+  while ((m = re.exec(html)) !== null) {
+    seen++;
+    const before = html.slice(0, m.index);
+    // An <a ...> opened more recently than the last </a> means we are inside one.
+    if (before.lastIndexOf('<a ') > before.lastIndexOf('</a>')) return false;
+  }
+  return seen > 0;
+}
+
 // Names to search for. Derived from the source data so it cannot drift out of
 // step with the slug list — if a slug is added, its name is checked too.
 function withdrawnNames() {
@@ -119,9 +145,18 @@ function main() {
         failures.push(`${rel}: links to withdrawn slug "/people/${slug}"`);
       }
 
-      // C. Name in body text requires either noindex or a permitted parent page.
+      // C. Name in body text: allowed on an indexable page ONLY as unlinked
+      // plain text (the ruling's "a father's page must not read as childless").
+      // Noindexed pages are exempt entirely — we have told Google to ignore them.
       if (re.test(html) && !isNoindex && !nameMayBeVisible) {
-        failures.push(`${rel}: shows withdrawn name "${name}" on an indexable page`);
+        if (!allOccurrencesUnlinked(html, name)) {
+          failures.push(`${rel}: shows withdrawn name "${name}" as a LINK on an indexable page`);
+        } else if (!/^people\/[^/]+\/index\.html$/.test(rel)) {
+          // Plain text is permitted on a PERSON PROFILE. A hub, index or
+          // derived page printing an unlinked name is still a second indexable
+          // copy of a withdrawn person's existence, which the ruling forbids.
+          failures.push(`${rel}: shows withdrawn name "${name}" on a non-profile indexable page`);
+        }
       }
     }
   }

@@ -76,6 +76,14 @@ export default defineConfig({
       // therefore a no-op today; it stays wired so re-adding a slug to the
       // set once again removes that person from the sitemap automatically.
       filter: (page) => {
+        // `page` is a FULL URL (e.g. https://telferwiki.com/tree/), not a path —
+        // @astrojs/sitemap hands the filter the same href it writes to <loc>.
+        // Matching on a leading "/" silently matched nothing and let /tree/
+        // through even after it was noindexed. Verified against
+        // node_modules/@astrojs/sitemap/dist/index.js (line 95 passes the href).
+        const treePaths = /^https?:\/\/[^/]+\/tree\/?$|^https?:\/\/[^/]+\/people\/full-tree\/?$/;
+        if (treePaths.test(page)) return false;
+
         const m = page.match(/\/people\/([^/?]+)/);
         if (!m) return true;
         const slug = m[1];
@@ -93,6 +101,20 @@ export default defineConfig({
         //    Added 25 Oct 2026 after GSC showed 5 impressions / 2 clicks on a
         //    withdrawn minor's family sheet.
         if (/\/people\/[^/]+\/(?:family-sheet|descendants)\/?$/.test(page)) return false;
+
+        // 3. The two whole-tree renderings. Added 26 Oct 2026 under the same
+        //    ruling as case 2, and for a stronger reason: these pages are not
+        //    just a second copy of the relationship table, they are the ONLY
+        //    pages that emit every withdrawn name in one body, inside the
+        //    client-side JSON payload as well as the markup. A crawler fetching
+        //    /tree/ gets the entire withdrawn set in a single request.
+        //    They also carry no unique content — both are derived views of the
+        //    same people.json the profile pages already publish — so nothing is
+        //    lost from the index by excluding them.
+        //    Both are noindexed at the page level too (tree.astro,
+        //    people/full-tree.astro); this keeps them out of the sitemap so we
+        //    are not asking Google to crawl a page we then refuse to index.
+        if (/^\/tree\/?$/.test(page) || /\/people\/full-tree\/?$/.test(page)) return false;
 
         return true;
       },
