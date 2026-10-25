@@ -1016,11 +1016,6 @@
       "generation": 5
     },
     {
-      "slug": "jono-telfer",
-      "id": "Jono Telfer",
-      "generation": 8
-    },
-    {
       "slug": "joseph-farrow-1814",
       "id": "Joseph Farrow (1814)",
       "generation": 4
@@ -1094,11 +1089,6 @@
       "slug": "kenneth-telfer-1906",
       "id": "Kenneth William John Telfer (1906)",
       "generation": 6
-    },
-    {
-      "slug": "kristin-stefanoff",
-      "id": "Kristin Holly Stefanoff",
-      "generation": 8
     },
     {
       "slug": "kylie-telfer-1982",
@@ -1324,11 +1314,6 @@
       "slug": "murray-telfer-1920",
       "id": "Murray Keith Telfer (1920)",
       "generation": 6
-    },
-    {
-      "slug": "nick-telfer",
-      "id": "Nick Telfer",
-      "generation": 8
     },
     {
       "slug": "noela-pauline-virgen-1921",
@@ -2083,6 +2068,21 @@
     {
       "slug": "samuel-joel-telfer",
       "id": "Samuel Joel Telfer (1985)",
+      "generation": 8
+    },
+    {
+      "slug": "jonathon-telfer",
+      "id": "Jonathon Scott Telfer (1995)",
+      "generation": 8
+    },
+    {
+      "slug": "kristin-stefanoff",
+      "id": "Kristin Holly Stefanoff (1985)",
+      "generation": 8
+    },
+    {
+      "slug": "nicholas-telfer",
+      "id": "Nicholas Adam Telfer (1988)",
       "generation": 8
     }
   ],
@@ -3209,10 +3209,6 @@
         "to": "john-telfer-1847"
       },
       {
-        "from": "grantley-telfer",
-        "to": "jono-telfer"
-      },
-      {
         "from": "elizabeth-hannah-telfer-1836",
         "to": "joseph-francis-farrow"
       },
@@ -3287,14 +3283,6 @@
       {
         "from": "mark-telfer-1877",
         "to": "kenneth-telfer-1906"
-      },
-      {
-        "from": "dale-telfer",
-        "to": "kristin-stefanoff"
-      },
-      {
-        "from": "grantley-telfer",
-        "to": "kristin-stefanoff"
       },
       {
         "from": "leonard-arthur-dance",
@@ -3551,10 +3539,6 @@
       {
         "from": "beatrice-telfer-1877",
         "to": "murray-telfer-1920"
-      },
-      {
-        "from": "grantley-telfer",
-        "to": "nick-telfer"
       },
       {
         "from": "alfred-edward-lillecrapp-1869",
@@ -4327,6 +4311,30 @@
       {
         "from": "malvern-reginald-telfer",
         "to": "samuel-joel-telfer"
+      },
+      {
+        "from": "dale-telfer",
+        "to": "jonathon-telfer"
+      },
+      {
+        "from": "grantley-telfer",
+        "to": "jonathon-telfer"
+      },
+      {
+        "from": "dale-telfer",
+        "to": "kristin-stefanoff"
+      },
+      {
+        "from": "grantley-telfer",
+        "to": "kristin-stefanoff"
+      },
+      {
+        "from": "dale-telfer",
+        "to": "nicholas-telfer"
+      },
+      {
+        "from": "grantley-telfer",
+        "to": "nicholas-telfer"
       }
     ],
     "spouseOf": [
@@ -6961,14 +6969,6 @@
         "to": "margaret-telfer-1849"
       },
       {
-        "from": "jono-telfer",
-        "to": "kristin-stefanoff"
-      },
-      {
-        "from": "jono-telfer",
-        "to": "nick-telfer"
-      },
-      {
         "from": "joseph-masters-1841",
         "to": "joseph-masters-1853"
       },
@@ -7027,10 +7027,6 @@
       {
         "from": "kenneth-telfer-1906",
         "to": "maifie-telfer-1913"
-      },
-      {
-        "from": "kristin-stefanoff",
-        "to": "nick-telfer"
       },
       {
         "from": "lesley-thomas-telfer-1891",
@@ -7715,6 +7711,18 @@
       {
         "from": "joshua-paul-telfer",
         "to": "luke-caleb-telfer"
+      },
+      {
+        "from": "jonathon-telfer",
+        "to": "kristin-stefanoff"
+      },
+      {
+        "from": "jonathon-telfer",
+        "to": "nicholas-telfer"
+      },
+      {
+        "from": "kristin-stefanoff",
+        "to": "nicholas-telfer"
       }
     ],
     "stepParentOf": [

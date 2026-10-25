@@ -128,6 +128,24 @@
       "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME ('Janet Stevenson'), and she had NO dates at all, so the page defaulted to LIVING. Her birth (19 May 1881) and death (1959) were confirmed from her father Robert Dunlop Lawrie's timeline; the surname was corrected to Lawrie. The old URL must resolve to the corrected page.",
       "date": "2026-10-23",
       "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "jono-telfer": {
+      "to": "jonathon-telfer",
+      "reason": "Page had been TITLED with the family nickname rather than the printed name. A Telfer Family Tree (2008), printed p.144 records '3. Jonathon Scot TELFER, b. 31 Jan 1995'; Mark Telfer confirmed the family spelling as 'Scott' (2 t's) on 2026-10-25. The page is now named for the printed person and 'Jono' is recorded as an alias. This is a rename, not a removal — the person and their record are unchanged.",
+      "date": "2026-10-25",
+      "corrections_log": "2026-10-25 — RENAMED: 'Jono Telfer' → \"Jonathon Scott Telfer (b. 1995)\" (nickname in page title)"
+    },
+    "nick-telfer": {
+      "to": "nicholas-telfer",
+      "reason": "Page had been TITLED with the family nickname rather than the printed name. A Telfer Family Tree (2008), printed p.144 records '2. Nicholas Adam TELFER, b. 11 Apr 1988 Tumby Bay, SA'. The page is now named for the printed person and 'Nick' is recorded as an alias. This is a rename, not a removal — the person and their record are unchanged.",
+      "date": "2026-10-25",
+      "corrections_log": "2026-10-25 — RENAMED: 'Nick Telfer' → \"Nicholas Adam Telfer (b. 1988)\" (nickname in page title)"
+    },
+    "kristin-stefanoff": {
+      "to": "kristin-holly-telfer-stefanoff-1985",
+      "reason": "Page title carried only the married surname and no middle name or dates. A Telfer Family Tree (2008), printed p.144 records '1. Kristin Holly TELFER, b. 26 Mar 1985 Tumby Bay, SA'; she married Ben Stefanoff. The page is now titled 'Kristin Holly (Telfer) Stefanoff (b. 1985)' so that the maiden name, middle name and birth year all resolve. This is a rename, not a removal.",
+      "date": "2026-10-25",
+      "corrections_log": "2026-10-25 — RENAMED: 'Kristin Stefanoff' → \"Kristin Holly (Telfer) Stefanoff (b. 1985)\""
     }
   }
 }

@@ -17975,11 +17975,11 @@
     "birth_year_display": "1957",
     "death_year_display": "living",
     "display_name": "Grantley Keith Telfer",
-    "title": "Grantley Keith Telfer — Family & Biography",
+    "title": "Grantley Keith Telfer (b. 1957)",
     "lifespan": "1957 – living",
     "generation": 7,
     "is_living": true,
-    "body_markdown": "# Grantley Keith Telfer\n\n**Born:** 5 October 1957 — Tumby Bay, South Australia\n\n**Role:** Uncle of Mark Kenneth Telfer — brother of Timothy Neil Telfer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Timothy Neil Telfer (1959–?)]], [[Kathryn Mavis Telfer (1961–1965)]], [[Susan Shirley Lawrie (1967–living)]] |\n| **Spouse** | [[Dale Helen Telfer]] (m. 3 Feb 1979, Medowie, NSW) |\n| **Children** | [[Kristin Stefanoff]] (née Telfer, b. 26 Mar 1985), [[Nick Telfer]] (b. 11 Apr 1988), [[Jono Telfer]] (b. 31 Jan 1995) |\n\n---",
+    "body_markdown": "# Grantley Keith Telfer\n\n**Born:** 5 October 1957 — Tumby Bay, South Australia\n\n**Role:** Uncle of Mark Kenneth Telfer — brother of Timothy Neil Telfer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Timothy Neil Telfer (1959–?)]], [[Kathryn Mavis Telfer (1961–1965)]], [[Susan Shirley Lawrie (1967–living)]] |\n| **Spouse** | [[Dale Helen Telfer]] (née Rogers, b. 17 Mar 1959; m. 3 Feb 1979, Medowie, NSW) |\n| **Children** | [[Kristin Holly (Telfer) Stefanoff (b. 1985)]] (b. 26 Mar 1985), [[Nicholas Adam Telfer (b. 1988)]] (b. 11 Apr 1988), [[Jonathon Scott Telfer (b. 1995)]] (b. 31 Jan 1995) |\n\n---",
     "roles": [
       "Uncle of Mark Kenneth Telfer — brother of Timothy Neil Telfer"
     ],
@@ -17993,9 +17993,9 @@
       "shirley-telfer-1929"
     ],
     "children": [
-      "jono-telfer",
+      "jonathon-telfer",
       "kristin-stefanoff",
-      "nick-telfer"
+      "nicholas-telfer"
     ],
     "spouses": [
       "dale-telfer"
@@ -18030,7 +18030,7 @@
     "lifespan": "1959 – living",
     "generation": 7,
     "is_living": true,
-    "body_markdown": "# Dale Helen Telfer\n\n**Role:** Wife of Grantley Keith Telfer\n**Born:** 17 March 1959 — Woolich College, Sydney, NSW\n**Maiden Name:** Rogers\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Grantley Keith Telfer]] (m. 3 Feb 1979, Medowie, NSW) |\n| **Children** | [[Kristin Stefanoff]], [[Nick Telfer]], [[Jono Telfer]] |\n\n---",
+    "body_markdown": "# Dale Helen Telfer\n\n**Role:** Wife of Grantley Keith Telfer\n**Born:** 17 March 1959 — Woolich College, Sydney, NSW\n**Maiden Name:** Rogers\n**Married:** 3 February 1979 — Medowie, New South Wales\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Grantley Keith Telfer]] (m. 3 Feb 1979, Medowie, NSW) |\n| **Children** | [[Kristin Holly (Telfer) Stefanoff (b. 1985)]] (b. 26 Mar 1985), [[Nicholas Adam Telfer (b. 1988)]] (b. 11 Apr 1988), [[Jonathon Scott Telfer (b. 1995)]] (b. 31 Jan 1995) |\n\n---",
     "roles": [
       "Wife of Grantley Keith Telfer"
     ],
@@ -18041,13 +18041,9 @@
     ],
     "parents": [],
     "children": [
+      "jonathon-telfer",
       "kristin-stefanoff",
-      {
-        "plain_name": "Nicholas Adam Telfer"
-      },
-      {
-        "plain_name": "Jonathon Scott Telfer"
-      }
+      "nicholas-telfer"
     ],
     "spouses": [
       "grantley-telfer"
@@ -18796,6 +18792,50 @@
     "person_photo": null
   },
   {
+    "id": "Kristin Holly Stefanoff (1985)",
+    "slug": "kristin-stefanoff",
+    "first_name": "Kristin",
+    "middle_name": "Holly",
+    "last_name": "Stefanoff",
+    "birth_year": 1985,
+    "death_year": null,
+    "birth_date": "26 March 1985",
+    "death_date": null,
+    "birth_place": "Tumby Bay, South Australia",
+    "birth_year_display": "1985",
+    "death_year_display": "living",
+    "display_name": "Kristin Holly Stefanoff",
+    "title": "Kristin Holly (Telfer) Stefanoff (b. 1985)",
+    "lifespan": "1985 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Kristin Holly Stefanoff\n\n**Role:** Cousin of Mark Kenneth Telfer — daughter of Grantley Keith Telfer\n**Born:** 26 March 1985 — Tumby Bay, South Australia\n**Maiden Name:** Telfer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Grantley Keith Telfer]] (b. 1957) |\n| **Mother** | [[Dale Helen Telfer]] (née Rogers, b. 1959) |\n| **Spouse** | [[Ben Stefanoff]] |\n| **Siblings** | [[Nicholas Adam Telfer (b. 1988)]], [[Jonathon Scott Telfer (b. 1995)]] |\n\n---",
+    "roles": [
+      "Cousin of Mark Kenneth Telfer — daughter of Grantley Keith Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "dale-telfer",
+      "grantley-telfer"
+    ],
+    "children": [],
+    "spouses": [
+      "ben-stefanoff"
+    ],
+    "siblings": [
+      "jonathon-telfer",
+      "nicholas-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Rex Murray Telfer Lawrie (1985)",
     "slug": "rex-lawrie",
     "first_name": "Rex",
@@ -19025,6 +19065,51 @@
     "person_photo": null
   },
   {
+    "id": "Nicholas Adam Telfer (1988)",
+    "slug": "nicholas-telfer",
+    "first_name": "Nicholas",
+    "middle_name": "Adam",
+    "last_name": "Telfer",
+    "birth_year": 1988,
+    "death_year": null,
+    "birth_date": "11 April 1988",
+    "death_date": null,
+    "birth_place": "Tumby Bay, South Australia",
+    "birth_year_display": "1988",
+    "death_year_display": "living",
+    "display_name": "Nicholas Adam Telfer",
+    "title": "Nicholas Adam Telfer (b. 1988)",
+    "lifespan": "1988 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Nicholas Adam Telfer\n\n**Role:** Cousin of Mark Kenneth Telfer — son of Grantley Keith Telfer\n**Born:** 11 April 1988 — Tumby Bay, South Australia\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Grantley Keith Telfer]] (b. 1957) |\n| **Mother** | [[Dale Helen Telfer]] (née Rogers, b. 1959) |\n| **Siblings** | [[Kristin Holly (Telfer) Stefanoff (b. 1985)]], [[Jonathon Scott Telfer (b. 1995)]] |\n\n---",
+    "roles": [
+      "Cousin of Mark Kenneth Telfer — son of Grantley Keith Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "dale-telfer",
+      "grantley-telfer"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "jonathon-telfer",
+      "kristin-stefanoff",
+      {
+        "plain_name": "Kristin Holly Telfer"
+      }
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Sophia Telfer (1992)",
     "slug": "sophia-telfer",
     "first_name": "Sophia",
@@ -19061,6 +19146,51 @@
       "carissa-telfer",
       "peter-telfer",
       "rebecca-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Jonathon Scott Telfer (1995)",
+    "slug": "jonathon-telfer",
+    "first_name": "Jonathon",
+    "middle_name": "Scott",
+    "last_name": "Telfer",
+    "birth_year": 1995,
+    "death_year": null,
+    "birth_date": "31 January 1995",
+    "death_date": null,
+    "birth_place": "South Australia",
+    "birth_year_display": "1995",
+    "death_year_display": "living",
+    "display_name": "Jonathon Scott Telfer",
+    "title": "Jonathon Scott Telfer (b. 1995)",
+    "lifespan": "1995 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Jonathon Scott Telfer\n\n**Role:** Cousin of Mark Kenneth Telfer — son of Grantley Keith Telfer\n**Born:** 31 January 1995\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Grantley Keith Telfer]] (b. 1957) |\n| **Mother** | [[Dale Helen Telfer]] (née Rogers, b. 1959) |\n| **Siblings** | [[Kristin Holly (Telfer) Stefanoff (b. 1985)]], [[Nicholas Adam Telfer (b. 1988)]] |\n\n---",
+    "roles": [
+      "Cousin of Mark Kenneth Telfer — son of Grantley Keith Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "dale-telfer",
+      "grantley-telfer"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "kristin-stefanoff",
+      "nicholas-telfer",
+      {
+        "plain_name": "Kristin Holly Telfer"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -19307,8 +19437,10 @@
     "lifespan": "? – living",
     "generation": 8,
     "is_living": true,
-    "body_markdown": "# Ben Stefanoff",
-    "roles": [],
+    "body_markdown": "# Ben Stefanoff\n\n**Role:** Husband of Kristin Holly Stefanoff (née Telfer)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Kristin Holly (Telfer) Stefanoff (b. 1985)]] (b. 26 Mar 1985; m. 12 Apr 2008) |\n\n---",
+    "roles": [
+      "Husband of Kristin Holly Stefanoff (née Telfer)"
+    ],
     "tags": [
       "family",
       "non-telfer"
@@ -19409,137 +19541,6 @@
     ],
     "siblings": [
       "rosemary-telfer-miriam"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Jono Telfer",
-    "slug": "jono-telfer",
-    "first_name": "Jono",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Jono Telfer",
-    "title": "Jono Telfer",
-    "lifespan": "? – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Jono Telfer\n\n**Role:** Son of Grantley Keith Telfer — brother of Kristin Stefanoff and Nick Telfer\n**Father:** [[Grantley Keith Telfer]]\n**Mother:** Unknown — Grantley's wife\n**Siblings:** Kristin Stefanoff, Nick Telfer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Grantley Keith Telfer]] |\n| **Mother** | Unknown — Grantley's wife |\n| **Siblings** | Kristin Stefanoff (née Telfer), [[Nick Telfer]] |\n\n---",
-    "roles": [
-      "Son of Grantley Keith Telfer — brother of Kristin Stefanoff and Nick Telfer"
-    ],
-    "tags": [
-      "family",
-      "descendant"
-    ],
-    "parents": [
-      "grantley-telfer",
-      {
-        "plain_name": "Unknown"
-      }
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "kristin-stefanoff",
-      "nick-telfer"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Kristin Holly Stefanoff",
-    "slug": "kristin-stefanoff",
-    "first_name": "Kristin",
-    "middle_name": "Holly",
-    "last_name": "Stefanoff",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Kristin Holly Stefanoff",
-    "title": "Kristin Stefanoff (née Telfer) — Family & Biography",
-    "lifespan": "? – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Kristin Stefanoff\n\n**Role:** Cousin of Mark Kenneth Telfer — daughter of Grantley Keith Telfer\n\n**Maiden Name:** Telfer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Grantley Keith Telfer]] |\n| **Mother** | Unknown — Grantley's wife |\n| **Spouse** | [[Ben Stefanoff]] |\n| **Siblings** | [[Jono Telfer]], [[Nick Telfer]] |\n\n---",
-    "roles": [
-      "Cousin of Mark Kenneth Telfer — daughter of Grantley Keith Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [
-      "dale-telfer",
-      "grantley-telfer",
-      {
-        "plain_name": "[unknown]"
-      }
-    ],
-    "children": [],
-    "spouses": [
-      "ben-stefanoff"
-    ],
-    "siblings": [
-      "jono-telfer",
-      "nick-telfer"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Nick Telfer",
-    "slug": "nick-telfer",
-    "first_name": "Nick",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "living",
-    "display_name": "Nick Telfer",
-    "title": "Nick Telfer — Family & Profile",
-    "lifespan": "? – living",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "# Nick Telfer\n\n**Role:** Cousin of Mark Kenneth Telfer — son of Grantley Keith Telfer\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Grantley Keith Telfer]] |\n| **Mother** | Unknown — Grantley's wife |\n| **Siblings** | [[Kristin Stefanoff|Kristin Stefanoff (née Telfer)]], Jono Telfer |\n\n---",
-    "roles": [
-      "Cousin of Mark Kenneth Telfer — son of Grantley Keith Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [
-      "grantley-telfer",
-      {
-        "plain_name": "[unknown]"
-      }
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "jono-telfer",
-      "kristin-stefanoff"
     ],
     "step_parents": [],
     "step_children": [],

@@ -212,6 +212,15 @@ const MANUAL_ALIASES = [
   // real page rather than leaving stale relative stubs / new 404s behind.
   { from: 'esther-jane-telfer-1835', to: 'esther-jane-telfer-1834', display_name: 'Esther Jane Telfer' },
   { from: 'esther-telfer-1835',      to: 'esther-jane-telfer-1834', display_name: 'Esther Jane Telfer' },
+  // Nickname → legal-name page renames (2026-10-25). These pages were NAMED with the
+  // family's short form ("Jono", "Nick") as the page title, which is a defect against
+  // the book: the 2008 supplement prints Jonathon Scott Telfer (b. 31 Jan 1995) and
+  // Nicholas Adam Telfer (b. 11 Apr 1988). The titles now carry the printed names and
+  // the nicknames are aliases on the pages. Slug arithmetic cannot derive these (no
+  // date or name change is involved), so they must be declared here or the old URLs
+  // 404 for anyone who bookmarked them.
+  { from: 'jono-telfer', to: 'jonathon-telfer', display_name: 'Jonathon Scott Telfer' },
+  { from: 'nick-telfer', to: 'nicholas-telfer', display_name: 'Nicholas Adam Telfer' },
 ];
 for (const a of MANUAL_ALIASES) pushRedirect(a);
 
