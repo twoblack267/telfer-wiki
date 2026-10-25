@@ -330,7 +330,12 @@ try {
   for (const [from, decl] of Object.entries(removedJson)) {
     if (!decl || !decl.to) continue;
     if (!PRIVACY_STRIP_SLUGS.has(from)) continue;   // normal removals handled by emit-git-slug-redirects
-    if (existingPages.has(from)) continue;          // the page still exists — never shadow it
+    // FIXED 2026-10-26 (siteqa-20261025-alias-200): this referenced `existingPages`,
+    // which does not exist in this file. The ReferenceError was thrown inside the
+    // try and swallowed by the catch, so the privacy-alias emit silently produced
+    // ZERO aliases on every build. The set that actually holds live pages here is
+    // DROP_IF_PAGE_EXISTS. Never leave a ReferenceError inside a bare catch.
+    if (DROP_IF_PAGE_EXISTS.has(from)) continue;    // the page still exists — never shadow it
     filteredRedirects.push({
       from,
       to: decl.to,
@@ -343,8 +348,30 @@ try {
   console.log(`  ⚠️  could not read src/data/removed-redirects.json (${e.message}) — no privacy aliases emitted`);
 }
 
+// ── GUARD (siteqa-20261025-alias-200): an alias must never be a 200 DEAD END ──
+// Every emitted stub is a meta-refresh with NO real HTTP redirect, so the alias URL
+// itself answers 200. That is fine for a legacy bookmark and fatal for SEO if the
+// destination does not resolve: the crawler lands on a 200 that goes nowhere.
+// The only safe emit is from a URL nobody owns TO a page live in THIS build.
+// A destination that is itself another stub is also dropped (chains rot).
+const finalRedirects = [];
+for (const r of filteredRedirects) {
+  if (!r || !r.to) { console.log(`  ⏭️  SKIP (no destination): ${r.from}`); continue; }
+  if (r.from === r.to) { console.log(`  ⏭️  SKIP (self-alias): ${r.from}`); continue; }
+  if (canonicalSlugs.has(r.from)) { console.log(`  ⏭️  SKIP (origin is a LIVE page): ${r.from} → ${r.to}`); continue; }
+  if (!canonicalSlugs.has(r.to)) {
+    console.log(`  ⛔ DROP (destination is not a live page in this build — a 200 here would be a dead end): ${r.from} → ${r.to}`);
+    continue;
+  }
+  finalRedirects.push(r);
+}
+// Chains: an alias whose destination is only reached through another alias.
+const _aliasTargets = new Set(finalRedirects.map(r => r.from));
+const chained = finalRedirects.filter(r => _aliasTargets.has(r.to) && !canonicalSlugs.has(r.to));
+for (const r of chained) console.log(`  ⛔ DROP (alias chain — destination ${r.to} is itself an alias): ${r.from}`);
+
 // Write redirect pages
-console.log(`\n📝 Generating ${filteredRedirects.length} redirect(s) (${uniqueRedirects.length - filteredRedirects.length} skipped)...`);
+console.log(`\n📝 Generating ${finalRedirects.length} redirect(s) (${uniqueRedirects.length - finalRedirects.length} skipped)`);
 
 // ── SUPPRESSED: origin slugs that belong to a LIVE page (tw-2026-09-19-001) ──
 // Loud on purpose. Suppression is the fix working, but a silent fix rots: if this
@@ -395,7 +422,7 @@ function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
   console.log(`  ${from} → ${to}  (${displayName})`);
 }
 
-for (const r of filteredRedirects) {
+for (const r of finalRedirects) {
   writeRedirect(r.from, r.to, r.display_name, true);
 }
 
