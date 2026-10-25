@@ -38,7 +38,7 @@ const VAULT_PEOPLE_DIR = "Family History/People";
 /** git last-commit date (ISO) for a path inside a repo; null on any failure. */
 function gitDate(repoDir, relPath) {
   try {
-    const out = execFileSync("git", ["log", "-1", "--format=%cI", "--", relPath], {
+    const out = execFileSync("git", ["log", "-1", "--format=%cI", "--follow", "--", relPath], {
       cwd: repoDir,
       encoding: "utf-8",
       stdio: ["ignore", "pipe", "ignore"],
@@ -220,8 +220,13 @@ const byTriple = new Map();
 for (const [f, d] of fileDate) {
   const m = manifestParts(f);
   if (!m.name) continue;
+  // Compare as TIMESTAMPS, never as strings. git %cI carries the committer's local
+  // offset ("2026-10-25T19:57:39+10:00" vs "2026-10-11T12:01:44+10:00"); lexicographic
+  // comparison of ISO strings with differing offsets orders them wrongly and would
+  // silently pick the older date for a name shared by two files.
   const prev = byName.get(m.name);
-  if (!prev || d > fileDate.get(prev)) byName.set(m.name, f);
+  const prevTs = prev ? Date.parse(fileDate.get(prev)) : -Infinity;
+  if (!prev || Date.parse(d) > prevTs) byName.set(m.name, f);
 
   if (m.year && m.first && m.tokens.length >= 2) {
     for (let i = 1; i < m.tokens.length; i++) {
