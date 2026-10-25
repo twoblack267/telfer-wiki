@@ -97,7 +97,21 @@ export function formatBody(body, people) {
         // Only treat as a table if the 2nd line is a real separator (--- | --- pattern)
         const sep = rows[1].replace(/\|/g, '').trim();
         if (!/^[-: ]+$/.test(sep) || !sep.includes('-')) return match;
-        let html = '<table class="w-full border-collapse my-0 text-sm"><thead><tr>';
+        // The table MUST live inside a block-level .table-scroll div so the
+        // horizontal-scroll guard in BaseLayout.astro has something to scroll.
+        // Putting overflow-x:auto on the <table> itself sizes it to min-content
+        // and pushes the last column off-screen on phones (see BaseLayout note).
+        // Tables with 4+ columns cannot fit a phone; tag them so BaseLayout can
+        // switch them to intrinsic width inside the scroll wrapper instead of
+        // cramming cells into unreadable slivers.
+        const wideCls = headers.length >= 4 ? ' wide-table' : '';
+        // A 2-column table whose first column is a short LABEL (Relation, Mother,
+        // Father, Spouse...) needs the nowrap floor in BaseLayout. A 2-column
+        // table whose first column holds PERSON NAMES (Family / Children tables)
+        // must wrap, or the page overflows. Distinguish by header text.
+        const KV = /^(relation|relationship|role|field|attribute|item|key|detail|fact|event|date|label)$/i;
+        const kvCls = headers.length === 2 && KV.test(headers[0]) ? ' kv-table' : '';
+        let html = `<div class="table-scroll"><table class="w-full border-collapse my-0 text-sm${wideCls}${kvCls}"><thead><tr>`;
         for (const h of headers) {
           html += `<th class="bg-[var(--color-heading)] text-white font-sans font-semibold text-left px-2 py-1">${h}</th>`;
         }
@@ -110,7 +124,7 @@ export function formatBody(body, people) {
           }
           html += '</tr>';
         }
-        html += '</tbody></table>';
+        html += '</tbody></table></div>';
         return html;
       }
     )

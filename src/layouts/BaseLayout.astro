@@ -520,31 +520,92 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
     .wiki-content table { font-size: 0.95rem; }
   }
 
-  /* First column holds short labels (Relation / Mother / Spouse / Grandparents).
-     Measured failure at <=430px: the column gets 52.4px while "Grandparents"
-     needs 53.1px of min-content — one pixel short, so the browser breaks the
-     word mid-way ("Relatio / n", "Stepfa / ther", "Grand / parent / s").
-     A min-width floor plus an explicit nowrap on this column fixes it at every
-     width, because both beat `word-break: break-word` below. */
-  .wiki-content table > thead > tr > th:first-child,
-  .wiki-content table > tbody > tr > td:first-child {
+  /* First column holds short labels (Relation / Mother / Spouse / Grandparents)
+     in KEY-VALUE tables, and this needs a floor: measured failure at <=430px
+     showed the column getting 52.4px while "Grandparents" needs 53.1px of
+     min-content, so the browser broke words mid-way ("Relatio/n").
+     CRITICAL: this must apply ONLY to label tables. Applying it to every table
+     put nowrap on full names in Family tables ("Lindsay Ellis Stribling"),
+     which cannot wrap, so the table took max-content width and pushed the whole
+     PAGE into horizontal scroll (measured 25 Oct 2026: 542px on a 390px
+     screen at /people/arthur-clifford-stribling-1890/).
+     format-body.mjs now tags key/value tables `kv-table`. */
+  .wiki-content table.kv-table > thead > tr > th:first-child,
+  .wiki-content table.kv-table > tbody > tr > td:first-child {
     min-width: 7rem;
     white-space: nowrap;
     word-break: keep-all;
     overflow-wrap: normal;
   }
 
-  /* Horizontal-scroll safety net for genuinely wide tables.
-     NOTE: this selector previously read `.wiki-content :not(.table-wrapper) > table`
-     and NEVER MATCHED, because the table's direct parent IS .wiki-content — the
-     descendant combinator required an element in between. The rule was dead code,
-     so the intended overflow guard never ran. Targeting the table directly (the
-     only other match would be a table nested inside a .table-wrapper, which
-     should scroll) restores the guard. */
-  .wiki-content > table {
+  /* Wrapper for horizontal-scroll safety net on genuinely wide tables.
+     HISTORY: .wiki-content > table { display:block; overflow-x:auto } was applied
+     to the table ITSELF. That makes width:100% resolve against the table's own
+     block, so the browser sized the block to the table's MIN-CONTENT width
+     (368px inside a 342px container) and the third column physically rendered
+     outside the viewport. Measured 25 Oct 2026 on elspeth-young-1722 at 390px:
+     the "Notes" column spanned 314.8px -> 391.7px, i.e. 26px off-screen, with
+     no visible scrollbar on a phone. `overflow-x: auto` on the table is
+     meaningless anyway — a table cannot scroll its own columns while
+     table-layout:auto computes them from content.
+     The scroll container MUST be a block-level DIV ancestor. format-body.mjs
+     now emits <div class="table-scroll"><table ...></table></div>; this rule
+     does the scroll. The table keeps display:table so width:100% is honoured
+     and columns shrink to fit the phone. */
+  .wiki-content .table-scroll {
     display: block;
+    width: 100%;
+    max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  .wiki-content .table-scroll > table {
+    display: table;
+    width: 100%;
+    /* table-layout:fixed is what actually constrains these tables. With
+       table-layout:auto a percentage width resolves against the table's own
+       MIN-CONTENT width, so `width:100%` / `max-width:100%` do NOTHING and the
+       table takes its max-content width (measured: 440px inside a 272px
+       wrapper at 320px, which pushed the whole PAGE to 359px scrollWidth).
+       Fixed layout distributes the 100% across declared columns and lets the
+       mobile wrapping rules below do their job. */
+    table-layout: fixed;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* Long unbroken tokens (source path references like
+     "Family History/Records/Telfer_James_census_1841-06-06_Castleton_784-13-...")
+     cannot wrap and blow out the page width on a phone. Measured 25 Oct 2026:
+     a single <p> was 335px wide in a 272px container at 320px viewport.
+     `anywhere` is correct HERE (body prose) — it is only forbidden on table
+     CELLS, where it shreds ordinary words (see the mobile rule below). */
+  .wiki-content p,
+  .wiki-content li {
+    overflow-wrap: anywhere;
+  }
+
+  /* Some body text is not wrapped in <p>/<li> — it sits as a direct child of
+     .wiki-content (measured 25 Oct 2026: a raw "Family History/Records/
+     Stribling_..." path node holding the page at 518px on a 390px screen).
+     Cover every block-level text container. */
+  .wiki-content,
+  .wiki-content div,
+  .wiki-content section,
+  .wiki-content figure,
+  .wiki-content figcaption,
+  .wiki-content blockquote {
+    overflow-wrap: anywhere;
+  }
+
+  /* Wide multi-column tables (5-6 cols, e.g. the Agnes Telfer census table)
+     cannot fit a 320px phone at any sane font size. Let the wrapper scroll
+     properly instead of letting fixed layout cram cells to unreadable slivers. */
+  .wiki-content .table-scroll > table.wide-table {
+    table-layout: auto;
+    width: max-content;
+    min-width: 100%;
+    max-width: none;
   }
 
   /* Mobile: let cells wrap. On desktop there is room and single-line rows read
