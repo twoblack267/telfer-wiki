@@ -86,6 +86,29 @@ jobs:
       - name: Submit sitemap delta
         run: |
           set -euo pipefail
+          # IndexNow verifies ownership by FETCHING https://<host>/<key>.txt at
+          # submit time. Two ways this 403s:
+          #   1. the key file is not committed, or
+          #   2. it IS committed but GitHub Pages has not published this deploy yet.
+          # Case 2 bit us on the first live run: the build contained the key, the
+          # live host still 404'd, IndexNow said 403. So wait for the live file to
+          # come up before submitting — a 403 costs a full resubmit next run.
+          if [ "${{ inputs.dry_run }}" != "true" ]; then
+            KEY_URL="https://telferwiki.com/${INDEXNOW_KEY}.txt"
+            echo "waiting for $KEY_URL to go live..."
+            for i in $(seq 1 20); do
+              CODE=$(curl -s -o /dev/null -w '%{http_code}' "$KEY_URL" || true)
+              if [ "$CODE" = "200" ]; then
+                echo "key file live (HTTP $CODE) after ${i} attempt(s)"
+                break
+              fi
+              echo "  attempt $i: HTTP $CODE — waiting 15s for Pages to publish"
+              sleep 15
+            done
+            if [ "$CODE" != "200" ]; then
+              echo "::warning::key file still not live — IndexNow will likely 403 this run"
+            fi
+          fi
           ARGS=""
           if [ "${{ inputs.full }}" = "true" ]; then ARGS="$ARGS --full"; fi
           if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
