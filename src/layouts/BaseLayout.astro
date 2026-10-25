@@ -183,6 +183,10 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
       :root{--nav-ink:#8A1B3B;--nav-ink-hover:#6d1430}
       [data-theme="dark"]{--nav-ink:#d98aa4;--nav-ink-hover:#ecb3c5}
       svg.nav-ico{width:22px;height:22px;flex:0 0 auto;stroke:currentColor;stroke-width:1.5;fill:none;transition:transform .2s ease}
+      /* Page-body icons (titles, tabs, lists, inputs): same engraving weight and
+         brand ink as the nav, but sized to their own context. */
+      svg.pg-ico{stroke:var(--nav-ink);color:var(--nav-ink);stroke-width:1.5;fill:none;flex:0 0 auto}
+      svg.pg-ico[width="48"]{stroke-width:1.4}
       .nav-link:hover svg.nav-ico{transform:translateY(-1px)}
       .nav-link.active svg.nav-ico{stroke-width:1.9}
       /* Layout is inline so it cannot be lost if Tailwind's content scan misses

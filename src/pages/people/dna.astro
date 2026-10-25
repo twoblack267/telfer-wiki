@@ -39,7 +39,7 @@ const haplogroupsY = [...new Set(people.filter(p => p.haplogroup_y).map(p => ({ 
     {peopleWithDna.length === 0 ? (
       <!-- Under Construction Notice -->
       <div class="person-card rounded-xl p-8 text-center border-2 border-dashed border-[var(--color-border)]">
-        <div class="text-5xl mb-3">🧬</div>
+        <div class="mb-3" style="display:flex;justify-content:center"><svg class="pg-ico" width="48" height="48" aria-hidden="true" focusable="false"><use href="#i-dna"></use></svg></div>
         <h2 class="font-serif text-xl text-[var(--color-heading)] mb-2">DNA Page — Under Construction</h2>
         <p class="text-[var(--color-muted)] mb-4 max-w-md mx-auto">
           No genetic genealogy data has been added yet. When you or family members take DNA tests

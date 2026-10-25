@@ -21,7 +21,7 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
   <!-- Search input -->
   <div class="mb-6">
     <div class="relative">
-      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-muted)] text-lg">🔍</span>
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-muted)]" style="display:flex;pointer-events:none"><svg class="pg-ico" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></span>
       <input
         id="search-input"
         type="text"
