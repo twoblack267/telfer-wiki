@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-25T09:11:46+10:00",
+  "generated_at": "2026-10-25T17:24:16+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 427,
+  "count": 433,
   "kinds": {
-    "real": 411,
+    "real": 417,
     "redirect": 16,
     "empty": 0
   },
@@ -520,6 +520,10 @@
       "sha256": "84330c467e0e25d7bf92a25ac08609eed1717c4955fc022b48ada8a82491037b",
       "kind": "real"
     },
+    "Esther Naomi Lynette Telfer (b. 1983).md": {
+      "sha256": "7ced479f8d997edd82de189a20ea7b3fa81740e6372de08db4cf9751392c49e9",
+      "kind": "real"
+    },
     "Esther Telfer Smith (1870\u20131906).md": {
       "sha256": "0adf27ff5eb5f5cb84b2cf7c4c9b23b373df5fa976517cfaeae2c32b1446f89e",
       "kind": "real"
@@ -758,6 +762,10 @@
     },
     "Isa Katie Stribling (1886\u20131973).md": {
       "sha256": "7f62984b5da34a83cd15f23cf23e9a0c4a692c95511a410e58d5863273cc7389",
+      "kind": "real"
+    },
+    "Isaac Nathaniel Telfer (b. 1988).md": {
+      "sha256": "8f59ce56914e14316be2c0e8002267a0a5f770e0e82bdd98ba4dbdbfae77ef05",
       "kind": "real"
     },
     "Isabella Kelly (~1825\u20131867).md": {
@@ -1076,6 +1084,10 @@
       "sha256": "f0b8cffdbdaf48ce5107c18e348f6d93b164abb2c997d4cfbca40170387241e2",
       "kind": "real"
     },
+    "Joshua Paul Telfer (b. 1982).md": {
+      "sha256": "e0c3097fb2627bf900ba576c417d86cee2180f1e511455203c0957e5bc2d8467",
+      "kind": "real"
+    },
     "Joyce Elizabeth Telfer (1912\u20132012).md": {
       "sha256": "04037b757976ba39bf1ceccd9a2a121e5a35010c1cf9bf7fa16eea9d95a91e94",
       "kind": "real"
@@ -1184,6 +1196,10 @@
       "sha256": "e0c38ab63e2fb07526445d7e6d8f96cd91f90af9eb6526ff00015c8491859b05",
       "kind": "real"
     },
+    "Luke Caleb Telfer (b. 1980).md": {
+      "sha256": "c595606c10d6e09df3545ded72ae70c594da67bea35ac47fc724c9a5c5e5f0e7",
+      "kind": "real"
+    },
     "Mabel Winifred Parker (1890\u20131895).md": {
       "sha256": "f138bc46488809ce0280609b8dd476b41536a131fe75c1e5b0d0414c5d085d88",
       "kind": "real"
@@ -1198,6 +1214,10 @@
     },
     "Malcolm Murray Cameron.md": {
       "sha256": "f66d2522108d02140de1068d20d8e424d959e8e72fdb1c5ad3694132d6a9e1aa",
+      "kind": "real"
+    },
+    "Malvern Reginald Telfer (b. 1953).md": {
+      "sha256": "8dd32bcb13486545a9bb3e6dfb5a0b06529b180ec09d3145c2413968874533ba",
       "kind": "real"
     },
     "Margaret Armstrong (~1745\u2013?).md": {
@@ -1389,7 +1409,7 @@
       "kind": "real"
     },
     "Reginald Masters Telfer (1922\u20132011).md": {
-      "sha256": "780b2cc937bc7719db3ccecc24ababff5d15c38c2c5629c3d6380ac5e219b598",
+      "sha256": "cf2a499240abbf2578a9003ef00a3c5350e6b2be0542e4865f31392611998137",
       "kind": "real"
     },
     "Rev. Ralph Drummond (1792\u20131872).md": {
@@ -1510,6 +1530,10 @@
     },
     "Sabina (Triplett) Dillon (1870\u20131961).md": {
       "sha256": "9f7289f7982a707bfc89ec08c7d4e0dd75376a0b93126d6781fe0f11894514e8",
+      "kind": "real"
+    },
+    "Samuel Joel Telfer (b. 1985).md": {
+      "sha256": "e3a59dbda35fa38b6224ef6f20d55d861853cbc816040a3c409e2cc280ff9cb4",
       "kind": "real"
     },
     "Sandra Lee Smith.md": {

@@ -2054,6 +2054,36 @@
       "slug": "marion-lawrie-1838",
       "id": "Marion Lawrie (1838)",
       "generation": 5
+    },
+    {
+      "slug": "esther-naomi-lynette-telfer",
+      "id": "Esther Naomi Lynette Telfer (1983)",
+      "generation": 8
+    },
+    {
+      "slug": "isaac-nathaniel-telfer",
+      "id": "Isaac Nathaniel Telfer (1988)",
+      "generation": 8
+    },
+    {
+      "slug": "joshua-paul-telfer",
+      "id": "Joshua Paul Telfer (1982)",
+      "generation": 8
+    },
+    {
+      "slug": "luke-caleb-telfer",
+      "id": "Luke Caleb Telfer (1980)",
+      "generation": 8
+    },
+    {
+      "slug": "malvern-reginald-telfer",
+      "id": "Malvern Reginald Telfer (1953)",
+      "generation": 7
+    },
+    {
+      "slug": "samuel-joel-telfer",
+      "id": "Samuel Joel Telfer (1985)",
+      "generation": 8
     }
   ],
   "edges": {
@@ -4273,6 +4303,30 @@
       {
         "from": "john-lawrie-1810",
         "to": "marion-lawrie-1838"
+      },
+      {
+        "from": "malvern-reginald-telfer",
+        "to": "esther-naomi-lynette-telfer"
+      },
+      {
+        "from": "malvern-reginald-telfer",
+        "to": "isaac-nathaniel-telfer"
+      },
+      {
+        "from": "malvern-reginald-telfer",
+        "to": "joshua-paul-telfer"
+      },
+      {
+        "from": "malvern-reginald-telfer",
+        "to": "luke-caleb-telfer"
+      },
+      {
+        "from": "reginald-masters-telfer-1922",
+        "to": "malvern-reginald-telfer"
+      },
+      {
+        "from": "malvern-reginald-telfer",
+        "to": "samuel-joel-telfer"
       }
     ],
     "spouseOf": [
@@ -7319,6 +7373,10 @@
         "to": "ruth-carson"
       },
       {
+        "from": "david-telfer",
+        "to": "malvern-reginald-telfer"
+      },
+      {
         "from": "alma-stribling",
         "to": "arthur-clifford-stribling-1890"
       },
@@ -7633,6 +7691,30 @@
       {
         "from": "marion-lawrie-1838",
         "to": "robert-dunlop-lawrie-1850"
+      },
+      {
+        "from": "esther-naomi-lynette-telfer",
+        "to": "isaac-nathaniel-telfer"
+      },
+      {
+        "from": "esther-naomi-lynette-telfer",
+        "to": "joshua-paul-telfer"
+      },
+      {
+        "from": "esther-naomi-lynette-telfer",
+        "to": "luke-caleb-telfer"
+      },
+      {
+        "from": "isaac-nathaniel-telfer",
+        "to": "joshua-paul-telfer"
+      },
+      {
+        "from": "isaac-nathaniel-telfer",
+        "to": "luke-caleb-telfer"
+      },
+      {
+        "from": "joshua-paul-telfer",
+        "to": "luke-caleb-telfer"
       }
     ],
     "stepParentOf": [
