@@ -1,0 +1,104 @@
+name: Daily index submission
+
+# WHY THIS EXISTS
+#   New and changed pages were only discovered when Google/Bing got around to
+#   re-crawling. Submitting the delta daily keeps discovery close to publish
+#   time. Runs once a day, plus on demand.
+#
+# WHY 05:17 UTC
+#   15:17 AEST — after the working day's edits, before the next morning's. Any
+#   time works; what matters is that it is off the hour so it does not queue
+#   behind the rest of the world's cron jobs.
+#
+# WHY IT REBUILDS
+#   The submission must describe what is DEPLOYED, not what someone intended to
+#   deploy. Building first means the sitemap we submit is the sitemap we ship.
+#
+# GOOGLE
+#   Google retired its sitemap ping endpoint in 2023. There is no push API for
+#   it any more. Google discovers URLs from the sitemap referenced in
+#   robots.txt, so this job asserts that sitemap is live and current rather
+#   than pretending to ping Google. Bing/Yandex/Seznam/Naver go via IndexNow.
+
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+    inputs:
+      full:
+        description: 'Submit every URL, ignoring the delta state'
+        required: false
+        default: 'false'
+      dry_run:
+        description: 'Show what would be submitted, send nothing'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write   # to commit the submission state back to the repo
+
+concurrency:
+  group: index-submission
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Verify IndexNow key file is served in the build
+        run: |
+          set -euo pipefail
+          # IndexNow returns 403 unless the key file is reachable at the host
+          # root. If it is missing from dist/ the submission cannot work, and
+          # failing HERE says so plainly instead of surfacing as a 403 later.
+          KEY_FILE=$(ls dist/*.txt 2>/dev/null | grep -Ev 'llms|robots' | head -1 || true)
+          if [ -z "$KEY_FILE" ]; then
+            echo "::error::No IndexNow key file in dist/. Expected a 32-hex-name .txt at the site root."
+            echo "Create it with: python3 -c \"import secrets;print(secrets.token_hex(16))\" > public/<key>.txt"
+            exit 1
+          fi
+          echo "IndexNow key file present: $(basename "$KEY_FILE")"
+          echo "INDEXNOW_KEY=$(basename "$KEY_FILE" .txt)" >> "$GITHUB_ENV"
+
+      - name: Submit sitemap delta
+        run: |
+          set -euo pipefail
+          ARGS=""
+          if [ "${{ inputs.full }}" = "true" ]; then ARGS="$ARGS --full"; fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          node scripts/submit-sitemap.mjs $ARGS
+
+      - name: Commit submission state
+        if: ${{ inputs.dry_run != 'true' }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- scripts/.index-submission-state.json 2>/dev/null; then
+            echo "No state change to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/.index-submission-state.json
+          git commit -m "chore: record index submission state ($(date -u +%Y-%m-%d))"
+          # Rebase-and-retry: another workflow may have pushed while we ran.
+          for i in 1 2 3; do
+            git pull --rebase --quiet origin main && git push --quiet && exit 0
+            echo "push attempt $i failed, retrying..."
+            sleep 3
+          done
+          echo "::warning::could not push index state — next run will resubmit this delta"

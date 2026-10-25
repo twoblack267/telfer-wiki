@@ -37,3 +37,7 @@ scripts/.sentinel/
 
 # table-clip-check.py writes this probe into the repo on every run
 .table-clip-probe.cjs
+
+# IndexNow key — public by design (served at /<key>.txt). Not a secret.
+!public/5ab1418c8cf5005166c9c802aab06152.txt
+scripts/.indexnow-key
