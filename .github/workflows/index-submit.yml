@@ -57,6 +57,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # `npm run build` runs the full gate suite, which includes a Playwright
+      # search-render e2e test. Without the browser binary that test dies with
+      # "Executable doesn't exist ... chrome-headless-shell" and takes the whole
+      # job red with it. deploy.yml installs Chromium for exactly this reason —
+      # keep these two in step, or this job will fail on every scheduled run.
+      - name: Install Playwright browser
+        run: npx playwright install chromium --with-deps
+
       - name: Build site
         run: npm run build
 
