@@ -187,6 +187,14 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
          brand ink as the nav, but sized to their own context. */
       svg.pg-ico{stroke:var(--nav-ink);color:var(--nav-ink);stroke-width:1.5;fill:none;flex:0 0 auto}
       svg.pg-ico[width="48"]{stroke-width:1.4}
+      /* Vault evidence marks rendered as inline SVG (see utils/vault-marks.mjs).
+         Sized in em so they track whatever text they sit in - prose, a table
+         cell, or an H2 heading. */
+      svg.vault-mark{display:inline-block;vertical-align:-0.12em;margin-right:.34em;flex:0 0 auto}
+      /* A mark opening a heading needs the gap on its leading side too, or it
+         presses against the first letter. */
+      h1>svg.vault-mark:first-child,h2>svg.vault-mark:first-child,h3>svg.vault-mark:first-child{margin-left:.06em}
+      @media (max-width:640px){svg.vault-mark{width:1.05em;height:1.05em}}
       .nav-link:hover svg.nav-ico{transform:translateY(-1px)}
       .nav-link.active svg.nav-ico{stroke-width:1.9}
       /* Layout is inline so it cannot be lost if Tailwind's content scan misses
