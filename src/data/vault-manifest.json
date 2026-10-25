@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-25T18:24:25+10:00",
+  "generated_at": "2026-10-25T19:18:02+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 433,
+  "count": 434,
   "kinds": {
-    "real": 417,
+    "real": 418,
     "redirect": 16,
     "empty": 0
   },
@@ -1100,6 +1100,10 @@
       "sha256": "a3f46d99a04f903c4f87354bbb564ac42d25feb0beea81a00b0d4bcc98759a48",
       "kind": "real"
     },
+    "Karla Jayde (Vandenbroek) Telfer (b. 1985).md": {
+      "sha256": "daaac91573edad690e67f8b24c8c9d1e03cc9c97f0988ee0aa1676b23a1c9fb3",
+      "kind": "real"
+    },
     "Kathryn Mavis Telfer (1961\u20131965).md": {
       "sha256": "e987f5b78d2f823964429fbdc2e2c511d9e10b3fd15327904875a51fd17707bb",
       "kind": "real"
@@ -1533,7 +1537,7 @@
       "kind": "real"
     },
     "Samuel Joel Telfer (b. 1985).md": {
-      "sha256": "f94c87256dedfc132678d88f145429a5b7a6fc157fb24f33c22aaf00f3230b0d",
+      "sha256": "f738826ec0893195e13c45de2f89e439b2287312535eabebeb30b802d203f009",
       "kind": "real"
     },
     "Sandra Lee Smith.md": {

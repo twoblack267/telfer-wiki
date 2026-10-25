@@ -1,37 +1,13 @@
 {
-  "checkedAt": "2026-10-25T08:24:48.916Z",
+  "checkedAt": "2026-10-25T09:18:25.687Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 417,
-    "after": 417
+    "after": 418
   },
   "crownJewelsChecked": 5,
-  "renames": [
-    {
-      "from": "jono-telfer",
-      "to": "jonathon-telfer",
-      "name": "Jono Telfer"
-    },
-    {
-      "from": "nick-telfer",
-      "to": "nicholas-telfer",
-      "name": "Nick Telfer"
-    }
-  ],
+  "renames": [],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "kristin-stefanoff",
-      "name": "Kristin Holly Stefanoff",
-      "field": "parents",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "[unknown]"
-      ]
-    }
-  ]
+  "warnings": []
 }

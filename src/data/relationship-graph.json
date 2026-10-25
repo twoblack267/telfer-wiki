@@ -2084,6 +2084,10 @@
       "slug": "nicholas-telfer",
       "id": "Nicholas Adam Telfer (1988)",
       "generation": 8
+    },
+    {
+      "slug": "karla-telfer",
+      "id": "Karla Jayde Telfer (1985)"
     }
   ],
   "edges": {
@@ -4693,6 +4697,10 @@
       {
         "from": "frank-lawrie",
         "to": "sophia-parker-lawrie-1886"
+      },
+      {
+        "from": "karla-telfer",
+        "to": "samuel-joel-telfer"
       }
     ],
     "siblingOf": [
