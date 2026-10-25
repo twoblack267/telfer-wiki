@@ -336,13 +336,25 @@ try {
     // ZERO aliases on every build. The set that actually holds live pages here is
     // DROP_IF_PAGE_EXISTS. Never leave a ReferenceError inside a bare catch.
     if (DROP_IF_PAGE_EXISTS.has(from)) continue;    // the page still exists — never shadow it
+    // PRIVACY STRIP (2026-10-26, owner's ruling): a withdrawn person gets NO
+    // page, not even a redirect stub. The owner's reading of the ruling is
+    // strict: "no page" includes a meta-refresh stub, because the stub sits at
+    // the withdrawn person's own URL and confirms that identity existed.
+    // A 404 is the honest answer — it says nothing at all.
+    //
+    // An earlier attempt exempted these from the liveness guard and emitted
+    // six aliases. CI's check-withdrawn-names correctly failed the build with
+    // 'page exists for withdrawn slug'. That gate was right; the aliases were
+    // wrong. Do not re-add the exemption without changing the ruling first.
+    console.log(`  🔒 SKIP (privacy strip: withdrawn person gets no page, not even a redirect stub): ${from} → ${decl.to}`);
+    continue;
+    // eslint-disable-next-line no-unreachable
     filteredRedirects.push({
       from,
       to: decl.to,
       display_name: decl.person || decl.to,
       reason: 'privacy-withdrawal',
     });
-    console.log(`  🔒 alias for privacy-withdrawn page: ${from} → ${decl.to}`);
   }
 } catch (e) {
   console.log(`  ⚠️  could not read src/data/removed-redirects.json (${e.message}) — no privacy aliases emitted`);
