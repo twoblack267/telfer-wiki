@@ -111,18 +111,50 @@ for (const p of people) {
     });
   }
 
-  // Case 1b: COLLAPSED-first-name old slug variant.
-  // Historical/legacy slug scheme used only the FIRST word of a multi-word
-  // first name, e.g. 'william-parker-1850' for "William Humphrey Parker",
-  // 'clara-telfer-1883' for "Clara Blanche Telfer". If a person's first name
-  // has more than one word, redirect the collapsed form → the correct new slug.
-  // This covers legacy links that full-first-name Case 1 misses (147 people
-  // had no redirect; william-parker-* links 404'd live).
-  const firstWords = (p.first_name || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
-  if (firstWords.length > 1) {
-    const collapsedBare = `${firstWords[0]}-${lastName}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
-    const collapsedOld = birthYear ? `${collapsedBare}-${birthYear}` : collapsedBare;
-    if (collapsedOld !== newSlug && collapsedOld !== oldSlug) {
+  // Case 1b: COLLAPSED-first-name old slug variant — THE YEAR-SUFFIXED FORM ONLY.
+  //
+  // Legacy URL scheme used only the FIRST word of a given name:
+  //   'clara-telfer-1883'     for "Clara Blanche Telfer" (1883)
+  //   'william-parker-1850'   for "William Humphrey Parker" (1850)
+  //
+  // FIXED 2026-10-26. Two separate defects had kept this dead:
+  //
+  //   (a) It read `p.first_name` and demanded more than one word. The schema
+  //       splits given names across first_name/middle_name — "Clara Blanche
+  //       Telfer" is {first_name:"Clara", middle_name:"Blanche"} — so the test
+  //       could never be true. The given name must be assembled the same way
+  //       the slug was: FIRST + MIDDLE.
+  //
+  //   (b) More subtle, and the reason the first fix alone still produced
+  //       nothing: these people are in CONFLICTED surname groups (two Claras,
+  //       three William Parkers). Case 1 sets `actualOldSlug` to the BARE slug
+  //       for conflicted groups, so `oldSlug` (the year-suffixed guess) looks
+  //       "unused". Guarding on `collapsedOld !== oldSlug` therefore discarded
+  //       exactly the URLs we needed. The year-suffixed collapsed form is NOT
+  //       ambiguous — 'clara-telfer-1883' can only be Clara Blanche — so it is
+  //       emitted whenever no live page claims it. The bare slug stays Case 1's
+  //       problem and may legitimately go nowhere: 'william-parker' cannot
+  //       resolve to one man when three share it.
+  //
+  // Only a year-suffixed collapsed slug is emitted here. A yearless one is
+  // indistinguishable from the bare slug Case 1 already handles, and emitting
+  // it would redirect every "William Parker" to whichever was found first.
+  // Given name as the LEGACY SLUGGER saw it: first_name may already contain
+  // several words ('Francis Adam' in the guard fixture and in older data), or
+  // it may be split across first_name/middle_name ('Clara' + 'Blanche'). Both
+  // must collapse identically, so concatenate and split — never trust one field.
+  const givenWords = `${p.first_name || ''} ${p.middle_name || ''}`
+    .toLowerCase()
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+  if (givenWords.length > 1) {
+    const collapsedBare = `${givenWords[0]}-${lastName}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+    // A yearless collapsed slug IS the bare slug Case 1 handles, and pushing it
+    // here would redirect every "William Parker" to whichever was found first.
+    // So the year-suffixed form is what this case exists to recover.
+    const collapsedOld = birthYear ? `${collapsedBare}-${birthYear}` : null;
+    if (collapsedOld && collapsedOld !== newSlug) {
       pushRedirect({
         from: collapsedOld,
         to: newSlug,
