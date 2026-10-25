@@ -58,10 +58,14 @@ const recentPeople = (telferPeople || [])
   <div class="space-y-3 sm:space-y-4">
     <!-- Hero -->
     <section class="text-center py-4 sm:py-6 border-b-2 border-[var(--color-border)]">
-      <div class="text-4xl sm:text-5xl mb-2">🌳</div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[var(--color-heading)] mb-3">
-        Telfer Wiki
-      </h1>
+      <img
+        src={import.meta.env.BASE_URL + "images/brand/telfer-lockup-760.png"}
+        alt="Telfer Wiki — a Moreton Bay fig, with Proverbs 22:6"
+        width="760"
+        height="967"
+        class="mx-auto mb-2 w-52 sm:w-64 md:w-72 h-auto"
+      />
+      <h1 class="sr-only">Telfer Wiki</h1>
       <p class="text-base sm:text-lg text-[var(--color-ink-light)] font-serif italic max-w-2xl mx-auto px-2">
         A digital archive for the descendants of John Telfer of Castleton — from the Scottish lowlands to the South Australian plains
       </p>

@@ -1,21 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="hexBg" x1="0" y1="0" x2="100" y2="100">
-      <stop offset="0%" stop-color="#f7f3eb"/>
-      <stop offset="100%" stop-color="#ede5d6"/>
-    </linearGradient>
-    <linearGradient id="hexAccent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#6b1d3a"/>
-      <stop offset="100%" stop-color="#c9a94e"/>
-    </linearGradient>
-  </defs>
-  <!-- Hexagon background -->
-  <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="url(#hexBg)" stroke="url(#hexAccent)" stroke-width="2.5"/>
-  <!-- Inner hexagon accent -->
-  <polygon points="50,18 82,34 82,66 50,82 18,66 18,34" fill="none" stroke="url(#hexAccent)" stroke-width="1.5" opacity="0.6"/>
-  <!-- Tree icon centered -->
-  <g transform="translate(50, 50)">
-    <path d="M0,-24 L0,-8 M-10,-12 L10,-12 M-14,-4 L14,-4 M-18,4 L18,4 M-10,12 L10,12" stroke="url(#hexAccent)" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <ellipse cx="0" cy="20" rx="6" ry="3" fill="url(#hexAccent)" opacity="0.9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Telfer Wiki">
+  <title>Telfer Wiki</title>
+  <circle cx="50" cy="50" r="48" fill="#f7f3eb"/>
+  <circle cx="50" cy="50" r="46" fill="none" stroke="#b8963f" stroke-width="5"/>
+  <g fill="#8a1c3b">
+    <path d="M50 12c11 0 20 7.2 22.5 17 5.6 3 9 8.2 9 14 0 6.5-4.4 12-10.8 13.9.5 1.6.8 3.3.8 5 0 6.6-5.4 12-12 12h-9.2v10.6h-8.6V73.9h-9.2c-6.6 0-12-5.4-12-12 0-1.7.3-3.4.8-5C14.9 55 10.5 49.5 10.5 43c0-5.8 3.4-11 9-14C22 19.2 39 12 50 12z"/>
+    <path d="M41.4 73.9h8.6v12.4c-3.4-1.6-6.3-4.6-8.6-8.2z"/>
+    <path d="M58.6 73.9h-8.6v12.4c3.4-1.6 6.3-4.6 8.6-8.2z"/>
+    <rect x="24" y="86.4" width="52" height="4.6" rx="2.3"/>
   </g>
 </svg>

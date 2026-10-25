@@ -103,7 +103,13 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
     <title>{title} — Telfer Wiki</title>
     <meta name="description" content={resolvedDescription} />
     <meta name="description-chars" content={String(resolvedDescription.length)} data-encoding="decoded" />
-    <link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + "favicon.svg"} />
+    <!-- Icons: purpose-drawn 16px SVG for browser tabs (a detailed crest collapses at 16px,
+         so the tiny mark is a simplified tree), badge design for larger/app icons. -->
+    <link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + "favicon.svg"} sizes="any" />
+    <link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + "favicon-16.svg"} sizes="16x16" />
+    <link rel="icon" type="image/png" sizes="32x32" href={import.meta.env.BASE_URL + "favicon-32.png"} />
+    <link rel="icon" type="image/png" sizes="16x16" href={import.meta.env.BASE_URL + "favicon-16.png"} />
+    <link rel="apple-touch-icon" sizes="180x180" href={import.meta.env.BASE_URL + "apple-touch-icon.png"} />
 
     <!-- Google AdSense — site ownership verification (ad client ca-pub-8950658490247877) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8950658490247877" crossorigin="anonymous"></script>
@@ -158,7 +164,14 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
     <nav class="border-b-2 border-[var(--color-border)] bg-[var(--color-nav-bg)] backdrop-blur-sm sticky top-0 z-50 no-print">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href={import.meta.env.BASE_URL} class="nav-link text-lg sm:text-xl font-serif font-bold text-[var(--color-heading)] hover:text-[var(--color-heading-hover)] no-underline flex items-center gap-2">
-          <span class="text-[var(--color-highlight)] text-xl sm:text-2xl">🌳</span>
+          <img
+            src={import.meta.env.BASE_URL + "images/brand/telfer-fig.png"}
+            alt=""
+            aria-hidden="true"
+            width="40"
+            height="40"
+            class="h-8 w-8 sm:h-10 sm:w-10 object-contain shrink-0"
+          />
           Telfer Wiki
         </a>
 
@@ -279,7 +292,19 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
     <!-- Footer -->
     <footer class="border-t border-[var(--color-border)] bg-[var(--color-surface)] no-print">
       <div class="max-w-5xl mx-auto px-4 py-4 sm:py-6 text-center text-sm text-[var(--color-muted)]">
-        <p class="font-serif italic">Telfer Wiki — a living family history archive. From the Scottish lowlands to the South Australian plains.</p>
+        <img
+          src={import.meta.env.BASE_URL + "images/brand/telfer-fig-400.png"}
+          alt="The Telfer family fig tree"
+          width="120"
+          height="120"
+          loading="lazy"
+          class="mx-auto mb-3 h-24 w-24 sm:h-28 sm:w-28 object-contain opacity-90"
+        />
+        <blockquote class="font-serif italic text-[var(--color-ink-light)] max-w-md mx-auto leading-relaxed">
+          &ldquo;Train up a child in the way he should go, and when he is old he will not depart from it.&rdquo;
+          <footer class="mt-2 not-italic font-bold text-xs tracking-widest uppercase text-[var(--color-heading)]">Proverbs 22:6</footer>
+        </blockquote>
+        <p class="font-serif italic mt-4">Telfer Wiki — a living family history archive. From the Scottish lowlands to the South Australian plains.</p>
         <p class="mt-1">
           Data sourced from the Telfer Family History archive.
           <span class="text-xs">Built by Skippy the Magnificent &amp; The Librarian.</span>
