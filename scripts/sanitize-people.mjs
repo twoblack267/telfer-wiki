@@ -398,7 +398,16 @@ function resolveRelationship(entry) {
 
   if (PRIVACY_STRIP_SLUGS.has(slug)) {
     const person = slugToPerson.get(slug);
-    return { plainName: person?.display_name || stripDates(String(entry)) };
+    // TAG IT. A privacy-stripped relative and an unresolved name-variant both
+    // arrive downstream as { plain_name }, and templates cannot tell them
+    // apart. Fencing "any slug-less placeholder" de-indexed 128 family sheets
+    // and 200+ legitimate historical relatives (Mary Hayes, Betty Hutton,
+    // George Fisher …) on 25 Oct 2026. The flag makes the distinction explicit
+    // so derived pages fence on privacy ONLY.
+    return {
+      plainName: person?.display_name || stripDates(String(entry)),
+      withheld: true,
+    };
   }
 
   return visible.has(slug) ? { slug: String(entry) } : null;
@@ -409,7 +418,7 @@ function resolveRelationshipArray(arr) {
   return (arr || [])
     .map(resolveRelationship)
     .filter(Boolean)
-    .map((r) => (r.slug !== undefined ? r.slug : { plain_name: r.plainName }));
+    .map((r) => (r.slug !== undefined ? r.slug : { plain_name: r.plainName, ...(r.withheld ? { withheld: true } : {}) }));
 }
 
 // ─── Age-Gate Privacy Guardian ────────────────────────────────────────────────

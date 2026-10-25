@@ -23,7 +23,21 @@ function relRows(arr) {
   return (arr || []).map(s => {
     if (s && typeof s === 'object') {
       const n = s.plain_name || '';
-      return { withdrawn: true, display_name: n, slug: null, birth_year: null, death_year: null, is_living: false };
+      return {
+        withdrawn: true,
+        display_name: n,
+        slug: null,
+        birth_year: null,
+        death_year: null,
+        is_living: false,
+        // CARRY THE PRIVACY FLAG THROUGH. Only a genuine privacy strip has
+        // `withheld: true` (set by scripts/sanitize-people.mjs). Unresolved
+        // name variants — Mary Hayes, Betty Hutton, George Fisher, or the
+        // duplicated "Isobel/Isabella Telfer" — arrive without it and must
+        // NOT fence the page. Dropping this flag is what de-indexed 179
+        // family sheets on 25 Oct 2026.
+        withheld: s.withheld === true,
+      };
     }
     return peoplePublic.find(p => p.slug === s);
   }).filter(Boolean);
@@ -65,9 +79,30 @@ export async function getStaticPaths() {
     .filter(p => p.spouses.length > 0 || p.parents.length > 0 || p.siblings.length > 0 || p.children.length > 0)
     .map(p => ({ params: { slug: p.slug } }));
 }
+
+// PRIVACY: family group sheets are a machine-readable republication of a
+// family's relationships. When the family contains a withdrawn person, the
+// sheet is a second indexable copy of names the owner ruled must appear on the
+// parent's page ONLY. Fence the whole sheet out of Google rather than try to
+// redact a table — cheaper, and impossible to get half-right.
+// See references/privacy-derived-pages.md (25 Oct 2026).
+//
+// NOTE: key on `withdrawn`, NOT on `plain_name`. relRows() above normalises a
+// placeholder to { withdrawn: true, display_name, slug: null } and does not
+// carry plain_name through, so a plain_name test is always undefined and the
+// fence silently never fires (bug caught 25 Oct 2026 by inspecting dist).
+//
+// AND: fence ONLY on the explicit privacy flag. A slug-less placeholder is
+// usually an UNRESOLVED NAME VARIANT (Mary Hayes, Betty Hutton, George Fisher
+// …), not a privacy strip. Inferring "slug-less ⇒ withheld" de-indexed 128
+// family sheets and 200+ legitimate historical relatives on 25 Oct 2026.
+// scripts/sanitize-people.mjs now tags genuine privacy strips with
+// `withheld: true` at the source; relRows carries it through.
+const familyHasWithdrawn = [...spouses, ...children, ...siblings, ...parents]
+  .some((r) => r && r.withheld === true);
 ---
 
-<BaseLayout title={`Family Group Sheet: ${person.display_name}`} canonicalPath={`/people/${slug}/family-sheet/`} description={`Family group sheet for ${person.display_name} (${formatDateRange(person)}) — parents, spouse${spouses.length === 1 ? '' : 's'}, siblings and children, from the Telfer family history archive.`}>
+<BaseLayout title={`Family Group Sheet: ${person.display_name}`} canonicalPath={`/people/${slug}/family-sheet/`} noindex={familyHasWithdrawn} description={`Family group sheet for ${person.display_name} (${formatDateRange(person)}) — parents, spouse${spouses.length === 1 ? '' : 's'}, siblings and children, from the Telfer family history archive.`}>
   <div class="max-w-3xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">

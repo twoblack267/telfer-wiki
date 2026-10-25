@@ -77,7 +77,24 @@ export default defineConfig({
       // set once again removes that person from the sitemap automatically.
       filter: (page) => {
         const m = page.match(/\/people\/([^/?]+)/);
-        return !(m && NOINDEX_SLUGS.has(m[1]));
+        if (!m) return true;
+        const slug = m[1];
+
+        // 1. A withdrawn person: no page, no family sheet, nothing.
+        if (NOINDEX_SLUGS.has(slug)) return false;
+
+        // 2. Derived pages that republish a family's relationships. These carry
+        //    the names of withdrawn relatives inside machine-readable tables
+        //    (family group sheets list "Children (4)" by full name), which puts
+        //    them in Google even though the person has no page of their own.
+        //    The owner's ruling requires the names to remain visible on the
+        //    parent's page — it does not license a second indexable copy of the
+        //    same table. See references/privacy-derived-pages.md.
+        //    Added 25 Oct 2026 after GSC showed 5 impressions / 2 clicks on a
+        //    withdrawn minor's family sheet.
+        if (/\/people\/[^/]+\/(?:family-sheet|descendants)\/?$/.test(page)) return false;
+
+        return true;
       },
       // Per-URL <lastmod>, from the committed slug -> date map.
       // A URL whose slug is absent (15 people have no vault file match) gets NO

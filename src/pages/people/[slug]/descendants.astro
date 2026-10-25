@@ -54,6 +54,21 @@ function buildDescendants(rootSlug, people, maxDepth = 6, currentDepth = 0) {
 
 const descendantTree = buildDescendants(slug, peoplePublic, 6);
 
+// PRIVACY FENCE (owner ruling 16 Oct 2026).
+// A descendant chart is a SECOND ROUTE to the same names shown on a family
+// group sheet: no page of its own, but every node is a live link. Fence it:
+// robots noindex, and astro.config.ts drops all /descendants/ URLs from the
+// sitemap. Names stay visible as plain text where the ruling requires them.
+//
+// Only a placeholder carrying the explicit `withheld: true` privacy flag fences
+// the chart. scripts/sanitize-people.mjs tags genuine privacy strips at the
+// source; every other slug-less placeholder is an unresolved name variant and
+// must not de-index a legitimate historical profile.
+const hasWithdrawnChild = (person.children || []).some(
+  (c) => c && typeof c === "object" && c.withheld === true
+);
+const descendantHasWithdrawn = hasWithdrawnChild;
+
 function countDescendants(node) {
   if (!node) return 0;
   return node.children.reduce((sum, child) => sum + countDescendants(child) + 1, 0);
@@ -125,7 +140,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<BaseLayout title={`Descendants of ${person.display_name}`} canonicalPath={`/people/${slug}/descendants/`} description={`Descendant chart for ${person.display_name}${lifespan(person)} — ${totalDescendants} descendant${totalDescendants === 1 ? '' : 's'} across ${generationsSpanned >= 0 ? generationsSpanned + 1 : '?'} generation${generationsSpanned === 0 ? '' : 's'}, from the Telfer family history archive.`}>
+<BaseLayout title={`Descendants of ${person.display_name}`} canonicalPath={`/people/${slug}/descendants/`} noindex={descendantHasWithdrawn} description={`Descendant chart for ${person.display_name}${lifespan(person)} — ${totalDescendants} descendant${totalDescendants === 1 ? '' : 's'} across ${generationsSpanned >= 0 ? generationsSpanned + 1 : '?'} generation${generationsSpanned === 0 ? '' : 's'}, from the Telfer family history archive.`}>
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">
