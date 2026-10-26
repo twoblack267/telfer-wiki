@@ -46,7 +46,7 @@
  *
  * Run AFTER the astro build, BEFORE the postbuild gates.
  */
-import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, statSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -56,6 +56,10 @@ const DIST = join(ROOT, 'dist');
 // this file is a complete roster of the family including living people. It is
 // produced on request; deployment is the owner's decision, not a build side effect.
 const OUT = join(ROOT, 'build', 'llms-full.txt');
+// build/ is gitignored, so it does NOT exist on a clean CI checkout. Creating it
+// here is the difference between "works on my machine" and a green pipeline —
+// this exact line was missing and broke CI on commit 1cd0f7e.
+mkdirSync(join(ROOT, 'build'), { recursive: true });
 
 const SITE = 'https://telferwiki.com';
 
