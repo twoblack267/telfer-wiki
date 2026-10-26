@@ -2089,6 +2089,118 @@
       "slug": "esther-naomi-lynette-telfer",
       "id": "Esther Naomi Lynette Telfer (1993)",
       "generation": 8
+    },
+    {
+      "slug": "kelson-telfer-1946",
+      "id": "Kelson Telfer (1946)"
+    },
+    {
+      "slug": "phyllis-marjorie-fatchen-1934",
+      "id": "Phyllis Marjorie Fatchen (1934)"
+    },
+    {
+      "slug": "donald-rex-fatchen-1957",
+      "id": "Donald Rex Fatchen (1957)"
+    },
+    {
+      "slug": "ross-kelvin-fatchen-1948",
+      "id": "Ross Kelvin Fatchen (1948)"
+    },
+    {
+      "slug": "malcolm-geoffrey-fatchen-1942",
+      "id": "Malcolm Geoffrey Fatchen (1942)"
+    },
+    {
+      "slug": "marjory-evelyn-barton-1942",
+      "id": "Marjory Evelyn Barton (1942)"
+    },
+    {
+      "slug": "gwenda-rosemary-barton-1948",
+      "id": "Gwenda Rosemary Barton (1948)"
+    },
+    {
+      "slug": "joy-barton-1954",
+      "id": "Joy Barton (1954)"
+    },
+    {
+      "slug": "ian-donald-mcmurtrie-1954",
+      "id": "Ian Donald McMurtrie (1954)"
+    },
+    {
+      "slug": "stanley-james-pedler-1938",
+      "id": "Stanley James Pedler (1938)"
+    },
+    {
+      "slug": "mary-ellen-pedler-1940",
+      "id": "Mary Ellen Pedler (1940)"
+    },
+    {
+      "slug": "shirley-rene-pedler-1942",
+      "id": "Shirley Rene Pedler (1942)"
+    },
+    {
+      "slug": "stanley-lawrence-pedler-1948",
+      "id": "Stanley Lawrence Pedler (1948)"
+    },
+    {
+      "slug": "dennis-rowe-1946",
+      "id": "Dennis Rowe (1946)"
+    },
+    {
+      "slug": "lindsay-rowe-1954",
+      "id": "Lindsay Rowe (1954)"
+    },
+    {
+      "slug": "joy-meridith-rowe-1956",
+      "id": "Joy Meridith Rowe (1956)"
+    },
+    {
+      "slug": "roy-rowe-1960",
+      "id": "Roy Rowe (1960)"
+    },
+    {
+      "slug": "judith-dawn-telfer-1944",
+      "id": "Judith Dawn Telfer (1944)"
+    },
+    {
+      "slug": "beryl-ruth-telfer-1949",
+      "id": "Beryl Ruth Telfer (1949)"
+    },
+    {
+      "slug": "joy-lorraine-telfer-1952",
+      "id": "Joy Lorraine Telfer (1952)"
+    },
+    {
+      "slug": "david-murray-telfer-1961",
+      "id": "David Murray Telfer (1961)"
+    },
+    {
+      "slug": "brenda-janice-telfer-1949",
+      "id": "Brenda Janice Telfer (1949)"
+    },
+    {
+      "slug": "lyndell-marie-telfer-1951",
+      "id": "Lyndell Marie Telfer (1951)"
+    },
+    {
+      "slug": "vonda-joy-telfer",
+      "id": "Vonda Joy Telfer"
+    },
+    {
+      "slug": "andrew-nicholson-1956",
+      "id": "Andrew Nicholson (1956)"
+    },
+    {
+      "slug": "gerald-nicholson-1958",
+      "id": "Gerald Nicholson (1958)"
+    },
+    {
+      "slug": "nola-elizabeth-nicholson-1959",
+      "id": "Nola Elizabeth Nicholson (1959)"
+    },
+    {
+      "slug": "rex-nicholson-1961",
+      "id": "Rex Nicholson (1961)"
     }
   ],
   "edges": {
@@ -4340,6 +4452,118 @@
       {
         "from": "malvern-reginald-telfer",
         "to": "esther-naomi-lynette-telfer"
+      },
+      {
+        "from": "francis-telfer-1910",
+        "to": "kelson-telfer-1946"
+      },
+      {
+        "from": "clarice-may-telfer-1911",
+        "to": "phyllis-marjorie-fatchen-1934"
+      },
+      {
+        "from": "clarice-may-telfer-1911",
+        "to": "donald-rex-fatchen-1957"
+      },
+      {
+        "from": "clarice-may-telfer-1911",
+        "to": "ross-kelvin-fatchen-1948"
+      },
+      {
+        "from": "clarice-may-telfer-1911",
+        "to": "malcolm-geoffrey-fatchen-1942"
+      },
+      {
+        "from": "emily-amelia-telfer-1913",
+        "to": "marjory-evelyn-barton-1942"
+      },
+      {
+        "from": "emily-amelia-telfer-1913",
+        "to": "gwenda-rosemary-barton-1948"
+      },
+      {
+        "from": "emily-amelia-telfer-1913",
+        "to": "joy-barton-1954"
+      },
+      {
+        "from": "ethel-jean-telfer-1915",
+        "to": "ian-donald-mcmurtrie-1954"
+      },
+      {
+        "from": "gladys-merle-telfer-1917",
+        "to": "stanley-james-pedler-1938"
+      },
+      {
+        "from": "gladys-merle-telfer-1917",
+        "to": "mary-ellen-pedler-1940"
+      },
+      {
+        "from": "gladys-merle-telfer-1917",
+        "to": "shirley-rene-pedler-1942"
+      },
+      {
+        "from": "gladys-merle-telfer-1917",
+        "to": "stanley-lawrence-pedler-1948"
+      },
+      {
+        "from": "doris-elma-telfer-1919",
+        "to": "dennis-rowe-1946"
+      },
+      {
+        "from": "doris-elma-telfer-1919",
+        "to": "lindsay-rowe-1954"
+      },
+      {
+        "from": "doris-elma-telfer-1919",
+        "to": "joy-meridith-rowe-1956"
+      },
+      {
+        "from": "doris-elma-telfer-1919",
+        "to": "roy-rowe-1960"
+      },
+      {
+        "from": "edwin-telfer-1921",
+        "to": "judith-dawn-telfer-1944"
+      },
+      {
+        "from": "edwin-telfer-1921",
+        "to": "beryl-ruth-telfer-1949"
+      },
+      {
+        "from": "edwin-telfer-1921",
+        "to": "joy-lorraine-telfer-1952"
+      },
+      {
+        "from": "edwin-telfer-1921",
+        "to": "david-murray-telfer-1961"
+      },
+      {
+        "from": "edwin-telfer-1921",
+        "to": "brenda-janice-telfer-1949"
+      },
+      {
+        "from": "edwin-telfer-1921",
+        "to": "lyndell-marie-telfer-1951"
+      },
+      {
+        "from": "reginald-masters-telfer-1922",
+        "to": "vonda-joy-telfer"
+      },
+      {
+        "from": "ruth-telfer-1931",
+        "to": "andrew-nicholson-1956"
+      },
+      {
+        "from": "ruth-telfer-1931",
+        "to": "gerald-nicholson-1958"
+      },
+      {
+        "from": "ruth-telfer-1931",
+        "to": "nola-elizabeth-nicholson-1959"
+      },
+      {
+        "from": "ruth-telfer-1931",
+        "to": "rex-nicholson-1961"
       }
     ],
     "spouseOf": [
