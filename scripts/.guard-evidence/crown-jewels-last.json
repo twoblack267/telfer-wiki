@@ -1,74 +1,13 @@
 {
-  "checkedAt": "2026-10-26T11:33:35.790Z",
+  "checkedAt": "2026-10-26T11:55:06.248Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 510,
+    "before": 516,
     "after": 516
   },
   "crownJewelsChecked": 5,
-  "renames": [
-    {
-      "from": "stanley-lawrence-pedler-1948",
-      "to": "allan-pedler",
-      "name": "Stanley Lawrence Pedler"
-    },
-    {
-      "from": "kenneth-james-pedler",
-      "to": "kenneth-pedler",
-      "name": "Kenneth James Pedler"
-    },
-    {
-      "from": "keith-gordon-pedler",
-      "to": "keith-pedler",
-      "name": "Keith Gordon Pedler"
-    },
-    {
-      "from": "sharon-marie-pedler",
-      "to": "sharon-pedler",
-      "name": "Sharon Marie Pedler"
-    },
-    {
-      "from": "susan-irene-pedler",
-      "to": "susan-pedler",
-      "name": "Susan Irene Pedler"
-    },
-    {
-      "from": "lance-gordon-hawkins",
-      "to": "lance-hawkins",
-      "name": "Lance Gordon Hawkins"
-    },
-    {
-      "from": "craig-harold-hawkins",
-      "to": "craig-hawkins",
-      "name": "Craig Harold Hawkins"
-    },
-    {
-      "from": "gaylene-merle-hawkins",
-      "to": "gaylene-hawkins",
-      "name": "Gaylene Merle Hawkins"
-    },
-    {
-      "from": "brett-kenneth-rylance",
-      "to": "brett-rylance",
-      "name": "Brett Kenneth Rylance"
-    },
-    {
-      "from": "julie-evelyn-rylance",
-      "to": "julie-rylance",
-      "name": "Julie Evelyn Rylance"
-    },
-    {
-      "from": "shane-daniel-pedler",
-      "to": "shane-pedler",
-      "name": "Shane Daniel Pedler"
-    },
-    {
-      "from": "kirrilee-skye-pedler",
-      "to": "kirrilee-pedler",
-      "name": "Kirrilee Skye Pedler"
-    }
-  ],
+  "renames": [],
   "failures": [],
   "warnings": []
 }

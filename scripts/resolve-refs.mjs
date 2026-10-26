@@ -90,10 +90,18 @@ function stripLifespan(name) {
   // — the vault's form for a living person with no birth year. Without this the
   // ref kept its parenthetical, matched no record, fell through to a bare/fuzzy
   // match, and captured a same-named 19th-century namesake.
-  const lifespanned = name.replace(/\s*\([~]?\d{4}\s*[–-]\s*[\d?living-]+\s*\)\s*$/, '').trim();
-  if (lifespanned !== name.trim()) return lifespanned;
-  // "(fl. 1998)", "(fl 1998)", "(--? d. 1998)"
-  return name.replace(/\s*\(fl\.?\s*\d{3,4}\)\s*$/i, '').trim();
+  // FIXED 2026-10-26 (THE STRIP WAS ANCHORED TO THE END AND RAN ONLY ONCE):
+  // `Clara Ann Millicent (Dunn) Telfer (1878–1966)` lost its lifespan and kept
+  // `(Dunn)` welded mid-name — a string that matches NO index key, so every
+  // reference to a married woman was refused and her reciprocal edges died with
+  // her Self line. The maiden name is a SECOND parenthetical; strip all of them.
+  // Measured before: 11 of the 14 double-parenthetical vault names resolved to null.
+  let out = name.trim();
+  // Remove every lifespan-looking group, anchored only at the group itself.
+  out = out.replace(/\s*\([~]?\d{4}\s*[–-]\s*(?:\d{4}|living|\?)?\s*\)/gi, ' ');
+  // "(fl. 1998)", "(fl 1998)"
+  out = out.replace(/\s*\(fl\.?\s*\d{3,4}\)/gi, ' ');
+  return out.replace(/\s+/g, ' ').trim();
 }
 
 // FIXED 2026-10-25 (the `b. ~YYYY` form is a YEAR, not a name).
@@ -128,7 +136,11 @@ function extractYears(name) {
 }
 
 function stripAnnotation(name) {
-  return name.replace(/\s*\([^)]+\)\s*$/, '').trim();
+  // FIXED 2026-10-26: was `/[^)]+\)$/` — trailing only, so a married woman's
+  // `(Dunn)` survived. Strip EVERY parenthetical group.
+  // Guard: never strip a lone group that IS the whole name (e.g. "(unknown)").
+  const stripped = String(name || '').replace(/\s*\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim();
+  return stripped || String(name || '').trim();
 }
 
 function lowerTrim(s) {
@@ -216,14 +228,17 @@ function pickBestMatch(candidates, context) {
 
 function getNamePieces(name) {
   // Try to extract useful name pieces for matching
-  const cleaned = stripAnnotation(stripLifespan(name.trim()));
-  const lower = lowerTrim(cleaned);
-  
-  // Handle "née" names: "Amy Ellen Telfer (née Provis)" → try "Amy Ellen Telfer" first
-  const neeMatch = cleaned.match(/^(.+?)\s*\(née\s+[^)]+\)/i);
+  // FIXED 2026-10-26: a married woman's name carries a maiden-name parenthetical
+  // AND a lifespan. Both strippers above are now global, so `clean` is the bare
+  // core name ("clara ann millicent telfer") and matches byName/byFullName, which
+  // are keyed on first/middle/last — already clean. The `née` special-case is kept
+  // for the `Amy Ellen Telfer (née Provis)` form, where it is still cheaper to cut
+  // at the marker than to rely on the parenthesis scan.
+  const lifespanless = stripLifespan(name.trim());
+  const neeMatch = lifespanless.match(/^(.+?)\s*\(née\s+[^)]+\)/i);
   if (neeMatch) return lowerTrim(neeMatch[1].trim());
-  
-  return lower;
+  const cleaned = stripAnnotation(lifespanless);
+  return lowerTrim(cleaned);
 }
 
 function resolveRef(name, context = null) {
