@@ -64,10 +64,14 @@ const descendantTree = buildDescendants(slug, peoplePublic, 6);
 // the chart. scripts/sanitize-people.mjs tags genuine privacy strips at the
 // source; every other slug-less placeholder is an unresolved name variant and
 // must not de-index a legitimate historical profile.
-const hasWithdrawnChild = (person.children || []).some(
-  (c) => c && typeof c === "object" && c.withheld === true
+// Every relationship array counts, not just children: a SPOUSE withheld at the
+// owner's request prints on this chart too (Timothy Telfer — Sheryle Joy
+// Telfer, 26 Oct 2026). Checking only `children` left that chart indexable
+// while it displayed a withdrawn name, which the withdrawn-name gate caught.
+const isWithheld = (c) => c && typeof c === "object" && c.withheld === true;
+const descendantHasWithdrawn = ["children", "spouses", "parents", "siblings"].some(
+  (field) => (person[field] || []).some(isWithheld)
 );
-const descendantHasWithdrawn = hasWithdrawnChild;
 
 function countDescendants(node) {
   if (!node) return 0;

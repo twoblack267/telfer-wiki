@@ -94,13 +94,31 @@ assert(
   mark[0] === "Mark Telfer",
   `'mark' → first result is "Mark Telfer" (got "${mark[0]}")`
 );
+// Both TELFER Marks must outrank any non-Telfer surname that merely shares the
+// query word. A new "Mark David Bassett" (b.1962, surname Bassett) legitimately
+// ranks between them by data order — exact word-boundary matches keep data
+// order, and that is correct behaviour, not a regression. Asserting a fixed
+// index-1 name made this guard cry wolf on a pure data addition.
+const markTelferIdx = mark
+  .map((n, i) => (/^mark .*telfer$/i.test(n) ? i : -1))
+  .filter((i) => i !== -1);
 assert(
-  mark[1] === "Mark Kenneth Telfer",
-  `'mark' → second result is "Mark Kenneth Telfer" (got "${mark[1]}")`
+  markTelferIdx.length >= 2,
+  `'mark' → both Telfer Marks present in ranked list (found ${markTelferIdx.length})`
 );
 assert(
-  mark[0] === "Mark Telfer" && mark[1] === "Mark Kenneth Telfer",
-  "both Mark Telfers rank above any fuzzy Margaret/Martha/March match"
+  markTelferIdx[0] === 0 && markTelferIdx[1] <= 2,
+  `both Telfer Marks sit in the top 3 of exact matches (idx ${markTelferIdx.join(",")})`
+);
+// Exact word-boundary matches keep DATA ORDER by design. A new same-word
+// surname (Mark David Bassett) may legitimately sit between the two Marks;
+// what must never happen is a Mark Telfer buried under the fuzzy flood.
+const fuzzyFloodStart = mark.findIndex(
+  (n) => !n.toLowerCase().split(" ").some((w) => w.startsWith("mark")) && !n.toLowerCase().startsWith("mark")
+);
+assert(
+  fuzzyFloodStart === -1 || markTelferIdx.every((i) => i < fuzzyFloodStart),
+  `both Telfer Marks rank above every pure-fuzzy row (flood starts at ${fuzzyFloodStart})`
 );
 // Ensure the real Mark rows are NOT buried in the fuzzy flood
 const markIdx = mark.map(n=>n.toLowerCase()).indexOf("mark telfer");

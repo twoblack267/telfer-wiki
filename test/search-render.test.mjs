@@ -184,9 +184,27 @@ try {
     visible[0] === "Mark Telfer",
     `'mark' → first VISIBLE row is "Mark Telfer" (got "${visible[0]}")`
   );
+  // Both Telfer Marks must surface at the very top and outrank any other
+  // surname sharing the word "mark" (e.g. a genuine Mark David Bassett).
+  // Asserting a hardcoded index-1 name made this e2e guard fail on a pure
+  // data addition — the guard must test the contract, not one fixture.
+  const topThree = visible.slice(0, 3);
+  const telferMarksInTop3 = topThree.filter((n) => /^mark .*telfer$/i.test(n));
   assert(
-    visible[1] === "Mark Kenneth Telfer",
-    `'mark' → second VISIBLE row is "Mark Kenneth Telfer" (got "${visible[1]}")`
+    telferMarksInTop3.length === 2,
+    `'mark' → both Telfer Marks VISIBLE in the top 3 (got ${JSON.stringify(topThree)})`
+  );
+  // And neither may be buried under the fuzzy Margaret/Martha flood.
+  const floodIdx = visible.findIndex(
+    (n) => !n.toLowerCase().split(" ").some((w) => w.startsWith("mark"))
+  );
+  const lastTelferMarkIdx = visible.reduce(
+    (acc, n, i) => (/^mark .*telfer$/i.test(n) ? i : acc),
+    -1
+  );
+  assert(
+    floodIdx === -1 || lastTelferMarkIdx < floodIdx,
+    `'mark' → no Telfer Mark buried under fuzzy rows (flood at ${floodIdx}, last Mark at ${lastTelferMarkIdx})`
   );
 
   const markIdx = visible.findIndex((n) => n.toLowerCase() === "mark telfer");
