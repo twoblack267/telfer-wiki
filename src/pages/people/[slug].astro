@@ -288,14 +288,83 @@ function firstSentence(text) {
 // chunks and only falls back to label-shaped ones when nothing else exists — that
 // fallback is what lets "Spouse: Elsie Ada Williams (m. 1894)" leak, so it is ordered:
 // real prose first, then any full sentence, then any non-empty text, never a source note.
+// Marks (⚠️, ✅, 📌) are stripped before pattern matching: a warning box starts with an
+// emoji, so testing the raw start missed "⚠️ Same-name note:" entirely and let the trap
+// warning become the description (james-telfer-1762).
+const LEAD_MARKS = /^[\u2190-\u21FF\u2600-\u27BF\uFE0F\u2B00-\u2BFF\s]+/;
+// Paragraphs that are GOOD writing and BAD descriptions, in every tier. Straight reject:
+// no ranking, no fallback. Each one is housekeeping that belongs on the page and never
+// in a search result. Tier (b) of firstProseSentence() once let the same-name warning
+// through because it is a complete, well-formed sentence — relevance is not the test,
+// purpose is.
+function isEditorialOnly(t) {
+  const s = String(t || "").replace(LEAD_MARKS, "").trim();
+  if (!s) return true;
+  if (/^(Same-name note|Same name note|Disambiguation|Note on the name)\b/i.test(s)) return true;
+  if (/^(Not yet sourced|Not yet verified|Awaiting|To confirm|Unconfirmed|Unverified)\b/i.test(s)) return true;
+  if (/^(What is not known|What is known)\b/i.test(s)) return true;
+  if (/^(Source|Sources|Source note|Note|Reference|References)\b/i.test(s)) return true;
+  if (/^(Correction Notice|Previously listed|This is incorrect|Erratum)\b/i.test(s)) return true;
+  if (/^(AWM|Roll of Honour|CWGC|Find a Grave|FindAGrave)\b/i.test(s)) return true;
+  if (/^(Status|Research status|Confidence)\b/i.test(s)) return true;
+  // BOOK-CITATION OPENERS. A line that begins with a book title exists to tell a
+  // researcher where to look, not to describe a life: "A Telfer Family Tree
+  // (Supplement 2008), p.65: printed entry — 6. Vera Jean LILLECRAPP, b. 17 Nov 1909".
+  // The italic/bold styling is gone by this point, so match the shape instead.
+  if (/^[^.!?:]{3,70}\((?:Supplement\s*)?(?:18|19|20)\d\d\)/.test(s)) return true;
+  if (/^(?:From the Borders to the Bush|A Telfer Family Tree|The Telfer Family)\b/i.test(s)) return true;
+  if (/\bprinted entry\b/i.test(s.slice(0, 60))) return true;
+  // RECEIPTS. "## Receipt (why this page may be admitted)" exists so a human can audit
+  // how a thin profile got past the admission gate. Genuinely useful. Never a snippet.
+  if (/^(Receipt|Admission|Why this page|Justification|Provenance)\b/i.test(s)) return true;
+  // Dangling cross-reference fragments: a note that starts mid-thought about ANOTHER
+  // page ("Already named in the vault on the parent page..."). If it opens with a
+  // connective, the thing it refers to is not in the snippet, so it reads as nonsense.
+  if (/^(Already|See also|As noted|As above|See above|Refer to|Cf\.|Compare)\b/i.test(s)) return true;
+  // CHANGELOG LINES. "Profile enhanced from auto-generated stub." and "Stub entry filled
+  // from primary sources, 24 Aug 2026." are notes about OUR editing, dated for our own
+  // bookkeeping. 21 pages led with one. In a Google snippet that reads as "we tidied the
+  // database" presented as a biography, and on mary-anne-mcintyre-1836 it SHADOWED a
+  // real Life Summary sitting further down the page.
+  if (/^(Stub entry|Profile enhanced|Enhanced from|Auto-generated|Placeholder|Filled from)\b/i.test(s)) return true;
+  if (/^(Name and birth-year|Name and date|Birth-year|Name correction|Correction)\b/i.test(s)) return true;
+  if (/^(Verified across|Verified against|Checked against|Cross-checked)\b/i.test(s)) return true;
+  if (/^(Added|Updated|Recorded|Created|Written)\b[^.!?]{0,40}\b(19|20)\d\d\b/i.test(s)) return true;
+  // A bare changelog with a trailing date: "... , 24 Aug 2026." / "... — 19 September 2026."
+  if (/\b\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(?:19|20)\d\d\b\.?\s*$/.test(s) && s.split(/\s+/).length < 22) return true;
+  return false;
+}
 function looksLikeLabel(t) {
-  const s = String(t || "").trim();
+  const s = String(t || "").replace(LEAD_MARKS, "").trim();
   if (!s) return true;
   // A SHORT lead-in ending in a colon is a field label: "Born: 1786", "Spouse: X".
-  // Long ones are legitimately prose ("Read the full story: ..."), so cap the lead-in.
-  // A field line is "Word:" or "Two Words:" — a short, capitalised, colon-terminated
-  // lead-in. Anything longer is prose that happens to contain a colon.
-  if (/^[A-Z][A-Za-z\-']{0,14}(?: [A-Z][A-Za-z\-']{0,14})?:\s/.test(s)) return true;
+  //
+  // BUT a bold lead-in at the start of a PARAGRAPH is a rhetorical opener, not a field:
+  // "**What is known:** she was born in Roxburghshire around 1829." is a good sentence
+  // wearing a hat. The earlier version of this rule killed that paragraph and left whole
+  // honest pages with no description at all (margaret-telfer-1829). The difference is the
+  // SHAPE OF THE TAIL: a field line's value is a fragment ("1786", "James Telfer (1761–1845)"),
+  // an opener's tail is a clause with a verb in it. Ask for a full stop and 8+ words.
+  // HARD REJECTIONS run before the generic colon heuristic. Each of these is a good
+  // paragraph and a terrible description, and testing them after a generic "Word:" rule
+  // means a longer label ("Same-name note:") never gets reached.
+  // Same-name trap warnings exist to stop researchers merging two men into one — never
+  // a snippet. "Not yet sourced"/"What is not known" are honest ledgers, not a shopfront.
+  if (/^(Same-name note|Same name note|Disambiguation|Note on the name)\b/i.test(s)) return true;
+  if (/^(Not yet sourced|Not yet verified|Awaiting|To confirm|Unconfirmed|Unverified)\b/i.test(s)) return true;
+  if (/^What is not known:/i.test(s)) return true;
+  if (/^(Source|Sources|Source note|Note|Reference|References)\b/i.test(s)) return true;
+  if (/^(Correction Notice|Previously listed|This is incorrect|Erratum)\b/i.test(s)) return true;
+  if (/^(AWM|Roll of Honour|CWGC|Find a Grave|FindAGrave)\b/i.test(s)) return true;
+  const FIELD_LEAD = /^[A-Z][A-Za-z\-']{0,14}(?: [A-Z][A-Za-z\-']{0,14})?:\s+(.*)$/.exec(s);
+  if (FIELD_LEAD) {
+    const tail = FIELD_LEAD[1].trim();
+    const proseTail = /[.!?]/.test(tail) && tail.split(/\s+/).length >= 8;
+    if (!proseTail) return true;
+    // It is prose with a bold opener — but "What is known:" is our own editorial label,
+    // and a description should read as the sentence, not as the label. Prefer a cleaner
+    // chunk if one exists; if not, the caller strips the opener before using it.
+  }
   // Provenance boilerplate — a note to the editor, not to a reader.
   if (/^(Source|Sources|Source note|Note|Reference|References)\b/i.test(s)) return true;
   // A CITATION is not a description. "A Telfer Family Tree (2008), p.276 — family
@@ -308,6 +377,16 @@ function looksLikeLabel(t) {
   // "⚠️ Correction Notice"). A searcher needs the fact, not the audit trail.
   if (/^(Correction Notice|Previously listed|This is incorrect|Erratum)\b/i.test(s)) return true;
   if (/^\u26a0/i.test(s)) return true;
+  // Same-name trap warnings: the single most useful paragraph on a page that has one,
+  // and the single worst description — the box exists to stop researchers merging two
+  // men, not to introduce one. Never a snippet.
+  if (/^(Same-name note|Same name note|Disambiguation|Note on the name)\b/i.test(s)) return true;
+  // Editorial "we haven't got this yet" notes. Honest, and the honour belongs on the
+  // page. A snippet that leads with what we lack sells the person short.
+  if (/^(Not yet sourced|Not yet verified|Awaiting|To confirm|Unconfirmed|Unverified)\b/i.test(s)) return true;
+  // "What is not known:" — the honest companion to "What is known:". A description is a
+  // shopfront; this is the ledger. Keep it on the page, out of the snippet.
+  if (/^What is not known:/i.test(s)) return true;
   // War-memorial database records. Real information, but a list entry, not prose.
   if (/^(AWM|Roll of Honour|CWGC|Find a Grave|FindAGrave)\b/i.test(s)) return true;
   // A run of "Label Value" fragments with no verb and no full stop.
@@ -345,16 +424,38 @@ function firstProseSentence(html) {
   for (const raw of chunks) {
     const text = decodeText(String(raw).replace(/<[^>]+>/g, " "));
     if (!text) continue;
-    const isSourceNote = /^(Source|Sources|Source note|Note|Reference|References)\b/i.test(text);
-    if (!isSourceNote) anyText.push(text);
+    // The fallback tier collects ONLY text that is fit to publish. It used to collect
+    // everything except source notes and then return it unfiltered when the cleaner
+    // tiers came up empty — so a changelog line ("Stub entry written from the printed
+    // book page, 3 Oct 2026") went out the back door that every other tier had shut.
+    const neverDescribe = isEditorialOnly(text);
+    if (!neverDescribe) anyText.push(text);
     const s = firstSentence(text);
-    if (s && !isSourceNote) {
-      sentence.push(s);
-      if (!looksLikeLabel(text)) clean.push(s);
+    if (s && !neverDescribe) {
+      // TIER (b) MUST NOT BE A BACK DOOR. It exists so a plain factual line ("Deceased
+      // -- dates not recorded.") can serve when nothing else does. It is not licence for
+      // our own editorial furniture to become a description: a same-name trap warning,
+      // a "not yet sourced" note and a "what is not known" ledger are all perfectly good
+      // sentences, and all of them are the wrong thing to show a searcher.
+      if (!neverDescribe) sentence.push(s);
+      if (!neverDescribe && !looksLikeLabel(text)) clean.push(s);
     }
   }
-  if (clean.length) return clean[0];
-  if (sentence.length) return sentence[0];
+  // A description that opens with our own editorial label ("What is known: she was…")
+  // reads like a database, not a biography. Strip a short bold-opener prefix so the
+  // sentence stands on its own: "she was born in Roxburghshire, Scotland, around 1829."
+  const stripOpener = (t) => {
+    const m = /^[A-Z][A-Za-z\-']{0,14}(?: [A-Z][A-Za-z\-']{0,14})?:\s+(.+)$/.exec(t);
+    if (!m) return t;
+    const tail = m[1].trim();
+    // Only when the tail can stand alone: starts lower-case or is a full clause.
+    if (tail.split(/\s+/).length >= 8 && /^[a-z]/.test(tail)) {
+      return tail.charAt(0).toUpperCase() + tail.slice(1);
+    }
+    return t;
+  };
+  if (clean.length) return stripOpener(clean[0]);
+  if (sentence.length) return stripOpener(sentence[0]);
   return anyText[0] || "";
 }
 
