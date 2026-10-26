@@ -1,50 +1,13 @@
 {
-  "checkedAt": "2026-10-26T03:52:46.268Z",
+  "checkedAt": "2026-10-26T03:53:53.464Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 446,
+    "before": 508,
     "after": 508
   },
   "crownJewelsChecked": 5,
-  "renames": [
-    {
-      "from": "beryl-ruth-telfer-1949",
-      "to": "miriam-ruth-telfer-1949",
-      "name": "Beryl Ruth Telfer"
-    }
-  ],
+  "renames": [],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "edwin-telfer-1921",
-      "name": "Edwin Roy Telfer",
-      "field": "children",
-      "before": 6,
-      "after": 4,
-      "lost": 2,
-      "lostEntries": [
-        "beryl-ruth-telfer-1949",
-        "brenda-janice-telfer-1949",
-        "lyndell-marie-telfer-1951"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "reginald-masters-telfer-1922",
-      "name": "Reginald Masters Telfer",
-      "field": "children",
-      "before": 8,
-      "after": 5,
-      "lost": 3,
-      "lostEntries": [
-        "Vonda Joy",
-        "Brenda Janice",
-        "Lyndell Marie",
-        "Malvern Reginald",
-        "David Lyndon"
-      ]
-    }
-  ]
+  "warnings": []
 }
