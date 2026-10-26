@@ -10,9 +10,31 @@ permissions:
   pages: write
   id-token: write
 
+# ── SUPERSEDED-RUN CANCELLATION, added 2026-10-26 ────────────────────────────
+# Concurrency group is PER COMMIT (`pages-${{ github.sha }}`), and a newer push
+# cancels an older one. Why:
+#
+#   Before: one serialised `pages` group with cancel-in-progress: false. Every
+#   push waited behind the previous run's verify-live, which can legitimately
+#   poll for ~40 minutes. Five pushes in 35 minutes therefore stacked, and a
+#   SUPERSEDED run sat polling for a build id the live site had already moved
+#   past — 180 attempts, 42 minutes, then a red "LIVE SITE DOES NOT SERVE BUILD"
+#   on a deploy that was never meant to be the final one. That is a false-red:
+#   the fault was push cadence, not the site.
+#
+#   Per-SHA grouping keeps what the old group was actually protecting: two runs
+#   can never deploy the same Pages artifact concurrently. But a superseded
+#   commit no longer holds the queue hostage — GitHub cancels it the moment
+#   newer work arrives. cancel-in-progress: true is safe here ONLY because the
+#   group is per-SHA: it cancels a DIFFERENT commit's run, never this one's own
+#   deploy mid-publish.
+#
+#   Corollary rule for whoever pushes: a cancelled (not failed) run is NORMAL
+#   after a rapid second push. Only the newest run's verify-live speaks for the
+#   live site.
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.sha }}
+  cancel-in-progress: true
 
 jobs:
   build:
