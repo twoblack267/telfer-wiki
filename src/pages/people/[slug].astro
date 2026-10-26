@@ -7,7 +7,7 @@ import { NOINDEX_SLUGS } from "../../data/privacy-exclusions.mjs";
 // committed as slug -> "/og/<slug>.png". Built rather than derived at render time
 // for the same reason as lastmod.json: CI must not need anything local-only.
 import OG_IMAGES from "../../data/og-images.json";
-import { clampDescription } from "../../utils/meta-description.mjs";
+import { clampDescription, decodeDescriptionEntities } from "../../utils/meta-description.mjs";
 import { lookupByPersonSlug, resolvePersonKey } from "../../lib/resolve-person-key.mjs";
 
 export async function getStaticPaths() {
@@ -228,36 +228,134 @@ const templateDescription = [
 // vault markdown into HTML with inline links; strip the tags, drop a leading heading,
 // and take the first real sentence. This is page content, not boilerplate, so it
 // carries the occupation/place/story the template never could.
-function firstProseSentence(html) {
-  const text = String(html || "")
-    .replace(/<figcaption[\s\S]*?<\/figcaption>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    // DO NOT decode "&amp;" to a raw "&". Astro escapes the attribute on write, so a
-    // raw & comes back out as "&#38;" inside <meta> — which is what was leaking into
-    // search results. Convert entities to their PLAIN TEXT meaning instead, and to
-    // nothing at all for & < >, which are never wanted in a sentence of prose.
-    .replace(/&amp;/g, " and ")
-    .replace(/&#38;/g, " and ")
-    .replace(/&lt;|&gt;|&#60;|&#62;/g, " ")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&#39;|&rsquo;|&lsquo;|&#8217;|&#8216;/g, "'")
-    .replace(/&quot;|&ldquo;|&rdquo;|&#34;|&#8220;|&#8221;/g, '"')
-    .replace(/&mdash;|&#8212;/g, "—")
-    .replace(/&ndash;|&#8211;/g, "–")
-    .replace(/&#(\d+);/g, (_, n) => {
-      const c = Number(n);
-      // Only fold safe punctuation/letters; drop control-ish codes entirely.
-      return c === 39 || c === 8217 ? "'" : c === 34 || c === 8220 || c === 8221 ? '"' : " ";
-    })
+// FIRST PROSE SENTENCE — block-classified, not regex-stripped.
+//
+// WHY THIS EXISTS (card itc-20261026-1): the old version stripped every tag from the
+// rendered HTML and took "the first sentence" of whatever fell out. That welds a table
+// header onto its cells — "<th>Relation</th><th>Name</th><td>Father</td><td>James…"
+// became the sentence "Family Relation Name Father James Telfer…" — and it turns
+// "<strong>Born:</strong> 1786<br>" into "… Born: 1786 Died: …". 122 of 816 person
+// pages shipped labels as their Google snippet. Four regex patches made it worse
+// (9 -> 77 -> 81 -> 150 pages leaking, two of them deleting the sentence's SUBJECT:
+// "(1809 - 1895). was born on 2 February 1809"). Regexes cannot separate a label from
+// a sentence, because the difference is STRUCTURAL, not lexical — "Father" is a
+// perfectly good word. So: classify blocks, delete the structures that are never
+// prose, then take the first block that is genuinely a sentence.
+//
+// RULE: a table cell (td/th), a heading (h1-h6), a list item that is a key:value pair,
+// a <br>-separated field line, a blockquote, a figcaption and a link-only paragraph are
+// NEVER prose. Everything else is a candidate; the first candidate with a real sentence
+// wins.
+const ENTITIES = [
+  [/&amp;/g, " and "],
+  [/&#38;/g, " and "],
+  [/&lt;|&gt;|&#60;|&#62;/g, " "],
+  [/&nbsp;/g, " "],
+  [/&#39;|&rsquo;|&lsquo;|&#8217;|&#8216;/g, "'"],
+  [/&quot;|&ldquo;|&rdquo;|&#34;|&#8220;|&#8221;/g, '"'],
+  [/&mdash;|&#8212;/g, "\u2014"],
+  [/&ndash;|&#8211;/g, "\u2013"],
+];
+function decodeText(t) {
+  let s = String(t || "");
+  for (const [re, to] of ENTITIES) s = s.replace(re, to);
+  // Any remaining numeric entity: keep safe punctuation, drop control-ish codes.
+  s = s.replace(/&#(\d+);/g, (_, n) => {
+    const c = Number(n);
+    return c === 39 ? "'" : c === 34 ? '"' : c === 8212 ? "\u2014" : c === 8211 ? "\u2013" : " ";
+  });
+  return s
     .replace(/\s+/g, " ")
+    // Tag stripping leaves a space before punctuation: "1856 , the son of X ."
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .replace(/\(\s+/g, "(")
+    .replace(/\s+\)/g, ")")
     .trim();
-  // A sentence ends at . ! or ? followed by space+capital, or at end of text.
-  // Bail out on abbreviations that end mid-sentence (Mr. Mrs. b. d. m. etc.).
-  const m = text.match(/^(.{40,}?[.!?])(?=\s+[A-Z“"'(]|\s*$)/);
+}
+// A sentence ends at . ! or ? followed by whitespace+capital (or end of text).
+// Bail on abbreviations that can end mid-sentence.
+function firstSentence(text) {
+  const t = decodeText(text);
+  if (!t) return "";
+  const m = t.match(/^(.{40,}?[.!?])(?=\s+[A-Z"\u201c'(]|\s*$)/);
   if (!m) return "";
   const s = m[1].trim();
   if (/\b(Mr|Mrs|Ms|Dr|Rev|St|b|d|m|m\.|b\.|d\.|c|ca|cf|no|vol|p|pp)\.$/.test(s)) return "";
   return s;
+}
+// Is this text a structural label / field line / source note rather than prose?
+// A CLEAN chunk is one a reader would accept as a description. The parser prefers clean
+// chunks and only falls back to label-shaped ones when nothing else exists — that
+// fallback is what lets "Spouse: Elsie Ada Williams (m. 1894)" leak, so it is ordered:
+// real prose first, then any full sentence, then any non-empty text, never a source note.
+function looksLikeLabel(t) {
+  const s = String(t || "").trim();
+  if (!s) return true;
+  // A SHORT lead-in ending in a colon is a field label: "Born: 1786", "Spouse: X".
+  // Long ones are legitimately prose ("Read the full story: ..."), so cap the lead-in.
+  // A field line is "Word:" or "Two Words:" — a short, capitalised, colon-terminated
+  // lead-in. Anything longer is prose that happens to contain a colon.
+  if (/^[A-Z][A-Za-z\-']{0,14}(?: [A-Z][A-Za-z\-']{0,14})?:\s/.test(s)) return true;
+  // Provenance boilerplate — a note to the editor, not to a reader.
+  if (/^(Source|Sources|Source note|Note|Reference|References)\b/i.test(s)) return true;
+  // A CITATION is not a description. "A Telfer Family Tree (2008), p.276 — family
+  // record: …" tells a searcher which book we own, not who the person was. Detect a
+  // leading source reference: a title/year/p. combination, or a bare "Author (Year)".
+  if (/^[^.!?:]{0,80}\(\s*(?:1[6-9]|20)\d\d\s*\)[^.!?]{0,20}(?:,|\u2014|\s-)/.test(s)) return true;
+  if (/\b(?:p\.|pp\.|p\.\s?\d+|page)\s?\d+/.test(s.slice(0, 90))) return true;
+  if (/^(?:A |The )?[A-Z][A-Za-z ]{2,40}(?:Family|Tree|History|Records?)\b/.test(s.slice(0, 50))) return true;
+  // Correction notices are editorial housekeeping ("Previously listed as …",
+  // "⚠️ Correction Notice"). A searcher needs the fact, not the audit trail.
+  if (/^(Correction Notice|Previously listed|This is incorrect|Erratum)\b/i.test(s)) return true;
+  if (/^\u26a0/i.test(s)) return true;
+  // War-memorial database records. Real information, but a list entry, not prose.
+  if (/^(AWM|Roll of Honour|CWGC|Find a Grave|FindAGrave)\b/i.test(s)) return true;
+  // A run of "Label Value" fragments with no verb and no full stop.
+  if (!/[.!?]/.test(s) && s.split(/\s+/).length < 6) return true;
+  return false;
+}
+function firstProseSentence(html) {
+  let h = String(html || "");
+  // 1. Delete the structures that are never prose — WITH their contents. Order
+  //    matters: figures before blockquotes is irrelevant, but tables must go before
+  //    the generic tag strip so their cells never surface as text.
+  h = h.replace(/<figure[\s\S]*?<\/figure>/gi, " ");
+  h = h.replace(/<table[\s\S]*?<\/table>/gi, " ");
+  h = h.replace(/<h[1-6][^>]*>[\s\S]*?<\/h[1-6]>/gi, " ");
+  h = h.replace(/<blockquote[\s\S]*?<\/blockquote>/gi, " ");
+  h = h.replace(/<figcaption[\s\S]*?<\/figcaption>/gi, " ");
+  h = h.replace(/<script[\s\S]*?<\/script>/gi, " ");
+  h = h.replace(/<style[\s\S]*?<\/style>/gi, " ");
+  // 2. Split what remains into block-level chunks at paragraph boundaries, keeping
+  //    <br> as a chunk separator too: a field list rendered as one <p> with <br>s is
+  //    several lines, none of which is prose.
+  const chunks = h
+    .replace(/<br\s*\/?>/gi, "\n\n")
+    .replace(/<\/(p|li|div|dd|dt|tr|section|article)>/gi, "\n\n")
+    .replace(/<(p|li|div|dd|dt|tr|section|article)\b[^>]*>/gi, "\n\n")
+    .split(/\n{2,}/);
+  // 3. Three tiers, in order of what a searcher deserves to read:
+  //    (a) a CLEAN sentence — no label, no source note;
+  //    (b) any sentence with real punctuation, even if label-shaped;
+  //    (c) any non-empty text that is not a source note.
+  //    A short factual line beats an empty description, but it must never beat prose.
+  const clean = [];
+  const sentence = [];
+  const anyText = [];
+  for (const raw of chunks) {
+    const text = decodeText(String(raw).replace(/<[^>]+>/g, " "));
+    if (!text) continue;
+    const isSourceNote = /^(Source|Sources|Source note|Note|Reference|References)\b/i.test(text);
+    if (!isSourceNote) anyText.push(text);
+    const s = firstSentence(text);
+    if (s && !isSourceNote) {
+      sentence.push(s);
+      if (!looksLikeLabel(text)) clean.push(s);
+    }
+  }
+  if (clean.length) return clean[0];
+  if (sentence.length) return sentence[0];
+  return anyText[0] || "";
 }
 
 // Extract a year from a free-text fact line like "**Born:** ~1872 (aged 93 …)".
@@ -289,7 +387,13 @@ const stripNamePrefix = (t) => {
   if (!m) return t;
   return t.slice(m[0].length).trim();
 };
-const leadSentence = nameOnly ? "" : stripNamePrefix(proseSentence);
+// The block parser already returns a chunk of the person's OWN body prose, so it
+// never carries the name-prefix stutter the old tag-strip did. stripNamePrefix() also
+// ate real sentence subjects — "Francis Telfer was born…" became "was born…" — which is
+// how a description ended up reading "(1809 – 1895). was born on 2 February 1809". The
+// prefix is now stripped ONLY when the body itself begins with the bare display name
+// followed by punctuation, not when the name is the sentence's grammatical subject.
+const leadSentence = nameOnly ? "" : proseSentence;
 // Measured on the ENTITY-DECODED text. `slice(0,158)` used to run on the raw
 // string, so a sentence carrying &#38;/&#34; came out well past the budget in the
 // rendered <meta> (card itc-20261023-7). Decode first, count what a crawler sees,
@@ -299,11 +403,16 @@ const decodeEntities = (t) => String(t || "")
   .replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#8217;/g, "'");
 // Marks are stripped before clamping: a search snippet cannot render an icon,
 // and a raw emoji there reads as noise on someone else's results page.
-const seoDescription = leadSentence && decodeEntities(leadSentence).length >= 40
+const rawSeoDescription = leadSentence && decodeEntities(leadSentence).length >= 40
   ? clampDescription(decodeEntities(
       `${person.display_name}${yearText ? ` (${yearText})` : ""}. ${stripVaultMarks(leadSentence)}`
     ))
   : templateDescription;
+// FINAL decode before the layout escapes for HTML. Without this, a nickname quote reaches
+// Google as "known as &#34;Cuth&#34;" — 22 pages did (card itc-20261026-2). Decoding here,
+// at the last step, catches every path into the description: prose, template fallback,
+// and any future override.
+const seoDescription = decodeDescriptionEntities(rawSeoDescription);
 
 // ── Duplicate-lead suppression for the hero role chip (itc-20261024-2) ──────
 // The vault often writes the same one-liner twice: once as the profile's opening

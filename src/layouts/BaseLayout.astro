@@ -17,11 +17,16 @@ interface Props {
   } | null;
 }
 const { title, description, canonicalPath, ogType, ogImage, schema, faqItems, storyBlurb, noindex, navState } = Astro.props;
-import { clampDescription, META_DESCRIPTION_MAX } from "../utils/meta-description.mjs";
+import { clampDescription, decodeDescriptionEntities, META_DESCRIPTION_MAX } from "../utils/meta-description.mjs";
 const currentPath = Astro.url.pathname;
 const canonicalUrl = canonicalPath ? `https://telferwiki.com${canonicalPath}` : Astro.url.origin + Astro.url.pathname;
 const defaultDescription = clampDescription("The Telfer Family Wiki — a digital family history archive tracing nine generations of Telfers from Scotland to South Australia. A living record of the family line from John Telfer of Castleton to the present day.");
-const resolvedDescription = clampDescription(description || defaultDescription);
+// Decode entities HERE, in the layout, because this is the exact point the value becomes
+// HTML: Astro escapes whatever string it is given, so a description that already contains
+// a real '"' would be re-encoded to &#34; and Google shows the escape instead of the quote.
+// Decoding at the source cannot survive that round trip — 22 pages shipped raw &#34;
+// (card itc-20261026-2). Do it once, at the boundary, for every page in the wiki.
+const resolvedDescription = decodeDescriptionEntities(clampDescription(description || defaultDescription));
 const resolvedOgType = ogType || "website";
 const resolvedOgImage = ogImage || "https://telferwiki.com/telferwiki-og.png";
 // When a page is noindexed for privacy, drop structured data entirely (no schema

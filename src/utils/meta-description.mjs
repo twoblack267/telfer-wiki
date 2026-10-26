@@ -11,6 +11,35 @@
 
 export const META_DESCRIPTION_MAX = 158;
 
+// Numeric and named entities that end up in a description must be DECODED before the
+// layout escapes them for HTML, or Google shows the raw escape: "known as &#34;Cuth&#34;"
+// instead of "known as "Cuth"". 22 pages shipped that way (card itc-20261026-2) because
+// the renderer emits real quotes, the HTML escape re-encodes them on write, and nothing
+// decoded at the end. Decode once, here, at the single point every description passes
+// through — do not sprinkle .replace() calls across templates.
+const ENTITY_MAP = [
+  [/&#0*38;|&amp;/g, "&"],
+  [/&#0*34;|&quot;/g, '"'],
+  [/&#0*39;|&apos;|&#8216;|&#8217;|&lsquo;|&rsquo;/g, "'"],
+  [/&#8212;|&mdash;/g, "\u2014"],
+  [/&#8211;|&ndash;/g, "\u2013"],
+  [/&#8210;|&#45;/g, "-"],
+  [/&#0*60;|&lt;/g, "<"],
+  [/&#0*62;|&gt;/g, ">"],
+  [/&nbsp;|&#160;/g, " "],
+  [/&hellip;|&#8230;/g, "\u2026"],
+];
+export function decodeDescriptionEntities(text) {
+  let s = String(text == null ? "" : text);
+  for (const [re, to] of ENTITY_MAP) s = s.replace(re, to);
+  // Any remaining numeric entity: keep the real character, never the escape.
+  s = s.replace(/&#(\d+);/g, (m, n) => {
+    const c = Number(n);
+    return Number.isFinite(c) && c > 31 && c < 0x110000 ? String.fromCodePoint(c) : " ";
+  });
+  return s;
+}
+
 /**
  * Fit `text` inside the snippet budget without ending mid-word.
  * @param {unknown} text
