@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-26T19:58:13.185Z",
+  "checkedAt": "2026-10-26T19:58:19.786Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -9,5 +9,42 @@
   "crownJewelsChecked": 5,
   "renames": [],
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "clara-ann-millicent-telfer-1878",
+      "name": "Clara Ann Millicent Telfer",
+      "field": "children",
+      "before": 5,
+      "after": 4,
+      "lost": 1,
+      "lostEntries": [
+        "Millicent Joyce Telfer"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "francis-adam-telfer-1875",
+      "name": "Francis Adam Telfer",
+      "field": "children",
+      "before": 5,
+      "after": 4,
+      "lost": 1,
+      "lostEntries": [
+        "Millicent Joyce Telfer"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "john-telfer-1840",
+      "name": "John Telfer",
+      "field": "children",
+      "before": 17,
+      "after": 16,
+      "lost": 1,
+      "lostEntries": [
+        "Martha Telfer (1873–?)"
+      ]
+    }
+  ]
 }
