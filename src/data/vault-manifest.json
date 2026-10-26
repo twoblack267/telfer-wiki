@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-26T05:08:08+10:00",
+  "generated_at": "2026-10-26T14:03:17+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 434,
+  "count": 435,
   "kinds": {
-    "real": 418,
+    "real": 419,
     "redirect": 16,
     "empty": 0
   },
@@ -137,7 +137,11 @@
       "kind": "real"
     },
     "Andrew Telfer (1798\u20131858).md": {
-      "sha256": "57d070e40d495405b09f3c317ee9b40b3664bda2682578251344a26e9ad21072",
+      "sha256": "363ef74ea59f8a1391c1f046a7fdf60030c8ef9c782fa5bd633842348743a779",
+      "kind": "real"
+    },
+    "Andrew Telfer (b. 1850).md": {
+      "sha256": "c54f35903998a556f24488e8e43a18d406c6451ff3b0035ddb3607ede9af343c",
       "kind": "real"
     },
     "Angela Telfer.md": {
@@ -249,7 +253,7 @@
       "kind": "redirect"
     },
     "Clarice May Telfer (1911\u20131997).md": {
-      "sha256": "f4c11588c47a6b214192ed0b94f2f513cf12383cec9a93ec3bb0328fb8b7207a",
+      "sha256": "399749da51546ffd862aae2d18b94a3397801cd1dd5decdc69d48bcc02333f3b",
       "kind": "real"
     },
     "Colin Lindsay Beaton (1915\u20131944).md": {
@@ -317,7 +321,7 @@
       "kind": "real"
     },
     "Doris Elma Telfer (1919\u20131993).md": {
-      "sha256": "ccdfdde465cbabc1a28e4c80203bbcfe4a2523a304a0c4375e0064b6957f2526",
+      "sha256": "8934d59f0198f95c76ef90cffd806364194c6dce586dfc6ce5913f3dc4d93e00",
       "kind": "real"
     },
     "Dorothy Dillon.md": {
@@ -357,7 +361,7 @@
       "kind": "real"
     },
     "Edwin Roy Telfer (1921\u20132009).md": {
-      "sha256": "e18b6aab5d97a7ee9290359f4e30c9a1f2ba01de6408fae48c8cdd7a996f1dc8",
+      "sha256": "5c8b4e145ae7f5be6ec671cb4a93b94a2a62e14e2fa1c46b706505176567c6f5",
       "kind": "real"
     },
     "Effie Olive Telfer (1886\u20131969).md": {
@@ -469,7 +473,7 @@
       "kind": "real"
     },
     "Emily Amelia Telfer (1913\u20132000).md": {
-      "sha256": "f01ed8d58d93489c3111bfc005ad8f0653fce408c06bec48a32042b4da779745",
+      "sha256": "86499e0a87c4ab6ebb86fb115cd4d3be3d03d57ec5226f44c413bef893f65d78",
       "kind": "real"
     },
     "Emily Ellen Thorpe.md": {
@@ -533,7 +537,7 @@
       "kind": "real"
     },
     "Ethel Jean Telfer (1915\u20132004).md": {
-      "sha256": "23a2c07bd4fb307e04c4f54b7fae6f61f32ea6ebccf44e6fc21113057cfef567",
+      "sha256": "31d2ff1f01699a2fd785ddd5b3e3f059512d639b4f01243c18711d994605a53b",
       "kind": "real"
     },
     "Eva Agnes Farrow.md": {
@@ -573,7 +577,7 @@
       "kind": "real"
     },
     "Francis Kelson Telfer (1910\u20131987).md": {
-      "sha256": "825631dca11017e886cc77d7e6291ddd7d698fc83015a594efa6636c30f03a18",
+      "sha256": "dd1a60db8f8647614f4556d75db28ff7d855e00a448966d585ae7ed2de0a5c4e",
       "kind": "real"
     },
     "Francis Telfer (1768\u20131836).md": {
@@ -657,7 +661,7 @@
       "kind": "real"
     },
     "Gladys Merle Telfer (1917\u2013living).md": {
-      "sha256": "01bdc8df4300d35bb2660ee996ab486ce44b147466b4fdf1cec9c3d257347b12",
+      "sha256": "d7f170fbb1a958f8808b9c8c5178432f552f53d8f24619c8aaa8c48fff573990",
       "kind": "real"
     },
     "Gordon Percival Dennis (1904\u20131986).md": {
@@ -1413,7 +1417,7 @@
       "kind": "real"
     },
     "Reginald Masters Telfer (1922\u20132011).md": {
-      "sha256": "cf2a499240abbf2578a9003ef00a3c5350e6b2be0542e4865f31392611998137",
+      "sha256": "b45918f9997a3a805afc4e192b228f41a7f2c1b7b30433979ec5277bede8a395",
       "kind": "real"
     },
     "Rev. Ralph Drummond (1792\u20131872).md": {
@@ -1525,7 +1529,7 @@
       "kind": "real"
     },
     "Ruth Telfer (1931\u2013?).md": {
-      "sha256": "c94cfaed5d1e1c6a719296d110ee24c269afff36d92ac4f768993989054f5fac",
+      "sha256": "7cd3ec132d15249d900a4fba04c85b22dafe9b32d0ce1870f6ad9bc65b172acd",
       "kind": "real"
     },
     "Ryan David Telfer (1982\u20131982).md": {
@@ -1721,7 +1725,7 @@
       "kind": "real"
     },
     "William Telfer (1802\u20131850).md": {
-      "sha256": "682f82c30bebd5e7b4ecce7a4f662a107c8e939e4784d9b360b37879fafe5397",
+      "sha256": "c840479cfcc8428fb6ce88c9b07887b001ef95ecdafd83ad94b1bb3bd0e0b534",
       "kind": "real"
     },
     "William Telfer (1811\u2013?).md": {
