@@ -152,6 +152,12 @@
       "reason": "Page title carried only the married surname and no middle name or dates. A Telfer Family Tree (2008), printed p.144 records '1. Kristin Holly TELFER, b. 26 Mar 1985 Tumby Bay, SA'; she married Ben Stefanoff. The page is now titled 'Kristin Holly (Telfer) Stefanoff (b. 1985)' so that the maiden name, middle name and birth year all resolve. This is a rename, not a removal.",
       "date": "2026-10-25",
       "corrections_log": "2026-10-25 — RENAMED: 'Kristin Stefanoff' → \"Kristin Holly (Telfer) Stefanoff (b. 1985)\""
+    },
+    "beryl-ruth-telfer-1949": {
+      "to": "miriam-ruth-telfer-1949",
+      "reason": "Phantom duplicate, not a real person. 'Beryl Ruth Telfer' was produced by OCR corruption of 'Miriam Ruth Telfer, b. 5 Jul 1949' in the 2008 Supplement's scan-derived text layer. Two independent sources print Miriam Ruth: the Supplement's own Reginald/Edwin block and the Borders text layer. Miriam Ruth already has her own profile (miriam-ruth-telfer-1949), correctly parented to Edwin Roy Telfer. The phantom carried a wrong father link that was ALSO poisoning Brenda Janice and Lyndell Marie's parentage. Visitors land on the real person.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 — REMOVED: \"Beryl Ruth Telfer (1949)\" phantom (OCR corruption of Miriam Ruth Telfer)"
     }
   }
 }

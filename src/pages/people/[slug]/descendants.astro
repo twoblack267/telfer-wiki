@@ -170,8 +170,13 @@ export async function getStaticPaths() {
       </div>
       <div class="person-card rounded-xl p-4 text-center">
         <div class="text-3xl font-bold text-[var(--color-highlight)]">
-          {person.spouses.length > 0
-            ? person.spouses.map(s => peoplePublic.find(p => p.slug === s)?.display_name || s).join(', ')
+          {(person.spouses || []).length > 0
+            ? (person.spouses || [])
+                .map(s => typeof s === 'string'
+                  ? (peoplePublic.find(p => p.slug === s)?.display_name || s)
+                  : (s?.plain_name || ''))
+                .filter(Boolean)
+                .join(', ')
             : '—'}
         </div>
         <div class="text-sm text-[var(--color-muted)]">Spouse(s)</div>

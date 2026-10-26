@@ -1,13 +1,19 @@
 {
-  "checkedAt": "2026-10-26T03:12:06.206Z",
+  "checkedAt": "2026-10-26T03:52:43.604Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 418,
-    "after": 446
+    "before": 446,
+    "after": 508
   },
   "crownJewelsChecked": 5,
-  "renames": [],
+  "renames": [
+    {
+      "from": "beryl-ruth-telfer-1949",
+      "to": "miriam-ruth-telfer-1949",
+      "name": "Beryl Ruth Telfer"
+    }
+  ],
   "failures": [],
   "warnings": []
 }
