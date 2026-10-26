@@ -498,6 +498,7 @@ function main() {
     .sort();
 
   console.log(`📁 Found ${mdFiles.length} markdown files in vault`);
+  const mdFileSet = new Set(mdFiles);   // rename-recovery guard needs the live file list
   console.log(`📄 Existing people.json: ${existingPeople.length} entries`);
 
   let added = 0;
@@ -894,6 +895,43 @@ function main() {
         console.log(
           `  ↻ Vault-file merge: ${entry.display_name || slug} — re-joined record ` +
           `${existing.slug} via vault_file (identity key missed)`
+        );
+      }
+    }
+    // ── VAULT-FILE RENAME RECOVERY (added 2026-10-27) ─────────────────────────
+    // The converter never sees git history, so a pure RENAME in the vault
+    // (`James Robert Telfer (1866–1925).md` → `(1866–1930).md`,
+    // `Helen Telfer.md` → `Harriett Helen Telfer (1873–1929).md`,
+    // `Susan Telfer (1871–1952).md` → `(1871–1954).md`) leaves the OLD row in
+    // people.json carrying a vault_file that no longer exists. The identity key
+    // misses (name/middle changed), the vault-file fallback above misses (the
+    // filename is new), and the name-only fallback is gated on birthYear == null —
+    // so a NEW row is pushed AND the old row is orphan-purged in the same run,
+    // silently DESTROYING the curated body, sources and photo of a person who
+    // never changed. Observed 2026-10-27: the vault's 06:33 rename commit produced
+    // 7 MISSING / 3 ORPHAN parity violations and failed the build the next morning.
+    //
+    // SAFETY: a candidate is accepted only when it is UNIQUE on
+    // (first_name + last_name + birth_year) AND its file no longer exists in the
+    // vault AND that record is not already claimed by a live file. A rename keeps
+    // all three identifying fields; a genuinely different person does not.
+    if (!existing) {
+      const stillOnDisk = (name) => name && fs.existsSync(path.join(VAULT_PEOPLE_DIR, name));
+      const nameKey = (p) =>
+        `${(p.first_name || '')}${(p.last_name || '')}`.toLowerCase().replace(/\s+/g, '');
+      const thisKey = `${firstName}${lastName}`.toLowerCase().replace(/\s+/g, '');
+      const renamedCands = existingPeople.filter((p) => {
+        const vf = (p.vault_file || '').trim();
+        if (!vf || stillOnDisk(vf)) return false;              // file must be GONE
+        if (mdFileSet.has(vf)) return false;                   // and not republished
+        if (nameKey(p) !== thisKey) return false;              // same person's names
+        return String(p.birth_year ?? '') === String(birthYear ?? '');
+      });
+      if (renamedCands.length === 1) {
+        existing = renamedCands[0];
+        console.log(
+          `  ↻ Vault-file RENAME: ${entry.display_name || slug} — re-joined record ` +
+          `${existing.slug} from vanished ${existing.vault_file}`
         );
       }
     }

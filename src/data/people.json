@@ -786,6 +786,7 @@
       "marian-cornish-1896",
       "mark-telfer-1877",
       "robert-telfer-1886",
+      "roland-telfer",
       "James",
       "Elizabeth",
       "Susan",
@@ -3618,6 +3619,7 @@
       "marian-cornish-1896",
       "mark-telfer-1877",
       "robert-telfer-1886",
+      "roland-telfer",
       "Mark (1877–1946)",
       "Maria Clara (1878–1903)",
       "Isabella Lucieton (1880–1964)",
@@ -3895,6 +3897,7 @@
       "mark-telfer-1877",
       "martha-cameron-1873",
       "robert-telfer-1886",
+      "roland-telfer",
       "susan-telfer-1871",
       "Alma Tressy Cullen (1893–1976)"
     ],
@@ -4204,7 +4207,8 @@
       "maria-clara-telfer-1878",
       "marian-cornish-1896",
       "mark-telfer-1877",
-      "robert-telfer-1886"
+      "robert-telfer-1886",
+      "roland-telfer"
     ],
     "related_trees": [
       "telfer-tree"
@@ -5078,6 +5082,7 @@
       "marian-cornish-1896",
       "mark-telfer-1877",
       "robert-telfer-1886",
+      "roland-telfer",
       "Mark (1877–1946)",
       "Maria Clara (1878–1903)",
       "Isabella (1880–1964)",
@@ -5149,17 +5154,17 @@
     "step_children": []
   },
   {
-    "id": "Edith Mary Kathleen Telfer",
+    "id": "Edith Mary Kathleen Telfer (1879)",
     "slug": "edith-mary-kathleen-telfer",
     "first_name": "Edith",
-    "middle_name": null,
-    "last_name": "Mary Kathleen Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
+    "middle_name": "Mary Kathleen",
+    "last_name": "Telfer",
+    "birth_year": 1879,
+    "death_year": 1960,
+    "birth_year_display": "1879",
+    "death_year_display": "1960",
     "display_name": "Edith Mary Kathleen Telfer",
-    "title": "Edith Mary Kathleen Telfer",
+    "title": "Edith Mary Kathleen Telfer (1879–1960)",
     "tags": [
       "family"
     ],
@@ -5167,7 +5172,7 @@
       {
         "type": "Self",
         "names": [
-          "Edith Mary Kathleen Telfer"
+          "Edith Mary Kathleen Telfer (1879–1960)"
         ]
       },
       {
@@ -5185,21 +5190,22 @@
       {
         "type": "Siblings",
         "names": [
-          "James Robert Telfer (1866–1925)",
-          "William Adam Francis Telfer (1869–?)",
-          "Lindsay Roland Telfer",
-          "Roland Telfer",
-          "Elizabeth Telfer (1868–1950)",
-          "Susan Telfer (1871–1952)",
-          "Helen Telfer"
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Francis John Burton Telfer (1877–?)",
+          "Robert Allan Burton Telfer (1882–1940)"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Edith Mary Kathleen Telfer\n\n## Provenance note\n\nThis profile was created as a stub on 2026-06-20 with a bare `Self:` relationship line and no parents, no dates and no sources.\n\n**Parentage restored 2026-10-27** from the profile of her father, **Robert Telfer (1835–1907)**, whose `relationships` field names her as a daughter with the date range **1879–1960**, and from Robert's own 1907 *Border Chronicle* obituary, which states the couple had **five sons and four daughters** — the daughters being Elizabeth, Helen, Susan and Edith Mary Kathleen. The mother is **Susan Burton Telfer (1844–1924)**, Robert's wife.\n\n**Siblings recorded but not yet given profiles:** Robert Allan Burton Telfer (died Sydney 1940) and Francis John “Jack” Burton Telfer. Both are named as sons in their father Robert Telfer (1835–1907)’s record and in his 1907 obituary, but neither has a vault page, so neither appears in the `relationships` line. A name with no page there renders as dead plain text and fails the family-link guards.\n\n**Still unverified — do not treat as fact:**\n- The birth/death years **1879–1960** rest on Robert's profile alone and have not been checked against an SA civil registration. A Genealogy SA BDM pull for Edith Mary Kathleen Telfer, c.1879, is the outstanding work.\n- No marriage or issue is recorded here. If she married, her married name is unknown and a Rowbotham/Renfrey-style name trap (see `work/Leads.md`) may apply.\n- This stub previously carried the tag `non-telfer`, which contradicts every other record of her. The tag has been **removed**, not silently: she is recorded as a Telfer daughter by her father's own record and his obituary.",
-    "body_stripped": "## Provenance note\n\nThis profile was created as a stub on 2026-06-20 with a bare `Self:` relationship line and no parents, no dates and no sources.\n\n**Parentage restored 2026-10-27** from the profile of her father, **Robert Telfer (1835–1907)**, whose `relationships` field names her as a daughter with the date range **1879–1960**, and from Robert's own 1907 *Border Chronicle* obituary, which states the couple had **five sons and four daughters** — the daughters being Elizabeth, Helen, Susan and ",
+    "body_markdown": "# Edith Mary Kathleen Telfer (1879–1960)\n\n## Provenance note\n\nThis profile was created as a stub on 2026-06-20 with a bare `Self:` relationship line and no parents, no dates and no sources.\n\n**Parentage restored 2026-10-27** from the profile of her father, **Robert Telfer (1835–1907)**, whose `relationships` field names her as a daughter with the date range **1879–1960**, and from Robert's own 1907 *Border Chronicle* obituary, which states the couple had **five sons and four daughters** — the daughters being Elizabeth, Harriett Helen “Nell”, Susan and Edith Mary Kathleen. The mother is **Susan Burton Telfer (1844–1924)**, Robert’s wife.\n\n**Dates now register-proven (27 Oct 2026).** SA Death Registration **Adelaide 915/7041**: `TELFER, Edith Mary Kathleen · 01-Nov-1960 · Age 81 · Adelaide` — read live at Genealogy SA. Aged 81 puts her birth in 1878/79, matching the book’s b.1879. `birth_year: 1879` and `death_year: 1960` are now in frontmatter; previously this profile carried **no dates at all** and the `first_name`/`last_name` split was `Edith` / `Mary Kathleen Telfer`.\n\n**Superseded 27 Oct 2026.** This note said Robert Allan Burton Telfer and Francis John “Jack” Burton Telfer\nhad no profiles. **They both have pages now** — [[Robert Allan Burton Telfer (1882–1940)]] and\n[[Francis John Burton Telfer (1877–?)]] — and both appear in the `relationships` line above. All nine of\nRobert and Susan’s children are now pages. Kept here rather than deleted so the change is visible.\n\n**Still unverified — do not treat as fact:**\n- The birth/death years **1879–1960** rest on Robert's profile alone and have not been checked against an SA civil registration. A Genealogy SA BDM pull for Edith Mary Kathleen Telfer, c.1879, is the outstanding work.\n- No marriage or issue is recorded here. If she married, her married name is unknown and a Rowbotham/Renfrey-style name trap (see `work/Leads.md`) may apply.\n- This stub previously carried the tag `non-telfer`, which contradicts every other record of her. The tag has been **removed**, not silently: she is recorded as a Telfer daughter by her father's own record and his obituary.",
+    "body_stripped": "## Provenance note\n\nThis profile was created as a stub on 2026-06-20 with a bare `Self:` relationship line and no parents, no dates and no sources.\n\n**Parentage restored 2026-10-27** from the profile of her father, **Robert Telfer (1835–1907)**, whose `relationships` field names her as a daughter with the date range **1879–1960**, and from Robert's own 1907 *Border Chronicle* obituary, which states the couple had **five sons and four daughters** — the daughters being Elizabeth, Harriett Helen “N",
     "is_living": false,
-    "lifespan": "? – ?",
+    "lifespan": "1879 – 1960",
     "parents": [
       "robert-telfer-1835",
       "susan-telfer-1844"
@@ -5207,12 +5213,13 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "elizabeth-telfer-1868",
-      "helen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
       "james-robert-telfer-1866",
-      "lindsay-telfer-1920",
-      "roland-telfer",
-      "susan-telfer-1871",
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek",
       "william-telfer"
     ],
     "related_trees": [
@@ -6658,8 +6665,6 @@
     ],
     "siblings": [
       "clara-blanche-telfer-1883",
-      "edith-mary-kathleen-telfer",
-      "helen-telfer",
       "james-telfer-1866",
       "martha-cameron-1873",
       "susan-telfer-1871",
@@ -7941,7 +7946,7 @@
       {
         "type": "Father",
         "names": [
-          "James Robert Telfer (1866–1925)"
+          "James Robert Telfer (1866–1930)"
         ]
       },
       {
@@ -10546,7 +10551,7 @@
       {
         "type": "Spouse",
         "names": [
-          "James Robert Telfer (1866–1925)"
+          "James Robert Telfer (1866–1930)"
         ]
       },
       {
@@ -10823,86 +10828,6 @@
     "birth_date": null,
     "death_date": null,
     "vault_file": "Hazel Rose Telfer (1891–1939).md",
-    "images": [],
-    "person_photo": null,
-    "generation": 5,
-    "step_parents": [],
-    "step_children": []
-  },
-  {
-    "id": "Helen Telfer",
-    "slug": "helen-telfer",
-    "first_name": "Helen",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Helen Telfer",
-    "title": "Helen Telfer",
-    "tags": [
-      "family",
-      "ancestor"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Helen Telfer"
-        ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "Robert Telfer (1835–1907)"
-        ]
-      },
-      {
-        "type": "Mother",
-        "names": [
-          "Susan Burton Telfer (1844–1924)"
-        ]
-      },
-      {
-        "type": "Siblings",
-        "names": [
-          "James Robert Telfer (1866–1925)",
-          "William Adam Francis Telfer (1869–?)",
-          "Lindsay Roland Telfer",
-          "Roland Telfer",
-          "Elizabeth Telfer (1868–1950)",
-          "Susan Telfer (1871–1952)",
-          "Edith Mary Kathleen Telfer"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Helen Telfer\n\n## Provenance note\n\nThis profile was created as a stub on 2026-06-20 with a bare `Self:` relationship line and no parents, no dates and no sources.\n\n**Parentage restored 2026-10-27** from the profile of her father, **Robert Telfer (1835–1907)**, whose `relationships` field names her as a daughter with the date range **1879–1960**, and from Robert's own 1907 *Border Chronicle* obituary, which states the couple had **five sons and four daughters** — the daughters being Elizabeth, Helen, Susan and Edith Mary Kathleen. The mother is **Susan Burton Telfer (1844–1924)**, Robert's wife.\n\n**Siblings recorded but not yet given profiles:** Robert Allan Burton Telfer (died Sydney 1940) and Francis John “Jack” Burton Telfer. Both are named as sons in their father Robert Telfer (1835–1907)’s record and in his 1907 obituary, but neither has a vault page, so neither appears in the `relationships` line. A name with no page there renders as dead plain text and fails the family-link guards.\n\n**Still unverified — do not treat as fact:**\n- The birth/death years **1879–1960** rest on Robert's profile alone and have not been checked against an SA civil registration. A Genealogy SA BDM pull for Edith Mary Kathleen Telfer, c.1879, is the outstanding work.\n- No marriage or issue is recorded here. If she married, her married name is unknown and a Rowbotham/Renfrey-style name trap (see `work/Leads.md`) may apply.\n- This stub previously carried the tag `non-telfer`, which contradicts every other record of her. The tag has been **removed**, not silently: she is recorded as a Telfer daughter by her father's own record and his obituary.",
-    "body_stripped": "## Provenance note\n\nThis profile was created as a stub on 2026-06-20 with a bare `Self:` relationship line and no parents, no dates and no sources.\n\n**Parentage restored 2026-10-27** from the profile of her father, **Robert Telfer (1835–1907)**, whose `relationships` field names her as a daughter with the date range **1879–1960**, and from Robert's own 1907 *Border Chronicle* obituary, which states the couple had **five sons and four daughters** — the daughters being Elizabeth, Helen, Susan and ",
-    "is_living": false,
-    "lifespan": "? – ?",
-    "parents": [
-      "robert-telfer-1835",
-      "susan-telfer-1844"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "edith-mary-kathleen-telfer",
-      "elizabeth-telfer-1868",
-      "james-robert-telfer-1866",
-      "lindsay-telfer-1920",
-      "roland-telfer",
-      "susan-telfer-1871",
-      "william-telfer"
-    ],
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "birth_date": null,
-    "death_date": null,
-    "vault_file": "Helen Telfer.md",
     "images": [],
     "person_photo": null,
     "generation": 5,
@@ -11819,6 +11744,7 @@
       "marian-cornish-1896",
       "mark-telfer-1877",
       "robert-telfer-1886",
+      "roland-telfer",
       "Mark (1877–1946)",
       "Maria Clara (1878–1903)",
       "John Roland (1882–1975)",
@@ -12644,11 +12570,11 @@
     "middle_name": "Robert",
     "last_name": "Telfer",
     "birth_year": 1866,
-    "death_year": 1925,
+    "death_year": 1930,
     "birth_year_display": "1866",
-    "death_year_display": "1925",
+    "death_year_display": "1930",
     "display_name": "James Robert Telfer",
-    "title": "James Robert Telfer (1866–1925) — Mount Gambier SA",
+    "title": "James Robert Telfer (1866–1930) — Mount Gambier SA",
     "tags": [
       "person",
       "telfer"
@@ -12690,10 +12616,10 @@
     "roles": [
       "Eldest son of [[Robert Telfer (1835–1907)]] — station hand at Moorak"
     ],
-    "body_markdown": "# James Robert Telfer (1866–1925)\n\n**Role:** Eldest son of [[Robert Telfer (1835–1907)]] — station hand at Moorak\n**Spouse:** Hannah Peacock (1862–1948)\n**Father:** [[Robert Telfer (1835–1907)]]\n**Mother:** [[Susan Burton Telfer (1844–1924)]]\n\n**Born:** 1866\n**Died:** 2 October 1925 — aged 59 (SA Death Reg Book 482/5 + Border Watch 6 Oct 1925; FindAGrave headstone variantly reads 4 Oct — superseded)\n**Buried:** Lake Terrace Cemetery, Mount Gambier, SA\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Hannah Peacock (1862–1948)]] |\n| **Father** | [[Robert Telfer (1835–1907)]] |\n| **Mother** | [[Susan Burton Telfer (1844–1924)]] |\n| **Son** | [[Leslie Robert Telfer]] |\n| **Daughter** | [[Ethel Edith Telfer]] — m. James Gordon Steele |\n| **Daughter** | Jean Telfer |\n\n## Life Summary\n\nJames Robert Telfer was the eldest son of Robert Telfer and Susan Burton. He worked as a station hand at Moorak Station and married Hannah Peacock. They had three children — Leslie Robert, Ethel Edith and Jean.\n\nHe died on 2 October 1925 and is buried at Lake Terrace Cemetery, Mount Gambier, South Australia.\n\n*(From the Borders to the Bush, p. 227 — eldest son; death/burial confirmed by headstone.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| ~1866 | Born |\n| — | Worked as station hand at Moorak Station |\n| 2 Oct 1925 | Died — SA Death Reg Book 482/5, aged 59, Mt Gambier (headstone shows 4 Oct) — buried Lake Terrace Cemetery, Mt Gambier, SA |\n\n## Sources\n\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 227–230 — eldest son of Robert & Susan. Accessed 16 Aug 2026.\n- **Source:** [Find a Grave — James Robert Telfer (1866–1925), memorial 215167934, Lake Terrace Cemetery, Mount Gambier SA](https://www.findagrave.com/memorial/215167934) — \"born 1866 and died 4 Oct 1925. Buried at Lake Terrace Cemetery, Mount Gambier\" — accessed 16 Aug 2026.\n- **Source:** Genealogy SA (member), accessed 3 Sep 2026 — SA Death Reg **Book 482/Page 5** (James Robert TELFER, d. 2 Oct 1925, age 59, married, Mt Gambier, District Grey)\n- **Source:** Genealogy SA (member), accessed 3 Sep 2026 — SA Death Reg **Book 730/Page 4493** (Hannah TELFER, d. 25 Aug 1948, widow, residence Walkerville, relative James Robert TELFER [DH]) — corroborates James Robert ↔ Hannah relationship and her death\n- **Source:** Genealogy SA — Death Registrations: `TELFER, James Robert — 02-Oct-1925 — aged 59 — Grey — 482/5` — accessed 17 Sep 2026\n- **Source:** Genealogy SA — Marriage Registrations: `TELFER, James Robert × PEACOCK, Hannah — 28-Oct-1889 — Grey — 161/897` — accessed 17 Sep 2026",
+    "body_markdown": "# James Robert Telfer (1866–1930)\n\n**Role:** Eldest son of [[Robert Telfer (1835–1907)]] — station hand at Moorak\n**Spouse:** Hannah Peacock (1862–1948)\n**Father:** [[Robert Telfer (1835–1907)]]\n**Mother:** [[Susan Burton Telfer (1844–1924)]]\n\n**Born:** 1866\n**Died:** 2 October 1925 — aged 59 (SA Death Reg Book 482/5 + Border Watch 6 Oct 1925; FindAGrave headstone variantly reads 4 Oct — superseded)\n**Buried:** Lake Terrace Cemetery, Mount Gambier, SA\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Hannah Peacock (1862–1948)]] |\n| **Father** | [[Robert Telfer (1835–1907)]] |\n| **Mother** | [[Susan Burton Telfer (1844–1924)]] |\n| **Son** | [[Leslie Robert Telfer]] |\n| **Daughter** | [[Ethel Edith Telfer]] — m. James Gordon Steele |\n| **Daughter** | Jean Telfer |\n\n## Life Summary\n\nJames Robert Telfer was the eldest son of Robert Telfer and Susan Burton. He worked as a station hand at Moorak Station and married Hannah Peacock. They had three children — Leslie Robert, Ethel Edith and Jean.\n\nHe died on 2 October 1925 and is buried at Lake Terrace Cemetery, Mount Gambier, South Australia.\n\n*(From the Borders to the Bush, p. 227 — eldest son; death/burial confirmed by headstone.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| ~1866 | Born |\n| — | Worked as station hand at Moorak Station |\n| 2 Oct 1925 | Died — SA Death Reg Book 482/5, aged 59, Mt Gambier (headstone shows 4 Oct) — buried Lake Terrace Cemetery, Mt Gambier, SA |\n\n## Sources\n\n- **Source:** Donald Telfer, *From the Borders to the Bush* (ISBN 0 7316 6387 X), pp. 227–230 — eldest son of Robert & Susan. Accessed 16 Aug 2026.\n- **Source:** [Find a Grave — James Robert Telfer (1866–1930), memorial 215167934, Lake Terrace Cemetery, Mount Gambier SA](https://www.findagrave.com/memorial/215167934) — \"born 1866 and died 4 Oct 1925. Buried at Lake Terrace Cemetery, Mount Gambier\" — accessed 16 Aug 2026.\n- **Source:** Genealogy SA (member), accessed 3 Sep 2026 — SA Death Reg **Book 482/Page 5** (James Robert TELFER, d. 2 Oct 1925, age 59, married, Mt Gambier, District Grey)\n- **Source:** Genealogy SA (member), accessed 3 Sep 2026 — SA Death Reg **Book 730/Page 4493** (Hannah TELFER, d. 25 Aug 1948, widow, residence Walkerville, relative James Robert TELFER [DH]) — corroborates James Robert ↔ Hannah relationship and her death\n- **Source:** Genealogy SA — Death Registrations: `TELFER, James Robert — 02-Oct-1925 — aged 59 — Grey — 482/5` — accessed 17 Sep 2026\n- **Source:** Genealogy SA — Marriage Registrations: `TELFER, James Robert × PEACOCK, Hannah — 28-Oct-1889 — Grey — 161/897` — accessed 17 Sep 2026",
     "body_stripped": "**Role:** Eldest son of Robert Telfer (1835–1907) — station hand at Moorak\n**Spouse:** Hannah Peacock (1862–1948)\n**Father:** Robert Telfer (1835–1907)\n**Mother:** Susan Burton Telfer (1844–1924)\n\n**Born:** 1866\n**Died:** 2 October 1925 — aged 59 (SA Death Reg Book 482/5 + Border Watch 6 Oct 1925; FindAGrave headstone variantly reads 4 Oct — superseded)\n**Buried:** Lake Terrace Cemetery, Mount Gambier, SA\n\n## Family\n\n Relation  Name \n\n **Spouse**  Hannah Peacock (1862–1948) \n **Father**  Robert ",
     "is_living": false,
-    "lifespan": "1866 – 1925",
+    "lifespan": "1866 – 1930",
     "parents": [
       "robert-telfer-1835",
       "susan-telfer-1844"
@@ -12707,8 +12633,12 @@
     ],
     "siblings": [
       "edith-mary-kathleen-telfer",
-      "helen-telfer",
-      "roland-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek",
       "william-telfer"
     ],
     "related_trees": [
@@ -12716,7 +12646,7 @@
     ],
     "birth_date": null,
     "death_date": null,
-    "vault_file": "James Robert Telfer (1866–1925).md",
+    "vault_file": "James Robert Telfer (1866–1930).md",
     "images": [],
     "person_photo": null,
     "generation": 5,
@@ -15900,6 +15830,7 @@
       "marian-cornish-1896",
       "mark-telfer-1877",
       "robert-telfer-1886",
+      "roland-telfer",
       "Mark",
       "Maria Clara",
       "Isabella Lucieton",
@@ -16179,6 +16110,7 @@
       "mark-telfer-1877",
       "martha-cameron-1873",
       "robert-telfer-1886",
+      "roland-telfer",
       "susan-telfer-1871"
     ],
     "spouses": [
@@ -18139,7 +18071,7 @@
       {
         "type": "Father",
         "names": [
-          "James Robert Telfer (1866–1925)"
+          "James Robert Telfer (1866–1930)"
         ]
       },
       {
@@ -18403,10 +18335,8 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "edith-mary-kathleen-telfer",
       "floris-telfer-1904",
       "gilbert-telfer-1908",
-      "helen-telfer",
       "jean-telfer-1910",
       "joyce-telfer-1912",
       "kenneth-telfer-1906",
@@ -19620,6 +19550,7 @@
       "marian-cornish-1896",
       "mark-telfer-1877",
       "robert-telfer-1886",
+      "roland-telfer",
       "Mark (1877–1946)",
       "Isabella (1880–1964)",
       "John Roland (1882–1975)",
@@ -19731,6 +19662,7 @@
       "maria-clara-telfer-1878",
       "mark-telfer-1877",
       "robert-telfer-1886",
+      "roland-telfer",
       "James (1866-1946)",
       "Elizabeth",
       "Susan",
@@ -19993,6 +19925,7 @@
       "maria-clara-telfer-1878",
       "marian-cornish-1896",
       "robert-telfer-1886",
+      "roland-telfer",
       "James",
       "Elizabeth",
       "Susan",
@@ -20237,7 +20170,8 @@
       "maria-clara-telfer-1878",
       "marian-cornish-1896",
       "mark-telfer-1877",
-      "robert-telfer-1886"
+      "robert-telfer-1886",
+      "roland-telfer"
     ],
     "spouses": [
       "john-telfer-1840"
@@ -22824,6 +22758,7 @@
       "maria-clara-telfer-1878",
       "marian-cornish-1896",
       "mark-telfer-1877",
+      "roland-telfer",
       "Mark (1877–1946)",
       "Maria Clara (1878–1903)",
       "Isabella (1880–1964)",
@@ -22978,7 +22913,7 @@
       {
         "type": "Self",
         "names": [
-          "Robert Telfer"
+          "Robert Telfer (1835–1907)"
         ]
       },
       {
@@ -23002,15 +22937,15 @@
       {
         "type": "Children",
         "names": [
-          "James Robert Telfer (1866–1925)",
-          "William Adam Francis Telfer (1869–?)",
-          "Lindsay Burton Telfer",
-          "Robert Allan Burton Telfer",
-          "Francis John Burton Telfer",
-          "Elizabeth Telfer",
-          "Helen Telfer",
-          "Susan Telfer (1871–1952)",
-          "Edith Mary Kathleen Telfer (1879–1960)"
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Francis John Burton Telfer (1877–?)",
+          "Edith Mary Kathleen Telfer (1879–1960)",
+          "Robert Allan Burton Telfer (1882–1940)"
         ]
       }
     ],
@@ -23027,11 +22962,14 @@
     ],
     "children": [
       "edith-mary-kathleen-telfer",
-      "helen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
       "james-robert-telfer-1866",
-      "roland-telfer",
-      "william-telfer",
-      "Francis John Burton Telfer"
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek",
+      "william-telfer"
     ],
     "spouses": [
       "susan-telfer-1844"
@@ -24426,8 +24364,15 @@
       {
         "type": "Children",
         "names": [
-          "James Robert Telfer (1866–1925)",
-          "Roland John Telfer (1882–1975)"
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Francis John Burton Telfer (1877–?)",
+          "Edith Mary Kathleen Telfer (1879–1960)",
+          "Robert Allan Burton Telfer (1882–1940)"
         ]
       }
     ],
@@ -24439,9 +24384,13 @@
     "parents": [],
     "children": [
       "edith-mary-kathleen-telfer",
-      "helen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
       "james-robert-telfer-1866",
-      "roland-telfer",
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek",
       "william-telfer"
     ],
     "spouses": [
@@ -24512,8 +24461,8 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Susan Telfer (1871–1952)\n\n**Born:** 9 May 1871, Black Heath, Tungkillo SA | **Died:** 29 Jul 1952, Mount Gambier SA (age 81) | **Mother:** Martha Allen | **Father:** [[John Telfer (1840–1913)]] | **Spouse:** Robert Agnew (m. 21 Dec 1892)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Susan Telfer (m. Agnew) |\n| Father | [[John Telfer (1840–1913)]] |\n| Mother | [[Martha Allen (1840–1876)]] (m. 1865–1876) |\n| Spouse | [[Robert Agnew]] |\n| Brother | [[James Telfer (1866–1946)]] |\n| Sister | [[Elizabeth Telfer (1868–1950)]] |\n| Sister | [[Martha Telfer Cameron (1873–1964)]] |\n\n## Life Summary\n\nSusan Telfer was the third child of John Telfer and [[Martha Allen (1840–1876)]]. Born at Black Heath, Tungkillo, South Australia on 9 May 1871, she married Robert Agnew on 21 December 1892. She passed away on 29 July 1952 in Mount Gambier, South Australia at the age of 81, having outlived all her siblings from Martha Allen's line except Martha Cameron, who died twelve years later.\n\n## Family Stories\n\nSusan was the third child of John and Martha Telfer, born on 9 June 1871. She married Robert Agnew, a farmer, and they made their home first at Millicent and later at Glencoe in the South East of South Australia. Robert served on the Mt. Muirhead School Board of Advice alongside Adam Telfer. Together they raised a large family of eight children — two sons, Keith and Gilbert, and six daughters, Myrna, Gladys, Doreen, Thelma, Marjorie and Betty.\n\nSusan lived to 81 years of age and died on 29 July 1952 at the home of her eldest daughter Myrna (Mrs. Arthur Goodes) at Glencoe West. Her descendants carried the Telfer line into the next generation across the South East and beyond.\n\n*(From the Borders to the Bush, pp.237–238)*\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 9 May 1871 | Born at Black Heath, Tungkillo, South Australia |\n| 1873 | Birth of sister Martha |\n| 9 Mar 1876 | Death of mother [[Martha Allen (1840–1876)]] at German Flat, Mount Gambier |\n| 21 Dec 1892 | Married Robert Agnew |\n| 29 Jul 1952 | Died at Mount Gambier, South Australia (age 81) |\n\n## Sources\n\n- ✅ Approved Deep Research Report: \"The Descendants of John Telfer (1841–1913) of Tantanoola\" (Skippy review 29 May 2026) — via WikiTree, Trove cross-referencing\n- [[John Telfer (1840–1913)]] vault profile — children table",
-    "body_stripped": "**Born:** 9 May 1871, Black Heath, Tungkillo SA  **Died:** 29 Jul 1952, Mount Gambier SA (age 81)  **Mother:** Martha Allen  **Father:** John Telfer (1840–1913)  **Spouse:** Robert Agnew (m. 21 Dec 1892)\n\n## Family\n\n Relation  Name \n\n Self  Susan Telfer (m. Agnew) \n Father  John Telfer (1840–1913) \n Mother  Martha Allen (1840–1876) (m. 1865–1876) \n Spouse  Robert Agnew \n Brother  James Telfer (1866–1946) \n Sister  Elizabeth Telfer (1868–1950) \n Sister  Martha Telfer Cameron (1873–1964) \n\n## Life",
+    "body_markdown": "# Susan Telfer (1871–1952)\n\n> ⚠️ **Two women named Susan Telfer were born in 1871. This is NOT the other one.**\n> This page is the daughter of **John Telfer (1840–1913) & Martha Allen**, born Black Heath,\n> Tungkillo, who married **Robert Agnew** in 1892 and died 29 Jul 1952 at Mount Gambier.\n> Robert Telfer (1835–1907)'s daughter Susan — born **German Creek**, died **1954** — is a\n> different woman: [[Susan Telfer of German Creek (1871–1954)]]. Do not merge them.\n\n**Born:** 9 May 1871, Black Heath, Tungkillo SA | **Died:** 29 Jul 1952, Mount Gambier SA (age 81) | **Mother:** Martha Allen | **Father:** [[John Telfer (1840–1913)]] | **Spouse:** Robert Agnew (m. 21 Dec 1892)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Susan Telfer (m. Agnew) |\n| Father | [[John Telfer (1840–1913)]] |\n| Mother | [[Martha Allen (1840–1876)]] (m. 1865–1876) |\n| Spouse | [[Robert Agnew]] |\n| Brother | [[James Telfer (1866–1946)]] |\n| Sister | [[Elizabeth Telfer (1868–1950)]] |\n| Sister | [[Martha Telfer Cameron (1873–1964)]] |\n\n## Life Summary\n\nSusan Telfer was the third child of John Telfer and [[Martha Allen (1840–1876)]]. Born at Black Heath, Tungkillo, South Australia on 9 May 1871, she married Robert Agnew on 21 December 1892. She passed away on 29 July 1952 in Mount Gambier, South Australia at the age of 81, having outlived all her siblings from Martha Allen's line except Martha Cameron, who died twelve years later.\n\n## Family Stories\n\nSusan was the third child of John and Martha Telfer, born on 9 June 1871. She married Robert Agnew, a farmer, and they made their home first at Millicent and later at Glencoe in the South East of South Australia. Robert served on the Mt. Muirhead School Board of Advice alongside Adam Telfer. Together they raised a large family of eight children — two sons, Keith and Gilbert, and six daughters, Myrna, Gladys, Doreen, Thelma, Marjorie and Betty.\n\nSusan lived to 81 years of age and died on 29 July 1952 at the home of her eldest daughter Myrna (Mrs. Arthur Goodes) at Glencoe West. Her descendants carried the Telfer line into the next generation across the South East and beyond.\n\n*(From the Borders to the Bush, pp.237–238)*\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 9 May 1871 | Born at Black Heath, Tungkillo, South Australia |\n| 1873 | Birth of sister Martha |\n| 9 Mar 1876 | Death of mother [[Martha Allen (1840–1876)]] at German Flat, Mount Gambier |\n| 21 Dec 1892 | Married Robert Agnew |\n| 29 Jul 1952 | Died at Mount Gambier, South Australia (age 81) |\n\n## Sources\n\n- ✅ Approved Deep Research Report: \"The Descendants of John Telfer (1841–1913) of Tantanoola\" (Skippy review 29 May 2026) — via WikiTree, Trove cross-referencing\n- [[John Telfer (1840–1913)]] vault profile — children table",
+    "body_stripped": "> ⚠️ **Two women named Susan Telfer were born in 1871. This is NOT the other one.**\n> This page is the daughter of **John Telfer (1840–1913) & Martha Allen**, born Black Heath,\n> Tungkillo, who married **Robert Agnew** in 1892 and died 29 Jul 1952 at Mount Gambier.\n> Robert Telfer (1835–1907)'s daughter Susan — born **German Creek**, died **1954** — is a\n> different woman: Susan Telfer of German Creek (1871–1954). Do not merge them.\n\n**Born:** 9 May 1871, Black Heath, Tungkillo SA  **Died:** 29 ",
     "is_living": false,
     "lifespan": "1871 – 1952",
     "parents": [
@@ -24526,9 +24475,7 @@
     ],
     "siblings": [
       "clara-blanche-telfer-1883",
-      "edith-mary-kathleen-telfer",
       "elizabeth-telfer-1868",
-      "helen-telfer",
       "james-telfer-1866",
       "martha-cameron-1873",
       "James (1866–1946)",
@@ -27480,7 +27427,7 @@
     "birth_year_display": "1869",
     "death_year_display": "?",
     "display_name": "William Adam Francis Telfer",
-    "title": "William Adam Francis Telfer (b. 1869)",
+    "title": "William Adam Francis Telfer (1869–1951)",
     "tags": [
       "family",
       "telfer",
@@ -27490,7 +27437,7 @@
       {
         "type": "Self",
         "names": [
-          "William Adam Francis Telfer"
+          "William Adam Francis Telfer (1869–1951)"
         ]
       },
       {
@@ -27504,12 +27451,31 @@
         "names": [
           "Susan Burton Telfer (1844–1924)"
         ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Mildred Emily Cornelia Wilson"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Francis John Burton Telfer (1877–?)",
+          "Edith Mary Kathleen Telfer (1879–1960)",
+          "Robert Allan Burton Telfer (1882–1940)"
+        ]
       }
     ],
     "roles": [
       "Son of Robert Telfer and Susan Burton — born in the **German Creek** section of the Grey district, the birthplace later given as the family's South Australian base."
     ],
-    "body_markdown": "# William Adam Francis Telfer (b. 1869)\n\n**Role:** Son of Robert Telfer and Susan Burton — born in the **German Creek** section of the Grey district, the birthplace later given as the family's South Australian base.\n\n**Born:** 15 July 1869 — German Creek, Grey district, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Robert Telfer (1835–1907)]] |\n| **Mother** | [[Susan Burton Telfer (1844–1924)]] |\n\n## Life Summary\n\nWilliam Adam Francis Telfer was born on 15 July 1869 in the **German Creek** section of South Australia's Grey district, the son of Robert Telfer (1835–1907) and Susan Burton. His birth registration corroborates the family's long-held association with the German Creek area — a detail the 1986 booklet *A Brief Account of the First Telfer Families to Settle in SA* records (p.15) as the \"German Creek section\" from which the Robert Telfer branch later moved.\n\nHe is listed as a child of Robert and Susan in *A Brief Account*; nothing further about his adult life has yet been located.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 15 Jul 1869 | Born — German Creek, Grey district, SA |\n\n## Sources\n\n- **Source:** Genealogy SA — Birth Registrations: `TELFER, William Adam Francis — 15-Jul-1869 — father Robert TELFER, mother Susan BURTON — German Creek, Grey — 75/202` — accessed 17 Sep 2026\n- **Source:** *A Brief Account of the First Telfer Families to Settle in SA* (1986), p.15 — accessed 17 Sep 2026",
+    "body_markdown": "# William Adam Francis Telfer (1869–1951)\n\n**Role:** Son of Robert Telfer and Susan Burton — born in the **German Creek** section of the Grey district, the birthplace later given as the family's South Australian base.\n\n**Born:** 15 July 1869 — German Creek, Grey district, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Robert Telfer (1835–1907)]] |\n| **Mother** | [[Susan Burton Telfer (1844–1924)]] |\n\n## Life Summary\n\nWilliam Adam Francis Telfer was born on 15 July 1869 in the **German Creek** section of South Australia's Grey district, the son of Robert Telfer (1835–1907) and Susan Burton. His birth registration corroborates the family's long-held association with the German Creek area — a detail the 1986 booklet *A Brief Account of the First Telfer Families to Settle in SA* records (p.15) as the \"German Creek section\" from which the Robert Telfer branch later moved.\n\nHe is listed as a child of Robert and Susan in *A Brief Account*; nothing further about his adult life has yet been located.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 15 Jul 1869 | Born — German Creek, Grey district, SA |\n\n## Merged from a duplicate file (27 Oct 2026)\n\n> **Why this section exists.** A second vault file — `William Adam Francis Telfer (1869–1951).md` — was created\n> from B3 p.33 as one of Robert's nine children, and it duplicated this profile. It is now a **redirect stub**.\n> Nothing was thrown away: its unique content is here.\n\n- **Death year 1951 — LEAD ONLY, not verified.** It rests on a single printed page of\n  *A Telfer Family Tree — Supplement 2008* (B3 p.33), which the archive's standing rule treats as a **lead**, not a\n  witness. No civil registration has been read. Do **not** treat 1951 as established; add `death_year: 1951`\n  only when a registration arrives.\n- **Marriage — LEAD ONLY.** B3 p.33 names his wife as **Mildred Emily Cornelia Wilson**. No marriage\n  registration has been read and no profile exists for her yet.\n- One of the **nine children** named in their parents' 1907 obituary (*\"He left a widow, five sons, and four\n  daughters\"*, *Border Watch*, 15 January 1907) and listed identically in the family chapter.\n\n## Sources\n\n1. **Genealogy SA — Birth Registration, Grey 75/202** — `TELFER, William Adam Francis — 15-Jul-1869 — father\n   Robert TELFER, mother Susan BURTON — German Creek, Grey` — read 17 Sep 2026. *Primary. Witnesses the birth.*\n2. **A Brief Account of the First Telfer Families to Settle in SA (1986), p.15** — the \"German Creek section\".\n3. **A Telfer Family Tree — Supplement 2008 (B3), p.33** — **LEAD.** Death year 1951 and the wife's name.\n4. **Border Watch, 15 January 1907** — the parents' obituary: *\"He left a widow, five sons, and four daughters.\"*",
     "body_stripped": "**Role:** Son of Robert Telfer and Susan Burton — born in the **German Creek** section of the Grey district, the birthplace later given as the family's South Australian base.\n\n**Born:** 15 July 1869 — German Creek, Grey district, South Australia\n\n## Family\n\n Relation  Name \n\n **Father**  Robert Telfer (1835–1907) \n **Mother**  Susan Burton Telfer (1844–1924) \n\n## Life Summary\n\nWilliam Adam Francis Telfer was born on 15 July 1869 in the **German Creek** section of South Australia's Grey district,",
     "parents": [
       "robert-telfer-1835",
@@ -27518,11 +27484,17 @@
     "children": [],
     "siblings": [
       "edith-mary-kathleen-telfer",
-      "helen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
       "james-robert-telfer-1866",
-      "roland-telfer"
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek"
     ],
-    "spouses": [],
+    "spouses": [
+      "Mildred Emily Cornelia Wilson"
+    ],
     "is_living": false,
     "lifespan": "1869 – ?",
     "related_trees": [
@@ -29515,29 +29487,36 @@
       {
         "type": "Father",
         "names": [
-          "Robert Telfer (1835–1907)"
+          "John Telfer (1841–1913)"
         ]
       },
       {
         "type": "Mother",
         "names": [
-          "Susan Burton Telfer (1844–1924)"
+          "Martha Henstridge (~1854–1921)"
         ]
       }
     ],
     "roles": [],
-    "body_markdown": "# Roland John Telfer (1882–1975)\n\n> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 20 January 1882 — Tantanoola, South Australia\n**Died:** 7 March 1975 — Royal Adelaide Hospital, Adelaide, South Australia\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of the Woodlands, Yahl\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n- **Spouse:** none recorded in the tree\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.265**:\n\n> 9. Roland John TELFER, b. 20 Jan 1882 Tantanoola, d. 7 Mar 1975 RAH, Adelaide, SA\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.265:** printed entry — *9. Roland John TELFER, b. 20 Jan 1882 Tantanoola, d. 7 Mar 1975 RAH, Adelaide, SA*\n\n---",
-    "body_stripped": "> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 20 January 1882 — Tantanoola, South Australia\n**Died:** 7 March 1975 — Royal Adelaide Hospital, Adelaide, South Australia\n\n## Family\n\n- **Father:** Robert Telfer (1835–1907) — of the Woodlands, Yahl\n- **Mother:** Susan Burton Telfer (1844–1924)\n- **Spouse:** none recorded in the tree\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names",
+    "body_markdown": "# Roland John Telfer (1882–1975)\n\n> **⚠️ PARENTAGE CORRECTED 27 Oct 2026 — he is Robert Telfer's NEPHEW, not his son.**\n>\n> This page previously recorded him as a son of **Robert Telfer (1835–1907)** and\n> **Susan Burton (1844–1924)**. That was wrong. It came from a provisional,\n> single-witness reading of one line on B3 p.265 without reading the chapter\n> heading above it.\n>\n> *A Telfer Family Tree — Supplement 2008* prints his entry at **p.70/119 under the\n> heading \"John TELFER (1841–1913) m. (1) Martha Allen (2) Martha Henstridge\"**. He is\n> numbered **9** within *that* family — not the ninth child of Robert.\n>\n> **John Telfer (1841–1913)** is the **seventh child of James Telfer (1796–1863) and\n> Elizabeth Beattie** (B3 p.33: *\"7. John (1841-1913) m.1 Martha Allen m.2 Martha\n> Henstridge\"*), and is therefore **Robert Telfer's brother**. Roland John is a first\n> cousin of Robert's nine children — not one of them.\n>\n> Robert & Susan's nine children are printed separately at **B3 p.33** and do **not**\n> include him: James Robert, Elizabeth, William Adam Francis, Susan, Harriett Helen,\n> Lindsay Burton, Francis John Burton, Edith Mary Kathleen, Robert Allan Burton.\n>\n> **Consequence:** he does not appear in Robert's child list, nor in the sibling lists\n> of Edith or Harriett Helen. He remains a valid person on the tree — in the correct branch.\n\n> Stub entry written from the printed book page, 3 Oct 2026. See Sources below.\n\n## Lifespan\n\n**Born:** 20 January 1882 — Tantanoola, South Australia\n**Died:** 7 March 1975 — Royal Adelaide Hospital, Adelaide, South Australia\n\n## Family\n\n- **Father:** [[John Telfer (1841–1913)]] — Robert Telfer's brother (B3 p.70/119)\n- **Mother:** Martha Henstridge (~1854–1921) — John's second wife\n- **Spouse:** none recorded in the tree\n\n## Receipt (why this page may be admitted)\n\nThe printed page of *A Telfer Family Tree* (Supplement 2008) names this person directly at **p.265**:\n\n> 9. Roland John TELFER, b. 20 Jan 1882 Tantanoola, d. 7 Mar 1975 RAH, Adelaide, SA\n\n## Sources\n\n1. **A Telfer Family Tree (Supplement 2008), p.265:** printed entry — *9. Roland John TELFER, b. 20 Jan 1882 Tantanoola, d. 7 Mar 1975 RAH, Adelaide, SA*\n\n---",
+    "body_stripped": "> **⚠️ PARENTAGE CORRECTED 27 Oct 2026 — he is Robert Telfer's NEPHEW, not his son.**\n>\n> This page previously recorded him as a son of **Robert Telfer (1835–1907)** and\n> **Susan Burton (1844–1924)**. That was wrong. It came from a provisional,\n> single-witness reading of one line on B3 p.265 without reading the chapter\n> heading above it.\n>\n> *A Telfer Family Tree — Supplement 2008* prints his entry at **p.70/119 under the\n> heading \"John TELFER (1841–1913) m. (1) Martha Allen (2) Martha Henst",
     "parents": [
-      "robert-telfer-1835",
-      "susan-telfer-1844"
+      "john-telfer-1840",
+      "martha-henstridge-1854"
     ],
     "children": [],
     "siblings": [
-      "edith-mary-kathleen-telfer",
-      "helen-telfer",
-      "james-robert-telfer-1866",
-      "william-telfer"
+      "alan-telfer-1890",
+      "charles-telfer-1875",
+      "clara-blanche-telfer-1883",
+      "colin-telfer-1889",
+      "douglas-telfer-1887",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "maria-clara-telfer-1878",
+      "marian-cornish-1896",
+      "mark-telfer-1877",
+      "robert-telfer-1886"
     ],
     "spouses": [],
     "step_parents": [],
@@ -35655,6 +35634,528 @@
     "images": [],
     "person_photo": null,
     "generation": 6
+  },
+  {
+    "id": "Francis John Burton Telfer (1877)",
+    "slug": "francis-john-burton-telfer",
+    "vault_file": "Francis John Burton Telfer (1877–?).md",
+    "first_name": "Francis John Burton",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1877,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1877",
+    "death_year_display": "?",
+    "display_name": "Francis John Burton Telfer",
+    "title": "Francis John Burton Telfer (1877–?)",
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Francis John Burton Telfer (1877–?)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Robert Telfer (1835–1907)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Susan Burton Telfer (1844–1924)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Edith Mary Kathleen Telfer (1879–1960)",
+          "Robert Allan Burton Telfer (1882–1940)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Francis John Burton Telfer (1877–?)\n\n> ⚠️ **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1877 — Moorak, South Australia\n- **Died:** unknown — the chapter list prints only \"(1877- )\"\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of *Carlowrie*, Yahl; formerly Woodlands\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n\nOne of the **nine children** named in their parents' 1907 obituary (*\"He left a widow,\nfive sons, and four daughters\"*) and listed identically in the family chapter.\n\n## What is still unknown\n\nDeath date is blank in the source itself, not lost in OCR. Known in the family as **\"Jack\"** (per Robert Telfer's record), but that nickname is not printed on the page read.\n\n## Sources\n\n1. **A Telfer Family Tree — Supplement 2008 (B3), p.33** — the parents' family list:\n   *\"Robert and Susan had a family of 9 children — James Robert (b. 1866 Mt Gambier, SA),\n   Elizabeth (b. 1868), William Adam Francis (b.1869 German Ck, SA), Susan (b.1871 German\n   Ck, SA), Harriett Helen (b.1873 German Ck, SA), Lindsay Burton (b.1875 German Ck, SA),\n   Francis John Burton (b.1877 Moorak, SA), Edith Mary Kathleen (b.1879 Moorak, SA) and\n   Robert Allan Burton (b.1882 Moorak, SA).\"*\n2. **B3 p.33, chapter list** — the numbered entries giving each death date and spouse.\n3. **Parent's obituary** — *Border Watch*, 15 January 1907: *\"He left a widow, five sons,\n   and four daughters.\"* Names the count, not the individuals.",
+    "body_stripped": "> ⚠️ **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1877 — Moorak, South Australia\n- **Died:** unknown — the chapter list prints only \"(1877- )\"\n\n## Family\n\n- **Father:** Ro",
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "siblings": [
+      "edith-mary-kathleen-telfer",
+      "elizabeth-rowbotham",
+      "harriett-helen-telfer",
+      "james-robert-telfer-1866",
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek",
+      "william-telfer"
+    ],
+    "spouses": [],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "lifespan": "1877 – ?",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Harriett Helen Telfer (1873)",
+    "slug": "harriett-helen-telfer",
+    "vault_file": "Harriett Helen Telfer (1873–1929).md",
+    "first_name": "Harriett Helen",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1873,
+    "death_year": 1929,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1873",
+    "death_year_display": "1929",
+    "display_name": "Harriett Helen Telfer",
+    "title": "Harriett Helen Telfer (1873–1929)",
+    "tags": [
+      "family",
+      "ancestor"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Harriett Helen Telfer (1873–1929)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Robert Telfer (1835–1907)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Susan Burton Telfer (1844–1924)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "George Banks Renfrey"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Francis John Burton Telfer (1877–?)",
+          "Edith Mary Kathleen Telfer (1879–1960)",
+          "Robert Allan Burton Telfer (1882–1940)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Harriett Helen “Nell” Telfer (1873–1929)\n\n## Provenance note\n\nThis profile was created as a stub on 2026-06-20 with a bare `Self:` relationship line and no parents, no dates and no sources.\n\n**Identity resolved 2026-10-27.** This stub was titled **“Helen Telfer”** with a bare `Self:` line, no parentage, no dates and no sources. She is **Harriett Helen Telfer, known as Nell** — the “Harriett Helen (b.1873 German Ck, SA)” of her parents’ family list in *A Telfer Family Tree — Supplement 2008* (B3 p.33), and the “Helen” her father’s 1907 obituary counts among four daughters (*Border Watch*, 15 January 1907: *“He left a widow, five sons, and four daughters.”*). **Dates: 1873–1929.** She married **George Banks Renfrey**.\n\n> ⚠️ **A stale error removed here.** The previous version of this note gave her dates as **1879–1960** — those are her sister **Edith Mary Kathleen**’s dates, copied across when the stub was written. Harriett Helen was born 1873 and died 1929. Frontmatter was already correct; the prose was not.\n\nThe mother is **Susan Burton Telfer (1844–1924)**, Robert’s wife.\n\n**Superseded 27 Oct 2026.** This note said Robert Allan Burton Telfer and Francis John “Jack” Burton Telfer\nhad no profiles. **They both have pages now** — [[Robert Allan Burton Telfer (1882–1940)]] and\n[[Francis John Burton Telfer (1877–?)]] — and both appear in the `relationships` line above. All nine of\nRobert and Susan’s children are now pages. Kept here rather than deleted so the change is visible.\n\n**Still unverified — do not treat as fact:**\n- The birth/death years **1879–1960** rest on Robert's profile alone and have not been checked against an SA civil registration. A Genealogy SA BDM pull for Edith Mary Kathleen Telfer, c.1879, is the outstanding work.\n- No marriage or issue is recorded here. If she married, her married name is unknown and a Rowbotham/Renfrey-style name trap (see `work/Leads.md`) may apply.\n- This stub previously carried the tag `non-telfer`, which contradicts every other record of her. The tag has been **removed**, not silently: she is recorded as a Telfer daughter by her father's own record and his obituary.",
+    "body_stripped": "## Provenance note\n\nThis profile was created as a stub on 2026-06-20 with a bare `Self:` relationship line and no parents, no dates and no sources.\n\n**Identity resolved 2026-10-27.** This stub was titled **“Helen Telfer”** with a bare `Self:` line, no parentage, no dates and no sources. She is **Harriett Helen Telfer, known as Nell** — the “Harriett Helen (b.1873 German Ck, SA)” of her parents’ family list in *A Telfer Family Tree — Supplement 2008* (B3 p.33), and the “Helen” her father’s 1907 o",
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "siblings": [
+      "edith-mary-kathleen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "james-robert-telfer-1866",
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek",
+      "william-telfer"
+    ],
+    "spouses": [
+      "George Banks Renfrey"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "lifespan": "1873 – 1929",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Lindsay Burton Telfer (1875)",
+    "slug": "lindsay-burton-telfer",
+    "vault_file": "Lindsay Burton Telfer (1875–1943).md",
+    "first_name": "Lindsay Burton",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1875,
+    "death_year": 1943,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1875",
+    "death_year_display": "1943",
+    "display_name": "Lindsay Burton Telfer",
+    "title": "Lindsay Burton Telfer (1875–1943)",
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Lindsay Burton Telfer (1875–1943)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Robert Telfer (1835–1907)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Susan Burton Telfer (1844–1924)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Francis John Burton Telfer (1877–?)",
+          "Edith Mary Kathleen Telfer (1879–1960)",
+          "Robert Allan Burton Telfer (1882–1940)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Lindsay Burton Telfer (1875–1943)\n\n> ⚠️ **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1875 — German Creek, South Australia\n- **Died:** 1943\n- **No spouse or issue printed** on the pages read.\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of *Carlowrie*, Yahl; formerly Woodlands\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n\nOne of the **nine children** named in their parents' 1907 obituary (*\"He left a widow,\nfive sons, and four daughters\"*) and listed identically in the family chapter.\n\n## What is still unknown\n\n**Do not confuse him with Lindsay Roland Telfer (1920–1976)**, son of Mark Telfer 1877 and Julia Matilda Seebohm, or with Lindsay Ellis Stribling. Three different men carry 'Lindsay' in this tree. He is Robert's son; Lindsay Roland is a cousin.\n\n## Sources\n\n1. **A Telfer Family Tree — Supplement 2008 (B3), p.33** — the parents' family list:\n   *\"Robert and Susan had a family of 9 children — James Robert (b. 1866 Mt Gambier, SA),\n   Elizabeth (b. 1868), William Adam Francis (b.1869 German Ck, SA), Susan (b.1871 German\n   Ck, SA), Harriett Helen (b.1873 German Ck, SA), Lindsay Burton (b.1875 German Ck, SA),\n   Francis John Burton (b.1877 Moorak, SA), Edith Mary Kathleen (b.1879 Moorak, SA) and\n   Robert Allan Burton (b.1882 Moorak, SA).\"*\n2. **B3 p.33, chapter list** — the numbered entries giving each death date and spouse.\n3. **Parent's obituary** — *Border Watch*, 15 January 1907: *\"He left a widow, five sons,\n   and four daughters.\"* Names the count, not the individuals.",
+    "body_stripped": "> ⚠️ **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1875 — German Creek, South Australia\n- **Died:** 1943\n- **No spouse or issue printed** on the pages read.\n\n## Family\n\n- *",
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "siblings": [
+      "edith-mary-kathleen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
+      "james-robert-telfer-1866",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek",
+      "william-telfer"
+    ],
+    "spouses": [],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "lifespan": "1875 – 1943",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Elizabeth Rowbotham (1868)",
+    "slug": "elizabeth-rowbotham",
+    "vault_file": "Elizabeth Rowbotham (1868–1908).md",
+    "first_name": "Elizabeth",
+    "middle_name": null,
+    "last_name": "Rowbotham",
+    "birth_year": 1868,
+    "death_year": 1908,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1868",
+    "death_year_display": "1908",
+    "display_name": "Elizabeth Rowbotham",
+    "title": "Elizabeth Rowbotham (1868–1908)",
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Elizabeth Rowbotham (1868–1908)"
+        ]
+      },
+      {
+        "type": "Birth name",
+        "names": [
+          "Elizabeth Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Robert Telfer (1835–1907)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Susan Burton Telfer (1844–1924)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Charles Winterbotham Rowbotham"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "James Robert Telfer (1866–1930)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Francis John Burton Telfer (1877–?)",
+          "Edith Mary Kathleen Telfer (1879–1960)",
+          "Robert Allan Burton Telfer (1882–1940)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Elizabeth Rowbotham (1868–1908)\n\n**Born Elizabeth Telfer**, daughter of [[Robert Telfer (1835–1907)]] and\n[[Susan Burton Telfer (1844–1924)]]. Married **Charles Winterbotham Rowbotham**; seven children.\n\n> **Name note — why this page is titled with her married name.**\n> She is **Elizabeth Telfer (1868–1908)**. But the vault also holds a *different* woman,\n> **[[Elizabeth Telfer (1868–1950)]]** — daughter of John Telfer (1840–1913) and Martha Allen, who\n> married Edwin Ernest Clarke. Two cousins, same name, **same birth year**, different branches.\n> The build derives a page's identity from `first_name` + `last_name`, so both women slugged to\n> `elizabeth-telfer-1868` and one silently displaced the other in the data.\n>\n> Her **married name is therefore carried in `last_name`** (`Rowbotham`), not just in the filename:\n> a filename alone changes nothing, because the build ignores it. That makes her display name —\n> `Elizabeth Rowbotham` — unique, so every reference to her resolves in one hop instead of\n> falling through to the resolver's namesake fan-out, where a birth-year-only match picks the\n> wrong Elizabeth. **This is a disambiguation, not a claim about how she was known.** Her\n> birth name is recorded above and in frontmatter (`birth_name`).\n>\n> **Do not \"correct\" `last_name` back to `Telfer`.** That reintroduces a data-loss collision.\n> The general rule this generalises to is in the Corrections Log.\n\n> ⚠️ **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1868 — place not printed (her siblings' births are given as Mt Gambier / German Creek / Moorak)\n- **Died:** 1908\n- **Married:** Charles Winterbotham **Rowbotham** — seven children, per the chapter list\n- **No issue recorded on this page** — the seven children are not named in the source read.\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of *Carlowrie*, Yahl; formerly Woodlands\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n\nOne of the **nine children** named in their parents' 1907 obituary (*\"He left a widow,\nfive sons, and four daughters\"*) and listed identically in the family chapter.\n\n## What is still unknown\n\nShe died at 40 and left seven children. The Rowbotham descendants are the largest single unrecorded line from Robert's nine, and the name is a known trap: **Rowbotham**, not Robinson or Rothwell.\n\n## Sources\n\n1. **A Telfer Family Tree — Supplement 2008 (B3), p.33** — the parents' family list:\n   *\"Robert and Susan had a family of 9 children — James Robert (b. 1866 Mt Gambier, SA),\n   Elizabeth (b. 1868), William Adam Francis (b.1869 German Ck, SA), Susan (b.1871 German\n   Ck, SA), Harriett Helen (b.1873 German Ck, SA), Lindsay Burton (b.1875 German Ck, SA),\n   Francis John Burton (b.1877 Moorak, SA), Edith Mary Kathleen (b.1879 Moorak, SA) and\n   Robert Allan Burton (b.1882 Moorak, SA).\"*\n2. **B3 p.33, chapter list** — the numbered entries giving each death date and spouse.\n3. **Parent's obituary** — *Border Watch*, 15 January 1907: *\"He left a widow, five sons,\n   and four daughters.\"* Names the count, not the individuals.",
+    "body_stripped": "**Born Elizabeth Telfer**, daughter of Robert Telfer (1835–1907) and\nSusan Burton Telfer (1844–1924). Married **Charles Winterbotham Rowbotham**; seven children.\n\n> **Name note — why this page is titled with her married name.**\n> She is **Elizabeth Telfer (1868–1908)**. But the vault also holds a *different* woman,\n> **Elizabeth Telfer (1868–1950)** — daughter of John Telfer (1840–1913) and Martha Allen, who\n> married Edwin Ernest Clarke. Two cousins, same name, **same birth year**, different br",
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "siblings": [
+      "edith-mary-kathleen-telfer",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
+      "james-robert-telfer-1866",
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "susan-telfer-of-german-creek",
+      "william-telfer"
+    ],
+    "spouses": [
+      "Charles Winterbotham Rowbotham"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "lifespan": "1868 – 1908",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Robert Allan Burton Telfer (1882)",
+    "slug": "robert-allan-burton-telfer",
+    "vault_file": "Robert Allan Burton Telfer (1882–1940).md",
+    "first_name": "Robert Allan Burton",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1882,
+    "death_year": 1940,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1882",
+    "death_year_display": "1940",
+    "display_name": "Robert Allan Burton Telfer",
+    "title": "Robert Allan Burton Telfer (1882–1940)",
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Robert Allan Burton Telfer (1882–1940)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Robert Telfer (1835–1907)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Susan Burton Telfer (1844–1924)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Isabella Thomson"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Susan Telfer of German Creek (1871–1954)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Francis John Burton Telfer (1877–?)",
+          "Edith Mary Kathleen Telfer (1879–1960)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Robert Allan Burton Telfer (1882–1940)\n\n> **Created 27 Oct 2026 — the ninth child had no page.** Every one of his eight siblings'\n> profiles already named him, and his own parents' records carry him, but there was no file\n> for him. This is the page those references needed.\n\n> ⚠️ **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1882 — Moorak, South Australia\n- **Died:** 1940 — recorded elsewhere in the vault as **Sydney, New South Wales**\n- **Married:** **Isabella Thomson** — no date recorded\n- **No issue printed** in the pages read.\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of *Carlowrie*, Yahl; formerly Woodlands\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n\nThe **youngest** of the nine children, and the only one of the sons born at Moorak — the\nstation his father managed for the Browne family for over fifty years. He was **twenty-four\nyears old when his father died** in January 1907.\n\nOne of the **nine children** named in their parents' 1907 obituary (*\"He left a widow,\nfive sons, and four daughters\"*) and listed identically in the family chapter.\n\n## What is still unknown\n\n**Everything about his life after 1907.** The only post-1907 fact recorded anywhere in this\nvault is that he died in Sydney in 1940 — and a New South Wales death is *not* in the South\nAustralian index, which is where this branch's registrations have been read. His marriage to\n**Isabella Thomson**, any children, and his reason for leaving South Australia are all\nunresearched. A NSW death registration and a Trove search of the Sydney papers for late 1940\nare the two obvious next moves.\n\n## Sources\n\n1. **A Telfer Family Tree — Supplement 2008 (B3), p.33** — the parents' family list:\n   *\"Robert and Susan had a family of 9 children — James Robert (b. 1866 Mt Gambier, SA),\n   Elizabeth (b. 1868), William Adam Francis (b.1869 German Ck, SA), Susan (b.1871 German\n   Ck, SA), Harriett Helen (b.1873 German Ck, SA), Lindsay Burton (b.1875 German Ck, SA),\n   Francis John Burton (b.1877 Moorak, SA), Edith Mary Kathleen (b.1879 Moorak, SA) and\n   Robert Allan Burton (b.1882 Moorak, SA).\"*\n2. **B3 p.33, chapter list** — the numbered entries giving each death date and spouse.\n3. **Parent's obituary** — *Border Watch*, 15 January 1907: *\"He left a widow, five sons,\n   and four daughters.\"* Names the count, not the individuals.\n4. **Edith Mary Kathleen Telfer's vault page** — records the Sydney 1940 death and the\n   marriage to Isabella Thomson; itself a B3-derived lead.",
+    "body_stripped": "> **Created 27 Oct 2026 — the ninth child had no page.** Every one of his eight siblings'\n> profiles already named him, and his own parents' records carry him, but there was no file\n> for him. This is the page those references needed.\n\n> ⚠️ **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified",
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "siblings": [
+      "edith-mary-kathleen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
+      "james-robert-telfer-1866",
+      "lindsay-burton-telfer",
+      "susan-telfer-of-german-creek",
+      "william-telfer"
+    ],
+    "spouses": [
+      "Isabella Thomson"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "lifespan": "1882 – 1940",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Susan Telfer of German Creek (1871)",
+    "slug": "susan-telfer-of-german-creek",
+    "vault_file": "Susan Telfer of German Creek (1871–1954).md",
+    "first_name": "Susan",
+    "middle_name": null,
+    "last_name": "Telfer of German Creek",
+    "birth_year": 1871,
+    "death_year": 1954,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1871",
+    "death_year_display": "1954",
+    "display_name": "Susan Telfer of German Creek",
+    "title": "Susan Telfer of German Creek (1871–1954)",
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Susan Telfer of German Creek (1871–1954)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Robert Telfer (1835–1907)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Susan Burton Telfer (1844–1924)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "James Robert Telfer (1866–1930)",
+          "Elizabeth Rowbotham (1868–1908)",
+          "William Adam Francis Telfer (1869–1951)",
+          "Harriett Helen Telfer (1873–1929)",
+          "Lindsay Burton Telfer (1875–1943)",
+          "Francis John Burton Telfer (1877–?)",
+          "Edith Mary Kathleen Telfer (1879–1960)",
+          "Robert Allan Burton Telfer (1882–1940)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Susan Telfer of German Creek (1871–1954)\n\n> **Created 27 Oct 2026 — she had no page, and the name she shares caused a contamination.**\n> Robert Telfer (1835–1907)'s fourth child was named in every sibling's profile and in both\n> parents' records, but no file existed for her. Worse, the refs written for her —\n> \"Susan Telfer (1871–1954)\" — resolved to a **different woman**: [[Susan Telfer (1871–1952)]],\n> daughter of John Telfer (1840–1913) and Martha Allen, born Black Heath, Tungkillo, who\n> married Robert Agnew. Same name, same birth year, **different branch**. This page gives\n> Robert's daughter her own identity and a slug that cannot collide.\n\n> ⚠️ **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1871 — **German Creek**, South Australia *(B3 p.33)*\n- **Died:** 1954 *(B3 p.33 lists her as 1871–1954; no place or exact date printed on the page read)*\n- **Marriage / issue:** **not printed** on the page read. None recorded here — absence of a\n  record is not evidence that she never married.\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of *Carlowrie*, Yahl; formerly Woodlands\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n- **Siblings (8):** [[James Robert Telfer (1866–1930)]] · [[Elizabeth Rowbotham (1868–1908)]] ·\n  [[William Adam Francis Telfer (b. 1869)]] · [[Harriett Helen Telfer (1873–1929)]] ·\n  [[Lindsay Burton Telfer (1875–1943)]] · [[Francis John Burton Telfer (1877–?)]] ·\n  [[Edith Mary Kathleen Telfer (1879–1960)]] · [[Robert Allan Burton Telfer (1882–1940)]]\n\n## 🔴 NOT the same Susan Telfer as the Tungkillo woman\n\nTwo women, both Susan Telfer, both born 1871, different branches. They must never be merged.\n\n| | This page | The other woman |\n|---|---|---|\n| Born | 1871, **German Creek** | 9 May 1871, **Black Heath, Tungkillo** |\n| Father | **Robert** Telfer (1835–1907) | **John** Telfer (1840–1913) & Martha Allen |\n| Married | not printed | **Robert Agnew**, 21 Dec 1892 |\n| Died | 1954 | 29 Jul 1952, Mount Gambier |\n| Page | this one | [[Susan Telfer (1871–1952)]] |\n\nThe two are distinguishable **only** by parentage and birthplace — the name and birth year\nare identical. Any reference that does not carry her parentage is ambiguous and must not be\nresolved to either woman by guesswork.\n\n## Sources\n\n1. *A Telfer Family Tree — Supplement 2008* (B3), **p.33** — \"Family of ROBERT TELFER and SUSAN\n   BURTON\", child no. 4: \"Susan Telfer (1871–1954)\", and the chapter text naming\n   \"Susan (b.1871 German Ck, SA)\". **LEAD ONLY** — a single printed page.",
+    "body_stripped": "> **Created 27 Oct 2026 — she had no page, and the name she shares caused a contamination.**\n> Robert Telfer (1835–1907)'s fourth child was named in every sibling's profile and in both\n> parents' records, but no file existed for her. Worse, the refs written for her —\n> \"Susan Telfer (1871–1954)\" — resolved to a **different woman**: Susan Telfer (1871–1952),\n> daughter of John Telfer (1840–1913) and Martha Allen, born Black Heath, Tungkillo, who\n> married Robert Agnew. Same name, same birth year,",
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "siblings": [
+      "edith-mary-kathleen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
+      "james-robert-telfer-1866",
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "william-telfer"
+    ],
+    "spouses": [],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "lifespan": "1871 – 1954",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
   },
   {
     "id": "Kelson Telfer (1946)",

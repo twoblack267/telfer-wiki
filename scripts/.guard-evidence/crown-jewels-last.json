@@ -1,49 +1,58 @@
 {
-  "checkedAt": "2026-10-26T19:58:19.786Z",
+  "checkedAt": "2026-10-26T23:24:14.543Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 516,
-    "after": 523
+    "before": 523,
+    "after": 528
   },
   "crownJewelsChecked": 5,
-  "renames": [],
+  "renames": [
+    {
+      "from": "helen-telfer",
+      "to": "harriett-helen-telfer",
+      "name": "Helen Telfer"
+    }
+  ],
   "failures": [],
   "warnings": [
     {
       "kind": "FIELD_SHRANK",
-      "slug": "clara-ann-millicent-telfer-1878",
-      "name": "Clara Ann Millicent Telfer",
-      "field": "children",
-      "before": 5,
-      "after": 4,
-      "lost": 1,
+      "slug": "elizabeth-telfer-1868",
+      "name": "Elizabeth Telfer",
+      "field": "siblings",
+      "before": 9,
+      "after": 7,
+      "lost": 2,
       "lostEntries": [
-        "Millicent Joyce Telfer"
+        "edith-mary-kathleen-telfer",
+        "helen-telfer"
       ]
     },
     {
       "kind": "FIELD_SHRANK",
-      "slug": "francis-adam-telfer-1875",
-      "name": "Francis Adam Telfer",
-      "field": "children",
-      "before": 5,
-      "after": 4,
-      "lost": 1,
+      "slug": "lindsay-telfer-1920",
+      "name": "Lindsay Roland Telfer",
+      "field": "siblings",
+      "before": 8,
+      "after": 6,
+      "lost": 2,
       "lostEntries": [
-        "Millicent Joyce Telfer"
+        "edith-mary-kathleen-telfer",
+        "helen-telfer"
       ]
     },
     {
       "kind": "FIELD_SHRANK",
-      "slug": "john-telfer-1840",
-      "name": "John Telfer",
-      "field": "children",
-      "before": 17,
-      "after": 16,
-      "lost": 1,
+      "slug": "susan-telfer-1871",
+      "name": "Susan Telfer",
+      "field": "siblings",
+      "before": 9,
+      "after": 7,
+      "lost": 2,
       "lostEntries": [
-        "Martha Telfer (1873–?)"
+        "edith-mary-kathleen-telfer",
+        "helen-telfer"
       ]
     }
   ]

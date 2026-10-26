@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "from": "helen-telfer",
+    "to": "harriett-helen-telfer",
+    "matched_by": "removed-declared",
+    "display_name": "Helen Telfer",
+    "reason": "Vault-file RENAME, not a removal. The note 'Helen Telfer.md' was renamed to 'Harriett Helen Telfer (1873–1929).md' in vault commit f1463f6 (2026-10-27) when Robert Telfer (1835–1907)'s nine children were corrected. The person is unchanged; only the filename and the recorded given names were corrected to her full name. The old live URL must resolve to the renamed page."
+  }
+]

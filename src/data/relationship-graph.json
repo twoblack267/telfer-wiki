@@ -312,7 +312,7 @@
     },
     {
       "slug": "edith-mary-kathleen-telfer",
-      "id": "Edith Mary Kathleen Telfer",
+      "id": "Edith Mary Kathleen Telfer (1879)",
       "generation": 5
     },
     {
@@ -653,11 +653,6 @@
     {
       "slug": "hazel-rose-telfer-1891",
       "id": "Hazel Rose Telfer (1891)",
-      "generation": 5
-    },
-    {
-      "slug": "helen-telfer",
-      "id": "Helen Telfer",
       "generation": 5
     },
     {
@@ -2236,6 +2231,36 @@
       "generation": 6
     },
     {
+      "slug": "francis-john-burton-telfer",
+      "id": "Francis John Burton Telfer (1877)",
+      "generation": 5
+    },
+    {
+      "slug": "harriett-helen-telfer",
+      "id": "Harriett Helen Telfer (1873)",
+      "generation": 5
+    },
+    {
+      "slug": "lindsay-burton-telfer",
+      "id": "Lindsay Burton Telfer (1875)",
+      "generation": 5
+    },
+    {
+      "slug": "elizabeth-rowbotham",
+      "id": "Elizabeth Rowbotham (1868)",
+      "generation": 5
+    },
+    {
+      "slug": "robert-allan-burton-telfer",
+      "id": "Robert Allan Burton Telfer (1882)",
+      "generation": 5
+    },
+    {
+      "slug": "susan-telfer-of-german-creek",
+      "id": "Susan Telfer of German Creek (1871)",
+      "generation": 5
+    },
+    {
       "slug": "kelson-telfer-1946",
       "id": "Kelson Telfer (1946)",
       "generation": 7
@@ -3325,14 +3350,6 @@
       {
         "from": "margaret-telfer-1849",
         "to": "hazel-rose-telfer-1891"
-      },
-      {
-        "from": "robert-telfer-1835",
-        "to": "helen-telfer"
-      },
-      {
-        "from": "susan-telfer-1844",
-        "to": "helen-telfer"
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
@@ -4567,11 +4584,11 @@
         "to": "keith-telfer"
       },
       {
-        "from": "robert-telfer-1835",
+        "from": "john-telfer-1840",
         "to": "roland-telfer"
       },
       {
-        "from": "susan-telfer-1844",
+        "from": "martha-henstridge-1854",
         "to": "roland-telfer"
       },
       {
@@ -5061,6 +5078,54 @@
       {
         "from": "james-telfer-1858",
         "to": "rose-telfer"
+      },
+      {
+        "from": "robert-telfer-1835",
+        "to": "francis-john-burton-telfer"
+      },
+      {
+        "from": "susan-telfer-1844",
+        "to": "francis-john-burton-telfer"
+      },
+      {
+        "from": "robert-telfer-1835",
+        "to": "harriett-helen-telfer"
+      },
+      {
+        "from": "susan-telfer-1844",
+        "to": "harriett-helen-telfer"
+      },
+      {
+        "from": "robert-telfer-1835",
+        "to": "lindsay-burton-telfer"
+      },
+      {
+        "from": "susan-telfer-1844",
+        "to": "lindsay-burton-telfer"
+      },
+      {
+        "from": "robert-telfer-1835",
+        "to": "elizabeth-rowbotham"
+      },
+      {
+        "from": "susan-telfer-1844",
+        "to": "elizabeth-rowbotham"
+      },
+      {
+        "from": "robert-telfer-1835",
+        "to": "robert-allan-burton-telfer"
+      },
+      {
+        "from": "susan-telfer-1844",
+        "to": "robert-allan-burton-telfer"
+      },
+      {
+        "from": "robert-telfer-1835",
+        "to": "susan-telfer-of-german-creek"
+      },
+      {
+        "from": "susan-telfer-1844",
+        "to": "susan-telfer-of-german-creek"
       },
       {
         "from": "francis-telfer-1910",
@@ -5963,6 +6028,10 @@
         "to": "robert-telfer-1886"
       },
       {
+        "from": "alan-telfer-1890",
+        "to": "roland-telfer"
+      },
+      {
         "from": "albert-telfer-1881",
         "to": "bertha-telfer"
       },
@@ -6391,6 +6460,10 @@
         "to": "robert-telfer-1886"
       },
       {
+        "from": "charles-telfer-1875",
+        "to": "roland-telfer"
+      },
+      {
         "from": "charlotte-beven-1906",
         "to": "gwinfred-hucks-1908"
       },
@@ -6437,6 +6510,10 @@
       {
         "from": "clara-blanche-telfer-1883",
         "to": "robert-telfer-1886"
+      },
+      {
+        "from": "clara-blanche-telfer-1883",
+        "to": "roland-telfer"
       },
       {
         "from": "clara-blanche-telfer-1883",
@@ -6505,6 +6582,10 @@
       {
         "from": "colin-telfer-1889",
         "to": "robert-telfer-1886"
+      },
+      {
+        "from": "colin-telfer-1889",
+        "to": "roland-telfer"
       },
       {
         "from": "daisy-vera-latter-1886",
@@ -6599,12 +6680,20 @@
         "to": "robert-telfer-1886"
       },
       {
-        "from": "edith-mary-kathleen-telfer",
-        "to": "elizabeth-telfer-1868"
+        "from": "douglas-telfer-1887",
+        "to": "roland-telfer"
       },
       {
         "from": "edith-mary-kathleen-telfer",
-        "to": "helen-telfer"
+        "to": "elizabeth-rowbotham"
+      },
+      {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "francis-john-burton-telfer"
+      },
+      {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "harriett-helen-telfer"
       },
       {
         "from": "edith-mary-kathleen-telfer",
@@ -6612,15 +6701,15 @@
       },
       {
         "from": "edith-mary-kathleen-telfer",
-        "to": "lindsay-telfer-1920"
+        "to": "lindsay-burton-telfer"
       },
       {
         "from": "edith-mary-kathleen-telfer",
-        "to": "roland-telfer"
+        "to": "robert-allan-burton-telfer"
       },
       {
         "from": "edith-mary-kathleen-telfer",
-        "to": "susan-telfer-1871"
+        "to": "susan-telfer-of-german-creek"
       },
       {
         "from": "edith-mary-kathleen-telfer",
@@ -6885,10 +6974,6 @@
       {
         "from": "elizabeth-paynter-1864",
         "to": "thomas-paynter-1859"
-      },
-      {
-        "from": "elizabeth-telfer-1868",
-        "to": "helen-telfer"
       },
       {
         "from": "elizabeth-telfer-1868",
@@ -7543,26 +7628,6 @@
         "to": "violet-hope-telfer-1883"
       },
       {
-        "from": "helen-telfer",
-        "to": "james-robert-telfer-1866"
-      },
-      {
-        "from": "helen-telfer",
-        "to": "lindsay-telfer-1920"
-      },
-      {
-        "from": "helen-telfer",
-        "to": "roland-telfer"
-      },
-      {
-        "from": "helen-telfer",
-        "to": "susan-telfer-1871"
-      },
-      {
-        "from": "helen-telfer",
-        "to": "william-telfer"
-      },
-      {
         "from": "henry-hatch-dillon-1866",
         "to": "james-dillon-1861"
       },
@@ -7661,6 +7726,10 @@
       {
         "from": "isabella-telfer-1880",
         "to": "robert-telfer-1886"
+      },
+      {
+        "from": "isabella-telfer-1880",
+        "to": "roland-telfer"
       },
       {
         "from": "isabella-mabel-parker-carne-1895",
@@ -7784,7 +7853,15 @@
       },
       {
         "from": "james-robert-telfer-1866",
-        "to": "roland-telfer"
+        "to": "lindsay-burton-telfer"
+      },
+      {
+        "from": "james-robert-telfer-1866",
+        "to": "robert-allan-burton-telfer"
+      },
+      {
+        "from": "james-robert-telfer-1866",
+        "to": "susan-telfer-of-german-creek"
       },
       {
         "from": "james-robert-telfer-1866",
@@ -7995,6 +8072,10 @@
         "to": "robert-telfer-1886"
       },
       {
+        "from": "john-telfer-1882",
+        "to": "roland-telfer"
+      },
+      {
         "from": "john-telfer-1805",
         "to": "margaret-telfer-1801"
       },
@@ -8167,6 +8248,10 @@
         "to": "robert-telfer-1886"
       },
       {
+        "from": "maria-clara-telfer-1878",
+        "to": "roland-telfer"
+      },
+      {
         "from": "marian-cornish-1896",
         "to": "mark-telfer-1877"
       },
@@ -8175,8 +8260,16 @@
         "to": "robert-telfer-1886"
       },
       {
+        "from": "marian-cornish-1896",
+        "to": "roland-telfer"
+      },
+      {
         "from": "mark-telfer-1877",
         "to": "robert-telfer-1886"
+      },
+      {
+        "from": "mark-telfer-1877",
+        "to": "roland-telfer"
       },
       {
         "from": "martha-masters-1839",
@@ -8261,6 +8354,10 @@
       {
         "from": "reginald-masters-telfer-1922",
         "to": "ruth-telfer-1931"
+      },
+      {
+        "from": "robert-telfer-1886",
+        "to": "roland-telfer"
       },
       {
         "from": "robert-telfer-1803",
@@ -8401,10 +8498,6 @@
       {
         "from": "lillian-telfer",
         "to": "violet-hope-telfer-1883"
-      },
-      {
-        "from": "roland-telfer",
-        "to": "william-telfer"
       },
       {
         "from": "basil-telfer",
@@ -9013,6 +9106,102 @@
       {
         "from": "millicent-telfer",
         "to": "rose-telfer"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "harriett-helen-telfer"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "james-robert-telfer-1866"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "lindsay-burton-telfer"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "robert-allan-burton-telfer"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "susan-telfer-of-german-creek"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "william-telfer"
+      },
+      {
+        "from": "harriett-helen-telfer",
+        "to": "james-robert-telfer-1866"
+      },
+      {
+        "from": "harriett-helen-telfer",
+        "to": "lindsay-burton-telfer"
+      },
+      {
+        "from": "harriett-helen-telfer",
+        "to": "robert-allan-burton-telfer"
+      },
+      {
+        "from": "harriett-helen-telfer",
+        "to": "susan-telfer-of-german-creek"
+      },
+      {
+        "from": "harriett-helen-telfer",
+        "to": "william-telfer"
+      },
+      {
+        "from": "lindsay-burton-telfer",
+        "to": "robert-allan-burton-telfer"
+      },
+      {
+        "from": "lindsay-burton-telfer",
+        "to": "susan-telfer-of-german-creek"
+      },
+      {
+        "from": "lindsay-burton-telfer",
+        "to": "william-telfer"
+      },
+      {
+        "from": "elizabeth-rowbotham",
+        "to": "francis-john-burton-telfer"
+      },
+      {
+        "from": "elizabeth-rowbotham",
+        "to": "harriett-helen-telfer"
+      },
+      {
+        "from": "elizabeth-rowbotham",
+        "to": "james-robert-telfer-1866"
+      },
+      {
+        "from": "elizabeth-rowbotham",
+        "to": "lindsay-burton-telfer"
+      },
+      {
+        "from": "elizabeth-rowbotham",
+        "to": "robert-allan-burton-telfer"
+      },
+      {
+        "from": "elizabeth-rowbotham",
+        "to": "susan-telfer-of-german-creek"
+      },
+      {
+        "from": "elizabeth-rowbotham",
+        "to": "william-telfer"
+      },
+      {
+        "from": "robert-allan-burton-telfer",
+        "to": "susan-telfer-of-german-creek"
+      },
+      {
+        "from": "robert-allan-burton-telfer",
+        "to": "william-telfer"
+      },
+      {
+        "from": "susan-telfer-of-german-creek",
+        "to": "william-telfer"
       },
       {
         "from": "judith-dawn-telfer-1944",
