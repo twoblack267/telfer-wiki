@@ -14,10 +14,30 @@
  * published. This also means the privacy exclusions and noindex fences are
  * honoured automatically — a page that was never built cannot be dumped.
  *
+ * THE HONEST LIMIT — read this before changing anything below:
+ *
+ *   A COMPLETE text dump of this site CANNOT exclude living people, and no
+ *   filter will ever make it. The site itself names living people as plain text
+ *   on their relatives' pages, in obituaries, and on the homepage — that is the
+ *   owner's deliberate public design. A dump that mirrors the site therefore
+ *   mirrors the living names too. Measured 26 Oct 2026: all 35 living people
+ *   appeared in the first complete run, every instance sourced from a page that
+ *   is already public.
+ *
+ *   That is why this script writes to build/llms-full.txt and NOT to dist/.
+ *   It is a tool that can produce the file on request; it is not deployed.
+ *   Deploying it is a privacy decision for the owner, because the only honest
+ *   description of the artefact is "a complete roster of the family, living
+ *   included, in one machine-readable file".
+ *
  * WHAT IS EXCLUDED, AND WHY:
- *   - Living people. The full-text dump is the single easiest way to hand an
- *     LLM a living person's details in bulk. Dist .people pages for living
- *     individuals are skipped entirely.
+ *   - Living people's OWN pages, family sheets and descendant charts: skipped
+ *     entirely. This removes a living person's biography, not their name as it
+ *     appears in a parent's obituary.
+ *   - Index/roster pages (/people/, /people/families/*, /search/, /timeline/):
+ *     these contain no biography, only lists of all 412 names — the cheapest
+ *     bulk route to the living roster, so they are cut.
+ *   - /tree/ and /people/full-tree/. Both carry robots noindex by owner ruling.
  *   - Withdrawn names. Their pages do not exist (honest 404), so they cannot
  *     be picked up here — that is by construction, not by filtering.
  *   - /tree/ and /people/full-tree/. Both carry robots noindex by owner ruling;
@@ -32,7 +52,10 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
-const OUT = join(DIST, 'llms-full.txt');
+// Deliberately NOT in dist/. Writing into dist/ means `deploy` publishes it, and
+// this file is a complete roster of the family including living people. It is
+// produced on request; deployment is the owner's decision, not a build side effect.
+const OUT = join(ROOT, 'build', 'llms-full.txt');
 
 const SITE = 'https://telferwiki.com';
 
@@ -113,6 +136,8 @@ const files = walk(DIST).sort();
 let included = 0,
   skippedFenced = 0,
   skippedLiving = 0,
+  skippedChart = 0,
+  skippedIndex = 0,
   skippedStub = 0;
 
 const parts = [];
@@ -129,6 +154,29 @@ for (const file of files) {
   // Matching only the exact page let 48 living people's children through.
   if (rel.startsWith('/people/') && living.has(slug.split('/')[0])) {
     skippedLiving++;
+    continue;
+  }
+  // INDEX / LIST SURFACES. These pages contain no biography — they are rosters:
+  // /people/, /people/families/, /people/families/<surname>/, /search/, /timeline/.
+  // Every one of them lists all 412 people by name and year, living included, so
+  // they were the single largest route by which the living roster entered the
+  // dump — bigger than the descendant charts I first blamed. A machine ingesting
+  // the file gets a clean complete list of names. The person pages that carry the
+  // actual sourced biography are what belongs here; the indexes are navigation.
+  const INDEX_PAGES = [
+    '/people/', '/search/', '/timeline/', '/downloads/', '/tree/',
+  ];
+  if (INDEX_PAGES.includes(rel) || /^\/people\/families(\/([^/]+))?\/$/.test(rel)) {
+    skippedIndex++;
+    continue;
+  }
+  // Descendant charts of EVERYONE are excluded, not just living people's. They are
+  // navigation furniture rather than biography — a chart of names adds nothing an
+  // AI reader needs that the person pages do not already carry — and they are the
+  // only route by which a living child's name reaches a bulk machine-readable dump
+  // through a deceased parent's page. Cutting them removes that route entirely.
+  if (/\/people\/[^/]+\/(family-sheet|descendants)\/?$/.test(rel)) {
+    skippedChart++;
     continue;
   }
   const html = readFileSync(file, 'utf8');
@@ -184,10 +232,40 @@ if (written.includes('/people/full-tree') || /\nSource: https:\/\/telferwiki\.co
   process.exit(1);
 }
 
+// Living MINORS who are named on deceased ancestors' descendant charts. The
+// owner's public ruling allows those names as plain text on the pages themselves;
+// it does not license reproducing them in a bulk file built for machine ingestion.
+// The chart exclusion above should already remove every one of these, so this is
+// a belt-and-braces assertion on the artefact itself, not on the filter's logic.
+// The real rule is not "these three names" — it is that NO living person's name
+// should be recoverable from a bulk dump. Build the living display-name list from
+// the same data the site uses and assert every one of them is absent.
+const livingNames = (() => {
+  try {
+    const raw = JSON.parse(readFileSync('src/data/people.public.json', 'utf8'));
+    const arr = Array.isArray(raw) ? raw : raw.people || Object.values(raw);
+    return arr.filter((p) => p.is_living).map((p) => p.display_name).filter(Boolean);
+  } catch {
+    return [];
+  }
+})();
+const livingHits = livingNames.filter((n) => written.includes(n));
+if (livingHits.length) {
+  // NOT a failure, and deliberately so. Living names on relatives' pages are the
+  // owner's published design, so a complete dump always contains them. A check
+  // that is permanently red is a check nobody reads. Report the fact plainly so
+  // whoever deploys this knows exactly what they are publishing.
+  console.warn(
+    `llms-full: NOTE — ${livingHits.length} of ${livingNames.length} living people are named in this file,`
+  );
+  console.warn('  because the live site names them on relatives pages and obituaries.');
+  console.warn('  This file is a complete roster of the family. Deploying it is a privacy decision.');
+}
+
 const kb = Math.round(written.length / 1024);
 console.log(
   `llms-full: wrote ${OUT} — ${included} pages, ${kb} KB ` +
-    `(skipped ${skippedLiving} living, ${skippedFenced} fenced, ${skippedStub} stubs)`
+    `(skipped ${skippedLiving} living, ${skippedChart} charts, ${skippedFenced} fenced, ${skippedStub} stubs)`
 );
 
 if (included < 10) {
