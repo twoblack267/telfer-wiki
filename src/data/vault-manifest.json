@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-27T03:00:29+10:00",
+  "generated_at": "2026-10-27T05:51:28+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 456,
+  "count": 463,
   "kinds": {
-    "real": 440,
+    "real": 447,
     "redirect": 16,
     "empty": 0
   },
@@ -225,7 +225,7 @@
       "kind": "real"
     },
     "Charles Farrow (~1836\u20131884).md": {
-      "sha256": "e5b9643ba09ca85de8885aa391719dd6eea520299dc55e036fa003c2bf1869c1",
+      "sha256": "338fd23c40604833b190bd5eab360de6381d5d760cdbb417af069dddcd9035f1",
       "kind": "real"
     },
     "Charles Farrow Jr.md": {
@@ -353,7 +353,7 @@
       "kind": "real"
     },
     "Edith Mary Kathleen Telfer.md": {
-      "sha256": "c5b59af4fa0e20d6061e29aadf4f3f5946103d599727546177bf566db62aecde",
+      "sha256": "1262fcf3da0d2300000fb8ad835a8f1888b472a497c8036769d1a583a9cac167",
       "kind": "real"
     },
     "Edward Albert Parker (1888\u20131939).md": {
@@ -434,6 +434,10 @@
     },
     "Elizabeth Lawrie (1847\u20131907).md": {
       "sha256": "44c71093fcc227c838a2f4db59268b29671e532c2887c68b3fd9dcfd0e7f4cf5",
+      "kind": "real"
+    },
+    "Elizabeth Lillian Telfer (1896\u20131967).md": {
+      "sha256": "24383b873dc8e93b64fd98ad97e9900fa57f1f5f717b4e5744dabc674854992d",
       "kind": "real"
     },
     "Elizabeth Oliver (1807\u20131846).md": {
@@ -573,7 +577,7 @@
       "kind": "real"
     },
     "Frances Margaret Oswald (1861\u20131931).md": {
-      "sha256": "866a0730826043280e23365b460673f67aebb0194ff8a1e25a2a6a64a3c40729",
+      "sha256": "3619fac24387afbaf430479c3e83cbd3dcbfabb18326950575109787b90b466a",
       "kind": "real"
     },
     "Francis Adam Telfer (1875\u20131955).md": {
@@ -733,7 +737,7 @@
       "kind": "real"
     },
     "Helen Telfer.md": {
-      "sha256": "1e4e65dfeeea91b94b1e44062e463a3ad6f7567edd8ee5ad8cec5d2d2ac88e3b",
+      "sha256": "3eecd027d301f8fd89fa940bf60280c785b38ccde90310660f524413cdd0f546",
       "kind": "real"
     },
     "Henry Hatch Dillon.md": {
@@ -873,7 +877,7 @@
       "kind": "real"
     },
     "James Telfer (1858\u20131944).md": {
-      "sha256": "0346e423b374977758b442350dd8dc28a9700443c5c138c5d76bc377b1441c67",
+      "sha256": "d1378749c98eb0d33869a95754b00bf093975d8f74dd2bcc64efb31e754abaf4",
       "kind": "real"
     },
     "James Telfer (1866\u20131946).md": {
@@ -890,6 +894,10 @@
     },
     "James Telfer Dillon (1861\u20131951).md": {
       "sha256": "a937f66d25858f69ae904f273e87dfda4229a038d50997a48cd7802d303143f8",
+      "kind": "real"
+    },
+    "Jane Margaret Telfer (1882\u20131946).md": {
+      "sha256": "12a5875d1449008b47923564166cddf8df875ae77b29f454986ce60f53166bca",
       "kind": "real"
     },
     "Jane Murray Farrow (1857\u20131934).md": {
@@ -926,6 +934,10 @@
     },
     "Janet Welsh Telfer (1858\u20131921).md": {
       "sha256": "c8c6311845f39fc935aed5d121c8267395540918b5ccc7ec11b90ddc14b0063a",
+      "kind": "real"
+    },
+    "Janet Welsh Telfer (1885\u20131924).md": {
+      "sha256": "df669c30f9ab94ac24e9d287d5ae9c42df0ff37370a9b9dd7e6a040321b7dd22",
       "kind": "real"
     },
     "Jared Ivory.md": {
@@ -1209,7 +1221,7 @@
       "kind": "real"
     },
     "Leslie Hedley Pedler (1907\u20131956).md": {
-      "sha256": "e6a66e698033e776fc0efa029fb3be030f040357512f5564f043d309438049c1",
+      "sha256": "b7619b93e0c805e4bd4179c46ab6f9cfd551a47ce9977ff86f8af350349b2356",
       "kind": "real"
     },
     "Leslie James Dillon (1916\u20131941).md": {
@@ -1360,6 +1372,10 @@
       "sha256": "9f25ed74b5248023f969d02d4ef295691363caa2e08865944a06258251c365ee",
       "kind": "real"
     },
+    "Martha Pearce Telfer (1898\u20131978).md": {
+      "sha256": "dce320268ab1100e45c852ab638fd99da7c06d1f52d977924541acd84d7c7e21",
+      "kind": "real"
+    },
     "Martha Telfer (1873\u2013?).md": {
       "sha256": "3873339c9564f2a90af0ca4c4715ad28ca3e70959f7df5e9e49f77f22871b8f5",
       "kind": "redirect"
@@ -1396,6 +1412,10 @@
       "sha256": "cfdb39673ea089468320b3f567e260b1210b781180faa67c960f13368eea4759",
       "kind": "real"
     },
+    "Mary Frances Telfer (1893\u20131893).md": {
+      "sha256": "0fe3758948352751b32816cab50435b8116c41aa6c2d9d8e56c0cd60494f981c",
+      "kind": "real"
+    },
     "Mary Jane Paynter (1861\u20131945).md": {
       "sha256": "3274f824fe6dd0b673d3479ae9aaaa6277ecd9b47fe9f293b8b152d860163122",
       "kind": "real"
@@ -1406,6 +1426,10 @@
     },
     "Melville Bruce Telfer (1914\u20131997).md": {
       "sha256": "bb608bb7966c425429450626a871c5dbfd4bb96e5efc62ddcc3736f801021629",
+      "kind": "real"
+    },
+    "Millicent Agnes Telfer (1887\u20131985).md": {
+      "sha256": "9dadfc03289d4a7f94e5ed40eb1e0840732dd13fbf51115f5769ff22b245ef38",
       "kind": "real"
     },
     "Mina Evelyn Parker (1897\u20131982).md": {
@@ -1549,7 +1573,7 @@
       "kind": "real"
     },
     "Robert Telfer (1835\u20131907).md": {
-      "sha256": "77e1760ee73826dccd4768adeb7bc26b811d68ccb831416d16ddf3ea4b914f89",
+      "sha256": "3d4b9e6c172972b2d9483c70de8e07fd5fb5229f9bc127189088125f7b48eebe",
       "kind": "real"
     },
     "Robert Telfer Dillon (1862\u20131942).md": {
@@ -1570,6 +1594,10 @@
     },
     "Ronald Telfer (1898\u20131898).md": {
       "sha256": "3173223167d1a4d9c89e23ec7fd4210d6e7ed4c42f5862a872b5c855146d15d0",
+      "kind": "real"
+    },
+    "Rose Gladys Telfer (1890\u20131978).md": {
+      "sha256": "a800aabae452204e41a96c28045615bfba69efaab1320cb0982defef87143eb7",
       "kind": "real"
     },
     "Rose Isabel Margaret Paynter (Rankin) (1900\u20131988).md": {
@@ -1657,7 +1685,7 @@
       "kind": "real"
     },
     "Sophia Parker Lawrie (1886\u20131918).md": {
-      "sha256": "eb8c60ce919e3df5a156348cb4604bea2b9ae23aea4e4884ec1b65edc03cecc2",
+      "sha256": "fb7a4dd42b9498ac80a9c499fe8400a33f4ae0d0554c9d9d1f1cf617bfb07983",
       "kind": "real"
     },
     "Sophia Parker.md": {
@@ -1785,7 +1813,7 @@
       "kind": "real"
     },
     "William Henry Parker (1893\u20131968).md": {
-      "sha256": "1c79c45cfbcfdd5528ce9c36293d5a89e7131818a865060b7dc2310feaa91d85",
+      "sha256": "22b54ac61095e4cffc30b916798cd650b867087ff0d2e3f74bbe0ec3623116a3",
       "kind": "real"
     },
     "William Humphrey Parker (1850\u20131926).md": {

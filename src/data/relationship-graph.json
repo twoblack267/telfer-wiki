@@ -2201,6 +2201,41 @@
       "generation": 7
     },
     {
+      "slug": "elizabeth-telfer",
+      "id": "Elizabeth Lillian Telfer (1896)",
+      "generation": 6
+    },
+    {
+      "slug": "jane-telfer",
+      "id": "Jane Margaret Telfer (1882)",
+      "generation": 6
+    },
+    {
+      "slug": "janet-telfer",
+      "id": "Janet Welsh Telfer (1885)",
+      "generation": 6
+    },
+    {
+      "slug": "martha-telfer",
+      "id": "Martha Pearce Telfer (1898)",
+      "generation": 6
+    },
+    {
+      "slug": "mary-telfer",
+      "id": "Mary Frances Telfer (1893)",
+      "generation": 4
+    },
+    {
+      "slug": "millicent-telfer",
+      "id": "Millicent Agnes Telfer (1887)",
+      "generation": 6
+    },
+    {
+      "slug": "rose-telfer",
+      "id": "Rose Gladys Telfer (1890)",
+      "generation": 6
+    },
+    {
       "slug": "kelson-telfer-1946",
       "id": "Kelson Telfer (1946)",
       "generation": 7
@@ -2904,6 +2939,10 @@
         "to": "edith-mary-kathleen-telfer"
       },
       {
+        "from": "susan-telfer-1844",
+        "to": "edith-mary-kathleen-telfer"
+      },
+      {
         "from": "hannah-baker-1855",
         "to": "edward-albert-parker-1888"
       },
@@ -3289,6 +3328,10 @@
       },
       {
         "from": "robert-telfer-1835",
+        "to": "helen-telfer"
+      },
+      {
+        "from": "susan-telfer-1844",
         "to": "helen-telfer"
       },
       {
@@ -4964,6 +5007,62 @@
         "to": "susan-pedler"
       },
       {
+        "from": "frances-margaret-oswald-1861",
+        "to": "elizabeth-telfer"
+      },
+      {
+        "from": "james-telfer-1858",
+        "to": "elizabeth-telfer"
+      },
+      {
+        "from": "frances-margaret-oswald-1861",
+        "to": "jane-telfer"
+      },
+      {
+        "from": "james-telfer-1858",
+        "to": "jane-telfer"
+      },
+      {
+        "from": "frances-margaret-oswald-1861",
+        "to": "janet-telfer"
+      },
+      {
+        "from": "james-telfer-1858",
+        "to": "janet-telfer"
+      },
+      {
+        "from": "frances-margaret-oswald-1861",
+        "to": "martha-telfer"
+      },
+      {
+        "from": "james-telfer-1858",
+        "to": "martha-telfer"
+      },
+      {
+        "from": "frances-margaret-oswald-1861",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "james-telfer-1858",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "frances-margaret-oswald-1861",
+        "to": "millicent-telfer"
+      },
+      {
+        "from": "james-telfer-1858",
+        "to": "millicent-telfer"
+      },
+      {
+        "from": "frances-margaret-oswald-1861",
+        "to": "rose-telfer"
+      },
+      {
+        "from": "james-telfer-1858",
+        "to": "rose-telfer"
+      },
+      {
         "from": "francis-telfer-1910",
         "to": "kelson-telfer-1946"
       },
@@ -6500,6 +6599,34 @@
         "to": "robert-telfer-1886"
       },
       {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "elizabeth-telfer-1868"
+      },
+      {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "helen-telfer"
+      },
+      {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "james-robert-telfer-1866"
+      },
+      {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "lindsay-telfer-1920"
+      },
+      {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "roland-telfer"
+      },
+      {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "susan-telfer-1871"
+      },
+      {
+        "from": "edith-mary-kathleen-telfer",
+        "to": "william-telfer"
+      },
+      {
         "from": "edward-albert-parker-1888",
         "to": "elizabeth-parker-1879"
       },
@@ -6758,6 +6885,10 @@
       {
         "from": "elizabeth-paynter-1864",
         "to": "thomas-paynter-1859"
+      },
+      {
+        "from": "elizabeth-telfer-1868",
+        "to": "helen-telfer"
       },
       {
         "from": "elizabeth-telfer-1868",
@@ -7410,6 +7541,26 @@
       {
         "from": "hazel-rose-telfer-1891",
         "to": "violet-hope-telfer-1883"
+      },
+      {
+        "from": "helen-telfer",
+        "to": "james-robert-telfer-1866"
+      },
+      {
+        "from": "helen-telfer",
+        "to": "lindsay-telfer-1920"
+      },
+      {
+        "from": "helen-telfer",
+        "to": "roland-telfer"
+      },
+      {
+        "from": "helen-telfer",
+        "to": "susan-telfer-1871"
+      },
+      {
+        "from": "helen-telfer",
+        "to": "william-telfer"
       },
       {
         "from": "henry-hatch-dillon-1866",
@@ -8770,6 +8921,98 @@
       {
         "from": "sharon-pedler",
         "to": "susan-pedler"
+      },
+      {
+        "from": "elizabeth-telfer",
+        "to": "jane-telfer"
+      },
+      {
+        "from": "elizabeth-telfer",
+        "to": "janet-telfer"
+      },
+      {
+        "from": "elizabeth-telfer",
+        "to": "martha-telfer"
+      },
+      {
+        "from": "elizabeth-telfer",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "elizabeth-telfer",
+        "to": "millicent-telfer"
+      },
+      {
+        "from": "elizabeth-telfer",
+        "to": "rose-telfer"
+      },
+      {
+        "from": "jane-telfer",
+        "to": "janet-telfer"
+      },
+      {
+        "from": "jane-telfer",
+        "to": "janet-welsh-telfer-1858"
+      },
+      {
+        "from": "jane-telfer",
+        "to": "john-koppio-telfer-1862"
+      },
+      {
+        "from": "jane-telfer",
+        "to": "martha-telfer"
+      },
+      {
+        "from": "jane-telfer",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "jane-telfer",
+        "to": "millicent-telfer"
+      },
+      {
+        "from": "jane-telfer",
+        "to": "rose-telfer"
+      },
+      {
+        "from": "janet-telfer",
+        "to": "martha-telfer"
+      },
+      {
+        "from": "janet-telfer",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "janet-telfer",
+        "to": "millicent-telfer"
+      },
+      {
+        "from": "janet-telfer",
+        "to": "rose-telfer"
+      },
+      {
+        "from": "martha-telfer",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "martha-telfer",
+        "to": "millicent-telfer"
+      },
+      {
+        "from": "martha-telfer",
+        "to": "rose-telfer"
+      },
+      {
+        "from": "mary-telfer",
+        "to": "millicent-telfer"
+      },
+      {
+        "from": "mary-telfer",
+        "to": "rose-telfer"
+      },
+      {
+        "from": "millicent-telfer",
+        "to": "rose-telfer"
       },
       {
         "from": "judith-dawn-telfer-1944",
