@@ -1,0 +1,74 @@
+{
+  "stanley-lawrence-pedler-1948": {
+    "retired": "2026-10-26",
+    "reason": "Does not exist. Phantom created from the 2008 tree book's OCR line 'stan Laweonce PEDLER, b. 20 Dec 1948' = 'Allan Lawrence PEDLER, b. 20 Dec 1946'. The child is Allan Lawrence Pedler (born 20 Dec 1946), who now has his own vault note. Primary witness: Gladys's own chapter in From the Borders to the Bush — 'On 20th December, 1946, our next baby boy, Allan Lawrence, was born', and her closing list of four children (Stanley James, Mary Ellen, Shirley Irene, Allan Lawrence).",
+    "replaced_by": "allan-pedler",
+    "display_name": "Stanley Lawrence Pedler"
+  },
+  "kenneth-james-pedler": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "kenneth-pedler",
+    "display_name": "Kenneth James Pedler"
+  },
+  "keith-gordon-pedler": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "keith-pedler",
+    "display_name": "Keith Gordon Pedler"
+  },
+  "sharon-marie-pedler": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "sharon-pedler",
+    "display_name": "Sharon Marie Pedler"
+  },
+  "susan-irene-pedler": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "susan-pedler",
+    "display_name": "Susan Irene Pedler"
+  },
+  "lance-gordon-hawkins": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "lance-hawkins",
+    "display_name": "Lance Gordon Hawkins"
+  },
+  "craig-harold-hawkins": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "craig-hawkins",
+    "display_name": "Craig Harold Hawkins"
+  },
+  "gaylene-merle-hawkins": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "gaylene-hawkins",
+    "display_name": "Gaylene Merle Hawkins"
+  },
+  "brett-kenneth-rylance": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "brett-rylance",
+    "display_name": "Brett Kenneth Rylance"
+  },
+  "julie-evelyn-rylance": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "julie-rylance",
+    "display_name": "Julie Evelyn Rylance"
+  },
+  "shane-daniel-pedler": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "shane-pedler",
+    "display_name": "Shane Daniel Pedler"
+  },
+  "kirrilee-skye-pedler": {
+    "retired": "2026-10-26",
+    "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+    "replaced_by": "kirrilee-pedler",
+    "display_name": "Kirrilee Skye Pedler"
+  }
+}

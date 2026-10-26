@@ -466,7 +466,34 @@ writeRedirect('families', 'families', 'Families', false);
 written.push({ from: 'families', to: 'families', display_name: 'Families' });
 
 // Write log for reference
-fs.writeFileSync(REDIRECT_LOG, JSON.stringify(filteredRedirects, null, 2));
+// ── RETIRED PROFILES (2026-10-26) ──────────────────────────────────────────────
+// A profile deliberately retired (scripts/retired-profiles.json) can never be
+// regenerated as a redirect by the inference above, because the inference only
+// sees people who are still IN people.json. The declaration has to be carried
+// through by hand, or the crown-jewel guard judges the retirement as PROFILE
+// VANISHED and fails the pipeline — which it should, until we tell it.
+//
+// merged directly into the log so a retirement IS a declared move, not data loss.
+const _logOut = [...filteredRedirects];
+try {
+  const retired = JSON.parse(fs.readFileSync('scripts/retired-profiles.json', 'utf-8'));
+  for (const [slug, meta] of Object.entries(retired)) {
+    if (!meta || !meta.replaced_by) continue;
+    if (_logOut.some(r => r.from === slug)) continue;
+    _logOut.push({
+      from: slug,
+      to: meta.replaced_by,
+      display_name: meta.display_name || slug,
+      reason: 'retired-phantom',
+    });
+    console.log(`  🪦 DECLARED RETIREMENT: ${slug} → ${meta.replaced_by}`);
+  }
+} catch (e) {
+  // Absent file = no retirements. Present-but-unreadable is loud: silently losing
+  // the declaration turns a known correction into a guard failure on the next regen.
+  if (e.code !== 'ENOENT') console.log(`  ⚠️  could not read retired-profiles.json (${e.message}) — retirements will read as data loss`);
+}
+fs.writeFileSync(REDIRECT_LOG, JSON.stringify(_logOut, null, 2));
 
 // VERIFY FROM DISK, do not count intentions (fixed 2026-10-26).
 // This line used to report `filteredRedirects.length` — the number the script

@@ -158,6 +158,78 @@
       "reason": "Phantom duplicate, not a real person. 'Beryl Ruth Telfer' was produced by OCR corruption of 'Miriam Ruth Telfer, b. 5 Jul 1949' in the 2008 Supplement's scan-derived text layer. Two independent sources print Miriam Ruth: the Supplement's own Reginald/Edwin block and the Borders text layer. Miriam Ruth already has her own profile (miriam-ruth-telfer-1949), correctly parented to Edwin Roy Telfer. The phantom carried a wrong father link that was ALSO poisoning Brenda Janice and Lyndell Marie's parentage. Visitors land on the real person.",
       "date": "2026-10-26",
       "corrections_log": "2026-10-26 — REMOVED: \"Beryl Ruth Telfer (1949)\" phantom (OCR corruption of Miriam Ruth Telfer)"
+    },
+    "stanley-lawrence-pedler-1948": {
+      "to": "allan-pedler",
+      "reason": "Phantom, not a person. Created from the 2008 Supplement OCR line 'stan Laweonce PEDLER, b. 20 Dec 1948', which is 'Allan Lawrence PEDLER, b. 20 Dec 1946'. Gladys own chapter in From the Borders to the Bush names four children (Stanley James, Mary Ellen, Shirley Irene, Allan Lawrence) and states 'On 20th December, 1946, our next baby boy, Allan Lawrence, was born.'",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 REMOVED: Stanley Lawrence Pedler (1948) phantom child of Gladys Merle Telfer (OCR artifact of Allan Lawrence Pedler, b. 1946)"
+    },
+    "kenneth-james-pedler": {
+      "to": "kenneth-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "keith-gordon-pedler": {
+      "to": "keith-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "sharon-marie-pedler": {
+      "to": "sharon-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "susan-irene-pedler": {
+      "to": "susan-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "lance-gordon-hawkins": {
+      "to": "lance-hawkins",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "craig-harold-hawkins": {
+      "to": "craig-hawkins",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "gaylene-merle-hawkins": {
+      "to": "gaylene-hawkins",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "brett-kenneth-rylance": {
+      "to": "brett-rylance",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "julie-evelyn-rylance": {
+      "to": "julie-rylance",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "shane-daniel-pedler": {
+      "to": "shane-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "kirrilee-skye-pedler": {
+      "to": "kirrilee-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
     }
   }
 }

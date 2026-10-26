@@ -54,12 +54,61 @@ const norm = (s) => String(s || "").normalize("NFKC").toLowerCase().replace(/\s+
 /** How the real resolver keys a reference: name (no years) + birth year. */
 function refKey(reference) {
   const raw = String(reference || "").trim();
-  const m = raw.match(/^(.*?)\s*\((\d{3,4})(?:\s*[–\-]\s*(\d{3,4}|\?))?\)\s*$/);
+  // ── FIXED 2026-10-26 (THE PARSER COULD NOT READ LIVING PEOPLE) ───────────────
+  //
+  // This pattern was the ONLY route by which a reference could carry a year into
+  // the lookup below. It accepted `(YYYY)`, `(YYYY–YYYY)` and `(YYYY–?)` and
+  // nothing else. The vault's standard form for anyone still alive is
+  // `(YYYY–living)`, so EVERY living-person reference fell through to the
+  // year-less path with birth = null — and the year-less path can only resolve a
+  // name claimed by exactly one record. Result: a reference to a correctly
+  // recorded living person was structurally un-resolvable, and every accurate
+  // living-person edge ADDED to the vault LOWERED the reported coverage.
+  // Measured on 2026-10-26: 1691/2593 = 65.21% (floor 66.00%) — and 1462 refs
+  // take the leading-year form, most of them living people.
+  //
+  // The fix accepts ANY single trailing parenthetical and reads a LEADING year
+  // out of it, because that is the only thing the leading year ever means here:
+  //   (1938–living) -> 1938      (1938) -> 1938        (1907–1956) -> 1907
+  //   (1951–)       -> 1951      (b. 1910) -> 1910     (m. 1944) -> none
+  // A DEATH-only mention (`d. 16 Dec 2001`) contributes no birth year: the
+  // death-year matching further down is a tiebreaker and must not be fed a date
+  // of death as though it were a year of birth.
+  //
+  // DELIBERATELY UNCHANGED: a parenthetical with TWO OR MORE years and no leading
+  // year (`c.1853–1928`, `~1836–1884`) is treated as carrying no year at all. The
+  // existing year extractors below read `(\d{4})…–…(\d{4})` from anywhere in the
+  // string, which would take `1853` as a birth year — and an approximate date that
+  // is silently promoted to an exact one is how generations get wired wrong.
+  // Those refs keep their old, conservative behaviour: ambiguous ones stay
+  // unresolved rather than being guessed at.
+  const m = raw.match(/^(.*?)\s*\(([^()]*)\)\s*$/);
+  const LEADING_YEAR = /^(?:b\.?\s*|ca?\.?\s*|abt\.?\s*|about\s*|~+\s*)?(\d{4})\s*(?:[–\-]|$)/i;
+  const stripQuotes = (s) => norm(s).replace(/\s*"(.*?)"\s*/g, " ").replace(/\s+/g, " ").trim();
   if (m) {
-    const name = norm(m[1]).replace(/\s*"(.*?)"\s*/g, " ").replace(/\s+/g, " ").trim();
-    return { name, birth: Number(m[2]), death: m[3] && m[3] !== "?" ? Number(m[3]) : null, raw };
+    const name = stripQuotes(m[1]);
+    const inside = m[2].trim();
+    // A DEATH-ONLY parenthetical names no birth year. `d. 16 Dec 2001` must not
+    // become birth 2001 — the death-year tiebreaker below keys on `death`, never
+    // on `birth`, so passing a death date here would invent a person.
+    if (/^d\.?\s/i.test(inside)) {
+      const dy = inside.match(/\b(\d{4})\b/);
+      return { name, birth: null, death: dy ? Number(dy[1]) : null, raw };
+    }
+    const lead = inside.match(LEADING_YEAR);
+    if (lead) {
+      // A leading year is a birth year. `(1907–1956)` also carries a death year,
+      // which is a tiebreaker only; `(1938–living)` and `(1951–)` carry none.
+      const rest = inside.slice(lead[0].length);
+      const death = rest.match(/^[–\-]?\s*(\d{4})\s*$/);
+      return { name, birth: Number(lead[1]), death: death ? Number(death[1]) : null, raw };
+    }
+    // No leading year: `(m. 1944)`, `(never married)`, or an approximate range
+    // (`c.1853–1928`, `~1836–1884`) whose years must NOT be promoted to exact.
+    // Keep the name, drop the dates — conservative, unchanged from before.
+    return { name, birth: null, death: null, raw };
   }
-  return { name: norm(raw).replace(/\s*"(.*?)"\s*/g, " ").replace(/\s+/g, " ").trim(), birth: null, death: null, raw };
+  return { name: stripQuotes(raw), birth: null, death: null, raw };
 }
 
 /** How the real resolver keys a person: display name (no years) + birth year. */

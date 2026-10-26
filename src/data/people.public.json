@@ -14688,6 +14688,46 @@
     "person_photo": null
   },
   {
+    "id": "Leslie Hedley Pedler (1907)",
+    "slug": "leslie-pedler",
+    "first_name": "Leslie",
+    "middle_name": "Hedley",
+    "last_name": "Pedler",
+    "birth_year": 1907,
+    "death_year": 1956,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1907",
+    "death_year_display": "1956",
+    "display_name": "Leslie Hedley Pedler",
+    "title": "Leslie Hedley Pedler (1907–1956)",
+    "lifespan": "1907 – 1956",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# Leslie Hedley Pedler (1907–1956)\n\n> **Provenance:** written 2026-10-26 from *From the Borders to the Bush* (Gladys Pedler contribution). Each row is quoted from the source; anything the book does not state is marked *unverified*, not guessed.\n\n## Facts\n\n| Field | Value | Source | Status |\n|---|---|---|---|\n| Birth | 1907 | B1 — inferred only; the book gives no birth year | unverified |\n| Married | Gladys Merle Telfer, 17 September 1937 | B1 — \"On 17th September, 1937, I married our neighbour's eldest son Leslie\" | verified |\n| Residence (1937) | A house in Ungarra, Eyre Peninsula, South Australia | B1 — \"we lived in a house in Ungarra for about [some] months\" | verified |\n| Occupation (1937) | Worked on his father's property near Ungarra | B1 — \"Les worked hard on his father's property\" | verified |\n| Family of origin | Son of Tom and Annie Pedler; family of four boys and one girl | B1 — \"The adjoining [farm] belonged to Tom and Annie Pedler ... a family of 4 boys and the one girl\" | verified |\n| Brother | Harold | B1 — \"Les' brother Harold\" | verified |\n| Move to Queensland | Farmed at Bongeen on the Darling Downs; later shifted to Toowoomba | B1 — \"shifted into Pittsworth, about 20 miles from the farm\" then \"we shifted into Toowoomba to live and Les drove out to the farm every week\" | verified |\n| Death | 23 December 1956, at Toowoomba, Queensland | B1 — \"on 28rd December, 1956, he went to be with his Lord\" (OCR garble of 23rd) | verified |\n| Cause of death | Cancer | B1 — \"took seriously ill with cancer\" | verified |\n\n## Sources\n\n- B1 = *From the Borders to the Bush* (Gladys Pedler contribution). The chapter runs from \"A Gladys Pedler contribution\" and includes the 1986 family photograph caption.\n- No fact in this note is drawn from OCR alone; every quoted phrase is present in the published text layer of the book.",
+    "roles": [],
+    "tags": [
+      "person",
+      "family",
+      "pedler"
+    ],
+    "parents": [],
+    "children": [
+      "allan-pedler",
+      "mary-ellen-pedler-1940",
+      "shirley-rene-pedler-1942",
+      "stanley-james-pedler-1938"
+    ],
+    "spouses": [
+      "gladys-telfer"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Gilbert Melville Telfer (1908)",
     "slug": "gilbert-telfer-1908",
     "first_name": "Gilbert",
@@ -15857,7 +15897,7 @@
     "lifespan": "1916 – living",
     "generation": 6,
     "is_living": true,
-    "body_markdown": "# Gladys Merle Telfer (1916–living)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** 1916 — South Australia *(Genealogy SA birth index, District Flinders; Ryerson age 92 at death 13 Oct 2008 confirms 1916)*\n**Died:** not confirmed by two independent sources — a 2008 death notice found (see Research Note); profile stays private until the second source is in\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Pedler\n**Spouse:** Leslie Hedley Pedler (m. —, eldest son of the Pedler family at Ungarra)\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Doris Elma, Edwin Roy, Reginald Masters, Murray John, Ruth\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Spouse** | Leslie Hedley Pedler |\n| **Children** | Four (incl. Stan Pedler, m. Margaret Richardson) |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[Francis Kelson Telfer (1910–1987)|Francis Kelson Telfer]], Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Doris Elma Rowe (née Telfer), [[Edwin Roy Telfer (1921–2009)|Edwin Roy Telfer]], [[Reginald Masters Telfer (1922–2011)|Reginald Masters Telfer]], [[Murray John Telfer (1924–2009)|Murray John Telfer]], [[Ruth Telfer (1931–?)|Ruth Telfer]] |\n\n---",
+    "body_markdown": "# Gladys Merle Telfer (1916–living)\n\n**Role:** Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer\n**Born:** 1916 — South Australia *(Genealogy SA birth index, District Flinders; Ryerson age 92 at death 13 Oct 2008 confirms 1916)*\n**Died:** not confirmed by two independent sources — a 2008 death notice found (see Research Note); profile stays private until the second source is in\n**Parents:** [[Francis Charles Telfer (1875–1954)]] & [[Amy Ellen Telfer (1884–1951)]] (née Provis)\n**Married Name:** Pedler\n**Spouse:** Leslie Hedley Pedler (1907–1956), m. 17 Sep 1937 Church of Christ, Ungarra SA\n**Brother:** [[Murray John Telfer (1924–2009)]]\n**Siblings:** Francis Kelson, Clarice May, Emily Amelia, Ethel Jean, Doris Elma, Edwin Roy, Reginald Masters, Murray John, Ruth\n\n---\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Mother** | [[Amy Ellen Telfer (1884–1951)]] (née Provis) |\n| **Father** | [[Francis Charles Telfer (1875–1954)]] |\n| **Spouse** | [[Leslie Hedley Pedler (1907–1956)|Leslie Hedley Pedler]] |\n| **Children** | Four (incl. Stan Pedler, m. Margaret Richardson) |\n| **Brother** | [[Murray John Telfer (1924–2009)]] |\n| **Siblings** | [[Francis Kelson Telfer (1910–1987)|Francis Kelson Telfer]], Clarice May Fatchen (née Telfer), Emily Amelia Barton (née Telfer), Ethel Jean McMurtrie (née Telfer), Doris Elma Rowe (née Telfer), [[Edwin Roy Telfer (1921–2009)|Edwin Roy Telfer]], [[Reginald Masters Telfer (1922–2011)|Reginald Masters Telfer]], [[Murray John Telfer (1924–2009)|Murray John Telfer]], [[Ruth Telfer (1931–?)|Ruth Telfer]] |\n\n---",
     "roles": [
       "Daughter of Francis Charles Telfer and Amy Ellen Telfer (née Provis) — sister of Murray John Telfer"
     ],
@@ -15872,15 +15912,13 @@
       "francis-telfer-1875"
     ],
     "children": [
+      "allan-pedler",
       "mary-ellen-pedler-1940",
       "shirley-rene-pedler-1942",
-      "stanley-james-pedler-1938",
-      "stanley-lawrence-pedler-1948"
+      "stanley-james-pedler-1938"
     ],
     "spouses": [
-      {
-        "plain_name": "Leslie Hedley Pedler"
-      }
+      "leslie-pedler"
     ],
     "siblings": [
       "clarice-may-telfer-1911",
@@ -17804,45 +17842,85 @@
     "last_name": "Pedler",
     "birth_year": 1938,
     "death_year": null,
+    "birth_date": null,
+    "death_date": null,
     "birth_year_display": "1938",
     "death_year_display": "living",
     "display_name": "Stanley James Pedler",
     "title": "Stanley James Pedler — Family & Biography",
+    "lifespan": "1938 – living",
     "generation": 7,
     "is_living": true,
-    "body_markdown": "Married Margaret Jean Richardson, Aug 1958.\n\nSourced from *From the Borders to the Bush* (descendant chart) and *A Telfer Family Tree — Supplement 2008*, cross-referenced against each other. OCR artifacts were corrected only where a second source corroborated; unresolved conflicts are recorded as disputes rather than settled facts.",
+    "body_markdown": "# Stanley James Pedler (1938–living)\n\n> **Provenance:** facts collated from *From the Borders to the Bush* (B1) via `Gladys Merle Telfer (1916–living).md`, which holds the full sourcing audit. Written onto this record 2026-10-26 so the relationship graph has a canonical source.",
     "roles": [
       "Child of Gladys Merle Telfer"
     ],
     "tags": [
       "bio",
       "family",
-      "person",
-      "descendant",
-      "collateral-line"
+      "person"
     ],
     "parents": [
       "gladys-telfer",
-      {
-        "plain_name": "gladys-merle-telfer-1917"
-      }
+      "leslie-pedler"
     ],
     "children": [
-      "keith-gordon-pedler",
-      "kenneth-james-pedler",
-      "sharon-marie-pedler",
-      "susan-irene-pedler"
+      "keith-pedler",
+      "kenneth-pedler",
+      "sharon-pedler",
+      "susan-pedler"
     ],
     "spouses": [
-      {
-        "plain_name": "Margaret Jean Richardson"
-      }
+      "margaret-richardson"
+    ],
+    "siblings": [
+      "allan-pedler",
+      "mary-ellen-pedler-1940",
+      "shirley-rene-pedler-1942"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Raymond Neil Hawkins (1939)",
+    "slug": "raymond-hawkins",
+    "first_name": "Raymond",
+    "middle_name": "Neil",
+    "last_name": "Hawkins",
+    "birth_year": 1939,
+    "death_year": 2000,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1939",
+    "death_year_display": "2000",
+    "display_name": "Raymond Neil Hawkins",
+    "title": "Raymond Neil Hawkins (1939–2000)",
+    "lifespan": "1939 – 2000",
+    "generation": 7,
+    "is_living": false,
+    "body_markdown": "# Raymond Neil Hawkins (1939–2000)\n\n> **Provenance:** written 2026-10-26 from **B1** (*From the Borders to the Bush*, \"A Gladys Pedler contribution\"). Rows quoted from the source are marked *verified*; values carried from the earlier record without a printed source are marked *unverified*.\n\n## Facts\n\n| Field | Value | Source | Status |\n|---|---|---|---|\n| Married | Mary Ellen Pedler, 19 December 1964, Toowoomba, Queensland | B1 — \"MARY ELLEN was born in 1940 and on 19th December, 1964 married Raymond Hawkins\" | verified |\n| Children | Three — Lance Gordon (24 Feb 1966), Craig Harold (23 Mar 1968), Gaylene Merle (18 May 1970) | B1 — all three births and dates given in Gladys's list | verified |\n| Birth | 18 December 1939, St George, New South Wales | carried from the existing record; NOT stated in the B1 passage | unverified |\n| Death | 2000 | carried from the existing record; NOT stated in the B1 passage | unverified |\n| Occupation | Church of Christ minister | B1 — \"Ray is a Church Christ minister\" | verified |\n\n## Sources\n\n- **B1** = *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" — Gladys's own first-person account (~1987), the primary witness.\n- **B2** = *A Telfer Family Tree — Supplement 2008*, section 2 (Francis Charles TELFER).\n- **B3** = *A Brief Account of the First Telfer Families to Settle in SA* (1986) — lead only for the direct line, not used to settle collateral facts.",
+    "roles": [],
+    "tags": [
+      "person",
+      "family",
+      "pedler"
+    ],
+    "parents": [],
+    "children": [
+      "craig-hawkins",
+      "gaylene-hawkins",
+      "lance-hawkins"
+    ],
+    "spouses": [
+      "mary-ellen-pedler-1940"
     ],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
-    "lifespan": "1938 – living"
+    "person_photo": null
   },
   {
     "id": "Mary Ellen Pedler (1940)",
@@ -17852,44 +17930,45 @@
     "last_name": "Pedler",
     "birth_year": 1940,
     "death_year": null,
+    "birth_date": null,
+    "death_date": null,
     "birth_year_display": "1940",
     "death_year_display": "living",
     "display_name": "Mary Ellen Pedler",
     "title": "Mary Ellen Pedler — Family & Biography",
+    "lifespan": "1940 – living",
     "generation": 7,
     "is_living": true,
-    "body_markdown": "Born Oakey, Qld. Married Raymond Neil Hawkins, 19 Dec 1964, Toowoomba Qld.\n\nSourced from *From the Borders to the Bush* (descendant chart) and *A Telfer Family Tree — Supplement 2008*, cross-referenced against each other. OCR artifacts were corrected only where a second source corroborated; unresolved conflicts are recorded as disputes rather than settled facts.",
+    "body_markdown": "# Mary Ellen Pedler (1940–living)\n\n> **Provenance:** facts collated from *From the Borders to the Bush* (B1) via `Gladys Merle Telfer (1916–living).md`, which holds the full sourcing audit. Written onto this record 2026-10-26 so the relationship graph has a canonical source.",
     "roles": [
       "Child of Gladys Merle Telfer"
     ],
     "tags": [
       "bio",
       "family",
-      "person",
-      "descendant",
-      "collateral-line"
+      "person"
     ],
     "parents": [
       "gladys-telfer",
-      {
-        "plain_name": "gladys-merle-telfer-1917"
-      }
+      "leslie-pedler"
     ],
     "children": [
-      "craig-harold-hawkins",
-      "gaylene-merle-hawkins",
-      "lance-gordon-hawkins"
+      "craig-hawkins",
+      "gaylene-hawkins",
+      "lance-hawkins"
     ],
     "spouses": [
-      {
-        "plain_name": "Raymond Neil Hawkins"
-      }
+      "raymond-hawkins"
     ],
-    "siblings": [],
+    "siblings": [
+      "allan-pedler",
+      "shirley-rene-pedler-1942",
+      "stanley-james-pedler-1938"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
-    "lifespan": "1940 – living"
+    "person_photo": null
   },
   {
     "id": "Malcolm Geoffrey Fatchen (1942)",
@@ -17983,43 +18062,44 @@
     "last_name": "Pedler",
     "birth_year": 1942,
     "death_year": null,
+    "birth_date": "11 September 1942",
+    "death_date": null,
     "birth_year_display": "1942",
     "death_year_display": "living",
     "display_name": "Shirley Rene Pedler",
     "title": "Shirley Rene Pedler — Family & Biography",
+    "lifespan": "1942 – living",
     "generation": 7,
     "is_living": true,
-    "body_markdown": "Married Gordon William Rylance, 9 Nov 1974 (d. 16 Dec 2001).\n\nSourced from *From the Borders to the Bush* (descendant chart) and *A Telfer Family Tree — Supplement 2008*, cross-referenced against each other. OCR artifacts were corrected only where a second source corroborated; unresolved conflicts are recorded as disputes rather than settled facts.",
+    "body_markdown": "# Shirley Rene Pedler (1942–living)\n\n> **Status: sourced (collated — created 2026-10-26 to give this profile a vault source.** Nothing below is new research — it is what the site\n> already asserts, written down so the record has a file to edit.",
     "roles": [
       "Child of Gladys Merle Telfer"
     ],
     "tags": [
       "bio",
       "family",
-      "person",
-      "descendant",
-      "collateral-line"
+      "person"
     ],
     "parents": [
       "gladys-telfer",
-      {
-        "plain_name": "gladys-merle-telfer-1917"
-      }
+      "leslie-pedler"
     ],
     "children": [
-      "brett-kenneth-rylance",
-      "julie-evelyn-rylance"
+      "brett-rylance",
+      "julie-rylance"
     ],
     "spouses": [
-      {
-        "plain_name": "Gordon William Rylance"
-      }
+      "gordon-rylance"
     ],
-    "siblings": [],
+    "siblings": [
+      "allan-pedler",
+      "mary-ellen-pedler-1940",
+      "stanley-james-pedler-1938"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
-    "lifespan": "1942 – living"
+    "person_photo": null
   },
   {
     "id": "Judith Dawn Telfer (1944)",
@@ -18073,6 +18153,55 @@
     "step_children": [],
     "images": [],
     "lifespan": "1944 – living"
+  },
+  {
+    "id": "Allan Lawrence Pedler (1946)",
+    "slug": "allan-pedler",
+    "first_name": "Allan",
+    "middle_name": "Lawrence",
+    "last_name": "Pedler",
+    "birth_year": 1946,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1946",
+    "death_year_display": "living",
+    "display_name": "Allan Lawrence Pedler",
+    "title": "Allan Lawrence Pedler — Family & Biography",
+    "lifespan": "1946 – living",
+    "generation": 7,
+    "is_living": true,
+    "body_markdown": "# Allan Lawrence Pedler (1946–living)\n\n**Role:** Fourth and youngest child of Gladys Merle Telfer (née Telfer) and Leslie Hedley Pedler — the only son born in Queensland\n**Born:** **20 December 1946** — Queensland *(born at the family farm, Bongeen siding, near Mount Tyson, Darling Downs)*\n**Parents:** Gladys Merle Telfer (1916–2008) & Leslie Hedley Pedler (1907–1956)\n**Spouse:** Lynette Lillian Large, b. 11 Oct 1951 — m. **13 November 1976**, Brisbane\n**Sibling Note:** In B1's 1986 photo captions the family name is printed **\"Pedlar\"**; the formal spelling used throughout these records is **Pedler**.\n\n---",
+    "roles": [
+      "Fourth and youngest child of Gladys Merle Telfer (née Telfer) and Leslie Hedley Pedler — the only son born in Queensland"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "gladys-telfer",
+      "leslie-pedler"
+    ],
+    "children": [
+      "kirrilee-pedler",
+      "lawrence-pedler",
+      "shane-pedler"
+    ],
+    "spouses": [
+      "lynette-large"
+    ],
+    "siblings": [
+      "mary-ellen-pedler-1940",
+      "shirley-rene-pedler-1942",
+      "stanley-james-pedler-1938"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
   },
   {
     "id": "Beth Telfer (1946)",
@@ -18316,52 +18445,6 @@
     "lifespan": "1948 – living"
   },
   {
-    "id": "Stanley Lawrence Pedler (1948)",
-    "slug": "stanley-lawrence-pedler-1948",
-    "first_name": "Stanley",
-    "middle_name": "Lawrence",
-    "last_name": "Pedler",
-    "birth_year": 1948,
-    "death_year": null,
-    "birth_year_display": "1948",
-    "death_year_display": "living",
-    "display_name": "Stanley Lawrence Pedler",
-    "title": "Stanley Lawrence Pedler — Family & Biography",
-    "generation": 7,
-    "is_living": true,
-    "body_markdown": "Married Lynette Lillian Large, 13 Nov 1976. Distinct person from Stanley James Pedler (b. 1938) — two sons named Stanley, confirmed by different birth dates and spouses.\n\nSourced from *From the Borders to the Bush* (descendant chart) and *A Telfer Family Tree — Supplement 2008*, cross-referenced against each other. OCR artifacts were corrected only where a second source corroborated; unresolved conflicts are recorded as disputes rather than settled facts.",
-    "roles": [
-      "Child of Gladys Merle Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant",
-      "collateral-line"
-    ],
-    "parents": [
-      "gladys-telfer",
-      {
-        "plain_name": "gladys-merle-telfer-1917"
-      }
-    ],
-    "children": [
-      "kirrilee-skye-pedler",
-      "shane-daniel-pedler"
-    ],
-    "spouses": [
-      {
-        "plain_name": "Lynette Lillian Large"
-      }
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "lifespan": "1948 – living"
-  },
-  {
     "id": "Brenda Janice Telfer (1949)",
     "slug": "brenda-janice-telfer-1949",
     "first_name": "Brenda",
@@ -18542,6 +18625,45 @@
     "step_children": [],
     "images": [],
     "lifespan": "1951 – living"
+  },
+  {
+    "id": "Lynette Lillian Large (1951)",
+    "slug": "lynette-large",
+    "first_name": "Lynette",
+    "middle_name": "Lillian",
+    "last_name": "Large",
+    "birth_year": 1951,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1951",
+    "death_year_display": "living",
+    "display_name": "Lynette Lillian Large",
+    "title": "Lynette Lillian Large (1951–living)",
+    "lifespan": "1951 – living",
+    "generation": 7,
+    "is_living": true,
+    "body_markdown": "# Lynette Lillian Large (1951–living)\n\n> **Provenance:** written 2026-10-26 from **B1** (*From the Borders to the Bush*, \"A Gladys Pedler contribution\"). Rows quoted from the source are marked *verified*; values carried from the earlier record without a printed source are marked *unverified*.",
+    "roles": [],
+    "tags": [
+      "person",
+      "family",
+      "pedler"
+    ],
+    "parents": [],
+    "children": [
+      "kirrilee-pedler",
+      "lawrence-pedler",
+      "shane-pedler"
+    ],
+    "spouses": [
+      "allan-pedler"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
   },
   {
     "id": "John Robert Telfer (1952)",
@@ -19608,6 +19730,44 @@
     "person_photo": null
   },
   {
+    "id": "Gordon William Rylance",
+    "slug": "gordon-rylance",
+    "first_name": "Gordon",
+    "middle_name": "William",
+    "last_name": "Rylance",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "Gordon William Rylance",
+    "title": "Gordon William Rylance (living)",
+    "lifespan": "? – living",
+    "generation": 7,
+    "is_living": true,
+    "body_markdown": "# Gordon William Rylance (living)\n\n> **Provenance:** written 2026-10-26 from *From the Borders to the Bush* (Gladys Pedler contribution). Each row is quoted from the source; anything the book does not state is marked *unverified*, not guessed.",
+    "roles": [],
+    "tags": [
+      "person",
+      "family",
+      "pedler"
+    ],
+    "parents": [],
+    "children": [
+      "brett-rylance",
+      "julie-rylance"
+    ],
+    "spouses": [
+      "shirley-rene-pedler-1942"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Jennifer Bunston",
     "slug": "jennifer-bunston",
     "first_name": "Jennifer",
@@ -19635,6 +19795,46 @@
     ],
     "children": [],
     "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Margaret Jean Richardson",
+    "slug": "margaret-richardson",
+    "first_name": "Margaret",
+    "middle_name": "Jean",
+    "last_name": "Richardson",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "Margaret Jean Richardson",
+    "title": "Margaret Jean Richardson (living)",
+    "lifespan": "? – living",
+    "generation": 7,
+    "is_living": true,
+    "body_markdown": "# Margaret Jean Richardson (living)\n\n> **Provenance:** written 2026-10-26 from *From the Borders to the Bush* (Gladys Pedler contribution). Each row is quoted from the source; anything the book does not state is marked *unverified*, not guessed.",
+    "roles": [],
+    "tags": [
+      "person",
+      "family",
+      "pedler"
+    ],
+    "parents": [],
+    "children": [
+      "keith-pedler",
+      "kenneth-pedler",
+      "sharon-pedler",
+      "susan-pedler"
+    ],
+    "spouses": [
+      "stanley-james-pedler-1938"
+    ],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
@@ -19927,6 +20127,57 @@
     "person_photo": ""
   },
   {
+    "id": "Kenneth James Pedler (1959)",
+    "slug": "kenneth-pedler",
+    "first_name": "Kenneth",
+    "middle_name": "James",
+    "last_name": "Pedler",
+    "birth_year": 1959,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1959",
+    "death_year_display": "living",
+    "display_name": "Kenneth James Pedler",
+    "title": "Kenneth James Pedler — Family & Biography",
+    "lifespan": "1959 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Kenneth James Pedler (1959–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "margaret-richardson",
+      "stanley-james-pedler-1938"
+    ],
+    "children": [
+      {
+        "plain_name": "Mellissa Pedler"
+      },
+      {
+        "plain_name": "Rowland Pedler"
+      }
+    ],
+    "spouses": [
+      {
+        "plain_name": "Wendy May Ries"
+      }
+    ],
+    "siblings": [
+      "keith-pedler",
+      "sharon-pedler",
+      "susan-pedler"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Geoffrey Donald Bassett (1960)",
     "slug": "geoffrey-donald-bassett-1960",
     "first_name": "Geoffrey Donald",
@@ -19958,6 +20209,50 @@
     "step_children": [],
     "images": [],
     "person_photo": ""
+  },
+  {
+    "id": "Keith Gordon Pedler (1961)",
+    "slug": "keith-pedler",
+    "first_name": "Keith",
+    "middle_name": "Gordon",
+    "last_name": "Pedler",
+    "birth_year": 1961,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1961",
+    "death_year_display": "living",
+    "display_name": "Keith Gordon Pedler",
+    "title": "Keith Gordon Pedler — Family & Biography",
+    "lifespan": "1961 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Keith Gordon Pedler (1961–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "margaret-richardson",
+      "stanley-james-pedler-1938"
+    ],
+    "children": [
+      {
+        "plain_name": "Hannah Pedler"
+      }
+    ],
+    "spouses": [],
+    "siblings": [
+      "kenneth-pedler",
+      "sharon-pedler",
+      "susan-pedler"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
   },
   {
     "id": "Roger Graham Fatchen (1961)",
@@ -20059,6 +20354,93 @@
     "person_photo": ""
   },
   {
+    "id": "Sharon Marie Pedler (1964)",
+    "slug": "sharon-pedler",
+    "first_name": "Sharon",
+    "middle_name": "Marie",
+    "last_name": "Pedler",
+    "birth_year": 1964,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1964",
+    "death_year_display": "living",
+    "display_name": "Sharon Marie Pedler",
+    "title": "Sharon Marie Pedler — Family & Biography",
+    "lifespan": "1964 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Sharon Marie Pedler (1964–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "margaret-richardson",
+      "stanley-james-pedler-1938"
+    ],
+    "children": [],
+    "spouses": [
+      {
+        "plain_name": "Peter Jones"
+      }
+    ],
+    "siblings": [
+      "keith-pedler",
+      "kenneth-pedler",
+      "susan-pedler"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Lance Gordon Hawkins (1966)",
+    "slug": "lance-hawkins",
+    "first_name": "Lance",
+    "middle_name": "Gordon",
+    "last_name": "Hawkins",
+    "birth_year": 1966,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1966",
+    "death_year_display": "living",
+    "display_name": "Lance Gordon Hawkins",
+    "title": "Lance Gordon Hawkins — Family & Biography",
+    "lifespan": "1966 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Lance Gordon Hawkins (1966–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "mary-ellen-pedler-1940",
+      "raymond-hawkins"
+    ],
+    "children": [],
+    "spouses": [
+      {
+        "plain_name": "Karen Durand"
+      }
+    ],
+    "siblings": [
+      "craig-hawkins",
+      "gaylene-hawkins"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Stephen Craig Lawrie (1966)",
     "slug": "stephen-craig-lawrie-1966",
     "first_name": "Stephen Craig",
@@ -20158,6 +20540,46 @@
     "person_photo": ""
   },
   {
+    "id": "Susan Irene Pedler (1967)",
+    "slug": "susan-pedler",
+    "first_name": "Susan",
+    "middle_name": "Irene",
+    "last_name": "Pedler",
+    "birth_year": 1967,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1967",
+    "death_year_display": "living",
+    "display_name": "Susan Irene Pedler",
+    "title": "Susan Irene Pedler — Family & Biography",
+    "lifespan": "1967 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Susan Irene Pedler (1967–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "margaret-richardson",
+      "stanley-james-pedler-1938"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "keith-pedler",
+      "kenneth-pedler",
+      "sharon-pedler"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Bradley Donald Fatchen (1968)",
     "slug": "bradley-donald-fatchen-1968",
     "first_name": "Bradley Donald",
@@ -20189,6 +20611,59 @@
     "step_children": [],
     "images": [],
     "person_photo": ""
+  },
+  {
+    "id": "Craig Harold Hawkins (1968)",
+    "slug": "craig-hawkins",
+    "first_name": "Craig",
+    "middle_name": "Harold",
+    "last_name": "Hawkins",
+    "birth_year": 1968,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1968",
+    "death_year_display": "living",
+    "display_name": "Craig Harold Hawkins",
+    "title": "Craig Harold Hawkins — Family & Biography",
+    "lifespan": "1968 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Craig Harold Hawkins (1968–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "mary-ellen-pedler-1940",
+      "raymond-hawkins"
+    ],
+    "children": [
+      {
+        "plain_name": "Damon Hunter Hawkins"
+      },
+      {
+        "plain_name": "Joel Ray Hawkins"
+      },
+      {
+        "plain_name": "Clint Stanley Hawkins"
+      }
+    ],
+    "spouses": [
+      {
+        "plain_name": "Rachelle Holstein"
+      }
+    ],
+    "siblings": [
+      "gaylene-hawkins",
+      "lance-hawkins"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
   },
   {
     "id": "Roxanne Kay Lawrie (1968)",
@@ -20255,6 +20730,45 @@
     "step_children": [],
     "images": [],
     "person_photo": ""
+  },
+  {
+    "id": "Gaylene Merle Hawkins (1970)",
+    "slug": "gaylene-hawkins",
+    "first_name": "Gaylene",
+    "middle_name": "Merle",
+    "last_name": "Hawkins",
+    "birth_year": 1970,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1970",
+    "death_year_display": "living",
+    "display_name": "Gaylene Merle Hawkins",
+    "title": "Gaylene Merle Hawkins — Family & Biography",
+    "lifespan": "1970 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Gaylene Merle Hawkins (1970–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "mary-ellen-pedler-1940",
+      "raymond-hawkins"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "craig-hawkins",
+      "lance-hawkins"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
   },
   {
     "id": "Donna Felicity Biddle (1971)",
@@ -20587,6 +21101,52 @@
     "person_photo": ""
   },
   {
+    "id": "Brett Kenneth Rylance (1976)",
+    "slug": "brett-rylance",
+    "first_name": "Brett",
+    "middle_name": "Kenneth",
+    "last_name": "Rylance",
+    "birth_year": 1976,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1976",
+    "death_year_display": "living",
+    "display_name": "Brett Kenneth Rylance",
+    "title": "Brett Kenneth Rylance — Family & Biography",
+    "lifespan": "1976 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Brett Kenneth Rylance (1976–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "gordon-rylance",
+      "shirley-rene-pedler-1942"
+    ],
+    "children": [
+      {
+        "plain_name": "Bronwyn Dee Rylance"
+      }
+    ],
+    "spouses": [
+      {
+        "plain_name": "Jodie (surname not printed)"
+      }
+    ],
+    "siblings": [
+      "julie-rylance"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Kirrily Sheree Maddern (1976)",
     "slug": "kirrily-sheree-maddern-1976",
     "first_name": "Kirrily Sheree",
@@ -20768,6 +21328,48 @@
     "person_photo": null
   },
   {
+    "id": "Julie Evelyn Rylance (1978)",
+    "slug": "julie-rylance",
+    "first_name": "Julie",
+    "middle_name": "Evelyn",
+    "last_name": "Rylance",
+    "birth_year": 1978,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1978",
+    "death_year_display": "living",
+    "display_name": "Julie Evelyn Rylance",
+    "title": "Julie Evelyn Rylance — Family & Biography",
+    "lifespan": "1978 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Julie Evelyn Rylance (1978–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "gordon-rylance",
+      "shirley-rene-pedler-1942"
+    ],
+    "children": [],
+    "spouses": [
+      {
+        "plain_name": "Stephen Britton"
+      }
+    ],
+    "siblings": [
+      "brett-rylance"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Simon Trent Maddern (1978)",
     "slug": "simon-trent-maddern-1978",
     "first_name": "Simon Trent",
@@ -20867,6 +21469,45 @@
     "person_photo": ""
   },
   {
+    "id": "Shane Daniel Pedler (1979)",
+    "slug": "shane-pedler",
+    "first_name": "Shane",
+    "middle_name": "Daniel",
+    "last_name": "Pedler",
+    "birth_year": 1979,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1979",
+    "death_year_display": "living",
+    "display_name": "Shane Daniel Pedler",
+    "title": "Shane Daniel Pedler — Family & Biography",
+    "lifespan": "1979 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Shane Daniel Pedler (1979–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "allan-pedler",
+      "lynette-large"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "kirrilee-pedler",
+      "lawrence-pedler"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Luke Caleb Telfer (1980)",
     "slug": "luke-caleb-telfer",
     "first_name": "Luke Caleb",
@@ -20905,6 +21546,45 @@
       "esther-naomi-lynette-telfer",
       "isaac-nathaniel-telfer",
       "joshua-paul-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Kirrilee Skye Pedler (1981)",
+    "slug": "kirrilee-pedler",
+    "first_name": "Kirrilee",
+    "middle_name": "Skye",
+    "last_name": "Pedler",
+    "birth_year": 1981,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1981",
+    "death_year_display": "living",
+    "display_name": "Kirrilee Skye Pedler",
+    "title": "Kirrilee Skye Pedler — Family & Biography",
+    "lifespan": "1981 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Kirrilee Skye Pedler (1981–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "allan-pedler",
+      "lynette-large"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "lawrence-pedler",
+      "shane-pedler"
     ],
     "step_parents": [],
     "step_children": [],
@@ -21541,6 +22221,45 @@
     "step_children": [],
     "images": [],
     "person_photo": ""
+  },
+  {
+    "id": "Lawrence Leslie David Pedler (1987)",
+    "slug": "lawrence-pedler",
+    "first_name": "Lawrence",
+    "middle_name": "Leslie David",
+    "last_name": "Pedler",
+    "birth_year": 1987,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1987",
+    "death_year_display": "living",
+    "display_name": "Lawrence Leslie David Pedler",
+    "title": "Lawrence Leslie David Pedler — Family & Biography",
+    "lifespan": "1987 – living",
+    "generation": 8,
+    "is_living": true,
+    "body_markdown": "# Lawrence Leslie David Pedler (1987–living)\n\n> **Provenance:** collated from *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" via `Gladys Merle Telfer (1916–living).md`,\n> which carries the full [ok]/[ocr]/[dis]/[?] sourcing audit. Written onto this\n> record 2026-10-26 so the relationship graph has a canonical source.",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "allan-pedler",
+      "lynette-large"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "kirrilee-pedler",
+      "shane-pedler"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
   },
   {
     "id": "Angelina Elen Telfer (1988)",
@@ -22218,39 +22937,6 @@
     "person_photo": ""
   },
   {
-    "id": "Brett Kenneth Rylance",
-    "slug": "brett-kenneth-rylance",
-    "first_name": "Brett Kenneth",
-    "middle_name": "",
-    "last_name": "Rylance",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Brett Kenneth Rylance",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Shirley Rene Pedler.",
-    "roles": [],
-    "tags": [
-      "rylance"
-    ],
-    "parents": [
-      "shirley-rene-pedler-1942"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
     "id": "Carissa Telfer (d.2023)",
     "slug": "carissa-telfer",
     "first_name": "Carissa",
@@ -22298,39 +22984,6 @@
       }
     ],
     "person_photo": "images/people/Carissa-Telfer.jpg"
-  },
-  {
-    "id": "Craig Harold Hawkins",
-    "slug": "craig-harold-hawkins",
-    "first_name": "Craig Harold",
-    "middle_name": "",
-    "last_name": "Hawkins",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Craig Harold Hawkins",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Mary Ellen Pedler.",
-    "roles": [],
-    "tags": [
-      "hawkins"
-    ],
-    "parents": [
-      "mary-ellen-pedler-1940"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
   },
   {
     "id": "Daniel James Nicholson",
@@ -22432,72 +23085,6 @@
     "person_photo": ""
   },
   {
-    "id": "Gaylene Merle Hawkins",
-    "slug": "gaylene-merle-hawkins",
-    "first_name": "Gaylene Merle",
-    "middle_name": "",
-    "last_name": "Hawkins",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Gaylene Merle Hawkins",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Mary Ellen Pedler.",
-    "roles": [],
-    "tags": [
-      "hawkins"
-    ],
-    "parents": [
-      "mary-ellen-pedler-1940"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
-    "id": "Julie Evelyn Rylance",
-    "slug": "julie-evelyn-rylance",
-    "first_name": "Julie Evelyn",
-    "middle_name": "",
-    "last_name": "Rylance",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Julie Evelyn Rylance",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Shirley Rene Pedler.",
-    "roles": [],
-    "tags": [
-      "rylance"
-    ],
-    "parents": [
-      "shirley-rene-pedler-1942"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
     "id": "Justin Paul McAllister",
     "slug": "justin-paul-mcallister",
     "first_name": "Justin Paul",
@@ -22531,72 +23118,6 @@
     "person_photo": ""
   },
   {
-    "id": "Keith Gordon Pedler",
-    "slug": "keith-gordon-pedler",
-    "first_name": "Keith Gordon",
-    "middle_name": "",
-    "last_name": "Pedler",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Keith Gordon Pedler",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Stanley James Pedler.",
-    "roles": [],
-    "tags": [
-      "pedler"
-    ],
-    "parents": [
-      "stanley-james-pedler-1938"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
-    "id": "Kenneth James Pedler",
-    "slug": "kenneth-james-pedler",
-    "first_name": "Kenneth James",
-    "middle_name": "",
-    "last_name": "Pedler",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Kenneth James Pedler",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Stanley James Pedler. Married Wendy May Ries.",
-    "roles": [],
-    "tags": [
-      "pedler"
-    ],
-    "parents": [
-      "stanley-james-pedler-1938"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
     "id": "Kerryn Leigh Manuel",
     "slug": "kerryn-leigh-manuel",
     "first_name": "Kerryn Leigh",
@@ -22620,39 +23141,6 @@
     ],
     "parents": [
       "brenda-janice-telfer-1949"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
-    "id": "Kirrilee Skye Pedler",
-    "slug": "kirrilee-skye-pedler",
-    "first_name": "Kirrilee Skye",
-    "middle_name": "",
-    "last_name": "Pedler",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Kirrilee Skye Pedler",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Stanley Lawrence Pedler.",
-    "roles": [],
-    "tags": [
-      "pedler"
-    ],
-    "parents": [
-      "stanley-lawrence-pedler-1948"
     ],
     "children": [],
     "spouses": [],
@@ -22719,39 +23207,6 @@
     ],
     "parents": [
       "gerald-nicholson-1958"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
-    "id": "Lance Gordon Hawkins",
-    "slug": "lance-gordon-hawkins",
-    "first_name": "Lance Gordon",
-    "middle_name": "",
-    "last_name": "Hawkins",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Lance Gordon Hawkins",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Mary Ellen Pedler.",
-    "roles": [],
-    "tags": [
-      "hawkins"
-    ],
-    "parents": [
-      "mary-ellen-pedler-1940"
     ],
     "children": [],
     "spouses": [],
@@ -22878,39 +23333,6 @@
     "person_photo": ""
   },
   {
-    "id": "Shane Daniel Pedler",
-    "slug": "shane-daniel-pedler",
-    "first_name": "Shane Daniel",
-    "middle_name": "",
-    "last_name": "Pedler",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Shane Daniel Pedler",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Stanley Lawrence Pedler.",
-    "roles": [],
-    "tags": [
-      "pedler"
-    ],
-    "parents": [
-      "stanley-lawrence-pedler-1948"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
     "id": "Sharon Barbara Fatchen",
     "slug": "sharon-barbara-fatchen",
     "first_name": "Sharon Barbara",
@@ -22934,72 +23356,6 @@
     ],
     "parents": [
       "ross-kelvin-fatchen-1948"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
-    "id": "Sharon Marie Pedler",
-    "slug": "sharon-marie-pedler",
-    "first_name": "Sharon Marie",
-    "middle_name": "",
-    "last_name": "Pedler",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Sharon Marie Pedler",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Stanley James Pedler.",
-    "roles": [],
-    "tags": [
-      "pedler"
-    ],
-    "parents": [
-      "stanley-james-pedler-1938"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
-  },
-  {
-    "id": "Susan Irene Pedler",
-    "slug": "susan-irene-pedler",
-    "first_name": "Susan Irene",
-    "middle_name": "",
-    "last_name": "Pedler",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "",
-    "death_year_display": "",
-    "display_name": "Susan Irene Pedler",
-    "title": "",
-    "lifespan": " – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Stanley James Pedler.",
-    "roles": [],
-    "tags": [
-      "pedler"
-    ],
-    "parents": [
-      "stanley-james-pedler-1938"
     ],
     "children": [],
     "spouses": [],

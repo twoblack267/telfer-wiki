@@ -91,6 +91,31 @@ RR="$(node scripts/resolve-refs.mjs --write 2>&1)" || {
 echo "$RR" | grep -E 'RESOLVED|Remaining unresolved|Wrote' | head -5
 
 echo
+echo
+echo "==> Step 2d2/3: retire-profiles.mjs --write (delete deliberately retired profiles)"
+# WHY THIS STEP EXISTS
+# --------------------
+# convert-markdown.mjs re-appends every record that has no vault_file:
+#   existingPeople = [...mergedPeople, ...noVaultFile]
+# so a phantom profile can NEVER be removed by deleting it from people.json — the
+# next regen restores it from the no-vault-note carry-over. Measured, 2026-10-26:
+# deleted stanley-lawrence-pedler-1948, re-ran the pipeline, profile came back.
+#
+# scripts/retired-profiles.json is the tombstone list: slug -> {reason, replaced_by}.
+# This step deletes those slugs and scrubs every back-reference to them. It is
+# idempotent, and it REFUSES to act on any entry without a written reason (an
+# unexplained removal is data loss, not a correction).
+#
+# MUST run AFTER convert-markdown + resolve-refs (which recreate the phantoms) and
+# BEFORE the crown-jewel guard below (so the guard sees the corrected tree and the
+# retirement reads as the declared rename recorded in scripts/redirect-log.json).
+RQ="$(node scripts/retire-profiles.mjs --write 2>&1)" || {
+  echo "RETIRE-PROFILES FAILED — the tombstone list could not be applied:"
+  echo "$RQ" | tail -20
+  exit 1
+}
+echo "$RQ" | tail -4
+
 echo "==> Step 2e/3: CROWN-JEWEL DATA-LOSS GUARD (added 2026-10-24)"
 # WHY HERE, IMMEDIATELY AFTER resolve-refs.mjs
 # -------------------------------------------------
@@ -140,6 +165,16 @@ GJ="$(node scripts/guard-crown-jewels.mjs 2>&1)" || {
   exit 1
 }
 echo "$GJ" | tail -3
+
+# Fail-closed: retired profiles must not survive into the published data. If the
+# retirer silently no-opped (bad list, changed carry-over logic), this catches it
+# here rather than letting a phantom ship to telferwiki.com.
+RC="$(node scripts/retire-profiles.mjs --check 2>&1)" || {
+  echo "RETIRED PROFILE STILL PRESENT AFTER REGEN — refusing to publish:"
+  echo "$RC"
+  exit 1
+}
+echo "$RC"
 
 echo
 echo "==> Step 3/3: verify gate-clean (validate-no-mark-refs.py)"

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-26T19:11:30+10:00",
+  "generated_at": "2026-10-26T21:33:08+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 435,
+  "count": 456,
   "kinds": {
-    "real": 419,
+    "real": 440,
     "redirect": 16,
     "empty": 0
   },
@@ -94,6 +94,10 @@
     },
     "Alfred George Stribling (c.1853\u20131928).md": {
       "sha256": "6b33e4d1c64496efc58d6bddd5c485d5a7030ce50ae818eed5398d31bee1ee04",
+      "kind": "real"
+    },
+    "Allan Lawrence Pedler (1946\u2013living).md": {
+      "sha256": "6671fa9c58844f5c05f8cf9e251b334a352e56f409a54cca56d7a4a2b5cb2997",
       "kind": "real"
     },
     "Allan Telfer.md": {
@@ -192,6 +196,10 @@
       "sha256": "51ba3950e2d06afd2950415eafd01df75c6a9e63f571b2af04280f66adbe5e0c",
       "kind": "redirect"
     },
+    "Brett Kenneth Rylance (1976\u2013living).md": {
+      "sha256": "732747717baea0a7cb0b48b4faf2b526e141b5d430c726520f35947f33ab07ca",
+      "kind": "real"
+    },
     "Carissa Telfer (?\u20132023).md": {
       "sha256": "96d237d3f492d7bc985a1de4bccf96d51d973d33831ae762dfb5b203b23dbd6e",
       "kind": "real"
@@ -266,6 +274,10 @@
     },
     "Colin Roy Telfer (1889\u20131964).md": {
       "sha256": "ea693d0df9da2810f9f6c4f2412b32d6038c16d1a6ab48bfe56bfd13e8d3c354",
+      "kind": "real"
+    },
+    "Craig Harold Hawkins (1968\u2013living).md": {
+      "sha256": "48a414d71c0d879f1fc795b1c50c0a0b3bac8e6193b91af95a75721023888775",
       "kind": "real"
     },
     "Crystal Rose McDonald.md": {
@@ -612,6 +624,10 @@
       "sha256": "3664638a15969f334708d4545703d8f1aa78fc93f3f1482ef84cd3b7459a036c",
       "kind": "real"
     },
+    "Gaylene Merle Hawkins (1970\u2013living).md": {
+      "sha256": "a98f7d36fa9219ae9ec2a108ed1b14d0d1b51faa3496848a72b0e44706b336a7",
+      "kind": "real"
+    },
     "Geoffrey Francis Telfer (1914\u20131975).md": {
       "sha256": "1f7fc88ffb28d84f0311244f4775cbcfd4227e93223eb40a372918c76abf454f",
       "kind": "real"
@@ -661,11 +677,15 @@
       "kind": "real"
     },
     "Gladys Merle Telfer (1916\u2013living).md": {
-      "sha256": "2520b02fade90104342e0d3af75dfd2a0b443f182d5263ba69108e489072a61e",
+      "sha256": "3bd26bd12d7207e41d3997f51e6bb892915657b897800f6e5e41425a473087b3",
       "kind": "real"
     },
     "Gordon Percival Dennis (1904\u20131986).md": {
       "sha256": "dad356c75510ac4a2286a0500c5a870cd36c5a027a7e40e7cdcfb6d00436a6ba",
+      "kind": "real"
+    },
+    "Gordon William Rylance (living).md": {
+      "sha256": "e9c665077c1a1d42ae2ba42d9e073a9675db0a31c988701494f64740c7992f5d",
       "kind": "real"
     },
     "Grantley Keith Telfer.md": {
@@ -1100,6 +1120,10 @@
       "sha256": "b76960ff113ff2e7da5477182ea8facbc6f01c405544266b59976c036994d555",
       "kind": "real"
     },
+    "Julie Evelyn Rylance (1978\u2013living).md": {
+      "sha256": "0e8d6e465a1dac9cb2acddbde2b2b18a91cded39e6c8b9ce0fff90d8dc85b88f",
+      "kind": "real"
+    },
     "Karina Ivory.md": {
       "sha256": "a3f46d99a04f903c4f87354bbb564ac42d25feb0beea81a00b0d4bcc98759a48",
       "kind": "real"
@@ -1110,6 +1134,10 @@
     },
     "Kathryn Mavis Telfer (1961\u20131965).md": {
       "sha256": "e987f5b78d2f823964429fbdc2e2c511d9e10b3fd15327904875a51fd17707bb",
+      "kind": "real"
+    },
+    "Keith Gordon Pedler (1961\u2013living).md": {
+      "sha256": "e5458094b9f54dee2f2d5b380d55a921ec744f532b6b534ea4119fea107f6d5f",
       "kind": "real"
     },
     "Keith Telfer (1911\u20131958).md": {
@@ -1128,8 +1156,16 @@
       "sha256": "bc55530d40d3d437b9f0d8b8cac07e3d19cefcc48f7b6a9cd68e88a5d160274d",
       "kind": "real"
     },
+    "Kenneth James Pedler (1959\u2013living).md": {
+      "sha256": "254088fc12d516ffff7d4b51e3fc2c9b377afde4bb3dd809ac76fe13f9b052cc",
+      "kind": "real"
+    },
     "Kenneth William John Telfer (1906\u20131970).md": {
       "sha256": "0d516dc24c121b362f903a0d1dd0a07a4ff38110ea5231cfb597813dcc3cccbe",
+      "kind": "real"
+    },
+    "Kirrilee Skye Pedler (1981\u2013living).md": {
+      "sha256": "f31be0a141aa2ea16b07ad563c00514e7fbcbd919872f06ef4b3334eb89452e9",
       "kind": "real"
     },
     "Kristin Holly (Telfer) Stefanoff (b. 1985).md": {
@@ -1138,6 +1174,10 @@
     },
     "Kylie Isabella Telfer (1982\u2013?).md": {
       "sha256": "85be19b4ca74166d9ea1e0cac693f52d4e6c62235dff80ec9c019a72a1eb2b6c",
+      "kind": "real"
+    },
+    "Lance Gordon Hawkins (1966\u2013living).md": {
+      "sha256": "be70731c68204813e046ddff9c471334b2a6c3de56a6a010f0db0fcb7492ffec",
       "kind": "real"
     },
     "Lancelot Hobart Watson (1888\u20131960).md": {
@@ -1152,6 +1192,10 @@
       "sha256": "e5537de9f2925b25d9c8dc9d873c4f40cdaca4b8ab01d19ae52e078d1eb92f86",
       "kind": "real"
     },
+    "Lawrence Leslie David Pedler (1987\u2013living).md": {
+      "sha256": "0dfb024c9c74ef785578f677fcaf7e127783d81924423d4b3a3c2fb8ea5dfcc6",
+      "kind": "real"
+    },
     "Leonard Arthur Dance.md": {
       "sha256": "9e00816c05308b773492c93cf5a7ec952b74d857251a337c78c11a26a50e7f1a",
       "kind": "real"
@@ -1162,6 +1206,10 @@
     },
     "Leslie Frank Dillon (~1892\u20131915).md": {
       "sha256": "dc4f4ca8bd194457d3248a38124ca6a3f77629e6b0cfb29b66e776243c85b405",
+      "kind": "real"
+    },
+    "Leslie Hedley Pedler (1907\u20131956).md": {
+      "sha256": "7139cd4db27e5ede72ea2f4989669474fdf9dd347bc471e47e42cc8425c6f4e8",
       "kind": "real"
     },
     "Leslie James Dillon (1916\u20131941).md": {
@@ -1208,6 +1256,10 @@
       "sha256": "c595606c10d6e09df3545ded72ae70c594da67bea35ac47fc724c9a5c5e5f0e7",
       "kind": "real"
     },
+    "Lynette Lillian Large (1951\u2013living).md": {
+      "sha256": "593fadbe2e8e75ac74605d201541657018450dc4523a504e75b9f7b7b8781fa4",
+      "kind": "real"
+    },
     "Mabel Winifred Parker (1890\u20131895).md": {
       "sha256": "f138bc46488809ce0280609b8dd476b41536a131fe75c1e5b0d0414c5d085d88",
       "kind": "real"
@@ -1246,6 +1298,10 @@
     },
     "Margaret Farrow.md": {
       "sha256": "e62283ad73187fc1bc58fff02f40d5e4c2bdefa3068c4282692a8a8add179225",
+      "kind": "real"
+    },
+    "Margaret Jean Richardson (living).md": {
+      "sha256": "08881ac5ce6a1c51cffc447b613cdd5dc796bde7a36995af527a97b26c72db93",
       "kind": "real"
     },
     "Margaret Parker (1857\u20131885).md": {
@@ -1336,6 +1392,10 @@
       "sha256": "fab7b1735ca7d9bb0122e19d27c09292af98b31f81e9ff040dac62e485c1424b",
       "kind": "real"
     },
+    "Mary Ellen Pedler (1940\u2013living).md": {
+      "sha256": "1b37c55cf92acd10458723cb5f693615334db70e1779ef75253e2339d0bdd38c",
+      "kind": "real"
+    },
     "Mary Jane Paynter (1861\u20131945).md": {
       "sha256": "3274f824fe6dd0b673d3479ae9aaaa6277ecd9b47fe9f293b8b152d860163122",
       "kind": "real"
@@ -1410,6 +1470,10 @@
     },
     "Phineas Baker (1870\u20131959).md": {
       "sha256": "2ad67f4219779fdf0debf479e8eeea3b4ed523c8d0d4d9c322dbc389d8bc280a",
+      "kind": "real"
+    },
+    "Raymond Neil Hawkins (1939\u20132000).md": {
+      "sha256": "49e7a3804a3426cb14077c9fab75016a952a118e90422198a595d5fafbaf28bb",
       "kind": "real"
     },
     "Rebecca Telfer.md": {
@@ -1560,12 +1624,24 @@
       "sha256": "325e5cbb8a2f1b354e3e05e90b16fb1c02e78778b47ee5b7a11ca3b08c42a071",
       "kind": "real"
     },
+    "Shane Daniel Pedler (1979\u2013living).md": {
+      "sha256": "af9f5195baca04ff3f0ac00816b0f4db0fe6bf1b3f609649dc57eb969a36ff0f",
+      "kind": "real"
+    },
+    "Sharon Marie Pedler (1964\u2013living).md": {
+      "sha256": "1440016fd88448293b636578b7cf3ec266a05c2a87943d12febb8681e60a9f8d",
+      "kind": "real"
+    },
     "Sheryle Telfer (1961\u2013?).md": {
       "sha256": "615b3bc6e2e9a96034e6aedcd64e843d2a5e5ef53f7677227e3750e62100f7dc",
       "kind": "real"
     },
     "Shirley Edna Telfer (1929\u20132017).md": {
       "sha256": "b55aced2a284b5056db6ce3e1b1eef54acb324d17a46b8c76170d3b91e01c60d",
+      "kind": "real"
+    },
+    "Shirley Rene Pedler (1942\u2013living).md": {
+      "sha256": "857f58857297154b4ae171b5af365e213ecbc01eafa8c1bbf4c5a1516b563e95",
       "kind": "real"
     },
     "Sophia (Webster) March (1803\u20131892).md": {
@@ -1592,12 +1668,20 @@
       "sha256": "faa75c86562792774be891bd835b600805536436fcee011bb331b4039ab5dae0",
       "kind": "real"
     },
+    "Stanley James Pedler (1938\u2013living).md": {
+      "sha256": "999b6b66cd64769d9eee9986bd5a321d36f92c0e550871492628466f7717df86",
+      "kind": "real"
+    },
     "Stella Winifred Parker (1899\u20131974).md": {
       "sha256": "0fcfb60ddc21aa2ea45490eac44368bde74540f5d6b9d23bdff43f03707770e5",
       "kind": "real"
     },
     "Susan Burton Telfer (1844\u20131924).md": {
       "sha256": "1494a4649578b222333f7801f5e1be9c588079ca25db27c62d1bbf2c4ab53c66",
+      "kind": "real"
+    },
+    "Susan Irene Pedler (1967\u2013living).md": {
+      "sha256": "81aaf7e847ded9e15bb7d95bc8a8e4d999361be0bc9cab5173ffe4fdadd9b0b0",
       "kind": "real"
     },
     "Susan Shirley Lawrie (1967\u2013living).md": {

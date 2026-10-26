@@ -2096,6 +2096,109 @@
       "generation": 6
     },
     {
+      "slug": "stanley-james-pedler-1938",
+      "id": "Stanley James Pedler (1938)",
+      "generation": 7
+    },
+    {
+      "slug": "mary-ellen-pedler-1940",
+      "id": "Mary Ellen Pedler (1940)",
+      "generation": 7
+    },
+    {
+      "slug": "shirley-rene-pedler-1942",
+      "id": "Shirley Rene Pedler (1942)",
+      "generation": 7
+    },
+    {
+      "slug": "allan-pedler",
+      "id": "Allan Lawrence Pedler (1946)",
+      "generation": 7
+    },
+    {
+      "slug": "brett-rylance",
+      "id": "Brett Kenneth Rylance (1976)",
+      "generation": 8
+    },
+    {
+      "slug": "craig-hawkins",
+      "id": "Craig Harold Hawkins (1968)",
+      "generation": 8
+    },
+    {
+      "slug": "gaylene-hawkins",
+      "id": "Gaylene Merle Hawkins (1970)",
+      "generation": 8
+    },
+    {
+      "slug": "julie-rylance",
+      "id": "Julie Evelyn Rylance (1978)",
+      "generation": 8
+    },
+    {
+      "slug": "keith-pedler",
+      "id": "Keith Gordon Pedler (1961)",
+      "generation": 8
+    },
+    {
+      "slug": "kenneth-pedler",
+      "id": "Kenneth James Pedler (1959)",
+      "generation": 8
+    },
+    {
+      "slug": "kirrilee-pedler",
+      "id": "Kirrilee Skye Pedler (1981)",
+      "generation": 8
+    },
+    {
+      "slug": "lance-hawkins",
+      "id": "Lance Gordon Hawkins (1966)",
+      "generation": 8
+    },
+    {
+      "slug": "lawrence-pedler",
+      "id": "Lawrence Leslie David Pedler (1987)",
+      "generation": 8
+    },
+    {
+      "slug": "shane-pedler",
+      "id": "Shane Daniel Pedler (1979)",
+      "generation": 8
+    },
+    {
+      "slug": "sharon-pedler",
+      "id": "Sharon Marie Pedler (1964)",
+      "generation": 8
+    },
+    {
+      "slug": "susan-pedler",
+      "id": "Susan Irene Pedler (1967)",
+      "generation": 8
+    },
+    {
+      "slug": "gordon-rylance",
+      "id": "Gordon William Rylance",
+      "generation": 7
+    },
+    {
+      "slug": "leslie-pedler",
+      "id": "Leslie Hedley Pedler (1907)",
+      "generation": 6
+    },
+    {
+      "slug": "margaret-richardson",
+      "id": "Margaret Jean Richardson",
+      "generation": 7
+    },
+    {
+      "slug": "lynette-large",
+      "id": "Lynette Lillian Large (1951)"
+    },
+    {
+      "slug": "raymond-hawkins",
+      "id": "Raymond Neil Hawkins (1939)"
+    },
+    {
       "slug": "kelson-telfer-1946",
       "id": "Kelson Telfer (1946)",
       "generation": 7
@@ -2138,26 +2241,6 @@
     {
       "slug": "ian-donald-mcmurtrie-1954",
       "id": "Ian Donald McMurtrie (1954)",
-      "generation": 7
-    },
-    {
-      "slug": "stanley-james-pedler-1938",
-      "id": "Stanley James Pedler (1938)",
-      "generation": 7
-    },
-    {
-      "slug": "mary-ellen-pedler-1940",
-      "id": "Mary Ellen Pedler (1940)",
-      "generation": 7
-    },
-    {
-      "slug": "shirley-rene-pedler-1942",
-      "id": "Shirley Rene Pedler (1942)",
-      "generation": 7
-    },
-    {
-      "slug": "stanley-lawrence-pedler-1948",
-      "id": "Stanley Lawrence Pedler (1948)",
       "generation": 7
     },
     {
@@ -2378,61 +2461,6 @@
     {
       "slug": "sarah-nicholson",
       "id": "Sarah Nicholson",
-      "generation": 8
-    },
-    {
-      "slug": "kenneth-james-pedler",
-      "id": "Kenneth James Pedler",
-      "generation": 8
-    },
-    {
-      "slug": "keith-gordon-pedler",
-      "id": "Keith Gordon Pedler",
-      "generation": 8
-    },
-    {
-      "slug": "sharon-marie-pedler",
-      "id": "Sharon Marie Pedler",
-      "generation": 8
-    },
-    {
-      "slug": "susan-irene-pedler",
-      "id": "Susan Irene Pedler",
-      "generation": 8
-    },
-    {
-      "slug": "lance-gordon-hawkins",
-      "id": "Lance Gordon Hawkins",
-      "generation": 8
-    },
-    {
-      "slug": "craig-harold-hawkins",
-      "id": "Craig Harold Hawkins",
-      "generation": 8
-    },
-    {
-      "slug": "gaylene-merle-hawkins",
-      "id": "Gaylene Merle Hawkins",
-      "generation": 8
-    },
-    {
-      "slug": "brett-kenneth-rylance",
-      "id": "Brett Kenneth Rylance",
-      "generation": 8
-    },
-    {
-      "slug": "julie-evelyn-rylance",
-      "id": "Julie Evelyn Rylance",
-      "generation": 8
-    },
-    {
-      "slug": "shane-daniel-pedler",
-      "id": "Shane Daniel Pedler",
-      "generation": 8
-    },
-    {
-      "slug": "kirrilee-skye-pedler",
-      "id": "Kirrilee Skye Pedler",
       "generation": 8
     },
     {
@@ -4806,6 +4834,134 @@
         "to": "gladys-telfer"
       },
       {
+        "from": "gladys-telfer",
+        "to": "stanley-james-pedler-1938"
+      },
+      {
+        "from": "leslie-pedler",
+        "to": "stanley-james-pedler-1938"
+      },
+      {
+        "from": "gladys-telfer",
+        "to": "mary-ellen-pedler-1940"
+      },
+      {
+        "from": "leslie-pedler",
+        "to": "mary-ellen-pedler-1940"
+      },
+      {
+        "from": "gladys-telfer",
+        "to": "shirley-rene-pedler-1942"
+      },
+      {
+        "from": "leslie-pedler",
+        "to": "shirley-rene-pedler-1942"
+      },
+      {
+        "from": "gladys-telfer",
+        "to": "allan-pedler"
+      },
+      {
+        "from": "leslie-pedler",
+        "to": "allan-pedler"
+      },
+      {
+        "from": "gordon-rylance",
+        "to": "brett-rylance"
+      },
+      {
+        "from": "shirley-rene-pedler-1942",
+        "to": "brett-rylance"
+      },
+      {
+        "from": "mary-ellen-pedler-1940",
+        "to": "craig-hawkins"
+      },
+      {
+        "from": "raymond-hawkins",
+        "to": "craig-hawkins"
+      },
+      {
+        "from": "mary-ellen-pedler-1940",
+        "to": "gaylene-hawkins"
+      },
+      {
+        "from": "raymond-hawkins",
+        "to": "gaylene-hawkins"
+      },
+      {
+        "from": "gordon-rylance",
+        "to": "julie-rylance"
+      },
+      {
+        "from": "shirley-rene-pedler-1942",
+        "to": "julie-rylance"
+      },
+      {
+        "from": "margaret-richardson",
+        "to": "keith-pedler"
+      },
+      {
+        "from": "stanley-james-pedler-1938",
+        "to": "keith-pedler"
+      },
+      {
+        "from": "margaret-richardson",
+        "to": "kenneth-pedler"
+      },
+      {
+        "from": "stanley-james-pedler-1938",
+        "to": "kenneth-pedler"
+      },
+      {
+        "from": "allan-pedler",
+        "to": "kirrilee-pedler"
+      },
+      {
+        "from": "lynette-large",
+        "to": "kirrilee-pedler"
+      },
+      {
+        "from": "mary-ellen-pedler-1940",
+        "to": "lance-hawkins"
+      },
+      {
+        "from": "raymond-hawkins",
+        "to": "lance-hawkins"
+      },
+      {
+        "from": "allan-pedler",
+        "to": "lawrence-pedler"
+      },
+      {
+        "from": "lynette-large",
+        "to": "lawrence-pedler"
+      },
+      {
+        "from": "allan-pedler",
+        "to": "shane-pedler"
+      },
+      {
+        "from": "lynette-large",
+        "to": "shane-pedler"
+      },
+      {
+        "from": "margaret-richardson",
+        "to": "sharon-pedler"
+      },
+      {
+        "from": "stanley-james-pedler-1938",
+        "to": "sharon-pedler"
+      },
+      {
+        "from": "margaret-richardson",
+        "to": "susan-pedler"
+      },
+      {
+        "from": "stanley-james-pedler-1938",
+        "to": "susan-pedler"
+      },
+      {
         "from": "francis-telfer-1910",
         "to": "kelson-telfer-1946"
       },
@@ -4840,22 +4996,6 @@
       {
         "from": "ethel-jean-telfer-1915",
         "to": "ian-donald-mcmurtrie-1954"
-      },
-      {
-        "from": "gladys-telfer",
-        "to": "stanley-james-pedler-1938"
-      },
-      {
-        "from": "gladys-telfer",
-        "to": "mary-ellen-pedler-1940"
-      },
-      {
-        "from": "gladys-telfer",
-        "to": "shirley-rene-pedler-1942"
-      },
-      {
-        "from": "gladys-telfer",
-        "to": "stanley-lawrence-pedler-1948"
       },
       {
         "from": "doris-telfer",
@@ -5048,50 +5188,6 @@
       {
         "from": "gerald-nicholson-1958",
         "to": "sarah-nicholson"
-      },
-      {
-        "from": "stanley-james-pedler-1938",
-        "to": "kenneth-james-pedler"
-      },
-      {
-        "from": "stanley-james-pedler-1938",
-        "to": "keith-gordon-pedler"
-      },
-      {
-        "from": "stanley-james-pedler-1938",
-        "to": "sharon-marie-pedler"
-      },
-      {
-        "from": "stanley-james-pedler-1938",
-        "to": "susan-irene-pedler"
-      },
-      {
-        "from": "mary-ellen-pedler-1940",
-        "to": "lance-gordon-hawkins"
-      },
-      {
-        "from": "mary-ellen-pedler-1940",
-        "to": "craig-harold-hawkins"
-      },
-      {
-        "from": "mary-ellen-pedler-1940",
-        "to": "gaylene-merle-hawkins"
-      },
-      {
-        "from": "shirley-rene-pedler-1942",
-        "to": "brett-kenneth-rylance"
-      },
-      {
-        "from": "shirley-rene-pedler-1942",
-        "to": "julie-evelyn-rylance"
-      },
-      {
-        "from": "stanley-lawrence-pedler-1948",
-        "to": "shane-daniel-pedler"
-      },
-      {
-        "from": "stanley-lawrence-pedler-1948",
-        "to": "kirrilee-skye-pedler"
       },
       {
         "from": "joy-meridith-rowe-1956",
@@ -5546,6 +5642,26 @@
       {
         "from": "edwin-telfer",
         "to": "lola-may-paterson-1913"
+      },
+      {
+        "from": "gladys-telfer",
+        "to": "leslie-pedler"
+      },
+      {
+        "from": "mary-ellen-pedler-1940",
+        "to": "raymond-hawkins"
+      },
+      {
+        "from": "allan-pedler",
+        "to": "lynette-large"
+      },
+      {
+        "from": "gordon-rylance",
+        "to": "shirley-rene-pedler-1942"
+      },
+      {
+        "from": "margaret-richardson",
+        "to": "stanley-james-pedler-1938"
       }
     ],
     "siblingOf": [
@@ -8576,6 +8692,82 @@
       {
         "from": "gladys-telfer",
         "to": "ruth-telfer-1931"
+      },
+      {
+        "from": "mary-ellen-pedler-1940",
+        "to": "shirley-rene-pedler-1942"
+      },
+      {
+        "from": "mary-ellen-pedler-1940",
+        "to": "stanley-james-pedler-1938"
+      },
+      {
+        "from": "shirley-rene-pedler-1942",
+        "to": "stanley-james-pedler-1938"
+      },
+      {
+        "from": "allan-pedler",
+        "to": "mary-ellen-pedler-1940"
+      },
+      {
+        "from": "allan-pedler",
+        "to": "shirley-rene-pedler-1942"
+      },
+      {
+        "from": "allan-pedler",
+        "to": "stanley-james-pedler-1938"
+      },
+      {
+        "from": "brett-rylance",
+        "to": "julie-rylance"
+      },
+      {
+        "from": "craig-hawkins",
+        "to": "gaylene-hawkins"
+      },
+      {
+        "from": "craig-hawkins",
+        "to": "lance-hawkins"
+      },
+      {
+        "from": "gaylene-hawkins",
+        "to": "lance-hawkins"
+      },
+      {
+        "from": "keith-pedler",
+        "to": "kenneth-pedler"
+      },
+      {
+        "from": "keith-pedler",
+        "to": "sharon-pedler"
+      },
+      {
+        "from": "keith-pedler",
+        "to": "susan-pedler"
+      },
+      {
+        "from": "kenneth-pedler",
+        "to": "sharon-pedler"
+      },
+      {
+        "from": "kenneth-pedler",
+        "to": "susan-pedler"
+      },
+      {
+        "from": "kirrilee-pedler",
+        "to": "lawrence-pedler"
+      },
+      {
+        "from": "kirrilee-pedler",
+        "to": "shane-pedler"
+      },
+      {
+        "from": "lawrence-pedler",
+        "to": "shane-pedler"
+      },
+      {
+        "from": "sharon-pedler",
+        "to": "susan-pedler"
       },
       {
         "from": "judith-dawn-telfer-1944",
