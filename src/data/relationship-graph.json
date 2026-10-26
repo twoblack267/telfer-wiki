@@ -291,11 +291,6 @@
       "generation": 6
     },
     {
-      "slug": "doris-elma-telfer-1919",
-      "id": "Doris Elma Telfer (1919)",
-      "generation": 6
-    },
-    {
       "slug": "dorothy-dillon",
       "id": "Dorothy Dillon (d.1988)",
       "generation": 5
@@ -339,11 +334,6 @@
       "slug": "edwin-telfer-1887",
       "id": "Edwin Gilbert Telfer (1887)",
       "generation": 5
-    },
-    {
-      "slug": "edwin-telfer-1921",
-      "id": "Edwin Roy Telfer (1921)",
-      "generation": 6
     },
     {
       "slug": "effie-olive-telfer-1886",
@@ -623,11 +613,6 @@
     {
       "slug": "gilbert-telfer-1908",
       "id": "Gilbert Melville Telfer (1908)",
-      "generation": 6
-    },
-    {
-      "slug": "gladys-merle-telfer-1917",
-      "id": "Gladys Merle Telfer (1917)",
       "generation": 6
     },
     {
@@ -2096,6 +2081,18 @@
       "generation": 5
     },
     {
+      "slug": "doris-telfer",
+      "id": "Doris Elma Telfer (1918)"
+    },
+    {
+      "slug": "edwin-telfer",
+      "id": "Edwin Roy Telfer (1919)"
+    },
+    {
+      "slug": "gladys-telfer",
+      "id": "Gladys Merle Telfer (1916)"
+    },
+    {
       "slug": "kelson-telfer-1946",
       "id": "Kelson Telfer (1946)",
       "generation": 7
@@ -2846,14 +2843,6 @@
         "to": "donald-jack-hookings-1916"
       },
       {
-        "from": "amy-telfer-1884",
-        "to": "doris-elma-telfer-1919"
-      },
-      {
-        "from": "francis-telfer-1875",
-        "to": "doris-elma-telfer-1919"
-      },
-      {
         "from": "elizabeth-beattie-telfer-1832",
         "to": "dorothy-dillon"
       },
@@ -2900,14 +2889,6 @@
       {
         "from": "john-telfer-1847",
         "to": "edwin-telfer-1887"
-      },
-      {
-        "from": "amy-telfer-1884",
-        "to": "edwin-telfer-1921"
-      },
-      {
-        "from": "francis-telfer-1875",
-        "to": "edwin-telfer-1921"
       },
       {
         "from": "adam-telfer-1842",
@@ -3232,14 +3213,6 @@
       {
         "from": "mark-telfer-1877",
         "to": "gilbert-telfer-1908"
-      },
-      {
-        "from": "amy-telfer-1884",
-        "to": "gladys-merle-telfer-1917"
-      },
-      {
-        "from": "francis-telfer-1875",
-        "to": "gladys-merle-telfer-1917"
       },
       {
         "from": "murray-telfer-1924",
@@ -4806,6 +4779,30 @@
         "to": "andrew-telfer"
       },
       {
+        "from": "amy-telfer-1884",
+        "to": "doris-telfer"
+      },
+      {
+        "from": "francis-telfer-1875",
+        "to": "doris-telfer"
+      },
+      {
+        "from": "amy-telfer-1884",
+        "to": "edwin-telfer"
+      },
+      {
+        "from": "francis-telfer-1875",
+        "to": "edwin-telfer"
+      },
+      {
+        "from": "amy-telfer-1884",
+        "to": "gladys-telfer"
+      },
+      {
+        "from": "francis-telfer-1875",
+        "to": "gladys-telfer"
+      },
+      {
         "from": "francis-telfer-1910",
         "to": "kelson-telfer-1946"
       },
@@ -4842,39 +4839,39 @@
         "to": "ian-donald-mcmurtrie-1954"
       },
       {
-        "from": "gladys-merle-telfer-1917",
+        "from": "gladys-telfer",
         "to": "stanley-james-pedler-1938"
       },
       {
-        "from": "gladys-merle-telfer-1917",
+        "from": "gladys-telfer",
         "to": "mary-ellen-pedler-1940"
       },
       {
-        "from": "gladys-merle-telfer-1917",
+        "from": "gladys-telfer",
         "to": "shirley-rene-pedler-1942"
       },
       {
-        "from": "gladys-merle-telfer-1917",
+        "from": "gladys-telfer",
         "to": "stanley-lawrence-pedler-1948"
       },
       {
-        "from": "doris-elma-telfer-1919",
+        "from": "doris-telfer",
         "to": "dennis-rowe-1946"
       },
       {
-        "from": "doris-elma-telfer-1919",
+        "from": "doris-telfer",
         "to": "lindsay-rowe-1954"
       },
       {
-        "from": "doris-elma-telfer-1919",
+        "from": "doris-telfer",
         "to": "joy-meridith-rowe-1956"
       },
       {
-        "from": "doris-elma-telfer-1919",
+        "from": "doris-telfer",
         "to": "roy-rowe-1960"
       },
       {
-        "from": "edwin-telfer-1921",
+        "from": "edwin-telfer",
         "to": "judith-dawn-telfer-1944"
       },
       {
@@ -4882,7 +4879,7 @@
         "to": "judith-dawn-telfer-1944"
       },
       {
-        "from": "edwin-telfer-1921",
+        "from": "edwin-telfer",
         "to": "joy-lorraine-telfer-1952"
       },
       {
@@ -4890,7 +4887,7 @@
         "to": "joy-lorraine-telfer-1952"
       },
       {
-        "from": "edwin-telfer-1921",
+        "from": "edwin-telfer",
         "to": "david-murray-telfer-1961"
       },
       {
@@ -4926,7 +4923,7 @@
         "to": "rex-nicholson-1961"
       },
       {
-        "from": "edwin-telfer-1921",
+        "from": "edwin-telfer",
         "to": "miriam-ruth-telfer-1949"
       },
       {
@@ -5292,10 +5289,6 @@
         "to": "elizabeth-telfer-1868"
       },
       {
-        "from": "edwin-telfer-1921",
-        "to": "lola-may-paterson-1913"
-      },
-      {
         "from": "elizabeth-beattie-1802",
         "to": "james-telfer-1796"
       },
@@ -5546,6 +5539,10 @@
       {
         "from": "karla-telfer",
         "to": "samuel-joel-telfer"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "lola-may-paterson-1913"
       }
     ],
     "siblingOf": [
@@ -6227,11 +6224,11 @@
       },
       {
         "from": "clarice-may-telfer-1911",
-        "to": "doris-elma-telfer-1919"
+        "to": "doris-telfer"
       },
       {
         "from": "clarice-may-telfer-1911",
-        "to": "edwin-telfer-1921"
+        "to": "edwin-telfer"
       },
       {
         "from": "clarice-may-telfer-1911",
@@ -6247,7 +6244,7 @@
       },
       {
         "from": "clarice-may-telfer-1911",
-        "to": "gladys-merle-telfer-1917"
+        "to": "gladys-telfer"
       },
       {
         "from": "clarice-may-telfer-1911",
@@ -6342,38 +6339,6 @@
         "to": "laurel-bosanquet"
       },
       {
-        "from": "doris-elma-telfer-1919",
-        "to": "edwin-telfer-1921"
-      },
-      {
-        "from": "doris-elma-telfer-1919",
-        "to": "emily-amelia-telfer-1913"
-      },
-      {
-        "from": "doris-elma-telfer-1919",
-        "to": "ethel-jean-telfer-1915"
-      },
-      {
-        "from": "doris-elma-telfer-1919",
-        "to": "francis-telfer-1910"
-      },
-      {
-        "from": "doris-elma-telfer-1919",
-        "to": "gladys-merle-telfer-1917"
-      },
-      {
-        "from": "doris-elma-telfer-1919",
-        "to": "murray-telfer-1924"
-      },
-      {
-        "from": "doris-elma-telfer-1919",
-        "to": "reginald-masters-telfer-1922"
-      },
-      {
-        "from": "doris-elma-telfer-1919",
-        "to": "ruth-telfer-1931"
-      },
-      {
         "from": "douglas-telfer-1913",
         "to": "john-telfer-alick-ralph"
       },
@@ -6464,34 +6429,6 @@
       {
         "from": "edwin-telfer-1887",
         "to": "william-telfer-1880"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "emily-amelia-telfer-1913"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "ethel-jean-telfer-1915"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "francis-telfer-1910"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "gladys-merle-telfer-1917"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "murray-telfer-1924"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "reginald-masters-telfer-1922"
-      },
-      {
-        "from": "edwin-telfer-1921",
-        "to": "ruth-telfer-1931"
       },
       {
         "from": "effie-olive-telfer-1886",
@@ -6775,7 +6712,7 @@
       },
       {
         "from": "emily-amelia-telfer-1913",
-        "to": "gladys-merle-telfer-1917"
+        "to": "gladys-telfer"
       },
       {
         "from": "emily-amelia-telfer-1913",
@@ -6899,7 +6836,7 @@
       },
       {
         "from": "ethel-jean-telfer-1915",
-        "to": "gladys-merle-telfer-1917"
+        "to": "gladys-telfer"
       },
       {
         "from": "ethel-jean-telfer-1915",
@@ -7051,7 +6988,7 @@
       },
       {
         "from": "francis-telfer-1910",
-        "to": "gladys-merle-telfer-1917"
+        "to": "gladys-telfer"
       },
       {
         "from": "francis-telfer-1910",
@@ -7292,18 +7229,6 @@
       {
         "from": "gilbert-telfer-1908",
         "to": "maifie-telfer-1913"
-      },
-      {
-        "from": "gladys-merle-telfer-1917",
-        "to": "murray-telfer-1924"
-      },
-      {
-        "from": "gladys-merle-telfer-1917",
-        "to": "reginald-masters-telfer-1922"
-      },
-      {
-        "from": "gladys-merle-telfer-1917",
-        "to": "ruth-telfer-1931"
       },
       {
         "from": "grantley-telfer",
@@ -8576,6 +8501,78 @@
       {
         "from": "esther-naomi-lynette-telfer",
         "to": "luke-caleb-telfer"
+      },
+      {
+        "from": "doris-telfer",
+        "to": "edwin-telfer"
+      },
+      {
+        "from": "doris-telfer",
+        "to": "emily-amelia-telfer-1913"
+      },
+      {
+        "from": "doris-telfer",
+        "to": "ethel-jean-telfer-1915"
+      },
+      {
+        "from": "doris-telfer",
+        "to": "francis-telfer-1910"
+      },
+      {
+        "from": "doris-telfer",
+        "to": "gladys-telfer"
+      },
+      {
+        "from": "doris-telfer",
+        "to": "murray-telfer-1924"
+      },
+      {
+        "from": "doris-telfer",
+        "to": "reginald-masters-telfer-1922"
+      },
+      {
+        "from": "doris-telfer",
+        "to": "ruth-telfer-1931"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "emily-amelia-telfer-1913"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "ethel-jean-telfer-1915"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "francis-telfer-1910"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "gladys-telfer"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "murray-telfer-1924"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "reginald-masters-telfer-1922"
+      },
+      {
+        "from": "edwin-telfer",
+        "to": "ruth-telfer-1931"
+      },
+      {
+        "from": "gladys-telfer",
+        "to": "murray-telfer-1924"
+      },
+      {
+        "from": "gladys-telfer",
+        "to": "reginald-masters-telfer-1922"
+      },
+      {
+        "from": "gladys-telfer",
+        "to": "ruth-telfer-1931"
       },
       {
         "from": "judith-dawn-telfer-1944",
