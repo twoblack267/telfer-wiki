@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-26T04:03:54.849Z",
-  "status": "REGRESSION",
+  "checkedAt": "2026-10-26T04:04:20.905Z",
+  "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 508,
@@ -8,19 +8,6 @@
   },
   "crownJewelsChecked": 5,
   "renames": [],
-  "failures": [
-    {
-      "kind": "CROWN_JEWEL_SHRANK",
-      "slug": "william-telfer-1802",
-      "name": "William Telfer",
-      "field": "children",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "Andrew Telfer"
-      ]
-    }
-  ],
+  "failures": [],
   "warnings": []
 }
