@@ -2261,6 +2261,11 @@
       "generation": 5
     },
     {
+      "slug": "ronald-rex-fatchen",
+      "id": "Ronald Rex Fatchen (1937)",
+      "generation": 7
+    },
+    {
       "slug": "kelson-telfer-1946",
       "id": "Kelson Telfer (1946)",
       "generation": 7
@@ -2268,11 +2273,6 @@
     {
       "slug": "phyllis-marjorie-fatchen-1934",
       "id": "Phyllis Marjorie Fatchen (1934)",
-      "generation": 7
-    },
-    {
-      "slug": "donald-rex-fatchen-1957",
-      "id": "Donald Rex Fatchen (1937)",
       "generation": 7
     },
     {
@@ -5128,16 +5128,16 @@
         "to": "susan-telfer-of-german-creek"
       },
       {
+        "from": "clarice-may-telfer-1911",
+        "to": "ronald-rex-fatchen"
+      },
+      {
         "from": "francis-telfer-1910",
         "to": "kelson-telfer-1946"
       },
       {
         "from": "clarice-may-telfer-1911",
         "to": "phyllis-marjorie-fatchen-1934"
-      },
-      {
-        "from": "clarice-may-telfer-1911",
-        "to": "donald-rex-fatchen-1957"
       },
       {
         "from": "clarice-may-telfer-1911",
@@ -5392,19 +5392,19 @@
         "to": "michelle-elizabeth-bassett-1973"
       },
       {
-        "from": "donald-rex-fatchen-1957",
+        "from": "ronald-rex-fatchen",
         "to": "roger-graham-fatchen-1961"
       },
       {
-        "from": "donald-rex-fatchen-1957",
+        "from": "ronald-rex-fatchen",
         "to": "vivonne-joy-fatchen-1966"
       },
       {
-        "from": "donald-rex-fatchen-1957",
+        "from": "ronald-rex-fatchen",
         "to": "bradley-donald-fatchen-1968"
       },
       {
-        "from": "donald-rex-fatchen-1957",
+        "from": "ronald-rex-fatchen",
         "to": "petrea-elizabeth-fatchen-1972"
       },
       {
@@ -9202,6 +9202,18 @@
       {
         "from": "susan-telfer-of-german-creek",
         "to": "william-telfer"
+      },
+      {
+        "from": "ronald-rex-fatchen",
+        "to": "ross-kelvin-fatchen-1948"
+      },
+      {
+        "from": "phyllis-marjorie-fatchen-1934",
+        "to": "ronald-rex-fatchen"
+      },
+      {
+        "from": "malcolm-geoffrey-fatchen-1942",
+        "to": "ronald-rex-fatchen"
       },
       {
         "from": "judith-dawn-telfer-1944",

@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "from": "donald-rex-fatchen-1957",
+    "to": "ronald-rex-fatchen",
+    "matched_by": "removed-declared",
+    "display_name": "Donald Rex Fatchen",
+    "reason": "SLUG RENAME, not a removal — and the old slug carried two faults at once. (1) The GIVEN NAME was wrong: this man is Ronald Rex Fatchen, not Donald. B2 (From the Borders to the Bush) printed p.174 was read from the PAGE IMAGE by two independent engines — WeVisDoc-2B (local) and Gemini vision (cloud) — across three renders at 9x and 12x magnification; both read 'Ronald Rex Fatchen' on every render and neither ever read 'Donald'. (2) The trailing YEAR in the slug was wrong: 1957 was a marriage-era date sitting in his birth-date cell, not a birth. That date has been withdrawn rather than guessed, and the vault now states plainly that B2 prints no birth date for him at all. The person is unchanged and has his own vault note ('Ronald Rex Fatchen.md'). 'Donald' survives correctly only as the MIDDLE name of his son Bradley Donald Fatchen. Recorded in the vault Corrections Log, 2026-10-27."
+  }
+]

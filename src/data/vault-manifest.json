@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-27T15:29:44+10:00",
+  "generated_at": "2026-10-27T16:03:08+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 469,
+  "count": 470,
   "kinds": {
-    "real": 452,
+    "real": 453,
     "redirect": 17,
     "empty": 0
   },
@@ -261,7 +261,7 @@
       "kind": "redirect"
     },
     "Clarice May Telfer (1911\u20131997).md": {
-      "sha256": "305f8bb4e4b8ba841d88deadaa70a0e7d6a5f57c8427bf3419e109017b03601d",
+      "sha256": "3eeb6285e67a4e6781049179efb3e7eabbcc9ea61e5e26e24c84f4f811815f9e",
       "kind": "real"
     },
     "Colin Lindsay Beaton (1915\u20131944).md": {
@@ -1606,6 +1606,10 @@
     },
     "Roland John Telfer (1882\u20131975).md": {
       "sha256": "1ab11068682ed7e57db52cf1034d7e1cb08900b82d77a227fd0c41553af23377",
+      "kind": "real"
+    },
+    "Ronald Rex Fatchen.md": {
+      "sha256": "3263c6c8036ab6d9b08529d2fb9b296f28c38a7ff2be02c90fb7a8b7ed52d840",
       "kind": "real"
     },
     "Ronald Telfer (1898\u20131898).md": {

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T05:30:13.309Z",
+  "checkedAt": "2026-10-27T06:04:06.671Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -7,7 +7,122 @@
     "after": 528
   },
   "crownJewelsChecked": 5,
-  "renames": [],
+  "renames": [
+    {
+      "from": "donald-rex-fatchen-1957",
+      "to": "ronald-rex-fatchen",
+      "name": "Donald Rex Fatchen"
+    }
+  ],
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "dennis-rowe-1946",
+      "name": "Dennis Rowe",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "doris-elma-telfer-1919"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "lindsay-rowe-1954",
+      "name": "Lindsay Rowe",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "doris-elma-telfer-1919"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "joy-meridith-rowe-1956",
+      "name": "Joy Meridith Rowe",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "doris-elma-telfer-1919"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "roy-rowe-1960",
+      "name": "Roy Rowe",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "doris-elma-telfer-1919"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "judith-dawn-telfer-1944",
+      "name": "Judith Dawn Telfer",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "edwin-telfer-1921"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "joy-lorraine-telfer-1952",
+      "name": "Joy Lorraine Telfer",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "edwin-telfer-1921"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "david-murray-telfer-1961",
+      "name": "David Murray Telfer",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "edwin-telfer-1921"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "miriam-ruth-telfer-1949",
+      "name": "Miriam Ruth Telfer",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "edwin-telfer-1921"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "lola-may-paterson-1913",
+      "name": "Lola May Paterson",
+      "field": "spouses",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "edwin-telfer-1921"
+      ]
+    }
+  ]
 }

@@ -89,6 +89,12 @@
     "replaced_by": "edwin-telfer",
     "display_name": "Edwin Roy Telfer"
   },
+  "donald-rex-fatchen-1957": {
+    "retired": "2026-10-27",
+    "reason": "SLUG RENAME, not a removal. The given name was wrong and the slug carried the wrong year too. B2 (From the Borders to the Bush) p.174 was read from the PAGE IMAGE by two independent engines - WeVisDoc-2B (local) and Gemini vision (cloud) - across three renders at 9x and 12x: both read 'Ronald Rex Fatchen' every time and neither ever read 'Donald'. The vault note for his mother Clarice May Telfer (1911-1997) has been corrected from Donald to Ronald, and the '17 Dec 1957' that sat in his birth-date cell was a marriage-era date, not a birth date; B2 prints no birth date for him at all, so that cell is now blank rather than guessed. The new profile keeps birth_year 1937, which the old slug contradicted. THE PERSON IS UNCHANGED. Source: vault Corrections Log 2026-10-27.",
+    "replaced_by": "ronald-rex-fatchen",
+    "display_name": "Ronald Rex Fatchen"
+  },
   "gladys-merle-telfer-1917": {
     "retired": "2026-10-27",
     "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates and the vault note was renamed to match, so the derived slug changed. THE PERSON IS UNCHANGED. Birth 1917 -> 1916. Source recorded in the vault note: Genealogy SA birth index, Ryerson age 92. New note: 'Gladys Merle Telfer (1916-living).md'; she remains flagged living. Her old live URL must resolve to the new page.",
