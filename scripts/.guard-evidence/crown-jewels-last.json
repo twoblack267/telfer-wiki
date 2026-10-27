@@ -1,59 +1,13 @@
 {
-  "checkedAt": "2026-10-26T23:24:14.543Z",
+  "checkedAt": "2026-10-27T01:25:34.832Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 523,
+    "before": 528,
     "after": 528
   },
   "crownJewelsChecked": 5,
-  "renames": [
-    {
-      "from": "helen-telfer",
-      "to": "harriett-helen-telfer",
-      "name": "Helen Telfer"
-    }
-  ],
+  "renames": [],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "elizabeth-telfer-1868",
-      "name": "Elizabeth Telfer",
-      "field": "siblings",
-      "before": 9,
-      "after": 7,
-      "lost": 2,
-      "lostEntries": [
-        "edith-mary-kathleen-telfer",
-        "helen-telfer"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "lindsay-telfer-1920",
-      "name": "Lindsay Roland Telfer",
-      "field": "siblings",
-      "before": 8,
-      "after": 6,
-      "lost": 2,
-      "lostEntries": [
-        "edith-mary-kathleen-telfer",
-        "helen-telfer"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "susan-telfer-1871",
-      "name": "Susan Telfer",
-      "field": "siblings",
-      "before": 9,
-      "after": 7,
-      "lost": 2,
-      "lostEntries": [
-        "edith-mary-kathleen-telfer",
-        "helen-telfer"
-      ]
-    }
-  ]
+  "warnings": []
 }
