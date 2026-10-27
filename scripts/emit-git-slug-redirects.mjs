@@ -293,17 +293,26 @@ if (WRITE_PAGES) {
     }
     fs.mkdirSync(dir, { recursive: true });
     const target = `${ABS_BASE}/people/${r.to}/`;
+    // The LABEL is the person's real name, so it must come from the DESTINATION,
+    // never from r.display_name. In snapshot mode the old record is synthesised as
+    // { slug: s, display_name: s } (see line ~134) because the committed snapshot
+    // stores slugs only — so r.display_name IS the old slug, and every stub read
+    // "Redirecting to helen-telfer". The destination is always a live record in
+    // people.json, so its display_name is authoritative. Fall back to the slug
+    // only if the destination somehow has no name.
+    const destRec = NEW.find((p) => p.slug === r.to);
+    const label = (destRec && destRec.display_name) || r.display_name;
     fs.writeFileSync(file, `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting to ${r.display_name}</title>
+  <title>Redirecting to ${label}</title>
   <meta http-equiv="refresh" content="0;url=${target}">
   <link rel="canonical" href="${target}">
   <meta name="robots" content="noindex">
 </head>
 <body>
-  <p>Redirecting to <a href="${target}">${r.display_name}</a>...</p>
+  <p>Redirecting to <a href="${target}">${label}</a>...</p>
 </body>
 </html>
 <script>location.replace('${target}');</script>`);
