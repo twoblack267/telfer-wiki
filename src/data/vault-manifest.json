@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-28T08:45:58+10:00",
+  "generated_at": "2026-10-28T09:10:06+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 570,
+  "count": 607,
   "kinds": {
-    "real": 553,
+    "real": 590,
     "redirect": 17,
     "empty": 0
   },
@@ -40,6 +40,10 @@
       "sha256": "b99fc07377a1aca7c711ee82c35e6ee18838c5b758e2baffb9b3c4db7bc2a445",
       "kind": "real"
     },
+    "Adelaide Estelle Telfer (b. 2003).md": {
+      "sha256": "103a61cf4d219ae0478d5aa1a82d0ddf3df6a0769bde64bdf4b9ef592c1ab98a",
+      "kind": "real"
+    },
     "Adrian James Commane (b. 1977).md": {
       "sha256": "85bb51f3fc3644b050ded25a98f8b6ae2ec7708b1320599fb44551074f131091",
       "kind": "real"
@@ -54,6 +58,10 @@
     },
     "Agnes Telfer (1848\u2013?).md": {
       "sha256": "3bfadd45c8f2673d3f8b5cb8619f766562c6336b5cd962569410fd7e0e3c53c9",
+      "kind": "real"
+    },
+    "Aimee Narelle Welch (b. 1996).md": {
+      "sha256": "c7d8991678269ac69d15390b8d1edf543107f948038e29fd0ec24308994e2e39",
       "kind": "real"
     },
     "Alan Dale Telfer (1890\u20131937).md": {
@@ -78,6 +86,10 @@
     },
     "Alexander Brown Thomson.md": {
       "sha256": "511e6c3950038378d6489a74054b8295f9b99b38322774a7f4115b76d3f6e718",
+      "kind": "real"
+    },
+    "Alexander James Telfer (b. 1998).md": {
+      "sha256": "cba62c72bf3e13a503a84d856d5facc4e42fd60ad551454b2a252ac400113d96",
       "kind": "real"
     },
     "Alexander Lawrie (1776\u20131847).md": {
@@ -192,8 +204,16 @@
       "sha256": "0195407ca0ed2aa716b07e13fd6126035c1b375a6ce84da7ce1eaeb2e8d20ebf",
       "kind": "real"
     },
+    "Anneliese Monique Telfer (b. 1997).md": {
+      "sha256": "1b5ee346de303c29627d11f98f8a88c0483a409fcbeef2898399f43c8dc7465f",
+      "kind": "real"
+    },
     "Anthony James Fatchen (b. 1969).md": {
       "sha256": "08f5312f687667fd8e95f87bb6b1f7c843139ab94c99fd40c52b85361686e23b",
+      "kind": "real"
+    },
+    "April Nicol Telfer (b. 2002).md": {
+      "sha256": "b9bc8a0a67eafeb2e41bca3fe696fb41e95a0f3f3cba0873378e93f501f40031",
       "kind": "real"
     },
     "Arnold Cuthbert Lawrie.md": {
@@ -248,6 +268,10 @@
       "sha256": "53ec735545a9b2a340c9de281e1fc6c5a7f4a5162f475b18382d869d84ea913f",
       "kind": "real"
     },
+    "Bradley Luke Telfer (b. 1994).md": {
+      "sha256": "fd9adda31ac68234d170a386ba84010f2134afddcd99da63156f4e68805b36f1",
+      "kind": "real"
+    },
     "Brenda Janice Telfer (b. 1949).md": {
       "sha256": "31309ba270ba1fd089d3abe72807ef5621e181b3b37b97f34804e679ac68e409",
       "kind": "real"
@@ -262,6 +286,10 @@
     },
     "Bronwyn Tracy Lawrie (b. 1972).md": {
       "sha256": "63cd60142ed1e9deab095d21f339f8198589dd5751734c5fa47eff928770dd55",
+      "kind": "real"
+    },
+    "Bruce Grant Telfer (b. 1972).md": {
+      "sha256": "e933bb057c8b4303c6e37b5aae9cb7c4ff829c81e4a6c00ea4ebdae1ef1294dc",
       "kind": "real"
     },
     "Carissa Telfer (?\u20132023).md": {
@@ -344,6 +372,10 @@
       "sha256": "f5837958311d85e0f6125275ab46f8865c6b0296f71a50dc7aca90b8a4906bb2",
       "kind": "real"
     },
+    "Clayton David Telfer (b. 1999).md": {
+      "sha256": "2743228b8b42651dcd68bf14d381462946f43d24316b54cd59c65e086d7448b9",
+      "kind": "real"
+    },
     "Colin Lindsay Beaton (1915\u20131944).md": {
       "sha256": "02aa6c5b556ac2bf51322d1a32e67e64654036b5a87c2385be079a96ae9c8fe0",
       "kind": "real"
@@ -354,6 +386,10 @@
     },
     "Colin Roy Telfer (1889\u20131964).md": {
       "sha256": "ea693d0df9da2810f9f6c4f2412b32d6038c16d1a6ab48bfe56bfd13e8d3c354",
+      "kind": "real"
+    },
+    "Connor Harris McLaughlin (b. 1999).md": {
+      "sha256": "9c4383bc08ea08e16e7eeba68d7e529a7a4b55c6f1990e78c69f580c73769e68",
       "kind": "real"
     },
     "Craig Harold Hawkins (1968\u2013living).md": {
@@ -394,6 +430,10 @@
     },
     "David Lyndon Telfer (1957\u20131996).md": {
       "sha256": "894aba5821fffc0743be1a890b6e519044ecd8cd4888979f1eb752a7bf787f5a",
+      "kind": "real"
+    },
+    "David Morris Telfer (b. 1970).md": {
+      "sha256": "ade9b745e385da28a7e613a38c28ed64038cb2886051d95355148ff3349b6ee9",
       "kind": "real"
     },
     "David Murray Telfer (b. 1961).md": {
@@ -502,6 +542,10 @@
     },
     "Elisabeth Telfer (b. ~1806, England).md": {
       "sha256": "89b52b78208be7272361b1d035dcddf91dfeae9c553648ed70fb3d5189b80fa5",
+      "kind": "real"
+    },
+    "Elissa Anne Bustard (b. 1973).md": {
+      "sha256": "1776cdb8ba8717ef7c477e97b1a5fb0345f1da63ba63a518eb30fe29565a039d",
       "kind": "real"
     },
     "Elizabeth Anne Smith (1878\u2013?).md": {
@@ -764,12 +808,20 @@
       "sha256": "3664638a15969f334708d4545703d8f1aa78fc93f3f1482ef84cd3b7459a036c",
       "kind": "real"
     },
+    "Garry Lewis Harold McLaughlin (b. 1966).md": {
+      "sha256": "3b1ba2796a960bc3b3c56e9691142721b7bdd9fb3629f42c434e87d002db41c1",
+      "kind": "real"
+    },
     "Gavin Malcolm Fatchen (b. 1973).md": {
       "sha256": "2f42cbab3104b7825636db20461757552a3d5e721850669ab61bd67e8475859d",
       "kind": "real"
     },
     "Gaylene Merle Hawkins (1970\u2013living).md": {
       "sha256": "a677ef1ea87a3f27312b7d7f55f67793edfeff8c242a59903f1eb4b066714bea",
+      "kind": "real"
+    },
+    "Geoffrey Alan Telfer (b. 1964).md": {
+      "sha256": "144afbbca0a9d77ddfd3e6a4a4296aaeeccacfda919170e8b5c79fd2581e2dfb",
       "kind": "real"
     },
     "Geoffrey Donald Bassett (b. 1960).md": {
@@ -852,6 +904,10 @@
       "sha256": "7eaefbff3ac35bc980308bba09fb28fe83994e17e9b5998b19b8530f43f3d0f4",
       "kind": "real"
     },
+    "Gwendoline May Hinder (1909\u20132005).md": {
+      "sha256": "2b024d0eb309992c439fed67bf57fae753f4471180fd4426c01b9028439a57c2",
+      "kind": "real"
+    },
     "Gwendoline Victoria (Campbell) Telfer (1910\u20131966).md": {
       "sha256": "12d757a3ed90ebb3d1a43cd4b1a389898b9d8fe00bd3f0d55b0ff923b8de34e4",
       "kind": "real"
@@ -894,6 +950,10 @@
     },
     "Heather Joy McMurtrie (b. 1949).md": {
       "sha256": "9a3d3cb0e3983936da72220c5a2afd376a2bb7267c5204f5c514be3afe5a4025",
+      "kind": "real"
+    },
+    "Helen Elizabeth King (b. 1939).md": {
+      "sha256": "6ca7c0faba8e2ee67b5a2355b4796e2c195d9380ac2b48248771050ce2f2c01e",
       "kind": "real"
     },
     "Helen Elizabeth Nicholson (b. 1959).md": {
@@ -1148,12 +1208,20 @@
       "sha256": "13b54fd7abdd9a6e918eefdcdfcf431a329294fad013152e88a9bd1d7e3e3d53",
       "kind": "real"
     },
+    "Jessica Hanson (b. 2003).md": {
+      "sha256": "543cbf3fb1b29eceb6c0654cbe344885cf9eeab444adc36f44b61d9df4574f78",
+      "kind": "real"
+    },
     "Jessie Allan.md": {
       "sha256": "2570fd8b2f1c15ffcd616d170b5ff05a5d1ef5548f279f3a3161ad2bcd0075a3",
       "kind": "real"
     },
     "Jessie Kathleen (Sargent) Telfer (1914\u20131954).md": {
       "sha256": "8e2d11e89880587234fcf005b96a88c4565878dc776b6466f950b8c530501354",
+      "kind": "real"
+    },
+    "Joanna Margaret Welch (b. 1993).md": {
+      "sha256": "4cb9a29abd6c7c0034219cce03c1529574f5ad16eb23b9c6b95f14473adafe2a",
       "kind": "real"
     },
     "Joel Matthew Ivory (1986\u2013?).md": {
@@ -1420,6 +1488,10 @@
       "sha256": "d67c5e45669254e5b248081f38ccd9481161433dadd4b4461e3e9df03c63b1a4",
       "kind": "real"
     },
+    "Kylie Anne Telfer (b. 1974).md": {
+      "sha256": "d02763107152aa6fc5b45be1d41b857e849c01b1afd6f89e2ecb0b9045159d5d",
+      "kind": "real"
+    },
     "Kylie Isabella Telfer (1982\u2013?).md": {
       "sha256": "85be19b4ca74166d9ea1e0cac693f52d4e6c62235dff80ec9c019a72a1eb2b6c",
       "kind": "real"
@@ -1446,6 +1518,14 @@
     },
     "Lawrence Leslie David Pedler (1987\u2013living).md": {
       "sha256": "4e45c431d60633cbf61beb854a461475b8e374888a5c335e50a04009e790322b",
+      "kind": "real"
+    },
+    "Leanne Estelle Thomson (b. 1972).md": {
+      "sha256": "e90a0c047a86e957f9ba331e7fd49a06b1b9551dda53ece0f98710e4d0628aad",
+      "kind": "real"
+    },
+    "Leanne Gaye Telfer (b. 1967).md": {
+      "sha256": "ed23a5c4f3f349ba17d395d12386a9e6c162bf7e8747fe094a5ae58255b3aada",
       "kind": "real"
     },
     "Leonard Arthur Dance.md": {
@@ -1528,6 +1608,10 @@
       "sha256": "c595606c10d6e09df3545ded72ae70c594da67bea35ac47fc724c9a5c5e5f0e7",
       "kind": "real"
     },
+    "Lyall Vincent Telfer (b. 1943).md": {
+      "sha256": "d16c4de19d3c84b75edb9f2212e5f81c639df56e255ae098d413c2299990a66c",
+      "kind": "real"
+    },
     "Lyndell Marie Telfer (b. 1951).md": {
       "sha256": "5c149c2e8b337212332bd767ac3aba360fa2f20ae812b57a38c9411cc835ecf1",
       "kind": "real"
@@ -1592,6 +1676,10 @@
       "sha256": "b38c0bccd3cc3937fb98661ac72545ab57e81a26884cac3b4d2434fd46c55331",
       "kind": "real"
     },
+    "Margaret Kaye Telfer (b. 1962).md": {
+      "sha256": "5329f44773fdcc0de888565fba20175508860faabeddf7891f8bd8f3a0d94a4f",
+      "kind": "real"
+    },
     "Margaret Parker (1857\u20131885).md": {
       "sha256": "78655524290410e9774a6f979d91b5757d3ae48997744e777db897b94779b286",
       "kind": "real"
@@ -1632,12 +1720,20 @@
       "sha256": "2d98db7f891ed5a6677e19901b1b84fcfcd369592caf689f0795ca7729da46dc",
       "kind": "real"
     },
+    "Mark Andrew Hanson (b. 1971).md": {
+      "sha256": "3e68dee19f9b39200e538bef8440d8c0ee1505db6a959f0a1e5e0bfa368ce10b",
+      "kind": "real"
+    },
     "Mark David Bassett (b. 1962).md": {
       "sha256": "913c0a93d3df73e1f4598ada728b40bce81a741f4606ff4372d31674e5aa1b2d",
       "kind": "real"
     },
     "Mark Kenneth Telfer (1986\u2013?).md": {
       "sha256": "3215f0bb6165e3a60754c3ab25037489f16b15fbed13096307105c57524c83ed",
+      "kind": "real"
+    },
+    "Mark Kenneth Welch (b. 1958).md": {
+      "sha256": "07846e45d3eb64235a0593c09490a5d559b3c65c4aaf54e81a2f832c635d109e",
       "kind": "real"
     },
     "Mark Telfer (1877\u20131946).md": {
@@ -1736,6 +1832,10 @@
       "sha256": "c8dfc7f2d8dae81ade4134301e73788fe49320697998ddd7df9b0aa706129bf9",
       "kind": "real"
     },
+    "Michelle Llane Spratt (b. 1966).md": {
+      "sha256": "46fb419f84149694689eafc038d90ed6f391cf789e54f187b6edbf12365ad63f",
+      "kind": "real"
+    },
     "Millicent Agnes Telfer (1887\u20131985).md": {
       "sha256": "e0b688461ce7a9d2ed486fbfcae06e6bf0f4922b16dec1a89032cadf68c61d13",
       "kind": "real"
@@ -1752,6 +1852,10 @@
       "sha256": "f39662663701c7dcf88bde93e86fa72dace0bd0b01d5d446a8338f7f8cf0f1a9",
       "kind": "real"
     },
+    "Morris John Telfer (b. 1937).md": {
+      "sha256": "c5cf0c1681c00639fd28ee6233f73a2c95f9d3303f319c518b01c0e8b286f61a",
+      "kind": "real"
+    },
     "Murray John Telfer (1911\u20131982).md": {
       "sha256": "bb1d262e468c0a48faffa0e1616fa6d00c94bae7f6ccba7d6ebea0cba2f12a7d",
       "kind": "redirect"
@@ -1764,8 +1868,16 @@
       "sha256": "0091f40073effd2c7540111b4adef0ef3872d4d525e0caf739e1b1afb75c6066",
       "kind": "real"
     },
+    "Narelle Elizabeth Telfer (b. 1968).md": {
+      "sha256": "590e8471f593b586d703e176da802a75e7c45b6577880f99bccc6a7e18766003",
+      "kind": "real"
+    },
+    "Natasha Hanson (b. 2004).md": {
+      "sha256": "53796c3bef30841dbcd7dfeca2599291de7a9f9d420144122715fbcdd9e8c89e",
+      "kind": "real"
+    },
     "Neil Ronald Telfer (1936\u2013).md": {
-      "sha256": "73f228553306e79d078dbdffa1ae7c868b94a5549c4293ee77e0e454f201426d",
+      "sha256": "ee30a4e34e41dba7224c172c0ab864ddea92b77b7b0242601b0eb5636e19ea30",
       "kind": "real"
     },
     "Nicholas Adam Telfer (b. 1988).md": {
@@ -1774,6 +1886,10 @@
     },
     "Nicholas Andre Maddern (b. 1973).md": {
       "sha256": "42973efe67e7e20987cd8c3126ebac2951cd32114e6296387a0f74076757bb00",
+      "kind": "real"
+    },
+    "Nicole Elizabeth Welch (b. 1991).md": {
+      "sha256": "20cc93db4167edaf66f6f5a2750de65c45c03fe704b8987188876db63fccc31d",
       "kind": "real"
     },
     "Nita Leah Mutton (1889\u20131971).md": {
@@ -1862,6 +1978,10 @@
     },
     "Rex Nicholson (b. 1961).md": {
       "sha256": "d9ca72d0b2fe71f66d480470f47665ee73340977d00186af25ebbb1c0cc365b9",
+      "kind": "real"
+    },
+    "Rhodes Ronald Telfer (b. 2006).md": {
+      "sha256": "a5b8e6dd2fea21bd5b4b154a47d9e64ad52165f05580c28cf49a839cb100f5bc",
       "kind": "real"
     },
     "Richard Lancelot Watson (1910\u20131942).md": {
@@ -1984,6 +2104,10 @@
       "sha256": "0df89d5a399d08656e50f156d0bfd21654b05b3139022d1b2a8a5f0848b9cda7",
       "kind": "real"
     },
+    "Ruth Allison Littlejohn (b. 1949).md": {
+      "sha256": "03425e02b788b8fec25aa48de6d7476086526d45f80b87382898131a942c6ca9",
+      "kind": "real"
+    },
     "Ruth Margaret Telfer Carson (1915\u20132000).md": {
       "sha256": "1e574c71fdfe896f2cb2380d0ccd23301c565f28acf1e68f8765262b5b425313",
       "kind": "real"
@@ -2000,12 +2124,20 @@
       "sha256": "125c65ed8960f12621e9be5b478859e4021f0701aab6cb88acb625ff8448fb79",
       "kind": "real"
     },
+    "Ryan Jacob Telfer (b. 2001).md": {
+      "sha256": "7086890dd90691eec9819b4ee47c2c7b0882e0e69b70c549af4084667c94e35f",
+      "kind": "real"
+    },
     "Sabina (Triplett) Dillon (1870\u20131961).md": {
       "sha256": "9f7289f7982a707bfc89ec08c7d4e0dd75376a0b93126d6781fe0f11894514e8",
       "kind": "real"
     },
     "Samuel Joel Telfer (b. 1985).md": {
       "sha256": "ca9a848b0ed9523946e80fc9fabce042c4561cb1453261157d4ca8b53e1d2357",
+      "kind": "real"
+    },
+    "Sandra Jean Mahala Philpott (b. 1943).md": {
+      "sha256": "b56af9586e07aabc901564f10a4de7b8f3b3d9bf23bb1a60e8035aa2353c34bd",
       "kind": "real"
     },
     "Sandra Lee Smith.md": {
@@ -2104,6 +2236,14 @@
       "sha256": "9e779df24ffdaf347df81417d9e09b1dd9df750873ce1253793a3fd52a87826a",
       "kind": "real"
     },
+    "Steven Gregory Telfer (b. 1969).md": {
+      "sha256": "19acdc2ba24306ea1d1467689ae7cd85b915b4e7d8e82d3d69f5784b989c81be",
+      "kind": "real"
+    },
+    "Sukanya Lee (b. 1971).md": {
+      "sha256": "9cd5f08ac4861901a9c2ef0ea6ad2a608c0f6d8b678ad46426365653127e407e",
+      "kind": "real"
+    },
     "Susan Burton Telfer (1844\u20131924).md": {
       "sha256": "4452c84d8baa52975b1d43bcdcff13f5dfac488a61873d2e56d7572f50eb8857",
       "kind": "real"
@@ -2126,6 +2266,10 @@
     },
     "Sydney Hugh Parker (1922\u20131964).md": {
       "sha256": "01f1614be9d1c8744493973a2b403e340093f9285d2d5958776014749bb0e710",
+      "kind": "real"
+    },
+    "Tara Claire McLaughlin (b. 1996).md": {
+      "sha256": "062e0c08c760f885bb151f09902b2b382ddc632553d80c6247ee9709e61a1435",
       "kind": "real"
     },
     "Thelma Ellen Parker (1924\u20132002).md": {
@@ -2286,6 +2430,10 @@
     },
     "Zachary David Story (b. 2002).md": {
       "sha256": "bb782db75185655eb7dd3df3792caa0177a2a2873cbfa88046f7c27326be7faa",
+      "kind": "real"
+    },
+    "Zachary Hanson (b. 2001).md": {
+      "sha256": "5cf2fa182bda25711343647323ebed1ae8f033007440fb3195c3d4e214e5fc5a",
       "kind": "real"
     }
   }

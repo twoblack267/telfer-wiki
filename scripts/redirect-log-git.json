@@ -1,173 +1,20 @@
 [
   {
-    "from": "amy-erin-vickers",
-    "to": "amy-vickers",
+    "from": "david-telfer",
+    "to": "david-telfer-1957",
     "matched_by": "display_name",
-    "display_name": "Amy Erin Vickers"
+    "display_name": "David Lyndon Telfer"
   },
   {
-    "from": "angelina-elen-telfer-1988",
-    "to": "angelina-telfer",
-    "matched_by": "removed-declared",
-    "display_name": "Angelina Elen Telfer",
-    "reason": "Duplicate with a misspelled middle name. The vault profile is Angelina Ellen Telfer, b. 17 Apr 1988 Tumby Bay. This one reads 'Elen', a transcription slip, not a second child."
-  },
-  {
-    "from": "anna-kate-nicholson",
-    "to": "anna-nicholson",
+    "from": "geoffrey-telfer",
+    "to": "geoffrey-telfer-1914",
     "matched_by": "display_name",
-    "display_name": "Anna Kate Nicholson"
+    "display_name": "Geoffrey Francis Telfer"
   },
   {
-    "from": "anthony-james-fatchen",
-    "to": "anthony-fatchen",
+    "from": "ryan-telfer",
+    "to": "ryan-telfer-1982",
     "matched_by": "display_name",
-    "display_name": "Anthony James Fatchen"
-  },
-  {
-    "from": "brenton-kym-saviour",
-    "to": "brenton-siviour",
-    "matched_by": "removed-declared",
-    "display_name": "Brenton Kym Saviour",
-    "reason": "Duplicate under a misspelled surname. Both readers of printed Supplement p.140 return SIVIOUR, not 'Saviour' — the stub's surname is an OCR slip, not a second family. The vault profile is Brenton Kym Siviour, b. 14 May 1966 Snowtown SA."
-  },
-  {
-    "from": "carissa-telfer",
-    "to": "carissa-telfer-2023",
-    "matched_by": "vault_file",
-    "display_name": "Carissa Telfer"
-  },
-  {
-    "from": "daniel-james-nicholson",
-    "to": "daniel-nicholson",
-    "matched_by": "display_name",
-    "display_name": "Daniel James Nicholson"
-  },
-  {
-    "from": "david-nathan-vickers",
-    "to": "david-vickers",
-    "matched_by": "display_name",
-    "display_name": "David Nathan Vickers"
-  },
-  {
-    "from": "dennis-rowe-1946",
-    "to": "john-rowe",
-    "matched_by": "removed-declared",
-    "display_name": "Dennis Rowe",
-    "reason": "Phantom name, not a second person. There is no Dennis Rowe printed; the eldest child of Albert Rowe and Doris Elma Telfer is John ROWE, b. 30 Jan 1946. The stub's name and its marriage date (14 May 1967 against the printed 11 May 1967) were both OCR slips. Visitors go to the real man's page."
-  },
-  {
-    "from": "emma-louise-commane-1983",
-    "to": "emma-commane",
-    "matched_by": "removed-declared",
-    "display_name": "Emma Louise Commane",
-    "reason": "Duplicate that drops a middle name. The vault profile is Emma Louise Jayne Commane (b. 1983); this stub was generated from the same line with the 'Jayne' lost."
-  },
-  {
-    "from": "gavin-malcolm-fatchen",
-    "to": "gavin-fatchen",
-    "matched_by": "display_name",
-    "display_name": "Gavin Malcolm Fatchen"
-  },
-  {
-    "from": "gwenda-rosemary-barton-1948",
-    "to": "gwenda-barton",
-    "matched_by": "display_name",
-    "display_name": "Gwenda Rosemary Barton"
-  },
-  {
-    "from": "jordan-kane-telfer-1984",
-    "to": "jordon-telfer",
-    "matched_by": "removed-declared",
-    "display_name": "Jordan Kane Telfer",
-    "reason": "Spelling duplicate. The printed page has Jordon Kane TELFER, b. 3 Jun 1984 Tumby Bay, and the vault holds that profile. This slug spells the name 'Jordan', which is not what the book prints. Keeping both would publish the same child under two spellings."
-  },
-  {
-    "from": "joy-barton-1954",
-    "to": "jennifer-barton",
-    "matched_by": "removed-declared",
-    "display_name": "Joy Barton",
-    "reason": "Phantom name. 'Joy' is Jennifer Joy BARTON's middle name; the book prints Jennifer Joy BARTON, b. 30 Aug 1954 Tumby Bay SA. The stub split her name and published a person who does not exist. Visitors go to her real page."
-  },
-  {
-    "from": "justin-paul-mcallister",
-    "to": "justin-mcallister",
-    "matched_by": "display_name",
-    "display_name": "Justin Paul McAllister"
-  },
-  {
-    "from": "kerryn-leigh-manuel",
-    "to": "kerryn-leigh-manuel-1975",
-    "matched_by": "display_name",
-    "display_name": "Kerryn Leigh Manuel"
-  },
-  {
-    "from": "kristy-jane-mcallister",
-    "to": "kristy-mcallister",
-    "matched_by": "display_name",
-    "display_name": "Kristy Jane McAllister"
-  },
-  {
-    "from": "kyla-nicholson",
-    "to": "kyla-nicholson-1980",
-    "matched_by": "display_name",
-    "display_name": "Kyla Nicholson"
-  },
-  {
-    "from": "lola-may-paterson-1913",
-    "to": "lola-paterson",
-    "matched_by": "display_name",
-    "display_name": "Lola May Paterson"
-  },
-  {
-    "from": "nola-elizabeth-nicholson-1959",
-    "to": "helen-nicholson",
-    "matched_by": "removed-declared",
-    "display_name": "Nola Elizabeth Nicholson",
-    "reason": "Phantom name from the book's OCR text layer. Printed Supplement p.145 reads Helen Elizabeth NICHOLSON, b. 8 Oct 1959 Mt Gambier SA. The stub's 'Nola', her husband's birth year (1957 against 1967) and the marriage year (1980 against 1997) were all OCR errors, now retracted."
-  },
-  {
-    "from": "phillip-andrew-fatchen",
-    "to": "phillip-fatchen",
-    "matched_by": "display_name",
-    "display_name": "Phillip Andrew Fatchen"
-  },
-  {
-    "from": "ross-kelvin-fatchen-1948",
-    "to": "ross-fatchen",
-    "matched_by": "display_name",
-    "display_name": "Ross Kelvin Fatchen"
-  },
-  {
-    "from": "sarah-nicholson",
-    "to": "sarah-nicholson-1984",
-    "matched_by": "removed-declared",
-    "display_name": "Sarah Nicholson",
-    "reason": "Duplicate stub for Sarah Jane Nicholson (b. 11 Nov 1984), daughter of Gerald Nicholson and Kaye Lorraine Meyers. This record carried the bare slug /people/sarah-nicholson/ and her middle name was lost; the vault profile now publishes /people/sarah-nicholson-1984/. One child, one page."
-  },
-  {
-    "from": "shannon-louise-telfer-1982",
-    "to": "shannon-telfer",
-    "matched_by": "display_name",
-    "display_name": "Shannon Louise Telfer"
-  },
-  {
-    "from": "sharon-barbara-fatchen",
-    "to": "sharon-fatchen",
-    "matched_by": "display_name",
-    "display_name": "Sharon Barbara Fatchen"
-  },
-  {
-    "from": "vonda-joy-telfer",
-    "to": "vonda-joy-telfer-1948",
-    "matched_by": "display_name",
-    "display_name": "Vonda Joy Telfer"
-  },
-  {
-    "from": "wendy-lynette-saviour",
-    "to": "wendy-siviour",
-    "matched_by": "removed-declared",
-    "display_name": "Wendy Lynette Saviour",
-    "reason": "Duplicate under a misspelled surname. The page reads SIVIOUR; this record's 'Saviour' is an OCR slip, and the stub's marriage date also disagreed with the page. The vault profile is Wendy Lynette Siviour, b. 10 Dec 1969 Pt Lincoln SA."
+    "display_name": "Ryan David Telfer"
   }
 ]

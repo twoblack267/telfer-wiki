@@ -1,174 +1,29 @@
 {
-  "checkedAt": "2026-10-27T22:53:32.147Z",
+  "checkedAt": "2026-10-27T23:10:46.102Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 528,
-    "after": 555
+    "before": 555,
+    "after": 592
   },
   "crownJewelsChecked": 5,
   "renames": [
     {
-      "from": "carissa-telfer",
-      "to": "carissa-telfer-2023",
-      "name": "Carissa Telfer"
+      "from": "geoffrey-telfer",
+      "to": "geoffrey-telfer-1914",
+      "name": "Geoffrey Francis Telfer"
     },
     {
-      "from": "ross-kelvin-fatchen-1948",
-      "to": "ross-fatchen",
-      "name": "Ross Kelvin Fatchen"
+      "from": "david-telfer",
+      "to": "david-telfer-1957",
+      "name": "David Lyndon Telfer"
     },
     {
-      "from": "gwenda-rosemary-barton-1948",
-      "to": "gwenda-barton",
-      "name": "Gwenda Rosemary Barton"
-    },
-    {
-      "from": "joy-barton-1954",
-      "to": "jennifer-barton",
-      "name": "Joy Barton"
-    },
-    {
-      "from": "dennis-rowe-1946",
-      "to": "john-rowe",
-      "name": "Dennis Rowe"
-    },
-    {
-      "from": "vonda-joy-telfer",
-      "to": "vonda-joy-telfer-1948",
-      "name": "Vonda Joy Telfer"
-    },
-    {
-      "from": "nola-elizabeth-nicholson-1959",
-      "to": "helen-nicholson",
-      "name": "Nola Elizabeth Nicholson"
-    },
-    {
-      "from": "kerryn-leigh-manuel",
-      "to": "kerryn-leigh-manuel-1975",
-      "name": "Kerryn Leigh Manuel"
-    },
-    {
-      "from": "jordan-kane-telfer-1984",
-      "to": "jordon-telfer",
-      "name": "Jordan Kane Telfer"
-    },
-    {
-      "from": "angelina-elen-telfer-1988",
-      "to": "angelina-telfer",
-      "name": "Angelina Elen Telfer"
-    },
-    {
-      "from": "emma-louise-commane-1983",
-      "to": "emma-commane",
-      "name": "Emma Louise Commane"
-    },
-    {
-      "from": "shannon-louise-telfer-1982",
-      "to": "shannon-telfer",
-      "name": "Shannon Louise Telfer"
-    },
-    {
-      "from": "anna-kate-nicholson",
-      "to": "anna-nicholson",
-      "name": "Anna Kate Nicholson"
-    },
-    {
-      "from": "kyla-nicholson",
-      "to": "kyla-nicholson-1980",
-      "name": "Kyla Nicholson"
-    },
-    {
-      "from": "daniel-james-nicholson",
-      "to": "daniel-nicholson",
-      "name": "Daniel James Nicholson"
-    },
-    {
-      "from": "sarah-nicholson",
-      "to": "sarah-nicholson-1984",
-      "name": "Sarah Nicholson"
-    },
-    {
-      "from": "david-nathan-vickers",
-      "to": "david-vickers",
-      "name": "David Nathan Vickers"
-    },
-    {
-      "from": "amy-erin-vickers",
-      "to": "amy-vickers",
-      "name": "Amy Erin Vickers"
-    },
-    {
-      "from": "sharon-barbara-fatchen",
-      "to": "sharon-fatchen",
-      "name": "Sharon Barbara Fatchen"
-    },
-    {
-      "from": "phillip-andrew-fatchen",
-      "to": "phillip-fatchen",
-      "name": "Phillip Andrew Fatchen"
-    },
-    {
-      "from": "anthony-james-fatchen",
-      "to": "anthony-fatchen",
-      "name": "Anthony James Fatchen"
-    },
-    {
-      "from": "gavin-malcolm-fatchen",
-      "to": "gavin-fatchen",
-      "name": "Gavin Malcolm Fatchen"
-    },
-    {
-      "from": "brenton-kym-saviour",
-      "to": "brenton-siviour",
-      "name": "Brenton Kym Saviour"
-    },
-    {
-      "from": "wendy-lynette-saviour",
-      "to": "wendy-siviour",
-      "name": "Wendy Lynette Saviour"
-    },
-    {
-      "from": "justin-paul-mcallister",
-      "to": "justin-mcallister",
-      "name": "Justin Paul McAllister"
-    },
-    {
-      "from": "kristy-jane-mcallister",
-      "to": "kristy-mcallister",
-      "name": "Kristy Jane McAllister"
-    },
-    {
-      "from": "lola-may-paterson-1913",
-      "to": "lola-paterson",
-      "name": "Lola May Paterson"
+      "from": "ryan-telfer",
+      "to": "ryan-telfer-1982",
+      "name": "Ryan David Telfer"
     }
   ],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "brenda-janice-telfer-1949",
-      "name": "Brenda Janice Telfer",
-      "field": "spouses",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "Peter James Manuel"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "lyndell-marie-telfer-1951",
-      "name": "Lyndell Marie Telfer",
-      "field": "spouses",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "Robert Norman Maddern"
-      ]
-    }
-  ]
+  "warnings": []
 }

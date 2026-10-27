@@ -188,11 +188,30 @@ try {
   // surname sharing the word "mark" (e.g. a genuine Mark David Bassett).
   // Asserting a hardcoded index-1 name made this e2e guard fail on a pure
   // data addition — the guard must test the contract, not one fixture.
-  const topThree = visible.slice(0, 3);
-  const telferMarksInTop3 = topThree.filter((n) => /^mark .*telfer$/i.test(n));
+  //
+  // Same lesson, second time: requiring BOTH Telfer Marks inside a fixed
+  // top-three window also cries wolf on data. Adding Mark Kenneth Welch and
+  // Mark Andrew Hanson (printed Supplement p.148) legitimately pushed the
+  // second Telfer Mark to index 4. The contract is (a) the primary Mark Telfer
+  // leads, and (b) no Telfer Mark sits below a row that does not match the
+  // query word at all. Those are asserted here; window arithmetic is not.
+  const telferMarkIdx = visible
+    .map((n, i) => (/^mark .*telfer$/i.test(n) ? i : -1))
+    .filter((i) => i !== -1);
   assert(
-    telferMarksInTop3.length === 2,
-    `'mark' → both Telfer Marks VISIBLE in the top 3 (got ${JSON.stringify(topThree)})`
+    telferMarkIdx.length === 2,
+    `'mark' → both Telfer Marks VISIBLE in the results (idx ${telferMarkIdx.join(",")})`
+  );
+  assert(
+    telferMarkIdx[0] === 0,
+    `'mark' → the primary Mark Telfer is the first VISIBLE row (got "${visible[0]}")`
+  );
+  const firstNonMark = visible.findIndex(
+    (n) => !n.toLowerCase().split(" ").some((w) => w.startsWith("mark") || w.includes("mark"))
+  );
+  assert(
+    firstNonMark === -1 || telferMarkIdx.every((i) => i < firstNonMark),
+    `'mark' → neither Telfer Mark is buried under a non-mark row (first non-mark at ${firstNonMark})`
   );
   // And neither may be buried under the fuzzy Margaret/Martha flood.
   const floodIdx = visible.findIndex(

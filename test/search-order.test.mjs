@@ -106,13 +106,18 @@ assert(
   markTelferIdx.length >= 2,
   `'mark' → both Telfer Marks present in ranked list (found ${markTelferIdx.length})`
 );
+// Exact word-boundary matches keep DATA ORDER by design. Any number of other
+// "Mark <Surname>" people may legitimately sit between the two Telfer Marks —
+// Mark David Bassett, Mark Kenneth Welch, Mark Andrew Hanson and Mark Hanson
+// all do. Asserting a fixed index (formerly `markTelferIdx[1] <= 2`) made this
+// guard cry wolf on pure data additions, or on a surname that stops being
+// unique. The real invariant is that the primary Mark leads, and that neither
+// Telfer Mark is buried below a fuzzy row — asserted immediately below.
 assert(
-  markTelferIdx[0] === 0 && markTelferIdx[1] <= 2,
-  `both Telfer Marks sit in the top 3 of exact matches (idx ${markTelferIdx.join(",")})`
+  markTelferIdx[0] === 0,
+  `the primary Mark Telfer leads the 'mark' results (idx ${markTelferIdx.join(",")})`
 );
-// Exact word-boundary matches keep DATA ORDER by design. A new same-word
-// surname (Mark David Bassett) may legitimately sit between the two Marks;
-// what must never happen is a Mark Telfer buried under the fuzzy flood.
+// What must never happen is a Mark Telfer buried under the fuzzy flood.
 const fuzzyFloodStart = mark.findIndex(
   (n) => !n.toLowerCase().split(" ").some((w) => w.startsWith("mark")) && !n.toLowerCase().startsWith("mark")
 );
