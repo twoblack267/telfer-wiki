@@ -100,5 +100,167 @@
     "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates and the vault note was renamed to match, so the derived slug changed. THE PERSON IS UNCHANGED. Birth 1917 -> 1916. Source recorded in the vault note: Genealogy SA birth index, Ryerson age 92. New note: 'Gladys Merle Telfer (1916-living).md'; she remains flagged living. Her old live URL must resolve to the new page.",
     "replaced_by": "gladys-telfer",
     "display_name": "Gladys Merle Telfer"
+  },
+  "ross-kelvin-fatchen-1948": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate of the vault profile, and wrong on two fields: it gives a birth year of 1948 and a wife 'Susanne Margaret Whitt'. The printed 2008 Supplement p.139 reads Ross Kelvin FATCHEN, b. 26 Feb 1945, married (1) Susanne Margaret WAIT, (2) Christine Ann Matthews 3 Sep 1994. The vault profile carries the printed values, read from the page image by two independent converters.",
+    "replaced_by": "ross-fatchen",
+    "display_name": "Ross Kelvin Fatchen"
+  },
+  "gwenda-rosemary-barton-1948": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; a vault profile now exists for the same person, built from printed Supplement p.140. Two records for one person would publish two pages, and this one carries the wrong birth year (1948 vs the family record).",
+    "replaced_by": "gwenda-barton",
+    "display_name": "Gwenda Rosemary Barton"
+  },
+  "joy-barton-1954": {
+    "retired": "2026-10-28",
+    "reason": "Phantom duplicate. 'Joy Barton' is not a name on the page: the book prints Jennifer Joy BARTON, b. 30 Aug 1954 Tumby Bay SA. The stub split her middle name into a first name, so the pipeline made a second person. Her real vault profile is Jennifer Joy Barton.",
+    "replaced_by": "jennifer-barton",
+    "display_name": "Joy Barton"
+  },
+  "dennis-rowe-1946": {
+    "retired": "2026-10-28",
+    "reason": "Phantom duplicate. There is no Dennis Rowe on printed Supplement p.141. The eldest child of Albert Rowe and Doris Elma Telfer is John ROWE, b. 30 Jan 1946, married 11 May 1967 (the stub also has the marriage as 14 May 1967). The vault profile is John Rowe.",
+    "replaced_by": "john-rowe",
+    "display_name": "Dennis Rowe"
+  },
+  "vonda-joy-telfer-joy": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate of the same person built from a different key. 'Vonda Joy Telfer (b. 1948)' is the vault record; this second slug exists only because the person's name was truncated to a fragment when the record was first created. One person, one page.",
+    "replaced_by": "vonda-joy-telfer-1948",
+    "display_name": "Vonda Joy Telfer"
+  },
+  "nola-elizabeth-nicholson-1959": {
+    "retired": "2026-10-28",
+    "reason": "Phantom. 'Nola' comes from the book's OCR text layer mangling the line. Printed Supplement p.145 reads Helen Elizabeth NICHOLSON, b. 8 Oct 1959 Mt Gambier SA, married Alexander Simon Donald 26 Jan 1997 (the stub also has the marriage as 1980 and the husband a decade older). The vault profile is Helen Elizabeth Nicholson; the OCR-only name is retracted.",
+    "replaced_by": "helen-nicholson",
+    "display_name": "Nola Elizabeth Nicholson"
+  },
+  "jordan-kane-telfer-1984": {
+    "retired": "2026-10-28",
+    "reason": "Spelling duplicate. The printed page has Jordon Kane TELFER, b. 3 Jun 1984 Tumby Bay, and the vault holds that profile. This slug spells the name 'Jordan', which is not what the book prints. Keeping both would publish the same child under two spellings.",
+    "replaced_by": "jordon-telfer",
+    "display_name": "Jordan Kane Telfer"
+  },
+  "angelina-elen-telfer-1988": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate with a misspelled middle name. The vault profile is Angelina Ellen Telfer, b. 17 Apr 1988 Tumby Bay. This one reads 'Elen', a transcription slip, not a second child.",
+    "replaced_by": "angelina-telfer",
+    "display_name": "Angelina Elen Telfer"
+  },
+  "emma-louise-commane-1983": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate that drops a middle name. The vault profile is Emma Louise Jayne Commane (b. 1983); this stub was generated from the same line with the 'Jayne' lost.",
+    "replaced_by": "emma-commane",
+    "display_name": "Emma Louise Commane"
+  },
+  "shannon-louise-telfer-1982": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate of the vault profile with the wrong birth year: this stub says 1982, the vault record reads 1992. A wrong-year twin of a living person is a worse fault than a missing record, so the stub goes and the vault profile stands.",
+    "replaced_by": "shannon-telfer",
+    "display_name": "Shannon Louise Telfer"
+  },
+  "anna-kate-nicholson": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Anna Kate Nicholson (b. 12 Dec 1985), daughter of Andrew Nicholson, now exists and carries the printed dates. Two records for one child would publish two pages, one of them blank.",
+    "replaced_by": "anna-nicholson",
+    "display_name": "Anna Kate Nicholson"
+  },
+  "kyla-nicholson-living": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate of Kyla Nicholson. This record has no vault file and no birth year, and exists only because the name collided with another Kyla Nicholson slug. The vault profile (b. 13 May 1980, daughter of Gerald Nicholson and Kaye Lorraine Meyers) is the real person.",
+    "replaced_by": "kyla-nicholson-1980",
+    "display_name": "Kyla Nicholson"
+  },
+  "daniel-james-nicholson": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Daniel James Nicholson (b. 22 Sep 1982) now exists with the printed dates. One child, one page.",
+    "replaced_by": "daniel-nicholson",
+    "display_name": "Daniel James Nicholson"
+  },
+  "sarah-nicholson-living": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate that also loses her middle name and puts her in the wrong generation of records. The vault profile is Sarah Jane Nicholson, b. 11 Nov 1984, daughter of Gerald Nicholson and Kaye Lorraine Meyers.",
+    "replaced_by": "sarah-nicholson-1984",
+    "display_name": "Sarah Nicholson"
+  },
+  "david-nathan-vickers": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for David Nathan Vickers (b. 30 Oct 1981 Rose Park SA) now exists, built from printed Supplement p.141 by two independent readers of the page image.",
+    "replaced_by": "david-vickers",
+    "display_name": "David Nathan Vickers"
+  },
+  "amy-erin-vickers": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Amy Erin Vickers (b. 10 Jul 1983 Rose Park SA) now exists from printed Supplement p.141.",
+    "replaced_by": "amy-vickers",
+    "display_name": "Amy Erin Vickers"
+  },
+  "sharon-barbara-fatchen": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Sharon Barbara Fatchen (b. 31 Mar 1971 Pt Lincoln SA) now exists from printed Supplement p.139.",
+    "replaced_by": "sharon-fatchen",
+    "display_name": "Sharon Barbara Fatchen"
+  },
+  "phillip-andrew-fatchen": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Phillip Andrew Fatchen (b. 20 Dec 1972 Pt Lincoln SA) now exists from printed Supplement p.139. The stub's slug had also collapsed 'Phillip Andrew' into 'Phillip'.",
+    "replaced_by": "phillip-fatchen",
+    "display_name": "Phillip Andrew Fatchen"
+  },
+  "anthony-james-fatchen": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Anthony James Fatchen (b. 19 Jun 1969 Cummins SA) now exists from printed Supplement p.139.",
+    "replaced_by": "anthony-fatchen",
+    "display_name": "Anthony James Fatchen"
+  },
+  "gavin-malcolm-fatchen": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Gavin Malcolm Fatchen (b. 21 Nov 1973 Tumby Bay SA) now exists from printed Supplement p.139.",
+    "replaced_by": "gavin-fatchen",
+    "display_name": "Gavin Malcolm Fatchen"
+  },
+  "brenton-kym-saviour": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate under a misspelled surname. Both readers of printed Supplement p.140 return SIVIOUR, not 'Saviour' — the stub's surname is an OCR slip, not a second family. The vault profile is Brenton Kym Siviour, b. 14 May 1966 Snowtown SA.",
+    "replaced_by": "brenton-siviour",
+    "display_name": "Brenton Kym Saviour"
+  },
+  "wendy-lynette-saviour": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate under a misspelled surname. The page reads SIVIOUR; this record's 'Saviour' is an OCR slip, and the stub's marriage date also disagreed with the page. The vault profile is Wendy Lynette Siviour, b. 10 Dec 1969 Pt Lincoln SA.",
+    "replaced_by": "wendy-siviour",
+    "display_name": "Wendy Lynette Saviour"
+  },
+  "justin-paul-mcallister": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Justin Paul McAllister (son of Jennifer Joy Barton and Paul McAllister) now exists from printed Supplement p.140.",
+    "replaced_by": "justin-mcallister",
+    "display_name": "Justin Paul McAllister"
+  },
+  "kristy-jane-mcallister": {
+    "retired": "2026-10-28",
+    "reason": "Stub duplicate with no vault note; the vault profile for Kristy Jane McAllister now exists from printed Supplement p.140.",
+    "replaced_by": "kristy-mcallister",
+    "display_name": "Kristy Jane McAllister"
+  },
+  "lola-may-paterson-1913": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate with the wrong birth year and no vault note. The vault profile now reads Lola May Paterson, 1918-1970. The stub's 1913 was never supported by a printed source.",
+    "replaced_by": "lola-paterson",
+    "display_name": "Lola May Paterson"
+  },
+  "kerryn-leigh-manuel-leigh": {
+    "retired": "2026-10-28",
+    "reason": "Duplicate of the vault profile. The real record is Kerryn Leigh Manuel (b. 1975), which carries the vault note, the birth year and every incoming reference. This second slug exists only because the person's middle name was truncated to a fragment when the record was first created. One person, one page.",
+    "replaced_by": "kerryn-leigh-manuel-1975",
+    "display_name": "Kerryn Leigh Manuel"
+  },
+  "kelson-telfer-1946": {
+    "retired": "2026-10-28",
+    "reason": "Phantom person, retracted. Francis Kelson TELFER (b. 26 Jan 1910, d. 1 Mar 1953) and Sylvia Merle BOAL (b. 6 Dec 1916) have NO children printed on page 138 of the 2008 Supplement. The record was manufactured by the book's OCR text layer interleaving their two lines into 'KelsonBOAL,TELFER,'. Two independent readers of the 300 dpi page image agree there is no child, so the profile is withdrawn rather than corrected.",
+    "replaced_by": null,
+    "display_name": "Kelson Telfer"
   }
 }

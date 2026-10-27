@@ -255,11 +255,36 @@ for (const oldSlug of vanished) {
 }
 
 // --- THE GATE: refuse to be 215/216 -----------------------------------------
-if (unresolved.length) {
-  console.error(`\n\u274c ${unresolved.length} live URL(s) could NOT be matched to a successor:`);
-  for (const u of unresolved) console.error(`   /people/${u.from}/   (${u.display_name}; ${u.vault_file})`);
+// DECLARED REMOVALS WITH NO SUCCESSOR (added 2026-10-28). A profile can be retired
+// because the person DOES NOT EXIST — a phantom manufactured by the book's OCR text
+// layer (kelson-telfer-1946: 'KelsonBOAL,TELFER,' where two lines interleaved). Such a
+// page has no rightful successor, and inventing one would send readers to a stranger.
+// A declaration with to:null is exactly that statement, written down with a reason and
+// a date in src/data/removed-redirects.json. Before this, such a declaration was
+// collected as `unresolved` and FAILED the whole regen — the declared-removal path
+// pushed the record and then fell through to an unconditional exit 1, so the one
+// correction the file exists to permit was unshippable.
+// These are NOT counted as covered live URLs: an honest report must not claim a
+// redirect that does not exist. They are listed separately and emitted as a 410-style
+// gone page (no refresh, no canonical, noindex) so the old URL explains itself instead
+// of silently 404-ing.
+const declaredGone = [];
+const stillUnresolved = [];
+for (const u of unresolved) {
+  const d = REMOVED[u.from];
+  if (d && d.to === null) {
+    declaredGone.push({ from: u.from, display_name: u.display_name, reason: d.reason });
+  } else {
+    stillUnresolved.push(u);
+  }
+}
+if (stillUnresolved.length) {
+  console.error(`\n\u274c ${stillUnresolved.length} live URL(s) could NOT be matched to a successor:`);
+  for (const u of stillUnresolved) console.error(`   /people/${u.from}/   (${u.display_name}; ${u.vault_file})`);
   console.error(`\nRefusing to emit a partial redirect set. Every one of the ${vanished.length} live URLs`);
-  console.error(`must resolve, or the rest of the set is a false sense of safety.\n`);
+  console.error(`must resolve, or the rest of the set is a false sense of safety.`);
+  console.error(`If a page is gone because the PERSON never existed, declare it with "to": null in`);
+  console.error(`src/data/removed-redirects.json and a written reason — do not point it at a stranger.\n`);
   process.exit(1);
 }
 
@@ -319,6 +344,40 @@ if (WRITE_PAGES) {
     written++;
   }
   console.log(`\n  wrote ${written} redirect page(s) into dist/people/  (skipped ${skipped} real page(s))`);
+
+  // GONE PAGES for declared removals with no successor. A visitor arriving at a URL
+  // for a person who never existed should be told so in words, not handed a silent 404
+  // or a redirect to somebody else. noindex, no canonical, no refresh: this page does
+  // not move anyone, it explains.
+  let goneWritten = 0;
+  for (const g of declaredGone) {
+    const dir = path.join(DIST_DIR, g.from);
+    const file = path.join(dir, 'index.html');
+    if (fs.existsSync(file) && !fs.readFileSync(file, 'utf-8').includes('name="robots"')) {
+      continue;                                     // never overwrite a real page
+    }
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(file, `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Record withdrawn — ${g.display_name}</title>
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+  <h1>This record has been withdrawn</h1>
+  <p>There is no person named <strong>${g.display_name}</strong> in the Telfer family record.</p>
+  <p>The page you followed came from a transcription error in the source book, not from a person.
+  It has been removed rather than redirected, because there is no one to redirect you to.</p>
+  <p><a href="${ABS_BASE}/">Return to Telfer Wiki</a></p>
+</body>
+</html>`);
+    goneWritten++;
+  }
+  if (goneWritten) console.log(`  wrote ${goneWritten} "record withdrawn" page(s) for declared removals with no successor`);
 }
 
-console.log(`\n\u2705 ${matched.length}/${vanished.length} live URLs covered. Log: scripts/redirect-log-git.json\n`);
+console.log(`\n\u2705 ${matched.length}/${vanished.length - declaredGone.length} live URLs covered`
+  + (declaredGone.length ? ` (+${declaredGone.length} declared gone: no successor exists)` : '')
+  + `. Log: scripts/redirect-log-git.json\n`);
+for (const g of declaredGone) console.log(`   \u2717 /people/${g.from}/ — removed, no successor page: ${g.display_name}`);

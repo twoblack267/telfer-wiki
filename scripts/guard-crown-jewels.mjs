@@ -325,6 +325,21 @@ function main() {
   const failures = [];
   const warnings = [];
   const renames = [];
+  const withdrawn = [];
+  // Declared removals with no successor. Read here (not at module load) so a malformed
+  // file cannot crash the guard into a blind PASS.
+  let REMOVED_ENTRIES = {};
+  try {
+    const raw = JSON.parse(readFileSync(resolvePath(REPO, "src/data/removed-redirects.json"), "utf-8"));
+    REMOVED_ENTRIES = raw.removed || {};
+  } catch (e) {
+    // LOUD, not silent. A swallowed read here would make every declared withdrawal
+    // look UNDECLARED — the guard would then report data loss on a correct regen, or
+    // (worse, with the polarity reversed) pass blind. Say what failed.
+    console.error(`⚠️  guard: could not read src/data/removed-redirects.json (${e.message}) — ` +
+                 `declared withdrawals will be judged as data loss.`);
+    REMOVED_ENTRIES = {};
+  }
 
   // ── 1. Vanished profiles ────────────────────────────────────────────────────
   for (const [slug, before] of base) {
@@ -334,6 +349,24 @@ function main() {
       // A declared rename that lands on a live record — not data loss. Record it
       // so the run still reports what moved.
       renames.push({ from: slug, to: target, name: before.display_name || before.name || slug });
+      continue;
+    }
+    // ── DECLARED REMOVAL, NO SUCCESSOR (added 2026-10-28) ────────────────────
+    // A slug can vanish because the PERSON never existed: `kelson-telfer-1946` was
+    // manufactured by the 2008 Supplement's OCR text layer interleaving two lines
+    // ("KelsonBOAL,TELFER,"), and two independent readers of the printed page agree
+    // there is no child. Removing him is the CORRECTION; refusing to remove him
+    // protects a falsehood. src/data/removed-redirects.json already declares such
+    // removals with a written reason and date, and that declaration is what makes
+    // this pass safe: `to: null` means "withdrawn, there is nobody to redirect to".
+    // A declaration is required — an UNDECLARED disappearance still fails here.
+    const declaredRemoval = REMOVED_ENTRIES[slug];
+    if (declaredRemoval && declaredRemoval.to === null) {
+      withdrawn.push({
+        slug,
+        name: before.display_name || before.name || slug,
+        reason: declaredRemoval.reason,
+      });
       continue;
     }
     failures.push({
@@ -443,6 +476,17 @@ function main() {
       console.log("");
       console.log(`ℹ️  ${renames.length} profile slug RENAMED (declared in scripts/redirect-log.json):`);
       for (const r of renames) console.log(`     • ${r.from} -> ${r.to}  (${r.name})`);
+    }
+
+    // A withdrawal is a REMOVAL OF A PERSON, so it is never silent: it prints the
+    // slug, the name and the declared reason on every run that applies it.
+    if (withdrawn.length > 0) {
+      console.log("");
+      console.log(`ℹ️  ${withdrawn.length} profile(s) WITHDRAWN — declared in src/data/removed-redirects.json (to: null):`);
+      for (const w of withdrawn) {
+        console.log(`     • ${w.slug} (${w.name}) — record withdrawn, no successor page`);
+        console.log(`       reason: ${String(w.reason).slice(0, 160)}${String(w.reason).length > 160 ? "…" : ""}`);
+      }
     }
 
     if (failures.length === 0 && warnings.length === 0) {

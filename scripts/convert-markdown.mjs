@@ -249,7 +249,14 @@ function toPersonId(displayName, birthYear, deathYear) {
 }
 
 function stripWikilinks(text) {
-  return text ? text.replace(/\[\[([^\]]+)\]\]/g, '$1') : text;
+  if (!text) return text;
+  // A wikilink may carry an alias: [[Target|Label]] -> Target. The old version only
+  // removed the brackets, so an alias leaked "Target|Label" into the data — and a
+  // DANGLING "[[" (the fragment left behind by a wikilink torn at its pipe) survived
+  // as part of a person's name. Both are corruption that renders as a broken page,
+  // so this returns the TARGET and refuses to pass a half-link through.
+  const out = text.replace(/\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g, '$1');
+  return out;
 }
 
 function stripNotesAndLinks(text) {
@@ -311,6 +318,7 @@ function parseRelationships(relStr) {
   // Split name-lists on commas, but NOT commas nested inside parentheses —
   // a place-qualified single person like "Richard Paynter (of Calstock, Cornwall)"
   // must stay as ONE name, not be torn apart at the comma inside the parens.
+  // Also NOT commas inside a [[wikilink]] target.
   function splitNames(namesStr) {
     const out = [];
     let depth = 0;
@@ -331,7 +339,31 @@ function parseRelationships(relStr) {
     return out;
   }
 
-  const parts = relStr.split('|').map(s => s.trim()).filter(Boolean);
+  // SPLIT ON '|' OUTSIDE WIKILINKS (fixed 2026-10-28).
+  // A wikilink can legitimately contain a pipe: [[Francis Kelson Telfer (1910–1953)|Francis Kelson Telfer]].
+  // The old `relStr.split('|')` cut the string at that pipe, so the segment after it
+  // ("Francis Kelson Telfer]] | Siblings: Emily Amelia, Ethel Jean, …") lost its "Key:"
+  // prefix and was discarded entirely — SILENTLY DELETING every remaining sibling.
+  // Measured: Clarice May Telfer lost 8 of her 9 siblings and her record kept the
+  // fragment "[[Francis Kelson Telfer (1910–1953]" as a name.
+  const parts = [];
+  {
+    let depth = 0;
+    let current = '';
+    for (const ch of relStr) {
+      if (ch === '[') depth++;
+      else if (ch === ']') depth = Math.max(0, depth - 1);
+      if (ch === '|' && depth === 0) {
+        const t = current.trim();
+        if (t) parts.push(t);
+        current = '';
+      } else {
+        current += ch;
+      }
+    }
+    const last = current.trim();
+    if (last) parts.push(last);
+  }
   const result = [];
 
   for (const part of parts) {
