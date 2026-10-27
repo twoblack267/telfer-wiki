@@ -35,9 +35,25 @@ const living = members.filter((p) => p.is_living);
 const deceased = members.filter((p) => !p.is_living);
 
 // Find generations covered
-const years = members.filter((p) => p.birth_year).map((p) => p.birth_year as number);
-const oldest = years.length > 0 ? Math.min(...years) : null;
-const youngest = years.length > 0 ? Math.max(...years) : null;
+// tw-2026-10-27-007: this range must describe LIVES, not just birth years.
+// Deriving both ends from birth_year printed "spanning 1865–1865" for Charles
+// Farrow Jr, who was born 1865 and died 1936 — reading to a visitor as a child
+// who died at birth, while the very same page's member card said 1865–1936.
+const birthYears = members.filter((p) => p.birth_year).map((p) => p.birth_year as number);
+const deathYears = members.filter((p) => p.death_year).map((p) => p.death_year as number);
+const oldest = birthYears.length > 0 ? Math.min(...birthYears) : null;
+const latestBirth = birthYears.length > 0 ? Math.max(...birthYears) : null;
+const youngest = latestBirth === null
+  ? null
+  : (deathYears.length > 0 ? Math.max(latestBirth, ...deathYears) : latestBirth);
+
+// A "span" of X–X asserts a life that began and ended in one year. Only print it
+// when that is genuinely true (a real infant death), otherwise omit the range
+// rather than publish a fake lifespan.
+const span =
+  oldest !== null && youngest !== null && !(oldest === youngest && !deathYears.includes(oldest))
+    ? `${oldest}–${youngest}`
+    : null;
 
 // Gather unique roles (if available)
 const roles = [...new Set(members.flatMap((p) => p.roles || []))].sort();
@@ -48,7 +64,7 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
 
 <BaseLayout
   title={`${surname} Family`}
-  description={`The ${surname} family in the Telfer line — ${members.length} profile${members.length !== 1 ? "s" : ""}${oldest && youngest ? ` spanning ${oldest}–${youngest}` : ""}, including ${deceased.length} deceased and ${living.length} living. Part of the Telfer Family Wiki, tracing nine generations from Scotland to South Australia.`}
+  description={`The ${surname} family in the Telfer line — ${members.length} profile${members.length !== 1 ? "s" : ""}${span ? ` spanning ${span}` : ""}, including ${deceased.length} deceased and ${living.length} living. Part of the Telfer Family Wiki, tracing nine generations from Scotland to South Australia.`}
 >
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
@@ -69,7 +85,7 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
           </h1>
           <p class="text-lg text-[var(--color-ink-light)]">
             {members.length} profile{members.length !== 1 ? "s" : ""}
-            {oldest && youngest ? ` · spanning ${oldest}–${youngest}` : ""}
+            {span ? ` · spanning ${span}` : ""}
           </p>
           <div class="flex gap-2 mt-3">
             <span class="text-xs px-3 py-1 rounded badge-living">{living.length} Living</span>

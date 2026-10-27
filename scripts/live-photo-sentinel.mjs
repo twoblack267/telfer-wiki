@@ -48,9 +48,23 @@ const SETTLE_MS = parseInt(getArg('--settle', '2500'), 10);
 // ── the candidate pool: profiles the BUILD says carry photos ────────────────
 // Read from people.json, but only to CHOOSE which pages to visit. The verdict
 // comes from the live page alone — we never compare against this file.
+//
+// PRIVACY-STRIP EXCLUSION (fixed 2026-10-28, card live-photo-sentinel-20261027-1).
+// people.json is the FULL dataset; the site renders people.public.json, from
+// which PRIVACY_STRIP_SLUGS are deliberately removed (owner ruling, Mark,
+// 16 Oct 2026 — Ivory branch). So a withheld profile has photos in people.json
+// and NO PAGE on the live site: sampling it always yields PAGE_UNAVAILABLE and
+// files a false "photo lost" card for a page that is 404ing ON PURPOSE.
+// That is what happened on 27 Oct: jared-ivory-1993 was reported as a lost
+// photo when Mark's own privacy ruling was correctly withholding it.
+// The pool must therefore be the set of pages that are SUPPOSED to exist.
+import { PRIVACY_STRIP_SLUGS } from '../src/data/privacy-exclusions.mjs';
+
 const people = JSON.parse(readFileSync(path.join(REPO, 'src/data/people.json'), 'utf8'));
 const pool = people
   .filter((p) => Array.isArray(p.images) && p.images.length > 0)
+  // A withdrawn profile is not a candidate: its 404 is the desired state.
+  .filter((p) => !PRIVACY_STRIP_SLUGS.has(p.slug))
   .map((p) => ({ slug: p.slug, expected: p.images.length }));
 
 if (pool.length === 0) {

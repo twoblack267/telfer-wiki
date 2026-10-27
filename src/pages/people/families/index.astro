@@ -58,8 +58,16 @@ const sortedGenerations = Object.entries(generations)
 const years = telferPeople
   .map((p) => parseBirthYear(p.birth_year))
   .filter((y): y is number => y !== null && Number.isFinite(y));
+// tw-2026-10-27-007: the upper bound must be the last recorded YEAR OF LIFE, not
+// the latest birth year, or a line whose last-born member is not its last to die
+// gets presented as having ended decades early (e.g. 2019 when deaths run past it).
+const deathYears = telferPeople
+  .map((p) => parseBirthYear(p.death_year))
+  .filter((y): y is number => y !== null && Number.isFinite(y));
 const minYear = years.length ? Math.min(...years) : null;
-const maxYear = years.length ? Math.max(...years) : null;
+const maxYear = years.length
+  ? Math.max(Math.max(...years), ...(deathYears.length ? deathYears : [Math.max(...years)]))
+  : null;
 const yearSpan = minYear !== null && maxYear !== null ? `${minYear}–${maxYear}` : "Unknown";
 const livingCount = telferPeople.filter(p => p.is_living).length;
 const deceasedCount = telferPeople.length - livingCount;
