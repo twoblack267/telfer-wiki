@@ -71,6 +71,24 @@ const AMBIGUOUS = '__ambiguous__';
 for (const person of people) {
   const name = person.id.toLowerCase(); // id has clean name
   if (!nameIndex.has(name)) nameIndex.set(name, person.slug);
+
+  // ── 2026-10-28: MIDDLE NAME LIVES ONLY IN `title` ──────────────────────────
+  // `id` and `display_name` are both the SHORT form ("Mark Telfer"); the middle
+  // name survives only in `title` ("Mark David Telfer (1950–1990)"). So the key
+  // "mark david telfer" was never registered, and every vault line written in the
+  // full Christian name failed to bind — including both of his wives' Spouse lines.
+  // Result was a ONE-WAY relationship: his page listed them, their pages showed a
+  // bare unlinked string, which is the "everyone links together" breakage exactly.
+  // Register the title's year-stripped name as an alias for THIS person only, via
+  // the same collision logic, so a genuinely shared full name still goes AMBIGUOUS.
+  {
+    const t = String(person.title || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
+    const tParts = t.split(/\s+/).filter(Boolean);
+    const lastName = String(person.last_name || '').toLowerCase();
+    if (tParts.length >= 3 && tParts[tParts.length - 1].toLowerCase() === lastName) {
+      setPrefersComplete(t.toLowerCase(), person.slug);
+    }
+  }
   // Also try first + last name
   // FIXED 2026-09-22 ("robert (1850)" key): person.id carries the year suffix —
   // "Robert Dunlop Lawrie (1850)" — so parts[parts.length - 1] was the YEAR, not
@@ -370,7 +388,18 @@ function resolveNameToSlug(name, sourceSlug) {
         if (qualified && qualified !== AMBIGUOUS) return true;
         return false;
       }
-      const sameFull = new Set(people.filter((p) => baseName(p.id) === bareKey).map((p) => p.slug));
+      // 2026-10-28: `p.id` is the SHORT form ("Mark Telfer") — a middle name lives only
+      // in `title` ("Mark David Telfer (1950–1990)"). Testing `id` alone therefore said
+      // the full name identified nobody, so a unique full-name ref was treated as a
+      // bare ambiguous one and refused. Include the title's base name in the
+      // distinctness test so a genuinely unique full name can bind, while a name still
+      // shared by two records stays AMBIGUOUS and is refused.
+      const titleBase = (p) => String(p.title || '').replace(/\s*\([^)]*\)\s*$/, '').trim().toLowerCase();
+      const sameFull = new Set(
+        people
+          .filter((p) => baseName(p.id) === bareKey || titleBase(p) === bareKey)
+          .map((p) => p.slug)
+      );
       return sameFull.size === 1 && nameIndex.has(bareKey);
     })();
     if (!fullIsDistinct) {

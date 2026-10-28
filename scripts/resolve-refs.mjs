@@ -87,9 +87,43 @@ people.forEach(p => {
   // qualifier — it must never win the qualifier short-circuit above.
   if (/\s*\([~]?\d{3,4}\s*[–-]?[^)]*\)\s*$/.test(p.display_name || '')) yearAnnotatedKeys.add(display);
   
+  // 2026-10-28 (defect tw-2026-10-28-single-source-transparency): the vault's own
+  // frontmatter often splits names so the MIDDLE name ends up in the title only —
+  // `first_name: Mark`, `middle_name: null`, `last_name: Telfer`,
+  // `title: "Mark David Telfer (1950–1990)"`. `short` and `full` then BOTH collapse
+  // to "mark telfer", so a ref written as "Mark David Telfer" (the form every one of
+  // his wives' Relationship lines uses) matched no index entry and was refused. Both
+  // his spouses rendered him as unlinked plain text while his own page listed them
+  // fine — a one-way link, which is exactly the "everyone links together" breakage.
+  //
+  // Recover the middle name from the title, the same evidence the birth-year fix
+  // uses: the vault author wrote it verbatim in the profile's filename. Never invents.
+  if (!p.middle_name && p.title) {
+    const t = String(p.title);
+    const mid = t.match(/\(\s*b\.?\s*\d{4}\s*\)/i)
+      ? null                                    // "James Telfer (b. 1979)" — no middle name
+      : t.replace(/\s*\([^)]*\)\s*$/, "").trim(); // strip trailing "(1950–1990)"
+    if (mid) {
+      const parts = mid.split(/\s+/);
+      const lastWord = (p.last_name || "").toLowerCase();
+      if (parts.length >= 3 && parts[parts.length - 1].toLowerCase() === lastWord) {
+        p.middle_name = parts.slice(1, -1).join(" ");
+      }
+    }
+  }
+  const midName = p.middle_name;
+  const fullWithMid = [p.first_name, midName, p.last_name].filter(Boolean).join(' ').toLowerCase().trim();
+
   // Store all matches for short names (duplicates)
   if (!byName.has(short)) byName.set(short, []);
   byName.get(short).push({ slug: p.slug, birth: birthYear, death: p.death_year, display });
+
+  // Index the MIDDLE-NAME form too ("mark david telfer"), so a vault ref spelled with
+  // the full Christian name binds instead of falling through to a raw string.
+  if (fullWithMid && fullWithMid !== short) {
+    if (!byName.has(fullWithMid)) byName.set(fullWithMid, []);
+    byName.get(fullWithMid).push({ slug: p.slug, birth: birthYear, death: p.death_year, display });
+  }
   
   if (full && full !== short) {
     if (!byFullName.has(full)) byFullName.set(full, []);
@@ -670,7 +704,23 @@ const changes = [];
 const selfRefs = [];
 
 people.forEach(p => {
-  const subjectBirth = p.birth_year;
+  // 2026-10-28: THE SUBJECT'S OWN YEAR HAS THE SAME DEFECT AS EVERY REF'S YEAR.
+  // This reads the raw `birth_year` field, which is null for the 61 records whose
+  // year lives only in the title ("Christine Hunter (b. 1952)"). With subjectBirth
+  // null, the date gate cannot judge any candidate, so an otherwise unambiguous ref
+  // stays refused. Live symptom: Christine Hunter (b. 1952) never linked to her
+  // husband Mark David Telfer (b. 1950) — a 2-year gap, obviously plausible — while
+  // his OTHER wife linked fine because hers carried no date at all to gate against.
+  // Both wives now bind. Same evidence-not-guess principle as the ref-side fix above:
+  // the year is written verbatim in the profile's own filename.
+  const subjectBirth = p.birth_year || (() => {
+    const t = p.title || '';
+    const born = t.match(/\(\s*b\.?\s*(\d{4})\s*\)/i);
+    if (born) return parseInt(born[1]);
+    const span = t.match(/\(~?(\d{4})\s*[–-]/);
+    if (span) return parseInt(span[1]);
+    return null;
+  })();
   // subjectDeath is needed so a child born AFTER their parent died is refused.
   const subjectDeath = p.death_year;
   
