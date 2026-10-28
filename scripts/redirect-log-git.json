@@ -1,5 +1,19 @@
 [
   {
+    "from": "adam-murray",
+    "to": "adam-murray-1728",
+    "matched_by": "removed-declared",
+    "display_name": "adam-murray-1728",
+    "reason": "Bare-name URL that once served a 301 alias. The undated duplicate page was retired by the duplicate-identity gate (commit bd834e0) and nothing declared a successor URL, so /people/adam-murray/ went from 301 to 404 on the 29 Oct deploy. The person was never removed - he is published at adam-murray-1728. This is a URL rename, not a removal."
+  },
+  {
+    "from": "amy-erin-vickers",
+    "to": "amy-vickers",
+    "matched_by": "removed-declared",
+    "display_name": "amy-vickers",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
     "from": "angelina-elen-telfer-1988",
     "to": "angelina-telfer",
     "matched_by": "removed-declared",
@@ -19,6 +33,20 @@
     "matched_by": "removed-declared",
     "display_name": "john-telfer-1847",
     "reason": "Fabricated child of the Ann Taylor stub. No standalone daughter named Ann in this family — every 'Ann Telfer' in the books is a MIDDLE name (Susan Ann, Mary Ann, Sarah Ann, Sandra Ann). Empty 212-byte shell with no dates."
+  },
+  {
+    "from": "anna-kate-nicholson",
+    "to": "anna-nicholson",
+    "matched_by": "removed-declared",
+    "display_name": "anna-nicholson",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
+    "from": "anthony-james-fatchen",
+    "to": "anthony-fatchen",
+    "matched_by": "removed-declared",
+    "display_name": "anthony-fatchen",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
   },
   {
     "from": "beryl-ruth-telfer-1949",
@@ -61,6 +89,20 @@
     "matched_by": "removed-declared",
     "display_name": "craig-hawkins",
     "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference."
+  },
+  {
+    "from": "daniel-james-nicholson",
+    "to": "daniel-nicholson",
+    "matched_by": "removed-declared",
+    "display_name": "daniel-nicholson",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
+    "from": "david-nathan-vickers",
+    "to": "david-vickers",
+    "matched_by": "removed-declared",
+    "display_name": "david-vickers",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
   },
   {
     "from": "dennis-rowe-1946",
@@ -126,6 +168,13 @@
     "reason": "Stale slug from the pre-correction state. Frederick Parker's birth year was corrected 1838 -> 1848 (Corrections Log item 1; Genealogy SA Marriage Reg 89/759, groom age 23 in 1871). The vault file was renamed and the slug scheme later moved to a yearless 'frederick-parker'. The old 'frederick-parker-1838' URL must resolve to the corrected page."
   },
   {
+    "from": "gavin-malcolm-fatchen",
+    "to": "gavin-fatchen",
+    "matched_by": "removed-declared",
+    "display_name": "gavin-fatchen",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
     "from": "gaylene-merle-hawkins",
     "to": "gaylene-hawkins",
     "matched_by": "removed-declared",
@@ -138,6 +187,13 @@
     "matched_by": "removed-declared",
     "display_name": "gladys-telfer",
     "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates; the vault note was renamed to match and the derived slug changed. The person is unchanged. Birth 1917 -> 1916 per Genealogy SA birth index and Ryerson age 92, as recorded in the vault note 'Gladys Merle Telfer (1916-living).md'; she remains flagged living. The old live URL must resolve to the new page."
+  },
+  {
+    "from": "gwenda-rosemary-barton-1948",
+    "to": "gwenda-barton",
+    "matched_by": "removed-declared",
+    "display_name": "gwenda-barton",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
   },
   {
     "from": "helen-telfer",
@@ -166,6 +222,13 @@
     "matched_by": "removed-declared",
     "display_name": "john-telfer-1847",
     "reason": "Fabricated child of the Ann Taylor stub. No Jessie among John Telfer (1847-1929)'s children in the books. Empty 224-byte shell with no dates."
+  },
+  {
+    "from": "john-telfer-of-castleton",
+    "to": "john-telfer-of-castleton-1731",
+    "matched_by": "removed-declared",
+    "display_name": "john-telfer-of-castleton-1731",
+    "reason": "Bare-name URL that once resolved. Same class as adam-murray: the undated duplicate was retired by the duplicate-identity gate (commit bd834e0) with no declared successor URL, so the bare URL 404s. The person is published at john-telfer-of-castleton-1731. A URL rename, not a removal."
   },
   {
     "from": "johnnie-telfer",
@@ -210,6 +273,13 @@
     "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference."
   },
   {
+    "from": "justin-paul-mcallister",
+    "to": "justin-mcallister",
+    "matched_by": "removed-declared",
+    "display_name": "justin-mcallister",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
     "from": "keith-gordon-pedler",
     "to": "keith-pedler",
     "matched_by": "removed-declared",
@@ -238,6 +308,20 @@
     "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference."
   },
   {
+    "from": "kristy-jane-mcallister",
+    "to": "kristy-mcallister",
+    "matched_by": "removed-declared",
+    "display_name": "kristy-mcallister",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
+    "from": "kyla-nicholson",
+    "to": "kyla-nicholson-1980",
+    "matched_by": "removed-declared",
+    "display_name": "kyla-nicholson-1980",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
     "from": "lance-gordon-hawkins",
     "to": "lance-hawkins",
     "matched_by": "removed-declared",
@@ -252,11 +336,25 @@
     "reason": "Stale slug from the pre-correction state. Lillian May Telfer's birth was corrected 1872 -> 7 Aug 1873 (Corrections Log item 2; Tree pp. 287 & 291). Her current slug is derived from the NAME ('lillian-telfer'), so the old year-suffixed URL must resolve to the corrected page."
   },
   {
+    "from": "lola-may-paterson-1913",
+    "to": "lola-paterson",
+    "matched_by": "removed-declared",
+    "display_name": "lola-paterson",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
     "from": "marion-vida",
     "to": "marion-lawrie-1888",
     "matched_by": "removed-declared",
     "display_name": "marion-lawrie-1888",
     "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Marion Vida' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page."
+  },
+  {
+    "from": "mary-telfer",
+    "to": "mary-telfer-living",
+    "matched_by": "removed-declared",
+    "display_name": "mary-telfer-living",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
   },
   {
     "from": "nicholas-andre-maddern-1974",
@@ -279,11 +377,25 @@
     "reason": "Phantom name from the book's OCR text layer. Printed Supplement p.145 reads Helen Elizabeth NICHOLSON, b. 8 Oct 1959 Mt Gambier SA. The stub's 'Nola', her husband's birth year (1957 against 1967) and the marriage year (1980 against 1997) were all OCR errors, now retracted."
   },
   {
+    "from": "phillip-andrew-fatchen",
+    "to": "phillip-fatchen",
+    "matched_by": "removed-declared",
+    "display_name": "phillip-fatchen",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
     "from": "robina-telfer",
     "to": "john-telfer-1847",
     "matched_by": "removed-declared",
     "display_name": "john-telfer-1847",
     "reason": "Fabricated child of the Ann Taylor stub. The only 'Robina' in the books belongs to the Scottish Newcastleton branch (Borders p.361), not the South Australian 1847 line. Empty 224-byte shell with no dates."
+  },
+  {
+    "from": "ross-kelvin-fatchen-1948",
+    "to": "ross-fatchen",
+    "matched_by": "removed-declared",
+    "display_name": "ross-fatchen",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
   },
   {
     "from": "sarah-nicholson",
@@ -298,6 +410,20 @@
     "matched_by": "removed-declared",
     "display_name": "shane-pedler",
     "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference."
+  },
+  {
+    "from": "shannon-louise-telfer-1982",
+    "to": "shannon-telfer",
+    "matched_by": "removed-declared",
+    "display_name": "shannon-telfer",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
+  },
+  {
+    "from": "sharon-barbara-fatchen",
+    "to": "sharon-fatchen",
+    "matched_by": "removed-declared",
+    "display_name": "sharon-fatchen",
+    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
   },
   {
     "from": "sharon-marie-pedler",

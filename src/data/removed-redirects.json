@@ -434,6 +434,114 @@
       "reason": "URL rename, not a removal. The profile gained its birth-year suffix in commit 2ade6f6, which renamed the page without declaring a redirect, so the old bare URL silently 404'd. Same person, same vault note (Kerryn Leigh Manuel (b. 1975).md).",
       "date": "2026-10-29",
       "corrections_log": "2026-10-29 — MAINTENANCE: undeclared slug rename restored (kerryn-leigh-manuel)"
+    },
+    "adam-murray": {
+      "to": "adam-murray-1728",
+      "reason": "Bare-name URL that once served a 301 alias. The undated duplicate page was retired by the duplicate-identity gate (commit bd834e0) and nothing declared a successor URL, so /people/adam-murray/ went from 301 to 404 on the 29 Oct deploy. The person was never removed - he is published at adam-murray-1728. This is a URL rename, not a removal.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared bare-name alias restored (adam-murray)"
+    },
+    "john-telfer-of-castleton": {
+      "to": "john-telfer-of-castleton-1731",
+      "reason": "Bare-name URL that once resolved. Same class as adam-murray: the undated duplicate was retired by the duplicate-identity gate (commit bd834e0) with no declared successor URL, so the bare URL 404s. The person is published at john-telfer-of-castleton-1731. A URL rename, not a removal.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared bare-name alias restored (john-telfer-of-castleton)"
+    },
+    "mary-telfer": {
+      "to": "mary-telfer-living",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (mary-telfer)"
+    },
+    "ross-kelvin-fatchen-1948": {
+      "to": "ross-fatchen",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (ross-kelvin-fatchen-1948)"
+    },
+    "gwenda-rosemary-barton-1948": {
+      "to": "gwenda-barton",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (gwenda-rosemary-barton-1948)"
+    },
+    "shannon-louise-telfer-1982": {
+      "to": "shannon-telfer",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (shannon-louise-telfer-1982)"
+    },
+    "anna-kate-nicholson": {
+      "to": "anna-nicholson",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (anna-kate-nicholson)"
+    },
+    "kyla-nicholson": {
+      "to": "kyla-nicholson-1980",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (kyla-nicholson)"
+    },
+    "daniel-james-nicholson": {
+      "to": "daniel-nicholson",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (daniel-james-nicholson)"
+    },
+    "david-nathan-vickers": {
+      "to": "david-vickers",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (david-nathan-vickers)"
+    },
+    "amy-erin-vickers": {
+      "to": "amy-vickers",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (amy-erin-vickers)"
+    },
+    "sharon-barbara-fatchen": {
+      "to": "sharon-fatchen",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (sharon-barbara-fatchen)"
+    },
+    "phillip-andrew-fatchen": {
+      "to": "phillip-fatchen",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (phillip-andrew-fatchen)"
+    },
+    "anthony-james-fatchen": {
+      "to": "anthony-fatchen",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (anthony-james-fatchen)"
+    },
+    "gavin-malcolm-fatchen": {
+      "to": "gavin-fatchen",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (gavin-malcolm-fatchen)"
+    },
+    "justin-paul-mcallister": {
+      "to": "justin-mcallister",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (justin-paul-mcallister)"
+    },
+    "kristy-jane-mcallister": {
+      "to": "kristy-mcallister",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (kristy-jane-mcallister)"
+    },
+    "lola-may-paterson-1913": {
+      "to": "lola-paterson",
+      "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (lola-may-paterson-1913)"
     }
   }
 }
