@@ -46,6 +46,36 @@ const suppressed = [];
 /** Aliases dropped because their destination is withdrawn (privacy strip). */
 const strippedAliases = [];
 
+// ─────────────────────────────────────────────────────────────────────────────
+// AMBIGUOUS BARE NAMES (added 2026-10-28).
+// A bare slug such as /people/william-telfer/ belongs to NOBODY when several people
+// share that first+last name. Every "choose one successor" rule in this file is a
+// tie-break, not evidence, and emitting such a redirect states a false fact.
+// MEASURED live consequences of the old behaviour:
+//   /people/carissa-telfer/ -> carissa-telfer-2023   (the 2023 INFANT, not
+//                                                     Carissa Telfer 1989-2023)
+//   /people/william-telfer/ -> william-francis-telfer-1885 (a different person
+//                                                     who is not one of the four
+//                                                     'William Telfer's at all)
+//   /people/john-dillon/    -> john-dillon-1827      (blind pick between 1827,
+//                                                     1859 and the 1882 infant)
+// Precedent already in this repo: /people/robert/ was REMOVED rather than pointed at
+// one of three Roberts (see MANUAL_ALIASES, 2026-09-12). This applies that same rule
+// generically. The bare URL is left absent and declared with to:null in
+// src/data/removed-redirects.json, and scripts/generate-disambiguation.mjs emits a
+// chooser page for it, so the reader picks rather than the build guessing.
+// ─────────────────────────────────────────────────────────────────────────────
+const bareNameOf = (p) => `${(p.first_name || '').toLowerCase()}-${(p.last_name || '').toLowerCase()}`
+  .replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+const bareClaims = new Map();
+for (const p of people) {
+  const b = bareNameOf(p);
+  if (!bareClaims.has(b)) bareClaims.set(b, new Set());
+  bareClaims.get(b).add(p.slug);
+}
+const ambiguousBareNames = new Set();
+for (const [b, slugs] of bareClaims) if (slugs.size > 1) ambiguousBareNames.add(b);
+
 // Build map: old-format slug → actual person
 const redirects = [];
 
@@ -102,6 +132,13 @@ for (const p of people) {
   // In a conflicted group, the URL that used to be this person's is the bare slug —
   // unless they still hold the bare slug, in which case their URL has not changed.
   const actualOldSlug = groupConflicted && newSlug !== bareSlug ? bareSlug : oldSlug;
+  // AMBIGUITY GATE: `actualOldSlug === bareSlug` means the bare URL belonged to the
+  // whole conflict group, so it belonged to nobody in particular. Redirecting it to
+  // whichever member this loop reaches first is a blind pick. Skip it; the reader gets
+  // a disambiguation page instead, and removed-redirects.json declares it to:null.
+  if (actualOldSlug === bareSlug && ambiguousBareNames.has(bareSlug)) {
+    continue;
+  }
   if (actualOldSlug !== newSlug && !canonicalSlugs.has(actualOldSlug)) {
     pushRedirect({
       from: actualOldSlug,
@@ -214,8 +251,25 @@ for (const r of bareToNew) {
   }
 }
 // Push Case 3 redirects (dedupe: skip any 'from' already claimed by an earlier redirect)
+// AMBIGUITY GATE (added 2026-10-28). A bare slug shared by MORE THAN ONE person must
+// never be redirected to one of them. `byBare` above resolves a collision group by
+// picking the latest birth (the "leaf"), which is a tie-break, not evidence. Measured
+// consequences of letting it through: /people/carissa-telfer/ redirected to the 2023
+// INFANT rather than Carissa Telfer (1989-2023); /people/william-telfer/ redirected to
+// William Francis Telfer (1885), who is not even one of the four "William Telfer"s.
+// Both are invented facts of exactly the kind this repo treats as a defect.
+//
+// Precedent: /people/robert/ was removed rather than pointed at one of three Roberts
+// (MANUAL_ALIASES below, 2026-09-12). Same rule, applied generically here.
+// The correct destination for an ambiguous bare name is a disambiguation listing,
+// which is a separate feature; until it exists, the URL is honestly absent and
+// src/data/removed-redirects.json declares it with to:null and a reason.
 const existingFrom = new Set(redirects.map(r => r.from));
 for (const r of byBare.values()) {
+  if (ambiguousBareNames.has(r.from)) {
+    console.log(`  ⚠️  bare slug /people/${r.from}/ is AMBIGUOUS (${bareClaims.get(r.from).size} people) — not redirected to ${r.to}`);
+    continue;
+  }
   if (!existingFrom.has(r.from)) {
     pushRedirect({ from: r.from, to: r.to, display_name: r.display_name });
   }

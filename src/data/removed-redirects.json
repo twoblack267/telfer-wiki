@@ -391,6 +391,31 @@
       "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under the 28 Oct 2026 ruling on the 81 sourceless notes. Backed up before deletion.",
       "date": "2026-10-28",
       "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "elizabeth-anne-smith-1878": {
+      "to": "elizabeth-smith",
+      "reason": "Slug shape changed; the person did not. Elizabeth Anne Smith (b. 1878) is the sole match — same record, canonical slug.",
+      "date": "2026-10-28"
+    },
+    "joseph-francis-farrow": {
+      "to": "joseph-farrow",
+      "reason": "Slug shape changed; the person did not. Joseph Francis Farrow is the sole match — same record, canonical slug.",
+      "date": "2026-10-28"
+    },
+    "john-dillon": {
+      "to": null,
+      "reason": "Ambiguous bare name. Three John Dillons (1827, 1859, 1882) could claim this URL; the only exact-match page is the 1882 infant, and pointing a bare name at him would repeat the collision bug. Needs a disambiguation page listing all three.",
+      "date": "2026-10-28"
+    },
+    "william-telfer": {
+      "to": null,
+      "reason": "Ambiguous bare name. Four William Telfers (1802, 1811, 1841, 1847) plus William Francis Telfer (1885) could claim this URL. The page previously redirected to the 1885 man, who is not a namesake of the bare name at all. Needs a disambiguation page.",
+      "date": "2026-10-28"
+    },
+    "carissa-telfer": {
+      "to": null,
+      "reason": "Ambiguous bare name, and a sensitive one. Two Carissa Telfers: 1989-2023 and an infant who died in 2023. The page previously redirected to the infant by blind pick. A redirect would silently choose between a woman and a baby; a disambiguation page lets the reader choose.",
+      "date": "2026-10-28"
     }
   }
 }
