@@ -38,6 +38,7 @@ import fs from 'fs';
 import path from 'path';
 import { execFileSync } from 'child_process';
 import { fileURLToPath } from 'url';
+import { PRIVACY_STRIP_SLUGS } from '../src/data/privacy-exclusions.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(__dirname, '..');
@@ -146,7 +147,48 @@ for (const p of OLD) if (p.slug) oldBySlug.set(p.slug, p);
 const newBySlug = new Map();
 for (const p of NEW) if (p.slug) newBySlug.set(p.slug, p);
 
-const vanished = [...oldBySlug.keys()].filter((s) => !newBySlug.has(s)).sort();
+const vanishedFromDiff = [...oldBySlug.keys()].filter((s) => !newBySlug.has(s)).sort();
+
+// Declared removals are loaded HERE (not further down) because `vanished` needs them.
+// A profile can be REMOVED from the vault on purpose — not renamed, not purged as a
+// phantom twin — genuinely removed because the evidence did not support it, or because
+// the owner withdrew it for privacy.
+const REMOVED_ABS = path.join(REPO, 'src/data/removed-redirects.json');
+let REMOVED = {};
+try {
+  REMOVED = JSON.parse(fs.readFileSync(REMOVED_ABS, 'utf-8')).removed || {};
+} catch {
+  // No declarations yet — fine, fall through to normal matching.
+}
+
+// --- DECLARED REMOVALS ARE FOREVER, NOT ONE-COMMIT ---------------------------------
+// tw-2026-10-29-001: `vanished` used to be computed ONLY from the diff between the
+// previous commit's people.json and the working tree. `removed-redirects.json` was then
+// consulted as a lookup table for those slugs. That is backwards for anything older than
+// one commit: the removal enters history, next run it is no longer "vanished", so no alias
+// page is emitted — and because dist/people is rebuilt from scratch, yesterday's alias page
+// is GONE. Measured 2026-10-29: 61 of the 67 declared removals were live 404s, including
+// the privacy-withdrawn Ivory children. A declared destination is a standing promise to a
+// visitor and must be emitted on every build until it is removed from the JSON.
+//
+// So: union the diff-derived vanished slugs with every slug declared in the file.
+//
+// PRIVACY-STRIPPED SLUGS ARE EXCLUDED, and this is deliberate (owner's ruling, 26 Oct 2026):
+// a withdrawn person gets NO page, not even a meta-refresh stub, because the stub sits at the
+// withdrawn person's own URL and confirms that identity existed. A 404 says nothing at all.
+// An earlier attempt emitted those six aliases and CI's check-withdrawn-names correctly failed
+// the build. That gate was right. Do not re-add the exemption without changing the ruling.
+//
+// The remaining bug this fixes: a removal older than the last commit was invisible to the
+// diff, so its alias page was never re-emitted after a rebuild — 61 of 67 declared URLs were
+// live 404s on 2026-10-29, all of them non-private corrections.
+const isPublished = (s) => newBySlug.has(s) && !PRIVACY_STRIP_SLUGS.has(s);
+const declaredSlugs = Object.keys(REMOVED).filter(
+  (s) => !newBySlug.has(s) && !PRIVACY_STRIP_SLUGS.has(s),
+);
+const vanished = [...new Set([...vanishedFromDiff, ...declaredSlugs])]
+  .filter((s) => !PRIVACY_STRIP_SLUGS.has(s))
+  .sort();
 const appeared = [...newBySlug.keys()].filter((s) => !oldBySlug.has(s)).sort();
 
 // --- identity fallback chain -------------------------------------------------
@@ -202,16 +244,18 @@ const unresolved = [];
 // a declared destination instead of an invented one. src/data/removed-redirects.json
 // carries those declarations, each with a reason, a date and the Corrections Log
 // heading that records it. Consulted FIRST, before any heuristic matching.
-const REMOVED_ABS = path.join(REPO, 'src/data/removed-redirects.json');
-let REMOVED = {};
-try {
-  REMOVED = JSON.parse(fs.readFileSync(REMOVED_ABS, 'utf-8')).removed || {};
-} catch {
-  // No declarations yet — fine, fall through to normal matching.
-}
+// (Loaded earlier, at the `vanished` computation, because declared removals must join
+// the emit set on every build — see tw-2026-10-29-001 above.)
 
 for (const oldSlug of vanished) {
-  const o = oldBySlug.get(oldSlug);
+  // `o` can be undefined for a DECLARED slug that is older than the diff window — it is
+  // not in the previous commit's people.json, which is exactly why it was lost before.
+  // Fall back to the declaration's own text; never invent a name from the slug.
+  const o = oldBySlug.get(oldSlug) || {
+    display_name: REMOVED[oldSlug]?.person || REMOVED[oldSlug]?.to || oldSlug,
+    vault_file: null,
+    tags: [],
+  };
 
   // 1. Explicitly-removed profile: use the declared destination.
   const declared = REMOVED[oldSlug];
