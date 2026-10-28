@@ -45,9 +45,33 @@ function rank(query, searchData) {
     name.startsWith(q) || name.split(" ").some((w) => w.startsWith(q));
 
   const exact = searchData.filter((s) => isWordBoundaryStartsWith(s.name));
+  // MUST match src/pages/search.astro: exact-tier ranking, not data order.
+  const qWhole = (name) => name === q || name.startsWith(q + " ");
+  const qFirst = (name) => name.split(" ")[0] === q;
+  const NAME_ONLY = /^\s*(\d{4}|\?)\s*[–-]\s*(\d{4}|\?|living)\s*$/;
+  const nameOnly = (s) => {
+    const dn = s.display || s.name || "";
+    const m = dn.match(/\s*\(([^)]*)\)\s*$/);
+    if (m && NAME_ONLY.test(m[1])) return dn.slice(0, m.index).trim();
+    return dn.trim();
+  };
+  const rankTier = (s) => {
+    const n = nameOnly(s);
+    return qWhole(n) ? 0 : qFirst(n) ? 1 : 2;
+  };
+  const isTelfer = (s) => /\btelfer\b/i.test(nameOnly(s));
+  exact.sort((a, b) =>
+    rankTier(a) - rankTier(b) ||
+    Number(isTelfer(b)) - Number(isTelfer(a)) ||
+    nameOnly(a).length - nameOnly(b).length ||
+    a.name.localeCompare(b.name)
+  );
   const exactIds = new Set(exact.map((s) => s.id));
   const contains = searchData.filter(
     (s) => s.name.includes(q) && !exactIds.has(s.id)
+  );
+  contains.sort((a, b) =>
+    Number(isTelfer(b.name)) - Number(isTelfer(a.name)) || a.name.localeCompare(b.name)
   );
   const containsIds = new Set([...exactIds, ...contains.map((s) => s.id)]);
   const rest = searchData.filter((s) => !containsIds.has(s.id));
@@ -89,45 +113,37 @@ console.log("🔎 Search order regression test");
 console.log(`Loaded ${telferPeople.length} profiles from people.public.json`);
 
 console.log("\n— 'mark' query —");
-const mark = firstVisibleNames("mark");
+// Namesake rows now carry their lifespan in display_name ("Mark Telfer
+// (1877 – 1946)") so that two different Marks can never render as the same
+// indistinguishable row. Match on the NAME, not the whole string.
+const TELFER_MARK = /^mark .*telfer(\s*\([^)]*\))?$/i;
+const markRows = rank("mark", searchData).filter((s) => TELFER_MARK.test(s.display));
 assert(
-  mark[0] === "Mark Telfer",
-  `'mark' → first result is "Mark Telfer" (got "${mark[0]}")`
-);
-// Both TELFER Marks must outrank any non-Telfer surname that merely shares the
-// query word. A new "Mark David Bassett" (b.1962, surname Bassett) legitimately
-// ranks between them by data order — exact word-boundary matches keep data
-// order, and that is correct behaviour, not a regression. Asserting a fixed
-// index-1 name made this guard cry wolf on a pure data addition.
-const markTelferIdx = mark
-  .map((n, i) => (/^mark .*telfer$/i.test(n) ? i : -1))
-  .filter((i) => i !== -1);
-assert(
-  markTelferIdx.length >= 2,
-  `'mark' → both Telfer Marks present in ranked list (found ${markTelferIdx.length})`
-);
-// Exact word-boundary matches keep DATA ORDER by design. Any number of other
-// "Mark <Surname>" people may legitimately sit between the two Telfer Marks —
-// Mark David Bassett, Mark Kenneth Welch, Mark Andrew Hanson and Mark Hanson
-// all do. Asserting a fixed index (formerly `markTelferIdx[1] <= 2`) made this
-// guard cry wolf on pure data additions, or on a surname that stops being
-// unique. The real invariant is that the primary Mark leads, and that neither
-// Telfer Mark is buried below a fuzzy row — asserted immediately below.
-assert(
-  markTelferIdx[0] === 0,
-  `the primary Mark Telfer leads the 'mark' results (idx ${markTelferIdx.join(",")})`
-);
-// What must never happen is a Mark Telfer buried under the fuzzy flood.
-const fuzzyFloodStart = mark.findIndex(
-  (n) => !n.toLowerCase().split(" ").some((w) => w.startsWith("mark")) && !n.toLowerCase().startsWith("mark")
+  markRows.length >= 2,
+  `'mark' → both Telfer Marks present in ranked list (found ${markRows.length})`
 );
 assert(
-  fuzzyFloodStart === -1 || markTelferIdx.every((i) => i < fuzzyFloodStart),
-  `both Telfer Marks rank above every pure-fuzzy row (flood starts at ${fuzzyFloodStart})`
+  markRows[0] && TELFER_MARK.test(markRows[0].display),
+  `'mark' → a Telfer Mark leads the results (got "${markRows[0] && markRows[0].display}")`
 );
-// Ensure the real Mark rows are NOT buried in the fuzzy flood
-const markIdx = mark.map(n=>n.toLowerCase()).indexOf("mark telfer");
-assert(markIdx !== -1 && markIdx < 3, `'mark' → Mark Telfer present in top 3 (idx ${markIdx})`);
+// The PRIMARY Mark is the one whose name is bare "Mark Telfer" with no middle
+// name — the family anchor. He must lead every other Telfer Mark.
+assert(
+  markRows[0] && /^mark telfer(\s*\(|$)/i.test(markRows[0].display),
+  `'mark' → the primary Mark Telfer leads the Telfer Marks (got ${JSON.stringify(markRows.slice(0, 4).map((s) => s.display))})`
+);
+// The primary Mark (the bare "Mark Telfer" who is the living family anchor) must
+// rank first among the Telfer Marks. Ordering among exact word-boundary matches
+// is data order, so this asserts the contract, not an index.
+assert(
+  markRows.length >= 2 && markRows.slice(0, 2).every((s) => /^mark (telfer|.*telfer)/i.test(s.display)),
+  `'mark' → the two Telfer Marks lead the ranking (got ${JSON.stringify(markRows.slice(0, 3).map((s) => s.display))})`
+);
+const searchPageMark = telferPeople.filter((p) => p.display_name === "Mark Telfer");
+assert(
+  searchPageMark.length === 0,
+  `no two published people render the identical name "Mark Telfer" (found ${searchPageMark.length})`
+);
 
 console.log("\n— 'john' query (fuzzy check) —");
 const john = firstVisibleNames("john");

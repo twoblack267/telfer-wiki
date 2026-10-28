@@ -386,6 +386,36 @@ function resolveNameToSlug(name, sourceSlug) {
     if (nameIndex.has(key)) return fuzzyVal;
   }
 
+  // 3b) MIDDLE-NAME TOLERANCE, UNIQUE-CANDIDATE ONLY (2026-10-28).
+  //
+  // The vault writes people by their FULL christened name while people.json often
+  // records them without the middle name(s): every reference to "Martha Clara
+  // Henstridge" was refused because the only record answers to "Martha Henstridge",
+  // and the walk above only ever tried first+last against `nameIndex`, which is
+  // keyed by whole names. Same story for "George Leslie Roy Hucks" →
+  // george-hucks-1875 and the four Ivory children of Aaron Paul Ivory.
+  //
+  // Accept first+last ONLY when that key identifies EXACTLY ONE record AND the
+  // reference carries no birth year or the record's birth year agrees with it.
+  // Anything else stays unresolved: this rescues distinctive names, never guesses
+  // between generations (77 multi-candidate and 12 year-conflicting refs are still
+  // refused — "Margaret Eliza Parker (1872–1938)" must never bind to
+  // margaret-parker b.1857).
+  {
+    const parts = cleanName.split(' ').filter(Boolean);
+    if (parts.length >= 3) {
+      const fn = parts[0].toLowerCase();
+      const ln = parts[parts.length - 1].toLowerCase();
+      const candidates = people.filter(
+        (p) => String(p.first_name || '').toLowerCase() === fn && String(p.last_name || '').toLowerCase() === ln
+      );
+      if (candidates.length === 1) {
+        const only = candidates[0];
+        if (!refBirth || (only.birth_year && only.birth_year === refBirth)) return only.slug;
+      }
+    }
+  }
+
   // 4) Partial match on display_name
   for (const person of people) {
     if (person.id.toLowerCase() === cleanName.toLowerCase()) return person.slug;

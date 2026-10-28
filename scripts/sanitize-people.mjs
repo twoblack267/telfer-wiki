@@ -877,6 +877,39 @@ for (const person of people) {
   publicPeople.push(publicPerson);
 }
 
+// ─── Display-name disambiguation (2026-10-28) ────────────────────────────────
+// build-people-json.mjs emits display_name as "Mark David Telfer (1877–1946)".
+// That lifespan was being stripped downstream, so every namesake rendered as
+// bare "Mark Telfer" — 24 collisions across the site (8 James Telfers, 4 John
+// Telfers), and on the search page two indistinguishable "Mark Telfer" rows
+// pushed a real Telfer Mark under the fuzzy Margaret/Martha flood.
+// The year is ALREADY printed on the row (it is `lifespan`), so carrying it in
+// the name costs no new information and makes a collision impossible to read as
+// a duplicate person. Only colliding names are touched: a unique name keeps its
+// plain form. The lifespan suffix is derived here, never copied, so it can never
+// drift from birth_year_display / death_year_display.
+{
+  const counts = new Map();
+  for (const p of publicPeople) {
+    const n = stripDates(p.display_name || '').toLowerCase();
+    if (n) counts.set(n, (counts.get(n) || 0) + 1);
+  }
+  let disambiguated = 0;
+  for (const p of publicPeople) {
+    const bare = stripDates(p.display_name || '');
+    if (!bare) continue;
+    if ((counts.get(bare.toLowerCase()) || 0) < 2) continue;
+    const dated = `${bare} (${p.lifespan || '? – ?'})`;
+    if (p.display_name !== dated) {
+      p.display_name = dated;
+      disambiguated++;
+    }
+  }
+  if (disambiguated) {
+    console.log(`🔎 Display-name disambiguation: ${disambiguated} namesake row(s) now carry their lifespan`);
+  }
+}
+
 // Sort by generation, then birth year, then name
 publicPeople.sort((a, b) => {
   if (a.generation !== b.generation) return (a.generation || 0) - (b.generation || 0);

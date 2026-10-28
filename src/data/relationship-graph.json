@@ -1796,9 +1796,9 @@
       "generation": 5
     },
     {
-      "slug": "james-telfer",
-      "id": "James John Drew Telfer (1978)",
-      "generation": 8
+      "slug": "james-telfer-living",
+      "id": "James Telfer",
+      "generation": 99
     },
     {
       "slug": "lillian-telfer",
@@ -2951,6 +2951,331 @@
       "generation": 8
     },
     {
+      "slug": "adrian-light",
+      "id": "Adrian Light",
+      "generation": 99
+    },
+    {
+      "slug": "albert-campbell",
+      "id": "Albert Campbell",
+      "generation": 6
+    },
+    {
+      "slug": "alison-hooper",
+      "id": "Alison Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "amie-goodson",
+      "id": "Amie Goodson",
+      "generation": 99
+    },
+    {
+      "slug": "andrew-goodson",
+      "id": "Andrew Goodson",
+      "generation": 99
+    },
+    {
+      "slug": "andrew-hooper",
+      "id": "Andrew Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "anthony-hooper",
+      "id": "Anthony Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "arya-telfer",
+      "id": "Arya Telfer",
+      "generation": 99
+    },
+    {
+      "slug": "belinda-hooper",
+      "id": "Belinda Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "bernard-merchant",
+      "id": "Bernard Merchant",
+      "generation": 99
+    },
+    {
+      "slug": "bruce-morris",
+      "id": "Bruce Morris",
+      "generation": 99
+    },
+    {
+      "slug": "cameron-bates",
+      "id": "Cameron Bates",
+      "generation": 99
+    },
+    {
+      "slug": "carol-petith",
+      "id": "Carol Petith",
+      "generation": 99
+    },
+    {
+      "slug": "catherine-walsh",
+      "id": "Catherine Walsh",
+      "generation": 99
+    },
+    {
+      "slug": "charlotte-hooper",
+      "id": "Charlotte Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "christine-hunter",
+      "id": "Christine Hunter",
+      "generation": 99
+    },
+    {
+      "slug": "christine-tsim",
+      "id": "Christine Tsim",
+      "generation": 99
+    },
+    {
+      "slug": "dhurri-thiagarajah",
+      "id": "Dhurri Thiagarajah",
+      "generation": 99
+    },
+    {
+      "slug": "doljin-anastovski",
+      "id": "Doljin Anastovski",
+      "generation": 99
+    },
+    {
+      "slug": "edward-light",
+      "id": "Edward Light",
+      "generation": 99
+    },
+    {
+      "slug": "edward-cameron",
+      "id": "Edward Cameron",
+      "generation": 99
+    },
+    {
+      "slug": "frank-hooper",
+      "id": "Frank Hooper",
+      "generation": 6
+    },
+    {
+      "slug": "geoffrey-goodson",
+      "id": "Geoffrey Goodson",
+      "generation": 7
+    },
+    {
+      "slug": "gwenyth-telfer",
+      "id": "Gwenyth Telfer",
+      "generation": 6
+    },
+    {
+      "slug": "ian-cameron",
+      "id": "Ian Cameron",
+      "generation": 99
+    },
+    {
+      "slug": "iris-hooper",
+      "id": "Iris Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "ivan-hooper",
+      "id": "Ivan Hooper",
+      "generation": 7
+    },
+    {
+      "slug": "jack-cameron",
+      "id": "Jack Cameron",
+      "generation": 99
+    },
+    {
+      "slug": "james-light",
+      "id": "James Light",
+      "generation": 99
+    },
+    {
+      "slug": "james-sara",
+      "id": "James Sara",
+      "generation": 99
+    },
+    {
+      "slug": "jane-goodson",
+      "id": "Jane Goodson",
+      "generation": 99
+    },
+    {
+      "slug": "jennifer-fox",
+      "id": "Jennifer Fox",
+      "generation": 99
+    },
+    {
+      "slug": "jennifer-dearden",
+      "id": "Jennifer Dearden",
+      "generation": 99
+    },
+    {
+      "slug": "jessica-telfer",
+      "id": "Jessica Telfer",
+      "generation": 6
+    },
+    {
+      "slug": "jonathan-telfer",
+      "id": "Jonathan Telfer",
+      "generation": 5
+    },
+    {
+      "slug": "joshua-morris",
+      "id": "Joshua Morris",
+      "generation": 99
+    },
+    {
+      "slug": "kathryn-whymark",
+      "id": "Kathryn Whymark",
+      "generation": 99
+    },
+    {
+      "slug": "kelly-bates",
+      "id": "Kelly Bates",
+      "generation": 99
+    },
+    {
+      "slug": "laurel-telfer",
+      "id": "Laurel Telfer",
+      "generation": 5
+    },
+    {
+      "slug": "lyndy-trevaskis",
+      "id": "Lyndy Trevaskis",
+      "generation": 7
+    },
+    {
+      "slug": "mark-telfer-living",
+      "id": "Mark Telfer",
+      "generation": 7
+    },
+    {
+      "slug": "martin-telfer",
+      "id": "Martin Telfer",
+      "generation": 99
+    },
+    {
+      "slug": "melinda-walsh",
+      "id": "Melinda Walsh",
+      "generation": 99
+    },
+    {
+      "slug": "michael-hooper",
+      "id": "Michael Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "muriel-crespin",
+      "id": "Muriel Crespin",
+      "generation": 6
+    },
+    {
+      "slug": "nancy-telfer",
+      "id": "Nancy Telfer",
+      "generation": 7
+    },
+    {
+      "slug": "peter-goodson",
+      "id": "Peter Goodson",
+      "generation": 99
+    },
+    {
+      "slug": "richard-walsh",
+      "id": "Richard Walsh",
+      "generation": 5
+    },
+    {
+      "slug": "richard-hooper",
+      "id": "Richard Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "robert-godfrey",
+      "id": "Robert Godfrey",
+      "generation": 6
+    },
+    {
+      "slug": "roger-hooper",
+      "id": "Roger Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "ronald-faller",
+      "id": "Ronald Faller",
+      "generation": 99
+    },
+    {
+      "slug": "roslyn-white",
+      "id": "Roslyn White",
+      "generation": 99
+    },
+    {
+      "slug": "sally-walsh",
+      "id": "Sally Walsh",
+      "generation": 99
+    },
+    {
+      "slug": "samantha-walsh",
+      "id": "Samantha Walsh",
+      "generation": 99
+    },
+    {
+      "slug": "sarah-morris",
+      "id": "Sarah Morris",
+      "generation": 99
+    },
+    {
+      "slug": "simon-telfer",
+      "id": "Simon Telfer",
+      "generation": 99
+    },
+    {
+      "slug": "stephen-bates",
+      "id": "Stephen Bates",
+      "generation": 99
+    },
+    {
+      "slug": "susan-lucas",
+      "id": "Susan Lucas",
+      "generation": 99
+    },
+    {
+      "slug": "tahlia-morris",
+      "id": "Tahlia Morris",
+      "generation": 99
+    },
+    {
+      "slug": "terence-hooper",
+      "id": "Terence Hooper",
+      "generation": 7
+    },
+    {
+      "slug": "timothy-hooper",
+      "id": "Timothy Hooper",
+      "generation": 99
+    },
+    {
+      "slug": "wendy-godfrey",
+      "id": "Wendy Godfrey",
+      "generation": 99
+    },
+    {
+      "slug": "james-telfer-1978",
+      "id": "James John Drew Telfer (1978)",
+      "generation": 8
+    },
+    {
+      "slug": "mark-telfer",
+      "id": "Mark Andrew Telfer (1976)",
+      "generation": 9
+    },
+    {
       "slug": "nicholas-andre-maddern-1974",
       "id": "Nicholas Andre Maddern (1974)",
       "generation": 8
@@ -3314,10 +3639,6 @@
       {
         "from": "margaret-telfer-1849",
         "to": "effie-olive-telfer-1886"
-      },
-      {
-        "from": "thomas-telfer",
-        "to": "elisabeth-telfer-1806"
       },
       {
         "from": "esther-jane-telfer-1834",
@@ -4864,14 +5185,6 @@
         "to": "geoffrey-telfer-1914"
       },
       {
-        "from": "daryll-telfer",
-        "to": "james-telfer"
-      },
-      {
-        "from": "rosemary-curtis",
-        "to": "james-telfer"
-      },
-      {
         "from": "adam-telfer-1842",
         "to": "lillian-telfer"
       },
@@ -6116,6 +6429,58 @@
         "to": "zachary-hanson"
       },
       {
+        "from": "ernest-telfer-1878",
+        "to": "gwenyth-telfer"
+      },
+      {
+        "from": "frank-hooper",
+        "to": "ivan-hooper"
+      },
+      {
+        "from": "jessica-telfer",
+        "to": "ivan-hooper"
+      },
+      {
+        "from": "ernest-telfer-1878",
+        "to": "jessica-telfer"
+      },
+      {
+        "from": "florence-nicholas",
+        "to": "jessica-telfer"
+      },
+      {
+        "from": "john-telfer-1847",
+        "to": "jonathan-telfer"
+      },
+      {
+        "from": "john-telfer-1847",
+        "to": "laurel-telfer"
+      },
+      {
+        "from": "lloyd-wilbur-telfer-1913",
+        "to": "mark-telfer-living"
+      },
+      {
+        "from": "lloyd-wilbur-telfer-1913",
+        "to": "nancy-telfer"
+      },
+      {
+        "from": "frank-hooper",
+        "to": "terence-hooper"
+      },
+      {
+        "from": "jessica-telfer",
+        "to": "terence-hooper"
+      },
+      {
+        "from": "daryll-telfer",
+        "to": "james-telfer-1978"
+      },
+      {
+        "from": "rosemary-curtis",
+        "to": "james-telfer-1978"
+      },
+      {
         "from": "lyndell-marie-telfer-1951",
         "to": "nicholas-andre-maddern-1974"
       },
@@ -6394,6 +6759,10 @@
         "to": "sandra-lee-smith"
       },
       {
+        "from": "lloyd-wilbur-telfer-1913",
+        "to": "muriel-crespin"
+      },
+      {
         "from": "malcolm-duncan-cameron",
         "to": "martha-cameron-1873"
       },
@@ -6451,7 +6820,7 @@
       },
       {
         "from": "alexa-telfer",
-        "to": "james-telfer"
+        "to": "james-telfer-1978"
       },
       {
         "from": "dale-telfer",
@@ -6552,6 +6921,94 @@
       {
         "from": "margaret-telfer",
         "to": "mark-welch"
+      },
+      {
+        "from": "albert-campbell",
+        "to": "gwenyth-telfer"
+      },
+      {
+        "from": "alison-hooper",
+        "to": "bernard-merchant"
+      },
+      {
+        "from": "andrew-goodson",
+        "to": "kathryn-whymark"
+      },
+      {
+        "from": "andrew-hooper",
+        "to": "christine-tsim"
+      },
+      {
+        "from": "anthony-hooper",
+        "to": "susan-lucas"
+      },
+      {
+        "from": "belinda-hooper",
+        "to": "ian-cameron"
+      },
+      {
+        "from": "bruce-morris",
+        "to": "sally-walsh"
+      },
+      {
+        "from": "carol-petith",
+        "to": "mark-telfer"
+      },
+      {
+        "from": "catherine-walsh",
+        "to": "doljin-anastovski"
+      },
+      {
+        "from": "dhurri-thiagarajah",
+        "to": "martin-telfer"
+      },
+      {
+        "from": "edward-light",
+        "to": "iris-hooper"
+      },
+      {
+        "from": "frank-hooper",
+        "to": "jessica-telfer"
+      },
+      {
+        "from": "geoffrey-goodson",
+        "to": "nancy-telfer"
+      },
+      {
+        "from": "gwenyth-telfer",
+        "to": "robert-godfrey"
+      },
+      {
+        "from": "james-sara",
+        "to": "samantha-walsh"
+      },
+      {
+        "from": "jennifer-fox",
+        "to": "michael-hooper"
+      },
+      {
+        "from": "jennifer-dearden",
+        "to": "richard-hooper"
+      },
+      {
+        "from": "laurel-telfer",
+        "to": "richard-walsh"
+      },
+      {
+        "from": "lyndy-trevaskis",
+        "to": "mark-telfer-living"
+      },
+      {
+        "from": "melinda-walsh",
+        "to": "ronald-faller"
+      },
+      {
+        "from": "roger-hooper",
+        "to": "roslyn-white"
+      },
+      {
+        "from": "stephen-bates",
+        "to": "wendy-godfrey"
       }
     ],
     "siblingOf": [
@@ -9200,10 +9657,6 @@
         "to": "ruth-carson"
       },
       {
-        "from": "james-telfer",
-        "to": "rosemary-telfer-miriam"
-      },
-      {
         "from": "lillian-telfer",
         "to": "margaret-telfer-1869"
       },
@@ -10406,6 +10859,18 @@
       {
         "from": "natasha-hanson",
         "to": "zachary-hanson"
+      },
+      {
+        "from": "ivan-hooper",
+        "to": "terence-hooper"
+      },
+      {
+        "from": "jessica-telfer",
+        "to": "lloyd-wilbur-telfer-1913"
+      },
+      {
+        "from": "james-telfer-1978",
+        "to": "rosemary-telfer-miriam"
       }
     ],
     "stepParentOf": [

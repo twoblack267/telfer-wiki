@@ -150,6 +150,32 @@ export function measure(peopleJson) {
           const cands = byName.get(rk.name) || [];
           if (cands.length === 1) hit = cands[0];
         }
+        if (!hit) {
+          // ── MIDDLE-NAME TOLERANCE (2026-10-28) ────────────────────────────────
+          //
+          // This measurer must model the SAME rules as the real resolver in
+          // scripts/build-relationship-graph.mjs, or the gate reports a coverage
+          // figure that no longer describes the build. The resolver now accepts a
+          // distinctive full name against a record stored without its middle
+          // names ("Martha Clara Henstridge" → Martha Henstridge (1854)) when that
+          // first+last pair identifies exactly ONE record and the years agree.
+          // Mirror that here, under the same uniqueness + birth-year guards, so
+          // the floor keeps measuring reality instead of punishing an improvement.
+          const words = rk.name.split(" ").filter(Boolean);
+          if (words.length >= 3) {
+            const fn = words[0];
+            const ln = words[words.length - 1];
+            const cands = peopleJson.filter(
+              (q) =>
+                norm(q.first_name || "") === fn &&
+                norm(q.last_name || "") === ln
+            );
+            if (cands.length === 1) {
+              const only = cands[0];
+              if (!rk.birth || (only.birth_year && only.birth_year === rk.birth)) hit = only;
+            }
+          }
+        }
         if (hit && rk.raw !== p.id && rk.raw !== p.display_name) {
           resolved++;
           perType[rel.type] = (perType[rel.type] || 0) + 1;

@@ -1,29 +1,57 @@
 {
-  "checkedAt": "2026-10-27T23:10:46.102Z",
+  "checkedAt": "2026-10-28T04:27:37.474Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 555,
-    "after": 592
+    "before": 592,
+    "after": 657
   },
   "crownJewelsChecked": 5,
   "renames": [
     {
-      "from": "geoffrey-telfer",
-      "to": "geoffrey-telfer-1914",
-      "name": "Geoffrey Francis Telfer"
-    },
-    {
-      "from": "david-telfer",
-      "to": "david-telfer-1957",
-      "name": "David Lyndon Telfer"
-    },
-    {
-      "from": "ryan-telfer",
-      "to": "ryan-telfer-1982",
-      "name": "Ryan David Telfer"
+      "from": "james-telfer",
+      "to": "james-edgerston-telfer-1877",
+      "name": "James John Drew Telfer"
     }
   ],
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "elisabeth-telfer-1806",
+      "name": "Elisabeth Telfer",
+      "field": "parents",
+      "before": 1,
+      "after": 0,
+      "lost": 1,
+      "lostEntries": [
+        "thomas-telfer"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "thomas-telfer",
+      "name": "Thomas Telfer",
+      "field": "children",
+      "before": 2,
+      "after": 0,
+      "lost": 2,
+      "lostEntries": [
+        "elisabeth-telfer-1806",
+        "Adam Telfer (bap. 1775)"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "thomas-telfer",
+      "name": "Thomas Telfer",
+      "field": "spouses",
+      "before": 1,
+      "after": 0,
+      "lost": 1,
+      "lostEntries": [
+        "Agnes Mair"
+      ]
+    }
+  ]
 }

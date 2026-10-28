@@ -180,9 +180,16 @@ try {
   const visible = await visibleNames(page);
   console.log(`  → top 5 visible for 'mark': ${JSON.stringify(visible.slice(0, 5))}`);
 
+  // The contract is "a bare-name Mark Telfer leads", not "a specific year does".
+  // There are legitimately several people called Mark Telfer, each with a
+  // lifespan suffix. Before 2026-10-28 this asserted the literal string
+  // "Mark Telfer" — which passed only because the disambiguator had been
+  // producing a suffix-less duplicate, i.e. the test was green because of
+  // the very bug it was meant to guard. Match the shape instead.
+  const PRIMARY_MARK = /^mark telfer(\s*\([^)]*\))?$/i;
   assert(
-    visible[0] === "Mark Telfer",
-    `'mark' → first VISIBLE row is "Mark Telfer" (got "${visible[0]}")`
+    PRIMARY_MARK.test(visible[0]),
+    `'mark' → first VISIBLE row is a bare "Mark Telfer" (got "${visible[0]}")`
   );
   // Both Telfer Marks must surface at the very top and outrank any other
   // surname sharing the word "mark" (e.g. a genuine Mark David Bassett).
@@ -196,10 +203,17 @@ try {
   // leads, and (b) no Telfer Mark sits below a row that does not match the
   // query word at all. Those are asserted here; window arithmetic is not.
   const telferMarkIdx = visible
-    .map((n, i) => (/^mark .*telfer$/i.test(n) ? i : -1))
+    .map((n, i) => (/^mark(\s+\S+)*\s+telfer(\s*\([^)]*\))?$/i.test(n) ? i : -1))
     .filter((i) => i !== -1);
+  // Historically exactly two Telfer Marks existed; Mark Andrew Telfer (b. 1976)
+  // was previously collapsed into Mark David Telfer by an identity-key collision
+  // (both had no birth_year → key `marktelfer|`) and so had NO page at all. That
+  // bug is fixed (ONE VAULT FILE = ONE PERSON), so three now publish correctly.
+  // The contract is NOT a fixed count — it is (a) the primary Mark Telfer leads,
+  // and (b) no Telfer Mark sits below a row that does not match the query word.
+  // Asserting `=== 2` would re-break the moment another Mark Telfer is published.
   assert(
-    telferMarkIdx.length === 2,
+    telferMarkIdx.length >= 2,
     `'mark' → both Telfer Marks VISIBLE in the results (idx ${telferMarkIdx.join(",")})`
   );
   assert(
@@ -218,7 +232,7 @@ try {
     (n) => !n.toLowerCase().split(" ").some((w) => w.startsWith("mark"))
   );
   const lastTelferMarkIdx = visible.reduce(
-    (acc, n, i) => (/^mark .*telfer$/i.test(n) ? i : acc),
+    (acc, n, i) => (/^mark(\s+\S+)*\s+telfer(\s*\([^)]*\))?$/i.test(n) ? i : acc),
     -1
   );
   assert(
@@ -226,8 +240,10 @@ try {
     `'mark' → no Telfer Mark buried under fuzzy rows (flood at ${floodIdx}, last Mark at ${lastTelferMarkIdx})`
   );
 
-  const markIdx = visible.findIndex((n) => n.toLowerCase() === "mark telfer");
-  assert(markIdx === 0 || markIdx === 1, `'mark' → "Mark Telfer" does NOT sit buried (visible idx ${markIdx})`);
+  // Same shape-not-literal rule as above: the primary Mark Telfer carries a
+  // lifespan suffix once namesakes are disambiguated.
+  const markIdx = visible.findIndex((n) => PRIMARY_MARK.test(n));
+  assert(markIdx === 0 || markIdx === 1, `'mark' → a bare "Mark Telfer" does NOT sit buried (visible idx ${markIdx})`);
 
   // Sanity: a fuzzy-only query still returns rows (fuse alive)
   await page.fill("#search-input", "margaret");

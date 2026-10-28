@@ -476,6 +476,7 @@ function main() {
   // "Mary Anne"+"McIntyre") — otherwise a legitimate re-merge dedupes to the
   // wrong person or spawns a duplicate.
   const existingByKey = new Map();
+  const keyColonies = new Map();   // key -> EVERY record on that key (see collision note)
   for (const p of existingPeople) {
     // ALWAYS include middle_name, including when a birth_year is present.
     // Reason (2026-09-18): the vault frontmatter splits given names into
@@ -492,6 +493,22 @@ function main() {
     const namePart = `${(p.first_name || '')}${(p.middle_name || '')}${(p.last_name || '')}`;
     const key = `${namePart}|${by}`;
     const keyLower = key.toLowerCase().replace(/\s+/g, '');
+    // ── COLLISION COLONY (2026-10-28) ─────────────────────────────────────────
+    // Two DIFFERENT people can build the identical key: Mark Andrew Telfer
+    // (b. 1976) and Mark David Telfer (1950–1990) both reduce to `marktelfer|`
+    // because neither carries a birth_year in people.json. The old code kept
+    // whichever record happened to win — so the loser became UNMATCHABLE, its
+    // file fell through every fallback, and (worse) the winner's record was
+    // merged with the loser's vault content, publishing one man under the
+    // other's identity while a real vault profile got no page at all.
+    //
+    // keep ALL colliding records on the key. `existingByKey` still holds the
+    // preferred one (year-suffixed slug wins, unchanged), and `keyColonies`
+    // holds every record on that key so the match site can prefer the one whose
+    // vault_file IS the file being converted — ONE VAULT FILE = ONE PERSON.
+    if (!keyColonies.has(keyLower)) keyColonies.set(keyLower, []);
+    keyColonies.get(keyLower).push(p);
+
     const existing = existingByKey.get(keyLower);
     if (!existing) {
       existingByKey.set(keyLower, p);
@@ -873,6 +890,38 @@ function main() {
       : `${firstName}${middleName || ''}${lastName}|`
     ).toLowerCase().replace(/\s+/g, '');
     let existing = existingByKey.get(matchKey);
+    // ── DISAMBIGUATE THE COLONY BY VAULT FILE (2026-10-28) ────────────────────
+    // The identity key cannot tell two same-named people apart when neither has
+    // a birth_year. The vault file CAN — it is unique by definition. When the
+    // key resolves to a record that belongs to a DIFFERENT file, look for the
+    // record that belongs to THIS file; if there isn't one, treat the person as
+    // new rather than merging two humans into one record.
+    {
+      const colony = keyColonies.get(matchKey) || (existing ? [existing] : []);
+      if (existing && (existing.vault_file || '').trim() !== vaultFile) {
+        const mine = colony.find((p) => (p.vault_file || '').trim() === vaultFile);
+        if (mine) {
+          existing = mine;
+        } else {
+          // ── ONE VAULT FILE = ONE PERSON (hardened 2026-10-28) ──────────────
+          // A vault file is unique by definition; no two files describe the same
+          // person. So if the key's occupant belongs to a DIFFERENT file, and no
+          // record in the colony owns THIS file, then this file's person has no
+          // record yet — they are NEW. Do NOT merge them into the occupant.
+          //
+          // The previous `colony.length > 1` requirement was wrong: it assumed a
+          // collision must be visible in the colony before we could act. But the
+          // colony only holds records from the PREVIOUS build. Mark Andrew Telfer
+          // (b. 1976, no birth_year, key `marktelfer|`) collided with Mark David
+          // Telfer (no birth_year, same key) on the FIRST build, when the colony
+          // held only the single winner — so the guard refused to split them, the
+          // loser was absorbed, and his vault file silently got no page at all
+          // (build gate: ❌ MISSING real vault record). A colony of one is still
+          // proof: that one belongs to someone else's file.
+          existing = null;
+        }
+      }
+    }
     // Fall back to slug match ONLY when the incoming profile has no birth year.
     // A birth-year key (first+last|YYYY) is authoritative and disambiguates
     // same-first+last people of different generations (e.g. John Watson 1851 vs
@@ -896,9 +945,6 @@ function main() {
     // claimed by a different vault file, and its vault_file is the very file being
     // converted. The year key still takes priority, so distinct same-name people
     // of different generations can never be conflated.
-    if (!existing && birthYear == null) {
-      existing = existingBySlug.get(slug);
-    }
     // ── VAULT-FILE FALLBACK (added 2026-09-22, card tw-2026-09-22-011) ─────────
     // ONE VAULT FILE = ONE PERSON. When the identity key misses, the vault file
     // itself is the strongest available match — a record whose vault_file is the
@@ -967,6 +1013,18 @@ function main() {
         );
       }
     }
+    // ── CLAIM THE BARE SLUG (2026-10-28) ──────────────────────────────────────
+    // A passing record with NO existing match must still mark its bare slug as
+    // TAKEN. Without this, two different people who share first+last (Mark Andrew
+    // Telfer b.1976 and Mark David Telfer 1950–1990) both arrive at
+    // `mark-telfer`, neither sees a conflict, and the disambiguation pass below
+    // then appends its last-resort `-living` suffix to BOTH — publishing one URL
+    // for two men and sending every "Mark Telfer" reference to whichever record
+    // won the write. Registering the claim keeps the disambiguator honest.
+    if (!existing && !existingBySlug.has(slug)) {
+      existingBySlug.set(slug, { slug, vault_file: vaultFile, _pending: true });
+    }
+
     if (!existing) {
       const nameOnlyKey = `${firstName}${middleName || ''}${lastName}|`
         .toLowerCase().replace(/\s+/g, '');
@@ -982,6 +1040,31 @@ function main() {
       }
     }
 
+    // ── FILE-ANCHORED LAST RESORT (2026-10-28) ────────────────────────────────
+    // Everything above can miss when two same-named people share an identity key
+    // and the index kept the wrong one. This branch cannot miss for the right
+    // reason: a record whose vault_file IS this file is this person, full stop.
+    // There is no name guessing and no rate of false positives — one file, one
+    // person — so it is safe even for a living person with no birth year.
+    if (!existing) {
+      const mineByFile = existingPeople.filter(
+        (p) => (p.vault_file || '').trim() === vaultFile
+      );
+      if (mineByFile.length === 1) {
+        existing = mineByFile[0];
+      }
+    }
+
+    // ── END OF MATCHING (2026-10-28) ────────────────────────────────────────
+    // NOTHING may look this file up by bare slug without checking it belongs to
+    // this file. Every branch above is anchored (identity key, name-key+vault_file,
+    // vault_file equality, rename recovery). The bare-slug lookup that used to sit
+    // here was NOT: it matched `mark-telfer-living` (vault_file = Mark David
+    // Telfer 1950–1990) for Mark Andrew Telfer (b. 1976), both being Mark + Telfer
+    // with no birth year. The merge then overwrote Mark David's record with Mark
+    // Andrew's body and never created Mark Andrew's row, so one man was published
+    // under the other's identity and the parity gate lost a page. A slug is a
+    // URL, not an identity — see the file-anchored rules above.
     if (existing) {
       // Update — overwrite fields from markdown, keep existing denormalized
       // Slug preservation: don't regress an already-disambiguated slug to a
@@ -1215,6 +1298,11 @@ function main() {
   );
   if (conflictedSlugs.size > 0) {
     console.log(`⚠️  ${conflictedSlugs.size} bare slug(s) have conflicts — disambiguating:`);
+    // slugs already spoken for by records that are NOT being re-slugged, so a new
+    // suffix can never land on a live URL
+    const claimed = new Set(
+      existingPeople.filter((p) => !conflictedSlugs.has(p.slug)).map((p) => p.slug)
+    );
     for (const p of existingPeople) {
       if (conflictedSlugs.has(p.slug)) {
         // Preference: birth_year → death_year → middle name fragment → -living
@@ -1232,7 +1320,21 @@ function main() {
             suffix = 'living';
           }
         }
-        p.slug = p.slug + '-' + suffix;
+        // ── COLLISION-AWARE SUFFIX (2026-10-28) ───────────────────────────────
+        // Two records can resolve to the SAME suffix — two Marks with no middle
+        // name and no birth year both landed on `mark-telfer-living`, and two
+        // people who differ only by a name they share produced the same
+        // middle-fragment. A suffix that is already taken by a DIFFERENT vault
+        // file is not a disambiguator; escalate to `-2`, `-3`, … until it is
+        // unique, so every person keeps their own URL.
+        let candidate = p.slug + '-' + suffix;
+        if (claimed.has(candidate)) {
+          let n = 2;
+          while (claimed.has(candidate + '-' + n)) n++;
+          candidate = candidate + '-' + n;
+        }
+        claimed.add(candidate);
+        p.slug = candidate;
         console.log(`  ${p.display_name} → ${p.slug}`);
       }
     }

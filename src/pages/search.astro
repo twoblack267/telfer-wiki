@@ -87,8 +87,9 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
 
     if (!input || !results || !items.length) return;
 
-    const searchData = items.map((el) => ({
+    const searchData = items.map((el, idx) => ({
       el,
+      idx,
       name: el.dataset.name || "",
       year: el.dataset.year || "",
       role: el.dataset.role || "",
@@ -116,39 +117,135 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
         name.startsWith(q) || name.split(" ").some((w) => w.startsWith(q));
 
       const exact = searchData.filter((s) => isWordBoundaryStartsWith(s.name));
+      // Within the exact tier, ORDER MATTERS. Data order is generation order
+      // (oldest first), so a bare `filter` ranked an 1877 Mark Telfer above a
+      // 1958 Mark Welch only by accident of generation — and once namesakes
+      // carried a lifespan suffix the tie broke the wrong way and the living
+      // Mark was buried under unrelated surnames.
+      // Tiers: 0 = the query IS the whole name ("mark telfer" for "mark"),
+      //        1 = the query is the FIRST word ("mark andrew telfer"),
+      //        2 = the query matches some later word (a middle name),
+      // then the TELFER line (this is the Telfer wiki), then surname, then
+      // shortest name (so "Mark Telfer" outranks "Mark Andrew Telfer").
+      const qWhole = (name) => name === q || name.startsWith(q + " ");
+      const qFirst = (name) => name.split(" ")[0] === q;
+      // Exactness is measured on the NAME ONLY. The lifespan suffix that
+      // disambiguates namesakes (" (1877 – 1946)") must never count toward
+      // length, or an old Mark outranks a plain one on punctuation alone.
+      const NAME_ONLY = /^\s*(\d{4}|\?)\s*[–-]\s*(\d{4}|\?|living)\s*$/;
+      const nameOnly = (s) => {
+        const dn = s.display || s.name || "";
+        const m = dn.match(/\s*\(([^)]*)\)\s*$/);
+        if (m && NAME_ONLY.test(m[1])) {
+          // Base name keeps its original case (a.name.localeCompare must not
+          // become a case-insensitive no-op — that silently disabled the
+          // final tie-break and let the comparator return 0 for distinct rows,
+          // so V8's TimSort left them in generation order).
+          return dn.slice(0, m.index).trim();
+        }
+        return dn.trim();
+      };
+      const rankTier = (s) => {
+        const n = nameOnly(s).toLowerCase();
+        return qWhole(n) ? 0 : qFirst(n) ? 1 : 2;
+      };
+      const isTelfer = (s) => /\btelfer\b/i.test(nameOnly(s));
+      // Two keys are needed, not one:
+      //   1. surname priority — "Mark Telfer" before "Mark Welch"
+      //   2. shortest name — "Mark Telfer" before "Mark Andrew Telfer"
+      // A single `length` key conflated them ("Mark Welch" = 10 chars beat
+      // "Mark Telfer" = 11). And `a.name.localeCompare(b.name)` compares the
+      // LOWERCASED data-name, which is case-insensitive — it returned 0 for
+      // every pair, so the comparator's last resort was a tie and V8's stable
+      // sort quietly preserved generation order. Names here are unique, so a
+      // case-SENSITIVE compare always discriminates.
+      const surnameAfterTelfer = (s) => {
+        const parts = nameOnly(s).toLowerCase().split(/\s+/);
+        const surname = parts.length > 1 ? parts[1] : parts[0];
+        return /^telfer\b/.test(surname) ? 0 : 1;
+      };
+      exact.sort((a, b) =>
+        rankTier(a) - rankTier(b) ||
+        Number(isTelfer(b)) - Number(isTelfer(a)) ||
+        surnameAfterTelfer(a) - surnameAfterTelfer(b) ||
+        nameOnly(a).length - nameOnly(b).length ||
+        (nameOnly(a) < nameOnly(b) ? -1 : nameOnly(a) > nameOnly(b) ? 1 : 0)
+      );
       const exactIds = new Set(exact.map((s) => s.el));
       const contains = searchData.filter((s) => s.name.includes(q) && !exactIds.has(s.el));
+      contains.sort((a, b) =>
+        Number(isTelfer(b.name)) - Number(isTelfer(a.name)) || a.name.localeCompare(b.name)
+      );
       const containsIds = new Set([...exactIds, ...contains.map((s) => s.el)]);
       const rest = searchData.filter((s) => !containsIds.has(s.el));
+      // Fuzzy rows carry the SAME shape as the other tiers ({el, idx, name,
+      // year, role}). The old version returned bare {el, score} objects, so any
+      // downstream code reaching for `.name` (the comparator, or render's
+      // shown-set) hit `undefined` and threw. Keep the shape uniform.
       const fuzzy =
         rest.length > 0
-          ? fuse.search(q).map((r) => ({ el: r.item.el, score: r.score }))
+          ? fuse.search(q).map((r) => ({ ...r.item, score: r.score }))
           : [];
 
       return [...exact, ...contains, ...fuzzy].slice(0, 60);
     }
 
+    // ────────────────────────────────────────────────────────────────────
+    // render() — show the ranked rows, in ranked order.
+    //
+    // This is deliberately the dumbest possible implementation, because every
+    // clever version of it was wrong:
+    //
+    //   • forEach(appendChild) on a SUBSET reverses the block — each append
+    //     detaches the row and drops it at the tail, compacting earlier ones.
+    //   • insertBefore(item, results.children[i]) drifts, because children[i]
+    //     counts the ~590 hidden rows as well as the visible ones.
+    //   • append(...matched) then prepend(...matched) reverses AND then
+    //     front-loads the reversed block.
+    //
+    // The working method: build a detached <div>, append a COPY of the
+    // matched rows' order by walking the ranked array and appending each node
+    // to the fragment in turn (the fragment starts empty, so appending is
+    // plain insertion — nothing detaches a second time), then move the
+    // fragment's now-ordered children to the front of #results in one call.
+    // ----------------------------------------------------------------
     function render(matchedItems) {
-      items.forEach((item) => (item.style.display = "none"));
+      const matchedEls = [];
+      matchedItems.forEach((item) => {
+        const el = item && item.el;
+        if (el && el.style && matchedEls.indexOf(el) === -1) matchedEls.push(el);
+      });
 
-      if (matchedItems.length === 0) {
+      if (!matchedEls.length) {
+        items.forEach((el) => { if (el && el.style) el.style.display = "none"; });
         results.classList.add("hidden");
         emptyState.classList.remove("hidden");
         resultCount.textContent = "No results";
         return;
       }
 
+      // Order in a detached staging node. The staging node is EMPTY before we
+      // start, so every append puts the node at the end of a short list — the
+      // exact inverse of the bug (where the source list was long and each
+      // append removed a hole).
+      const stage = document.createElement("div");
+      matchedEls.forEach((el) => stage.appendChild(el));
+      const ordered = Array.prototype.slice.call(stage.children);
+
+      // Put the ordered block at the front of #results in ONE call. prepend
+      // with several nodes inserts them in argument order, which is why the
+      // block must be ordered BEFORE it arrives (see above).
+      results.prepend(...ordered);
+
+      // Show the ranked rows, hide the rest.
+      const shown = new Set(ordered);
+      items.forEach((el) => {
+        if (el && el.style) el.style.display = shown.has(el) ? "" : "none";
+      });
+
       results.classList.remove("hidden");
       emptyState.classList.add("hidden");
-      resultCount.textContent = `${matchedItems.length} profile${matchedItems.length !== 1 ? "s" : ""}`;
-
-      // Reorder the DOM so visible rows follow the ranked order from rank(),
-      // not the stale server-rendered data order. Fixes "mark" showing fuzzy
-      // Margaret/Martha rows above the actual Mark Telfer matches.
-      matchedItems.forEach((item) => results.appendChild(item.el));
-      matchedItems.forEach((item) => {
-        item.el.style.display = "";
-      });
+      resultCount.textContent = `${ordered.length} profile${ordered.length !== 1 ? "s" : ""}`;
     }
 
     input.addEventListener("input", () => {
