@@ -275,8 +275,20 @@ function resolveNameToSlug(name, sourceSlug) {
   // bare `(1803)` is also a birth year. A leading `b.`/`~`/`c.`/`abt`/`ca.` marker
   // (approximate or birth-qualified) is tolerated and carries no meaning beyond
   // "here is a year".
+  // BAPTISM DATES (added 2026-10-28). The vault writes "Elisabeth Telfer (bap. 1774)"
+  // when only a baptism is known, and "bap." was absent from every qualifier list here,
+  // so refBirth stayed null and the ref fell through to the bare-name path. There it
+  // matched the sole namesake — a woman born in England in 1806 — and bound her as the
+  // daughter of a 1740s Scottish householder. A baptism is within weeks of birth, so it
+  // is sound evidence and must be parsed like any other year.
+  const bapMatch = name.match(/\(\s*(?:bap\.?|bapt\.?|baptised|baptized)\s*(?:~|c\.)?\s*(\d{4})\b/i);
+  if (bapMatch) {
+    // Falls through to the 1b) year-disambiguation path exactly like a normal year.
+    var bapRefBirth = parseInt(bapMatch[1], 10);
+  }
+
   const yearsMatch = name.match(/(\d{4})\s*[\-–]\s*(\d{4})/);
-  let refBirth = null, refDeath = null;
+  let refBirth = (typeof bapRefBirth === "number") ? bapRefBirth : null, refDeath = null;
   if (yearsMatch) {
     refBirth = parseInt(yearsMatch[1], 10);
     refDeath = parseInt(yearsMatch[2], 10);

@@ -60,11 +60,22 @@ const FIELDS = ['children', 'parents', 'spouses'];
 // same-named profile is NOT them. Never add an entry to silence a wrong-person match.
 const UNRESOLVED_OK = new Map([
   [
+    'Adam Telfer (bap. 1775, no profile)',
+  ],
+  [
     'Adam Telfer (bap. 1775)',
     'Child of Thomas Telfer (of Broadlee) and Agnes Mair, baptised 1775. Not ' +
       'adam-telfer-1771 (parents: James Telfer of Sorbietrees + Margaret Armstrong) ' +
       'and not adam-telfer-1799 (parents: james-telfer-1761 + Elizabeth Hutton) — ' +
       'different families. Profile not yet written.',
+  ],
+  [
+    'Elisabeth Telfer (bap. 1774, no profile)',
+    'Daughter of Thomas Telfer (of Broadlee) and Agnes Mair, baptised 10 Feb (index ' +
+      'year 1774, register page reads 1776 — discrepancy recorded and unresolved). ' +
+      'NOT elisabeth-telfer-1806 (born in England 1806, unrelated) and NOT ' +
+      'elizabeth-telfer-1774 (Elizabeth Hutton, wife of James Telfer of Sorbietrees). ' +
+      'Profile not yet written; the name is kept visible as a research gap.',
   ],
 ]);
 // Tolerance: relationship data genuinely shrinks a little when vault records are corrected
@@ -349,6 +360,12 @@ for (const p of people) {
     for (const ref of v) {
       if (isSlug(ref) || typeof ref !== 'string') continue;
       if (UNRESOLVED_OK.has(ref)) continue; // documented missing profile — see UNRESOLVED_OK
+      // An explicit "no profile" marker is a WRITTEN ASSERTION by the researcher that no
+      // vault record is intended for this name — see the note in resolve-refs.mjs. Such a
+      // ref MUST stay a bare name; "resolving" it to a namesake is the defect, not the fix.
+      // (2026-10-28: without this, the guard demanded Thomas Telfer's daughter be bound to
+      // elisabeth-telfer-1806, a woman born in England 32 years after the baptism.)
+      if (/no[-\s]profile|do not link|not the same person/i.test(ref)) continue;
       const res = resolvableName(ref, p, f);
       if (!res) continue; // unresolvable label (e.g. a non-person note) — not this defect
       bareTotal++;

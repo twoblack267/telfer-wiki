@@ -694,6 +694,23 @@ function resolveRef(name, context = null) {
         if (ageAtMarriage < 12 || ageAtMarriage > 70) return null;
       }
     }
+    // EXPLICIT "NO PROFILE" MARKER (added 2026-10-28).
+    //
+    // The vault sometimes names a relative whose identity is genuinely unknown or whose
+    // record does not exist — a baptism with a disputed year, a name from a transcript
+    // with no person behind it. Such a ref can be annotated in the vault:
+    //     "Elisabeth Telfer (bap. 1774, no profile)"
+    //     "Elisabeth Telfer (bap. 10 Feb ... — no profile in this vault)"
+    //
+    // Without this, the marker was INERT: it changed nothing about matching, and the
+    // final `return candidates[0].slug` bound the sole surviving namesake anyway. Thomas
+    // Telfer (of Broadlee) acquired a daughter born 1806 in England that way.
+    //
+    // The marker is a written assertion by the researcher that NO profile is intended.
+    // Honour it: refuse the bind and leave the raw name visible. Deliberately checked
+    // LAST among the ref-level rules so an explicit statement always wins over a guess.
+    if (/no[-\s]profile|do not link|not the same person/i.test(clean)) return null;
+
     return candidates[0].slug;
   } else {
     // Multiple candidates — use context

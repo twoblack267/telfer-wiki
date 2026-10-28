@@ -506,6 +506,15 @@ export function getLinksForRelationships(relationshipNames, allPeople, context =
       const bare = entry.replace(/\s*\(\s*~?\d{4}\s*[–-]\s*(?:\d{4}|living|\?)\s*\)\s*$/, "").trim();
       return { name: bare || entry, slug: null, lifespan: undefined, plain: true };
     }
+    // EXPLICIT "NO PROFILE" MARKER (2026-10-28). The researcher can assert in the vault
+    // that a named relative has no record and must not be linked — "Elisabeth Telfer
+    // (bap. 1774, no profile)". The data layer now honours that, but the render layer was
+    // still resolving the name on its own and emitting a real <a href>. That is the same
+    // wrong-person link one level down: Thomas Telfer's daughter, baptised 1774, rendered
+    // as a link to a woman born in England in 1806. Print the name, refuse the link.
+    if (/no[-\s]profile|do not link|not the same person/i.test(entry)) {
+      return { name: entry, slug: null, lifespan: undefined, plain: true };
+    }
     // Not a slug and not a refused dated ref — try resolving a display-name/
     // wiki-link to a slug, keep the original text as the link label.
     const slug = lookupSlug(entry, allPeople);

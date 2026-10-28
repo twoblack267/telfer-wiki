@@ -210,6 +210,22 @@ function checkPage(file) {
           continue;
         }
       }
+      // EXPLICIT "NO PROFILE" MARKER (2026-10-28). The researcher can write in the vault
+      // that a named relative has no record and must not be linked — "Elisabeth Telfer
+      // (bap. 1774, no profile)". Both the data layer and the renderer now honour that and
+      // print the name as plain text. This guard must not then demand the link: without
+      // this check it failed the build for correctly refusing to bind Thomas Telfer's
+      // daughter (baptised 1774) to a woman born in England in 1806. Same category as the
+      // refused dated ref below — a research gap, not a rendering defect.
+      if (/no[-\s]profile|do not link|not the same person/i.test(relSlug)) {
+        unresolved.push({
+          page: slug,
+          field: SECTION_LABEL[field],
+          relationship: relSlug,
+          reason: "marked 'no profile' in the vault; intentionally not linked",
+        });
+        continue;
+      }
       if (!resolvedSlug) {
         // Genuinely unresolvable: no profile exists for this person, so the page
         // cannot link them. That is a research gap, reported separately from a
