@@ -3261,11 +3261,6 @@
       "generation": 4
     },
     {
-      "slug": "nicholas-andre-maddern-1974",
-      "id": "Nicholas Andre Maddern (1974)",
-      "generation": 8
-    },
-    {
       "slug": "kirrily-sheree-maddern-1976",
       "id": "Kirrily Sheree Maddern (1976)",
       "generation": 8
@@ -6018,7 +6013,7 @@
         "to": "elsie-marie-maddern"
       },
       {
-        "from": "nicholas-andre-maddern-1974",
+        "from": "nicholas-andre-maddern",
         "to": "elsie-marie-maddern"
       },
       {
@@ -6724,10 +6719,6 @@
       {
         "from": "james-telfer-1796",
         "to": "mary-telfer-living"
-      },
-      {
-        "from": "lyndell-marie-telfer-1951",
-        "to": "nicholas-andre-maddern-1974"
       },
       {
         "from": "lyndell-marie-telfer-1951",

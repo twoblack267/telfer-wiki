@@ -422,6 +422,18 @@
       "reason": "Duplicate identity, not a removal. One woman, two vault notes. The print-derived note (b. 1989) was created 28 Oct 2026 by a rebuild of the printed Supplement 2008 pages; it exists only as a citation trail for that printed line. HER OWN NOTE STATES the life record, photo and funeral details live in the (?-2023) note and that is the note to read. The (?-2023) note is therefore the surviving page and the print-citation note carries the redirect tag. Neither note previously carried the tag, so both shipped and the site published her twice with conflicting parentage. Recorded in the vault Corrections Log 2026-10-29.",
       "date": "2026-10-29",
       "corrections_log": "2026-10-29 — CORRECTION: Carissa Telfer published twice (duplicate identity merged)"
+    },
+    "vonda-joy-telfer": {
+      "to": "vonda-joy-telfer-1948",
+      "reason": "URL rename, not a removal. The profile gained its birth-year suffix in commit 2ade6f6, which renamed the page without declaring a redirect, so the old bare URL silently 404'd. Same person, same vault note (Vonda Joy Telfer (b. 1948).md).",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 — MAINTENANCE: undeclared slug rename restored (vonda-joy-telfer)"
+    },
+    "kerryn-leigh-manuel": {
+      "to": "kerryn-leigh-manuel-1975",
+      "reason": "URL rename, not a removal. The profile gained its birth-year suffix in commit 2ade6f6, which renamed the page without declaring a redirect, so the old bare URL silently 404'd. Same person, same vault note (Kerryn Leigh Manuel (b. 1975).md).",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 — MAINTENANCE: undeclared slug rename restored (kerryn-leigh-manuel)"
     }
   }
 }

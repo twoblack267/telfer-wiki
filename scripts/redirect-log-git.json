@@ -224,6 +224,13 @@
     "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference."
   },
   {
+    "from": "kerryn-leigh-manuel",
+    "to": "kerryn-leigh-manuel-1975",
+    "matched_by": "removed-declared",
+    "display_name": "kerryn-leigh-manuel-1975",
+    "reason": "URL rename, not a removal. The profile gained its birth-year suffix in commit 2ade6f6, which renamed the page without declaring a redirect, so the old bare URL silently 404'd. Same person, same vault note (Kerryn Leigh Manuel (b. 1975).md)."
+  },
+  {
     "from": "kirrilee-skye-pedler",
     "to": "kirrilee-pedler",
     "matched_by": "removed-declared",
@@ -250,6 +257,12 @@
     "matched_by": "removed-declared",
     "display_name": "marion-lawrie-1888",
     "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Marion Vida' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page."
+  },
+  {
+    "from": "nicholas-andre-maddern-1974",
+    "to": "nicholas-andre-maddern",
+    "matched_by": "display_name",
+    "display_name": "Nicholas Andre Maddern"
   },
   {
     "from": "nick-telfer",
@@ -306,6 +319,13 @@
     "matched_by": "removed-declared",
     "display_name": "susan-pedler",
     "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference."
+  },
+  {
+    "from": "vonda-joy-telfer",
+    "to": "vonda-joy-telfer-1948",
+    "matched_by": "removed-declared",
+    "display_name": "vonda-joy-telfer-1948",
+    "reason": "URL rename, not a removal. The profile gained its birth-year suffix in commit 2ade6f6, which renamed the page without declaring a redirect, so the old bare URL silently 404'd. Same person, same vault note (Vonda Joy Telfer (b. 1948).md)."
   },
   {
     "from": "wendy-lynette-saviour",

@@ -1,7 +1,7 @@
 {
   "stanley-lawrence-pedler-1948": {
     "retired": "2026-10-26",
-    "reason": "Does not exist. Phantom created from the 2008 tree book's OCR line 'stan Laweonce PEDLER, b. 20 Dec 1948' = 'Allan Lawrence PEDLER, b. 20 Dec 1946'. The child is Allan Lawrence Pedler (born 20 Dec 1946), who now has his own vault note. Primary witness: Gladys's own chapter in From the Borders to the Bush — 'On 20th December, 1946, our next baby boy, Allan Lawrence, was born', and her closing list of four children (Stanley James, Mary Ellen, Shirley Irene, Allan Lawrence).",
+    "reason": "Does not exist. Phantom created from the 2008 tree book's OCR line 'stan Laweonce PEDLER, b. 20 Dec 1948' = 'Allan Lawrence PEDLER, b. 20 Dec 1946'. The child is Allan Lawrence Pedler (born 20 Dec 1946), who now has his own vault note. Primary witness: Gladys's own chapter in From the Borders to the Bush \u2014 'On 20th December, 1946, our next baby boy, Allan Lawrence, was born', and her closing list of four children (Stanley James, Mary Ellen, Shirley Irene, Allan Lawrence).",
     "replaced_by": "allan-pedler",
     "display_name": "Stanley Lawrence Pedler"
   },
@@ -73,7 +73,7 @@
   },
   "helen-telfer": {
     "retired": "2026-10-27",
-    "reason": "SLUG RENAME, not a removal. The vault note 'Helen Telfer.md' was renamed to 'Harriett Helen Telfer (1873–1929).md' in vault commit f1463f6 (2026-10-27) when Robert Telfer (1835–1907)'s nine children were corrected from book 3 p.33, which gives her full name as Harriett Helen 'Nell' Telfer (1873–1929). The person is unchanged; the slug changed because the recorded given names were corrected. Her old live URL must resolve to the renamed page. Recorded in the vault Corrections Log, 2026-10-27.",
+    "reason": "SLUG RENAME, not a removal. The vault note 'Helen Telfer.md' was renamed to 'Harriett Helen Telfer (1873\u20131929).md' in vault commit f1463f6 (2026-10-27) when Robert Telfer (1835\u20131907)'s nine children were corrected from book 3 p.33, which gives her full name as Harriett Helen 'Nell' Telfer (1873\u20131929). The person is unchanged; the slug changed because the recorded given names were corrected. Her old live URL must resolve to the renamed page. Recorded in the vault Corrections Log, 2026-10-27.",
     "replaced_by": "harriett-helen-telfer",
     "display_name": "Harriett Helen Telfer"
   },
@@ -223,7 +223,7 @@
   },
   "brenton-kym-saviour": {
     "retired": "2026-10-28",
-    "reason": "Duplicate under a misspelled surname. Both readers of printed Supplement p.140 return SIVIOUR, not 'Saviour' — the stub's surname is an OCR slip, not a second family. The vault profile is Brenton Kym Siviour, b. 14 May 1966 Snowtown SA.",
+    "reason": "Duplicate under a misspelled surname. Both readers of printed Supplement p.140 return SIVIOUR, not 'Saviour' \u2014 the stub's surname is an OCR slip, not a second family. The vault profile is Brenton Kym Siviour, b. 14 May 1966 Snowtown SA.",
     "replaced_by": "brenton-siviour",
     "display_name": "Brenton Kym Saviour"
   },
@@ -262,5 +262,17 @@
     "reason": "Phantom person, retracted. Francis Kelson TELFER (b. 26 Jan 1910, d. 1 Mar 1953) and Sylvia Merle BOAL (b. 6 Dec 1916) have NO children printed on page 138 of the 2008 Supplement. The record was manufactured by the book's OCR text layer interleaving their two lines into 'KelsonBOAL,TELFER,'. Two independent readers of the 300 dpi page image agree there is no child, so the profile is withdrawn rather than corrected.",
     "replaced_by": null,
     "display_name": "Kelson Telfer"
+  },
+  "nicholas-andre-maddern-1974": {
+    "retired": "2026-10-29",
+    "reason": "Phantom. No vault_file, 41-character body ('Child of Lyndell Marie Telfer. Born 1974.'), no relationships, no source. Nothing in the vault \u2014 today or in vault git history \u2014 ever said 1974; the printed A Telfer Family Tree Supplement 2008 p.143 says 9 Mar 1973, and every vault mention (his own note, mother Lyndell's, wife Amy's, daughter Elsie's) prints 1973. The real record is nicholas-andre-maddern (vault-backed, 784-char body). Survivor of the convert-markdown.mjs no-vault_file carry-over exemption (bug class tw-2026-09-12-011). Mark's standing instruction of 28 Oct 2026 is 'do not touch him' \u2014 that applies to his VAULT NOTE, which is the correct record and is untouched here; only the generated stub is retired.",
+    "replaced_by": "nicholas-andre-maddern",
+    "display_name": "Nicholas Andre Maddern"
+  },
+  "Kirrily Sheree Maddern (1976)": {
+    "retired": "2026-10-29",
+    "reason": "Duplicate stub for a LIVING person, not a genealogy question. 'Sheree' is a spelling variant of the vault's Kirrily Sharee Maddern (b. 15 Apr 1976, Cummins). Same parents (Robert Norman Maddern & Lyndell Marie Telfer), same DOB year, same husband (Daniel Colin Dingwall, m. 2 Oct 2005). The stub has no vault_file, a 96-character body, and a conflicting day (1 Apr vs 15 Apr). Same no-vault_file carry-over exemption bug class (tw-2026-09-12-011). Survivor is the vault-backed record.",
+    "replaced_by": "kirrily-sharee-maddern",
+    "display_name": "Kirrily Sheree Maddern"
   }
 }

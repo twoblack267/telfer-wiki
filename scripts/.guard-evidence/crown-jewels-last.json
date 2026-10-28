@@ -1,13 +1,32 @@
 {
-  "checkedAt": "2026-10-28T21:06:37.728Z",
+  "checkedAt": "2026-10-28T22:31:47.679Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 654,
-    "after": 654
+    "after": 653
   },
   "crownJewelsChecked": 6,
-  "renames": [],
+  "renames": [
+    {
+      "from": "nicholas-andre-maddern-1974",
+      "to": "nicholas-andre-maddern",
+      "name": "Nicholas Andre Maddern"
+    }
+  ],
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "lyndell-marie-telfer-1951",
+      "name": "Lyndell Marie Telfer",
+      "field": "children",
+      "before": 5,
+      "after": 4,
+      "lost": 1,
+      "lostEntries": [
+        "nicholas-andre-maddern-1974"
+      ]
+    }
+  ]
 }

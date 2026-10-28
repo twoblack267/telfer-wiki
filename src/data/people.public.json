@@ -21805,7 +21805,6 @@
       "kirrily-sharee-maddern",
       "kirrily-sheree-maddern-1976",
       "nicholas-andre-maddern",
-      "nicholas-andre-maddern-1974",
       "simon-trent-maddern-1978"
     ],
     "spouses": [],
@@ -26795,7 +26794,7 @@
     "death_date": null,
     "birth_year_display": "1973",
     "death_year_display": "living",
-    "display_name": "Nicholas Andre Maddern (1973 – living)",
+    "display_name": "Nicholas Andre Maddern",
     "title": "Nicholas Andre Maddern — Family & Biography",
     "lifespan": "1973 – living",
     "generation": 8,
@@ -26815,7 +26814,9 @@
       "lyndell-marie-telfer-1951",
       "robert-norman-maddern"
     ],
-    "children": [],
+    "children": [
+      "elsie-marie-maddern"
+    ],
     "spouses": [],
     "siblings": [
       "kirrily-sharee-maddern",
@@ -26825,41 +26826,6 @@
     "step_children": [],
     "images": [],
     "person_photo": null
-  },
-  {
-    "id": "Nicholas Andre Maddern (1974)",
-    "slug": "nicholas-andre-maddern-1974",
-    "first_name": "Nicholas Andre",
-    "middle_name": "",
-    "last_name": "Maddern",
-    "birth_year": 1974,
-    "death_year": null,
-    "birth_date": "",
-    "death_date": "",
-    "birth_year_display": "1974",
-    "death_year_display": "",
-    "display_name": "Nicholas Andre Maddern (1974 – )",
-    "title": "",
-    "lifespan": "1974 – ",
-    "generation": 8,
-    "is_living": true,
-    "body_markdown": "Child of Lyndell Marie Telfer. Born 1974.",
-    "roles": [],
-    "tags": [
-      "maddern"
-    ],
-    "parents": [
-      "lyndell-marie-telfer-1951"
-    ],
-    "children": [
-      "elsie-marie-maddern"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": ""
   },
   {
     "id": "Kerryn Leigh Manuel (1975)",
@@ -32150,7 +32116,7 @@
     ],
     "parents": [
       "amy-marie-bennett",
-      "nicholas-andre-maddern-1974"
+      "nicholas-andre-maddern"
     ],
     "children": [],
     "spouses": [],

@@ -37950,7 +37950,6 @@
       "kirrily-sharee-maddern",
       "kirrily-sheree-maddern-1976",
       "nicholas-andre-maddern",
-      "nicholas-andre-maddern-1974",
       "simon-trent-maddern-1978"
     ],
     "spouses": [],
@@ -41992,7 +41991,7 @@
     "body_stripped": "**Born:** 27 Jun 2005 — Pt Lincoln, SA\n**Parents:** Nicholas Andre Maddern & Amy Marie Bennett\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They e",
     "parents": [
       "amy-marie-bennett",
-      "nicholas-andre-maddern-1974"
+      "nicholas-andre-maddern"
     ],
     "children": [],
     "siblings": [],
@@ -43549,7 +43548,9 @@
       "lyndell-marie-telfer-1951",
       "robert-norman-maddern"
     ],
-    "children": [],
+    "children": [
+      "elsie-marie-maddern"
+    ],
     "siblings": [
       "kirrily-sharee-maddern",
       "simon-trent-maddern-1978"
@@ -52462,45 +52463,6 @@
     "images": [],
     "person_photo": null,
     "generation": 4
-  },
-  {
-    "id": "Nicholas Andre Maddern (1974)",
-    "slug": "nicholas-andre-maddern-1974",
-    "first_name": "Nicholas Andre",
-    "middle_name": "",
-    "last_name": "Maddern",
-    "birth_year": 1974,
-    "death_year": null,
-    "birth_year_display": "1974",
-    "death_year_display": "",
-    "display_name": "Nicholas Andre Maddern",
-    "title": "",
-    "tags": [
-      "maddern"
-    ],
-    "relationships": "",
-    "roles": [],
-    "body_markdown": "Child of Lyndell Marie Telfer. Born 1974.",
-    "body_stripped": "Child of Lyndell Marie Telfer. Born 1974.",
-    "is_living": true,
-    "lifespan": "b. 1974",
-    "parents": [
-      "lyndell-marie-telfer-1951"
-    ],
-    "children": [
-      "elsie-marie-maddern"
-    ],
-    "spouses": [],
-    "siblings": [],
-    "related_trees": [],
-    "birth_date": "",
-    "death_date": "",
-    "vault_file": "",
-    "images": [],
-    "person_photo": "",
-    "generation": 8,
-    "step_parents": [],
-    "step_children": []
   },
   {
     "id": "Kirrily Sheree Maddern (1976)",
