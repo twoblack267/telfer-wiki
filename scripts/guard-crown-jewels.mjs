@@ -101,8 +101,20 @@ const CROWN_JEWELS = {
       "refs are ambiguous or point at his brother; refusing to guess is correct.",
   },
   "andrew-kelly-parker-1883": {
-    children: 8,
-    why: "Eight children listed in the vault frontmatter, including a same-named son.",
+    // CORRECTED 2026-10-28 (children 8 -> 7): the eighth "child" was HIMSELF.
+    // The vault frontmatter, the prose Children table and the generated data all
+    // listed "Andrew Kelly Parker" among Andrew Kelly Parker's children. There is no
+    // second record of that name anywhere in the vault or the dataset (checked
+    // 28 Oct), and nothing in the note suggests a same-named son — the "eights
+    // children" sentence in his Life Summary was the same duplication counted twice.
+    // His AIF service file (62513) is the reason the frontmatter was believed, but a
+    // service file lists nobody's children. The self-reference is now removed from
+    // relationships:, the prose table AND the count sentence, so seven is the vault's
+    // own figure. A minimum of 8 would demand the pipeline re-fabricate a man as his
+    // own son; refusing is the correction, not the loss.
+    children: 7,
+    allowShrink: { children: "self-reference removed 2026-10-28 (8 → 7); the eighth entry was Andrew himself" },
+    why: "Seven children named in the vault (Keith Cyril, Elliott William, Ira Mark, Ada Beatrice, Lucy Beatrice Davey, Betty Lorraine, Jean Mary). The old minimum of 8 counted Andrew himself as his own son.",
   },
   "andrew-telfer-1798": {
     // CORRECTED 2026-10-24 (children 4 -> 3).
@@ -325,6 +337,7 @@ function main() {
   const failures = [];
   const warnings = [];
   const renames = [];
+  const declaredShrinks = [];
   const withdrawn = [];
   // Declared removals with no successor. Read here (not at module load) so a malformed
   // file cannot crash the guard into a blind PASS.
@@ -393,6 +406,13 @@ function main() {
 
       // Was this shrink deliberately declared?
       if (opts.allowPeople.has(slug) || opts.allow.has(`${slug}:${field}`)) continue;
+      // A crown jewel may DECLARE a one-off shrink in its own spec (allowShrink).
+      // Declaring it keeps the floor meaningful for every other field; the reason is
+      // printed with the receipt, so the exemption is visible and never silent.
+      if (jewel && jewel.allowShrink && jewel.allowShrink[field]) {
+        declaredShrinks.push({ slug, field, before: b, after: a, reason: jewel.allowShrink[field] });
+        continue;
+      }
 
       const row = {
         kind: jewel ? "CROWN_JEWEL_SHRANK" : "FIELD_SHRANK",
@@ -420,6 +440,7 @@ function main() {
     if (!after) continue; // reported above if it was in base; a brand-new absence is a separate concern
     for (const [field, minimum] of Object.entries(spec)) {
       if (field === "why") continue;
+      if (field === "allowShrink") continue;
       // Distinct, not raw: a duplicated entry must never satisfy a minimum. That is
       // exactly how janet-nichol's single child passed a minimum of 2 before 2026-10-24.
       const a = distinctCount(after[field]);

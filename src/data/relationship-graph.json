@@ -2146,9 +2146,9 @@
       "generation": 6
     },
     {
-      "slug": "mary-telfer",
+      "slug": "mary-telfer-1893",
       "id": "Mary Frances Telfer (1893)",
-      "generation": 4
+      "generation": 6
     },
     {
       "slug": "millicent-telfer",
@@ -2801,7 +2801,7 @@
       "generation": 6
     },
     {
-      "slug": "margaret-telfer",
+      "slug": "margaret-telfer-1962",
       "id": "Margaret Telfer (1962)",
       "generation": 7
     },
@@ -2958,7 +2958,7 @@
     {
       "slug": "christine-hunter",
       "id": "Christine Hunter",
-      "generation": 99
+      "generation": 7
     },
     {
       "slug": "christine-tsim",
@@ -3234,6 +3234,36 @@
       "slug": "william-telfer-1847",
       "id": "William Telfer (1847)",
       "generation": 5
+    },
+    {
+      "slug": "elizabeth-paynter",
+      "id": "Elizabeth Paynter",
+      "generation": 99
+    },
+    {
+      "slug": "george-hucks",
+      "id": "George Leslie Roy Hucks (1926)",
+      "generation": 7
+    },
+    {
+      "slug": "john-paynter",
+      "id": "John Paynter",
+      "generation": 99
+    },
+    {
+      "slug": "margaret-telfer-rutherford",
+      "id": "Margaret Rutherford Telfer",
+      "generation": 5
+    },
+    {
+      "slug": "margaret-telfer-living",
+      "id": "Margaret Telfer",
+      "generation": 4
+    },
+    {
+      "slug": "mary-telfer-living",
+      "id": "Mary Telfer",
+      "generation": 4
     },
     {
       "slug": "nicholas-andre-maddern-1974",
@@ -4227,6 +4257,10 @@
       {
         "from": "john-telfer-1847",
         "to": "john-telfer-1877"
+      },
+      {
+        "from": "lancelot-watson-1888",
+        "to": "john-watson-1916"
       },
       {
         "from": "charles-farrow-1836",
@@ -5602,11 +5636,11 @@
       },
       {
         "from": "frances-margaret-oswald-1861",
-        "to": "mary-telfer"
+        "to": "mary-telfer-1893"
       },
       {
         "from": "james-telfer-1858",
-        "to": "mary-telfer"
+        "to": "mary-telfer-1893"
       },
       {
         "from": "frances-margaret-oswald-1861",
@@ -6145,7 +6179,7 @@
         "to": "adelaide-telfer"
       },
       {
-        "from": "margaret-telfer",
+        "from": "margaret-telfer-1962",
         "to": "aimee-welch"
       },
       {
@@ -6233,7 +6267,7 @@
         "to": "jessica-hanson"
       },
       {
-        "from": "margaret-telfer",
+        "from": "margaret-telfer-1962",
         "to": "joanna-welch"
       },
       {
@@ -6262,11 +6296,11 @@
       },
       {
         "from": "helen-king",
-        "to": "margaret-telfer"
+        "to": "margaret-telfer-1962"
       },
       {
         "from": "morris-telfer",
-        "to": "margaret-telfer"
+        "to": "margaret-telfer-1962"
       },
       {
         "from": "gwendoline-hinder",
@@ -6289,7 +6323,7 @@
         "to": "natasha-hanson"
       },
       {
-        "from": "margaret-telfer",
+        "from": "margaret-telfer-1962",
         "to": "nicole-welch"
       },
       {
@@ -6659,6 +6693,46 @@
       {
         "from": "andrew-telfer-1798",
         "to": "william-telfer-1847"
+      },
+      {
+        "from": "richard-paynter-of-calstock",
+        "to": "elizabeth-paynter"
+      },
+      {
+        "from": "agnes-paynter-1895",
+        "to": "george-hucks"
+      },
+      {
+        "from": "george-hucks-1875",
+        "to": "george-hucks"
+      },
+      {
+        "from": "richard-paynter-of-calstock",
+        "to": "john-paynter"
+      },
+      {
+        "from": "james-telfer-1829",
+        "to": "margaret-telfer-rutherford"
+      },
+      {
+        "from": "janet-welsh-1826",
+        "to": "margaret-telfer-rutherford"
+      },
+      {
+        "from": "elizabeth-beattie-1802",
+        "to": "margaret-telfer-living"
+      },
+      {
+        "from": "james-telfer-1796",
+        "to": "margaret-telfer-living"
+      },
+      {
+        "from": "elizabeth-beattie-1802",
+        "to": "mary-telfer-living"
+      },
+      {
+        "from": "james-telfer-1796",
+        "to": "mary-telfer-living"
       },
       {
         "from": "lyndell-marie-telfer-1951",
@@ -7099,7 +7173,7 @@
         "to": "ruth-littlejohn"
       },
       {
-        "from": "margaret-telfer",
+        "from": "margaret-telfer-1962",
         "to": "mark-welch"
       },
       {
@@ -7263,6 +7337,14 @@
       {
         "from": "adam-telfer-1842",
         "to": "margaret-telfer-1829"
+      },
+      {
+        "from": "adam-telfer-1842",
+        "to": "margaret-telfer-living"
+      },
+      {
+        "from": "adam-telfer-1842",
+        "to": "mary-telfer-living"
       },
       {
         "from": "adam-telfer-1842",
@@ -8226,6 +8308,14 @@
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
+        "to": "margaret-telfer-living"
+      },
+      {
+        "from": "elizabeth-beattie-telfer-1832",
+        "to": "mary-telfer-living"
+      },
+      {
+        "from": "elizabeth-beattie-telfer-1832",
         "to": "robert-telfer-1835"
       },
       {
@@ -9098,6 +9188,14 @@
       },
       {
         "from": "isabella-telfer-1837",
+        "to": "margaret-telfer-living"
+      },
+      {
+        "from": "isabella-telfer-1837",
+        "to": "mary-telfer-living"
+      },
+      {
+        "from": "isabella-telfer-1837",
         "to": "robert-telfer-1835"
       },
       {
@@ -9222,6 +9320,14 @@
       },
       {
         "from": "james-telfer-1829",
+        "to": "margaret-telfer-living"
+      },
+      {
+        "from": "james-telfer-1829",
+        "to": "mary-telfer-living"
+      },
+      {
+        "from": "james-telfer-1829",
         "to": "robert-telfer-1835"
       },
       {
@@ -9235,6 +9341,10 @@
       {
         "from": "james-telfer-1858",
         "to": "john-koppio-telfer-1862"
+      },
+      {
+        "from": "james-telfer-1858",
+        "to": "margaret-telfer-rutherford"
       },
       {
         "from": "james-telfer-1866",
@@ -9295,6 +9405,10 @@
       {
         "from": "janet-welsh-telfer-1858",
         "to": "john-koppio-telfer-1862"
+      },
+      {
+        "from": "janet-welsh-telfer-1858",
+        "to": "margaret-telfer-rutherford"
       },
       {
         "from": "jared-ivory-1993",
@@ -9377,6 +9491,10 @@
         "to": "mary-bayes-farrow-1875"
       },
       {
+        "from": "john-koppio-telfer-1862",
+        "to": "margaret-telfer-rutherford"
+      },
+      {
         "from": "john-lindsay-cameron-1907",
         "to": "malcolm-murray-cameron"
       },
@@ -9427,6 +9545,14 @@
       {
         "from": "john-telfer-1840",
         "to": "margaret-telfer-1829"
+      },
+      {
+        "from": "john-telfer-1840",
+        "to": "margaret-telfer-living"
+      },
+      {
+        "from": "john-telfer-1840",
+        "to": "mary-telfer-living"
       },
       {
         "from": "john-telfer-1840",
@@ -9559,6 +9685,14 @@
       {
         "from": "margaret-telfer-1801",
         "to": "william-telfer-1811"
+      },
+      {
+        "from": "margaret-telfer-1829",
+        "to": "margaret-telfer-living"
+      },
+      {
+        "from": "margaret-telfer-1829",
+        "to": "mary-telfer-living"
       },
       {
         "from": "margaret-telfer-1829",
@@ -10378,7 +10512,7 @@
       },
       {
         "from": "elizabeth-telfer",
-        "to": "mary-telfer"
+        "to": "mary-telfer-1893"
       },
       {
         "from": "elizabeth-telfer",
@@ -10406,7 +10540,7 @@
       },
       {
         "from": "jane-telfer",
-        "to": "mary-telfer"
+        "to": "mary-telfer-1893"
       },
       {
         "from": "jane-telfer",
@@ -10422,7 +10556,7 @@
       },
       {
         "from": "janet-telfer",
-        "to": "mary-telfer"
+        "to": "mary-telfer-1893"
       },
       {
         "from": "janet-telfer",
@@ -10434,7 +10568,7 @@
       },
       {
         "from": "martha-telfer",
-        "to": "mary-telfer"
+        "to": "mary-telfer-1893"
       },
       {
         "from": "martha-telfer",
@@ -10445,11 +10579,11 @@
         "to": "rose-telfer"
       },
       {
-        "from": "mary-telfer",
+        "from": "mary-telfer-1893",
         "to": "millicent-telfer"
       },
       {
-        "from": "mary-telfer",
+        "from": "mary-telfer-1893",
         "to": "rose-telfer"
       },
       {
@@ -10994,7 +11128,7 @@
       },
       {
         "from": "david-telfer-1970",
-        "to": "margaret-telfer"
+        "to": "margaret-telfer-1962"
       },
       {
         "from": "david-telfer-1970",
@@ -11002,7 +11136,7 @@
       },
       {
         "from": "geoffrey-telfer-1964",
-        "to": "margaret-telfer"
+        "to": "margaret-telfer-1962"
       },
       {
         "from": "geoffrey-telfer-1964",
@@ -11025,7 +11159,7 @@
         "to": "steven-telfer"
       },
       {
-        "from": "margaret-telfer",
+        "from": "margaret-telfer-1962",
         "to": "narelle-telfer"
       },
       {
@@ -11179,6 +11313,34 @@
       {
         "from": "john-dillon-1882",
         "to": "leslie-frank-dillon"
+      },
+      {
+        "from": "elizabeth-paynter",
+        "to": "john-paynter"
+      },
+      {
+        "from": "elizabeth-paynter",
+        "to": "richard-paynter-1838"
+      },
+      {
+        "from": "john-paynter",
+        "to": "richard-paynter-1838"
+      },
+      {
+        "from": "margaret-telfer-living",
+        "to": "mary-telfer-1893"
+      },
+      {
+        "from": "margaret-telfer-living",
+        "to": "mary-telfer-living"
+      },
+      {
+        "from": "margaret-telfer-living",
+        "to": "robert-telfer-1835"
+      },
+      {
+        "from": "mary-telfer-living",
+        "to": "robert-telfer-1835"
       }
     ],
     "stepParentOf": [

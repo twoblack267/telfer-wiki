@@ -73,6 +73,10 @@ for (const p of people) {
   if (!bareClaims.has(b)) bareClaims.set(b, new Set());
   bareClaims.get(b).add(p.slug);
 }
+// PROVEN RENAMES, available to the ambiguity gates further down. Filled by the
+// bare-slug loop (below) from scripts/prove-rename.mjs. Declared here so the gates that
+// reference it are not reading a TDZ binding — this file has been bitten by that before.
+const provenRenameTargets = new Map();
 const ambiguousBareNames = new Set();
 for (const [b, slugs] of bareClaims) if (slugs.size > 1) ambiguousBareNames.add(b);
 
@@ -136,7 +140,12 @@ for (const p of people) {
   // whole conflict group, so it belonged to nobody in particular. Redirecting it to
   // whichever member this loop reaches first is a blind pick. Skip it; the reader gets
   // a disambiguation page instead, and removed-redirects.json declares it to:null.
-  if (actualOldSlug === bareSlug && ambiguousBareNames.has(bareSlug)) {
+  //
+  // EXCEPT when the rename has been PROVEN by scripts/prove-rename.mjs: HEAD's record
+  // at that bare slug and exactly one live record share a vault note, so the URL's owner
+  // is a matter of record rather than a guess. Ambiguity is then an artefact of how many
+  // people share the NAME, not of who held the URL.
+  if (actualOldSlug === bareSlug && ambiguousBareNames.has(bareSlug) && !provenRenameTargets.has(bareSlug)) {
     continue;
   }
   if (actualOldSlug !== newSlug && !canonicalSlugs.has(actualOldSlug)) {
@@ -212,28 +221,61 @@ for (const p of people) {
 // logic). The member who previously held the bare slug loses it. Emit a redirect
 // from the now-unclaimed bare slug → their new suffixed slug, but ONLY when the
 // bare slug is not claimed as the real page of another person in this run.
+// ONLY PROVEN RENAMES GO IN HERE (rewritten 2026-10-28).
+//
+// The old loop pushed EVERY member of a collision group whose bare slug was unowned,
+// and a later tie-break picked one by birth year — a guess dressed as history. Measured
+// 28 Oct that guess was about to send /people/margaret-telfer/ to Margaret Dougal
+// (1849-1936) when the URL had belonged to Margaret Kaye (b. 1962), and
+// /people/carissa-telfer/ to an infant. A reader following an old link would have been
+// told, silently and confidently, that they were looking at a different person.
+//
+// A bare slug is a URL that WAS live, so its owner is a matter of record, not of
+// inference. scripts/prove-rename.mjs settles it from committed data: HEAD's record at
+// the bare slug names a vault note, and that note now generates exactly one live record.
+// Same note means same person, so the slug merely gained its year.
+//
+// Anything that cannot be proven is simply not emitted. The reader lands on the
+// disambiguation page, which is honest; a wrong person is not.
+import { execFileSync } from "node:child_process";
 const bareToNew = [];
+const proofCache = new Map();
 for (const p of people) {
-  // PRIVACY STRIP: never manufacture an alias pointing at a withdrawn page —
-  // the destination does not exist, so the alias would be a hard 404 and the
-  // redirect-health gate correctly blocks the deploy. See
-  // src/data/privacy-exclusions.mjs.
   if (PRIVACY_STRIP_SLUGS.has(p.slug)) continue;
   const firstName = (p.first_name || '').toLowerCase();
   const lastName = (p.last_name || '').toLowerCase();
   const bareSlug = `${firstName}-${lastName}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
-  if (bareSlug !== p.slug && /-\d{4}$/.test(bareSlug) === false) {
-    // bareSlug differs — someone in this group holds it; find who owns the bare slug
-    const owner = people.find(q => {
-      const qf = (q.first_name || '').toLowerCase();
-      const ql = (q.last_name || '').toLowerCase();
-      const qbare = `${qf}-${ql}`.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
-      return qbare === bareSlug && q.slug === bareSlug;
-    });
-    // Only redirect when the bare slug is NOT a live page in this run
-    if (!owner) {
-      bareToNew.push({ from: bareSlug, to: p.slug, display_name: p.display_name, birth: p.birth_year });
+  if (bareSlug === p.slug || /-\d{4}$/.test(bareSlug)) continue;
+  if (people.some((q) => q.slug === bareSlug)) continue; // still a live page, not a rename
+
+  if (!proofCache.has(bareSlug)) {
+    let res = null;
+    try {
+      const raw = execFileSync("node", ["scripts/prove-rename.mjs", bareSlug], {
+        encoding: "utf-8",
+        stdio: ["ignore", "pipe", "pipe"],
+      });
+      res = JSON.parse(raw);
+    } catch (e) {
+      // prove-rename exits 1 when it REFUSES, and prints its reasoning on stdout.
+      // A throw here is the normal refusal path, not an error — record it and move on.
+      try {
+        res = JSON.parse(e.stdout || "{}");
+      } catch {
+        res = { proven: false, why: `prove-rename failed: ${e.message}` };
+      }
     }
+    proofCache.set(bareSlug, res);
+    if (res && res.proven) {
+      provenRenameTargets.set(bareSlug, res.target);
+      console.log(`  ✅ proven rename: ${bareSlug} → ${res.target}  (${res.note})`);
+    } else if (res && res.why) {
+      console.log(`  ⛔ not emitted: ${bareSlug} — ${res.why}`);
+    }
+  }
+  const proof = proofCache.get(bareSlug);
+  if (proof && proof.proven && proof.target === p.slug) {
+    bareToNew.push({ from: bareSlug, to: p.slug, display_name: p.display_name, birth: p.birth_year });
   }
 }
 // When a whole collision group lost their bare slug (e.g. a newly-added same-name
@@ -243,12 +285,12 @@ for (const p of people) {
 // conflict and owns it. Prefer that candidate for the bare-slug redirect.
 const byBare = new Map();
 for (const r of bareToNew) {
-  if (!byBare.has(r.from)) {
-    byBare.set(r.from, r);
-  } else if ((r.birth || 0) >= (byBare.get(r.from).birth || 0)) {
-    // equal-name conflict: the LEAF (no children) inherits the historical bare URL.
-    byBare.set(r.from, r);
-  }
+  // NO birth-year tie-break. bareToNew is now fed only by prove-rename.mjs, which
+  // returns at most one target per bare slug, so a collision here would mean the proof
+  // contradicted itself — refuse rather than pick. The old `>=` tie-break chose the
+  // latest birth (the "leaf"), which is exactly how /people/margaret-telfer/ was about
+  // to be sent to an 1849 woman instead of the 1962 one who owned the URL.
+  if (!byBare.has(r.from)) byBare.set(r.from, r);
 }
 // Push Case 3 redirects (dedupe: skip any 'from' already claimed by an earlier redirect)
 // AMBIGUITY GATE (added 2026-10-28). A bare slug shared by MORE THAN ONE person must
@@ -266,8 +308,17 @@ for (const r of bareToNew) {
 // src/data/removed-redirects.json declares it with to:null and a reason.
 const existingFrom = new Set(redirects.map(r => r.from));
 for (const r of byBare.values()) {
-  if (ambiguousBareNames.has(r.from)) {
+  // A PROVEN rename is not an ambiguous pick. See prove-rename.mjs: the bare URL's
+  // owner is established from committed vault notes, so the number of same-named people
+  // is irrelevant to where the URL points.
+  if (ambiguousBareNames.has(r.from) && !provenRenameTargets.has(r.from)) {
     console.log(`  ⚠️  bare slug /people/${r.from}/ is AMBIGUOUS (${bareClaims.get(r.from).size} people) — not redirected to ${r.to}`);
+    continue;
+  }
+  if (provenRenameTargets.has(r.from) && provenRenameTargets.get(r.from) !== r.to) {
+    // The proof and the candidate disagree. Emit nothing: a wrong person is worse
+    // than an honest 404 on a disambiguation page.
+    console.log(`  ⛔ proof says ${r.from} -> ${provenRenameTargets.get(r.from)}, candidate said ${r.to} — refusing`);
     continue;
   }
   if (!existingFrom.has(r.from)) {

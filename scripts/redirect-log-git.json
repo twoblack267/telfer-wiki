@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "from": "margaret-telfer",
+    "to": "margaret-telfer-1962",
+    "matched_by": "vault_file",
+    "display_name": "Margaret Telfer"
+  },
+  {
+    "from": "mary-telfer",
+    "to": "mary-telfer-1893",
+    "matched_by": "display_name",
+    "display_name": "Mary Frances Telfer"
+  }
+]

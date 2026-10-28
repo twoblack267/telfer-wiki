@@ -9,6 +9,7 @@
  */
 
 import fs from 'fs';
+import path from 'path';
 import { checkYears } from './lib/date-gate.mjs';
 
 /**
@@ -132,6 +133,46 @@ people.forEach(p => {
   
   byBirthYear.set(p.slug, birthYear);
 });
+
+// ── 2026-10-28: REDIRECT-STUB ALIASES ────────────────────────────────────────
+// Redirect stubs are purged after resolution, so a relationship written as the stub's
+// name ends up pointing at nobody. `Martha Telfer` floated exactly that way while the
+// vault already knew she is `Martha Telfer Cameron (1873–1964)`.
+// The map is written by convert-markdown.mjs. Aliases are applied LAST and only where
+// no real person already answers to the name, so a stub can never displace a person.
+(function applyRedirectAliases() {
+  const file = path.resolve(process.cwd(), 'src/data/redirect-aliases.json');
+  if (!fs.existsSync(file)) return;
+  let map = {};
+  try { map = JSON.parse(fs.readFileSync(file, 'utf-8')); } catch { return; }
+
+  const canon = (s) => String(s || '').replace(/\s*\([^)]*\)\s*$/, '').replace(/\s+/g, ' ').trim().toLowerCase();
+  const byCanonical = new Map();
+  for (const p of people) {
+    for (const name of [canon(p.id), canon(p.display_name), canon(p.title)]) {
+      if (!name) continue;
+      if (!byCanonical.has(name)) byCanonical.set(name, new Set());
+      byCanonical.get(name).add(p.slug);
+    }
+  }
+
+  let applied = 0;
+  for (const [alias, canonical] of Object.entries(map)) {
+    if (byName.has(alias)) continue;                 // a real person already owns this name
+    const hits = byCanonical.get(canon(canonical));
+    if (!hits || hits.size !== 1) continue;          // target missing or ambiguous
+    const target = people.find((p) => p.slug === [...hits][0]);
+    if (!target) continue;
+    byName.set(alias, [{
+      slug: target.slug,
+      birth: byBirthYear.get(target.slug) ?? null,
+      death: target.death_year ?? null,
+      display: target.display_name || target.id,
+    }]);
+    applied++;
+  }
+  if (applied) console.log(`  🔀 redirect aliases applied: ${applied}`);
+})();
 
 // ── Helpers ──────────────────────────────────────
 

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-28T18:50:46+10:00",
+  "generated_at": "2026-10-28T20:42:13+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 664,
+  "count": 670,
   "kinds": {
-    "real": 647,
+    "real": 653,
     "redirect": 17,
     "empty": 0
   },
@@ -197,7 +197,7 @@
       "kind": "real"
     },
     "Andrew Kelly Parker (1883\u20131952).md": {
-      "sha256": "e4bed4362856efa56af3d674c8e9e14d2317e1ce44d2c8666cf862c4f59bfe6d",
+      "sha256": "7420d95b695ebb2ca8442bd2822687c3c097213039ccfc4fabd2a4baa16a34eb",
       "kind": "real"
     },
     "Andrew Nicholson (b. 1956).md": {
@@ -692,6 +692,10 @@
       "sha256": "e6e6eac4c5442943bd8d193c285553f6c9349c6a4c6a3da3fcbd04dccd7d8566",
       "kind": "real"
     },
+    "Elizabeth Paynter (m. 1866).md": {
+      "sha256": "0680965ff6ce52176e9769142e05747cc0b3dd2a8fa0eea09a0549532cc9efcf",
+      "kind": "real"
+    },
     "Elizabeth Rowbotham (1868\u20131908).md": {
       "sha256": "51875de2896ad67e73e7e19998c184cf621f68680ac3f1b20942cab13a8be8b6",
       "kind": "real"
@@ -928,6 +932,10 @@
       "sha256": "1c684b9638a57a3be52fdd70c26d93d991b6ae14e819fddfaa2971f53b2e3983",
       "kind": "real"
     },
+    "George Leslie Roy Hucks (b. 1926).md": {
+      "sha256": "a8a3860a8679316c66c9072b0f987471490e4be7faf4c7fba67beeba33449875",
+      "kind": "real"
+    },
     "George Masters (1841\u20131841).md": {
       "sha256": "cb685d8fe5cbe11656685c7dc6474206d369a6badbeccff407d06af8daf6a6d7",
       "kind": "real"
@@ -1149,7 +1157,7 @@
       "kind": "real"
     },
     "James Cowan (~1741\u20131786).md": {
-      "sha256": "7c9bac665cf4a0fa5dd424cf9b6b4dd0ad8177a4baeb3a822d808b7cde57f86c",
+      "sha256": "9bbb96cf77f17eaadb3798273af8661eaa64a805580feed1531e705117f28af6",
       "kind": "real"
     },
     "James Edgerston Telfer (1877\u20131959).md": {
@@ -1193,7 +1201,7 @@
       "kind": "real"
     },
     "James Telfer (1829\u20131913).md": {
-      "sha256": "32cc5458f68e6d8ed5aa9b1053b6326a770f0c496172f9846596c9a376f06990",
+      "sha256": "792ba4015d87256cc28a737d3da0a38639d28111a31d088cf2fffd67449b5725",
       "kind": "real"
     },
     "James Telfer (1832\u20131845).md": {
@@ -1201,7 +1209,7 @@
       "kind": "real"
     },
     "James Telfer (1858\u20131944).md": {
-      "sha256": "42e50f80ba466bdc139b056b243e604fcec292b2c5b06d5a14db57a7ef0734ca",
+      "sha256": "4d7bd5873069167da23d11bd733d5491480878be5b5442d4c0cee0e340991c38",
       "kind": "real"
     },
     "James Telfer (1866\u20131946).md": {
@@ -1381,7 +1389,7 @@
       "kind": "real"
     },
     "John Koppio Telfer (1862\u20131922).md": {
-      "sha256": "f010b197635e7ff0d689fafc674f0bae5d87f3a3b4a8ed408fa7ce5fa0633416",
+      "sha256": "bd11dc1e203f2c6c25c5c191c9a9e262e5b5bcdd1a21ea19a5453db8ff92c0d5",
       "kind": "real"
     },
     "John Lawrie (1810\u20131888).md": {
@@ -1406,6 +1414,10 @@
     },
     "John Murray (1779\u20131849).md": {
       "sha256": "e4322398fa709509f8f1a3cff661eb84998692083af6ebf007709a5c9b624c2d",
+      "kind": "real"
+    },
+    "John Paynter (m. 1884).md": {
+      "sha256": "a10ba4b3ff60862249e93e73131758de4cb8743448995036530d73b2f5dbebfb",
       "kind": "real"
     },
     "John Ralph Paynter (1921\u20131941).md": {
@@ -1828,12 +1840,20 @@
       "sha256": "78655524290410e9774a6f979d91b5757d3ae48997744e777db897b94779b286",
       "kind": "real"
     },
+    "Margaret Rutherford Telfer.md": {
+      "sha256": "620f25c62b3150e8b5ba6e3d456f9e83243df572c06854dbbe17c68546ce74d9",
+      "kind": "real"
+    },
     "Margaret Telfer (1801\u2013?).md": {
       "sha256": "c3cd5849cefb07a650eb44c72f103b745712052adf4472dab73a85b8a6728a29",
       "kind": "real"
     },
     "Margaret Telfer (1829\u2013?).md": {
       "sha256": "42411c8956f5f24438a373d829045fb95f142befe9134f92e57272c0ae3be4e6",
+      "kind": "real"
+    },
+    "Margaret Telfer (Beattie line).md": {
+      "sha256": "7f0806d414d5d667bf97da6704a2f3dff630306e4e8729bf69d40634050ecef6",
       "kind": "real"
     },
     "Margaret Wright Telfer (1810\u20131892).md": {
@@ -1893,7 +1913,7 @@
       "kind": "real"
     },
     "Martha Allen (1840\u20131876).md": {
-      "sha256": "e6fb2d3b537f5082585d11b0df7f3da03cdad953b19989b047faab07f55f3a8c",
+      "sha256": "4297db158b2e20cf576aa207c4fbf6d5dd1114cc1d2523b0cb95dfb7719c58eb",
       "kind": "real"
     },
     "Martha Ann Masters Radford (1839\u20131912).md": {
@@ -1954,6 +1974,10 @@
     },
     "Mary Jane Paynter (1861\u20131945).md": {
       "sha256": "3274f824fe6dd0b673d3479ae9aaaa6277ecd9b47fe9f293b8b152d860163122",
+      "kind": "real"
+    },
+    "Mary Telfer.md": {
+      "sha256": "4958531c9903a46eef68101f77961bc1d928b8709457c458f2c152a94588a158",
       "kind": "real"
     },
     "Matthew Blake Kelly (b. 1977).md": {

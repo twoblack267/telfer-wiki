@@ -384,6 +384,68 @@ function extractRoles(body) {
   return match ? [match[1].trim()] : [];
 }
 
+// Body-table BIOLOGICAL relationships (added 2026-10-28).
+//
+// THE HOLE: 295 of the vault's 670 people pages record their family in a
+// relationship table — `| **Father** | [[William Henry Parker (1893–1968)]] |` —
+// and NOT in frontmatter. The only body reader in this file was
+// extractBodyStepRelations below, which by design returns ONLY step relations.
+// So the table was invisible to the build: those profiles shipped with empty
+// parents/children/siblings/spouses, and because reciprocal edges are derived
+// from them, they were invisible FROM the other side too.
+//
+// Measured 2026-10-28 before this reader existed: 5 of 655 records had NO family
+// edge at all (sydney-parker-1922, lilian-parker-1922, john-watson-1916,
+// richard-watson-1910, susan-lawrie) and 16 more had frontmatter relations that
+// never reached an array. Those five were on the live site as isolated people.
+//
+// RULES (deliberate, do not relax):
+//  1. Wikilinks ONLY. A bare name in a cell ("May Bailey, of Hobart (m. 1907)")
+//     is NOT asserted — prose is not a link, and this vault writes bare names in
+//     cells precisely when the person has no page. No wikilink, no edge.
+//  2. "None"/"Unknown" cells are silence, not data. Never emit a person called None.
+//  3. Biological labels only. Step* labels are left to extractBodyStepRelations so
+//     a step-parent can never be asserted as a biological one.
+//  4. Multiple rows for the same label accumulate (vault sometimes splits Spouse).
+function extractBodyTableRelations(body) {
+  const out = { parents: [], children: [], siblings: [], spouses: [] };
+  if (!body) return out;
+
+  const BIOLOGICAL = {
+    father: 'parents', mother: 'parents', parent: 'parents', parents: 'parents',
+    children: 'children', child: 'children', son: 'children', daughter: 'children',
+    siblings: 'siblings', sibling: 'siblings', brother: 'siblings', sister: 'siblings',
+    spouse: 'spouses', spouses: 'spouses', husband: 'spouses', wife: 'spouses',
+    partner: 'spouses',
+  };
+
+  const rowRe = /^\s*\|([^|\n]*)\|([^\n]*)$/gm;
+  let row;
+  while ((row = rowRe.exec(body)) !== null) {
+    const rawLabel = row[1].replace(/\*+/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+    // Strip a trailing qualifier, e.g. "father (adoptive)" -> "father".
+    const label = rawLabel.replace(/\s*\([^)]*\)\s*$/, '').trim();
+    const bucket = BIOLOGICAL[label];
+    if (!bucket) continue;
+    const cell = row[2];
+    if (/^\s*(none|unknown|n\/?a|nil)\s*$/i.test(cell.replace(/\[\[.*?\]\]/g, ''))) continue;
+    const re = /\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g;
+    let m;
+    while ((m = re.exec(cell)) !== null) {
+      const name = m[1].trim();
+      if (name && !/^(none|unknown|n\/?a|nil)$/i.test(name)) out[bucket].push(name);
+    }
+  }
+
+  const uniq = (a) => [...new Set(a)];
+  return {
+    parents: uniq(out.parents),
+    children: uniq(out.children),
+    siblings: uniq(out.siblings),
+    spouses: uniq(out.spouses),
+  };
+}
+
 // Body-table step relationships (added 2026-09-22).
 // Some vault profiles record a step relation ONLY in the body's relationship table
 // ("| **Stepfather** | [[Allen Merrick]] |") or as a prose line ("Stepfather: [[X]]"),
@@ -777,6 +839,20 @@ function main() {
     // frontmatter, array or string, and merge only when the string form is silent.
     const flatSiblings = toArr(fm.siblings);
     if (siblings.length === 0 && flatSiblings.length > 0) siblings.push(...flatSiblings);
+
+    // Body relationship TABLE (added 2026-10-28). Runs on the raw body so the
+    // wikilinks are intact. This is the vault's dominant convention (295 of 670
+    // pages) and it was previously read by NOTHING, which is why families written
+    // plainly in the vault arrived on the site as isolated people. Merge rule: the
+    // table contributes only where the other sources said nothing, so a deliberate
+    // frontmatter declaration is never overridden by a stale table row.
+    {
+      const fromTable = extractBodyTableRelations(body);
+      if (parents.length === 0) parents.push(...fromTable.parents);
+      if (children.length === 0) children.push(...fromTable.children);
+      if (siblings.length === 0) siblings.push(...fromTable.siblings);
+      if (spouses.length === 0) spouses.push(...fromTable.spouses);
+    }
 
 
     const roles = extractRoles(body);
@@ -1236,6 +1312,7 @@ function main() {
   // purged even though the file itself still exists on disk.
   // Tag-first detection (shared helper) so the purge set matches the skip set.
   const redirectStubFiles = new Set();
+
   if (vaultDirExists) {
     for (const f of vaultFilesNow) {
       if (!f.endsWith('.md')) continue;
@@ -1247,6 +1324,56 @@ function main() {
       }
     }
   }
+  // ── 2026-10-28: REDIRECT STUBS LEAVE DANGLING REFS ────────────────────────
+  // A stub is purged AFTER resolution, so any relationship written as the stub's
+  // name resolves to nothing the moment the stub disappears. `Martha Telfer`
+  // floated for exactly this reason: the stub `Martha Telfer (1873–?)` declares
+  // itself the same person as `Martha Telfer Cameron (1873–1964)`, but nothing
+  // ever carried that fact to the resolvers.
+  //
+  // Emit the mapping so a stub's name can be indexed as an ALIAS for its canonical
+  // target. Extraction is deliberately conservative — `redirect_to:` frontmatter
+  // first, then an explicit "canonical record lives at [[...]]" sentence — and any
+  // stub whose target can't be read is simply left out. An alias is never guessed.
+  const redirectAliases = {};
+  if (vaultDirExists) {
+    for (const f of redirectStubFiles) {
+      const abs = path.join(VAULT_PEOPLE_DIR, f);
+      let raw = '';
+      try { raw = fs.readFileSync(abs, 'utf-8'); } catch { continue; }
+      const fm = readFrontmatter(abs) || {};
+
+      // The stub's own name: its title, minus any trailing "— redirect ..." tail
+      // and any "(1973–?)" date suffix, so it matches how relatives write it.
+      const rawTitle = String(fm.title || f.replace(/\.md$/, ''));
+      const stubName = rawTitle
+        .replace(/\s+[—–-]\s+.*\bredirect\b.*$/i, '')
+        .replace(/\s*\([^)]*\)\s*$/, '')
+        .trim();
+      if (!stubName) continue;
+
+      // Where it points. Frontmatter wins; else the stub's own prose, which in
+      // practice names the target as plain text — "the same person as Martha
+      // Telfer Cameron (1873–1964)" — not as a [[wikilink]]. Accept both.
+      let target = '';
+      const rt = fm.redirect_to;
+      if (rt) {
+        target = String(rt).replace(/^\s*\[\[|\]\]\s*$/g, '').trim();
+      } else {
+        const m = raw.match(/(?:SAME person as|same person as|same individual as)\s*\[?\[?([A-Z][^.\n\[\]]*?)\]?\]?(?=[.,;\n])/);
+        if (m) target = m[1].trim();
+      }
+      if (!target) continue;
+      target = target.split('|')[0].replace(/[[\]]/g, '').trim();
+      // Strip a trailing ", wife of ..." / " (the) ..." clause the prose adds.
+      target = target.replace(/\s*,\s*(?:wife|husband|son|daughter|mother|father)\b.*$/i, '').trim();
+      if (target.toLowerCase() === stubName.toLowerCase()) continue;
+
+      redirectAliases[stubName.toLowerCase()] = target;
+    }
+    console.log(`  🔀 redirect aliases: ${Object.keys(redirectAliases).length} stub name(s) mapped to canonical records`);
+  }
+
   const processedFiles = new Set(mdFiles); // files we just parsed & merged
   const beforePurge = existingPeople.length;
   const keep = [];
@@ -1379,6 +1506,15 @@ function main() {
 
   // 4. Write back
   fs.writeFileSync(PEOPLE_JSON, JSON.stringify(existingPeople, null, 2) + '\n', 'utf-8');
+
+  // Persist the sanitised name→canonical-name map for the resolvers. Written every
+  // run (including an empty map) so a deleted stub can never leave a stale alias
+  // binding somebody to the wrong record.
+  fs.writeFileSync(
+    path.resolve(process.cwd(), 'src/data/redirect-aliases.json'),
+    JSON.stringify(redirectAliases, null, 2) + '\n',
+    'utf-8'
+  );
 
   console.log(`\n✅ Done! ${added} added, ${updated} updated, ${skipped} skipped`);
   console.log(`📊 Total: ${existingPeople.length} profiles in people.json`);

@@ -136,6 +136,47 @@ for (const person of people) {
   }
 }
 
+// ─── 2026-10-28: REDIRECT-STUB ALIASES ───────────────────────────────────────
+// A redirect stub is purged AFTER name resolution, so a relationship written as the
+// stub's name resolves to nobody the instant the stub vanishes. `Martha Telfer`
+// floated with no link for exactly this reason: the vault already records that she is
+// `Martha Telfer Cameron (1873–1964)`, but that fact never reached the index.
+//
+// convert-markdown.mjs extracts the stub→canonical pairs it can read and writes them
+// to src/data/redirect-aliases.json. Apply them here as LOWEST-priority aliases: if a
+// real person already answers to the name, the stub does not get to steal it, and if
+// two stubs disagree the key goes AMBIGUOUS and is refused like any other clash.
+// A stub we could not parse is simply absent from the map — nothing is ever guessed.
+(function applyRedirectAliases() {
+  const file = path.resolve(process.cwd(), 'src/data/redirect-aliases.json');
+  if (!fs.existsSync(file)) return;
+  let map = {};
+  try { map = JSON.parse(fs.readFileSync(file, 'utf-8')); } catch { return; }
+
+  // canonical name (as written in the stub prose) -> slug
+  const byCanonical = new Map();
+  for (const p of people) {
+    const canon = (s) => String(s || '').replace(/\s*\([^)]*\)\s*$/, '').replace(/\s+/g, ' ').trim().toLowerCase();
+    for (const name of [canon(p.id), canon(p.display_name), canon(p.title)]) {
+      if (!name) continue;
+      if (!byCanonical.has(name)) byCanonical.set(name, new Set());
+      byCanonical.get(name).add(p.slug);
+    }
+  }
+
+  let applied = 0;
+  for (const [alias, canonical] of Object.entries(map)) {
+    const hits = byCanonical.get(String(canonical).replace(/\s*\([^)]*\)\s*$/, '')
+      .replace(/\s+/g, ' ').trim().toLowerCase());
+    if (!hits || hits.size !== 1) continue;          // unresolvable or ambiguous target
+    const slug = [...hits][0];
+    // Never overwrite an existing mapping — a real person outranks a stub.
+    if (!nameIndex.has(alias)) { nameIndex.set(alias, slug); applied++; }
+  }
+  if (applied) console.log(`  🔀 redirect aliases applied: ${applied}`);
+})();
+
+
 // ─── Resolve Names to Slugs ──────────────────────────────────────────────────
 
 /**
