@@ -388,6 +388,31 @@ function main() {
       renames.push({ from: slug, to: target, name: before.display_name || before.name || slug });
       continue;
     }
+    // ── DECLARED MERGE, LIVE SUCCESSOR (added 2026-10-29) ────────────────────
+    // A slug can vanish because TWO vault notes described ONE person and the
+    // print-citation note was retired. That is a merge, not a loss: the human being
+    // is still published, under the surviving slug. The redirect log cannot prove
+    // this, because generate-redirects.mjs REBUILDS redirect-log.json every run —
+    // anything hand-added there is wiped. src/data/removed-redirects.json is the
+    // committed input, so a merge is declared there with `to: <survivor>`.
+    // Worked case: carissa-telfer-1989 retired in favour of carissa-telfer-2023
+    // (see the vault Corrections Log, 2026-10-29). The successor must be LIVE, and
+    // the redirect must already be emitted, or this still fails as data loss.
+    const declaredMerge = REMOVED_ENTRIES[slug];
+    if (
+      declaredMerge &&
+      declaredMerge.to &&
+      declaredMerge.to !== slug &&
+      (now.has(declaredMerge.to) || redirectTarget(slug) === declaredMerge.to)
+    ) {
+      renames.push({
+        from: slug,
+        to: declaredMerge.to,
+        name: before.display_name || before.name || slug,
+        declared: true,
+      });
+      continue;
+    }
     // ── DECLARED REMOVAL, NO SUCCESSOR (added 2026-10-28) ────────────────────
     // A slug can vanish because the PERSON never existed: `kelson-telfer-1946` was
     // manufactured by the 2008 Supplement's OCR text layer interleaving two lines

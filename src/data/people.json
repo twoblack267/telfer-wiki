@@ -2143,7 +2143,6 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "carissa-telfer-1989",
       "carissa-telfer-2023",
       "peter-telfer",
       "rebecca-telfer",
@@ -2942,7 +2941,10 @@
     "children": [],
     "spouses": [],
     "siblings": [
-      "angela-telfer"
+      "angela-telfer",
+      "peter-telfer",
+      "rebecca-telfer",
+      "sophia-telfer"
     ],
     "related_trees": [
       "telfer-tree"
@@ -15922,7 +15924,6 @@
     ],
     "children": [
       "angela-telfer",
-      "carissa-telfer-1989",
       "carissa-telfer-2023",
       "peter-telfer",
       "rebecca-telfer",
@@ -22068,7 +22069,7 @@
     "spouses": [],
     "siblings": [
       "angela-telfer",
-      "carissa-telfer-1989",
+      "carissa-telfer-2023",
       "rebecca-telfer",
       "sophia-telfer"
     ],
@@ -23431,7 +23432,6 @@
     "lifespan": "? – living",
     "parents": [],
     "children": [
-      "carissa-telfer-1989",
       "peter-telfer",
       "rebecca-telfer",
       "sophia-telfer"
@@ -28633,7 +28633,7 @@
     "children": [],
     "siblings": [
       "angela-telfer",
-      "carissa-telfer-1989",
+      "carissa-telfer-2023",
       "peter-telfer",
       "sophia-telfer"
     ],
@@ -28930,7 +28930,7 @@
     "children": [],
     "siblings": [
       "angela-telfer",
-      "carissa-telfer-1989",
+      "carissa-telfer-2023",
       "peter-telfer",
       "rebecca-telfer"
     ],
@@ -41419,87 +41419,6 @@
     "generation": 8,
     "evidence_level": null,
     "single_source": true,
-    "provisional_why": null
-  },
-  {
-    "id": "Carissa Telfer (1989)",
-    "slug": "carissa-telfer-1989",
-    "vault_file": "Carissa Telfer (b. 1989).md",
-    "first_name": "Carissa",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": 1989,
-    "death_year": 2023,
-    "birth_date": "18 May 1989",
-    "death_date": null,
-    "birth_year_display": "1989",
-    "death_year_display": "2023",
-    "display_name": "Carissa Telfer",
-    "title": "Carissa Telfer (b. 1989)",
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Carissa Telfer"
-        ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "John Robert Telfer"
-        ]
-      },
-      {
-        "type": "Mother",
-        "names": [
-          "Robyn Telfer"
-        ]
-      },
-      {
-        "type": "Siblings",
-        "names": [
-          "Angela Telfer",
-          "Sophia Telfer",
-          "Rebecca Telfer",
-          "Peter Telfer"
-        ]
-      }
-    ],
-    "roles": [
-      "Daughter of [[John Robert Telfer]] and [[Robyn Telfer]] (adopted)"
-    ],
-    "body_markdown": "# Carissa Telfer (b. 18 May 1989 – 29 June 2023)\n\n**Canonical profile:** [[Carissa Telfer (?–2023)]]\n\n**Role:** Daughter of [[John Robert Telfer]] and [[Robyn Telfer]] (adopted)\n**Born:** 18 May 1989\n**Died:** 29 June 2023\n\n## Identity — one person, two records\n\nThis note and [[Carissa Telfer (?–2023)]] describe **the same woman**. The vault had\nonly one profile for her until 28 October 2026, when a rebuild of the printed\n<em>Supplement 2008</em> pages created this second, print-derived note from the bare\nline in the book.\n\nThe two are reconciled here deliberately:\n\n| What the book says | What this vault records |\n|---|---|\n| Born 18 May 1989 | Born 18 May 1989 — agrees |\n| Fifth child of her father's family in the book's child list | Fifth child, with a later-adopted brother |\n| No death recorded (the book predates it) | Died 29 June 2023 |\n\nNothing in the two records conflicts. The book simply predates her death and Peter's\nadoption. **Her life record, photo and funeral details live in\n[[Carissa Telfer (?–2023)]]** — that is the note to read; this one exists so the printed\npage has a citation trail and so nobody re-creates her a third time.\n\n## Evidence\n\n**The book supplies the birth; an independent family record supplies the death.**\n\n- *A Telfer Family Tree — Supplement 2008*, printed p.144 — records her birth (18 May 1989) and her place in\n  the family. That is **one witness**, and the page was read twice by different machines: still one witness.\n- **The death is corroborated outside the book.** Her death and funeral (29 June 2023, announced 5 July 2023)\n  were announced on the Telfer Mini Digger Facebook page — a record independent of the Supplement.\n\nThe birth rests on the book alone. The death does not. Her full life record lives in\n[[Carissa Telfer (?–2023)]].\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.144. Birth only. One witness.\n- **Family record** — death and funeral announced via the Telfer Mini Digger Facebook page, 5 July 2023.\n  Independent of the book. Corroborates the death date, not the birth.",
-    "body_stripped": "**Canonical profile:** Carissa Telfer (?–2023)\n\n**Role:** Daughter of John Robert Telfer and Robyn Telfer (adopted)\n**Born:** 18 May 1989\n**Died:** 29 June 2023\n\n## Identity — one person, two records\n\nThis note and Carissa Telfer (?–2023) describe **the same woman**. The vault had\nonly one profile for her until 28 October 2026, when a rebuild of the printed\n<em>Supplement 2008</em> pages created this second, print-derived note from the bare\nline in the book.\n\nThe two are reconciled here delibera",
-    "parents": [
-      "john-telfer-robert",
-      "robyn-telfer"
-    ],
-    "children": [],
-    "siblings": [
-      "angela-telfer",
-      "peter-telfer",
-      "rebecca-telfer",
-      "sophia-telfer"
-    ],
-    "spouses": [],
-    "step_parents": [],
-    "step_children": [],
-    "is_living": false,
-    "lifespan": "1989 – 2023",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 8,
-    "evidence_level": null,
-    "single_source": false,
     "provisional_why": null
   },
   {

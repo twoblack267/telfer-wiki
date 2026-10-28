@@ -264,6 +264,44 @@ echo "==> Step 5/5: regenerate people.public.json (sanitize from people.json)"
 # MUST run sanitize, else people.public.json (what the site renders) stays stale.
 node scripts/sanitize-people.mjs
 
+echo "==> Step 4c/5: DUPLICATE-IDENTITY VERIFIER (added 2026-10-29)"
+# WHY THIS GATE EXISTS
+# --------------------
+# A person is not a row. If one human being becomes two published pages, the site states
+# two conflicting things about someone who is dead and cannot object. That happened:
+# Carissa Telfer had a full life-record note and a print-derived note from the 2008
+# Supplement, which predates her death. The life-record note said "**Canonical profile:**"
+# in its body — prose for a human. convert-markdown.mjs decides what becomes a page from
+# the `redirect` TAG, so neither note was skipped and both shipped, one calling her
+# "daughter of John Robert Telfer and Robyn Telfer" and the other "adopted cousin".
+#
+# No gate measured this. verify-relationships.mjs asks "is this person linked to family?";
+# this asks "is this person actually two people?". Different question, different failure.
+# MUST run after Step 5/5 so it reads the same public data the site renders.
+# Read-only. Safe at any point. Fix in the VAULT: `redirect` tag on the stub note, plus an
+# entry in src/data/removed-redirects.json so the old URL still lands on the survivor.
+# POLICY (Mark, 2026-10-29): FILE A CARD, DO NOT HALT THE PIPELINE.
+# A duplicate identity is a research problem, not a reason to freeze the whole site at
+# 03:00 and leave every other page unpublished. So this gate REPORTS and FILES; it does
+# not exit 1. The board card is what gets the fix done. Halt only if the verifier itself
+# crashes (unknown state), never merely because it found something.
+DU="$(node scripts/verify-duplicate-identity.mjs 2>&1)"
+DU_EXIT=$?
+echo "$DU" | tail -6
+if [ "$DU_EXIT" -eq 0 ]; then
+  echo "    (no duplicate identities)"
+elif [ "$DU_EXIT" -eq 1 ]; then
+  echo "    ⚠️  Duplicate identities FOUND — filed to the Can Do Board, pipeline continues."
+  echo "    Fix in the VAULT: \`redirect\` tag on the stub note + an entry in"
+  echo "    src/data/removed-redirects.json. See docs/NAMING-RULES.md §6."
+  node scripts/file-naming-cards.mjs --from-duplicates "$DU" 2>/dev/null || \
+    echo "    (card filing helper not available — finding printed above for the 07:00 check)"
+else
+  echo "    ❌ DUPLICATE VERIFIER CRASHED (exit $DU_EXIT) — unknown state, refusing to publish."
+  exit 1
+fi
+
+
 echo
 echo "==> GATE: scan for cross-branch sibling contamination (same-name branch leaks)"
 node scripts/scan-cross-branch.mjs || {

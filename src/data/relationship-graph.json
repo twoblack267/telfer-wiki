@@ -2471,11 +2471,6 @@
       "generation": 8
     },
     {
-      "slug": "carissa-telfer-1989",
-      "id": "Carissa Telfer (1989)",
-      "generation": 8
-    },
-    {
       "slug": "carolyn-veronica-cook",
       "id": "Carolyn Veronica Cook (1975)",
       "generation": 9
@@ -5987,14 +5982,6 @@
         "to": "brenton-siviour"
       },
       {
-        "from": "john-telfer-robert",
-        "to": "carissa-telfer-1989"
-      },
-      {
-        "from": "robyn-telfer",
-        "to": "carissa-telfer-1989"
-      },
-      {
         "from": "carolyn-veronica-cook",
         "to": "clayton-brodie-manuel"
       },
@@ -7652,10 +7639,6 @@
       },
       {
         "from": "angela-telfer",
-        "to": "carissa-telfer-1989"
-      },
-      {
-        "from": "angela-telfer",
         "to": "carissa-telfer-2023"
       },
       {
@@ -7753,6 +7736,18 @@
       {
         "from": "bertha-telfer",
         "to": "william-telfer-1880"
+      },
+      {
+        "from": "carissa-telfer-2023",
+        "to": "peter-telfer"
+      },
+      {
+        "from": "carissa-telfer-2023",
+        "to": "rebecca-telfer"
+      },
+      {
+        "from": "carissa-telfer-2023",
+        "to": "sophia-telfer"
       },
       {
         "from": "caroline-telfer-1842",
@@ -10945,18 +10940,6 @@
       {
         "from": "brenton-siviour",
         "to": "wendy-siviour"
-      },
-      {
-        "from": "carissa-telfer-1989",
-        "to": "peter-telfer"
-      },
-      {
-        "from": "carissa-telfer-1989",
-        "to": "rebecca-telfer"
-      },
-      {
-        "from": "carissa-telfer-1989",
-        "to": "sophia-telfer"
       },
       {
         "from": "clayton-brodie-manuel",

@@ -416,6 +416,12 @@
       "to": null,
       "reason": "Ambiguous bare name, and a sensitive one. Two Carissa Telfers: 1989-2023 and an infant who died in 2023. The page previously redirected to the infant by blind pick. A redirect would silently choose between a woman and a baby; a disambiguation page lets the reader choose.",
       "date": "2026-10-28"
+    },
+    "carissa-telfer-1989": {
+      "to": "carissa-telfer-2023",
+      "reason": "Duplicate identity, not a removal. One woman, two vault notes. The print-derived note (b. 1989) was created 28 Oct 2026 by a rebuild of the printed Supplement 2008 pages; it exists only as a citation trail for that printed line. HER OWN NOTE STATES the life record, photo and funeral details live in the (?-2023) note and that is the note to read. The (?-2023) note is therefore the surviving page and the print-citation note carries the redirect tag. Neither note previously carried the tag, so both shipped and the site published her twice with conflicting parentage. Recorded in the vault Corrections Log 2026-10-29.",
+      "date": "2026-10-29",
+      "corrections_log": "2026-10-29 — CORRECTION: Carissa Telfer published twice (duplicate identity merged)"
     }
   }
 }

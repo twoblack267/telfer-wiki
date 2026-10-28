@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-28T21:32:25+10:00",
+  "generated_at": "2026-10-29T02:06:09+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
   "count": 670,
   "kinds": {
-    "real": 653,
-    "redirect": 17,
+    "real": 652,
+    "redirect": 18,
     "empty": 0
   },
   "files": {
@@ -345,8 +345,8 @@
       "kind": "real"
     },
     "Carissa Telfer (b. 1989).md": {
-      "sha256": "3adc19e978bf9f4d754cb0199ace382cdd5fdb3f1bde180f82b097f2913277ad",
-      "kind": "real"
+      "sha256": "8f021924439a87d6d5fd1540bed58ab007c5268eab65848ca7a7a41ba01048f5",
+      "kind": "redirect"
     },
     "Carol Petith.md": {
       "sha256": "5e6f7d1cb761f3b7a3a79a1a4e5a8274a8ae9e44039c4cb295db5714b31187ec",
