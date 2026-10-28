@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-28T15:27:22+10:00",
+  "generated_at": "2026-10-28T15:48:53+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 658,
+  "count": 661,
   "kinds": {
-    "real": 641,
+    "real": 644,
     "redirect": 17,
     "empty": 0
   },
@@ -130,6 +130,10 @@
     },
     "Allan Lawrence Pedler (1946\u2013living).md": {
       "sha256": "618375042e5d952a6ae347e2dd439f01f88dd5078cee8b39695050d90c780f74",
+      "kind": "real"
+    },
+    "Allan Telfer.md": {
+      "sha256": "954d450635fb29ed7cc32957b9cce1928ccb9bdce4f7f40a02b209391eeb8e08",
       "kind": "real"
     },
     "Allen Merrick.md": {
@@ -618,6 +622,10 @@
     },
     "Elissa Anne Bustard (b. 1973).md": {
       "sha256": "7017321aa77c1ede923b7021e336feb7be191f76a16d4881dc033742e38e94be",
+      "kind": "real"
+    },
+    "Elizabeth Anne Smith (1878\u2013?).md": {
+      "sha256": "af8d4335423292d7e3969d953181db83546129fcc145c23b083c4fd717748910",
       "kind": "real"
     },
     "Elizabeth Beattie (1741\u20131819).md": {
@@ -1462,6 +1470,10 @@
     },
     "Joseph Farrow (1814\u20131899).md": {
       "sha256": "5adcc6f27b9eb8d3f2ee7a47715c7c0240eb3388ce863850d9e08940b24f7e57",
+      "kind": "real"
+    },
+    "Joseph Francis Farrow.md": {
+      "sha256": "e46b48fefe18acd7cf3efedd644656517af6b930cd3f7d8cc741a604b11d9f15",
       "kind": "real"
     },
     "Joseph March (1767\u20131831).md": {

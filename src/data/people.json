@@ -1704,6 +1704,7 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "related_trees": [
@@ -2773,7 +2774,9 @@
     "spouses": [
       "Clive Lipscombe"
     ],
-    "siblings": [],
+    "siblings": [
+      "allan-telfer"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -3270,6 +3273,7 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875",
       "Peter Farrow",
       "Esther Hannah Farrow",
@@ -5897,6 +5901,7 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "related_trees": [
@@ -5991,6 +5996,7 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875",
       "Esther Farrow",
       "Amy Farrow"
@@ -6565,6 +6571,7 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "related_trees": [
@@ -7393,6 +7400,7 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "related_trees": [
@@ -7474,12 +7482,12 @@
       "jean-murray-1810"
     ],
     "children": [
+      "elizabeth-smith",
       "esther-telfer-smith-1870",
       "francis-telfer-smith-1874",
       "jane-sophie-smith-1866",
       "john-smith",
-      "margaret-dougal-smith-1868",
-      "Elizabeth Anne Smith (1878–?)"
+      "margaret-dougal-smith-1868"
     ],
     "spouses": [
       "john-smith-1827"
@@ -7575,6 +7583,7 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "elizabeth-smith",
       "francis-telfer-smith-1874",
       "jane-sophie-smith-1866",
       "john-smith",
@@ -7857,6 +7866,7 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "related_trees": [
@@ -9033,6 +9043,7 @@
     "children": [],
     "spouses": [],
     "siblings": [
+      "elizabeth-smith",
       "esther-telfer-smith-1870",
       "jane-sophie-smith-1866",
       "john-smith",
@@ -9389,6 +9400,7 @@
       "eva-agnes-farrow-1877",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "related_trees": [
@@ -9845,9 +9857,9 @@
       "mark-telfer-1877"
     ],
     "children": [
+      "allan-telfer",
       "beth-telfer-1946",
-      "ian-telfer-1947",
-      "Allan Telfer"
+      "ian-telfer-1947"
     ],
     "spouses": [
       "jessie-allan"
@@ -11122,7 +11134,9 @@
     "spouses": [
       "Sally Taylor"
     ],
-    "siblings": [],
+    "siblings": [
+      "allan-telfer"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -13228,6 +13242,7 @@
       "eva-agnes-farrow-1877",
       "george-hope-farrow-1872",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "related_trees": [
@@ -13308,11 +13323,11 @@
       "Benjamin Harper"
     ],
     "siblings": [
+      "elizabeth-smith",
       "esther-telfer-smith-1870",
       "francis-telfer-smith-1874",
       "john-smith",
-      "margaret-dougal-smith-1868",
-      "Elizabeth Anne Smith (1878–?)"
+      "margaret-dougal-smith-1868"
     ],
     "related_trees": [
       "telfer-tree"
@@ -14338,7 +14353,9 @@
     "is_living": false,
     "lifespan": "? – ?",
     "parents": [],
-    "children": [],
+    "children": [
+      "allan-telfer"
+    ],
     "spouses": [
       "gilbert-telfer-1908"
     ],
@@ -14865,6 +14882,7 @@
       "eva-agnes-farrow-1877",
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "related_trees": [
@@ -15543,12 +15561,12 @@
     "lifespan": "1827 – 1895",
     "parents": [],
     "children": [
+      "elizabeth-smith",
       "esther-telfer-smith-1870",
       "francis-telfer-smith-1874",
       "jane-sophie-smith-1866",
       "john-smith",
-      "margaret-dougal-smith-1868",
-      "Elizabeth Anne Smith (1878–?)"
+      "margaret-dougal-smith-1868"
     ],
     "spouses": [
       "esther-jane-telfer-1834"
@@ -16132,8 +16150,7 @@
       "charles-farrow-1836"
     ],
     "spouses": [
-      "Mary Ellen Bayes (m. 1848)",
-      "Elizabeth Float Smith (m. 1870)"
+      "Mary Ellen Bayes (m. 1848)"
     ],
     "siblings": [],
     "related_trees": [
@@ -18535,6 +18552,7 @@
       "Thomas Parkins (1860–1917)"
     ],
     "siblings": [
+      "elizabeth-smith",
       "esther-telfer-smith-1870",
       "francis-telfer-smith-1874",
       "jane-sophie-smith-1866",
@@ -20164,7 +20182,8 @@
       "eva-agnes-farrow-1877",
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
-      "john-farrow"
+      "john-farrow",
+      "joseph-farrow"
     ],
     "related_trees": [
       "telfer-tree"
@@ -26186,6 +26205,7 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
+      "joseph-farrow",
       "mary-bayes-farrow-1875"
     ],
     "spouses": [
@@ -26718,6 +26738,7 @@
     ],
     "children": [],
     "siblings": [
+      "elizabeth-smith",
       "esther-telfer-smith-1870",
       "francis-telfer-smith-1874",
       "jane-sophie-smith-1866",
@@ -49349,6 +49370,251 @@
     "images": [],
     "person_photo": null,
     "generation": 9
+  },
+  {
+    "id": "Allan Telfer",
+    "slug": "allan-telfer",
+    "vault_file": "Allan Telfer.md",
+    "first_name": "Allan",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "living",
+    "display_name": "Allan Telfer",
+    "title": "Allan Telfer",
+    "tags": [
+      "family",
+      "telfer",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Allan Telfer"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Gilbert Melville Telfer (1908–1973)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Jessie Allan"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Christine Marshall"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Beth Telfer",
+          "Ian Telfer"
+        ]
+      }
+    ],
+    "roles": [
+      "Third child of Gilbert Melville Telfer and Jessie Allan"
+    ],
+    "body_markdown": "# Allan Telfer\n\n**Role:** Third child of Gilbert Melville Telfer and Jessie Allan\n\n| Relation | Name |\n|---|---|\n| Father | [[Gilbert Melville Telfer (1908–1973)]] (known as Mel) |\n| Mother | [[Jessie Allan]] |\n| Spouse | Christine Marshall |\n| Siblings | [[Beth Telfer]] (married Clive Lipscombe), [[Ian Telfer]] (married Sally Taylor) |\n\n## Evidence\n\n**Derived from a sourced parent — not independently witnessed.**\n\nThe only source for him in this archive is the note on his father, [[Gilbert Melville Telfer (1908–1973)]], which is itself sourced to *From the Borders to the Bush* p.243. That source names him as a child, which establishes his existence and parentage as the book prints them — nothing more.\n\nA derived citation is a **copy of a hand, not a second hand**. It does not corroborate his father's note; it inherits from it.\n\n**Status: derived. One witness, held upstream.**",
+    "body_stripped": "**Role:** Third child of Gilbert Melville Telfer and Jessie Allan\n\n Relation  Name \n\n Father  Gilbert Melville Telfer (1908–1973) (known as Mel) \n Mother  Jessie Allan \n Spouse  Christine Marshall \n Siblings  Beth Telfer (married Clive Lipscombe), Ian Telfer (married Sally Taylor) \n\n## Evidence\n\n**Derived from a sourced parent — not independently witnessed.**\n\nThe only source for him in this archive is the note on his father, Gilbert Melville Telfer (1908–1973), which is itself sourced to *From ",
+    "parents": [
+      "gilbert-telfer-1908",
+      "jessie-allan"
+    ],
+    "children": [],
+    "siblings": [
+      "beth-telfer-1946",
+      "ian-telfer-1947"
+    ],
+    "spouses": [
+      "Christine Marshall"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": true,
+    "lifespan": "? – living",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 7
+  },
+  {
+    "id": "Elizabeth Anne Smith (1878)",
+    "slug": "elizabeth-smith",
+    "vault_file": "Elizabeth Anne Smith (1878–?).md",
+    "first_name": "Elizabeth",
+    "middle_name": "Anne",
+    "last_name": "Smith",
+    "birth_year": 1878,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1878",
+    "death_year_display": "?",
+    "display_name": "Elizabeth Anne Smith",
+    "title": "Elizabeth Anne Smith (1878–?)",
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Elizabeth Anne Smith (1878–?)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Esther Jane Telfer (1834–1909)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "John Smith (~1827–1895)"
+        ]
+      }
+    ],
+    "roles": [
+      "Daughter of John Smith and Esther Jane Telfer."
+    ],
+    "body_markdown": "# Elizabeth Anne Smith (1878–?)\n\n**Role:** Daughter of John Smith and Esther Jane Telfer.\n\n## Lifespan\n\n**Born:** 1878 — Millicent, South Australia\n**Died:** unknown\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[John Smith (~1827–1895)]] |\n| **Mother** | [[Esther Jane Telfer (1834–1909)]] |\n\n**Siblings:** [[Jane Sophie Smith]] · [[Margaret Dougal Smith]] · [[Esther Telfer Smith (1870–1906)]] · [[John James Smith (1871–1943)]] · [[Francis Telfer Smith (1874–1945)]]\n\n## Evidence\n\n**Derived — named as a child on a sourced parent's note.**\n\nNo source is held here. This person is listed as a daughter in the children table\nof **[[Esther Jane Telfer (1834–1909)]]**, which carries its own citations. The\nfact is proven upstream; the citation is inherited.\n\nA derived citation is a **copy of a hand, not a second hand**.\n\n**Status: derived. One witness, held upstream. Marriage and death unknown.**",
+    "body_stripped": "**Role:** Daughter of John Smith and Esther Jane Telfer.\n\n## Lifespan\n\n**Born:** 1878 — Millicent, South Australia\n**Died:** unknown\n\n## Family\n\n Relation  Name \n\n **Father**  John Smith (~1827–1895) \n **Mother**  Esther Jane Telfer (1834–1909) \n\n**Siblings:** Jane Sophie Smith · Margaret Dougal Smith · Esther Telfer Smith (1870–1906) · John James Smith (1871–1943) · Francis Telfer Smith (1874–1945)\n\n## Evidence\n\n**Derived — named as a child on a sourced parent's note.**\n\nNo source is held here.",
+    "parents": [
+      "esther-jane-telfer-1834",
+      "john-smith-1827"
+    ],
+    "children": [],
+    "siblings": [
+      "esther-telfer-smith-1870",
+      "francis-telfer-smith-1874",
+      "jane-sophie-smith-1866",
+      "john-smith",
+      "margaret-dougal-smith-1868"
+    ],
+    "spouses": [],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "lifespan": "1878 – ?",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
+  },
+  {
+    "id": "Joseph Francis Farrow",
+    "slug": "joseph-farrow",
+    "vault_file": "Joseph Francis Farrow.md",
+    "first_name": "Joseph",
+    "middle_name": "Francis",
+    "last_name": "Farrow",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "?",
+    "display_name": "Joseph Francis Farrow",
+    "title": "Joseph Francis Farrow",
+    "tags": [
+      "family",
+      "non-telfer",
+      "person"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Joseph Francis Farrow"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Charles Farrow (~1836–1884)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Elizabeth Hannah Telfer (1836–1916)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Annie Louise Downton"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Jane Murray Farrow (1857–1934)",
+          "Esther Farrow Latter (1859–1951)",
+          "Elizabeth Telfer Farrow",
+          "Charles Farrow Jr",
+          "Amy Farrow Stribling (1868–1945)",
+          "John James Telfer Farrow",
+          "George Hope Farrow (1872–1919)",
+          "Mary Bayes Farrow (1875–1938)",
+          "Eva Agnes Farrow"
+        ]
+      }
+    ],
+    "roles": [
+      "Fourth child and second son of Charles Farrow and Elizabeth Hannah Telfer of Hope Farm, Tarlee"
+    ],
+    "body_markdown": "# Joseph Francis Farrow\n\n**Role:** Fourth child and second son of Charles Farrow and Elizabeth Hannah Telfer of Hope Farm, Tarlee\n\n| Relation | Name |\n|---|---|\n| Father | [[Charles Farrow (~1836–1884)]] |\n| Mother | [[Elizabeth Hannah Telfer (1836–1916)]] |\n| Spouse | Annie Louise Downton |\n| Siblings | [[Jane Murray Farrow (1857–1934)|Jane Murray Farrow]] (m. Alfred Stribling), [[Esther Farrow Latter (1859–1951)|Esther \"Ettie\" Farrow]] (m. Richard Pelling Latter), [[Elizabeth Telfer Farrow]] (m. [[Thomas Holloway (1856–1922)]]), [[Charles Farrow Jr]] (m. Ethel Mary Sambell), [[Amy Farrow Stribling (1868–1945)|Amy Farrow]] (m. Sidney Stribling), [[John James Telfer Farrow]] (m. Emily Smithers), [[George Hope Farrow (1872–1919)|George Hope Farrow]] (m. Caroline Stanton), [[Mary Bayes Farrow (1875–1938)|Mary Bayes Farrow]] (m. Alfred Edward Lillecrapp), [[Eva Agnes Farrow]] (m. Walter Hookings) |\n\n## Evidence\n\n**Derived from a sourced parent — not independently witnessed.**\n\nHe is named as a child in [[Elizabeth Hannah Telfer (1836–1916)]], which carries its own sources for the family (Tarlee Cemetery headstone transcription, Find a Grave memorial 184343892, and the Farrow family narrative). That note establishes his parentage as printed — nothing more.\n\nA derived citation is a **copy of a hand, not a second hand**. It does not add a witness to his mother's note; it inherits one.\n\n**Status: derived. One witness, held upstream.**",
+    "body_stripped": "**Role:** Fourth child and second son of Charles Farrow and Elizabeth Hannah Telfer of Hope Farm, Tarlee\n\n Relation  Name \n\n Father  Charles Farrow (~1836–1884) \n Mother  Elizabeth Hannah Telfer (1836–1916) \n Spouse  Annie Louise Downton \n Siblings  Jane Murray Farrow (1857–1934)Jane Murray Farrow (m. Alfred Stribling), Esther Farrow Latter (1859–1951)Esther \"Ettie\" Farrow (m. Richard Pelling Latter), Elizabeth Telfer Farrow (m. Thomas Holloway (1856–1922)), Charles Farrow Jr (m. Ethel Mary Samb",
+    "parents": [
+      "charles-farrow-1836",
+      "elizabeth-hannah-telfer-1836"
+    ],
+    "children": [],
+    "siblings": [
+      "amy-farrow-stribling-1868",
+      "charles-farrow-jr",
+      "elizabeth-farrow",
+      "elizabeth-telfer-farrow-holloway-1861",
+      "esther-farrow-latter-1859",
+      "eva-agnes-farrow-1877",
+      "george-hope-farrow-1872",
+      "jane-murray-farrow-1857",
+      "john-farrow",
+      "mary-bayes-farrow-1875"
+    ],
+    "spouses": [
+      "Annie Louise Downton"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "lifespan": "? – ?",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 5
   },
   {
     "id": "Nicholas Andre Maddern (1974)",

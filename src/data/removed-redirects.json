@@ -1,414 +1,396 @@
 {
- "_comment": "Explicit redirect targets for profiles DELIBERATELY removed from the vault (not renamed, not purged as a phantom twin — genuinely removed because the evidence did not support them). The emit-git-slug-redirects.mjs guard matches a vanished live URL to a successor by display_name / vault_file / tagset / namekey. A removed person has NO successor by any of those keys, so without this file the guard correctly refuses to emit a partial redirect set and the regen fails closed. Add an entry here ONLY with a reason and a date, and only after the removal is recorded in the vault's Corrections Log.",
- "_schema": {
-  "<old-slug>": {
-   "to": "<slug of the page a visitor should land on, or null for a soft 410-style notice>",
-   "reason": "why the profile was removed",
-   "date": "YYYY-MM-DD",
-   "corrections_log": "the Corrections Log heading that records this removal"
+  "_comment": "Explicit redirect targets for profiles DELIBERATELY removed from the vault (not renamed, not purged as a phantom twin — genuinely removed because the evidence did not support them). The emit-git-slug-redirects.mjs guard matches a vanished live URL to a successor by display_name / vault_file / tagset / namekey. A removed person has NO successor by any of those keys, so without this file the guard correctly refuses to emit a partial redirect set and the regen fails closed. Add an entry here ONLY with a reason and a date, and only after the removal is recorded in the vault's Corrections Log.",
+  "_schema": {
+    "<old-slug>": {
+      "to": "<slug of the page a visitor should land on, or null for a soft 410-style notice>",
+      "reason": "why the profile was removed",
+      "date": "YYYY-MM-DD",
+      "corrections_log": "the Corrections Log heading that records this removal"
+    }
+  },
+  "removed": {
+    "esther-naomi-lynette-telfer-1983": {
+      "to": "esther-naomi-lynette-telfer-1993",
+      "reason": "Date correction, not a removal. The page was titled (b. 1983) from a bad OCR read of '6 Mar 1983' in the 2008 Supplement's scan-derived text layer. Two independent sources print 1993: the 1989 book's text layer ('b. 6 Mar 1993 Tumby Bay, SA') and a direct reading of the Supplement's printed page 145. The Supplement scan's OCR layer misread the 9 as an 8. Page retitled to 1993.",
+      "date": "2026-10-25",
+      "corrections_log": "2026-10-25 — CORRECTION: Esther Naomi Lynette Telfer birth year 1983 → 1993 (OCR misread, two sources agree)"
+    },
+    "ann-taylor-1856": {
+      "to": "john-telfer-1847",
+      "reason": "Fabricated spouse. No 'Ann Taylor' exists in any of the three gold books; her stated husband 'John Telfer (1847-1923)' does not exist either (all three books give 1847-1929 and print his marriage to Caroline Amelia Masters six times in the Supplement alone). Her nine children have no book support. Visitors land on the man her stub was wrongly attached to.",
+      "date": "2026-09-22",
+      "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
+    },
+    "ann-telfer": {
+      "to": "john-telfer-1847",
+      "reason": "Fabricated child of the Ann Taylor stub. No standalone daughter named Ann in this family — every 'Ann Telfer' in the books is a MIDDLE name (Susan Ann, Mary Ann, Sarah Ann, Sandra Ann). Empty 212-byte shell with no dates.",
+      "date": "2026-09-22",
+      "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
+    },
+    "johnnie-telfer": {
+      "to": "john-telfer-1847",
+      "reason": "Fabricated child of the Ann Taylor stub. 'Johnnie' returns ZERO hits across all three book texts. Empty 228-byte shell with no dates.",
+      "date": "2026-09-22",
+      "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
+    },
+    "robina-telfer": {
+      "to": "john-telfer-1847",
+      "reason": "Fabricated child of the Ann Taylor stub. The only 'Robina' in the books belongs to the Scottish Newcastleton branch (Borders p.361), not the South Australian 1847 line. Empty 224-byte shell with no dates.",
+      "date": "2026-09-22",
+      "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
+    },
+    "jessie-telfer": {
+      "to": "john-telfer-1847",
+      "reason": "Fabricated child of the Ann Taylor stub. No Jessie among John Telfer (1847-1929)'s children in the books. Empty 224-byte shell with no dates.",
+      "date": "2026-09-22",
+      "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
+    },
+    "frederick-parker-1838": {
+      "to": "frederick-parker",
+      "reason": "Stale slug from the pre-correction state. Frederick Parker's birth year was corrected 1838 -> 1848 (Corrections Log item 1; Genealogy SA Marriage Reg 89/759, groom age 23 in 1871). The vault file was renamed and the slug scheme later moved to a yearless 'frederick-parker'. The old 'frederick-parker-1838' URL must resolve to the corrected page.",
+      "date": "2026-10-05",
+      "corrections_log": "### 1. Frederick Parker — birth year CORRECTED 1838 → 1848"
+    },
+    "lillian-may-telfer-1872": {
+      "to": "lillian-telfer",
+      "reason": "Stale slug from the pre-correction state. Lillian May Telfer's birth was corrected 1872 -> 7 Aug 1873 (Corrections Log item 2; Tree pp. 287 & 291). Her current slug is derived from the NAME ('lillian-telfer'), so the old year-suffixed URL must resolve to the corrected page.",
+      "date": "2026-10-05",
+      "corrections_log": "### 2. Lillian May Telfer — birth 1872 → 7 Aug 1873; file renamed"
+    },
+    "aaron-ivory-1989": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Aaron Paul Ivory"
+    },
+    "joel-ivory-1986": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Joel Matthew Ivory"
+    },
+    "jared-ivory-1993": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Jared Mitchell Ivory"
+    },
+    "lauren-ivory-1994": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Lauren Maree Ivory"
+    },
+    "karina-ivory": {
+      "to": "paul-ivory-1955",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Karina Ivory"
+    },
+    "sheryle-telfer-1961": {
+      "to": "timothy-telfer-1959",
+      "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
+      "date": "2026-10-16",
+      "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
+      "privacy_withdrawal": true,
+      "person": "Sheryle Joy Telfer"
+    },
+    "catherine-leah": {
+      "to": "catherine-lawrie",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Catherine Leah' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "hugh-john": {
+      "to": "hugh-lawrie",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Hugh John' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "frank-lindsay": {
+      "to": "frank-lawrie",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Frank Lindsay' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "marion-vida": {
+      "to": "marion-lawrie-1888",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Marion Vida' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "janet-stevenson": {
+      "to": "janet-lawrie-1881",
+      "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME ('Janet Stevenson'), and she had NO dates at all, so the page defaulted to LIVING. Her birth (19 May 1881) and death (1959) were confirmed from her father Robert Dunlop Lawrie's timeline; the surname was corrected to Lawrie. The old URL must resolve to the corrected page.",
+      "date": "2026-10-23",
+      "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
+    },
+    "jono-telfer": {
+      "to": "jonathon-telfer",
+      "reason": "Page had been TITLED with the family nickname rather than the printed name. A Telfer Family Tree (2008), printed p.144 records '3. Jonathon Scot TELFER, b. 31 Jan 1995'; Mark Telfer confirmed the family spelling as 'Scott' (2 t's) on 2026-10-25. The page is now named for the printed person and 'Jono' is recorded as an alias. This is a rename, not a removal — the person and their record are unchanged.",
+      "date": "2026-10-25",
+      "corrections_log": "2026-10-25 — RENAMED: 'Jono Telfer' → \"Jonathon Scott Telfer (b. 1995)\" (nickname in page title)"
+    },
+    "nick-telfer": {
+      "to": "nicholas-telfer",
+      "reason": "Page had been TITLED with the family nickname rather than the printed name. A Telfer Family Tree (2008), printed p.144 records '2. Nicholas Adam TELFER, b. 11 Apr 1988 Tumby Bay, SA'. The page is now named for the printed person and 'Nick' is recorded as an alias. This is a rename, not a removal — the person and their record are unchanged.",
+      "date": "2026-10-25",
+      "corrections_log": "2026-10-25 — RENAMED: 'Nick Telfer' → \"Nicholas Adam Telfer (b. 1988)\" (nickname in page title)"
+    },
+    "kristin-stefanoff": {
+      "to": "kristin-holly-telfer-stefanoff-1985",
+      "reason": "Page title carried only the married surname and no middle name or dates. A Telfer Family Tree (2008), printed p.144 records '1. Kristin Holly TELFER, b. 26 Mar 1985 Tumby Bay, SA'; she married Ben Stefanoff. The page is now titled 'Kristin Holly (Telfer) Stefanoff (b. 1985)' so that the maiden name, middle name and birth year all resolve. This is a rename, not a removal.",
+      "date": "2026-10-25",
+      "corrections_log": "2026-10-25 — RENAMED: 'Kristin Stefanoff' → \"Kristin Holly (Telfer) Stefanoff (b. 1985)\""
+    },
+    "beryl-ruth-telfer-1949": {
+      "to": "miriam-ruth-telfer-1949",
+      "reason": "Phantom duplicate, not a real person. 'Beryl Ruth Telfer' was produced by OCR corruption of 'Miriam Ruth Telfer, b. 5 Jul 1949' in the 2008 Supplement's scan-derived text layer. Two independent sources print Miriam Ruth: the Supplement's own Reginald/Edwin block and the Borders text layer. Miriam Ruth already has her own profile (miriam-ruth-telfer-1949), correctly parented to Edwin Roy Telfer. The phantom carried a wrong father link that was ALSO poisoning Brenda Janice and Lyndell Marie's parentage. Visitors land on the real person.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 — REMOVED: \"Beryl Ruth Telfer (1949)\" phantom (OCR corruption of Miriam Ruth Telfer)"
+    },
+    "stanley-lawrence-pedler-1948": {
+      "to": "allan-pedler",
+      "reason": "Phantom, not a person. Created from the 2008 Supplement OCR line 'stan Laweonce PEDLER, b. 20 Dec 1948', which is 'Allan Lawrence PEDLER, b. 20 Dec 1946'. Gladys own chapter in From the Borders to the Bush names four children (Stanley James, Mary Ellen, Shirley Irene, Allan Lawrence) and states 'On 20th December, 1946, our next baby boy, Allan Lawrence, was born.'",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 REMOVED: Stanley Lawrence Pedler (1948) phantom child of Gladys Merle Telfer (OCR artifact of Allan Lawrence Pedler, b. 1946)"
+    },
+    "kenneth-james-pedler": {
+      "to": "kenneth-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "keith-gordon-pedler": {
+      "to": "keith-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "sharon-marie-pedler": {
+      "to": "sharon-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "susan-irene-pedler": {
+      "to": "susan-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "lance-gordon-hawkins": {
+      "to": "lance-hawkins",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "craig-harold-hawkins": {
+      "to": "craig-hawkins",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "gaylene-merle-hawkins": {
+      "to": "gaylene-hawkins",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "brett-kenneth-rylance": {
+      "to": "brett-rylance",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "julie-evelyn-rylance": {
+      "to": "julie-rylance",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "shane-daniel-pedler": {
+      "to": "shane-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "kirrilee-skye-pedler": {
+      "to": "kirrilee-pedler",
+      "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
+      "date": "2026-10-26",
+      "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
+    },
+    "helen-telfer": {
+      "to": "harriett-helen-telfer",
+      "reason": "Vault-file RENAME, not a removal. The note 'Helen Telfer.md' was renamed to 'Harriett Helen Telfer (1873–1929).md' in vault commit f1463f6 (2026-10-27) when Robert Telfer (1835–1907)'s nine children were corrected. The person is unchanged; only the filename and the recorded given names were corrected to her full name. The old live URL must resolve to the renamed page.",
+      "date": "2026-10-27",
+      "corrections_log": "2026-10-27 — Robert Telfer (1835-1907)'s nine children: correct identities, dates and parents",
+      "display_name": "Harriett Helen Telfer"
+    },
+    "doris-elma-telfer-1919": {
+      "to": "doris-telfer",
+      "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates; the vault note was renamed to match and the derived slug changed. The person is unchanged. Birth 1919 -> 1918 per Genealogy SA birth index and marriage 420/6926, as recorded in the vault note 'Doris Elma Telfer (1918-1993).md'. The old live URL must resolve to the new page.",
+      "date": "2026-10-27",
+      "corrections_log": "2026-10-26 - Correct 4 Telfer dates against Trove + Genealogy SA sources",
+      "display_name": "Doris Elma Telfer"
+    },
+    "edwin-telfer-1921": {
+      "to": "edwin-telfer",
+      "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates; the vault note was renamed to match and the derived slug changed. The person is unchanged. Dates 1921-2009 -> 1919-1996 per Genealogy SA birth index + cemeteries index, as recorded in the vault note 'Edwin Roy Telfer (1919-1996).md'. Edwin ROY Telfer (b.1919), distinct from Edwin Gilbert Telfer (b.1887). The old live URL must resolve to the new page.",
+      "date": "2026-10-27",
+      "corrections_log": "2026-10-26 - Correct 4 Telfer dates against Trove + Genealogy SA sources",
+      "display_name": "Edwin Roy Telfer"
+    },
+    "gladys-merle-telfer-1917": {
+      "to": "gladys-telfer",
+      "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates; the vault note was renamed to match and the derived slug changed. The person is unchanged. Birth 1917 -> 1916 per Genealogy SA birth index and Ryerson age 92, as recorded in the vault note 'Gladys Merle Telfer (1916-living).md'; she remains flagged living. The old live URL must resolve to the new page.",
+      "date": "2026-10-27",
+      "corrections_log": "2026-10-26 - Correct 4 Telfer dates against Trove + Genealogy SA sources",
+      "display_name": "Gladys Merle Telfer"
+    },
+    "donald-rex-fatchen-1957": {
+      "to": "ronald-rex-fatchen",
+      "reason": "SLUG RENAME, not a removal — and the old slug carried two faults at once. (1) The GIVEN NAME was wrong: this man is Ronald Rex Fatchen, not Donald. B2 (From the Borders to the Bush) printed p.174 was read from the PAGE IMAGE by two independent engines — WeVisDoc-2B (local) and Gemini vision (cloud) — across three renders at 9x and 12x magnification; both read 'Ronald Rex Fatchen' on every render and neither ever read 'Donald'. (2) The trailing YEAR in the slug was wrong: 1957 was a marriage-era date sitting in his birth-date cell, not a birth. That date has been withdrawn rather than guessed, and the vault now states plainly that B2 prints no birth date for him at all. The person is unchanged and has his own vault note ('Ronald Rex Fatchen.md'). 'Donald' survives correctly only as the MIDDLE name of his son Bradley Donald Fatchen. Recorded in the vault Corrections Log, 2026-10-27.",
+      "date": "2026-10-27",
+      "corrections_log": "2026-10-27 — CORRECTION: 'Donald Rex Fatchen' was Ronald Rex Fatchen; birth date 17 Dec 1957 withdrawn (was a marriage-era date, no birth date printed in B2)",
+      "display_name": "Ronald Rex Fatchen"
+    },
+    "angelina-elen-telfer-1988": {
+      "to": "angelina-telfer",
+      "reason": "Duplicate with a misspelled middle name. The vault profile is Angelina Ellen Telfer, b. 17 Apr 1988 Tumby Bay. This one reads 'Elen', a transcription slip, not a second child.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "brenton-kym-saviour": {
+      "to": "brenton-siviour",
+      "reason": "Duplicate under a misspelled surname. Both readers of printed Supplement p.140 return SIVIOUR, not 'Saviour' — the stub's surname is an OCR slip, not a second family. The vault profile is Brenton Kym Siviour, b. 14 May 1966 Snowtown SA.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "emma-louise-commane-1983": {
+      "to": "emma-commane",
+      "reason": "Duplicate that drops a middle name. The vault profile is Emma Louise Jayne Commane (b. 1983); this stub was generated from the same line with the 'Jayne' lost.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "jordan-kane-telfer-1984": {
+      "to": "jordon-telfer",
+      "reason": "Spelling duplicate. The printed page has Jordon Kane TELFER, b. 3 Jun 1984 Tumby Bay, and the vault holds that profile. This slug spells the name 'Jordan', which is not what the book prints. Keeping both would publish the same child under two spellings.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "sarah-nicholson": {
+      "to": "sarah-nicholson-1984",
+      "reason": "Duplicate stub for Sarah Jane Nicholson (b. 11 Nov 1984), daughter of Gerald Nicholson and Kaye Lorraine Meyers. This record carried the bare slug /people/sarah-nicholson/ and her middle name was lost; the vault profile now publishes /people/sarah-nicholson-1984/. One child, one page.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "wendy-lynette-saviour": {
+      "to": "wendy-siviour",
+      "reason": "Duplicate under a misspelled surname. The page reads SIVIOUR; this record's 'Saviour' is an OCR slip, and the stub's marriage date also disagreed with the page. The vault profile is Wendy Lynette Siviour, b. 10 Dec 1969 Pt Lincoln SA.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "dennis-rowe-1946": {
+      "to": "john-rowe",
+      "reason": "Phantom name, not a second person. There is no Dennis Rowe printed; the eldest child of Albert Rowe and Doris Elma Telfer is John ROWE, b. 30 Jan 1946. The stub's name and its marriage date (14 May 1967 against the printed 11 May 1967) were both OCR slips. Visitors go to the real man's page.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "joy-barton-1954": {
+      "to": "jennifer-barton",
+      "reason": "Phantom name. 'Joy' is Jennifer Joy BARTON's middle name; the book prints Jennifer Joy BARTON, b. 30 Aug 1954 Tumby Bay SA. The stub split her name and published a person who does not exist. Visitors go to her real page.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "nola-elizabeth-nicholson-1959": {
+      "to": "helen-nicholson",
+      "reason": "Phantom name from the book's OCR text layer. Printed Supplement p.145 reads Helen Elizabeth NICHOLSON, b. 8 Oct 1959 Mt Gambier SA. The stub's 'Nola', her husband's birth year (1957 against 1967) and the marriage year (1980 against 1997) were all OCR errors, now retracted.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "kelson-telfer-1946": {
+      "to": null,
+      "reason": "Phantom person. Francis Kelson TELFER and Sylvia Merle BOAL have NO children printed: the OCR text layer interleaved their two lines and manufactured a child. Both independent readers of the printed page 138 image agree there is no child. No successor page exists, so visitors get the notice rather than a wrong person.",
+      "date": "2026-10-28",
+      "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
+    },
+    "edward-telfer": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "eric-john-telfer": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "edith-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "esther-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "esther-hannah-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "james-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "margaret-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "peter-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "robert-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "sarah-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    },
+    "william-farrow": {
+      "to": null,
+      "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
+      "date": "2026-10-28",
+      "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
+    }
   }
- },
- "removed": {
-  "esther-naomi-lynette-telfer-1983": {
-   "to": "esther-naomi-lynette-telfer-1993",
-   "reason": "Date correction, not a removal. The page was titled (b. 1983) from a bad OCR read of '6 Mar 1983' in the 2008 Supplement's scan-derived text layer. Two independent sources print 1993: the 1989 book's text layer ('b. 6 Mar 1993 Tumby Bay, SA') and a direct reading of the Supplement's printed page 145. The Supplement scan's OCR layer misread the 9 as an 8. Page retitled to 1993.",
-   "date": "2026-10-25",
-   "corrections_log": "2026-10-25 — CORRECTION: Esther Naomi Lynette Telfer birth year 1983 → 1993 (OCR misread, two sources agree)"
-  },
-  "ann-taylor-1856": {
-   "to": "john-telfer-1847",
-   "reason": "Fabricated spouse. No 'Ann Taylor' exists in any of the three gold books; her stated husband 'John Telfer (1847-1923)' does not exist either (all three books give 1847-1929 and print his marriage to Caroline Amelia Masters six times in the Supplement alone). Her nine children have no book support. Visitors land on the man her stub was wrongly attached to.",
-   "date": "2026-09-22",
-   "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
-  },
-  "ann-telfer": {
-   "to": "john-telfer-1847",
-   "reason": "Fabricated child of the Ann Taylor stub. No standalone daughter named Ann in this family — every 'Ann Telfer' in the books is a MIDDLE name (Susan Ann, Mary Ann, Sarah Ann, Sandra Ann). Empty 212-byte shell with no dates.",
-   "date": "2026-09-22",
-   "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
-  },
-  "johnnie-telfer": {
-   "to": "john-telfer-1847",
-   "reason": "Fabricated child of the Ann Taylor stub. 'Johnnie' returns ZERO hits across all three book texts. Empty 228-byte shell with no dates.",
-   "date": "2026-09-22",
-   "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
-  },
-  "robina-telfer": {
-   "to": "john-telfer-1847",
-   "reason": "Fabricated child of the Ann Taylor stub. The only 'Robina' in the books belongs to the Scottish Newcastleton branch (Borders p.361), not the South Australian 1847 line. Empty 224-byte shell with no dates.",
-   "date": "2026-09-22",
-   "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
-  },
-  "jessie-telfer": {
-   "to": "john-telfer-1847",
-   "reason": "Fabricated child of the Ann Taylor stub. No Jessie among John Telfer (1847-1929)'s children in the books. Empty 224-byte shell with no dates.",
-   "date": "2026-09-22",
-   "corrections_log": "2026-09-22 — REMOVED: \"Ann Taylor (~1856–?)\" and four fabricated children (books contradict the vault)"
-  },
-  "frederick-parker-1838": {
-   "to": "frederick-parker",
-   "reason": "Stale slug from the pre-correction state. Frederick Parker's birth year was corrected 1838 -> 1848 (Corrections Log item 1; Genealogy SA Marriage Reg 89/759, groom age 23 in 1871). The vault file was renamed and the slug scheme later moved to a yearless 'frederick-parker'. The old 'frederick-parker-1838' URL must resolve to the corrected page.",
-   "date": "2026-10-05",
-   "corrections_log": "### 1. Frederick Parker — birth year CORRECTED 1838 → 1848"
-  },
-  "lillian-may-telfer-1872": {
-   "to": "lillian-telfer",
-   "reason": "Stale slug from the pre-correction state. Lillian May Telfer's birth was corrected 1872 -> 7 Aug 1873 (Corrections Log item 2; Tree pp. 287 & 291). Her current slug is derived from the NAME ('lillian-telfer'), so the old year-suffixed URL must resolve to the corrected page.",
-   "date": "2026-10-05",
-   "corrections_log": "### 2. Lillian May Telfer — birth 1872 → 7 Aug 1873; file renamed"
-  },
-  "aaron-ivory-1989": {
-   "to": "paul-ivory-1955",
-   "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
-   "date": "2026-10-16",
-   "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
-   "privacy_withdrawal": true,
-   "person": "Aaron Paul Ivory"
-  },
-  "joel-ivory-1986": {
-   "to": "paul-ivory-1955",
-   "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
-   "date": "2026-10-16",
-   "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
-   "privacy_withdrawal": true,
-   "person": "Joel Matthew Ivory"
-  },
-  "jared-ivory-1993": {
-   "to": "paul-ivory-1955",
-   "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
-   "date": "2026-10-16",
-   "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
-   "privacy_withdrawal": true,
-   "person": "Jared Mitchell Ivory"
-  },
-  "lauren-ivory-1994": {
-   "to": "paul-ivory-1955",
-   "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
-   "date": "2026-10-16",
-   "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
-   "privacy_withdrawal": true,
-   "person": "Lauren Maree Ivory"
-  },
-  "karina-ivory": {
-   "to": "paul-ivory-1955",
-   "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
-   "date": "2026-10-16",
-   "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
-   "privacy_withdrawal": true,
-   "person": "Karina Ivory"
-  },
-  "sheryle-telfer-1961": {
-   "to": "timothy-telfer-1959",
-   "reason": "Privacy withdrawal (owner ruling 2026-10-16, at the request of the person's own family). The living person and their mother are no longer published: no profile page, no photo, no index entry, no sitemap row. THIS IS NOT A CITEABLE RETRACTION — the person exists and their record is intact in the vault; the site simply does not publish them. Visitors who followed an old link land on the family page that names them. Reversible: remove the slug from src/data/privacy-exclusions.mjs and rebuild.",
-   "date": "2026-10-16",
-   "corrections_log": "2026-10-16 — PRIVACY WITHDRAWAL: living Ivory generation + their mother unpublished from the site (vault intact, reversible)",
-   "privacy_withdrawal": true,
-   "person": "Sheryle Joy Telfer"
-  },
-  "catherine-leah": {
-   "to": "catherine-lawrie",
-   "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Catherine Leah' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
-   "date": "2026-10-23",
-   "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
-  },
-  "hugh-john": {
-   "to": "hugh-lawrie",
-   "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Hugh John' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
-   "date": "2026-10-23",
-   "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
-  },
-  "frank-lindsay": {
-   "to": "frank-lawrie",
-   "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Frank Lindsay' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
-   "date": "2026-10-23",
-   "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
-  },
-  "marion-vida": {
-   "to": "marion-lawrie-1888",
-   "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Marion Vida' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page.",
-   "date": "2026-10-23",
-   "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
-  },
-  "janet-stevenson": {
-   "to": "janet-lawrie-1881",
-   "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME ('Janet Stevenson'), and she had NO dates at all, so the page defaulted to LIVING. Her birth (19 May 1881) and death (1959) were confirmed from her father Robert Dunlop Lawrie's timeline; the surname was corrected to Lawrie. The old URL must resolve to the corrected page.",
-   "date": "2026-10-23",
-   "corrections_log": "2026-10-23 — NAME CORRECTED: given names had been stored as surname (itc-20261023-1)"
-  },
-  "jono-telfer": {
-   "to": "jonathon-telfer",
-   "reason": "Page had been TITLED with the family nickname rather than the printed name. A Telfer Family Tree (2008), printed p.144 records '3. Jonathon Scot TELFER, b. 31 Jan 1995'; Mark Telfer confirmed the family spelling as 'Scott' (2 t's) on 2026-10-25. The page is now named for the printed person and 'Jono' is recorded as an alias. This is a rename, not a removal — the person and their record are unchanged.",
-   "date": "2026-10-25",
-   "corrections_log": "2026-10-25 — RENAMED: 'Jono Telfer' → \"Jonathon Scott Telfer (b. 1995)\" (nickname in page title)"
-  },
-  "nick-telfer": {
-   "to": "nicholas-telfer",
-   "reason": "Page had been TITLED with the family nickname rather than the printed name. A Telfer Family Tree (2008), printed p.144 records '2. Nicholas Adam TELFER, b. 11 Apr 1988 Tumby Bay, SA'. The page is now named for the printed person and 'Nick' is recorded as an alias. This is a rename, not a removal — the person and their record are unchanged.",
-   "date": "2026-10-25",
-   "corrections_log": "2026-10-25 — RENAMED: 'Nick Telfer' → \"Nicholas Adam Telfer (b. 1988)\" (nickname in page title)"
-  },
-  "kristin-stefanoff": {
-   "to": "kristin-holly-telfer-stefanoff-1985",
-   "reason": "Page title carried only the married surname and no middle name or dates. A Telfer Family Tree (2008), printed p.144 records '1. Kristin Holly TELFER, b. 26 Mar 1985 Tumby Bay, SA'; she married Ben Stefanoff. The page is now titled 'Kristin Holly (Telfer) Stefanoff (b. 1985)' so that the maiden name, middle name and birth year all resolve. This is a rename, not a removal.",
-   "date": "2026-10-25",
-   "corrections_log": "2026-10-25 — RENAMED: 'Kristin Stefanoff' → \"Kristin Holly (Telfer) Stefanoff (b. 1985)\""
-  },
-  "beryl-ruth-telfer-1949": {
-   "to": "miriam-ruth-telfer-1949",
-   "reason": "Phantom duplicate, not a real person. 'Beryl Ruth Telfer' was produced by OCR corruption of 'Miriam Ruth Telfer, b. 5 Jul 1949' in the 2008 Supplement's scan-derived text layer. Two independent sources print Miriam Ruth: the Supplement's own Reginald/Edwin block and the Borders text layer. Miriam Ruth already has her own profile (miriam-ruth-telfer-1949), correctly parented to Edwin Roy Telfer. The phantom carried a wrong father link that was ALSO poisoning Brenda Janice and Lyndell Marie's parentage. Visitors land on the real person.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 — REMOVED: \"Beryl Ruth Telfer (1949)\" phantom (OCR corruption of Miriam Ruth Telfer)"
-  },
-  "stanley-lawrence-pedler-1948": {
-   "to": "allan-pedler",
-   "reason": "Phantom, not a person. Created from the 2008 Supplement OCR line 'stan Laweonce PEDLER, b. 20 Dec 1948', which is 'Allan Lawrence PEDLER, b. 20 Dec 1946'. Gladys own chapter in From the Borders to the Bush names four children (Stanley James, Mary Ellen, Shirley Irene, Allan Lawrence) and states 'On 20th December, 1946, our next baby boy, Allan Lawrence, was born.'",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 REMOVED: Stanley Lawrence Pedler (1948) phantom child of Gladys Merle Telfer (OCR artifact of Allan Lawrence Pedler, b. 1946)"
-  },
-  "kenneth-james-pedler": {
-   "to": "kenneth-pedler",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "keith-gordon-pedler": {
-   "to": "keith-pedler",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "sharon-marie-pedler": {
-   "to": "sharon-pedler",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "susan-irene-pedler": {
-   "to": "susan-pedler",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "lance-gordon-hawkins": {
-   "to": "lance-hawkins",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "craig-harold-hawkins": {
-   "to": "craig-hawkins",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "gaylene-merle-hawkins": {
-   "to": "gaylene-hawkins",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "brett-kenneth-rylance": {
-   "to": "brett-rylance",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "julie-evelyn-rylance": {
-   "to": "julie-rylance",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "shane-daniel-pedler": {
-   "to": "shane-pedler",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "kirrilee-skye-pedler": {
-   "to": "kirrilee-pedler",
-   "reason": "Duplicate profile created 2026-10-26 when a vault note was written for the same person who already had a record without a vault_file. The pipeline keys on the full-name slug, producing a second, year-less profile alongside the real one. Two records for one living person is a worse fault than a missing record. The surviving profile has the vault note, the birth year and every incoming reference.",
-   "date": "2026-10-26",
-   "corrections_log": "2026-10-26 MERGED: duplicate Pedler grandchild records created by slug collision (full-name vs bare-name slug)"
-  },
-  "helen-telfer": {
-   "to": "harriett-helen-telfer",
-   "reason": "Vault-file RENAME, not a removal. The note 'Helen Telfer.md' was renamed to 'Harriett Helen Telfer (1873–1929).md' in vault commit f1463f6 (2026-10-27) when Robert Telfer (1835–1907)'s nine children were corrected. The person is unchanged; only the filename and the recorded given names were corrected to her full name. The old live URL must resolve to the renamed page.",
-   "date": "2026-10-27",
-   "corrections_log": "2026-10-27 — Robert Telfer (1835-1907)'s nine children: correct identities, dates and parents",
-   "display_name": "Harriett Helen Telfer"
-  },
-  "doris-elma-telfer-1919": {
-   "to": "doris-telfer",
-   "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates; the vault note was renamed to match and the derived slug changed. The person is unchanged. Birth 1919 -> 1918 per Genealogy SA birth index and marriage 420/6926, as recorded in the vault note 'Doris Elma Telfer (1918-1993).md'. The old live URL must resolve to the new page.",
-   "date": "2026-10-27",
-   "corrections_log": "2026-10-26 - Correct 4 Telfer dates against Trove + Genealogy SA sources",
-   "display_name": "Doris Elma Telfer"
-  },
-  "edwin-telfer-1921": {
-   "to": "edwin-telfer",
-   "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates; the vault note was renamed to match and the derived slug changed. The person is unchanged. Dates 1921-2009 -> 1919-1996 per Genealogy SA birth index + cemeteries index, as recorded in the vault note 'Edwin Roy Telfer (1919-1996).md'. Edwin ROY Telfer (b.1919), distinct from Edwin Gilbert Telfer (b.1887). The old live URL must resolve to the new page.",
-   "date": "2026-10-27",
-   "corrections_log": "2026-10-26 - Correct 4 Telfer dates against Trove + Genealogy SA sources",
-   "display_name": "Edwin Roy Telfer"
-  },
-  "gladys-merle-telfer-1917": {
-   "to": "gladys-telfer",
-   "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates; the vault note was renamed to match and the derived slug changed. The person is unchanged. Birth 1917 -> 1916 per Genealogy SA birth index and Ryerson age 92, as recorded in the vault note 'Gladys Merle Telfer (1916-living).md'; she remains flagged living. The old live URL must resolve to the new page.",
-   "date": "2026-10-27",
-   "corrections_log": "2026-10-26 - Correct 4 Telfer dates against Trove + Genealogy SA sources",
-   "display_name": "Gladys Merle Telfer"
-  },
-  "donald-rex-fatchen-1957": {
-   "to": "ronald-rex-fatchen",
-   "reason": "SLUG RENAME, not a removal — and the old slug carried two faults at once. (1) The GIVEN NAME was wrong: this man is Ronald Rex Fatchen, not Donald. B2 (From the Borders to the Bush) printed p.174 was read from the PAGE IMAGE by two independent engines — WeVisDoc-2B (local) and Gemini vision (cloud) — across three renders at 9x and 12x magnification; both read 'Ronald Rex Fatchen' on every render and neither ever read 'Donald'. (2) The trailing YEAR in the slug was wrong: 1957 was a marriage-era date sitting in his birth-date cell, not a birth. That date has been withdrawn rather than guessed, and the vault now states plainly that B2 prints no birth date for him at all. The person is unchanged and has his own vault note ('Ronald Rex Fatchen.md'). 'Donald' survives correctly only as the MIDDLE name of his son Bradley Donald Fatchen. Recorded in the vault Corrections Log, 2026-10-27.",
-   "date": "2026-10-27",
-   "corrections_log": "2026-10-27 — CORRECTION: 'Donald Rex Fatchen' was Ronald Rex Fatchen; birth date 17 Dec 1957 withdrawn (was a marriage-era date, no birth date printed in B2)",
-   "display_name": "Ronald Rex Fatchen"
-  },
-  "angelina-elen-telfer-1988": {
-   "to": "angelina-telfer",
-   "reason": "Duplicate with a misspelled middle name. The vault profile is Angelina Ellen Telfer, b. 17 Apr 1988 Tumby Bay. This one reads 'Elen', a transcription slip, not a second child.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "brenton-kym-saviour": {
-   "to": "brenton-siviour",
-   "reason": "Duplicate under a misspelled surname. Both readers of printed Supplement p.140 return SIVIOUR, not 'Saviour' — the stub's surname is an OCR slip, not a second family. The vault profile is Brenton Kym Siviour, b. 14 May 1966 Snowtown SA.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "emma-louise-commane-1983": {
-   "to": "emma-commane",
-   "reason": "Duplicate that drops a middle name. The vault profile is Emma Louise Jayne Commane (b. 1983); this stub was generated from the same line with the 'Jayne' lost.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "jordan-kane-telfer-1984": {
-   "to": "jordon-telfer",
-   "reason": "Spelling duplicate. The printed page has Jordon Kane TELFER, b. 3 Jun 1984 Tumby Bay, and the vault holds that profile. This slug spells the name 'Jordan', which is not what the book prints. Keeping both would publish the same child under two spellings.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "sarah-nicholson": {
-   "to": "sarah-nicholson-1984",
-   "reason": "Duplicate stub for Sarah Jane Nicholson (b. 11 Nov 1984), daughter of Gerald Nicholson and Kaye Lorraine Meyers. This record carried the bare slug /people/sarah-nicholson/ and her middle name was lost; the vault profile now publishes /people/sarah-nicholson-1984/. One child, one page.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "wendy-lynette-saviour": {
-   "to": "wendy-siviour",
-   "reason": "Duplicate under a misspelled surname. The page reads SIVIOUR; this record's 'Saviour' is an OCR slip, and the stub's marriage date also disagreed with the page. The vault profile is Wendy Lynette Siviour, b. 10 Dec 1969 Pt Lincoln SA.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "dennis-rowe-1946": {
-   "to": "john-rowe",
-   "reason": "Phantom name, not a second person. There is no Dennis Rowe printed; the eldest child of Albert Rowe and Doris Elma Telfer is John ROWE, b. 30 Jan 1946. The stub's name and its marriage date (14 May 1967 against the printed 11 May 1967) were both OCR slips. Visitors go to the real man's page.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "joy-barton-1954": {
-   "to": "jennifer-barton",
-   "reason": "Phantom name. 'Joy' is Jennifer Joy BARTON's middle name; the book prints Jennifer Joy BARTON, b. 30 Aug 1954 Tumby Bay SA. The stub split her name and published a person who does not exist. Visitors go to her real page.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "nola-elizabeth-nicholson-1959": {
-   "to": "helen-nicholson",
-   "reason": "Phantom name from the book's OCR text layer. Printed Supplement p.145 reads Helen Elizabeth NICHOLSON, b. 8 Oct 1959 Mt Gambier SA. The stub's 'Nola', her husband's birth year (1957 against 1967) and the marriage year (1980 against 1997) were all OCR errors, now retracted.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "kelson-telfer-1946": {
-   "to": null,
-   "reason": "Phantom person. Francis Kelson TELFER and Sylvia Merle BOAL have NO children printed: the OCR text layer interleaved their two lines and manufactured a child. Both independent readers of the printed page 138 image agree there is no child. No successor page exists, so visitors get the notice rather than a wrong person.",
-   "date": "2026-10-28",
-   "corrections_log": "Duplicate and phantom profile retirements, 28 October 2026"
-  },
-  "allan-telfer": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "edward-telfer": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "eric-john-telfer": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "elizabeth-anne-smith-1878": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "edith-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "esther-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "esther-hannah-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "james-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "joseph-francis-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "margaret-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "peter-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "robert-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "sarah-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  },
-  "william-farrow": {
-   "to": null,
-   "reason": "Sourceless empty shell removed from the vault. No facts beyond a bare name, no relationships, no date of any kind, and ZERO inbound wikilinks from any other note. It was noise, not family history: it recorded nothing that is not already held elsewhere, and nobody was linked to it. Removed under Mark's 28 Oct ruling on the 81 sourceless notes. Backed up before deletion.",
-   "date": "2026-10-28",
-   "corrections_log": "2026-10-28 (15:20) — SOURCELESS-NOTE SWEEP: 14 empty shells removed · 55 notes given an honest evidence status · 3 deletions refused"
-  }
- }
 }

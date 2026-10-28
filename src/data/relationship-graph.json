@@ -3206,6 +3206,21 @@
       "generation": 9
     },
     {
+      "slug": "allan-telfer",
+      "id": "Allan Telfer",
+      "generation": 7
+    },
+    {
+      "slug": "elizabeth-smith",
+      "id": "Elizabeth Anne Smith (1878)",
+      "generation": 5
+    },
+    {
+      "slug": "joseph-farrow",
+      "id": "Joseph Francis Farrow",
+      "generation": 5
+    },
+    {
       "slug": "nicholas-andre-maddern-1974",
       "id": "Nicholas Andre Maddern (1974)",
       "generation": 8
@@ -6355,6 +6370,30 @@
         "to": "james-telfer-1978"
       },
       {
+        "from": "gilbert-telfer-1908",
+        "to": "allan-telfer"
+      },
+      {
+        "from": "jessie-allan",
+        "to": "allan-telfer"
+      },
+      {
+        "from": "esther-jane-telfer-1834",
+        "to": "elizabeth-smith"
+      },
+      {
+        "from": "john-smith-1827",
+        "to": "elizabeth-smith"
+      },
+      {
+        "from": "charles-farrow-1836",
+        "to": "joseph-farrow"
+      },
+      {
+        "from": "elizabeth-hannah-telfer-1836",
+        "to": "joseph-farrow"
+      },
+      {
         "from": "lyndell-marie-telfer-1951",
         "to": "nicholas-andre-maddern-1974"
       },
@@ -7204,6 +7243,10 @@
       },
       {
         "from": "amy-farrow-stribling-1868",
+        "to": "joseph-farrow"
+      },
+      {
+        "from": "amy-farrow-stribling-1868",
         "to": "mary-bayes-farrow-1875"
       },
       {
@@ -7940,6 +7983,10 @@
       },
       {
         "from": "elizabeth-farrow",
+        "to": "joseph-farrow"
+      },
+      {
+        "from": "elizabeth-farrow",
         "to": "mary-bayes-farrow-1875"
       },
       {
@@ -8033,6 +8080,10 @@
       {
         "from": "elizabeth-telfer-farrow-holloway-1861",
         "to": "john-farrow"
+      },
+      {
+        "from": "elizabeth-telfer-farrow-holloway-1861",
+        "to": "joseph-farrow"
       },
       {
         "from": "elizabeth-telfer-farrow-holloway-1861",
@@ -8164,6 +8215,10 @@
       },
       {
         "from": "esther-farrow-latter-1859",
+        "to": "joseph-farrow"
+      },
+      {
+        "from": "esther-farrow-latter-1859",
         "to": "mary-bayes-farrow-1875"
       },
       {
@@ -8225,6 +8280,10 @@
       {
         "from": "eva-agnes-farrow-1877",
         "to": "john-farrow"
+      },
+      {
+        "from": "eva-agnes-farrow-1877",
+        "to": "joseph-farrow"
       },
       {
         "from": "eva-agnes-farrow-1877",
@@ -8521,6 +8580,10 @@
       {
         "from": "george-hope-farrow-1872",
         "to": "john-farrow"
+      },
+      {
+        "from": "george-hope-farrow-1872",
+        "to": "joseph-farrow"
       },
       {
         "from": "george-hope-farrow-1872",
@@ -8976,6 +9039,10 @@
       },
       {
         "from": "jane-murray-farrow-1857",
+        "to": "joseph-farrow"
+      },
+      {
+        "from": "jane-murray-farrow-1857",
         "to": "mary-bayes-farrow-1875"
       },
       {
@@ -9061,6 +9128,10 @@
       {
         "from": "john-telfer-1877",
         "to": "william-telfer-1880"
+      },
+      {
+        "from": "john-farrow",
+        "to": "joseph-farrow"
       },
       {
         "from": "john-farrow",
@@ -9469,6 +9540,10 @@
       {
         "from": "charles-farrow-jr",
         "to": "john-farrow"
+      },
+      {
+        "from": "charles-farrow-jr",
+        "to": "joseph-farrow"
       },
       {
         "from": "charles-farrow-jr",
@@ -10725,6 +10800,38 @@
       {
         "from": "james-telfer-1978",
         "to": "rosemary-telfer-miriam"
+      },
+      {
+        "from": "allan-telfer",
+        "to": "beth-telfer-1946"
+      },
+      {
+        "from": "allan-telfer",
+        "to": "ian-telfer-1947"
+      },
+      {
+        "from": "elizabeth-smith",
+        "to": "esther-telfer-smith-1870"
+      },
+      {
+        "from": "elizabeth-smith",
+        "to": "francis-telfer-smith-1874"
+      },
+      {
+        "from": "elizabeth-smith",
+        "to": "jane-sophie-smith-1866"
+      },
+      {
+        "from": "elizabeth-smith",
+        "to": "john-smith"
+      },
+      {
+        "from": "elizabeth-smith",
+        "to": "margaret-dougal-smith-1868"
+      },
+      {
+        "from": "joseph-farrow",
+        "to": "mary-bayes-farrow-1875"
       }
     ],
     "stepParentOf": [
