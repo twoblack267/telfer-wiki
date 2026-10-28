@@ -1,57 +1,13 @@
 {
-  "checkedAt": "2026-10-28T16:07:07.472Z",
+  "checkedAt": "2026-10-28T16:11:45.906Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 655,
+    "before": 654,
     "after": 654
   },
   "crownJewelsChecked": 6,
-  "renames": [
-    {
-      "from": "carissa-telfer-1989",
-      "to": "carissa-telfer-2023",
-      "name": "Carissa Telfer",
-      "declared": true
-    }
-  ],
+  "renames": [],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "angela-telfer",
-      "name": "Angela Telfer",
-      "field": "siblings",
-      "before": 5,
-      "after": 4,
-      "lost": 1,
-      "lostEntries": [
-        "carissa-telfer-1989"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "john-telfer-robert",
-      "name": "John Robert Telfer",
-      "field": "children",
-      "before": 6,
-      "after": 5,
-      "lost": 1,
-      "lostEntries": [
-        "carissa-telfer-1989"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "robyn-telfer",
-      "name": "Robyn Telfer",
-      "field": "children",
-      "before": 4,
-      "after": 3,
-      "lost": 1,
-      "lostEntries": [
-        "carissa-telfer-1989"
-      ]
-    }
-  ]
+  "warnings": []
 }

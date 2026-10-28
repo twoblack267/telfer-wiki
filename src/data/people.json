@@ -2922,9 +2922,18 @@
         ]
       },
       {
+        "type": "Mother",
+        "names": [
+          "Robyn Telfer (adoptive)"
+        ]
+      },
+      {
         "type": "Siblings",
         "names": [
-          "Angela Telfer"
+          "Angela Telfer",
+          "Sophia Telfer",
+          "Rebecca Telfer",
+          "Peter Telfer"
         ]
       }
     ],
@@ -2936,7 +2945,8 @@
     "is_living": false,
     "lifespan": "? – 2023",
     "parents": [
-      "john-telfer-robert"
+      "john-telfer-robert",
+      "robyn-telfer"
     ],
     "children": [],
     "spouses": [],
@@ -23432,6 +23442,7 @@
     "lifespan": "? – living",
     "parents": [],
     "children": [
+      "carissa-telfer-2023",
       "peter-telfer",
       "rebecca-telfer",
       "sophia-telfer"
