@@ -1,49 +1,13 @@
 {
-  "checkedAt": "2026-10-28T10:43:12.086Z",
+  "checkedAt": "2026-10-28T11:18:43.224Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 649,
+    "before": 655,
     "after": 655
   },
   "crownJewelsChecked": 5,
-  "renames": [
-    {
-      "from": "mary-telfer",
-      "to": "mary-telfer-1893",
-      "name": "Mary Frances Telfer"
-    },
-    {
-      "from": "margaret-telfer",
-      "to": "margaret-telfer-1962",
-      "name": "Margaret Telfer"
-    }
-  ],
+  "renames": [],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "martha-allen-1840",
-      "name": "Martha Allen",
-      "field": "children",
-      "before": 5,
-      "after": 4,
-      "lost": 1,
-      "lostEntries": [
-        "Martha Telfer"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "james-cowan",
-      "name": "James Cowan",
-      "field": "children",
-      "before": 11,
-      "after": 10,
-      "lost": 1,
-      "lostEntries": [
-        "James Cowan"
-      ]
-    }
-  ]
+  "warnings": []
 }

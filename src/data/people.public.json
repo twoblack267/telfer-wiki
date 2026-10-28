@@ -2259,7 +2259,9 @@
       "telfer",
       "research-lead"
     ],
-    "parents": [],
+    "parents": [
+      "thomas-telfer"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -3824,6 +3826,7 @@
       "robert-telfer-1886",
       "roland-telfer",
       "susan-telfer-1871",
+      "Martha Telfer (1873–?)",
       {
         "plain_name": "Eric John Telfer"
       }
@@ -6855,6 +6858,7 @@
     ],
     "children": [
       "agnes-paynter-1895",
+      "Richard William John Paynter",
       {
         "plain_name": "Lillian Ellen Jayne Paynter"
       },
@@ -10117,7 +10121,8 @@
       "joyce-telfer-1912",
       "kenneth-telfer-1906",
       "lindsay-telfer-1920",
-      "maifie-telfer-1913"
+      "maifie-telfer-1913",
+      "Murray John Telfer (1911–1982, adopted)"
     ],
     "spouses": [
       "mark-telfer-1877"
@@ -12623,6 +12628,57 @@
       {
         "plain_name": "Alma Tressy (Cullen) — 16th of 16 children"
       }
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Martha Pearce Telfer (1898)",
+    "slug": "martha-telfer",
+    "first_name": "Martha",
+    "middle_name": "Pearce",
+    "last_name": "Telfer",
+    "birth_year": 1898,
+    "death_year": 1978,
+    "birth_date": "11 August 1898",
+    "death_date": null,
+    "birth_year_display": "1898",
+    "death_year_display": "1978",
+    "display_name": "Martha Pearce Telfer",
+    "title": "Martha Pearce (Peggy) Telfer (1898–1978)",
+    "lifespan": "1898 – 1978",
+    "generation": 5,
+    "is_living": false,
+    "evidence_level": null,
+    "single_source": false,
+    "provisional_why": null,
+    "body_markdown": "# Martha Pearce \"Peggy\" Telfer (1898–1978)\n\n**Born:** 11 August 1898, Hundred of Pearce, South Australia | **Died:** 21 January 1978 | **Father:** [[James Telfer (1858–1944)]] | **Mother:** [[Frances Margaret Oswald (1861–1931)]] | **Spouse:** Arthur Stanley Urch, Canon (m. 4 May 1921)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Martha Pearce \"Peggy\" Telfer (1898–1978) |\n| Father | [[James Telfer (1858–1944)]] |\n| Mother | [[Frances Margaret Oswald (1861–1931)]] |\n| Spouse | Arthur Stanley Urch, Canon (b. 18 Dec 1883, m. 4 May 1921, d. 19 Mar 1971) |\n| Daughter | Joan Mary Urch (m. Geoffrey John Embleton, 1953 London) |\n| Sister | [[Jane Margaret Telfer (1882–1946)|Jane Margaret Telfer (1882–1946)]]|\n| Sister | [[Janet Welsh Telfer (1885–1924)|Janet Welsh Telfer (1885–1924)]]|\n| Sister | [[Millicent Agnes Telfer (1887–1985)|Millicent Agnes Telfer (1887–1985)]]|\n| Sister | [[Rose Gladys Telfer (1890–1978)|Rose Gladys Telfer (1890–1978)]]|\n| Sister | [[Mary Frances Telfer (1893–1893)|Mary Frances Telfer (1893–1893)]]|\n| Sister | [[Elizabeth Lilian Telfer (1896–1967)|Elizabeth Lilian Telfer (1896–1967)]]|\n\n## Life Summary\n\nMartha Pearce Telfer — \"Peggy\" — was the youngest of the seven daughters of James Telfer (1858–1944) and Frances Margaret Oswald, born in the Hundred of Pearce on 11 August 1898. Her middle name, Pearce, is the name of the South Australian hundred in which she was born.\n\nShe married **Arthur Stanley Urch** on **4 May 1921** at St John's Church, Sheringa. Arthur was an ordained clergyman who held the title of Canon, the son of Frank Urch; a 1921 newspaper report shows him officiating at another district wedding and proposing the toast in the same month.\n\nTheir daughter **Joan Mary Urch** married Geoffrey John Embleton in London in 1953, and that branch of the family settles in England.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 11 Aug 1898 | Born at Hundred of Pearce, South Australia (Flinders 627/209) |\n| 4 May 1921 | Married Arthur Stanley Urch at St John's Church, Sheringa (Flinders 287/540) |\n| 1953 | Daughter Joan Mary Urch marries Geoffrey John Embleton in London |\n| 19 Mar 1971 | Husband Arthur Stanley Urch dies |\n| 21 Jan 1978 | Dies *(date from the family book; not located in the SA death index sweep)* |\n\n## Sources\n\n1. **Source:** [Genealogy SA — SA Birth Registrations index, record Flinders 627/209](https://www.genealogysa.org.au/resources/online-database-search) — `TELFER, Martha Pearce · 11-Aug-1898 · Father James TELFER · Mother Frances Margaret OSWALD · Hd of Pearce` — read live 27 Oct 2026\n2. **Source:** [Genealogy SA — SA Marriage Registrations index, record Flinders 287/540](https://www.genealogysa.org.au/resources/online-database-search) — `URCH Arthur Stanley × TELFER Martha Pearce · 04-May-1921 · fathers Frank URCH / James TELFER` — read live 27 Oct 2026\n3. **Source:** Trove — a 1921 district wedding report naming \"Rev. A. S. Urch, B.A.\" as officiant and toast-proposer — accessed 27 Oct 2026\n4. **Source:** Donald Telfer, *A Telfer Family Tree* (Supplement to *From the Borders to the Bush*, 2008), p.184 — family listing",
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "telfer"
+    ],
+    "parents": [
+      "frances-margaret-oswald-1861",
+      "james-telfer-1858"
+    ],
+    "children": [],
+    "spouses": [
+      {
+        "plain_name": "Arthur Stanley Urch"
+      }
+    ],
+    "siblings": [
+      "elizabeth-telfer",
+      "jane-telfer",
+      "janet-telfer",
+      "mary-telfer-1893",
+      "millicent-telfer",
+      "rose-telfer"
     ],
     "step_parents": [],
     "step_children": [],
@@ -15808,57 +15864,6 @@
       "hazel-stribling",
       "isa-stribling",
       "lindsay-stribling"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Martha Pearce Telfer (1898)",
-    "slug": "martha-telfer",
-    "first_name": "Martha",
-    "middle_name": "Pearce",
-    "last_name": "Telfer",
-    "birth_year": 1898,
-    "death_year": 1978,
-    "birth_date": "11 August 1898",
-    "death_date": null,
-    "birth_year_display": "1898",
-    "death_year_display": "1978",
-    "display_name": "Martha Pearce Telfer",
-    "title": "Martha Pearce (Peggy) Telfer (1898–1978)",
-    "lifespan": "1898 – 1978",
-    "generation": 6,
-    "is_living": false,
-    "evidence_level": null,
-    "single_source": false,
-    "provisional_why": null,
-    "body_markdown": "# Martha Pearce \"Peggy\" Telfer (1898–1978)\n\n**Born:** 11 August 1898, Hundred of Pearce, South Australia | **Died:** 21 January 1978 | **Father:** [[James Telfer (1858–1944)]] | **Mother:** [[Frances Margaret Oswald (1861–1931)]] | **Spouse:** Arthur Stanley Urch, Canon (m. 4 May 1921)\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Martha Pearce \"Peggy\" Telfer (1898–1978) |\n| Father | [[James Telfer (1858–1944)]] |\n| Mother | [[Frances Margaret Oswald (1861–1931)]] |\n| Spouse | Arthur Stanley Urch, Canon (b. 18 Dec 1883, m. 4 May 1921, d. 19 Mar 1971) |\n| Daughter | Joan Mary Urch (m. Geoffrey John Embleton, 1953 London) |\n| Sister | [[Jane Margaret Telfer (1882–1946)|Jane Margaret Telfer (1882–1946)]]|\n| Sister | [[Janet Welsh Telfer (1885–1924)|Janet Welsh Telfer (1885–1924)]]|\n| Sister | [[Millicent Agnes Telfer (1887–1985)|Millicent Agnes Telfer (1887–1985)]]|\n| Sister | [[Rose Gladys Telfer (1890–1978)|Rose Gladys Telfer (1890–1978)]]|\n| Sister | [[Mary Frances Telfer (1893–1893)|Mary Frances Telfer (1893–1893)]]|\n| Sister | [[Elizabeth Lilian Telfer (1896–1967)|Elizabeth Lilian Telfer (1896–1967)]]|\n\n## Life Summary\n\nMartha Pearce Telfer — \"Peggy\" — was the youngest of the seven daughters of James Telfer (1858–1944) and Frances Margaret Oswald, born in the Hundred of Pearce on 11 August 1898. Her middle name, Pearce, is the name of the South Australian hundred in which she was born.\n\nShe married **Arthur Stanley Urch** on **4 May 1921** at St John's Church, Sheringa. Arthur was an ordained clergyman who held the title of Canon, the son of Frank Urch; a 1921 newspaper report shows him officiating at another district wedding and proposing the toast in the same month.\n\nTheir daughter **Joan Mary Urch** married Geoffrey John Embleton in London in 1953, and that branch of the family settles in England.\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 11 Aug 1898 | Born at Hundred of Pearce, South Australia (Flinders 627/209) |\n| 4 May 1921 | Married Arthur Stanley Urch at St John's Church, Sheringa (Flinders 287/540) |\n| 1953 | Daughter Joan Mary Urch marries Geoffrey John Embleton in London |\n| 19 Mar 1971 | Husband Arthur Stanley Urch dies |\n| 21 Jan 1978 | Dies *(date from the family book; not located in the SA death index sweep)* |\n\n## Sources\n\n1. **Source:** [Genealogy SA — SA Birth Registrations index, record Flinders 627/209](https://www.genealogysa.org.au/resources/online-database-search) — `TELFER, Martha Pearce · 11-Aug-1898 · Father James TELFER · Mother Frances Margaret OSWALD · Hd of Pearce` — read live 27 Oct 2026\n2. **Source:** [Genealogy SA — SA Marriage Registrations index, record Flinders 287/540](https://www.genealogysa.org.au/resources/online-database-search) — `URCH Arthur Stanley × TELFER Martha Pearce · 04-May-1921 · fathers Frank URCH / James TELFER` — read live 27 Oct 2026\n3. **Source:** Trove — a 1921 district wedding report naming \"Rev. A. S. Urch, B.A.\" as officiant and toast-proposer — accessed 27 Oct 2026\n4. **Source:** Donald Telfer, *A Telfer Family Tree* (Supplement to *From the Borders to the Bush*, 2008), p.184 — family listing",
-    "roles": [],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "telfer"
-    ],
-    "parents": [
-      "frances-margaret-oswald-1861",
-      "james-telfer-1858"
-    ],
-    "children": [],
-    "spouses": [
-      {
-        "plain_name": "Arthur Stanley Urch"
-      }
-    ],
-    "siblings": [
-      "elizabeth-telfer",
-      "jane-telfer",
-      "janet-telfer",
-      "mary-telfer-1893",
-      "millicent-telfer",
-      "rose-telfer"
     ],
     "step_parents": [],
     "step_children": [],
@@ -33139,27 +33144,34 @@
     "birth_date": null,
     "death_date": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Thomas Telfer",
-    "title": "Thomas Telfer — Family & Biography",
-    "lifespan": "? – living",
+    "title": "Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775",
+    "lifespan": "? – ?",
     "generation": 99,
-    "is_living": true,
+    "is_living": false,
     "evidence_level": null,
     "single_source": false,
     "provisional_why": null,
-    "body_markdown": "# RULED DECEASED BY MARK, 2026-09-22 (board card tw-2026-09-21-001).\n# No death year is recorded and none is invented — the converter's own\n# `deceased` flag exists for exactly this case (clearly-gone ancestors whose\n# exact dates were never recorded). Basis for the ruling: he is a 1770s\n# Scottish ancestor — two Castleton baptisms name him as father, 1774 and\n# 1775, and his household is traced through the 1851 census, so he was alive\n# in 1774/75 and cannot be a living person in 2026. He had been defaulting to\n# is_living because both year fields were empty.\ndeceased: true\ntags:\n  - person\n  - telfer\n  - research-lead\nrelationships: 'Self: Thomas Telfer (of Broadlee) | Spouse: Agnes Mair | Children: Elisabeth Telfer (bap. 1774), Adam Telfer (bap. 1775) | Residence: Broadlee, Castleton parish'\ntitle: \"Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775\"\n\n# Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775\n\n**Role:** **Head of a second Castleton parish Telfer household** — at Broadlee, in the Liddesdale valley\n**Flourished:** 1774–1775 (both children's baptisms)\n**Spouse:** **Agnes Mair**\n**Children:** Elisabeth Telfer (bap. 10 Feb, year recorded 1774 in the index / 1776 on the register page), Adam Telfer (bap. 23 Nov 1775)\n\n> ⚠️ **Not proven to be connected to the main line.** Thomas Telfer of Broadlee and his family are a **separate Castleton Telfer household** from [[James Telfer (of Sorbietrees) (~1740–?)]] (m. Margaret Armstrong) and from the family of [[John Telfer (of Castleton) (1731–?)]] & [[Elspeth Young (1722–?)]]. No record yet links them.\n\n---",
+    "body_markdown": "# Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775\n\n**Role:** **Head of a second Castleton parish Telfer household** — at Broadlee, in the Liddesdale valley\n**Flourished:** 1774–1775 (both children's baptisms)\n**Spouse:** **Agnes Mair**\n**Residence:** **Broadlee, Castleton parish, Roxburghshire**\n**Children:** Elisabeth Telfer (bap. 10 Feb, year recorded 1774 in the index / 1776 on the register page), Adam Telfer (bap. 23 Nov 1775)\n\n> ⚠️ **Not proven to be connected to the main line.** Thomas Telfer of Broadlee and his family are a **separate Castleton Telfer household** from [[James Telfer (of Sorbietrees) (~1740–?)]] (m. Margaret Armstrong) and from the family of [[John Telfer (of Castleton) (1731–?)]] & [[Elspeth Young (1722–?)]]. No record yet links them.\n\n---\n\n## The household\n\nTwo baptisms in the Castleton Old Parish Register (volume 10) name **Thomas Telfer** and **Agnes Mair** as parents — recorded with the surname spelt *Telfer* and the mother variously *Agnes*, *Agnus*, and *Mair*:\n\n| Child | Date | Reference |\n|---|---|---|\n| **Elisabeth** | 10 Feb (index year 1774; register page reads 1776) | `784/10/8` |\n| **Adam** | 23 Nov 1775 | `784/10/9` |\n\n**Brother and sister, baptised 18 months apart, same parents, same parish.**\n\n### The register page itself (`784/10/8`)\n\nThe image was **purchased from ScotlandsPeople, read, and saved to the vault** on 11 Sep 2026. It is **not a clean chronological register** — the minister entered families out of date order, by household, with reference letters in the margin:\n\n| Date | Parents | Child | Abode |\n|---|---|---|---|\n| Sept 13 1760 | Gideon Croser, Hellen Armstrong | William | Brighouse *(margin: \"for A\")* |\n| Nov 6 1770 | Gideon Croser, Hellen Armstrong | Hellen | Brighouse *(margin: \"for B\")* |\n| Mar 30 1773 | Jno. Oliver, Margaret Armstrong | Janet | Schoolhill |\n| Sep 26 1773 | Jno. Douglass, Christian Nichol | James | Broadlee |\n| Feb 1 1774 | Jno. Douglass, Christian Nichol | Janet | Broadlee *(margin: \"C\")* |\n| Dec 7 1774 | Jno. Douglass, Christian Nichol | Isable | Hermelaw |\n| **Feb 10** | **Thomas Telfer, Agnes Mair** | **Elisabeth** | **Broadlee** |\n| June 11 1775 | Adam Robson, Helen Hume | Helen | Boyhall |\n| June 11 1775 | Jno. Scott, Elizabeth Scott | Janet | Dymons |\n| June 18 1775 | George Robson, Margaret Oliver | Margaret | Daylong |\n| Jan 20 1780 | Wm. Douglass, Christian Nichol | Christian | Laidlaw |\n| Sep 27 1781 | Jno. Douglass, Christian Nichol | Margaret | Millburn |\n| May 16 1783 | James Douglass, Christian Scott | Hellen | Haggyhall |\n| July 29 1783 | Jno. Douglass, Christian Nichol | Robert | Millburn |\n\n⚠️ **The date discrepancy on the Elisabeth entry is recorded honestly and not resolved.** The ScotlandsPeople **index** gives `10/02/1774`; the **register page** itself reads **`Feb. 10` in a sequence running 1774 → 1775**, which reads as **1776** against the index. The marginal reference letters (\"for A\", \"for B\", \"C\") show the minister was making retrospective corrections on this page, so a year mismatch between the day-book and the fair copy is plausible. **Both readings are on the record; neither is asserted as correct.**\n\n**The abode column is the useful find: the Telfers lived at BROADLEE.** The same page shows the Douglass family occupying **Broadlee**, then **Hermelaw**, **Millburn** and **Laidlaw** — a cluster of Liddesdale farmsteads within a few miles of **Blackburnfoot**, where [[Francis Telfer (1809–1895)]] was born.\n\n---\n\n## The household surviving into 1851\n\nA **widow `ELIZABETH TELFER`, aged 77, born Castleton**, was recorded at Newcastleton in the 1851 census (`784/10/13`) as mother of the household head, `WILLIAM TELFER, 37, Woollen Weaver`.\n\n**Her age and birthplace fit the Elisabeth baptised to Thomas Telfer & Agnes Mair on this page.** Born 1774 → 77 in 1851, born in Castleton parish. **A precise match on both age and birthplace.**\n\n### ⚠️ But the identification is NOT certain — and this is why\n\nThe vault's own record for this woman is [[Elizabeth Hutton Telfer (1774–1853)]] — born **1774**, **died 4 April 1853 aged 79**, and **wife of [[James Telfer (1761–1845)]]**. She fits the 1851 widow equally well on age and birthplace, and there is a **third independent agreement** for her: her son William's statutory death entry records his mother's maiden surname as **Hutton**, not Mair.\n\n| Candidate | Born | Age 1851 | Fit |\n|---|---|---|---|\n| Elisabeth, dau. of Thomas Telfer & Agnes Mair (bap. `784/10/8`) | 1774 | 77 | age ✅ birthplace ✅ |\n| [[Elizabeth Hutton Telfer (1774–1853)]] (m. James Telfer) | 1774 | 77 | age ✅ birthplace ✅ **+ death record names \"Hutton\"** |\n\n**Two different women, both born 1774 in Castleton parish, both aged 77 in 1851.** The widow at `784/10/13` is identified as **Betty Hutton** in the vault, on the strength of the death record — **but the census image alone cannot distinguish them.**\n\n**Status: OPEN QUESTION — a lead, not a fact.** Recorded here so the ambiguity is visible rather than buried.\n\n---\n\n## Sources\n\n- **ScotlandsPeople — Castleton OPR baptisms, vol 10, page 8, ref `784/10/8` (Thomas Telfer / Agnes Mair → Elisabeth).** Image purchased and read 11 Sep 2026. Vault: `Family History/Records/Telfer_Elisabeth_bap_1774-02-10_Castleton_784-10-8.png` (1,600 × 2,481, 3.60 MB, sha256 `e9c4853fd739311da08013f40ababf73a4b2081b09ebece39d8249bc97284774`). Google Drive: `Photos/Elisabeth Telfer/`.\n- **ScotlandsPeople — Castleton OPR index, `784/10/9`** (Thomas Telfer / Agnus Mair → Adam, 23 Nov 1775).\n- **ScotlandsPeople — 1851 census, ref `784/10/13`, Castleton.** Image purchased and read 11 Sep 2026. Vault: `Family History/Records/Telfer_Adam_census_1851-03-30_Castleton_784-10-13.png`. Google Drive: `Photos/Elizabeth Hutton Telfer/`.",
     "roles": [
       "**Head of a second Castleton parish Telfer household** — at Broadlee, in the Liddesdale valley"
     ],
     "tags": [
-      "bio",
-      "family",
-      "person"
+      "person",
+      "telfer",
+      "research-lead"
     ],
     "parents": [],
-    "children": [],
-    "spouses": [],
+    "children": [
+      "elisabeth-telfer-1806",
+      "Adam Telfer (bap. 1775, no profile)"
+    ],
+    "spouses": [
+      {
+        "plain_name": "Agnes Mair"
+      }
+    ],
     "siblings": [],
     "step_parents": [],
     "step_children": [],

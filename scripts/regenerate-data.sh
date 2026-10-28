@@ -166,6 +166,7 @@ GJ="$(node scripts/guard-crown-jewels.mjs 2>&1)" || {
 }
 echo "$GJ" | tail -3
 
+
 # Fail-closed: retired profiles must not survive into the published data. If the
 # retirer silently no-opped (bad list, changed carry-over logic), this catches it
 # here rather than letting a phantom ship to telferwiki.com.
@@ -231,6 +232,33 @@ echo
 echo "==> Step 4/5: rebuild relationship graph + generations (stale-graph fix)"
 node scripts/build-relationship-graph.mjs
 node scripts/compute-generations.mjs
+
+echo
+echo "==> Step 4b/5: RELATIONSHIP-STRUCTURE VERIFIER (added 2026-10-28)"
+# WHY THIS GATE EXISTS
+# --------------------
+# "Nobody floating in the void" is a data property that no existing gate checked, so two
+# defects shipped for weeks:
+#   1. Nothing read the body relationship table, so 653 people had no edges on the site.
+#   2. 279 of 281 bare-slug redirects pointed from URLs that never existed, and the two
+#      real ones were resolved by a birth-year guess rather than by evidence.
+# MUST run AFTER Step 4/5 (build-relationship-graph.mjs). Measured 28 Oct: placed before
+# it, this gate saw 36 isolated people purely because the graph had not been rebuilt yet —
+# a false alarm about a tree that was half-built. Isolation is a property of the FINISHED
+# data, so it is judged on the finished data.
+#
+# This verifier asserts the invariants those defects violated: somebody still has family
+# links (reader connected), isolation has not regressed, no person is their own relative,
+# no graph edge dangles, no redirect names the wrong person, no living person leaks into
+# the published data. Read-only, so it is safe to run at any point.
+RS="$(node scripts/verify-relationships.mjs 2>&1)" || {
+  echo "$RS"
+  echo ""
+  echo "RELATIONSHIP STRUCTURE FAILED — refusing to publish a tree where people float."
+  echo "Fix the VAULT or the GENERATOR, never src/data/*.json (the next run wipes it)."
+  exit 1
+}
+echo "$RS" | tail -3
 
 echo "==> Step 5/5: regenerate people.public.json (sanitize from people.json)"
 # MUST run sanitize, else people.public.json (what the site renders) stays stale.

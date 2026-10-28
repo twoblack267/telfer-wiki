@@ -5705,7 +5705,9 @@
     "body_stripped": "**Role:** **English-born Telfer resident at Newcastleton, Castleton parish** — sister and housekeeper to John Telfer (b. ~1791, England)\n\n**Born:** ~1806 — **ENGLAND**\n**Died:** unknown\n**Occupation:** Housekeeper (1851)\n**Residence:** Newcastleton, Castleton parish, Roxburghshire (1851)\n**Sibling:** John Telfer (b. ~1791, England) — shepherd, head of the household she kept\n\n> ⚠️ **Not proven to be a relative of the main Telfer line.** Recorded because she is a sourced, documented Telfer born ou",
     "is_living": false,
     "lifespan": "1806 – ?",
-    "parents": [],
+    "parents": [
+      "thomas-telfer"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -6383,6 +6385,7 @@
     ],
     "children": [
       "agnes-paynter-1895",
+      "Richard William John Paynter",
       "Lillian Ellen Jayne Paynter",
       "Gustav Francis George Paynter",
       "Ethel Emily Elizabeth Paynter",
@@ -16320,6 +16323,7 @@
       "robert-telfer-1886",
       "roland-telfer",
       "susan-telfer-1871",
+      "Martha Telfer (1873–?)",
       "Eric John Telfer"
     ],
     "spouses": [
@@ -17351,7 +17355,8 @@
       "joyce-telfer-1912",
       "kenneth-telfer-1906",
       "lindsay-telfer-1920",
-      "maifie-telfer-1913"
+      "maifie-telfer-1913",
+      "Murray John Telfer (1911–1982, adopted)"
     ],
     "spouses": [
       "mark-telfer-1877"
@@ -23669,7 +23674,7 @@
       {
         "type": "Father",
         "names": [
-          "Francis Charles Telfer"
+          "Francis Charles Telfer (1875–1954)"
         ]
       },
       {
@@ -25069,25 +25074,57 @@
     "birth_year": null,
     "death_year": null,
     "birth_year_display": "?",
-    "death_year_display": "living",
+    "death_year_display": "?",
     "display_name": "Thomas Telfer",
-    "title": "Thomas Telfer — Family & Biography",
+    "title": "Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775",
     "tags": [
-      "bio",
-      "family",
-      "person"
+      "person",
+      "telfer",
+      "research-lead"
     ],
-    "relationships": [],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Thomas Telfer (of Broadlee)"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Agnes Mair"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "Elisabeth Telfer (bap. 1774, no profile)",
+          "Adam Telfer (bap. 1775, no profile)"
+        ]
+      },
+      {
+        "type": "Residence",
+        "names": [
+          "Broadlee",
+          "Castleton parish"
+        ]
+      }
+    ],
     "roles": [
       "**Head of a second Castleton parish Telfer household** — at Broadlee, in the Liddesdale valley"
     ],
-    "body_markdown": "# RULED DECEASED BY MARK, 2026-09-22 (board card tw-2026-09-21-001).\n# No death year is recorded and none is invented — the converter's own\n# `deceased` flag exists for exactly this case (clearly-gone ancestors whose\n# exact dates were never recorded). Basis for the ruling: he is a 1770s\n# Scottish ancestor — two Castleton baptisms name him as father, 1774 and\n# 1775, and his household is traced through the 1851 census, so he was alive\n# in 1774/75 and cannot be a living person in 2026. He had been defaulting to\n# is_living because both year fields were empty.\ndeceased: true\ntags:\n  - person\n  - telfer\n  - research-lead\nrelationships: 'Self: Thomas Telfer (of Broadlee) | Spouse: Agnes Mair | Children: Elisabeth Telfer (bap. 1774), Adam Telfer (bap. 1775) | Residence: Broadlee, Castleton parish'\ntitle: \"Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775\"\n\n# Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775\n\n**Role:** **Head of a second Castleton parish Telfer household** — at Broadlee, in the Liddesdale valley\n**Flourished:** 1774–1775 (both children's baptisms)\n**Spouse:** **Agnes Mair**\n**Residence:** **Broadlee, Castleton parish, Roxburghshire**\n**Children:** Elisabeth Telfer (bap. 10 Feb, year recorded 1774 in the index / 1776 on the register page), Adam Telfer (bap. 23 Nov 1775)\n\n> ⚠️ **Not proven to be connected to the main line.** Thomas Telfer of Broadlee and his family are a **separate Castleton Telfer household** from [[James Telfer (of Sorbietrees) (~1740–?)]] (m. Margaret Armstrong) and from the family of [[John Telfer (of Castleton) (1731–?)]] & [[Elspeth Young (1722–?)]]. No record yet links them.\n\n---\n\n## The household\n\nTwo baptisms in the Castleton Old Parish Register (volume 10) name **Thomas Telfer** and **Agnes Mair** as parents — recorded with the surname spelt *Telfer* and the mother variously *Agnes*, *Agnus*, and *Mair*:\n\n| Child | Date | Reference |\n|---|---|---|\n| **Elisabeth** | 10 Feb (index year 1774; register page reads 1776) | `784/10/8` |\n| **Adam** | 23 Nov 1775 | `784/10/9` |\n\n**Brother and sister, baptised 18 months apart, same parents, same parish.**\n\n### The register page itself (`784/10/8`)\n\nThe image was **purchased from ScotlandsPeople, read, and saved to the vault** on 11 Sep 2026. It is **not a clean chronological register** — the minister entered families out of date order, by household, with reference letters in the margin:\n\n| Date | Parents | Child | Abode |\n|---|---|---|---|\n| Sept 13 1760 | Gideon Croser, Hellen Armstrong | William | Brighouse *(margin: \"for A\")* |\n| Nov 6 1770 | Gideon Croser, Hellen Armstrong | Hellen | Brighouse *(margin: \"for B\")* |\n| Mar 30 1773 | Jno. Oliver, Margaret Armstrong | Janet | Schoolhill |\n| Sep 26 1773 | Jno. Douglass, Christian Nichol | James | Broadlee |\n| Feb 1 1774 | Jno. Douglass, Christian Nichol | Janet | Broadlee *(margin: \"C\")* |\n| Dec 7 1774 | Jno. Douglass, Christian Nichol | Isable | Hermelaw |\n| **Feb 10** | **Thomas Telfer, Agnes Mair** | **Elisabeth** | **Broadlee** |\n| June 11 1775 | Adam Robson, Helen Hume | Helen | Boyhall |\n| June 11 1775 | Jno. Scott, Elizabeth Scott | Janet | Dymons |\n| June 18 1775 | George Robson, Margaret Oliver | Margaret | Daylong |\n| Jan 20 1780 | Wm. Douglass, Christian Nichol | Christian | Laidlaw |\n| Sep 27 1781 | Jno. Douglass, Christian Nichol | Margaret | Millburn |\n| May 16 1783 | James Douglass, Christian Scott | Hellen | Haggyhall |\n| July 29 1783 | Jno. Douglass, Christian Nichol | Robert | Millburn |\n\n⚠️ **The date discrepancy on the Elisabeth entry is recorded honestly and not resolved.** The ScotlandsPeople **index** gives `10/02/1774`; the **register page** itself reads **`Feb. 10` in a sequence running 1774 → 1775**, which reads as **1776** against the index. The marginal reference letters (\"for A\", \"for B\", \"C\") show the minister was making retrospective corrections on this page, so a year mismatch between the day-book and the fair copy is plausible. **Both readings are on the record; neither is asserted as correct.**\n\n**The abode column is the useful find: the Telfers lived at BROADLEE.** The same page shows the Douglass family occupying **Broadlee**, then **Hermelaw**, **Millburn** and **Laidlaw** — a cluster of Liddesdale farmsteads within a few miles of **Blackburnfoot**, where [[Francis Telfer (1809–1895)]] was born.\n\n---\n\n## The household surviving into 1851\n\nA **widow `ELIZABETH TELFER`, aged 77, born Castleton**, was recorded at Newcastleton in the 1851 census (`784/10/13`) as mother of the household head, `WILLIAM TELFER, 37, Woollen Weaver`.\n\n**Her age and birthplace fit the Elisabeth baptised to Thomas Telfer & Agnes Mair on this page.** Born 1774 → 77 in 1851, born in Castleton parish. **A precise match on both age and birthplace.**\n\n### ⚠️ But the identification is NOT certain — and this is why\n\nThe vault's own record for this woman is [[Elizabeth Hutton Telfer (1774–1853)]] — born **1774**, **died 4 April 1853 aged 79**, and **wife of [[James Telfer (1761–1845)]]**. She fits the 1851 widow equally well on age and birthplace, and there is a **third independent agreement** for her: her son William's statutory death entry records his mother's maiden surname as **Hutton**, not Mair.\n\n| Candidate | Born | Age 1851 | Fit |\n|---|---|---|---|\n| Elisabeth, dau. of Thomas Telfer & Agnes Mair (bap. `784/10/8`) | 1774 | 77 | age ✅ birthplace ✅ |\n| [[Elizabeth Hutton Telfer (1774–1853)]] (m. James Telfer) | 1774 | 77 | age ✅ birthplace ✅ **+ death record names \"Hutton\"** |\n\n**Two different women, both born 1774 in Castleton parish, both aged 77 in 1851.** The widow at `784/10/13` is identified as **Betty Hutton** in the vault, on the strength of the death record — **but the census image alone cannot distinguish them.**\n\n**Status: OPEN QUESTION — a lead, not a fact.** Recorded here so the ambiguity is visible rather than buried.\n\n---\n\n## Sources\n\n- **ScotlandsPeople — Castleton OPR baptisms, vol 10, page 8, ref `784/10/8` (Thomas Telfer / Agnes Mair → Elisabeth).** Image purchased and read 11 Sep 2026. Vault: `Family History/Records/Telfer_Elisabeth_bap_1774-02-10_Castleton_784-10-8.png` (1,600 × 2,481, 3.60 MB, sha256 `e9c4853fd739311da08013f40ababf73a4b2081b09ebece39d8249bc97284774`). Google Drive: `Photos/Elisabeth Telfer/`.\n- **ScotlandsPeople — Castleton OPR index, `784/10/9`** (Thomas Telfer / Agnus Mair → Adam, 23 Nov 1775).\n- **ScotlandsPeople — 1851 census, ref `784/10/13`, Castleton.** Image purchased and read 11 Sep 2026. Vault: `Family History/Records/Telfer_Adam_census_1851-03-30_Castleton_784-10-13.png`. Google Drive: `Photos/Elizabeth Hutton Telfer/`.",
-    "body_stripped": "deceased: true\ntags:\n  - person\n  - telfer\n  - research-lead\nrelationships: 'Self: Thomas Telfer (of Broadlee)  Spouse: Agnes Mair  Children: Elisabeth Telfer (bap. 1774), Adam Telfer (bap. 1775)  Residence: Broadlee, Castleton parish'\ntitle: \"Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775\"\n\n**Role:** **Head of a second Castleton parish Telfer household** — at Broadlee, in the Liddesdale valley\n**Flourished:** 1774–1775 (both children's baptisms)\n**Spouse:** **Agnes Mair**\n**Re",
-    "is_living": true,
-    "lifespan": "? – living",
+    "body_markdown": "# Thomas Telfer (of Broadlee) — Castleton household, fl. 1774–1775\n\n**Role:** **Head of a second Castleton parish Telfer household** — at Broadlee, in the Liddesdale valley\n**Flourished:** 1774–1775 (both children's baptisms)\n**Spouse:** **Agnes Mair**\n**Residence:** **Broadlee, Castleton parish, Roxburghshire**\n**Children:** Elisabeth Telfer (bap. 10 Feb, year recorded 1774 in the index / 1776 on the register page), Adam Telfer (bap. 23 Nov 1775)\n\n> ⚠️ **Not proven to be connected to the main line.** Thomas Telfer of Broadlee and his family are a **separate Castleton Telfer household** from [[James Telfer (of Sorbietrees) (~1740–?)]] (m. Margaret Armstrong) and from the family of [[John Telfer (of Castleton) (1731–?)]] & [[Elspeth Young (1722–?)]]. No record yet links them.\n\n---\n\n## The household\n\nTwo baptisms in the Castleton Old Parish Register (volume 10) name **Thomas Telfer** and **Agnes Mair** as parents — recorded with the surname spelt *Telfer* and the mother variously *Agnes*, *Agnus*, and *Mair*:\n\n| Child | Date | Reference |\n|---|---|---|\n| **Elisabeth** | 10 Feb (index year 1774; register page reads 1776) | `784/10/8` |\n| **Adam** | 23 Nov 1775 | `784/10/9` |\n\n**Brother and sister, baptised 18 months apart, same parents, same parish.**\n\n### The register page itself (`784/10/8`)\n\nThe image was **purchased from ScotlandsPeople, read, and saved to the vault** on 11 Sep 2026. It is **not a clean chronological register** — the minister entered families out of date order, by household, with reference letters in the margin:\n\n| Date | Parents | Child | Abode |\n|---|---|---|---|\n| Sept 13 1760 | Gideon Croser, Hellen Armstrong | William | Brighouse *(margin: \"for A\")* |\n| Nov 6 1770 | Gideon Croser, Hellen Armstrong | Hellen | Brighouse *(margin: \"for B\")* |\n| Mar 30 1773 | Jno. Oliver, Margaret Armstrong | Janet | Schoolhill |\n| Sep 26 1773 | Jno. Douglass, Christian Nichol | James | Broadlee |\n| Feb 1 1774 | Jno. Douglass, Christian Nichol | Janet | Broadlee *(margin: \"C\")* |\n| Dec 7 1774 | Jno. Douglass, Christian Nichol | Isable | Hermelaw |\n| **Feb 10** | **Thomas Telfer, Agnes Mair** | **Elisabeth** | **Broadlee** |\n| June 11 1775 | Adam Robson, Helen Hume | Helen | Boyhall |\n| June 11 1775 | Jno. Scott, Elizabeth Scott | Janet | Dymons |\n| June 18 1775 | George Robson, Margaret Oliver | Margaret | Daylong |\n| Jan 20 1780 | Wm. Douglass, Christian Nichol | Christian | Laidlaw |\n| Sep 27 1781 | Jno. Douglass, Christian Nichol | Margaret | Millburn |\n| May 16 1783 | James Douglass, Christian Scott | Hellen | Haggyhall |\n| July 29 1783 | Jno. Douglass, Christian Nichol | Robert | Millburn |\n\n⚠️ **The date discrepancy on the Elisabeth entry is recorded honestly and not resolved.** The ScotlandsPeople **index** gives `10/02/1774`; the **register page** itself reads **`Feb. 10` in a sequence running 1774 → 1775**, which reads as **1776** against the index. The marginal reference letters (\"for A\", \"for B\", \"C\") show the minister was making retrospective corrections on this page, so a year mismatch between the day-book and the fair copy is plausible. **Both readings are on the record; neither is asserted as correct.**\n\n**The abode column is the useful find: the Telfers lived at BROADLEE.** The same page shows the Douglass family occupying **Broadlee**, then **Hermelaw**, **Millburn** and **Laidlaw** — a cluster of Liddesdale farmsteads within a few miles of **Blackburnfoot**, where [[Francis Telfer (1809–1895)]] was born.\n\n---\n\n## The household surviving into 1851\n\nA **widow `ELIZABETH TELFER`, aged 77, born Castleton**, was recorded at Newcastleton in the 1851 census (`784/10/13`) as mother of the household head, `WILLIAM TELFER, 37, Woollen Weaver`.\n\n**Her age and birthplace fit the Elisabeth baptised to Thomas Telfer & Agnes Mair on this page.** Born 1774 → 77 in 1851, born in Castleton parish. **A precise match on both age and birthplace.**\n\n### ⚠️ But the identification is NOT certain — and this is why\n\nThe vault's own record for this woman is [[Elizabeth Hutton Telfer (1774–1853)]] — born **1774**, **died 4 April 1853 aged 79**, and **wife of [[James Telfer (1761–1845)]]**. She fits the 1851 widow equally well on age and birthplace, and there is a **third independent agreement** for her: her son William's statutory death entry records his mother's maiden surname as **Hutton**, not Mair.\n\n| Candidate | Born | Age 1851 | Fit |\n|---|---|---|---|\n| Elisabeth, dau. of Thomas Telfer & Agnes Mair (bap. `784/10/8`) | 1774 | 77 | age ✅ birthplace ✅ |\n| [[Elizabeth Hutton Telfer (1774–1853)]] (m. James Telfer) | 1774 | 77 | age ✅ birthplace ✅ **+ death record names \"Hutton\"** |\n\n**Two different women, both born 1774 in Castleton parish, both aged 77 in 1851.** The widow at `784/10/13` is identified as **Betty Hutton** in the vault, on the strength of the death record — **but the census image alone cannot distinguish them.**\n\n**Status: OPEN QUESTION — a lead, not a fact.** Recorded here so the ambiguity is visible rather than buried.\n\n---\n\n## Sources\n\n- **ScotlandsPeople — Castleton OPR baptisms, vol 10, page 8, ref `784/10/8` (Thomas Telfer / Agnes Mair → Elisabeth).** Image purchased and read 11 Sep 2026. Vault: `Family History/Records/Telfer_Elisabeth_bap_1774-02-10_Castleton_784-10-8.png` (1,600 × 2,481, 3.60 MB, sha256 `e9c4853fd739311da08013f40ababf73a4b2081b09ebece39d8249bc97284774`). Google Drive: `Photos/Elisabeth Telfer/`.\n- **ScotlandsPeople — Castleton OPR index, `784/10/9`** (Thomas Telfer / Agnus Mair → Adam, 23 Nov 1775).\n- **ScotlandsPeople — 1851 census, ref `784/10/13`, Castleton.** Image purchased and read 11 Sep 2026. Vault: `Family History/Records/Telfer_Adam_census_1851-03-30_Castleton_784-10-13.png`. Google Drive: `Photos/Elizabeth Hutton Telfer/`.",
+    "body_stripped": "**Role:** **Head of a second Castleton parish Telfer household** — at Broadlee, in the Liddesdale valley\n**Flourished:** 1774–1775 (both children's baptisms)\n**Spouse:** **Agnes Mair**\n**Residence:** **Broadlee, Castleton parish, Roxburghshire**\n**Children:** Elisabeth Telfer (bap. 10 Feb, year recorded 1774 in the index / 1776 on the register page), Adam Telfer (bap. 23 Nov 1775)\n\n> ⚠️ **Not proven to be connected to the main line.** Thomas Telfer of Broadlee and his family are a **separate Cas",
+    "is_living": false,
+    "lifespan": "? – ?",
     "parents": [],
-    "children": [],
-    "spouses": [],
+    "children": [
+      "elisabeth-telfer-1806",
+      "Adam Telfer (bap. 1775, no profile)"
+    ],
+    "spouses": [
+      "Agnes Mair"
+    ],
     "siblings": [],
     "related_trees": [
       "telfer-tree"
@@ -36017,7 +36054,7 @@
     ],
     "images": [],
     "person_photo": null,
-    "generation": 6,
+    "generation": 5,
     "evidence_level": null,
     "single_source": false,
     "provisional_why": null

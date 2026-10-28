@@ -237,6 +237,15 @@ function extractYears(name) {
     return { birth: parseInt(match[1]), death };
   }
   // Just a single year: "John Telfer (1847)" — also "(b. ~1791, England)".
+  //
+  // 2026-10-28: `bap.` (baptism) was not recognised, so a ref like
+  // "Elisabeth Telfer (bap. 1774)" produced NO year and was invisible to every date
+  // gate. A baptism is within weeks of birth, so it is sound evidence of birth year.
+  // Consequence of the gap: Thomas Telfer (of Broadlee), a 1770s man with no birth
+  // year of his own, was given a daughter born 1806 — the only other "Elisabeth
+  // Telfer" in the vault — because neither ref carried a usable year.
+  const bap = name.match(/\(\s*(?:bap\.?|bapt\.?|baptised|baptized)\s*(?:~|c\.)?\s*(\d{4})\b/i);
+  if (bap) return { birth: parseInt(bap[1]), death: null, baptism: true };
   const single = name.match(/\(\s*(?:b\.?\s*|c\.?\s*|ca\.?\s*|abt\.?\s*|about\s*|~+\s*)*(\d{4})\b/i);
   if (single) return { birth: parseInt(single[1]), death: null };
   return null;
@@ -257,10 +266,40 @@ function lowerTrim(s) {
 function pickBestMatch(candidates, context) {
   // context = { subjectBirth, relation }
   if (candidates.length === 0) return null;
-  if (candidates.length === 1) return candidates[0].slug;
-  
+
   const { subjectBirth, relation } = context || {};
-  
+
+  // ── THE SINGLE-CANDIDATE HOLE (fixed 2026-10-28) ──────────────────────────────
+  //
+  // This line used to read `if (candidates.length === 1) return candidates[0].slug;`
+  // and sat ABOVE every date check, so the commonest case of all — a full name that
+  // matches exactly one person — skipped every sanity gate below. It is the same defect
+  // that was already fixed once in the caller for the generation filter, surviving here
+  // in its purest form.
+  //
+  // Observed consequence: Thomas Telfer (of Broadlee), a 1770s Scottish householder with
+  // no birth year of his own, named his daughter "Elisabeth Telfer (bap. 1774)". Exactly
+  // one record in the vault answers to "Elisabeth Telfer" — elisabeth-telfer-1806, born
+  // in ENGLAND in 1806, four decades after the baptism. She was bound as his daughter and
+  // would have rendered as a real link on a real ancestor's page.
+  //
+  // A single candidate is now judged by the same rules as a crowd. Absence of dates in
+  // the SUBJECT still cannot disprove anything, so undated subjects keep the old
+  // permissive behaviour; it is a dated ref that can now refuse a dated candidate.
+  if (candidates.length === 1) {
+    const only = candidates[0];
+    if (relation === 'child' && only.birth != null && subjectBirth != null) {
+      // A child cannot be born long after its parent. Allow a generous window so a
+      // genuine late child or a rough parental year is never rejected.
+      if (only.birth - subjectBirth > 55) return null;
+      if (only.birth < subjectBirth - 5) return null;
+    }
+    if (relation === 'parent' && only.birth != null && subjectBirth != null) {
+      if (subjectBirth - only.birth < 12) return null;
+    }
+    return only.slug;
+  }
+
   // Parent: must be born BEFORE child, and not too close (< 12 years gap)
   if (relation === 'parent' && subjectBirth != null) {
     const valid = candidates.filter(c => {
@@ -592,6 +631,35 @@ function resolveRef(name, context = null) {
           return null;
         }
       }
+    }
+    // REF-YEAR PLAUSIBILITY, SINGLE CANDIDATE (fixed 2026-10-28)
+    //
+    // `years` is the year written in the REF ITSELF — "Elisabeth Telfer (bap. 1774)" —
+    // and it is evidence regardless of whether the subject's own record is dated. Above,
+    // a ref year was only ever tested for an EXACT match against the candidate's birth
+    // year; if it merely failed to match, execution fell through to
+    // `return candidates[0].slug` and the sole namesake was bound anyway.
+    //
+    // That is how Thomas Telfer (of Broadlee) — born in the 1740s, no birth_year field —
+    // acquired a daughter born 1806 in England from a ref reading "bap. 1774". The subject
+    // being undated disabled every subject-relative gate; the ref's own date was never
+    // consulted. So a 32-year error in the PARENT's generation passed silently.
+    //
+    // A child cannot be born decades after its baptism. When the ref carries a birth or
+    // baptism year and the candidate was born more than 2 years away from it, refuse: the
+    // intended person has no profile, and the raw name stays visible as a research gap.
+    //
+    // SCOPED TO BIRTH-ORDERED RELATIONS ONLY (fixed the same day it was written): the
+    // first version applied to every relation and destroyed 7 correct links — most
+    // obviously Edwin Telfer (b.1919) and his wife Lola May Paterson (b.1918), where a
+    // one-year difference is not a contradiction but a marriage. Spouses and siblings are
+    // PEERS; a generation gap is not a fault between them. Only parent/child relations
+    // are strictly ordered in time, so only those are judged here. Even then the window is
+    // generous: a ref year can legitimately be off by a year or two (index vs register).
+    if (years && years.birth != null && candidates.length === 1 && candidates[0].birth != null
+        && (relation === 'parent' || relation === 'child')) {
+      const drift = Math.abs(candidates[0].birth - years.birth);
+      if (drift > 2) return null;
     }
     // Single candidate, verify with years if available
     if (years && years.birth) {
