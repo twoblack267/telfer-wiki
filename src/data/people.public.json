@@ -1230,6 +1230,7 @@
     ],
     "children": [
       "andrew-telfer",
+      "william-telfer-1847",
       {
         "plain_name": "Mary (Telfer) Bowden"
       },
@@ -2336,6 +2337,7 @@
       "charles-farrow-1836"
     ],
     "spouses": [
+      "elizabeth-smith-farrow",
       {
         "plain_name": "Mary Ellen Bayes"
       }
@@ -2521,6 +2523,45 @@
     "person_photo": null
   },
   {
+    "id": "Elizabeth Float Smith Farrow (1825)",
+    "slug": "elizabeth-smith-farrow",
+    "first_name": "Elizabeth",
+    "middle_name": "Float",
+    "last_name": "Smith Farrow",
+    "birth_year": 1825,
+    "death_year": 1914,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1825",
+    "death_year_display": "1914",
+    "display_name": "Elizabeth Float Smith Farrow",
+    "title": "Elizabeth Float Smith (1825–1914)",
+    "lifespan": "1825 – 1914",
+    "generation": 4,
+    "is_living": false,
+    "body_markdown": "# Elizabeth Float Smith (1825–1914)\n\n**Role:** Second wife of Joseph Farrow (1814–1899), married 1870\n\n| Relation | Name |\n|---|---|\n| Husband | [[Joseph Farrow (1814–1899)]] — married 1870 |\n| Former husband | John Philip Smith (died 1864 at Armagh, South Australia) |\n\n## Evidence\n\n- **Find a Grave**, memorial 215730514, page for Elizabeth Float Smith Farrow (1825–1914), citing Cheltenham Pioneer Cemetery — confirms the second marriage to Joseph Farrow.\n- Named as spouse in [[Joseph Farrow (1814–1899)]], which cites Find a Grave memorial 184343867.\n\n**Status: one documentary source (Find a Grave headstone record), plus the marriage recorded on her husband's note.**\n\n**Open thread:** her maiden name is recorded as \"Float Smith\" and her former husband as \"John Philip Smith\" — it is not yet clear whether \"Float\" is a middle name, a maiden name, or a previous married name. South Australian and Victorian BDM records would settle it.",
+    "roles": [
+      "Second wife of Joseph Farrow (1814–1899), married 1870"
+    ],
+    "tags": [
+      "family",
+      "non-telfer",
+      "person"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "joseph-farrow-1814"
+    ],
+    "siblings": [
+      "joseph-farrow"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Isabella Kelly (1825)",
     "slug": "isabella-kelly-1825",
     "first_name": "Isabella",
@@ -2648,7 +2689,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
-      "john-dillon",
+      "john-dillon-1859",
       "margaret-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871",
@@ -2966,7 +3007,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
-      "john-dillon",
+      "john-dillon-1859",
       "margaret-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871",
@@ -3200,7 +3241,7 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "spouses": [
       "susan-telfer-1844"
@@ -3330,7 +3371,6 @@
     "children": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -3816,7 +3856,7 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "spouses": [
       "robert-telfer-1835"
@@ -5059,6 +5099,48 @@
     "person_photo": null
   },
   {
+    "id": "William Telfer (1847)",
+    "slug": "william-telfer-1847",
+    "first_name": "William",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1847,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1847",
+    "death_year_display": "?",
+    "display_name": "William Telfer (1847 – ?)",
+    "title": "William Telfer (b. 1847)",
+    "lifespan": "1847 – ?",
+    "generation": 5,
+    "is_living": false,
+    "body_markdown": "# William Telfer (b. 1847)\n\n**Role:** Eldest child of Andrew Telfer (1798–1858) and Mary Hayes\n\n| Relation | Name |\n|---|---|\n| Father | [[Andrew Telfer (1798–1858)]] |\n| Mother | Mary Hayes |\n| Siblings | Mary (Telfer) Bowden (1848–1933), [[Andrew Telfer (b. 1850)]], Elizabeth \"Betsy\" (Telfer) Bolton (1854–1874) |\n\n## Evidence\n\n**Parentage — one source group, plus the family narrative.**\n- **Find a Grave**, memorial 48579836 (\"Andrew Nichol Telfer 1798–1858\"), which lists his children as William, Mary Bowden, Andrew and Elizabeth Bolton.\n- *From the Borders to the Bush* p.370.\n\n**Status: one documentary source for the parentage (Find a Grave headstone transcription), corroborated by the book.** His own birth, marriage and death are not independently witnessed.\n\n**Open thread:** no birth registration, marriage or death record has been located for him, and nothing is known of his later life. South Australian or NSW BDM records, or a search of Tamworth district records, would settle it.",
+    "roles": [
+      "Eldest child of Andrew Telfer (1798–1858) and Mary Hayes"
+    ],
+    "tags": [
+      "family",
+      "telfer",
+      "person"
+    ],
+    "parents": [
+      "andrew-telfer-1798",
+      {
+        "plain_name": "Mary Hayes"
+      }
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "andrew-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Agnes Telfer (1848)",
     "slug": "agnes-telfer-1848",
     "first_name": "Agnes",
@@ -5177,6 +5259,7 @@
       }
     ],
     "siblings": [
+      "william-telfer-1847",
       {
         "plain_name": "Mary (Telfer) Bowden"
       },
@@ -6125,7 +6208,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -6382,14 +6464,14 @@
     ],
     "parents": [],
     "children": [
+      "john-dillon-1882",
       "leslie-frank-dillon",
-      "John Dillon (1882–1882)",
       {
         "plain_name": "Beatrice Maud Dillon"
       }
     ],
     "spouses": [
-      "john-dillon"
+      "john-dillon-1859"
     ],
     "siblings": [],
     "step_parents": [],
@@ -6442,7 +6524,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "eva-agnes-farrow-1877",
       "george-hope-farrow-1872",
@@ -6550,7 +6631,7 @@
   },
   {
     "id": "John Boswell Dillon (1859)",
-    "slug": "john-dillon",
+    "slug": "john-dillon-1859",
     "first_name": "John",
     "middle_name": "Boswell",
     "last_name": "Dillon",
@@ -6576,8 +6657,8 @@
       "john-dillon-1827"
     ],
     "children": [
+      "john-dillon-1882",
       "leslie-frank-dillon",
-      "John Dillon (1882–1882)",
       {
         "plain_name": "Beatrice Maud Dillon"
       }
@@ -6777,7 +6858,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
       "george-hope-farrow-1872",
@@ -6884,7 +6964,7 @@
       "adam-dillon-1870",
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
-      "john-dillon",
+      "john-dillon-1859",
       "margaret-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871",
@@ -7133,7 +7213,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
-      "john-dillon",
+      "john-dillon-1859",
       "margaret-dillon",
       "septimus-dillon-1871"
     ],
@@ -7328,7 +7408,7 @@
       "adam-dillon-1870",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
-      "john-dillon",
+      "john-dillon-1859",
       "margaret-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871"
@@ -7470,7 +7550,6 @@
     ],
     "siblings": [
       "amy-farrow-stribling-1868",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -7622,7 +7701,7 @@
       "adam-dillon-1870",
       "francis-telfer-dillon-1864",
       "james-dillon-1861",
-      "john-dillon",
+      "john-dillon-1859",
       "margaret-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871"
@@ -7676,7 +7755,7 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -7971,7 +8050,6 @@
     ],
     "siblings": [
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -8027,7 +8105,7 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -8230,7 +8308,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
-      "john-dillon",
+      "john-dillon-1859",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871"
     ],
@@ -8291,7 +8369,7 @@
   },
   {
     "id": "William Adam Francis Telfer (1869)",
-    "slug": "william-telfer",
+    "slug": "william-telfer-1869",
     "first_name": "William",
     "middle_name": "Adam Francis",
     "last_name": "Telfer",
@@ -8373,7 +8451,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
-      "john-dillon",
+      "john-dillon-1859",
       "margaret-dillon",
       "robert-telfer-dillon-1862",
       "septimus-dillon-1871"
@@ -8629,7 +8707,7 @@
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
       "james-dillon-1861",
-      "john-dillon",
+      "john-dillon-1859",
       "margaret-dillon",
       "robert-telfer-dillon-1862"
     ],
@@ -8727,7 +8805,7 @@
       "james-robert-telfer-1866",
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -8821,7 +8899,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -8876,7 +8953,7 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -9320,7 +9397,7 @@
       "james-robert-telfer-1866",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -9369,7 +9446,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -9550,7 +9626,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "george-hope-farrow-1872",
@@ -9601,7 +9676,7 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -10081,7 +10156,7 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -10599,7 +10674,7 @@
       "james-robert-telfer-1866",
       "lindsay-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer"
+      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -12025,23 +12100,11 @@
       "non-telfer"
     ],
     "parents": [
-      "charles-farrow-1836",
-      "elizabeth-hannah-telfer-1836"
+      "charles-farrow-1836"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [
-      "amy-farrow-stribling-1868",
-      "charles-farrow-jr",
-      "elizabeth-telfer-farrow-holloway-1861",
-      "esther-farrow-latter-1859",
-      "eva-agnes-farrow-1877",
-      "george-hope-farrow-1872",
-      "jane-murray-farrow-1857",
-      "john-farrow",
-      "joseph-farrow",
-      "mary-bayes-farrow-1875"
-    ],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -12080,7 +12143,6 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -12171,7 +12233,7 @@
     "siblings": [
       "amy-farrow-stribling-1868",
       "charles-farrow-jr",
-      "elizabeth-farrow",
+      "elizabeth-smith-farrow",
       "elizabeth-telfer-farrow-holloway-1861",
       "esther-farrow-latter-1859",
       "eva-agnes-farrow-1877",
@@ -12966,6 +13028,47 @@
       "mary-telfer",
       "millicent-telfer",
       "rose-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "John Dillon (1882)",
+    "slug": "john-dillon-1882",
+    "first_name": "John",
+    "middle_name": null,
+    "last_name": "Dillon",
+    "birth_year": 1882,
+    "death_year": 1882,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1882",
+    "death_year_display": "1882",
+    "display_name": "John Dillon",
+    "title": "John Dillon (1882–1882)",
+    "lifespan": "1882 – 1882",
+    "generation": 6,
+    "is_living": false,
+    "body_markdown": "# John Dillon (1882–1882)\n\n**Role:** Infant son of John Boswell Dillon and Emily Jane Goodwin — lived only days\n\n| Relation | Name |\n|---|---|\n| Father | [[John Boswell Dillon (1859–1926)]] |\n| Mother | [[Emily Jane Goodwin (1859–1941)]] |\n| Siblings | Beatrice Maud Dillon (1884–1966), [[Leslie Frank Dillon (~1892–1915)]] |\n\n## Evidence\n\n**Named as a sibling on [[Leslie Frank Dillon (~1892–1915)]]** as \"John Dillon (b. & d. 1882)\".\n\n**Status: derived. One witness, held upstream — and that witness is the family's own record of the child.** No birth or death registration has been located for him.\n\n**Open thread:** South Australian BDM records for 1882 would give his exact dates and confirm the entry.",
+    "roles": [
+      "Infant son of John Boswell Dillon and Emily Jane Goodwin — lived only days"
+    ],
+    "tags": [
+      "family",
+      "dillon",
+      "person",
+      "infant-death"
+    ],
+    "parents": [
+      "emily-goodwin",
+      "john-dillon-1859"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "leslie-frank-dillon"
     ],
     "step_parents": [],
     "step_children": [],
@@ -14195,11 +14298,12 @@
     ],
     "parents": [
       "emily-goodwin",
-      "john-dillon"
+      "john-dillon-1859"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
+      "john-dillon-1882",
       {
         "plain_name": "Beatrice Maud Dillon"
       }

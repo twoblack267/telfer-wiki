@@ -1626,7 +1626,7 @@
       "generation": 5
     },
     {
-      "slug": "william-telfer",
+      "slug": "william-telfer-1869",
       "id": "William Adam Francis Telfer (1869)",
       "generation": 5
     },
@@ -1636,7 +1636,7 @@
       "generation": 5
     },
     {
-      "slug": "john-dillon",
+      "slug": "john-dillon-1859",
       "id": "John Boswell Dillon (1859)",
       "generation": 5
     },
@@ -3221,6 +3221,21 @@
       "generation": 5
     },
     {
+      "slug": "elizabeth-smith-farrow",
+      "id": "Elizabeth Float Smith Farrow (1825)",
+      "generation": 4
+    },
+    {
+      "slug": "john-dillon-1882",
+      "id": "John Dillon (1882)",
+      "generation": 6
+    },
+    {
+      "slug": "william-telfer-1847",
+      "id": "William Telfer (1847)",
+      "generation": 5
+    },
+    {
       "slug": "nicholas-andre-maddern-1974",
       "id": "Nicholas Andre Maddern (1974)",
       "generation": 8
@@ -3591,10 +3606,6 @@
       },
       {
         "from": "charles-farrow-1836",
-        "to": "elizabeth-farrow"
-      },
-      {
-        "from": "elizabeth-hannah-telfer-1836",
         "to": "elizabeth-farrow"
       },
       {
@@ -4974,7 +4985,7 @@
         "to": "leslie-frank-dillon"
       },
       {
-        "from": "john-dillon",
+        "from": "john-dillon-1859",
         "to": "leslie-frank-dillon"
       },
       {
@@ -5003,19 +5014,19 @@
       },
       {
         "from": "robert-telfer-1835",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "susan-telfer-1844",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
-        "to": "john-dillon"
+        "to": "john-dillon-1859"
       },
       {
         "from": "john-dillon-1827",
-        "to": "john-dillon"
+        "to": "john-dillon-1859"
       },
       {
         "from": "jean-telfer-1840",
@@ -6394,6 +6405,18 @@
         "to": "joseph-farrow"
       },
       {
+        "from": "emily-goodwin",
+        "to": "john-dillon-1882"
+      },
+      {
+        "from": "john-dillon-1859",
+        "to": "john-dillon-1882"
+      },
+      {
+        "from": "andrew-telfer-1798",
+        "to": "william-telfer-1847"
+      },
+      {
         "from": "lyndell-marie-telfer-1951",
         "to": "nicholas-andre-maddern-1974"
       },
@@ -6725,7 +6748,7 @@
       },
       {
         "from": "emily-goodwin",
-        "to": "john-dillon"
+        "to": "john-dillon-1859"
       },
       {
         "from": "nita-mutton",
@@ -6922,6 +6945,10 @@
       {
         "from": "stephen-bates",
         "to": "wendy-godfrey"
+      },
+      {
+        "from": "elizabeth-smith-farrow",
+        "to": "joseph-farrow-1814"
       }
     ],
     "siblingOf": [
@@ -6951,7 +6978,7 @@
       },
       {
         "from": "adam-dillon-1870",
-        "to": "john-dillon"
+        "to": "john-dillon-1859"
       },
       {
         "from": "adam-dillon-1870",
@@ -7212,10 +7239,6 @@
       {
         "from": "amy-farrow-stribling-1868",
         "to": "charles-farrow-jr"
-      },
-      {
-        "from": "amy-farrow-stribling-1868",
-        "to": "elizabeth-farrow"
       },
       {
         "from": "amy-farrow-stribling-1868",
@@ -7803,7 +7826,7 @@
       },
       {
         "from": "edith-mary-kathleen-telfer",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "edward-albert-parker-1888",
@@ -7956,38 +7979,6 @@
       {
         "from": "elizabeth-beattie-telfer-1832",
         "to": "robert-telfer-1835"
-      },
-      {
-        "from": "elizabeth-farrow",
-        "to": "elizabeth-telfer-farrow-holloway-1861"
-      },
-      {
-        "from": "elizabeth-farrow",
-        "to": "esther-farrow-latter-1859"
-      },
-      {
-        "from": "elizabeth-farrow",
-        "to": "eva-agnes-farrow-1877"
-      },
-      {
-        "from": "elizabeth-farrow",
-        "to": "george-hope-farrow-1872"
-      },
-      {
-        "from": "elizabeth-farrow",
-        "to": "jane-murray-farrow-1857"
-      },
-      {
-        "from": "elizabeth-farrow",
-        "to": "john-farrow"
-      },
-      {
-        "from": "elizabeth-farrow",
-        "to": "joseph-farrow"
-      },
-      {
-        "from": "elizabeth-farrow",
-        "to": "mary-bayes-farrow-1875"
       },
       {
         "from": "elizabeth-hannah-telfer-1836",
@@ -8471,7 +8462,7 @@
       },
       {
         "from": "francis-telfer-dillon-1864",
-        "to": "john-dillon"
+        "to": "john-dillon-1859"
       },
       {
         "from": "francis-telfer-dillon-1864",
@@ -8723,7 +8714,7 @@
       },
       {
         "from": "henry-hatch-dillon-1866",
-        "to": "john-dillon"
+        "to": "john-dillon-1859"
       },
       {
         "from": "henry-hatch-dillon-1866",
@@ -8955,7 +8946,7 @@
       },
       {
         "from": "james-robert-telfer-1866",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "james-telfer-1796",
@@ -9015,7 +9006,7 @@
       },
       {
         "from": "james-dillon-1861",
-        "to": "john-dillon"
+        "to": "john-dillon-1859"
       },
       {
         "from": "james-dillon-1861",
@@ -9515,10 +9506,6 @@
       },
       {
         "from": "charles-farrow-jr",
-        "to": "elizabeth-farrow"
-      },
-      {
-        "from": "charles-farrow-jr",
         "to": "elizabeth-telfer-farrow-holloway-1861"
       },
       {
@@ -9554,15 +9541,15 @@
         "to": "margaret-dougal-smith-1868"
       },
       {
-        "from": "john-dillon",
+        "from": "john-dillon-1859",
         "to": "margaret-dillon"
       },
       {
-        "from": "john-dillon",
+        "from": "john-dillon-1859",
         "to": "robert-telfer-dillon-1862"
       },
       {
-        "from": "john-dillon",
+        "from": "john-dillon-1859",
         "to": "septimus-dillon-1871"
       },
       {
@@ -9974,6 +9961,10 @@
         "to": "luke-caleb-telfer"
       },
       {
+        "from": "andrew-telfer",
+        "to": "william-telfer-1847"
+      },
+      {
         "from": "doris-telfer",
         "to": "edwin-telfer"
       },
@@ -10235,7 +10226,7 @@
       },
       {
         "from": "francis-john-burton-telfer",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "harriett-helen-telfer",
@@ -10255,7 +10246,7 @@
       },
       {
         "from": "harriett-helen-telfer",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "lindsay-burton-telfer",
@@ -10267,7 +10258,7 @@
       },
       {
         "from": "lindsay-burton-telfer",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "elizabeth-rowbotham",
@@ -10295,7 +10286,7 @@
       },
       {
         "from": "elizabeth-rowbotham",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "robert-allan-burton-telfer",
@@ -10303,11 +10294,11 @@
       },
       {
         "from": "robert-allan-burton-telfer",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "susan-telfer-of-german-creek",
-        "to": "william-telfer"
+        "to": "william-telfer-1869"
       },
       {
         "from": "ronald-rex-fatchen",
@@ -10832,6 +10823,14 @@
       {
         "from": "joseph-farrow",
         "to": "mary-bayes-farrow-1875"
+      },
+      {
+        "from": "elizabeth-smith-farrow",
+        "to": "joseph-farrow"
+      },
+      {
+        "from": "john-dillon-1882",
+        "to": "leslie-frank-dillon"
       }
     ],
     "stepParentOf": [

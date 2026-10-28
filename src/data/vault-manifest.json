@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-28T15:48:53+10:00",
+  "generated_at": "2026-10-28T16:44:42+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 661,
+  "count": 664,
   "kinds": {
-    "real": 644,
+    "real": 647,
     "redirect": 17,
     "empty": 0
   },
@@ -209,7 +209,7 @@
       "kind": "real"
     },
     "Andrew Telfer (1798\u20131858).md": {
-      "sha256": "5719d787805b8d2fb3238b36b0b99ca93edf5aa7f1430b215962b96451970aa3",
+      "sha256": "363ef74ea59f8a1391c1f046a7fdf60030c8ef9c782fa5bd633842348743a779",
       "kind": "real"
     },
     "Andrew Telfer (b. 1850).md": {
@@ -646,6 +646,10 @@
     },
     "Elizabeth Farrow.md": {
       "sha256": "4a92efd1f93f95d6340715adc33078e6c54662ed7df5327176ce9d0650e2e665",
+      "kind": "real"
+    },
+    "Elizabeth Float Smith (1825\u20131914).md": {
+      "sha256": "b07733b3fd6a56a486d74a2e58fde751f38b3b054d35633b17041da990b5216a",
       "kind": "real"
     },
     "Elizabeth Hannah (1836\u20131916).md": {
@@ -1356,6 +1360,10 @@
       "sha256": "ebe1a58b2fc55a4be0373fe02498ffe327ee010cb064ef723bdcf926a4b31fb3",
       "kind": "real"
     },
+    "John Dillon (1882\u20131882).md": {
+      "sha256": "ecf4ffde7d0776d8681e81d7b9ff39665f7df1749f756bef02cd86c4f56c108d",
+      "kind": "real"
+    },
     "John Ernest Telfer (1877\u20131877).md": {
       "sha256": "cdd54c2eb3d21941fc72c8fbbea1698ce441d6eb95054cd2bf999d75c8a93511",
       "kind": "real"
@@ -1469,7 +1477,7 @@
       "kind": "real"
     },
     "Joseph Farrow (1814\u20131899).md": {
-      "sha256": "5adcc6f27b9eb8d3f2ee7a47715c7c0240eb3388ce863850d9e08940b24f7e57",
+      "sha256": "0dc1d1e7ebdd8c38f7313d627497e4c8328bde0a8fb38cde3dccf0eccc33ceaa",
       "kind": "real"
     },
     "Joseph Francis Farrow.md": {
@@ -2630,6 +2638,10 @@
     },
     "William Telfer (1841\u2013?).md": {
       "sha256": "041da018647e64e901f79a81122b99929e5102d9c9143145083d62d35ee76084",
+      "kind": "real"
+    },
+    "William Telfer (b. 1847).md": {
+      "sha256": "d379bf9bae86e151a499a4cf4489606730084cfbe4059988afe62ede7fd18dfc",
       "kind": "real"
     },
     "William Telfer (shepherd).md": {

@@ -123,6 +123,21 @@ function stripLifespan(name) {
 function extractYears(name) {
   // Extract birth from "James Telfer (1761–1845)", "Mark Telfer (1986–living)",
   // "John Telfer (~1731–?)", or "John Telfer (b. ~1791, England)".
+  //
+  // 2026-10-28: a `(m. YYYY)` marriage year is NOT a birth year. Previously the
+  // pattern below found no match for "(m. 1870)" and returned null — which was
+  // correct — but the caller then fell through to a bare-name bind and silently
+  // attached a woman born 1878 as the second wife of a man born 1814. The
+  // refusal is now EXPLICIT so a marriage year can never be mistaken for a
+  // birth year, and the name-matching layer is told the ref is date-bearing.
+  if (/\(\s*m\.?\s*\d{4}/i.test(name)) {
+    return { birth: null, death: null, marriageOnly: true };
+  }
+  // Born and died the same year: "John Dillon (b. & d. 1882)". The lifespan
+  // regex below cannot see this form, so the year was invisible to the date
+  // gate and an infant bound onto his own father. Handled before lifespan.
+  const bd = name.match(/\(\s*b\.?\s*&\s*d\.?\s*(\d{4})\s*\)/i);
+  if (bd) return { birth: parseInt(bd[1]), death: parseInt(bd[1]) };
   // First try full lifespan: YYYY–YYYY or YYYY–living or YYYY–?
   const match = name.match(/\(\s*(?:b\.?\s*|c\.?\s*|ca\.?\s*|abt\.?\s*|about\s*|~+\s*)*(\d{4})\s*[–-]\s*(\d{4}|living|\?)\s*[,)]/i);
   if (match) {
@@ -283,7 +298,12 @@ function resolveRef(name, context = null) {
   
   // 2. Extract years and try with-years for the local form
   const years = extractYears(clean);
-  if (years) {
+  // 2026-10-28: `years.birth` is null for a marriage-only ref `(m. 1870)`. The
+  // name+" (YYYY–living)" keys below would otherwise be built as "null–living"
+  // and match nothing, so scope the whole year-matching block to real birth
+  // years. Marriage refs are handled further down, where they can be judged
+  // against the candidate's age at marriage.
+  if (years && years.birth != null) {
     // For each known name form of this person, try to match with extracted years
     const nameClean = stripLifespan(clean);
     const nameLower = lowerTrim(nameClean);
@@ -439,6 +459,21 @@ function resolveRef(name, context = null) {
         const candBirth = byBirthYear.get(slug);
         if (candBirth && candBirth === years.birth) return slug;
         // Birth year mismatch — it's probably wrong, keep looking
+      } else if (years && years.marriageOnly) {
+        // 2026-10-28: a marriage-year ref ("Elizabeth Float Smith (m. 1870)") reached
+        // this branch — no name match, so it fell through to byDisplay and returned
+        // the sole display match with NO age check. That bound a woman born 1878 as
+        // the wife of a man born 1814, and the graph builder then deleted the real
+        // spouse. A marriage year is evidence: judge the candidate's age at marriage
+        // before accepting, and refuse when impossible.
+        const m = clean.match(/\(\s*m\.?\s*(\d{4})/i);
+        const marriageYear = m ? parseInt(m[1]) : null;
+        const candBirth = byBirthYear.get(slug);
+        if (marriageYear != null && candBirth != null) {
+          const ageAtMarriage = marriageYear - candBirth;
+          if (ageAtMarriage < 12 || ageAtMarriage > 70) return null;
+        }
+        return slug;
       } else {
         return slug;
       }
@@ -477,6 +512,26 @@ function resolveRef(name, context = null) {
         if (dBirth === years.birth) return dSlug;
         // Neither matches exact years — prefer display but don't override
         return dSlug;
+      }
+    }
+    // MARRIAGE-YEAR REF, SINGLE CANDIDATE (2026-10-28).
+    //
+    // A ref like "Elizabeth Float Smith (m. 1870)" carries no birth year, so the
+    // exact-year test above cannot run and this function used to return the sole
+    // surviving namesake unconditionally. Observed consequence: a woman born 1878
+    // was bound as the second wife of a man born 1814, and the graph builder then
+    // DELETED the real spouse from the published record — a silent loss of a
+    // correct relationship, caused by a name collision with an unrelated child.
+    //
+    // A marriage year is still evidence: the spouse must be of marriageable age
+    // in that year. If the candidate cannot have married then, refuse and keep
+    // the raw name so the gap stays visible instead of inventing a wife.
+    if (years && years.marriageOnly && candidates.length === 1 && candidates[0].birth != null) {
+      const m = clean.match(/\(\s*m\.?\s*(\d{4})/i);
+      const marriageYear = m ? parseInt(m[1]) : null;
+      if (marriageYear) {
+        const ageAtMarriage = marriageYear - candidates[0].birth;
+        if (ageAtMarriage < 12 || ageAtMarriage > 70) return null;
       }
     }
     return candidates[0].slug;
@@ -525,6 +580,39 @@ function resolveRef(name, context = null) {
   // 7. Try stripping annotation like "(adoptive)", "(deceased)", "(3rd wife)"
   const noAnnot = stripAnnotation(clean);
   if (noAnnot !== clean) {
+    // 2026-10-28: DO NOT recurse on a marriage-year ref.
+    //
+    // "Elizabeth Float Smith (m. 1870)" has no name match and no display match, so the
+    // retry below recursed with the year STRIPPED ("Elizabeth Float Smith"). That retry
+    // could not apply the marriage-age gate — the evidence had been deleted — and fell
+    // through to step 8 (first+last), which matched the unrelated "Elizabeth Smith"
+    // born 1878. The graph builder then accepted her as the wife of a man born 1814
+    // and DELETED the real second marriage from the published record.
+    //
+    // A marriage year is evidence and must survive to the decision. Handle it here and
+    // return explicitly — null means "leave the raw name", which keeps the gap visible.
+    if (years && years.marriageOnly) {
+      const m = clean.match(/\(\s*m\.?\s*(\d{4})/i);
+      const marriageYear = m ? parseInt(m[1]) : null;
+      const bare = getNamePieces(noAnnot);
+      const pool = byName.get(bare) || [];
+      if (marriageYear != null && pool.length > 0) {
+        // Keep only spouses of a plausible age at that marriage.
+        const plausible = pool.filter(c => {
+          if (c.birth == null) return true; // undated: cannot rule out
+          const age = marriageYear - c.birth;
+          return age >= 12 && age <= 70;
+        });
+        if (plausible.length === 1) return plausible[0].slug;
+        if (plausible.length > 1) {
+          const best = pickBestMatch(plausible, context);
+          if (best) return best;
+        }
+        // Nothing plausible — refuse rather than fabricate a spouse.
+        return null;
+      }
+      return null;
+    }
     return resolveRef(noAnnot, context);
   }
   
