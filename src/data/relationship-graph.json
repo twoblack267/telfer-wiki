@@ -86,11 +86,6 @@
       "generation": 5
     },
     {
-      "slug": "allan-telfer",
-      "id": "Allan Telfer",
-      "generation": 7
-    },
-    {
       "slug": "allen-merrick",
       "id": "Allen Russell Merrick (1956)",
       "generation": 9
@@ -306,11 +301,6 @@
       "generation": 5
     },
     {
-      "slug": "edith-farrow",
-      "id": "Edith Farrow",
-      "generation": 5
-    },
-    {
       "slug": "edith-mary-kathleen-telfer",
       "id": "Edith Mary Kathleen Telfer (1879)",
       "generation": 5
@@ -319,11 +309,6 @@
       "slug": "edward-albert-parker-1888",
       "id": "Edward Albert Parker (1888)",
       "generation": 6
-    },
-    {
-      "slug": "edward-telfer",
-      "id": "Edward Telfer",
-      "generation": 99
     },
     {
       "slug": "edwin-ernest-clarke",
@@ -344,11 +329,6 @@
       "slug": "elisabeth-telfer-1806",
       "id": "Elisabeth Telfer (1806)",
       "generation": 4
-    },
-    {
-      "slug": "elizabeth-anne-smith-1878",
-      "id": "Elizabeth Anne Smith (1878)",
-      "generation": 5
     },
     {
       "slug": "elizabeth-beattie-1741",
@@ -451,11 +431,6 @@
       "generation": 6
     },
     {
-      "slug": "eric-john-telfer",
-      "id": "Eric John Telfer",
-      "generation": 5
-    },
-    {
       "slug": "ernest-telfer-1878",
       "id": "Ernest John Telfer (1878)",
       "generation": 5
@@ -468,16 +443,6 @@
     {
       "slug": "esther-farrow-latter-1859",
       "id": "Esther Farrow Latter (1859)",
-      "generation": 5
-    },
-    {
-      "slug": "esther-farrow",
-      "id": "Esther Farrow",
-      "generation": 99
-    },
-    {
-      "slug": "esther-hannah-farrow",
-      "id": "Esther Hannah Farrow",
       "generation": 5
     },
     {
@@ -751,11 +716,6 @@
       "generation": 5
     },
     {
-      "slug": "james-farrow",
-      "id": "James Farrow",
-      "generation": 5
-    },
-    {
       "slug": "james-gordon-steele-1892",
       "id": "James Gordon Steele (1892)",
       "generation": 6
@@ -1001,11 +961,6 @@
       "generation": 4
     },
     {
-      "slug": "joseph-francis-farrow",
-      "id": "Joseph Francis Farrow",
-      "generation": 5
-    },
-    {
       "slug": "joseph-march-1767",
       "id": "Joseph March (1767)",
       "generation": 2
@@ -1171,11 +1126,6 @@
       "generation": 4
     },
     {
-      "slug": "margaret-farrow",
-      "id": "Margaret Farrow",
-      "generation": 5
-    },
-    {
       "slug": "margaret-telfer-1801",
       "id": "Margaret Telfer (1801)",
       "generation": 3
@@ -1321,11 +1271,6 @@
       "generation": 9
     },
     {
-      "slug": "peter-farrow",
-      "id": "Peter Farrow",
-      "generation": 5
-    },
-    {
       "slug": "peter-telfer",
       "id": "Peter Telfer",
       "generation": 8
@@ -1391,11 +1336,6 @@
       "generation": 99
     },
     {
-      "slug": "robert-farrow",
-      "id": "Robert Farrow",
-      "generation": 5
-    },
-    {
       "slug": "robert-telfer-1886",
       "id": "Robert Freddy Telfer (1886)",
       "generation": 5
@@ -1444,11 +1384,6 @@
       "slug": "sandra-lee-smith",
       "id": "Sandra Lee Smith",
       "generation": 99
-    },
-    {
-      "slug": "sarah-farrow",
-      "id": "Sarah Farrow",
-      "generation": 5
     },
     {
       "slug": "sarah-jacobs-1763",
@@ -1583,11 +1518,6 @@
     {
       "slug": "william-baker-1853",
       "id": "William Baker (1853)",
-      "generation": 5
-    },
-    {
-      "slug": "william-farrow",
-      "id": "William Farrow",
       "generation": 5
     },
     {
@@ -3377,10 +3307,6 @@
         "to": "alfred-baker-1861"
       },
       {
-        "from": "gilbert-telfer-1908",
-        "to": "allan-telfer"
-      },
-      {
         "from": "emily-ellen-thorpe",
         "to": "amy-telfer-1884"
       },
@@ -3601,10 +3527,6 @@
         "to": "douglas-telfer-1887"
       },
       {
-        "from": "charles-farrow-1836",
-        "to": "edith-farrow"
-      },
-      {
         "from": "robert-telfer-1835",
         "to": "edith-mary-kathleen-telfer"
       },
@@ -3621,10 +3543,6 @@
         "to": "edward-albert-parker-1888"
       },
       {
-        "from": "william-telfer-1802",
-        "to": "edward-telfer"
-      },
-      {
         "from": "caroline-telfer-1842",
         "to": "edwin-telfer-1887"
       },
@@ -3639,14 +3557,6 @@
       {
         "from": "margaret-telfer-1849",
         "to": "effie-olive-telfer-1886"
-      },
-      {
-        "from": "esther-jane-telfer-1834",
-        "to": "elizabeth-anne-smith-1878"
-      },
-      {
-        "from": "john-smith-1827",
-        "to": "elizabeth-anne-smith-1878"
       },
       {
         "from": "adam-telfer-1842",
@@ -3741,10 +3651,6 @@
         "to": "emma-masters-1855"
       },
       {
-        "from": "john-telfer-1840",
-        "to": "eric-john-telfer"
-      },
-      {
         "from": "caroline-telfer-1842",
         "to": "ernest-telfer-1878"
       },
@@ -3767,10 +3673,6 @@
       {
         "from": "elizabeth-hannah-telfer-1836",
         "to": "esther-farrow-latter-1859"
-      },
-      {
-        "from": "charles-farrow-1836",
-        "to": "esther-hannah-farrow"
       },
       {
         "from": "francis-telfer-1809",
@@ -4109,10 +4011,6 @@
         "to": "james-edgerston-telfer-1877"
       },
       {
-        "from": "charles-farrow-1836",
-        "to": "james-farrow"
-      },
-      {
         "from": "charles-masters-1809",
         "to": "james-masters-1846"
       },
@@ -4381,10 +4279,6 @@
         "to": "john-telfer-1847"
       },
       {
-        "from": "elizabeth-hannah-telfer-1836",
-        "to": "joseph-francis-farrow"
-      },
-      {
         "from": "joseph-march-1767",
         "to": "joseph-march-1797"
       },
@@ -4573,10 +4467,6 @@
         "to": "margaret-telfer-1849"
       },
       {
-        "from": "charles-farrow-1836",
-        "to": "margaret-farrow"
-      },
-      {
         "from": "elizabeth-telfer-1774",
         "to": "margaret-telfer-1801"
       },
@@ -4729,10 +4619,6 @@
         "to": "penny-telfer-1960"
       },
       {
-        "from": "charles-farrow-1836",
-        "to": "peter-farrow"
-      },
-      {
         "from": "john-telfer-robert",
         "to": "peter-telfer"
       },
@@ -4781,10 +4667,6 @@
         "to": "robert-dunlop-lawrie-1850"
       },
       {
-        "from": "charles-farrow-1836",
-        "to": "robert-farrow"
-      },
-      {
         "from": "john-telfer-1840",
         "to": "robert-telfer-1886"
       },
@@ -4831,10 +4713,6 @@
       {
         "from": "francis-telfer-1875",
         "to": "ruth-telfer-1931"
-      },
-      {
-        "from": "charles-farrow-1836",
-        "to": "sarah-farrow"
       },
       {
         "from": "elizabeth-beattie-telfer-1832",
@@ -4987,10 +4865,6 @@
       {
         "from": "william-john-baker-1831",
         "to": "william-baker-1853"
-      },
-      {
-        "from": "charles-farrow-1836",
-        "to": "william-farrow"
       },
       {
         "from": "george-telfer-1850",
@@ -7983,26 +7857,6 @@
       {
         "from": "elisabeth-telfer-1806",
         "to": "john-telfer-1791"
-      },
-      {
-        "from": "elizabeth-anne-smith-1878",
-        "to": "esther-telfer-smith-1870"
-      },
-      {
-        "from": "elizabeth-anne-smith-1878",
-        "to": "francis-telfer-smith-1874"
-      },
-      {
-        "from": "elizabeth-anne-smith-1878",
-        "to": "jane-sophie-smith-1866"
-      },
-      {
-        "from": "elizabeth-anne-smith-1878",
-        "to": "john-smith"
-      },
-      {
-        "from": "elizabeth-anne-smith-1878",
-        "to": "margaret-dougal-smith-1868"
       },
       {
         "from": "elizabeth-beattie-telfer-1871",

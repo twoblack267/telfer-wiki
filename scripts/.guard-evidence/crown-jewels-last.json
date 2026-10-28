@@ -1,56 +1,61 @@
 {
-  "checkedAt": "2026-10-28T04:27:56.106Z",
+  "checkedAt": "2026-10-28T05:29:18.867Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 592,
-    "after": 657
+    "before": 657,
+    "after": 643
   },
   "crownJewelsChecked": 5,
-  "renames": [
-    {
-      "from": "james-telfer",
-      "to": "james-edgerston-telfer-1877",
-      "name": "James John Drew Telfer"
-    }
-  ],
+  "renames": [],
   "failures": [],
   "warnings": [
     {
       "kind": "FIELD_SHRANK",
-      "slug": "elisabeth-telfer-1806",
-      "name": "Elisabeth Telfer",
-      "field": "parents",
-      "before": 1,
-      "after": 0,
+      "slug": "esther-telfer-smith-1870",
+      "name": "Esther Telfer Smith",
+      "field": "siblings",
+      "before": 5,
+      "after": 4,
       "lost": 1,
       "lostEntries": [
-        "thomas-telfer"
+        "elizabeth-anne-smith-1878"
       ]
     },
     {
       "kind": "FIELD_SHRANK",
-      "slug": "thomas-telfer",
-      "name": "Thomas Telfer",
-      "field": "children",
-      "before": 2,
-      "after": 0,
-      "lost": 2,
+      "slug": "francis-telfer-smith-1874",
+      "name": "Francis Telfer Smith",
+      "field": "siblings",
+      "before": 5,
+      "after": 4,
+      "lost": 1,
       "lostEntries": [
-        "elisabeth-telfer-1806",
-        "Adam Telfer (bap. 1775)"
+        "elizabeth-anne-smith-1878"
       ]
     },
     {
       "kind": "FIELD_SHRANK",
-      "slug": "thomas-telfer",
-      "name": "Thomas Telfer",
-      "field": "spouses",
-      "before": 1,
-      "after": 0,
+      "slug": "margaret-dougal-smith-1868",
+      "name": "Margaret Dougal Smith",
+      "field": "siblings",
+      "before": 5,
+      "after": 4,
       "lost": 1,
       "lostEntries": [
-        "Agnes Mair"
+        "elizabeth-anne-smith-1878"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "john-smith",
+      "name": "John James Smith",
+      "field": "siblings",
+      "before": 5,
+      "after": 4,
+      "lost": 1,
+      "lostEntries": [
+        "elizabeth-anne-smith-1878"
       ]
     }
   ]
