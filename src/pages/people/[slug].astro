@@ -737,6 +737,19 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
               </style>
             </>
           )}
+
+          {!hasBio && (
+            <div class="privacy-hold">
+              <h2 class="font-serif text-base text-[var(--color-heading)] mb-1">
+                {person.is_living ? "Living family member" : "Profile in progress"}
+              </h2>
+              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+                {person.is_living
+                  ? "This person is living, so their details are deliberately not published here — a privacy hold, not a gap in the record. Name, family position and relationship links are shown; dates, places and life events are held back by choice."
+                  : "This person is recorded in the family tree, but no biography has been written yet. Their position in the family and any relationship links are shown above."}
+              </p>
+            </div>
+          )}
         </div>
 
         <!-- Photo Gallery -->

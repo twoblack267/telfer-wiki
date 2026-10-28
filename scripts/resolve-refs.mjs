@@ -42,19 +42,36 @@ people.forEach(p => {
   const short = `${p.first_name} ${p.last_name}`.toLowerCase().trim();
   const full = [p.first_name, p.middle_name, p.last_name].filter(Boolean).join(' ').toLowerCase().trim();
   const deathStr = p.death_year || '?';
+
+  // 2026-10-28: the vault's LIVING-person form puts the year in the TITLE
+  // ("James Telfer (b. 1979)") while the structured birth_year field stays null —
+  // 61 records were in exactly that state. Every date-aware index and gate below
+  // reads dates from birth_year, so a ref of "James Telfer (b. 1979)" parsed to
+  // 1979, found no candidate carrying that year, and fell through the ambiguity
+  // gate to null: the child edge never formed and the person stranded at gen 99.
+  // Deriving the year from the title restores evidence the vault already holds.
+  // It is NOT a guess: the year is written verbatim in the profile's own filename.
+  const birthYear = p.birth_year || (() => {
+    const t = p.title || '';
+    const born = t.match(/\(\s*b\.?\s*(\d{4})\s*\)/i);
+    if (born) return parseInt(born[1]);
+    const span = t.match(/\(~?(\d{4})\s*[–-]/);
+    if (span) return parseInt(span[1]);
+    return null;
+  })();
   
   // Build year-annotated versions for all name forms
-  if (p.birth_year) {
+  if (birthYear) {
     // "Mark Telfer (1877–1946)", "Mark Telfer (1877–living)", etc.
     [short, full, display].filter(Boolean).forEach(nameForm => {
       if (nameForm === short || nameForm === full || nameForm === display) {
         // deduplicate — only add each unique name+year combo once
-        const keyLiving = `${nameForm} (${p.birth_year}–living)`;
-        const keyUnknown = `${nameForm} (${p.birth_year}–?)`;
+        const keyLiving = `${nameForm} (${birthYear}–living)`;
+        const keyUnknown = `${nameForm} (${birthYear}–?)`;
         if (!byDisplayWithYears.has(keyLiving)) byDisplayWithYears.set(keyLiving, p.slug);
         if (!byDisplayWithYears.has(keyUnknown)) byDisplayWithYears.set(keyUnknown, p.slug);
         if (p.death_year) {
-          const keyDeath = `${nameForm} (${p.birth_year}–${p.death_year})`;
+          const keyDeath = `${nameForm} (${birthYear}–${p.death_year})`;
           if (!byDisplayWithYears.has(keyDeath)) byDisplayWithYears.set(keyDeath, p.slug);
         }
       }
@@ -72,14 +89,14 @@ people.forEach(p => {
   
   // Store all matches for short names (duplicates)
   if (!byName.has(short)) byName.set(short, []);
-  byName.get(short).push({ slug: p.slug, birth: p.birth_year, death: p.death_year, display });
+  byName.get(short).push({ slug: p.slug, birth: birthYear, death: p.death_year, display });
   
   if (full && full !== short) {
     if (!byFullName.has(full)) byFullName.set(full, []);
-    byFullName.get(full).push({ slug: p.slug, birth: p.birth_year, death: p.death_year, display });
+    byFullName.get(full).push({ slug: p.slug, birth: birthYear, death: p.death_year, display });
   }
   
-  byBirthYear.set(p.slug, p.birth_year);
+  byBirthYear.set(p.slug, birthYear);
 });
 
 // ── Helpers ──────────────────────────────────────

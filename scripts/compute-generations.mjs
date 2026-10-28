@@ -79,15 +79,45 @@ function resolveReference(ref, contextSlug) {
   // 1. Already a valid slug
   if (slugToPerson.has(ref)) return ref;
 
-  // 2. Extract birth_year from lifespan in reference, e.g. "(1761–1845)", "(~1731–?)"
+  // 2. Extract birth_year from lifespan in reference, e.g. "(1761–1845)", "(~1731–?)",
+  //    or the bare-birth form "(b. 1979)". The b. form is what the vault uses for
+  //    living people — without it, a common name like "James Telfer" disambiguates
+  //    to nothing and a living son silently falls into the gen-99 bin.
+  const bornMatch = ref.match(/\(\s*b\.?\s*(\d{4})\s*\)/i);
   const lifespanMatch = ref.match(/\(~?(\d{4})[–-]/);
-  const refBirthYear = lifespanMatch ? parseInt(lifespanMatch[1]) : null;
+  const refBirthYear = bornMatch
+    ? parseInt(bornMatch[1])
+    : (lifespanMatch ? parseInt(lifespanMatch[1]) : null);
 
   // 3. Strip all parenthetical content (lifespans, née, etc.)
   const stripped = ref.replace(/\([^)]*\)/g, '').trim().replace(/\s+/g, ' ');
   const strippedLower = stripped.toLowerCase();
 
   const candidates = [];
+
+  // PRE-PASS: exact vault file-name match.
+  // A wikilink names the person by FILE, and the file name is unique — so this
+  // is a certain link, not a guess. It must run over the whole set before any
+  // looser rule runs, because the loose first+last rule below matches every
+  // namesake in the tree and would otherwise bury the one right answer in a
+  // 4- or 12-way ambiguity that resolves to nothing (the gen-99 bug).
+  //
+  // Only applies when the reference CARRIED a disambiguator (a lifespan or a
+  // "b. YYYY"). A bare "James Telfer" strips to the same string as a dozen
+  // files and must stay ambiguous — matching it here silently merged people.
+  const refHadDisambiguator = /\([^)]*\d{4}[^)]*\)/.test(ref);
+  if (refHadDisambiguator) {
+    for (const person of people) {
+      const titleStripped = (person.title || '')
+        .replace(/\([^)]*\)/g, '').trim().replace(/\s+/g, ' ').toLowerCase();
+      if (titleStripped && strippedLower === titleStripped) {
+        // Confirm the full parenthetical forms agree, not just the stem.
+        const titleParen = ((person.title || '').match(/\(([^)]*)\)/) || [])[1] || '';
+        const refParen = (ref.match(/\(([^)]*)\)/) || [])[1] || '';
+        if (titleParen.trim() === refParen.trim()) return person.slug;
+      }
+    }
+  }
 
   for (const person of people) {
     const dn = person.display_name;
@@ -104,6 +134,24 @@ function resolveReference(ref, contextSlug) {
     if (strippedLower === dnStripped) {
       candidates.push(person);
       continue;
+    }
+
+
+    // b2) Stripped TITLE vs stripped reference (added 2026-10-28).
+    // Vault wikilinks reference a person by their FILE NAME — "Mark David Telfer
+    // (1950–1990)" — but display_name is often the shorter common form
+    // ("Mark Telfer"). The title field preserves the file-name form, so matching
+    // against it is what actually links a vault wikilink to its record.
+    // Without this, a correctly-wikilinked family still lands in the gen-99 bin.
+    //
+    // This is an EXACT file-name match, so it is authoritative: return at once
+    // rather than adding to `candidates`. The loose first+last rule below also
+    // matches every "Mark … Telfer" in the tree, and letting the two co-exist
+    // turned one certain link into a 4-way ambiguity that resolved to nothing.
+    const title = person.title || '';
+    const titleStripped = title.replace(/\([^)]*\)/g, '').trim().replace(/\s+/g, ' ').toLowerCase();
+    if (titleStripped && strippedLower === titleStripped) {
+      return person.slug;
     }
 
     // c) first_name + last_name match (handles 'Mark Telfer' → 'Mark Kenneth Telfer')

@@ -120,6 +120,30 @@ for (const person of people) {
 
 // ─── Resolve Names to Slugs ──────────────────────────────────────────────────
 
+/**
+ * A person's birth year, falling back to the one written in their TITLE.
+ *
+ * 2026-10-28. The vault's living-person filename form is `James Telfer (b. 1979)`:
+ * the year is real and recorded, but the structured `birth_year` field is null for
+ * 61 such records (55 of them living). Every date-aware comparison in this file read
+ * `p.birth_year` directly, so a vault reference carrying `(b. 1979)` parsed to 1979,
+ * found no candidate answering to that year, and fell through to the ambiguity gate
+ * and returned null. Consequence: the child edge was never written, the person never
+ * joined the graph, and they stranded at generation 99 for ever.
+ *
+ * This is not a guess. The year is written verbatim in the record's own title by the
+ * vault author; it is merely stored in prose rather than in the numeric field.
+ */
+function deriveBirthFromTitle(p) {
+  if (!p) return null;
+  const t = String(p.title || '');
+  const born = t.match(/\(\s*b\.?\s*(\d{4})\s*\)/i);
+  if (born) return parseInt(born[1], 10);
+  const span = t.match(/\(~?(\d{4})\s*[–-]/);
+  if (span) return parseInt(span[1], 10);
+  return null;
+}
+
 function resolveNameToSlug(name, sourceSlug) {
   if (!name || name === '?' || name.toLowerCase() === 'unknown') return null;
   if (name.match(/^\(?\d{4}[\-–]\d{4}\)?$/)) return null;
@@ -253,12 +277,20 @@ function resolveNameToSlug(name, sourceSlug) {
     })();
 
     // Exact both-years match is unequivocal.
+    // 2026-10-28: the vault's LIVING form carries the year in the TITLE
+    // ("James Telfer (b. 1979)") while structured birth_year stays null — 61 records
+    // were in that state. Comparing p.birth_year (null) against refBirth (1979)
+    // failed for every one of them, so the ref fell through to the ambiguity gate and
+    // returned null. That is the SECOND resolver with this defect (see resolve-refs.mjs
+    // byBirthYear); both must derive the year or the graph rebuild undoes the first fix.
+    // The year is written verbatim in the profile's own filename — evidence, not a guess.
+    const pBirth = (p) => p.birth_year ?? deriveBirthFromTitle(p);
     if (refDeath) {
-      const exact = candidates.find((p) => p.birth_year === refBirth && p.death_year === refDeath);
+      const exact = candidates.find((p) => pBirth(p) === refBirth && p.death_year === refDeath);
       if (exact) return exact.slug;
     }
     // Birth-year match.
-    const byBirth = candidates.filter((p) => p.birth_year === refBirth);
+    const byBirth = candidates.filter((p) => pBirth(p) === refBirth);
     if (byBirth.length === 1) return byBirth[0].slug;
     if (byBirth.length > 1) {
       // Same name + same birth year but conflicting deaths — genuinely ambiguous.

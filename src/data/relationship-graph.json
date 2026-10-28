@@ -5085,6 +5085,14 @@
         "to": "geoffrey-telfer-1914"
       },
       {
+        "from": "lyndy-trevaskis",
+        "to": "james-telfer-living"
+      },
+      {
+        "from": "mark-telfer-living",
+        "to": "james-telfer-living"
+      },
+      {
         "from": "adam-telfer-1842",
         "to": "lillian-telfer"
       },
@@ -6329,8 +6337,108 @@
         "to": "zachary-hanson"
       },
       {
+        "from": "edward-light",
+        "to": "adrian-light"
+      },
+      {
+        "from": "iris-hooper",
+        "to": "adrian-light"
+      },
+      {
+        "from": "roger-hooper",
+        "to": "alison-hooper"
+      },
+      {
+        "from": "roslyn-white",
+        "to": "alison-hooper"
+      },
+      {
+        "from": "andrew-goodson",
+        "to": "amie-goodson"
+      },
+      {
+        "from": "kathryn-whymark",
+        "to": "amie-goodson"
+      },
+      {
+        "from": "geoffrey-goodson",
+        "to": "andrew-goodson"
+      },
+      {
+        "from": "nancy-telfer",
+        "to": "andrew-goodson"
+      },
+      {
+        "from": "roger-hooper",
+        "to": "andrew-hooper"
+      },
+      {
+        "from": "roslyn-white",
+        "to": "andrew-hooper"
+      },
+      {
+        "from": "jennifer-fox",
+        "to": "anthony-hooper"
+      },
+      {
+        "from": "michael-hooper",
+        "to": "anthony-hooper"
+      },
+      {
+        "from": "dhurri-thiagarajah",
+        "to": "arya-telfer"
+      },
+      {
+        "from": "martin-telfer",
+        "to": "arya-telfer"
+      },
+      {
+        "from": "jennifer-fox",
+        "to": "belinda-hooper"
+      },
+      {
+        "from": "michael-hooper",
+        "to": "belinda-hooper"
+      },
+      {
+        "from": "stephen-bates",
+        "to": "cameron-bates"
+      },
+      {
+        "from": "wendy-godfrey",
+        "to": "cameron-bates"
+      },
+      {
+        "from": "laurel-telfer",
+        "to": "catherine-walsh"
+      },
+      {
+        "from": "anthony-hooper",
+        "to": "charlotte-hooper"
+      },
+      {
+        "from": "susan-lucas",
+        "to": "charlotte-hooper"
+      },
+      {
+        "from": "belinda-hooper",
+        "to": "edward-cameron"
+      },
+      {
+        "from": "ian-cameron",
+        "to": "edward-cameron"
+      },
+      {
         "from": "ernest-telfer-1878",
         "to": "gwenyth-telfer"
+      },
+      {
+        "from": "frank-hooper",
+        "to": "iris-hooper"
+      },
+      {
+        "from": "jessica-telfer",
+        "to": "iris-hooper"
       },
       {
         "from": "frank-hooper",
@@ -6339,6 +6447,30 @@
       {
         "from": "jessica-telfer",
         "to": "ivan-hooper"
+      },
+      {
+        "from": "belinda-hooper",
+        "to": "jack-cameron"
+      },
+      {
+        "from": "ian-cameron",
+        "to": "jack-cameron"
+      },
+      {
+        "from": "edward-light",
+        "to": "james-light"
+      },
+      {
+        "from": "iris-hooper",
+        "to": "james-light"
+      },
+      {
+        "from": "geoffrey-goodson",
+        "to": "jane-goodson"
+      },
+      {
+        "from": "nancy-telfer",
+        "to": "jane-goodson"
       },
       {
         "from": "ernest-telfer-1878",
@@ -6353,6 +6485,22 @@
         "to": "jonathan-telfer"
       },
       {
+        "from": "bruce-morris",
+        "to": "joshua-morris"
+      },
+      {
+        "from": "sally-walsh",
+        "to": "joshua-morris"
+      },
+      {
+        "from": "stephen-bates",
+        "to": "kelly-bates"
+      },
+      {
+        "from": "wendy-godfrey",
+        "to": "kelly-bates"
+      },
+      {
         "from": "john-telfer-1847",
         "to": "laurel-telfer"
       },
@@ -6361,8 +6509,88 @@
         "to": "mark-telfer-living"
       },
       {
+        "from": "christine-hunter",
+        "to": "martin-telfer"
+      },
+      {
+        "from": "mark-telfer-living",
+        "to": "martin-telfer"
+      },
+      {
+        "from": "laurel-telfer",
+        "to": "melinda-walsh"
+      },
+      {
+        "from": "frank-hooper",
+        "to": "michael-hooper"
+      },
+      {
+        "from": "jessica-telfer",
+        "to": "michael-hooper"
+      },
+      {
         "from": "lloyd-wilbur-telfer-1913",
         "to": "nancy-telfer"
+      },
+      {
+        "from": "muriel-crespin",
+        "to": "nancy-telfer"
+      },
+      {
+        "from": "geoffrey-goodson",
+        "to": "peter-goodson"
+      },
+      {
+        "from": "nancy-telfer",
+        "to": "peter-goodson"
+      },
+      {
+        "from": "roger-hooper",
+        "to": "richard-hooper"
+      },
+      {
+        "from": "roslyn-white",
+        "to": "richard-hooper"
+      },
+      {
+        "from": "frank-hooper",
+        "to": "roger-hooper"
+      },
+      {
+        "from": "jessica-telfer",
+        "to": "roger-hooper"
+      },
+      {
+        "from": "laurel-telfer",
+        "to": "sally-walsh"
+      },
+      {
+        "from": "laurel-telfer",
+        "to": "samantha-walsh"
+      },
+      {
+        "from": "bruce-morris",
+        "to": "sarah-morris"
+      },
+      {
+        "from": "sally-walsh",
+        "to": "sarah-morris"
+      },
+      {
+        "from": "lyndy-trevaskis",
+        "to": "simon-telfer"
+      },
+      {
+        "from": "mark-telfer-living",
+        "to": "simon-telfer"
+      },
+      {
+        "from": "bruce-morris",
+        "to": "tahlia-morris"
+      },
+      {
+        "from": "sally-walsh",
+        "to": "tahlia-morris"
       },
       {
         "from": "frank-hooper",
@@ -6371,6 +6599,22 @@
       {
         "from": "jessica-telfer",
         "to": "terence-hooper"
+      },
+      {
+        "from": "jennifer-fox",
+        "to": "timothy-hooper"
+      },
+      {
+        "from": "michael-hooper",
+        "to": "timothy-hooper"
+      },
+      {
+        "from": "gwenyth-telfer",
+        "to": "wendy-godfrey"
+      },
+      {
+        "from": "robert-godfrey",
+        "to": "wendy-godfrey"
       },
       {
         "from": "daryll-telfer",
@@ -9573,6 +9817,10 @@
         "to": "ruth-carson"
       },
       {
+        "from": "james-telfer-living",
+        "to": "simon-telfer"
+      },
+      {
         "from": "lillian-telfer",
         "to": "margaret-telfer-1869"
       },
@@ -10781,12 +11029,108 @@
         "to": "zachary-hanson"
       },
       {
+        "from": "adrian-light",
+        "to": "james-light"
+      },
+      {
+        "from": "alison-hooper",
+        "to": "andrew-hooper"
+      },
+      {
+        "from": "alison-hooper",
+        "to": "richard-hooper"
+      },
+      {
+        "from": "andrew-goodson",
+        "to": "jane-goodson"
+      },
+      {
+        "from": "andrew-goodson",
+        "to": "peter-goodson"
+      },
+      {
+        "from": "andrew-hooper",
+        "to": "richard-hooper"
+      },
+      {
+        "from": "anthony-hooper",
+        "to": "belinda-hooper"
+      },
+      {
+        "from": "anthony-hooper",
+        "to": "timothy-hooper"
+      },
+      {
+        "from": "belinda-hooper",
+        "to": "timothy-hooper"
+      },
+      {
+        "from": "cameron-bates",
+        "to": "kelly-bates"
+      },
+      {
+        "from": "edward-cameron",
+        "to": "jack-cameron"
+      },
+      {
+        "from": "iris-hooper",
+        "to": "ivan-hooper"
+      },
+      {
+        "from": "iris-hooper",
+        "to": "michael-hooper"
+      },
+      {
+        "from": "iris-hooper",
+        "to": "roger-hooper"
+      },
+      {
+        "from": "iris-hooper",
+        "to": "terence-hooper"
+      },
+      {
+        "from": "ivan-hooper",
+        "to": "michael-hooper"
+      },
+      {
+        "from": "ivan-hooper",
+        "to": "roger-hooper"
+      },
+      {
         "from": "ivan-hooper",
         "to": "terence-hooper"
       },
       {
+        "from": "jane-goodson",
+        "to": "peter-goodson"
+      },
+      {
         "from": "jessica-telfer",
         "to": "lloyd-wilbur-telfer-1913"
+      },
+      {
+        "from": "joshua-morris",
+        "to": "sarah-morris"
+      },
+      {
+        "from": "joshua-morris",
+        "to": "tahlia-morris"
+      },
+      {
+        "from": "michael-hooper",
+        "to": "roger-hooper"
+      },
+      {
+        "from": "michael-hooper",
+        "to": "terence-hooper"
+      },
+      {
+        "from": "roger-hooper",
+        "to": "terence-hooper"
+      },
+      {
+        "from": "sarah-morris",
+        "to": "tahlia-morris"
       },
       {
         "from": "james-telfer-1978",
