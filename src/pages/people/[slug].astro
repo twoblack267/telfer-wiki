@@ -175,6 +175,61 @@ const directLine = directLineAncestors(people);
 // byte-for-byte against these two exact strings. They are navigational shims for
 // named ancestors, not a general claim — keep the suffix explicit, do not derive it.
 const ROUTE_MARKER_SLUGS = new Set(["james-telfer-1761", "john-telfer-of-castleton-1731"]);
+// ── Evidence provenance banner (added 2026-10-28) ────────────────────────────
+// Mark, 28 Oct 2026: "I just don't want anyone floating off on their own with no
+// sauce, just a document." The vault already answers that question in its own
+// frontmatter — `single_source`, `evidence_level`, `provisional_why` — but the
+// converter used to drop all three, so the site presented a single-witness page
+// with the same unblinking confidence as a certified one. That is the defect this
+// banner fixes. It reports what the vault says; it never upgrades or softens it.
+//
+// Absence of a field is NOT proof of strength: 239 files say `single_source: true`
+// and 99 say `evidence_level: single_source`, but plenty of older files predate the
+// convention. So the banner speaks only when the vault has spoken, and says
+// "no evidence rating recorded" rather than implying a clean bill of health.
+const evidenceLevel = (person.evidence_level || "").trim();
+const singleSource = person.single_source === true;
+const provisionalWhy = (person.provisional_why || "").trim();
+const isSingleSource = singleSource || evidenceLevel === "single_source";
+const evidenceNote = (() => {
+  if (isSingleSource && provisionalWhy) {
+    return { tier: "single", title: "Single source — unverified", body: provisionalWhy };
+  }
+  if (isSingleSource) {
+    return {
+      tier: "single",
+      title: "Single source — unverified",
+      body:
+        "This profile rests on one source only. It has not been corroborated by an " +
+        "independent record. Treat the facts here as a lead to be checked, not as settled.",
+    };
+  }
+  if (evidenceLevel === "verified") {
+    return {
+      tier: "verified",
+      title: "Independently corroborated",
+      body: "The vault records this profile's facts as confirmed against an independent record.",
+    };
+  }
+  if (evidenceLevel === "soft-yes-provisional") {
+    return {
+      tier: "provisional",
+      title: "Sound but provisional",
+      body:
+        "Certainly right on present evidence, receipt attached, but not yet hardened " +
+        "against an independent record.",
+    };
+  }
+  if (evidenceLevel === "chapter-placed") {
+    return {
+      tier: "placed",
+      title: "Placed by chapter",
+      body: "Position in the family established from a book chapter rather than a vital record.",
+    };
+  }
+  return null;
+})();
+
 const livingNote = person.is_living
   ? ""
   : ROUTE_MARKER_SLUGS.has(person.slug) || directLine.has(person.slug)
@@ -721,6 +776,29 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
         )}
       </div>
     </div>
+
+    <!-- Evidence provenance banner. Renders only when the vault has recorded a
+         rating, and always BELOW the name so it frames everything read after it. -->
+    {evidenceNote && (
+      <div
+        class:list={[
+          "mb-1.5 rounded-xl border px-2.5 py-1.5",
+          evidenceNote.tier === "single"
+            ? "border-amber-400/60 bg-amber-50 dark:border-amber-500/40 dark:bg-amber-950/30"
+            : evidenceNote.tier === "verified"
+              ? "border-emerald-400/60 bg-emerald-50 dark:border-emerald-500/40 dark:bg-emerald-950/30"
+              : "border-sky-400/60 bg-sky-50 dark:border-sky-500/40 dark:bg-sky-950/30",
+        ]}
+        data-evidence-tier={evidenceNote.tier}
+      >
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-[var(--color-heading)] mb-0">
+          {evidenceNote.title}
+        </p>
+        <p class="text-[11px] leading-snug text-[var(--color-text-muted)] mt-0.5 mb-0">
+          {evidenceNote.body}
+        </p>
+      </div>
+    )}
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-1.5">
       <!-- Main Content -->

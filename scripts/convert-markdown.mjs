@@ -848,6 +848,23 @@ function main() {
       step_parents: stepParents,
       step_children: stepChildren,
       is_living: isLiving,
+      // ── Evidence provenance (added 2026-10-28) ─────────────────────────────
+      // The vault has recorded its own confidence for months: 239 person files
+      // carry `single_source: true`, 99 carry `evidence_level: single_source`, and
+      // 13 carry a `provisional_why` explaining in the author's own words that the
+      // page rests on one printed page and nothing else. NONE of it reached the
+      // site, because this converter dropped every one of those keys — so a reader
+      // saw a confident-looking profile whose backing was, in the vault's own
+      // assessment, a single typed-up family-tree report.
+      //
+      // Mark's rule, 28 Oct 2026: "I just don't want anyone floating off on their own
+      // with no sauce, just a document." The cure is not deletion — the evidence
+      // exists and is sound as far as it goes — it is carrying the caveat to the page
+      // so the reader is told exactly how thin the ice is. Passed through verbatim;
+      // never inferred, never upgraded here.
+      evidence_level: fm.evidence_level || null,
+      single_source: fm.single_source === true || fm.single_source === 'true',
+      provisional_why: fm.provisional_why || null,
       lifespan,
       related_trees: fm.related_trees || ['telfer-tree'],
       images: bodyImages.length > 0 ? bodyImages : [],
@@ -1118,6 +1135,17 @@ function main() {
       existing.death_year_display = entry.death_year_display;
       existing.is_living = entry.is_living;
       existing.lifespan = entry.lifespan;
+      // 2026-10-28: evidence provenance copied unconditionally, same as is_living.
+      // Mark's rule: "I don't want anyone floating off on their own with no sauce,
+      // just a document." The vault records its own confidence (239 files say
+      // single_source: true, 99 say evidence_level: single_source, 13 carry a written
+      // provisional_why) and none of it was reaching the site, so a single-witness
+      // profile rendered as confidently as a certified one. Written on EVERY run —
+      // including null/false — so a caveat disappears automatically the day an
+      // independent record is found, and never lingers stale.
+      existing.evidence_level = fm.evidence_level || null;
+      existing.single_source = fm.single_source === true || fm.single_source === 'true';
+      existing.provisional_why = fm.provisional_why || null;
       existing.vault_file = entry.vault_file;
       existing.tags = entry.tags;
       existing.relationships = entry.relationships;
@@ -1156,6 +1184,15 @@ function main() {
       // new field must be listed here or it is silently dropped. parentage_status
       // describes the CURRENT vault frontmatter, so it must be overwritten each run
       // (including to undefined, which allows a dispute to be cleared later).
+      //
+      // 2026-10-28: evidence provenance added to the allowlist. These three keys are
+      // copied from the vault frontmatter every run so a caveat can never go stale,
+      // and can be CLEARED the day a second witness is found (the fresh value is
+      // written unconditionally, including null/false). Leaving them off this
+      // allowlist is exactly why 239 single-source caveats never reached the site.
+      existing.evidence_level = entry.evidence_level ?? null;
+      existing.single_source = entry.single_source === true;
+      existing.provisional_why = entry.provisional_why ?? null;
       if (parentageUnproven) {
         existing.parentage_status = 'unproven';
         // disputed_parent_refs is (re)derived as SLUGS by build-relationship-graph.mjs,

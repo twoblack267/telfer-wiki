@@ -150,6 +150,14 @@ const PUBLIC_FIELDS = [
   'generation',
   'branch',
   'is_living',
+  // Evidence provenance (added 2026-10-28). Mark's rule: nobody may float off on
+  // their own with no sauce, just a document. The vault records its own confidence;
+  // without these three keys the site showed a single-witness page with the same
+  // unblinking confidence as a certified one. `provisional_why` is the vault author's
+  // own wording and is rendered verbatim — never summarised, never upgraded.
+  'evidence_level',
+  'single_source',
+  'provisional_why',
   'body_markdown',  // included but PII-scrubbed below
   'roles',
   'tags',
