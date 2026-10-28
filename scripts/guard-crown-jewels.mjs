@@ -80,6 +80,30 @@ const CROWN_JEWELS = {
       "John 1840-1845, Janet 1842-1845, John 1845-1921, Elizabeth 1847, Robert 1850, Alexander 1853). " +
       "A regen collapsed this to 1 on 2026-10-24.",
   },
+  "elisabeth-telfer-1806": {
+    // CORRECTED 2026-10-28 (parents 1 -> 0). This is a correction, not a loss.
+    //
+    // The one parent she was recorded as having was thomas-telfer — and it was WRONG.
+    // She was born in 1806 in England; Thomas Telfer (of Broadlee) was baptising children
+    // in Castleton parish, Roxburghshire, in 1774-75. The vault's page for him names his
+    // daughter as "Elisabeth Telfer (bap. 10 Feb ... year recorded 1774 in the index /
+    // 1776 on the register page)" and explicitly records the year discrepancy as
+    // UNRESOLVED. That ref carried no parseable year (the year extractor did not know
+    // `bap.`), so it fell to the bare-name path, matched the only "Elisabeth Telfer" in
+    // the vault, and bound a woman from the wrong country a generation later.
+    //
+    // The vault also documents at length that this Elisabeth (b.~1806, England) fits a
+    // 1851 widow's age and birthplace equally with Elizabeth Hutton Telfer (1774-1853)
+    // and that the identification is NOT settled. Asserting Thomas as her father picked
+    // one side of an open question and would have published it as fact on an ancestor's
+    // page. An orphan node is the honest state until the research settles it.
+    parents: 0,
+    allowShrink: { parents: "wrong-parent link removed 2026-10-28 (1 → 0); she was bound to Thomas Telfer of Broadlee by name alone, born in the wrong country 32 years after his children's baptisms" },
+    why:
+      "Born ~1806 in England. Previously bound as a child of Thomas Telfer (of Broadlee), " +
+      "who was baptising children at Castleton, Roxburghshire in 1774-75. The binding was a " +
+      "name collision with a daughter whose baptism year is itself disputed.",
+  },
   "william-telfer-1802": {
     // CORRECTED 2026-10-24 (children 5 -> 2; parents/spouses kept).
     // The old minimum of 5 children came from prior GENERATED data, which had wired

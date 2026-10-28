@@ -1,26 +1,13 @@
 {
-  "checkedAt": "2026-10-28T11:39:58.664Z",
+  "checkedAt": "2026-10-28T11:42:32.098Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 655,
     "after": 655
   },
-  "crownJewelsChecked": 5,
+  "crownJewelsChecked": 6,
   "renames": [],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "elisabeth-telfer-1806",
-      "name": "Elisabeth Telfer",
-      "field": "parents",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "thomas-telfer"
-      ]
-    }
-  ]
+  "warnings": []
 }
