@@ -49959,19 +49959,11 @@
         "names": [
           "Jonathan Lee Telfer"
         ]
-      },
-      {
-        "type": "Parent",
-        "names": [
-          "John Telfer (1847–1929)"
-        ]
       }
     ],
-    "roles": [
-      "Child of [[John Telfer (1847–1929)]]"
-    ],
-    "body_markdown": "# Jonathan Lee Telfer (b. 1977)\n\n**Role:** Child of [[John Telfer (1847–1929)]]\n**Born:** 11 Oct 1977 — Paddington, NSW\n\n## Family\n\n| Relation | Name |\n|",
-    "body_stripped": "**Role:** Child of John Telfer (1847–1929)\n**Born:** 11 Oct 1977 — Paddington, NSW\n\n## Family\n\n Relation  Name",
+    "roles": [],
+    "body_markdown": "# Jonathan Lee Telfer (b. 1977)\n\n**Born:** 11 Oct 1977 — Paddington, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | *(unproven — see note)* |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement, p.148.**\n\nThe book prints this name inside the chapter headed *John TELFER (1847–1929) m. Caroline Amelia MASTERS*, and the page's tree brackets point at that heading. **That cannot be the parent:** the dates are impossible by a century. The heading is a section title, not a parent line — the same trap that produced the false link on the other two names in this block.\n\n**Status: parentage unproven.** The name and dates come from the book alone. No parent is recorded here, and none is to be inferred. A register, certificate, or newspaper notice is needed before this note carries a parent.\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.148. Single source. Second witness outstanding.",
+    "body_stripped": "**Born:** 11 Oct 1977 — Paddington, NSW\n\n## Family\n\n Relation  Name \n\n **Parent**  *(unproven — see note)* \n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement, p.148.**\n\nThe book prints this name inside the chapter headed *John TELFER (1847–1929) m. Caroline Amelia MASTERS*, and the page's tree brackets point at that heading. **That cannot be the parent:** the dates are impossible by a century. The heading is a section title, not a parent line — the same trap that produce",
     "parents": [],
     "children": [],
     "siblings": [],
@@ -50218,23 +50210,15 @@
         ]
       },
       {
-        "type": "Parent",
-        "names": [
-          "John Telfer (1847–1929)"
-        ]
-      },
-      {
         "type": "Spouse",
         "names": [
           "Richard Bruce Walsh"
         ]
       }
     ],
-    "roles": [
-      "Child of [[John Telfer (1847–1929)]]"
-    ],
-    "body_markdown": "# Laurel Kaye Telfer (b. 1946)\n\n**Role:** Child of [[John Telfer (1847–1929)]]\n**Born:** 25 Jun 1946 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
-    "body_stripped": "**Role:** Child of John Telfer (1847–1929)\n**Born:** 25 Jun 1946 — Sydney, NSW\n\n## Family\n\n Relation  Name",
+    "roles": [],
+    "body_markdown": "# Laurel Kaye Telfer (b. 1946)\n\n**Born:** 25 Jun 1946 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | *(unproven — see note)* |\n| **Spouse** | [[Richard Bruce Walsh]] |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement, p.148.**\n\nThe book prints this name inside the chapter headed *John TELFER (1847–1929) m. Caroline Amelia MASTERS*, and the page's tree brackets point at that heading. **That cannot be the parent:** the dates are impossible by a century. The heading is a section title, not a parent line — the same trap that produced the false link on the other two names in this block.\n\n**Status: parentage unproven.** The name and dates come from the book alone. No parent is recorded here, and none is to be inferred. A register, certificate, or newspaper notice is needed before this note carries a parent.\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.148. Single source. Second witness outstanding.",
+    "body_stripped": "**Born:** 25 Jun 1946 — Sydney, NSW\n\n## Family\n\n Relation  Name \n\n **Parent**  *(unproven — see note)* \n **Spouse**  Richard Bruce Walsh \n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement, p.148.**\n\nThe book prints this name inside the chapter headed *John TELFER (1847–1929) m. Caroline Amelia MASTERS*, and the page's tree brackets point at that heading. **That cannot be the parent:** the dates are impossible by a century. The heading is a section title, not a parent lin",
     "parents": [],
     "children": [
       "catherine-walsh",
@@ -52107,23 +52091,15 @@
         ]
       },
       {
-        "type": "Parent",
-        "names": [
-          "John Telfer (1847–1929)"
-        ]
-      },
-      {
         "type": "Spouse",
         "names": [
           "Carol Petith"
         ]
       }
     ],
-    "roles": [
-      "Child of [[John Telfer (1847–1929)]]"
-    ],
-    "body_markdown": "# Mark Andrew Telfer (b. 1976)\n\n**Role:** Child of [[John Telfer (1847–1929)]]\n**Born:** 31 Mar 1976 — Paddington, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[John Telfer (1847–1929)]] |\n| **Spouse** | [[Carol Petith]] (m. 24 Apr 2004 Sydney, NSW) |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They establish what the book *prints*; they do not establish that the\nbook is right. A derived reading (OCR text layer, WeVisDoc, vision model, AI transcription) is a **finder,\nnever a witness**.\n\n**Status: single witness. Unverified.** Do not treat any field here as settled until a second, independent\nsource agrees — a register, a certificate, a newspaper notice, a cemetery record, or a clean read of the\n*published* page (not a phone scan of it).\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.148. Single source. Second witness outstanding.",
-    "body_stripped": "**Role:** Child of John Telfer (1847–1929)\n**Born:** 31 Mar 1976 — Paddington, NSW\n\n## Family\n\n Relation  Name \n\n **Parent**  John Telfer (1847–1929) \n **Spouse**  Carol Petith (m. 24 Apr 2004 Sydney, NSW) \n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and ",
+    "roles": [],
+    "body_markdown": "# Mark Andrew Telfer (b. 1976)\n\n**Born:** 31 Mar 1976 — Paddington, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | *(unproven — the book prints this name under the John Telfer (1847–1929) chapter heading, but that is a section title, not a parent: the dates are impossible by a century)* |\n| **Spouse** | [[Carol Petith]] (m. 24 Apr 2004 Sydney, NSW) |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They establish what the book *prints*; they do not establish that the\nbook is right. A derived reading (OCR text layer, WeVisDoc, vision model, AI transcription) is a **finder,\nnever a witness**.\n\n**Status: single witness. Unverified.** Do not treat any field here as settled until a second, independent\nsource agrees — a register, a certificate, a newspaper notice, a cemetery record, or a clean read of the\n*published* page (not a phone scan of it).\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.148. Single source. Second witness outstanding.",
+    "body_stripped": "**Born:** 31 Mar 1976 — Paddington, NSW\n\n## Family\n\n Relation  Name \n\n **Parent**  *(unproven — the book prints this name under the John Telfer (1847–1929) chapter heading, but that is a section title, not a parent: the dates are impossible by a century)* \n **Spouse**  Carol Petith (m. 24 Apr 2004 Sydney, NSW) \n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\nint",
     "parents": [],
     "children": [],
     "siblings": [],

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-29T07:58:06.575Z",
+  "checkedAt": "2026-10-29T12:42:36.768Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -9,43 +9,5 @@
   "crownJewelsChecked": 6,
   "renames": [],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "john-telfer-1847",
-      "name": "John Telfer",
-      "field": "children",
-      "before": 10,
-      "after": 8,
-      "lost": 2,
-      "lostEntries": [
-        "jonathan-telfer",
-        "laurel-telfer"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "jonathan-telfer",
-      "name": "Jonathan Telfer",
-      "field": "parents",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "john-telfer-1847"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "laurel-telfer",
-      "name": "Laurel Telfer",
-      "field": "parents",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "john-telfer-1847"
-      ]
-    }
-  ]
+  "warnings": []
 }
