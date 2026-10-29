@@ -624,8 +624,27 @@ function titleYears(p) {
   if (d) return `d. ${d}`;
   return "";
 }
+// Display-name disambiguation (sanitize-people.mjs, 2026-10-28) appends the
+// lifespan to `display_name` for NAMESAKE rows only — "Adam Telfer (1771 – 1846)"
+// — so two search rows cannot read as one person. That is correct for a list row,
+// where the name is the only thing on the line.
+//
+// A page title is NOT a list row: below it we append the years ourselves, so the
+// namesake rows printed the lifespan twice — 54 pages read
+// "Adam Telfer (1771 – 1846) (1771–1846)" in <title> and og:title.
+//
+// Only the TRAILING parenthetical is removed, and only when it holds nothing but
+// a year span. A real qualifier in parentheses must survive untouched:
+// "John Telfer (of Castleton) (1731–?)" keeps "of Castleton", and
+// "Elizabeth Beattie Bessie Telfer (1871–1948)" loses just the duplicated span.
+function bareTitleName(p) {
+  const raw = String(p.display_name || "");
+  const stripped = raw.replace(/\s*\(\s*(?:b\.|d\.|bap\.)?\s*~?\d{3,4}\s*(?:[–-]\s*(?:~?\d{3,4}|living|\?))?\s*\)\s*$/, "");
+  return stripped.trim() || raw.trim();
+}
 const titleYearsText = titleYears(person);
-const personTitle = titleYearsText ? `${person.display_name} (${titleYearsText})` : person.display_name;
+const titleName = bareTitleName(person);
+const personTitle = titleYearsText ? `${titleName} (${titleYearsText})` : titleName;
 
 const seoOverride = SEO_OVERRIDES[person.slug] || null;
 const seoTitle = seoOverride?.title || personTitle;
