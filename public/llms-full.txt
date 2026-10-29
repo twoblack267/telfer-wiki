@@ -1,0 +1,31 @@
+# llms-full.txt — not published
+
+The full-text corpus for this site is **deliberately not published**.
+
+## Why
+
+A complete text dump of the Telfer Wiki would be a complete roster of the family,
+**including living people**. The wiki names living people as plain text on their
+relatives' pages — by design — so a faithful dump cannot exclude them, and no filter
+applied to the output can undo that.
+
+The owners have therefore chosen not to publish it. This is not an oversight and not a
+temporary outage.
+
+## What is published instead
+
+- **[/llms.txt](https://telferwiki.com/llms.txt)** — the site map for AI assistants and
+  language models: what this site is, how it is structured, and where the useful pages are.
+- **[/sitemap-0.xml](https://telferwiki.com/sitemap-0.xml)** — every published page,
+  including every person page. Anything genuinely public is listed there.
+
+## If you need the full corpus
+
+Please use the sitemap. If you have a research need that genuinely requires the
+assembled corpus, contact the site owner via
+[/contact/](https://telferwiki.com/contact/).
+
+---
+
+*This file exists so that tooling which conventionally probes for `/llms-full.txt`
+receives an honest answer instead of a dead end. It contains no family data.*

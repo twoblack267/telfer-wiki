@@ -542,6 +542,12 @@
       "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement.",
       "date": "2026-10-29",
       "corrections_log": "2026-10-29 - MAINTENANCE: undeclared URL rename restored (lola-may-paterson-1913)"
+    },
+    "nicholas-andre-maddern-1974": {
+      "to": "nicholas-andre-maddern",
+      "reason": "Phantom stub retired 59b6de8: no vault_file, 41-character body, no source. Vault and A Telfer Family Tree Supplement 2008 p.143 both print 9 Mar 1973. Old URL was published before retirement, so it needs a declared alias, not a silent 404.",
+      "date": "2026-10-29",
+      "corrections_log": "Nicholas Andre Maddern — phantom 1974 stub retired"
     }
   }
 }
