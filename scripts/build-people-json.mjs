@@ -299,7 +299,9 @@ function createStubPerson(name, slug, sourceSlug, relationshipType) {
     birth_year: birthYear,
     death_year: deathYear,
     birth_year_display: birthYear ? String(birthYear) : '?',
-    death_year_display: deathYear ? String(deathYear) : (isLiving ? 'living' : '?'),
+    // Living = no death status at all (Mark's ruling 30 Oct 2026): blank, not "living"
+    // and not "?". "living" asserts life today; "?" suggests a missing death.
+    death_year_display: deathYear ? String(deathYear) : (isLiving ? '' : '?'),
     display_name: `${cleanName} (${birthYear ? String(birthYear) : '?'}–${deathYear ? String(deathYear) : (isLiving ? 'living' : '?')})`,
     title: `${cleanName} — Family & Biography`,
     tags: ['bio', 'family', 'person', 'stub', 'needs-research'],
@@ -503,7 +505,8 @@ async function build() {
       death_year: deathYear,
       birth_year_display: birthDisplay,
       death_year_display: deathDisplay,
-      display_name: `${fullName} (${birthDisplay}–${deathDisplay === 'living' ? 'living' : deathDisplay})`,
+      display_name: deathDisplay === '' ? `${fullName} (${birthDisplay})`
+        : `${fullName} (${birthDisplay}–${deathDisplay})`,
       title: fm.title || `${fullName} — Family & Biography`,
       tags: fm.tags || ['bio', 'family', 'person'],
       relationships,
@@ -511,7 +514,7 @@ async function build() {
       body_markdown: isLiving ? null : content,
       body_stripped: isLiving ? null : content.replace(/^---[\s\S]*?---/, '').trim(),
       is_living: isLiving,
-      lifespan: `${birthDisplay} – ${deathDisplay === 'living' ? 'living' : deathDisplay}`,
+      lifespan: deathDisplay === '' ? birthDisplay : `${birthDisplay} – ${deathDisplay}`,
       generation: null, // computed later
       branch: finalBranch,
       confidence,

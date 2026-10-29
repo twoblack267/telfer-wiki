@@ -883,8 +883,12 @@ for (const person of people) {
   //    This is a lossless pure derivation:
   //        born_auth = birth_year_display   dead_auth = death_year_display
   //        lifespan  = born_auth + " – " + dead_auth      (never drops "~")
+  // Blank death display (a LIVING person) shows the birth year alone — no dangling
+  // dash, no "?". Mark's ruling 30 Oct 2026: no death status on a living person.
   publicPerson.lifespan =
-    `${publicPerson.birth_year_display} – ${publicPerson.death_year_display}`;
+    publicPerson.death_year_display === ''
+      ? String(publicPerson.birth_year_display ?? '')
+      : `${publicPerson.birth_year_display} – ${publicPerson.death_year_display}`;
   publicPeople.push(publicPerson);
 }
 

@@ -229,7 +229,12 @@ for p in data:
         dec += 1
     if is_living is True and d is not None:
         issues.append("LIVING with death_year %s: %s" % (d, name))
-    if is_living is True and dyd not in (None, '', 'living'):
+    # Mark's ruling, 30 Oct 2026: a living person carries NO death status. The old
+    # check demanded dyd == 'living', which forced the data to assert "alive today" —
+    # a claim the archive cannot prove, and the same unfounded-claim class the rules
+    # ban at L306-L308. Blank is the correct state; '?' is a spurious unknown; a real
+    # death year is corruption. Only the latter two are defects.
+    if is_living is True and dyd not in (None, ''):
         issues.append("LIVING but death_year_display=%r: %s" % (dyd, name))
     if is_living is not True and dyd == 'living' and d is not None:
         issues.append("DECEASED but death_year_display='living': %s" % name)

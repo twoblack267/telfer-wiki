@@ -102,13 +102,19 @@ function ordinalSuffix(n) {
 //     lifespan = birth_year_display + " – " + death_year_display
 // Display fields are always populated and hold "~" circa / "living" / "?".
 function dLifespan(p) {
-  if (!p.birth_year_display && !p.death_year_display) return p.lifespan || "";
-  // When we genuinely have no dates, say so in words. "? – ?" reads as a broken page;
-  // "Dates unknown" reads as a deliberate, honest record. The 18 people this covers have
-  // parents, spouses and children — they are real, just undated (measured 29 Oct 2026).
-  // Presentation only: changes no data and asserts no date.
+  // A LIVING person has no death year. That is not "unknown" — it is a state we do not
+  // publish. Printing "1989 – ?" invites the reader to think a death is suspected-but-
+  // missing; printing "1989–living" asserts the opposite (that they are alive today,
+  // which the archive cannot prove). Both are unfounded. Mark's call, 30 Oct 2026:
+  // strip the status, call it what it is, and leave it BLANK — show the birth year only.
+  // Nothing is inferred: the record's own is_living flag decides, and no date is invented.
+  const living = p.is_living === true && p.death_year == null;
   const b = p.birth_year_display ?? "?";
   const d = p.death_year_display ?? "?";
+  if (living) return b === "?" ? "" : b;
+  if (!b && !d) return p.lifespan || "";
+  // When we genuinely have no dates, say so in words. "? – ?" reads as a broken page;
+  // "Dates unknown" reads as a deliberate, honest record.
   if (b === "?" && d === "?") return "Dates unknown";
   return `${b} – ${d}`;
 }

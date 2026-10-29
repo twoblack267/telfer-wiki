@@ -272,9 +272,25 @@ function checkPage(file) {
         // row carries its lifespan when the person has one in the data. If the
         // person has no lifespan/birth at all, that's a DATA gap we surface too.
         const relPerson = bySlug.get(resolvedSlug);
-        const hasDates = !!(relPerson?.lifespan || relPerson?.birth_year);
+        // A LIVING person renders her birth year ALONE — "1970", not "1970 – ?"
+        // (Mark's ruling, 30 Oct 2026: no death status on a living person). The data
+        // still carries lifespan "1970 – ?" for compatibility, so assert against the
+        // chip the row actually draws, or every living relative fails a guard that is
+        // testing the label rather than the link. Link correctness is untouched.
+        const livingChip = relPerson?.is_living === true && relPerson?.death_year == null;
+        const expectedChip = livingChip
+          ? (relPerson?.birth_year_display && relPerson.birth_year_display !== "?" ? String(relPerson.birth_year_display) : null)
+          : (relPerson?.lifespan || null);
+        // A LIVING person with no recorded birth year draws NO chip at all — the row
+        // is the linked name and nothing else. That is the honest render (we hold no
+        // dates, so we print none); it is not a "bare name" defect, which is why the
+        // old guard fired on 84 of them. Only a DECEASED person with no dates is a gap.
+        const hasDates = livingChip ? true : !!(relPerson?.lifespan || relPerson?.birth_year);
+        // "? – ?" is the renderer's "Dates unknown" state. Assert the words it draws.
+        const CHIP_UNKNOWN = "Dates unknown";
+        const chipText = expectedChip === "? – ?" ? CHIP_UNKNOWN : expectedChip;
         // The lifespan renders as: </a> <span class="...">(LIFESPAN)</span>
-        const ls = relPerson?.lifespan;
+        const ls = chipText;
         const withDates = ls
           ? new RegExp(
               `</a>\\s*<span[^>]*>\\(${escapeRegExp(ls)}\\)</span>`
@@ -286,7 +302,7 @@ function checkPage(file) {
             page: slug,
             field: SECTION_LABEL[field],
             relationship: name && name !== relSlug ? `${relSlug} → ${name}` : relSlug,
-            reason: `linked but lifespan "${relPerson.lifespan}" NOT rendered on row`,
+            reason: `linked but lifespan "${ls}" NOT rendered on row`,
           });
         } else if (!hasDates) {
           failures.push({

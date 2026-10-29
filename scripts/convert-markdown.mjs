@@ -745,12 +745,18 @@ function main() {
     const deathDate = normaliseDate(rawDeathDate);
 
     const birthYearDisplay = birthYear != null ? (birthApprox ? `~${birthYear}` : String(birthYear)) : '?';
-    // A missing death year prints "?" — NEVER the word "living".
-    // "1840 – living" is the same unfounded claim as the front-page living counter:
-    // the absence of a death record is not evidence that someone is alive.
-    // See Family History/How We Work (Telfer Wiki Rules).md L306-L308.
-    const deathYearDisplay = deathYear != null ? (deathApprox ? `~${deathYear}` : String(deathYear)) : '?';
-    const lifespan = `${birthYearDisplay} – ${deathYearDisplay}`;
+    // A missing death year prints "" (NOTHING) — never "?" and never "living".
+    // "1840 – living" is an unfounded claim (the absence of a death record is not
+    // evidence of life), and "1840 – ?" is an unfounded SUGGESTION (it reads as a
+    // death that is merely missing). Mark's ruling 30 Oct 2026: strip the status,
+    // call it what it is, leave it blank. A deceased person with no recorded year
+    // keeps "?" because there the death itself is established. See rules L306-L308.
+    const deathYearDisplay = deathYear != null ? (deathApprox ? `~${deathYear}` : String(deathYear))
+      : (isLiving ? '' : '?');
+    // A living person shows the birth year alone: "1989", never "1989 – " and never
+    // "1989 – ?". The dash implies a closing date exists and is missing.
+    const lifespan = deathYearDisplay === '' ? birthYearDisplay
+      : `${birthYearDisplay} – ${deathYearDisplay}`;
 
     const tags = Array.isArray(fm.tags) && fm.tags.length > 0
       ? fm.tags : ['bio', 'family', 'person'];

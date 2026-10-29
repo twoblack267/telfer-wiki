@@ -388,8 +388,20 @@ export function stripWikiLinks(text) {
 // reconciliation exactly. birth_year_display / death_year_display are always
 // populated (hold "~" circa, "living", "?" honestly) → lossless, never drops "~".
 function derivedLifespan(p) {
+  // LIVING = NO DEATH STATUS (Mark's ruling 30 Oct 2026). A blank death display is
+  // not a missing value to be filled with "?" — it is the deliberate absence of a
+  // claim. Show the birth year alone, or nothing at all when even that is unrecorded.
+  // This must agree with dLifespan() in pages/people/[slug].astro, because the
+  // relationship-links guard asserts the row's chip equals the page's lifespan.
+  if (p.is_living === true && p.death_year == null) {
+    const b = p.birth_year_display ?? "?";
+    return b === "?" ? "" : b;
+  }
   if (!p.birth_year_display && !p.death_year_display) return p.lifespan || "";
-  return `${p.birth_year_display ?? "?"} – ${p.death_year_display ?? "?"}`;
+  const b = p.birth_year_display ?? "?";
+  const d = p.death_year_display ?? "?";
+  if (b === "?" && d === "?") return "Dates unknown";
+  return `${b} – ${d}`;
 }
 
 /**
