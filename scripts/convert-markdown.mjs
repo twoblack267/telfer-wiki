@@ -745,7 +745,11 @@ function main() {
     const deathDate = normaliseDate(rawDeathDate);
 
     const birthYearDisplay = birthYear != null ? (birthApprox ? `~${birthYear}` : String(birthYear)) : '?';
-    const deathYearDisplay = deathYear != null ? (deathApprox ? `~${deathYear}` : String(deathYear)) : (isLiving ? 'living' : '?');
+    // A missing death year prints "?" — NEVER the word "living".
+    // "1840 – living" is the same unfounded claim as the front-page living counter:
+    // the absence of a death record is not evidence that someone is alive.
+    // See Family History/How We Work (Telfer Wiki Rules).md L306-L308.
+    const deathYearDisplay = deathYear != null ? (deathApprox ? `~${deathYear}` : String(deathYear)) : '?';
     const lifespan = `${birthYearDisplay} – ${deathYearDisplay}`;
 
     const tags = Array.isArray(fm.tags) && fm.tags.length > 0
@@ -924,6 +928,12 @@ function main() {
       step_parents: stepParents,
       step_children: stepChildren,
       is_living: isLiving,
+      // is_deceased = FACT: a death is recorded (death year, or a deceased flag on the
+      // vault note). This is the ONLY status the site is permitted to assert. Pages
+      // badge "Deceased" from this and say NOTHING when it is false — an unrecorded
+      // death is unknown, not "Living". Do not derive it from is_living: that flag is
+      // the PRIVACY posture and flips for anyone born >120 years ago.
+      is_deceased: deathYear != null || deceasedFlag,
       // ── Evidence provenance (added 2026-10-28) ─────────────────────────────
       // The vault has recorded its own confidence for months: 239 person files
       // carry `single_source: true`, 99 carry `evidence_level: single_source`, and
@@ -1210,6 +1220,10 @@ function main() {
       existing.birth_year_display = entry.birth_year_display;
       existing.death_year_display = entry.death_year_display;
       existing.is_living = entry.is_living;
+      // is_deceased = FACT (a death is recorded), distinct from is_living = PRIVACY
+      // posture. Must be copied here or the merge silently drops it and every page
+      // falls back to guessing status from the privacy flag — the original defect.
+      existing.is_deceased = entry.is_deceased;
       existing.lifespan = entry.lifespan;
       // 2026-10-28: evidence provenance copied unconditionally, same as is_living.
       // Mark's rule: "I don't want anyone floating off on their own with no sauce,

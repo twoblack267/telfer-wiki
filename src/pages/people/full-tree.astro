@@ -375,12 +375,9 @@ function renderTree(person: TreeNode, depth = 0, options = {}) {
   const allChildren = person._resolvedChildren || [];
 
   const indent = "  ".repeat(depth);
-  const lifespan = `${person.birth_year || "?"}–${
-    person.death_year ?? (person.is_living ? "living" : "?")
-  }`;
-  const livingBadge = person.is_living
-    ? ' <span class="badge badge-living text-xs">living</span>'
-    : "";
+  // A missing death year prints "?" — never "living". See rules L306-L308.
+  const lifespan = `${person.birth_year || "?"}–${person.death_year ?? "?"}`;
+  const livingBadge = "";
   const virtualBadge = person.virtual
     ? ' <span class="badge badge-virtual text-xs" style="background: var(--color-warning); color: var(--color-surface);">virtual</span>'
     : "";
@@ -390,7 +387,7 @@ function renderTree(person: TreeNode, depth = 0, options = {}) {
   const spouseName = spouses.length
     ? " + " + spouses
         .map(s => `${s.display_name} (${s.birth_year || "?"}–${
-          s.death_year ?? (s.is_living ? "living" : "?")})`)
+          s.death_year ?? "?"})`)
         .join(" + ")
     : "";
 
@@ -536,7 +533,7 @@ const looseHtml = detachedLoose.length
       .sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999))
       .map(
         (d) =>
-          `<li><a class="hover:text-[var(--color-heading)] underline decoration-dotted" href="/people/${allPeople.find((p: any) => p.id === d.id)?.slug || ""}/">${d.display_name}</a> <span class="text-xs text-[var(--color-muted)]">(${d.birth_year || "?"}–${d.death_year ?? (d.is_living ? "living" : "?")})</span></li>`
+          `<li><a class="hover:text-[var(--color-heading)] underline decoration-dotted" href="/people/${allPeople.find((p: any) => p.id === d.id)?.slug || ""}/">${d.display_name}</a> <span class="text-xs text-[var(--color-muted)]">(${d.birth_year || "?"}–${d.death_year ?? "?"})</span></li>`
       )
       .join("") +
     `</ul>`
@@ -676,10 +673,6 @@ const pageTitle = "Telfer Family Tree — All Generations";
         <div class="flex items-center gap-2">
           <span class="font-mono text-[var(--color-heading)]">├─</span>
           <span>Click to expand/collapse branch</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="badge badge-living text-xs">living</span>
-          <span>Living person</span>
         </div>
         <div class="flex items-center gap-2">
           <span class="text-xs text-[var(--color-muted)]">[Surname]</span>

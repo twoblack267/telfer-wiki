@@ -70,7 +70,8 @@ export interface PersonData {
   body_markdown: string;
   body_stripped: string;
   // Computed
-  is_living: boolean;
+  is_living: boolean;   // PRIVACY posture: no recorded death → treated as private
+  is_deceased: boolean; // FACT: a death is actually recorded. The only status the site may assert.
   lifespan: string;
   generation: number;
   parents: string[];
@@ -215,12 +216,28 @@ function buildPeople(): PersonData[] {
       const siblings = getNamesFor("siblings");
 
       // Determine if living
+      // TWO SEPARATE QUESTIONS were fused into this one flag, and that is the root of
+      // the "267 Living" defect. Keep them apart:
+      //   isLiving  = PRIVACY posture. "No recorded death" → treat as private.
+      //               This drives content stripping. NEVER publish a life story
+      //               because a death hasn't been found. Do NOT "correct" this.
+      //   isDeceased = FACT. Only true when a death is actually recorded.
+      //               This is the ONLY state the site is allowed to assert.
+      //   hasDeathRecord=false does NOT mean alive. It means unknown. The site
+      //               must therefore say NOTHING about status, rather than "Living".
+      // Rules: Family History/How We Work (Telfer Wiki Rules).md L306-L308 —
+      // "treated as living (private) until death is confirmed by two sources" is a
+      // PRIVACY posture, not a claim about life. Nobody is assumed dead on a guess
+      // either — so no age cutoff may ever invent a death (L308).
       const currentYear = new Date().getFullYear();
       const isLiving = frontmatter.death_year ? false : frontmatter.birth_year ? (currentYear - frontmatter.birth_year < 120) : true;
+      const isDeceased = Boolean(frontmatter.death_year);
 
       // Build display values
+      // A missing death year prints as "?" — never "living". "1840 – living" is the
+      // same unfounded claim as the front-page counter, just in a smaller font.
       const birthDisplay = frontmatter.birth_year ? `${frontmatter.birth_year}` : "?";
-      const deathDisplay = isLiving ? "living" : frontmatter.death_year ? `${frontmatter.death_year}` : "?";
+      const deathDisplay = frontmatter.death_year ? `${frontmatter.death_year}` : "?";
       const lifespan = `${birthDisplay} – ${deathDisplay}`;
 
       // Build display name
@@ -253,6 +270,7 @@ function buildPeople(): PersonData[] {
         body_markdown: cleanBody,
         body_stripped: stripMarkdown(cleanBody).substring(0, 500),
         is_living: isLiving,
+        is_deceased: isDeceased,
         lifespan,
         generation,
         parents,

@@ -95,8 +95,9 @@ const generationsSpanned = getMaxGeneration(descendantTree) - (person.generation
 function lifespan(p) {
   if (!p) return '';
   const b = p.birth_year || p.birth_display || '?';
-  const d = p.death_year || p.death_display || (p.is_living ? 'living' : '?');
-  const both = (p.birth_year || p.birth_display) && (p.death_year || p.death_display || p.is_living);
+  // A missing death year prints '?' — never 'living' (rules L306-L308).
+  const d = p.death_year || p.death_display || '?';
+  const both = (p.birth_year || p.birth_display) && (p.death_year || p.death_display);
   return both ? ` (${b}–${d})` : '';
 }
 
@@ -114,7 +115,7 @@ function renderDescendantNode(node, depth = 0) {
         <span class="${dotClass}" title="${node.branch || ''}"></span>
         <a href="/people/${node.slug}/" class="text-sm font-medium text-[var(--color-link)] hover:underline">${node.display_name}</a>
         ${node.generation ? `<span class="text-xs text-[var(--color-muted)] font-mono">Gen ${node.generation}</span>` : ''}
-        ${node.is_living ? '<span class="text-xs badge-living">Living</span>' : ''}
+        
       </summary>
   `;
   

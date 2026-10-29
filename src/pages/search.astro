@@ -57,10 +57,9 @@ const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) &
           <div class="hidden md:block text-xs text-[var(--color-ink-light)] max-w-xs truncate">{stripWikiLinks(person.roles[0])}</div>
         )}
         <div class="shrink-0">
-          {person.is_living
-            ? <span class="text-xs px-2 py-0.5 rounded badge-living">Living</span>
-            : <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
-          }
+          {person.is_deceased && (
+            <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
+          )}
         </div>
         <span class="shrink-0 text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">&rarr;</span>
       </a>

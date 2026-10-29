@@ -60,7 +60,8 @@ function formatDateRange(p) {
   // Withdrawn relative (privacy strip): no page, no published dates.
   if (p.withdrawn) return '';
   const b = p.birth_year || p.birth_display || '?';
-  const d = p.death_year || p.death_display || (p.is_living ? 'living' : '?');
+  // A missing death year prints '?' — never 'living' (rules L306-L308).
+  const d = p.death_year || p.death_display || '?';
   return `${b}–${d}`;
 }
 
@@ -161,7 +162,7 @@ const familyHasWithdrawn = [...spouses, ...children, ...siblings, ...parents]
                   <p class="text-xs text-[var(--color-muted)]">{formatDateRange(spouse)}</p>
                   {formatPlace(spouse) && <p class="text-xs text-[var(--color-ink-light)] mt-0.5">{formatPlace(spouse)}</p>}
                 </div>
-                {spouse.is_living && <span class="badge-living text-xs">Living</span>}
+                
               </div>
               
               {/* Marriage info - look for marriage details in relationships */}
@@ -191,7 +192,7 @@ const familyHasWithdrawn = [...spouses, ...children, ...siblings, ...parents]
                   {formatDateRange(child)}
                   {child.branch && <span class="ml-1 px-1.5 py-0.5 rounded text-[10px] bg-[var(--color-surface)]">{child.branch}</span>}
                 </div>
-                {child.is_living && !child.withdrawn && <span class="badge-living text-xs">Living</span>}
+                
               </div>
             </article>
           ))}

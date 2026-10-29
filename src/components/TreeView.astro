@@ -255,12 +255,12 @@ function renderSurnameTree(person: PersonData, depth = 0, seen = new Set<string>
   const childrenToShowOnly = allChildren.filter(c => !shouldRecurseSurname(c));
 
   const indent = "  ".repeat(depth);
-  const lifespan = `${person.birth_year || "?"}–${person.death_year ?? (person.is_living ? "living" : "?")}`;
-  const livingBadge = person.is_living
-    ? ' <span class="badge badge-living text-xs">living</span>'
-    : "";
+  const lifespan = `${person.birth_year || "?"}–${person.death_year ?? "?"}`;
+  // No status badge for an unrecorded death. "living" here was an assertion the
+  // archive cannot support; a missing death year is UNKNOWN. See rules L306-L308.
+  const livingBadge = "";
   const spouseName = spouse
-    ? ` + ${spouse.display_name} (${spouse.birth_year || "?"}–${spouse.death_year ?? (spouse.is_living ? "living" : "?")})`
+    ? ` + ${spouse.display_name} (${spouse.birth_year || "?"}–${spouse.death_year ?? "?"})`
     : "";
   const surnameLabel =
     person.last_name?.toLowerCase() !== "telfer"
@@ -286,12 +286,10 @@ ${indent}  <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3">`;
 
   for (const child of childrenToShowOnly) {
     const childSpouse = getSpouse(child);
-    const childLifespan = `${child.birth_year || "?"}–${child.death_year ?? (child.is_living ? "living" : "?")}`;
-    const childLivingBadge = child.is_living
-      ? ' <span class="badge badge-living text-xs">living</span>'
-      : "";
+    const childLifespan = `${child.birth_year || "?"}–${child.death_year ?? "?"}`;
+    const childLivingBadge = "";
     const childSpouseName = childSpouse
-      ? ` + ${childSpouse.display_name} (${childSpouse.birth_year || "?"}–${childSpouse.death_year ?? (childSpouse.is_living ? "living" : "?")})`
+      ? ` + ${childSpouse.display_name} (${childSpouse.birth_year || "?"}–${childSpouse.death_year ?? "?"})`
       : "";
     const childSurnameLabel = ` <span class="text-xs text-[var(--color-muted)]">[${child.last_name}]</span>`;
     const childIsSelected = selectedId && (child.id === selectedId || child.slug === selectedId || child.display_name === selectedId);
@@ -309,10 +307,8 @@ ${indent}      <div class="ml-6 mt-1 border-l border-[var(--color-border)] pl-3"
     // If this is a married daughter (placeholder with grandchildren), show her children as final leaf level
     if (isMarriedDaughter(child) && child.children) {
       for (const grandchild of child.children) {
-        const gcLifespan = `${grandchild.birth_year || "?"}–${grandchild.death_year ?? (grandchild.is_living ? "living" : "?")}`;
-        const gcLivingBadge = grandchild.is_living
-          ? ' <span class="badge badge-living text-xs">living</span>'
-          : "";
+        const gcLifespan = `${grandchild.birth_year || "?"}–${grandchild.death_year ?? "?"}`;
+        const gcLivingBadge = "";
         const gcSurnameLabel = ` <span class="text-xs text-[var(--color-muted)]">[${grandchild.last_name}]</span>`;
         const gcIdAttr = `data-person-id="${grandchild.id}" data-person-slug="${grandchild.slug}" data-person-name="${grandchild.display_name.replace(/"/g, "&quot;")}"`;
 

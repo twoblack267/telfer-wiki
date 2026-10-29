@@ -154,7 +154,7 @@ for (const t of timeline) {
               </div>
               <div class="flex-1 min-w-0">
                 <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-0.5">
-                  {event.type === "birth" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded badge-living">Born</span>}
+                  {event.type === "birth" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded badge-birth">Born</span>}
                   {event.type === "death" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded badge-deceased">Died</span>}
                   {event.type === "event" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded bg-[var(--color-navy)] text-white">Event</span>}
                   {event.personSlug ? (

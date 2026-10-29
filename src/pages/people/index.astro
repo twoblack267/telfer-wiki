@@ -22,14 +22,14 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
 
 <BaseLayout
   title="People"
-  description={`Browse all ${telferPeople.length} profiles in the Telfer line — ${telferPeople.filter(p => p.is_living).length} living and ${telferPeople.filter(p => !p.is_living).length} deceased — from John Telfer of Castleton (b. 1731) to the present day. Part of the Telfer Family Wiki.`}
+  description={`Browse all ${telferPeople.length} profiles in the Telfer line — ${telferPeople.filter(p => p.is_deceased).length} with a recorded death and ${telferPeople.filter(p => !p.is_deceased).length} with no death record — from John Telfer of Castleton (b. 1731) to the present day. Part of the Telfer Family Wiki.`}
 >
   <div class="page-header">
     <h1>All People</h1>
     <p class="text-[var(--color-ink-light)] mt-2">
       {telferPeople.length} profiles in the Telfer line
-      &nbsp;·&nbsp; <span class="text-[var(--color-burgundy)]">{telferPeople.filter(p => p.is_living).length} living</span>
-      &nbsp;·&nbsp; <span>{telferPeople.filter(p => !p.is_living).length} deceased</span>
+      &nbsp;·&nbsp; <span>{telferPeople.filter(p => p.is_deceased).length} deceased</span>
+      &nbsp;·&nbsp; <span class="text-[var(--color-muted)]">{telferPeople.filter(p => !p.is_deceased).length} no death record</span>
     </p>
   </div>
 
@@ -64,7 +64,7 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
   <div class="flex flex-wrap gap-3 mb-6 items-center">
     <label class="text-sm text-[var(--color-muted)]">Filter:</label>
     <a href={import.meta.env.BASE_URL + "people/"} data-filter-status="all" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">All</a>
-    <a href={import.meta.env.BASE_URL + "people?status=living"} data-filter-status="living" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-green-300 no-underline text-green-800 hover:border-green-500 transition-colors">Living</a>
+    <a href={import.meta.env.BASE_URL + "people?status=living"} data-filter-status="living" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">No death record</a>
     <a href={import.meta.env.BASE_URL + "people?status=deceased"} data-filter-status="deceased" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Deceased</a>
     <span class="text-[var(--color-border)] mx-1">|</span>
     <a href={import.meta.env.BASE_URL + "people?sort=alpha"} data-filter-sort="alpha" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
@@ -77,6 +77,10 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
     {telferPeople.map((person) => (
       <a
         href={`${import.meta.env.BASE_URL}people/${person.slug}/`}
+        {/* The classes 'living'/'deceased' are FILTER KEYS read by the script below, not
+            a claim printed on the page. They stay wired to is_living (the privacy
+            posture) so the existing URL filter keeps working; nothing here renders
+            the word "Living" to a visitor any more. */}
         class={`flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group ${person.is_living ? 'living' : 'deceased'}`}
       >
         <!-- Name & lifespan -->
@@ -87,11 +91,9 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
           <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
         </div>
 
-        {/* Status badge */}
+        {/* Status badge — only a recorded death is ever badged */}
         <div>
-          {person.is_living ? (
-            <span class="text-xs px-2 py-0.5 rounded badge-living">Living</span>
-          ) : (
+          {person.is_deceased && (
             <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
           )}
         </div>
@@ -125,7 +127,7 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
     items.forEach(el => {
       el.dataset.living = el.classList.contains('living') ? 'true' : 'false';
       el.dataset.name = (el.querySelector('.font-medium')?.textContent || '').toLowerCase();
-      // Extract year from lifespan: "1840 – 1876" or "? – living" or "1840 – living"
+      // Extract year from lifespan: "1840 – 1876" or "1840 – ?" (never "– living")
       const lifespan = el.querySelector('.text-sm.text-\\[var\\(--color-muted\\)\\]')?.textContent || '';
       const yearMatch = lifespan.match(/(\d{4})\s*–/);
       el.dataset.year = yearMatch ? yearMatch[1] : '9999';

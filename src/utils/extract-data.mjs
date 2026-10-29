@@ -153,9 +153,13 @@ function parsePeopleFile(filepath) {
   const siblings = getNames("siblings");
 
   const currentYear = new Date().getFullYear();
+  // isLiving = PRIVACY posture (no recorded death → private, drives content stripping).
+  // isDeceased = FACT (a death is recorded). A missing death year is UNKNOWN, not alive:
+  // it prints "?" and never the word "living". See How We Work L306-L308.
   const isLiving = fm.death_year ? false : fm.birth_year ? (currentYear - fm.birth_year < 120) : true;
+  const isDeceased = Boolean(fm.death_year);
   const birthD = fm.birth_year ? `${fm.birth_year}` : "?";
-  const deathD = isLiving ? "living" : fm.death_year ? `${fm.death_year}` : "?";
+  const deathD = fm.death_year ? `${fm.death_year}` : "?";
   const lifespan = `${birthD} – ${deathD}`;
   const middle = fm.middle_name ? ` ${fm.middle_name}` : "";
   const displayName = `${fm.first_name}${middle} ${fm.last_name}`;

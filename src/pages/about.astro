@@ -5,8 +5,8 @@ import type { PersonData } from "../utils/extract-data.mjs";
 const peopleData = (await import("../data/people.public.json")).default as PersonData[];
 const people = peopleData.filter(p => p.branch === "telfer" || !p.branch) || [];
 const totalPeople = people.length;
-const deceasedCount = people.filter(p => !p.is_living).length;
-const livingCount = people.filter(p => p.is_living).length;
+const deceasedCount = people.filter(p => p.is_deceased).length;
+const noDeathRecordCount = people.filter(p => !p.is_deceased).length;
 
 // Count generations
 const birthYears = people.filter(p => p.birth_year).map(p => p.birth_year as number);
@@ -114,6 +114,12 @@ people.forEach(p => {
           For the small number of family members who prefer not to appear in online search results at all,
           their pages are kept hidden from search engines while still remaining part of the tree.
         </p>
+        <p class="mt-3">
+          <strong>What "No death record" means.</strong> This archive only records a death when it can be
+          documented. A person shown with no death date has not been confirmed either way — the absence of a
+          death record is <em>not</em> a claim that someone is alive, and everyone in the tree is described the
+          same way regardless. Where a death is recorded, the page says so.
+        </p>
       </section>
 
       <section class="mb-10">
@@ -128,8 +134,8 @@ people.forEach(p => {
             <div class="text-sm text-[var(--color-text-muted)] mt-1">Ancestors</div>
           </div>
           <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 text-center">
-            <div class="text-3xl font-bold text-[var(--color-highlight)]">{livingCount}</div>
-            <div class="text-sm text-[var(--color-text-muted)] mt-1">Living relatives</div>
+            <div class="text-3xl font-bold text-[var(--color-highlight)]">{noDeathRecordCount}</div>
+            <div class="text-sm text-[var(--color-text-muted)] mt-1">No death record</div>
           </div>
           <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 text-center">
             <div class="text-3xl font-bold text-[var(--color-highlight)]">{generations}</div>

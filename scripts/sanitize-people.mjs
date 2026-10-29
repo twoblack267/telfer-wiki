@@ -149,7 +149,8 @@ const PUBLIC_FIELDS = [
   'lifespan',
   'generation',
   'branch',
-  'is_living',
+  'is_living',        // PRIVACY posture only — no recorded death → private. NOT a life status.
+  'is_deceased',      // FACT: a death is recorded. The only status the site may assert.
   // Evidence provenance (added 2026-10-28). Mark's rule: nobody may float off on
   // their own with no sauce, just a document. The vault records its own confidence;
   // without these three keys the site showed a single-witness page with the same
@@ -876,8 +877,10 @@ for (const person of people) {
   //    fresh from birth_year_display / death_year_display every build, so a stale
   //    stored string can never drift out of sync with the year fields again (the
   //    Allen defect: chip kept "? – 2015" after birth 1956 was recorded).
-  //    Display fields are fully populated for all records and carry "~" circa,
-  //    "living", and "?" honestly, so this is a lossless pure derivation:
+  //    Display fields are fully populated for all records and carry "~" circa and
+  //    "?" honestly. They no longer carry the word "living": a missing death year is
+  //    unknown, and printing "living" there was an unfounded claim (rules L306-L308).
+  //    This is a lossless pure derivation:
   //        born_auth = birth_year_display   dead_auth = death_year_display
   //        lifespan  = born_auth + " – " + dead_auth      (never drops "~")
   publicPerson.lifespan =
