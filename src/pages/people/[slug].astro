@@ -103,7 +103,14 @@ function ordinalSuffix(n) {
 // Display fields are always populated and hold "~" circa / "living" / "?".
 function dLifespan(p) {
   if (!p.birth_year_display && !p.death_year_display) return p.lifespan || "";
-  return `${p.birth_year_display ?? "?"} – ${p.death_year_display ?? "?"}`;
+  // When we genuinely have no dates, say so in words. "? – ?" reads as a broken page;
+  // "Dates unknown" reads as a deliberate, honest record. The 18 people this covers have
+  // parents, spouses and children — they are real, just undated (measured 29 Oct 2026).
+  // Presentation only: changes no data and asserts no date.
+  const b = p.birth_year_display ?? "?";
+  const d = p.death_year_display ?? "?";
+  if (b === "?" && d === "?") return "Dates unknown";
+  return `${b} – ${d}`;
 }
 const heroLifespan = dLifespan(person);
 

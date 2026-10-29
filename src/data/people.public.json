@@ -4218,8 +4218,6 @@
       "ernest-telfer-1878",
       "francis-telfer-1875",
       "john-telfer-1877",
-      "jonathan-telfer",
-      "laurel-telfer",
       "walter-telfer-1884",
       "william-telfer-1880"
     ],
@@ -13203,48 +13201,6 @@
     "person_photo": null
   },
   {
-    "id": "Jonathan Telfer",
-    "slug": "jonathan-telfer",
-    "first_name": "Jonathan",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Jonathan Telfer",
-    "title": "Jonathan Lee Telfer (b. 1977)",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Jonathan Lee Telfer (b. 1977)\n\n**Role:** Child of [[John Telfer (1847–1929)]]\n**Born:** 11 Oct 1977 — Paddington, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[John Telfer (1847–1929)]] |\n\n---",
-    "roles": [
-      "Child of [[John Telfer (1847–1929)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "john-telfer-1847"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Joseph Francis Farrow",
     "slug": "joseph-farrow",
     "first_name": "Joseph",
@@ -13332,55 +13288,6 @@
     "children": [],
     "spouses": [
       "marian-cornish-1896"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Laurel Telfer",
-    "slug": "laurel-telfer",
-    "first_name": "Laurel",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Laurel Telfer",
-    "title": "Laurel Kaye Telfer (b. 1946)",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Laurel Kaye Telfer (b. 1946)\n\n**Role:** Child of [[John Telfer (1847–1929)]]\n**Born:** 25 Jun 1946 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[John Telfer (1847–1929)]] |\n| **Spouse** | [[Richard Bruce Walsh (b. 1945)]] (m. 26 Aug 1967 Sydney, NSW) |\n\n---",
-    "roles": [
-      "Child of [[John Telfer (1847–1929)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "john-telfer-1847"
-    ],
-    "children": [
-      "catherine-walsh",
-      "melinda-walsh",
-      "sally-walsh",
-      "samantha-walsh"
-    ],
-    "spouses": [
-      "richard-walsh"
     ],
     "siblings": [],
     "step_parents": [],
@@ -13547,48 +13454,6 @@
     "children": [],
     "spouses": [
       "robert-telfer-1886"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Richard Walsh",
-    "slug": "richard-walsh",
-    "first_name": "Richard",
-    "middle_name": null,
-    "last_name": "Walsh",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Richard Walsh",
-    "title": "Richard Bruce Walsh (b. 1945)",
-    "lifespan": "? – ?",
-    "generation": 5,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Richard Bruce Walsh (b. 1945)\n\n**Role:** Spouse/connected by marriage\n**Born:** 18 Jan 1945 — Grafton, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Laurel Kaye Telfer (b. 1946)]] (m. 26 Aug 1967 Sydney, NSW) |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "laurel-telfer"
     ],
     "siblings": [],
     "step_parents": [],
@@ -16431,6 +16296,54 @@
     "person_photo": null
   },
   {
+    "id": "Frank Hooper (1904)",
+    "slug": "frank-hooper",
+    "first_name": "Frank",
+    "middle_name": "Lionel",
+    "last_name": "Hooper",
+    "birth_year": 1904,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1904",
+    "death_year_display": "?",
+    "display_name": "Frank Hooper",
+    "title": "Frank Lionel Hooper (1904–)",
+    "lifespan": "1904 – ?",
+    "generation": 6,
+    "is_living": false,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Frank Lionel Hooper (1904–)\n\n**Role:** Spouse/connected by marriage\n**Born:** 21 Dec 1904\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "iris-hooper",
+      "ivan-hooper",
+      "michael-hooper",
+      "roger-hooper",
+      "terence-hooper"
+    ],
+    "spouses": [
+      "jessica-telfer"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Gordon Dennis (1904)",
     "slug": "gordon-dennis",
     "first_name": "Gordon",
@@ -17149,6 +17062,59 @@
       "murray-telfer-1924",
       "reginald-masters-telfer-1922",
       "ruth-telfer-1931"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Jessica Telfer (1911)",
+    "slug": "jessica-telfer",
+    "first_name": "Jessica",
+    "middle_name": "Veronica",
+    "last_name": "Telfer",
+    "birth_year": 1911,
+    "death_year": 1994,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1911",
+    "death_year_display": "1994",
+    "display_name": "Jessica Telfer",
+    "title": "Jessica Veronica Telfer (1911–1994)",
+    "lifespan": "1911 – 1994",
+    "generation": 6,
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Jessica Veronica Telfer (1911–1994)\n\n**Role:** Child of [[Ernest John Telfer (1878–1953)]] — one of the four children his vault profile had flagged unverified since 2026; confirmed here from the printed page.\n**Born:** 19 Jun 1911 — Terowie, SA\n**Died:** 28 Jul 1994 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Ernest John Telfer (1878–1953)]] — one of the four children his vault profile had flagged unverified since 2026; confirmed here from the printed page."
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "ernest-telfer-1878",
+      "florence-nicholas"
+    ],
+    "children": [
+      "iris-hooper",
+      "ivan-hooper",
+      "michael-hooper",
+      "roger-hooper",
+      "terence-hooper"
+    ],
+    "spouses": [
+      "frank-hooper"
+    ],
+    "siblings": [
+      "lloyd-wilbur-telfer-1913"
     ],
     "step_parents": [],
     "step_children": [],
@@ -18186,6 +18152,53 @@
     "person_photo": null
   },
   {
+    "id": "Gwenyth Telfer (1918)",
+    "slug": "gwenyth-telfer",
+    "first_name": "Gwenyth",
+    "middle_name": "Miranda",
+    "last_name": "Telfer",
+    "birth_year": 1918,
+    "death_year": 2003,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1918",
+    "death_year_display": "2003",
+    "display_name": "Gwenyth Telfer",
+    "title": "Gwenyth Miranda Telfer (1918–2003)",
+    "lifespan": "1918 – 2003",
+    "generation": 6,
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Gwenyth Miranda Telfer (1918–2003)\n\n**Role:** Child of [[Ernest John Telfer (1878–1953)]] — one of the four children his vault profile had flagged unverified since 2026; confirmed here from the printed page.\n**Born:** 24 Oct 1918 — Stroud, NSW\n**Died:** 3 Jun 2003\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Ernest John Telfer (1878–1953)]] — one of the four children his vault profile had flagged unverified since 2026; confirmed here from the printed page."
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "ernest-telfer-1878"
+    ],
+    "children": [
+      "wendy-godfrey"
+    ],
+    "spouses": [
+      "albert-campbell",
+      "robert-godfrey"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "John Alick Ralph Telfer (1918)",
     "slug": "john-telfer-alick-ralph",
     "first_name": "John",
@@ -18644,6 +18657,50 @@
       "murray-telfer-1924",
       "ruth-telfer-1931"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Muriel Crespin (1923)",
+    "slug": "muriel-crespin",
+    "first_name": "Muriel",
+    "middle_name": null,
+    "last_name": "Crespin",
+    "birth_year": 1923,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1923",
+    "death_year_display": "?",
+    "display_name": "Muriel Crespin",
+    "title": "Muriel Grace Crespin (b. 1923)",
+    "lifespan": "1923 – ?",
+    "generation": 6,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Muriel Grace Crespin (b. 1923)\n\n**Role:** Spouse/connected by marriage\n**Born:** 4 Nov 1923 — Prahran, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "nancy-telfer"
+    ],
+    "spouses": [
+      "lloyd-wilbur-telfer-1913"
+    ],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -19208,247 +19265,6 @@
     "person_photo": null
   },
   {
-    "id": "Bruce Morris",
-    "slug": "bruce-morris",
-    "first_name": "Bruce",
-    "middle_name": null,
-    "last_name": "Morris",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Bruce Morris",
-    "title": "Bruce James Morris (b. 1971)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Bruce James Morris (b. 1971)\n\n**Role:** Spouse/connected by marriage\n**Born:** 2 Mar 1971 — Canberra, ACT\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Sally Michelle Walsh (b. 1970)]] (m. 8 Oct 1994 Canberra, ACT) |\n| **Children** | [[Joshua James Morris (b. 1996)]] · [[Sarah Kayte Morris (b. 1997)]] · [[Tahlia Paige Morris (b. 1998)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "joshua-morris",
-      "sarah-morris",
-      "tahlia-morris"
-    ],
-    "spouses": [
-      "sally-walsh"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Catherine Walsh",
-    "slug": "catherine-walsh",
-    "first_name": "Catherine",
-    "middle_name": null,
-    "last_name": "Walsh",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Catherine Walsh",
-    "title": "Catherine Alison Walsh (b. 1976)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Catherine Alison Walsh (b. 1976)\n\n**Role:** Child of [[Laurel Kaye Telfer (b. 1946)]]\n**Born:** 10 Dec 1976 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Laurel Kaye Telfer (b. 1946)]] |\n| **Spouse** | [[Doljin Anastovski (b. 1976)]] (b. 25 Nov 1976 Wollongong, NSW m. 8 Oct 2000 Wollongong, NSW) |\n| **Children** | Isabella Eden Anastovski · Zachary Tomas Anastovski |\n\n---",
-    "roles": [
-      "Child of [[Laurel Kaye Telfer (b. 1946)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "laurel-telfer"
-    ],
-    "children": [
-      {
-        "plain_name": "Isabella Eden Anastovski"
-      },
-      {
-        "plain_name": "Zachary Tomas Anastovski"
-      }
-    ],
-    "spouses": [
-      "doljin-anastovski"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Doljin Anastovski",
-    "slug": "doljin-anastovski",
-    "first_name": "Doljin",
-    "middle_name": null,
-    "last_name": "Anastovski",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Doljin Anastovski",
-    "title": "Doljin Anastovski (b. 1976)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Doljin Anastovski (b. 1976)\n\n**Role:** Spouse/connected by marriage\n**Born:** 25 Nov 1976 — Wollongong, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Catherine Alison Walsh (b. 1976)]] (m. 8 Oct 2000 Wollongong, NSW) |\n| **Children** | Isabella Eden Anastovski · Zachary Tomas Anastovski |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      {
-        "plain_name": "Isabella Eden Anastovski"
-      },
-      {
-        "plain_name": "Zachary Tomas Anastovski"
-      }
-    ],
-    "spouses": [
-      "catherine-walsh"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Frank Hooper",
-    "slug": "frank-hooper",
-    "first_name": "Frank",
-    "middle_name": "Lionel",
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Frank Hooper",
-    "title": "Frank Lionel Hooper (1904–)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Frank Lionel Hooper (1904–)\n\n**Role:** Spouse/connected by marriage\n**Born:** 21 Dec 1904\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Jessica Veronica Telfer (1911–1994)]] (m. 6 Jun 1931) |\n| **Children** | Ivan Donald Hooper · Terence Hugh Hooper · [[Iris Lynette Hooper (b. 1938)]] · [[Roger Carrington Hooper (b. 1943)]] · [[Michael Jeffrey Hooper (b. 1944)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "iris-hooper",
-      "ivan-hooper",
-      "michael-hooper",
-      "roger-hooper",
-      "terence-hooper"
-    ],
-    "spouses": [
-      "jessica-telfer"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Gwenyth Telfer",
-    "slug": "gwenyth-telfer",
-    "first_name": "Gwenyth",
-    "middle_name": "Miranda",
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Gwenyth Telfer",
-    "title": "Gwenyth Miranda Telfer (1918–2003)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": false,
-    "is_deceased": true,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Gwenyth Miranda Telfer (1918–2003)\n\n**Role:** Child of [[Ernest John Telfer (1878–1953)]] — one of the four children his vault profile had flagged unverified since 2026; confirmed here from the printed page.\n**Born:** 24 Oct 1918 — Stroud, NSW\n**Died:** 3 Jun 2003\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Ernest John Telfer (1878–1953)]] |\n| **Spouse** | [[Robert John Godfrey]] (m. 1945 Ashfield, NSW, divorced) |\n| **Spouse** | [[Albert John (Jack) Campbell]] (m. 1953 Auburn District, NSW) |\n| **Children** | [[Wendy Yvonne Godfrey (b. 1946)]] |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They establish what the book *prints*; they do not establish that the\nbook is right. A derived reading (OCR text layer, WeVisDoc, vision model, AI transcription) is a **finder,\nnever a witness**.\n\n**Status: single witness. Unverified.** Do not treat any field here as settled until a second, independent\nsource agrees — a register, a certificate, a newspaper notice, a cemetery record, or a clean read of the\n*published* page (not a phone scan of it).\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.149. Single source. Second witness outstanding.",
-    "roles": [
-      "Child of [[Ernest John Telfer (1878–1953)]] — one of the four children his vault profile had flagged unverified since 2026; confirmed here from the printed page."
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "ernest-telfer-1878"
-    ],
-    "children": [
-      "wendy-godfrey"
-    ],
-    "spouses": [
-      "albert-campbell",
-      "robert-godfrey"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Harry Bunston",
     "slug": "harry-bunston",
     "first_name": "Harry",
@@ -19481,108 +19297,6 @@
       "floris-telfer-1904"
     ],
     "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "James Sara",
-    "slug": "james-sara",
-    "first_name": "James",
-    "middle_name": null,
-    "last_name": "Sara",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "James Sara",
-    "title": "James Sara (b. 1970)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# James Sara (b. 1970)\n\n**Role:** Spouse/connected by marriage\n**Born:** 15 Jun 1970 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Samantha Jayne Walsh (b. 1975)]] (m. 17 Jan 1998 Sydney, NSW) |\n| **Children** | Amelia Jayne Sara · Sebastian James Sara |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      {
-        "plain_name": "Amelia Jayne Sara"
-      },
-      {
-        "plain_name": "Sebastian James Sara"
-      }
-    ],
-    "spouses": [
-      "samantha-walsh"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Jessica Telfer",
-    "slug": "jessica-telfer",
-    "first_name": "Jessica",
-    "middle_name": "Veronica",
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Jessica Telfer",
-    "title": "Jessica Veronica Telfer (1911–1994)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": false,
-    "is_deceased": true,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Jessica Veronica Telfer (1911–1994)\n\n**Role:** Child of [[Ernest John Telfer (1878–1953)]] — one of the four children his vault profile had flagged unverified since 2026; confirmed here from the printed page.\n**Born:** 19 Jun 1911 — Terowie, SA\n**Died:** 28 Jul 1994 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Ernest John Telfer (1878–1953)]] |\n| **Spouse** | [[Frank Lionel Hooper (1904–)]] (b. 21 Dec 1904 m. 6 Jun 1931) |\n| **Children** | Ivan Donald Hooper · Terence Hugh Hooper · [[Iris Lynette Hooper (b. 1938)]] · [[Roger Carrington Hooper (b. 1943)]] · [[Michael Jeffrey Hooper (b. 1944)]] |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They establish what the book *prints*; they do not establish that the\nbook is right. A derived reading (OCR text layer, WeVisDoc, vision model, AI transcription) is a **finder,\nnever a witness**.\n\n**Status: single witness. Unverified.** Do not treat any field here as settled until a second, independent\nsource agrees — a register, a certificate, a newspaper notice, a cemetery record, or a clean read of the\n*published* page (not a phone scan of it).\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.148. Single source. Second witness outstanding.",
-    "roles": [
-      "Child of [[Ernest John Telfer (1878–1953)]] — one of the four children his vault profile had flagged unverified since 2026; confirmed here from the printed page."
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "ernest-telfer-1878",
-      "florence-nicholas"
-    ],
-    "children": [
-      "iris-hooper",
-      "ivan-hooper",
-      "michael-hooper",
-      "roger-hooper",
-      "terence-hooper"
-    ],
-    "spouses": [
-      "frank-hooper"
-    ],
-    "siblings": [
-      "lloyd-wilbur-telfer-1913"
-    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -19712,94 +19426,6 @@
     "person_photo": null
   },
   {
-    "id": "Melinda Walsh",
-    "slug": "melinda-walsh",
-    "first_name": "Melinda",
-    "middle_name": null,
-    "last_name": "Walsh",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Melinda Walsh",
-    "title": "Melinda Kaye Walsh (b. 1972)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Melinda Kaye Walsh (b. 1972)\n\n**Role:** Child of [[Laurel Kaye Telfer (b. 1946)]]\n**Born:** 23 Jun 1972 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Laurel Kaye Telfer (b. 1946)]] |\n| **Spouse** | [[Ronald Henry Faller (b. 1971)]] (b. 14 Jul 1971 Toronto, Canada m. 8 Jul 2005 Toronto, Canada) |\n\n---",
-    "roles": [
-      "Child of [[Laurel Kaye Telfer (b. 1946)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "laurel-telfer"
-    ],
-    "children": [],
-    "spouses": [
-      "ronald-faller"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Muriel Crespin",
-    "slug": "muriel-crespin",
-    "first_name": "Muriel",
-    "middle_name": null,
-    "last_name": "Crespin",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Muriel Crespin",
-    "title": "Muriel Grace Crespin (b. 1923)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Muriel Grace Crespin (b. 1923)\n\n**Role:** Spouse/connected by marriage\n**Born:** 4 Nov 1923 — Prahran, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | Lloyd Wilbur Telfer (m. 8 Apr 1942 Shepparton, Vic) |\n| **Children** | [[Nancy Rae Telfer (b. 1943)]] · [[Mark David Telfer (1950–1990)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "nancy-telfer"
-    ],
-    "spouses": [
-      "lloyd-wilbur-telfer-1913"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Robert Godfrey",
     "slug": "robert-godfrey",
     "first_name": "Robert",
@@ -19836,147 +19462,6 @@
     ],
     "spouses": [
       "gwenyth-telfer"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Ronald Faller",
-    "slug": "ronald-faller",
-    "first_name": "Ronald",
-    "middle_name": null,
-    "last_name": "Faller",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Ronald Faller",
-    "title": "Ronald Henry Faller (b. 1971)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Ronald Henry Faller (b. 1971)\n\n**Role:** Spouse/connected by marriage\n**Born:** 14 Jul 1971 — Toronto, Canada\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Melinda Kaye Walsh (b. 1972)]] (m. 8 Jul 2005 Toronto, Canada) |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "melinda-walsh"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Sally Walsh",
-    "slug": "sally-walsh",
-    "first_name": "Sally",
-    "middle_name": null,
-    "last_name": "Walsh",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Sally Walsh",
-    "title": "Sally Michelle Walsh (b. 1970)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Sally Michelle Walsh (b. 1970)\n\n**Role:** Child of [[Laurel Kaye Telfer (b. 1946)]]\n**Born:** 8 Aug 1970 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Laurel Kaye Telfer (b. 1946)]] |\n| **Spouse** | [[Bruce James Morris (b. 1971)]] (b. 2 Mar 1971 Canberra, ACT m. 8 Oct 1994 Canberra, ACT) |\n| **Children** | [[Joshua James Morris (b. 1996)]] · [[Sarah Kayte Morris (b. 1997)]] · [[Tahlia Paige Morris (b. 1998)]] |\n\n---",
-    "roles": [
-      "Child of [[Laurel Kaye Telfer (b. 1946)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "laurel-telfer"
-    ],
-    "children": [
-      "joshua-morris",
-      "sarah-morris",
-      "tahlia-morris"
-    ],
-    "spouses": [
-      "bruce-morris"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Samantha Walsh",
-    "slug": "samantha-walsh",
-    "first_name": "Samantha",
-    "middle_name": null,
-    "last_name": "Walsh",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Samantha Walsh",
-    "title": "Samantha Jayne Walsh (b. 1975)",
-    "lifespan": "? – ?",
-    "generation": 6,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Samantha Jayne Walsh (b. 1975)\n\n**Role:** Child of [[Laurel Kaye Telfer (b. 1946)]]\n**Born:** 30 Apr 1975 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Laurel Kaye Telfer (b. 1946)]] |\n| **Spouse** | [[James Sara (b. 1970)]] (b. 15 Jun 1970 Sydney, NSW m. 17 Jan 1998 Sydney, NSW) |\n| **Children** | Amelia Jayne Sara · Sebastian James Sara |\n\n---",
-    "roles": [
-      "Child of [[Laurel Kaye Telfer (b. 1946)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "laurel-telfer"
-    ],
-    "children": [
-      {
-        "plain_name": "Amelia Jayne Sara"
-      },
-      {
-        "plain_name": "Sebastian James Sara"
-      }
-    ],
-    "spouses": [
-      "james-sara"
     ],
     "siblings": [],
     "step_parents": [],
@@ -21069,6 +20554,54 @@
     "person_photo": null
   },
   {
+    "id": "Ivan Hooper (1932)",
+    "slug": "ivan-hooper",
+    "first_name": "Ivan",
+    "middle_name": "Donald (Don)",
+    "last_name": "Hooper",
+    "birth_year": 1932,
+    "death_year": 1983,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1932",
+    "death_year_display": "1983",
+    "display_name": "Ivan Hooper",
+    "title": "Ivan Donald (Don) Hooper (1932–1983)",
+    "lifespan": "1932 – 1983",
+    "generation": 7,
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Ivan Donald (Don) Hooper (1932–1983)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 15 Jul 1932\n**Died:** 28 Oct 1983\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "frank-hooper",
+      "jessica-telfer"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "iris-hooper",
+      "michael-hooper",
+      "roger-hooper",
+      "terence-hooper"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Phyllis Marjorie Fatchen (1934)",
     "slug": "phyllis-marjorie-fatchen-1934",
     "first_name": "Phyllis",
@@ -21122,6 +20655,54 @@
       "malcolm-geoffrey-fatchen-1942",
       "ronald-rex-fatchen",
       "ross-fatchen"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Terence Hooper (1935)",
+    "slug": "terence-hooper",
+    "first_name": "Terence",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1935,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1935",
+    "death_year_display": "?",
+    "display_name": "Terence Hooper",
+    "title": "Terence Hugh (Terry) Hooper (b. 1935)",
+    "lifespan": "1935 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Terence Hugh (Terry) Hooper (b. 1935)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 12 Apr 1935\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "frank-hooper",
+      "jessica-telfer"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "iris-hooper",
+      "ivan-hooper",
+      "michael-hooper",
+      "roger-hooper"
     ],
     "step_parents": [],
     "step_children": [],
@@ -21187,6 +20768,51 @@
     "person_photo": null
   },
   {
+    "id": "Edward Light (1937)",
+    "slug": "edward-light",
+    "first_name": "Edward",
+    "middle_name": null,
+    "last_name": "Light",
+    "birth_year": 1937,
+    "death_year": 1988,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1937",
+    "death_year_display": "1988",
+    "display_name": "Edward Light",
+    "title": "Edward Light (1937–1988)",
+    "lifespan": "1937 – 1988",
+    "generation": 7,
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Edward Light (1937–1988)\n\n**Role:** Spouse/connected by marriage\n**Born:** 27 Jul 1937 — Isle of Wight\n**Died:** 31 Oct 1988 — Goulburn, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "adrian-light",
+      "james-light"
+    ],
+    "spouses": [
+      "iris-hooper"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Ronald Rex Fatchen (1937)",
     "slug": "ronald-rex-fatchen",
     "first_name": "Ronald Rex",
@@ -21234,6 +20860,59 @@
       "malcolm-geoffrey-fatchen-1942",
       "phyllis-marjorie-fatchen-1934",
       "ross-fatchen"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Iris Hooper (1938)",
+    "slug": "iris-hooper",
+    "first_name": "Iris",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1938,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1938",
+    "death_year_display": "?",
+    "display_name": "Iris Hooper",
+    "title": "Iris Lynette Hooper (b. 1938)",
+    "lifespan": "1938 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Iris Lynette Hooper (b. 1938)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 13 May 1938 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "frank-hooper",
+      "jessica-telfer"
+    ],
+    "children": [
+      "adrian-light",
+      "james-light"
+    ],
+    "spouses": [
+      "edward-light"
+    ],
+    "siblings": [
+      "ivan-hooper",
+      "michael-hooper",
+      "roger-hooper",
+      "terence-hooper"
     ],
     "step_parents": [],
     "step_children": [],
@@ -21551,6 +21230,109 @@
     "person_photo": null
   },
   {
+    "id": "Nancy Telfer (1943)",
+    "slug": "nancy-telfer",
+    "first_name": "Nancy",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1943,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1943",
+    "death_year_display": "?",
+    "display_name": "Nancy Telfer",
+    "title": "Nancy Rae Telfer (b. 1943)",
+    "lifespan": "1943 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Nancy Rae Telfer (b. 1943)\n\n**Role:** Child of Lloyd Wilbur Telfer\n**Born:** 21 Dec 1943 — Prahran, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of Lloyd Wilbur Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "lloyd-wilbur-telfer-1913",
+      "muriel-crespin"
+    ],
+    "children": [
+      "andrew-goodson",
+      "jane-goodson",
+      "peter-goodson"
+    ],
+    "spouses": [
+      "geoffrey-goodson"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Roger Hooper (1943)",
+    "slug": "roger-hooper",
+    "first_name": "Roger",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1943,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1943",
+    "death_year_display": "?",
+    "display_name": "Roger Hooper",
+    "title": "Roger Carrington Hooper (b. 1943)",
+    "lifespan": "1943 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Roger Carrington Hooper (b. 1943)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 15 Jan 1943 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "frank-hooper",
+      "jessica-telfer"
+    ],
+    "children": [
+      "alison-hooper",
+      "andrew-hooper",
+      "richard-hooper"
+    ],
+    "spouses": [
+      "roslyn-white"
+    ],
+    "siblings": [
+      "iris-hooper",
+      "ivan-hooper",
+      "michael-hooper",
+      "terence-hooper"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Judith Dawn Telfer (1944)",
     "slug": "judith-dawn-telfer-1944",
     "first_name": "Judith",
@@ -21601,6 +21383,60 @@
       "david-murray-telfer-1961",
       "joy-lorraine-telfer-1952",
       "miriam-ruth-telfer-1949"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Michael Hooper (1944)",
+    "slug": "michael-hooper",
+    "first_name": "Michael",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1944,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1944",
+    "death_year_display": "?",
+    "display_name": "Michael Hooper",
+    "title": "Michael Jeffrey Hooper (b. 1944)",
+    "lifespan": "1944 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Michael Jeffrey Hooper (b. 1944)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 20 Apr 1944 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "frank-hooper",
+      "jessica-telfer"
+    ],
+    "children": [
+      "anthony-hooper",
+      "belinda-hooper",
+      "timothy-hooper"
+    ],
+    "spouses": [
+      "jennifer-fox"
+    ],
+    "siblings": [
+      "iris-hooper",
+      "ivan-hooper",
+      "roger-hooper",
+      "terence-hooper"
     ],
     "step_parents": [],
     "step_children": [],
@@ -21871,6 +21707,100 @@
     "person_photo": null
   },
   {
+    "id": "Wendy Godfrey (1946)",
+    "slug": "wendy-godfrey",
+    "first_name": "Wendy",
+    "middle_name": null,
+    "last_name": "Godfrey",
+    "birth_year": 1946,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1946",
+    "death_year_display": "?",
+    "display_name": "Wendy Godfrey",
+    "title": "Wendy Yvonne Godfrey (b. 1946)",
+    "lifespan": "1946 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Wendy Yvonne Godfrey (b. 1946)\n\n**Role:** Child of [[Gwenyth Miranda Telfer (1918–2003)]]\n**Born:** 13 Nov 1946 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Gwenyth Miranda Telfer (1918–2003)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "gwenyth-telfer",
+      "robert-godfrey"
+    ],
+    "children": [
+      "cameron-bates",
+      "kelly-bates"
+    ],
+    "spouses": [
+      "stephen-bates"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Geoffrey Goodson (1947)",
+    "slug": "geoffrey-goodson",
+    "first_name": "Geoffrey",
+    "middle_name": null,
+    "last_name": "Goodson",
+    "birth_year": 1947,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1947",
+    "death_year_display": "?",
+    "display_name": "Geoffrey Goodson",
+    "title": "Geoffrey John Goodson (b. 1947)",
+    "lifespan": "1947 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Geoffrey John Goodson (b. 1947)\n\n**Role:** Spouse/connected by marriage\n**Born:** 13 Aug 1947 — Surrey Hills, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "andrew-goodson",
+      "jane-goodson",
+      "peter-goodson"
+    ],
+    "spouses": [
+      "nancy-telfer"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Ian Telfer (1947)",
     "slug": "ian-telfer-1947",
     "first_name": "Ian",
@@ -21909,6 +21839,98 @@
     "siblings": [
       "allan-telfer"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Jennifer Fox (1947)",
+    "slug": "jennifer-fox",
+    "first_name": "Jennifer",
+    "middle_name": null,
+    "last_name": "Fox",
+    "birth_year": 1947,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1947",
+    "death_year_display": "?",
+    "display_name": "Jennifer Fox",
+    "title": "Jennifer Bradfield Fox (b. 1947)",
+    "lifespan": "1947 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Jennifer Bradfield Fox (b. 1947)\n\n**Role:** Spouse/connected by marriage\n**Born:** 14 Jun 1947 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "anthony-hooper",
+      "belinda-hooper",
+      "timothy-hooper"
+    ],
+    "spouses": [
+      "michael-hooper"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Roslyn White (1947)",
+    "slug": "roslyn-white",
+    "first_name": "Roslyn",
+    "middle_name": null,
+    "last_name": "White",
+    "birth_year": 1947,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1947",
+    "death_year_display": "?",
+    "display_name": "Roslyn White",
+    "title": "Roslyn Jenette White (b. 1947)",
+    "lifespan": "1947 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Roslyn Jenette White (b. 1947)\n\n**Role:** Spouse/connected by marriage\n**Born:** 1 Apr 1947 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "alison-hooper",
+      "andrew-hooper",
+      "richard-hooper"
+    ],
+    "spouses": [
+      "roger-hooper"
+    ],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -22124,6 +22146,100 @@
     "person_photo": null
   },
   {
+    "id": "Stephen Bates (1949)",
+    "slug": "stephen-bates",
+    "first_name": "Stephen",
+    "middle_name": null,
+    "last_name": "Bates",
+    "birth_year": 1949,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1949",
+    "death_year_display": "?",
+    "display_name": "Stephen Bates",
+    "title": "Stephen Norman Bates (b. 1949)",
+    "lifespan": "1949 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Stephen Norman Bates (b. 1949)\n\n**Role:** Spouse/connected by marriage\n**Born:** 29 Dec 1949 — Sunderland, England\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "cameron-bates",
+      "kelly-bates"
+    ],
+    "spouses": [
+      "wendy-godfrey"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Mark Telfer (1950)",
+    "slug": "mark-telfer-living",
+    "first_name": "Mark",
+    "middle_name": "David",
+    "last_name": "Telfer",
+    "birth_year": 1950,
+    "death_year": 1990,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1950",
+    "death_year_display": "1990",
+    "display_name": "Mark Telfer (1950 – 1990)",
+    "title": "Mark David Telfer (1950–1990)",
+    "lifespan": "1950 – 1990",
+    "generation": 7,
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Mark David Telfer (1950–1990)\n\n**Role:** Child of Lloyd Wilbur Telfer\n**Born:** 25 Jul 1950\n**Died:** 21 May 1990 — Bendigo, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of Lloyd Wilbur Telfer"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "lloyd-wilbur-telfer-1913"
+    ],
+    "children": [
+      "james-telfer-living",
+      "martin-telfer",
+      "simon-telfer"
+    ],
+    "spouses": [
+      "christine-hunter",
+      "lyndy-trevaskis"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Daryll William Telfer (1951)",
     "slug": "daryll-telfer",
     "first_name": "Daryll",
@@ -22264,6 +22380,50 @@
     ],
     "spouses": [
       "allan-pedler"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Christine Hunter (1952)",
+    "slug": "christine-hunter",
+    "first_name": "Christine",
+    "middle_name": null,
+    "last_name": "Hunter",
+    "birth_year": 1952,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1952",
+    "death_year_display": "?",
+    "display_name": "Christine Hunter",
+    "title": "Christine Hunter (b. 1952)",
+    "lifespan": "1952 – ?",
+    "generation": 7,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Christine Hunter (b. 1952)\n\n**Role:** Spouse/connected by marriage\n**Born:** 24 Apr 1952\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "martin-telfer"
+    ],
+    "spouses": [
+      "mark-telfer-living"
     ],
     "siblings": [],
     "step_parents": [],
@@ -24222,141 +24382,6 @@
     "person_photo": null
   },
   {
-    "id": "Christine Hunter",
-    "slug": "christine-hunter",
-    "first_name": "Christine",
-    "middle_name": null,
-    "last_name": "Hunter",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Christine Hunter",
-    "title": "Christine Hunter (b. 1952)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Christine Hunter (b. 1952)\n\n**Role:** Spouse/connected by marriage\n**Born:** 24 Apr 1952\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Mark David Telfer (1950–1990)]] (m. Shepparton, Vic) |\n| **Children** | [[Martin Telfer (b. 1972)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "martin-telfer"
-    ],
-    "spouses": [
-      "mark-telfer-living"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Edward Light",
-    "slug": "edward-light",
-    "first_name": "Edward",
-    "middle_name": null,
-    "last_name": "Light",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Edward Light",
-    "title": "Edward Light (1937–1988)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": false,
-    "is_deceased": true,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Edward Light (1937–1988)\n\n**Role:** Spouse/connected by marriage\n**Born:** 27 Jul 1937 — Isle of Wight\n**Died:** 31 Oct 1988 — Goulburn, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Iris Lynette Hooper (b. 1938)]] (m. 1 Jan 1966 Sydney, NSW) |\n| **Children** | [[James Edward Light (b. 1966)]] · [[Adrian Terence Light (b. 1969)]] |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They establish what the book *prints*; they do not establish that the\nbook is right. A derived reading (OCR text layer, WeVisDoc, vision model, AI transcription) is a **finder,\nnever a witness**.\n\n**Status: single witness. Unverified.** Do not treat any field here as settled until a second, independent\nsource agrees — a register, a certificate, a newspaper notice, a cemetery record, or a clean read of the\n*published* page (not a phone scan of it).\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.148. Single source. Second witness outstanding.",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "adrian-light",
-      "james-light"
-    ],
-    "spouses": [
-      "iris-hooper"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Geoffrey Goodson",
-    "slug": "geoffrey-goodson",
-    "first_name": "Geoffrey",
-    "middle_name": null,
-    "last_name": "Goodson",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Geoffrey Goodson",
-    "title": "Geoffrey John Goodson (b. 1947)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Geoffrey John Goodson (b. 1947)\n\n**Role:** Spouse/connected by marriage\n**Born:** 13 Aug 1947 — Surrey Hills, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Nancy Rae Telfer (b. 1943)]] (m. 1 Sep 1976 Kew, Vic) |\n| **Children** | [[Andrew John Goodson (b. 1978)]] · [[Peter James Goodson (b. 1980)]] · [[Jane Louise Goodson (b. 1981)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "andrew-goodson",
-      "jane-goodson",
-      "peter-goodson"
-    ],
-    "spouses": [
-      "nancy-telfer"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Gordon William Rylance",
     "slug": "gordon-rylance",
     "first_name": "Gordon",
@@ -24399,107 +24424,6 @@
     "person_photo": null
   },
   {
-    "id": "Iris Hooper",
-    "slug": "iris-hooper",
-    "first_name": "Iris",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Iris Hooper",
-    "title": "Iris Lynette Hooper (b. 1938)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Iris Lynette Hooper (b. 1938)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 13 May 1938 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Jessica Veronica Telfer (1911–1994)]] |\n| **Spouse** | [[Edward Light (1937–1988)]] (b. 27 Jul 1937 Isle of Wight m. 1 Jan 1966 Sydney, NSW d. 31 Oct 1988 Goulburn, NSW) |\n| **Children** | [[James Edward Light (b. 1966)]] · [[Adrian Terence Light (b. 1969)]] |\n\n---",
-    "roles": [
-      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "frank-hooper",
-      "jessica-telfer"
-    ],
-    "children": [
-      "adrian-light",
-      "james-light"
-    ],
-    "spouses": [
-      "edward-light"
-    ],
-    "siblings": [
-      "ivan-hooper",
-      "michael-hooper",
-      "roger-hooper",
-      "terence-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Ivan Hooper",
-    "slug": "ivan-hooper",
-    "first_name": "Ivan",
-    "middle_name": "Donald (Don)",
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Ivan Hooper",
-    "title": "Ivan Donald (Don) Hooper (1932–1983)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": false,
-    "is_deceased": true,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Ivan Donald (Don) Hooper (1932–1983)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 15 Jul 1932\n**Died:** 28 Oct 1983\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Jessica Veronica Telfer (1911–1994)]] |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They establish what the book *prints*; they do not establish that the\nbook is right. A derived reading (OCR text layer, WeVisDoc, vision model, AI transcription) is a **finder,\nnever a witness**.\n\n**Status: single witness. Unverified.** Do not treat any field here as settled until a second, independent\nsource agrees — a register, a certificate, a newspaper notice, a cemetery record, or a clean read of the\n*published* page (not a phone scan of it).\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.148. Single source. Second witness outstanding.",
-    "roles": [
-      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "frank-hooper",
-      "jessica-telfer"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "iris-hooper",
-      "michael-hooper",
-      "roger-hooper",
-      "terence-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Jennifer Bunston",
     "slug": "jennifer-bunston",
     "first_name": "Jennifer",
@@ -24532,98 +24456,6 @@
     "children": [],
     "spouses": [],
     "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Jennifer Fox",
-    "slug": "jennifer-fox",
-    "first_name": "Jennifer",
-    "middle_name": null,
-    "last_name": "Fox",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Jennifer Fox",
-    "title": "Jennifer Bradfield Fox (b. 1947)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Jennifer Bradfield Fox (b. 1947)\n\n**Role:** Spouse/connected by marriage\n**Born:** 14 Jun 1947 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Michael Jeffrey Hooper (b. 1944)]] (m. 14 Feb 1969 Sydney, NSW) |\n| **Children** | [[Timothy Michael Hooper (1969–1969)]] · [[Belinda Louise Hooper (b. 1971)]] · [[Anthony Michael Hooper (b. 1972)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "anthony-hooper",
-      "belinda-hooper",
-      "timothy-hooper"
-    ],
-    "spouses": [
-      "michael-hooper"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Joshua Morris",
-    "slug": "joshua-morris",
-    "first_name": "Joshua",
-    "middle_name": null,
-    "last_name": "Morris",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Joshua Morris",
-    "title": "Joshua James Morris (b. 1996)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Joshua James Morris (b. 1996)\n\n**Role:** Child of [[Sally Michelle Walsh (b. 1970)]]\n**Born:** 2 Jan 1996 — Canberra, ACT\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Sally Michelle Walsh (b. 1970)]] |\n\n---",
-    "roles": [
-      "Child of [[Sally Michelle Walsh (b. 1970)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "bruce-morris",
-      "sally-walsh"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "sarah-morris",
-      "tahlia-morris"
-    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -24711,158 +24543,6 @@
     ],
     "spouses": [
       "stanley-james-pedler-1938"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Mark Telfer",
-    "slug": "mark-telfer-living",
-    "first_name": "Mark",
-    "middle_name": "David",
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Mark Telfer (? – ?)",
-    "title": "Mark David Telfer (1950–1990)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": false,
-    "is_deceased": true,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Mark David Telfer (1950–1990)\n\n**Role:** Child of Lloyd Wilbur Telfer\n**Born:** 25 Jul 1950\n**Died:** 21 May 1990 — Bendigo, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | Lloyd Wilbur Telfer |\n| **Spouse** | [[Lyndy Trevaskis]] (m. Bendigo, Vic — first wife div/ended before 1972 union) |\n| **Spouse** | [[Christine Hunter (b. 1952)]] (b. 24 Apr 1952 m. Shepparton, Vic) |\n| **Children** | [[James Telfer (b. 1979)]] · [[Simon Telfer (b. 1986)]] · [[Martin Telfer (b. 1972)]] |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They establish what the book *prints*; they do not establish that the\nbook is right. A derived reading (OCR text layer, WeVisDoc, vision model, AI transcription) is a **finder,\nnever a witness**.\n\n**Status: single witness. Unverified.** Do not treat any field here as settled until a second, independent\nsource agrees — a register, a certificate, a newspaper notice, a cemetery record, or a clean read of the\n*published* page (not a phone scan of it).\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.149. Single source. Second witness outstanding.",
-    "roles": [
-      "Child of Lloyd Wilbur Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "lloyd-wilbur-telfer-1913"
-    ],
-    "children": [
-      "james-telfer-living",
-      "martin-telfer",
-      "simon-telfer"
-    ],
-    "spouses": [
-      "christine-hunter",
-      "lyndy-trevaskis"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Michael Hooper",
-    "slug": "michael-hooper",
-    "first_name": "Michael",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Michael Hooper",
-    "title": "Michael Jeffrey Hooper (b. 1944)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Michael Jeffrey Hooper (b. 1944)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 20 Apr 1944 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Jessica Veronica Telfer (1911–1994)]] |\n| **Spouse** | [[Jennifer Bradfield Fox (b. 1947)]] (b. 14 Jun 1947 Sydney, NSW m. 14 Feb 1969 Sydney, NSW) |\n| **Children** | [[Timothy Michael Hooper (1969–1969)]] · [[Belinda Louise Hooper (b. 1971)]] · [[Anthony Michael Hooper (b. 1972)]] |\n\n---",
-    "roles": [
-      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "frank-hooper",
-      "jessica-telfer"
-    ],
-    "children": [
-      "anthony-hooper",
-      "belinda-hooper",
-      "timothy-hooper"
-    ],
-    "spouses": [
-      "jennifer-fox"
-    ],
-    "siblings": [
-      "iris-hooper",
-      "ivan-hooper",
-      "roger-hooper",
-      "terence-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Nancy Telfer",
-    "slug": "nancy-telfer",
-    "first_name": "Nancy",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Nancy Telfer",
-    "title": "Nancy Rae Telfer (b. 1943)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Nancy Rae Telfer (b. 1943)\n\n**Role:** Child of Lloyd Wilbur Telfer\n**Born:** 21 Dec 1943 — Prahran, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | Lloyd Wilbur Telfer |\n| **Spouse** | [[Geoffrey John Goodson (b. 1947)]] (b. 13 Aug 1947 Surrey Hills, Vic m. 1 Sep 1976 Kew, Vic) |\n| **Children** | [[Andrew John Goodson (b. 1978)]] · [[Peter James Goodson (b. 1980)]] · [[Jane Louise Goodson (b. 1981)]] |\n\n---",
-    "roles": [
-      "Child of Lloyd Wilbur Telfer"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "lloyd-wilbur-telfer-1913",
-      "muriel-crespin"
-    ],
-    "children": [
-      "andrew-goodson",
-      "jane-goodson",
-      "peter-goodson"
-    ],
-    "spouses": [
-      "geoffrey-goodson"
     ],
     "siblings": [],
     "step_parents": [],
@@ -24962,60 +24642,6 @@
     "person_photo": null
   },
   {
-    "id": "Roger Hooper",
-    "slug": "roger-hooper",
-    "first_name": "Roger",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Roger Hooper",
-    "title": "Roger Carrington Hooper (b. 1943)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Roger Carrington Hooper (b. 1943)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 15 Jan 1943 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Jessica Veronica Telfer (1911–1994)]] |\n| **Spouse** | [[Roslyn Jenette White (b. 1947)]] (b. 1 Apr 1947 Sydney, NSW m. 6 Dec 1969 Chatswood, NSW) |\n| **Children** | [[Andrew Roger Hooper (b. 1974)]] · [[Alison Lucy Hooper (b. 1977)]] · [[Richard David Hooper (b. 1979)]] |\n\n---",
-    "roles": [
-      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "frank-hooper",
-      "jessica-telfer"
-    ],
-    "children": [
-      "alison-hooper",
-      "andrew-hooper",
-      "richard-hooper"
-    ],
-    "spouses": [
-      "roslyn-white"
-    ],
-    "siblings": [
-      "iris-hooper",
-      "ivan-hooper",
-      "michael-hooper",
-      "terence-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Rosemary Ruth Curtis",
     "slug": "rosemary-curtis",
     "first_name": "Rosemary",
@@ -25052,285 +24678,6 @@
     ],
     "spouses": [
       "daryll-telfer"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Roslyn White",
-    "slug": "roslyn-white",
-    "first_name": "Roslyn",
-    "middle_name": null,
-    "last_name": "White",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Roslyn White",
-    "title": "Roslyn Jenette White (b. 1947)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Roslyn Jenette White (b. 1947)\n\n**Role:** Spouse/connected by marriage\n**Born:** 1 Apr 1947 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Roger Carrington Hooper (b. 1943)]] (m. 6 Dec 1969 Chatswood, NSW) |\n| **Children** | [[Andrew Roger Hooper (b. 1974)]] · [[Alison Lucy Hooper (b. 1977)]] · [[Richard David Hooper (b. 1979)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "alison-hooper",
-      "andrew-hooper",
-      "richard-hooper"
-    ],
-    "spouses": [
-      "roger-hooper"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Sarah Morris",
-    "slug": "sarah-morris",
-    "first_name": "Sarah",
-    "middle_name": null,
-    "last_name": "Morris",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Sarah Morris",
-    "title": "Sarah Kayte Morris (b. 1997)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Sarah Kayte Morris (b. 1997)\n\n**Role:** Child of [[Sally Michelle Walsh (b. 1970)]]\n**Born:** 2 May 1997 — Canberra, ACT\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Sally Michelle Walsh (b. 1970)]] |\n\n---",
-    "roles": [
-      "Child of [[Sally Michelle Walsh (b. 1970)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "bruce-morris",
-      "sally-walsh"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "joshua-morris",
-      "tahlia-morris"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Stephen Bates",
-    "slug": "stephen-bates",
-    "first_name": "Stephen",
-    "middle_name": null,
-    "last_name": "Bates",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Stephen Bates",
-    "title": "Stephen Norman Bates (b. 1949)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Stephen Norman Bates (b. 1949)\n\n**Role:** Spouse/connected by marriage\n**Born:** 29 Dec 1949 — Sunderland, England\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Wendy Yvonne Godfrey (b. 1946)]] (m. 29 Sep 1978 The Rocks, Sydney, NSW) |\n| **Children** | [[Kelly Ann Bates (b. 1980)]] · [[Cameron Stephen Bates (b. 1983)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "cameron-bates",
-      "kelly-bates"
-    ],
-    "spouses": [
-      "wendy-godfrey"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Tahlia Morris",
-    "slug": "tahlia-morris",
-    "first_name": "Tahlia",
-    "middle_name": null,
-    "last_name": "Morris",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Tahlia Morris",
-    "title": "Tahlia Paige Morris (b. 1998)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Tahlia Paige Morris (b. 1998)\n\n**Role:** Child of [[Sally Michelle Walsh (b. 1970)]]\n**Born:** 29 Oct 1998 — Canberra, ACT\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Sally Michelle Walsh (b. 1970)]] |\n\n---",
-    "roles": [
-      "Child of [[Sally Michelle Walsh (b. 1970)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "bruce-morris",
-      "sally-walsh"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "joshua-morris",
-      "sarah-morris"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Terence Hooper",
-    "slug": "terence-hooper",
-    "first_name": "Terence",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Terence Hooper",
-    "title": "Terence Hugh (Terry) Hooper (b. 1935)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Terence Hugh (Terry) Hooper (b. 1935)\n\n**Role:** Child of [[Jessica Veronica Telfer (1911–1994)]]\n**Born:** 12 Apr 1935\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Jessica Veronica Telfer (1911–1994)]] |\n\n---",
-    "roles": [
-      "Child of [[Jessica Veronica Telfer (1911–1994)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "frank-hooper",
-      "jessica-telfer"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "iris-hooper",
-      "ivan-hooper",
-      "michael-hooper",
-      "roger-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Wendy Godfrey",
-    "slug": "wendy-godfrey",
-    "first_name": "Wendy",
-    "middle_name": null,
-    "last_name": "Godfrey",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Wendy Godfrey",
-    "title": "Wendy Yvonne Godfrey (b. 1946)",
-    "lifespan": "? – ?",
-    "generation": 7,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Wendy Yvonne Godfrey (b. 1946)\n\n**Role:** Child of [[Gwenyth Miranda Telfer (1918–2003)]]\n**Born:** 13 Nov 1946 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Gwenyth Miranda Telfer (1918–2003)]] |\n| **Spouse** | [[Stephen Norman Bates (b. 1949)]] (b. 29 Dec 1949 Sunderland, England m. 29 Sep 1978 The Rocks, Sydney, NSW) |\n| **Children** | [[Kelly Ann Bates (b. 1980)]] · [[Cameron Stephen Bates (b. 1983)]] |\n\n---",
-    "roles": [
-      "Child of [[Gwenyth Miranda Telfer (1918–2003)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "gwenyth-telfer",
-      "robert-godfrey"
-    ],
-    "children": [
-      "cameron-bates",
-      "kelly-bates"
-    ],
-    "spouses": [
-      "stephen-bates"
     ],
     "siblings": [],
     "step_parents": [],
@@ -25423,6 +24770,95 @@
       "wade-peter-manuel-1975"
     ],
     "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Richard Walsh (1945)",
+    "slug": "richard-walsh",
+    "first_name": "Richard",
+    "middle_name": null,
+    "last_name": "Walsh",
+    "birth_year": 1945,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1945",
+    "death_year_display": "?",
+    "display_name": "Richard Walsh",
+    "title": "Richard Bruce Walsh (b. 1945)",
+    "lifespan": "1945 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Richard Bruce Walsh (b. 1945)\n\n**Role:** Spouse/connected by marriage\n**Born:** 18 Jan 1945 — Grafton, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "laurel-telfer"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Laurel Telfer (1946)",
+    "slug": "laurel-telfer",
+    "first_name": "Laurel",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1946,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1946",
+    "death_year_display": "?",
+    "display_name": "Laurel Telfer",
+    "title": "Laurel Kaye Telfer (b. 1946)",
+    "lifespan": "1946 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Laurel Kaye Telfer (b. 1946)\n\n**Role:** Child of [[John Telfer (1847–1929)]]\n**Born:** 25 Jun 1946 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[John Telfer (1847–1929)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "catherine-walsh",
+      "melinda-walsh",
+      "sally-walsh",
+      "samantha-walsh"
+    ],
+    "spouses": [
+      "richard-walsh"
+    ],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
@@ -26080,6 +25516,51 @@
     "person_photo": null
   },
   {
+    "id": "James Light (1966)",
+    "slug": "james-light",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Light",
+    "birth_year": 1966,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1966",
+    "death_year_display": "?",
+    "display_name": "James Light",
+    "title": "James Edward Light (b. 1966)",
+    "lifespan": "1966 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# James Edward Light (b. 1966)\n\n**Role:** Child of [[Iris Lynette Hooper (b. 1938)]]\n**Born:** 28 Dec 1966 — Goulburn, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Iris Lynette Hooper (b. 1938)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "edward-light",
+      "iris-hooper"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "adrian-light"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Lance Gordon Hawkins (1966)",
     "slug": "lance-hawkins",
     "first_name": "Lance",
@@ -26552,6 +26033,51 @@
     "person_photo": null
   },
   {
+    "id": "Adrian Light (1969)",
+    "slug": "adrian-light",
+    "first_name": "Adrian",
+    "middle_name": null,
+    "last_name": "Light",
+    "birth_year": 1969,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1969",
+    "death_year_display": "?",
+    "display_name": "Adrian Light",
+    "title": "Adrian Terence Light (b. 1969)",
+    "lifespan": "1969 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Adrian Terence Light (b. 1969)\n\n**Role:** Child of [[Iris Lynette Hooper (b. 1938)]]\n**Born:** 16 Jul 1969 — Goulburn, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Iris Lynette Hooper (b. 1938)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "edward-light",
+      "iris-hooper"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "james-light"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Anthony James Fatchen (1969)",
     "slug": "anthony-fatchen",
     "first_name": "Anthony",
@@ -26609,6 +26135,52 @@
       }
     ],
     "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Timothy Hooper (1969)",
+    "slug": "timothy-hooper",
+    "first_name": "Timothy",
+    "middle_name": "Michael",
+    "last_name": "Hooper",
+    "birth_year": 1969,
+    "death_year": 1969,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1969",
+    "death_year_display": "1969",
+    "display_name": "Timothy Hooper",
+    "title": "Timothy Michael Hooper (1969–1969)",
+    "lifespan": "1969 – 1969",
+    "generation": 8,
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Timothy Michael Hooper (1969–1969)\n\n**Role:** Child of [[Michael Jeffrey Hooper (b. 1944)]]\n**Born:** 1969 — Sydney, NSW\n**Died:** 1969 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Michael Jeffrey Hooper (b. 1944)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "jennifer-fox",
+      "michael-hooper"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "anthony-hooper",
+      "belinda-hooper"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -26784,6 +26356,57 @@
     "person_photo": null
   },
   {
+    "id": "Belinda Hooper (1971)",
+    "slug": "belinda-hooper",
+    "first_name": "Belinda",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1971,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1971",
+    "death_year_display": "?",
+    "display_name": "Belinda Hooper",
+    "title": "Belinda Louise Hooper (b. 1971)",
+    "lifespan": "1971 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Belinda Louise Hooper (b. 1971)\n\n**Role:** Child of [[Michael Jeffrey Hooper (b. 1944)]]\n**Born:** 25 Mar 1971 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Michael Jeffrey Hooper (b. 1944)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "jennifer-fox",
+      "michael-hooper"
+    ],
+    "children": [
+      "edward-cameron",
+      "jack-cameron"
+    ],
+    "spouses": [
+      "ian-cameron"
+    ],
+    "siblings": [
+      "anthony-hooper",
+      "timothy-hooper"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Donna Felicity Biddle (1971)",
     "slug": "donna-felicity-biddle-1971",
     "first_name": "Donna",
@@ -26840,6 +26463,51 @@
     "siblings": [
       "justin-andrew-biddle-1973"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Ian Cameron (1971)",
+    "slug": "ian-cameron",
+    "first_name": "Ian",
+    "middle_name": null,
+    "last_name": "Cameron",
+    "birth_year": 1971,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1971",
+    "death_year_display": "?",
+    "display_name": "Ian Cameron",
+    "title": "Ian Charles Cameron (b. 1971)",
+    "lifespan": "1971 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Ian Charles Cameron (b. 1971)\n\n**Role:** Spouse/connected by marriage\n**Born:** 16 Oct 1971 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "edward-cameron",
+      "jack-cameron"
+    ],
+    "spouses": [
+      "belinda-hooper"
+    ],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -26903,6 +26571,56 @@
     "person_photo": null
   },
   {
+    "id": "Anthony Hooper (1972)",
+    "slug": "anthony-hooper",
+    "first_name": "Anthony",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1972,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1972",
+    "death_year_display": "?",
+    "display_name": "Anthony Hooper",
+    "title": "Anthony Michael Hooper (b. 1972)",
+    "lifespan": "1972 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Anthony Michael Hooper (b. 1972)\n\n**Role:** Child of [[Michael Jeffrey Hooper (b. 1944)]]\n**Born:** 29 Dec 1972 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Michael Jeffrey Hooper (b. 1944)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "jennifer-fox",
+      "michael-hooper"
+    ],
+    "children": [
+      "charlotte-hooper"
+    ],
+    "spouses": [
+      "susan-lucas"
+    ],
+    "siblings": [
+      "belinda-hooper",
+      "timothy-hooper"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Bronwyn Tracy Lawrie (1972)",
     "slug": "bronwyn-tracy-lawrie-1972",
     "first_name": "Bronwyn",
@@ -26958,6 +26676,53 @@
       "roxanne-kay-lawrie-1968",
       "stephen-craig-lawrie-1966"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Martin Telfer (1972)",
+    "slug": "martin-telfer",
+    "first_name": "Martin",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1972,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1972",
+    "death_year_display": "?",
+    "display_name": "Martin Telfer",
+    "title": "Martin Telfer (b. 1972)",
+    "lifespan": "1972 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Martin Telfer (b. 1972)\n\n**Role:** Child of [[Mark David Telfer (1950–1990)]]\n**Born:** 10 Apr 1972 — Shepparton, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Mark David Telfer (1950–1990)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "christine-hunter",
+      "mark-telfer-living"
+    ],
+    "children": [
+      "arya-telfer"
+    ],
+    "spouses": [
+      "dhurri-thiagarajah"
+    ],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -27065,6 +26830,92 @@
     ],
     "children": [],
     "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Susan Lucas (1972)",
+    "slug": "susan-lucas",
+    "first_name": "Susan",
+    "middle_name": null,
+    "last_name": "Lucas",
+    "birth_year": 1972,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1972",
+    "death_year_display": "?",
+    "display_name": "Susan Lucas",
+    "title": "Susan Denise Lucas (b. 1972)",
+    "lifespan": "1972 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Susan Denise Lucas (b. 1972)\n\n**Role:** Spouse/connected by marriage\n**Born:** 3 Oct 1972\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "charlotte-hooper"
+    ],
+    "spouses": [
+      "anthony-hooper"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Bernard Merchant (1973)",
+    "slug": "bernard-merchant",
+    "first_name": "Bernard",
+    "middle_name": null,
+    "last_name": "Merchant",
+    "birth_year": 1973,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1973",
+    "death_year_display": "?",
+    "display_name": "Bernard Merchant",
+    "title": "Bernard Joseph Merchant (b. 1973)",
+    "lifespan": "1973 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Bernard Joseph Merchant (b. 1973)\n\n**Role:** Spouse/connected by marriage\n**Born:** 31 Oct 1973 — St John's, Newfoundland, Canada\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "alison-hooper"
+    ],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
@@ -27330,6 +27181,98 @@
       "kirrily-sharee-maddern",
       "simon-trent-maddern-1978"
     ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Andrew Hooper (1974)",
+    "slug": "andrew-hooper",
+    "first_name": "Andrew",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1974,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1974",
+    "death_year_display": "?",
+    "display_name": "Andrew Hooper",
+    "title": "Andrew Roger Hooper (b. 1974)",
+    "lifespan": "1974 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Andrew Roger Hooper (b. 1974)\n\n**Role:** Child of [[Roger Carrington Hooper (b. 1943)]]\n**Born:** 24 Sep 1974\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Roger Carrington Hooper (b. 1943)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "roger-hooper",
+      "roslyn-white"
+    ],
+    "children": [],
+    "spouses": [
+      "christine-tsim"
+    ],
+    "siblings": [
+      "alison-hooper",
+      "richard-hooper"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Dhurri Thiagarajah (1974)",
+    "slug": "dhurri-thiagarajah",
+    "first_name": "Dhurri",
+    "middle_name": null,
+    "last_name": "Thiagarajah",
+    "birth_year": 1974,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1974",
+    "death_year_display": "?",
+    "display_name": "Dhurri Thiagarajah",
+    "title": "Dhurri Thiagarajah (b. 1974)",
+    "lifespan": "1974 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Dhurri Thiagarajah (b. 1974)\n\n**Role:** Spouse/connected by marriage\n**Born:** 19 Feb 1974 — Colombo, Sri Lanka\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "arya-telfer"
+    ],
+    "spouses": [
+      "martin-telfer"
+    ],
+    "siblings": [],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -27756,6 +27699,138 @@
     "person_photo": null
   },
   {
+    "id": "Alison Hooper (1977)",
+    "slug": "alison-hooper",
+    "first_name": "Alison",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1977,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1977",
+    "death_year_display": "?",
+    "display_name": "Alison Hooper",
+    "title": "Alison Lucy Hooper (b. 1977)",
+    "lifespan": "1977 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Alison Lucy Hooper (b. 1977)\n\n**Role:** Child of [[Roger Carrington Hooper (b. 1943)]]\n**Born:** 8 Apr 1977 — Eastwood, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Roger Carrington Hooper (b. 1943)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "roger-hooper",
+      "roslyn-white"
+    ],
+    "children": [],
+    "spouses": [
+      "bernard-merchant"
+    ],
+    "siblings": [
+      "andrew-hooper",
+      "richard-hooper"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Christine Tsim (1977)",
+    "slug": "christine-tsim",
+    "first_name": "Christine",
+    "middle_name": null,
+    "last_name": "Tsim",
+    "birth_year": 1977,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1977",
+    "death_year_display": "?",
+    "display_name": "Christine Tsim",
+    "title": "Christine Tsim (b. 1977)",
+    "lifespan": "1977 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Christine Tsim (b. 1977)\n\n**Role:** Spouse/connected by marriage\n**Born:** 21 Feb 1977\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "andrew-hooper"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Jennifer Dearden (1977)",
+    "slug": "jennifer-dearden",
+    "first_name": "Jennifer",
+    "middle_name": null,
+    "last_name": "Dearden",
+    "birth_year": 1977,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1977",
+    "death_year_display": "?",
+    "display_name": "Jennifer Dearden",
+    "title": "Jennifer Roslyn Dearden (b. 1977)",
+    "lifespan": "1977 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Jennifer Roslyn Dearden (b. 1977)\n\n**Role:** Spouse/connected by marriage\n**Born:** 4 Sep 1977 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "richard-hooper"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Matthew Blake Kelly (1977)",
     "slug": "matthew-blake-kelly-1977",
     "first_name": "Matthew Blake",
@@ -27793,6 +27868,56 @@
     "siblings": [
       "andrew-david-kelly-1979",
       "rebecca-jayne-kelly-1975"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Andrew Goodson (1978)",
+    "slug": "andrew-goodson",
+    "first_name": "Andrew",
+    "middle_name": null,
+    "last_name": "Goodson",
+    "birth_year": 1978,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1978",
+    "death_year_display": "?",
+    "display_name": "Andrew Goodson",
+    "title": "Andrew John Goodson (b. 1978)",
+    "lifespan": "1978 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Andrew John Goodson (b. 1978)\n\n**Role:** Child of [[Nancy Rae Telfer (b. 1943)]]\n**Born:** 26 Dec 1978 — Kew, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Nancy Rae Telfer (b. 1943)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "geoffrey-goodson",
+      "nancy-telfer"
+    ],
+    "children": [
+      "amie-goodson"
+    ],
+    "spouses": [
+      "kathryn-whymark"
+    ],
+    "siblings": [
+      "jane-goodson",
+      "peter-goodson"
     ],
     "step_parents": [],
     "step_children": [],
@@ -27892,6 +28017,50 @@
     "person_photo": null
   },
   {
+    "id": "Kathryn Whymark (1978)",
+    "slug": "kathryn-whymark",
+    "first_name": "Kathryn",
+    "middle_name": null,
+    "last_name": "Whymark",
+    "birth_year": 1978,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1978",
+    "death_year_display": "?",
+    "display_name": "Kathryn Whymark",
+    "title": "Kathryn Rebecca Whymark (b. 1978)",
+    "lifespan": "1978 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Kathryn Rebecca Whymark (b. 1978)\n\n**Role:** Spouse/connected by marriage\n**Born:** 10 Jun 1978 — Box Hill, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "amie-goodson"
+    ],
+    "spouses": [
+      "andrew-goodson"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Simon Trent Maddern (1978)",
     "slug": "simon-trent-maddern-1978",
     "first_name": "Simon Trent",
@@ -27980,6 +28149,51 @@
     "person_photo": null
   },
   {
+    "id": "James Telfer (1979)",
+    "slug": "james-telfer-living",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1979,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1979",
+    "death_year_display": "?",
+    "display_name": "James Telfer (1979 – ?)",
+    "title": "James Telfer (b. 1979)",
+    "lifespan": "1979 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# James Telfer (b. 1979)\n\n**Role:** Child of [[Mark David Telfer (1950–1990)]]\n**Born:** 28 Jan 1979\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Mark David Telfer (1950–1990)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "lyndy-trevaskis",
+      "mark-telfer-living"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "simon-telfer"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Lincoln Joel Commane (1979)",
     "slug": "lincoln-joel-commane-1979",
     "first_name": "Lincoln",
@@ -28035,6 +28249,54 @@
     "person_photo": null
   },
   {
+    "id": "Richard Hooper (1979)",
+    "slug": "richard-hooper",
+    "first_name": "Richard",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 1979,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1979",
+    "death_year_display": "?",
+    "display_name": "Richard Hooper",
+    "title": "Richard David Hooper (b. 1979)",
+    "lifespan": "1979 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Richard David Hooper (b. 1979)\n\n**Role:** Child of [[Roger Carrington Hooper (b. 1943)]]\n**Born:** 11 Dec 1979 — Eastwood, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Roger Carrington Hooper (b. 1943)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "roger-hooper",
+      "roslyn-white"
+    ],
+    "children": [],
+    "spouses": [
+      "jennifer-dearden"
+    ],
+    "siblings": [
+      "alison-hooper",
+      "andrew-hooper"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Shane Daniel Pedler (1979)",
     "slug": "shane-pedler",
     "first_name": "Shane",
@@ -28071,6 +28333,51 @@
     "siblings": [
       "kirrilee-pedler",
       "lawrence-pedler"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Kelly Bates (1980)",
+    "slug": "kelly-bates",
+    "first_name": "Kelly",
+    "middle_name": null,
+    "last_name": "Bates",
+    "birth_year": 1980,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1980",
+    "death_year_display": "?",
+    "display_name": "Kelly Bates",
+    "title": "Kelly Ann Bates (b. 1980)",
+    "lifespan": "1980 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Kelly Ann Bates (b. 1980)\n\n**Role:** Child of [[Wendy Yvonne Godfrey (b. 1946)]]\n**Born:** 15 May 1980 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Wendy Yvonne Godfrey (b. 1946)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "stephen-bates",
+      "wendy-godfrey"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "cameron-bates"
     ],
     "step_parents": [],
     "step_children": [],
@@ -28180,6 +28487,52 @@
     "person_photo": null
   },
   {
+    "id": "Peter Goodson (1980)",
+    "slug": "peter-goodson",
+    "first_name": "Peter",
+    "middle_name": null,
+    "last_name": "Goodson",
+    "birth_year": 1980,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1980",
+    "death_year_display": "?",
+    "display_name": "Peter Goodson",
+    "title": "Peter James Goodson (b. 1980)",
+    "lifespan": "1980 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Peter James Goodson (b. 1980)\n\n**Role:** Child of [[Nancy Rae Telfer (b. 1943)]]\n**Born:** 12 May 1980 — Kew, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Nancy Rae Telfer (b. 1943)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "geoffrey-goodson",
+      "nancy-telfer"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "andrew-goodson",
+      "jane-goodson"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "David Nathan Vickers (1981)",
     "slug": "david-vickers",
     "first_name": "David",
@@ -28227,6 +28580,52 @@
       }
     ],
     "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Jane Goodson (1981)",
+    "slug": "jane-goodson",
+    "first_name": "Jane",
+    "middle_name": null,
+    "last_name": "Goodson",
+    "birth_year": 1981,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1981",
+    "death_year_display": "?",
+    "display_name": "Jane Goodson",
+    "title": "Jane Louise Goodson (b. 1981)",
+    "lifespan": "1981 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Jane Louise Goodson (b. 1981)\n\n**Role:** Child of [[Nancy Rae Telfer (b. 1943)]]\n**Born:** 13 Oct 1981\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Nancy Rae Telfer (b. 1943)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "geoffrey-goodson",
+      "nancy-telfer"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "andrew-goodson",
+      "peter-goodson"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -28619,6 +29018,51 @@
       }
     ],
     "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Cameron Bates (1983)",
+    "slug": "cameron-bates",
+    "first_name": "Cameron",
+    "middle_name": null,
+    "last_name": "Bates",
+    "birth_year": 1983,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1983",
+    "death_year_display": "?",
+    "display_name": "Cameron Bates",
+    "title": "Cameron Stephen Bates (b. 1983)",
+    "lifespan": "1983 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Cameron Stephen Bates (b. 1983)\n\n**Role:** Child of [[Wendy Yvonne Godfrey (b. 1946)]]\n**Born:** 16 Jun 1983 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Wendy Yvonne Godfrey (b. 1946)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "stephen-bates",
+      "wendy-godfrey"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "kelly-bates"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -29301,6 +29745,51 @@
       "ryan-telfer-1982",
       "samuel-joel-telfer",
       "simeon-david-telfer-1983"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Simon Telfer (1986)",
+    "slug": "simon-telfer",
+    "first_name": "Simon",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1986,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1986",
+    "death_year_display": "?",
+    "display_name": "Simon Telfer",
+    "title": "Simon Telfer (b. 1986)",
+    "lifespan": "1986 – ?",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Simon Telfer (b. 1986)\n\n**Role:** Child of [[Mark David Telfer (1950–1990)]]\n**Born:** 19 Mar 1986\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Mark David Telfer (1950–1990)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "lyndy-trevaskis",
+      "mark-telfer-living"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "james-telfer-living"
     ],
     "step_parents": [],
     "step_children": [],
@@ -30518,51 +31007,6 @@
     "person_photo": null
   },
   {
-    "id": "Adrian Light",
-    "slug": "adrian-light",
-    "first_name": "Adrian",
-    "middle_name": null,
-    "last_name": "Light",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Adrian Light",
-    "title": "Adrian Terence Light (b. 1969)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Adrian Terence Light (b. 1969)\n\n**Role:** Child of [[Iris Lynette Hooper (b. 1938)]]\n**Born:** 16 Jul 1969 — Goulburn, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Iris Lynette Hooper (b. 1938)]] |\n\n---",
-    "roles": [
-      "Child of [[Iris Lynette Hooper (b. 1938)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "edward-light",
-      "iris-hooper"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "james-light"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Alexa Telfer",
     "slug": "alexa-telfer",
     "first_name": "Alexa",
@@ -30598,54 +31042,6 @@
       "james-telfer-1978"
     ],
     "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Alison Hooper",
-    "slug": "alison-hooper",
-    "first_name": "Alison",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Alison Hooper",
-    "title": "Alison Lucy Hooper (b. 1977)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Alison Lucy Hooper (b. 1977)\n\n**Role:** Child of [[Roger Carrington Hooper (b. 1943)]]\n**Born:** 8 Apr 1977 — Eastwood, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Roger Carrington Hooper (b. 1943)]] |\n| **Spouse** | [[Bernard Joseph Merchant (b. 1973)]] (b. 31 Oct 1973 St John's, Newfoundland, Canada m. 3 Dec 2005 Epping, NSW) |\n\n---",
-    "roles": [
-      "Child of [[Roger Carrington Hooper (b. 1943)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "roger-hooper",
-      "roslyn-white"
-    ],
-    "children": [],
-    "spouses": [
-      "bernard-merchant"
-    ],
-    "siblings": [
-      "andrew-hooper",
-      "richard-hooper"
-    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -30717,104 +31113,6 @@
     "person_photo": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg"
   },
   {
-    "id": "Andrew Goodson",
-    "slug": "andrew-goodson",
-    "first_name": "Andrew",
-    "middle_name": null,
-    "last_name": "Goodson",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Andrew Goodson",
-    "title": "Andrew John Goodson (b. 1978)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Andrew John Goodson (b. 1978)\n\n**Role:** Child of [[Nancy Rae Telfer (b. 1943)]]\n**Born:** 26 Dec 1978 — Kew, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Nancy Rae Telfer (b. 1943)]] |\n| **Spouse** | [[Kathryn Rebecca Whymark (b. 1978)]] (b. 10 Jun 1978 Box Hill, Vic m. 6 Apr 2002 Ballarat, Vic) |\n| **Children** | [[Amie Victoria Goodson (b. 2005)]] |\n\n---",
-    "roles": [
-      "Child of [[Nancy Rae Telfer (b. 1943)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "geoffrey-goodson",
-      "nancy-telfer"
-    ],
-    "children": [
-      "amie-goodson"
-    ],
-    "spouses": [
-      "kathryn-whymark"
-    ],
-    "siblings": [
-      "jane-goodson",
-      "peter-goodson"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Andrew Hooper",
-    "slug": "andrew-hooper",
-    "first_name": "Andrew",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Andrew Hooper",
-    "title": "Andrew Roger Hooper (b. 1974)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Andrew Roger Hooper (b. 1974)\n\n**Role:** Child of [[Roger Carrington Hooper (b. 1943)]]\n**Born:** 24 Sep 1974\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Roger Carrington Hooper (b. 1943)]] |\n| **Spouse** | [[Christine Tsim (b. 1977)]] (b. 21 Feb 1977 m. 29 May 2004 Gladesville, NSW) |\n\n---",
-    "roles": [
-      "Child of [[Roger Carrington Hooper (b. 1943)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "roger-hooper",
-      "roslyn-white"
-    ],
-    "children": [],
-    "spouses": [
-      "christine-tsim"
-    ],
-    "siblings": [
-      "alison-hooper",
-      "richard-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Angela Telfer",
     "slug": "angela-telfer",
     "first_name": "Angela",
@@ -30861,107 +31159,6 @@
     "person_photo": null
   },
   {
-    "id": "Anthony Hooper",
-    "slug": "anthony-hooper",
-    "first_name": "Anthony",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Anthony Hooper",
-    "title": "Anthony Michael Hooper (b. 1972)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Anthony Michael Hooper (b. 1972)\n\n**Role:** Child of [[Michael Jeffrey Hooper (b. 1944)]]\n**Born:** 29 Dec 1972 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Michael Jeffrey Hooper (b. 1944)]] |\n| **Spouse** | [[Susan Denise Lucas (b. 1972)]] (b. 3 Oct 1972 m. 21 Apr 2001 Maitland, NSW) |\n| **Children** | [[Charlotte Eloise Hooper (b. 2004)]] |\n\n---",
-    "roles": [
-      "Child of [[Michael Jeffrey Hooper (b. 1944)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "jennifer-fox",
-      "michael-hooper"
-    ],
-    "children": [
-      "charlotte-hooper"
-    ],
-    "spouses": [
-      "susan-lucas"
-    ],
-    "siblings": [
-      "belinda-hooper",
-      "timothy-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Belinda Hooper",
-    "slug": "belinda-hooper",
-    "first_name": "Belinda",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Belinda Hooper",
-    "title": "Belinda Louise Hooper (b. 1971)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Belinda Louise Hooper (b. 1971)\n\n**Role:** Child of [[Michael Jeffrey Hooper (b. 1944)]]\n**Born:** 25 Mar 1971 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Michael Jeffrey Hooper (b. 1944)]] |\n| **Spouse** | [[Ian Charles Cameron (b. 1971)]] (b. 16 Oct 1971 Sydney, NSW m. 11 Mar 2000) |\n| **Children** | [[Jack William Cameron (b. 2002)]] · [[Edward Michael Cameron (b. 2004)]] |\n\n---",
-    "roles": [
-      "Child of [[Michael Jeffrey Hooper (b. 1944)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "jennifer-fox",
-      "michael-hooper"
-    ],
-    "children": [
-      "edward-cameron",
-      "jack-cameron"
-    ],
-    "spouses": [
-      "ian-cameron"
-    ],
-    "siblings": [
-      "anthony-hooper",
-      "timothy-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Ben Stefanoff",
     "slug": "ben-stefanoff",
     "first_name": "Ben",
@@ -30996,93 +31193,6 @@
       "kristin-stefanoff"
     ],
     "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Bernard Merchant",
-    "slug": "bernard-merchant",
-    "first_name": "Bernard",
-    "middle_name": null,
-    "last_name": "Merchant",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Bernard Merchant",
-    "title": "Bernard Joseph Merchant (b. 1973)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Bernard Joseph Merchant (b. 1973)\n\n**Role:** Spouse/connected by marriage\n**Born:** 31 Oct 1973 — St John's, Newfoundland, Canada\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Alison Lucy Hooper (b. 1977)]] (m. 3 Dec 2005 Epping, NSW) |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "alison-hooper"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Cameron Bates",
-    "slug": "cameron-bates",
-    "first_name": "Cameron",
-    "middle_name": null,
-    "last_name": "Bates",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Cameron Bates",
-    "title": "Cameron Stephen Bates (b. 1983)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Cameron Stephen Bates (b. 1983)\n\n**Role:** Child of [[Wendy Yvonne Godfrey (b. 1946)]]\n**Born:** 16 Jun 1983 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Wendy Yvonne Godfrey (b. 1946)]] |\n\n---",
-    "roles": [
-      "Child of [[Wendy Yvonne Godfrey (b. 1946)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "stephen-bates",
-      "wendy-godfrey"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "kelly-bates"
-    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -31143,497 +31253,6 @@
     "person_photo": "images/people/Carissa-Telfer.jpg"
   },
   {
-    "id": "Christine Tsim",
-    "slug": "christine-tsim",
-    "first_name": "Christine",
-    "middle_name": null,
-    "last_name": "Tsim",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Christine Tsim",
-    "title": "Christine Tsim (b. 1977)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Christine Tsim (b. 1977)\n\n**Role:** Spouse/connected by marriage\n**Born:** 21 Feb 1977\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Andrew Roger Hooper (b. 1974)]] (m. 29 May 2004 Gladesville, NSW) |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "andrew-hooper"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Dhurri Thiagarajah",
-    "slug": "dhurri-thiagarajah",
-    "first_name": "Dhurri",
-    "middle_name": null,
-    "last_name": "Thiagarajah",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Dhurri Thiagarajah",
-    "title": "Dhurri Thiagarajah (b. 1974)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Dhurri Thiagarajah (b. 1974)\n\n**Role:** Spouse/connected by marriage\n**Born:** 19 Feb 1974 — Colombo, Sri Lanka\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Martin Telfer (b. 1972)]] (m. 11 Apr 1999 Melbourne, Vic) |\n| **Children** | [[Arya Telfer (b. 2005)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "arya-telfer"
-    ],
-    "spouses": [
-      "martin-telfer"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Ian Cameron",
-    "slug": "ian-cameron",
-    "first_name": "Ian",
-    "middle_name": null,
-    "last_name": "Cameron",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Ian Cameron",
-    "title": "Ian Charles Cameron (b. 1971)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Ian Charles Cameron (b. 1971)\n\n**Role:** Spouse/connected by marriage\n**Born:** 16 Oct 1971 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Belinda Louise Hooper (b. 1971)]] (m. 11 Mar 2000) |\n| **Children** | [[Jack William Cameron (b. 2002)]] · [[Edward Michael Cameron (b. 2004)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "edward-cameron",
-      "jack-cameron"
-    ],
-    "spouses": [
-      "belinda-hooper"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "James Light",
-    "slug": "james-light",
-    "first_name": "James",
-    "middle_name": null,
-    "last_name": "Light",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "James Light",
-    "title": "James Edward Light (b. 1966)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# James Edward Light (b. 1966)\n\n**Role:** Child of [[Iris Lynette Hooper (b. 1938)]]\n**Born:** 28 Dec 1966 — Goulburn, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Iris Lynette Hooper (b. 1938)]] |\n\n---",
-    "roles": [
-      "Child of [[Iris Lynette Hooper (b. 1938)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "edward-light",
-      "iris-hooper"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "adrian-light"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "James Telfer",
-    "slug": "james-telfer-living",
-    "first_name": "James",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "James Telfer (? – ?)",
-    "title": "James Telfer (b. 1979)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# James Telfer (b. 1979)\n\n**Role:** Child of [[Mark David Telfer (1950–1990)]]\n**Born:** 28 Jan 1979\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Mark David Telfer (1950–1990)]] |\n\n---",
-    "roles": [
-      "Child of [[Mark David Telfer (1950–1990)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "lyndy-trevaskis",
-      "mark-telfer-living"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "simon-telfer"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Jane Goodson",
-    "slug": "jane-goodson",
-    "first_name": "Jane",
-    "middle_name": null,
-    "last_name": "Goodson",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Jane Goodson",
-    "title": "Jane Louise Goodson (b. 1981)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Jane Louise Goodson (b. 1981)\n\n**Role:** Child of [[Nancy Rae Telfer (b. 1943)]]\n**Born:** 13 Oct 1981\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Nancy Rae Telfer (b. 1943)]] |\n\n---",
-    "roles": [
-      "Child of [[Nancy Rae Telfer (b. 1943)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "geoffrey-goodson",
-      "nancy-telfer"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "andrew-goodson",
-      "peter-goodson"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Jennifer Dearden",
-    "slug": "jennifer-dearden",
-    "first_name": "Jennifer",
-    "middle_name": null,
-    "last_name": "Dearden",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Jennifer Dearden",
-    "title": "Jennifer Roslyn Dearden (b. 1977)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Jennifer Roslyn Dearden (b. 1977)\n\n**Role:** Spouse/connected by marriage\n**Born:** 4 Sep 1977 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Richard David Hooper (b. 1979)]] (m. 13 Dec 2003 Epping, NSW) |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [],
-    "spouses": [
-      "richard-hooper"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Kathryn Whymark",
-    "slug": "kathryn-whymark",
-    "first_name": "Kathryn",
-    "middle_name": null,
-    "last_name": "Whymark",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Kathryn Whymark",
-    "title": "Kathryn Rebecca Whymark (b. 1978)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Kathryn Rebecca Whymark (b. 1978)\n\n**Role:** Spouse/connected by marriage\n**Born:** 10 Jun 1978 — Box Hill, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Andrew John Goodson (b. 1978)]] (m. 6 Apr 2002 Ballarat, Vic) |\n| **Children** | [[Amie Victoria Goodson (b. 2005)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "amie-goodson"
-    ],
-    "spouses": [
-      "andrew-goodson"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Kelly Bates",
-    "slug": "kelly-bates",
-    "first_name": "Kelly",
-    "middle_name": null,
-    "last_name": "Bates",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Kelly Bates",
-    "title": "Kelly Ann Bates (b. 1980)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Kelly Ann Bates (b. 1980)\n\n**Role:** Child of [[Wendy Yvonne Godfrey (b. 1946)]]\n**Born:** 15 May 1980 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Wendy Yvonne Godfrey (b. 1946)]] |\n\n---",
-    "roles": [
-      "Child of [[Wendy Yvonne Godfrey (b. 1946)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "stephen-bates",
-      "wendy-godfrey"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "cameron-bates"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Martin Telfer",
-    "slug": "martin-telfer",
-    "first_name": "Martin",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Martin Telfer",
-    "title": "Martin Telfer (b. 1972)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Martin Telfer (b. 1972)\n\n**Role:** Child of [[Mark David Telfer (1950–1990)]]\n**Born:** 10 Apr 1972 — Shepparton, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Mark David Telfer (1950–1990)]] |\n| **Spouse** | [[Dhurri Thiagarajah (b. 1974)]] (b. 19 Feb 1974 Colombo, Sri Lanka m. 11 Apr 1999 Melbourne, Vic) |\n| **Children** | [[Arya Telfer (b. 2005)]] |\n\n---",
-    "roles": [
-      "Child of [[Mark David Telfer (1950–1990)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "christine-hunter",
-      "mark-telfer-living"
-    ],
-    "children": [
-      "arya-telfer"
-    ],
-    "spouses": [
-      "dhurri-thiagarajah"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Peter Goodson",
-    "slug": "peter-goodson",
-    "first_name": "Peter",
-    "middle_name": null,
-    "last_name": "Goodson",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Peter Goodson",
-    "title": "Peter James Goodson (b. 1980)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Peter James Goodson (b. 1980)\n\n**Role:** Child of [[Nancy Rae Telfer (b. 1943)]]\n**Born:** 12 May 1980 — Kew, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Nancy Rae Telfer (b. 1943)]] |\n\n---",
-    "roles": [
-      "Child of [[Nancy Rae Telfer (b. 1943)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "geoffrey-goodson",
-      "nancy-telfer"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "andrew-goodson",
-      "jane-goodson"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
     "id": "Peter Telfer",
     "slug": "peter-telfer",
     "first_name": "Peter",
@@ -31686,189 +31305,6 @@
       }
     ],
     "person_photo": "images/people/Peter-Telfer.jpg"
-  },
-  {
-    "id": "Richard Hooper",
-    "slug": "richard-hooper",
-    "first_name": "Richard",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Richard Hooper",
-    "title": "Richard David Hooper (b. 1979)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Richard David Hooper (b. 1979)\n\n**Role:** Child of [[Roger Carrington Hooper (b. 1943)]]\n**Born:** 11 Dec 1979 — Eastwood, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Roger Carrington Hooper (b. 1943)]] |\n| **Spouse** | [[Jennifer Roslyn Dearden (b. 1977)]] (b. 4 Sep 1977 Sydney, NSW m. 13 Dec 2003 Epping, NSW) |\n\n---",
-    "roles": [
-      "Child of [[Roger Carrington Hooper (b. 1943)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "roger-hooper",
-      "roslyn-white"
-    ],
-    "children": [],
-    "spouses": [
-      "jennifer-dearden"
-    ],
-    "siblings": [
-      "alison-hooper",
-      "andrew-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Simon Telfer",
-    "slug": "simon-telfer",
-    "first_name": "Simon",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Simon Telfer",
-    "title": "Simon Telfer (b. 1986)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Simon Telfer (b. 1986)\n\n**Role:** Child of [[Mark David Telfer (1950–1990)]]\n**Born:** 19 Mar 1986\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Mark David Telfer (1950–1990)]] |\n\n---",
-    "roles": [
-      "Child of [[Mark David Telfer (1950–1990)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "lyndy-trevaskis",
-      "mark-telfer-living"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "james-telfer-living"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Susan Lucas",
-    "slug": "susan-lucas",
-    "first_name": "Susan",
-    "middle_name": null,
-    "last_name": "Lucas",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Susan Lucas",
-    "title": "Susan Denise Lucas (b. 1972)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Susan Denise Lucas (b. 1972)\n\n**Role:** Spouse/connected by marriage\n**Born:** 3 Oct 1972\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Spouse** | [[Anthony Michael Hooper (b. 1972)]] (m. 21 Apr 2001 Maitland, NSW) |\n| **Children** | [[Charlotte Eloise Hooper (b. 2004)]] |\n\n---",
-    "roles": [
-      "Spouse/connected by marriage"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [],
-    "children": [
-      "charlotte-hooper"
-    ],
-    "spouses": [
-      "anthony-hooper"
-    ],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Timothy Hooper",
-    "slug": "timothy-hooper",
-    "first_name": "Timothy",
-    "middle_name": "Michael",
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Timothy Hooper",
-    "title": "Timothy Michael Hooper (1969–1969)",
-    "lifespan": "? – ?",
-    "generation": 8,
-    "is_living": false,
-    "is_deceased": true,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Timothy Michael Hooper (1969–1969)\n\n**Role:** Child of [[Michael Jeffrey Hooper (b. 1944)]]\n**Born:** 1969 — Sydney, NSW\n**Died:** 1969 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Michael Jeffrey Hooper (b. 1944)]] |\n\n---\n\n## Evidence\n\n**One witness only — the printed page of the 2008 Supplement.**\n\n*A Telfer Family Tree — Supplement 2008* is a typed-up family-tree report, not a vital record. It has no\ninternal citations. This note rests on that page **and nothing else**.\n\nThe page was rendered at 300 dpi and read twice — once by a vision model, once by WeVisDoc-2B. **Those two\nreadings are one source, not two.** They establish what the book *prints*; they do not establish that the\nbook is right. A derived reading (OCR text layer, WeVisDoc, vision model, AI transcription) is a **finder,\nnever a witness**.\n\n**Status: single witness. Unverified.** Do not treat any field here as settled until a second, independent\nsource agrees — a register, a certificate, a newspaper notice, a cemetery record, or a clean read of the\n*published* page (not a phone scan of it).\n\n## Sources\n\n- **B2** — *A Telfer Family Tree — Supplement 2008*, printed p.149. Single source. Second witness outstanding.",
-    "roles": [
-      "Child of [[Michael Jeffrey Hooper (b. 1944)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "jennifer-fox",
-      "michael-hooper"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "anthony-hooper",
-      "belinda-hooper"
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
   },
   {
     "id": "Allen Russell Merrick (1956)",
@@ -32003,6 +31439,191 @@
     "person_photo": "images/people/Penny_Tim_wedding_group_28Nov1981.jpg"
   },
   {
+    "id": "James Sara (1970)",
+    "slug": "james-sara",
+    "first_name": "James",
+    "middle_name": null,
+    "last_name": "Sara",
+    "birth_year": 1970,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1970",
+    "death_year_display": "?",
+    "display_name": "James Sara",
+    "title": "James Sara (b. 1970)",
+    "lifespan": "1970 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# James Sara (b. 1970)\n\n**Role:** Spouse/connected by marriage\n**Born:** 15 Jun 1970 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      {
+        "plain_name": "Amelia Jayne Sara"
+      },
+      {
+        "plain_name": "Sebastian James Sara"
+      }
+    ],
+    "spouses": [
+      "samantha-walsh"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Sally Walsh (1970)",
+    "slug": "sally-walsh",
+    "first_name": "Sally",
+    "middle_name": null,
+    "last_name": "Walsh",
+    "birth_year": 1970,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1970",
+    "death_year_display": "?",
+    "display_name": "Sally Walsh",
+    "title": "Sally Michelle Walsh (b. 1970)",
+    "lifespan": "1970 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Sally Michelle Walsh (b. 1970)\n\n**Role:** Child of [[Laurel Kaye Telfer (b. 1946)]]\n**Born:** 8 Aug 1970 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Laurel Kaye Telfer (b. 1946)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "laurel-telfer"
+    ],
+    "children": [
+      "joshua-morris",
+      "sarah-morris",
+      "tahlia-morris"
+    ],
+    "spouses": [
+      "bruce-morris"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Bruce Morris (1971)",
+    "slug": "bruce-morris",
+    "first_name": "Bruce",
+    "middle_name": null,
+    "last_name": "Morris",
+    "birth_year": 1971,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1971",
+    "death_year_display": "?",
+    "display_name": "Bruce Morris",
+    "title": "Bruce James Morris (b. 1971)",
+    "lifespan": "1971 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Bruce James Morris (b. 1971)\n\n**Role:** Spouse/connected by marriage\n**Born:** 2 Mar 1971 — Canberra, ACT\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      "joshua-morris",
+      "sarah-morris",
+      "tahlia-morris"
+    ],
+    "spouses": [
+      "sally-walsh"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Ronald Faller (1971)",
+    "slug": "ronald-faller",
+    "first_name": "Ronald",
+    "middle_name": null,
+    "last_name": "Faller",
+    "birth_year": 1971,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1971",
+    "death_year_display": "?",
+    "display_name": "Ronald Faller",
+    "title": "Ronald Henry Faller (b. 1971)",
+    "lifespan": "1971 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Ronald Henry Faller (b. 1971)\n\n**Role:** Spouse/connected by marriage\n**Born:** 14 Jul 1971 — Toronto, Canada\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [
+      "melinda-walsh"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Andrew David Story (1972)",
     "slug": "andrew-david-story",
     "first_name": "Andrew David",
@@ -32039,6 +31660,50 @@
       "zachary-david-story"
     ],
     "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Melinda Walsh (1972)",
+    "slug": "melinda-walsh",
+    "first_name": "Melinda",
+    "middle_name": null,
+    "last_name": "Walsh",
+    "birth_year": 1972,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1972",
+    "death_year_display": "?",
+    "display_name": "Melinda Walsh",
+    "title": "Melinda Kaye Walsh (b. 1972)",
+    "lifespan": "1972 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Melinda Kaye Walsh (b. 1972)\n\n**Role:** Child of [[Laurel Kaye Telfer (b. 1946)]]\n**Born:** 23 Jun 1972 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Laurel Kaye Telfer (b. 1946)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "laurel-telfer"
+    ],
+    "children": [],
+    "spouses": [
+      "ronald-faller"
+    ],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
@@ -32126,6 +31791,57 @@
     "person_photo": null
   },
   {
+    "id": "Samantha Walsh (1975)",
+    "slug": "samantha-walsh",
+    "first_name": "Samantha",
+    "middle_name": null,
+    "last_name": "Walsh",
+    "birth_year": 1975,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1975",
+    "death_year_display": "?",
+    "display_name": "Samantha Walsh",
+    "title": "Samantha Jayne Walsh (b. 1975)",
+    "lifespan": "1975 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Samantha Jayne Walsh (b. 1975)\n\n**Role:** Child of [[Laurel Kaye Telfer (b. 1946)]]\n**Born:** 30 Apr 1975 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Laurel Kaye Telfer (b. 1946)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "laurel-telfer"
+    ],
+    "children": [
+      {
+        "plain_name": "Amelia Jayne Sara"
+      },
+      {
+        "plain_name": "Sebastian James Sara"
+      }
+    ],
+    "spouses": [
+      "james-sara"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Amy Marie Bennett (1976)",
     "slug": "amy-marie-bennett",
     "first_name": "Amy Marie",
@@ -32159,6 +31875,106 @@
       "elsie-marie-maddern"
     ],
     "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Catherine Walsh (1976)",
+    "slug": "catherine-walsh",
+    "first_name": "Catherine",
+    "middle_name": null,
+    "last_name": "Walsh",
+    "birth_year": 1976,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1976",
+    "death_year_display": "?",
+    "display_name": "Catherine Walsh",
+    "title": "Catherine Alison Walsh (b. 1976)",
+    "lifespan": "1976 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Catherine Alison Walsh (b. 1976)\n\n**Role:** Child of [[Laurel Kaye Telfer (b. 1946)]]\n**Born:** 10 Dec 1976 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Laurel Kaye Telfer (b. 1946)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "laurel-telfer"
+    ],
+    "children": [
+      {
+        "plain_name": "Isabella Eden Anastovski"
+      },
+      {
+        "plain_name": "Zachary Tomas Anastovski"
+      }
+    ],
+    "spouses": [
+      "doljin-anastovski"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Doljin Anastovski (1976)",
+    "slug": "doljin-anastovski",
+    "first_name": "Doljin",
+    "middle_name": null,
+    "last_name": "Anastovski",
+    "birth_year": 1976,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1976",
+    "death_year_display": "?",
+    "display_name": "Doljin Anastovski",
+    "title": "Doljin Anastovski (b. 1976)",
+    "lifespan": "1976 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Doljin Anastovski (b. 1976)\n\n**Role:** Spouse/connected by marriage\n**Born:** 25 Nov 1976 — Wollongong, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Spouse/connected by marriage"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [
+      {
+        "plain_name": "Isabella Eden Anastovski"
+      },
+      {
+        "plain_name": "Zachary Tomas Anastovski"
+      }
+    ],
+    "spouses": [
+      "catherine-walsh"
+    ],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
@@ -32201,6 +32017,46 @@
     "spouses": [
       "carol-petith"
     ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Jonathan Telfer (1977)",
+    "slug": "jonathan-telfer",
+    "first_name": "Jonathan",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 1977,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1977",
+    "death_year_display": "?",
+    "display_name": "Jonathan Telfer",
+    "title": "Jonathan Lee Telfer (b. 1977)",
+    "lifespan": "1977 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Jonathan Lee Telfer (b. 1977)\n\n**Role:** Child of [[John Telfer (1847–1929)]]\n**Born:** 11 Oct 1977 — Paddington, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[John Telfer (1847–1929)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [],
+    "children": [],
+    "spouses": [],
     "siblings": [],
     "step_parents": [],
     "step_children": [],
@@ -32534,6 +32390,51 @@
     "person_photo": null
   },
   {
+    "id": "Jack Cameron (2002)",
+    "slug": "jack-cameron",
+    "first_name": "Jack",
+    "middle_name": null,
+    "last_name": "Cameron",
+    "birth_year": 2002,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "2002",
+    "death_year_display": "?",
+    "display_name": "Jack Cameron",
+    "title": "Jack William Cameron (b. 2002)",
+    "lifespan": "2002 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Jack William Cameron (b. 2002)\n\n**Role:** Child of [[Belinda Louise Hooper (b. 1971)]]\n**Born:** 17 Jul 2002 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Belinda Louise Hooper (b. 1971)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "belinda-hooper",
+      "ian-cameron"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "edward-cameron"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Zachary David Story (2002)",
     "slug": "zachary-david-story",
     "first_name": "Zachary David",
@@ -32668,6 +32569,94 @@
     "person_photo": null
   },
   {
+    "id": "Charlotte Hooper (2004)",
+    "slug": "charlotte-hooper",
+    "first_name": "Charlotte",
+    "middle_name": null,
+    "last_name": "Hooper",
+    "birth_year": 2004,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "2004",
+    "death_year_display": "?",
+    "display_name": "Charlotte Hooper",
+    "title": "Charlotte Eloise Hooper (b. 2004)",
+    "lifespan": "2004 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Charlotte Eloise Hooper (b. 2004)\n\n**Role:** Child of [[Anthony Michael Hooper (b. 1972)]]\n**Born:** 18 Aug 2004 — Bowral, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Anthony Michael Hooper (b. 1972)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "anthony-hooper",
+      "susan-lucas"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Edward Cameron (2004)",
+    "slug": "edward-cameron",
+    "first_name": "Edward",
+    "middle_name": null,
+    "last_name": "Cameron",
+    "birth_year": 2004,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "2004",
+    "death_year_display": "?",
+    "display_name": "Edward Cameron",
+    "title": "Edward Michael Cameron (b. 2004)",
+    "lifespan": "2004 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Edward Michael Cameron (b. 2004)\n\n**Role:** Child of [[Belinda Louise Hooper (b. 1971)]]\n**Born:** 8 Apr 2004 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Belinda Louise Hooper (b. 1971)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "belinda-hooper",
+      "ian-cameron"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "jack-cameron"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Ella Lee Manuel (2004)",
     "slug": "ella-lee-manuel",
     "first_name": "Ella Lee",
@@ -32699,6 +32688,92 @@
     "parents": [
       "lianna-kay-hayes",
       "wade-peter-manuel-1975"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Amie Goodson (2005)",
+    "slug": "amie-goodson",
+    "first_name": "Amie",
+    "middle_name": null,
+    "last_name": "Goodson",
+    "birth_year": 2005,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "2005",
+    "death_year_display": "?",
+    "display_name": "Amie Goodson",
+    "title": "Amie Victoria Goodson (b. 2005)",
+    "lifespan": "2005 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Amie Victoria Goodson (b. 2005)\n\n**Role:** Child of [[Andrew John Goodson (b. 1978)]]\n**Born:** 10 Oct 2005 — Ballarat, Vic\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Andrew John Goodson (b. 1978)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "andrew-goodson",
+      "kathryn-whymark"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Arya Telfer (2005)",
+    "slug": "arya-telfer",
+    "first_name": "Arya",
+    "middle_name": null,
+    "last_name": "Telfer",
+    "birth_year": 2005,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "2005",
+    "death_year_display": "?",
+    "display_name": "Arya Telfer",
+    "title": "Arya Telfer (b. 2005)",
+    "lifespan": "2005 – ?",
+    "generation": 9,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Arya Telfer (b. 2005)\n\n**Role:** Child of [[Martin Telfer (b. 1972)]]\n**Born:** 3 Mar 2005\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Martin Telfer (b. 1972)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "dhurri-thiagarajah",
+      "martin-telfer"
     ],
     "children": [],
     "spouses": [],
@@ -32942,29 +33017,29 @@
     "person_photo": null
   },
   {
-    "id": "Amie Goodson",
-    "slug": "amie-goodson",
-    "first_name": "Amie",
+    "id": "Joshua Morris (1996)",
+    "slug": "joshua-morris",
+    "first_name": "Joshua",
     "middle_name": null,
-    "last_name": "Goodson",
-    "birth_year": null,
+    "last_name": "Morris",
+    "birth_year": 1996,
     "death_year": null,
     "birth_date": null,
     "death_date": null,
-    "birth_year_display": "?",
+    "birth_year_display": "1996",
     "death_year_display": "?",
-    "display_name": "Amie Goodson",
-    "title": "Amie Victoria Goodson (b. 2005)",
-    "lifespan": "? – ?",
-    "generation": 9,
+    "display_name": "Joshua Morris",
+    "title": "Joshua James Morris (b. 1996)",
+    "lifespan": "1996 – ?",
+    "generation": 10,
     "is_living": true,
     "is_deceased": false,
     "evidence_level": null,
     "single_source": true,
     "provisional_why": null,
-    "body_markdown": "# Amie Victoria Goodson (b. 2005)\n\n**Role:** Child of [[Andrew John Goodson (b. 1978)]]\n**Born:** 10 Oct 2005 — Ballarat, Vic\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Andrew John Goodson (b. 1978)]] |\n\n---",
+    "body_markdown": "# Joshua James Morris (b. 1996)\n\n**Role:** Child of [[Sally Michelle Walsh (b. 1970)]]\n**Born:** 2 Jan 1996 — Canberra, ACT\n\n## Family\n\n| Relation | Name |\n|",
     "roles": [
-      "Child of [[Andrew John Goodson (b. 1978)]]"
+      "Child of [[Sally Michelle Walsh (b. 1970)]]"
     ],
     "tags": [
       "bio",
@@ -32973,142 +33048,14 @@
       "descendant"
     ],
     "parents": [
-      "andrew-goodson",
-      "kathryn-whymark"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Arya Telfer",
-    "slug": "arya-telfer",
-    "first_name": "Arya",
-    "middle_name": null,
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Arya Telfer",
-    "title": "Arya Telfer (b. 2005)",
-    "lifespan": "? – ?",
-    "generation": 9,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Arya Telfer (b. 2005)\n\n**Role:** Child of [[Martin Telfer (b. 1972)]]\n**Born:** 3 Mar 2005\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Martin Telfer (b. 1972)]] |\n\n---",
-    "roles": [
-      "Child of [[Martin Telfer (b. 1972)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "dhurri-thiagarajah",
-      "martin-telfer"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Charlotte Hooper",
-    "slug": "charlotte-hooper",
-    "first_name": "Charlotte",
-    "middle_name": null,
-    "last_name": "Hooper",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Charlotte Hooper",
-    "title": "Charlotte Eloise Hooper (b. 2004)",
-    "lifespan": "? – ?",
-    "generation": 9,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Charlotte Eloise Hooper (b. 2004)\n\n**Role:** Child of [[Anthony Michael Hooper (b. 1972)]]\n**Born:** 18 Aug 2004 — Bowral, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Anthony Michael Hooper (b. 1972)]] |\n\n---",
-    "roles": [
-      "Child of [[Anthony Michael Hooper (b. 1972)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "anthony-hooper",
-      "susan-lucas"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Edward Cameron",
-    "slug": "edward-cameron",
-    "first_name": "Edward",
-    "middle_name": null,
-    "last_name": "Cameron",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "?",
-    "death_year_display": "?",
-    "display_name": "Edward Cameron",
-    "title": "Edward Michael Cameron (b. 2004)",
-    "lifespan": "? – ?",
-    "generation": 9,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Edward Michael Cameron (b. 2004)\n\n**Role:** Child of [[Belinda Louise Hooper (b. 1971)]]\n**Born:** 8 Apr 2004 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Belinda Louise Hooper (b. 1971)]] |\n\n---",
-    "roles": [
-      "Child of [[Belinda Louise Hooper (b. 1971)]]"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person",
-      "descendant"
-    ],
-    "parents": [
-      "belinda-hooper",
-      "ian-cameron"
+      "bruce-morris",
+      "sally-walsh"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "jack-cameron"
+      "sarah-morris",
+      "tahlia-morris"
     ],
     "step_parents": [],
     "step_children": [],
@@ -33116,29 +33063,29 @@
     "person_photo": null
   },
   {
-    "id": "Jack Cameron",
-    "slug": "jack-cameron",
-    "first_name": "Jack",
+    "id": "Sarah Morris (1997)",
+    "slug": "sarah-morris",
+    "first_name": "Sarah",
     "middle_name": null,
-    "last_name": "Cameron",
-    "birth_year": null,
+    "last_name": "Morris",
+    "birth_year": 1997,
     "death_year": null,
     "birth_date": null,
     "death_date": null,
-    "birth_year_display": "?",
+    "birth_year_display": "1997",
     "death_year_display": "?",
-    "display_name": "Jack Cameron",
-    "title": "Jack William Cameron (b. 2002)",
-    "lifespan": "? – ?",
-    "generation": 9,
+    "display_name": "Sarah Morris",
+    "title": "Sarah Kayte Morris (b. 1997)",
+    "lifespan": "1997 – ?",
+    "generation": 10,
     "is_living": true,
     "is_deceased": false,
     "evidence_level": null,
     "single_source": true,
     "provisional_why": null,
-    "body_markdown": "# Jack William Cameron (b. 2002)\n\n**Role:** Child of [[Belinda Louise Hooper (b. 1971)]]\n**Born:** 17 Jul 2002 — Sydney, NSW\n\n## Family\n\n| Relation | Name |\n|---|---|\n| **Parent** | [[Belinda Louise Hooper (b. 1971)]] |\n\n---",
+    "body_markdown": "# Sarah Kayte Morris (b. 1997)\n\n**Role:** Child of [[Sally Michelle Walsh (b. 1970)]]\n**Born:** 2 May 1997 — Canberra, ACT\n\n## Family\n\n| Relation | Name |\n|",
     "roles": [
-      "Child of [[Belinda Louise Hooper (b. 1971)]]"
+      "Child of [[Sally Michelle Walsh (b. 1970)]]"
     ],
     "tags": [
       "bio",
@@ -33147,13 +33094,60 @@
       "descendant"
     ],
     "parents": [
-      "belinda-hooper",
-      "ian-cameron"
+      "bruce-morris",
+      "sally-walsh"
     ],
     "children": [],
     "spouses": [],
     "siblings": [
-      "edward-cameron"
+      "joshua-morris",
+      "tahlia-morris"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Tahlia Morris (1998)",
+    "slug": "tahlia-morris",
+    "first_name": "Tahlia",
+    "middle_name": null,
+    "last_name": "Morris",
+    "birth_year": 1998,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1998",
+    "death_year_display": "?",
+    "display_name": "Tahlia Morris",
+    "title": "Tahlia Paige Morris (b. 1998)",
+    "lifespan": "1998 – ?",
+    "generation": 10,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Tahlia Paige Morris (b. 1998)\n\n**Role:** Child of [[Sally Michelle Walsh (b. 1970)]]\n**Born:** 29 Oct 1998 — Canberra, ACT\n\n## Family\n\n| Relation | Name |\n|",
+    "roles": [
+      "Child of [[Sally Michelle Walsh (b. 1970)]]"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person",
+      "descendant"
+    ],
+    "parents": [
+      "bruce-morris",
+      "sally-walsh"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "joshua-morris",
+      "sarah-morris"
     ],
     "step_parents": [],
     "step_children": [],
