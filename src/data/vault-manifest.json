@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-31T03:00:48+10:00",
+  "generated_at": "2026-10-31T05:17:49+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 671,
+  "count": 672,
   "kinds": {
-    "real": 653,
+    "real": 654,
     "redirect": 18,
     "empty": 0
   },
@@ -777,7 +777,7 @@
       "kind": "real"
     },
     "Esther Farrow Latter (1859\u20131951).md": {
-      "sha256": "ca36e191b9134dc0999b212a4262455b335ed1845d04fd5693fb13f66d787805",
+      "sha256": "92c40730b046e447e0a700b1de0a0cb2b7827cec7067a52bc16e2d63a2c07a45",
       "kind": "real"
     },
     "Esther Jane (1834\u20131909).md": {
@@ -1094,6 +1094,10 @@
     },
     "Ian Telfer.md": {
       "sha256": "f7a3419a2979f4cf0117d925102e799da6deefb64eb4a81bbb876c1d6b0be18f",
+      "kind": "real"
+    },
+    "Ida Jane Latter (1884\u20131983).md": {
+      "sha256": "5ec40727682c9e4ff07efe303de27a021b3cbf33ae502c8431e166be0b4676d2",
       "kind": "real"
     },
     "Inez Dillon.md": {
@@ -2205,7 +2209,7 @@
       "kind": "real"
     },
     "Richard Pelling Latter (~1860\u20131936).md": {
-      "sha256": "4e512535b28ebbf9f8faeb9c5c9fb7a157b728a448c5d0c5c870a7e4baa46239",
+      "sha256": "f026cad1927c4d32e2bd3f7b314bb798e9e78611f30f5be40d0f9b94cff87907",
       "kind": "real"
     },
     "Rita Joyce Telfer (1909\u20131990).md": {

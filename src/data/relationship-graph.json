@@ -3266,6 +3266,11 @@
       "generation": 6
     },
     {
+      "slug": "ida-latter",
+      "id": "Ida Jane Latter (1884)",
+      "generation": 6
+    },
+    {
       "slug": "kirrily-sheree-maddern-1976",
       "id": "Kirrily Sheree Maddern (1976)",
       "generation": 8
@@ -6726,6 +6731,14 @@
         "to": "james-telfer"
       },
       {
+        "from": "esther-farrow-latter-1859",
+        "to": "ida-latter"
+      },
+      {
+        "from": "richard-pelling-latter-1860",
+        "to": "ida-latter"
+      },
+      {
         "from": "lyndell-marie-telfer-1951",
         "to": "kirrily-sheree-maddern-1976"
       }
@@ -8020,6 +8033,10 @@
       {
         "from": "colin-telfer-1889",
         "to": "roland-telfer"
+      },
+      {
+        "from": "daisy-vera-latter-1886",
+        "to": "ida-latter"
       },
       {
         "from": "daisy-vera-latter-1886",
@@ -11328,6 +11345,10 @@
       {
         "from": "james-telfer",
         "to": "leslie-robert-telfer"
+      },
+      {
+        "from": "ida-latter",
+        "to": "kenneth-harry-latter-1888"
       }
     ],
     "stepParentOf": [
