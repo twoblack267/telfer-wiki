@@ -284,10 +284,22 @@ const yearText = !unknownSpan
 
 // Template form — kept as the FALLBACK for profiles with no prose, and with the
 // unknown-date placeholder suppressed so it never prints "(? – ?)".
+// A bare name plus "— Telfer family history." is only 37 characters, which gives a crawler
+// almost nothing (card tw-2026-10-31-003). Add the relationship FACTS the profile already
+// states — role, spouse, marriage date/place — never anything not in the record.
+const spouseMatch = (person.body_markdown || "").match(/\|\s*\*\*Spouse\*\*\s*\|\s*\[\[([^\]|]+)(?:\|([^\]]+))?\]\]\s*(\([^)]*\))?/);
+const roleMatch = (person.body_markdown || "").match(/\*\*Role:\*\*\s*([^\n]+)/);
+const fallbackFacts = [
+  roleMatch ? `${roleMatch[1].replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, "$2" || "$1").trim()}` : "",
+  spouseMatch
+    ? `Spouse of ${(spouseMatch[2] || spouseMatch[1]).trim()}${spouseMatch[3] ? ` ${spouseMatch[3].trim()}` : ""}.`
+    : "",
+].filter(Boolean).join(" ");
 const templateDescription = [
   person.display_name,
-  yearText ? `(${yearText})` : "",
+  yearText && !person.display_name.includes(`(${yearText})`) ? `(${yearText})` : "",
   `— Telfer family history.`,
+  fallbackFacts,
   genNote,
   livingNote,
 ].join(" ").replace(/\s+/g, " ").trim().slice(0, 158).trim();
@@ -572,9 +584,14 @@ const decodeEntities = (t) => String(t || "")
   .replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#8217;/g, "'");
 // Marks are stripped before clamping: a search snippet cannot render an icon,
 // and a raw emoji there reads as noise on someone else's results page.
+// display_name ALREADY carries the years for ~59 records ("Elizabeth Beattie (1741 – 1819)")
+// while 590 carry a bare name. Appending `(yearText)` unconditionally printed the lifespan
+// twice on those 42 live pages (card tw-2026-10-31-001). Append only when the name does not
+// already carry that exact span.
+const nameHasYears = Boolean(yearText) && person.display_name.includes(`(${yearText})`);
 const rawSeoDescription = leadSentence && decodeEntities(leadSentence).length >= 40
   ? clampDescription(decodeEntities(
-      `${person.display_name}${yearText ? ` (${yearText})` : ""}. ${stripVaultMarks(leadSentence)}`
+      `${person.display_name}${yearText && !nameHasYears ? ` (${yearText})` : ""}. ${stripVaultMarks(leadSentence)}`
     ))
   : templateDescription;
 // FINAL decode before the layout escapes for HTML. Without this, a nickname quote reaches
@@ -659,7 +676,13 @@ const titleYearsText = titleYears(person);
 const titleName = bareTitleName(person);
 const personTitle = titleYearsText ? `${titleName} (${titleYearsText})` : titleName;
 
+// Set at ONE place so no path can bypass the entity decode: the hand-written SEO_OVERRIDES
+// strings are plain text and previously skipped it entirely (card tw-2026-10-31-002).
 const seoOverride = SEO_OVERRIDES[person.slug] || null;
+const resolvedSeoDescription = decodeDescriptionEntities(
+  clampDescription(seoOverride?.description || seoDescription)
+);
+
 const seoTitle = seoOverride?.title || personTitle;
 
 // Share card: this person's own generated image when one exists, otherwise the
@@ -740,7 +763,7 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
  
 <BaseLayout
   title={seoTitle}
-  description={seoOverride?.description || seoDescription}
+  description={resolvedSeoDescription}
   canonicalPath={`/people/${person.slug}/`}
   ogType="profile"
   ogImage={ogImage}

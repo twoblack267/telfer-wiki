@@ -130,5 +130,42 @@ if (leaks.length > 0) {
   process.exit(1);
 }
 
+// ── Attribute-level defects (cards tw-2026-10-31-001 / -002 / -003) ──
+// These are invisible to the label test above because the text is fine; the ENCODING or the
+// duplication is what ships wrong. Read the RAW attribute, before any unescaping, because a
+// crawler that mishandles `&#34;` shows it verbatim.
+const DUP_SPAN = /\(([^()]{3,14})\)\s*\(\1\)/;
+const ENTITY = /&#\d+;|&#x[0-9a-fA-F]+;/;
+const attrDefects = [];
+const dirsAll = fs.existsSync(DIST)
+  ? fs.readdirSync(DIST, { withFileTypes: true }).filter((e) => e.isDirectory()).map((e) => e.name)
+  : [];
+for (const d of dirsAll) {
+  const f = path.join(DIST, d, "index.html");
+  if (!fs.existsSync(f)) continue;
+  const html = fs.readFileSync(f, "utf8");
+  const m = html.match(/<meta\s+name="description"\s+content="([^"]*)"/i);
+  if (!m) continue;
+  const raw = m[1];
+  const dec = raw.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&");
+  if (ENTITY.test(raw)) attrDefects.push({ slug: d, reason: `numeric entity in attribute: ${raw.slice(0, 70)}` });
+  else if (DUP_SPAN.test(dec)) {
+    const mm = dec.match(DUP_SPAN);
+    attrDefects.push({ slug: d, reason: `lifespan printed twice: "${mm[0]}"` });
+  }
+}
+if (attrDefects.length > 0) {
+  console.error(`❌ meta-description-hygiene: ${attrDefects.length} description(s) carry attribute-level defects`);
+  for (const l of attrDefects.slice(0, 20)) console.error(`   ❌ ${l.slug}  ${l.reason}`);
+  if (attrDefects.length > 20) console.error(`   … and ${attrDefects.length - 20} more`);
+  console.error("");
+  console.error("   A numeric entity (&quot;/#34) means the attribute writer re-encoded a real");
+  console.error("   quote — emit it via escapeAttr() in BaseLayout.astro, never as a bare");
+  console.error("   content={...} binding. A doubled span means display_name already carries");
+  console.error("   the years and the template appended them again.");
+  process.exit(1);
+}
+
 console.log("✅ meta-description-hygiene: no structural labels leak into search snippets");
+console.log("✅ meta-description-hygiene: no numeric entities, no doubled lifespan");
 process.exit(0);

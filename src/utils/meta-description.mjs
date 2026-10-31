@@ -11,6 +11,11 @@
 
 export const META_DESCRIPTION_MAX = 158;
 
+// Function words that must never be the last thing a snippet shows. Longest forms first so
+// the alternation does not stop at "at" inside "at the". Applied ONLY to the clamped tail.
+const DANGLING_TAIL =
+  /(?:[\s,;:—–-]+(?:and|or|but|of|in|on|at|to|with|was|were|is|are|the|a|an|for|from|by|as|who|which|that|his|her|their|its|this|these|those|after|before|during|born|died))+$/i;
+
 // Numeric and named entities that end up in a description must be DECODED before the
 // layout escapes them for HTML, or Google shows the raw escape: "known as &#34;Cuth&#34;"
 // instead of "known as "Cuth"". 22 pages shipped that way (card itc-20261026-2) because
@@ -48,8 +53,12 @@ export function decodeDescriptionEntities(text) {
  */
 export function clampDescription(text, max = META_DESCRIPTION_MAX) {
   const s = String(text == null ? "" : text).replace(/\s+/g, " ").trim();
-  if (s.length <= max) return s;
-  const cut = s.slice(0, max + 1);
+  // Decode FIRST, both paths: the early return below previously handed back the raw
+  // string with `&#34;` still in it, so every under-budget description shipped the literal
+  // escape (card tw-2026-10-31-002). Length is measured on what a crawler receives.
+  const d = decodeDescriptionEntities(s);
+  if (d.length <= max) return d;
+  const cut = d.slice(0, max + 1);
   // Prefer a sentence boundary, then a clause boundary, then a word boundary.
   const lastSentence = cut.lastIndexOf(". ");
   const lastClause = Math.max(cut.lastIndexOf(", "), cut.lastIndexOf("; "), cut.lastIndexOf(" — "));
@@ -62,5 +71,14 @@ export function clampDescription(text, max = META_DESCRIPTION_MAX) {
         : lastSpace > 0
           ? lastSpace
           : max;
-  return s.slice(0, at).replace(/[\s,;:—–-]+$/, "").trim();
+  // Never end a snippet on a dangling function word ("…son of Francis Telfer and").
+  // 9 pages shipped that tail (card tw-2026-10-31-003). Strip trailing stopwords first,
+  // then re-check for a word boundary; only trim when something real is left.
+  let out = d.slice(0, at).replace(/[\s,;:—–-]+$/, "").trim();
+  for (let i = 0; i < 3; i++) {
+    const next = out.replace(DANGLING_TAIL, "").trim();
+    if (next === out) break;
+    out = next;
+  }
+  return out;
 }
