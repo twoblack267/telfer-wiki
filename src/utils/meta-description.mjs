@@ -46,6 +46,21 @@ export function decodeDescriptionEntities(text) {
 }
 
 /**
+ * Close a description that fits the budget but stops mid-sentence.
+ * A trailing ")" or "]" is a real terminator for a parenthetical citation
+ * ("… (A Telfer Family Tree — Supplement 2008)") and must survive; a bare word
+ * ("…, Roxburghshire, Scotland") gets a full stop.
+ */
+function closeShort(text, max = META_DESCRIPTION_MAX) {
+  const t = String(text == null ? "" : text).trim();
+  if (!t) return t;
+  if (/[.!?…\)\]]$/.test(t)) return t;
+  if (t.length + 1 <= max) return `${t}.`;
+  // No room for the stop: trim to fit, then close.
+  return `${t.slice(0, max - 1).replace(/[\s,;:—–-]+$/, "").trim()}.`;
+}
+
+/**
  * Fit `text` inside the snippet budget without ending mid-word.
  * @param {unknown} text
  * @param {number} max
@@ -57,7 +72,12 @@ export function clampDescription(text, max = META_DESCRIPTION_MAX) {
   // string with `&#34;` still in it, so every under-budget description shipped the literal
   // escape (card tw-2026-10-31-002). Length is measured on what a crawler receives.
   const d = decodeDescriptionEntities(s);
-  if (d.length <= max) return d;
+  // Terminator contract applies to SHORT descriptions too. The early return used to hand
+  // back an unterminated string untouched, so a 89-char fallback like "James Telfer
+  // (1762 – ?). Baptised: 24 September 1762 — Castleton, Roxburghshire, Scotland" shipped
+  // with no full stop (20 pages, card itc-20261101-1). Unclamped text that simply lacks a
+  // final period is closed with one; mid-sentence cuts get an ellipsis below.
+  if (d.length <= max) return closeShort(d);
   const cut = d.slice(0, max + 1);
   // Prefer a sentence boundary, then a clause boundary, then a word boundary.
   const lastSentence = cut.lastIndexOf(". ");
@@ -79,6 +99,20 @@ export function clampDescription(text, max = META_DESCRIPTION_MAX) {
     const next = out.replace(DANGLING_TAIL, "").trim();
     if (next === out) break;
     out = next;
+  }
+  // A clamped snippet must READ as finished. Until 2026-11-02 the tail was trimmed but
+  // never terminated, so ~33% of person pages shipped an open sentence — "…the pair
+  // shared the birth date 29 August 1858 at Tungkillo" with no full stop and no ellipsis
+  // (card itc-20261101-1). The dangling-conjunction check passed them because the cut
+  // landed on a noun, not on "and"/"of"/"the". Contract: if we cut mid-sentence, say so
+  // with an ellipsis, unless the text already ends on a real terminator.
+  if (!/[.!?…]$/.test(out)) {
+    // Drop a now-dangling comma/semicolon/dash left by the stopword strip, then close.
+    // Reserve one character for the ellipsis so the TOTAL stays inside the budget —
+    // appending after the slice pushed a 158-char cap to 159 (caught by self-test).
+    out = out.replace(/[\s,;:—–-]+$/, "").trim();
+    if (out.length >= max) out = out.slice(0, max - 1).replace(/[\s,;:—–-]+$/, "").trim();
+    out += "\u2026";
   }
   return out;
 }

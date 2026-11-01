@@ -295,14 +295,19 @@ const fallbackFacts = [
     ? `Spouse of ${(spouseMatch[2] || spouseMatch[1]).trim()}${spouseMatch[3] ? ` ${spouseMatch[3].trim()}` : ""}.`
     : "",
 ].filter(Boolean).join(" ");
-const templateDescription = [
+// NOTE (2026-11-02, card itc-20261101-1): this used a bare `.slice(0, 158)`, which
+// bypassed clampDescription() and therefore its terminator contract. 37 pages shipped a
+// description cut mid-phrase with no full stop and no ellipsis ("…sister of Murray John
+// Telfer 6th g"). Route it through clampDescription like every other path so the snippet
+// is always closed and never exceeds the budget.
+const templateDescription = clampDescription([
   person.display_name,
   yearText && !person.display_name.includes(`(${yearText})`) ? `(${yearText})` : "",
   `— Telfer family history.`,
   fallbackFacts,
   genNote,
   livingNote,
-].join(" ").replace(/\s+/g, " ").trim().slice(0, 158).trim();
+].join(" ").replace(/\s+/g, " ").trim());
 
 // FIRST PROSE SENTENCE from the person's own body. formatBody has already turned the
 // vault markdown into HTML with inline links; strip the tags, drop a leading heading,
