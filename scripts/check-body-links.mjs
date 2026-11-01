@@ -183,6 +183,17 @@ const KNOWN_NOTE_REFERENCES = new Set([
   'wedding - tim & sheryle telfer (28 aug 1999)',
   'celebrating the life of murray john telfer',
   'malcolm george telfer — discrepancy investigation',
+  // Skippy 2026-11-02 (card broken-body-link-20261101). Both notes live in
+  // Family History/Documents/, which make-vault-notes-snapshot.mjs EXCLUDES BY RULE
+  // ("Do not add them without Mark's say-so"), so they can never appear in
+  // VAULT_NOTES and isVaultNote() cannot resolve them. Verified to exist on disk:
+  //   Documents/FR776 — Alexander Telfer baptism 1841 (image read).md
+  //   Documents/NZ Telfer Contacts — Otorohanga Lead Sheet (2026-10-20).md
+  // Both are genuine research-document references, not person links. Added here
+  // per this file's documented allowlist step rather than by widening the snapshot
+  // scope. A dead PERSON link still never matches this set and still blocks.
+  'fr776 — alexander telfer baptism 1841 (image read)',
+  'nz telfer contacts — otorohanga lead sheet (2026-10-20)',
 ].map((s) => s.toLowerCase()));
 
 function isNonPersonReference(t) {
