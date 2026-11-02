@@ -71,10 +71,11 @@ export default defineConfig({
     sitemap({
       entryLimit: 1000,
       // Privacy: keep living Ivory pages out of the sitemap entirely.
-      // NOTE: NOINDEX_SLUGS is currently EMPTY by design (2026-09-08 decision
-      // to let the youngest Ivory generation back on Google). This filter is
-      // therefore a no-op today; it stays wired so re-adding a slug to the
-      // set once again removes that person from the sitemap automatically.
+      // NOINDEX_SLUGS is NOT empty — it holds the six privacy-withdrawn people
+      // (owner's ruling 2026-10-16, reaffirmed 2026-10-26). This filter is live
+      // and matters: it keeps their URLs out of sitemap.xml. It is not a no-op.
+      // (The earlier "EMPTY by design, 2026-09-08" note here was stale and
+      // contradicted the actual set — corrected 2026-11-03.)
       filter: (page) => {
         // `page` is a FULL URL (e.g. https://telferwiki.com/tree/), not a path —
         // @astrojs/sitemap hands the filter the same href it writes to <loc>.

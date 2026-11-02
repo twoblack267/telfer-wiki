@@ -18,9 +18,16 @@ retracted. The site simply stops publishing them.
 
 - Their profile pages are gone (397 people published → 391).
 - They are out of `sitemap.xml` and carry no index entry — Google will drop them.
-- Their **old URLs still resolve**. A visitor following a stale link is handed
-  over to a *living, named* page rather than a dead end. Those hop pages are
-  marked `noindex`.
+- Their **old URLs return 404, deliberately**. *(Owner's ruling, 2026-10-26 —
+  supersedes the earlier hop-page design described below.)* A withdrawn person
+  gets **no page at all, not even a meta-refresh stub**, because a stub sits at
+  the withdrawn person's own URL and confirms that the identity existed. A 404
+  says nothing at all. An earlier build did emit those six hop pages; CI's
+  `check-withdrawn-names` gate correctly failed it, and the ruling followed.
+  **Do not re-add hop pages for privacy-withdrawn slugs** without changing the
+  ruling — `emit-git-slug-redirects.mjs` excludes anything in
+  `PRIVACY_STRIP_SLUGS` for exactly this reason, so the six 404s are working as
+  designed, not a regression.
 - Their **names remain on the site as plain text**: Paul's page still lists all
   four of his children; Tim's page still lists all four stepchildren; the full
   tree still shows all six; Sheryle is still named beside both of her husbands.
@@ -123,8 +130,11 @@ the person looks removed but is still reachable.
 1. **Add the slug to `src/data/privacy-exclusions.mjs`.** Without this, the next
    nightly rebuild publishes them again.
 2. **Add a declaration to `src/data/removed-redirects.json`** naming the person
-   and a *living* page to send their old link to. Without this, their old URL
-   becomes a 404 and gate 3 refuses the deploy — or worse, ships a dead end.
+   and a *living* page their old link would go to. The entry is still required —
+   it records the withdrawal and satisfies gate 3 — but for a **privacy**
+   withdrawal (`privacy_withdrawal: true`) the declared target is **not**
+   emitted as a hop page: the old URL returns 404 by owner's ruling. The
+   declaration is the audit trail, not a redirect promise.
 3. **Remove any photo that is only of that person** from `public/images/people/`.
    Without this the page is gone but the photograph is still served to anyone
    with the direct URL. The page never gets checked again, because it no longer
