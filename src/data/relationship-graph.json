@@ -2161,11 +2161,6 @@
       "generation": 6
     },
     {
-      "slug": "francis-john-burton-telfer",
-      "id": "Francis John Burton (known as Jack) Telfer (1877)",
-      "generation": 5
-    },
-    {
       "slug": "harriett-helen-telfer",
       "id": "Harriett Helen Telfer (1873)",
       "generation": 5
@@ -3269,6 +3264,14 @@
       "slug": "ida-latter",
       "id": "Ida Jane Latter (1884)",
       "generation": 6
+    },
+    {
+      "slug": "francis-john-burton-telfer",
+      "id": "Francis John Burton Telfer (1877)"
+    },
+    {
+      "slug": "kenneth-paynter",
+      "id": "Kenneth James Paynter (1919)"
     },
     {
       "slug": "kirrily-sheree-maddern-1976",
@@ -5664,14 +5667,6 @@
       },
       {
         "from": "robert-telfer-1835",
-        "to": "francis-john-burton-telfer"
-      },
-      {
-        "from": "susan-telfer-1844",
-        "to": "francis-john-burton-telfer"
-      },
-      {
-        "from": "robert-telfer-1835",
         "to": "harriett-helen-telfer"
       },
       {
@@ -6737,6 +6732,14 @@
       {
         "from": "richard-pelling-latter-1860",
         "to": "ida-latter"
+      },
+      {
+        "from": "robert-telfer-1835",
+        "to": "francis-john-burton-telfer"
+      },
+      {
+        "from": "susan-telfer-1844",
+        "to": "francis-john-burton-telfer"
       },
       {
         "from": "lyndell-marie-telfer-1951",
@@ -10603,30 +10606,6 @@
         "to": "rose-telfer"
       },
       {
-        "from": "francis-john-burton-telfer",
-        "to": "harriett-helen-telfer"
-      },
-      {
-        "from": "francis-john-burton-telfer",
-        "to": "james-robert-telfer-1866"
-      },
-      {
-        "from": "francis-john-burton-telfer",
-        "to": "lindsay-burton-telfer"
-      },
-      {
-        "from": "francis-john-burton-telfer",
-        "to": "robert-allan-burton-telfer"
-      },
-      {
-        "from": "francis-john-burton-telfer",
-        "to": "susan-telfer-of-german-creek"
-      },
-      {
-        "from": "francis-john-burton-telfer",
-        "to": "william-telfer-1869"
-      },
-      {
         "from": "harriett-helen-telfer",
         "to": "james-robert-telfer-1866"
       },
@@ -11349,6 +11328,30 @@
       {
         "from": "ida-latter",
         "to": "kenneth-harry-latter-1888"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "harriett-helen-telfer"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "james-robert-telfer-1866"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "lindsay-burton-telfer"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "robert-allan-burton-telfer"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "susan-telfer-of-german-creek"
+      },
+      {
+        "from": "francis-john-burton-telfer",
+        "to": "william-telfer-1869"
       }
     ],
     "stepParentOf": [

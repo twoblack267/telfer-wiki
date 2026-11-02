@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-03T03:00:53+10:00",
+  "generated_at": "2026-11-03T05:49:21+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 672,
+  "count": 673,
   "kinds": {
-    "real": 654,
+    "real": 655,
     "redirect": 18,
     "empty": 0
   },
@@ -69,7 +69,7 @@
       "kind": "real"
     },
     "Alan Dale Telfer (1890\u20131937).md": {
-      "sha256": "d1a0706e4961b573b562a53d05918b6ed78c293c334049b39fe69759f653dba6",
+      "sha256": "d726da32f8e322983afbc5ed1d047858528eefbe6bbd91ec3c594835e36455a6",
       "kind": "real"
     },
     "Alan Theodore Downs (1905\u20131959).md": {
@@ -449,7 +449,7 @@
       "kind": "real"
     },
     "Colin Louis Paynter (1919\u20131942).md": {
-      "sha256": "7c23085724aebb6392dc31feff65fc46dae3da805ee8e4e3e887e1ce16c49a77",
+      "sha256": "c012e6fc436fa5a92a2e3328f3d177045ffc13f6eb485fe00302cad9bf0e6cba",
       "kind": "real"
     },
     "Colin Roy Telfer (1889\u20131964).md": {
@@ -840,8 +840,8 @@
       "sha256": "5f9edbe44e115a2b78ba84c2e610d059c395857679b751aba2642ed4bac9a72f",
       "kind": "real"
     },
-    "Francis John Burton Telfer (1877\u2013?).md": {
-      "sha256": "f9832d040ba8b76264ab27a562cb329c8ed8e76c2ae142ecb1bc1301ad3ca328",
+    "Francis John Burton Telfer (1877\u2013).md": {
+      "sha256": "26ffe1881e11a1fbe2eb45126205c87f968ef4ed1391cef6d06e80e3ae173aa6",
       "kind": "real"
     },
     "Francis Kelson Telfer (1910\u20131953).md": {
@@ -1429,7 +1429,7 @@
       "kind": "real"
     },
     "John Ralph Paynter (1921\u20131941).md": {
-      "sha256": "bc540fc65d7d1868a6b4154a9bc832d3ae1d29f0b1ed2427c22d9a776990841f",
+      "sha256": "29f63267f8b28f0c6ea14f5d4d74ac1a5132845762ecb1fda0d1b8cf32c8899d",
       "kind": "real"
     },
     "John Robert Telfer.md": {
@@ -1457,7 +1457,7 @@
       "kind": "real"
     },
     "John Telfer (1840\u20131913).md": {
-      "sha256": "f0275e4574c2d81a1fd76ea783057d8905be5df5b2f6fc96fa6f4050c1dce1f6",
+      "sha256": "145d76292f39dcd542a30a0c90b6cd112ed87e009f10eb051e673fe0abb29f07",
       "kind": "real"
     },
     "John Telfer (1847\u20131929).md": {
@@ -1612,6 +1612,10 @@
       "sha256": "bc55530d40d3d437b9f0d8b8cac07e3d19cefcc48f7b6a9cd68e88a5d160274d",
       "kind": "real"
     },
+    "Kenneth James Paynter (1919).md": {
+      "sha256": "bb47c0962ef77feb22c6a8deea669b0857db6df54b0df7e4b4d8306f20eab743",
+      "kind": "real"
+    },
     "Kenneth James Pedler (1959).md": {
       "sha256": "0b4ca9cebd83924190316a953e445f9c43796b2679a1533f4a1c4b04c6011153",
       "kind": "real"
@@ -1741,7 +1745,7 @@
       "kind": "real"
     },
     "Lindsay Burton Telfer (1875\u20131943).md": {
-      "sha256": "803340d7b71c2ab91fc43cde2a81825f086df56cb7f357818a6092eacbc2efd3",
+      "sha256": "ff109ab0e33c8ffe59441ad1a10b83f88a57434d04d5a11d003a2d24ef7ec39b",
       "kind": "real"
     },
     "Lindsay Ellis Stribling (1893\u20131979).md": {
@@ -2257,7 +2261,7 @@
       "kind": "real"
     },
     "Robert Telfer (1835\u20131907).md": {
-      "sha256": "309fe617620dc8425c500ab460963667f850f2eba524d737dd56acd2f6bc6538",
+      "sha256": "5be1a8ce0a5f85bcc6666372665683f962c59568934d15ce050a552b119a4966",
       "kind": "real"
     },
     "Robert Telfer Dillon (1862\u20131942).md": {
@@ -2485,7 +2489,7 @@
       "kind": "real"
     },
     "Susan Burton Telfer (1844\u20131924).md": {
-      "sha256": "4452c84d8baa52975b1d43bcdcff13f5dfac488a61873d2e56d7572f50eb8857",
+      "sha256": "1bf62368c3117255fb64b27da12716595e0c5aa1a18cb2a8678b12d31c6b73b5",
       "kind": "real"
     },
     "Susan Denise Lucas (b. 1972).md": {

@@ -684,8 +684,30 @@ function main() {
     const birthApprox = approxYear(fm.birth_year);
     const deathApprox = approxYear(fm.death_year);
 
+    // ── PARENTHETICAL EPITHET IN A NAME FIELD (added 2026-11-03, tw-2026-11-03-001) ──
+    // A vault note whose `first_name` reads "Francis John Burton (known as Jack)"
+    // built a DIFFERENT identity key from the same man's other note reading
+    // "Francis John Burton": keys are first+middle+last|birth_year, so the epithet
+    // split one person into two records, the slug-conflict pass appended `-2`, and
+    // the crown-jewel guard then aborted the whole nightly pipeline on
+    // "PROFILE VANISHED" -- a misleading error for what is really a duplicate note.
+    // An epithet is not part of a name. Strip a trailing bracketed gloss before
+    // keying so two notes for one person collide HERE (where the duplicate-twin
+    // purge can see them) instead of three steps later. The gloss is reported so
+    // the vault can be corrected rather than silently rewritten.
+    const stripEpithet = (s) => s.replace(/\s*\([^)]*\)\s*$/, '').trim();
+    const firstNameKey = stripEpithet(firstName) || firstName;
+    const lastNameKey = stripEpithet(lastName) || lastName;
+    if (`${firstNameKey}${middleName || ''}${lastNameKey}` !== `${firstName}${middleName || ''}${lastName}`) {
+      console.log(
+        `  ⚠️  EPITHET IN NAME FIELD: "${file}" has first_name "${firstName}" — keyed as ` +
+        `"${firstNameKey}". Keep "(known as ...)" in the body or an alias field, not in ` +
+        `first_name: it splits one person into two records.`
+      );
+    }
+
     // Generate slug WITHOUT middle name to match existing convention
-    const slug = toSlug(firstName, lastName);
+    const slug = toSlug(firstNameKey, lastNameKey);
 
     const currentYear = new Date().getFullYear();
     // Living status: a death year means deceased. If no death year is recorded but the
