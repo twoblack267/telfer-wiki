@@ -243,6 +243,134 @@ const evidenceNote = (() => {
   return null;
 })();
 
+// ── Provenance (added 2026-11-03) ────────────────────────────────────────────
+// Three facts, all read from real artefacts, none asserted about a human:
+//   1. citation count — how many distinct source references the profile text
+//      actually contains (register numbers, certificate refs, cemetery records,
+//      or entries in an explicit "## Sources" section).
+//   2. kinds — the human-readable source types genuinely named in that text.
+//   3. changed — the vault file's own last GIT COMMIT date, from lastmod.json
+//      (source: "git last-commit dates of Obsidian vault person files"). If the
+//      slug has no entry, the date is omitted — never replaced with build time,
+//      which would be a fabricated claim of recency.
+const bodyText = String(person.body_markdown || "");
+
+// Profiles that openly declare they rest on family memory rather than documents.
+// "0 cited sources" is TRUE for them, but reads like a defect; say what it means.
+const declaredOral = /no documentary source|family memory|no record is held|no document\b|unproven|not documented/i.test(
+  bodyText,
+);
+
+// Real git commit date -> "3 Nov 2026". Returns "" when the slug has no entry,
+// so the page simply omits the clause rather than inventing one.
+const lastmod = (await import("../../data/lastmod.json")).default as
+  | { people?: Record<string, string> }
+  | undefined;
+function formatGitDate(iso: unknown): string {
+  if (typeof iso !== "string" || !iso) return "";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  return d.toLocaleDateString("en-AU", { day: "numeric", month: "short", year: "numeric", timeZone: "Australia/Brisbane" });
+}
+
+const CITATION_PATTERNS = [
+  /\b\d{4}\/\d{1,6}\b/g,                     // NZ/SA BDM refs, e.g. 1939/6626
+  /\b(?:NZBDM|BDM)\s*(?:ref|no\.?)?\s*:?\s*(\d[\d\/.]*)/gi,
+  /\b(?:cert|ref)\.?\s*(?:no\.?)?\s*:?\s*([A-Z]?\d[\w\/.-]{2,})/gi,
+  /\b(?:rid|record\s*id)\s*[:\s]*(\d+)/gi,   // cemetery record ids
+  /\bpre-?1855\s+OPR\b/gi,
+  /\bNRS\s*\d+\/\d+/gi,                      // National Records of Scotland refs
+  // Named primary sources in prose. Each pattern hits a DISTINCT phrasing so
+  // the same phrase is not counted twice ("Parish Register" matched both the
+  // OPR rule and the generic rule, inflating the count). Image captions are
+  // stripped before counting — a caption is not a citation.
+  /\b(?:death|birth|marriage)\s+register\b(?!\s*[,:—-]\s*(?:baptism|image|photo))/gi,
+  /\b(?:death|birth|marriage)\s+(?:entry|record|certificate)\b/gi,
+  /\b(?:cemetery|burial)\s+(?:record|register)\b/gi,
+  /\bOBLIV\b/gi,
+  /\bTrove\b/gi,
+  /\b(?:headstone|grave)\s+(?:record|inscription)\b/gi,
+];
+
+const SOURCE_KINDS: Array<[RegExp, string]> = [
+  [/\bparish\s+register|\bOPR\b/i, "parish register"],
+  [/\bmarriage\s+register|1939\/6626/i, "marriage register"],
+  [/\bdeath\s+register|\bdeath\s+entry\b/i, "death register"],
+  [/\bbirth\s+register|\bbirth\s+entry\b/i, "birth register"],
+  [/\bcemetery|\bburial\b|\brid\s*\d+/i, "cemetery record"],
+  [/\bcertificate\b|\bcert\.\b/i, "certificate"],
+  [/\bprobate|\bwill\b/i, "probate record"],
+  [/\bheadstone|\bgrave\b/i, "grave record"],
+  [/\bcensus\b/i, "census"],
+  [/\bnewspaper|\btrove\b|\bobituar/i, "newspaper"],
+  [/\bbook\b|\bchapter\b|\bThe\s+Kio\s+Kio\b/i, "book chapter"],
+];
+
+const provenance = (() => {
+  let citations = 0;
+  const seen = new Set<string>();
+
+  // Strip image markdown and bare image URLs — an illustration caption is not
+  // a source reference, and counting them inflated counts on figure-heavy pages.
+  const countable = bodyText
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[!\[[^\]]*\]\([^)]*\)\]\([^)]*\)/g, " ")
+    .replace(/\/images\/[^\s)"']+/g, " ");
+
+  // 1. An explicit "## Sources" / "## References" section is the strongest
+  //    signal there is — slice from the heading to the next heading and count
+  //    its entries directly. Do NOT use a lazy [\s\S]*? with a $-lookahead:
+  //    in JS that collapses to an empty capture and silently counts zero.
+  //
+  //    Counting is BULLET-AWARE: one bullet = one source. Indented or plain
+  //    continuation lines belong to the entry above them (URLs, "accessed
+  //    <date>", "A volunteer-transcribed cemetery inscription, independent of
+  //    B1."). Counting those as separate sources inflated long entries — 141
+  //    profiles have continuation lines in their Sources section.
+  const lines = countable.split("\n");
+  const headIdx = lines.findIndex((l) =>
+    /^#{1,4}\s*(?:sources?|references?|citations?)(?:\s+(?:and|&)\s+notes)?\s*$/i.test(l.trim()),
+  );
+  if (headIdx !== -1) {
+    let sawBullets = false;
+    let loose = 0; // non-bullet source lines before the first bullet
+    for (let i = headIdx + 1; i < lines.length; i++) {
+      const line = lines[i];
+      if (/^#{1,4}\s/.test(line.trim())) break; // next section — stop
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      if (/^[-*+]\s/.test(trimmed)) {
+        sawBullets = true;
+        citations++;
+        continue;
+      }
+      if (sawBullets) continue; // continuation of the bullet above — not a new source
+      // A plain line before any bullet is its own entry (some sections are
+      // written as bare paragraphs rather than bullet lists).
+      const t = trimmed.replace(/^[>–—•]+/, "").trim();
+      if (t.length > 3) loose++;
+    }
+    if (!sawBullets) citations += loose;
+  }
+
+  // 2. Numbered / named source references anywhere in the body.
+  for (const re of CITATION_PATTERNS) {
+    for (const m of countable.matchAll(re)) {
+      const key = String(m[0]).toLowerCase().replace(/\s+/g, " ").trim();
+      if (key && !seen.has(key)) {
+        seen.add(key);
+        citations++;
+      }
+    }
+  }
+
+  const kinds: string[] = [];
+  for (const [re, label] of SOURCE_KINDS) {
+    if (re.test(countable) && !kinds.includes(label)) kinds.push(label);
+  }
+  return { citations, kinds: kinds.slice(0, 3), changed: formatGitDate(lastmod?.people?.[person.slug]) };
+})();
+
 const livingNote = person.is_living
   ? ""
   : ROUTE_MARKER_SLUGS.has(person.slug) || directLine.has(person.slug)
@@ -859,6 +987,23 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
         </p>
       </div>
     )}
+
+    {/* ── Provenance line (added 2026-11-03) ─────────────────────────────────
+        The site carried no statement of where a page's facts came from or when
+        it last changed, on any of the 819 person pages. This adds that — and
+        ONLY that. Every element is counted or read from a real artefact:
+        citation count from the profile text, source types actually named in it,
+        and the vault file's own last git commit date. Nothing here claims a
+        human read the page. See references: audit-2026-11-03. */}
+    <p class="text-[11px] text-[var(--color-muted)] mb-1.5 leading-snug" data-provenance>
+      {provenance.citations > 0
+        ? <>{provenance.citations} cited source{provenance.citations === 1 ? "" : "s"}</>
+        : declaredOral
+          ? <>No documentary source claimed</>
+          : <>No citations recorded</>}
+      {provenance.kinds.length > 0 && <> · {provenance.kinds.join(", ")}</>}
+      {provenance.changed && <> · page data last changed {provenance.changed}</>}
+    </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-1.5">
       <!-- Main Content -->
