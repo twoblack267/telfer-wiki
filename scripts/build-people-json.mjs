@@ -370,8 +370,16 @@ function extractImages(body, vaultFile) {
 
 async function build() {
   console.log('📚 Reading vault people directory...');
+  // SORTED. readdirSync order is filesystem-dependent and, on APFS, is effectively
+  // hash order. The map below is last-write-wins, so two John Lawries writing the
+  // key "John Lawrie" meant whichever file readdir happened to emit last claimed
+  // the plain name - and the dateless "John Lawrie (1810-1888)" child reference then
+  // resolved to nobody. Sorting makes the winner deterministic (later filename wins
+  // the plain key, which is what the disambiguation in nameToSlug wants to see) and
+  // makes a regen reproducible run to run. Fixed 2026-11-03.
   const files = fs.readdirSync(VAULT_PEOPLE_DIR)
     .filter(f => f.endsWith('.md') && f !== 'Leads.md' && f !== '_Index.md')
+    .sort()
     .map(f => ({ name: f, path: path.join(VAULT_PEOPLE_DIR, f) }));
 
   console.log(`Found ${files.length} person files`);
@@ -401,6 +409,12 @@ async function build() {
     } else if (fm.birth_year) {
       nameToSlug.set(`${fullName} (${fm.birth_year}–?)`, baseSlug);
     }
+    // The BARE filename name, e.g. "John Lawrie (1810–1888)" - identity, not lifespan.
+    // Frontmatter can disagree with the filename (a corrected death year, a title that
+    // is a nickname), and a vault link written against the FILE then failed to resolve.
+    // Added 2026-11-03: this is why John Lawrie (1845–1921) could not be listed as a
+    // child of John Lawrie (1810–1888) while his own profile named his father correctly.
+    nameToSlug.set(file.name.replace(/\.md$/, ''), baseSlug);
 
     fileData.push({ file, fm, content });
   }

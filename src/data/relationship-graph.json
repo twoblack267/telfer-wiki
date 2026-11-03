@@ -3287,7 +3287,8 @@
     },
     {
       "slug": "jean-telfer",
-      "id": "Jean Burton Telfer (1905)"
+      "id": "Jean Burton Telfer (1905)",
+      "generation": 6
     },
     {
       "slug": "kirrily-sheree-maddern-1976",
@@ -5420,10 +5421,6 @@
       {
         "from": "john-lawrie-1810",
         "to": "john-lawrie-1840"
-      },
-      {
-        "from": "janet-dunlop-1811",
-        "to": "john-lawrie-1845"
       },
       {
         "from": "john-lawrie-1810",
@@ -10303,10 +10300,6 @@
       },
       {
         "from": "alexander-lawrie",
-        "to": "john-lawrie-1845"
-      },
-      {
-        "from": "alexander-lawrie",
         "to": "marion-lawrie-1838"
       },
       {
@@ -10327,10 +10320,6 @@
       },
       {
         "from": "elizabeth-lawrie",
-        "to": "john-lawrie-1845"
-      },
-      {
-        "from": "elizabeth-lawrie",
         "to": "marion-lawrie-1838"
       },
       {
@@ -10347,10 +10336,6 @@
       },
       {
         "from": "janet-lawrie-1842",
-        "to": "john-lawrie-1845"
-      },
-      {
-        "from": "janet-lawrie-1842",
         "to": "marion-lawrie-1838"
       },
       {
@@ -10363,10 +10348,6 @@
       },
       {
         "from": "jean-lawrie",
-        "to": "john-lawrie-1845"
-      },
-      {
-        "from": "jean-lawrie",
         "to": "marion-lawrie-1838"
       },
       {
@@ -10375,22 +10356,10 @@
       },
       {
         "from": "john-lawrie-1840",
-        "to": "john-lawrie-1845"
-      },
-      {
-        "from": "john-lawrie-1840",
         "to": "marion-lawrie-1838"
       },
       {
         "from": "john-lawrie-1840",
-        "to": "robert-dunlop-lawrie-1850"
-      },
-      {
-        "from": "john-lawrie-1845",
-        "to": "marion-lawrie-1838"
-      },
-      {
-        "from": "john-lawrie-1845",
         "to": "robert-dunlop-lawrie-1850"
       },
       {
