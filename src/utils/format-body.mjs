@@ -31,6 +31,10 @@ export function formatBody(body, people) {
 
   const BASE = import.meta.env.BASE_URL || "/";
 
+  // Fenced blocks are lifted out of the chain and re-inserted at the end, so the
+  // newline/paragraph passes can never touch a verbatim record transcription.
+  const fenceStore = [];
+
   let html = body
     // ── Drop the duplicate `**Role:**` line (itc-20261024-2) ─────────────────
     // The person template renders `person.roles` as the italic chip directly
@@ -58,6 +62,16 @@ export function formatBody(body, people) {
     // syntax with NO colon after the bold), nor [[Link|Alias]] wikilinks (those carry
     // a pipe but are followed by plain alias text, not "**Label:**"). Purely presentational.
     .replace(/ \| (?=\*\*[A-Za-z][^*\n:]*?:\*\*)/g, "\n")
+    // Fenced code blocks (``` ... ```) — historical register/record transcriptions.
+    // MUST be extracted before the blockquote-strip and the \n-><br> pass below:
+    // with no fence handler the block fell through to those passes, collapsing a
+    // column-aligned register into "PAYNTERGroom", "Groom Age: : SGroom" etc.
+    // The placeholder is restored verbatim after the newline passes (see FENCE_RE).
+    .replace(/^```[^\n]*\n([\s\S]*?)\n```$/gm, (m, body) => {
+      const escaped = body.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      fenceStore.push(`<pre class="fence">${escaped}</pre>`);
+      return `\u0000FENCE${fenceStore.length - 1}\u0000`;
+    })
     // Strip leading blockquote markers (> ) from markdown first — fixes blockquote-wrapped images & notes
     .replace(/^>\s*/gm, "")
     // Strip social media profile URLs — safety net (primary strip is in convert-markdown.mjs)
@@ -249,6 +263,10 @@ export function formatBody(body, people) {
     .replace(/((?:<li(?![^>]*class="(?:child|marr)-item")[^>]*>.*?<\/li>\n?)+)/g, "<ul class='space-y-1 my-0'>$1</ul>")
     // Convert numbered lists
     .replace(/^\d+\.\s+(.+)$/gm, "<li class='ml-4 list-decimal text-[var(--color-ink)]'>$1</li>")
+    // Wrap numbered <li> runs in <ol>. This MUST run after the conversion above:
+    // the <ul> pass at line ~249 only sees bullet <li>s, so numbered <li>s were
+    // emitted with no list parent at all (111 pages, 436 orphan <li> site-wide).
+    .replace(/((?:<li(?=[^>]*list-decimal)[^>]*>.*?<\/li>\n?)+)/g, "<ol class='space-y-1 my-0' style='list-style:decimal'>$1</ol>")
     // Images: ![alt](path) — now handles blockquote-stripped markdown
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
       if (src.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
@@ -298,6 +316,11 @@ export function formatBody(body, people) {
   // their own <ul class="x-roster">. That produced <ul><ul><li class="child-item">
   // and an invalid list tree. Drop the injected wrapper so each roster keeps
   // exactly one list element.
+
+  // Restore fenced transcriptions lifted out at the top of the chain.
+  if (fenceStore.length) {
+    html = html.replace(/\u0000FENCE(\d+)\u0000/g, (m, i) => fenceStore[Number(i)] || '');
+  }
 
   return html;
 }

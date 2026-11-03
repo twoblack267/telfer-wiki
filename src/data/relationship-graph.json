@@ -5127,10 +5127,6 @@
         "to": "sophia-telfer"
       },
       {
-        "from": "murray-telfer-1924",
-        "to": "susan-lawrie"
-      },
-      {
         "from": "shirley-telfer-1929",
         "to": "susan-lawrie"
       },
@@ -11455,6 +11451,10 @@
       {
         "from": "robert-lawrie",
         "to": "rex-lawrie"
+      },
+      {
+        "from": "murray-telfer-1924",
+        "to": "susan-lawrie"
       }
     ],
     "stepChildOf": [
@@ -11489,6 +11489,10 @@
       {
         "from": "john-telfer-1847",
         "to": "bertha-telfer"
+      },
+      {
+        "from": "murray-telfer-1924",
+        "to": "susan-lawrie"
       },
       {
         "from": "sheryle-telfer-1961",

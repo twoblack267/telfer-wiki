@@ -30,8 +30,13 @@ const OUTPUT_PATH = path.resolve(__dirname, '../src/data/people.public.json');
  * Scrub personally identifiable information from text content.
  * Handles: emails, phones, street addresses, PO boxes, Medicare, licences.
  */
-function scrubPII(text) {
+function scrubPII(text, opts = {}) {
   if (!text) return text;
+  // HISTORICAL ADDRESSES ARE EVIDENCE.
+  // The street-address rule below deletes "200 Long Street" from a 1956 funeral
+  // notice, leaving "of ,". It must only run for LIVING people — a deceased
+  // ancestor's recorded address is a 19th/20th-century record, not PII.
+  const scrubStreet = opts.scrubStreet !== false;
 
   let result = text;
 
@@ -62,7 +67,7 @@ function scrubPII(text) {
   );
 
   // Street-level addresses: number + street name + street type suffix
-  result = result.replace(
+  if (scrubStreet) result = result.replace(
     /\b\d{1,4}\s+[A-Z][a-zA-Z']+(?:\s+[A-Z][a-zA-Z']+)*\s+(?:St(?:reet)?\.?|Rd(?:oad)?\.?|Ave(?:nue)?\.?|Ln(?:ane)?\.?|Dr(?:ive)?\.?|Ct(?:ourt)?\.?|Pl(?:ace)?\.?|Cres(?:cent)?\.?|Hwy(?:ay)?\.?|Pde(?:ade)?\.?|Tce(?:race)?\.?|Close|Way|Circuit|Cir(?:cuit)?\.?)\b/g,
     ''
   );
@@ -310,6 +315,13 @@ function buildNameToSlug(people) {
         const key = `${displayNameLC} (${p.birth_year}–)`;
         if (preferYear(key)) map.set(key, p.slug);
       }
+      // ADOPTION-QUALIFIED VARIANT (2026-11-04). Vault cells now label adopted
+      // children inline: "Susan Shirley Lawrie (1967–living, adopted)".
+      // stripDates() cannot remove that inner comma-qualified text, so the entry
+      // would bind to NOTHING and the page would silently lose the child.
+      // Map the qualifier away, keeping the date brackets.
+      const adoptedLC = displayNameLC.replace(/(\([^)]*?),\s*adopted[^)]*\)/gi, '$1)');
+      if (adoptedLC !== displayNameLC) map.set(adoptedLC, p.slug);
       // Also just birth year alone
       const birthKey = `${displayNameLC} (${p.birth_year})`;
       if (preferYear(birthKey)) map.set(birthKey, p.slug);
@@ -823,7 +835,7 @@ for (const person of people) {
       let val = person[field];
       // PII-scrub body_markdown before publishing
       if (field === 'body_markdown') {
-        val = scrubPII(val);
+        val = scrubPII(val, { scrubStreet: person.is_living === true });
       }
       publicPerson[field] = val;
     }

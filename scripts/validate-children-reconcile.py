@@ -75,7 +75,12 @@ LIFESPAN = re.compile(r"\s*\(\s*(?:c\.\s*)?\d{3,4}\s*[–\-—]\s*(?:c\.\s*)?(?:
 # "(nee X)" are MARRIAGE qualifiers and must be stripped too — missing them left one
 # residual false contradiction ("hannah march (m. sloman)" vs "hannah march").
 QUALIFIER = re.compile(
-    r"\s*\((?:adopted|step|foster|illegitimate|m\.|nee|née|married|marr\.)[^)]*\)\s*",
+    r"\s*\((?:adopted|step|foster|illegitimate|m\.|nee|née|married|marr\.)[^)]*\)\s*"
+    # Qualifier carried INSIDE a lifespan bracket: "Susan (1967-living, adopted)".
+    # LIFESPAN only matches a clean date range, so the whole bracket missed and the
+    # name keyed as "susan shirley lawrie (1967-living, adopted)" -> false
+    # contradiction on 2026-11-04. Drop the bracket tail here.
+    r"|\s*\((?=[^)]*\b(?:adopted|step|foster|illegitimate)\b)[^)]*\)\s*",
     re.IGNORECASE)
 WIKILINK = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]")
 FM = re.compile(r"^---\n(.*?)\n---", re.S)
@@ -143,7 +148,22 @@ def parse_relationships(rel):
             continue
         k, v = part.split(":", 1)
         k = k.strip().lower().rstrip("s")
-        out.setdefault(k, []).extend(x.strip() for x in v.split(",") if x.strip())
+        # Split on commas that are NOT inside a bracket. A qualifier inside the
+        # lifespan bracket — "Susan (1967-living, adopted)" — used to be torn in half
+        # here, leaving a phantom child named "adopted)". 2026-11-04.
+        parts, buf, depth = [], "", 0
+        for chch in v:
+            if chch == "(":
+                depth += 1
+            elif chch == ")":
+                depth = max(0, depth - 1)
+            if chch == "," and depth == 0:
+                parts.append(buf)
+                buf = ""
+            else:
+                buf += chch
+        parts.append(buf)
+        out.setdefault(k, []).extend(x.strip() for x in parts if x.strip())
     return out
 
 

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-03T21:37:53.363Z",
+  "checkedAt": "2026-11-03T22:33:27.368Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -9,5 +9,30 @@
   "crownJewelsChecked": 6,
   "renames": [],
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "murray-telfer-1924",
+      "name": "Murray John Telfer",
+      "field": "children",
+      "before": 6,
+      "after": 5,
+      "lost": 1,
+      "lostEntries": [
+        "susan-lawrie"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "susan-lawrie",
+      "name": "Susan Shirley Lawrie",
+      "field": "parents",
+      "before": 2,
+      "after": 1,
+      "lost": 1,
+      "lostEntries": [
+        "murray-telfer-1924"
+      ]
+    }
+  ]
 }
