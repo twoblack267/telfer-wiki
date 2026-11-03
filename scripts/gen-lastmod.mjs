@@ -142,13 +142,33 @@ function manifestParts(fname) {
  */
 function matchVaultFile(person, byName, byTriple) {
   const keys = personKeys(person.title || person.name || "");
+  const year = String(person.birth_year || "").trim();
 
   for (const k of keys) {
-    const exact = byName.get(k);
-    if (exact) return { file: exact, how: "exact" };
+    const cands = byName.get(k);
+    if (!cands || cands.length === 0) continue;
+    if (cands.length === 1) return { file: cands[0], how: "exact" };
+
+    // Several vault files share this name. Disambiguate by BIRTH YEAR using the
+    // year in the filename ("William Telfer (1841).md"). Without this, the
+    // newest-changed namesake wins and its revision date is published on this
+    // person's page — the 1841 William showed the 1847 William's date,
+    // measured 2026-11-03. Prefer a single year match; if the year narrows to
+    // nothing or to several, fall through to the triple/prefix passes rather
+    // than guessing.
+    if (/^\d{3,4}$/.test(year)) {
+      const byYear = cands.filter((f) => {
+        const m = f.match(/\((\d{3,4})[–\-)]/);
+        return m && m[1] === year;
+      });
+      if (byYear.length === 1) return { file: byYear[0], how: "exact+birth-year" };
+    }
+    // No year to go on: the newest file is the only defensible choice, but it
+    // is a WEAK match and flagged as such.
+    return { file: cands[0], how: "exact-name-collision" };
   }
 
-  const y = String(person.birth_year || "").trim();
+  const y = year;
   if (!/^\d{3,4}$/.test(y)) return null;
 
   for (const k of keys) {
@@ -167,10 +187,12 @@ function matchVaultFile(person, byName, byTriple) {
   // a first|last|year triple. Match only when the wiki key is a PREFIX-WORD-RUN of exactly one
   // vault name key, and refuse if more than one vault file answers. Same refusal-not-guess rule.
   const prefixCands = [];
-  for (const [vk, vf] of byName) {
+  for (const [vk, vfs] of byName) {
     const vt = vk.split(/\s+/).filter(Boolean);
     if (vt.length <= toks2len(keys)) continue;
-    if (vt.slice(0, toks2len(keys)).join(" ") === keys[0]) prefixCands.push(vf);
+    if (vt.slice(0, toks2len(keys)).join(" ") !== keys[0]) continue;
+    // byName values are now ARRAYS of same-named files (newest first).
+    for (const vf of vfs) prefixCands.push(vf);
   }
   if (prefixCands.length === 1) return { file: prefixCands[0], how: "wiki-key-is-prefix-of-vault-name" };
 
@@ -192,9 +214,46 @@ const vaultFiles = (() => {
   }
 })();
 
+/** Read `last_revision: YYYY-MM-DD` from a vault file's YAML frontmatter.
+ *
+ * ADDED 2026-11-03. The vault file is now the SOURCE OF TRUTH for when a record
+ * last changed: every person file carries exactly one `last_revision` line,
+ * rewritten by ~/.hermes/scripts/stamp-vault.py whenever a job edits the file.
+ *
+ * This matters because git and the file disagreed. Adam Dillon's profile said
+ * `date: 2026-06-20` while its last commit was 2026-09-17 — three months stale.
+ * Reading the field first means the website shows what the record itself
+ * claims, and a human opening the .md in Obsidian sees the same date.
+ *
+ * Falls back to the git commit date only when the field is absent, so a file
+ * that has not been stamped yet still gets a usable date.
+ */
+function revisionDate(repoDir, relPath) {
+  try {
+    const text = readFileSync(resolve(repoDir, relPath), "utf-8");
+    const fm = text.match(/^---\n([\s\S]*?)\n---\n/);
+    if (fm) {
+      const m = fm[1].match(/^last_revision:\s*(\d{4}-\d{2}-\d{2})\s*$/m);
+      if (m) {
+        // Anchor to UTC MIDDAY, not local midnight. A date is a calendar day,
+        // not an instant: `new Date("2026-11-03T00:00:00+10:00")` is
+        // 2026-11-02T14:00Z, and BaseLayout renders it back in Australia/
+        // Brisbane on the previous day for any consumer that reads the ISO
+        // string. Midday UTC survives formatting in every timezone the site
+        // might be built or read in, measured 2026-11-03.
+        const d = new Date(`${m[1]}T12:00:00Z`);
+        if (!Number.isNaN(d.getTime())) return d.toISOString();
+      }
+    }
+  } catch {
+    // fall through to git
+  }
+  return gitDate(repoDir, relPath);
+}
+
 const fileDate = new Map();
 for (const f of vaultFiles) {
-  const d = gitDate(VAULT_DIR, `${VAULT_PEOPLE_DIR}/${f}`);
+  const d = revisionDate(VAULT_DIR, `${VAULT_PEOPLE_DIR}/${f}`);
   if (d) fileDate.set(f, d);
 }
 console.log(`vault files: ${vaultFiles.length}, with git dates: ${fileDate.size}`);
@@ -224,16 +283,24 @@ for (const [f, d] of fileDate) {
   // offset ("2026-10-25T19:57:39+10:00" vs "2026-10-11T12:01:44+10:00"); lexicographic
   // comparison of ISO strings with differing offsets orders them wrongly and would
   // silently pick the older date for a name shared by two files.
-  const prev = byName.get(m.name);
-  const prevTs = prev ? Date.parse(fileDate.get(prev)) : -Infinity;
-  if (!prev || Date.parse(d) > prevTs) byName.set(m.name, f);
+  //
+  // Store ALL files for a name, ordered newest-first, instead of collapsing to the
+  // single newest. Collapsing lost the year: five files are named "william telfer",
+  // and the newest (b. 1847) was handed to the page for the 1841 man, so
+  // /people/william-telfer-1841/ showed 2026-11-02 while its own vault file said
+  // 2026-10-30 — one person's revision date published on another person's page,
+  // measured 2026-11-03. matchVaultFile now filters these by the person's birth year.
+  const arr = byName.get(m.name) || [];
+  if (!arr.includes(f)) arr.push(f);
+  arr.sort((a, b) => Date.parse(fileDate.get(b)) - Date.parse(fileDate.get(a)));
+  byName.set(m.name, arr);
 
   if (m.year && m.first && m.tokens.length >= 2) {
     for (let i = 1; i < m.tokens.length; i++) {
       const k = `${m.first}|${m.tokens[i]}|${m.year}`;
-      const arr = byTriple.get(k) || [];
-      arr.push(f);
-      byTriple.set(k, arr);
+      const t = byTriple.get(k) || [];
+      t.push(f);
+      byTriple.set(k, t);
     }
   }
 }
