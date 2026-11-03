@@ -3286,6 +3286,10 @@
       "generation": 6
     },
     {
+      "slug": "jean-telfer",
+      "id": "Jean Burton Telfer (1905)"
+    },
+    {
       "slug": "kirrily-sheree-maddern-1976",
       "id": "Kirrily Sheree Maddern (1976)",
       "generation": 8
@@ -6786,6 +6790,14 @@
         "to": "frederick-albert-paynter"
       },
       {
+        "from": "hannah-peacock-1862",
+        "to": "jean-telfer"
+      },
+      {
+        "from": "james-robert-telfer-1866",
+        "to": "jean-telfer"
+      },
+      {
         "from": "lyndell-marie-telfer-1951",
         "to": "kirrily-sheree-maddern-1976"
       }
@@ -8644,6 +8656,10 @@
       {
         "from": "ethel-edith-telfer-1894",
         "to": "james-telfer"
+      },
+      {
+        "from": "ethel-edith-telfer-1894",
+        "to": "jean-telfer"
       },
       {
         "from": "ethel-edith-telfer-1894",
@@ -11383,6 +11399,10 @@
       },
       {
         "from": "james-telfer",
+        "to": "jean-telfer"
+      },
+      {
+        "from": "james-telfer",
         "to": "leslie-robert-telfer"
       },
       {
@@ -11412,6 +11432,10 @@
       {
         "from": "francis-john-burton-telfer",
         "to": "william-telfer-1869"
+      },
+      {
+        "from": "jean-telfer",
+        "to": "leslie-robert-telfer"
       }
     ],
     "stepParentOf": [

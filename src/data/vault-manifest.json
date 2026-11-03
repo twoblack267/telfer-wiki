@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-03T20:39:17+10:00",
+  "generated_at": "2026-11-03T20:54:14+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 675,
+  "count": 676,
   "kinds": {
-    "real": 657,
+    "real": 658,
     "redirect": 18,
     "empty": 0
   },
@@ -961,7 +961,7 @@
       "kind": "real"
     },
     "Gerald Nicholson (b. 1958).md": {
-      "sha256": "8bbe37605d4e5d21e90474b10a13d95dba63942bac0fb56253e33916406f14c8",
+      "sha256": "6cf669a20c55f9b296494709f06848b48be2cabeb57c19634dba8cd025455440",
       "kind": "real"
     },
     "Gilbert Melville Telfer (1908\u20131973).md": {
@@ -1013,7 +1013,7 @@
       "kind": "real"
     },
     "Hannah Peacock (1862\u20131948).md": {
-      "sha256": "903eb4fe2183eb56e8c49523af34ebe99da9bbdfe792320844f0b81a453902f2",
+      "sha256": "0263f351dc44cad61099d774c1ba2905a14a8b83bc464977ac385455f7785a82",
       "kind": "real"
     },
     "Hannah Peacock.md": {
@@ -1165,7 +1165,7 @@
       "kind": "real"
     },
     "James Burton Telfer (1897\u20131907).md": {
-      "sha256": "6b3b912d2d51e4f73cabc45c05b7affa70a1bc17652e9616e5af7c7f04131b95",
+      "sha256": "546fa8bd73b50f9f340f0bdbb86eb3efc43583616052385d0e42bc92d6f16c02",
       "kind": "real"
     },
     "James Cowan (~1741\u20131786).md": {
@@ -1193,7 +1193,7 @@
       "kind": "real"
     },
     "James Robert Telfer (1866\u20131930).md": {
-      "sha256": "de5f6db061242bc4f12d2e125e37b7618dc783e874ab6c1ee966563aa555824e",
+      "sha256": "5e3037d872904772f2208dd1a467a62856b5f7cd50124575a7777a1a54536082",
       "kind": "real"
     },
     "James Sara (b. 1970).md": {
@@ -1294,6 +1294,10 @@
     },
     "Jared Ivory.md": {
       "sha256": "2fe53211ebfb4b966eae3767dedc7bc4eded0cf16c3c6a799ce83e74bfe994dc",
+      "kind": "real"
+    },
+    "Jean Burton Telfer (1905\u20132003).md": {
+      "sha256": "ac78df9be68b94fca4b156eb47efb8a0716e562e23eef62aa1e37de43eca69d8",
       "kind": "real"
     },
     "Jean Hinshelwood (~1750\u20131809).md": {
