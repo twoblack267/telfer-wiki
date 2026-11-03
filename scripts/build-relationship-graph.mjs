@@ -565,6 +565,7 @@ const stepParentEdges = new Map(); // slug(child) -> Set(stepParentSlug)
 // distinguishable at a glance — silence is what hid the Sibling/Spouses bug.
 const derivedCounts = new Map();
 const stepChildEdges = new Map();  // slug(stepParent) -> Set(stepChildSlug)
+const adoptedChildEdges = new Set();  // "parentSlug>childSlug" — real child edge, labelled adopted
 
 for (const person of people) {
   const slug = person.slug;
@@ -914,9 +915,17 @@ for (const person of people) {
           // The qualifier is the researcher's own provenance claim — honour it by
           // recording a step/community edge instead. Matched on the RAW name because
           // the "(adopted)" marker is stripped when the name resolves to a slug.
+          // 2026-11-04 (Mark's ruling "all his children are adopted"): the edge is
+          // recorded as an ADOPTED CHILD, not as a stepchild. A stepchild is a
+          // different claim — a child of a spouse from another relationship — and
+          // John Robert Telfer's page showed his five children in BOTH the Children
+          // row and a Stepchildren card. The parent/child edge is the true one; the
+          // qualifier belongs in the label. The old step-only wiring is why adopted
+          // kids vanished from `children` and re-appeared under the wrong heading.
+
           if (/\badopt/i.test(String(name || ''))) {
-            stepChildEdges.get(sourceSlug).add(targetSlug);
-            stepParentEdges.get(targetSlug).add(sourceSlug);
+            addParentChild(targetSlug, sourceSlug);
+            adoptedChildEdges.add(`${sourceSlug}>${targetSlug}`);
             derivedCounts.set('Child (adopted)', (derivedCounts.get('Child (adopted)') || 0) + 1);
             resolved++;
             break;

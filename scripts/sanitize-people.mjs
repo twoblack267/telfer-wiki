@@ -325,8 +325,43 @@ function buildNameToSlug(people) {
       // Also just birth year alone
       const birthKey = `${displayNameLC} (${p.birth_year})`;
       if (preferYear(birthKey)) map.set(birthKey, p.slug);
+
     }
   }
+  // ── QUALIFIER FALLBACKS (2026-11-04) ───────────────────────────────────────
+  // Every key above is built from `display_name`, so it carries THIS person's own
+  // dates. A vault cell naming someone else carries THAT person's dates and often
+  // a qualifier, e.g. "Murray John Telfer (1911–1982, adopted)". The vault's years
+  // for Julia's adopted son disagree with his own record, so no display-name key
+  // can ever match — the child silently fell to the plain-text branch.
+  //
+  // These fallbacks strip qualifiers and use the map's OWN keys as the vocabulary,
+  // so they inherit every disambiguation rule above instead of re-implementing it.
+  // NOTE: registering every year-qualified key under its bare name (tried first)
+  // is WRONG — it would let any "Murray Telfer" claim a 1924-born stranger. Keep
+  // the years; only drop the trailing qualifier.
+  // 1) QUALIFIER-PAREN FORM, built for every known person: "name (y1–y2)" AND
+  //    "name (y1–y2, adopted)". The vault's years are its own evidence; when they
+  //    disagree with the profile's we still refuse (see the map-only loop below).
+  for (const p of people) {
+    if (!p.display_name || !p.slug) continue;
+    const base = stripDates(p.display_name).toLowerCase();
+    if (!p.birth_year) continue;
+    const tail = p.death_year ? `${p.birth_year}–${p.death_year}` : String(p.birth_year);
+    const plainKey = `${base} (${tail})`;
+    if (!map.has(plainKey)) map.set(plainKey, p.slug);
+    for (const qual of ['adopted', 'step', 'foster', 'illegitimate']) {
+      const qk = `${base} (${tail}, ${qual})`;
+      if (!map.has(qk)) map.set(qk, p.slug);
+    }
+  }
+  for (const [key, slug] of [...map]) {
+    // "x (a–b, adopted)" → "x (a–b)"  |  "x (a–b, adopted" → "x (a–b"
+    let stripped = key.replace(/,\s*[a-z][^(),]*(?:\)|$)/, ($0) => ($0.endsWith(')') ? ')' : ''));
+    stripped = stripped.replace(/\((\s*~?\d{3,4}[^)]*?)(?:,\s*[a-z][^)]*)?\)/i, '($1)');
+    if (stripped !== key && !map.has(stripped)) map.set(stripped, slug);
+  }
+
   return map;
 }
 
@@ -413,7 +448,14 @@ function resolveRelationship(entry) {
   // gap, not a non-relationship — carry it as a plain_name so the page still
   // renders it (unlinked) and it stays visible as work to do.
   if (!slug) {
-    const plain = stripDates(String(entry)).trim();
+    // A YEAR IN THE ENTRY IS EVIDENCE, NOT DECORATION (2026-11-04). stripDates()
+    // used to throw the whole bracket away, so "Murray John Telfer (1911–1982,
+    // adopted)" collapsed to "Murray John Telfer" — and the vault ALSO holds a
+    // different Murray Telfer with no years. The reader saw a bare name and could
+    // not tell WHICH Murray the "Adopted Son" row meant. Keep the vault's own
+    // bracket verbatim when it carries years; strip only a qualifier-only bracket.
+    const raw = String(entry);
+    const plain = /\d{3,4}/.test(raw) ? raw.trim() : stripDates(raw).trim();
     return plain ? { plainName: plain } : null;
   }
 

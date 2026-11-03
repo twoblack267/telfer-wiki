@@ -3427,6 +3427,10 @@
         "to": "andrew-telfer-1798"
       },
       {
+        "from": "john-telfer-robert",
+        "to": "angela-telfer"
+      },
+      {
         "from": "alfred-george-stribling-1853",
         "to": "arthur-clifford-stribling-1890"
       },
@@ -3461,6 +3465,10 @@
       {
         "from": "gilbert-telfer-1908",
         "to": "beth-telfer-1946"
+      },
+      {
+        "from": "john-telfer-robert",
+        "to": "carissa-telfer-2023"
       },
       {
         "from": "robyn-telfer",
@@ -5125,6 +5133,10 @@
       {
         "from": "robyn-telfer",
         "to": "sophia-telfer"
+      },
+      {
+        "from": "murray-telfer-1924",
+        "to": "susan-lawrie"
       },
       {
         "from": "shirley-telfer-1929",
@@ -11397,20 +11409,12 @@
         "to": "amy-telfer"
       },
       {
-        "from": "john-telfer-robert",
-        "to": "angela-telfer"
-      },
-      {
         "from": "caroline-telfer-1842",
         "to": "bertha-telfer"
       },
       {
         "from": "john-telfer-1847",
         "to": "bertha-telfer"
-      },
-      {
-        "from": "john-telfer-robert",
-        "to": "carissa-telfer-2023"
       },
       {
         "from": "dinah-flavel-1821",
@@ -11445,16 +11449,8 @@
         "to": "mark-telfer-1986"
       },
       {
-        "from": "john-telfer-robert",
-        "to": "peter-telfer"
-      },
-      {
         "from": "robert-lawrie",
         "to": "rex-lawrie"
-      },
-      {
-        "from": "murray-telfer-1924",
-        "to": "susan-lawrie"
       }
     ],
     "stepChildOf": [
@@ -11475,24 +11471,8 @@
         "to": "jean-telfer-1840"
       },
       {
-        "from": "john-telfer-robert",
-        "to": "angela-telfer"
-      },
-      {
-        "from": "john-telfer-robert",
-        "to": "carissa-telfer-2023"
-      },
-      {
-        "from": "john-telfer-robert",
-        "to": "peter-telfer"
-      },
-      {
         "from": "john-telfer-1847",
         "to": "bertha-telfer"
-      },
-      {
-        "from": "murray-telfer-1924",
-        "to": "susan-lawrie"
       },
       {
         "from": "sheryle-telfer-1961",

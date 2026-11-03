@@ -2161,7 +2161,9 @@
     "body_stripped": "**Role:** Cousin (adopted daughter of John Telfer)\n\n## Family\n\n Relation  Name \n\n **Father**  John Robert Telfer (adoptive) \n **Siblings**  Peter Telfer (adopted brother), Carissa Telfer (?–2023) (adopted sister, deceased) \n\n## Life Summary\n\nAngela is John Robert Telfer's adopted daughter, making her a cousin of Mark Kenneth Telfer. \n\n## Evidence\n\n**Family memory — no documentary source exists or can exist.**\n\nThis is a living (or recently living) member of the family. No civil or parish\nrecord ",
     "is_living": true,
     "lifespan": "?",
-    "parents": [],
+    "parents": [
+      "john-telfer-robert"
+    ],
     "children": [],
     "spouses": [],
     "siblings": [
@@ -2178,10 +2180,8 @@
     "vault_file": "Angela Telfer.md",
     "images": [],
     "person_photo": null,
-    "generation": 99,
-    "step_parents": [
-      "john-telfer-robert"
-    ],
+    "generation": 8,
+    "step_parents": [],
     "step_children": [],
     "evidence_level": null,
     "single_source": false,
@@ -2979,6 +2979,7 @@
     "is_living": false,
     "lifespan": "? – 2023",
     "parents": [
+      "john-telfer-robert",
       "robyn-telfer"
     ],
     "children": [],
@@ -3005,9 +3006,7 @@
     ],
     "person_photo": "images/people/Carissa-Telfer.jpg",
     "generation": 8,
-    "step_parents": [
-      "john-telfer-robert"
-    ],
+    "step_parents": [],
     "step_children": [],
     "evidence_level": null,
     "single_source": false,
@@ -16099,17 +16098,19 @@
       {
         "type": "Children",
         "names": [
+          "Carissa Telfer (adopted, deceased)",
+          "Sophia Telfer (adopted)",
+          "Rebecca Telfer (adopted)",
           "Angela Telfer (adopted)",
-          "Peter Telfer (adopted)",
-          "Carissa Telfer (adopted, deceased)"
+          "Peter Telfer (adopted)"
         ]
       }
     ],
     "roles": [
       "Uncle (Tim's brother)"
     ],
-    "body_markdown": "# John Robert Telfer\n\n**Born:** 17 December 1952 — Tumby Bay, South Australia\n\n**Role:** Uncle (Tim's brother)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | [[Robyn Telfer]] (wife) |\n| **Children** | [[Carissa Telfer (?–2023)]] (b. 18 May 1989, adopted; deceased), [[Sophia Telfer]] (b. 18 May 1992), [[Rebecca Telfer]] (b. 25 Sep 1996), [[Angela Telfer]] (b. 25 Sep 1996, adopted), [[Peter Telfer]] (adopted after the 2008 books) |\n| **Siblings** | [[Daryll William Telfer]], [[Grantley Keith Telfer]], [[Timothy Neil Telfer (1959)]], [[Kathryn Mavis Telfer (1961–1965)]], [[Susan Shirley Lawrie (1967)]] |\n\n---\n\n## Life Summary\n\nJohn is one of the uncles of the present line (brother of Tim, Grantley, Daryll, Kathryn and Sue; son of Murray John Telfer and Shirley Edna Telfer) — brother to Tim, Grantley, Daryll, Kathryn, and Sue.\n\n---\n\n## Evidence\n\n**Derived from a sourced relative — not independently witnessed.**\n\nThis person is not named in a source held for themselves. Their existence and\nparentage are recorded on the note of **[[Daryll William Telfer]]**, which\ncarries its own citations. The fact is proven upstream; the citation is inherited,\nnot held here.\n\nA derived citation is a **copy of a hand, not a second hand**. It establishes what\nthe sourced note says — nothing more.\n\n**Status: derived. One witness, held upstream.**",
-    "body_stripped": "**Born:** 17 December 1952 — Tumby Bay, South Australia\n\n**Role:** Uncle (Tim's brother)\n\n## Family\n\n Relation  Name \n\n **Mother**  Shirley Edna Telfer (1929–2017) \n **Father**  Murray John Telfer (1924–2009) \n **Spouse**  Robyn Telfer (wife) \n **Children**  Carissa Telfer (?–2023) (b. 18 May 1989, adopted; deceased), Sophia Telfer (b. 18 May 1992), Rebecca Telfer (b. 25 Sep 1996), Angela Telfer (b. 25 Sep 1996, adopted), Peter Telfer (adopted after the 2008 books) \n **Siblings**  Daryll William",
+    "body_markdown": "# John Robert Telfer\n\n**Born:** 17 December 1952 — Tumby Bay, South Australia\n\n**Role:** Uncle (Tim's brother)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | [[Robyn Telfer]] (wife) |\n| **Children** | [[Carissa Telfer (?–2023)]] (b. 18 May 1989, adopted; deceased), [[Sophia Telfer]] (b. 18 May 1992, adopted), [[Rebecca Telfer]] (b. 25 Sep 1996, adopted), [[Angela Telfer]] (b. 25 Sep 1996, adopted), [[Peter Telfer]] (adopted after the 2008 books) |\n| **Siblings** | [[Daryll William Telfer]], [[Grantley Keith Telfer]], [[Timothy Neil Telfer (1959)]], [[Kathryn Mavis Telfer (1961–1965)]], [[Susan Shirley Lawrie (1967)]] |\n\n---\n\n## Life Summary\n\nJohn is one of the uncles of the present line (brother of Tim, Grantley, Daryll, Kathryn and Sue; son of Murray John Telfer and Shirley Edna Telfer) — brother to Tim, Grantley, Daryll, Kathryn, and Sue.\n\n---\n\n## Evidence\n\n**Derived from a sourced relative — not independently witnessed.**\n\nThis person is not named in a source held for themselves. Their existence and\nparentage are recorded on the note of **[[Daryll William Telfer]]**, which\ncarries its own citations. The fact is proven upstream; the citation is inherited,\nnot held here.\n\nA derived citation is a **copy of a hand, not a second hand**. It establishes what\nthe sourced note says — nothing more.\n\n**Status: derived. One witness, held upstream.**",
+    "body_stripped": "**Born:** 17 December 1952 — Tumby Bay, South Australia\n\n**Role:** Uncle (Tim's brother)\n\n## Family\n\n Relation  Name \n\n **Mother**  Shirley Edna Telfer (1929–2017) \n **Father**  Murray John Telfer (1924–2009) \n **Spouse**  Robyn Telfer (wife) \n **Children**  Carissa Telfer (?–2023) (b. 18 May 1989, adopted; deceased), Sophia Telfer (b. 18 May 1992, adopted), Rebecca Telfer (b. 25 Sep 1996, adopted), Angela Telfer (b. 25 Sep 1996, adopted), Peter Telfer (adopted after the 2008 books) \n **Siblings",
     "is_living": true,
     "lifespan": "1952",
     "parents": [
@@ -16117,6 +16118,8 @@
       "shirley-telfer-1929"
     ],
     "children": [
+      "angela-telfer",
+      "carissa-telfer-2023",
       "rebecca-telfer",
       "sophia-telfer"
     ],
@@ -16141,11 +16144,7 @@
     "generation": 7,
     "birth_place": "Tumby Bay, South Australia",
     "step_parents": [],
-    "step_children": [
-      "angela-telfer",
-      "carissa-telfer-2023",
-      "peter-telfer"
-    ],
+    "step_children": [],
     "evidence_level": null,
     "single_source": false,
     "provisional_why": null,
@@ -17547,7 +17546,7 @@
     "roles": [
       "?"
     ],
-    "body_markdown": "# Julia Matilda Seebohm\n\n**Born:** 18 Oct 1876, Tantanoola, South Australia | **Died:** 26 Apr 1939, Tantanoola, South Australia | **Buried:** Tantanoola Cemetery | **Mother:** Mary Anne McIntyre (1836–1913) | **Father:** Wilhelm Seebohm (1833–1907) | **Occupation:** ?\n\nAlso known as **Matilda** or **Tilly** Telfer.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Julia Matilda Seebohm (1876–1939) |\n| Husband | [[Mark Telfer (1877–1946)]] |\n| Daughter | [[Floris Ethel Victoria Telfer (1904–1951)]] |\n| Son | [[Kenneth William John Telfer (1906–1970)]] |\n| Son | [[Gilbert Melville Telfer (1908–1973)]] |\n| Adopted Son | [[Murray John Telfer (1911–1982)]] |\n| Father | [[Wilhelm Seebohm (1833–1907)]] |\n| Mother | [[Mary Anne McIntyre (1836–1913)]] |\n\n## Life Summary\n\nJulia Matilda Seebohm was born on 18 October 1876 at Tantanoola, South Australia, the tenth of eleven children of German immigrant Wilhelm Seebohm and Scottish-born Mary Anne McIntyre. Her father Wilhelm emigrated from Altona, near Hamburg, Germany; her mother Mary was from Glasgow, Scotland.\n\nOn 9 July 1902, Julia married [[Mark Telfer (1877–1946)]] at the Public Hall, Tantanoola. The marriage was recorded in the local newspaper as uniting \"Mr. Mark Telfer, son of Mr. John Telfer, to Miss Matilda Seebohm, daughter of Mr. W. Seebohm.\" Julia was known in the family as Matilda or Tilly.\n\nShe and Mark raised four children at Tantanoola and North Millicent: Floris, Kenneth, Melvin, and adopted son Murray. The family lived in the Tantanoola area, a small farming community in the Wattle Range Council region of South Australia's South East.\n\nJulia died on 26 April 1939 and was buried at Tantanoola Cemetery. She predeceased her husband Mark, who died in 1946; his death notice in The Advertiser referred to him as \"beloved husband of the late Julia Matilda Telfer.\"\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 18 Oct 1876 | Born at Tantanoola, South Australia, to Wilhelm Seebohm and Mary Anne McIntyre |\n| 9 Jul 1902 | Married [[Mark Telfer (1877–1946)]] at the Public Hall, Tantanoola SA |\n| 1904 | Birth of daughter Floris Ethel Victoria Telfer |\n| 1904 | Birth of son Kenneth William John Telfer |\n| 1908 | Birth of son Gilbert Melville Telfer |\n| 1911 | Adoption of son Murray John Telfer (1911–1982) |\n| 26 Apr 1939 | Died at Tantanoola, South Australia |\n| 26 Apr 1939 | Buried at Tantanoola Cemetery |\n\n## Sources\n\n- [WikiTree: Julia Matilda Seebohm (Seebohm-20)](https://www.wikitree.com/wiki/Seebohm-20) — accessed 8 June 2026\n- [WikiTree: Wilhelm Seebohm (Seebohm-10)](https://www.wikitree.com/wiki/Seebohm-10) — accessed 8 June 2026\n- [WikiTree: Augusta John Seebohm (Seebohm-16)](https://www.wikitree.com/wiki/Seebohm-16) — accessed 8 June 2026 (obituary mentions sister \"Matilda (Mrs. Mark Telfer, Tantanoola)\")\n- [FindAGrave: Julia Matilda Telfer (memorial 186972473)](https://www.findagrave.com/memorial/186972473/julia-matilda-telfer) — accessed 8 June 2026\n- [Trove: Family Notices, The Advertiser, 24 Jul 1946](https://trove.nla.gov.au/newspaper/article/35706080) — accessed 8 June 2026 (Mark Telfer death notice mentioning \"the late Julia Matilda Telfer\")\n- Marriage date recorded in vault (from Tim Telfer's family records)",
+    "body_markdown": "# Julia Matilda Seebohm\n\n**Born:** 18 Oct 1876, Tantanoola, South Australia | **Died:** 26 Apr 1939, Tantanoola, South Australia | **Buried:** Tantanoola Cemetery | **Mother:** Mary Anne McIntyre (1836–1913) | **Father:** Wilhelm Seebohm (1833–1907) | **Occupation:** ?\n\nAlso known as **Matilda** or **Tilly** Telfer.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Julia Matilda Seebohm (1876–1939) |\n| Husband | [[Mark Telfer (1877–1946)]] |\n| Daughter | [[Floris Ethel Victoria Telfer (1904–1951)]] |\n| Son | [[Kenneth William John Telfer (1906–1970)]] |\n| Son | [[Gilbert Melville Telfer (1908–1973)]] |\n| Son (adopted) | [[Murray John Telfer (1911–1982)]] |\n| Father | [[Wilhelm Seebohm (1833–1907)]] |\n| Mother | [[Mary Anne McIntyre (1836–1913)]] |\n\n## Life Summary\n\nJulia Matilda Seebohm was born on 18 October 1876 at Tantanoola, South Australia, the tenth of eleven children of German immigrant Wilhelm Seebohm and Scottish-born Mary Anne McIntyre. Her father Wilhelm emigrated from Altona, near Hamburg, Germany; her mother Mary was from Glasgow, Scotland.\n\nOn 9 July 1902, Julia married [[Mark Telfer (1877–1946)]] at the Public Hall, Tantanoola. The marriage was recorded in the local newspaper as uniting \"Mr. Mark Telfer, son of Mr. John Telfer, to Miss Matilda Seebohm, daughter of Mr. W. Seebohm.\" Julia was known in the family as Matilda or Tilly.\n\nShe and Mark raised four children at Tantanoola and North Millicent: Floris, Kenneth, Melvin, and adopted son Murray. The family lived in the Tantanoola area, a small farming community in the Wattle Range Council region of South Australia's South East.\n\nJulia died on 26 April 1939 and was buried at Tantanoola Cemetery. She predeceased her husband Mark, who died in 1946; his death notice in The Advertiser referred to him as \"beloved husband of the late Julia Matilda Telfer.\"\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 18 Oct 1876 | Born at Tantanoola, South Australia, to Wilhelm Seebohm and Mary Anne McIntyre |\n| 9 Jul 1902 | Married [[Mark Telfer (1877–1946)]] at the Public Hall, Tantanoola SA |\n| 1904 | Birth of daughter Floris Ethel Victoria Telfer |\n| 1904 | Birth of son Kenneth William John Telfer |\n| 1908 | Birth of son Gilbert Melville Telfer |\n| 1911 | Adoption of son Murray John Telfer (1911–1982) |\n| 26 Apr 1939 | Died at Tantanoola, South Australia |\n| 26 Apr 1939 | Buried at Tantanoola Cemetery |\n\n## Sources\n\n- [WikiTree: Julia Matilda Seebohm (Seebohm-20)](https://www.wikitree.com/wiki/Seebohm-20) — accessed 8 June 2026\n- [WikiTree: Wilhelm Seebohm (Seebohm-10)](https://www.wikitree.com/wiki/Seebohm-10) — accessed 8 June 2026\n- [WikiTree: Augusta John Seebohm (Seebohm-16)](https://www.wikitree.com/wiki/Seebohm-16) — accessed 8 June 2026 (obituary mentions sister \"Matilda (Mrs. Mark Telfer, Tantanoola)\")\n- [FindAGrave: Julia Matilda Telfer (memorial 186972473)](https://www.findagrave.com/memorial/186972473/julia-matilda-telfer) — accessed 8 June 2026\n- [Trove: Family Notices, The Advertiser, 24 Jul 1946](https://trove.nla.gov.au/newspaper/article/35706080) — accessed 8 June 2026 (Mark Telfer death notice mentioning \"the late Julia Matilda Telfer\")\n- Marriage date recorded in vault (from Tim Telfer's family records)",
     "body_stripped": "**Born:** 18 Oct 1876, Tantanoola, South Australia  **Died:** 26 Apr 1939, Tantanoola, South Australia  **Buried:** Tantanoola Cemetery  **Mother:** Mary Anne McIntyre (1836–1913)  **Father:** Wilhelm Seebohm (1833–1907)  **Occupation:** ?\n\nAlso known as **Matilda** or **Tilly** Telfer.\n\n## Family\n\n Relation  Name \n\n Self  Julia Matilda Seebohm (1876–1939) \n Husband  Mark Telfer (1877–1946) \n Daughter  Floris Ethel Victoria Telfer (1904–1951) \n Son  Kenneth William John Telfer (1906–1970) \n Son ",
     "is_living": false,
     "lifespan": "1876 – 1939",
@@ -21741,6 +21740,7 @@
       "grantley-telfer",
       "john-telfer-robert",
       "kathryn-telfer-1961",
+      "susan-lawrie",
       "timothy-telfer-1959"
     ],
     "spouses": [
@@ -21798,9 +21798,7 @@
     "person_photo": "images/people/murray-ruth-telfer-duchess-horse-1936.jpg",
     "generation": 6,
     "step_parents": [],
-    "step_children": [
-      "susan-lawrie"
-    ],
+    "step_children": [],
     "evidence_level": "soft-yes-provisional",
     "single_source": false,
     "provisional_why": "Burial plot (Tumby Bay Cemetery, Plot K161) is single source group only — Find a Grave memorial 240579000. No second independent group yet; nothing contradicts it. Parents/spouse already primary-confirmed and unaffected.",
@@ -22332,7 +22330,9 @@
     "parents": [
       "robyn-telfer"
     ],
-    "children": [],
+    "children": [
+      "john-telfer-robert"
+    ],
     "spouses": [],
     "siblings": [
       "angela-telfer",
@@ -22356,9 +22356,7 @@
     ],
     "person_photo": "images/people/Peter-Telfer.jpg",
     "generation": 8,
-    "step_parents": [
-      "john-telfer-robert"
-    ],
+    "step_parents": [],
     "step_children": [],
     "evidence_level": null,
     "single_source": false,
@@ -29368,6 +29366,7 @@
     "body_markdown": "# death_year unknown — Susan is living\n\n# Susan Shirley Lawrie (1967–living)\n\n> Born: 6 August 1967 · Deceased No · Maiden name Telfer · Married name Lawrie\n\n**Role:** Youngest daughter of [[Murray John Telfer (1924–2009)]] and [[Shirley Edna Telfer (1929–2017)]]; sister of [[Timothy Neil Telfer (1959)]]\n\n**Born:** 6 August 1967 — Adelaide, South Australia\n**Maiden Name:** Telfer\n**Married Name:** Lawrie\n\n---\n\n## Life Summary\n\nSue is the youngest of Murray and Shirley's six children. She was **adopted as a baby** by Murray and Shirley — details of her biological parents are yet to be researched. She married into the Lawrie family.\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother (adoptive)** | [[Shirley Edna Telfer (1929–2017)]] |\n| **Father (adoptive)** | [[Murray John Telfer (1924–2009)]] |\n| **Spouse** | [[Robert Lawrie (fl. 1998)]] (m. 3 Jan 1998, Tumby Bay, South Australia) |\n| **Children** | [[Rex Murray Telfer Lawrie]] (b. 17 Jan 1985), [[Amanda Nicolle Lawrie]] (b. 11 Nov 1998) |\n| **Siblings** | [[Daryll William Telfer]], [[John Robert Telfer]], [[Grantley Keith Telfer]], [[Timothy Neil Telfer (1959)]], [[Kathryn Mavis Telfer (1961–1965)]] |\n\n---\n\n## Marriage\n\nSue married Robert Lawrie on 3 January 1998 at Tumby Bay, South Australia.\n\n---\n\n*Profile created from family records. Details to be confirmed.*\n\n## Evidence\n\n**Derived from a sourced relative — not independently witnessed.**\n\nThis person is not named in a source held for themselves. Their existence and\nparentage are recorded on the note of **[[Daryll William Telfer]]**, which\ncarries its own citations. The fact is proven upstream; the citation is inherited,\nnot held here.\n\nA derived citation is a **copy of a hand, not a second hand**. It establishes what\nthe sourced note says — nothing more.\n\n**Status: derived. One witness, held upstream.**",
     "body_stripped": "> Born: 6 August 1967 · Deceased No · Maiden name Telfer · Married name Lawrie\n\n**Role:** Youngest daughter of Murray John Telfer (1924–2009) and Shirley Edna Telfer (1929–2017); sister of Timothy Neil Telfer (1959)\n\n**Born:** 6 August 1967 — Adelaide, South Australia\n**Maiden Name:** Telfer\n**Married Name:** Lawrie\n\n## Life Summary\n\nSue is the youngest of Murray and Shirley's six children. She was **adopted as a baby** by Murray and Shirley — details of her biological parents are yet to be rese",
     "parents": [
+      "murray-telfer-1924",
       "shirley-telfer-1929"
     ],
     "children": [
@@ -29392,9 +29391,7 @@
     "images": [],
     "person_photo": null,
     "generation": 7,
-    "step_parents": [
-      "murray-telfer-1924"
-    ],
+    "step_parents": [],
     "step_children": [],
     "evidence_level": null,
     "single_source": false,

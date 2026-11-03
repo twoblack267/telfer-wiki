@@ -39,7 +39,31 @@ const siblingLinks = getLinksForRelationships(person.siblings, telferPeople, { s
 // step-parent/stepchild is never presented as a blood relation. No generation gate:
 // a step relation has no biological bounds.
 const stepParentLinks = getLinksForRelationships(person.step_parents || [], telferPeople);
-const stepChildLinks = getLinksForRelationships(person.step_children || [], telferPeople);
+// DEDUPE (2026-11-04): a child the vault lists in Children (as an adopted son or
+// daughter) can ALSO carry a derived step edge, because the pipeline records the
+// adoption on both sides. Rendering both cards named Carissa, Angela and Peter TWICE
+// on John Robert Telfer's page under two different headings — the Family table said
+// "children", the cards said one thing twice. The vault's Children row is the
+// controlling statement, so anything already shown under Children is dropped from
+// the step cards. Prefer the biological/children card, never the weaker duplicate.
+// Matched on the RAW relationship text, not on resolved slugs: an adopted child's
+// Children entry is written "Angela Telfer (adopted)", which binds to a person but
+// keeps its qualifying text as the NAME, so a slug-only test sees two strangers.
+const childNamesLC = new Set(
+  (person.children || []).map((c) => (typeof c === "string" ? c : c?.plain_name || "").toLowerCase()),
+);
+const namedInChildren = (raw, resolvedName) => {
+  const key = String(typeof raw === "string" ? raw : raw?.plain_name || "").toLowerCase();
+  if (childNamesLC.has(key)) return true;
+  const bare = (t) => t.replace(/\([^)]*\)/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+  const b = bare(key);
+  return b.length > 2 && [...childNamesLC].some((c) => bare(c) === b);
+};
+const stepChildLinks = getLinksForRelationships(person.step_children || [], telferPeople)
+  .filter((s, i) => {
+    const raw = (person.step_children || [])[i];
+    return !(namedInChildren(raw, s.name) || (s.slug && childLinks.some((c) => c.slug === s.slug)));
+  });
 
 // ── Body content ──
 const bodyHtml = formatBody(person.body_markdown || "", telferPeople);
