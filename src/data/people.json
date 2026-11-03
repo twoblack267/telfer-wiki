@@ -4295,11 +4295,15 @@
     "is_living": false,
     "lifespan": "1919 – 1942",
     "parents": [
-      "frederick-albert-paynter"
+      "frederick-albert-paynter",
+      "mildred-mary-mahar"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "john-paynter-1921",
+      "kenneth-paynter"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -16027,11 +16031,15 @@
     "is_living": false,
     "lifespan": "1921 – 1941",
     "parents": [
-      "frederick-albert-paynter"
+      "frederick-albert-paynter",
+      "mildred-mary-mahar"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "colin-paynter-1919",
+      "kenneth-paynter"
+    ],
     "related_trees": [
       "telfer-tree"
     ],
@@ -53316,10 +53324,14 @@
     "body_markdown": "# Kenneth James Paynter (1919–)\n\n**Role:** Twin of [[Colin Louis Paynter (1919–1942)]], of the Paynter (Telfer-descendant) branch — Quorn, South Australia\n\n**Born:** 6 April 1919 — Quorn, South Australia\n**Twin of:** [[Colin Louis Paynter (1919–1942)]] — same birth date, same registration page\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Branch** | PAYNTER — descent from [[Jean Telfer (1840–1892)]] and [[Richard Paynter (1838–1869)]] line, Quorn SA |\n| **Father** | [[Frederick Albert Paynter (1889)]] (b. 6 Apr 1889, Mannanarie SA) — son of Francis Telfer Paynter and Ellen Jane Liebich |\n| **Mother** | **Mildred Mary Mahar** — named on the birth registration itself; daughter of **John Mahar** |\n| **Parents' marriage** | **12 February 1918**, District Frome — register 274/334 |\n| **Twin** | [[Colin Louis Paynter (1919–1942)]] — Private SX10471, KIA Papua 1942 |\n| **Brother** | [[John Ralph Paynter (1921–1941)]] — Private SX6633, DOW Libya 1941 |\n\n## Life Summary\n\nKenneth James Paynter was born on 6 April 1919 at Quorn, South Australia, one of a **multiple birth** — a twin. His twin was [[Colin Louis Paynter (1919–1942)]], killed in action in Papua in 1942.\n\nBoth boys were registered on the **same certificate page, 35A/249**, in the Frome district, to **Frederick Albert Paynter** and **Mildred Mary Mahar** — the registration records carry the indexer's **\"M — multiple births\"** symbol on both entries.\n\nNothing further about Kenneth's life is recorded in the vault. He is not named on the AWM Roll of Honour alongside his twin, and no death record has been located for him — so the descent line through him is not yet known. He is recorded here so that Colin's twin is a person, not a footnote.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 6 Apr 1919 | Born at Quorn, South Australia — twin of Colin Louis Paynter; registered 35A/249, Frome |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index** (member search, read live 3 Nov 2026): PAYNTER, Kenneth James, 06-Apr-1919, M, Frederick Albert PAYNTER / Mildred Mary MAHAR, Quorn, Frome, **35A/249** — [genealogysa.org.au](https://www.genealogysa.org.au/resources/online-database-search)\n2. **Genealogy SA — \"Abbreviations Explained\"**: symbol **M** = \"Identifies multiple births\" — [genealogysa.org.au/services/help/abbreviations-explained](https://www.genealogysa.org.au/services/help/abbreviations-explained) — accessed 3 Nov 2026\n3. **Genealogy SA — Birth Registrations index:** PAYNTER, Colin Louis, 06-Apr-1919, M, same parents, Quorn, Frome, 35A/249 — the twin's entry on the same page — accessed 3 Nov 2026\n4. **Genealogy SA — Marriage Registrations index** (read live 3 Nov 2026): `PAYNTER Fredrick Albert × MAHAR Mildred Mary · 12-Feb-1918 · Francis PAYNTER / John MAHAR · Frome · 274/334` — his parents' marriage — [genealogysa.org.au](https://www.genealogysa.org.au/resources/online-database-search)",
     "body_stripped": "**Role:** Twin of Colin Louis Paynter (1919–1942), of the Paynter (Telfer-descendant) branch — Quorn, South Australia\n\n**Born:** 6 April 1919 — Quorn, South Australia\n**Twin of:** Colin Louis Paynter (1919–1942) — same birth date, same registration page\n\n## Family\n\n Relation  Name \n\n **Branch**  PAYNTER — descent from Jean Telfer (1840–1892) and Richard Paynter (1838–1869) line, Quorn SA \n **Father**  Frederick Albert Paynter (1889) (b. 6 Apr 1889, Mannanarie SA) — son of Francis Telfer Paynter ",
     "parents": [
-      "frederick-albert-paynter"
+      "frederick-albert-paynter",
+      "mildred-mary-mahar"
     ],
     "children": [],
-    "siblings": [],
+    "siblings": [
+      "colin-paynter-1919",
+      "john-paynter-1921"
+    ],
     "spouses": [],
     "step_parents": [],
     "step_children": [],
@@ -53405,7 +53417,7 @@
     ],
     "siblings": [],
     "spouses": [
-      "Mildred Mary Mahar (m. 1918)"
+      "mildred-mary-mahar"
     ],
     "step_parents": [],
     "step_children": [],
@@ -53415,6 +53427,84 @@
     "single_source": false,
     "provisional_why": null,
     "lifespan": "1889 – ?",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 6
+  },
+  {
+    "id": "Mildred Mary Mahar",
+    "slug": "mildred-mary-mahar",
+    "vault_file": "Mildred Mary Mahar.md",
+    "first_name": "Mildred Mary",
+    "middle_name": null,
+    "last_name": "Mahar",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "",
+    "display_name": "Mildred Mary Mahar",
+    "title": "Mildred Mary Mahar — Family & Biography",
+    "tags": [
+      "Mahar",
+      "Quorn",
+      "South Australia"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Mildred Mary Mahar"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "John Mahar"
+        ]
+      },
+      {
+        "type": "Spouse",
+        "names": [
+          "Frederick Albert Paynter (m. 1918)"
+        ]
+      },
+      {
+        "type": "Children",
+        "names": [
+          "Kenneth James Paynter (1919)",
+          "Colin Louis Paynter (1919–1942)",
+          "John Ralph Paynter (1921–1941)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Mildred Mary Mahar\n\n**Branch:** MAHAR — married into PAYNTER, Quorn, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | John Mahar (no profile — name only, from the marriage register) |\n| **Spouse** | [[Frederick Albert Paynter (1889)]] — married 12 February 1918, District Frome (register 274/334) |\n| **Son** | [[Kenneth James Paynter (1919)]] — twin, b. 6 Apr 1919 |\n| **Son** | [[Colin Louis Paynter (1919–1942)]] — twin, Private SX10471, KIA Papua 1942 |\n| **Son** | [[John Ralph Paynter (1921–1941)]] — Private SX6633, DOW Libya 1941 |\n\n## Life Summary\n\nMildred Mary Mahar married [[Frederick Albert Paynter (1889)]] on 12 February 1918 in the District of Frome, South Australia — register **274/334**. Her father is recorded as **John Mahar**.\n\nShe gave birth to twin sons, [[Kenneth James Paynter (1919)]] and [[Colin Louis Paynter (1919–1942)]], on 6 April 1919 at Quorn. Both were registered on the same certificate page, **35A/249**, in the Frome district, and both entries carry the indexer's **\"M — multiple births\"** symbol. A third son, [[John Ralph Paynter (1921–1941)]], followed in 1921.\n\nHer maiden name was long carried in the family record as *\"Mildred Mary Paynter (née unknown)\"*; it was resolved when the registrar's printed surname appeared on both sons' birth entries.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 12 Feb 1918 | Married Frederick Albert Paynter, District Frome (274/334) |\n| 6 Apr 1919 | Twin sons Kenneth and Colin born, Quorn (35A/249) |\n| 1921 | Son John Ralph born |\n\n## Evidence\n\n**Genealogy SA birth registrations — read live 3 Nov 2026.**\n\nThe birth entries for her twin sons record the mother's name in full:\n- `PAYNTER Colin Louis | 06-Apr-1919 | M | Frederick Albert PAYNTER | Mildred Mary MAHAR | Quorn | Frome | 35A/249`\n- `PAYNTER Kenneth James | 06-Apr-1919 | M | Frederick Albert PAYNTER | Mildred Mary MAHAR | Quorn | Frome | 35A/249`\n\nHer marriage to Frederick Albert Paynter is recorded at register **274/334**, District Frome, 12 February 1918. Her own birth date and death date are **not recorded** — neither has been traced.\n\n**Status: identity and maiden name are registration-sourced and verified. Her birth and death dates remain unknown, and are recorded as unknown rather than guessed.**",
+    "body_stripped": "**Branch:** MAHAR — married into PAYNTER, Quorn, South Australia\n\n## Family\n\n Relation  Name \n\n **Father**  John Mahar (no profile — name only, from the marriage register) \n **Spouse**  Frederick Albert Paynter (1889) — married 12 February 1918, District Frome (register 274/334) \n **Son**  Kenneth James Paynter (1919) — twin, b. 6 Apr 1919 \n **Son**  Colin Louis Paynter (1919–1942) — twin, Private SX10471, KIA Papua 1942 \n **Son**  John Ralph Paynter (1921–1941) — Private SX6633, DOW Libya 1941 ",
+    "parents": [
+      "John Mahar"
+    ],
+    "children": [
+      "colin-paynter-1919",
+      "john-paynter-1921",
+      "kenneth-paynter"
+    ],
+    "siblings": [],
+    "spouses": [
+      "frederick-albert-paynter"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": false,
+    "provisional_why": null,
+    "lifespan": "?",
     "related_trees": [
       "telfer-tree"
     ],

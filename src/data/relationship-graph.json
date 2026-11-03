@@ -3277,7 +3277,12 @@
     },
     {
       "slug": "frederick-albert-paynter",
-      "id": "Frederick Albert Paynter (1889)"
+      "id": "Frederick Albert Paynter (1889)",
+      "generation": 6
+    },
+    {
+      "slug": "mildred-mary-mahar",
+      "id": "Mildred Mary Mahar"
     },
     {
       "slug": "kirrily-sheree-maddern-1976",
@@ -3533,6 +3538,10 @@
       },
       {
         "from": "frederick-albert-paynter",
+        "to": "colin-paynter-1919"
+      },
+      {
+        "from": "mildred-mary-mahar",
         "to": "colin-paynter-1919"
       },
       {
@@ -4317,6 +4326,10 @@
       },
       {
         "from": "frederick-albert-paynter",
+        "to": "john-paynter-1921"
+      },
+      {
+        "from": "mildred-mary-mahar",
         "to": "john-paynter-1921"
       },
       {
@@ -6760,6 +6773,10 @@
         "to": "kenneth-paynter"
       },
       {
+        "from": "mildred-mary-mahar",
+        "to": "kenneth-paynter"
+      },
+      {
         "from": "ellen-liebich",
         "to": "frederick-albert-paynter"
       },
@@ -7296,6 +7313,10 @@
       {
         "from": "elizabeth-smith-farrow",
         "to": "joseph-farrow-1814"
+      },
+      {
+        "from": "frederick-albert-paynter",
+        "to": "mildred-mary-mahar"
       }
     ],
     "siblingOf": [
@@ -8030,6 +8051,14 @@
       {
         "from": "clarice-may-telfer-1911",
         "to": "ruth-telfer-1931"
+      },
+      {
+        "from": "colin-paynter-1919",
+        "to": "john-paynter-1921"
+      },
+      {
+        "from": "colin-paynter-1919",
+        "to": "kenneth-paynter"
       },
       {
         "from": "colin-telfer-1889",
@@ -9538,6 +9567,10 @@
       {
         "from": "john-lindsay-cameron-1907",
         "to": "malcolm-murray-cameron"
+      },
+      {
+        "from": "john-paynter-1921",
+        "to": "kenneth-paynter"
       },
       {
         "from": "john-telfer-robert",

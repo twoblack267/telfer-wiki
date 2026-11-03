@@ -15088,9 +15088,7 @@
       "kenneth-paynter"
     ],
     "spouses": [
-      {
-        "plain_name": "Mildred Mary Mahar"
-      }
+      "mildred-mary-mahar"
     ],
     "siblings": [],
     "step_parents": [],
@@ -19281,6 +19279,53 @@
     "person_photo": null
   },
   {
+    "id": "Mildred Mary Mahar",
+    "slug": "mildred-mary-mahar",
+    "first_name": "Mildred Mary",
+    "middle_name": null,
+    "last_name": "Mahar",
+    "birth_year": null,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "?",
+    "death_year_display": "",
+    "display_name": "Mildred Mary Mahar",
+    "title": "Mildred Mary Mahar — Family & Biography",
+    "lifespan": "?",
+    "generation": 6,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": false,
+    "provisional_why": null,
+    "body_markdown": "# Mildred Mary Mahar\n\n**Branch:** MAHAR — married into PAYNTER, Quorn, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | John Mahar (no profile — name only, from the marriage register) |\n| **Spouse** | [[Frederick Albert Paynter (1889)]] — married 12 February 1918, District Frome (register 274/334) |\n| **Son** | [[Kenneth James Paynter (1919)]] — twin, b. 6 Apr 1919 |\n| **Son** | [[Colin Louis Paynter (1919–1942)]] — twin, Private SX10471, KIA Papua 1942 |\n| **Son** | [[John Ralph Paynter (1921–1941)]] — Private SX6633, DOW Libya 1941 |",
+    "roles": [],
+    "tags": [
+      "Mahar",
+      "Quorn",
+      "South Australia"
+    ],
+    "parents": [
+      {
+        "plain_name": "John Mahar"
+      }
+    ],
+    "children": [
+      "colin-paynter-1919",
+      "john-paynter-1921",
+      "kenneth-paynter"
+    ],
+    "spouses": [
+      "frederick-albert-paynter"
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Robert Godfrey",
     "slug": "robert-godfrey",
     "first_name": "Robert",
@@ -19989,11 +20034,15 @@
       "war"
     ],
     "parents": [
-      "frederick-albert-paynter"
+      "frederick-albert-paynter",
+      "mildred-mary-mahar"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "john-paynter-1921",
+      "kenneth-paynter"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -20031,11 +20080,15 @@
       "paynter"
     ],
     "parents": [
-      "frederick-albert-paynter"
+      "frederick-albert-paynter",
+      "mildred-mary-mahar"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "colin-paynter-1919",
+      "john-paynter-1921"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -20177,11 +20230,15 @@
       "war"
     ],
     "parents": [
-      "frederick-albert-paynter"
+      "frederick-albert-paynter",
+      "mildred-mary-mahar"
     ],
     "children": [],
     "spouses": [],
-    "siblings": [],
+    "siblings": [
+      "colin-paynter-1919",
+      "kenneth-paynter"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],

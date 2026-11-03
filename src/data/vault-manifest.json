@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-03T11:30:12+10:00",
+  "generated_at": "2026-11-03T11:39:00+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 674,
+  "count": 675,
   "kinds": {
-    "real": 656,
+    "real": 657,
     "redirect": 18,
     "empty": 0
   },
@@ -2038,6 +2038,10 @@
     },
     "Michelle Llane Spratt (b. 1966).md": {
       "sha256": "d02b75f61606757f0b36a6e87cfa3b11bf0b52612f5d2b3c6206bd72e4a314d8",
+      "kind": "real"
+    },
+    "Mildred Mary Mahar.md": {
+      "sha256": "baab92fa6872dac7f69b126e8bef939bf752eed562aa1b8033006f79259f0276",
       "kind": "real"
     },
     "Millicent Agnes Telfer (1887\u20131985).md": {
