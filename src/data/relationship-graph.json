@@ -3276,6 +3276,10 @@
       "generation": 7
     },
     {
+      "slug": "frederick-albert-paynter",
+      "id": "Frederick Albert Paynter (1889)"
+    },
+    {
       "slug": "kirrily-sheree-maddern-1976",
       "id": "Kirrily Sheree Maddern (1976)",
       "generation": 8
@@ -3526,6 +3530,10 @@
       {
         "from": "francis-telfer-1875",
         "to": "clarice-may-telfer-1911"
+      },
+      {
+        "from": "frederick-albert-paynter",
+        "to": "colin-paynter-1919"
       },
       {
         "from": "john-telfer-1840",
@@ -4306,6 +4314,10 @@
       {
         "from": "elizabeth-beattie-1741",
         "to": "john-murray-1779"
+      },
+      {
+        "from": "frederick-albert-paynter",
+        "to": "john-paynter-1921"
       },
       {
         "from": "murray-telfer-1924",
@@ -6742,6 +6754,18 @@
       {
         "from": "susan-telfer-1844",
         "to": "francis-john-burton-telfer"
+      },
+      {
+        "from": "frederick-albert-paynter",
+        "to": "kenneth-paynter"
+      },
+      {
+        "from": "ellen-liebich",
+        "to": "frederick-albert-paynter"
+      },
+      {
+        "from": "francis-telfer-paynter-1862",
+        "to": "frederick-albert-paynter"
       },
       {
         "from": "lyndell-marie-telfer-1951",
