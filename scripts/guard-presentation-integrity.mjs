@@ -224,11 +224,46 @@ try {
 }
 
 // ── P7 — the contact address must be visible text ──────────────────────────
+// NOTE: this rule only sees the BUILD OUTPUT. Cloudflare Scrape Shield can still
+// rewrite the address at the edge (Email Obfuscation) into an
+// <a href="/cdn-cgi/l/email-protection" class="__cf_email__"> — which turns plain
+// text back into a mailto-only dead end AFTER a green build. That setting was
+// found ON for telferwiki.com on 2026-11-04 and turned OFF (zone setting
+// email_obfuscation). Verify live HTML, not just dist/, with:
+//   curl -s https://telferwiki.com/contact/ | grep -c __cf_email__   -> must be 0
+//   curl -s https://telferwiki.com/contact/ | grep -c contact@telferwiki.com
+
 // Verified defect 2026-11-04: /contact/ published the address only inside a
 // mailto: link and a mailto: form. On a phone with no mail client configured
 // the tap does nothing and the visitor concludes the site is broken. The
 // address must exist as plain, selectable text on the page.
 const CONTACT_EMAIL_TEXT = /contact@telferwiki\.com/;
+
+// Cloudflare Email Obfuscation rewrites a real address into a __cf_email__ anchor at
+// the edge. If it ever appears in a built file, something upstream injected it and
+// the "select and copy" path is broken again.
+if (process.env.GUARD_CHECK_LIVE) {
+  const { execSync } = await import("node:child_process");
+  const live = ["/contact/", "/people/", "/people/families/"];
+  for (const p of live) {
+    let body = "";
+    try {
+      body = execSync(`curl -s --max-time 25 https://telferwiki.com${p}`, { encoding: "utf8" });
+    } catch {
+      continue;
+    }
+    if (/__cf_email__/.test(body)) {
+      violations.push({
+        rule: "P7L",
+        file: `live:${p}`,
+        msg: "Cloudflare Email Obfuscation is rewriting the address into a __cf_email__ anchor — the address is no longer selectable text. Turn off Scrape Shield > Email Obfuscation.",
+      });
+    }
+    if (!CONTACT_EMAIL_TEXT.test(body.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g, ""))) {
+      violations.push({ rule: "P7L", file: `live:${p}`, msg: "Live page does not expose the contact address as visible text." });
+    }
+  }
+}
 const contactPage = readIf(path.join(DIST, "contact", "index.html"));
 if (contactPage) {
   const visible = contactPage.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g, "");
