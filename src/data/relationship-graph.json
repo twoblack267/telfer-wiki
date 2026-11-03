@@ -123,7 +123,7 @@
     {
       "slug": "angela-telfer",
       "id": "Angela Telfer",
-      "generation": 8
+      "generation": 99
     },
     {
       "slug": "arnold-cuthbert-lawrie-1895",
@@ -163,7 +163,7 @@
     {
       "slug": "bertha-telfer",
       "id": "Bertha Telfer (1872)",
-      "generation": 5
+      "generation": 6
     },
     {
       "slug": "beth-telfer-1946",
@@ -703,7 +703,7 @@
     {
       "slug": "james-alexander-alcorn-1915",
       "id": "James Alexander Alcorn (1915)",
-      "generation": 5
+      "generation": 7
     },
     {
       "slug": "james-baker-1859",
@@ -3427,10 +3427,6 @@
         "to": "andrew-telfer-1798"
       },
       {
-        "from": "john-telfer-robert",
-        "to": "angela-telfer"
-      },
-      {
         "from": "alfred-george-stribling-1853",
         "to": "arthur-clifford-stribling-1890"
       },
@@ -3463,20 +3459,8 @@
         "to": "beatrice-telfer-1911"
       },
       {
-        "from": "caroline-telfer-1842",
-        "to": "bertha-telfer"
-      },
-      {
-        "from": "john-telfer-1847",
-        "to": "bertha-telfer"
-      },
-      {
         "from": "gilbert-telfer-1908",
         "to": "beth-telfer-1946"
-      },
-      {
-        "from": "john-telfer-robert",
-        "to": "carissa-telfer-2023"
       },
       {
         "from": "robyn-telfer",
@@ -4717,10 +4701,6 @@
       {
         "from": "noela-pauline-virgen-1921",
         "to": "penny-telfer-1960"
-      },
-      {
-        "from": "john-telfer-robert",
-        "to": "peter-telfer"
       },
       {
         "from": "robyn-telfer",
@@ -11421,6 +11401,22 @@
         "to": "amy-telfer"
       },
       {
+        "from": "john-telfer-robert",
+        "to": "angela-telfer"
+      },
+      {
+        "from": "caroline-telfer-1842",
+        "to": "bertha-telfer"
+      },
+      {
+        "from": "john-telfer-1847",
+        "to": "bertha-telfer"
+      },
+      {
+        "from": "john-telfer-robert",
+        "to": "carissa-telfer-2023"
+      },
+      {
         "from": "dinah-flavel-1821",
         "to": "james-telfer-1832"
       },
@@ -11453,6 +11449,10 @@
         "to": "mark-telfer-1986"
       },
       {
+        "from": "john-telfer-robert",
+        "to": "peter-telfer"
+      },
+      {
         "from": "robert-lawrie",
         "to": "rex-lawrie"
       }
@@ -11467,8 +11467,28 @@
         "to": "mark-telfer-1986"
       },
       {
+        "from": "caroline-telfer-1842",
+        "to": "bertha-telfer"
+      },
+      {
         "from": "jean-murray-1810",
         "to": "jean-telfer-1840"
+      },
+      {
+        "from": "john-telfer-robert",
+        "to": "angela-telfer"
+      },
+      {
+        "from": "john-telfer-robert",
+        "to": "carissa-telfer-2023"
+      },
+      {
+        "from": "john-telfer-robert",
+        "to": "peter-telfer"
+      },
+      {
+        "from": "john-telfer-1847",
+        "to": "bertha-telfer"
       },
       {
         "from": "sheryle-telfer-1961",

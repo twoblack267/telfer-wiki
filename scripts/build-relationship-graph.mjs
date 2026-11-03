@@ -907,6 +907,20 @@ for (const person of people) {
         case 'Child':
         case 'Son':
         case 'Daughter':
+          // ADOPTED CHILD (cards tw-2026-11-03-004 / -006, 2026-11-04).
+          // The vault writes "Bertha Telfer (adopted)" inside John Telfer (1847)'s
+          // Children list. That ref resolved like any other and wired a biological
+          // parent edge, so the site published an adopted daughter as a natural one.
+          // The qualifier is the researcher's own provenance claim — honour it by
+          // recording a step/community edge instead. Matched on the RAW name because
+          // the "(adopted)" marker is stripped when the name resolves to a slug.
+          if (/\badopt/i.test(String(name || ''))) {
+            stepChildEdges.get(sourceSlug).add(targetSlug);
+            stepParentEdges.get(targetSlug).add(sourceSlug);
+            derivedCounts.set('Child (adopted)', (derivedCounts.get('Child (adopted)') || 0) + 1);
+            resolved++;
+            break;
+          }
           // SELF-DECLARATION WINS (2026-09-22, card tw-2026-09-22-011). If the target
           // already declares its own parents, an INCOMING claim from this person's
           // Children list must not overwrite that. It may still ADD itself when the
@@ -1070,10 +1084,19 @@ for (const person of people) {
         case 'Adoptive father':
         case 'Adoptive mother':
           // Matches the existing 'Adoptive Father'/'Adoptive Mother' case above:
-          // recorded as a parent edge so the page links, tallied separately so the
-          // biological claim is never implied.
-          parentEdges.get(sourceSlug).add(targetSlug);
-          childEdges.get(targetSlug).add(sourceSlug);
+          // recorded so the page links, but tallied separately so the biological
+          // claim is never implied.
+          //
+          // FIXED 2026-11-04 (cards tw-2026-11-03-004 / -006): the comment above has
+          // always promised "recorded as a step/community parent edge", but the code
+          // wrote to the PLAIN parentEdges/childEdges maps. So an adoptive parent was
+          // published as a biological one — Bertha Telfer (adopted by John & Caroline
+          // Telfer) rendered as their natural daughter, and James Alexander Alcorn's
+          // page implied a blood line that the vault explicitly denies. Route the
+          // edge to the step/community maps, which the renderer already labels and
+          // which never assert a genetic claim.
+          stepParentEdges.get(sourceSlug).add(targetSlug);
+          stepChildEdges.get(targetSlug).add(sourceSlug);
           derivedCounts.set(rel.type, (derivedCounts.get(rel.type) || 0) + 1);
           resolved++;
           break;
