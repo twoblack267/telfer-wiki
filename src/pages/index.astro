@@ -131,11 +131,11 @@ const recentPeople = (recentData.people || [])
         </div>
         <div class="person-card rounded-lg p-3 sm:p-4 text-center">
           <div class="text-2xl sm:text-3xl font-bold font-serif text-[var(--color-heading)]">{deceasedTelfer.length}</div>
-          <div class="text-sm text-[var(--color-muted)] mt-0.5">Deceased</div>
+          <div class="text-sm text-[var(--color-muted)] mt-0.5">With a recorded death</div>
         </div>
         <div class="person-card rounded-lg p-3 sm:p-4 text-center">
           <div class="text-2xl sm:text-3xl font-bold font-serif text-[var(--color-heading)]">{livingTelfer.length}</div>
-          <div class="text-sm text-[var(--color-muted)] mt-0.5">No death record</div>
+          <div class="text-sm text-[var(--color-muted)] mt-0.5">Dates incomplete</div>
         </div>
       </div>
     </section>
@@ -184,9 +184,6 @@ const recentPeople = (recentData.people || [])
             <div class="font-medium text-[var(--color-heading)]">{person.display_name}</div>
             <div class="text-sm text-[var(--color-muted)]">
               {person.birth_year ? person.birth_year : "?"} – {person.death_year || "?"}
-              {person.is_deceased && (
-                <span class="ml-2 inline-block text-xs px-2 py-0.5 rounded badge-living">Deceased</span>
-              )}
             </div>
             <div class="text-xs text-[var(--color-muted)] mt-0.5">Added {person.added}</div>
           </a>

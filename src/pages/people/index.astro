@@ -18,6 +18,36 @@ const TELFER_TREE_ENABLED = import.meta.env.TELFER_TREE_ENABLED === "true";
 
 // Extract unique tags
 const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
+
+// ── Split the directory (2026-11-03) ────────────────────────────────────────
+// People whose record has NO usable year at all (lifespan renders as "?" or
+// "? – ?") are held back from the alphabetical/alphabetical-by-year listing and
+// shown in a separate "Help Us Complete the Record" block at the bottom, where
+// the point IS that they are incomplete. The main list then reads as a clean
+// directory instead of a wall of question marks.
+function hasAnyYear(p: PersonData): boolean {
+  return Boolean(p.birth_year) || Boolean(p.death_year);
+}
+const knownPeople = telferPeople.filter(hasAnyYear);
+const unknownPeople = telferPeople.filter((p) => !hasAnyYear(p));
+
+// A–Z jump targets: only letters that actually have entries.
+const initialLetters = [
+  ...new Set(
+    knownPeople.map((p) => (p.display_name || "?")[0].toUpperCase()).filter((c) => /[A-Z]/.test(c)),
+  ),
+].sort();
+
+// Group for the A–Z anchor blocks (used by the alphabetical sort mode), keyed
+// by initial so the anchor targets exist wherever the JS puts the rows.
+const byInitial: Record<string, PersonData[]> = {};
+for (const p of knownPeople) {
+  const key = (p.display_name || "?")[0].toUpperCase();
+  if (!byInitial[key]) byInitial[key] = [];
+  byInitial[key].push(p);
+}
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -28,8 +58,8 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
     <h1>All People</h1>
     <p class="text-[var(--color-ink-light)] mt-2">
       {telferPeople.length} profiles in the Telfer line
-      &nbsp;·&nbsp; <span>{telferPeople.filter(p => p.is_deceased).length} deceased</span>
-      &nbsp;·&nbsp; <span class="text-[var(--color-muted)]">{telferPeople.filter(p => !p.is_deceased).length} no death record</span>
+      &nbsp;·&nbsp; <span>{telferPeople.filter(p => p.is_deceased).length} with a recorded death</span>
+      &nbsp;·&nbsp; <span class="text-[var(--color-muted)]">{unknownPeople.length} awaiting a date</span>
     </p>
   </div>
 
@@ -39,7 +69,7 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
       {TELFER_TREE_ENABLED && (
         <li role="presentation">
           <a
-            href={`${import.meta.env.BASE_URL}people/telfer-tree/`}
+            href={`${base}people/telfer-tree/`}
             class="px-4 py-2 rounded-t-lg border-b-2 border-[var(--color-link)] text-[var(--color-link)] font-medium"
             role="tab"
             aria-selected="true"
@@ -50,7 +80,7 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
       )}
       <li role="presentation">
         <a
-          href={`${import.meta.env.BASE_URL}people/dna/`}
+          href={`${base}people/dna/`}
           class="px-4 py-2 rounded-t-lg border-b-2 border-[var(--color-highlight)] text-[var(--color-highlight)] font-medium"
           role="tab"
         >
@@ -61,58 +91,98 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
   </nav>
 
   <!-- Filters -->
-  <div class="flex flex-wrap gap-3 mb-6 items-center">
-    <label class="text-sm text-[var(--color-muted)]">Filter:</label>
-    <a href={import.meta.env.BASE_URL + "people/"} data-filter-status="all" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">All</a>
-    <a href={import.meta.env.BASE_URL + "people?status=living"} data-filter-status="living" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">No death record</a>
-    <a href={import.meta.env.BASE_URL + "people?status=deceased"} data-filter-status="deceased" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Deceased</a>
+  <div class="flex flex-wrap gap-3 mb-3 items-center">
+    <label class="text-sm text-[var(--color-muted)]">Show:</label>
+    <a href={base + "people/"} data-filter-status="all" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Everyone</a>
+    <a href={base + "people?status=recorded"} data-filter-status="recorded" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">With a recorded death</a>
+    <a href={base + "people?status=awaiting"} data-filter-status="awaiting" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Awaiting a date</a>
     <span class="text-[var(--color-border)] mx-1">|</span>
-    <a href={import.meta.env.BASE_URL + "people?sort=alpha"} data-filter-sort="alpha" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
-    <a href={import.meta.env.BASE_URL + "people?sort=year"} data-filter-sort="year" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
-    <span class="text-sm text-[var(--color-muted)] ml-auto"><span id="filter-count">{telferPeople.length}</span> shown</span>
+    <a href={base + "people?sort=alpha"} data-filter-sort="alpha" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
+    <a href={base + "people?sort=year"} data-filter-sort="year" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
+    <span class="text-sm text-[var(--color-muted)] ml-auto"><span id="filter-count">{knownPeople.length}</span> shown</span>
   </div>
+
+  <!-- A–Z jump links (tw-2026-11-03). Long directory: no infinite scrolling.
+       Letters are always present; the browser scrolls to the matching anchor
+       whether the list is in A–Z mode or by-year mode (anchors are on the rows
+       themselves, so they exist in both orders). -->
+  <nav class="jump-links mb-6" aria-label="Jump to letter">
+    <span class="text-xs text-[var(--color-muted)] mr-1">Jump to:</span>
+    {initialLetters.map((letter) => (
+      <a href={`#letter-${letter}`} data-jump={letter} class="jump-chip">{letter}</a>
+    ))}
+  </nav>
 
   <!-- People Grid -->
   <div id="people-list" class="divide-y divide-[var(--color-border)]">
-    {telferPeople.map((person) => (
+    {knownPeople.map((person) => {
+      const initial = (person.display_name || "?")[0].toUpperCase();
+      return (
       <a
-        href={`${import.meta.env.BASE_URL}people/${person.slug}/`}
-        {/* The classes 'living'/'deceased' are FILTER KEYS read by the script below, not
-            a claim printed on the page. They stay wired to is_living (the privacy
-            posture) so the existing URL filter keeps working; nothing here renders
-            the word "Living" to a visitor any more. */}
-        class={`flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group ${person.is_living ? 'living' : 'deceased'}`}
+        href={`${base}people/${person.slug}/`}
+        data-initial={initial}
+        {/* 'recorded'/'awaiting' are FILTER KEYS read by the script below, not a
+            claim printed on the page. They stay wired to is_deceased / date
+            presence so the URL filter keeps working; the old "Deceased" badge
+            was removed on 2026-11-03 so ancestors are no longer flagged one by
+            one — only records still missing a date are called out, and only in
+            the Help Us Complete section.
+            NOTE: no id here — every row would share the first row's id for its
+            letter. The A–Z jump script scrolls to the first MATCHING row object
+            instead, which is correct in both sort modes. *}
+        class={`person-row flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group ${person.is_deceased ? 'recorded' : 'awaiting'}`}
       >
         <!-- Name & lifespan -->
         <div class="flex-1 min-w-0">
           <div class="font-medium text-[var(--color-burgundy)] group-hover:text-[var(--color-burgundy-light)] transition-colors">
             {person.display_name}
           </div>
-          <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
-        </div>
-
-        {/* Status badge — only a recorded death is ever badged */}
-        <div>
-          {person.is_deceased && (
-            <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
-          )}
+          <div class="text-sm text-[var(--color-muted)] lifespan">{person.lifespan}</div>
         </div>
 
         {/* Arrow */}
         <span class="text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">→</span>
       </a>
-    ))}
+      );
+    })}
   </div>
 
-  {telferPeople.length === 0 && (
+  {knownPeople.length === 0 && (
     <div class="text-center py-12 text-[var(--color-muted)]">
       <p class="text-lg">No profiles found.</p>
     </div>
   )}
 
+  <!-- Help Us Complete the Record (2026-11-03) -->
+  {unknownPeople.length > 0 && (
+    <section id="complete-the-record" class="help-record mt-10 pt-6 border-t-2 border-[var(--color-border)]">
+      <h2 class="font-serif text-xl text-[var(--color-burgundy)] mb-2">Help Us Complete the Record</h2>
+      <p class="text-sm text-[var(--color-ink-light)] mb-2">
+        These {unknownPeople.length} people are named in the family record, but no year of birth or death
+        has been found for them yet. A notice, a headstone, a register entry or a family Bible page
+        would fill the gap — if you can help with any of them, we would genuinely love to hear from you.
+      </p>
+      <p class="text-sm mb-2">
+        <a href={base + "contact/"} class="text-[var(--color-link)]">Send in a record →</a>
+      </p>
+      <p class="text-xs text-[var(--color-muted)] mb-4">
+        Write to <span class="font-mono select-all">contact@telferwiki.com</span> — anyone can send, from any
+        device, no account needed. Name, rough dates, place, and where you got it is enough.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        {unknownPeople.map((person) => (
+          <a href={`${base}people/${person.slug}/`} class="person-card rounded-lg p-2.5 no-underline block">
+            <div class="text-sm font-medium text-[var(--color-ink)] truncate">{person.display_name}</div>
+            <div class="text-xs text-[var(--color-muted)] mt-0.5">Dates unknown — records incomplete</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
   <!-- Search prompt -->
   <div class="mt-8 text-center">
-    <a href={import.meta.env.BASE_URL + "search/"} class="text-sm text-[var(--color-link)]">
+    <a href={base + "search/"} class="text-sm text-[var(--color-link)]">
       Looking for someone specific? Try search →
     </a>
   </div>
@@ -125,10 +195,11 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
     const items = Array.from(list.children);
     // Serialize person data into data attributes
     items.forEach(el => {
-      el.dataset.living = el.classList.contains('living') ? 'true' : 'false';
+      el.dataset.recorded = el.classList.contains('recorded') ? 'true' : 'false';
+      el.dataset.init = el.dataset.initial || '';
       el.dataset.name = (el.querySelector('.font-medium')?.textContent || '').toLowerCase();
       // Extract year from lifespan: "1840 – 1876" or "1840 – ?" (never "– living")
-      const lifespan = el.querySelector('.text-sm.text-\\[var\\(--color-muted\\)\\]')?.textContent || '';
+      const lifespan = el.querySelector('.lifespan')?.textContent || '';
       const yearMatch = lifespan.match(/(\d{4})\s*–/);
       el.dataset.year = yearMatch ? yearMatch[1] : '9999';
     });
@@ -142,10 +213,10 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
       items.forEach(el => {
         if (status === 'all') {
           el.style.display = '';
-        } else if (status === 'living') {
-          el.style.display = el.dataset.living === 'true' ? '' : 'none';
-        } else if (status === 'deceased') {
-          el.style.display = el.dataset.living === 'false' ? '' : 'none';
+        } else if (status === 'recorded') {
+          el.style.display = el.dataset.recorded === 'true' ? '' : 'none';
+        } else if (status === 'awaiting') {
+          el.style.display = el.dataset.recorded === 'false' ? '' : 'none';
         }
       });
 
@@ -196,6 +267,22 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
 
     // Handle back/forward navigation
     window.addEventListener('popstate', applyFilters);
+
+    // A–Z jump links: in A–Z mode the first occurrence of a letter is the top of
+    // that group, so duplicate ids are harmless; in year mode we scroll to the
+    // first matching row in whatever order the list currently has.
+    document.querySelectorAll('[data-jump]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const letter = this.dataset.jump;
+        if (letter === 'help') return; // plain anchor to the section
+        e.preventDefault();
+        const target = items.find(el => el.dataset.init === letter && el.style.display !== 'none');
+        if (!target) return;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.classList.add('jump-flash');
+        setTimeout(() => target.classList.remove('jump-flash'), 1200);
+      });
+    });
   })();
 </script>
 
@@ -209,13 +296,43 @@ const allTags = [...new Set(telferPeople.flatMap((p) => p.tags || []))].sort();
     border-color: var(--color-border);
     color: var(--color-ink-light);
   }
-  /* Keep living button green when not active */
-  .filter-btn[data-filter-status="living"]:not(.filter-active) {
-    border-color: #86efac;
-    color: #166534;
+  .jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
   }
-  [data-theme="dark"] .filter-btn[data-filter-status="living"]:not(.filter-active) {
-    border-color: #2a5a2a;
-    color: #7fd18f;
+  .jump-chip {
+    display: inline-block;
+    min-width: 1.9rem;
+    text-align: center;
+    padding: 0.25rem 0.45rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--color-ink-light);
+    background: var(--color-surface);
+    transition: all 0.15s ease;
+  }
+  .jump-chip:hover {
+    border-color: var(--color-burgundy);
+    color: var(--color-burgundy);
+  }
+  .jump-chip-help {
+    min-width: auto;
+    border-style: dashed;
+  }
+  .jump-flash {
+    animation: jumpflash 1.2s ease;
+  }
+  @keyframes jumpflash {
+    0% { background: color-mix(in srgb, var(--color-gold) 35%, transparent); }
+    100% { background: transparent; }
+  }
+  .help-record .person-card {
+    border-color: var(--color-border);
   }
 </style>

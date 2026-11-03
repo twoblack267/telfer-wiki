@@ -55,6 +55,14 @@ const sortedGenerations = Object.entries(generations)
     ),
   ]);
 
+// 2026-11-03: decade buckets are the directory; people with NO birth year at
+// all are pulled out of the stream and shown at the bottom under
+// "Help Us Complete the Record" instead of as a "Unknown" bucket in the middle
+// of the page.
+const unknownBirth = sortedGenerations.filter(([decade]) => decade === "Unknown").flatMap(([, m]) => m as PersonData[]);
+const datedGenerations = sortedGenerations.filter(([decade]) => decade !== "Unknown");
+const jumpDecades = datedGenerations.map(([decade]) => String(decade));
+
 const years = telferPeople
   .map((p) => parseBirthYear(p.birth_year))
   .filter((y): y is number => y !== null && Number.isFinite(y));
@@ -89,8 +97,8 @@ const otherSurnames = Object.entries(surnameCounts)
     <h1>The Telfer Family</h1>
     <p class="text-[var(--color-ink-light)] mt-2">
       {telferPeople.length} profiles · {minYear}–{maxYear}
-      &nbsp;·&nbsp; <span class="text-[var(--color-burgundy)]">{deceasedCount} deceased</span>
-      &nbsp;·&nbsp; <span class="text-[var(--color-muted)]">{noDeathRecordCount} no death record</span>
+      &nbsp;·&nbsp; <span class="text-[var(--color-burgundy)]">{deceasedCount} with a recorded death</span>
+      &nbsp;·&nbsp; <span class="text-[var(--color-muted)]">{noDeathRecordCount} awaiting dates</span>
     </p>
     <p class="text-sm text-[var(--color-muted)] mt-1 italic">
       The Telfer family line from Scotland to Australia — direct descendants, spouses, and the families they married into.
@@ -110,7 +118,7 @@ const otherSurnames = Object.entries(surnameCounts)
     </div>
     <div class="person-card rounded-xl p-4 text-center">
       <div class="text-2xl font-bold font-serif text-[var(--color-muted)]">{noDeathRecordCount}</div>
-      <div class="text-xs text-[var(--color-muted)] mt-1">No death record</div>
+      <div class="text-xs text-[var(--color-muted)] mt-1">Dates incomplete</div>
     </div>
     <div class="person-card rounded-xl p-4 text-center">
       <div class="text-2xl font-bold font-serif text-[var(--color-burgundy)]">{yearSpan}</div>
@@ -135,10 +143,20 @@ const otherSurnames = Object.entries(surnameCounts)
     </div>
   )}
 
+  <!-- A–Z / decade jump links (tw-2026-11-03): long directory, no endless scrolling -->
+  {jumpDecades.length > 1 && (
+    <nav class="jump-links mb-6" aria-label="Jump to decade">
+      <span class="text-xs text-[var(--color-muted)] mr-1">Jump to:</span>
+      {jumpDecades.map((d) => (
+        <a href={`#gen-${d.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`} class="jump-chip">{d}</a>
+      ))}
+    </nav>
+  )}
+
   <!-- Generations -->
-  {sortedGenerations.map(([decade, members]) => (
+  {datedGenerations.map(([decade, members]) => (
     <div class="mb-8">
-      <h2 class="font-serif text-xl text-[var(--color-burgundy)] mb-3 border-b border-[var(--color-border)] pb-2">
+      <h2 id={`gen-${String(decade).replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`} class="font-serif text-xl text-[var(--color-burgundy)] mb-3 border-b border-[var(--color-border)] pb-2 scroll-mt-20">
         {decade}
         <span class="text-sm text-[var(--color-muted)] font-normal ml-2">({members.length} {members.length === 1 ? "profile" : "profiles"})</span>
       </h2>
@@ -167,4 +185,48 @@ const otherSurnames = Object.entries(surnameCounts)
       </div>
     </div>
   ))}
+
+  <!-- Help Us Complete the Record (tw-2026-11-03) -->
+  {unknownBirth.length > 0 && (
+    <section id="complete-the-record" class="mt-10 pt-6 border-t-2 border-[var(--color-border)]">
+      <h2 class="font-serif text-xl text-[var(--color-burgundy)] mb-2">Help Us Complete the Record</h2>
+      <p class="text-sm text-[var(--color-ink-light)] mb-2">
+        These {unknownBirth.length} people are named in the family record, but no year of birth has been
+        found for them yet. If you hold a notice, headstone photograph, register entry or Bible page that
+        would settle one of them, we would love to hear from you.
+      </p>
+      <p class="text-sm mb-2">
+        <a href={import.meta.env.BASE_URL + "contact/"} class="text-[var(--color-link)]">Send in a record →</a>
+      </p>
+      <p class="text-xs text-[var(--color-muted)] mb-4">
+        Write to <span class="font-mono select-all">contact@telferwiki.com</span> — anyone can send, from any
+        device, no account needed. Name, rough dates, place, and where you got it is enough.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {unknownBirth.map((p) => (
+          <a href={`${import.meta.env.BASE_URL}people/${p.slug}/`} class="person-card rounded-xl p-3 no-underline block hover:border-[var(--color-gold)] transition-all">
+            <div class="text-sm font-medium text-[var(--color-ink)] truncate">{p.display_name}</div>
+            <div class="text-xs text-[var(--color-muted)] mt-0.5">Dates unknown — records incomplete</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
 </BaseLayout>
+
+<style>
+  .jump-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem; }
+  .jump-chip {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-ink-light);
+    background: var(--color-surface);
+    transition: all 0.15s ease;
+  }
+  .jump-chip:hover { border-color: var(--color-burgundy); color: var(--color-burgundy); }
+</style>

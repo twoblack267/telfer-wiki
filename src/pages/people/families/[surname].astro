@@ -33,6 +33,13 @@ members.sort((a, b) => {
 });
 
 const deceased = members.filter((p) => p.is_deceased);
+// 2026-11-03: people with NEITHER birth nor death year are pulled out of the
+// alphabetical list and given their own "Help Us Complete the Record" block at
+// the bottom, so the main list stays a clean directory of dated lives.
+const undatedMembers = members.filter((p) => !p.birth_year && !p.death_year);
+const datedMembers = members.filter((p) => p.birth_year || p.death_year);
+members.length = 0;
+members.push(...datedMembers);
 const noDeathRecord = members.filter((p) => !p.is_deceased);
 
 // Find generations covered
@@ -56,6 +63,13 @@ const span =
     ? `${oldest}–${youngest}`
     : null;
 
+// A–Z jump links for long family lists (tw-2026-11-03). Only show the bar when
+// the family is long enough to need it — a 3-person list does not.
+const letters = [
+  ...new Set(members.map((p) => (p.display_name || "?")[0].toUpperCase()).filter((c) => /[A-Z]/.test(c))),
+].sort();
+const showJump = members.length >= 12 && letters.length > 2;
+
 // Gather unique roles (if available)
 const roles = [...new Set(members.flatMap((p) => p.roles || []))].sort();
 
@@ -65,7 +79,7 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
 
 <BaseLayout
   title={`${surname} Family`}
-  description={`The ${surname} family in the Telfer line — ${members.length} profile${members.length !== 1 ? "s" : ""}${span ? ` spanning ${span}` : ""}, including ${deceased.length} with a recorded death and ${noDeathRecord.length} with no death record. Part of the Telfer Family Wiki, tracing nine generations from Scotland to South Australia.`}
+  description={`The ${surname} family in the Telfer line — ${members.length} profile${members.length !== 1 ? "s" : ""}${span ? ` spanning ${span}` : ""}, including ${deceased.length} with a recorded death and ${noDeathRecord.length} awaiting dates. Part of the Telfer Family Wiki, tracing nine generations from Scotland to South Australia.`}
 >
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
@@ -89,8 +103,8 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
             {span ? ` · spanning ${span}` : ""}
           </p>
           <div class="flex gap-2 mt-3">
-            <span class="text-xs px-3 py-1 rounded badge-deceased">{deceased.length} Deceased</span>
-            <span class="text-xs px-3 py-1 rounded border border-[var(--color-border)] text-[var(--color-muted)]">{noDeathRecord.length} no death record</span>
+            <span class="text-xs px-3 py-1 rounded badge-deceased">{deceased.length} with a recorded death</span>
+            <span class="text-xs px-3 py-1 rounded border border-[var(--color-border)] text-[var(--color-muted)]">{noDeathRecord.length} awaiting dates</span>
           </div>
         </div>
         <div class="text-5xl text-[var(--color-gold)] font-bold font-serif shrink-0">
@@ -127,11 +141,22 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
       </div>
     )}
 
+    <!-- A–Z jump links -->
+    {showJump && (
+      <nav class="jump-links mb-4" aria-label="Jump to letter">
+        <span class="text-xs text-[var(--color-muted)] mr-1">Jump to:</span>
+        {letters.map((l) => (
+          <a href={`#letter-${l}`} data-letter={l} class="jump-chip">{l}</a>
+        ))}
+      </nav>
+    )}
+
     <!-- Members list -->
     <div class="divide-y divide-[var(--color-border)]">
       {members.map((person) => (
         <a
           href={`${import.meta.env.BASE_URL}people/${person.slug}/`}
+          data-row-letter={(person.display_name || "?")[0].toUpperCase()}
           class="flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group"
         >
           <!-- Name & lifespan -->
@@ -139,7 +164,9 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
             <div class="font-medium text-[var(--color-burgundy)] group-hover:text-[var(--color-burgundy-light)] transition-colors">
               {person.display_name}
             </div>
-            <div class="text-sm text-[var(--color-muted)]">{person.lifespan}</div>
+            <div class="text-sm text-[var(--color-muted)]">
+              {person.lifespan ? person.lifespan : "Dates unknown — records incomplete"}
+            </div>
           </div>
 
           {/* Roles preview */}
@@ -149,17 +176,73 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
             </div>
           )}
 
-          {/* Status badge — only a recorded death is ever badged */}
-          <div>
-            {person.is_deceased && (
-              <span class="text-xs px-2 py-0.5 rounded badge-deceased">Deceased</span>
-            )}
-          </div>
-
           {/* Arrow */}
           <span class="text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">→</span>
         </a>
       ))}
     </div>
   </div>
+
+    <!-- Help Us Complete the Record (tw-2026-11-03) -->
+    {undatedMembers.length > 0 && (
+      <section id="complete-the-record" class="mt-10 pt-6 border-t-2 border-[var(--color-border)]">
+        <h2 class="font-serif text-xl text-[var(--color-burgundy)] mb-2">Help Us Complete the Record</h2>
+        <p class="text-sm text-[var(--color-ink-light)] mb-2">
+          {undatedMembers.length === 1 ? "One person in this family carries no year at all" : `${undatedMembers.length} people in this family carry no year at all`}
+          — they are named in the record, but not yet dated. A notice, headstone photograph, register entry
+          or Bible page would settle them, and we would love to hear from you.
+        </p>
+        <p class="text-sm mb-2">
+          <a href={import.meta.env.BASE_URL + "contact/"} class="text-[var(--color-link)]">Send in a record →</a>
+        </p>
+        <p class="text-xs text-[var(--color-muted)] mb-4">
+          Write to <span class="font-mono select-all">contact@telferwiki.com</span> — anyone can send, from any
+          device, no account needed. Name, rough dates, place, and where you got it is enough.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {undatedMembers.map((p) => (
+            <a href={`${import.meta.env.BASE_URL}people/${p.slug}/`} class="person-card rounded-lg p-2.5 no-underline block">
+              <div class="text-sm font-medium text-[var(--color-ink)]">{p.display_name}</div>
+              <div class="text-xs text-[var(--color-muted)] mt-0.5">Dates unknown — records incomplete</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 </BaseLayout>
+
+<script>
+  // A–Z jump (tw-2026-11-03). Duplicate ids within a letter are expected; we
+  // scroll to the FIRST row whose data-letter matches, which is always the top
+  // of that letter group in this list's fixed sort order.
+  (function () {
+    document.querySelectorAll('[data-letter]').forEach((link) => {
+      link.addEventListener('click', function (e) {
+        const letter = this.dataset.letter;
+        const rows = Array.from(document.querySelectorAll('[data-row-letter]'));
+        const target = rows.find((el) => el.dataset.rowLetter === letter);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  })();
+</script>
+
+<style>
+  .jump-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem; }
+  .jump-chip {
+    display: inline-block;
+    min-width: 1.8rem;
+    text-align: center;
+    padding: 0.25rem 0.45rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-ink-light);
+    background: var(--color-surface);
+  }
+  .jump-chip:hover { border-color: var(--color-burgundy); color: var(--color-burgundy); }
+</style>
