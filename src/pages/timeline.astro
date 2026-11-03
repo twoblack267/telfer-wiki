@@ -64,7 +64,7 @@ for (const p of telferPeople) {
         "birth",
         p.display_name,
         p.slug,
-        `${p.display_name} born`,
+        "is born",
       ),
     );
   }
@@ -83,16 +83,16 @@ for (const p of telferPeople) {
         "death",
         p.display_name,
         p.slug,
-        `${p.display_name} died (aged ${aged})`,
+        aged === "?" ? "dies" : `dies, aged ${aged}`,
       ),
     );
   }
 }
 
 // Add key historical events from tree content
-timeline.push({ year: 1839, sortYear: 1839, dateLabel: "1839", type: "event", personName: "Francis Telfer", personSlug: "francis-telfer-1809", detail: "Francis Telfer emigrates to South Australia" });
-timeline.push({ year: 1845, sortYear: 1845, dateLabel: "1845", type: "event", personName: "Telfer Family", personSlug: "", detail: "Telfer family settles in the Tantanoola district, SA" });
-timeline.push({ year: 1874, sortYear: 1874, dateLabel: "1874", type: "event", personName: "John Telfer", personSlug: "john-telfer-1847", detail: "John Telfer marries Caroline Masters" });
+timeline.push({ year: 1839, sortYear: 1839, dateLabel: "1839", type: "event", personName: "Francis Telfer", personSlug: "francis-telfer-1809", detail: "emigrates to South Australia" });
+timeline.push({ year: 1845, sortYear: 1845, dateLabel: "1845", type: "event", personName: "The Telfer family", personSlug: "", detail: "settles in the Tantanoola district, SA" });
+timeline.push({ year: 1874, sortYear: 1874, dateLabel: "1874", type: "event", personName: "John Telfer", personSlug: "john-telfer-1847", detail: "marries Caroline Masters" });
 
 // Sort by year (sortYear guarantees finite numerics; unparseable years sink to the end)
 timeline.sort((a, b) => a.sortYear - b.sortYear);
@@ -153,19 +153,21 @@ for (const t of timeline) {
                 {event.year}
               </div>
               <div class="flex-1 min-w-0">
-                <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-0.5">
-                  {event.type === "birth" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded badge-birth">Born</span>}
-                  {event.type === "death" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded badge-deceased">Died</span>}
-                  {event.type === "event" && <span class="text-xs px-1.5 sm:px-2 py-0.5 rounded bg-[var(--color-navy)] text-white">Event</span>}
+                {/* ONE SENTENCE PER EVENT (Mark, 4 Nov 2026).
+                    This row used to print the badge (Born), then the person's name,
+                    then a detail line that repeated the name again — "Born · John
+                    Telfer · John Telfer born". Three renderings of the same fact in
+                    one line. Now: the name is the link, the sentence ends it. */}
+                <div class="text-xs sm:text-sm">
                   {event.personSlug ? (
-                    <a href={`${import.meta.env.BASE_URL}people/${event.personSlug}/`} class="text-xs sm:text-sm font-medium text-[var(--color-link)]">
+                    <a href={`${import.meta.env.BASE_URL}people/${event.personSlug}/`} class="font-medium text-[var(--color-link)]">
                       {event.personName}
                     </a>
                   ) : (
-                    <span class="text-xs sm:text-sm font-medium text-[var(--color-ink)]">{event.personName}</span>
+                    <span class="font-medium text-[var(--color-ink)]">{event.personName}</span>
                   )}
+                  <span class="text-[var(--color-ink-light)]"> {event.detail}</span>
                 </div>
-                <div class="text-xs sm:text-sm text-[var(--color-ink-light)]">{event.detail}</div>
               </div>
             </div>
           </div>

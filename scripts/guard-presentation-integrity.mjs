@@ -304,6 +304,91 @@ for (const f of CTA_PAGES) {
   }
 }
 
+// ── P9 — no bare dash as a table value ─────────────────────────────────────
+// A cell holding only "—" / "–" / "-" is a database placeholder leaked into the
+// page. The case that forced the rule: a boy who died at 13 had a dash forced
+// into the *Married* column, which reads on the page as a note about the child
+// rather than an empty field. Blank is correct; a dash is editorial.
+for (const f of htmlFiles) {
+  const s = readIf(f) || "";
+  if (!/<table/.test(s)) continue;
+  const dashes = [...s.matchAll(/<td[^>]*>\s*[—–-]\s*<\/td>/g)];
+  if (dashes.length) {
+    violations.push({
+      rule: "P9",
+      file: rel(f),
+      msg: `${dashes.length} table cell(s) contain only a dash. Blank the cell instead.`,
+    });
+  }
+}
+
+// ── P10 — relationship tables must render as a list ────────────────────────
+// "Relation | Name" is a label and a value, not tabular data. Rendered as a table
+// on a phone the label column had to be pinned to a nowrap floor while the value
+// column slivered. If a page still emits a kv-table for relations, the renderer
+// has regressed to the old shape.
+for (const f of htmlFiles) {
+  const s = readIf(f) || "";
+  if (/table class="[^"]*\bkv-table\b/.test(s)) {
+    violations.push({
+      rule: "P10",
+      file: rel(f),
+      msg: "Relationship facts still rendered as a kv TABLE; they must render as <dl class=\"kv-list\">.",
+    });
+  }
+  // P10b — a Children roster must not be a table with a Married column. On a
+  // phone that column sat off-screen behind a sideways scroll, so the one fact
+  // a reader came for ("who did this child marry") was the one they could not
+  // see. Roster of people = list of cards (see .child-list in BaseLayout).
+  if (/<th[^>]*>\s*Married\s*<\/th>/i.test(s)) {
+    violations.push({
+      rule: "P10b",
+      file: rel(f),
+      msg: "Children roster still renders as a table with a Married column; use <ul class=\"child-list\">.",
+    });
+  }
+}
+
+// ── P11 — no AI working notes in a profile body ────────────────────────────
+// Mark, 4 Nov 2026: a profile body is for family, not a research log. The
+// reasoning belongs in the vault's Corrections Log. These markers are the
+// fingerprints of a job writing its process into the published page.
+const AI_NOTE_PATTERNS = [
+  /Checked on \d{1,2} \w+ 20\d\d/i,
+  /DATE DISCREPANCY/i,
+  /⚠️/,
+  /\b(OPEN|CLOSED)\b\s*[—-]\s*(Discrepancy|DATE)/i,
+  /the blocker was never/i,
+  /nobody had read the row/i,
+  /\bVerifier,\s*\d/i,
+];
+for (const f of htmlFiles) {
+  if (!/\/people\/[^/]+\/index\.html$/.test(f.replace(/\\/g, "/"))) continue;
+  const s = readIf(f) || "";
+  for (const rx of AI_NOTE_PATTERNS) {
+    const m = s.match(rx);
+    if (m) {
+      violations.push({
+        rule: "P11",
+        file: rel(f),
+        msg: `Profile body contains a research working note ("${m[0]}"). Move it to the Corrections Log.`,
+      });
+      break;
+    }
+  }
+}
+
+// ── P12 — timeline rows must not repeat the name ───────────────────────────
+// A row used to read "Born · John Telfer · John Telfer born". The badge and the
+// duplicated detail were removed; this catches a regression to that shape.
+for (const f of htmlFiles) {
+  if (!/timeline\/index\.html$/.test(f.replace(/\\/g, "/"))) continue;
+  const s = readIf(f) || "";
+  if (/\bborn<\/span>|>Born<\/span>|>Died<\/span>/.test(s) && /\bborn\b[^<]{0,80}\bborn\b/i.test(s)) {
+    violations.push({ rule: "P12", file: rel(f), msg: "Timeline row repeats the person's name or the birth event." });
+  }
+}
+
 // ── report ─────────────────────────────────────────────────────────────────
 if (violations.length) {
   console.error("\nGATE FAILED — presentation integrity:");

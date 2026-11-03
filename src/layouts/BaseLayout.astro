@@ -699,6 +699,112 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     overflow-wrap: normal;
   }
 
+  /* ── KEY/VALUE FACTS AS A LIST, NOT A TABLE (Mark, 4 Nov 2026) ────────────
+     "Relation | Name" tables (Parents, Spouses, Siblings) are a label and a
+     value. As a table on a phone the label column had to be forced to a nowrap
+     7rem floor — pure overhead for a two-word label — while the value column
+     was squeezed into the remainder and real names wrapped mid-word.
+     format-body.mjs now emits <dl class="kv-list"> instead. Label above value,
+     full width, wrapping where it needs to. No scroll container, no nowrap
+     floor, nothing to clip. */
+  .wiki-content .kv-list {
+    margin: 0;
+    padding: 0;
+  }
+  .wiki-content .kv-list .kv-item {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .wiki-content .kv-list .kv-item:last-child {
+    border-bottom: 0;
+  }
+  .wiki-content .kv-list dt.kv-label {
+    font-family: var(--font-sans, sans-serif);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin: 0 0 0.1rem;
+  }
+  .wiki-content .kv-list dd.kv-value {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-ink);
+    overflow-wrap: anywhere;
+  }
+  .wiki-content .kv-list .kv-none {
+    color: var(--color-muted);
+    font-style: italic;
+    font-size: 0.85rem;
+  }
+
+  /* Children rosters: one card per child, never a 4-column spreadsheet.
+     A phone showed "Child | Born | Died | Married" as a cramped grid with the
+     Married column scrolled off-screen — facts about a dead child you had to
+     swipe sideways to read. Each child is now a block: name on its own line,
+     then only the facts that actually exist, as small labelled values. */
+  .wiki-content .child-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  @media (min-width: 34rem) {
+    .wiki-content .child-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .wiki-content .child-list .child-item {
+    padding: 0.5rem 0 0.5rem 0.7rem;
+    border-left: 2px solid var(--color-border);
+  }
+  .wiki-content .child-list .child-name {
+    font-weight: 600;
+    color: var(--color-heading);
+    overflow-wrap: anywhere;
+  }
+  .wiki-content .child-list .child-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 0.75rem;
+    margin-top: 0.15rem;
+  }
+  .wiki-content .child-list .child-fact {
+    font-size: 0.85rem;
+    color: var(--color-ink);
+    overflow-wrap: anywhere;
+  }
+  .wiki-content .child-list .child-fact-label {
+    color: var(--color-muted);
+    margin-right: 0.3rem;
+  }
+  .wiki-content .child-list .child-fact-label::after {
+    content: '';
+  }
+
+  /* Marriage entries: each marriage is a block, because the Notes column holds
+     a sentence, not a cell value. */
+  .wiki-content .marr-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .wiki-content .marr-list .marr-item {
+    padding: 0.5rem 0 0.5rem 0.7rem;
+    border-left: 2px solid var(--color-border);
+  }
+  .wiki-content .marr-list .marr-when {
+    font-weight: 600;
+    color: var(--color-heading);
+  }
+  .wiki-content .marr-list .marr-fact {
+    font-size: 0.9rem;
+    color: var(--color-ink);
+    overflow-wrap: anywhere;
+  }
+
   /* Wrapper for horizontal-scroll safety net on genuinely wide tables.
      HISTORY: .wiki-content > table { display:block; overflow-x:auto } was applied
      to the table ITSELF. That makes width:100% resolve against the table's own

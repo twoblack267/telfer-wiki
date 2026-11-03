@@ -133,6 +133,19 @@ const otherSurnames = Object.entries(surnameCounts)
       <p class="text-sm text-[var(--color-ink-light)] mb-3">
         These non-Telfer surnames joined the family line through marriage:
       </p>
+      {/* NAMING CONVENTION, SAID WHERE IT IS NEEDED (Mark, 4 Nov 2026).
+          The rule used to live only in the vault's working notes, so a visitor
+          seeing "Dillon" beside "Telfer" had no way to tell whether it was a
+          married-in family, a maiden name, or a mistake. Two sentences, on the
+          page that raises the question. */}
+      <p class="text-sm text-[var(--color-ink-light)] mb-3">
+        A woman is listed under the surname she was <em>born</em> with, and her
+        married name is given alongside where it is known — so
+        <em>Esther Telfer Smith</em> is the daughter of Francis Telfer who married
+        John Smith, not a member of a separate Smith line. Women who married out
+        of the Telfer line keep their Telfer name here for the same reason: the
+        archive follows the blood, and records the marriage separately.
+      </p>
       <div class="flex flex-wrap gap-2">
         {otherSurnames.map(([name, count]) => (
           <span class="text-xs px-3 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-ink-light)]">

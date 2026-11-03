@@ -3,6 +3,29 @@
  * Converts [[Wiki Links]] to proper HTML anchor tags.
  */
 
+// A markdown table row is delimited by pipes, EXCEPT pipes inside
+// [[wikilinks]] or [text](url). Filtering empty cells after the split
+// shifts every later cell left and silently loses the first one — which
+// is how children's names vanished from published pages. Split on
+// pipes only, then drop exactly the outer empties.
+export const splitRow = (line) => {
+  const cells = [];
+  let cur = '';
+  let depth = 0;
+  for (let c = 0; c < line.length; c++) {
+    const ch = line[c];
+    if (ch === '[') depth++;
+    else if (ch === ']') depth = Math.max(0, depth - 1);
+    if (ch === '|' && depth === 0) { cells.push(cur); cur = ''; }
+    else cur += ch;
+  }
+  cells.push(cur);
+  // drop the leading/trailing artefact cells produced by outer pipes
+  if (cells.length && cells[0].trim() === '') cells.shift();
+  if (cells.length && cells[cells.length - 1].trim() === '') cells.pop();
+  return cells.map((c) => c.trim());
+};
+
 export function formatBody(body, people) {
   if (!body) return "";
 
@@ -93,7 +116,7 @@ export function formatBody(body, people) {
           return s;
         });
         if (rows.length < 2) return match;
-        const headers = rows[0].split('|').filter((c) => c.trim()).map((c) => c.trim());
+        const headers = splitRow(rows[0]);
         // Only treat as a table if the 2nd line is a real separator (--- | --- pattern)
         const sep = rows[1].replace(/\|/g, '').trim();
         if (!/^[-: ]+$/.test(sep) || !sep.includes('-')) return match;
@@ -109,18 +132,106 @@ export function formatBody(body, people) {
         // Father, Spouse...) needs the nowrap floor in BaseLayout. A 2-column
         // table whose first column holds PERSON NAMES (Family / Children tables)
         // must wrap, or the page overflows. Distinguish by header text.
-        const KV = /^(relation|relationship|role|field|attribute|item|key|detail|fact|event|date|label)$/i;
-        const kvCls = headers.length === 2 && KV.test(headers[0]) ? ' kv-table' : '';
-        let html = `<div class="table-scroll"><table class="w-full border-collapse my-0 text-sm${wideCls}${kvCls}"><thead><tr>`;
+        const KV = /^(relation|relationship|role|field|attribute|item|key|detail|fact|date|label)$/i;
+        const isKV = headers.length === 2 && KV.test(headers[0]);
+
+        // ── KEY/VALUE TABLES BECOME A LIST, NOT A SPREADSHEET (Mark, 4 Nov 2026) ──
+        // "Relation | Name" (Parents / Spouses / Siblings) is a two-column grid whose
+        // left column is a label and whose right column is one or more names. On a
+        // phone that renders as a cramped table with a nowrap label column eating half
+        // the width, and the names sliver-wrap into unreadable fragments. Nothing about
+        // it benefits from being a table: it is a list of facts. Render it as one —
+        // label above, names below, full width, wrapping naturally.
+        if (isKV) {
+          let html = '<dl class="kv-list my-0 space-y-1.5">';
+          for (let i = 2; i < rows.length; i++) {
+            const cells = splitRow(rows[i]).slice(0, headers.length);
+            if (cells.length < 2) continue;
+            const label = cells[0];
+            const value = cells.slice(1).join(' | ').trim();
+            if (!label) continue;
+            html += '<div class="kv-item">';
+            html += `<dt class="kv-label">${label}</dt>`;
+            html += `<dd class="kv-value">${value || '<span class="kv-none">not recorded</span>'}</dd>`;
+            html += '</div>';
+          }
+          html += '</dl>';
+          return html;
+        }
+
+        const isEmptyCell = (c) => /^[—–\-\u2014\u2013]$/.test(c.trim());
+
+        // ── MARRIAGE ENTRIES BECOME A LIST (Mark, 4 Nov 2026) ────────────────────
+        // "# | Married | To | Notes", "Married | To", "Married | To | Notes":
+        // one entry per marriage, and the Notes cell often holds a whole
+        // sentence. A table squeezes that into a sliver; a block gives it room.
+        const isMarriage =
+          /^(#|no\.?|marriage|married|wedding|spouse)$/i.test(headers[0]) &&
+          headers.length >= 2;
+        if (isMarriage) {
+          let out = '<div class="marr-list"><ul>';
+          for (let r = 2; r < rows.length; r++) {
+            const cells = splitRow(rows[r]).slice(0, headers.length);
+            while (cells.length < headers.length) cells.push('');
+            if (!cells.some((c) => c && !isEmptyCell(c))) continue;
+            const when = cells.find((c) => /\d{3,4}/.test(c)) || '';
+            let item = '<li class="marr-item">';
+            if (when) item += `<div class="marr-when">${when}</div>`;
+            for (let c = 0; c < cells.length; c++) {
+              const v = cells[c];
+              if (!v || isEmptyCell(v) || v === when) continue;
+              item += `<div class="marr-fact">${v}</div>`;
+            }
+            out += item + '</li>';
+          }
+          return out + '</ul></div>';
+        }
+
+        // ── CHILDREN ROSTERS BECOME A LIST (Mark, 4 Nov 2026) ─────────────────
+        // "Child | Born | Died | Married" is a roster of people, not tabular
+        // data. On a phone the Married column sat off-screen behind a sideways
+        // scroll, so the one fact a reader wanted was the one they could not
+        // see. Each child is now a block: the NAME first, then only the facts
+        // that actually exist. A blank cell says nothing at all.
+        const isChildren = /^child(ren)?$/i.test(headers[0]) && headers.length >= 2;
+        if (isChildren) {
+          let out = '<div class="child-list"><ul>';
+          for (let r = 2; r < rows.length; r++) {
+            const cells = splitRow(rows[r]).slice(0, headers.length);
+            while (cells.length < headers.length) cells.push('');
+            if (!cells[0]) continue;                       // no name, no row
+            const facts = [];
+            for (let c = 1; c < cells.length; c++) {
+              const v = cells[c];
+              if (!v || isEmptyCell(v)) continue;          // blank or dash: silence
+              facts.push(`<span class="child-fact"><span class="child-fact-label">${headers[c]}</span>${v}</span>`);
+            }
+            out += `<li class="child-item"><div class="child-name">${cells[0]}</div>`;
+            if (facts.length) out += `<div class="child-facts">${facts.join('')}</div>`;
+            out += '</li>';
+          }
+          return out + '</ul></div>';
+        }
+
+        // ── EMPTY CELLS STAY EMPTY (Mark, 4 Nov 2026) ──────────────────────────
+        // A dash in a table cell is only ever a database placeholder — "this field
+        // exists and has no value". Printed next to a child who died in infancy it
+        // reads as "this child never married, and we are noting the absence", which
+        // is a small cruelty dressed as completeness. A blank cell says the same
+        // thing without the editorial. So a cell that is nothing but a dash, an
+        // en/em dash, or a bare hyphen renders EMPTY.
+        let html = `<div class="table-scroll"><table class="w-full border-collapse my-0 text-sm${wideCls}"><thead><tr>`;
         for (const h of headers) {
           html += `<th class="bg-[var(--color-heading)] text-white font-sans font-semibold text-left px-2 py-1">${h}</th>`;
         }
         html += '</tr></thead><tbody>';
         for (let i = 2; i < rows.length; i++) {
-          const cells = rows[i].split('|').filter((c) => c.trim()).map((c) => c.trim());
+          // DO NOT filter empty cells — dropping a blank cell shifts every
+          // later cell one column left. Keep positional cells, render dash blanks empty.
+          const cells = splitRow(rows[i]).slice(0, headers.length);
           html += '<tr>';
           for (const c of cells) {
-            html += `<td class="px-2 py-0.5 border-b border-[var(--color-border)]">${c}</td>`;
+            html += `<td class="px-2 py-0.5 border-b border-[var(--color-border)]">${isEmptyCell(c) ? '' : c}</td>`;
           }
           html += '</tr>';
         }
@@ -130,8 +241,12 @@ export function formatBody(body, people) {
     )
     // Convert bullet points
     .replace(/^[-*] (.+)$/gm, "<li class='ml-4 text-[var(--color-ink)]'>$1</li>")
-    // Wrap consecutive <li> in <ul>
-    .replace(/((?:<li[^>]*>.*?<\/li>\n?)+)/g, "<ul class='space-y-1 my-0'>$1</ul>")
+    // Wrap consecutive <li> in <ul>. Skip our roster items: they carry a
+    // child-item / marr-item class and are already positioned inside their own
+    // list block. Wrapping them again produced <ul><ul><li class="child-item">
+    // and an invalid tree (the second <ul> was the inner bullet list, converted
+    // later in this chain, so it could not be matched here).
+    .replace(/((?:<li(?![^>]*class="(?:child|marr)-item")[^>]*>.*?<\/li>\n?)+)/g, "<ul class='space-y-1 my-0'>$1</ul>")
     // Convert numbered lists
     .replace(/^\d+\.\s+(.+)$/gm, "<li class='ml-4 list-decimal text-[var(--color-ink)]'>$1</li>")
     // Images: ![alt](path) — now handles blockquote-stripped markdown
@@ -177,6 +292,12 @@ export function formatBody(body, people) {
   html = html.replace(/(<\/(?:h[1-6]|table|figure|ul|ol|li)>)\s*(<br>)+/gi, "$1");
   // Strip <br> after <br> (consecutive break collapse)
   html = html.replace(/(<br>)+\s*(<br>)+/gi, "<br>");
+
+  // The bullet-list regex earlier in this chain matches ANY run of <li>…</li>,
+  // including the ones the children and marriage rosters already emit inside
+  // their own <ul class="x-roster">. That produced <ul><ul><li class="child-item">
+  // and an invalid list tree. Drop the injected wrapper so each roster keeps
+  // exactly one list element.
 
   return html;
 }
@@ -380,6 +501,53 @@ export function stripWikiLinks(text) {
     const [, alias] = inner.split("|");
     return alias || inner;
   }).replace(/[\[\]]/g, "");
+}
+
+/**
+ * Build a CAPTION for a photo — a short, human line — from the alt text.
+ *
+ * Why this exists (Mark, 4 Nov 2026): the gallery used to print img.alt as the
+ * <figcaption>. Alt text is written for a machine that cannot see the picture:
+ * it leads with "Photograph of", spells out who is in the frame at length, and
+ * often repeats the file's own description. Printed verbatim as a caption it
+ * reads like a caption that forgot it was a caption, and it duplicates the alt
+ * attribute — screen readers then announce the same sentence twice.
+ *
+ * The rules, in order:
+ *   1. Drop the mechanical opening ("Photograph of", "Portrait of", "Image of",
+ *      "Picture of", "Photo of") — the reader can see it is a photograph.
+ *   2. If the caption would just restate the person's own name, return "" — the
+ *      page is already titled with their name, so the caption adds nothing.
+ *   3. Trim to the first sentence, and to a sane length at a word boundary.
+ *   4. Keep any wiki links inside the remaining text so captions can still name
+ *      relatives as clickable links.
+ */
+export function captionFor(alt, linkify, ownerName = "") {
+  const raw = stripWikiLinks(alt).trim();
+  if (!raw) return "";
+
+  // 1. mechanical opening
+  let s = raw.replace(/^(?:a\s+)?(?:black[- ]and[- ]white\s+|sepia\s+|colour\s+|color\s+)?(?:photograph|photo|portrait|image|picture|daguerreotype|ambrotype|carte[- ]de[- ]visite|snapshot)\s+(?:of|showing)\s+/i, "");
+  s = s.replace(/^(?:photograph|photo|portrait|image|picture)\s*[:\-–—]\s*/i, "");
+  s = s.trim();
+
+  // 2. the caption is not worth printing if it only names the subject
+  const norm = (x) => x.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+  if (ownerName && norm(s) === norm(ownerName)) return "";
+  if (!s) return "";
+
+  // 3. first sentence only, capped
+  const firstSentence = s.split(/(?<=[.!?])\s+/)[0] || s;
+  let out = firstSentence.replace(/[.\s]+$/, "").trim();
+  const MAX = 160;
+  if (out.length > MAX) {
+    const cut = out.slice(0, MAX);
+    const atWord = cut.replace(/\s+\S*$/, "");
+    out = (atWord.length > 80 ? atWord : cut) + "…";
+  }
+
+  // 4. re-link any names still present
+  return linkify ? linkify(out) : out;
 }
 
 // Derive a lifespan fresh from the display fields, so a stale stored `lifespan`
