@@ -311,7 +311,7 @@
     "from": "kirrily-sheree-maddern-1976",
     "to": "kirrily-sharee-maddern",
     "matched_by": "removed-declared",
-    "display_name": "Kirrily Sheree Maddern",
+    "display_name": "kirrily-sharee-maddern",
     "reason": "NOT a phantom - a spelling/OCR variant of a LIVING person, so the page must not simply vanish. 'Sheree' is a variant of the vault's Kirrily Sharee Maddern (b. 15 Apr 1976, Cummins SA): same parents (Robert Norman Maddern & Lyndell Marie Telfer), same husband (Daniel Colin Dingwall, m. 2 Oct 2005), same birth YEAR but a conflicting day (1 Apr vs 15 Apr). The stub carried no vault_file and a 96-character body, so it was a carry-over record, not a second person. Retired 2026-10-29 (scripts/retired-profiles.json) and pointed at the vault-backed record. Two corrections on 4 Nov 2026: the retirement tombstone had been KEYED BY ID instead of slug, so retire-profiles.mjs never matched it and the duplicate stayed live and indexed for six days; and no redirect declaration existed, so retiring it would have left a dead 200 OK page in search engine indexes. Generated redirect, NOT one of the six PRIVACY_STRIP_SLUGS. Retired, not erased."
   },
   {
