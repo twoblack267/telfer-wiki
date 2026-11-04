@@ -328,12 +328,12 @@ function navIsActive(entry: { href: string; match: string }): boolean {
       /* Tailwind's lg: utilities for these buttons are not in the compiled CSS,
          so pin their visibility here instead of trusting the class list. */
       @media(min-width:1024px){#nav-toggle{display:none}}
-      /* Desktop nav must be hidden below lg; the lg:flex class is not in the
-         compiled CSS, so the list was rendering on phones above the drawer. */
-      #nav-desktop{display:none;align-items:center;gap:.25rem}
-      @media(min-width:1024px){#nav-desktop{display:flex}}
-      /* One menu, two presentations (2026-11-03). #nav-desktop is the only
-         link list in the DOM: a row above 1024px, a stacked drawer below it. */
+      /* nav-desktop below lg (2026-11-04). It previously carried Tailwind's
+         `hidden` class, which is emitted into the external stylesheet as
+         `.hidden{display:none}` — and an external rule beats an inline one on
+         specificity ties, so `#nav-desktop.is-open{display:flex}` lost and the
+         drawer NEVER appeared. Pinned inline here instead; the `hidden` class
+         was removed from the element in the same pass. */
       #nav-desktop{display:none;align-items:center;gap:.25rem}
       @media(min-width:1024px){#nav-desktop{display:flex}}
       /* Mobile drawer (2026-11-04). Two defects fixed here:
@@ -354,14 +354,20 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          only as wide as its own label, so the icons never lined up in a column
          and the active pill looked like a stray floating button. */
       #nav-desktop.is-open>a.nav-link{display:flex;width:100%;justify-content:flex-start;text-align:left}
-      /* the scrim: covers the viewport below the header, sits under the panel */
-      /* The scrim (2026-11-04). `inset:0` followed by `top:var(--nav-h)` leaves
-         BOTTOM unset, and because `inset` is a shorthand that resolves to
-         top/right/bottom/left, the later `top` alone left nothing to fill — the
-         scrim measured 0px tall and never rendered. It needs an explicit bottom. */
-      #nav-desktop.is-open::before{content:"";position:fixed;top:var(--nav-h,4.75rem);
-        right:0;bottom:0;left:0;
-        background:rgba(0,0,0,.55);z-index:-1;pointer-events:none}
+      /* The scrim (2026-11-04). It used to be a `::before` on this panel, which
+         measured 0px tall live no matter what top/bottom values were set — the
+         pseudo-element could not be painted to viewport height. A real div with
+         identical geometry measured 768px in the same document, so the fix is a
+         real element: #nav-scrim below, toggled by `.is-open` on this panel. */
+      #nav-desktop.is-open~#nav-scrim{opacity:1;pointer-events:auto}
+      /* Real element, real geometry. Fixed to the viewport, pinned below the
+         measured header height, and it must be a sibling AFTER the panel in the
+         DOM for the ~ selector above to reach it. z-index -1 keeps it under the
+         panel's own stacking context without disappearing behind the page. */
+      #nav-scrim{position:fixed;top:var(--nav-h,4.75rem);right:0;bottom:0;left:0;
+        background:rgba(0,0,0,.55);z-index:0;opacity:0;pointer-events:none;
+        transition:opacity .18s ease}
+      @media(min-width:1024px){#nav-scrim{display:none}}
       @media(min-width:1024px){#nav-desktop.is-open{position:static;flex-direction:row;box-shadow:none;border-top:0;padding:0;max-height:none}}
       /* Overflow containment (2026-11-04). The bar previously burst its container:
          14 items needed 1347px inside a 1024px max-w-5xl wrapper, nothing wrapped,
@@ -410,7 +416,7 @@ function navIsActive(entry: { href: string; match: string }): boolean {
              above only toggles this one element's visibility below the lg
              breakpoint; nothing is duplicated for a second breakpoint.
              Guarded by scripts/guard-presentation-integrity.mjs (rule P2b). -->
-        <div id="nav-desktop" class="hidden lg:flex gap-1 items-center">
+        <div id="nav-desktop" class="lg:flex gap-1 items-center">
           {NAV.map((n) => (
             <a
               href={import.meta.env.BASE_URL + n.href}
@@ -423,6 +429,12 @@ function navIsActive(entry: { href: string; match: string }): boolean {
           ))}
         </div>
 
+        <!-- Scrim behind the open drawer. A real element, not a ::before on the
+             panel: the pseudo-element could not be painted to viewport height
+             (measured 0px live, every time). Must stay AFTER #nav-desktop in the
+             DOM — the sibling rule that reveals it uses `~`. -->
+        <div id="nav-scrim" aria-hidden="true"></div>
+
         <!-- Dark Mode Toggle -->
         <button id="theme-toggle" class="min-w-[44px] min-h-[44px] p-3 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-heading)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle dark mode" title="Toggle dark/light mode">
           <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -430,8 +442,8 @@ function navIsActive(entry: { href: string; match: string }): boolean {
         </button>
                 <!-- Hamburger button -->
         <button id="nav-toggle" class="lg:hidden min-w-[44px] min-h-[44px] p-3 rounded-lg text-[var(--color-ink-light)] hover:text-[var(--color-heading)] hover:bg-[var(--color-surface)] transition-colors" aria-label="Toggle navigation">
-          <svg id="nav-icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-          <svg id="nav-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          <svg id="nav-icon-open" style="display:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg id="nav-icon-close" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
       </div>
 
@@ -603,37 +615,33 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     syncNavH();
     window.addEventListener('resize', syncNavH, { passive: true });
 
-    toggle.addEventListener('click', () => {
-      // `is-open` drives visibility from the inline stylesheet.
-      // Icon swap uses explicit `display` (2026-11-04) rather than Tailwind's
-      // `hidden`: that utility IS emitted, but only into the external page
-      // stylesheet, so on first paint both glyphs were briefly visible and the
-      // button showed a hamburger while the menu was already open. Inline
-      // display cannot lose that race.
-      const isOpen = !panel.classList.contains('is-open');
+    // ONE code path opens and closes the drawer (2026-11-04). Three handlers
+    // used to edit panel + icons + aria separately and drifted apart: Escape
+    // still toggled Tailwind's `hidden` class while click used inline display,
+    // so after Escape both glyphs were hidden and the button went blank.
+    // Every path now funnels through setOpen.
+    const setOpen = (isOpen) => {
       panel.classList.toggle('is-open', isOpen);
-      if (iconOpen) iconOpen.style.display = isOpen ? 'none' : '';
-      if (iconClose) iconClose.style.display = isOpen ? '' : 'none';
+      if (iconOpen) iconOpen.style.display = isOpen ? 'none' : 'block';
+      if (iconClose) iconClose.style.display = isOpen ? 'block' : 'none';
       toggle.setAttribute('aria-expanded', String(isOpen));
-    });
+      toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    };
+    setOpen(false);
+
+    toggle.addEventListener('click', () => setOpen(!panel.classList.contains('is-open')));
 
     // Close on outside click
     document.addEventListener('click', (e) => {
       if (panel.classList.contains('is-open') && !toggle.contains(e.target) && !panel.contains(e.target)) {
-        panel.classList.remove('is-open');
-        if (iconOpen) iconOpen.style.display = '';
-        if (iconClose) iconClose.style.display = 'none';
-        toggle.setAttribute('aria-expanded', 'false');
+        setOpen(false);
       }
     });
 
     // Close on Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && panel.classList.contains('is-open')) {
-        panel.classList.remove('is-open');
-        iconOpen?.classList.remove('hidden');
-        iconClose?.classList.add('hidden');
-        toggle.setAttribute('aria-expanded', 'false');
+        setOpen(false);
         toggle.focus();
       }
     });
