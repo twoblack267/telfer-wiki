@@ -157,18 +157,55 @@ export function formatBody(body, people) {
         // it benefits from being a table: it is a list of facts. Render it as one —
         // label above, names below, full width, wrapping naturally.
         if (isKV) {
+          // ── A BLANK LABEL CONTINUES THE PREVIOUS ROW, IT DOES NOT DELETE IT ──
+          // The vault writes multi-list rows as a labelled first row followed by
+          // blank-label continuation rows:
+          //     | **Siblings** | [[Daryll William Telfer]] (brother) |
+          //     |              | [[Susan Shirley Lawrie (1967)]] (sister, adopted) |
+          // Treating every blank label as "skip this row" silently threw away all
+          // but the first sibling — and with them the '(sister, adopted)' wording
+          // that is often the ONLY place the adoption fact appears. Merge each
+          // continuation into the row above so the label carries the whole list.
           let html = '<dl class="kv-list my-0 space-y-1.5">';
-          for (let i = 2; i < rows.length; i++) {
-            const cells = splitRow(rows[i]).slice(0, headers.length);
-            if (cells.length < 2) continue;
-            const label = cells[0];
-            const value = cells.slice(1).join(' | ').trim();
-            if (!label) continue;
+          let pendingLabel = null;
+          let pendingValues = [];
+          const flush = () => {
+            if (pendingLabel === null) return;
+            const value = pendingValues.filter(Boolean).join(', ');
             html += '<div class="kv-item">';
-            html += `<dt class="kv-label">${label}</dt>`;
+            html += `<dt class="kv-label">${pendingLabel}</dt>`;
             html += `<dd class="kv-value">${value || '<span class="kv-none">not recorded</span>'}</dd>`;
             html += '</div>';
+            pendingLabel = null;
+            pendingValues = [];
+          };
+          for (let i = 2; i < rows.length; i++) {
+            // ── RECOVER THE EMPTY LABEL CELL THAT NORMALISATION ATE ──────────
+            // The normalise pass above does `slice(1)` on a leading pipe, and for a
+            // blank-label continuation row `| | [[Name]] (brother) |` that leaves
+            // `| [[Name]] (brother)`. splitRow then drops the leftover empty lead,
+            // so the row arrives as ONE cell and `cells.length < 2` used to discard
+            // it — silently deleting every sibling after the first. Detect the
+            // collapsed shape and restore the empty label explicitly.
+            let cells = splitRow(rows[i]);
+            if (cells.length < headers.length && rows[i].trim().startsWith('|')) {
+              cells = ['', ...cells];
+            }
+            cells = cells.slice(0, headers.length);
+            if (cells.length < 2) continue;
+            const label = (cells[0] || '').trim();
+            const value = cells.slice(1).join(' | ').trim();
+            if (!label) {
+              // continuation of the row above — only if there is one, and only
+              // if it actually carries a value (a trailing blank row is noise).
+              if (pendingLabel !== null && value) pendingValues.push(value);
+              continue;
+            }
+            flush();
+            pendingLabel = label;
+            pendingValues = value ? [value] : [];
           }
+          flush();
           html += '</dl>';
           return html;
         }
