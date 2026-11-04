@@ -105,7 +105,7 @@ const rewriteNoindex = (content) => {
   const sentence =
     noindexCount === 0
       ? `**Currently no person page is noindexed** — every individual page is publicly indexable.`
-      : `**Currently ${noindexCount} person page${noindexCount === 1 ? " is" : "s are"} carrying \`noindex, nofollow\` and excluded from the sitemap** — see \`src/data/privacy-exclusions.mjs\` for the list.`;
+      : `**Currently ${noindexCount} person page${noindexCount === 1 ? " is" : "s are"} withdrawn from publication entirely** — the pages return 404, no link points at them, and none appears in the sitemap. They carry no \`noindex\` meta because there is no page left to carry it (the site's 26 Oct 2026 withdrawn-slug ruling); see \`src/data/privacy-exclusions.mjs\` for the list.`;
   if (!NOINDEX_LINE.test(content)) {
     return { ok: false, detail: "no privacy-noindexed reference line found" };
   }
