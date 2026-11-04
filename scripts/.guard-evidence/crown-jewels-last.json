@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-04T00:05:42.063Z",
+  "checkedAt": "2026-11-04T00:34:28.583Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -9,18 +9,5 @@
   "crownJewelsChecked": 6,
   "renames": [],
   "failures": [],
-  "warnings": [
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "peter-telfer",
-      "name": "Peter Telfer",
-      "field": "children",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "john-telfer-robert"
-      ]
-    }
-  ]
+  "warnings": []
 }
