@@ -400,13 +400,49 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          It now covers the header too (top:0), because the drawer is a left
          side panel: leaving the header bright above a dimmed page looked like
          two unrelated layers. z-index 40 sits under the panel's 45 and under
-         nothing else. */
-      #nav-scrim{position:fixed;top:0;right:0;bottom:0;left:0;
+         nothing else.
+         THE NOV 2026 BLACK BAR (fixed). The rule below used to be
+         `opacity:0` only. An element at opacity 0 still takes part in layout,
+         and #nav-scrim is a position:fixed body child with all four offsets
+         set - so its static position resolved to the top-left corner and it
+         behaved as an in-flow flex ITEM of <body> (which is a flex column).
+         That gave the body a phantom full-width first row, pushed the page
+         right (dead strip up the left edge) and made the top bar stop short
+         of the right edge. `display:none` removes it from flow entirely; it
+         is only ever needed below the lg breakpoint, where
+         `body.nav-open #nav-scrim` flips it back to display:block. */
+      #nav-scrim{display:none;position:fixed;top:0;right:0;bottom:0;left:0;
         background:rgba(0,0,0,.55);z-index:40;opacity:0;pointer-events:none;
         transition:opacity .18s ease}
-      body.nav-open #nav-scrim{opacity:1;pointer-events:auto}
+      body.nav-open #nav-scrim{display:block;opacity:1;pointer-events:auto}
       @media(min-width:1024px){#nav-scrim{display:none}}
       @media(min-width:1024px){#nav-desktop.is-open{position:static;flex-direction:row;box-shadow:none;border-top:0;padding:0;max-height:none}}
+      /* THE TOP BAR NOT SPANNING (fixed). Why the header read as a strip rather
+         than a full-width bar: <nav> is painted with --color-nav-bg, which is
+         rgba(...,0.85) - an 85% opaque surface over whatever is behind it. With
+         nothing painted on <html>/<body> there IS nothing behind it, so the
+         15% transparency composited to black in light mode. The bar looked dark
+         and half-width because the only place the page paper showed through was
+         the max-w-5xl content column. Paint the paper on the root so the bar has
+         the page behind it, as the token always assumed. */
+      html{background-color:var(--color-paper)}
+      body{background-color:var(--color-paper)}
+      body>nav.no-print{background-color:var(--color-nav-bg)}
+      /* FULL-BLEED BAR (2026-11-04, Mark's "top isn't going across properly").
+         The bar has always been background-painted edge to edge, but its INNER
+         CONTENT lived in a max-w-5xl (1024px) centred wrapper - so on a MacBook
+         (~1440-1512px) the painted strip ran full width while the logo and links
+         sat in a 1024px island with 200-250px of empty bar either side. That
+         reads as "not going across": the eye measures the content, not the paint.
+         The bar's content is now aligned to the same gutters as <main> at every
+         width below 1024px and allowed to use the full width above it, so the
+         header content and the page content share one grid. Main keeps its
+         readable measure and is aligned the same way by the rule below. */
+      @media(min-width:1024px){
+        body>nav.no-print>div{max-width:none;padding-left:2rem;padding-right:2rem}
+        main{max-width:none;padding-left:2rem;padding-right:2rem}
+        main>*{max-width:1400px;margin-left:auto;margin-right:auto}
+      }
       /* Overflow containment (2026-11-04). The bar previously burst its container:
          14 items needed 1347px inside a 1024px max-w-5xl wrapper, nothing wrapped,
          so the document grew to 1641px wide and the whole page scrolled sideways.
