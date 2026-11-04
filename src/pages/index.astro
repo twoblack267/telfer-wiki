@@ -14,6 +14,15 @@ const telferPeople = peopleData;
 const deceasedTelfer = telferPeople.filter((p) => p.is_deceased);
 const livingTelfer = telferPeople.filter((p) => !p.is_deceased);
 
+// 2026-11-05: this card used to print livingTelfer.length under the label
+// "Dates incomplete" — i.e. it counted everybody not flagged deceased (283,
+// of whom 264 are living relatives withheld for privacy) and presented them
+// as missing dates. The real gap is people with no year at all (45). The
+// living are not a defect, so they come out of the stats entirely.
+const noYearTelfer = telferPeople.filter((p) => !p.birth_year && !p.death_year);
+// Known dead, but no death YEAR recorded — a distinct, honest figure.
+const deadNoYearTelfer = telferPeople.filter((p) => p.is_deceased && !p.death_year);
+
 // Find earliest and latest years
 const validPeople = peopleData.filter((p) => p.birth_year);
 const years = validPeople.map((p) => p.birth_year as number);
@@ -134,8 +143,8 @@ const recentPeople = (recentData.people || [])
           <div class="text-sm text-[var(--color-muted)] mt-0.5">With a recorded death</div>
         </div>
         <div class="person-card rounded-lg p-3 sm:p-4 text-center">
-          <div class="text-2xl sm:text-3xl font-bold font-serif text-[var(--color-heading)]">{livingTelfer.length}</div>
-          <div class="text-sm text-[var(--color-muted)] mt-0.5">Dates incomplete</div>
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-[var(--color-heading)]">{noYearTelfer.length}</div>
+          <div class="text-sm text-[var(--color-muted)] mt-0.5">No year recorded</div>
         </div>
       </div>
     </section>

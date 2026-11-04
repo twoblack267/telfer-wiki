@@ -79,6 +79,11 @@ const maxYear = years.length
 const yearSpan = minYear !== null && maxYear !== null ? `${minYear}–${maxYear}` : "Unknown";
 const deceasedCount = telferPeople.filter(p => p.is_deceased).length;
 const noDeathRecordCount = telferPeople.length - deceasedCount;
+// 2026-11-05: the "Dates incomplete" card printed noDeathRecordCount — everyone
+// not flagged deceased (283, of whom 264 are living relatives withheld for
+// privacy) — and presented them as missing dates. The honest gap is people
+// with no year at all. Living people are not a defect and are not a statistic.
+const noYearCount = telferPeople.filter(p => !p.birth_year && !p.death_year).length;
 const surnameCounts: Record<string, number> = {};
 for (const p of telferPeople) {
   const name = p.last_name || "Unknown";
@@ -117,8 +122,8 @@ const otherSurnames = Object.entries(surnameCounts)
       <div class="text-xs text-[var(--color-muted)] mt-1">Surname Groups</div>
     </div>
     <div class="person-card rounded-xl p-4 text-center">
-      <div class="text-2xl font-bold font-serif text-[var(--color-muted)]">{noDeathRecordCount}</div>
-      <div class="text-xs text-[var(--color-muted)] mt-1">Dates incomplete</div>
+      <div class="text-2xl font-bold font-serif text-[var(--color-muted)]">{noYearCount}</div>
+      <div class="text-xs text-[var(--color-muted)] mt-1">No year recorded</div>
     </div>
     <div class="person-card rounded-xl p-4 text-center">
       <div class="text-2xl font-bold font-serif text-[var(--color-burgundy)]">{yearSpan}</div>

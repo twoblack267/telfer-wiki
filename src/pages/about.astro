@@ -7,6 +7,11 @@ const people = peopleData.filter(p => p.branch === "telfer" || !p.branch) || [];
 const totalPeople = people.length;
 const deceasedCount = people.filter(p => p.is_deceased).length;
 const noDeathRecordCount = people.filter(p => !p.is_deceased).length;
+// 2026-11-05: the "Dates incomplete" card printed noDeathRecordCount — everyone
+// not flagged deceased (283, of whom 264 are living relatives withheld for
+// privacy) — and presented them as missing dates. The honest gap is people
+// with no year at all. Living people are not a defect and are not a statistic.
+const noYearCount = people.filter(p => !p.birth_year && !p.death_year).length;
 
 // Count generations
 const birthYears = people.filter(p => p.birth_year).map(p => p.birth_year as number);
@@ -134,8 +139,8 @@ people.forEach(p => {
             <div class="text-sm text-[var(--color-text-muted)] mt-1">Ancestors</div>
           </div>
           <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 text-center">
-            <div class="text-3xl font-bold text-[var(--color-highlight)]">{noDeathRecordCount}</div>
-            <div class="text-sm text-[var(--color-text-muted)] mt-1">Dates incomplete</div>
+            <div class="text-3xl font-bold text-[var(--color-highlight)]">{noYearCount}</div>
+            <div class="text-sm text-[var(--color-text-muted)] mt-1">No year recorded</div>
           </div>
           <div class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-4 text-center">
             <div class="text-3xl font-bold text-[var(--color-highlight)]">{generations}</div>
