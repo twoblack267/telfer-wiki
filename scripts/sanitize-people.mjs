@@ -416,7 +416,7 @@ function resolveToVisible(entry) {
  * Order matters: the privacy check runs FIRST so a withdrawn person can never
  * be re-introduced to the published data by a later name match.
  */
-function resolveRelationship(entry) {
+function resolveRelationship(entry, field) {
   if (!entry) return null;
 
   const entryLC = String(entry).toLowerCase();
@@ -454,9 +454,20 @@ function resolveRelationship(entry) {
     // different Murray Telfer with no years. The reader saw a bare name and could
     // not tell WHICH Murray the "Adopted Son" row meant. Keep the vault's own
     // bracket verbatim when it carries years; strip only a qualifier-only bracket.
+    // AN UNBOUND SPOUSE IS NOT AN UNBOUND CHILD (fixed 2026-11-04).
+    // "Husband of Rona Mary Alcorn" names a woman with no profile in the tree —
+    // she married in 1941 and never appears as a Telfer. Rendering her as a bare
+    // unlinked name makes the SPOUSE card look broken. A spouse with no profile
+    // is still a spouse: keep the name and say plainly why there is no link.
+    //
+    // `field` must be threaded from the caller: resolveRelationship() receives
+    // only the entry string, so resolveRelationshipArray() passes the field name.
     const raw = String(entry);
     const plain = /\d{3,4}/.test(raw) ? raw.trim() : stripDates(raw).trim();
-    return plain ? { plainName: plain } : null;
+    // AN UNBOUND SPOUSE IS NOT AN UNBOUND CHILD (fixed 2026-11-04): a spouse with
+    // no profile still renders by name in the SPOUSE card; say why there is no link.
+    const asSpouse = field === "spouses" && Boolean(plain) && !/no[- ]profile/i.test(plain);
+    return plain ? { plainName: asSpouse ? `${plain} (no profile)` : plain } : null;
   }
 
   if (PRIVACY_STRIP_SLUGS.has(slug)) {
@@ -477,9 +488,9 @@ function resolveRelationship(entry) {
 }
 
 /** Map a relationship array through resolveRelationship, keeping plain names. */
-function resolveRelationshipArray(arr) {
+function resolveRelationshipArray(arr, field) {
   return (arr || [])
-    .map(resolveRelationship)
+    .map((entry) => resolveRelationship(entry, field))
     .filter(Boolean)
     .map((r) => (r.slug !== undefined ? r.slug : { plain_name: r.plainName, ...(r.withheld ? { withheld: true } : {}) }));
 }
@@ -888,14 +899,14 @@ for (const person of people) {
   // Relationship arrays carry EITHER a link target (string slug/display name)
   // OR a `{ plain_name: "…" }` object for a withdrawn (privacy-stripped)
   // relative — the latter renders as unclickable text. See resolveRelationship.
-  publicPerson.parents = resolveRelationshipArray(person.parents);
-  publicPerson.children = resolveRelationshipArray(person.children);
-  publicPerson.spouses = resolveRelationshipArray(person.spouses);
-  publicPerson.siblings = resolveRelationshipArray(person.siblings);
+  publicPerson.parents = resolveRelationshipArray(person.parents, 'parents');
+  publicPerson.children = resolveRelationshipArray(person.children, 'children');
+  publicPerson.spouses = resolveRelationshipArray(person.spouses, 'spouses');
+  publicPerson.siblings = resolveRelationshipArray(person.siblings, 'siblings');
   // Step relations (added 2026-09-22) — same visibility rule as the biological
   // arrays: a step relation to a non-visible person is dropped, never leaked.
-  publicPerson.step_parents = resolveRelationshipArray(person.step_parents);
-  publicPerson.step_children = resolveRelationshipArray(person.step_children);
+  publicPerson.step_parents = resolveRelationshipArray(person.step_parents, 'step_parents');
+  publicPerson.step_children = resolveRelationshipArray(person.step_children, 'step_children');
 
   // ── Age gate (owner decision, Aug 2026): UNDER-18s get school/occupation/
   //    location detail stripped from their public bio. Gate recomputes every
