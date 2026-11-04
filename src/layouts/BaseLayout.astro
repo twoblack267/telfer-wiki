@@ -452,8 +452,6 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          readable measure and is aligned the same way by the rule below. */
       @media(min-width:1024px){
         body>nav.no-print>div{max-width:none;padding-left:2rem;padding-right:2rem}
-        main{max-width:none;padding-left:2rem;padding-right:2rem}
-        main>*{max-width:1400px;margin-left:auto;margin-right:auto}
       }
       /* Overflow containment (2026-11-04). The bar previously burst its container:
          14 items needed 1347px inside a 1024px max-w-5xl wrapper, nothing wrapped,
@@ -538,7 +536,7 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     </nav>
 
     <!-- Main content -->
-    <main class="max-w-5xl mx-auto px-3 sm:px-4 py-4 sm:py-8 flex-1 w-full">
+    <main class="dashboard-main max-w-5xl mx-auto px-3 sm:px-4 py-4 sm:py-8 flex-1 w-full">
       <!-- The page's own content (person title, biography, etc.) renders FIRST so a
            viewer always sees the person's name/heading before any SEO helper blocks. -->
       <slot />
@@ -604,7 +602,7 @@ function navIsActive(entry: { href: string; match: string }): boolean {
 
     <!-- Footer -->
     <footer class="border-t border-[var(--color-border)] bg-[var(--color-surface)] no-print">
-      <div class="max-w-5xl mx-auto px-4 py-4 sm:py-6 text-center text-sm text-[var(--color-muted)]">
+      <div class="dashboard-foot max-w-5xl mx-auto px-4 py-4 sm:py-6 text-center text-sm text-[var(--color-muted)]">
         <img
           src={import.meta.env.BASE_URL + "images/brand/telfer-fig-400.png"}
           alt="The Telfer family fig tree"
@@ -755,6 +753,22 @@ function navIsActive(entry: { href: string; match: string }): boolean {
      dark-themed Chrome renders its unpainted areas dark. */
   html{color-scheme:light;background-color:var(--color-paper)}
   body{background-color:var(--color-paper);color:var(--color-ink)}
+
+  /* ── THE RIGHT-HAND GAP (2026-11-04, fourth pass — the real one). ──
+     <main> carried Tailwind's `max-w-5xl`, which is 64rem = 1024px. At every
+     MacBook width (1440, 1512, 1728) the content column was hard-capped at
+     1024px and centred by `mx-auto`, so 200-350px of empty cream sat between
+     the content and the right wall. The <header> was made full-bleed in an
+     earlier pass, which is why the top looked right while the body below it
+     was still a narrow island - the two no longer shared a grid.
+     `dashboard-main` replaces the cap: the main column fills its parent and
+     shares the header's 2rem gutters. Applied to the layout wrapper rather
+     than per-page so all 2,311 routes agree. Footer gets the same treatment so
+     its rule runs the full width too. */
+  @media(min-width:1024px){
+    .dashboard-main{max-width:none;padding-left:2rem;padding-right:2rem}
+    .dashboard-foot{max-width:none}
+  }
 
   @theme {
     --color-paper: #faf8f3;
