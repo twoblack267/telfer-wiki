@@ -846,16 +846,22 @@ const pageTitle = "Telfer Family Tree — All Generations";
         position: relative;
         scroll-snap-type: x mandatory;
       }
+      /* Fade hint (2026-11-04). The pill rail scrolls horizontally (measured
+         821px of content in a 350px box on a 390px phone) and previously ended
+         in a hard vertical slice through the "4th Gen" label, which reads as a
+         rendering fault rather than "swipe me". A right-edge fade now does the
+         telling. NOTE the gradient must be transparent -> background, i.e. the
+         OPAQUE colour sits at the RIGHT so the pills dissolve into the page. */
       .gen-jump-scroll::after, ul.scroll-snap-type-x-mandatory::after {
         content: "";
         position: absolute;
+        top: 0;
         bottom: 0;
         right: 0;
-        left: 0;
-        height: 1.5rem;
-        background: linear-gradient(to top, var(--color-background), transparent);
+        width: 2.5rem;
+        background: linear-gradient(to right, transparent, var(--color-background));
         pointer-events: none;
-        opacity: 0.8;
+        z-index: 1;
       }
       .gen-jump-item, li.scroll-snap-align-start {
         scroll-snap-align: start;

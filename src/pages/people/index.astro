@@ -292,6 +292,14 @@ const base = import.meta.env.BASE_URL;
     background: var(--color-heading) !important;
     color: white !important;
   }
+  /* In dark mode --color-heading is a LIGHT rose (#c97b7b) chosen for text on a
+     dark page. Reusing it as a pill BACKGROUND under white text gives 3.18:1 —
+     unreadable. These pills take a darkened version while the theme is dark. */
+  :global([data-theme="dark"]) .filter-active {
+    background: #7d3f3f !important;
+    border-color: #7d3f3f !important;
+    color: #ffffff !important;
+  }
   .filter-inactive {
     border-color: var(--color-border);
     color: var(--color-ink-light);

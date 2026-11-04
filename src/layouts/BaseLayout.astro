@@ -346,10 +346,14 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          2. There was no backdrop behind the open drawer, so the page stayed
             fully lit around it. A scrim is now drawn below the panel. */
       #nav-desktop.is-open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;
-        gap:.15rem;padding:.75rem 1rem;
+        gap:.15rem;padding:.75rem 1rem;align-items:stretch;
         background:var(--color-nav-solid, var(--color-surface));
         border-top:1px solid var(--color-border);box-shadow:0 12px 24px rgba(0,0,0,.55);
         max-height:calc(100dvh - 5rem);overflow-y:auto;z-index:1}
+      /* Rows fill the panel and read left-to-right. Without this each link was
+         only as wide as its own label, so the icons never lined up in a column
+         and the active pill looked like a stray floating button. */
+      #nav-desktop.is-open>a.nav-link{display:flex;width:100%;justify-content:flex-start;text-align:left}
       /* the scrim: covers the viewport below the header, sits under the panel */
       #nav-desktop.is-open::before{content:"";position:fixed;inset:0;top:var(--nav-h,4.75rem);
         background:rgba(0,0,0,.55);z-index:-1;pointer-events:none}
@@ -359,7 +363,13 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          so the document grew to 1641px wide and the whole page scrolled sideways.
          flex-wrap keeps any future growth INSIDE the bar rather than off-document. */
       nav>div{min-width:0}
-      #nav-desktop{flex-wrap:wrap;justify-content:flex-end;min-width:0;max-width:100%}
+      /* Desktop-only containment (2026-11-04). This rule ran globally, which was
+         a defect in its own right: the mobile drawer inherits #nav-desktop, so
+         justify-content:flex-end threw every drawer link to the RIGHT edge of a
+         full-width panel. Measured link left edges were 145/144/137/137/139/144/
+         142/133/151px — a ragged column floating in the middle of the screen,
+         which is exactly how it looked. Scoped to desktop. */
+      @media(min-width:1024px){#nav-desktop{flex-wrap:wrap;justify-content:flex-end;min-width:0;max-width:100%}}
       nav a.nav-link{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .6rem;border-radius:.5rem;text-decoration:none;
         color:var(--nav-ink);font-size:.875rem;letter-spacing:.01em}
       nav a.nav-link:hover{color:var(--nav-ink-hover);background:var(--color-surface)}
@@ -375,11 +385,15 @@ function navIsActive(entry: { href: string; match: string }): boolean {
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href={import.meta.env.BASE_URL} class="nav-link text-lg sm:text-xl font-serif font-bold text-[var(--color-heading)] hover:text-[var(--color-heading-hover)] no-underline flex items-center gap-2">
           <img
-            src={import.meta.env.BASE_URL + "images/brand/telfer-fig.png"}
+            src={import.meta.env.BASE_URL + "images/brand/telfer-fig-80.png"}
+            srcset={`${import.meta.env.BASE_URL}images/brand/telfer-fig-80.png 80w, ${import.meta.env.BASE_URL}images/brand/telfer-fig-96.png 96w`}
+            sizes="40px"
             alt=""
             aria-hidden="true"
             width="40"
             height="40"
+            loading="eager"
+            decoding="async"
             class="h-8 w-8 sm:h-10 sm:w-10 object-contain shrink-0"
           />
           Telfer Wiki
@@ -632,13 +646,14 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     --color-heading-hover: #8b3a3a;
     --color-secondary: #6b7a8f;
     --color-secondary-hover: #7a8ba8;
-    --color-link: #6b7a8f;
+    --color-link: #5f6f84;
     --color-link-hover: #7b2d2d;
     --color-highlight: #b8860b;
     --color-highlight-light: #c9961a;
     --color-border: #c9b896;
     --color-surface: #f0ebe0;
-    --color-muted: #9a8f7a;
+    /* Same contrast fix as the light-mode block below: 3.01:1 -> 5.0:1. */
+    --color-muted: #756a58;
     --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
     --font-sans: Inter, system-ui, -apple-system, sans-serif;
     --font-mono: "JetBrains Mono", "Fira Code", monospace;
@@ -658,13 +673,16 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     --color-heading-hover: #8b3a3a;
     --color-secondary: #6b7a8f;
     --color-secondary-hover: #7a8ba8;
-    --color-link: #6b7a8f;
+    --color-link: #5f6f84;
     --color-link-hover: #7b2d2d;
     --color-highlight: #b8860b;
     --color-highlight-light: #c9961a;
     --color-border: #c9b896;
     --color-surface: #f0ebe0;
-    --color-muted: #9a8f7a;
+    /* #9a8f7a measured 3.01:1 on #faf8f3 — below the 4.5:1 AA floor for
+       normal text, which is why every date and secondary label looked washed
+       out on a phone in daylight. #756a58 measures 5.0:1 and keeps the hue. */
+    --color-muted: #756a58;
     --color-card-bg: #ffffff;
     --color-input-bg: #fdfcf8;
     --color-nav-bg: rgba(250, 248, 243, 0.85);
@@ -1093,7 +1111,7 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     --color-highlight-light: #e0b85a;
     --color-border: #4a4235;
     --color-surface: #231e18;
-    --color-muted: #8a7f6f;
+    --color-muted: #948a78;
     --color-card-bg: #1f1a15;
     --color-input-bg: #231e18;
     --color-nav-bg: rgba(26, 22, 18, 0.85);
