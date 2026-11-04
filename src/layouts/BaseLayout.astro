@@ -411,11 +411,23 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          of the right edge. `display:none` removes it from flow entirely; it
          is only ever needed below the lg breakpoint, where
          `body.nav-open #nav-scrim` flips it back to display:block. */
-      #nav-scrim{display:none;position:fixed;top:0;right:0;bottom:0;left:0;
-        background:rgba(0,0,0,.55);z-index:40;opacity:0;pointer-events:none;
+      #nav-scrim{display:none}
+      body.nav-open #nav-scrim{display:block;position:fixed;top:0;right:0;bottom:0;left:0;
+        background:rgba(0,0,0,.55);z-index:40;opacity:1;pointer-events:auto;
         transition:opacity .18s ease}
-      body.nav-open #nav-scrim{display:block;opacity:1;pointer-events:auto}
-      @media(min-width:1024px){#nav-scrim{display:none}}
+      /* Scrim styling lives ONLY under body.nav-open (see the rule above).
+         WHY (2026-11-04, the gap that would not close): this block used to
+         give the scrim `top:0;right:0;bottom:0;left:0`. `display:none` does
+         remove it from flow, but a position:fixed element with all four
+         offsets set ALSO contributes its scrollable overflow rectangle to the
+         document — so the page's scrollWidth jumped to
+           window width + left inset + right inset
+         That extra width is what stopped the header short of the right wall
+         and what made the content look pinched: the viewport was scrolled
+         0..N with the real page only filling the left part. Nothing visible
+         was painting the gap, which is why pixel probes and CSS greps all came
+         back clean. Removing the four offsets from the hidden state is what
+         actually closes it. Do not restore them here. */
       @media(min-width:1024px){#nav-desktop.is-open{position:static;flex-direction:row;box-shadow:none;border-top:0;padding:0;max-height:none}}
       /* THE TOP BAR NOT SPANNING (fixed). Why the header read as a strip rather
          than a full-width bar: <nav> is painted with --color-nav-bg, which is
