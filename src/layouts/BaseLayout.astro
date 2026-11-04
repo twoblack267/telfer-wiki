@@ -336,9 +336,23 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          link list in the DOM: a row above 1024px, a stacked drawer below it. */
       #nav-desktop{display:none;align-items:center;gap:.25rem}
       @media(min-width:1024px){#nav-desktop{display:flex}}
+      /* Mobile drawer (2026-11-04). Two defects fixed here:
+         1. --color-nav-bg is #1a1612d9 — 8-digit hex, alpha d9 = 85% opaque. That
+            translucency is deliberate for the sticky header (backdrop-blur reads
+            through it), but the drawer inherited the same token, so timeline
+            entries were legible THROUGH the open menu. It looked like a menu
+            floating mid-page over washed-out content. The drawer now gets an
+            opaque surface derived from the same palette.
+         2. There was no backdrop behind the open drawer, so the page stayed
+            fully lit around it. A scrim is now drawn below the panel. */
       #nav-desktop.is-open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;
-        gap:.15rem;padding:.75rem 1rem;background:var(--color-nav-bg);
-        border-top:1px solid var(--color-border);box-shadow:0 12px 24px rgba(0,0,0,.18);max-height:80vh;overflow-y:auto}
+        gap:.15rem;padding:.75rem 1rem;
+        background:var(--color-nav-solid, var(--color-surface));
+        border-top:1px solid var(--color-border);box-shadow:0 12px 24px rgba(0,0,0,.55);
+        max-height:calc(100dvh - 5rem);overflow-y:auto;z-index:1}
+      /* the scrim: covers the viewport below the header, sits under the panel */
+      #nav-desktop.is-open::before{content:"";position:fixed;inset:0;top:var(--nav-h,4.75rem);
+        background:rgba(0,0,0,.55);z-index:-1;pointer-events:none}
       @media(min-width:1024px){#nav-desktop.is-open{position:static;flex-direction:row;box-shadow:none;border-top:0;padding:0;max-height:none}}
       /* Overflow containment (2026-11-04). The bar previously burst its container:
          14 items needed 1347px inside a 1024px max-w-5xl wrapper, nothing wrapped,
@@ -559,6 +573,17 @@ function navIsActive(entry: { href: string; match: string }): boolean {
   const iconClose = document.getElementById('nav-icon-close');
 
   if (toggle && panel) {
+    // Publish the real header height so the drawer's fixed-position scrim starts
+    // exactly under the header instead of at a guessed 4.75rem. Re-measured on
+    // open and on resize (mobile URL bars change viewport height).
+    const navEl = panel.closest('nav');
+    const syncNavH = () => {
+      if (!navEl) return;
+      document.documentElement.style.setProperty('--nav-h', navEl.getBoundingClientRect().height + 'px');
+    };
+    syncNavH();
+    window.addEventListener('resize', syncNavH, { passive: true });
+
     toggle.addEventListener('click', () => {
       // `is-open` drives visibility from the inline stylesheet; toggling
       // Tailwind's `hidden` here did nothing because those utilities are not
@@ -643,6 +668,11 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     --color-card-bg: #ffffff;
     --color-input-bg: #fdfcf8;
     --color-nav-bg: rgba(250, 248, 243, 0.85);
+    /* Opaque sibling for the mobile drawer — the header wants translucency +
+       backdrop-blur, a full-screen menu must fully occlude the page behind it.
+       Without this the drawer inherited the 85% token and timeline entries showed
+       through the open menu (Mark's "menu floating in the middle" report). */
+    --color-nav-solid: #faf8f3;
   }
 
   body {
@@ -1067,6 +1097,7 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     --color-card-bg: #1f1a15;
     --color-input-bg: #231e18;
     --color-nav-bg: rgba(26, 22, 18, 0.85);
+    --color-nav-solid: #1a1612;
   }
   [data-theme="dark"] body {
     background-color: var(--color-paper);
