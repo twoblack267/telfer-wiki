@@ -438,6 +438,53 @@ const FOOTER_REACHABLE = ["/downloads/", "/about/", "/contact/", "/privacy/", "/
   }
 }
 
+// ── P15 — a list row must contain visible text, not just an arrow ──────────
+// 2026-11-04: a JSX comment block sat between the anchor attributes and the
+// className on /people/, and Astro 5.18 silently dropped the rest of the tag.
+// All 607 rows shipped as `<a href=... data-initial="E" <span ...>→` — no name,
+// no dates. The page looked like 607 rows of brown arrows and every guard here
+// still passed, because no rule looked at what a row actually CONTAINS.
+//
+// Every row that links to a person must carry the person's name. This is the
+// cheapest possible assertion and it catches the whole family of "the template
+// dropped its children" defects: mismatched fragments, swallowed attributes,
+// conditional renders that never fire.
+const PEOPLE_INDEX = path.join(DIST, "people", "index.html");
+{
+  const s = readIf(PEOPLE_INDEX);
+  if (s) {
+    // Count only the directory rows themselves. Nav links, filter chips and
+    // footer links also point at /people/..., and counting them made the first
+    // version of this rule fail on a build that was actually correct.
+    const rows = s.match(/<a\s[^>]*href="\/people\/[^"]*"[^>]*class="[^"]*\bperson-row\b/g) || [];
+    // A row whose tag was truncated mid-attribute loses its class entirely, so
+    // look for /people/ anchors that carry a data-initial but no class.
+    const truncated = (s.match(/<a\s[^>]*href="\/people\/[^"]*"\s+data-initial="[^"]*"\s*</g) || []).length;
+    const nameCells = (s.match(/class="font-medium text-\[var\(--color-burgundy\)\]/g) || []).length;
+    if (truncated > 0) {
+      violations.push({
+        rule: "P15",
+        file: rel(PEOPLE_INDEX),
+        msg: `${truncated} person row(s) lost their class attribute — the tag is being truncated mid-emit. Check for a comment or expression sitting between attributes in the row template.`,
+      });
+    }
+    if (rows.length > 0 && nameCells === 0) {
+      violations.push({
+        rule: "P15",
+        file: rel(PEOPLE_INDEX),
+        msg: `${rows.length} person row(s) but no name cells. The All People directory is rendering bare arrows instead of names and dates.`,
+      });
+    }
+    if (rows.length > 0 && nameCells > 0 && nameCells !== rows.length) {
+      violations.push({
+        rule: "P15",
+        file: rel(PEOPLE_INDEX),
+        msg: `${rows.length} person row(s) but only ${nameCells} name cell(s) — some rows are rendering without a name.`,
+      });
+    }
+  }
+}
+
 // ── report ─────────────────────────────────────────────────────────────────
 if (violations.length) {
   console.error("\nGATE FAILED — presentation integrity:");
