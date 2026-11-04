@@ -1082,6 +1082,20 @@ for (const person of people) {
         case 'Grandchildren':
         case 'Great-grandmother':
         case 'Great-grandfather':
+        // FIXED 2026-11-04: the vault spells grandparent links with the side named
+        // ("Paternal Grandfather", "Maternal Grandmother"). Only the bare forms were
+        // listed, so these resolved to a real person and hit `default` — warned, and
+        // tallied nothing. No edge is written for any grandparent type here (the link
+        // is derived transitively from the parent chain), so the fix is the spelling,
+        // not the behaviour.
+        case 'Paternal Grandfather':
+        case 'Paternal Grandmother':
+        case 'Paternal Grandparent':
+        case 'Maternal Grandfather':
+        case 'Maternal Grandmother':
+        case 'Maternal Grandparent':
+        case 'Paternal Grandparents':
+        case 'Maternal Grandparents':
         case 'Father-in-law':
         case 'Mother-in-law':
         case 'Son-in-law':
@@ -1119,6 +1133,17 @@ for (const person of people) {
           // which never assert a genetic claim.
           stepParentEdges.get(sourceSlug).add(targetSlug);
           stepChildEdges.get(targetSlug).add(sourceSlug);
+          derivedCounts.set(rel.type, (derivedCounts.get(rel.type) || 0) + 1);
+          resolved++;
+          break;
+
+        case 'Self':
+          // FIXED 2026-11-04: 84 vault profiles carry a `Self` row in their Family
+          // table — it is the subject's own placeholder line ("| **Self** | Name |"),
+          // not a relationship. It resolved to the person themselves and hit
+          // `default`, emitting a warning per profile on every build. Skipped
+          // deliberately and counted separately, so a real self-edge would still be
+          // visible as an anomaly rather than being silently normalised away.
           derivedCounts.set(rel.type, (derivedCounts.get(rel.type) || 0) + 1);
           resolved++;
           break;
