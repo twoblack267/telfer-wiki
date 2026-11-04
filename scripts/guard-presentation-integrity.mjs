@@ -389,6 +389,55 @@ for (const f of htmlFiles) {
   }
 }
 
+// ── P13 — the top-bar menu must fit its container ──────────────────────────
+// 2026-11-04: the primary nav had grown to 14 items needing ~1347px inside the
+// 1024px max-w-5xl wrapper. Nothing wrapped, so the bar burst the container and
+// the whole document grew to 1641px wide — the "menu floating in the middle"
+// defect, which also made the All People page scroll sideways. A budget rule is
+// the only real guarantee: if someone adds links back in, the build fails here.
+//
+// Budget: 10 items. Measured average label+icon+padding ≈ 93px, so 10 items
+// ≈ 930px; with the 104px brand and 44px theme toggle that is 1078px against a
+// 1024px container — so 10 is the hard ceiling, not a target. Nine items measures
+// 988px and leaves 36px headroom. Policy links belong in the footer.
+const NAV_MAX_ITEMS = 10;
+for (const f of htmlFiles) {
+  const s = readIf(f) || "";
+  const m = s.match(/<div id="nav-desktop"[^>]*>([\s\S]*?)<\/div>/);
+  if (!m) continue;
+  const count = (m[1].match(/<a\s/g) || []).length;
+  if (count > NAV_MAX_ITEMS) {
+    violations.push({
+      rule: "P13",
+      file: rel(f),
+      msg: `Top-bar menu has ${count} items (budget ${NAV_MAX_ITEMS}). It will overflow the 1024px container and force page-wide horizontal scroll. Move policy links to the footer.`,
+    });
+    break;
+  }
+}
+
+// ── P14 — footer-only destinations must stay reachable ─────────────────────
+// P13 moved Downloads/About/Contact/Privacy/Terms out of the top bar. They were
+// already linked in the footer, but a future edit could drop them from BOTH and
+// leave a visitor with no route to the contact page. Every one of them must
+// still appear somewhere in the built home page.
+const FOOTER_REACHABLE = ["/downloads/", "/about/", "/contact/", "/privacy/", "/terms/"];
+{
+  const homePath = path.join(DIST, "index.html");
+  const home = readIf(homePath);
+  if (home) {
+    for (const href of FOOTER_REACHABLE) {
+      if (!home.includes(href)) {
+        violations.push({
+          rule: "P14",
+          file: rel(homePath),
+          msg: `Navigation destination ${href} is not reachable from the home page. It was removed from the top bar; it must remain in the footer.`,
+        });
+      }
+    }
+  }
+}
+
 // ── report ─────────────────────────────────────────────────────────────────
 if (violations.length) {
   console.error("\nGATE FAILED — presentation integrity:");

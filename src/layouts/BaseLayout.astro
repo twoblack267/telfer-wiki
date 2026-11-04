@@ -173,21 +173,43 @@ const curatedMap = curatedMapSlug ? CURATED_MAPS[curatedMapSlug] : null;
  * `match` is the path prefix used to mark the current section active. Empty
  * string means "exact match on home".
  */
+/**
+ * NAV — the PRIMARY top-bar menu only.
+ *
+ * 2026-11-04: this list had grown to 14 items needing 1347px inside a 1024px
+ * container (max-w-5xl). Nothing wrapped or overflowed gracefully, so the bar
+ * burst its container and dragged the whole page into horizontal scroll —
+ * that was the "menu floating in the middle" defect, and it took the All People
+ * page down with it because the overflow is page-wide, not page-local.
+ *
+ * The fix is editorial, not cosmetic: the top bar carries research destinations.
+ * Policy pages (Downloads / About / Contact / Privacy / Terms) live in the footer,
+ * where they were ALREADY linked (see FOOTER_LINKS below) — so no destination is
+ * lost and the visitor still reaches every page. Budget: 9 items ≈ 832px, which
+ * fits the 1024px container with the logo and theme toggle.
+ *
+ * Guarded by scripts/guard-presentation-integrity.mjs (rules P9/P10).
+ */
 const NAV = [
   { href: "",                       label: "Home",       icon: "i-home",      match: "" },
   { href: "people/",                label: "People",     icon: "i-people",    match: "people/" },
-  { href: "timeline/",              label: "Timeline",   icon: "i-timeline",  match: "timeline" },
   { href: "people/full-tree/",      label: "Full Tree",  icon: "i-full-tree", match: "people/full-tree" },
-  { href: "search/",                label: "Search",     icon: "i-search",    match: "search" },
+  { href: "timeline/",              label: "Timeline",   icon: "i-timeline",  match: "timeline" },
   { href: "people/families/",       label: "Families",   icon: "i-families",  match: "people/families" },
-  { href: "people/dna/",            label: "DNA",        icon: "i-dna",       match: "people/dna" },
+  { href: "search/",                label: "Search",     icon: "i-search",    match: "search" },
   { href: "ballads/",               label: "Ballads",    icon: "i-ballads",   match: "ballads" },
   { href: "telfer-name/",           label: "The Name",   icon: "i-about",     match: "telfer-name" },
-  { href: "downloads/",             label: "Downloads",  icon: "i-downloads", match: "downloads" },
-  { href: "about/",                 label: "About",      icon: "i-about",     match: "about" },
-  { href: "contact/",               label: "Contact",    icon: "i-contact",   match: "contact" },
-  { href: "privacy/",               label: "Privacy",    icon: "i-privacy",   match: "privacy" },
-  { href: "terms/",                 label: "Terms",      icon: "i-terms",     match: "terms" },
+  { href: "people/dna/",            label: "DNA",        icon: "i-dna",       match: "people/dna" },
+] as const;
+
+/** Secondary destinations — footer only. Kept here as the canonical list so the
+ *  footer and the guard agree on what must remain reachable somewhere. */
+const FOOTER_ONLY = [
+  { href: "downloads/", label: "Family Resource Downloads" },
+  { href: "about/",     label: "About this archive" },
+  { href: "contact/",   label: "Contact" },
+  { href: "privacy/",   label: "Privacy" },
+  { href: "terms/",     label: "Terms" },
 ] as const;
 
 function navIsActive(entry: { href: string; match: string }): boolean {
@@ -318,6 +340,12 @@ function navIsActive(entry: { href: string; match: string }): boolean {
         gap:.15rem;padding:.75rem 1rem;background:var(--color-nav-bg);
         border-top:1px solid var(--color-border);box-shadow:0 12px 24px rgba(0,0,0,.18);max-height:80vh;overflow-y:auto}
       @media(min-width:1024px){#nav-desktop.is-open{position:static;flex-direction:row;box-shadow:none;border-top:0;padding:0;max-height:none}}
+      /* Overflow containment (2026-11-04). The bar previously burst its container:
+         14 items needed 1347px inside a 1024px max-w-5xl wrapper, nothing wrapped,
+         so the document grew to 1641px wide and the whole page scrolled sideways.
+         flex-wrap keeps any future growth INSIDE the bar rather than off-document. */
+      nav>div{min-width:0}
+      #nav-desktop{flex-wrap:wrap;justify-content:flex-end;min-width:0;max-width:100%}
       nav a.nav-link{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .6rem;border-radius:.5rem;text-decoration:none;
         color:var(--nav-ink);font-size:.875rem;letter-spacing:.01em}
       nav a.nav-link:hover{color:var(--nav-ink-hover);background:var(--color-surface)}
