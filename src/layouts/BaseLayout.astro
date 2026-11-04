@@ -728,6 +728,22 @@ function navIsActive(entry: { href: string; match: string }): boolean {
 <style is:global>
   @import "tailwindcss";
 
+  /* ── ROOT CANVAS + COLOR-SCHEME (2026-11-04, second pass). ──
+     Everything in this file was painted on <nav>, <main>, <footer> — but
+     nothing on the canvas itself. Two consequences, both visible on Mark's
+     MacBook:
+       1. The <html> canvas was unpainted, so anything translucent (the nav's
+          85% bg + backdrop-blur-sm) composited over Chrome's dark default.
+       2. Inline <style> is emitted BEFORE the Tailwind import at line 729, so
+          the earlier `html{background-color:var(--color-paper)}` rules lost to
+          `.bg-[...]` on source order and were dead letters. These live in the
+          Tailwind-layer style block now — after the import — so they win.
+     `color-scheme` is the other half: it tells the UA what the canvas, scroll
+     bars, and form controls should default to. Without it a light page in a
+     dark-themed Chrome renders its unpainted areas dark. */
+  html{color-scheme:light;background-color:var(--color-paper)}
+  body{background-color:var(--color-paper);color:var(--color-ink)}
+
   @theme {
     --color-paper: #faf8f3;
     --color-paper-dark: #f0ebe0;
@@ -747,6 +763,22 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     --color-surface: #f0ebe0;
     /* Same contrast fix as the light-mode block below: 3.01:1 -> 5.0:1. */
     --color-muted: #756a58;
+    /* ── THE BLACK BAR, ROOT CAUSE (2026-11-04, second pass). ──
+       Tailwind v4's preflight sets `background-color: transparent` and
+       `border-color: currentColor` on the universal selector. In Tailwind v4
+       currentColor resolves to the TEXT colour, which in light mode is
+       --color-ink #2d2926 — near-black. The <nav> carries
+       `border-b-2 border-[var(--color-border)]`: the 2px ARBITRARY border
+       colour wins on the bottom edge, but `bg-[var(--color-nav-bg)]` is
+       rgba(250,248,243,0.85) — 15% translucent — and `backdrop-blur-sm`
+       filters whatever is behind the element. There was nothing painted on
+       <html>/<body>, so the composite sat on an UNPAINTED canvas that Chrome
+       renders as its dark backdrop. Painting paper here — inside @theme, where
+       it reaches the compiled stylesheet in the right order — kills it. The
+       earlier attempt put these rules in the OTHER <style is:global> block
+       (line ~430) which is emitted BEFORE the Tailwind import, so
+       `.bg-[var(--color-nav-bg)]` won on source order. */
+    --color-black: #2d2926;
     --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
     --font-sans: Inter, system-ui, -apple-system, sans-serif;
     --font-mono: "JetBrains Mono", "Fira Code", monospace;
