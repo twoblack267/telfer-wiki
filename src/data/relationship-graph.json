@@ -123,7 +123,7 @@
     {
       "slug": "angela-telfer",
       "id": "Angela Telfer",
-      "generation": 99
+      "generation": 8
     },
     {
       "slug": "arnold-cuthbert-lawrie-1895",
@@ -4709,6 +4709,10 @@
       {
         "from": "noela-pauline-virgen-1921",
         "to": "penny-telfer-1960"
+      },
+      {
+        "from": "john-telfer-robert",
+        "to": "peter-telfer"
       },
       {
         "from": "robyn-telfer",

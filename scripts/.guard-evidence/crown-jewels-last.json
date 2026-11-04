@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-03T23:13:44.355Z",
+  "checkedAt": "2026-11-04T00:05:42.063Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -12,76 +12,14 @@
   "warnings": [
     {
       "kind": "FIELD_SHRANK",
-      "slug": "angela-telfer",
-      "name": "Angela Telfer",
-      "field": "step_parents",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "john-telfer-robert"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "carissa-telfer-2023",
-      "name": "Carissa Telfer",
-      "field": "step_parents",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "john-telfer-robert"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "john-telfer-robert",
-      "name": "John Robert Telfer",
-      "field": "step_children",
-      "before": 3,
-      "after": 0,
-      "lost": 3,
-      "lostEntries": [
-        "angela-telfer",
-        "carissa-telfer-2023",
-        "peter-telfer"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "murray-telfer-1924",
-      "name": "Murray John Telfer",
-      "field": "step_children",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "susan-lawrie"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
       "slug": "peter-telfer",
       "name": "Peter Telfer",
-      "field": "step_parents",
+      "field": "children",
       "before": 1,
       "after": 0,
       "lost": 1,
       "lostEntries": [
         "john-telfer-robert"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "susan-lawrie",
-      "name": "Susan Shirley Lawrie",
-      "field": "step_parents",
-      "before": 1,
-      "after": 0,
-      "lost": 1,
-      "lostEntries": [
-        "murray-telfer-1924"
       ]
     }
   ]

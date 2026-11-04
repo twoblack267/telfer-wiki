@@ -924,7 +924,20 @@ for (const person of people) {
           // kids vanished from `children` and re-appeared under the wrong heading.
 
           if (/\badopt/i.test(String(name || ''))) {
-            addParentChild(targetSlug, sourceSlug);
+            // ARGUMENT ORDER IS THE WHOLE POINT (fixed 2026-11-04).
+            // This branch was written by copying the Father/Mother case above, whose
+            // call is addParentChild(targetSlug, sourceSlug) because there the SOURCE
+            // is the child. In the Children case it is the other way round: the
+            // SOURCE owns the list, so the source is the PARENT. Passing them in the
+            // inherited order inverted every adopted edge — John Robert Telfer's five
+            // adopted children were each recorded as his PARENT, and he lost all five
+            // from `children`. Peter Telfer was the only survivor that reached the
+            // published data, as a reversed edge (`peter-telfer.children =
+            // ['john-telfer-robert']`, i.e. a man listed as his own father's father),
+            // because he is the only adopted child with no birth year for the
+            // biological-plausibility guard to reject the inversion with.
+            // Must match the non-adopted Children path below.
+            addParentChild(sourceSlug, targetSlug);
             adoptedChildEdges.add(`${sourceSlug}>${targetSlug}`);
             derivedCounts.set('Child (adopted)', (derivedCounts.get('Child (adopted)') || 0) + 1);
             resolved++;

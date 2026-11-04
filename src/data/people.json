@@ -16120,6 +16120,7 @@
     "children": [
       "angela-telfer",
       "carissa-telfer-2023",
+      "peter-telfer",
       "rebecca-telfer",
       "sophia-telfer"
     ],
@@ -22328,11 +22329,10 @@
     "is_living": true,
     "lifespan": "?",
     "parents": [
+      "john-telfer-robert",
       "robyn-telfer"
     ],
-    "children": [
-      "john-telfer-robert"
-    ],
+    "children": [],
     "spouses": [],
     "siblings": [
       "angela-telfer",
