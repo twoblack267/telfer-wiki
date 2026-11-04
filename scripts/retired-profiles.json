@@ -269,9 +269,9 @@
     "replaced_by": "nicholas-andre-maddern",
     "display_name": "Nicholas Andre Maddern"
   },
-  "Kirrily Sheree Maddern (1976)": {
+  "kirrily-sheree-maddern-1976": {
     "retired": "2026-10-29",
-    "reason": "Duplicate stub for a LIVING person, not a genealogy question. 'Sheree' is a spelling variant of the vault's Kirrily Sharee Maddern (b. 15 Apr 1976, Cummins). Same parents (Robert Norman Maddern & Lyndell Marie Telfer), same DOB year, same husband (Daniel Colin Dingwall, m. 2 Oct 2005). The stub has no vault_file, a 96-character body, and a conflicting day (1 Apr vs 15 Apr). Same no-vault_file carry-over exemption bug class (tw-2026-09-12-011). Survivor is the vault-backed record.",
+    "reason": "Duplicate stub for a LIVING person, not a genealogy question. 'Sheree' is a spelling variant of the vault's Kirrily Sharee Maddern (b. 15 Apr 1976, Cummins). Same parents (Robert Norman Maddern & Lyndell Marie Telfer), same DOB year, same husband (Daniel Colin Dingwall, m. 2 Oct 2005). The stub has no vault_file, a 96-character body, and a conflicting day (1 Apr vs 15 Apr). Same no-vault_file carry-over exemption bug class (tw-2026-09-12-011). Survivor is the vault-backed record.\n\nKEYING BUG FIXED 4 Nov 2026: this tombstone was keyed by the person's ID ('Kirrily Sheree Maddern (1976)') instead of their slug. retire-profiles.mjs matches on p.slug, so the entry never matched anything and the phantom was never removed - the retirement was recorded as done on 2026-10-29 and the duplicate stayed live and indexed for six days. Every other entry in this file is slug-keyed. Verified after the fix: retire-profiles reported '1 retired profile removed - kirrily-sheree-maddern-1976' and --check exits 0 with 658 profiles.",
     "replaced_by": "kirrily-sharee-maddern",
     "display_name": "Kirrily Sheree Maddern"
   }

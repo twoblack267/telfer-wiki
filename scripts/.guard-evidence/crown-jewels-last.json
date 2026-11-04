@@ -1,13 +1,19 @@
 {
-  "checkedAt": "2026-11-04T10:07:18.977Z",
+  "checkedAt": "2026-11-04T10:34:20.740Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 659,
-    "after": 659
+    "after": 658
   },
   "crownJewelsChecked": 6,
-  "renames": [],
+  "renames": [
+    {
+      "from": "kirrily-sheree-maddern-1976",
+      "to": "kirrily-sharee-maddern",
+      "name": "Kirrily Sheree Maddern"
+    }
+  ],
   "failures": [],
   "warnings": []
 }

@@ -3289,11 +3289,6 @@
       "slug": "jean-telfer",
       "id": "Jean Burton Telfer (1905)",
       "generation": 6
-    },
-    {
-      "slug": "kirrily-sheree-maddern-1976",
-      "id": "Kirrily Sheree Maddern (1976)",
-      "generation": 8
     }
   ],
   "edges": {
@@ -6785,10 +6780,6 @@
       {
         "from": "james-robert-telfer-1866",
         "to": "jean-telfer"
-      },
-      {
-        "from": "lyndell-marie-telfer-1951",
-        "to": "kirrily-sheree-maddern-1976"
       }
     ],
     "spouseOf": [
