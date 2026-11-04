@@ -764,10 +764,30 @@ function navIsActive(entry: { href: string; match: string }): boolean {
      `dashboard-main` replaces the cap: the main column fills its parent and
      shares the header's 2rem gutters. Applied to the layout wrapper rather
      than per-page so all 2,311 routes agree. Footer gets the same treatment so
-     its rule runs the full width too. */
+     its rule runs the full width too.
+     FIFTH PASS (2026-11-04): "making the stream full". Filling the viewport
+     put the prose edge-to-edge, which is unreadable at 1500px - Mark asked for
+     the flow to be full-width, not the text. Ultra-wide line lengths are the
+     real defect underneath his complaint. So: the CONTAINER is full-bleed
+     (sections, cards, grids, rules all run wall to wall), but the prose inside
+     a section is capped with the ch unit - a measure that tracks the font, so
+     it stays honest at any zoom or window size. `--measure` is 68ch with the
+     text left-aligned in the flow, never centred as a narrow island. */
   @media(min-width:1024px){
     .dashboard-main{max-width:none;padding-left:2rem;padding-right:2rem}
     .dashboard-foot{max-width:none}
+    /* Prose gets a measure; containers do not. */
+    .dashboard-main section > p,
+    .dashboard-main section > h2,
+    .dashboard-main section > blockquote,
+    .dashboard-main section > ul,
+    .dashboard-main section > ol{max-width:68ch}
+    /* Centred sections keep their centred look but stop sprawling. */
+    .dashboard-main section.text-center > p,
+    .dashboard-main section.text-center > h2{max-width:68ch;margin-left:auto;margin-right:auto}
+    /* Cards, grids and rules stay full width - that is the "stream". */
+    .dashboard-main .person-card,
+    .dashboard-main .grid{max-width:none}
   }
 
   @theme {
