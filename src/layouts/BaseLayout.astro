@@ -33,9 +33,16 @@ const resolvedDescription = decodeDescriptionEntities(clampDescription(descripti
 // `&#34;`, which some crawlers and social scrapers then show literally — 45+ pages shipped
 // `known as &#34;Mimie&#34;` (card tw-2026-10-31-002). Emit the attribute ourselves with a single
 // correct escape pass so a quote becomes a real quote character in the delivered string.
+// DOUBLE-ENCODING IS THE SAME DEFECT AS NO ENCODING. The description built by the person
+// template usually arrives already entity-encoded upstream ("known as &quot;Cliff&quot;"), and
+// escaping that a second time produced `&amp;quot;` — the browser then shows a literal
+// `&quot;` in the snippet on 29 person pages. Decode to plain text first, then escape once.
 const escapeAttr = (t) => String(t == null ? "" : t)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const descAttr = escapeAttr(resolvedDescription);
+// A `"` inside content="…" is DELIVERED as the named entity (&quot;), which is valid HTML and
+// is what the browser decodes to a real quote. Numeric forms are what scrapers mishandle, so
+// they stay banned (the hygiene gate enforces that); the named form is correct output.
+const descAttr = escapeAttr(decodeDescriptionEntities(resolvedDescription));
 const descCharsAttr = escapeAttr(String(resolvedDescription.length));
 const resolvedOgType = ogType || "website";
 const resolvedOgImage = ogImage || "https://telferwiki.com/telferwiki-og.png";

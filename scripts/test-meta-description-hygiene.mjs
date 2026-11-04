@@ -145,6 +145,12 @@ for (const d of dirsAll) {
   if (!fs.existsSync(f)) continue;
   const html = fs.readFileSync(f, "utf8");
   const m = html.match(/<meta\s+name="description"\s+content="([^"]*)"/i);
+  // A WITHDRAWN-RECORD STUB HAS NO DESCRIPTION AND SHOULD NOT HAVE ONE. The entry filter
+  // below skipped anything titled "Redirecting to" (alias stubs) but not the "[Slug].astro"
+  // withdrawn-record pages, so a byte-identical noindex stub counted as content and scanned
+  // 12 phantom slugs. Only real person pages are in scope.
+  const t = html.match(/<title>([^<]*)<\/title>/i);
+  if (!t || /^(?:Redirecting to|Record withdrawn)/i.test(t[1])) continue;
   if (!m) continue;
   const raw = m[1];
   const dec = raw.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&");

@@ -434,17 +434,82 @@ const yearText = !unknownSpan
         ? `d. ${bodyDeath}`
         : "";
 
+// display_name ALREADY carries the years for ~59 records ("Elizabeth Beattie (1741 – 1819)")
+// while 590 carry a bare name. Appending `(yearText)` unconditionally printed the lifespan
+// twice on those 42 live pages (card tw-2026-10-31-001). Append only when the name does not
+// already carry that exact span.
+// Declared HERE, above the template description, because both the template and the prose
+// lead use it; a `const` read above its declaration is a build-stopping TDZ error.
+const nameHasYears = Boolean(yearText) && person.display_name.includes(`(${yearText})`);
+
 // Template form — kept as the FALLBACK for profiles with no prose, and with the
 // unknown-date placeholder suppressed so it never prints "(? – ?)".
 // A bare name plus "— Telfer family history." is only 37 characters, which gives a crawler
 // almost nothing (card tw-2026-10-31-003). Add the relationship FACTS the profile already
 // states — role, spouse, marriage date/place — never anything not in the record.
-const spouseMatch = (person.body_markdown || "").match(/\|\s*\*\*Spouse\*\*\s*\|\s*\[\[([^\]|]+)(?:\|([^\]]+))?\]\]\s*(\([^)]*\))?/);
 const roleMatch = (person.body_markdown || "").match(/\*\*Role:\*\*\s*([^\n]+)/);
+// THE FAMILY TABLE IS THE RELATIONSHIP SOURCE OF TRUTH, AND IT SPELLS RELATIONS THREE WAYS.
+// The template fact-builder recognised only `**Spouse**` in the table, so a profile that
+// records the relationship as a bare `**Wife**` row (samuel-joel-telfer) produced no spouse
+// fact at all — and the description then fell back to the `**Wife:**` BODY LINE, whose value
+// already carries its own lifespan: "Karla Jayde (Vandenbroek) Telfer (b. 1985)" plus the
+// template's years = "(b. 1985) (b. 1985)". Match any partner relation. (Note: this is the
+// only place a relation is read from the body line; the table is preferred when present.)
+const PARTNER = "(?:Spouse|Wife|Husband|Partner|De facto)";
+const spouseTable = (person.body_markdown || "").match(
+  new RegExp(`\\|\\s*\\*\\*${PARTNER}\\*\\*\\s*\\|\\s*\\[\\[([^\\]|]+)(?:\\|([^\\]]+))?\\]\\]`)
+);
+const spouseBodyLine = (person.body_markdown || "").match(
+  new RegExp(`^\\*\\*${PARTNER}:\\*\\*\\s*\\[\\[([^\\]|]+)(?:\\|([^\\]]+))?\\]\\]`, "m")
+);
+// A TABLE ROW'S TRAILING PARENTHETICAL BELONGS TO THE ROW, NOT TO THE NAME.
+// "| **Spouse** | [[Gwenyth Miranda Telfer (1918–2003)]] (m. 1953 Auburn District, NSW) |"
+// escaped once through the LEAD path and shipped as "Albert Campbell. Gwenyth Miranda Telfer
+// (1918–2003) (m. 1953 Auburn District, NSW)" — a row, not a sentence. Carrying the trailing
+// bracket in the match and then discarding it means the same text can never be re-spoken.
+const spouseTrailing = (m) => {
+
+  // Re-match with the trailing parenthetical captured, so the caller can drop it.
+  const src = String(person.body_markdown || "");
+  const re = new RegExp(`\\|\\s*\\*\\*${PARTNER}\\*\\*\\s*\\|\\s*\\[\\[([^\\]|]+)(?:\\|([^\\]]+))?\\]\\]\\s*(\\([^)]*\\))?`);
+  return src.match(re);
+};
+const spouseMatch = spouseTable ? spouseTrailing(spouseTable) : spouseBodyLine;
+// THE ROLE LINE IS NOT AUTOMATICALLY A FACT. Two ways it lies, both shipped:
+//  1. BOOKKEEPING. "Child of X — one of the four children his vault profile had flagged
+//     unverified since 2026; confirmed here from the printed page" is our filing note
+//     wearing a relationship's coat. Used verbatim it became the description of
+//     gwenyth-telfer and jessica-telfer.
+//  2. A DANGLING LABEL. Split at the em dash, "Child of — one of the four children…"
+//     leaves nothing but the words "Child of", which then sat in front of the note:
+//     "Gwenyth Telfer (1918 – 2003) — Telfer family history. Child of — one of…".
+// Keep only the part of the role line that names a PERSON, and drop it entirely if what
+// survives is bookkeeping or a bare label. The relationship is already in the Family
+// table, so losing the phrase costs a searcher nothing.
+const cleanRoleText = (() => {
+  let t = String(roleMatch?.[1] || "")
+    .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, "$2" || "$1")
+    .trim();
+  if (!t) return "";
+  // Cut the line at the first clause that is about our own notes.
+  t = t.split(/\s+[—–]\s+|\s*;\s*/)[0].trim();
+  if (/\b(?:vault (?:profile|file)|flagged unverified|confirmed here from|not printed in the tree)\b/i.test(t)) return "";
+  // "Child of" / "Spouse of" with nobody after it is a label, not a fact.
+  if (/^(?:Child|Spouse|Parent|Sibling|Son|Daughter|Father|Mother|Wife|Husband)\s+of\s*$/i.test(t)) return "";
+  // Any remaining label with no object of its own.
+  if (/^(?:Child|Spouse|Parent)\s+of\s+[—–-]/i.test(t)) return "";
+  // A ROLE THAT ENDS ON A LIFE SPAN PRINTS THE SPAN TWICE. samuel-joel-telfer's Role line
+  // names only his wife — "Wife of [[Karla Jayde (Vandenbroek) Telfer (b. 1985)]]" — and the
+  // template adds the spouse fact underneath, giving "(b. 1985) (b. 1985)". A role that is
+  // just a relationship is already covered by the Family table and the spouse fact, so drop
+  // it here rather than letting the same years be printed twice.
+  if (/^(?:Child|Spouse|Parent|Sibling|Son|Daughter|Father|Mother|Wife|Husband|Partner)\s+of\s+/i.test(t)) return "";
+  return t;
+})();
 const fallbackFacts = [
-  roleMatch ? `${roleMatch[1].replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, "$2" || "$1").trim()}` : "",
+  cleanRoleText,
   spouseMatch
-    ? `Spouse of ${(spouseMatch[2] || spouseMatch[1]).trim()}${spouseMatch[3] ? ` ${spouseMatch[3].trim()}` : ""}.`
+    ? `Spouse of ${String(spouseMatch[2] || spouseMatch[1]).replace(/\s*\((?:b\.|d\.|bap\.)?\s*[^()]*\)\s*$/i, "").trim()}${spouseMatch[3] && !/\d{4}/.test(spouseMatch[3]) ? ` ${spouseMatch[3].trim()}` : ""}.`
     : "",
 ].filter(Boolean).join(" ");
 // NOTE (2026-11-02, card itc-20261101-1): this used a bare `.slice(0, 158)`, which
@@ -454,12 +519,57 @@ const fallbackFacts = [
 // is always closed and never exceeds the budget.
 const templateDescription = clampDescription([
   person.display_name,
-  yearText && !person.display_name.includes(`(${yearText})`) ? `(${yearText})` : "",
+  yearText && !nameHasYears ? `(${yearText})` : "",
   `— Telfer family history.`,
   fallbackFacts,
   genNote,
   livingNote,
 ].join(" ").replace(/\s+/g, " ").trim());
+// A FALLBACK THAT STARTS "Derived from a sourced parent — not independently witnessed" is
+// our provenance note, not the first line of a birth. factDescription() reads the body's
+// FACT LINES, which include field runs ("Born: 1880 | Died: 1962 | Mother: …") and the
+// raw "[[" wikilink syntax — neither belongs in a snippet. Take the first fact line that is
+// a single clause, spell the links out, and leave the rest to the template.
+const cleanFactLine = (raw) => {
+  let t = String(raw)
+    .replace(/\*\*/g, "")
+    .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]/g, "$2" || "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+  // Field run: everything after the first "|" is another column, not another sentence.
+  t = t.split(/\s*\|\s*/)[0].trim();
+  return t;
+};
+// THE FIELD FACT IS THE TRUE FALLBACK. The template sentence above is only useful when the
+// profile states a relationship or a role; when it states neither ("Albert Campbell"), the
+// description spent its whole budget on "— Telfer family history." and said nothing about
+// the person. The profile's own first fact line is strictly better: "Born: 1890 —
+// Rockhampton, QLD" becomes a description a searcher can use, and it is a fact we already
+// publish, taken from the page itself. Never invent, never reach past the body.
+const factDescription = clampDescription(
+  (() => {
+    const firstFact = String(person.body_markdown || "")
+      .split("\n")
+      .map((l) => l.trim())
+      .find((l) => /^\*\*(?:Born|Died|Baptised|Birth|Married)\b/i.test(l));
+    if (!firstFact) return "";
+    // "**Born:** 1890 — Rockhampton, QLD" -> "Born 1890 — Rockhampton, QLD." A LABEL STAYS A
+    // LABEL: dropping the colon turned "Born" into the first word of a sentence, and the gate
+    // that guards against field runs then read "Born 2 Oct 1868, Black Heath, Tungkillo, SA"
+    // as prose. Keep the colon — it is honest about what the line is — and keep the fact.
+    let cleaned = cleanFactLine(firstFact);
+    // "Marriage: m. Simon Trent Maddern (b. 1978) — 10 Jan 2004, Cabra College Chapel, Adelaide,
+    // SA" opens a snippet with a bare "M.", a column marker that survives the markdown as if it
+    // were an initial. Say what the line MEANS in words the record supports; the names and
+    // dates are unchanged.
+    const marriage = cleaned.match(/^(?:Marriage|Married):?\s*(?:m\.|married)\s*(.+)$/i);
+    if (marriage) cleaned = `Married ${marriage[1]}`;
+    else if (/(?:^|:\s*)(?:m\.)\s+[A-Z]/.test(cleaned) && !/^Married /.test(cleaned))
+      cleaned = cleaned.replace(/(^|:\s*)m\.\s+/i, "$1Married ");
+    if (cleaned.length < 12) return "";
+    return `${person.display_name}${yearText && !nameHasYears ? ` (${yearText})` : ""}. ${cleaned}.`;
+  })()
+);
 
 // FIRST PROSE SENTENCE from the person's own body. formatBody has already turned the
 // vault markdown into HTML with inline links; strip the tags, drop a leading heading,
@@ -540,6 +650,42 @@ function isEditorialOnly(t) {
   if (/^(Same-name note|Same name note|Disambiguation|Note on the name)\b/i.test(s)) return true;
   if (/^(Not yet sourced|Not yet verified|Awaiting|To confirm|Unconfirmed|Unverified)\b/i.test(s)) return true;
   if (/^(What is not known|What is known)\b/i.test(s)) return true;
+  // THE LIVING-PERSON BOILERPLATE. Every living profile opens with the vault's own
+  // housekeeping line, "Living person — details limited to the printed record (name,
+  // dates, places, immediate family)." It is a POLICY NOTICE, identical on 36 pages, and
+  // it was being used as the meta description on all of them (plus two more where the same sentence was split differently).
+  // A snippet that says the same thing on 36 pages is a duplicate-content signal, and it
+  // tells a searcher nothing about the person. Same class as "What is known:" — a label
+  // about our editing rules, not a fact about a life. Dropped from every tier, including
+  // the anyText fallback, so those pages fall through to the template description, which
+  // at least names the person and their dates.
+  // OUR OWN BOOKKEEPING, SPOKEN TO THE FAMILY. "one of the four children his vault
+  // profile had flagged unverified since 2026; confirmed here from the printed page" is
+  // a progress note about a vault file. It shipped as the snippet on two pages
+  // (gwenyth-telfer, jessica-telfer), and half of it became the LEAD of the description
+  // because the Role line was split at the em dash. A searcher never needed to know
+  // which of our notes were stale in 2026. Same class as "Stub entry": true, useful,
+  // and none of Google's business.
+  // OUR OWN PLACEHOLDER, PUBLISHED TO STRANGERS. A vault line may honestly record a
+  // missing place: "Born: 10 August 1911 — (place not printed in the tree)". That
+  // parenthetical is a note to the researcher. In a search snippet it reads as a typo
+  // (keith-telfer shipped it). Reject the sentence so the template description, which
+  // says only what IS known, gets used instead.
+  if (/\(place not printed in the tree\)/i.test(s)) return true;
+  if (/\(dates not recorded\)/i.test(s)) return true;
+  if (/\(place not recorded\)/i.test(s)) return true;
+  // AND THE SAME NOTE WHEN THE ROLE LINE SPLITS AT ITS EM DASH. The vault writes
+  // "**Role:** Child of X ? one of the four children his vault profile had?". Split on
+  // the dash, the FIRST half is "Child of X" (a label, rejected) and the second half
+  // begins "one of the four children his vault profile had flagged?", which slipped past
+  // a pattern anchored at the START of the sentence. That is exactly the snippet still
+  // shipping on gwenyth-telfer and jessica-telfer. Test the sentence ANYWHERE for the
+  // bookkeeping phrases, not only at its head.
+  if (/\b(?:vault profile|vault file|flagged unverified)\b/i.test(s)) return true;
+  if (/\bconfirmed here from the printed page\b/i.test(s)) return true;
+  if (/\bnot printed in the tree\b/i.test(s)) return true;
+  if (/\b(?:flagged unverified|since 20\d\d)\b/i.test(s) && s.split(/\s+/).length < 40) return true;
+  if (/\bdetails limited to the printed record\b/i.test(s)) return true;
   if (/^(Source|Sources|Source note|Note|Reference|References)\b/i.test(s)) return true;
   if (/^(Correction Notice|Previously listed|This is incorrect|Erratum)\b/i.test(s)) return true;
   if (/^(AWM|Roll of Honour|CWGC|Find a Grave|FindAGrave)\b/i.test(s)) return true;
@@ -628,14 +774,50 @@ function looksLikeLabel(t) {
   if (/^(AWM|Roll of Honour|CWGC|Find a Grave|FindAGrave)\b/i.test(s)) return true;
   // A run of "Label Value" fragments with no verb and no full stop.
   if (!/[.!?]/.test(s) && s.split(/\s+/).length < 6) return true;
+  // A FIELD LIST WITH NO LABEL AT ALL. A profile that opens "## Family" with a two-column
+  // table renders, once the table wrapper is gone and a row is split, as a bare value:
+  // "Lyall Vincent Telfer & Ruth Allison Littlejohn" — every name in the row, nothing
+  // saying what they are. It has four words and no full stop, so the length rule above
+  // passed it and kylie-telfer shipped her parents' names as her description. A sentence
+  // about a person has a verb; this is a list. Require a lowercase word (a verb or a
+  // preposition) in the first six OR a full stop, otherwise it is a fragment of a table.
+  if (!/[.!?]/.test(s) && !/\b(?:[a-z]{3,})\b/.test(s)) return true;
+  // A NAME PLUS A PARENTHETICAL IS NOT A SENTENCE. "Gwenyth Miranda Telfer (1918–2003)
+  // (m. 1953 Auburn District, NSW)" is a table cell: no verb, no clause, just a person and
+  // their dates, sometimes with the dates printed twice. 90 pages shipped one of these as
+  // their Google snippet — every "Wife:"/"Husband:" body line, and every fragment left
+  // behind after a relationship label was split off. A real sentence has at least three
+  // words that are not name-ish and does not end on a bracketed fact.
+  const bareNamePlusDates = (t) => {
+    const words = t.split(/\s+/).filter(Boolean);
+    if (words.length < 3) return true;
+    // Ends on a bracketed fact with no terminator after it.
+    if (/\)\s*\.?$/.test(t) && !/[.!?]/.test(t)) {
+      // Any lower-case word OUTSIDE a bracket? If not, there is no clause here.
+      const outside = t.replace(/\([^)]*\)/g, " ");
+      if (!/\b[a-z]{2,}\b/.test(outside)) return true;
+    }
+    return false;
+  };
+  if (bareNamePlusDates(s)) return true;
+  // A MARKER IS NOT A NAME. "M. Nicholas Andre Maddern (b. 1973) — 25 Apr 2004, Cummins
+  // Lutheran Chapel" came from a marriage-abbreviation line: the "M." marker survived as
+  // if it were a forename, and the result reads as nonsense in a search result.
+  if (/^(?:M|m|B|D|Bap|Bur)\.\s+[A-Z]/.test(s)) return true;
   return false;
 }
-function firstProseSentence(html) {
+function firstProseSentenceAll(html) {
   let h = String(html || "");
   // 1. Delete the structures that are never prose — WITH their contents. Order
   //    matters: figures before blockquotes is irrelevant, but tables must go before
   //    the generic tag strip so their cells never surface as text.
   h = h.replace(/<figure[\s\S]*?<\/figure>/gi, " ");
+  // DEFINITION LISTS ARE THE SAME STRUCTURE AS TABLES. formatBody renders a Family table as
+  // <dl><dt>Spouse</dt><dd>Gwenyth Miranda Telfer (1918–2003) (m. 1953 …)</dd></dl>, so with
+  // only <table> handled the LABEL was dropped and the VALUE — a name plus a bracket — became
+  // the first "sentence" on the page. That is how albert-campbell shipped another person's
+  // name and marriage as his own description. Never prose: delete the whole list.
+  h = h.replace(/<dl[\s\S]*?<\/dl>/gi, " ");
   h = h.replace(/<table[\s\S]*?<\/table>/gi, " ");
   h = h.replace(/<h[1-6][^>]*>[\s\S]*?<\/h[1-6]>/gi, " ");
   h = h.replace(/<blockquote[\s\S]*?<\/blockquote>/gi, " ");
@@ -659,16 +841,34 @@ function firstProseSentence(html) {
   const sentence = [];
   const anyText = [];
   for (const raw of chunks) {
-    const text = decodeText(String(raw).replace(/<[^>]+>/g, " "));
-    if (!text) continue;
+    // Tags become a SPACE and are decoded, then re-split on the line breaks the markdown
+    // renderer leaves INSIDE a paragraph. A "**Role:**" line in a table row renders as
+    // "<td>Child of <a …>Ernest John Telfer</a> — one of the four children…</td>", so
+    // stripping <a> to a space glued "Child of" to "— one of…" and the description opened
+    // with a dangling "Child of — one of…" (gwenyth-telfer, jessica-telfer). A newline is
+    // a chunk boundary the same way <br> is; this makes the split happen AFTER the tags
+    // are gone, so an inline link cannot merge two lines into one sentence fragment.
+    const flat = decodeText(String(raw).replace(/<[^>]+>/g, " "));
+    if (!flat) continue;
+    for (const text of flat.split(/\s*(?:\u2014\s*)?\n+\s*|[\r\n]+/).flatMap((x) => x.split(/ {2,}/)).map((x) => x.trim()).filter(Boolean)) {
     // The fallback tier collects ONLY text that is fit to publish. It used to collect
     // everything except source notes and then return it unfiltered when the cleaner
     // tiers came up empty — so a changelog line ("Stub entry written from the printed
     // book page, 3 Oct 2026") went out the back door that every other tier had shut.
     const neverDescribe = isEditorialOnly(text);
-    if (!neverDescribe) anyText.push(text);
+    // A LINE THAT CARRIES OUR BOOKKEEPING ANYWHERE IS NOT A SNIPPET, EVEN IN PART.
+    // The filter above tests the chunk's head; the vault's Role lines split at an em
+    // dash, so the head ("Child of Ernest John Telfer") is innocuous and the TAIL is
+    // the note ("… flagged unverified since 2026"). firstSentence() then picked the tail
+    // up as a candidate. Rejecting the whole chunk here means gwenyth and jessica fall
+    // through to their facts tier and get "Born: 19 Jun 1911 — Terowie, SA." instead of
+    // a progress note about our own filing. A chunk rejected here is rejected for every
+    // tier, including the anyText fallback — that is the whole point of rejecting it.
+    const bookkeeping = /\b(?:vault (?:profile|file)|flagged unverified|confirmed here from the printed page|not printed in the tree)\b/i.test(text);
+    const neverDescribeAll = neverDescribe || bookkeeping;
+    if (!neverDescribeAll) anyText.push(text);
     const s = firstSentence(text);
-    if (s && !neverDescribe) {
+    if (s && !neverDescribeAll) {
       // TIER (b) MUST NOT BE A BACK DOOR. It exists so a plain factual line ("Deceased
       // -- dates not recorded.") can serve when nothing else does. It is not licence for
       // our own editorial furniture to become a description: a same-name trap warning,
@@ -676,6 +876,7 @@ function firstProseSentence(html) {
       // sentences, and all of them are the wrong thing to show a searcher.
       if (!neverDescribe) sentence.push(s);
       if (!neverDescribe && !looksLikeLabel(text)) clean.push(s);
+    }
     }
   }
   // A description that opens with our own editorial label ("What is known: she was…")
@@ -691,13 +892,45 @@ function firstProseSentence(html) {
     }
     return t;
   };
-  if (clean.length) return stripOpener(clean[0]);
-  if (sentence.length) return stripOpener(sentence[0]);
-  return anyText[0] || "";
+  // Every candidate in preference order, for callers that need to try the next one
+  // when the first is a fragment the editorial filter rejects.
+  return [...clean, ...sentence, ...anyText].map(stripOpener);
+}
+// Backwards-compatible single-answer wrapper: the old contract, the best chunk only.
+function firstProseSentence(html) {
+  return firstProseSentenceAll(html)[0] || "";
 }
 
 // Extract a year from a free-text fact line like "**Born:** ~1872 (aged 93 …)".
-const proseSentence = firstProseSentence(bodyHtml);
+// SECOND TIER. firstProseSentence() returns ONE chunk — the best it found. When that
+// chunk is a fragment the filter above now rejects ("Child of —"), the page falls all
+// the way back to the bare template ("Name (years) — Telfer family history. 6th
+// generation Telfer.") even though the body has perfectly good sentences further down.
+// firstProseSentenceAll() hands back every candidate in preference order, so the first
+// one that survives the filter AND reads as a sentence wins: gwenyth-telfer drops
+// "Child of — one of the four children…" and lands on her birthplace and dates instead
+// of a policy template.
+// THE TABLE IS NOT PROSE, SO IT MUST BE DELETED BEFORE THE SENTENCES ARE SOUGHT.
+// firstProseSentenceAll() strips <table> itself, but THIS call passes bodyHtml through
+// too — and when the table wrapper is missing (a Family section rendered as bare <tr>/<td>,
+// which is what formatBody emits for a profile whose markdown table has no surrounding
+// block) the cells survive the strip and the first "sentence" becomes a row: "Albert
+// Campbell. Gwenyth Miranda Telfer (1918–2003) (m. 1953 Auburn District, NSW)". Drop the
+// table and everything table-ish here, once, and every candidate below inherits the fix.
+const proseHtml = String(bodyHtml || "")
+  .replace(/<table[\s\S]*?<\/table>/gi, " ")
+  .replace(/<dl[\s\S]*?<\/dl>/gi, " ")
+  .replace(/<(?:tbody|thead|tfoot|tr|td|th)[^>]*>/gi, "\n\n");
+const allCandidates = firstProseSentenceAll(proseHtml);
+// A candidate is usable only if it BOTH survives the editorial filter and reads as a
+// sentence — a full stop or a clause long enough to be one. The 6-word floor alone was
+// too weak: "Child of — one of the four children his vault profile had flagged…" is
+// eleven words and is still a fragment, and it kept winning on gwenyth-telfer because
+// the filter rejected the real sentences later in her body for being shorter.
+const usable = allCandidates.filter(
+  (c) => c && !isEditorialOnly(c) && (/[.!?]/.test(c) ? c.split(/\s+/).length >= 8 : c.split(/\s+/).length >= 12)
+);
+const proseSentence = usable[0] || allCandidates.find((c) => c && !isEditorialOnly(c)) || firstProseSentence(bodyHtml);
 // The body's first sentence usually repeats the person's own name (the profile
 // heading is stripped, so "James Telfer (bap.1762) Baptised: …" leads). Leading with
 // name + name reads as a stutter in a search result, so drop a sentence that is
@@ -715,6 +948,26 @@ const nameOnly = (() => {
   // The remainder must be EMPTY for this to be a pure name echo.
   return s.length === 0;
 })();
+// A "SENTENCE" WITH NO VERB IS A FIELD. isEditorialOnly() rejects the shapes it can
+// recognise, but "M. Simon Trent Maddern (b. 1978) — 10 Jan 2004, Cabra College Chapel,
+// Adelaide, SA" is a marriage COLUMN, and it passed every check until the words were read:
+// no verb, no clause, just a name and two dates. Rather than teach the filter one more
+// pattern per column, require the lead to say something a person DID or WAS. If it does
+// not, the template/fact path takes over — which names the actual relationship in English.
+// BUT A VERB LIST IS NOT ENOUGH ON ITS OWN. "Born: 1880 | Died: 1962 | Mother:" contains
+// three of those words and is still a database row — the pipes give it away. A field run
+// (two or more "|" separators, or two or more "Label:" fragments) is never prose, however
+// many verbs it happens to contain.
+const looksLikeFieldRun = (t) =>
+  !t
+    ? false
+    : (t.match(/\s[|\u00a6]\s/g) || []).length >= 1
+      || (t.match(/\b[A-Z][a-z]{2,}:\s/g) || []).length >= 2
+      || /\[\[/.test(t);
+const leadHasVerb = !proseSentence
+  ? false
+  : !looksLikeFieldRun(proseSentence) && /\b(?:was|were|is|are|born|baptised|baptized|died|married|emigrated|arrived|settled|lived|worked|served|farmed|fought|enlisted|owned|ran|kept|joined|moved|returned|remained|became|had|has|left|took|gave|sailed|buried|recorded|named|listed|remembered|known)\b/i.test(proseSentence);
+const leadSentence = nameOnly || !leadHasVerb ? "" : proseSentence;
 // When the body merely restates the name, strip that echo from the front of the
 // sentence rather than throwing the whole sentence away — "Robert Dunlop Stub entry
 // — …" becomes "Stub entry — …", which is the part that actually says something.
@@ -731,7 +984,7 @@ const stripNamePrefix = (t) => {
 // how a description ended up reading "(1809 – 1895). was born on 2 February 1809". The
 // prefix is now stripped ONLY when the body itself begins with the bare display name
 // followed by punctuation, not when the name is the sentence's grammatical subject.
-const leadSentence = nameOnly ? "" : proseSentence;
+
 // Measured on the ENTITY-DECODED text. `slice(0,158)` used to run on the raw
 // string, so a sentence carrying &#38;/&#34; came out well past the budget in the
 // rendered <meta> (card itc-20261023-7). Decode first, count what a crawler sees,
@@ -741,16 +994,37 @@ const decodeEntities = (t) => String(t || "")
   .replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#8217;/g, "'");
 // Marks are stripped before clamping: a search snippet cannot render an icon,
 // and a raw emoji there reads as noise on someone else's results page.
-// display_name ALREADY carries the years for ~59 records ("Elizabeth Beattie (1741 – 1819)")
-// while 590 carry a bare name. Appending `(yearText)` unconditionally printed the lifespan
-// twice on those 42 live pages (card tw-2026-10-31-001). Append only when the name does not
-// already carry that exact span.
-const nameHasYears = Boolean(yearText) && person.display_name.includes(`(${yearText})`);
-const rawSeoDescription = leadSentence && decodeEntities(leadSentence).length >= 40
+
+// A POISONED LEAD MUST NOT REACH THE TITLE LINE EITHER. "Gwenyth Telfer (1918 – 2003)
+// — Telfer family history. Child of — one of the four children his vault profile had
+// flagged unverified since 2026…" is not a description of a person; it is half a field
+// label glued to our own filing note. The prose path was already refusing that text, so
+// the guard has to sit HERE as well, or the page falls through to a template that
+// appends whatever it is handed. Reject a lead that opens with a dangling "Child of"/
+// "Spouse of"/"Parent of" or carries vault bookkeeping anywhere.
+const leadIsAStub = !leadSentence
+  || /^(?:Child|Spouse|Parent|Sibling|Son|Daughter|Father|Mother)\s+of\s*(?:[—–-]|$)/i.test(leadSentence.replace(/^[^A-Za-z]+/, ""))
+  || /\b(?:vault (?:profile|file)|flagged unverified|confirmed here from the printed page|not printed in the tree)\b/i.test(leadSentence);
+// A RELATIONSHIP LABEL IS NOT A SENTENCE ABOUT A LIFE. When the body's first prose block is
+// nothing more than "Karla Jayde (Vandenbroek) Telfer (b. 1985)" — a Wife: line — the template
+// had already turned it into a role fact, and the lead path then re-appended the same person
+// with the template's own years on top: "(b. 1985) (b. 1985)" shipped live on
+// samuel-joel-telfer. Anything whose ONLY content is a name plus a lifespan is a table value,
+// not prose, so it must not become the lead sentence.
+const leadIsBareNameWithDates = !leadSentence
+  || /^[^.!?]{0,90}(?:\(\s*(?:b\.|d\.|bap\.)?\s*~?\d{3,4}(?:\s*[–-]\s*(?:~?\d{3,4}|living|\?))?\s*\))\s*\.?$/i.test(leadSentence.trim())
+  // A DOUBLED SPAN ANYWHERE — "(b. 1985) (b. 1985)" is never a sentence, whoever wrote it.
+  || /\)\s*\(\s*(?:b\.|d\.|bap\.)?\s*[~?\d]{3,4}(?:\s*[–-]\s*[~?\d]{3,4})?\s*\)/i.test(leadSentence);
+const rawSeoDescription = leadSentence && !leadIsAStub && !leadIsBareNameWithDates && decodeEntities(leadSentence).length >= 40
   ? clampDescription(decodeEntities(
       `${person.display_name}${yearText && !nameHasYears ? ` (${yearText})` : ""}. ${stripVaultMarks(leadSentence)}`
     ))
-  : templateDescription;
+  : // A bare "Name — Telfer family history. 6th generation Telfer." says nothing a searcher
+    // cannot already see in the title. If the profile states a date or a place, prefer that
+    // fact over our own boilerplate; fall back to the template only when the body has none.
+    factDescription && (!fallbackFacts || factDescription.length >= templateDescription.length)
+    ? factDescription
+    : templateDescription;
 // FINAL decode before the layout escapes for HTML. Without this, a nickname quote reaches
 // Google as "known as &#34;Cuth&#34;" — 22 pages did (card itc-20261026-2). Decoding here,
 // at the last step, catches every path into the description: prose, template fallback,
