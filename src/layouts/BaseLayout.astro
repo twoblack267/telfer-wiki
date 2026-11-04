@@ -922,6 +922,30 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     .wiki-content { font-size: 1.05rem; }
   }
 
+  /* Fenced record transcriptions (`<pre class="fence">`, built by
+     src/utils/format-body.mjs) — WARN, NOT MEASURED UNTIL 5 NOV 2026.
+     No rule existed for them at all, so they rendered at the browser default
+     `white-space: pre` with `overflow-x: visible`. A verbatim register
+     transcription therefore refused to wrap and pushed the whole PAGE into
+     horizontal scroll rather than its own box.
+
+     MEASURED (5 Nov 2026, /people/mary-bayes-farrow-1875/, headless Chromium):
+     documentElement.scrollWidth 639px against a 320px viewport; the <pre>
+     itself was 615px of content inside a 272px box. Setting the three props
+     below in-page brought the page to exactly 320px with zero remaining
+     overflow offenders. Card tw-2026-11-05-005.
+
+     `pre-wrap` (not `pre-line`) keeps the column alignment of the original
+     transcription while allowing a long line to wrap; `break-word` only fires
+     on a genuinely unbreakable token, so normal prose lines wrap on spaces. */
+  .wiki-content pre.fence {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
   .wiki-content p { margin-bottom: 0.15rem; }
   @media (min-width: 640px) {
     .wiki-content p { margin-bottom: 0.25rem; }
