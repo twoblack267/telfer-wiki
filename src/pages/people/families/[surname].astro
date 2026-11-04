@@ -38,9 +38,18 @@ const deceased = members.filter((p) => p.is_deceased);
 // the bottom, so the main list stays a clean directory of dated lives.
 const undatedMembers = members.filter((p) => !p.birth_year && !p.death_year);
 const datedMembers = members.filter((p) => p.birth_year || p.death_year);
-members.length = 0;
-members.push(...datedMembers);
+// 2026-11-05: the main list stays dated-only, but the HEADLINE COUNT must be
+// everyone. Counting dated members only printed a gold "0" beside 19 family
+// headings whose single member has no dates yet, and undercounted 5 more
+// (2 members, 1 dated) — a page announcing "0 profiles" while listing a person.
+// The dating gap is still stated, in words, next to the count.
+const totalCount = members.length;
 const noDeathRecord = members.filter((p) => !p.is_deceased);
+const countLabel =
+  `${totalCount} profile${totalCount !== 1 ? "s" : ""}` +
+  (undatedMembers.length > 0
+    ? ` · ${undatedMembers.length === totalCount ? "all dates unknown" : `${undatedMembers.length} with dates unknown`}`
+    : "");
 
 // Find generations covered
 // tw-2026-10-27-007: this range must describe LIVES, not just birth years.
@@ -79,7 +88,7 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
 
 <BaseLayout
   title={`${surname} Family`}
-  description={`The ${surname} family in the Telfer line — ${members.length} profile${members.length !== 1 ? "s" : ""}${span ? ` spanning ${span}` : ""}, including ${deceased.length} with a recorded death and ${noDeathRecord.length} awaiting dates. Part of the Telfer Family Wiki, tracing nine generations from Scotland to South Australia.`}
+  description={`The ${surname} family in the Telfer line — ${countLabel.replace(" · ", ", ")}${span ? ` spanning ${span}` : ""}, including ${deceased.length} with a recorded death. Part of the Telfer Family Wiki, tracing nine generations from Scotland to South Australia.`}
 >
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
@@ -99,7 +108,7 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
             The {surname} Family
           </h1>
           <p class="text-lg text-[var(--color-ink-light)]">
-            {members.length} profile{members.length !== 1 ? "s" : ""}
+            {countLabel}
             {span ? ` · spanning ${span}` : ""}
           </p>
           <div class="flex gap-2 mt-3">
@@ -108,7 +117,7 @@ const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["
           </div>
         </div>
         <div class="text-5xl text-[var(--color-gold)] font-bold font-serif shrink-0">
-          {members.length}
+          {totalCount}
         </div>
       </div>
     </div>
