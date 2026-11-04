@@ -77,8 +77,36 @@ const bodyHtml = formatBody(person.body_markdown || "", telferPeople);
 // here, at render time. Editing 125 vault files to restyle a view would be
 // deleting research judgements to fix a look.
 const bodyHtmlMarked = renderVaultMarks(bodyHtml);
-const bodyHtmlClean = bodyHtmlMarked
-  .replace(/^<h1[^>]*>.*?<\/h1>\s*/i, '')
+// Strip leading h1(s) AND any h1 that is just the person's own name repeated.
+// The vault convention writes "# <Full Name>" at the top of a biography, which
+// duplicates the page <h1> and produced two identical headings in the rendered
+// profile (10 people affected, e.g. edwin-telfer). The old regex only removed an
+// h1 in the very first position, and renderVaultMarks can emit inline markup
+// ahead of it, which defeated the anchor. Matching on the name is robust to both.
+const personName = (person.display_name || person.name || '').trim().replace(/\s+/g, ' ');
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+// Match an h1 that is a NAME HEADING for this person, in any of the forms the
+// vault writes it:
+//   "Clarice May Telfer"
+//   "Clarice May Fatchen (née Telfer)"     <- married name: starts differently
+//   "Elizabeth Oliver (1807–1846)"
+// So: the h1 must either begin with the display name, or carry a "(née " marker
+// combined with the person's first given name. Anything else (a real section
+// heading such as "## Early Life") is left alone.
+const firstName = personName.split(/\s+/)[0] || '';
+const h1NamePatterns = [
+  personName ? new RegExp(`<h1[^>]*>\\s*${escapeRe(personName)}\\b[^<]*</h1>\\s*`, 'gi') : null,
+  firstName
+    ? new RegExp(`<h1[^>]*>[^<]*\\b\\(née ${escapeRe(personName.split(/\s+/).slice(-1)[0] || '')}\\)[^<]*</h1>\\s*`, 'gi')
+    : null,
+  firstName
+    ? new RegExp(`<h1[^>]*>\\s*${escapeRe(firstName)}\\b[^<]*\\(née [^)]*\\)[^<]*</h1>\\s*`, 'gi')
+    : null,
+].filter(Boolean) as RegExp[];
+
+let bodyHtmlClean = bodyHtmlMarked.replace(/^<h1[^>]*>.*?<\/h1>\s*/i, '');
+for (const re of h1NamePatterns) bodyHtmlClean = bodyHtmlClean.replace(re, '');
+bodyHtmlClean = bodyHtmlClean
   .replace(/^(<p>\s*<\/p>\s*)+/i, '')
   .replace(/^\s+/, '');
 const hasBio = bodyHtmlClean.replace(/<[^>]*>/g, '').trim().length > 0;
