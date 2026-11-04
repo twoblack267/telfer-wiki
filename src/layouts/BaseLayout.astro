@@ -355,7 +355,12 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          and the active pill looked like a stray floating button. */
       #nav-desktop.is-open>a.nav-link{display:flex;width:100%;justify-content:flex-start;text-align:left}
       /* the scrim: covers the viewport below the header, sits under the panel */
-      #nav-desktop.is-open::before{content:"";position:fixed;inset:0;top:var(--nav-h,4.75rem);
+      /* The scrim (2026-11-04). `inset:0` followed by `top:var(--nav-h)` leaves
+         BOTTOM unset, and because `inset` is a shorthand that resolves to
+         top/right/bottom/left, the later `top` alone left nothing to fill — the
+         scrim measured 0px tall and never rendered. It needs an explicit bottom. */
+      #nav-desktop.is-open::before{content:"";position:fixed;top:var(--nav-h,4.75rem);
+        right:0;bottom:0;left:0;
         background:rgba(0,0,0,.55);z-index:-1;pointer-events:none}
       @media(min-width:1024px){#nav-desktop.is-open{position:static;flex-direction:row;box-shadow:none;border-top:0;padding:0;max-height:none}}
       /* Overflow containment (2026-11-04). The bar previously burst its container:
@@ -599,13 +604,16 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     window.addEventListener('resize', syncNavH, { passive: true });
 
     toggle.addEventListener('click', () => {
-      // `is-open` drives visibility from the inline stylesheet; toggling
-      // Tailwind's `hidden` here did nothing because those utilities are not
-      // emitted into the build (same content-scan gap as the flex classes).
+      // `is-open` drives visibility from the inline stylesheet.
+      // Icon swap uses explicit `display` (2026-11-04) rather than Tailwind's
+      // `hidden`: that utility IS emitted, but only into the external page
+      // stylesheet, so on first paint both glyphs were briefly visible and the
+      // button showed a hamburger while the menu was already open. Inline
+      // display cannot lose that race.
       const isOpen = !panel.classList.contains('is-open');
       panel.classList.toggle('is-open', isOpen);
-      iconOpen?.classList.toggle('hidden', !isOpen);
-      iconClose?.classList.toggle('hidden', isOpen);
+      if (iconOpen) iconOpen.style.display = isOpen ? 'none' : '';
+      if (iconClose) iconClose.style.display = isOpen ? '' : 'none';
       toggle.setAttribute('aria-expanded', String(isOpen));
     });
 
@@ -613,8 +621,8 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     document.addEventListener('click', (e) => {
       if (panel.classList.contains('is-open') && !toggle.contains(e.target) && !panel.contains(e.target)) {
         panel.classList.remove('is-open');
-        iconOpen?.classList.remove('hidden');
-        iconClose?.classList.add('hidden');
+        if (iconOpen) iconOpen.style.display = '';
+        if (iconClose) iconClose.style.display = 'none';
         toggle.setAttribute('aria-expanded', 'false');
       }
     });
