@@ -336,6 +336,18 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          these utility classes again (it did - flex/gap/px were dropped). */
       /* Tailwind's lg: utilities for these buttons are not in the compiled CSS,
          so pin their visibility here instead of trusting the class list. */
+      /* Header stacking (2026-11-04). The drawer is a left panel that starts
+         below the header, and the scrim now dims everything else including the
+         header strip. Without an explicit z-index on the header the close button
+         ended up UNDER the scrim and could not be clicked. 60 puts the header
+         above the scrim (40) and above the panel (45). */
+      body>nav.no-print{position:sticky;z-index:60}
+      /* 44px hit area is the accessibility floor; the button was 24px of icon
+         with padding inside a flex row that clipped it on narrow screens. */
+      #nav-toggle{display:inline-flex;align-items:center;justify-content:center;
+        min-width:44px;min-height:44px;padding:0;background:none;border:0;cursor:pointer;
+        color:inherit;border-radius:.5rem}
+      #nav-toggle:focus-visible{outline:2px solid var(--color-heading);outline-offset:2px}
       @media(min-width:1024px){#nav-toggle{display:none}}
       /* nav-desktop below lg (2026-11-04). It previously carried Tailwind's
          `hidden` class, which is emitted into the external stylesheet as
@@ -354,11 +366,14 @@ function navIsActive(entry: { href: string; match: string }): boolean {
             opaque surface derived from the same palette.
          2. There was no backdrop behind the open drawer, so the page stayed
             fully lit around it. A scrim is now drawn below the panel. */
-      #nav-desktop.is-open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;
-        gap:.15rem;padding:.75rem 1rem;align-items:stretch;
+      #nav-desktop.is-open{display:flex;flex-direction:column;
+        position:fixed;left:0;top:var(--nav-h,4.75rem);bottom:0;
+        width:min(19rem,82vw);
+        gap:.15rem;padding:.75rem 1rem 2rem;align-items:stretch;
         background:var(--color-nav-solid, var(--color-surface));
-        border-top:1px solid var(--color-border);box-shadow:0 12px 24px rgba(0,0,0,.55);
-        max-height:calc(100dvh - 5rem);overflow-y:auto;z-index:1}
+        border-right:1px solid var(--color-border);
+        box-shadow:8px 0 24px rgba(0,0,0,.55);
+        overflow-y:auto;overscroll-behavior:contain;z-index:45}
       /* Rows fill the panel and read left-to-right. Without this each link was
          only as wide as its own label, so the icons never lined up in a column
          and the active pill looked like a stray floating button. */
@@ -367,8 +382,12 @@ function navIsActive(entry: { href: string; match: string }): boolean {
          the sticky header's backdrop-filter makes the nav a containing block for
          fixed-position descendants — inside it, this element filled only the
          77px header and measured 0px tall. Revealed by body.nav-open, set by the
-         same setOpen() that drives the panel. */
-      #nav-scrim{position:fixed;top:var(--nav-h,4.75rem);right:0;bottom:0;left:0;
+         same setOpen() that drives the panel.
+         It now covers the header too (top:0), because the drawer is a left
+         side panel: leaving the header bright above a dimmed page looked like
+         two unrelated layers. z-index 40 sits under the panel's 45 and under
+         nothing else. */
+      #nav-scrim{position:fixed;top:0;right:0;bottom:0;left:0;
         background:rgba(0,0,0,.55);z-index:40;opacity:0;pointer-events:none;
         transition:opacity .18s ease}
       body.nav-open #nav-scrim{opacity:1;pointer-events:auto}
