@@ -580,7 +580,17 @@ const cleanRoleText = (() => {
   return t;
 })();
 const fallbackFacts = [
-  cleanRoleText,
+  // EACH FACT IS A SENTENCE, SO EACH FACT ENDS WITH A FULL STOP.
+  // Grantley's description shipped as "Brother of Timothy Neil Telfer Spouse of Dale
+  // Helen Telfer" — two facts joined by a space, because cleanRoleText() returns the
+  // raw line with no terminator and the spouse clause follows it. That reads as one
+  // malformed sentence listing a man as a brother and a spouse of two different
+  // people. Terminate the role here rather than at every call site.
+  (() => {
+    const r = cleanRoleText.trim();
+    if (!r) return "";
+    return /[.!?]$/.test(r) ? r : `${r}.`;
+  })(),
   spouseMatch
     ? (() => {
         // A SPOUSE FACT IS A NAME, NOT THAT PERSON'S WHOLE LIFE. The old builder appended
