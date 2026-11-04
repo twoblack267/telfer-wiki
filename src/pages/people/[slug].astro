@@ -545,8 +545,27 @@ const cleanRoleText = (() => {
     .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, "$2" || "$1")
     .trim();
   if (!t) return "";
+  // THE OWNER'S NAME DOES NOT BELONG ON EVERY PAGE. Roles were written as
+  // "Cousin of Mark Kenneth Telfer — son of Grantley Keith Telfer", and a bare
+  // "Cousin of Mark Kenneth Telfer" survived the clause cut below and shipped
+  // as the meta description of three profiles. The person's own relationship
+  // to their parents is the fact; who they are related to the site owner is not
+  // a fact about them, so that pronoun is removed before anything else is
+  // measured. Applied to the vault-corrected text too, so a re-sync cannot
+  // reintroduce it.
+  // Strip "<relation> of Mark Kenneth Telfer" wherever it appears, plus the
+  // dangling connector it tends to leave behind.
+  t = t
+    .replace(/\b(?:Cousin|Nephew|Niece|Uncle|Aunt|Grandson|Granddaughter|Grandfather|Grandmother|Great[\s-]?(?:Uncle|Aunt|Grandson|Granddaughter)|Father|Mother|Son|Daughter|Wife|Husband|Partner|Stepfather|Stepmother|Stepson|Stepdaughter|Brother|Sister|Descendant|Ancestor)(?:\s+of)?\s+Mark\s+Kenneth\s+Telfer\b/gi, "")
+    .replace(/\b(?:Cousin|Nephew|Niece|Uncle|Aunt|Grandson|Granddaughter)(?:\s+of)?\s+Mark\s+Telfer\b/gi, "")
+    .replace(/\s*[—–-]\s*(?:maternal\s+|paternal\s+)?(?:grandfather|grandmother|uncle|aunt)\s+of\s+Mark\s+Kenneth\s+Telfer\b/gi, "")
+    .replace(/^\s*[—–-]\s*/, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  if (!t) return "";
   // Cut the line at the first clause that is about our own notes.
   t = t.split(/\s+[—–]\s+|\s*;\s*/)[0].trim();
+  if (/^\s*Mark Kenneth Telfer\s*$/i.test(t)) return "";
   if (/\b(?:vault (?:profile|file)|flagged unverified|confirmed here from|not printed in the tree)\b/i.test(t)) return "";
   // "Child of" / "Spouse of" with nobody after it is a label, not a fact.
   if (/^(?:Child|Spouse|Parent|Sibling|Son|Daughter|Father|Mother|Wife|Husband)\s+of\s*$/i.test(t)) return "";
@@ -572,6 +591,11 @@ const fallbackFacts = [
         const rawName = String(spouseMatch[2] || spouseMatch[1] || "").replace(/\s*\((?:b\.|d\.|bap\.)?\s*[^()]*\)\s*$/i, "").trim();
         const name = rawName.split(/\s*(?:→|->|–|—)\s*/)[0].trim();
         if (!name || /\d{4}/.test(name)) return "";
+        // The same rule that governs the Role line governs the spouse fact: naming the
+        // site owner in the description of somebody else's page says nothing about them.
+        // kylie-telfer-1982's description read "Spouse of Mark Kenneth Telfer", which is
+        // the owner's name glued onto a page about his wife.
+        if (/^Mark\s+Kenneth\s+Telfer$/i.test(name)) return "";
         const tail = String(spouseMatch[3] || "");
         const keepTail = tail && !/\d{4}|→|->/.test(tail);
         return `Spouse of ${name}${keepTail ? ` ${tail.trim()}` : ""}.`;
