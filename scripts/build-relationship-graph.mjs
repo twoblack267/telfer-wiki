@@ -1378,7 +1378,26 @@ function slugByExactDisplay(ref) {
 for (const person of people) {
   const slug = person.slug;
   person.parents = carryUnresolved(person, 'parents', Array.from(parentEdges.get(slug) || []).sort());
-  person.children = carryUnresolved(person, 'children', Array.from(childEdges.get(slug) || []).sort());
+  // CHILDREN IN BIRTH ORDER, NOT ALPHABETICAL ORDER (fixed 2026-11-04).
+  // `.sort()` on a slug array is a STRING sort: amy-telfer, david-telfer-merrick-2000,
+  // mark-telfer-1986. Penny's page therefore listed her children Amy, David, Mark —
+  // alphabetical, which reads like a spreadsheet export and, worse, puts a 1986 birth
+  // after a 2000 birth in a genealogy page where order IS meaning. Sort by birth year,
+  // then by birth-date if two siblings share a year (twins), then slug as a stable
+  // tiebreak. Undated people sink to the end rather than scattering.
+  const birthSortKey = (s) => {
+    const p = people.find((x) => x.slug === s);
+    if (!p) return Number.MAX_SAFE_INTEGER;
+    const y = p.birth_year;
+    if (!y || typeof y !== 'number') return Number.MAX_SAFE_INTEGER;
+    return y;
+  };
+  const byBirth = (a, b) => {
+    const ya = birthSortKey(a), yb = birthSortKey(b);
+    if (ya !== yb) return ya - yb;
+    return String(a).localeCompare(String(b));
+  };
+  person.children = carryUnresolved(person, 'children', Array.from(childEdges.get(slug) || []).sort(byBirth));
   person.spouses = carryUnresolved(person, 'spouses', Array.from(spouseEdges.get(slug) || []).sort());
   person.siblings = carryUnresolved(person, 'siblings', Array.from(siblingEdges.get(slug) || []).sort());
   // Step arrays (added 2026-09-22). Emitted alongside the biological ones so the

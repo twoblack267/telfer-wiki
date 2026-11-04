@@ -158,11 +158,11 @@
     ],
     "parents": [],
     "children": [
-      "adam-telfer-1771",
-      "francis-telfer-1768",
       "james-telfer-1762",
       "jean-telfer-1764",
-      "jenet-telfer-1770"
+      "francis-telfer-1768",
+      "jenet-telfer-1770",
+      "adam-telfer-1771"
     ],
     "spouses": [
       "margaret-armstrong-1745"
@@ -322,11 +322,11 @@
     ],
     "parents": [],
     "children": [
-      "adam-telfer-1771",
-      "francis-telfer-1768",
       "james-telfer-1762",
       "jean-telfer-1764",
-      "jenet-telfer-1770"
+      "francis-telfer-1768",
+      "jenet-telfer-1770",
+      "adam-telfer-1771"
     ],
     "spouses": [
       "james-telfer-of-sorbietrees-1740"
@@ -454,13 +454,13 @@
       "john-telfer-of-castleton-1731"
     ],
     "children": [
-      "adam-telfer-1799",
-      "francis-telfer-1809",
-      "isobel-telfer-1798",
       "james-telfer-1796",
-      "john-telfer-1805",
+      "isobel-telfer-1798",
+      "adam-telfer-1799",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "john-telfer-1805",
+      "francis-telfer-1809",
       "william-telfer-1811",
       {
         "plain_name": "Isobel/Isabella Telfer (1798–?)"
@@ -861,13 +861,13 @@
     ],
     "parents": [],
     "children": [
-      "adam-telfer-1799",
-      "francis-telfer-1809",
-      "isobel-telfer-1798",
       "james-telfer-1796",
-      "john-telfer-1805",
+      "isobel-telfer-1798",
+      "adam-telfer-1799",
       "margaret-telfer-1801",
       "robert-telfer-1803",
+      "john-telfer-1805",
+      "francis-telfer-1809",
       "william-telfer-1811"
     ],
     "spouses": [
@@ -1187,15 +1187,15 @@
       }
     ],
     "children": [
-      "adam-telfer-1842",
-      "elizabeth-beattie-telfer-1832",
-      "isabella-telfer-1837",
       "james-telfer-1829",
-      "john-telfer-1840",
       "margaret-telfer-1829",
+      "elizabeth-beattie-telfer-1832",
+      "robert-telfer-1835",
+      "isabella-telfer-1837",
+      "john-telfer-1840",
+      "adam-telfer-1842",
       "margaret-telfer-living",
-      "mary-telfer-living",
-      "robert-telfer-1835"
+      "mary-telfer-living"
     ],
     "spouses": [
       "elizabeth-beattie-1802"
@@ -1332,8 +1332,8 @@
       "william-telfer-shepherd"
     ],
     "children": [
-      "andrew-telfer",
       "william-telfer-1847",
+      "andrew-telfer",
       {
         "plain_name": "Mary (Telfer) Bowden"
       },
@@ -1554,15 +1554,15 @@
     ],
     "parents": [],
     "children": [
-      "adam-telfer-1842",
-      "elizabeth-beattie-telfer-1832",
-      "isabella-telfer-1837",
       "james-telfer-1829",
-      "john-telfer-1840",
       "margaret-telfer-1829",
+      "elizabeth-beattie-telfer-1832",
+      "robert-telfer-1835",
+      "isabella-telfer-1837",
+      "john-telfer-1840",
+      "adam-telfer-1842",
       "margaret-telfer-living",
       "mary-telfer-living",
-      "robert-telfer-1835",
       {
         "plain_name": "Mary"
       }
@@ -1960,13 +1960,13 @@
       }
     ],
     "children": [
-      "elizabeth-hannah-telfer-1836",
-      "esther-jane-telfer-1834",
-      "george-telfer-1850",
       "james-telfer-1832",
+      "esther-jane-telfer-1834",
+      "elizabeth-hannah-telfer-1836",
       "jean-telfer-1840",
       "john-telfer-1847",
-      "margaret-telfer-1849"
+      "margaret-telfer-1849",
+      "george-telfer-1850"
     ],
     "spouses": [
       "dinah-flavel-1821",
@@ -2087,9 +2087,9 @@
       }
     ],
     "children": [
-      "elizabeth-hannah-telfer-1836",
+      "james-telfer-1832",
       "esther-jane-telfer-1834",
-      "james-telfer-1832"
+      "elizabeth-hannah-telfer-1836"
     ],
     "spouses": [
       "francis-telfer-1809"
@@ -2142,9 +2142,9 @@
     ],
     "parents": [],
     "children": [
-      "george-telfer-1850",
       "john-telfer-1847",
-      "margaret-telfer-1849"
+      "margaret-telfer-1849",
+      "george-telfer-1850"
     ],
     "spouses": [
       "francis-telfer-1809"
@@ -2347,19 +2347,19 @@
     ],
     "parents": [],
     "children": [
-      "caroline-telfer-1842",
       "charles-masters-1837",
-      "emma-masters-1855",
-      "frederick-masters-1848",
+      "william-masters-1838",
+      "martha-masters-1839",
       "george-masters-1841",
+      "joseph-masters-1841",
+      "caroline-telfer-1842",
       "george-masters-1844",
       "james-masters-1846",
+      "frederick-masters-1848",
       "jemima-masters-1850",
-      "joseph-masters-1841",
-      "joseph-masters-1853",
-      "martha-masters-1839",
       "mary-masters-1852",
-      "william-masters-1838",
+      "joseph-masters-1853",
+      "emma-masters-1855",
       {
         "plain_name": "Martha Ann Masters Radford (1839-1912)"
       },
@@ -2420,14 +2420,14 @@
       }
     ],
     "children": [
-      "alexander-lawrie",
-      "elizabeth-lawrie",
-      "janet-lawrie-1842",
       "jean-lawrie",
-      "john-lawrie-1840",
-      "john-lawrie-1845",
       "marion-lawrie-1838",
-      "robert-dunlop-lawrie-1850"
+      "john-lawrie-1840",
+      "janet-lawrie-1842",
+      "john-lawrie-1845",
+      "elizabeth-lawrie",
+      "robert-dunlop-lawrie-1850",
+      "alexander-lawrie"
     ],
     "spouses": [
       "janet-dunlop-1811"
@@ -2471,13 +2471,13 @@
       "robert-dunlop"
     ],
     "children": [
-      "alexander-lawrie",
-      "elizabeth-lawrie",
-      "janet-lawrie-1842",
       "jean-lawrie",
-      "john-lawrie-1840",
       "marion-lawrie-1838",
-      "robert-dunlop-lawrie-1850"
+      "john-lawrie-1840",
+      "janet-lawrie-1842",
+      "elizabeth-lawrie",
+      "robert-dunlop-lawrie-1850",
+      "alexander-lawrie"
     ],
     "spouses": [
       "john-lawrie-1810"
@@ -2565,19 +2565,19 @@
     ],
     "parents": [],
     "children": [
-      "caroline-telfer-1842",
       "charles-masters-1837",
-      "emma-masters-1855",
-      "frederick-masters-1848",
+      "william-masters-1838",
+      "martha-masters-1839",
       "george-masters-1841",
+      "joseph-masters-1841",
+      "caroline-telfer-1842",
       "george-masters-1844",
       "james-masters-1846",
+      "frederick-masters-1848",
       "jemima-masters-1850",
-      "joseph-masters-1841",
-      "joseph-masters-1853",
-      "martha-masters-1839",
       "mary-masters-1852",
-      "william-masters-1838",
+      "joseph-masters-1853",
+      "emma-masters-1855",
       {
         "plain_name": "Martha Ann Masters Radford (1839-1912)"
       },
@@ -2629,9 +2629,9 @@
     ],
     "parents": [],
     "children": [
+      "richard-paynter-1838",
       "elizabeth-paynter",
-      "john-paynter",
-      "richard-paynter-1838"
+      "john-paynter"
     ],
     "spouses": [
       {
@@ -2684,14 +2684,14 @@
       }
     ],
     "children": [
+      "elizabeth-parker",
+      "william-humphrey-parker-1850",
+      "henry-parker",
       "agnes-parker",
       "david-parker",
-      "elizabeth-parker",
-      "henry-parker",
+      "margaret-parker",
       "hugh-parker-1859",
       "hugh-parker-1864",
-      "margaret-parker",
-      "william-humphrey-parker-1850",
       {
         "plain_name": "Christian Parker"
       },
@@ -2802,14 +2802,14 @@
       }
     ],
     "children": [
+      "elizabeth-parker",
+      "william-humphrey-parker-1850",
+      "henry-parker",
       "agnes-parker",
       "david-parker",
-      "elizabeth-parker",
-      "henry-parker",
+      "margaret-parker",
       "hugh-parker-1859",
       "hugh-parker-1864",
-      "margaret-parker",
-      "william-humphrey-parker-1850",
       {
         "plain_name": "Christian Parker"
       }
@@ -2900,13 +2900,13 @@
     ],
     "parents": [],
     "children": [
-      "adam-dillon-1870",
+      "john-dillon-1859",
+      "james-dillon-1861",
+      "robert-telfer-dillon-1862",
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
-      "james-dillon-1861",
-      "john-dillon-1859",
       "margaret-dillon",
-      "robert-telfer-dillon-1862",
+      "adam-dillon-1870",
       "septimus-dillon-1871",
       {
         "plain_name": "Elizabeth Esther Dillon"
@@ -2968,12 +2968,12 @@
     ],
     "parents": [],
     "children": [
-      "elizabeth-smith",
-      "esther-telfer-smith-1870",
-      "francis-telfer-smith-1874",
       "jane-sophie-smith-1866",
+      "margaret-dougal-smith-1868",
+      "esther-telfer-smith-1870",
       "john-smith",
-      "margaret-dougal-smith-1868"
+      "francis-telfer-smith-1874",
+      "elizabeth-smith"
     ],
     "spouses": [
       "esther-jane-telfer-1834"
@@ -3136,15 +3136,15 @@
       "sophia-march-1803"
     ],
     "children": [
-      "alfred-baker-1861",
-      "emeline-couzens-1857",
-      "fanny-baker-1863",
+      "william-baker-1853",
       "hannah-baker-1855",
+      "emeline-couzens-1857",
       "james-baker-1859",
-      "phineas-baker-1870",
-      "sophia-harriett-ridgway-1868",
+      "alfred-baker-1861",
+      "fanny-baker-1863",
       "walter-baker-1865",
-      "william-baker-1853"
+      "sophia-harriett-ridgway-1868",
+      "phineas-baker-1870"
     ],
     "spouses": [
       "william-john-baker-1831"
@@ -3192,15 +3192,15 @@
       }
     ],
     "children": [
-      "alfred-baker-1861",
-      "emeline-couzens-1857",
-      "fanny-baker-1863",
+      "william-baker-1853",
       "hannah-baker-1855",
+      "emeline-couzens-1857",
       "james-baker-1859",
-      "phineas-baker-1870",
-      "sophia-harriett-ridgway-1868",
+      "alfred-baker-1861",
+      "fanny-baker-1863",
       "walter-baker-1865",
-      "william-baker-1853"
+      "sophia-harriett-ridgway-1868",
+      "phineas-baker-1870"
     ],
     "spouses": [
       "sophia-baker-1829"
@@ -3246,15 +3246,15 @@
       "james-telfer-1796"
     ],
     "children": [
-      "adam-dillon-1870",
-      "dorothy-dillon",
+      "john-dillon-1859",
+      "james-dillon-1861",
+      "robert-telfer-dillon-1862",
       "francis-telfer-dillon-1864",
       "henry-hatch-dillon-1866",
-      "james-dillon-1861",
-      "john-dillon-1859",
       "margaret-dillon",
-      "robert-telfer-dillon-1862",
+      "adam-dillon-1870",
       "septimus-dillon-1871",
+      "dorothy-dillon",
       "william-dillon"
     ],
     "spouses": [
@@ -3415,12 +3415,12 @@
       "jean-murray-1810"
     ],
     "children": [
-      "elizabeth-smith",
-      "esther-telfer-smith-1870",
-      "francis-telfer-smith-1874",
       "jane-sophie-smith-1866",
+      "margaret-dougal-smith-1868",
+      "esther-telfer-smith-1870",
       "john-smith",
-      "margaret-dougal-smith-1868"
+      "francis-telfer-smith-1874",
+      "elizabeth-smith"
     ],
     "spouses": [
       "john-smith-1827"
@@ -3495,15 +3495,15 @@
       "james-telfer-1796"
     ],
     "children": [
-      "edith-mary-kathleen-telfer",
-      "elizabeth-rowbotham",
-      "francis-john-burton-telfer",
-      "harriett-helen-telfer",
       "james-robert-telfer-1866",
-      "lindsay-burton-telfer",
-      "robert-allan-burton-telfer",
+      "elizabeth-rowbotham",
+      "william-telfer-1869",
       "susan-telfer-of-german-creek",
-      "william-telfer-1869"
+      "harriett-helen-telfer",
+      "lindsay-burton-telfer",
+      "francis-john-burton-telfer",
+      "edith-mary-kathleen-telfer",
+      "robert-allan-burton-telfer"
     ],
     "spouses": [
       "susan-telfer-1844"
@@ -3560,17 +3560,17 @@
       "joseph-farrow-1814"
     ],
     "children": [
-      "amy-farrow-stribling-1868",
-      "charles-farrow-jr",
-      "elizabeth-farrow",
-      "elizabeth-telfer-farrow-holloway-1861",
-      "esther-farrow-latter-1859",
-      "eva-agnes-farrow-1877",
-      "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
+      "esther-farrow-latter-1859",
+      "elizabeth-telfer-farrow-holloway-1861",
+      "charles-farrow-jr",
+      "amy-farrow-stribling-1868",
+      "george-hope-farrow-1872",
+      "mary-bayes-farrow-1875",
+      "eva-agnes-farrow-1877",
+      "elizabeth-farrow",
       "john-farrow",
       "joseph-farrow",
-      "mary-bayes-farrow-1875",
       {
         "plain_name": "Peter Farrow"
       },
@@ -3641,16 +3641,16 @@
       "jean-murray-1810"
     ],
     "children": [
-      "amy-farrow-stribling-1868",
-      "charles-farrow-jr",
-      "elizabeth-telfer-farrow-holloway-1861",
-      "esther-farrow-latter-1859",
-      "eva-agnes-farrow-1877",
-      "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
+      "esther-farrow-latter-1859",
+      "elizabeth-telfer-farrow-holloway-1861",
+      "charles-farrow-jr",
+      "amy-farrow-stribling-1868",
+      "george-hope-farrow-1872",
+      "mary-bayes-farrow-1875",
+      "eva-agnes-farrow-1877",
       "john-farrow",
       "joseph-farrow",
-      "mary-bayes-farrow-1875",
       {
         "plain_name": "Esther Farrow"
       },
@@ -3756,12 +3756,12 @@
       "richard-paynter-of-calstock"
     ],
     "children": [
-      "dinah-flavel-paynter-1869",
-      "elizabeth-paynter-1864",
-      "francis-telfer-paynter-1862",
+      "thomas-paynter-1859",
       "mary-jane-paynter-1861",
+      "francis-telfer-paynter-1862",
+      "elizabeth-paynter-1864",
       "thirza-paynter",
-      "thomas-paynter-1859"
+      "dinah-flavel-paynter-1869"
     ],
     "spouses": [
       "jean-telfer-1840"
@@ -3811,12 +3811,12 @@
       "francis-telfer-1809"
     ],
     "children": [
-      "dinah-flavel-paynter-1869",
-      "elizabeth-paynter-1864",
-      "francis-telfer-paynter-1862",
-      "mary-jane-paynter-1861",
-      "thirza-paynter",
       "thomas-paynter-1859",
+      "mary-jane-paynter-1861",
+      "francis-telfer-paynter-1862",
+      "elizabeth-paynter-1864",
+      "thirza-paynter",
+      "dinah-flavel-paynter-1869",
       {
         "plain_name": "Annie Parker (1875–1895)"
       },
@@ -3880,22 +3880,22 @@
       "james-telfer-1796"
     ],
     "children": [
-      "alan-telfer-1890",
-      "charles-telfer-1875",
-      "clara-blanche-telfer-1883",
-      "colin-telfer-1889",
-      "douglas-telfer-1887",
-      "elizabeth-telfer-1868",
-      "isabella-telfer-1880",
       "james-telfer-1866",
-      "john-telfer-1882",
-      "maria-clara-telfer-1878",
-      "marian-cornish-1896",
-      "mark-telfer-1877",
-      "martha-cameron-1873",
-      "robert-telfer-1886",
-      "roland-telfer",
+      "elizabeth-telfer-1868",
       "susan-telfer-1871",
+      "martha-cameron-1873",
+      "charles-telfer-1875",
+      "mark-telfer-1877",
+      "maria-clara-telfer-1878",
+      "isabella-telfer-1880",
+      "john-telfer-1882",
+      "roland-telfer",
+      "clara-blanche-telfer-1883",
+      "robert-telfer-1886",
+      "douglas-telfer-1887",
+      "colin-telfer-1889",
+      "alan-telfer-1890",
+      "marian-cornish-1896",
       "Martha Telfer (1873–?)",
       {
         "plain_name": "Eric John Telfer"
@@ -3960,10 +3960,10 @@
     ],
     "parents": [],
     "children": [
-      "elizabeth-telfer-1868",
       "james-telfer-1866",
-      "martha-cameron-1873",
-      "susan-telfer-1871"
+      "elizabeth-telfer-1868",
+      "susan-telfer-1871",
+      "martha-cameron-1873"
     ],
     "spouses": [
       "john-telfer-1840"
@@ -4008,18 +4008,18 @@
       "james-telfer-1796"
     ],
     "children": [
-      "adelaide-elsie-pearl-telfer-1889",
-      "effie-olive-telfer-1886",
-      "elizabeth-beattie-telfer-1871",
-      "eva-rowena-telfer-1885",
-      "francis-adam-telfer-1875",
-      "hazel-rose-telfer-1891",
-      "herbert-dougal-telfer-1881",
-      "james-edgerston-telfer-1877",
-      "lillian-telfer",
       "margaret-telfer-1869",
+      "elizabeth-beattie-telfer-1871",
+      "lillian-telfer",
+      "francis-adam-telfer-1875",
+      "james-edgerston-telfer-1877",
       "vernon-ray-st-clair-telfer-1879",
-      "violet-hope-telfer-1883"
+      "herbert-dougal-telfer-1881",
+      "violet-hope-telfer-1883",
+      "eva-rowena-telfer-1885",
+      "effie-olive-telfer-1886",
+      "adelaide-elsie-pearl-telfer-1889",
+      "hazel-rose-telfer-1891"
     ],
     "spouses": [
       "margaret-telfer-1849"
@@ -4081,13 +4081,13 @@
       "martha-masters-1814"
     ],
     "children": [
-      "albert-telfer-1881",
-      "edwin-telfer-1887",
-      "ernest-telfer-1878",
       "francis-telfer-1875",
       "john-telfer-1877",
+      "ernest-telfer-1878",
+      "william-telfer-1880",
+      "albert-telfer-1881",
       "walter-telfer-1884",
-      "william-telfer-1880"
+      "edwin-telfer-1887"
     ],
     "spouses": [
       "john-telfer-1847"
@@ -4162,15 +4162,15 @@
     ],
     "parents": [],
     "children": [
-      "edith-mary-kathleen-telfer",
-      "elizabeth-rowbotham",
-      "francis-john-burton-telfer",
-      "harriett-helen-telfer",
       "james-robert-telfer-1866",
-      "lindsay-burton-telfer",
-      "robert-allan-burton-telfer",
+      "elizabeth-rowbotham",
+      "william-telfer-1869",
       "susan-telfer-of-german-creek",
-      "william-telfer-1869"
+      "harriett-helen-telfer",
+      "lindsay-burton-telfer",
+      "francis-john-burton-telfer",
+      "edith-mary-kathleen-telfer",
+      "robert-allan-burton-telfer"
     ],
     "spouses": [
       "robert-telfer-1835"
@@ -4217,13 +4217,13 @@
       "margaret-telfer-1810"
     ],
     "children": [
-      "albert-telfer-1881",
-      "edwin-telfer-1887",
-      "ernest-telfer-1878",
       "francis-telfer-1875",
       "john-telfer-1877",
+      "ernest-telfer-1878",
+      "william-telfer-1880",
+      "albert-telfer-1881",
       "walter-telfer-1884",
-      "william-telfer-1880"
+      "edwin-telfer-1887"
     ],
     "spouses": [
       "caroline-telfer-1842"
@@ -4334,18 +4334,18 @@
       }
     ],
     "children": [
-      "adelaide-elsie-pearl-telfer-1889",
-      "effie-olive-telfer-1886",
-      "elizabeth-beattie-telfer-1871",
-      "eva-rowena-telfer-1885",
-      "francis-adam-telfer-1875",
-      "hazel-rose-telfer-1891",
-      "herbert-dougal-telfer-1881",
-      "james-edgerston-telfer-1877",
-      "lillian-telfer",
       "margaret-telfer-1869",
+      "elizabeth-beattie-telfer-1871",
+      "lillian-telfer",
+      "francis-adam-telfer-1875",
+      "james-edgerston-telfer-1877",
       "vernon-ray-st-clair-telfer-1879",
-      "violet-hope-telfer-1883"
+      "herbert-dougal-telfer-1881",
+      "violet-hope-telfer-1883",
+      "eva-rowena-telfer-1885",
+      "effie-olive-telfer-1886",
+      "adelaide-elsie-pearl-telfer-1889",
+      "hazel-rose-telfer-1891"
     ],
     "spouses": [
       "adam-telfer-1842"
@@ -4398,8 +4398,8 @@
       }
     ],
     "children": [
-      "lesley-thomas-telfer-1891",
-      "william-francis-telfer-1885"
+      "william-francis-telfer-1885",
+      "lesley-thomas-telfer-1891"
     ],
     "spouses": [
       "ruth-penna-1863"
@@ -4451,18 +4451,18 @@
     ],
     "parents": [],
     "children": [
-      "alan-telfer-1890",
       "charles-telfer-1875",
-      "clara-blanche-telfer-1883",
-      "colin-telfer-1889",
-      "douglas-telfer-1887",
+      "mark-telfer-1877",
+      "maria-clara-telfer-1878",
       "isabella-telfer-1880",
       "john-telfer-1882",
-      "maria-clara-telfer-1878",
-      "marian-cornish-1896",
-      "mark-telfer-1877",
+      "roland-telfer",
+      "clara-blanche-telfer-1883",
       "robert-telfer-1886",
-      "roland-telfer"
+      "douglas-telfer-1887",
+      "colin-telfer-1889",
+      "alan-telfer-1890",
+      "marian-cornish-1896"
     ],
     "spouses": [
       "john-telfer-1840"
@@ -4507,8 +4507,8 @@
     ],
     "parents": [],
     "children": [
-      "lesley-thomas-telfer-1891",
-      "william-francis-telfer-1885"
+      "william-francis-telfer-1885",
+      "lesley-thomas-telfer-1891"
     ],
     "spouses": [
       "george-telfer-1850"
@@ -5829,13 +5829,13 @@
       "john-lawrie-1810"
     ],
     "children": [
-      "alberta-grace-lawrie-1882",
-      "caroline-edna-lawrie-1890",
       "catherine-lawrie",
-      "frank-lawrie",
-      "hugh-lawrie",
       "janet-lawrie-1881",
+      "alberta-grace-lawrie-1882",
+      "hugh-lawrie",
+      "frank-lawrie",
       "marion-lawrie-1888",
+      "caroline-edna-lawrie-1890",
       {
         "plain_name": "Catherine Leah"
       },
@@ -5914,16 +5914,16 @@
       "isabella-kelly-1825"
     ],
     "children": [
-      "andrew-kelly-parker-1883",
-      "edward-albert-parker-1888",
       "elizabeth-parker-1879",
-      "isabella-mabel-parker-carne-1895",
       "lucy-agnes-parker-1881",
-      "mabel-winifred-parker-1890",
-      "mina-evelyn-parker-1897",
+      "andrew-kelly-parker-1883",
       "sophia-parker-lawrie-1886",
-      "stella-winifred-parker-1899",
-      "william-henry-parker-1893"
+      "edward-albert-parker-1888",
+      "mabel-winifred-parker-1890",
+      "william-henry-parker-1893",
+      "isabella-mabel-parker-carne-1895",
+      "mina-evelyn-parker-1897",
+      "stella-winifred-parker-1899"
     ],
     "spouses": [
       "hannah-baker-1855"
@@ -5976,13 +5976,13 @@
     ],
     "parents": [],
     "children": [
-      "alberta-grace-lawrie-1882",
-      "caroline-edna-lawrie-1890",
       "catherine-lawrie",
-      "frank-lawrie",
-      "hugh-lawrie",
       "janet-lawrie-1881",
+      "alberta-grace-lawrie-1882",
+      "hugh-lawrie",
+      "frank-lawrie",
       "marion-lawrie-1888",
+      "caroline-edna-lawrie-1890",
       {
         "plain_name": "Catherine Leah"
       },
@@ -6294,13 +6294,13 @@
     ],
     "parents": [],
     "children": [
-      "alma-stribling",
-      "arthur-clifford-stribling-1890",
-      "ella-stribling",
-      "george-stribling",
-      "hazel-stribling",
       "isa-stribling",
-      "lindsay-stribling"
+      "ella-stribling",
+      "arthur-clifford-stribling-1890",
+      "alma-stribling",
+      "lindsay-stribling",
+      "hazel-stribling",
+      "george-stribling"
     ],
     "spouses": [
       "jane-murray-farrow-1857"
@@ -6508,16 +6508,16 @@
       "william-john-baker-1831"
     ],
     "children": [
-      "andrew-kelly-parker-1883",
-      "edward-albert-parker-1888",
       "elizabeth-parker-1879",
-      "isabella-mabel-parker-carne-1895",
       "lucy-agnes-parker-1881",
-      "mabel-winifred-parker-1890",
-      "mina-evelyn-parker-1897",
+      "andrew-kelly-parker-1883",
       "sophia-parker-lawrie-1886",
-      "stella-winifred-parker-1899",
-      "william-henry-parker-1893"
+      "edward-albert-parker-1888",
+      "mabel-winifred-parker-1890",
+      "william-henry-parker-1893",
+      "isabella-mabel-parker-carne-1895",
+      "mina-evelyn-parker-1897",
+      "stella-winifred-parker-1899"
     ],
     "spouses": [
       "william-humphrey-parker-1850"
@@ -6630,8 +6630,8 @@
       }
     ],
     "children": [
-      "george-holloway",
-      "herbert-clifford-holloway-1887"
+      "herbert-clifford-holloway-1887",
+      "george-holloway"
     ],
     "spouses": [
       "elizabeth-telfer-farrow-holloway-1861"
@@ -6731,13 +6731,13 @@
       "elizabeth-hannah-telfer-1836"
     ],
     "children": [
-      "alma-stribling",
-      "arthur-clifford-stribling-1890",
-      "ella-stribling",
-      "george-stribling",
-      "hazel-stribling",
       "isa-stribling",
-      "lindsay-stribling"
+      "ella-stribling",
+      "arthur-clifford-stribling-1890",
+      "alma-stribling",
+      "lindsay-stribling",
+      "hazel-stribling",
+      "george-stribling"
     ],
     "spouses": [
       "alfred-george-stribling-1853"
@@ -6842,13 +6842,13 @@
       "janet-welsh-1826"
     ],
     "children": [
-      "elizabeth-telfer",
       "jane-telfer",
       "janet-telfer",
-      "martha-telfer",
-      "mary-telfer-1893",
       "millicent-telfer",
-      "rose-telfer"
+      "rose-telfer",
+      "mary-telfer-1893",
+      "elizabeth-telfer",
+      "martha-telfer"
     ],
     "spouses": [
       "frances-margaret-oswald-1861"
@@ -7080,8 +7080,8 @@
       "elizabeth-hannah-telfer-1836"
     ],
     "children": [
-      "daisy-vera-latter-1886",
       "ida-latter",
+      "daisy-vera-latter-1886",
       "kenneth-harry-latter-1888"
     ],
     "spouses": [
@@ -7341,8 +7341,8 @@
     ],
     "parents": [],
     "children": [
-      "daisy-vera-latter-1886",
       "ida-latter",
+      "daisy-vera-latter-1886",
       "kenneth-harry-latter-1888"
     ],
     "spouses": [
@@ -7502,13 +7502,13 @@
       }
     ],
     "children": [
-      "elizabeth-telfer",
       "jane-telfer",
       "janet-telfer",
-      "martha-telfer",
-      "mary-telfer-1893",
       "millicent-telfer",
-      "rose-telfer"
+      "rose-telfer",
+      "mary-telfer-1893",
+      "elizabeth-telfer",
+      "martha-telfer"
     ],
     "spouses": [
       "james-telfer-1858"
@@ -7819,9 +7819,9 @@
       "john-dillon-1827"
     ],
     "children": [
-      "beatrice-mary-murray-1919",
       "elva-may-southwood-1896",
-      "leslie-james-dillon-1916"
+      "leslie-james-dillon-1916",
+      "beatrice-mary-murray-1919"
     ],
     "spouses": [
       "mary-ann-dillon-1887",
@@ -8034,8 +8034,8 @@
       "john-dillon-1827"
     ],
     "children": [
-      "inez-dillon-1905",
       "thomas-cleveland-dillon-1900",
+      "inez-dillon-1905",
       "vera-dillon-1905"
     ],
     "spouses": [
@@ -8898,10 +8898,10 @@
       }
     ],
     "children": [
-      "gwen-lillecrapp",
-      "ivan-frank-lillecrapp-1917",
       "olive-mary-lillecrapp-1899",
-      "vera-lillecrapp"
+      "gwen-lillecrapp",
+      "vera-lillecrapp",
+      "ivan-frank-lillecrapp-1917"
     ],
     "spouses": [
       "mary-bayes-farrow-1875"
@@ -9277,8 +9277,8 @@
       }
     ],
     "children": [
-      "inez-dillon-1905",
       "thomas-cleveland-dillon-1900",
+      "inez-dillon-1905",
       "vera-dillon-1905"
     ],
     "spouses": [
@@ -10033,15 +10033,15 @@
       "john-telfer-1847"
     ],
     "children": [
+      "francis-telfer-1910",
       "clarice-may-telfer-1911",
-      "doris-telfer",
-      "edwin-telfer",
       "emily-amelia-telfer-1913",
       "ethel-jean-telfer-1915",
-      "francis-telfer-1910",
       "gladys-telfer",
-      "murray-telfer-1924",
+      "doris-telfer",
+      "edwin-telfer",
       "reginald-masters-telfer-1922",
+      "murray-telfer-1924",
       "ruth-telfer-1931"
     ],
     "spouses": [
@@ -10177,8 +10177,8 @@
       "elizabeth-hannah-telfer-1836"
     ],
     "children": [
-      "ivan-frank-lillecrapp-1917",
-      "olive-mary-lillecrapp-1899"
+      "olive-mary-lillecrapp-1899",
+      "ivan-frank-lillecrapp-1917"
     ],
     "spouses": [
       "alfred-edward-lillecrapp-1869"
@@ -10235,12 +10235,12 @@
     ],
     "children": [
       "floris-telfer-1904",
+      "kenneth-telfer-1906",
       "gilbert-telfer-1908",
       "jean-telfer-1910",
       "joyce-telfer-1912",
-      "kenneth-telfer-1906",
-      "lindsay-telfer-1920",
       "maifie-telfer-1913",
+      "lindsay-telfer-1920",
       "Murray John Telfer (1911–1982, adopted)"
     ],
     "spouses": [
@@ -10314,12 +10314,12 @@
     ],
     "parents": [],
     "children": [
+      "rita-telfer-1909",
       "beatrice-telfer-1911",
       "douglas-telfer-1913",
-      "john-telfer-alick-ralph",
       "melville-telfer-1914",
-      "murray-telfer-1920",
-      "rita-telfer-1909"
+      "john-telfer-alick-ralph",
+      "murray-telfer-1920"
     ],
     "spouses": [
       "albert-telfer-1881"
@@ -10367,8 +10367,8 @@
       "elizabeth-hannah-telfer-1836"
     ],
     "children": [
-      "donald-jack-hookings-1916",
       "laurel-bosanquet",
+      "donald-jack-hookings-1916",
       {
         "plain_name": "Laurel Mary Hookings"
       }
@@ -10581,12 +10581,12 @@
     ],
     "children": [
       "floris-telfer-1904",
+      "kenneth-telfer-1906",
       "gilbert-telfer-1908",
       "jean-telfer-1910",
       "joyce-telfer-1912",
-      "kenneth-telfer-1906",
-      "lindsay-telfer-1920",
-      "maifie-telfer-1913"
+      "maifie-telfer-1913",
+      "lindsay-telfer-1920"
     ],
     "spouses": [
       "julia-matilda-seebohm-1876"
@@ -10788,9 +10788,9 @@
       "john-telfer-1847"
     ],
     "children": [
-      "gwenyth-telfer",
       "jessica-telfer",
       "lloyd-wilbur-telfer-1913",
+      "gwenyth-telfer",
       {
         "plain_name": "John Ernest"
       }
@@ -11244,12 +11244,12 @@
       "john-telfer-1847"
     ],
     "children": [
+      "rita-telfer-1909",
       "beatrice-telfer-1911",
       "douglas-telfer-1913",
-      "john-telfer-alick-ralph",
       "melville-telfer-1914",
-      "murray-telfer-1920",
-      "rita-telfer-1909"
+      "john-telfer-alick-ralph",
+      "murray-telfer-1920"
     ],
     "spouses": [
       "beatrice-telfer-1877"
@@ -11361,8 +11361,8 @@
       }
     ],
     "children": [
-      "donald-jack-hookings-1916",
-      "laurel-bosanquet"
+      "laurel-bosanquet",
+      "donald-jack-hookings-1916"
     ],
     "spouses": [
       "eva-agnes-farrow-1877"
@@ -11733,15 +11733,15 @@
       "george-provis"
     ],
     "children": [
+      "francis-telfer-1910",
       "clarice-may-telfer-1911",
-      "doris-telfer",
-      "edwin-telfer",
       "emily-amelia-telfer-1913",
       "ethel-jean-telfer-1915",
-      "francis-telfer-1910",
       "gladys-telfer",
-      "murray-telfer-1924",
+      "doris-telfer",
+      "edwin-telfer",
       "reginald-masters-telfer-1922",
+      "murray-telfer-1924",
       "ruth-telfer-1931"
     ],
     "spouses": [
@@ -11982,9 +11982,9 @@
       "ruth-penna-1863"
     ],
     "children": [
-      "basil-telfer",
       "geoffrey-telfer-1914",
-      "ruth-carson"
+      "ruth-carson",
+      "basil-telfer"
     ],
     "spouses": [
       {
@@ -12168,8 +12168,8 @@
       "martha-henstridge-1854"
     ],
     "children": [
-      "effie-telfer",
-      "keith-telfer"
+      "keith-telfer",
+      "effie-telfer"
     ],
     "spouses": [
       "lilian-daisy-dawson"
@@ -12315,8 +12315,8 @@
       }
     ],
     "children": [
-      "beatrice-mary-murray-1919",
-      "leslie-james-dillon-1916"
+      "leslie-james-dillon-1916",
+      "beatrice-mary-murray-1919"
     ],
     "spouses": [
       "robert-telfer-dillon-1862"
@@ -13592,8 +13592,8 @@
     ],
     "children": [
       "charlotte-beven-1906",
-      "george-hucks",
       "gwinfred-hucks-1908",
+      "george-hucks",
       {
         "plain_name": "Linda Georgenia Elizabeth Hucks"
       }
@@ -15018,8 +15018,8 @@
     ],
     "children": [
       "colin-paynter-1919",
-      "john-paynter-1921",
-      "kenneth-paynter"
+      "kenneth-paynter",
+      "john-paynter-1921"
     ],
     "spouses": [
       "mildred-mary-mahar"
@@ -15195,9 +15195,9 @@
     "children": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
-      "shirley-telfer-1929",
       "sydney-parker-1922",
-      "william-humphrey-parker-1926"
+      "william-humphrey-parker-1926",
+      "shirley-telfer-1929"
     ],
     "spouses": [
       "william-henry-parker-1893"
@@ -15608,9 +15608,9 @@
     "children": [
       "avis-muriel-nicholls-1918",
       "howard-lindsay-parker-1920",
-      "shirley-telfer-1929",
       "sydney-parker-1922",
       "william-humphrey-parker-1926",
+      "shirley-telfer-1929",
       {
         "plain_name": "Avis Parker"
       }
@@ -16385,11 +16385,11 @@
     ],
     "parents": [],
     "children": [
-      "iris-hooper",
       "ivan-hooper",
-      "michael-hooper",
+      "terence-hooper",
+      "iris-hooper",
       "roger-hooper",
-      "terence-hooper"
+      "michael-hooper"
     ],
     "spouses": [
       "jessica-telfer"
@@ -16755,10 +16755,10 @@
     ],
     "parents": [],
     "children": [
-      "allan-pedler",
+      "stanley-james-pedler-1938",
       "mary-ellen-pedler-1940",
       "shirley-rene-pedler-1942",
-      "stanley-james-pedler-1938"
+      "allan-pedler"
     ],
     "spouses": [
       "gladys-telfer"
@@ -16805,9 +16805,9 @@
       "mark-telfer-1877"
     ],
     "children": [
-      "allan-telfer",
       "beth-telfer-1946",
-      "ian-telfer-1947"
+      "ian-telfer-1947",
+      "allan-telfer"
     ],
     "spouses": [
       "jessie-allan"
@@ -17148,10 +17148,10 @@
       "francis-telfer-1875"
     ],
     "children": [
-      "donald-fatchen",
-      "malcolm-geoffrey-fatchen-1942",
       "phyllis-marjorie-fatchen-1934",
+      "donald-fatchen",
       "ronald-rex-fatchen",
+      "malcolm-geoffrey-fatchen-1942",
       "ross-fatchen"
     ],
     "spouses": [
@@ -17211,11 +17211,11 @@
       "florence-nicholas"
     ],
     "children": [
-      "iris-hooper",
       "ivan-hooper",
-      "michael-hooper",
+      "terence-hooper",
+      "iris-hooper",
       "roger-hooper",
-      "terence-hooper"
+      "michael-hooper"
     ],
     "spouses": [
       "frank-hooper"
@@ -17496,9 +17496,9 @@
       "francis-telfer-1875"
     ],
     "children": [
+      "marjory-evelyn-barton-1942",
       "gwenda-barton",
       "jennifer-barton",
-      "marjory-evelyn-barton-1942",
       {
         "plain_name": "Joy Barton"
       }
@@ -17563,8 +17563,8 @@
       }
     ],
     "children": [
-      "mark-telfer-living",
-      "nancy-telfer"
+      "nancy-telfer",
+      "mark-telfer-living"
     ],
     "spouses": [
       "muriel-crespin"
@@ -18074,10 +18074,10 @@
       "francis-telfer-1875"
     ],
     "children": [
-      "allan-pedler",
+      "stanley-james-pedler-1938",
       "mary-ellen-pedler-1940",
       "shirley-rene-pedler-1942",
-      "stanley-james-pedler-1938"
+      "allan-pedler"
     ],
     "spouses": [
       "leslie-pedler"
@@ -18230,8 +18230,8 @@
     ],
     "children": [
       "john-rowe",
-      "joy-meridith-rowe-1956",
       "lindsay-rowe-1954",
+      "joy-meridith-rowe-1956",
       "roy-rowe-1960",
       {
         "plain_name": "Dennis Rowe"
@@ -18384,10 +18384,10 @@
     ],
     "parents": [],
     "children": [
-      "david-murray-telfer-1961",
-      "joy-lorraine-telfer-1952",
       "judith-dawn-telfer-1944",
-      "miriam-ruth-telfer-1949"
+      "miriam-ruth-telfer-1949",
+      "joy-lorraine-telfer-1952",
+      "david-murray-telfer-1961"
     ],
     "spouses": [
       "edwin-telfer"
@@ -18484,10 +18484,10 @@
       "francis-telfer-1875"
     ],
     "children": [
-      "david-murray-telfer-1961",
-      "joy-lorraine-telfer-1952",
       "judith-dawn-telfer-1944",
-      "miriam-ruth-telfer-1949"
+      "miriam-ruth-telfer-1949",
+      "joy-lorraine-telfer-1952",
+      "david-murray-telfer-1961"
     ],
     "spouses": [
       "lola-paterson",
@@ -18742,11 +18742,11 @@
       "francis-telfer-1875"
     ],
     "children": [
+      "vonda-joy-telfer-1948",
       "brenda-janice-telfer-1949",
-      "david-telfer-1957",
       "lyndell-marie-telfer-1951",
       "malvern-reginald-telfer",
-      "vonda-joy-telfer-1948"
+      "david-telfer-1957"
     ],
     "spouses": [
       {
@@ -18848,11 +18848,11 @@
     ],
     "children": [
       "daryll-telfer",
-      "grantley-telfer",
       "john-telfer-robert",
+      "grantley-telfer",
+      "timothy-telfer-1959",
       "kathryn-telfer-1961",
-      "susan-lawrie",
-      "timothy-telfer-1959"
+      "susan-lawrie"
     ],
     "spouses": [
       "shirley-telfer-1929"
@@ -18939,11 +18939,11 @@
     ],
     "children": [
       "daryll-telfer",
-      "grantley-telfer",
       "john-telfer-robert",
+      "grantley-telfer",
+      "timothy-telfer-1959",
       "kathryn-telfer-1961",
-      "susan-lawrie",
-      "timothy-telfer-1959"
+      "susan-lawrie"
     ],
     "spouses": [
       "murray-telfer-1924"
@@ -19301,8 +19301,8 @@
     ],
     "children": [
       "colin-paynter-1919",
-      "john-paynter-1921",
-      "kenneth-paynter"
+      "kenneth-paynter",
+      "john-paynter-1921"
     ],
     "spouses": [
       "frederick-albert-paynter"
@@ -19746,9 +19746,9 @@
     ],
     "parents": [],
     "children": [
-      "lyall-telfer",
+      "neil-telfer",
       "morris-telfer",
-      "neil-telfer"
+      "lyall-telfer"
     ],
     "spouses": [],
     "siblings": [],
@@ -20445,9 +20445,9 @@
     ],
     "parents": [],
     "children": [
+      "vonda-joy-telfer-1948",
       "brenda-janice-telfer-1949",
-      "lyndell-marie-telfer-1951",
-      "vonda-joy-telfer-1948"
+      "lyndell-marie-telfer-1951"
     ],
     "spouses": [],
     "siblings": [],
@@ -20682,8 +20682,8 @@
     "children": [
       "dean-ronald-bassett-1958",
       "geoffrey-donald-bassett-1960",
-      "john-ross-bassett-1963",
       "mark-david-bassett-1962",
+      "john-ross-bassett-1963",
       "michelle-elizabeth-bassett-1973"
     ],
     "spouses": [
@@ -20788,10 +20788,10 @@
       }
     ],
     "children": [
-      "bradley-donald-fatchen-1968",
-      "petrea-elizabeth-fatchen-1972",
       "roger-graham-fatchen-1961",
-      "vivonne-joy-fatchen-1966"
+      "vivonne-joy-fatchen-1966",
+      "bradley-donald-fatchen-1968",
+      "petrea-elizabeth-fatchen-1972"
     ],
     "spouses": [
       {
@@ -20841,8 +20841,8 @@
     ],
     "parents": [],
     "children": [
-      "adrian-light",
-      "james-light"
+      "james-light",
+      "adrian-light"
     ],
     "spouses": [
       "iris-hooper"
@@ -20887,10 +20887,10 @@
       }
     ],
     "children": [
-      "bradley-donald-fatchen-1968",
-      "petrea-elizabeth-fatchen-1972",
       "roger-graham-fatchen-1961",
-      "vivonne-joy-fatchen-1966"
+      "vivonne-joy-fatchen-1966",
+      "bradley-donald-fatchen-1968",
+      "petrea-elizabeth-fatchen-1972"
     ],
     "spouses": [
       {
@@ -20943,8 +20943,8 @@
       "jessica-telfer"
     ],
     "children": [
-      "adrian-light",
-      "james-light"
+      "james-light",
+      "adrian-light"
     ],
     "spouses": [
       "edward-light"
@@ -20995,8 +20995,8 @@
       "leslie-pedler"
     ],
     "children": [
-      "keith-pedler",
       "kenneth-pedler",
+      "keith-pedler",
       "sharon-pedler",
       "susan-pedler"
     ],
@@ -21043,9 +21043,9 @@
     ],
     "parents": [],
     "children": [
+      "lance-hawkins",
       "craig-hawkins",
-      "gaylene-hawkins",
-      "lance-hawkins"
+      "gaylene-hawkins"
     ],
     "spouses": [
       "mary-ellen-pedler-1940"
@@ -21091,9 +21091,9 @@
       "leslie-pedler"
     ],
     "children": [
+      "lance-hawkins",
       "craig-hawkins",
-      "gaylene-hawkins",
-      "lance-hawkins"
+      "gaylene-hawkins"
     ],
     "spouses": [
       "raymond-hawkins"
@@ -21146,9 +21146,9 @@
       }
     ],
     "children": [
+      "karen-michelle-fatchen-1967",
       "anthony-fatchen",
-      "gavin-fatchen",
-      "karen-michelle-fatchen-1967"
+      "gavin-fatchen"
     ],
     "spouses": [
       {
@@ -21307,8 +21307,8 @@
     ],
     "children": [
       "andrew-goodson",
-      "jane-goodson",
-      "peter-goodson"
+      "peter-goodson",
+      "jane-goodson"
     ],
     "spouses": [
       "geoffrey-goodson"
@@ -21355,8 +21355,8 @@
       "jessica-telfer"
     ],
     "children": [
-      "alison-hooper",
       "andrew-hooper",
+      "alison-hooper",
       "richard-hooper"
     ],
     "spouses": [
@@ -21410,10 +21410,10 @@
       "lola-paterson"
     ],
     "children": [
-      "bronwyn-tracy-lawrie-1972",
-      "carolyn-marie-lawrie-1970",
+      "stephen-craig-lawrie-1966",
       "roxanne-kay-lawrie-1968",
-      "stephen-craig-lawrie-1966"
+      "carolyn-marie-lawrie-1970",
+      "bronwyn-tracy-lawrie-1972"
     ],
     "spouses": [
       {
@@ -21466,9 +21466,9 @@
       "jessica-telfer"
     ],
     "children": [
-      "anthony-hooper",
+      "timothy-hooper",
       "belinda-hooper",
-      "timothy-hooper"
+      "anthony-hooper"
     ],
     "spouses": [
       "jennifer-fox"
@@ -21522,8 +21522,8 @@
       }
     ],
     "children": [
-      "phillip-fatchen",
-      "sharon-fatchen"
+      "sharon-fatchen",
+      "phillip-fatchen"
     ],
     "spouses": [
       {
@@ -21577,9 +21577,9 @@
       "leslie-pedler"
     ],
     "children": [
+      "shane-pedler",
       "kirrilee-pedler",
-      "lawrence-pedler",
-      "shane-pedler"
+      "lawrence-pedler"
     ],
     "spouses": [
       "lynette-large"
@@ -21783,8 +21783,8 @@
       "robert-godfrey"
     ],
     "children": [
-      "cameron-bates",
-      "kelly-bates"
+      "kelly-bates",
+      "cameron-bates"
     ],
     "spouses": [
       "stephen-bates"
@@ -21829,8 +21829,8 @@
     "parents": [],
     "children": [
       "andrew-goodson",
-      "jane-goodson",
-      "peter-goodson"
+      "peter-goodson",
+      "jane-goodson"
     ],
     "spouses": [
       "nancy-telfer"
@@ -21918,9 +21918,9 @@
     ],
     "parents": [],
     "children": [
-      "anthony-hooper",
+      "timothy-hooper",
       "belinda-hooper",
-      "timothy-hooper"
+      "anthony-hooper"
     ],
     "spouses": [
       "michael-hooper"
@@ -21964,8 +21964,8 @@
     ],
     "parents": [],
     "children": [
-      "alison-hooper",
       "andrew-hooper",
+      "alison-hooper",
       "richard-hooper"
     ],
     "spouses": [
@@ -22011,9 +22011,9 @@
       "reginald-masters-telfer-1922"
     ],
     "children": [
-      "andrew-david-kelly-1979",
+      "rebecca-jayne-kelly-1975",
       "matthew-blake-kelly-1977",
-      "rebecca-jayne-kelly-1975"
+      "andrew-david-kelly-1979"
     ],
     "spouses": [],
     "siblings": [
@@ -22061,8 +22061,8 @@
       "reginald-masters-telfer-1922"
     ],
     "children": [
-      "kerryn-leigh-manuel-1975",
       "lynton-brett-manuel-1973",
+      "kerryn-leigh-manuel-1975",
       "wade-peter-manuel-1975"
     ],
     "spouses": [],
@@ -22219,8 +22219,8 @@
     ],
     "parents": [],
     "children": [
-      "cameron-bates",
-      "kelly-bates"
+      "kelly-bates",
+      "cameron-bates"
     ],
     "spouses": [
       "wendy-godfrey"
@@ -22266,8 +22266,8 @@
       "lloyd-wilbur-telfer-1913"
     ],
     "children": [
-      "james-telfer-living",
       "martin-telfer",
+      "james-telfer-living",
       "simon-telfer"
     ],
     "spouses": [
@@ -22316,8 +22316,8 @@
       "shirley-telfer-1929"
     ],
     "children": [
-      "james-telfer-1978",
-      "rosemary-telfer-miriam"
+      "rosemary-telfer-miriam",
+      "james-telfer-1978"
     ],
     "spouses": [
       "rosemary-curtis"
@@ -22370,9 +22370,9 @@
       "reginald-masters-telfer-1922"
     ],
     "children": [
+      "nicholas-andre-maddern",
       "kirrily-sharee-maddern",
       "kirrily-sheree-maddern-1976",
-      "nicholas-andre-maddern",
       "simon-trent-maddern-1978"
     ],
     "spouses": [],
@@ -22415,9 +22415,9 @@
     ],
     "parents": [],
     "children": [
+      "shane-pedler",
       "kirrilee-pedler",
-      "lawrence-pedler",
-      "shane-pedler"
+      "lawrence-pedler"
     ],
     "spouses": [
       "allan-pedler"
@@ -22510,11 +22510,11 @@
       "shirley-telfer-1929"
     ],
     "children": [
+      "sophia-telfer",
+      "rebecca-telfer",
       "angela-telfer",
       "carissa-telfer-2023",
-      "peter-telfer",
-      "rebecca-telfer",
-      "sophia-telfer"
+      "peter-telfer"
     ],
     "spouses": [
       "robyn-telfer"
@@ -22568,11 +22568,11 @@
       "lola-paterson"
     ],
     "children": [
+      "matthew-john-commane-1975",
       "adrian-james-commane-1977",
-      "emma-commane",
-      "kym-jotham-commane-1981",
       "lincoln-joel-commane-1979",
-      "matthew-john-commane-1975"
+      "kym-jotham-commane-1981",
+      "emma-commane"
     ],
     "spouses": [
       {
@@ -22627,11 +22627,11 @@
       }
     ],
     "children": [
-      "esther-naomi-lynette-telfer",
-      "isaac-nathaniel-telfer",
-      "joshua-paul-telfer",
       "luke-caleb-telfer",
-      "samuel-joel-telfer"
+      "joshua-paul-telfer",
+      "samuel-joel-telfer",
+      "isaac-nathaniel-telfer",
+      "esther-naomi-lynette-telfer"
     ],
     "spouses": [
       {
@@ -22844,15 +22844,15 @@
     "parents": [],
     "children": [
       {
+        "plain_name": "Joel Matthew Ivory",
+        "withheld": true
+      },
+      {
         "plain_name": "Aaron Paul Ivory",
         "withheld": true
       },
       {
         "plain_name": "Jared Mitchell Ivory",
-        "withheld": true
-      },
-      {
-        "plain_name": "Joel Matthew Ivory",
         "withheld": true
       },
       {
@@ -22981,10 +22981,10 @@
       }
     ],
     "children": [
-      "amy-vickers",
-      "bethany-lyn-vickers-1988",
       "david-vickers",
-      "simon-james-vickers-1985"
+      "amy-vickers",
+      "simon-james-vickers-1985",
+      "bethany-lyn-vickers-1988"
     ],
     "spouses": [
       {
@@ -23038,11 +23038,11 @@
       }
     ],
     "children": [
-      "angelina-telfer",
-      "jordon-telfer",
-      "michael-scott-telfer-1986",
       "ryan-telfer-1982",
       "simeon-david-telfer-1983",
+      "jordon-telfer",
+      "michael-scott-telfer-1986",
+      "angelina-telfer",
       {
         "plain_name": "Simeon"
       },
@@ -23117,9 +23117,9 @@
       "shirley-telfer-1929"
     ],
     "children": [
-      "jonathon-telfer",
       "kristin-stefanoff",
-      "nicholas-telfer"
+      "nicholas-telfer",
+      "jonathon-telfer"
     ],
     "spouses": [
       "dale-telfer"
@@ -23177,8 +23177,8 @@
       }
     ],
     "children": [
-      "daniel-nicholson",
       "kyla-nicholson-1980",
+      "daniel-nicholson",
       "sarah-nicholson-1984",
       {
         "plain_name": "Emma Rose Nicholson"
@@ -23232,9 +23232,9 @@
     ],
     "parents": [],
     "children": [
-      "jonathon-telfer",
       "kristin-stefanoff",
-      "nicholas-telfer"
+      "nicholas-telfer",
+      "jonathon-telfer"
     ],
     "spouses": [
       "grantley-telfer"
@@ -23341,8 +23341,8 @@
       "shirley-telfer-1929"
     ],
     "children": [
-      "amy-telfer",
-      "mark-telfer-1986"
+      "mark-telfer-1986",
+      "amy-telfer"
     ],
     "spouses": [
       {
@@ -23663,8 +23663,8 @@
       "shirley-telfer-1929"
     ],
     "children": [
-      "amanda-lawrie",
-      "rex-lawrie"
+      "rex-lawrie",
+      "amanda-lawrie"
     ],
     "spouses": [
       "robert-lawrie"
@@ -23885,8 +23885,8 @@
     ],
     "parents": [],
     "children": [
-      "keith-pedler",
       "kenneth-pedler",
+      "keith-pedler",
       "sharon-pedler",
       "susan-pedler"
     ],
@@ -23976,10 +23976,10 @@
     ],
     "parents": [],
     "children": [
-      "carissa-telfer-2023",
-      "peter-telfer",
+      "sophia-telfer",
       "rebecca-telfer",
-      "sophia-telfer"
+      "carissa-telfer-2023",
+      "peter-telfer"
     ],
     "spouses": [
       "john-telfer-robert"
@@ -24022,8 +24022,8 @@
     ],
     "parents": [],
     "children": [
-      "james-telfer-1978",
-      "rosemary-telfer-miriam"
+      "rosemary-telfer-miriam",
+      "james-telfer-1978"
     ],
     "spouses": [
       "daryll-telfer"
@@ -24115,9 +24115,9 @@
       "John Ernest Telfer (1910–1984)"
     ],
     "children": [
-      "bruce-telfer",
       "leanne-telfer",
-      "steven-telfer"
+      "steven-telfer",
+      "bruce-telfer"
     ],
     "spouses": [
       "sandra-philpott"
@@ -24162,10 +24162,10 @@
       "John Ernest Telfer (1910–1984)"
     ],
     "children": [
-      "david-telfer-1970",
-      "geoffrey-telfer-1964",
       "margaret-telfer-1962",
-      "narelle-telfer"
+      "geoffrey-telfer-1964",
+      "narelle-telfer",
+      "david-telfer-1970"
     ],
     "spouses": [
       "helen-king"
@@ -24207,10 +24207,10 @@
     ],
     "parents": [],
     "children": [
-      "david-telfer-1970",
-      "geoffrey-telfer-1964",
       "margaret-telfer-1962",
-      "narelle-telfer"
+      "geoffrey-telfer-1964",
+      "narelle-telfer",
+      "david-telfer-1970"
     ],
     "spouses": [
       "morris-telfer"
@@ -24300,8 +24300,8 @@
     ],
     "parents": [],
     "children": [
-      "kerryn-leigh-manuel-1975",
       "lynton-brett-manuel-1973",
+      "kerryn-leigh-manuel-1975",
       "wade-peter-manuel-1975"
     ],
     "spouses": [],
@@ -24342,9 +24342,9 @@
     ],
     "parents": [],
     "children": [
-      "bruce-telfer",
       "leanne-telfer",
-      "steven-telfer"
+      "steven-telfer",
+      "bruce-telfer"
     ],
     "spouses": [
       "neil-telfer"
@@ -24428,10 +24428,10 @@
     ],
     "parents": [],
     "children": [
-      "catherine-walsh",
-      "melinda-walsh",
       "sally-walsh",
-      "samantha-walsh"
+      "melinda-walsh",
+      "samantha-walsh",
+      "catherine-walsh"
     ],
     "spouses": [
       "richard-walsh"
@@ -24473,9 +24473,9 @@
     ],
     "parents": [],
     "children": [
-      "andrew-david-kelly-1979",
+      "rebecca-jayne-kelly-1975",
       "matthew-blake-kelly-1977",
-      "rebecca-jayne-kelly-1975"
+      "andrew-david-kelly-1979"
     ],
     "spouses": [],
     "siblings": [],
@@ -24515,8 +24515,8 @@
     ],
     "parents": [],
     "children": [
-      "kirrily-sharee-maddern",
       "nicholas-andre-maddern",
+      "kirrily-sharee-maddern",
       "simon-trent-maddern-1978"
     ],
     "spouses": [],
@@ -26013,8 +26013,8 @@
       "michael-hooper"
     ],
     "children": [
-      "edward-cameron",
-      "jack-cameron"
+      "jack-cameron",
+      "edward-cameron"
     ],
     "spouses": [
       "ian-cameron"
@@ -26123,8 +26123,8 @@
     ],
     "parents": [],
     "children": [
-      "edward-cameron",
-      "jack-cameron"
+      "jack-cameron",
+      "edward-cameron"
     ],
     "spouses": [
       "belinda-hooper"
@@ -26934,8 +26934,8 @@
       "peter-james-manuel"
     ],
     "children": [
-      "abbi-may-manuel",
       "clayton-brodie-manuel",
+      "abbi-may-manuel",
       "jonty-tyler-manuel"
     ],
     "spouses": [],
@@ -27033,10 +27033,10 @@
       "vonda-joy-telfer-1948"
     ],
     "children": [
-      "jonathon-andrew-story",
-      "kaitlyn-paige-story",
       "michaela-jayne-story",
-      "zachary-david-story"
+      "jonathon-andrew-story",
+      "zachary-david-story",
+      "kaitlyn-paige-story"
     ],
     "spouses": [],
     "siblings": [
@@ -29268,8 +29268,8 @@
       "timothy-telfer-1959"
     ],
     "children": [
-      "levi-telfer-2017",
       "mitchell-telfer-2008",
+      "levi-telfer-2017",
       "zabella-telfer-2019"
     ],
     "spouses": [
@@ -29654,6 +29654,71 @@
     "person_photo": null
   },
   {
+    "id": "Amy Nicole Telfer (1991)",
+    "slug": "amy-telfer",
+    "first_name": "Amy",
+    "middle_name": "Nicole",
+    "last_name": "Telfer",
+    "birth_year": 1991,
+    "death_year": null,
+    "birth_date": "30 March 1991",
+    "death_date": null,
+    "birth_place": "Redcliffe, Queensland",
+    "birth_year_display": "1991",
+    "death_year_display": "",
+    "display_name": "Amy Nicole Telfer",
+    "title": "Amy Nicole Telfer — Family & Biography",
+    "lifespan": "1991",
+    "generation": 8,
+    "is_living": true,
+    "is_deceased": false,
+    "evidence_level": null,
+    "single_source": false,
+    "provisional_why": null,
+    "body_markdown": "# Amy Nicole Telfer\n\n**Role:** Daughter of Timothy Neil Telfer and Penny Telfer, stepdaughter of Allen Merrick\n\n## Photos\n\n![Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest](images/people/Amy-Telfer-Tiny-Tots-Quest.jpg)\n\n![Amy Telfer (far right, light blue headband) with two classmates in Mueller College sports uniform — red polo with white collar. Mueller College, Rothwell, Queensland. Identified by her brother Mark.](images/people/Amy_Telfer_Mueller_College_sports_team.jpg)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959)]] |\n| **Stepfather** | [[Allen Merrick]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986)]], [[David Telfer-Merrick]] (half-brother) |\n\n---\n\n## Education\n\n**Mueller College**, Rothwell, Queensland — secondary schooling.\n\n---",
+    "roles": [
+      "Daughter of Timothy Neil Telfer and Penny Telfer, stepdaughter of Allen Merrick"
+    ],
+    "tags": [
+      "bio",
+      "family",
+      "person"
+    ],
+    "parents": [
+      "penny-telfer-1960",
+      "timothy-telfer-1959"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "david-telfer-merrick-2000",
+      "mark-telfer-1986"
+    ],
+    "step_parents": [
+      "allen-merrick",
+      {
+        "plain_name": "Sheryle Joy Telfer",
+        "withheld": true
+      }
+    ],
+    "step_children": [],
+    "images": [
+      {
+        "src": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg",
+        "alt": "Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Amy-Telfer-Tiny-Tots-Quest.jpg",
+        "filename": "Amy-Telfer-Tiny-Tots-Quest.jpg"
+      },
+      {
+        "src": "images/people/Amy_Telfer_Mueller_College_sports_team.jpg",
+        "alt": "Amy Telfer (far right, light blue headband) with two classmates in Mueller College sports uniform — red polo with white collar. Mueller College, Rothwell, Queensland. Identified by her brother Mark.",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Amy_Telfer_Mueller_College_sports_team.jpg",
+        "filename": "Amy_Telfer_Mueller_College_sports_team.jpg"
+      }
+    ],
+    "person_photo": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg"
+  },
+  {
     "id": "Shannon Louise Telfer (1992)",
     "slug": "shannon-telfer",
     "first_name": "Shannon",
@@ -29975,71 +30040,6 @@
     "person_photo": null
   },
   {
-    "id": "Amy Nicole Telfer",
-    "slug": "amy-telfer",
-    "first_name": "Amy",
-    "middle_name": "Nicole",
-    "last_name": "Telfer",
-    "birth_year": null,
-    "death_year": null,
-    "birth_date": "30 March 1991",
-    "death_date": null,
-    "birth_place": "Redcliffe, Queensland",
-    "birth_year_display": "?",
-    "death_year_display": "",
-    "display_name": "Amy Nicole Telfer",
-    "title": "Amy Nicole Telfer — Family & Biography",
-    "lifespan": "?",
-    "generation": 8,
-    "is_living": true,
-    "is_deceased": false,
-    "evidence_level": null,
-    "single_source": false,
-    "provisional_why": null,
-    "body_markdown": "# Amy Nicole Telfer\n\n**Role:** Daughter of Timothy Neil Telfer and Penny Telfer, stepdaughter of Allen Merrick\n\n## Photos\n\n![Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest](images/people/Amy-Telfer-Tiny-Tots-Quest.jpg)\n\n![Amy Telfer (far right, light blue headband) with two classmates in Mueller College sports uniform — red polo with white collar. Mueller College, Rothwell, Queensland. Identified by her brother Mark.](images/people/Amy_Telfer_Mueller_College_sports_team.jpg)\n\n---\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Mother** | [[Penny Telfer]] |\n| **Father** | [[Timothy Neil Telfer (1959)]] |\n| **Stepfather** | [[Allen Merrick]] |\n| **Siblings** | [[Mark Kenneth Telfer (1986)]], [[David Telfer-Merrick]] (half-brother) |\n\n---\n\n## Education\n\n**Mueller College**, Rothwell, Queensland — secondary schooling.\n\n---",
-    "roles": [
-      "Daughter of Timothy Neil Telfer and Penny Telfer, stepdaughter of Allen Merrick"
-    ],
-    "tags": [
-      "bio",
-      "family",
-      "person"
-    ],
-    "parents": [
-      "penny-telfer-1960",
-      "timothy-telfer-1959"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "david-telfer-merrick-2000",
-      "mark-telfer-1986"
-    ],
-    "step_parents": [
-      "allen-merrick",
-      {
-        "plain_name": "Sheryle Joy Telfer",
-        "withheld": true
-      }
-    ],
-    "step_children": [],
-    "images": [
-      {
-        "src": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg",
-        "alt": "Amy Telfer, aged 3, at the Endeavour Foundation Tiny Tots Quest",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Amy-Telfer-Tiny-Tots-Quest.jpg",
-        "filename": "Amy-Telfer-Tiny-Tots-Quest.jpg"
-      },
-      {
-        "src": "images/people/Amy_Telfer_Mueller_College_sports_team.jpg",
-        "alt": "Amy Telfer (far right, light blue headband) with two classmates in Mueller College sports uniform — red polo with white collar. Mueller College, Rothwell, Queensland. Identified by her brother Mark.",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Amy_Telfer_Mueller_College_sports_team.jpg",
-        "filename": "Amy_Telfer_Mueller_College_sports_team.jpg"
-      }
-    ],
-    "person_photo": "images/people/Amy-Telfer-Tiny-Tots-Quest.jpg"
-  },
-  {
     "id": "Angela Telfer",
     "slug": "angela-telfer",
     "first_name": "Angela",
@@ -30317,9 +30317,9 @@
     ],
     "parents": [],
     "children": [
-      "aimee-welch",
+      "nicole-welch",
       "joanna-welch",
-      "nicole-welch"
+      "aimee-welch"
     ],
     "spouses": [
       "margaret-telfer-1962"
@@ -30365,9 +30365,9 @@
       "noela-pauline-virgen-1921"
     ],
     "children": [
+      "mark-telfer-1986",
       "amy-telfer",
-      "david-telfer-merrick-2000",
-      "mark-telfer-1986"
+      "david-telfer-merrick-2000"
     ],
     "spouses": [
       "allen-merrick"
@@ -30443,9 +30443,9 @@
       "morris-telfer"
     ],
     "children": [
-      "aimee-welch",
+      "nicole-welch",
       "joanna-welch",
-      "nicole-welch"
+      "aimee-welch"
     ],
     "spouses": [
       "mark-welch"
@@ -30494,8 +30494,8 @@
       "morris-telfer"
     ],
     "children": [
-      "anneliese-telfer",
-      "bradley-telfer"
+      "bradley-telfer",
+      "anneliese-telfer"
     ],
     "spouses": [
       "michelle-spratt"
@@ -30541,8 +30541,8 @@
     ],
     "parents": [],
     "children": [
-      "connor-mclaughlin",
-      "tara-mclaughlin"
+      "tara-mclaughlin",
+      "connor-mclaughlin"
     ],
     "spouses": [
       "leanne-telfer"
@@ -30584,8 +30584,8 @@
     ],
     "parents": [],
     "children": [
-      "anneliese-telfer",
-      "bradley-telfer"
+      "bradley-telfer",
+      "anneliese-telfer"
     ],
     "spouses": [
       "geoffrey-telfer-1964"
@@ -30630,8 +30630,8 @@
       "sandra-philpott"
     ],
     "children": [
-      "connor-mclaughlin",
-      "tara-mclaughlin"
+      "tara-mclaughlin",
+      "connor-mclaughlin"
     ],
     "spouses": [
       "garry-mclaughlin"
@@ -30772,8 +30772,8 @@
       "morris-telfer"
     ],
     "children": [
-      "adelaide-telfer",
-      "clayton-telfer"
+      "clayton-telfer",
+      "adelaide-telfer"
     ],
     "spouses": [
       "leanne-thomson"
@@ -30962,9 +30962,9 @@
     ],
     "parents": [],
     "children": [
+      "zachary-hanson",
       "jessica-hanson",
-      "natasha-hanson",
-      "zachary-hanson"
+      "natasha-hanson"
     ],
     "spouses": [
       "kylie-telfer"
@@ -31049,8 +31049,8 @@
     "parents": [],
     "children": [
       "alexander-telfer",
-      "april-telfer",
-      "ryan-telfer-2001"
+      "ryan-telfer-2001",
+      "april-telfer"
     ],
     "spouses": [
       "bruce-telfer"
@@ -31092,10 +31092,10 @@
     ],
     "parents": [],
     "children": [
-      "jonathon-andrew-story",
-      "kaitlyn-paige-story",
       "michaela-jayne-story",
-      "zachary-david-story"
+      "jonathon-andrew-story",
+      "zachary-david-story",
+      "kaitlyn-paige-story"
     ],
     "spouses": [],
     "siblings": [],
@@ -31139,8 +31139,8 @@
     ],
     "children": [
       "alexander-telfer",
-      "april-telfer",
-      "ryan-telfer-2001"
+      "ryan-telfer-2001",
+      "april-telfer"
     ],
     "spouses": [
       "sukanya-lee"
@@ -31185,8 +31185,8 @@
     ],
     "parents": [],
     "children": [
-      "adelaide-telfer",
-      "clayton-telfer"
+      "clayton-telfer",
+      "adelaide-telfer"
     ],
     "spouses": [
       "david-telfer-1970"
@@ -31317,9 +31317,9 @@
       "ruth-littlejohn"
     ],
     "children": [
+      "zachary-hanson",
       "jessica-hanson",
-      "natasha-hanson",
-      "zachary-hanson"
+      "natasha-hanson"
     ],
     "spouses": [
       "mark-hanson"
@@ -31361,8 +31361,8 @@
     ],
     "parents": [],
     "children": [
-      "abbi-may-manuel",
       "clayton-brodie-manuel",
+      "abbi-may-manuel",
       "jonty-tyler-manuel"
     ],
     "spouses": [],
