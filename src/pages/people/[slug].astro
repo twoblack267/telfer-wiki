@@ -421,11 +421,26 @@ function yearFromLine(markdown, label) {
 // yearSpan is the BARE pair ("? – ?"), not "(? – ?)" — the parentheses are added at
 // render. Testing for literal parens here never matched and silently left every
 // unknown-date profile on the placeholder path. Match the bare form.
+// A HALF-UNKNOWN SPAN IS NOT UNKNOWN. "1740 – ?" is a real birth year beside an unknown
+// death, and it published as `(1740 – ?)` — a question mark where a searcher expects a
+// date (james-telfer-of-sorbietrees-1740). Treat a span with ONE known year as a partial
+// span and render it "b. 1740"; a span with no known year at all stays unknown.
+const spanParts = String(yearSpan || "").split("–").map((x) => x.trim());
+const yearKnown = (v) => /^\d{3,4}$/.test(String(v || "").replace(/^[~c.]*/, ""));
 const unknownSpan = !yearSpan || /^\s*[~?]?\s*–\s*[~?]?\s*$/.test(yearSpan.trim());
+// "1740 – ?" / "? – 1855": borrow the one real year, label it for what it is.
+const partialSpan =
+  !unknownSpan && spanParts.length === 2
+    ? yearKnown(spanParts[0]) && !yearKnown(spanParts[1])
+      ? `b. ${spanParts[0]}`
+      : !yearKnown(spanParts[0]) && yearKnown(spanParts[1])
+        ? `d. ${spanParts[1]}`
+        : ""
+    : "";
 const bodyBirth = unknownSpan ? yearFromLine(person.body_markdown, "Born") : "";
 const bodyDeath = unknownSpan ? yearFromLine(person.body_markdown, "Died") : "";
 const yearText = !unknownSpan
-  ? yearSpan
+  ? partialSpan || yearSpan
   : bodyBirth && bodyDeath
     ? `${bodyBirth} – ${bodyDeath}`
     : bodyBirth
@@ -440,7 +455,18 @@ const yearText = !unknownSpan
 // already carry that exact span.
 // Declared HERE, above the template description, because both the template and the prose
 // lead use it; a `const` read above its declaration is a build-stopping TDZ error.
-const nameHasYears = Boolean(yearText) && person.display_name.includes(`(${yearText})`);
+// A partial span ("b. 1850") will NEVER appear verbatim inside a display_name that
+// prints the raw pair — "Andrew Telfer (1850 – ?)" contains "(1850 – ?)", not "(b. 1850)".
+// Testing the DISPLAY form appended `(b. 1850)` straight after `(1850 – ?)` and duplicated
+// the year on 12 pages. What we actually need to know is "does the name already show this
+// year?", so test the year TEXT: if the partial span names a year the name already prints,
+// the name has years.
+const nameHasYears = Boolean(yearText) && (
+  person.display_name.includes(`(${yearText})`) ||
+  (partialSpan
+    ? person.display_name.includes(partialSpan.replace(/^b\.\s*|^d\.\s*/, ""))
+    : false)
+);
 
 // Template form — kept as the FALLBACK for profiles with no prose, and with the
 // unknown-date placeholder suppressed so it never prints "(? – ?)".
@@ -509,7 +535,19 @@ const cleanRoleText = (() => {
 const fallbackFacts = [
   cleanRoleText,
   spouseMatch
-    ? `Spouse of ${String(spouseMatch[2] || spouseMatch[1]).replace(/\s*\((?:b\.|d\.|bap\.)?\s*[^()]*\)\s*$/i, "").trim()}${spouseMatch[3] && !/\d{4}/.test(spouseMatch[3]) ? ` ${spouseMatch[3].trim()}` : ""}.`
+    ? (() => {
+        // A SPOUSE FACT IS A NAME, NOT THAT PERSON'S WHOLE LIFE. The old builder appended
+        // spouseMatch[3] — whatever trailed the wikilink — which for joy-meridith-rowe-1956
+        // was "→ Serena Vickers (b. 20 Aug 2002 North Adelaide, SA)", a descendant, not a
+        // husband. Take the NAME only: strip brackets, stop at an arrow, and refuse any
+        // trailing fragment that carries its own date (a date belongs to a different fact).
+        const rawName = String(spouseMatch[2] || spouseMatch[1] || "").replace(/\s*\((?:b\.|d\.|bap\.)?\s*[^()]*\)\s*$/i, "").trim();
+        const name = rawName.split(/\s*(?:→|->|–|—)\s*/)[0].trim();
+        if (!name || /\d{4}/.test(name)) return "";
+        const tail = String(spouseMatch[3] || "");
+        const keepTail = tail && !/\d{4}|→|->/.test(tail);
+        return `Spouse of ${name}${keepTail ? ` ${tail.trim()}` : ""}.`;
+      })()
     : "",
 ].filter(Boolean).join(" ");
 // NOTE (2026-11-02, card itc-20261101-1): this used a bare `.slice(0, 158)`, which
@@ -532,12 +570,38 @@ const templateDescription = clampDescription([
 // a single clause, spell the links out, and leave the rest to the template.
 const cleanFactLine = (raw) => {
   let t = String(raw)
-    .replace(/\*\*/g, "")
+    // Italic markers too: a source citation arrives as "*(A Telfer Family Tree — Supplement
+    // 2008)*", and stripping only "**" left the single asterisks behind so the citation
+    // rule below never matched and beth-telfer-1946 shipped the book title as if it were
+    // the birthplace.
+    .replace(/\*+/g, "")
     .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]/g, "$2" || "$1")
     .replace(/\s+/g, " ")
     .trim();
   // Field run: everything after the first "|" is another column, not another sentence.
   t = t.split(/\s*\|\s*/)[0].trim();
+  // A LEADING CITATION IS NOT A BIOGRAPHY. Several body lines open with the source in
+  // parentheses — "Born 30 Oct 1981 Rose Park, SA Spouse Kerry McNamara → Serena Vickers
+  // (b. 20 Aug 2002 North Adelaide, SA)" and "Child of Lyndell Marie Telfer. Born 1976.
+  // Married Daniel Colin Dingwall. (b. 1 Apr 1976 Cummins)" both shipped a dangling
+  // "(b. 1 Apr 1976 Cummins)" as the END of the snippet. A bracket at the very end that
+  // opens with a date marker is a citation fragment, not a full stop.
+  t = t.replace(/\(\s*(?:b\.|d\.|bap\.|born|died|baptised)(?=[\s)]|$)[^()]*\)\s*$/i, "").trim();
+  // "A Telfer Family Tree — Supplement 2008" is the BOOK, not the place. A trailing
+  // source citation in italics-turned-plain text reads as part of the address, and it
+  // pushed beth-telfer-1946 and ian-telfer-1947 over the terminator contract. The source
+  // is cited in full on the page's Sources section; the snippet doesn't need the receipt.
+  // The citation arrives WRAPPED IN ITALICS — "*(A Telfer Family Tree — Supplement 2008)*"
+  // — so after the asterisk strip above it is a plain bracket, but the closing "*" can sit
+  // between the ")" and the end of line. Allow trailing asterisks/space after the bracket.
+  t = t.replace(/[\s*]*\((?:A Telfer Family Tree|From the Borders to the Bush|The Telfer Family)[^()]*\)[\s*]*$/i, "").trim();
+  // OUR PLACEHOLDER, STILL LEAKING. "(place not printed in the tree)" is a note to the
+  // researcher written where the place belongs. isEditorialOnly() now rejects sentences
+  // carrying it, but a FACT line goes down this path instead — so strip the parenthetical
+  // and keep the date, which is still a true and useful fact.
+  t = t.replace(/\s*[—–-]\s*\(place not printed in the tree\)/i, "")
+    .replace(/\s*\(place not printed in the tree\)/i, "")
+    .trim();
   return t;
 };
 // THE FIELD FACT IS THE TRUE FALLBACK. The template sentence above is only useful when the
@@ -567,6 +631,32 @@ const factDescription = clampDescription(
     else if (/(?:^|:\s*)(?:m\.)\s+[A-Z]/.test(cleaned) && !/^Married /.test(cleaned))
       cleaned = cleaned.replace(/(^|:\s*)m\.\s+/i, "$1Married ");
     if (cleaned.length < 12) return "";
+    // A "FACT LINE" WHOSE VALUE IS A TABLE ROW IS NOT A FACT ABOUT THE PERSON. The mid-line
+    // pipe is the tell: the Children table rendered as "| Child | Born | Spouse |", and one
+    // cell ("30 Oct 1981 Rose Park, SA | Kerry McNamara -> Serena Vickers (b. 20 Aug 2002)")
+    // became joy-meridith-rowe-1956's description. cleanFactLine() keeps only the text before
+    // the first pipe, so this test runs on the RAW line, not the cleaned one.
+    if (/\|[^|]+\|/.test(String(firstFact || ""))) return "";
+    // DON'T SAY THE DATE TWICE. "Richard Paynter (of Calstock) (1816 – 1855). Born: c.1816
+    // — Calstock, Cornwall, England." and "Rose Isabel Margaret Paynter (Rankin) (1900 –
+    // 1988). Rose Isabel Margaret Paynter was born 8 August 1900 …" both repeat the birth
+    // year the display name already printed, which reads as a doubled span to the gate and
+    // as a stutter to a searcher. When the fact line's opening date is the year already in
+    // the display name, start the snippet at the PLACE instead — the fact survives, the
+    // duplicate goes.
+    const openDate = cleaned.match(/^(?:Born|Died|Baptised|Birth|Married)\s*:\s*(?:c\.|ca\.|about\s*)?(\d{3,4})\b/i);
+    // The years can come from the display name OR from the separate yearText span the
+    // template appends — "Richard Paynter (of Calstock)" carries neither, and is rendered
+    // as "… (of Calstock) (1816 – 1855)". Test BOTH, or the dedupe silently does nothing.
+    const shownYears = `${person.display_name || ""} ${yearText || ""}`;
+    if (openDate && shownYears.includes(openDate[1])) {
+      const rest = cleaned
+        .replace(/^((?:Born|Died|Baptised|Birth|Married)\s*:\s*)(?:c\.|ca\.|about\s*)?\d{3,4}\s*/i, "$1")
+        .replace(/^([^:]*?:\s*)[\s,—–-]+/, "$1")
+        .trim();
+      // Only take this path when a real place survives; otherwise keep the full fact.
+      if (rest.length >= 18) cleaned = rest;
+    }
     return `${person.display_name}${yearText && !nameHasYears ? ` (${yearText})` : ""}. ${cleaned}.`;
   })()
 );
@@ -686,6 +776,15 @@ function isEditorialOnly(t) {
   if (/\bnot printed in the tree\b/i.test(s)) return true;
   if (/\b(?:flagged unverified|since 20\d\d)\b/i.test(s) && s.split(/\s+/).length < 40) return true;
   if (/\bdetails limited to the printed record\b/i.test(s)) return true;
+  // A DISAMBIGUATION NOTE IS ABOUT OUR FILING, NOT A LIFE. "Not to be confused with
+  // Margaret Wright Telfer (1810–1892)" shipped as the description on
+  // margaret-telfer-1869 — it names a different person and explains our own naming
+  // problem. The reader of a search result has not asked which Margaret is which.
+  if (/^(Not to be confused with|Do not confuse|Distinct from)\b/i.test(s)) return true;
+  // A NOTE WRITTEN TO OURSELVES. "See Notes — Olive Netta is recorded in the vault as
+  // Frank's sister" (geoffrey-telfer-1914) refers to a Notes section a searcher cannot
+  // see, and to a vault file rather than to a fact.
+  if (/\b(?:recorded in the vault as|in the vault as|the vault (?:lists|holds|records|has))\b/i.test(s)) return true;
   if (/^(Source|Sources|Source note|Note|Reference|References)\b/i.test(s)) return true;
   if (/^(Correction Notice|Previously listed|This is incorrect|Erratum)\b/i.test(s)) return true;
   if (/^(AWM|Roll of Honour|CWGC|Find a Grave|FindAGrave)\b/i.test(s)) return true;
@@ -967,7 +1066,33 @@ const looksLikeFieldRun = (t) =>
 const leadHasVerb = !proseSentence
   ? false
   : !looksLikeFieldRun(proseSentence) && /\b(?:was|were|is|are|born|baptised|baptized|died|married|emigrated|arrived|settled|lived|worked|served|farmed|fought|enlisted|owned|ran|kept|joined|moved|returned|remained|became|had|has|left|took|gave|sailed|buried|recorded|named|listed|remembered|known)\b/i.test(proseSentence);
-const leadSentence = nameOnly || !leadHasVerb ? "" : proseSentence;
+// A SENTENCE THAT ENDS ON OPEN BRACKET IS A CUT FIELD, NOT A FINISHED THOUGHT. The vault
+// writes lifespan citations inline, so a body line can run "Born 30 Oct 1981 Rose Park, SA
+// Spouse Kerry McNamara → Serena Vickers (b. 20 Aug 2002 North Adelaide, SA" — a verb
+// ("Born") satisfied leadHasVerb and the fragment shipped (joy-meridith-rowe-1956,
+// kirrily-sheree-maddern-1976). An unbalanced bracket means the sentence was still going
+// when the field ended.
+const leadIsUnclosed = !proseSentence
+  ? false
+  : (proseSentence.match(/\(/g) || []).length !== (proseSentence.match(/\)/g) || []).length;
+// A TABLE ROW THAT SURVIVED THE STRIP IS STILL A TABLE ROW. The vault's Children table
+// has no "Relation" header, so formatBody renders it as <table> — but the strip above only
+// removes a COMPLETE <table>...</table> pair, and a row that lost its wrapper survives as
+// "30 Oct 1981 Rose Park, SA Spouse Kerry McNamara -> Serena Vickers (b. 20 Aug 2002 ...)",
+// which shipped as joy-meridith-rowe-1956's description. A pipe or a lone cell means we are
+// reading a spreadsheet, not a life.
+const looksLikeTableRow = /\s\|\s/.test(proseSentence || "");
+// THE LEAD PATH MUST BE CLEANED LIKE THE FACT PATH. Everything above rejects STRUCTURE,
+// but proseSentence is raw vault text: it still carries the book citation in italics and
+// the trailing date-of-another-person bracket, so "Beth Telfer (1946). Born: 10 April
+// 1946 — Millicent, South Australia (A Telfer Family Tree — Supplement 2008)" shipped
+// EVEN THOUGH factDescription() had already produced the clean version and lost to it
+// on length. Run the same cleaner, and let the fact line win.
+const leadCleaned = proseSentence ? cleanFactLine(proseSentence) : "";
+const leadSentence =
+  nameOnly || !leadHasVerb || leadIsUnclosed || looksLikeTableRow || leadCleaned.length < 40
+    ? ""
+    : leadCleaned;
 // When the body merely restates the name, strip that echo from the front of the
 // sentence rather than throwing the whole sentence away — "Robert Dunlop Stub entry
 // — …" becomes "Stub entry — …", which is the part that actually says something.
@@ -1015,7 +1140,13 @@ const leadIsBareNameWithDates = !leadSentence
   || /^[^.!?]{0,90}(?:\(\s*(?:b\.|d\.|bap\.)?\s*~?\d{3,4}(?:\s*[–-]\s*(?:~?\d{3,4}|living|\?))?\s*\))\s*\.?$/i.test(leadSentence.trim())
   // A DOUBLED SPAN ANYWHERE — "(b. 1985) (b. 1985)" is never a sentence, whoever wrote it.
   || /\)\s*\(\s*(?:b\.|d\.|bap\.)?\s*[~?\d]{3,4}(?:\s*[–-]\s*[~?\d]{3,4})?\s*\)/i.test(leadSentence);
-const rawSeoDescription = leadSentence && !leadIsAStub && !leadIsBareNameWithDates && decodeEntities(leadSentence).length >= 40
+// A CLEAN FACT BEATS A STITCHED LEAD. leadSentence is assembled from whatever prose the
+// vault happened to put first, which on several profiles is a weld of two different field
+// runs ("Born 30 Oct 1981 Rose Park, SA Spouse Kerry McNamara -> Serena Vickers"). When
+// factDescription() produced a whole sentence from a real "**Born:**" line, prefer it — the
+// structured fact is the honest summary, and the prose lead only fills in when there isn't one.
+const preferFact = Boolean(factDescription) && factDescription.length >= 40;
+const rawSeoDescription = leadSentence && !preferFact && !leadIsAStub && !leadIsBareNameWithDates && decodeEntities(leadSentence).length >= 40
   ? clampDescription(decodeEntities(
       `${person.display_name}${yearText && !nameHasYears ? ` (${yearText})` : ""}. ${stripVaultMarks(leadSentence)}`
     ))

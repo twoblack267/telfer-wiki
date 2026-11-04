@@ -140,6 +140,16 @@ export const VAULT_MARK_CHARS = Object.keys(MARKS);
 export function stripVaultMarks(text) {
   return String(text || "")
     .replace(MARK_RE, "")
+    // A FOOTNOTE MARKER IS NOT PROSE. The vault points at its Notes section with a bare
+    // "*", so "See Notes — Olive Netta is recorded…" reached a search snippet as
+    // "\* See Notes — …" (geoffrey-telfer-1914). Drop the asterisk run, and drop the
+    // "See Notes" cross-reference with it when it opens the fragment — it points at
+    // something a search result cannot show.
+    .replace(/\\?\*+/g, "")
+    .replace(/^\s*See Notes\b\s*[—–:-]?\s*/i, "")
+    // A trailing bracket that never closes, or a fragment left dangling on open
+    // punctuation, is a cut sentence wearing a full stop.
+    .replace(/[\s,;:—–-]*[(\[]\s*$/, "")
     .replace(/^[\s,;:—–-]+/, "")
     .replace(/\s{2,}/g, " ")
     .trim();
