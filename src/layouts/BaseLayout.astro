@@ -368,16 +368,22 @@ function navIsActive(entry: { href: string; match: string }): boolean {
             fully lit around it. A scrim is now drawn below the panel. */
       #nav-desktop.is-open{display:flex;flex-direction:column;
         position:fixed;left:0;top:var(--nav-h,4.75rem);
-        /* Explicit height, not bottom:0 (2026-11-04). This panel lives inside
-           <nav>, which carries backdrop-blur-sm - and a backdrop-filter makes
-           the nav a containing block for position:fixed descendants. With
-           bottom:0 the panel resolved against the 77px header and collapsed to
-           44px. A calc() height is immune to whichever ancestor ends up
-           containing it, so the drawer spans the viewport either way. */
-        height:calc(100vh - var(--nav-h,4.75rem));
-        height:calc(100dvh - var(--nav-h,4.75rem));
+        /* Two rounds of fixes (2026-11-04). This panel lives inside <nav>,
+           which carries backdrop-blur-sm - and a backdrop-filter makes the nav
+           a containing block for position:fixed descendants. With bottom:0 the
+           panel resolved against the 77px header and collapsed to 44px.
+           Round 1 gave it a calc() dvh height, which fixed desktop emulation
+           but is still a VIEWPORT-CLAMPED value: on a phone where the URL bar
+           is showing, dvh can shrink below the content and clip the menu.
+           Round 2 lets the panel size to its CONTENT with a viewport cap, so
+           it stops a comfortable gap below the last link instead of running to
+           the bottom of the screen. max-height keeps it scrollable on short
+           landscape viewports; it never shrinks below the content that fits. */
+        height:auto;
+        max-height:calc(100vh - var(--nav-h,4.75rem) - 1.25rem);
+        max-height:calc(100dvh - var(--nav-h,4.75rem) - 1.25rem);
         width:min(19rem,82vw);
-        gap:.15rem;padding:.75rem 1rem 2rem;align-items:stretch;
+        gap:.15rem;padding:.75rem 1rem 1.25rem;align-items:stretch;
         background:var(--color-nav-solid, var(--color-surface));
         border-right:1px solid var(--color-border);
         box-shadow:8px 0 24px rgba(0,0,0,.55);
