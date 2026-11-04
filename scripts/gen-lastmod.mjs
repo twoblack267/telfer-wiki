@@ -58,6 +58,12 @@ function personName(s) {
     .split("—")[0]
     .split(" - ")[0]
     .replace(/\s*\([^)]*\)\s*$/, "")
+    // Collapse runs of whitespace BEFORE returning. personKeys() strips
+    // surrounding quotes to spaces, so "Francis Charles 'Charlie' Telfer"
+    // became "francis charles  charlie  telfer" (double spaces) and then
+    // matched NO vault filename — the one 99.8%-coverage miss, measured
+    // 2026-11-05. Harmless for keys that were already single-spaced.
+    .replace(/\s+/g, " ")
     .trim()
     .toLowerCase();
 }
@@ -78,7 +84,17 @@ function personKeys(s) {
   // strip a mid-string nickname before anything else:
   //   "francis charles 'charlie' telfer" -> "francis charles telfer"
   //   "william francis \"frank\" telfer"  -> "william francis telfer"
-  const bare = personName(s.replace(/['"‘’“”]/g, " "));
+  //
+  // Blank the quote CHARACTERS only; do not leave a gap behind. The previous
+  // form replaced quotes with " " and relied on a later whitespace collapse,
+  // which never happened inside personName() — so "Francis Charles 'Charlie'
+  // Telfer" produced the key "francis charles charlie telfer" (nickname kept,
+  // double spaces) and matched no vault file. Measured 2026-11-05.
+  // Then drop the mid-string nickname ENTIRELY: quoted text is never part of
+  // the surname a vault filename carries, and vault files are named
+  // "Francis Charles Telfer (1875–1954).md" — no nickname. Deleting only the
+  // quote marks left "charlie" sitting in the key and still matched nothing.
+  const bare = personName(s.replace(/['"‘’“”][^'"‘’“”]*['"‘’“”]/g, " "));
   const keys = [];
   // strip a trailing ", née X" / ", nee X" married-name annotation
   const noNee = bare.replace(/,\s*n(?:é|e)e\s+.*$/, "").trim();

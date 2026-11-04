@@ -53,6 +53,32 @@ const LAST_MOD_BY_SLUG = (() => {
   return map;
 })();
 
+// ---------------------------------------------------------------------------
+// <lastmod> for NON-PERSON pages, taken from the last git commit of the source
+// file that renders them. Values are literal and dated — they are NOT computed
+// at build time, because a build-time fallback would restamp every page on
+// every deploy and teach Google that lastmod means nothing (the exact failure
+// mode that made the 2026-09 CI sitemap worthless: 981 URLs, one timestamp).
+//
+// UPDATE THIS when a listed page's source file changes. An unlisted page gets
+// no <lastmod> — omitting is honest, inheriting is not.
+// ---------------------------------------------------------------------------
+const PAGE_LAST_MOD = new Map<string, string>([
+  ["/", "2026-11-04T12:00:00.000Z"], // src/pages/index.astro
+  ["/about/", "2026-11-04T12:00:00.000Z"], // src/pages/about.astro
+  ["/timeline/", "2026-11-04T12:00:00.000Z"], // src/pages/timeline.astro
+  ["/contact/", "2026-11-04T12:00:00.000Z"], // src/pages/contact.astro
+  ["/search/", "2026-11-04T12:00:00.000Z"], // src/pages/search.astro
+  ["/downloads/", "2026-10-24T12:00:00.000Z"], // src/pages/downloads.astro
+  ["/privacy/", "2026-10-25T12:00:00.000Z"], // src/pages/privacy.astro
+  ["/terms/", "2026-10-17T12:00:00.000Z"], // src/pages/terms.astro
+  ["/ballads/", "2026-10-25T12:00:00.000Z"], // src/pages/ballads/index.astro
+  ["/ballads/telfers-cows/", "2026-10-25T12:00:00.000Z"], // src/pages/ballads/telfers-cows.astro
+  ["/telfer-name/", "2026-10-27T12:00:00.000Z"], // src/pages/telfer-name.astro
+  ["/people/", "2026-11-04T12:00:00.000Z"], // src/pages/people/index.astro
+  ["/people/dna/", "2026-10-25T12:00:00.000Z"], // src/pages/people/dna.astro
+]);
+
 export default defineConfig({
   site: "https://telferwiki.com",
   output: "static",
@@ -120,8 +146,18 @@ export default defineConfig({
         return true;
       },
       // Per-URL <lastmod>, from the committed slug -> date map.
-      // A URL whose slug is absent (15 people have no vault file match) gets NO
-      // <lastmod> at all — we omit rather than invent a date.
+      // A URL whose slug is absent (none as of 2026-11-05; the map covers
+      // every public person) gets NO <lastmod> at all — we omit rather than
+      // invent a date.
+      //
+      // Non-person pages fall back to their SOURCE FILE's last git commit.
+      // Without this, 11 site pages (/, /about/, /timeline/, /contact/,
+      // /search/, /downloads/, /privacy/, /terms/, /ballads/, /ballads/
+      // telfers-cows/, /telfer-name/) shipped with no lastmod at all, so
+      // Google had no recrawl signal for the very pages we most want
+      // refreshed. Measured 2026-11-05.
+      // The mapping is explicit (not derived) so a new top-level page gets
+      // no date rather than a wrongly-inherited one.
       serialize(item) {
         try {
           const pathname = new URL(item.url).pathname;
@@ -130,6 +166,8 @@ export default defineConfig({
             const iso = LAST_MOD_BY_SLUG.get(m[1]);
             if (iso) return { ...item, lastmod: iso };
           }
+          const page = PAGE_LAST_MOD.get(pathname.replace(/\/?$/, "/"));
+          if (page) return { ...item, lastmod: page };
         } catch {
           // malformed URL -> no lastmod for this entry
         }
