@@ -118,18 +118,18 @@ const base = import.meta.env.BASE_URL;
     {knownPeople.map((person) => {
       const initial = (person.display_name || "?")[0].toUpperCase();
       return (
+      // 'recorded'/'awaiting' are FILTER KEYS read by the script below, not a
+      // claim printed on the page. They stay wired to is_deceased / date
+      // presence so the URL filter keeps working; the old "Deceased" badge
+      // was removed on 2026-11-03 so ancestors are no longer flagged one by
+      // one — only records still missing a date are called out, and only in
+      // the Help Us Complete section.
+      // NOTE: no id here — every row would share the first row's id for its
+      // letter. The A–Z jump script scrolls to the first MATCHING row object
+      // instead, which is correct in both sort modes.
       <a
         href={`${base}people/${person.slug}/`}
         data-initial={initial}
-        {/* 'recorded'/'awaiting' are FILTER KEYS read by the script below, not a
-            claim printed on the page. They stay wired to is_deceased / date
-            presence so the URL filter keeps working; the old "Deceased" badge
-            was removed on 2026-11-03 so ancestors are no longer flagged one by
-            one — only records still missing a date are called out, and only in
-            the Help Us Complete section.
-            NOTE: no id here — every row would share the first row's id for its
-            letter. The A–Z jump script scrolls to the first MATCHING row object
-            instead, which is correct in both sort modes. *}
         class={`person-row flex items-center gap-4 py-3 px-2 no-underline hover:bg-[var(--color-surface)]/50 transition-colors rounded group ${person.is_deceased ? 'recorded' : 'awaiting'}`}
       >
         <!-- Name & lifespan -->
