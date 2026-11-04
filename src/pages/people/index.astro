@@ -137,11 +137,21 @@ const base = import.meta.env.BASE_URL;
           <div class="font-medium text-[var(--color-burgundy)] group-hover:text-[var(--color-burgundy-light)] transition-colors">
             {person.display_name}
           </div>
-          <div class="text-sm text-[var(--color-muted)] lifespan">{person.lifespan}</div>
+          {/* Lifespan line. display_name already embeds the years for most people,
+              so this row showed the dates TWICE on 57 of 607 rows (measured) —
+              "Elizabeth Beattie (1741 – 1819)" with "1741 – 1819" underneath.
+              Hidden when the name already carries them, so each row states the
+              years exactly once and the bold line keeps the row's weight. */}
+          {!person.display_name?.includes(person.lifespan || '\u0000') && (
+            <div class="text-sm text-[var(--color-muted)] lifespan">{person.lifespan}</div>
+          )}
         </div>
 
-        {/* Arrow */}
-        <span class="text-[var(--color-border)] group-hover:text-[var(--color-burgundy)] transition-colors">→</span>
+        {/* Arrow (2026-11-04). Was --color-border, which measured 1.82:1 dark /
+            1.84:1 light — effectively invisible, so 607 of them read as stray
+            specks rather than a row affordance. --color-muted gives 5.3:1 dark
+            / 5.0:1 light, matching the lifespan text it sits beside. */}
+        <span class="text-[var(--color-muted)] group-hover:text-[var(--color-burgundy)] transition-colors">→</span>
       </a>
       );
     })}
