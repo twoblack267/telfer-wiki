@@ -133,6 +133,34 @@ for (const person of people) {
     for (const alias of aliases) {
       if (alias && alias !== idBare.toLowerCase()) setPrefersComplete(alias, person.slug);
     }
+    // ── VAULT NAME FORM AS AN INDEX KEY (added 2026-11-05) ────────────────────
+    // Vault files write the surname LAST and the qualifier INSIDE the name:
+    //   file "Richard Paynter (of Calstock).md"  → ref "Richard Paynter (of Calstock) (1816–1855)"
+    //   file "John Telfer (of Castleton) (1731).md" → ref "John Telfer (of Castleton) (1731)"
+    // The keys registered above are built from `id`, so a person whose given name
+    // and qualifier were split differently in `id` (here `Richard (of Calstock)
+    // Paynter (1816)`) registers `richard (of calstock) paynter` and `richard
+    // paynter` — and the vault form `richard paynter (of calstock)` matches
+    // NEITHER. resolveNameToSlug strips the trailing lifespan, leaving exactly that
+    // unmatched string, so the edge is refused.
+    //
+    // Measured cost when last_name was corrected: Elizabeth Paynter (m. 1866) lost
+    // her Father, and Richard (of Calstock) Paynter went from 3 children to 2. The
+    // crown-jewel guard caught it. One-way loss — his page still listed her.
+    //
+    // Register the filename's own name (minus any trailing lifespan) as an alias.
+    // setPrefersComplete means a form claimed by two different people goes
+    // AMBIGUOUS and is still refused — this can only restore an edge, never guess.
+    {
+      const fileStem = String(person.vault_file || '').replace(/\.md$/i, '').trim();
+      const fileBare = fileStem
+        .replace(/\s*\(\s*b\.?\s*\d{4}\s*\)\s*$/i, '')
+        .replace(/\s*\(\s*[~c.]?\s*\d{3,4}\s*[–-][^)]*\)\s*$/, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toLowerCase();
+      if (fileBare && fileBare !== idBare.toLowerCase()) setPrefersComplete(fileBare, person.slug);
+    }
   }
 }
 
@@ -236,11 +264,33 @@ function resolveNameToSlug(name, sourceSlug) {
   // qualifier is discarded, and only accept an unambiguous hit, so no generation of
   // William is ever guessed at.
   {
-    const q = String(name || '').match(/\(([^)]*)\)\s*$/);
+    // ── LIFESPAN FIRST, THEN THE QUALIFIER (fixed 2026-11-05) ────────────────
+    // The vault writes the qualifier INSIDE the name and the lifespan AFTER it:
+    //   "Richard Paynter (of Calstock) (1816–1855)"
+    //   "John Telfer (of Castleton) (1731)"
+    // This block used to read the LAST parenthetical, which is the LIFESPAN. Its
+    // words strip to nothing, so the whole qualified-key lookup was skipped and
+    // cleanName had already reduced the ref to the bare "Richard Paynter" —
+    // which belongs to the SON, Richard Paynter (1838). Measured consequence when
+    // last_name was corrected: Elizabeth Paynter (m. 1866) lost her Father and
+    // Richard (of Calstock) went from 3 children to 2. The crown-jewel guard
+    // caught it; the edge was one-way lost (his page still listed her).
+    // Strip the lifespan span first, then let the existing qualifier logic read
+    // what is genuinely left: "(of Calstock)".
+    const lifespanStripped = String(name || '')
+      .replace(/\s*\(\s*[~c.]?\s*\d{3,4}\s*[–-]\s*[^)]*\)\s*$/, '')
+      .replace(/\s*\(\s*b\.?\s*\d{4}\s*\)\s*$/i, '')
+      .trim();
+    const q = (lifespanStripped || String(name || '')).match(/\(([^)]*)\)\s*$/);
     if (q) {
       const words = q[1].replace(/[\d\u2013\-?]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
       if (words) {
-        const bare = String(name).replace(/\s*\([^)]*\)\s*$/, '').replace(/["\u201c\u201d]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+        const bare = lifespanStripped
+          .replace(/\s*\([^)]*\)\s*$/, '')
+          .replace(/["“”]/g, '')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .toLowerCase();
         const qualified = nameIndex.get(`${bare} (${words})`);
         if (qualified && qualified !== AMBIGUOUS) return qualified;
       }

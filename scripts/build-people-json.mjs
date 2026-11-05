@@ -415,6 +415,29 @@ async function build() {
     // Added 2026-11-03: this is why John Lawrie (1845–1921) could not be listed as a
     // child of John Lawrie (1810–1888) while his own profile named his father correctly.
     nameToSlug.set(file.name.replace(/\.md$/, ''), baseSlug);
+    // ALIAS KEYS FROM THE NAME IN THE VAULT FILENAME (added 2026-11-05).
+    // Relationships elsewhere are written the way the OLD surname style wanted:
+    //   "Richard Paynter (of Calstock) (1816–1855)"
+    // i.e. the filename's name, then the lifespan. The resolver looks that exact
+    // string up here. It stops matching the moment last_name is corrected, because
+    // the key above is built from first+middle+last — measured when Richard
+    // (of Calstock) Paynter's last_name stopped being "Paynter (of Calstock)":
+    // Elizabeth Paynter silently lost her father edge (children 3 -> 2) and the
+    // crown-jewel guard caught it.
+    // Build the alias from the FILENAME (which never changes) plus the
+    // frontmatter years, in both dash forms. Additive only — every existing key
+    // stands, so a string that already resolved cannot change target.
+    {
+      const bare = file.name.replace(/\.md$/, '');
+      const y1 = fm.birth_year, y2 = fm.death_year;
+      if (y1) {
+        for (const dash of ['–', '-']) {
+          const variant = `${bare} (${y1}${dash}${y2 || '?'})`;
+          if (!nameToSlug.has(variant)) nameToSlug.set(variant, baseSlug);
+        }
+      }
+      if (!nameToSlug.has(bare)) nameToSlug.set(bare, baseSlug);
+    }
 
     fileData.push({ file, fm, content });
   }

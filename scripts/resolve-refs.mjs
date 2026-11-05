@@ -84,6 +84,38 @@ people.forEach(p => {
   } else {
     byDisplay.set(display, p.slug);
   }
+  // ── OLD-DISPLAY ALIASES (added 2026-11-05) ───────────────────────────────────
+  // Vault relationship strings were written against the OLD display form when a
+  // given/qualifier sat inside last_name:
+  //   "Richard Paynter (of Calstock) (1816–1855)"   (Elizabeth Paynter's Father)
+  //   "John Telfer (of Castleton) (1731)"
+  // Correcting last_name to the true surname moved `of Calstock` into
+  // middle_name, so display became "Richard (of Calstock) Paynter" and BOTH the
+  // plain and the year-annotated key above stopped matching. Measured cost:
+  // Elizabeth Paynter silently lost her father edge (children 3 -> 2) and the
+  // crown-jewel guard caught it. One-way loss: his page still listed her.
+  // The old form is recoverable without guessing — it is the vault FILENAME minus
+  // any trailing lifespan, e.g. "Richard Paynter (of Calstock).md". Build the key
+  // from p.vault_file when the converter recorded it, else from the title.
+  // ADDITIVE ONLY: `has()` guards mean a key that already resolved keeps its
+  // target, so this can only restore edges, never move one.
+  (() => {
+    const src = (p.vault_file || p.title || '').toString().trim();
+    if (!src) return;
+    const bare = src
+      .replace(/\.md$/i, '')
+      .replace(/\s*\(\s*b\.?\s*\d{4}\s*\)\s*$/i, '')     // "(b. 1840s)"
+      .replace(/\s*\(\s*[~c.]?\s*\d{3,4}\s*[–-][^)]*\)\s*$/, '') // "(~1740–?)"
+      .trim()
+      .toLowerCase();
+    if (!bare) return;
+    if (!byDisplay.has(bare)) byDisplay.set(bare, p.slug);
+    if (birthYear) {
+      const deathStr2 = p.death_year || '?';
+      const k = `${bare} (${birthYear}–${deathStr2})`;
+      if (!byDisplayWithYears.has(k)) byDisplayWithYears.set(k, p.slug);
+    }
+  })();
   // A display_name ending in a parenthetical lifespan/year is an ANNOTATION, not a name
   // qualifier — it must never win the qualifier short-circuit above.
   if (/\s*\([~]?\d{3,4}\s*[–-]?[^)]*\)\s*$/.test(p.display_name || '')) yearAnnotatedKeys.add(display);
