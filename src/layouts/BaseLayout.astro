@@ -237,7 +237,7 @@ const NAV = [
   { href: "search/",                label: "Search",     icon: "i-search",    match: "search" },
   { href: "ballads/",               label: "Ballads",    icon: "i-ballads",   match: "ballads" },
   { href: "telfer-name/",           label: "The Name",   icon: "i-about",     match: "telfer-name" },
-  { href: "people/dna/",            label: "DNA",        icon: "i-dna",       match: "people/dna" },
+  { href: "people/dna/",            label: "DNA",        icon: "i-dna",       match: "people/dna", hidden: true },
 ] as const;
 
 /** Secondary destinations — footer only. Kept here as the canonical list so the
@@ -539,7 +539,10 @@ function navIsActive(entry: { href: string; match: string }): boolean {
              breakpoint; nothing is duplicated for a second breakpoint.
              Guarded by scripts/guard-presentation-integrity.mjs (rule P2b). -->
         <div id="nav-desktop" class="lg:flex gap-1 items-center">
-          {NAV.map((n) => (
+          {/* `hidden` items stay in NAV (so the route and its active-state match
+              still work) but are not advertised. DNA is hidden while its page is
+              a stub — see NAV comment. */}
+          {NAV.filter((n) => !n.hidden).map((n) => (
             <a
               href={import.meta.env.BASE_URL + n.href}
               class="nav-link flex items-center gap-1.5 px-2.5 py-2 rounded-lg"

@@ -78,28 +78,37 @@ const base = import.meta.env.BASE_URL;
           </a>
         </li>
       )}
-      <li role="presentation">
-        <a
-          href={`${base}people/dna/`}
-          class="px-4 py-2 rounded-t-lg border-b-2 border-[var(--color-highlight)] text-[var(--color-highlight)] font-medium"
-          role="tab"
-        >
-          <svg class="pg-ico" width="17" height="17" aria-hidden="true" focusable="false" style="vertical-align:-2px;margin-right:.3rem;display:inline-block"><use href="#i-dna"></use></svg>DNA
-        </a>
-      </li>
+      {/* DNA tab removed 2026-11-05 (Mark's decision). The page it pointed at
+          was an "Under Construction" stub with zero data — a nav item that
+          promises content and delivers a placeholder is the same kind of
+          unbacked claim we removed from the footer tonight. The route still
+          exists at /people/dna/ so no inbound link breaks, but it is no
+          longer advertised. Restore the tab the day there is real data. */}
     </ul>
   </nav>
 
-  <!-- Filters -->
-  <div class="flex flex-wrap gap-3 mb-3 items-center">
-    <label class="text-sm text-[var(--color-muted)]">Show:</label>
-    <a href={base + "people/"} data-filter-status="all" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Everyone</a>
-    <a href={base + "people?status=recorded"} data-filter-status="recorded" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">With a recorded death</a>
-    <a href={base + "people?status=awaiting"} data-filter-status="awaiting" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Awaiting a date</a>
-    <span class="text-[var(--color-border)] mx-1">|</span>
-    <a href={base + "people?sort=alpha"} data-filter-sort="alpha" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
-    <a href={base + "people?sort=year"} data-filter-sort="year" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
-    <span class="text-sm text-[var(--color-muted)] ml-auto"><span id="filter-count">{knownPeople.length}</span> shown</span>
+  <!-- Filters. Restructured 2026-11-05 (Mark: "the buttons are a bit of a
+       mess on the phone"). The old layout was one flat flex-wrap row: five
+       pills, a bare "|" divider, and a "607 shown" counter that was pushed
+       right with ml-auto. On a narrow screen the divider orphaned itself at
+       the start of a line and the counter flew off to a corner of its own,
+       so the row read as three ragged fragments. Now the two groups are real
+       groups: Show (filters) and Sort (order), each on its own line, with the
+       counter sitting inside the first group where it belongs. No divider is
+       needed once the groups are visually separate. -->
+  <div class="filter-bar mb-3">
+    <div class="filter-group">
+      <span class="filter-label">Show:</span>
+      <a href={base + "people/"} data-filter-status="all" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Everyone</a>
+      <a href={base + "people?status=recorded"} data-filter-status="recorded" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">With a recorded death</a>
+      <a href={base + "people?status=awaiting"} data-filter-status="awaiting" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Awaiting a date</a>
+      <span class="filter-count"><span id="filter-count">{knownPeople.length}</span> shown</span>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Sort:</span>
+      <a href={base + "people?sort=alpha"} data-filter-sort="alpha" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">A–Z</a>
+      <a href={base + "people?sort=year"} data-filter-sort="year" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">By Year</a>
+    </div>
   </div>
 
   <!-- A–Z jump links (tw-2026-11-03). Long directory: no infinite scrolling.
@@ -313,6 +322,34 @@ const base = import.meta.env.BASE_URL;
   .filter-inactive {
     border-color: var(--color-border);
     color: var(--color-ink-light);
+  }
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+  }
+  .filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .filter-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-muted);
+    margin-right: 0.1rem;
+  }
+  /* The counter belongs to the Show group, not to the far edge of the row.
+     It reads as the result of the filter immediately to its left, which is
+     what it actually is. */
+  .filter-count {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    padding-left: 0.15rem;
+    white-space: nowrap;
   }
   .jump-links {
     display: flex;
