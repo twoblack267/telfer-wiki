@@ -41,7 +41,13 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const SITEMAP = path.join(ROOT, 'dist', 'sitemap-0.xml');
+// FIX 2026-11-05: this used to point at dist/sitemap-0.xml only. Astro caps a
+// single sitemap at 1000 URLs, so the site emits sitemap-0.xml AND
+// sitemap-1.xml behind sitemap-index.xml. Reading only file 0 silently skipped
+// 755 pages that were never submitted to IndexNow. Read the index, then every
+// child sitemap.
+const SITEMAP_INDEX = path.join(ROOT, 'dist', 'sitemap-index.xml');
+const SITEMAP = path.join(ROOT, 'dist', 'sitemap-0.xml'); // fallback
 const STATE_FILE = path.join(ROOT, 'scripts', '.index-submission-state.json');
 const HOST = 'telferwiki.com';
 const ORIGIN = `https://${HOST}`;
@@ -83,6 +89,42 @@ function readSitemapUrls(file) {
     urls.push({ loc: m[1].trim(), lastmod: (m[2] || '').trim() });
   }
   return urls;
+}
+
+/**
+ * Read every sitemap the build emitted, not just the first one.
+ *
+ * Astro/MaxMind sitemap plugins split at 1000 URLs per file and emit a
+ * sitemap-index.xml listing them. Reading only sitemap-0.xml is how 755 pages
+ * went unsubmitted from Oct 25 to Nov 5 — no error, no warning, just a smaller
+ * number on a green build. Prefer the index; fall back to file 0 if absent.
+ */
+function readAllSitemapUrls() {
+  const files = [];
+  if (fs.existsSync(SITEMAP_INDEX)) {
+    const idx = fs.readFileSync(SITEMAP_INDEX, 'utf8');
+    const re = /<loc>([^<]+)<\/loc>/g;
+    let m;
+    while ((m = re.exec(idx)) !== null) {
+      const loc = m[1].trim();
+      // Only follow children we can read locally from dist/.
+      const base = path.basename(loc);
+      const local = path.join(ROOT, 'dist', base);
+      if (fs.existsSync(local)) files.push(local);
+    }
+  }
+  if (!files.length) files.push(SITEMAP);
+
+  const seen = new Set();
+  const urls = [];
+  for (const f of files) {
+    for (const u of readSitemapUrls(f)) {
+      if (seen.has(u.loc)) continue;
+      seen.add(u.loc);
+      urls.push(u);
+    }
+  }
+  return { urls, files };
 }
 
 // ─── State ───────────────────────────────────────────────────────────────────
@@ -208,11 +250,12 @@ async function main() {
   const forceFull = process.argv.includes('--full');
   const dryRun = process.argv.includes('--dry-run');
 
-  const urls = readSitemapUrls(SITEMAP);
+  const { urls, files } = readAllSitemapUrls();
   const state = readState();
   const delta = computeDelta(urls, state, { forceFull });
   const key = readIndexNowKey();
 
+  console.log(`📑 sitemap files:       ${files.map((f) => path.basename(f)).join(', ')}`);
   console.log(`📑 sitemap URLs:        ${urls.length}`);
   console.log(`🔁 new/changed URLs:    ${delta.length}${forceFull ? ' (--full)' : ''}`);
   console.log(`🔑 IndexNow key:        ${key ? 'configured' : 'MISSING'}`);

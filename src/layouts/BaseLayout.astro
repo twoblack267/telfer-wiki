@@ -97,6 +97,36 @@ const revisionDate = revisionIso
     })
   : "";
 
+// src/data/verified.json — slug -> { by, on }, mirrored from `verified_by` and
+// `verified_on` in the person's OWN vault frontmatter by gen-verified.mjs.
+//
+// WHY THIS IS SEPARATE FROM THE REVISION DATE
+// The revision date says "a file changed". This says "a person read it and
+// stands behind it". Google's 2026 guidance on machine-generated content is
+// about accountability — a named human and a date they own. A page with no
+// signature renders no signature block: absence is the honest signal, and
+// there is deliberately no default, no fallback to the revision date and no
+// nightly stamp that would manufacture one.
+const verifiedMap: Record<string, { by: string; on: string }> = (() => {
+  try {
+    const raw = readFileSync(resolve(process.cwd(), "src/data/verified.json"), "utf-8");
+    const parsed = JSON.parse(raw) as { people?: Record<string, { by: string; on: string }> };
+    return parsed.people || {};
+  } catch {
+    return {};
+  }
+})();
+
+const verifiedEntry = personSlugMatch ? verifiedMap[personSlugMatch[1]] : undefined;
+const verifiedDate = verifiedEntry?.on
+  ? new Date(verifiedEntry.on + "T00:00:00+10:00").toLocaleDateString("en-AU", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+      timeZone: "Australia/Brisbane",
+    })
+  : "";
+
 // Curated-place map cards. Each person page that earns a map gets one entry
 // here (verified place only — see references/google-maps-embed-seo-overrides.md
 // in the telfer-wiki skill). Rendered at a FIXED slot in the template (below
@@ -630,6 +660,15 @@ function navIsActive(entry: { href: string; match: string }): boolean {
         {revisionDate && (
           <p class="text-xs mt-1 opacity-80" data-last-revision>
             {ownDate ? "Last revision" : "Archive last revised"}: <time datetime={revisionIso}>{revisionDate}</time>
+          </p>
+        )}
+        {/* Human signature — present ONLY when the vault frontmatter carries
+            verified_by + verified_on for this person. No default, no fallback,
+            no nightly stamp. Added 2026-11-05. */}
+        {verifiedEntry && (
+          <p class="text-xs mt-1 opacity-80" data-verified-by={verifiedEntry.by}>
+            Reviewed and verified by <strong>{verifiedEntry.by}</strong> on{" "}
+            <time datetime={verifiedEntry.on}>{verifiedDate}</time>
           </p>
         )}
         <nav class="mt-4 pt-3 border-t border-[var(--color-border)] flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs" aria-label="Site information">

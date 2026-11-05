@@ -1,0 +1,15 @@
+{
+  "_comment": "slug -> { by, on }. Mirrors `verified_by` + `verified_on` frontmatter from the Obsidian vault, keyed by the SAME slug the page is served at. Written by scripts/gen-verified.mjs; never hand-edited, never backfilled, never stamped nightly. A person absent from this map is UNSIGNED and their page renders no signature block at all.",
+  "generated": "2026-11-05",
+  "counts": {
+    "signed": 1,
+    "unsigned": 651,
+    "ambiguous": 13
+  },
+  "people": {
+    "william-telfer-1802": {
+      "by": "Mark Telfer",
+      "on": "2026-11-05"
+    }
+  }
+}

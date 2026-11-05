@@ -126,10 +126,22 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add scripts/.index-submission-state.json
           git commit -m "chore: record index submission state ($(date -u +%Y-%m-%d))"
-          # Rebase-and-retry: another workflow may have pushed while we ran.
+          # WHY THIS LOOKS PARANOID (fixed 2026-11-05):
+          #   The old loop ran `git pull --rebase` and died every night with
+          #   "error: cannot pull with rebase: You have unstaged changes." The
+          #   build steps before this one leave the working tree dirty (built
+          #   output, generated manifests), so rebase refused — three times in a
+          #   row, every run since day one. The state was committed locally and
+          #   never pushed, so each run re-submitted the same delta forever.
+          #   Rebase with --autostash, and if it still fights us, rebase onto the
+          #   freshly fetched remote explicitly. Only after all that do we warn.
           for i in 1 2 3; do
-            git pull --rebase --quiet origin main && git push --quiet && exit 0
+            if git pull --rebase --autostash --quiet origin main && git push --quiet; then
+              echo "state pushed on attempt $i"
+              exit 0
+            fi
             echo "push attempt $i failed, retrying..."
-            sleep 3
+            git rebase --abort 2>/dev/null || true
+            sleep 5
           done
           echo "::warning::could not push index state — next run will resubmit this delta"
