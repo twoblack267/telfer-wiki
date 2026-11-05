@@ -767,7 +767,7 @@
     },
     {
       "slug": "james-telfer-of-sorbietrees-1740",
-      "id": "James Telfer (of Sorbietrees) (1740)",
+      "id": "James (of Sorbietrees) Telfer (1740)",
       "generation": 1
     },
     {
@@ -947,7 +947,7 @@
     },
     {
       "slug": "john-telfer-of-castleton-1731",
-      "id": "John Telfer (of Castleton) (1731)",
+      "id": "John (of Castleton) Telfer (1731)",
       "generation": 1
     },
     {
@@ -1307,7 +1307,7 @@
     },
     {
       "slug": "richard-paynter-of-calstock",
-      "id": "Richard Paynter (of Calstock) (1816)",
+      "id": "Richard (of Calstock) Paynter (1816)",
       "generation": 4
     },
     {
@@ -1367,7 +1367,7 @@
     },
     {
       "slug": "rose-rankin-1900",
-      "id": "Rose Isabel Margaret Paynter (Rankin) (1900)",
+      "id": "Rose Isabel Margaret Paynter Rankin (1900)",
       "generation": 7
     },
     {
@@ -1572,7 +1572,7 @@
     },
     {
       "slug": "william-telfer-shepherd",
-      "id": "William Telfer (shepherd)",
+      "id": "William (shepherd) Telfer",
       "generation": 99
     },
     {
@@ -1587,7 +1587,7 @@
     },
     {
       "slug": "charles-farrow-jr",
-      "id": "Charles Farrow Jr (1865)",
+      "id": "Charles Jr Farrow (1865)",
       "generation": 5
     },
     {
@@ -2182,7 +2182,7 @@
     },
     {
       "slug": "susan-telfer-of-german-creek",
-      "id": "Susan Telfer of German Creek (1871)",
+      "id": "Susan (of German Creek) Telfer (1871)",
       "generation": 5
     },
     {
@@ -6692,10 +6692,6 @@
       {
         "from": "andrew-telfer-1798",
         "to": "william-telfer-1847"
-      },
-      {
-        "from": "richard-paynter-of-calstock",
-        "to": "elizabeth-paynter"
       },
       {
         "from": "agnes-paynter-1895",

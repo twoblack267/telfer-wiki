@@ -256,10 +256,19 @@ function resolveSpouse(person: TreeNode): TreeNode | null {
 // which is NON-UNIQUE (5 records share display_name "John Telfer"). On 2026-09-12 it resolved
 // the root to "John Telfer (1791)" — a namesake with NO children — collapsing the whole tree
 // to a single node. Always resolve the root by its UNIQUE slug; never by bare display name.
+// ROOT_SLUG below is a BARE slug; the tree's own resolution also needs the
+// suffixed form, because toSlug() adds -YYYY whenever two people share a name
+// (this root is john-telfer-of-castleton-1731). The bare slug resolves to
+// nothing, and a bare-name id lookup misses too: the id carries the middle
+// name, "John (of Castleton) Telfer (1731)". Match on the slug PREFIX so a
+// later surname correction cannot break the tree again — 5 Nov 2026 the
+// root's last_name moved from "Telfer (of Castleton)" to "Telfer", the slug
+// suffix changed, and the whole build died on "Root person not found".
 const ROOT_SLUG = "john-telfer-of-castleton";
 const realRoot =
   allPeople.find((p) => p.slug === ROOT_SLUG) ||
-  allPeople.find((p) => typeof p.id === "string" && p.id.startsWith("John Telfer (of Castleton)")) ||
+  allPeople.find((p) => typeof p.slug === "string" && p.slug.startsWith(ROOT_SLUG + "-")) ||
+  allPeople.find((p) => typeof p.id === "string" && p.id.startsWith("John") && p.id.includes("Castleton")) ||
   findPerson(ROOT_SLUG);
 
 if (!realRoot) {

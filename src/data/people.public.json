@@ -83,18 +83,18 @@
     "person_photo": null
   },
   {
-    "id": "John Telfer (of Castleton) (1731)",
+    "id": "John (of Castleton) Telfer (1731)",
     "slug": "john-telfer-of-castleton-1731",
     "first_name": "John",
-    "middle_name": null,
-    "last_name": "Telfer (of Castleton)",
+    "middle_name": "(of Castleton)",
+    "last_name": "Telfer",
     "birth_year": 1731,
     "death_year": null,
     "birth_date": null,
     "death_date": null,
     "birth_year_display": "1731",
     "death_year_display": "?",
-    "display_name": "John Telfer (of Castleton)",
+    "display_name": "John (of Castleton) Telfer",
     "title": "John Telfer (of Castleton)",
     "lifespan": "1731 – ?",
     "generation": 1,
@@ -127,19 +127,19 @@
     "person_photo": null
   },
   {
-    "id": "James Telfer (of Sorbietrees) (1740)",
+    "id": "James (of Sorbietrees) Telfer (1740)",
     "slug": "james-telfer-of-sorbietrees-1740",
     "first_name": "James",
-    "middle_name": null,
-    "last_name": "Telfer (of Sorbietrees)",
+    "middle_name": "(of Sorbietrees)",
+    "last_name": "Telfer",
     "birth_year": 1740,
     "death_year": null,
     "birth_date": null,
     "death_date": null,
     "birth_year_display": "1740",
     "death_year_display": "?",
-    "display_name": "James Telfer (of Sorbietrees)",
-    "title": "James Telfer (of Sorbietrees) — Family & Biography",
+    "display_name": "James (of Sorbietrees) Telfer",
+    "title": "James (of Sorbietrees) Telfer — Family & Biography",
     "lifespan": "1740 – ?",
     "generation": 1,
     "is_living": false,
@@ -2601,18 +2601,18 @@
     "person_photo": null
   },
   {
-    "id": "Richard Paynter (of Calstock) (1816)",
+    "id": "Richard (of Calstock) Paynter (1816)",
     "slug": "richard-paynter-of-calstock",
     "first_name": "Richard",
-    "middle_name": null,
-    "last_name": "Paynter (of Calstock)",
+    "middle_name": "(of Calstock)",
+    "last_name": "Paynter",
     "birth_year": 1816,
     "death_year": 1855,
     "birth_date": null,
     "death_date": null,
     "birth_year_display": "1816",
     "death_year_display": "1855",
-    "display_name": "Richard Paynter (of Calstock)",
+    "display_name": "Richard (of Calstock) Paynter",
     "title": "Richard Paynter (of Calstock)",
     "lifespan": "1816 – 1855",
     "generation": 4,
@@ -2630,7 +2630,6 @@
     "parents": [],
     "children": [
       "richard-paynter-1838",
-      "elizabeth-paynter",
       "john-paynter"
     ],
     "spouses": [
@@ -2724,8 +2723,8 @@
     "id": "Elizabeth Float Smith Farrow (1825)",
     "slug": "elizabeth-smith-farrow",
     "first_name": "Elizabeth",
-    "middle_name": "Float",
-    "last_name": "Smith Farrow",
+    "middle_name": "Float Smith",
+    "last_name": "Farrow",
     "birth_year": 1825,
     "death_year": 1914,
     "birth_date": null,
@@ -3503,7 +3502,10 @@
       "lindsay-burton-telfer",
       "francis-john-burton-telfer",
       "edith-mary-kathleen-telfer",
-      "robert-allan-burton-telfer"
+      "robert-allan-burton-telfer",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "spouses": [
       "susan-telfer-1844"
@@ -4170,7 +4172,10 @@
       "lindsay-burton-telfer",
       "francis-john-burton-telfer",
       "edith-mary-kathleen-telfer",
-      "robert-allan-burton-telfer"
+      "robert-allan-burton-telfer",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "spouses": [
       "robert-telfer-1835"
@@ -6751,7 +6756,10 @@
       "george-hope-farrow-1872",
       "john-farrow",
       "joseph-farrow",
-      "mary-bayes-farrow-1875"
+      "mary-bayes-farrow-1875",
+      {
+        "plain_name": "Charles Farrow Jr"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -7047,8 +7055,8 @@
     "id": "Esther Farrow Latter (1859)",
     "slug": "esther-farrow-latter-1859",
     "first_name": "Esther",
-    "middle_name": null,
-    "last_name": "Farrow Latter",
+    "middle_name": "Farrow",
+    "last_name": "Latter",
     "birth_year": 1859,
     "death_year": 1951,
     "birth_date": null,
@@ -7409,8 +7417,8 @@
     "id": "Elizabeth Telfer Farrow Holloway (1861)",
     "slug": "elizabeth-telfer-farrow-holloway-1861",
     "first_name": "Elizabeth",
-    "middle_name": "Telfer",
-    "last_name": "Farrow Holloway",
+    "middle_name": "Telfer Farrow",
+    "last_name": "Holloway",
     "birth_year": 1861,
     "death_year": 1946,
     "birth_date": null,
@@ -7588,8 +7596,8 @@
     "id": "Mary Jane Paynter (1861)",
     "slug": "mary-jane-paynter-1861",
     "first_name": "Mary",
-    "middle_name": null,
-    "last_name": "Jane Paynter",
+    "middle_name": "Jane",
+    "last_name": "Paynter",
     "birth_year": 1861,
     "death_year": 1945,
     "birth_date": null,
@@ -7638,8 +7646,8 @@
     "id": "Francis Telfer Paynter (1862)",
     "slug": "francis-telfer-paynter-1862",
     "first_name": "Francis",
-    "middle_name": null,
-    "last_name": "Telfer Paynter",
+    "middle_name": "Telfer",
+    "last_name": "Paynter",
     "birth_year": 1862,
     "death_year": 1900,
     "birth_date": "27 October 1862",
@@ -8155,18 +8163,18 @@
     "person_photo": null
   },
   {
-    "id": "Charles Farrow Jr (1865)",
+    "id": "Charles Jr Farrow (1865)",
     "slug": "charles-farrow-jr",
     "first_name": "Charles",
-    "middle_name": null,
-    "last_name": "Farrow Jr",
+    "middle_name": "Jr",
+    "last_name": "Farrow",
     "birth_year": 1865,
     "death_year": 1936,
     "birth_date": null,
     "death_date": null,
     "birth_year_display": "1865",
     "death_year_display": "1936",
-    "display_name": "Charles Farrow Jr",
+    "display_name": "Charles Jr Farrow",
     "title": "Charles Farrow Jr",
     "lifespan": "1865 – 1936",
     "generation": 5,
@@ -8327,8 +8335,8 @@
     "id": "Henry Hatch Dillon (1866)",
     "slug": "henry-hatch-dillon-1866",
     "first_name": "Henry",
-    "middle_name": null,
-    "last_name": "Hatch Dillon",
+    "middle_name": "Hatch",
+    "last_name": "Dillon",
     "birth_year": 1866,
     "death_year": 1936,
     "birth_date": null,
@@ -8798,7 +8806,10 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer-1869"
+      "william-telfer-1869",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -8916,8 +8927,8 @@
     "id": "Dinah Flavel Paynter (1869)",
     "slug": "dinah-flavel-paynter-1869",
     "first_name": "Dinah",
-    "middle_name": null,
-    "last_name": "Flavel Paynter",
+    "middle_name": "Flavel",
+    "last_name": "Paynter",
     "birth_year": 1869,
     "death_year": 1958,
     "birth_date": null,
@@ -9128,7 +9139,10 @@
       "james-robert-telfer-1866",
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
-      "susan-telfer-of-german-creek"
+      "susan-telfer-of-german-creek",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -9458,6 +9472,54 @@
     "person_photo": null
   },
   {
+    "id": "Susan (of German Creek) Telfer (1871)",
+    "slug": "susan-telfer-of-german-creek",
+    "first_name": "Susan",
+    "middle_name": "(of German Creek)",
+    "last_name": "Telfer",
+    "birth_year": 1871,
+    "death_year": 1954,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1871",
+    "death_year_display": "1954",
+    "display_name": "Susan (of German Creek) Telfer",
+    "title": "Susan Telfer of German Creek (1871–1954)",
+    "lifespan": "1871 – 1954",
+    "generation": 5,
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": null,
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Susan Telfer of German Creek (1871–1954)\n\n> **Created 27 Oct 2026 — she had no page, and the name she shares caused a contamination.**\n> Robert Telfer (1835–1907)'s fourth child was named in every sibling's profile and in both\n> parents' records, but no file existed for her. Worse, the refs written for her —\n> \"Susan Telfer (1871–1954)\" — resolved to a **different woman**: [[Susan Telfer (1871–1952)]],\n> daughter of John Telfer (1840–1913) and Martha Allen, born Black Heath, Tungkillo, who\n> married Robert Agnew. Same name, same birth year, **different branch**. This page gives\n> Robert's daughter her own identity and a slug that cannot collide.\n\n> **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1871 — **German Creek**, South Australia *(B3 p.33)*\n- **Died:** 1954 *(B3 p.33 lists her as 1871–1954; no place or exact date printed on the page read)*\n- **Marriage / issue:** **not printed** on the page read. None recorded here — absence of a\n  record is not evidence that she never married.\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of *Carlowrie*, Yahl; formerly Woodlands\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n- **Siblings (8):** [[James Robert Telfer (1866–1925)]] · [[Elizabeth Rowbotham (1868–1908)]] ·\n  [[William Adam Francis Telfer (b. 1869)]] · [[Harriett Helen Telfer (1873–1929)]] ·\n  [[Lindsay Burton Telfer (1875–1943)]] · [[Francis John Burton Telfer (1877–)]] ·\n  [[Edith Mary Kathleen Telfer]] · [[Robert Allan Burton Telfer (1882–1940)]]\n\n## Not the same Susan Telfer as the Tungkillo woman\n\nTwo women, both Susan Telfer, both born 1871, different branches. They must never be merged.\n\n| | This page | The other woman |\n|---|---|---|\n| Born | 1871, **German Creek** | 9 May 1871, **Black Heath, Tungkillo** |\n| Father | **Robert** Telfer (1835–1907) | **John** Telfer (1840–1913) & Martha Allen |\n| Married | not printed | **Robert Agnew**, 21 Dec 1892 |\n| Died | 1954 | 29 Jul 1952, Mount Gambier |\n| Page | this one | [[Susan Telfer (1871–1952)]] |\n\nThe two are distinguishable **only** by parentage and birthplace — the name and birth year\nare identical. Any reference that does not carry her parentage is ambiguous and must not be\nresolved to either woman by guesswork.\n\n## Sources\n\n1. *A Telfer Family Tree — Supplement 2008* (B3), **p.33** — \"Family of ROBERT TELFER and SUSAN\n   BURTON\", child no. 4: \"Susan Telfer (1871–1954)\", and the chapter text naming\n   \"Susan (b.1871 German Ck, SA)\". **LEAD ONLY** — a single printed page.",
+    "roles": [],
+    "tags": [
+      "family",
+      "telfer"
+    ],
+    "parents": [
+      "robert-telfer-1835",
+      "susan-telfer-1844"
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "edith-mary-kathleen-telfer",
+      "elizabeth-rowbotham",
+      "francis-john-burton-telfer",
+      "harriett-helen-telfer",
+      "james-robert-telfer-1866",
+      "lindsay-burton-telfer",
+      "robert-allan-burton-telfer",
+      "william-telfer-1869"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Susan Telfer (1871)",
     "slug": "susan-telfer-1871",
     "first_name": "Susan",
@@ -9507,54 +9569,6 @@
       {
         "plain_name": "Martha (1873–1964)"
       }
-    ],
-    "step_parents": [],
-    "step_children": [],
-    "images": [],
-    "person_photo": null
-  },
-  {
-    "id": "Susan Telfer of German Creek (1871)",
-    "slug": "susan-telfer-of-german-creek",
-    "first_name": "Susan",
-    "middle_name": null,
-    "last_name": "Telfer of German Creek",
-    "birth_year": 1871,
-    "death_year": 1954,
-    "birth_date": null,
-    "death_date": null,
-    "birth_year_display": "1871",
-    "death_year_display": "1954",
-    "display_name": "Susan Telfer of German Creek",
-    "title": "Susan Telfer of German Creek (1871–1954)",
-    "lifespan": "1871 – 1954",
-    "generation": 5,
-    "is_living": false,
-    "is_deceased": true,
-    "evidence_level": null,
-    "single_source": true,
-    "provisional_why": null,
-    "body_markdown": "# Susan Telfer of German Creek (1871–1954)\n\n> **Created 27 Oct 2026 — she had no page, and the name she shares caused a contamination.**\n> Robert Telfer (1835–1907)'s fourth child was named in every sibling's profile and in both\n> parents' records, but no file existed for her. Worse, the refs written for her —\n> \"Susan Telfer (1871–1954)\" — resolved to a **different woman**: [[Susan Telfer (1871–1952)]],\n> daughter of John Telfer (1840–1913) and Martha Allen, born Black Heath, Tungkillo, who\n> married Robert Agnew. Same name, same birth year, **different branch**. This page gives\n> Robert's daughter her own identity and a slug that cannot collide.\n\n> **SINGLE WITNESS — one source only.** Everything below rests on one printed page of\n> *A Telfer Family Tree — Supplement 2008* (B3 p.33). Book 3 is a **lead**, not a witness:\n> a civil registration is still required before any date here is treated as verified.\n> If a second independent source arrives, remove this banner and raise `source_count`.\n\n## Lifespan\n\n- **Born:** 1871 — **German Creek**, South Australia *(B3 p.33)*\n- **Died:** 1954 *(B3 p.33 lists her as 1871–1954; no place or exact date printed on the page read)*\n- **Marriage / issue:** **not printed** on the page read. None recorded here — absence of a\n  record is not evidence that she never married.\n\n## Family\n\n- **Father:** [[Robert Telfer (1835–1907)]] — of *Carlowrie*, Yahl; formerly Woodlands\n- **Mother:** [[Susan Burton Telfer (1844–1924)]]\n- **Siblings (8):** [[James Robert Telfer (1866–1925)]] · [[Elizabeth Rowbotham (1868–1908)]] ·\n  [[William Adam Francis Telfer (b. 1869)]] · [[Harriett Helen Telfer (1873–1929)]] ·\n  [[Lindsay Burton Telfer (1875–1943)]] · [[Francis John Burton Telfer (1877–)]] ·\n  [[Edith Mary Kathleen Telfer]] · [[Robert Allan Burton Telfer (1882–1940)]]\n\n## Not the same Susan Telfer as the Tungkillo woman\n\nTwo women, both Susan Telfer, both born 1871, different branches. They must never be merged.\n\n| | This page | The other woman |\n|---|---|---|\n| Born | 1871, **German Creek** | 9 May 1871, **Black Heath, Tungkillo** |\n| Father | **Robert** Telfer (1835–1907) | **John** Telfer (1840–1913) & Martha Allen |\n| Married | not printed | **Robert Agnew**, 21 Dec 1892 |\n| Died | 1954 | 29 Jul 1952, Mount Gambier |\n| Page | this one | [[Susan Telfer (1871–1952)]] |\n\nThe two are distinguishable **only** by parentage and birthplace — the name and birth year\nare identical. Any reference that does not carry her parentage is ambiguous and must not be\nresolved to either woman by guesswork.\n\n## Sources\n\n1. *A Telfer Family Tree — Supplement 2008* (B3), **p.33** — \"Family of ROBERT TELFER and SUSAN\n   BURTON\", child no. 4: \"Susan Telfer (1871–1954)\", and the chapter text naming\n   \"Susan (b.1871 German Ck, SA)\". **LEAD ONLY** — a single printed page.",
-    "roles": [],
-    "tags": [
-      "family",
-      "telfer"
-    ],
-    "parents": [
-      "robert-telfer-1835",
-      "susan-telfer-1844"
-    ],
-    "children": [],
-    "spouses": [],
-    "siblings": [
-      "edith-mary-kathleen-telfer",
-      "elizabeth-rowbotham",
-      "francis-john-burton-telfer",
-      "harriett-helen-telfer",
-      "james-robert-telfer-1866",
-      "lindsay-burton-telfer",
-      "robert-allan-burton-telfer",
-      "william-telfer-1869"
     ],
     "step_parents": [],
     "step_children": [],
@@ -9661,7 +9675,10 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer-1869"
+      "william-telfer-1869",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -10133,7 +10150,10 @@
       "james-robert-telfer-1866",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer-1869"
+      "william-telfer-1869",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -10437,7 +10457,10 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer-1869"
+      "william-telfer-1869",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -10949,7 +10972,10 @@
       "lindsay-burton-telfer",
       "robert-allan-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer-1869"
+      "william-telfer-1869",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -11012,8 +11038,8 @@
     "id": "Alma Ida Sporer (1880)",
     "slug": "alma-ida-sporer-1880",
     "first_name": "Alma",
-    "middle_name": null,
-    "last_name": "Ida Sporer",
+    "middle_name": "Ida",
+    "last_name": "Sporer",
     "birth_year": 1880,
     "death_year": 1965,
     "birth_date": "21 July 1880",
@@ -11503,7 +11529,10 @@
       "james-robert-telfer-1866",
       "lindsay-burton-telfer",
       "susan-telfer-of-german-creek",
-      "william-telfer-1869"
+      "william-telfer-1869",
+      {
+        "plain_name": "Susan Telfer of German Creek (1871–1954)"
+      }
     ],
     "step_parents": [],
     "step_children": [],
@@ -12855,8 +12884,8 @@
     "id": "Alexander Brown Thomson",
     "slug": "alexander-brown-thomson",
     "first_name": "Alexander",
-    "middle_name": null,
-    "last_name": "Brown Thomson",
+    "middle_name": "Brown",
+    "last_name": "Thomson",
     "birth_year": null,
     "death_year": null,
     "birth_date": null,
@@ -12933,8 +12962,8 @@
     "id": "Edwin Ernest Clarke",
     "slug": "edwin-ernest-clarke",
     "first_name": "Edwin",
-    "middle_name": null,
-    "last_name": "Ernest Clarke",
+    "middle_name": "Ernest",
+    "last_name": "Clarke",
     "birth_year": null,
     "death_year": null,
     "birth_date": null,
@@ -13105,7 +13134,8 @@
       "george-hope-farrow-1872",
       "jane-murray-farrow-1857",
       "john-farrow",
-      "mary-bayes-farrow-1875"
+      "mary-bayes-farrow-1875",
+      "Elizabeth Telfer Farrow"
     ],
     "step_parents": [],
     "step_children": [],
@@ -13154,8 +13184,8 @@
     "id": "Lilian Daisy Dawson",
     "slug": "lilian-daisy-dawson",
     "first_name": "Lilian",
-    "middle_name": null,
-    "last_name": "Daisy Dawson",
+    "middle_name": "Daisy",
+    "last_name": "Dawson",
     "birth_year": null,
     "death_year": null,
     "birth_date": null,
@@ -13192,8 +13222,8 @@
     "id": "Malcolm Duncan Cameron",
     "slug": "malcolm-duncan-cameron",
     "first_name": "Malcolm",
-    "middle_name": null,
-    "last_name": "Duncan Cameron",
+    "middle_name": "Duncan",
+    "last_name": "Cameron",
     "birth_year": null,
     "death_year": null,
     "birth_date": null,
@@ -14472,8 +14502,8 @@
     "id": "Sophia Parker Lawrie (1886)",
     "slug": "sophia-parker-lawrie-1886",
     "first_name": "Sophia",
-    "middle_name": null,
-    "last_name": "Parker Lawrie",
+    "middle_name": "Parker",
+    "last_name": "Lawrie",
     "birth_year": 1886,
     "death_year": 1918,
     "birth_date": "4 February 1886",
@@ -15636,8 +15666,8 @@
     "id": "Ethel Edith Telfer (1894)",
     "slug": "ethel-edith-telfer-1894",
     "first_name": "Ethel",
-    "middle_name": null,
-    "last_name": "Edith Telfer",
+    "middle_name": "Edith",
+    "last_name": "Telfer",
     "birth_year": 1894,
     "death_year": 1937,
     "birth_date": null,
@@ -15787,8 +15817,8 @@
     "id": "Isabella Mabel Parker Carne (1895)",
     "slug": "isabella-mabel-parker-carne-1895",
     "first_name": "Isabella",
-    "middle_name": "Mabel",
-    "last_name": "Parker Carne",
+    "middle_name": "Mabel Parker",
+    "last_name": "Carne",
     "birth_year": 1895,
     "death_year": 1954,
     "birth_date": null,
@@ -16210,8 +16240,8 @@
     "id": "Thomas Cleveland Dillon (1900)",
     "slug": "thomas-cleveland-dillon-1900",
     "first_name": "Thomas",
-    "middle_name": null,
-    "last_name": "Cleveland Dillon",
+    "middle_name": "Cleveland",
+    "last_name": "Dillon",
     "birth_year": 1900,
     "death_year": 1976,
     "birth_date": null,
@@ -19227,8 +19257,8 @@
     "id": "Malcolm Murray Cameron",
     "slug": "malcolm-murray-cameron",
     "first_name": "Malcolm",
-    "middle_name": null,
-    "last_name": "Murray Cameron",
+    "middle_name": "Murray",
+    "last_name": "Cameron",
     "birth_year": null,
     "death_year": null,
     "birth_date": null,
@@ -19538,18 +19568,18 @@
     "person_photo": null
   },
   {
-    "id": "Rose Isabel Margaret Paynter (Rankin) (1900)",
+    "id": "Rose Isabel Margaret Paynter Rankin (1900)",
     "slug": "rose-rankin-1900",
     "first_name": "Rose",
     "middle_name": "Isabel Margaret Paynter",
-    "last_name": "(Rankin)",
+    "last_name": "Rankin",
     "birth_year": 1900,
     "death_year": 1988,
     "birth_date": null,
     "death_date": null,
     "birth_year_display": "1900",
     "death_year_display": "1988",
-    "display_name": "Rose Isabel Margaret Paynter (Rankin)",
+    "display_name": "Rose Isabel Margaret Paynter Rankin",
     "title": "Rose Isabel Margaret Paynter (Rankin) (1900–1988)",
     "lifespan": "1900 – 1988",
     "generation": 7,
@@ -33595,7 +33625,6 @@
       "single-source"
     ],
     "parents": [
-      "richard-paynter-of-calstock",
       {
         "plain_name": "Mary Pearce"
       }
@@ -33619,8 +33648,8 @@
     "id": "Emily Ellen Thorpe",
     "slug": "emily-ellen-thorpe",
     "first_name": "Emily",
-    "middle_name": null,
-    "last_name": "Ellen Thorpe",
+    "middle_name": "Ellen",
+    "last_name": "Thorpe",
     "birth_year": null,
     "death_year": null,
     "birth_date": null,
@@ -34016,19 +34045,19 @@
     "person_photo": null
   },
   {
-    "id": "William Telfer (shepherd)",
+    "id": "William (shepherd) Telfer",
     "slug": "william-telfer-shepherd",
     "first_name": "William",
-    "middle_name": null,
-    "last_name": "Telfer (shepherd)",
+    "middle_name": "(shepherd)",
+    "last_name": "Telfer",
     "birth_year": null,
     "death_year": null,
     "birth_date": null,
     "death_date": null,
     "birth_year_display": "?",
     "death_year_display": "?",
-    "display_name": "William Telfer (shepherd)",
-    "title": "William Telfer (shepherd) — Family & Biography",
+    "display_name": "William (shepherd) Telfer",
+    "title": "William (shepherd) Telfer — Family & Biography",
     "lifespan": "? – ?",
     "generation": 99,
     "is_living": false,

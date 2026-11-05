@@ -25,7 +25,7 @@
  * config then omits <lastmod> for that page rather than inventing one.
  */
 import { execFileSync } from "node:child_process";
-import { readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync, existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -96,6 +96,18 @@ function personKeys(s) {
   // quote marks left "charlie" sitting in the key and still matched nothing.
   const bare = personName(s.replace(/['"‘’“”][^'"‘’“”]*['"‘’“”]/g, " "));
   const keys = [];
+  // BRACKETED EPITHETS ARE NOT PART OF THE NAME (added 2026-11-05).
+  // These two were the only surname corrections that lost their <lastmod>:
+  //   "James (of Sorbietrees) Telfer"  -> vault file "James Telfer (of Sorbietrees) (~1740–?).md"
+  //   "William (shepherd) Telfer"      -> vault file "William Telfer (shepherd).md"
+  // The epithet sat where the surname used to, so the key became
+  // "james of sorbietrees telfer" and no vault name matched it. Strip the
+  // bracketed run to get the plain "james telfer" key. ADDED ONLY, never
+  // replaces a key: if the plain form is ambiguous the matchVaultFile
+  // refusal still applies, and a suffix for the epithet means a
+  // <lastmod> they did have before is never removed.
+  const noBracket = bare.replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
+  if (noBracket && noBracket !== bare) keys.push(noBracket);
   // strip a trailing ", née X" / ", nee X" married-name annotation
   const noNee = bare.replace(/,\s*n(?:é|e)e\s+.*$/, "").trim();
   if (noNee) keys.push(noNee);
@@ -359,9 +371,22 @@ const payload = {
     const p = {};
     const fam = gitDate(ROOT, "src/pages/people/families/index.astro");
     if (fam) {
-      p["/people/families/"] = fam;
-      for (const dir of readdirSync(resolve(ROOT, "dist/people/families"), { withFileTypes: true })) {
-        if (dir.isDirectory()) p[`/people/families/${dir.name}/`] = fam;
+      const FAM_DIR = resolve(ROOT, "dist/people/families");
+      if (existsSync(FAM_DIR)) {
+        // Old dirty surname slugs keep a redirect stub so a published URL never
+        // 404s, but a stub must not be advertised as a page: it is noindex and it
+        // is not the family's address. Measured 5 Nov 2026, when 25 stubs briefly
+        // carried a lastmod and could have been listed.
+        const STUBS = new Set(
+          Object.keys(
+            JSON.parse(readFileSync(resolve(ROOT, "src/data/history/family-slug-aliases.json"), "utf-8")),
+          ).filter((k) => k !== "_comment"),
+        );
+        p["/people/families/"] = fam;
+        for (const dir of readdirSync(FAM_DIR, { withFileTypes: true })) {
+          if (!dir.isDirectory() || STUBS.has(dir.name)) continue;
+          p[`/people/families/${dir.name}/`] = fam;
+        }
       }
     }
     return p;
