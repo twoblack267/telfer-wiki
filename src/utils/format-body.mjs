@@ -313,7 +313,15 @@ export function formatBody(body, people) {
       return `<a href="${BASE}${src.replace(/^\//, "")}" class="wiki-link" target="_blank">${alt || src}</a>`;
     })
     // Regular links
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="wiki-link">$1</a>')
+    // FIXED 2026-11-05: `[^)]+` stopped at the FIRST ")" in the URL, so
+    // [BLANGY-TRONVILLE (6).JPG](https://commons.wikimedia.org/wiki/File:BLANGY-TRONVILLE_(6).JPG)
+    // rendered as href=".../File:BLANGY-TRONVILLE_(6" — a live 404 citation on
+    // Arthur Clifford Stribling's page, and the same shape hits any URL with
+    // parentheses (Wikipedia disambiguation pages especially). Balanced match:
+    // the target may contain the same number of "(" and ")" it opens. Markdown's
+    // own rule. The trailing \)? consumes the real closing paren.
+    .replace(/(!?)\[([^\]]+)\]\(((?:[^()]|\([^()]*\))+)\)/g, (m, bang, text, href) =>
+      bang ? m : `<a href="${href}" class="wiki-link" rel="noopener">${text}</a>`)
     // Convert paragraphs (double+ newlines) — collapse to single marker
     .replace(/\n\n+/g, "__PARA_BREAK__")
     // Line breaks (single newlines within paragraphs)

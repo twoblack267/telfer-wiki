@@ -371,6 +371,45 @@ else
   WARN="${WARN} audit"
 fi
 
+# ── 4a-bis. OUTBOUND CITATION ROT ───────────────────────────
+# WHY: scan-404.mjs proves OUR pages resolve. It never checks the archives we
+# CITE (Trove, Scotland's People, FamilySearch, WikiTree, WorldCat, Wikimedia).
+# Those rot: records get re-catalogued, archives reorganise, small sites die.
+# A dead citation on a family history site is a broken promise to the reader —
+# and after the "reviewed and verified by" signature shipped, it is a broken
+# promise under Mark's own name.
+#
+# NOT a FAIL. A dead outbound link does not block the push — it is not our
+# site's fault and blocking a night's data on someone else's 404 would be
+# exactly the wrong trade. It cards, it names the page, it counts the trend.
+echo "[4a] Checking outbound citations (archive rot)..."
+EXT_DEAD=0
+if node scripts/check-external-links.mjs --out "$RUN_DIR/nw-extlinks.json" \
+     > "$RUN_DIR/nw-extlinks.log" 2>&1; then
+  echo "  ✅ No dead outbound citations"
+else
+  EXT_DEAD=$(python3 -c "
+import json
+try:
+    d=json.load(open('$RUN_DIR/nw-extlinks.json'))
+    print(len(d.get('dead',[])))
+except Exception:
+    print(0)" 2>/dev/null || echo 0)
+  if [ "$EXT_DEAD" != "0" ]; then
+    echo "  🟡 $EXT_DEAD dead outbound citation(s) — carded, not blocking"
+    python3 -c "
+import json
+d=json.load(open('$RUN_DIR/nw-extlinks.json'))
+for x in d.get('dead',[]):
+    print('     • %s  (on %s)' % (x['url'], ', '.join(x['pages']))[:150])
+" 2>/dev/null
+    WARN="${WARN} extlinks(${EXT_DEAD})"
+  else
+    echo "  🟡 Outbound check errored (non-fatal)"
+    WARN="${WARN} extlinks"
+  fi
+fi
+
 # ── 4b. TRUST CHECK (content-accuracy sentry) ────────────────
 # Complements the link guard: catches CONTENT problems the link-check can't.
 # Derives a per-person trust level (✅ sourced / ⚠️ partial / ❓ unverified) from
