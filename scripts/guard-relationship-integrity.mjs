@@ -119,6 +119,16 @@ function walk(slug, depth) {
 for (const p of people) walk(p.slug, 0);
 
 // ── 4. Dangling names that SHOULD have linked ───────────────────────────────
+//
+// KNOWN, ACCEPTED FINDING — "Martha (Cameron)" → martha-cameron-1873 (2026-11-06).
+// The family's habit of naming a married daughter by her husband's surname in
+// brackets ("Martha (Cameron)" = Martha Telfer, who married Malcolm Cameron).
+// The gate is right to point at it, and it must keep doing so, because a
+// resolvable relationship nobody linked is exactly what this section exists to
+// surface. It is NOT fixed by teaching the resolver that brackets mean marriage:
+// that guess would bind "Martha (Cameron)" to any Cameron who ever married a
+// Martha. The honest fix is in the vault — the sibling entry should carry the
+// name her page actually bears. Until then this single finding is expected.
 const norm = (s) =>
   String(s)
     .toLowerCase()

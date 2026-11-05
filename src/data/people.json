@@ -444,7 +444,7 @@
         "type": "Siblings",
         "names": [
           "James Telfer (1796–1863)",
-          "Isobel/Isabella Telfer (1798–?)",
+          "Isobel Telfer (1798–?)",
           "Margaret Telfer (1801–?)",
           "Robert Telfer (1803–1878)",
           "John Telfer (1805–1839)",
@@ -474,8 +474,7 @@
       "john-telfer-1805",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer-1811",
-      "Isobel/Isabella Telfer (1798–?)"
+      "william-telfer-1811"
     ],
     "related_trees": [
       "telfer-tree"
@@ -489,7 +488,7 @@
     "step_parents": [],
     "step_children": [],
     "evidence_level": null,
-    "single_source": false,
+    "single_source": true,
     "provisional_why": null,
     "is_deceased": false
   },
@@ -3894,7 +3893,6 @@
     "lifespan": "1878 – 1966",
     "parents": [],
     "children": [
-      "ronald-telfer",
       "Dorothy Margaret Hope Telfer",
       "Gordon Francis Telfer",
       "Estelle May Telfer"
@@ -8703,7 +8701,6 @@
       "margaret-telfer-1849"
     ],
     "children": [
-      "ronald-telfer",
       "Dorothy Margaret Hope Telfer",
       "Gordon Francis Telfer",
       "Estelle May Telfer"
@@ -12936,7 +12933,7 @@
         "type": "Children",
         "names": [
           "James Telfer (1796–1863)",
-          "Isobel/Isabella Telfer (1798–?)",
+          "Isobel Telfer (1798–?)",
           "Adam Telfer (1799–?)",
           "Margaret Telfer (1801–?)",
           "Robert Telfer (1803–1878)",
@@ -12978,8 +12975,7 @@
       "robert-telfer-1803",
       "john-telfer-1805",
       "francis-telfer-1809",
-      "william-telfer-1811",
-      "Isobel/Isabella Telfer (1798–?)"
+      "william-telfer-1811"
     ],
     "spouses": [
       "elizabeth-telfer-1774"
@@ -16378,7 +16374,7 @@
         "type": "Siblings",
         "names": [
           "James Telfer (1796–1863)",
-          "Isobel/Isabella Telfer (1798–?)",
+          "Isobel Telfer (1798–?)",
           "Adam Telfer (1799–?)",
           "Margaret Telfer (1801–?)",
           "Robert Telfer (1803–1878)",
@@ -16408,8 +16404,7 @@
       "james-telfer-1796",
       "margaret-telfer-1801",
       "robert-telfer-1803",
-      "william-telfer-1811",
-      "Isobel/Isabella Telfer (1798–?)"
+      "william-telfer-1811"
     ],
     "related_trees": [
       "telfer-tree"
@@ -16423,7 +16418,7 @@
     "step_parents": [],
     "step_children": [],
     "evidence_level": null,
-    "single_source": false,
+    "single_source": true,
     "provisional_why": null,
     "is_deceased": true
   },
@@ -19653,7 +19648,7 @@
         "type": "Siblings",
         "names": [
           "James Telfer (1796–1863)",
-          "Isobel/Isabella Telfer (1798–?)",
+          "Isobel Telfer (1798–?)",
           "Adam Telfer (1799–?)",
           "Robert Telfer (1803–1878)",
           "John Telfer (1805–1839)",
@@ -19683,8 +19678,7 @@
       "james-telfer-1796",
       "john-telfer-1805",
       "robert-telfer-1803",
-      "william-telfer-1811",
-      "Isobel/Isabella Telfer (1798–?)"
+      "william-telfer-1811"
     ],
     "related_trees": [
       "telfer-tree"
@@ -19698,7 +19692,7 @@
     "step_parents": [],
     "step_children": [],
     "evidence_level": null,
-    "single_source": false,
+    "single_source": true,
     "provisional_why": null,
     "is_deceased": true
   },
@@ -20131,7 +20125,7 @@
           "James (1866-1946)",
           "Elizabeth",
           "Susan",
-          "Martha (Cameron)",
+          "Martha Telfer Cameron (1873–1964)",
           "Mark (1877-1946)",
           "Maria Clara",
           "Isabella Lucieton",
@@ -20170,12 +20164,12 @@
       "john-telfer-1882",
       "maria-clara-telfer-1878",
       "mark-telfer-1877",
+      "martha-cameron-1873",
       "robert-telfer-1886",
       "roland-telfer",
       "James (1866-1946)",
       "Elizabeth",
       "Susan",
-      "Martha (Cameron)",
       "Mark (1877-1946)",
       "Maria Clara",
       "Isabella Lucieton",
@@ -20800,6 +20794,7 @@
       "clara-blanche-telfer-1883",
       "elizabeth-telfer-1868",
       "james-telfer-1866",
+      "marian-cornish-1896",
       "susan-telfer-1871",
       "Elizabeth Telfer Clarke (1868–1950)",
       "Susan Telfer Agnew (1871–1952)"
@@ -27113,7 +27108,7 @@
         "type": "Siblings",
         "names": [
           "James Telfer (1796–1863)",
-          "Isobel/Isabella Telfer (1798–?)",
+          "Isobel Telfer (1798–?)",
           "Adam Telfer (1799–?)",
           "Margaret Telfer (1801–?)",
           "Robert Telfer (1803–1878)",
@@ -27143,8 +27138,7 @@
       "james-telfer-1796",
       "john-telfer-1805",
       "margaret-telfer-1801",
-      "robert-telfer-1803",
-      "Isobel/Isabella Telfer (1798–?)"
+      "robert-telfer-1803"
     ],
     "related_trees": [
       "telfer-tree"
@@ -27158,7 +27152,7 @@
     "step_parents": [],
     "step_children": [],
     "evidence_level": null,
-    "single_source": false,
+    "single_source": true,
     "provisional_why": null,
     "is_deceased": true
   },
@@ -30449,8 +30443,6 @@
     "body_markdown": "# Ronald Telfer (1898–1898)\n\n**Born:** 24 August 1898, Adelaide, South Australia | **Died:** 27 August 1898, Adelaide, South Australia (aged 3 days) | **Mother:** [[Maria Clara Telfer (1878–1903)]] | **Father:** not recorded\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Ronald Telfer |\n| Mother | [[Maria Clara Telfer (1878–1903)]] |\n\n## Life Summary\n\nRonald Telfer lived three days. He was born on 24 August 1898 at Adelaide, South Australia, and died there on 27 August 1898. His mother, [[Maria Clara Telfer (1878–1903)]], was twenty years old and unmarried; she died five years later, in December 1903, aged about 25. He is recorded in *A Telfer Family Tree* (p.263) as the sole child of her entry, numbered `1.` immediately beneath her, and the book's index (p.236) records her as having **1 child**.\n\n## Sources\n\n- **Printed book (primary for this family):** *A Telfer Family Tree*, **p.263** — entry `7. Martha Clara TELFER, b. 26 Sep 1878, d. 22 Dec 1903 Tantanoola, SA` followed immediately by `1. Ronald TELFER, b. 24 Aug 1898 Adelaide, SA, d. 27 Aug 1898 Adelaide, SA`.\n- **Printed book (index):** *A Telfer Family Tree*, **p.236** — index entry `7. Maria Clara Telfer (1878-1903)` recorded as **\"1 child\"**, corroborating one child and confirming the name **Maria** (the p.263 entry prints `Martha`, a one-letter transcription slip — same number, same birth year, same death date and place).\n- [[Maria Clara Telfer (1878–1903)]] vault profile.",
     "body_stripped": "**Born:** 24 August 1898, Adelaide, South Australia  **Died:** 27 August 1898, Adelaide, South Australia (aged 3 days)  **Mother:** Maria Clara Telfer (1878–1903)  **Father:** not recorded\n\n## Family\n\n Relation  Name \n\n Self  Ronald Telfer \n Mother  Maria Clara Telfer (1878–1903) \n\n## Life Summary\n\nRonald Telfer lived three days. He was born on 24 August 1898 at Adelaide, South Australia, and died there on 27 August 1898. His mother, Maria Clara Telfer (1878–1903), was twenty years old and unmar",
     "parents": [
-      "clara-ann-millicent-telfer-1878",
-      "francis-adam-telfer-1875",
       "maria-clara-telfer-1878"
     ],
     "children": [],
@@ -37283,12 +37275,7 @@
       "clarice-may-telfer-1911",
       "Verbin Reginald Fatchen (1882–1958)"
     ],
-    "children": [
-      "roger-graham-fatchen-1961",
-      "vivonne-joy-fatchen-1966",
-      "bradley-donald-fatchen-1968",
-      "petrea-elizabeth-fatchen-1972"
-    ],
+    "children": [],
     "siblings": [
       "malcolm-geoffrey-fatchen-1942",
       "phyllis-marjorie-fatchen-1934",
@@ -40860,7 +40847,6 @@
     "lifespan": "1961",
     "parents": [
       "donald-fatchen",
-      "ronald-rex-fatchen",
       "Beth Elaine Parker (b. 1939)"
     ],
     "children": [
@@ -40870,11 +40856,7 @@
     "spouses": [
       "Michelle Jane Clark (b. 1962)"
     ],
-    "siblings": [
-      "bradley-donald-fatchen-1968",
-      "petrea-elizabeth-fatchen-1972",
-      "vivonne-joy-fatchen-1966"
-    ],
+    "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
@@ -40952,7 +40934,6 @@
     "lifespan": "1966",
     "parents": [
       "donald-fatchen",
-      "ronald-rex-fatchen",
       "Beth Elaine Parker (b. 1939)"
     ],
     "children": [
@@ -40962,11 +40943,7 @@
     "spouses": [
       "Mark Amoy"
     ],
-    "siblings": [
-      "bradley-donald-fatchen-1968",
-      "petrea-elizabeth-fatchen-1972",
-      "roger-graham-fatchen-1961"
-    ],
+    "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
@@ -41043,7 +41020,6 @@
     "lifespan": "1968",
     "parents": [
       "donald-fatchen",
-      "ronald-rex-fatchen",
       "Beth Elaine Parker (b. 1939)"
     ],
     "children": [
@@ -41052,11 +41028,7 @@
     "spouses": [
       "Penelope Rose Evans (b. 1973)"
     ],
-    "siblings": [
-      "petrea-elizabeth-fatchen-1972",
-      "roger-graham-fatchen-1961",
-      "vivonne-joy-fatchen-1966"
-    ],
+    "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],
@@ -41134,7 +41106,6 @@
     "lifespan": "1972",
     "parents": [
       "donald-fatchen",
-      "ronald-rex-fatchen",
       "Beth Elaine Parker (b. 1939)"
     ],
     "children": [
@@ -41144,11 +41115,7 @@
     "spouses": [
       "Paul Ross Brown (b. 1972)"
     ],
-    "siblings": [
-      "bradley-donald-fatchen-1968",
-      "roger-graham-fatchen-1961",
-      "vivonne-joy-fatchen-1966"
-    ],
+    "siblings": [],
     "related_trees": [
       "telfer-tree"
     ],

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-05T21:07:44.667Z",
+  "checkedAt": "2026-11-05T21:48:47.541Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -9,5 +9,222 @@
   "crownJewelsChecked": 6,
   "renames": [],
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "adam-telfer-1799",
+      "name": "Adam Telfer",
+      "field": "siblings",
+      "before": 8,
+      "after": 7,
+      "lost": 1,
+      "lostEntries": [
+        "Isobel/Isabella Telfer (1798–?)"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "clara-ann-millicent-telfer-1878",
+      "name": "Clara Ann Millicent Telfer",
+      "field": "children",
+      "before": 4,
+      "after": 3,
+      "lost": 1,
+      "lostEntries": [
+        "ronald-telfer"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "francis-adam-telfer-1875",
+      "name": "Francis Adam Telfer",
+      "field": "children",
+      "before": 4,
+      "after": 3,
+      "lost": 1,
+      "lostEntries": [
+        "ronald-telfer"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "james-telfer-1761",
+      "name": "James Telfer",
+      "field": "children",
+      "before": 9,
+      "after": 8,
+      "lost": 1,
+      "lostEntries": [
+        "Isobel/Isabella Telfer (1798–?)"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "john-telfer-1805",
+      "name": "John Telfer",
+      "field": "siblings",
+      "before": 8,
+      "after": 7,
+      "lost": 1,
+      "lostEntries": [
+        "Isobel/Isabella Telfer (1798–?)"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "margaret-telfer-1801",
+      "name": "Margaret Telfer",
+      "field": "siblings",
+      "before": 8,
+      "after": 7,
+      "lost": 1,
+      "lostEntries": [
+        "Isobel/Isabella Telfer (1798–?)"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "william-telfer-1811",
+      "name": "William Telfer",
+      "field": "siblings",
+      "before": 8,
+      "after": 7,
+      "lost": 1,
+      "lostEntries": [
+        "Isobel/Isabella Telfer (1798–?)"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "ronald-telfer",
+      "name": "Ronald Telfer",
+      "field": "parents",
+      "before": 3,
+      "after": 1,
+      "lost": 2,
+      "lostEntries": [
+        "clara-ann-millicent-telfer-1878",
+        "francis-adam-telfer-1875"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "ronald-rex-fatchen",
+      "name": "Ronald Rex Fatchen",
+      "field": "children",
+      "before": 4,
+      "after": 0,
+      "lost": 4,
+      "lostEntries": [
+        "roger-graham-fatchen-1961",
+        "vivonne-joy-fatchen-1966",
+        "bradley-donald-fatchen-1968",
+        "petrea-elizabeth-fatchen-1972"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "roger-graham-fatchen-1961",
+      "name": "Roger Graham Fatchen",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "ronald-rex-fatchen"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "roger-graham-fatchen-1961",
+      "name": "Roger Graham Fatchen",
+      "field": "siblings",
+      "before": 3,
+      "after": 0,
+      "lost": 3,
+      "lostEntries": [
+        "bradley-donald-fatchen-1968",
+        "petrea-elizabeth-fatchen-1972",
+        "vivonne-joy-fatchen-1966"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "vivonne-joy-fatchen-1966",
+      "name": "Vivonne Joy Fatchen",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "ronald-rex-fatchen"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "vivonne-joy-fatchen-1966",
+      "name": "Vivonne Joy Fatchen",
+      "field": "siblings",
+      "before": 3,
+      "after": 0,
+      "lost": 3,
+      "lostEntries": [
+        "bradley-donald-fatchen-1968",
+        "petrea-elizabeth-fatchen-1972",
+        "roger-graham-fatchen-1961"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "bradley-donald-fatchen-1968",
+      "name": "Bradley Donald Fatchen",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "ronald-rex-fatchen"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "bradley-donald-fatchen-1968",
+      "name": "Bradley Donald Fatchen",
+      "field": "siblings",
+      "before": 3,
+      "after": 0,
+      "lost": 3,
+      "lostEntries": [
+        "petrea-elizabeth-fatchen-1972",
+        "roger-graham-fatchen-1961",
+        "vivonne-joy-fatchen-1966"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "petrea-elizabeth-fatchen-1972",
+      "name": "Petrea Elizabeth Fatchen",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "ronald-rex-fatchen"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "petrea-elizabeth-fatchen-1972",
+      "name": "Petrea Elizabeth Fatchen",
+      "field": "siblings",
+      "before": 3,
+      "after": 0,
+      "lost": 3,
+      "lostEntries": [
+        "bradley-donald-fatchen-1968",
+        "roger-graham-fatchen-1961",
+        "vivonne-joy-fatchen-1966"
+      ]
+    }
+  ]
 }

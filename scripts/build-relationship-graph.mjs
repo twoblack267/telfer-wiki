@@ -857,8 +857,8 @@ function addParentChild(parentSlug, childSlug, sourceSlug) {
 // (Ronald 1898 names only his Mother) — that must survive.
 function declaredParentSlugsFor(slug) {
   const p = slugToPerson.get(slug);
-  if (!p) return { father: [], mother: [], any: [] };
-  const out = { father: [], mother: [], any: [] };
+  if (!p) return { father: [], mother: [], any: [], recordDeclares: [], recordNamesParent: false };
+  const out = { father: [], mother: [], any: [], recordDeclares: [], recordNamesParent: false };
   for (const r of p.relationships || []) {
     const t = String(r.type || '').toLowerCase();
     const slot = (t === 'father' || t === 'fathers') ? 'father'
@@ -867,17 +867,47 @@ function declaredParentSlugsFor(slug) {
     if (!slot) continue;
     for (const n of r.names || []) {
       const s = resolveNameToSlug(n, slug);
-      if (s && s !== slug) out[slot].push(s);
+      if (s && s !== slug) { out[slot].push(s); out.recordDeclares.push(s); }
     }
   }
+  out.recordNamesParent = out.recordDeclares.length > 0;
   // Flat-schema profiles put parentage in `parents[]` with no slot names. Those
   // are real declarations, but they are NOT slot-labelled, so they can only ever
-  // prove "complete", never "this exact slot is taken".
+  // prove "complete", never "this exact slot is taken". They are also NOT
+  // authored by the child's `relationships:` string, so they never confer the
+  // authorship that beats an incoming household claim.
   const flat = (p.parents || []).filter(x => typeof x === 'string' && slugToPerson.has(x));
   out.any.push(...flat.filter(s => !out.father.includes(s) && !out.mother.includes(s)));
   return out;
 }
 
+// THE SLOT RULE — the fourth and final version (2026-11-06).
+//
+// Every earlier version failed for the same reason in different clothes: each one
+// asked "how many parents does the child declare?" and treated the answer as a
+// budget. Version 1 required two declared parents, so an infant naming only his
+// Mother was open to anyone. Version 2 counted declarations instead of slots and
+// refused a legitimate one-parent record. Version 3 tried `gender` to decide which
+// slot an incoming claim wanted — and `gender` is undefined on Francis, Clara, every
+// flat-schema profile in this vault, so it never fired once.
+//
+// The question was always wrong. A `Children` list is GENDER-NEUTRAL: it does not
+// say "this person is the father" or "this person is the mother". It only says the
+// child belongs to this person's household. So the claim does not know which slot
+// it wants, and no amount of guessing about the claimant's sex can supply that.
+//
+// What the record CAN answer is this: does the CHILD's own page already name ANY
+// parent that is not the claimant? If it does, then the child's parentage is
+// already recorded and a different person entering through an unlabelled household
+// list is not new information — it is a same-name collision across generations,
+// which is exactly what happened to Ronald Telfer (1898–1898): his cousin
+// "Ronald Edgerston Telfer" (b.1900) is the son of Francis and Clara, both of whom
+// kept a `Children` list carrying that raw name, and both of whom were grafted onto
+// the three-day-old infant. He already names his Mother. That is the whole answer.
+//
+// SLOT-LABELLED claims (Father:/Mother:) still get the sharper test: refuse only if
+// that exact slot is occupied by somebody else. A genuinely vacant father slot may
+// be filled — a gap in the record is not a refusal, it is a gap.
 function refusesContradictedParentClaim(childSlug, parentSlug, relType) {
   if (childSlug === parentSlug) return false;
   const slot = String(relType || '').toLowerCase();
@@ -885,9 +915,9 @@ function refusesContradictedParentClaim(childSlug, parentSlug, relType) {
                   : (slot === 'mother' || slot === 'mothers') ? 'mother'
                   : 'any';
   const d = declaredParentSlugsFor(childSlug);
-  const named = wantsSlot === 'any' ? [...d.father, ...d.mother, ...d.any]
-                                    : [...d[wantsSlot], ...d.any];
-  if (named.includes(parentSlug)) return false;              // claim agrees with record
+  const allDeclared = new Set([...d.father, ...d.mother, ...d.any]);
+  if (allDeclared.has(parentSlug)) return false;              // claim agrees with record
+
   if (wantsSlot !== 'any') {
     const taken = d[wantsSlot].filter(s => s !== parentSlug);
     if (taken.length) {
@@ -896,12 +926,105 @@ function refusesContradictedParentClaim(childSlug, parentSlug, relType) {
     }
     return false;
   }
-  // Nameless slot: only a COMPLETE record can refuse it.
-  const complete = d.father.length > 0 && d.mother.length > 0;
-  const hasTwo = new Set([...d.father, ...d.mother, ...d.any]).size >= 2;
-  if (complete || hasTwo) {
-    console.warn(`   ⚠️ refused extra parent claim: ${parentSlug} -> ${childSlug} (child already has two parents)`);
+
+  // ── UNLABELLED HOUSEHOLD CLAIM: ONLY A VACANCY IS OPEN ─────────────────────
+  // A `Children` list names no slot, so a STRANGER arriving through one is only
+  // ever new information when the child's own page has recorded NOBODY. The
+  // moment the child names any parent of its own, that page is the record and an
+  // unlabelled claim from somebody else's list is a same-name collision across
+  // generations.
+  //
+  // This is deliberately narrower than "only a completed pair can refuse"
+  // (versions 1–2, which let the 1898 infant collect three parents) and wider
+  // than "any declared parent blocks everything" — which over-refused 69 edges,
+  // every one of them a legitimate second parent or a legitimate co-parent.
+  //
+  // THE DISTINCTION IS AUTHORSHIP, NOT COUNT. If the child's own files name the
+  // claimant, the claim is composed BY THE CHILD and wins: Brett Rylance's page
+  // says `Parent: Shirley Irene Pedler` and Roger Fatchen's says `Father: Donald
+  // Rex Fatchen`. If the child names NOBODY, a `Children` claim can only be
+  // making up family from a shared name — Ronald Telfer (1898) names only his
+  // Mother, and both of his cousin's parents were grafted onto him that way.
+  // A co-parent who appears only in somebody else's household list therefore
+  // cannot be added from that list alone; the child's page must say so first.
+  if (d.recordNamesParent) {
+    if (d.recordDeclares.includes(parentSlug)) return false;
+    // ── THE BOTH-LISTS EXCEPTION (2026-11-06) ────────────────────────────────
+    // Two parents of the same child each list that child in their own `Children`
+    // row. Neither the child's page nor either parent's page names the OTHER
+    // parent, so this looks identical to Ronald's grandfather-claim — and it is
+    // not. It is Frank Lionel Hooper and Jessica Veronica Telfer, who each carry
+    // all five of their children while the children's own pages name only their
+    // mother. Without this exception the children became single-parent and the
+    // father vanished from the site entirely.
+    //
+    // The discriminator: a household claim is authored by BOTH sides. The
+    // claimant names the child, AND the child names a parent the claimant is
+    // married to. That is a family unit recorded from the parents' side.
+    // Ronald's grandfather names the child but is married to nobody the child
+    // names, so he fails this test — which is exactly right.
+    const claimantRec = slugToPerson.get(parentSlug);
+    const claimantSpouses = new Set(spouseEdges.get(parentSlug) || []);
+    const declaresSpouseOfClaimant = d.recordDeclares.some(s => claimantSpouses.has(s));
+    if (claimantSpouses.size === 0 && claimantRec) {
+      for (const r of claimantRec.relationships || []) {
+        if (!/^spouse/i.test(String(r.type || ''))) continue;
+        for (const n of r.names || []) {
+          const sp = resolveNameToSlug(n, parentSlug);
+          if (sp && sp !== parentSlug) claimantSpouses.add(sp);
+        }
+      }
+    }
+    if (declaresSpouseOfClaimant || d.recordDeclares.some(s => (spouseEdges.get(s) || new Set()).has(parentSlug))) {
+      return false;
+    }
+    // ── THE SAME PERSON, RECORDED TWICE (2026-11-06) ─────────────────────────
+    // "Ronald Rex Fatchen" (b.1937) and "Donald Rex Fatchen" (b.1937) are the
+    // same man: two vault pages, identical birth year, mother, father and wife,
+    // one of them using the name he went by. Each page lists the same four
+    // children. Because they are two records, the resolver sees two different
+    // claimants and the rule above fires — the children's page names Donald, so
+    // Ronald is "a stranger".
+    //
+    // This is NOT a relationship bug and no graph rule should paper over it. It
+    // is a duplicate-person defect in the vault, and the honest handling is to
+    // refuse the second record's edges (a person has one identity) while naming
+    // it loudly, rather than to silently publish both men as separate fathers.
+    if (claimantRec && d.recordDeclares.some((s) => {
+      const other = slugToPerson.get(s);
+      if (!other) return false;
+      // Year + surname alone is NOT identity: Clara Ann Millicent Dunn (1878–1966)
+      // and Maria Clara Telfer (1878–1903) are two different women who matched on
+      // exactly that and were briefly condemned as one. Identity needs the record:
+      // same birth year, same surname, AND the same parents named on both pages.
+      const sameYear = claimantRec.birth_year != null && claimantRec.birth_year === other.birth_year;
+      if (!sameYear) return false;
+      const surname = (r) => String(r.last_name || r.display_name || r.name || '')
+        .toLowerCase().replace(/[^a-z]/g, '').endsWith(String(claimantRec.last_name || '').toLowerCase().replace(/[^a-z]/g, ''));
+      if (!surname(other)) return false;
+      const parentKey = (r) => (r.relationships || [])
+        .filter((x) => /^(father|mother|parent)s?$/i.test(String(x.type || '').trim()))
+        .flatMap((x) => x.names || [])
+        .map((n) => String(n).toLowerCase().replace(/[^a-z]/g, ''))
+        .sort().join('|');
+      const a = parentKey(claimantRec), b = parentKey(other);
+      return a.length > 0 && a === b;
+    })) {
+      console.warn(`   ⚠️ refused unlabelled parent claim: ${parentSlug} -> ${childSlug} (DUPLICATE PERSON: ${parentSlug} and ${d.recordDeclares.join(', ')} share a birth year and surname)`);
+      return true;
+    }
+    console.warn(`   ⚠️ refused unlabelled parent claim: ${parentSlug} -> ${childSlug} (child's own record names ${d.recordDeclares.join(', ')}; no "${relType}" slot to fill)`);
     return true;
+  } else if (allDeclared.size > 0) {
+    // The child's parentage came from FLAT fields (`father:`/`mother:`) rather
+    // than its own `relationships:` string. Those are the converter's foreign
+    // keys, not the vault's relational spine, so they do not carry authorship.
+    // Refuse only when the record is already complete — a bare pair cannot be
+    // improved by a third.
+    if (d.father.length > 0 && d.mother.length > 0) {
+      console.warn(`   ⚠️ refused extra parent claim: ${parentSlug} -> ${childSlug} (flat parentage already complete)`);
+      return true;
+    }
   }
   return false;
 }
