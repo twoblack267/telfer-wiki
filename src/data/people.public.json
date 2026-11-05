@@ -20901,12 +20901,7 @@
         "plain_name": "Verbin Reginald Fatchen (1904–1993)"
       }
     ],
-    "children": [
-      "roger-graham-fatchen-1961",
-      "vivonne-joy-fatchen-1966",
-      "bradley-donald-fatchen-1968",
-      "petrea-elizabeth-fatchen-1972"
-    ],
+    "children": [],
     "spouses": [
       {
         "plain_name": "Beth Elaine Parker (b. 1939) (no profile)"
@@ -20985,8 +20980,8 @@
     "generation": 7,
     "is_living": true,
     "is_deceased": false,
-    "evidence_level": null,
-    "single_source": false,
+    "evidence_level": "single_source",
+    "single_source": true,
     "provisional_why": null,
     "body_markdown": "# Ronald Rex Fatchen (1937–living)\n\nSon of **[[Clarice May Telfer (1911–1997)]]** and **Verbin Reginald Fatchen**.\n\n## Marriage\n\n**Beth Elaine Parker**, b. 7 Jun 1940, m. 13 Feb 1980, Church of Christ,\nMt Hill SA. [ocr] B2's marriage year reads \"1960\" in the damaged text layer, but\nthat is impossible — his wife was born in 1940 and their children begin in 1982.\n1980 is the reasoned reading. Flagged, not settled.",
     "roles": [],
@@ -20997,13 +20992,18 @@
     "parents": [
       "clarice-may-telfer-1911",
       {
-        "plain_name": "Verbin Reginald Fatchen (1882–1958)"
+        "plain_name": "Verbin Reginald Fatchen (1904–1993)"
       }
     ],
-    "children": [],
+    "children": [
+      "roger-graham-fatchen-1961",
+      "vivonne-joy-fatchen-1966",
+      "bradley-donald-fatchen-1968",
+      "petrea-elizabeth-fatchen-1972"
+    ],
     "spouses": [
       {
-        "plain_name": "Beth Elaine Parker (1940–living) (no profile)"
+        "plain_name": "Beth Elaine Parker (b. 1939) (no profile)"
       }
     ],
     "siblings": [
@@ -24980,7 +24980,7 @@
       "descendant"
     ],
     "parents": [
-      "donald-fatchen",
+      "ronald-rex-fatchen",
       {
         "plain_name": "Beth Elaine Parker (b. 1939)"
       }
@@ -25429,7 +25429,7 @@
       "descendant"
     ],
     "parents": [
-      "donald-fatchen",
+      "ronald-rex-fatchen",
       {
         "plain_name": "Beth Elaine Parker (b. 1939)"
       }
@@ -25602,7 +25602,7 @@
       "descendant"
     ],
     "parents": [
-      "donald-fatchen",
+      "ronald-rex-fatchen",
       {
         "plain_name": "Beth Elaine Parker (b. 1939)"
       }
@@ -26476,7 +26476,7 @@
       "descendant"
     ],
     "parents": [
-      "donald-fatchen",
+      "ronald-rex-fatchen",
       {
         "plain_name": "Beth Elaine Parker (b. 1939)"
       }

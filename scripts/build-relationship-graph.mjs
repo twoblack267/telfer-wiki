@@ -27,6 +27,67 @@ const slugToPerson = new Map(people.map(p => [p.slug, p]));
 
 console.log(`📚 Loaded ${people.length} people`);
 
+// ─── SUPERSEDED DUPLICATE RECORDS (2026-11-06) ──────────────────────────────
+//
+// One man can have two vault notes under two spellings of his name ("Ronald Rex
+// Fatchen" / "Donald Rex Fatchen", both b.1937, same parents, same wife). The SITE
+// may only publish one of them or the archive shows a man as his own twin and his
+// children acquire two fathers.
+//
+// WHICH ONE SURVIVES IS A VAULT DECISION, NOT A GRAPH GUESS. A demoted note says so
+// itself with `superseded_by:` in its frontmatter; this script reads that and never
+// infers from name similarity, birth year or edit date. If no note declares
+// supersession, nothing here fires and the duplicate is left for a human.
+//
+// MERGE, NEVER DELETE: the demoted note is kept because other pages still link to it
+// by its old name, and removing it would orphan those links.
+const vaultDirGuess = process.env.VAULT_DIR || path.resolve(process.env.HOME || '', 'ObsidianVault');
+const SUPERSEDED_DUPLICATES = new Set();
+// survivorSlug -> [demoted slugs]. The reverse direction of the vault's pointer, so a
+// child whose page still names the OLD name can have its claim handed to the survivor.
+const supersededByName = new Map();
+{
+  const noteOwners = new Map();   // vault filename (no extension) -> slug
+  for (const p of people) {
+    const vf = p.vault_file;
+    if (vf) noteOwners.set(String(vf).replace(/\.md$/i, ''), p.slug);
+  }
+  for (const p of people) {
+    if (!p.vault_file) continue;
+    // `vault_file` is a BARE FILENAME ("Ronald Rex Fatchen.md"), not a vault-relative
+    // path, so it has to be joined under the People directory. A first version joined
+    // it straight onto the vault root, every read threw, and the superseded machinery
+    // silently did nothing — the banner never printed and the graph went on publishing
+    // the demoted twin as a second father.
+    const vfName = String(p.vault_file);
+    const abs = vfName.includes('/')
+      ? path.join(vaultDirGuess, vfName)
+      : path.join(vaultDirGuess, 'Family History', 'People', vfName);
+    let fm = '';
+    try { fm = fs.readFileSync(abs, 'utf-8'); } catch { continue; }
+    if (!/^superseded_by:\s*\S/m.test(fm)) continue;
+    SUPERSEDED_DUPLICATES.add(p.slug);
+    // Resolve the pointer through the note's TITLE, because the vault writes it as a
+    // filename and filenames are not slugs ("Ronald Rex Fatchen.md" -> ronald-rex-fatchen).
+    const m = fm.match(/^superseded_by:\s*(.+)$/m);
+    if (!m) continue;
+    const target = m[1].trim().replace(/^['"]|['"]$/g, '').replace(/\.md$/i, '');
+    const survivorSlug = noteOwners.get(target);
+    if (!survivorSlug) {
+      console.warn(`   ⚠️ ${p.slug} declares superseded_by "${target}" but no profile owns that note — the twin claim can't be handed over`);
+      continue;
+    }
+    if (!supersededByName.has(survivorSlug)) supersededByName.set(survivorSlug, []);
+    supersededByName.get(survivorSlug).push(p.slug);
+  }
+  if (SUPERSEDED_DUPLICATES.size) {
+    console.log(`🔁 Superseded duplicate record(s) declared in the vault: ${[...SUPERSEDED_DUPLICATES].join(', ')}`);
+    for (const [survivor, twins] of supersededByName) {
+      console.log(`   → ${twins.join(', ')} counted as ${survivor} (children of the demoted note belong to the survivor)`);
+    }
+  }
+}
+
 // ─── Build Slug Index (case-insensitive, fuzzy) ──────────────────────────────
 
 // Primary index: exact slug match
@@ -914,9 +975,26 @@ function refusesContradictedParentClaim(childSlug, parentSlug, relType) {
   const wantsSlot = (slot === 'father' || slot === 'fathers') ? 'father'
                   : (slot === 'mother' || slot === 'mothers') ? 'mother'
                   : 'any';
+  // ── A SUPERSEDED DUPLICATE RECORD NEVER CONTRIBUTES AN EDGE (2026-11-06) ──
+  // A demoted note asserts nothing: it is kept only so old links still resolve, so
+  // every claim it makes must be ignored and carried by the survivor instead. This
+  // must stay at the TOP, before any slot logic — an earlier version nested it inside
+  // the duplicate sniff and it fired for the SURVIVOR rather than the twin, emptying
+  // the wrong record and leaving all four Fatchen children with no father at all.
+  if (SUPERSEDED_DUPLICATES.has(parentSlug)) {
+    console.warn(`   ⚠️ skipped edges of superseded duplicate record: ${parentSlug} -> ${childSlug} (vault declares it superseded by another note; its children are carried there)`);
+    return true;
+  }
   const d = declaredParentSlugsFor(childSlug);
   const allDeclared = new Set([...d.father, ...d.mother, ...d.any]);
-  if (allDeclared.has(parentSlug)) return false;              // claim agrees with record
+  // ONLY the vault's own `relationships:` line may say "this claim agrees with the
+  // record". A flat `parents[]` entry cannot, because it is this script's own
+  // previous output: every regen starts from the last run's answer, so one wrong
+  // edge would re-enter here as a "declaration" and the guard would ratify its own
+  // mistake for ever. That loop is how Ronald Telfer (1898) collected three parents
+  // and why the fix kept coming undone.
+  const authoredDeclared = new Set([...d.father, ...d.mother, ...d.recordDeclares]);
+  if (authoredDeclared.has(parentSlug)) return false;         // claim agrees with record
 
   if (wantsSlot !== 'any') {
     const taken = d[wantsSlot].filter(s => s !== parentSlug);
@@ -990,6 +1068,17 @@ function refusesContradictedParentClaim(childSlug, parentSlug, relType) {
     // is a duplicate-person defect in the vault, and the honest handling is to
     // refuse the second record's edges (a person has one identity) while naming
     // it loudly, rather than to silently publish both men as separate fathers.
+    // ── A DEMOTED TWIN MAY NOT REFUSE ITS OWN SURVIVOR (2026-11-06) ──────────
+    // The duplicate-person test below fires on the SURVIVOR (ronald-rex-fatchen)
+    // because its twin (donald-fatchen) shares a birth year and surname — so the
+    // test that was written to stop two records publishing as two fathers instead
+    // hands every child to the record the vault declared dead. Measured: ronald
+    // children [], donald children [all four]. The vault has already answered this
+    // question with `superseded_by:`; asking it again here overrides the answer.
+    const supersededHere = [...supersededByName.get(parentSlug) || []];
+    if (supersededHere.length && d.recordDeclares.every((s) => supersededHere.includes(s))) {
+      return false;   // child names the dead twin => it names this survivor
+    }
     if (claimantRec && d.recordDeclares.some((s) => {
       const other = slugToPerson.get(s);
       if (!other) return false;

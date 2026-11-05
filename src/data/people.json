@@ -37241,30 +37241,30 @@
       {
         "type": "Father",
         "names": [
-          "Verbin Reginald Fatchen (1882–1958)"
+          "Verbin Reginald Fatchen (1904–1993)"
         ]
       },
       {
         "type": "Spouse",
         "names": [
-          "Beth Elaine Parker (1940–living)"
+          "Beth Elaine Parker (b. 1939)"
         ]
       },
       {
         "type": "Children",
         "names": [
-          "Roger Graham Fatchen",
-          "Vivonne Joy Fatchen",
-          "Bradley Donald Fatchen",
-          "Petrea Elizabeth Fatchen"
+          "Roger Graham Fatchen (b. 1961)",
+          "Vivonne Joy Fatchen (b. 1966)",
+          "Bradley Donald Fatchen (b. 1968)",
+          "Petrea Elizabeth Fatchen (b. 1972)"
         ]
       },
       {
         "type": "Siblings",
         "names": [
-          "Phyllis Marjorie Fatchen",
-          "Ross Kelvin Fatchen",
-          "Malcolm Geoffrey Fatchen"
+          "Phyllis Marjorie Fatchen (b. 1934)",
+          "Ross Kelvin Fatchen (b. 1945)",
+          "Malcolm Geoffrey Fatchen (b. 1942)"
         ]
       }
     ],
@@ -37273,16 +37273,21 @@
     "body_stripped": "Son of **Clarice May Telfer (1911–1997)** and **Verbin Reginald Fatchen**.\n\n## Name — corrected 27 Oct 2026\n\nPreviously recorded as **\"Donald\"** Rex Fatchen. That was wrong. B2 p.174 was\nread from the **page image** by two independent engines — WeVisDoc-2B (local)\nand Gemini vision (cloud) — across three renders at 9× and 12× magnification.\n**Both engines read \"Ronald Rex Fatchen\" on every render and neither ever read\n\"Donald.\"** The correction is confirmed, not guessed.\n\n## Dates — deliberately",
     "parents": [
       "clarice-may-telfer-1911",
-      "Verbin Reginald Fatchen (1882–1958)"
+      "Verbin Reginald Fatchen (1904–1993)"
     ],
-    "children": [],
+    "children": [
+      "roger-graham-fatchen-1961",
+      "vivonne-joy-fatchen-1966",
+      "bradley-donald-fatchen-1968",
+      "petrea-elizabeth-fatchen-1972"
+    ],
     "siblings": [
       "malcolm-geoffrey-fatchen-1942",
       "phyllis-marjorie-fatchen-1934",
       "ross-fatchen"
     ],
     "spouses": [
-      "Beth Elaine Parker (1940–living)"
+      "Beth Elaine Parker (b. 1939)"
     ],
     "step_parents": [],
     "step_children": [],
@@ -37294,8 +37299,8 @@
     "images": [],
     "person_photo": null,
     "generation": 7,
-    "evidence_level": null,
-    "single_source": false,
+    "evidence_level": "single_source",
+    "single_source": true,
     "provisional_why": null,
     "is_deceased": false
   },
@@ -40846,7 +40851,7 @@
     "is_living": true,
     "lifespan": "1961",
     "parents": [
-      "donald-fatchen",
+      "ronald-rex-fatchen",
       "Beth Elaine Parker (b. 1939)"
     ],
     "children": [
@@ -40933,7 +40938,7 @@
     "is_living": true,
     "lifespan": "1966",
     "parents": [
-      "donald-fatchen",
+      "ronald-rex-fatchen",
       "Beth Elaine Parker (b. 1939)"
     ],
     "children": [
@@ -41019,7 +41024,7 @@
     "is_living": true,
     "lifespan": "1968",
     "parents": [
-      "donald-fatchen",
+      "ronald-rex-fatchen",
       "Beth Elaine Parker (b. 1939)"
     ],
     "children": [
@@ -41105,7 +41110,7 @@
     "is_living": true,
     "lifespan": "1972",
     "parents": [
-      "donald-fatchen",
+      "ronald-rex-fatchen",
       "Beth Elaine Parker (b. 1939)"
     ],
     "children": [
@@ -42252,12 +42257,7 @@
       "clarice-may-telfer-1911",
       "Verbin Reginald Fatchen (1904–1993)"
     ],
-    "children": [
-      "roger-graham-fatchen-1961",
-      "vivonne-joy-fatchen-1966",
-      "bradley-donald-fatchen-1968",
-      "petrea-elizabeth-fatchen-1972"
-    ],
+    "children": [],
     "siblings": [
       "malcolm-geoffrey-fatchen-1942",
       "phyllis-marjorie-fatchen-1934",
