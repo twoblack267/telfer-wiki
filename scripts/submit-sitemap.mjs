@@ -244,6 +244,54 @@ async function verifySitemapLive() {
   };
 }
 
+/**
+ * PRE-FLIGHT 200 CHECK (added 2026-11-05).
+ *
+ * Every other live check in this project verifies the LOCAL build. This is the
+ * last place where we ask whether the deployed site actually serves the URL
+ * before we tell Bing and Yandex that it exists.
+ *
+ * Why it matters: a build can succeed while the deploy that serves it is still
+ * in flight, failed, or serving a stale artefact. Submitting a URL that 404s
+ * teaches the search engine the page is dead. That is worse than silence — a
+ * dead URL can be un-indexed while a URL never announced is simply unknown.
+ *
+ * Deliberately a SAMPLE, not all 1,755: two URLs (the newest and the oldest in
+ * the delta) catch "deploy not live yet" and "whole site down". Probing every
+ * URL would add minutes and get us rate-limited by our own host, which proves
+ * nothing extra — if the deploy is live, the pages are there; if it is not, the
+ * two probes both fail.
+ *
+ * Honest about uncertainty: a network error is reported as UNREACHABLE, not as
+ * a dead page, and unreachable is treated as fatal here because we cannot
+ * distinguish it from a real 404 from this vantage point. Refusing to submit is
+ * the safe failure — it costs one night, and tomorrow retries.
+ */
+async function preflightSample(delta) {
+  if (!delta.length) return { ok: true, checked: 0, detail: [] };
+
+  // Newest and oldest by lastmod, falling back to first/last in the delta.
+  const withDates = delta.filter((u) => u.lastmod).sort((a, b) => (a.lastmod < b.lastmod ? -1 : 1));
+  const sample =
+    withDates.length >= 2
+      ? [withDates[0], withDates[withDates.length - 1]]
+      : [delta[0], delta[delta.length - 1]].filter((v, i, a) => v && a.indexOf(v) === i);
+
+  const detail = [];
+  for (const u of sample) {
+    try {
+      const res = await fetch(u.loc, {
+        method: 'GET',
+        headers: { 'cache-control': 'no-cache' },
+      });
+      detail.push({ url: u.loc, status: res.status, ok: res.ok });
+    } catch (err) {
+      detail.push({ url: u.loc, status: null, ok: false, error: err.message });
+    }
+  }
+  return { ok: detail.every((d) => d.ok), checked: detail.length, detail };
+}
+
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -275,6 +323,30 @@ async function main() {
     console.log('Nothing new to submit — exiting clean.');
     writeState(state);
     return live.ok ? 0 : 1;
+  }
+
+  // ── PRE-FLIGHT: is the deployed site actually serving these URLs? ──
+  // Runs BEFORE submitIndexNow, because once IndexNow accepts a 404 we cannot
+  // un-tell it. Failing here exits 1 and the workflow goes red — the next
+  // night's run retries with the same delta, so nothing is lost but a night.
+  const pre = await preflightSample(delta);
+  if (pre.checked) {
+    console.log('\n── Pre-flight (deployed site) ──');
+    for (const d of pre.detail) {
+      console.log(
+        d.status
+          ? `  ${d.ok ? '✅' : '❌'} ${d.status} ${d.url}`
+          : `  ❌ UNREACHABLE ${d.url} — ${d.error}`
+      );
+    }
+  }
+  if (!pre.ok) {
+    console.log(
+      '\n🛑 ABORTING SUBMISSION — the deployed site is not serving these URLs.' +
+        '\n   Submitting a 404 tells the search engine the page is dead, which is' +
+        '\n   worse than never announcing it. State not updated; next run retries.'
+    );
+    return 1;
   }
 
   const results = [];
