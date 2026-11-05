@@ -1,0 +1,291 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { PersonData } from "../utils/extract-data.mjs";
+
+const peopleData = (await import("../data/people.public.json")).default as PersonData[];
+const people = peopleData.filter(p => p.branch === "telfer" || !p.branch) || [];
+
+// ── Numbers on this page are COUNTED, never typed ────────────────────────────
+// Mark's rule (5 Nov 2026): every number a page prints must exactly match its
+// label. A methodology page that quotes stale counts is the worst possible
+// page to get wrong — so every figure below is derived at build time.
+const total = people.length;
+// Sources live in the page body as a "## Sources" heading, not a data field.
+// Verified by inspection 6 Nov 2026: people.public.json has no `sources` key at
+// all — the first version of this page counted a field that doesn't exist and
+// proudly printed "0 with cited sources". Counting the heading is the honest
+// measure of "this page cites something".
+const hasSourcesBlock = (p: PersonData) =>
+  /^##\s+Sources\b/im.test(((p as any).body_markdown as string) || "");
+const withSources = people.filter(hasSourcesBlock).length;
+const withEvidence = people.filter(p => (p as any).evidence_level).length;
+const verified = people.filter(p => (p as any).evidence_level === "verified").length;
+const singleSource = people.filter(p => (p as any).single_source).length;
+const pct = (n: number) => Math.round((n / total) * 100);
+---
+
+<BaseLayout
+  title="How This Archive Works"
+  description="How the Telfer family archive decides what is true, what a certificate proves that a family story cannot, and what happens when two sources disagree."
+>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <article class="prose prose-lg dark:prose-invert max-w-none">
+      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[var(--color-heading)] mb-2">
+        How This Archive Works
+      </h1>
+      <p class="text-sm text-[var(--color-muted)] mb-8">
+        What we count as proof, what we don't, and how to tell the difference on any page
+      </p>
+
+      <p class="lead">
+        This is a family history, not a family legend. Every claim on this site is
+        here because something outside this website says so — a register, a
+        certificate, a headstone, a printed book. Where we don't have that, the page
+        says so rather than filling the gap with a guess.
+      </p>
+
+      <p>
+        That sounds obvious until you try it. Most family trees online are a mixture
+        of records and other people's trees, copied back and forth until nobody can
+        tell which is which. This page explains exactly where the line is drawn here,
+        so you can check our work instead of taking our word for it.
+      </p>
+
+      <hr />
+
+      <h2>Two witnesses, not one</h2>
+
+      <p>
+        A fact goes into this archive on one condition: <strong>two independent
+        things agree about it.</strong> Two books. Or a book and a register. Or a
+        certificate and a newspaper notice. What doesn't count is the same claim
+        twice from the same place.
+      </p>
+
+      <p>
+        This is stricter than it looks, because a great deal of what's online isn't
+        independent at all. If four family trees agree that someone was born in 1842,
+        and all four copied from the same unsourced tree, you have one witness, not
+        four. Genealogy sites are full of this. The number of pages repeating a claim
+        tells you nothing about whether it's true.
+      </p>
+
+      <div class="not-prose my-6 rounded-lg border-l-4 border-[var(--color-highlight)] bg-[var(--color-surface)] p-4">
+        <p class="font-semibold text-[var(--color-heading)] mb-2">The rule we hold ourselves to</p>
+        <p class="text-sm text-[var(--color-ink)]">
+          A <em>finder</em> is never a <em>witness</em>. Someone pointing us at a record
+          is useful — it is not evidence. Only the record itself counts. And this
+          website is never a source for itself: a page here repeating another page here
+          is one claim, not two.
+        </p>
+      </div>
+
+      <h2>What a certificate gives you that a story can't</h2>
+
+      <p>
+        Not all sources are equal, and pretending otherwise is how people end up with
+        wrong ancestors. Roughly, strongest first:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Civil registration certificates and official registers.</strong>
+          A government body recorded the birth, marriage or death at the time, from
+          someone who was there. These stand on their own — we don't demand a second
+          copy of something the state issued.
+        </li>
+        <li>
+          <strong>Parish registers and census returns.</strong> Contemporaneous, but
+          written by hand by a clerk who may have misheard a name. Strong, not infallible.
+        </li>
+        <li>
+          <strong>Newspaper notices and probate records.</strong> Dated and printed,
+          which makes them checkable — but they report what someone told a journalist.
+        </li>
+        <li>
+          <strong>Headstones.</strong> Genuinely useful, and genuinely wrong sometimes.
+          Families erected stones years later from memory. The stone often gives the
+          right death year and the wrong birth year.
+        </li>
+        <li>
+          <strong>Printed family histories.</strong> Enormously valuable, and the
+          reason this archive exists — three printed Telfer books are its backbone.
+          But these were compiled by researchers who had sources we can't see, and
+          transcribed by scanners that make mistakes. Treated as strong leads, cross-checked.
+        </li>
+        <li>
+          <strong>Family stories, letters, and other people's online trees.</strong>
+          Treated as <em>leads</em>, never as facts. Worth chasing. Not worth printing
+          as though it happened.
+        </li>
+      </ul>
+
+      <h2>Why some people have no dates</h2>
+
+      <p>
+        You will find profiles here with a birth year and nothing else, or a name and
+        no years at all. This is not laziness and it is not an oversight — it is the
+        rule working. Where no record has been found, no date is printed. An empty
+        field is honest; an invented one is a lie that gets copied for a hundred years.
+      </p>
+
+      <p>
+        Some of these are living relatives. We withhold details about living people
+        deliberately, for privacy. That is a decision, not a gap in the research, and
+        we don't count it as missing evidence.
+      </p>
+
+      <h2>When two sources disagree</h2>
+
+      <p>
+        This happens constantly, and it is the most interesting part of the work.
+        When it does:
+      </p>
+
+      <ol>
+        <li><strong>Both versions are recorded.</strong> Neither is quietly deleted.</li>
+        <li>
+          <strong>The printed page beats the scan.</strong> Where a scanned book and
+          the physical page disagree, the physical page wins — what we're reading is a
+          machine's best guess at a 19th-century font.
+        </li>
+        <li>
+          <strong>A certificate beats a compiled book.</strong> The book's author was
+          working further from the event than the registrar was.
+        </li>
+        <li>
+          <strong>Unresolvable conflicts get flagged, not decided.</strong> If two
+          equally good sources genuinely contradict each other, a person resolves it.
+          A machine doesn't.
+        </li>
+      </ol>
+
+      <h2>What each page tells you about itself</h2>
+
+      <p>
+        Every profile carries a rating saying how well that person is known. It's the
+        honest answer to the only question a stranger actually has: <em>how much
+        should I trust this page?</em>
+      </p>
+
+      <div class="not-prose my-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b-2 border-[var(--color-border)]">
+              <th class="text-left py-2 pr-4 font-semibold text-[var(--color-heading)]">Rating</th>
+              <th class="text-left py-2 font-semibold text-[var(--color-heading)]">What it means</th>
+            </tr>
+          </thead>
+          <tbody class="[&_td]:py-2 [&_td]:align-top [&_tr]:border-b [&_tr]:border-[var(--color-border)]">
+            <tr>
+              <td class="pr-4 font-medium whitespace-nowrap">Verified</td>
+              <td>Two independent sources agree, or a civil certificate stands alone. State it plainly.</td>
+            </tr>
+            <tr>
+              <td class="pr-4 font-medium whitespace-nowrap">Single source</td>
+              <td>One witness only. Treated as a <em>lead</em>, and the page says so out loud.</td>
+            </tr>
+            <tr>
+              <td class="pr-4 font-medium whitespace-nowrap">Provisional</td>
+              <td>
+                Right on the evidence in hand, not yet hardened against an independent
+                record. Carries its receipt — what was checked, against what.
+              </td>
+            </tr>
+            <tr>
+              <td class="pr-4 font-medium whitespace-nowrap">Not recorded</td>
+              <td>
+                Written before ratings were compulsory. <strong>This is not a clean
+                bill of health</strong> — it means nobody has rated it yet.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Where this archive actually stands</h2>
+
+      <p>
+        Because a methodology page is worthless if it only describes the ideal, here
+        is the real state of the work. These figures are counted from the archive
+        itself each time this page is built — they cannot be flattered by hand.
+      </p>
+
+      <div class="not-prose my-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="rounded-lg border border-[var(--color-border)] bg-[var(--color-card-bg)] p-4 text-center">
+          <div class="text-2xl font-bold font-serif text-[var(--color-heading)]">{total}</div>
+          <div class="text-xs text-[var(--color-muted)] mt-1">people in the archive</div>
+        </div>
+        <div class="rounded-lg border border-[var(--color-border)] bg-[var(--color-card-bg)] p-4 text-center">
+          <div class="text-2xl font-bold font-serif text-[var(--color-heading)]">{withSources}</div>
+          <div class="text-xs text-[var(--color-muted)] mt-1">with a cited sources section</div>
+        </div>
+        <div class="rounded-lg border border-[var(--color-border)] bg-[var(--color-card-bg)] p-4 text-center">
+          <div class="text-2xl font-bold font-serif text-[var(--color-heading)]">{verified}</div>
+          <div class="text-xs text-[var(--color-muted)] mt-1">rated verified</div>
+        </div>
+        <div class="rounded-lg border border-[var(--color-border)] bg-[var(--color-card-bg)] p-4 text-center">
+          <div class="text-2xl font-bold font-serif text-[var(--color-heading)]">{singleSource}</div>
+          <div class="text-xs text-[var(--color-muted)] mt-1">resting on one witness</div>
+        </div>
+      </div>
+
+      <p class="text-sm text-[var(--color-muted)]">
+        That's {withSources} of {total} people ({pct(withSources)}%) with cited sources,
+        and {withEvidence} carrying a rating of any kind. The rest is real work still
+        to do, and we'd rather show you the number than hide it.
+      </p>
+
+      <h2>How this is enforced, not just intended</h2>
+
+      <p>
+        A rule nobody enforces is a boast. Three things make the rules on this page
+        actually bind:
+      </p>
+
+      <ol>
+        <li>
+          <strong>Only one process may write family facts.</strong> A single scheduled
+          verification pass, running once a day, is the only thing permitted to write
+          a fact into the archive. Everything else — research, OCR, cross-checks —
+          feeds it and cannot write.
+        </li>
+        <li>
+          <strong>No rating, no page.</strong> A profile whose content changes without
+          an evidence rating fails the build. It cannot be published. That gate runs
+          on every rebuild, so it isn't a promise someone has to remember.
+        </li>
+        <li>
+          <strong>Every judgement is dated and receipted.</strong> When something is
+          recorded as provisional, the archive stores what was checked against what,
+          and when. A decision that can't be audited later was never properly made.
+        </li>
+      </ol>
+
+      <h2>When we get it wrong</h2>
+
+      <p>
+        We do, and there's a running corrections log recording every mistake found and
+        what was changed. Errors here have come from scanners misreading names,
+        transcribers mishearing a clerk, and — more than once — from me trusting a
+        single source I should have cross-checked.
+      </p>
+
+      <p>
+        If you spot something wrong, please tell us. A correction with a source
+        attached is the most useful thing anyone can send. If you <em>are</em> the
+        source — you have the certificate, you were there, you knew them — say so, and
+        we'll treat that as the starting point for finding the record that backs it up.
+      </p>
+
+      <hr />
+
+      <p class="text-sm text-[var(--color-muted)]">
+        This archive is compiled and maintained by one person, checked against the
+        sources named on each page. It is not a commercial product and makes no
+        claim to be a scholarly publication. Every rating on it is a statement about
+        evidence, and every one is open to challenge.
+      </p>
+    </article>
+  </main>
+</BaseLayout>
