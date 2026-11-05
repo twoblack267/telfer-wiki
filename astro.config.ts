@@ -144,6 +144,20 @@ export default defineConfig({
         //    are not asking Google to crawl a page we then refuse to index.
         if (/^\/tree\/?$/.test(page) || /\/people\/full-tree\/?$/.test(page)) return false;
 
+        // 4. /people/dna/ is NOT a person — it is an empty "Under Construction"
+        //    stub: no genetic genealogy data has been added, and the whole
+        //    content is a heading, one sentence of explanation and a "nothing
+        //    here yet" notice. It still renders HTTP 200 and carries no noindex,
+        //    so the sitemap was advertising it as a /people/<slug>/ profile.
+        //    Measured 2026-11-06: the sitemap's 656 base /people/ URLs matched
+        //    the 656 entries in people.public.json exactly EXCEPT for this one,
+        //    which is why the route looked like it had "extra slugs". It does
+        //    not — it has one non-person route wearing a person's URL shape.
+        //    Excluded from the sitemap and noindexed on the page until it has
+        //    real data (same precedent as /tree/ and /people/full-tree/).
+        //    Remove this case when the page is populated, not before.
+        if (/^https?:\/\/[^/]+\/people\/dna\/?$/.test(page)) return false;
+
         return true;
       },
       // Per-URL <lastmod>, from the committed slug -> date map.
