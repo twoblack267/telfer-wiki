@@ -25,7 +25,7 @@
  * config then omits <lastmod> for that page rather than inventing one.
  */
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -349,6 +349,23 @@ const payload = {
   vault_dir: VAULT_DIR,
   source: "git last-commit dates of Obsidian vault person files",
   count: hit,
+  // Non-person pages: honest git date of the source file that renders them.
+  // /people/families/<surname>/ has no vault file of its own — it is generated
+  // from families/index.astro — so it inherits THAT file's date. Resolved here,
+  // on the machine that has the repo history, because CI has no git history for
+  // it and a build-time fallback would restamp all 164 lists on every deploy.
+  // Measured 2026-11-05: all 165 families URLs shipped with no <lastmod> at all.
+  pages: (() => {
+    const p = {};
+    const fam = gitDate(ROOT, "src/pages/people/families/index.astro");
+    if (fam) {
+      p["/people/families/"] = fam;
+      for (const dir of readdirSync(resolve(ROOT, "dist/people/families"), { withFileTypes: true })) {
+        if (dir.isDirectory()) p[`/people/families/${dir.name}/`] = fam;
+      }
+    }
+    return p;
+  })(),
   people: Object.fromEntries(Object.entries(out).sort(([a], [b]) => a.localeCompare(b))),
 };
 

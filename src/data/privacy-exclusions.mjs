@@ -43,3 +43,29 @@ export const PRIVACY_STRIP_SLUGS = new Set([
  * sitemap. Kept in sync with PRIVACY_STRIP_SLUGS.
  */
 export const NOINDEX_SLUGS = new Set([...PRIVACY_STRIP_SLUGS]);
+
+/**
+ * Owner ruling — 5 November 2026: "everyone can be published, the only people
+ * that can't be shown are the ivories ... their names can sit there, just not
+ * their pages mate." Derived pages (family sheet, descendant chart) are now
+ * indexable unless they actually print a withheld name.
+ *
+ * Declared HERE and imported by astro.config.ts on purpose: astro.config.ts
+ * cannot see the built pages, so the sitemap filter and the template's noindex
+ * fence must read ONE list. Re-deriving "has a withheld relative" from a slug
+ * mismatch in the config de-indexed 128 sheets of genuine relatives (Mary
+ * Hayes, Betty Hutton, George Fisher) on 25 Oct 2026. One source of truth.
+ *
+ * These are the pages whose own family group sheet or descendant chart prints
+ * a withheld person's full name in its relationship table — the exact set the
+ * templates noindex via `withheld: true` in people.public.json.
+ */
+export const DERIVED_NOINDEX_SLUGS = new Set([
+  'paul-ivory-1955',       // family sheet lists his four withheld children + Sheryle
+  'timothy-telfer-1959',   // family sheet / descendant chart lists the same children
+]);
+
+/** A derived page is listed in the sitemap only if it is not noindexed. */
+export function isDerivedNoindex(slug) {
+  return DERIVED_NOINDEX_SLUGS.has(slug);
+}

@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
-import { NOINDEX_SLUGS } from "./src/data/privacy-exclusions.mjs";
+import { NOINDEX_SLUGS, isDerivedNoindex } from "./src/data/privacy-exclusions.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -77,6 +77,9 @@ const PAGE_LAST_MOD = new Map<string, string>([
   ["/telfer-name/", "2026-10-27T12:00:00.000Z"], // src/pages/telfer-name.astro
   ["/people/", "2026-11-04T12:00:00.000Z"], // src/pages/people/index.astro
   ["/people/dna/", "2026-10-25T12:00:00.000Z"], // src/pages/people/dna.astro
+  ...Object.entries(
+    (JSON.parse(readFileSync(resolve(__dirname, "src/data/lastmod.json"), "utf-8")).pages ?? {}) as Record<string, string>,
+  ).map(([path, iso]) => [path, iso] as [string, string]),
 ]);
 
 export default defineConfig({
@@ -118,16 +121,14 @@ export default defineConfig({
         // 1. A withdrawn person: no page, no family sheet, nothing.
         if (NOINDEX_SLUGS.has(slug)) return false;
 
-        // 2. Derived pages that republish a family's relationships. These carry
-        //    the names of withdrawn relatives inside machine-readable tables
-        //    (family group sheets list "Children (4)" by full name), which puts
-        //    them in Google even though the person has no page of their own.
-        //    The owner's ruling requires the names to remain visible on the
-        //    parent's page — it does not license a second indexable copy of the
-        //    same table. See references/privacy-derived-pages.md.
-        //    Added 25 Oct 2026 after GSC showed 5 impressions / 2 clicks on a
-        //    withdrawn minor's family sheet.
-        if (/\/people\/[^/]+\/(?:family-sheet|descendants)\/?$/.test(page)) return false;
+        // 2. Derived pages that print a withheld name. As of 5 Nov 2026 the
+        //    sitemap lists a family sheet or descendant chart UNLESS the page
+        //    itself is noindexed, and the noindex fence is keyed on the explicit
+        //    `withheld: true` flag — never on a missing slug (that guess
+        //    de-indexed 128 sheets of genuine relatives on 25 Oct 2026).
+        //    Derived pages are /people/<slug>/family-sheet/ and /descendants/,
+        //    so the SLUG is the second path segment in their case.
+        if (/\/(?:family-sheet|descendants)\/?$/.test(page) && isDerivedNoindex(slug)) return false;
 
         // 3. The two whole-tree renderings. Added 26 Oct 2026 under the same
         //    ruling as case 2, and for a stronger reason: these pages are not
@@ -160,7 +161,7 @@ export default defineConfig({
       // no date rather than a wrongly-inherited one.
       serialize(item) {
         try {
-          const pathname = new URL(item.url).pathname;
+          const pathname = decodeURIComponent(new URL(item.url).pathname);
           const m = pathname.match(/^\/people\/([^/]+)(\/|$)/);
           if (m) {
             const iso = LAST_MOD_BY_SLUG.get(m[1]);
