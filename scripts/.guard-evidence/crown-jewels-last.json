@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-05T01:14:38.701Z",
+  "checkedAt": "2026-11-05T01:47:44.516Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -12,260 +12,39 @@
   "warnings": [
     {
       "kind": "FIELD_SHRANK",
-      "slug": "charles-masters-1809",
-      "name": "Charles Masters",
+      "slug": "charles-farrow-jr",
+      "name": "Charles Jr Farrow",
       "field": "children",
-      "before": 17,
-      "after": 13,
-      "lost": 4,
+      "before": 1,
+      "after": 0,
+      "lost": 1,
       "lostEntries": [
-        "Martha Ann Masters Radford (1839-1912)",
-        "Jemima   Williams Masters Grant (1850-1919)",
-        "Mary Ellen Masters Roach (1852-1935)",
-        "Emma Jane Masters Tuck (1855-1922)"
+        "(unknown)"
       ]
     },
     {
       "kind": "FIELD_SHRANK",
-      "slug": "edith-mary-kathleen-telfer",
-      "name": "Edith Mary Kathleen Telfer",
+      "slug": "joseph-farrow",
+      "name": "Joseph Francis Farrow",
       "field": "siblings",
-      "before": 9,
-      "after": 8,
+      "before": 11,
+      "after": 10,
       "lost": 1,
       "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
+        "elizabeth-smith-farrow",
+        "Elizabeth Telfer Farrow"
       ]
     },
     {
       "kind": "FIELD_SHRANK",
-      "slug": "jane-murray-farrow-1857",
-      "name": "Jane Murray Farrow",
+      "slug": "elizabeth-smith-farrow",
+      "name": "Elizabeth Float Floate",
       "field": "siblings",
-      "before": 10,
-      "after": 9,
+      "before": 1,
+      "after": 0,
       "lost": 1,
       "lostEntries": [
-        "Charles Farrow Jr"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "lloyd-wilbur-telfer-1913",
-      "name": "Lloyd Wilbur Telfer",
-      "field": "parents",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "Florence Nicholas Telfer"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "martha-masters-1814",
-      "name": "Martha Masters",
-      "field": "children",
-      "before": 17,
-      "after": 13,
-      "lost": 4,
-      "lostEntries": [
-        "Martha Ann Masters Radford (1839-1912)",
-        "Jemima   Williams Masters Grant (1850-1919)",
-        "Mary Ellen Masters Roach (1852-1935)",
-        "Emma Jane Masters Tuck (1855-1922)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "robert-dunlop",
-      "name": "Robert Dunlop",
-      "field": "children",
-      "before": 2,
-      "after": 1,
-      "lost": 1,
-      "lostEntries": [
-        "Janet Dunlop Lawrie (1811–1902)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "robert-telfer-1835",
-      "name": "Robert Telfer",
-      "field": "children",
-      "before": 10,
-      "after": 9,
-      "lost": 1,
-      "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "susan-telfer-1844",
-      "name": "Susan Burton Telfer",
-      "field": "children",
-      "before": 10,
-      "after": 9,
-      "lost": 1,
-      "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "william-telfer-1869",
-      "name": "William Adam Francis Telfer",
-      "field": "siblings",
-      "before": 9,
-      "after": 8,
-      "lost": 1,
-      "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "alexander-lawrie",
-      "name": "Alexander Lawrie",
-      "field": "parents",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "Janet Dunlop Lawrie (1811–1902)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "elizabeth-lawrie",
-      "name": "Elizabeth Lawrie",
-      "field": "parents",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "Janet Dunlop Lawrie (1811–1902)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "janet-lawrie-1842",
-      "name": "Janet Lawrie",
-      "field": "parents",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "Janet Dunlop Lawrie (1811–1902)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "jean-lawrie",
-      "name": "Jean Lawrie",
-      "field": "parents",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "Janet Dunlop Lawrie (1811–1902)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "john-lawrie-1840",
-      "name": "John Lawrie",
-      "field": "parents",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "Janet Dunlop Lawrie (1811–1902)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "john-lawrie-1845",
-      "name": "John Lawrie",
-      "field": "parents",
-      "before": 2,
-      "after": 1,
-      "lost": 1,
-      "lostEntries": [
-        "Janet Dunlop Lawrie (1811–1902)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "marion-lawrie-1838",
-      "name": "Marion Lawrie",
-      "field": "parents",
-      "before": 3,
-      "after": 2,
-      "lost": 1,
-      "lostEntries": [
-        "Janet Dunlop Lawrie (1811–1902)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "harriett-helen-telfer",
-      "name": "Harriett Helen Telfer",
-      "field": "siblings",
-      "before": 9,
-      "after": 8,
-      "lost": 1,
-      "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "lindsay-burton-telfer",
-      "name": "Lindsay Burton Telfer",
-      "field": "siblings",
-      "before": 9,
-      "after": 8,
-      "lost": 1,
-      "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "elizabeth-rowbotham",
-      "name": "Elizabeth Rowbotham",
-      "field": "siblings",
-      "before": 9,
-      "after": 8,
-      "lost": 1,
-      "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "robert-allan-burton-telfer",
-      "name": "Robert Allan Burton Telfer",
-      "field": "siblings",
-      "before": 9,
-      "after": 8,
-      "lost": 1,
-      "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
-      ]
-    },
-    {
-      "kind": "FIELD_SHRANK",
-      "slug": "francis-john-burton-telfer",
-      "name": "Francis John Burton Telfer",
-      "field": "siblings",
-      "before": 9,
-      "after": 8,
-      "lost": 1,
-      "lostEntries": [
-        "Susan Telfer of German Creek (1871–1954)"
+        "joseph-farrow"
       ]
     }
   ]

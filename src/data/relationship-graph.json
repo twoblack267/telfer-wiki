@@ -1367,8 +1367,8 @@
     },
     {
       "slug": "rose-rankin-1900",
-      "id": "Rose Isabel Margaret Paynter Rankin (1900)",
-      "generation": 7
+      "id": "Rose Isabel Margaret Paynter (1900)",
+      "generation": 6
     },
     {
       "slug": "ruth-penna-1863",
@@ -3212,7 +3212,7 @@
     },
     {
       "slug": "elizabeth-smith-farrow",
-      "id": "Elizabeth Float Smith Farrow (1825)",
+      "id": "Elizabeth Float Floate (1825)",
       "generation": 4
     },
     {
@@ -4792,6 +4792,14 @@
       {
         "from": "harold-peryman-wishart-1888",
         "to": "rodger-peryman-wishart-1920"
+      },
+      {
+        "from": "elizabeth-liebich-1859",
+        "to": "rose-rankin-1900"
+      },
+      {
+        "from": "thomas-paynter-1859",
+        "to": "rose-rankin-1900"
       },
       {
         "from": "amy-telfer-1884",
@@ -7474,6 +7482,10 @@
         "to": "violet-hope-telfer-1883"
       },
       {
+        "from": "agnes-paynter-1895",
+        "to": "rose-rankin-1900"
+      },
+      {
         "from": "alan-telfer-1890",
         "to": "charles-telfer-1875"
       },
@@ -8372,6 +8384,10 @@
       {
         "from": "elizabeth-beattie-telfer-1832",
         "to": "robert-telfer-1835"
+      },
+      {
+        "from": "elizabeth-farrow",
+        "to": "joseph-farrow"
       },
       {
         "from": "elizabeth-hannah-telfer-1836",
@@ -11308,10 +11324,6 @@
       {
         "from": "joseph-farrow",
         "to": "mary-bayes-farrow-1875"
-      },
-      {
-        "from": "elizabeth-smith-farrow",
-        "to": "joseph-farrow"
       },
       {
         "from": "john-dillon-1882",
