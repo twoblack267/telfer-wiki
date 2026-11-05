@@ -1370,6 +1370,31 @@ const personSchema = {
   ...(parentLinks.length ? { parent: parentLinks.map((p) => (p.slug ? { "@type": "Person", name: p.name, url: `https://telferwiki.com/people/${p.slug}/` } : { "@type": "Person", name: p.name })) } : {}),
   ...(childLinks.length ? { children: childLinks.map((c) => (c.slug ? { "@type": "Person", name: c.name, url: `https://telferwiki.com/people/${c.slug}/` } : { "@type": "Person", name: c.name })) } : {}),
   ...(spouseSchema.length ? { spouse: spouseSchema } : {}),
+  // ── FRESHNESS + ATTRIBUTION (added 2026-11-05) ──────────────
+  // The footer has shown "Last revision <date>" since 3 Nov, but the machine
+  // block said nothing at all — so Google and the AI engines had no idea these
+  // pages are maintained. This is the same `lastmod` map the sitemap uses for
+  // <lastmod>, so page, sitemap and JSON-LD can never disagree about when a
+  // person was last revised.
+  //
+  // WHY THE CONDITIONAL: if lastmod.json is missing, an invalid Date in
+  // dateModified fails schema validation and can cost the whole block. Omit
+  // rather than lie. Same rule as birthDate above.
+  ...(lastmod?.people?.[person.slug] &&
+      !Number.isNaN(new Date(lastmod.people[person.slug]).getTime())
+    ? { dateModified: new Date(lastmod.people[person.slug]).toISOString() }
+    : {}),
+  // Attribution that a genealogy archive actually needs: a named maintainer
+  // with a stable URL. Google uses this for authorship; AI engines use it to
+  // decide the page is human-maintained rather than auto-scraped.
+  author: {
+    "@type": "Person",
+    name: "Mark Telfer",
+    url: "https://telferwiki.com/about/",
+  },
+  // No `isPartOf`/publisher: this archive's maintainer and its publisher are
+  // the same person, and inventing an organisation would be a claim we cannot
+  // evidence. One name, one URL, both true.
 };
 
 // ── SEO/AI: curated FAQ (data-driven manifest src/data/faqs.json) ──
