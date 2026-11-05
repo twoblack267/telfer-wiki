@@ -570,11 +570,39 @@ function resolveNameToSlug(name, sourceSlug) {
     if (parts.length >= 3) {
       const fn = parts[0].toLowerCase();
       const ln = parts[parts.length - 1].toLowerCase();
+      const middle = parts.slice(1, -1).map((s) => s.toLowerCase());
       const candidates = people.filter(
         (p) => String(p.first_name || '').toLowerCase() === fn && String(p.last_name || '').toLowerCase() === ln
       );
       if (candidates.length === 1) {
         const only = candidates[0];
+        // ── MIDDLE NAMES ARE IDENTITY, NOT DECORATION (fixed 2026-11-06) ──────
+        // The unique-candidate rescue above fired on "Ronald Edgerston Telfer"
+        // because exactly one profile answers to first+last "Ronald Telfer" —
+        // ronald-telfer (1898–1898), a three-day-old infant who died in 1898.
+        // The name in the vault belonged to his COUSIN of a later generation.
+        // Binding them grafted that infant's actual grandparents (Frank Telfer
+        // and Clara Dunn) onto the cousin, which is why the published record
+        // showed Ronald Telfer (1898) with three parents, two of them wrong.
+        //
+        // When the REFERENCE carries a middle name that the CANDIDATE does not
+        // share, they are different people. A single differing middle name is
+        // enough to refuse the match. Where the candidate's middle name is
+        // absent entirely we stay lenient — the vault often omits it.
+        const candMiddle = String(
+          only.middle_name || only.middle_names || ''
+        ).toLowerCase().split(/\s+/).filter(Boolean);
+        // Leniency only applies when the CANDIDATE has a middle name we can
+        // compare against. If the reference carries a middle name and the
+        // candidate has none, the candidate is not adopting that name — it is a
+        // different person the reference was never about. First+last alone is
+        // how the 1898 infant captured his cousin; refuse it.
+        if (candMiddle.length) {
+          const shared = middle.some((m) => candMiddle.includes(m));
+          if (!shared) return null;
+        } else {
+          return null;
+        }
         if (!refBirth || (only.birth_year && only.birth_year === refBirth)) return only.slug;
       }
     }
@@ -805,6 +833,79 @@ function addParentChild(parentSlug, childSlug, sourceSlug) {
 // (1853–1933) had the right parents in `parents[]` and still ended up an orphan
 // with zero siblings, dragging 8 sibling links down with him. Treat a populated
 // `parents` array as an equivalent self-declaration.
+// ── A CHILD'S DECLARED SLOT MAY NOT BE OVERWRITTEN BY A DIFFERENT PERSON ─────
+// (2026-11-06)
+//
+// Given a claim "source is the {Father|Mother|Parent} of target" — i.e. SOURCE is
+// the parent, TARGET is the child — decide whether the CHILD's own record already
+// fills that slot with somebody else.
+//
+// Why this cannot use gender: `gender` is `undefined` on Francis Adam Telfer,
+// Clara Dunn AND every flat-schema profile in this vault. A slot cannot be
+// assigned by inferring sex from the claimant, so identity is decided by the
+// record itself:
+//
+//   • Father/Mother claim → the slot is NAMED. If the child already names a
+//     parent in that exact slot and it is not this claimant, refuse.
+//   • Children claim (generic) → the slot is NOT named. Refuse only when the
+//     child's record is already COMPLETE (a father AND a mother) and the
+//     claimant is neither: there is no vacancy left to fill, so the claim is a
+//     same-name collision, not new information.
+//
+// A missing parent is a gap in the record, never consent to fill it. But a nameless
+// claim into a genuinely vacant slot is how the vault records one known parent
+// (Ronald 1898 names only his Mother) — that must survive.
+function declaredParentSlugsFor(slug) {
+  const p = slugToPerson.get(slug);
+  if (!p) return { father: [], mother: [], any: [] };
+  const out = { father: [], mother: [], any: [] };
+  for (const r of p.relationships || []) {
+    const t = String(r.type || '').toLowerCase();
+    const slot = (t === 'father' || t === 'fathers') ? 'father'
+               : (t === 'mother' || t === 'mothers') ? 'mother'
+               : (t === 'parent' || t === 'parents') ? 'any' : null;
+    if (!slot) continue;
+    for (const n of r.names || []) {
+      const s = resolveNameToSlug(n, slug);
+      if (s && s !== slug) out[slot].push(s);
+    }
+  }
+  // Flat-schema profiles put parentage in `parents[]` with no slot names. Those
+  // are real declarations, but they are NOT slot-labelled, so they can only ever
+  // prove "complete", never "this exact slot is taken".
+  const flat = (p.parents || []).filter(x => typeof x === 'string' && slugToPerson.has(x));
+  out.any.push(...flat.filter(s => !out.father.includes(s) && !out.mother.includes(s)));
+  return out;
+}
+
+function refusesContradictedParentClaim(childSlug, parentSlug, relType) {
+  if (childSlug === parentSlug) return false;
+  const slot = String(relType || '').toLowerCase();
+  const wantsSlot = (slot === 'father' || slot === 'fathers') ? 'father'
+                  : (slot === 'mother' || slot === 'mothers') ? 'mother'
+                  : 'any';
+  const d = declaredParentSlugsFor(childSlug);
+  const named = wantsSlot === 'any' ? [...d.father, ...d.mother, ...d.any]
+                                    : [...d[wantsSlot], ...d.any];
+  if (named.includes(parentSlug)) return false;              // claim agrees with record
+  if (wantsSlot !== 'any') {
+    const taken = d[wantsSlot].filter(s => s !== parentSlug);
+    if (taken.length) {
+      console.warn(`   ⚠️ refused contradicted ${relType} claim: ${parentSlug} -> ${childSlug} (child already names ${taken.join(', ')} in that slot)`);
+      return true;
+    }
+    return false;
+  }
+  // Nameless slot: only a COMPLETE record can refuse it.
+  const complete = d.father.length > 0 && d.mother.length > 0;
+  const hasTwo = new Set([...d.father, ...d.mother, ...d.any]).size >= 2;
+  if (complete || hasTwo) {
+    console.warn(`   ⚠️ refused extra parent claim: ${parentSlug} -> ${childSlug} (child already has two parents)`);
+    return true;
+  }
+  return false;
+}
+
 const SELF_DECLARED_PARENT = new Set();
 for (const p of people) {
   for (const rel of p.relationships || []) {
@@ -938,17 +1039,35 @@ for (const person of people) {
           // If the target has declared BOTH parents itself and neither is the
           // source, this claim is a same-name collision. Refuse it.
           {
-            const target = slugToPerson.get(sourceSlug);
-            const declared = (target?.relationships || [])
+            // ── THE HOLE (found 2026-11-06) ────────────────────────────────
+            // `target` was read from slugToPerson.get(sourceSlug) — the CLAIMANT —
+            // while the message called it `target` and the whole block was meant to
+            // judge the CHILD. The lookup was right for "does the claimant declare
+            // its own parents" and wrong for "does the claim contradict the child's
+            // own record". Kept correct here and made explicit.
+            const claimant = slugToPerson.get(sourceSlug);
+            const claimantDeclared = (claimant?.relationships || [])
               .filter(r => ['father', 'mother', 'parent', 'parents'].includes(String(r.type || '').toLowerCase()))
               .flatMap(r => r.names || [])
               .map(n => resolveNameToSlug(n, sourceSlug))
               .filter(Boolean);
-            if (declared.length >= 2 && !declared.includes(targetSlug) &&
+            if (claimantDeclared.length >= 2 && !claimantDeclared.includes(targetSlug) &&
                 SELF_DECLARED_PARENT.has(sourceSlug)) {
-              console.warn(`   ⚠️ refused outgoing parent claim: ${sourceSlug} -> ${targetSlug} (declares ${declared.join(', ')})`);
+              console.warn(`   ⚠️ refused outgoing parent claim: ${sourceSlug} -> ${targetSlug} (declares ${claimantDeclared.join(', ')})`);
               break;
             }
+          }
+          // ── A CHILD'S OWN PARENTAGE OUTRANKS A PARENT'S CHILD LIST (2026-11-06) ──
+          // This case is "source declares target as its FATHER/MOTHER" — so the
+          // source (child) is stating its own parentage, and the target is the
+          // parent. If the CHILD already names parents in the SAME SLOT and this
+          // target is not among them, the claim is a same-name collision across
+          // generations and must be refused. Reported by the 03:00 audit as
+          // "refused incoming parent claim: francis-adam-telfer-1875 -> millicent-telfer"
+          // — a child list bound a man to a granddaughter who already names her own
+          // father. `Martha (Cameron)` was the same class of defect.
+          if (refusesContradictedParentClaim(sourceSlug, targetSlug, rel.type)) {
+            break;
           }
           addParentChild(targetSlug, sourceSlug);
           resolved++;
@@ -993,23 +1112,28 @@ for (const person of people) {
             resolved++;
             break;
           }
-          // SELF-DECLARATION WINS (2026-09-22, card tw-2026-09-22-011). If the target
-          // already declares its own parents, an INCOMING claim from this person's
-          // Children list must not overwrite that. It may still ADD itself when the
-          // target declares nothing or only one parent (a person can have two, and
-          // one side may simply not be recorded) — but where the target has declared
-          // BOTH parents and this person is neither, the claim is a same-name
-          // collision and is refused.
+          // SELF-DECLARATION WINS (2026-09-22, card tw-2026-09-22-011; tightened
+          // 2026-11-06). An incoming claim from this person's Children list must not
+          // overwrite the child's own record.
+          //
+          // The old version is why Ronald Telfer (1898–1898) has been published with
+          // THREE parents since 4 October 2026. It counted declared parents and only
+          // refused at two, so an infant whose only recorded parent was his Mother
+          // (Maria Clara) was wide open: Francis Adam Telfer and Clara Dunn — his
+          // grandparents' generation — walked in and stayed. Counting to two treats a
+          // gap in the record as permission to fill it. It is not permission.
+          //
+          // Nor can the claimant's sex decide the slot: `gender` is undefined on
+          // Francis, Clara and every flat-schema profile in this vault, so the
+          // father/mother discrimination this block once attempted never fired.
+          //
+          // What is actually knowable is the record: if the child's parent slots are
+          // already FULL, the claim is a same-name collision across generations.
+          // `refusesContradictedParentClaim` decides that from names alone.
           {
-            const target = slugToPerson.get(targetSlug);
-            const declared = (target?.relationships || [])
-              .filter(r => ['father', 'mother', 'parent', 'parents'].includes(String(r.type || '').toLowerCase()))
-              .flatMap(r => r.names || [])
-              .map(n => resolveNameToSlug(n, targetSlug))
-              .filter(Boolean);
-            if (declared.length >= 2 && !declared.includes(sourceSlug) &&
-                SELF_DECLARED_PARENT.has(targetSlug)) {
-              console.warn(`   ⚠️ refused incoming parent claim: ${sourceSlug} -> ${targetSlug} (target declares ${declared.join(', ')})`);
+            const childSlugForClaim = targetSlug;
+            const parentSlugForClaim = sourceSlug;
+            if (refusesContradictedParentClaim(childSlugForClaim, parentSlugForClaim, rel.type)) {
               break;
             }
           }
@@ -1376,6 +1500,34 @@ function carryUnresolved(person, field, rebuilt, keepResolvedSlugs = false) {
     typeof ref === 'string' && ref.trim() &&
     (keepResolvedSlugs ? !rebuiltSet.has(ref) : (RAW_REF(ref) && !rebuiltSet.has(ref)))
   );
+  // ── A RAW NAME THAT RESOLVES TO A SLUG ALREADY PRESENT IS A DUPLICATE ──────
+  // (added 2026-11-06)
+  //
+  // The vault names a mother "Martha Clara Henstridge"; her profile is
+  // "Martha Henstridge". The edge builder resolves that correctly to
+  // `martha-henstridge-1854` and rebuilds the parent list with it. The raw string
+  // is then carried back in as an "unresolved" entry because it is not a slug and
+  // `duplicateOfPresentSlug()` only ran on refs the caller already considered kept.
+  // Result: eleven children of John Telfer (1840) were published with THREE
+  // parents — the same woman twice. That was live before this change.
+  //
+  // Resolve the raw name the same way the edge builder does, and drop it when it
+  // lands on a slug this list already contains. It changes nothing about genuine
+  // gaps: a name that resolves to nobody still stays.
+  {
+    const usable = [];
+    for (const ref of kept) {
+      if (RAW_REF(ref)) {
+        try {
+          const resolved = resolveNameToSlug(ref, person.slug);
+          if (resolved && rebuiltSet.has(resolved)) continue;   // already present as its own person
+        } catch { /* resolver refusal is not a reason to drop the name */ }
+      }
+      usable.push(ref);
+    }
+    kept.length = 0;
+    kept.push(...usable);
+  }
   if (kept.length === 0) return rebuilt;
   // Preserve any raw name the rebuilt list does not already contain, keeping the
   // vault's original order for the raw entries after the resolved ones.

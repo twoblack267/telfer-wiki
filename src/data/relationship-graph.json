@@ -3292,19 +3292,23 @@
     },
     {
       "slug": "byril-paynter",
-      "id": "Byril Marjorie Paynter (1924)"
+      "id": "Byril Marjorie Paynter (1924)",
+      "generation": 7
     },
     {
       "slug": "caroline-scriven",
-      "id": "Caroline Large Scriven (1886)"
+      "id": "Caroline Large Scriven (1886)",
+      "generation": 6
     },
     {
       "slug": "monica-paynter",
-      "id": "Monica Scriven Paynter (1914)"
+      "id": "Monica Scriven Paynter (1914)",
+      "generation": 7
     },
     {
       "slug": "walter-gregurke",
-      "id": "Walter George Gregurke (1882)"
+      "id": "Walter George Gregurke (1882)",
+      "generation": 6
     }
   ],
   "edges": {
