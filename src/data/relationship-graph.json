@@ -3289,6 +3289,22 @@
       "slug": "jean-telfer",
       "id": "Jean Burton Telfer (1905)",
       "generation": 6
+    },
+    {
+      "slug": "byril-paynter",
+      "id": "Byril Marjorie Paynter (1924)"
+    },
+    {
+      "slug": "caroline-scriven",
+      "id": "Caroline Large Scriven (1886)"
+    },
+    {
+      "slug": "monica-paynter",
+      "id": "Monica Scriven Paynter (1914)"
+    },
+    {
+      "slug": "walter-gregurke",
+      "id": "Walter George Gregurke (1882)"
     }
   ],
   "edges": {
@@ -6788,6 +6804,22 @@
       {
         "from": "james-robert-telfer-1866",
         "to": "jean-telfer"
+      },
+      {
+        "from": "frederick-albert-paynter",
+        "to": "byril-paynter"
+      },
+      {
+        "from": "mildred-mary-mahar",
+        "to": "byril-paynter"
+      },
+      {
+        "from": "caroline-scriven",
+        "to": "monica-paynter"
+      },
+      {
+        "from": "walter-gregurke",
+        "to": "monica-paynter"
       }
     ],
     "spouseOf": [
@@ -7310,6 +7342,10 @@
       {
         "from": "elizabeth-smith-farrow",
         "to": "joseph-farrow-1814"
+      },
+      {
+        "from": "kenneth-paynter",
+        "to": "monica-paynter"
       },
       {
         "from": "frederick-albert-paynter",
@@ -11396,6 +11432,18 @@
       {
         "from": "jean-telfer",
         "to": "leslie-robert-telfer"
+      },
+      {
+        "from": "byril-paynter",
+        "to": "colin-paynter-1919"
+      },
+      {
+        "from": "byril-paynter",
+        "to": "john-paynter-1921"
+      },
+      {
+        "from": "byril-paynter",
+        "to": "kenneth-paynter"
       }
     ],
     "stepParentOf": [

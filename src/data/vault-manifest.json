@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-06T03:00:32+10:00",
+  "generated_at": "2026-11-06T05:15:36+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 676,
+  "count": 680,
   "kinds": {
-    "real": 658,
+    "real": 662,
     "redirect": 18,
     "empty": 0
   },
@@ -336,6 +336,10 @@
       "sha256": "5a84df1c05ca8a08b24aae2dbf094ed1fcc55ad9417e14e844dc6601331fa2d6",
       "kind": "real"
     },
+    "Byril Marjorie Paynter (1924\u2013).md": {
+      "sha256": "90566035b9aeb1b8dfacf4cc37a13cdbf408ee6020fba17bb9a8618186b7419b",
+      "kind": "real"
+    },
     "Cameron Stephen Bates (b. 1983).md": {
       "sha256": "56fffe10acdbf75d4dbda9d4b69ff96330880c671e060fb6ff0a9153de1a13a4",
       "kind": "real"
@@ -366,6 +370,10 @@
     },
     "Caroline Hosking (1851\u20131920).md": {
       "sha256": "1d81e3a4912d43ea99ecc3d2df8e3582e7479f776f5393d10449de874a72e8e2",
+      "kind": "real"
+    },
+    "Caroline Large Scriven (1886\u20131978).md": {
+      "sha256": "6ef05bcc3fb70393240a561f78e55f696408f31b81c98208e7d6f0529d437cf8",
       "kind": "real"
     },
     "Carolyn Marie Lawrie (b. 1970).md": {
@@ -1621,7 +1629,7 @@
       "kind": "real"
     },
     "Kenneth James Paynter (1919).md": {
-      "sha256": "bb4b645d912011e05da9329a5480664eabd7d3ca82dfe6a42a8782ecf7fb64f9",
+      "sha256": "fff21b0add6017df9b3dbb55d2ad73750bc007d8a04b7a0b2455765edc7e84c4",
       "kind": "real"
     },
     "Kenneth James Pedler (1959).md": {
@@ -2062,6 +2070,10 @@
     },
     "Mitchell Telfer (2008).md": {
       "sha256": "49960e1e65dafc0264eb831a666fbf69f964fc71e5c632dcac262f45821a458f",
+      "kind": "real"
+    },
+    "Monica Scriven Paynter (1914\u20132002).md": {
+      "sha256": "10a73c88685959ae694610c33202fe42a104528a3ef52b911eb04b49a96d3c2a",
       "kind": "real"
     },
     "Morris John Telfer (b. 1937).md": {
@@ -2614,6 +2626,10 @@
     },
     "Walter Baker (1865\u20131937).md": {
       "sha256": "f8abc58f83ed55a89f27d013e750cdf3f6a360ae58632f5540720e0a9293d0f3",
+      "kind": "real"
+    },
+    "Walter George Gregurke (1882\u20131962).md": {
+      "sha256": "c856674b20c95961bdb3f7d7e3c9fde4c7c7e801c3901dd68343919434a9e0e7",
       "kind": "real"
     },
     "Walter John Hookings (1881\u20131962).md": {
