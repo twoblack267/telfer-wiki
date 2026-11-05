@@ -26,13 +26,28 @@
  * invisibly. The vault is a git repo; every signature has a dated commit.
  *
  * ── USAGE ─────────────────────────────────────────────────────────────────
- *   node scripts/sign-page.mjs william-telfer-1802              # sign today
- *   node scripts/sign-page.mjs william-telfer-1802 --date 2026-11-05
- *   node scripts/sign-page.mjs --list                            # what is signed
- *   node scripts/sign-page.mjs william-telfer-1802 --unsign      # retract
+ *   node scripts/sign-page.mjs <slug> --by "Reviewer Name"   # an INDEPENDENT reviewer
+ *   node scripts/sign-page.mjs --list                        # what is signed
+ *   node scripts/sign-page.mjs <slug> --unsign                # retract
+ *
+ * ── THE RULE THAT MAKES THIS WORTH ANYTHING ───────────────────────────────
+ * Mark cannot sign his own pages. He owned that himself: "even though I
+ * haven't signed as an author I really am the author... it would just be me
+ * lying to myself." He is right. A signature means a second pair of eyes
+ * checked the work; where there is no second pair, printing one is a lie with
+ * a name attached.
+ *
+ * So this tool REQUIRES --by, and REFUSES the compiler's own name. It will
+ * also refuse "Skippy" or any AI attribution: the thing that generated these
+ * records cannot certify them — both hands would be the same hands, and
+ * anyone who inspected the site would rightly stop trusting the signature.
+ *
+ * What an honest sole-author archive publishes instead is PROVENANCE — who
+ * compiled it, when, and against what — which the page footer already states.
+ * Signing is for the day someone else genuinely checks the work.
  *
  * Deliberately NO bulk mode. There is no `--all`, and that is on purpose:
- * reviewing 652 pages is not one decision, and a tool that signs them in one
+ * reviewing 652 pages is not one decision, and a tool that signed them in one
  * command would turn the only real trust signal on the site into a lie.
  */
 import fs from "node:fs";
@@ -140,10 +155,36 @@ if (!m) {
 }
 
 const unsign = flags.has("--unsign");
+const byArg = (() => {
+  const i = args.indexOf("--by");
+  return i >= 0 ? (args[i + 1] || "").trim() : "";
+})();
+const COMPILER = "Mark Telfer";
+// Anything that is not an independent human. Refusing these is the whole point.
+const NOT_A_REVIEWER = [/^mark\s*telfer$/i, /^skippy/i, /\bai\b/i, /\bbot\b/i, /language model/i, /^hermes/i];
 
 // ── validate the date before touching anything ──
 let when = null;
 if (!unsign) {
+  if (!byArg) {
+    console.error(
+      `❌ --by is required.\n` +
+        `   A signature means someone OTHER than the compiler checked this page.\n` +
+        `   If that person is you, there is no signature to make — the page already\n` +
+        `   states who compiled it and when (that is provenance, and it is honest).`
+    );
+    process.exit(1);
+  }
+  if (NOT_A_REVIEWER.some((re) => re.test(byArg))) {
+    console.error(
+      `❌ "${byArg}" cannot sign this page.\n` +
+        `   The compiler cannot certify their own work, and a machine that generates\n` +
+        `   the records cannot certify them either — both hands would be the same hands.\n` +
+        `   This is the one claim an evidence archive must never fake.`
+    );
+    process.exit(1);
+  }
+
   when = dateArg || new Date().toISOString().slice(0, 10);
   const d = new Date(when);
   if (Number.isNaN(d.getTime())) {
@@ -159,8 +200,9 @@ if (!unsign) {
 }
 
 let block = fm;
-block = setFmField(block, "reviewed_by", unsign ? null : "Mark Telfer");
+block = setFmField(block, "reviewed_by", unsign ? null : byArg);
 block = setFmField(block, "reviewed_on", unsign ? null : when);
+block = setFmField(block, "reviewer_is_compiler", null); // this tool never signs the compiler
 
 const updated = text.replace(/^---\r?\n[\s\S]*?\r?\n---/, `---\n${block}\n---`);
 fs.writeFileSync(path.join(VAULT, found.file), updated);
@@ -168,7 +210,7 @@ fs.writeFileSync(path.join(VAULT, found.file), updated);
 console.log(
   unsign
     ? `🔓 Retracted signature on ${found.person.first_name} ${found.person.last_name} (${slug})`
-    : `✍️  Signed ${found.person.first_name} ${found.person.last_name} (${slug}) — reviewed by Mark Telfer on ${when}`
+    : `✍️  Signed ${found.person.first_name} ${found.person.last_name} (${slug}) — reviewed by ${byArg} on ${when}`
 );
 console.log(`   vault: ${found.file}`);
 console.log("   next: npm run build  (regenerates signoff.json and the page schema)");

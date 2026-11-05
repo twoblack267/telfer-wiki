@@ -122,6 +122,13 @@ if (fs.existsSync(VAULT)) {
     signoff[slug] = {
       reviewed_by: fm.reviewed_by,
       reviewed_on: fm.reviewed_on,
+      // Flag rather than silently drop: a vault note carrying the compiler's
+      // own name is a mistake worth SEEING in the ledger and in the build
+      // warning. The page also refuses to emit it, so one guard failing does
+      // not become a false claim on 652 pages.
+      ...(/^mark\s*telfer$/i.test(fm.reviewed_by) || /^skippy/i.test(fm.reviewed_by)
+        ? { reviewer_is_compiler: true }
+        : {}),
       ...(fm.reviewed_note ? { note: fm.reviewed_note } : {}),
     };
   }

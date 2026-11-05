@@ -172,9 +172,19 @@ if (checked < MIN_EXPECTED) {
 
   const signedSlugs = Object.keys(ledger);
   let ok = 0;
+  const SELF = [/^mark\s*telfer$/i, /^skippy/i, /\bai\b/i, /\bbot\b/i, /language model/i, /^hermes/i];
 
   for (const slug of signedSlugs) {
     const rec = ledger[slug] || {};
+    // The compiler naming himself is not a review, it is a self-award. It must
+    // never reach a page — and if it is sitting in the ledger, that is a fault
+    // worth failing on rather than quietly skipping.
+    if (SELF.some((re) => re.test(rec.reviewed_by || ""))) {
+      fail.push(
+        `SELF-SIGNATURE in signoff.json: ${slug} reviewed_by "${rec.reviewed_by}" — the compiler cannot certify their own work`
+      );
+      continue;
+    }
     const file = path.join(process.cwd(), "dist/people", slug, "index.html");
 
     if (!rec.reviewed_by || !rec.reviewed_on) {

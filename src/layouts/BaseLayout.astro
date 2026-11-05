@@ -118,6 +118,14 @@ const verifiedMap: Record<string, { by: string; on: string }> = (() => {
 })();
 
 const verifiedEntry = personSlugMatch ? verifiedMap[personSlugMatch[1]] : undefined;
+// A signature only means something if the signer is not the compiler. Both
+// ledgers can carry the compiler's own name (an old vault note, a hand-edited
+// file, a bad merge); neither may render as a review. Guarded here so the
+// footer cannot print a second pair of eyes that does not exist.
+const SELF_NAMES = [/^mark\s*telfer$/i, /^skippy/i, /\bai\b/i, /\bbot\b/i, /language model/i, /^hermes/i];
+const isSelfSignature = Boolean(
+  verifiedEntry?.by && SELF_NAMES.some((re) => re.test(verifiedEntry.by))
+);
 const verifiedDate = verifiedEntry?.on
   ? new Date(verifiedEntry.on + "T00:00:00+10:00").toLocaleDateString("en-AU", {
       day: "numeric",
@@ -662,12 +670,23 @@ function navIsActive(entry: { href: string; match: string }): boolean {
             {ownDate ? "Last revision" : "Archive last revised"}: <time datetime={revisionIso}>{revisionDate}</time>
           </p>
         )}
-        {/* Human signature — present ONLY when the vault frontmatter carries
-            verified_by + verified_on for this person. No default, no fallback,
-            no nightly stamp. Added 2026-11-05. */}
-        {verifiedEntry && (
+        {/* Provenance (settled 2026-11-05). This REPLACES the old
+            "Reviewed and verified by X" line, which claimed a second pair of
+            eyes that does not exist. Mark owns this archive alone, and saying
+            so is stronger than a badge: a compiler who states their method
+            invites checking, while a self-awarded stamp invites suspicion.
+
+            The signature slot stays, but it now fires ONLY for an INDEPENDENT
+            reviewer — someone whose name is not the compiler's. Until that day
+            it renders nothing at all, which is the truth. */}
+        <p class="text-xs mt-1 opacity-80">
+          Compiled and checked against its sources by <strong>Mark Telfer</strong>
+          {" · "}
+          <a href={import.meta.env.BASE_URL + "contact/"} class="underline decoration-dotted underline-offset-2 hover:text-[var(--color-accent)]">corrections welcome</a>
+        </p>
+        {verifiedEntry && !isSelfSignature && (
           <p class="text-xs mt-1 opacity-80" data-verified-by={verifiedEntry.by}>
-            Reviewed and verified by <strong>{verifiedEntry.by}</strong> on{" "}
+            Independently checked by <strong>{verifiedEntry.by}</strong> on{" "}
             <time datetime={verifiedEntry.on}>{verifiedDate}</time>
           </p>
         )}

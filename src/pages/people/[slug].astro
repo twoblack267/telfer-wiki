@@ -325,6 +325,9 @@ const signoff = (await import("../../data/signoff.json")).default as
   | undefined;
 // The archive speaks as a project, not as a person. Used in `creator`.
 const ARCHIVE_NAME = "Telfer Family History Archive";
+// Who compiles this archive. Named as a `contributor` — someone who worked on
+// the page — never as an author and never as a reviewer. Honest and modest.
+const compiledBy = "Mark Telfer";
 function formatGitDate(iso: unknown): string {
   if (typeof iso !== "string" || !iso) return "";
   const d = new Date(iso);
@@ -1391,51 +1394,66 @@ const personSchema = {
       !Number.isNaN(new Date(lastmod.people[person.slug]).getTime())
     ? { dateModified: new Date(lastmod.people[person.slug]).toISOString() }
     : {}),
-  // ── ATTRIBUTION (revised 2026-11-05) ────────────────────────────────────
-  // Mark rejected "author: Mark Telfer". His objection, and it is correct:
-  // he did not write these biographies, and a personal author byline on 652
-  // pages he did not author is a claim about authorship that is not true.
-  // Overclaiming is exactly the kind of thing that erodes trust — and it
-  // looked like a pat on his own back, which an archive should never do.
+  // ── ATTRIBUTION (settled 2026-11-05, second pass) ───────────────────────
+  // History, because the reasoning matters more than the code:
+  //   1. `author: Mark Telfer` — rejected. He did not write 652 biographies;
+  //      a personal byline on pages he did not author is a false claim.
+  //   2. `reviewedBy: Mark Telfer` — also rejected, and he was right again.
+  //      "Reviewed" implies a second pair of eyes. There is no second pair.
+  //      Signing himself would be a rubber stamp with his own face on it.
+  //      He caught the flaw while building the tool that would have applied
+  //      it 652 times, which is a better instinct than most publishers have.
+  //   3. THIS. The archive is a sole-author work. So the page states its
+  //      PROVENANCE rather than manufacturing a reviewer:
+  //        creator       = the archive (Organization) — what made the page
+  //        dateModified  = when it last changed
+  //        reviewedBy    = stays EMPTY until a person other than the
+  //                        compiler actually signs. Mark may sign, but only
+  //                        the day someone else genuinely checks a page.
   //
-  // The true claim is narrower: THE ARCHIVE publishes, and a human REVIEWS.
-  // So:
-  //   creator   = the archive as a project (Organization) — who made the page
-  //   reviewedBy = Mark Telfer, ONLY when a sign-off record exists for this
-  //                page. No record, no claim. Silence is honest; a stamp we
-  //                cannot evidence is not.
+  // Why not invent a reviewer name: a false signature is exactly as damaging
+  // as a false citation, and it is the one thing an evidence archive must
+  // never print. Why not have the machine sign: the thing that generated the
+  // records cannot certify them — both hands would be the same hands.
   //
-  // schema.org `reviewedBy` is defined as "People or organizations that have
-  // reviewed the content on this web page for accuracy and/or completeness".
-  // That is precisely the relationship. It is NOT in Google's Search Gallery,
-  // so it earns no rich result — its value is entity/trust signal (Google's
-  // AI Mode uses structured data for claim verification), not rankings.
+  // What is honest instead is visible: the footer names the compiler and the
+  // date, and the correction log turns strangers into the reviewer the
+  // project does not have. Provenance, not a stamp.
   creator: {
     "@type": "Organization",
     name: ARCHIVE_NAME,
     url: "https://telferwiki.com/",
   },
+  // A compiler field, so the machine block names WHO maintained this page
+  // without claiming they checked someone else's work.
+  ...(compiledBy
+    ? { contributor: { "@type": "Person", name: compiledBy, url: "https://telferwiki.com/about/" } }
+    : {}),
   ...(() => {
     // Defence in depth: gen-signoff.mjs already refuses future/half
     // signatures at the source, but the PAGE must not trust the ledger it is
     // handed. A ledger edited by hand, merged from a bad branch, or produced
     // by a future version of the generator must not be able to make the site
     // claim a review that has not happened. Validate again, here.
+    //
+    // NOTE: empty by design. This only ever fires for an INDEPENDENT
+    // reviewer — see the self-signature guard in sign-page.mjs.
     const rec = signoff?.[person.slug];
     if (!rec || !rec.reviewed_by) return {};
+    if (rec.reviewer_is_compiler) return {}; // never certify your own work
     const when = Date.parse(rec.reviewed_on);
     if (Number.isNaN(when) || when > Date.now()) return {};
     return {
       reviewedBy: {
         "@type": "Person",
         name: rec.reviewed_by,
-        url: "https://telferwiki.com/about/",
+        ...(rec.reviewer_url ? { url: rec.reviewer_url } : {}),
         reviewDate: rec.reviewed_on,
       },
     };
   })(),
-  // No `isPartOf`/publisher: this archive's maintainer and its publisher are
-  // the same person, and inventing an organisation would be a claim we cannot
+  // No `publisher`: this archive's compiler and its publisher are the same
+  // person, and inventing an organisation would be a claim we cannot
   // evidence. One name, one URL, both true.
 };
 

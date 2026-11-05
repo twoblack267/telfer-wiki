@@ -47,7 +47,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
-const VAULT_DIR = "/Users/marktelfer/ObsidianVault";
+const VAULT_DIR = process.env.VAULT_DIR || "/Users/marktelfer/ObsidianVault";
 const VAULT_PEOPLE_DIR = "Family History/People";
 const OUT = resolve(ROOT, "src/data/verified.json");
 const PEOPLE = resolve(ROOT, "src/data/people.public.json");
