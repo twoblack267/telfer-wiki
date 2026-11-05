@@ -540,7 +540,24 @@ function navIsActive(entry: { href: string; match: string }): boolean {
       nav a.nav-link{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .6rem;border-radius:.5rem;text-decoration:none;
         color:var(--nav-ink);font-size:.875rem;letter-spacing:.01em}
       nav a.nav-link:hover{color:var(--nav-ink-hover);background:var(--color-surface)}
-      nav a.nav-link.active{color:var(--nav-ink);background:var(--color-surface)}
+      /* ACTIVE STATE — fixed 2026-11-05. Mark: "I press a button it stays on as
+         a different colour when I go back."
+         What was actually wrong, measured rather than guessed: this rule and the
+         page-scoped `.nav-link.active` below were fighting, and the computed
+         result was that the active link matched its inactive neighbours EXACTLY
+         — bg rgba(0,0,0,0), colour rgb(138,27,59), weight 400, border 0px on
+         both. The menu told him nothing about where he was.
+         The highlight is now a left bar in --color-highlight (#df8e1d) plus the
+         surface fill, and it is declared on `nav a.nav-link.active` so it
+         outranks `nav a.nav-link` instead of losing to it on specificity. */
+      nav a.nav-link.active{color:var(--nav-ink);background:var(--color-surface);
+        border-left:3px solid var(--color-highlight);font-weight:600}
+      @media(min-width:1024px){
+        /* Desktop sits in a horizontal row — a left bar there reads as a
+           misalignment, so it keeps the underline (see page-scoped .nav-link
+           ::after rules) and drops the bar. */
+        nav a.nav-link.active{border-left:0;font-weight:600}
+      }
       @media(max-width:1023px){
         svg.nav-ico{width:24px;height:24px}
         nav a.nav-link{gap:.65rem;padding:.6rem .75rem;justify-content:flex-start}
@@ -1371,17 +1388,31 @@ function navIsActive(entry: { href: string; match: string }): boolean {
   }
   .timeline-line:last-child::before { display: none; }
 
+  /* The active underline is absolutely positioned, so its containing block has
+     to be the link itself. Without `position:relative` here the ::after sought
+     the nearest positioned ANCESTOR and the 2px bar was drawn under the wrong
+     element (or off the row entirely) whenever a parent happened to be
+     positioned. Fixed 2026-11-05. */
+  .nav-link { position: relative; }
   .nav-link.active { color: var(--color-heading); font-weight: 600; }
   .nav-link.active::after {
     content: ""; position: absolute; bottom: -2px; left: 0; right: 0;
     height: 2px; background: var(--color-highlight);
   }
 
-  /* Mobile nav: active state with background instead of underline */
-  @media (max-width: 767px) {
+  /* Mobile nav: active state with background instead of underline.
+     Breakpoint fixed 2026-11-05. This rule used to fire at max-width:767px,
+     while the drawer itself only exists below lg (1024px) — the toggle is
+     hidden at `@media(min-width:1024px)`. In the 768–1023px band, which is a
+     phone in landscape and every small tablet, the drawer was the ONLY
+     navigation on the page and the active item got no highlight at all: he
+     opened the menu and could not tell where he was. Match the drawer's own
+     breakpoint so the two cannot disagree. */
+  @media (max-width: 1023px) {
     .nav-link.active {
       background-color: var(--color-surface);
       border-left: 3px solid var(--color-highlight);
+      font-weight: 600;
     }
     .nav-link.active::after {
       display: none;
