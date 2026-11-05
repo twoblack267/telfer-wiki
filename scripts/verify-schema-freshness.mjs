@@ -121,8 +121,15 @@ for (const file of pages) {
   }
   withDate++;
 
-  if (!ld.author || !ld.author.name) {
-    fail.push(`NO author.name: ${rel}`);
+  // Attribution: the archive is the CREATOR (an Organization, not a person).
+  // Mark rejected a personal author byline — he did not write these pages, and
+  // a byline claiming he did was both untrue and self-congratulatory. Browser
+  // Check any personal `author` here: it means the construct has crept back.
+  if (!ld.creator || !ld.creator.name) {
+    fail.push(`NO creator.name: ${rel}`);
+  }
+  if (ld.author) {
+    fail.push(`personal 'author' byline present: ${rel} — the archive publishes, a human reviews`);
   }
 
   // Cross-check against the sitemap. Both are derived from lastmod.json, so a
@@ -142,6 +149,83 @@ if (checked < MIN_EXPECTED) {
   fail.push(
     `COVERAGE COLLAPSE: only ${checked} person pages checked, expected >= ${MIN_EXPECTED}. ` +
       `A gate that checks nothing passes everything.`
+  );
+}
+
+// ── SIGNATURE INTEGRITY (added 2026-11-05) ────────────────────
+// reviewedBy is the only human claim on the page, so it gets the strictest
+// check: every signature in the ledger must appear on its page, with a real
+// reviewer name and a date that is not in the future. A signature that is
+// silently dropped is worse than one never made — it means the page LOOKS
+// unattended while the vault says a human reviewed it.
+{
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  let ledger = {};
+  try {
+    ledger = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), "src/data/signoff.json"), "utf-8")
+    );
+  } catch {
+    ledger = {};
+  }
+
+  const signedSlugs = Object.keys(ledger);
+  let ok = 0;
+
+  for (const slug of signedSlugs) {
+    const rec = ledger[slug] || {};
+    const file = path.join(process.cwd(), "dist/people", slug, "index.html");
+
+    if (!rec.reviewed_by || !rec.reviewed_on) {
+      fail.push(`signoff.json: ${slug} has an incomplete record`);
+      continue;
+    }
+    const when = Date.parse(rec.reviewed_on);
+    if (Number.isNaN(when)) {
+      fail.push(`signoff.json: ${slug} reviewed_on "${rec.reviewed_on}" is not a date`);
+      continue;
+    }
+    if (when > Date.now()) {
+      fail.push(`signoff.json: ${slug} reviewed_on ${rec.reviewed_on} is IN THE FUTURE`);
+      continue;
+    }
+    if (!fs.existsSync(file)) {
+      fail.push(`signature for a page that does not exist: /people/${slug}/`);
+      continue;
+    }
+
+    const html = fs.readFileSync(file, "utf-8");
+    if (!html.includes('"reviewedBy"')) {
+      fail.push(`signed but emits no reviewedBy: /people/${slug}/`);
+      continue;
+    }
+    if (!html.includes(rec.reviewed_by)) {
+      fail.push(`reviewedBy present but reviewer name missing: /people/${slug}/`);
+      continue;
+    }
+
+    // The byline claim Mark rejected must never come back.
+    const ld = html.match(/application\/ld\+json">([\s\S]*?)<\/script>/);
+    if (ld) {
+      try {
+        const parsed = JSON.parse(ld[1]);
+        const obj = Array.isArray(parsed) ? parsed[0] : parsed;
+        if (obj && obj.author) {
+          fail.push(
+            `personal 'author' byline is back on /people/${slug}/ — the archive publishes, a human reviews`
+          );
+        }
+      } catch {
+        /* JSON validity is checked elsewhere; do not double-report */
+      }
+    }
+    ok++;
+  }
+
+  console.log(
+    `   ✍️  signatures: ${ok}/${signedSlugs.length} verified on their page` +
+      (signedSlugs.length === 0 ? " (none claimed — honest)" : "")
   );
 }
 

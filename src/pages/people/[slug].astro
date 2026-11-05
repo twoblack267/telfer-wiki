@@ -318,6 +318,13 @@ const declaredOral = /no documentary source|family memory|no record is held|no d
 const lastmod = (await import("../../data/lastmod.json")).default as
   | { people?: Record<string, string> }
   | undefined;
+// Human sign-off ledger. Only pages named here may claim reviewedBy. Written
+// by scripts/sign-page.mjs; empty until Mark actually signs something.
+const signoff = (await import("../../data/signoff.json")).default as
+  | Record<string, { reviewed_by?: string; reviewed_on?: string; note?: string }>
+  | undefined;
+// The archive speaks as a project, not as a person. Used in `creator`.
+const ARCHIVE_NAME = "Telfer Family History Archive";
 function formatGitDate(iso: unknown): string {
   if (typeof iso !== "string" || !iso) return "";
   const d = new Date(iso);
@@ -1384,14 +1391,49 @@ const personSchema = {
       !Number.isNaN(new Date(lastmod.people[person.slug]).getTime())
     ? { dateModified: new Date(lastmod.people[person.slug]).toISOString() }
     : {}),
-  // Attribution that a genealogy archive actually needs: a named maintainer
-  // with a stable URL. Google uses this for authorship; AI engines use it to
-  // decide the page is human-maintained rather than auto-scraped.
-  author: {
-    "@type": "Person",
-    name: "Mark Telfer",
-    url: "https://telferwiki.com/about/",
+  // ── ATTRIBUTION (revised 2026-11-05) ────────────────────────────────────
+  // Mark rejected "author: Mark Telfer". His objection, and it is correct:
+  // he did not write these biographies, and a personal author byline on 652
+  // pages he did not author is a claim about authorship that is not true.
+  // Overclaiming is exactly the kind of thing that erodes trust — and it
+  // looked like a pat on his own back, which an archive should never do.
+  //
+  // The true claim is narrower: THE ARCHIVE publishes, and a human REVIEWS.
+  // So:
+  //   creator   = the archive as a project (Organization) — who made the page
+  //   reviewedBy = Mark Telfer, ONLY when a sign-off record exists for this
+  //                page. No record, no claim. Silence is honest; a stamp we
+  //                cannot evidence is not.
+  //
+  // schema.org `reviewedBy` is defined as "People or organizations that have
+  // reviewed the content on this web page for accuracy and/or completeness".
+  // That is precisely the relationship. It is NOT in Google's Search Gallery,
+  // so it earns no rich result — its value is entity/trust signal (Google's
+  // AI Mode uses structured data for claim verification), not rankings.
+  creator: {
+    "@type": "Organization",
+    name: ARCHIVE_NAME,
+    url: "https://telferwiki.com/",
   },
+  ...(() => {
+    // Defence in depth: gen-signoff.mjs already refuses future/half
+    // signatures at the source, but the PAGE must not trust the ledger it is
+    // handed. A ledger edited by hand, merged from a bad branch, or produced
+    // by a future version of the generator must not be able to make the site
+    // claim a review that has not happened. Validate again, here.
+    const rec = signoff?.[person.slug];
+    if (!rec || !rec.reviewed_by) return {};
+    const when = Date.parse(rec.reviewed_on);
+    if (Number.isNaN(when) || when > Date.now()) return {};
+    return {
+      reviewedBy: {
+        "@type": "Person",
+        name: rec.reviewed_by,
+        url: "https://telferwiki.com/about/",
+        reviewDate: rec.reviewed_on,
+      },
+    };
+  })(),
   // No `isPartOf`/publisher: this archive's maintainer and its publisher are
   // the same person, and inventing an organisation would be a claim we cannot
   // evidence. One name, one URL, both true.
