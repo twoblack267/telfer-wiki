@@ -250,10 +250,44 @@ const FOOTER_ONLY = [
   { href: "terms/",     label: "Terms" },
 ] as const;
 
-function navIsActive(entry: { href: string; match: string }): boolean {
+/**
+ * Which nav item is "current".
+ *
+ * Fixed 2026-11-05. Mark: "I press a button it stays on as a different colour
+ * when I go back". The old rule was `currentPath.startsWith(match)`, evaluated
+ * per item with no knowledge of the others, so parent and child both lit up:
+ * on /people/full-tree/ BOTH "People" and "Full Tree" were highlighted, and on
+ * /people/families/ BOTH "People" and "Families" were. The menu was telling him
+ * he was in two places at once.
+ *
+ * The fix is a single winner, not a filter: collect every item whose prefix
+ * matches and award the LONGEST match — the most specific destination. "People"
+ * loses to "Full Tree" on the full-tree page because that is genuinely where
+ * he is, and a parent section is not a location you can be standing in while
+ * also standing in its child.
+ */
+function navActiveMatch(): string {
   const base = import.meta.env.BASE_URL;
-  if (entry.href === "") return currentPath === base;
-  return currentPath.startsWith(base + entry.match);
+  const rest = currentPath.startsWith(base) ? currentPath.slice(base.length) : currentPath;
+  let best = null as null | { href: string; match: string };
+  for (const entry of NAV) {
+    if ((entry as { hidden?: boolean }).hidden) continue;
+    if (entry.href === "") {
+      if (rest === "" && !best) best = entry;
+      continue;
+    }
+    // Boundary-aware: "people/" must not match "peoplex/". The trailing slash
+    // on directory matches already prevents that, but timeline/search/ballads
+    // have none, so require either end-of-path or a "/" after the match.
+    const m = entry.match;
+    const hit = rest === m || rest === m + "/" || rest.startsWith(m + "/");
+    if (hit && (!best || m.length > best.match.length)) best = entry;
+  }
+  return best ? best.href : "";
+}
+
+function navIsActive(entry: { href: string; match: string }): boolean {
+  return navActiveMatch() === entry.href;
 }
 
 
@@ -658,8 +692,15 @@ function navIsActive(entry: { href: string; match: string }): boolean {
         </blockquote>
         <p class="font-serif italic mt-4">Telfer Wiki — a living family history archive. From the Scottish lowlands to the South Australian plains.</p>
         <p class="mt-1">
+          {/* Name count fixed 2026-11-05. Mark: "I had my name twice in the main
+              page". It was actually three times within one footer paragraph —
+              "compiled and maintained by Mark Telfer", then "Research,
+              transcription and site development by Mark Telfer", then the
+              provenance line "Compiled and checked against its sources by Mark
+              Telfer" a few lines below. Repeating a name does not strengthen a
+              claim, it just looks like someone padding a byline. The sentence
+              says it once; the provenance line below carries the method. */}
           Data sourced from the Telfer Family History archive, compiled and maintained by Mark Telfer.
-          <span class="text-xs">Research, transcription and site development by Mark Telfer.</span>
         </p>
         {/* Last revision — shown on every page (added 2026-11-03).
             The date is the vault file's own last GIT COMMIT, via lastmod.json,

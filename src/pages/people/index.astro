@@ -52,14 +52,32 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout
   title="People"
-  description={`Browse all ${telferPeople.length} profiles in the Telfer line — ${telferPeople.filter(p => p.is_deceased).length} with a recorded death and ${telferPeople.filter(p => !p.is_deceased).length} with no death record — from John Telfer of Castleton (b. 1731) to the present day. Part of the Telfer Family Wiki.`}
+  description={`Browse all ${telferPeople.length} profiles in the Telfer line — ${telferPeople.filter(p => p.is_deceased).length} with a death date and ${telferPeople.filter(p => !p.is_deceased).length} without one — from John Telfer of Castleton (b. 1731) to the present day. Part of the Telfer Family Wiki.`}
 >
   <div class="page-header">
     <h1>All People</h1>
+    {/* Counting fixed 2026-11-05. These numbers used to contradict each other
+        on the same line: "652 profiles ... 369 with a recorded death ... 45
+        awaiting a date", while the filter counter inches below said "607
+        shown". A reader doing arithmetic gets 369 + 45 = 414 against a total
+        of 652 and concludes the archive cannot count its own records.
+
+        Cause: two different measures wearing one label. "Awaiting a date"
+        counted people with NO year of either kind (45), while the filter of
+        that same name groups everyone WITHOUT a death date (283). Same phrase,
+        two meanings, printed centimetres apart.
+
+        Now every number states exactly what it counts, and the two main ones
+        add up: 652 = 369 with a death date + 283 without. */}
     <p class="text-[var(--color-ink-light)] mt-2">
       {telferPeople.length} profiles in the Telfer line
-      &nbsp;·&nbsp; <span>{telferPeople.filter(p => p.is_deceased).length} with a recorded death</span>
-      &nbsp;·&nbsp; <span class="text-[var(--color-muted)]">{unknownPeople.length} awaiting a date</span>
+      &nbsp;·&nbsp; <span>{telferPeople.filter(p => p.is_deceased).length} with a death date</span>
+      &nbsp;·&nbsp; <span class="text-[var(--color-muted)]">{telferPeople.filter(p => !p.is_deceased).length} without one</span>
+      {unknownPeople.length > 0 && (
+        <>
+          &nbsp;·&nbsp; <span class="text-[var(--color-muted)]">{unknownPeople.length} with no dates at all</span>
+        </>
+      )}
     </p>
   </div>
 
@@ -101,8 +119,8 @@ const base = import.meta.env.BASE_URL;
       <span class="filter-label">Show:</span>
       <a href={base + "people/"} data-filter-status="all" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Everyone</a>
       <a href={base + "people?status=recorded"} data-filter-status="recorded" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">With a recorded death</a>
-      <a href={base + "people?status=awaiting"} data-filter-status="awaiting" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">Awaiting a date</a>
-      <span class="filter-count"><span id="filter-count">{knownPeople.length}</span> shown</span>
+      <a href={base + "people?status=awaiting"} data-filter-status="awaiting" class="filter-btn text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] no-underline text-[var(--color-ink-light)] hover:border-[var(--color-burgundy)] transition-colors">No death date</a>
+      <span class="filter-count"><span id="filter-count">{knownPeople.filter(p => p.is_deceased).length}</span><span id="filter-count-label"> with a death date shown</span></span>
     </div>
     <div class="filter-group">
       <span class="filter-label">Sort:</span>
@@ -250,9 +268,20 @@ const base = import.meta.env.BASE_URL;
       });
       visible.forEach(el => list.appendChild(el));
 
-      // Update count
+      // Update count. The label is dynamic because the number means different
+      // things per filter, and a static "N shown" was claiming 607 while the
+      // recorded filter displayed 347 — the label and the list disagreed.
       const totalSpan = document.getElementById('filter-count');
-      if (totalSpan) totalSpan.textContent = visible.length;
+      const countLabel = document.getElementById('filter-count-label');
+      if (totalSpan) {
+        totalSpan.textContent = visible.length;
+        if (countLabel) {
+          countLabel.textContent =
+            status === 'recorded' ? ' with a death date shown'
+            : status === 'awaiting' ? ' without a death date shown'
+            : ' shown';
+        }
+      }
 
       // Highlight active buttons
       document.querySelectorAll('.filter-btn').forEach(btn => {
