@@ -109,6 +109,25 @@ jobs:
           path: dist
   deploy:
     needs: build
+    # SERIALISE THE PAGES DEPLOYMENT (added 2026-11-06).
+    # The workflow-level group above is per-SHA, so two pushes to main are two
+    # groups and run this deploy job in PARALLEL. GitHub Pages allows only ONE
+    # deployment in flight per repo, so parallel deploys produce one of two reds:
+    #   - HTTP 400 "Deployment request failed ... in progress deployment"
+    #     (run 42170366266, sha d5cf45f, rejected because 98d84cf was in flight)
+    #   - deploy-pages creates its deployment, polls an EMPTY status for 10 min,
+    #     then cancels it (runs 41903304854, 42169876787).
+    # A fixed group makes deploy jobs QUEUE instead of collide.
+    # cancel-in-progress: false because the build already cost ~2 min — killing a
+    # queued deploy only to start an identical one is waste. Safe to queue because
+    # this job is short (checkout + deploy + purge, ~1-2 min); the 40-minute
+    # backlog the old serialised group caused came from verify-live, which is NOT
+    # in this group.
+    concurrency:
+      group: pages-deploy
+      cancel-in-progress: false
+    # deploy-pages has its own 10-minute internal poll timer; this is a backstop.
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     environment:
       name: github-pages
