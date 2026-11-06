@@ -264,6 +264,34 @@ echo "==> Step 5/5: regenerate people.public.json (sanitize from people.json)"
 # MUST run sanitize, else people.public.json (what the site renders) stays stale.
 node scripts/sanitize-people.mjs
 
+echo "==> Step 5b/5: RELATIONSHIP INTEGRITY GATE (added 2026-11-06)"
+# WHY HERE, IMMEDIATELY AFTER sanitize-people.mjs
+# -------------------------------------------------
+# On 6 Nov 2026 the merge to main very nearly carried a regenerated
+# people.public.json that DROPPED 800 sibling links and rewired 345 profiles,
+# because the regen pipeline's people.json had drifted from the committed graph.
+# sanitize-people.mjs wrote the damaged file happily, and the only thing that
+# caught it was a human reading the merge diff. Nothing in this pipeline did.
+#
+# It cannot be left to the pre-commit hook or to `npm run build`'s prebuild:
+#   • the pre-commit hook only sees what the caller chose to STAGE, so a regen
+#     that damages people.public.json but stages only the snapshots slips past;
+#   • night-watch commits with `git add -A` and does not run `npm run build`.
+# So the gate belongs here, where the file is actually born — and the day after
+# the near-miss there was 1 gate after sanitize and 0 before the snapshot
+# refresh, which is exactly the hole the damage would have travelled through.
+#
+# The guard reads people.public.json and REFUSES one-way parent edges, >2
+# parents, self-ancestry and near-miss unresolved names. A tree that disagrees
+# with itself is worse than a short one.
+if ! node scripts/guard-relationship-integrity.mjs; then
+  echo ""
+  echo "RELATIONSHIP INTEGRITY FAILED — people.public.json contradicts itself."
+  echo "  The just-regenerated file is NOT safe to publish. Nothing has been"
+  echo "  committed or pushed by this run. Inspect the edges named above."
+  exit 1
+fi
+
 echo "==> Step 4c/5: DUPLICATE-IDENTITY VERIFIER (added 2026-10-29)"
 # WHY THIS GATE EXISTS
 # --------------------
