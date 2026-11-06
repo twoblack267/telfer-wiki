@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-06T12:04:47+10:00",
+  "generated_at": "2026-11-06T12:32:05+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 680,
+  "count": 677,
   "kinds": {
-    "real": 662,
+    "real": 659,
     "redirect": 18,
     "empty": 0
   },
@@ -135,7 +135,7 @@
     },
     "Alexander Telfer (1841).md": {
       "sha256": "d152595b368e007dc244603145005df2dc40d910fbe935747e6cd1978dff0628",
-      "sha256_whole": "245c56f048ae2ffdd2cae518c4e39922f9d7c3c1d989647490355e4ddfe54120",
+      "sha256_whole": "323617a71486dab429139be7bf56d987cd728f074478cc78eb04ca46971322a7",
       "kind": "real"
     },
     "Alfred Baker (1861\u20131946).md": {
@@ -265,7 +265,7 @@
     },
     "Andrew Telfer (b. 1850).md": {
       "sha256": "c6de7de8b972558e2cfe5ddccd4af12668f13d37c4c9299367fd9222788bde0b",
-      "sha256_whole": "ace827d507926b229b853c52157d374529b3578ac45c49e959ab28b1d231d66c",
+      "sha256_whole": "fc5e4d58ebd9f9f4669d1664a2a69d613472107b91377d5bf4abd569ef6343dc",
       "kind": "real"
     },
     "Angela Telfer.md": {
@@ -776,11 +776,6 @@
     "Elaine Burdett Sheridan Telfer (1913\u20131987).md": {
       "sha256": "af85cbadb21f971f0fa0100a6470cfc34f6707ab3c1ed82163035943af49a6e0",
       "sha256_whole": "b598828cf2baf5a604e5494eb749c243a7417e3e65ff2935a614233d6172bb7b",
-      "kind": "real"
-    },
-    "Elisabeth Telfer (b. ~1806, England).md": {
-      "sha256": "07130c4c8ed204991244c78b85a3c6242d53df22110c7ad73bc116607d10f501",
-      "sha256_whole": "4da76d93241c96870d5890c755a552cf71365b51c753a6f15bc27657fbfa8754",
       "kind": "real"
     },
     "Elissa Anne Bustard (b. 1973).md": {
@@ -1395,7 +1390,7 @@
     },
     "Inez Priscilla Dillon.md": {
       "sha256": "751c6de2b43f6aca50142817fb72c273a5f50e506f42feb7f5356636b134b9c7",
-      "sha256_whole": "70f4c957a0917ec2ecd07706a4addc917413a43c9f2a502ea75bbf641c0b16fa",
+      "sha256_whole": "b4fef4f05d63e39f17b3af5409d6cafa2ec4f921872d2cfbdc473af1a6b1f442",
       "kind": "real"
     },
     "Iris Lynette Hooper (b. 1938).md": {
@@ -1550,7 +1545,7 @@
     },
     "James Telfer (bap.1762).md": {
       "sha256": "6a953d2d164b3def50cf7b87593a8b12c2b03cc59f56b90977209b5ca8bdc2c0",
-      "sha256_whole": "5c9111ff781076d13d6426109a2331a4543aaa453f9060ea4a1fbb966761c88a",
+      "sha256_whole": "716db938e3bb60d61204d26ca4a632c9e32380366e4210f821f43f3522670e28",
       "kind": "real"
     },
     "James Telfer (of Sorbietrees) (~1740\u2013?).md": {
@@ -1600,7 +1595,7 @@
     },
     "Janet Nichol.md": {
       "sha256": "24d164623f8277a96fa9cb46965452adb1ebe027f047baf4a36e8c260338b558",
-      "sha256_whole": "a176bd21509ae596b9b0eabc939b7fbface2eaf2c9fe5c91b3fcb2890c89a7ae",
+      "sha256_whole": "0e2a79f4c3a63624f22dcde841898f18fd8ba34aa8756decc7c6eb35c6217d90",
       "kind": "real"
     },
     "Janet Stevenson Lawrie (1881\u20131959).md": {
@@ -1655,7 +1650,7 @@
     },
     "Jean Telfer (1764).md": {
       "sha256": "127c783e47eafc10ac27947f0ba6f9c072bb06893e7e2e1886d65ade85aa1be6",
-      "sha256_whole": "649b2b64a79c0eb5e02059f0e8bc8e4a2be7b837c764880a82d257e05a937f55",
+      "sha256_whole": "1f4a8f9aa11b1630ca134579877e68c7ef9a8fc9241d98fb4edb7a0ea888c9a2",
       "kind": "real"
     },
     "Jean Telfer (1840\u20131892).md": {
@@ -1846,11 +1841,6 @@
     "John Telfer (1847\u20131929).md": {
       "sha256": "b5309aaa344dfbecadbd68b4a98fe91c88faa189a31ede9a8d1c83958a907450",
       "sha256_whole": "179eeeb1ca591a23205389470dd74be824b291354298c1b72866a0eba1fb2a95",
-      "kind": "real"
-    },
-    "John Telfer (b. ~1791, England).md": {
-      "sha256": "5c14130f93eaaa4962153a85c5594372f0463c7964cda995119c8f9355d73f9d",
-      "sha256_whole": "e3cc10c5967879526f9409cb0572a22a6534f07310cf3d954b6f0446714edf66",
       "kind": "real"
     },
     "John Telfer (of Castleton) (1731).md": {
@@ -3218,11 +3208,6 @@
       "sha256_whole": "0f6b7ad69fe492b334d5df0012f4bc110210c9bb7414150e4cf4eee9b863ec19",
       "kind": "real"
     },
-    "Thomas Telfer (of Broadlee).md": {
-      "sha256": "587bb12b5562a3e486b994d48267e75c07484d02b7e8ae125a511ed4c6fb61c8",
-      "sha256_whole": "0b6d32b827290434cff15f6d627a60d2a833428193bc74f6a5396b81a8fed1dc",
-      "kind": "real"
-    },
     "Timothy Michael Hooper (1969\u20131969).md": {
       "sha256": "3d38c1d7f7a3451ef44ba25d16db203075f89d0ea7b5f1aba93c4dbfc968d07a",
       "sha256_whole": "2b73df0f2f1f50b57b23bd572ef4773334b7ab10e042e63aa829f37116853a82",
@@ -3375,17 +3360,17 @@
     },
     "William Telfer (1841).md": {
       "sha256": "e9ee76044e0fdd20bc929e3a4f5db3f49571607da204a2f033fca70e33a43092",
-      "sha256_whole": "fcac7b67123c24cb513819ec42fd64ae822837e8ab144f0561396a4b54dda843",
+      "sha256_whole": "0ceddb123b39a2f50a756cb84c6c24f93b51a33b94b4e38d3a258aafa909ce01",
       "kind": "real"
     },
     "William Telfer (b. 1847).md": {
       "sha256": "a82df268864e0dd32330956e11948a9f4ef6ef14fd1a4af8d5a281bbac3cd6f7",
-      "sha256_whole": "a8b2032c38dd39fa92fc7b9273b1d7c3400333b6cd1701717a94f8a57a2d3c12",
+      "sha256_whole": "b100a77d6135041f3278f03a8b505c08c4f02f0ca02525d9d79eb90b3dd3a5e0",
       "kind": "real"
     },
     "William Telfer (shepherd).md": {
       "sha256": "3d73e6041d2772e9dbb57efcaa43bf8ea6ed2ab7f5ac83affc0bcb3e4717ae4e",
-      "sha256_whole": "88cde6c198e96c04f995e59307de2fa83916844334fc54ced79bfd9460b59ca6",
+      "sha256_whole": "bda00b97c94cf7245fd8b2bc7d3701865535bccefc5966b81f2390263cc6959c",
       "kind": "real"
     },
     "William Williams Masters (1838\u20131927).md": {

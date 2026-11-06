@@ -326,11 +326,6 @@
       "generation": 5
     },
     {
-      "slug": "elisabeth-telfer-1806",
-      "id": "Elisabeth Telfer (1806)",
-      "generation": 4
-    },
-    {
       "slug": "elizabeth-beattie-1741",
       "id": "Elizabeth Beattie (1741)",
       "generation": 1
@@ -941,11 +936,6 @@
       "generation": 4
     },
     {
-      "slug": "john-telfer-1791",
-      "id": "John Telfer (1791)",
-      "generation": 3
-    },
-    {
       "slug": "john-telfer-of-castleton-1731",
       "id": "John (of Castleton) Telfer (1731)",
       "generation": 1
@@ -1459,11 +1449,6 @@
       "slug": "thomas-paynter-1859",
       "id": "Thomas Paynter (1859)",
       "generation": 5
-    },
-    {
-      "slug": "thomas-telfer",
-      "id": "Thomas Telfer",
-      "generation": 99
     },
     {
       "slug": "timothy-telfer-1959",
@@ -8332,10 +8317,6 @@
       {
         "from": "effie-olive-telfer-1886",
         "to": "violet-hope-telfer-1883"
-      },
-      {
-        "from": "elisabeth-telfer-1806",
-        "to": "john-telfer-1791"
       },
       {
         "from": "elizabeth-beattie-telfer-1871",
