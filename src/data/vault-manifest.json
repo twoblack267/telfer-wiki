@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-06T13:30:48+10:00",
+  "generated_at": "2026-11-06T14:33:40+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 677,
+  "count": 678,
   "kinds": {
-    "real": 659,
+    "real": 660,
     "redirect": 18,
     "empty": 0
   },
@@ -1244,8 +1244,8 @@
       "kind": "real"
     },
     "Gwendoline May Hinder (1909\u20132005).md": {
-      "sha256": "10f5b46d24764b3f639c4630c08fe9410ae6bbfd446c33bc603d12a10e45fa85",
-      "sha256_whole": "83c1705e549a015b4c211822829c48aa02ecee160de143c03a64d0bc5c94a060",
+      "sha256": "3245e449003467b85d26bef771318f955432d90730a13e37690343ed021fadd4",
+      "sha256_whole": "4a94bbf2f7f50083df92bb78e51f23f54473859121cc322417043e388b223b5b",
       "kind": "real"
     },
     "Gwendoline Victoria (Campbell) Telfer (1910\u20131966).md": {
@@ -1743,6 +1743,11 @@
       "sha256_whole": "ebf97c9f38337f12168eb02dfedf578a2ae1fef6ad191bcf11c1197edee266fc",
       "kind": "real"
     },
+    "John Ernest Telfer (1910\u20131984).md": {
+      "sha256": "c72c025c42d34178013679985bf35142676f45b01e1b2b438b5d227d7fdc2e4f",
+      "sha256_whole": "5da32aa2237a541e6b90f9cfa5dd787639c2d82825b445d8d06a40674bf3aaef",
+      "kind": "real"
+    },
     "John Hobart (Jack) Watson (1916\u20131943).md": {
       "sha256": "c670ea213fc392016554d6eb31126ac09a89acb216463c3b6435b390765d37be",
       "sha256_whole": "9774153c889b76cf5cee1b395e7b0eacca3ea654d628eb6727b167d556fbd2be",
@@ -2099,8 +2104,8 @@
       "kind": "real"
     },
     "Laurel Kaye Telfer (b. 1946).md": {
-      "sha256": "165b1b66453f916f92854d6786cb1bb5067a61f9c5133f32f063491182b1b93d",
-      "sha256_whole": "ceef5240277b13ee586307fd561a4dc5012dea0d57b8f57854b8c2789c446be0",
+      "sha256": "7ee89443bc793d558e7156cd32f87fe3806e9875cfe5d214f884e8e1ab7792e7",
+      "sha256_whole": "7dfc8b5ddced711e8a4950a1ee261635706fb0cac54270368a41a1bc8dfcb9d1",
       "kind": "real"
     },
     "Laurel Mary Bosanquet (1911\u20132000).md": {
@@ -2584,8 +2589,8 @@
       "kind": "real"
     },
     "Morris John Telfer (b. 1937).md": {
-      "sha256": "8ab8431143b2da99046516af76204bf4d00f36b67f4d5136261a38e321b8cfc7",
-      "sha256_whole": "f375efd105bd13b34cda8cddaa26455e83b450fd92ab66ee57d9e709a700be89",
+      "sha256": "ec9c3601936bba882b69ee238796f15db5268b2e2229fbf11ee9214c21822e5f",
+      "sha256_whole": "3a5773432f5abae3172f32a7bac26c96d7ad560ba0b69cf39362fc8dde8307ff",
       "kind": "real"
     },
     "Muriel Grace Crespin (b. 1923).md": {
@@ -2624,8 +2629,8 @@
       "kind": "real"
     },
     "Neil Ronald Telfer (193).md": {
-      "sha256": "2a6e88f6de454a1a932adc2d4dbbf4f9d69c982e77758177cba98a0a9cb34b1a",
-      "sha256_whole": "9a66adf8f1b7609c4271ddd434fb8bc80a6345aea3d00667824d779def0fd2e8",
+      "sha256": "57cff47106a82358c2212692e64324751ac2680ef20acca2ad989cc83de829e5",
+      "sha256_whole": "f0bccc48c6b35ec7987c86c8c67de1c48c49b22c3bc61be91db829e86fbd6a36",
       "kind": "real"
     },
     "Nicholas Adam Telfer (b. 1988).md": {
