@@ -53,11 +53,34 @@ try {
   process.exit(1);
 }
 
+/** A redirect stub is not a page a search engine can index or rank.
+ *  postbuild generates these for old/alias slugs: they carry
+ *  <meta http-equiv="refresh">, a canonical to the real profile and
+ *  <meta name="robots" content="noindex">. Demanding a description of them
+ *  is demanding SEO metadata for a page that explicitly opts out of SEO —
+ *  that false alarm blocked the deploy twice while every real page was fine. */
+const isRedirectStub = (html) =>
+  /http-equiv=["']refresh["']/i.test(html) && /name=["']robots["'][^>]*noindex/i.test(html);
+
+/** A withdrawn record (a person removed from the archive at a family's request)
+ *  is a tombstone, not a profile: <title>Record withdrawn…</title>, h1 "This
+ *  record has been withdrawn", robots noindex. There is deliberately nothing on
+ *  it to describe, and inventing a description would defeat the withdrawal. */
+const isWithdrawnStub = (html) =>
+  /<title>[^<]*Record withdrawn/i.test(html) && /name=["']robots["'][^>]*noindex/i.test(html);
+
+const isNonIndexable = (html) => isRedirectStub(html) || isWithdrawnStub(html);
+
 const over = [];
 const missing = [];
+let stubs = 0;
 
 for (const f of files) {
   const html = readFileSync(f, "utf8");
+  if (isNonIndexable(html)) {
+    stubs++;
+    continue;
+  }
   const m = html.match(/<meta\s+name="description"\s+content="([^"]*)"/i);
   if (!m) {
     missing.push(relative(DIST, f));
@@ -86,6 +109,7 @@ if (missing.length) {
 }
 
 console.log(
-  `🎉 meta-description-budget: ${files.length} pages, all descriptions ≤ ${MAX} chars (decoded)` +
+  `🎉 meta-description-budget: ${files.length - stubs} page(s), all descriptions ≤ ${MAX} chars (decoded)` +
+    (stubs ? ` · ${stubs} redirect stub(s) skipped (noindex, not indexable)` : "") +
     (missing.length ? ` · ${missing.length} page(s) carry no description` : "")
 );
