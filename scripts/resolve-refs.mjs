@@ -854,6 +854,11 @@ function resolveRef(name, context = null) {
 // ── Main ─────────────────────────────────────────
 
 let totalFixed = 0;
+// The denominator used to be the literal 558 (hardcoded), so a run that bound
+// nothing printed "0 / 558" and could never report zero honestly — a metric that
+// cannot say "0 of 0" cannot detect a regression. Count the refs actually
+// offered to the resolver this run instead. (tw-2026-11-06-009 item 4a.)
+let totalCandidates = 0;
 // Step fields carry the same raw-name→slug resolution contract as the biological
 // ones (added 2026-09-22). They resolve as ordinary parent/child relations; only
 // the EDGE they produce differs, and that is decided in build-relationship-graph.
@@ -912,6 +917,7 @@ people.forEach(p => {
 
     const newRefs = source.map(ref => {
       if (slugSet.has(ref)) return ref;
+      totalCandidates++;
       
       const resolved = resolveRef(ref, { subjectBirth, subjectDeath, relation });
       
@@ -934,7 +940,7 @@ people.forEach(p => {
 });
 
 // Print summary
-console.log(`\n=== RESOLVED: ${totalFixed} / 558 ===\n`);
+console.log(`\n=== RESOLVED: ${totalFixed} / ${totalCandidates} candidate ref(s) ===\n`);
 
 if (totalFixed > 0) {
   const byPerson = {};
