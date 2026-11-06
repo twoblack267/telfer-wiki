@@ -78,6 +78,13 @@ if (over.length) {
   process.exit(1);
 }
 
+if (missing.length) {
+  console.error(`❌ meta-description-budget: ${missing.length} page(s) emit no description.`);
+  for (const p of missing.slice(0, 10)) console.error(`   ${p}`);
+  if (missing.length > 10) console.error(`   …and ${missing.length - 10} more.`);
+  process.exit(1);
+}
+
 console.log(
   `🎉 meta-description-budget: ${files.length} pages, all descriptions ≤ ${MAX} chars (decoded)` +
     (missing.length ? ` · ${missing.length} page(s) carry no description` : "")
