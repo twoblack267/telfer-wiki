@@ -135,8 +135,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Deploy to GitHub Pages
+      # ─────────────────────────────────────────────────────────────────────
+      # BOUNDED RETRY FOR THE PAGES "EMPTY STATUS" STALL — added 2026-11-06.
+      #
+      # The concurrency group above stops deploy jobs COLLIDING, but it does not
+      # stop one deploy from stalling on its own. GitHub's Pages deployment
+      # record can sit at an empty/never-progressing status with nothing else in
+      # flight, and deploy-pages then polls its own 10-minute timer out and
+      # cancels the deployment it just created. Evidence, run 42178652796
+      # (sha 145bd244): every deployment status for 7594527776 and for the rerun
+      # 7594693295 went waiting -> queued -> in_progress -> failure, and the log
+      # shows "Current status: syncing_files" then "Current status: " (blank) for
+      # the remaining ~20 polls until "Timeout reached, aborting!". No other
+      # deployment existed to collide with — this is a SERVER-SIDE stall, so
+      # retrying is the correct response and serialising alone cannot fix it.
+      #
+      # ONE retry only. An unbounded retry against a genuine Pages outage would
+      # burn runner minutes and hide the outage; one retry converts a ~10 minute
+      # dead wait into a ~10 minute delay plus a publish, which is exactly what a
+      # transient stall deserves. The retry fires for ANY failure of the deploy
+      # attempt (deploy-pages has only stall/timeout failure modes — a permanent
+      # config error fails fast and will fail twice, loudly, which is honest).
+      # ─────────────────────────────────────────────────────────────────────
+      - name: Deploy to GitHub Pages (attempt 1)
+        id: deployment_1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Retry deploy after Pages stall
         id: deployment
+        if: steps.deployment_1.outcome == 'failure'
         uses: actions/deploy-pages@v4
       # ─────────────────────────────────────────────────────────────────────
       # CACHE PURGE — added 2026-09-21 (card tw-2026-09-12-041).
