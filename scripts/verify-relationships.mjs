@@ -88,7 +88,41 @@ for (const p of people) {
 // vault: an immigrant progenitor whose parents were never in Britain's records, or a
 // person whose entire known family is a spouse with no profile. Demanding zero would
 // force the pipeline to invent relatives, which is the one thing it must never do.
-const ISOLATED_BASELINE = 25;
+//
+// FIXED 2026-11-07: this used to be a bare `ISOLATED_BASELINE = 25` compared with
+// `>`. Measured that day: 17 isolated. So the gate carried EIGHT people of unaudited
+// slack — the graph could lose seven real links and still report green. That is the
+// third instance of one pattern in this repo (the SEO privacy gate's regex that could
+// never fail; the crown-jewel child floor of 2 when the real count was 3, which let the
+// 03:00 regen drop a daughter and pass). A threshold left at a comfortable old number
+// is not a guard, it is a rubber stamp.
+//
+// The baseline now lives in a reviewed file whose only job is to be the number, and the
+// gate's rule is "no increase at all" against it. Moving it is a deliberate commit that
+// has to say why — which is the whole point. Set it to today's measured value so any
+// future regression fails immediately rather than after eight more.
+const BASELINE_FILE = "scripts/relationship-isolation-baseline.json";
+let ISOLATED_BASELINE;
+try {
+  ISOLATED_BASELINE = JSON.parse(readFileSync(BASELINE_FILE, "utf8")).isolated;
+  if (typeof ISOLATED_BASELINE !== "number" || !Number.isFinite(ISOLATED_BASELINE)) {
+    throw new Error("'isolated' is missing or not a number");
+  }
+} catch (err) {
+  // A missing or malformed baseline must FAIL LOUDLY. Falling back to a constant would
+  // silently restore exactly the rubber stamp this change removed.
+  console.error(`❌ Cannot read isolation baseline from ${BASELINE_FILE}: ${err.message}`);
+  console.error("   Refusing to guess a threshold. Restore the file (see git history).");
+  process.exit(1);
+}
+// Warn before failing: slack must never accumulate silently again.
+if (ISOLATED_BASELINE - isolated.length >= 3) {
+  console.warn(
+    `⚠️  BASELINE SLACK: ${ISOLATED_BASELINE - isolated.length} fewer isolated than the ` +
+      `baseline of ${ISOLATED_BASELINE}. Tighten ${BASELINE_FILE} in a reviewed commit ` +
+      `so the gate measures drift rather than a stale number.`
+  );
+}
 if (isolated.length > ISOLATED_BASELINE) {
   problems.push(
     `ISOLATION REGRESSION: ${isolated.length} people have no resolvable relative ` +
@@ -99,7 +133,7 @@ if (isolated.length > ISOLATED_BASELINE) {
         .join(", ")}`
   );
 }
-notes.push(`isolated people: ${isolated.length} (baseline ${ISOLATED_BASELINE})`);
+notes.push(`isolated people: ${isolated.length} (baseline ${ISOLATED_BASELINE} from ${BASELINE_FILE})`);
 
 // ── 3. A RELATIVE MUST NEVER BE A SELF-REFERENCE ────────────────────────────────
 // Andrew Kelly Parker was listed as his own eighth child, and two other records did the

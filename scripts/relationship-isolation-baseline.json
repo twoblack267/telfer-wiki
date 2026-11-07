@@ -1,0 +1,10 @@
+{
+  "_what": "Reviewed threshold for verify-relationships.mjs ISOLATION check.",
+  "_rule": "The validator fails when the number of people with no resolvable relative EXCEEDS 'isolated'. It also WARNS when it is 3 or more BELOW, so slack cannot silently accumulate again.",
+  "_why_not_zero": "Many isolated people are genuinely alone in the vault - an immigrant progenitor whose parents were never recorded, or someone whose only relative has no profile. Forcing zero would make the pipeline invent relatives.",
+  "_history": [
+    {"date": "2026-10-28", "isolated": 25, "note": "was a bare constant in the script; reset here for reviewability"},
+    {"date": "2026-11-07", "isolated": 17, "note": "measured on HEAD b462f0e across 661 profiles; constant of 25 carried 8 people of unaudited slack, so it is pinned to the measured value"}
+  ],
+  "isolated": 17
+}
