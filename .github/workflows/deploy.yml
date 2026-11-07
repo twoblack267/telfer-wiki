@@ -90,10 +90,11 @@ jobs:
         # which is the privacy-sensitive direction and the reason the check
         # runs in BOTH directions rather than only counting.
         run: node scripts/check-photo-declarations.mjs
-        env:
-          # Optional phone bridge. Unset is fine: the build still fails and the
-          # log still records it. A dead messenger never turns a failure green.
-          PHOTO_FAIL_CARD_URL: ${{ secrets.PHOTO_FAIL_CARD_URL }}
+        # No separate phone secret needed: the existing "Escalation check"
+        # step below already pings the ntfy topic on ANY red build, and this
+        # check can only fail the build. The script's own card hook stays
+        # available (PHOTO_FAIL_CARD_URL) for running it outside Actions,
+        # where there is no workflow to escalate.
       # ESCALATION — added 2026-09-12. `failure()` is false for a job that never
       # started, and a failed "Install dependencies" or Playwright step skips
       # everything after it; verifying the pager HERE (rather than at the end)
