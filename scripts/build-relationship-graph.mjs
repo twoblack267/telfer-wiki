@@ -1480,6 +1480,21 @@ for (const person of people) {
         case 'Maternal Grandfather':
         case 'Maternal Grandmother':
         case 'Maternal Grandparent':
+        // FIXED 2026-11-07: the same spelling gap one generation further out.
+        // james-alexander-alcorn-1915 names his "Maternal Great-Grandmother",
+        // which resolved to a real person but hit `default` and warned on every
+        // build. Great-grandparents are derived transitively exactly like
+        // grandparents, so they are tallied here and no direct edge is written.
+        case 'Great-grandmother':
+        case 'Great-grandfather':
+        case 'Paternal Great-Grandfather':
+        case 'Paternal Great-Grandmother':
+        case 'Paternal Great-Grandparent':
+        case 'Maternal Great-Grandfather':
+        case 'Maternal Great-Grandmother':
+        case 'Maternal Great-Grandparent':
+        case 'Paternal Great-Grandparents':
+        case 'Maternal Great-Grandparents':
         case 'Paternal Grandparents':
         case 'Maternal Grandparents':
         case 'Father-in-law':
