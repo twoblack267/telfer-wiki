@@ -108,27 +108,46 @@ EXPECTED_MIN=$(node -e '
 SLUG='[A-Za-z0-9~_-]'
 CNT=$(cat dist/sitemap-*.xml 2>/dev/null | grep -oE "telferwiki\\.com/people/${SLUG}+/" | grep -vE '/family-sheet|/descendants' | sed -E "s#.*/people/(${SLUG}+)/#\\1#" | grep -vE '^(dna|families|full-tree)$' | sort -u | wc -l | tr -d ' ')
 # Privacy gate: driven by the SAME source of truth as the sitemap filter
-# (src/data/privacy-exclusions.mjs). It is EMPTY as of 2026-09-08 — Mark decided
-# the youngest Ivory generation is indexable again — so an empty set must PASS
-# (zero leaked slugs). A non-empty set must have EVERY slug absent from the
-# sitemap. The old code set PRIVACY_OK=1 up front and only ever flipped it to 0
-# inside the loop, so the variable was a static 1 and the gate could not fail
-# (IT Crew QA 2026-10-04, task itcrew-2026-10-04-2). Derive it from the check:
-# count any noindex slug that leaks into the sitemap and fail on a non-zero leak.
-NOINDEX_LIST=$(node -e '
-  const fs=require("fs");
-  const src=fs.readFileSync("./src/data/privacy-exclusions.mjs","utf8");
-  console.log([...src.matchAll(/"([a-z0-9-]+)"/g)].map(m=>m[1]).join(" "));
-' 2>/dev/null)
+# (src/data/privacy-exclusions.mjs) — IMPORTED, never regex-scraped.
+#
+# HISTORY (card itc-2026-11-07-03): this block used to scrape the .mjs with
+#   src.matchAll(/"([a-z0-9-]+)"/g)
+# i.e. it searched for DOUBLE-quoted strings. privacy-exclusions.mjs is written
+# with SINGLE quotes, so the regex matched ZERO slugs, NOINDEX_LIST came back
+# empty, and the shell then printed the cheerful "set is empty — nothing to
+# withhold" line while the set actually held six living people. The node call
+# was also wrapped in `2>/dev/null`, so any failure was invisible too.
+# Net effect: this privacy gate could not fail. It has been a rubber stamp.
+# Fix: import the module (ESM, dynamic import) so the gate reads the same Set
+# the templates read, and fail LOUDLY if extraction breaks.
+NOINDEX_LIST=$(node --input-type=module -e '
+  import("./src/data/privacy-exclusions.mjs").then(m => {
+    const slugs = [...m.PRIVACY_STRIP_SLUGS];
+    if (!Array.isArray(slugs) || slugs.length === 0) {
+      console.error("PRIVACY_GATE_EXTRACT_FAIL: PRIVACY_STRIP_SLUGS is empty or unreadable");
+      process.exit(3);
+    }
+    console.log(slugs.join(" "));
+  }).catch(e => { console.error("PRIVACY_GATE_IMPORT_FAIL: " + e.message); process.exit(3); });
+' 2>&1)
+PG_RC=$?
+if [ $PG_RC -ne 0 ]; then
+  bad "privacy gate could not read privacy-exclusions.mjs (rc=$PG_RC): $NOINDEX_LIST"
+  NOINDEX_LIST=""
+  PRIVACY_OK=0
+fi
 LEAKED=0
 for s in $NOINDEX_LIST; do
   grep -qE "telferwiki\.com/people/$s/" dist/sitemap-*.xml 2>/dev/null && LEAKED=$((LEAKED+1))
 done
 if [ "$LEAKED" -eq 0 ]; then PRIVACY_OK=1; else PRIVACY_OK=0; fi
 if [ -z "$NOINDEX_LIST" ]; then
-  ok "privacy-exclusions set is empty (2026-09-08 decision) — nothing to withhold"
+  # Never a PASS. An empty extraction means the gate is blind, not that there is
+  # nothing to withhold. A real empty set must be declared explicitly, not inferred.
+  bad "privacy gate found ZERO withheld slugs — extraction broken or set genuinely emptied; refusing to report green"
+  PRIVACY_OK=0
 else
-  ok "privacy set: $(echo $NOINDEX_LIST | wc -w | tr -d ' ') slug(s) enforced"
+  ok "privacy set: $(echo $NOINDEX_LIST | wc -w | tr -d ' ') slug(s) enforced, $LEAKED leaked into sitemap"
 fi
 if [ "$EXPECTED_MIN" -gt 0 ] && [ "$CNT" -ge "$EXPECTED_MIN" ] && [ "$PRIVACY_OK" -eq 1 ]; then
   ok "sitemap covers $CNT person pages (≥ $EXPECTED_MIN expected)"

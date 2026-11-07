@@ -39,6 +39,25 @@ export const PRIVACY_STRIP_SLUGS = new Set([
 ]);
 
 /**
+ * ⛔ DO NOT ADD PAUL IVORY OR TIM TELFER TO THIS SET. ⛔
+ *
+ * Owner ruling, Mark Telfer, 7 November 2026 (verbatim):
+ *   "Will Tim Telfor should be able to be on the website though ... And Tim
+ *    telfer's Page is my Dad he's not an ivory anyway"
+ *
+ * Tim Telfer is Mark's father. He is NOT an Ivory and is NOT withdrawn. His
+ * profile page is public, indexable, and belongs in the sitemap. Paul Ivory is
+ * likewise exempt and his page is untouched.
+ *
+ * Both DO appear in DERIVED_NOINDEX_SLUGS below — that is a different, narrower
+ * thing: it fences only their *derived* pages (family sheet, descendants) which
+ * print withdrawn names. Their profile pages stay live. An audit that "fixes"
+ * the overlap by adding them here would take Mark's father off the website.
+ *
+ * The two sets are intentionally disjoint. Overlap is not a bug.
+ */
+
+/**
  * Slugs whose pages carry a robots noindex meta and are excluded from the
  * sitemap. Kept in sync with PRIVACY_STRIP_SLUGS.
  */
