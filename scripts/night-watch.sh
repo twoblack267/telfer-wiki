@@ -557,8 +557,14 @@ if [ "$PUSHED" = "1" ]; then
     else
       echo "  Waiting for GitHub Pages to serve commit ${PUSHED_SHA} (up to 900s)..."
       SETTLED=0
+      POLL_START=$(date +%s)
+      LAST_SEEN="none"
       for i in $(seq 1 180); do
         LIVE_BODY=$(curl -fsS -m 20 "$SITE/" 2>/dev/null || true)
+        # Record what the site actually claims to be serving, so a failure
+        # reports EVIDENCE rather than just "could not confirm".
+        SEEN=$(printf '%s' "$LIVE_BODY" | grep -o 'data-build-id="[^"]*"' | head -1 | sed 's/.*="//; s/"//')
+        [ -n "$SEEN" ] && LAST_SEEN="$SEEN"
         # Match the SHORT sha: it appears in data-build-id="<short>-<epochms>".
         if printf '%s' "$LIVE_BODY" | grep -qF "$PUSHED_SHA"; then
           echo "  ✅ Live origin is serving push ${PUSHED_SHA} (after ~$((i*5))s)"
@@ -567,15 +573,30 @@ if [ "$PUSHED" = "1" ]; then
         fi
         sleep 5
       done
-    fi
 
-    if [ "$SETTLED" != "1" ]; then
-      # Do NOT claim the site is broken: we simply could not confirm the
-      # deploy. Report it as an unresolved condition, not a 404.
-      echo "  🟠 Could not confirm live origin is serving ${PUSHED_SHA} within 300s."
-      echo "     The live 404 scan below may read a STALE deployment — treat any"
-      echo "     broken-links result in this run as UNRELIABLE and re-run before acting."
-      FAIL="${FAIL} deploy-unconfirmed"
+      # FIXED 2026-11-07 — this branch used to print "within 300s" no matter how
+      # long it actually waited (a leftover string from the $SITE-unbound era),
+      # and reported only "could not confirm", which is indistinguishable from a
+      # broken grep. Both were making healthy deploys look like failures.
+      if [ "$SETTLED" != "1" ]; then
+        POLL_SECS=$(( $(date +%s) - POLL_START ))
+        echo "  🟠 Could not confirm live origin is serving ${PUSHED_SHA} after ${POLL_SECS}s."
+        if [ "$LAST_SEEN" = "none" ]; then
+          # No build-id at all: the page did not load or carries no stamp.
+          # That is an INSTRUMENT problem, not a deploy problem — do not card it
+          # as a deploy failure, because we never actually measured one.
+          echo "     ⚠️  ${SITE}/ served no data-build-id at all after ${POLL_SECS}s."
+          echo "     This is a PROBE/INSTRUMENT failure, not evidence the deploy failed."
+          echo "     Site may be down, or the stamp was removed from the HTML."
+          WARN="${WARN} deploy-probe-no-buildid"
+        else
+          # We CAN see a build id, it just is not ours. Real evidence.
+          echo "     Live site is serving: ${LAST_SEEN}"
+          echo "     Expected prefix:     ${PUSHED_SHA}"
+          echo "     This is EVIDENCE of a stale deployment, not a timeout."
+          FAIL="${FAIL} deploy-stale:${LAST_SEEN}"
+        fi
+      fi
     fi
   else
     echo "  Waiting for GitHub Pages redeploy to settle (~60s)..."
