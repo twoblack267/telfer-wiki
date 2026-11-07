@@ -2111,7 +2111,7 @@
       "generation": 7
     },
     {
-      "slug": "elizabeth-telfer",
+      "slug": "elizabeth-telfer-1896",
       "id": "Elizabeth Lillian Telfer (1896)",
       "generation": 6
     },
@@ -3299,6 +3299,11 @@
       "slug": "john-ernest-telfer",
       "id": "John Ernest Telfer (1910)",
       "generation": 6
+    },
+    {
+      "slug": "elizabeth-telfer-living",
+      "id": "Elizabeth Telfer",
+      "generation": 99
     }
   ],
   "edges": {
@@ -5641,11 +5646,11 @@
       },
       {
         "from": "frances-margaret-oswald-1861",
-        "to": "elizabeth-telfer"
+        "to": "elizabeth-telfer-1896"
       },
       {
         "from": "james-telfer-1858",
-        "to": "elizabeth-telfer"
+        "to": "elizabeth-telfer-1896"
       },
       {
         "from": "frances-margaret-oswald-1861",
@@ -6818,6 +6823,10 @@
       {
         "from": "florence-nicholas",
         "to": "john-ernest-telfer"
+      },
+      {
+        "from": "william-telfer-1802",
+        "to": "elizabeth-telfer-living"
       }
     ],
     "spouseOf": [
@@ -10592,27 +10601,27 @@
         "to": "susan-pedler"
       },
       {
-        "from": "elizabeth-telfer",
+        "from": "elizabeth-telfer-1896",
         "to": "jane-telfer"
       },
       {
-        "from": "elizabeth-telfer",
+        "from": "elizabeth-telfer-1896",
         "to": "janet-telfer"
       },
       {
-        "from": "elizabeth-telfer",
+        "from": "elizabeth-telfer-1896",
         "to": "martha-telfer"
       },
       {
-        "from": "elizabeth-telfer",
+        "from": "elizabeth-telfer-1896",
         "to": "mary-telfer-1893"
       },
       {
-        "from": "elizabeth-telfer",
+        "from": "elizabeth-telfer-1896",
         "to": "millicent-telfer"
       },
       {
-        "from": "elizabeth-telfer",
+        "from": "elizabeth-telfer-1896",
         "to": "rose-telfer"
       },
       {
@@ -11454,6 +11463,10 @@
       {
         "from": "john-ernest-telfer",
         "to": "lloyd-wilbur-telfer-1913"
+      },
+      {
+        "from": "elizabeth-telfer-living",
+        "to": "william-telfer-1841"
       }
     ],
     "stepParentOf": [

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-07T12:11:52+10:00",
+  "generated_at": "2026-11-07T12:49:15+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 678,
+  "count": 679,
   "kinds": {
-    "real": 660,
+    "real": 661,
     "redirect": 18,
     "empty": 0
   },
@@ -881,6 +881,11 @@
     "Elizabeth Telfer (1868\u20131950).md": {
       "sha256": "f7fc8042739e2870d9ca497301682d0c965ff040360cd19d639ec995fc0434dd",
       "sha256_whole": "2a564643adbef4ba0c2629990ca0357292fb6436c1d1eddb43641afda123d137",
+      "kind": "real"
+    },
+    "Elizabeth Telfer (Mrs Mansfield).md": {
+      "sha256": "b46471a9ad0ad86f88ec611bc0bff0a9ac18c5e6e1161a4032da0420870a940c",
+      "sha256_whole": "51a549077b309aab898435ef4a433ceaa9fa0ee2576eda2334f9e3e340baac40",
       "kind": "real"
     },
     "Elizabeth Telfer Farrow Holloway (1861\u20131946).md": {
@@ -3354,8 +3359,8 @@
       "kind": "real"
     },
     "William Telfer (1802\u20131850).md": {
-      "sha256": "970e8daa09e53c5bd515a42244ef27f820dad9bc5876af1a4e04e975380de390",
-      "sha256_whole": "5ad81d9e1203d5a63bd9510c333da464405bf63811e9bb9d4217f57d29040b65",
+      "sha256": "4f6e34d7213b5bcd36cdf9e9ec8e6d837587c3695deabfa1f48b88385524da67",
+      "sha256_whole": "08e94aa4e236734edcb9bd0c4fd3a1d3c3aff822768e0f09e424ed27d976f1d0",
       "kind": "real"
     },
     "William Telfer (1811\u2013?).md": {

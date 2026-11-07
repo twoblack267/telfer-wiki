@@ -1,13 +1,19 @@
 {
-  "checkedAt": "2026-11-07T02:12:25.760Z",
+  "checkedAt": "2026-11-07T02:49:50.500Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 660,
-    "after": 660
+    "after": 661
   },
   "crownJewelsChecked": 6,
-  "renames": [],
+  "renames": [
+    {
+      "from": "elizabeth-telfer",
+      "to": "elizabeth-telfer-1896",
+      "name": "Elizabeth Lillian Telfer"
+    }
+  ],
   "failures": [],
   "warnings": []
 }
