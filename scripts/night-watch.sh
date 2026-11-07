@@ -555,9 +555,9 @@ if [ "$PUSHED" = "1" ]; then
       echo "      pushed commit; nothing to confirm here.)"
       SETTLED=1
     else
-      echo "  Waiting for GitHub Pages to serve commit ${PUSHED_SHA} (up to 300s)..."
+      echo "  Waiting for GitHub Pages to serve commit ${PUSHED_SHA} (up to 900s)..."
       SETTLED=0
-      for i in $(seq 1 60); do
+      for i in $(seq 1 180); do
         LIVE_BODY=$(curl -fsS -m 20 "$SITE/" 2>/dev/null || true)
         # Match the SHORT sha: it appears in data-build-id="<short>-<epochms>".
         if printf '%s' "$LIVE_BODY" | grep -qF "$PUSHED_SHA"; then
