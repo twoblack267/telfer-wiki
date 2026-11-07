@@ -620,6 +620,29 @@ else
   FAIL="${FAIL} flyby"
 fi
 
+# ── 8b. VOICE CHANNEL (added 2026-11-07) ──
+# Mark is dyslexic: text alone does not reach him, so a broken voice pipeline is
+# a BROKEN DELIVERY CHANNEL, not a cosmetic bug. It has silently failed three
+# times and every watchdog reported OK each time, because they checked that the
+# TTS script RAN, not that a playable file came out.
+# skippy-tts-verify.sh now enforces: file exists, is opus/48k/mono, exceeds 1s,
+# is long enough for the text it claims to read (the 13-Oct chunk-0 truncation),
+# and measures male. This step renders a short real sentence through the full
+# production chain and asserts all of it. It costs a few seconds; silence costs
+# Mark a whole reply.
+echo "[8b] Verifying the voice channel end-to-end..."
+TTS_PROBE="$RUN_DIR/tts-probe.ogg"
+if TTS_OUT=$(bash "$HOME/.hermes/scripts/skippy-tts-verify.sh" \
+      "Night Watch voice channel check." "$TTS_PROBE" 2>&1); then
+  echo "  ✅ Voice channel live — $(echo "$TTS_OUT" | grep -o 'STAGED.*' | head -1)"
+else
+  TTS_RC=$?
+  echo "  🔴 Voice channel BROKEN (exit $TTS_RC) — Mark cannot hear replies"
+  echo "$TTS_OUT" | tail -3 | sed 's/^/     /'
+  FAIL="${FAIL} voice-channel:$TTS_RC"
+fi
+rm -f "$TTS_PROBE"
+
 # ── 9. Consolidated blocker card (every hard failure -> can-do board) ──
 # Purpose-built cards already fire for rendered-photo (3b) and deceased-flip (2d).
 # THIS step makes sure EVERY OTHER hard failure that blocked the push ALSO gets a
