@@ -80,6 +80,20 @@ jobs:
           # sees them locally, this prints exactly which of the three cases it hit:
           # a git failure, unequal head/work, or no previous commit available.
           REDIRECT_DIAG: 1
+      - name: Photo declarations check (every owner-supplied photo is declared)
+        # Added 2026-11-08. The schema/markup change that puts each person's
+        # photograph into their JSON-LD and the sitemap is worthless if nothing
+        # proves it still covers every photo Mark uploads. This asserts three
+        # numbers agree — records with person_photo, sitemap <image:image>, and
+        # pages carrying `image` in their Person JSON-LD — and fails the deploy
+        # if they don't. It also names any page that declares when it shouldn't,
+        # which is the privacy-sensitive direction and the reason the check
+        # runs in BOTH directions rather than only counting.
+        run: node scripts/check-photo-declarations.mjs
+        env:
+          # Optional phone bridge. Unset is fine: the build still fails and the
+          # log still records it. A dead messenger never turns a failure green.
+          PHOTO_FAIL_CARD_URL: ${{ secrets.PHOTO_FAIL_CARD_URL }}
       # ESCALATION — added 2026-09-12. `failure()` is false for a job that never
       # started, and a failed "Install dependencies" or Playwright step skips
       # everything after it; verifying the pager HERE (rather than at the end)
