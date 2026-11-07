@@ -87,13 +87,19 @@ type PublicPerson = {
 const SITE_ORIGIN = "https://telferwiki.com";
 
 const PERSON_IMAGE_BY_SLUG = (() => {
+  // SCOPE OF CONSENT (owner's ruling, 2026-11-08): EVERY person the owner has
+  // supplied a photograph for is declared — living and deceased alike ("I'm the
+  // one that selects the photos"). The upload IS the consent; nothing inferred.
+  // The first cut excluded living people and silently dropped 9 of 36 photos.
+  // noindexed pages still exclude — a declaration on a page Google is told to
+  // ignore is a contradiction.
   const map = new Map<string, { url: string; caption: string }>();
   try {
     const raw = readFileSync(resolve(__dirname, "src/data/people.public.json"), "utf-8");
     const data = JSON.parse(raw) as PublicPerson[] | { people?: PublicPerson[] };
     const people = Array.isArray(data) ? data : data.people || [];
     for (const p of people) {
-      if (!p?.slug || !p.person_photo || p.is_living) continue;
+      if (!p?.slug || !p.person_photo) continue;
       if (NOINDEX_SLUGS.has(p.slug)) continue;
       const alt = (p.images || []).find((i) => i.src === p.person_photo)?.alt;
       const name =

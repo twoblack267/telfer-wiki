@@ -152,21 +152,23 @@ const galleryImages = (person.images || []).filter(
 // and `creditText` — the two fields that make an image result legible.
 //
 // SCOPE OF CONSENT (owner's ruling, 2026-11-08): images are declared for
-// DECEASED people only. Living people's pages keep their photograph in the
-// markup for visitors and declare NOTHING to search engines. This is not
-// timidity — a living person's photo in Google Images is tied to their name,
-// birth year and family relationships across the internet, and the archive's
-// own standard already says living pages show only what is cleared and safe.
-// Declaring an image is what pushes it into image search; that push is for
-// the dead, who cannot be harmed by it. A noindexed page declares nothing at
-// all — an image on a page Google is told to ignore is a contradiction.
+// EVERY person the owner has given a photograph for — living and deceased
+// alike. His ruling, verbatim: "I don't mind if living people get shown
+// that's fine I'm the one that selects the photos". The act of uploading a
+// photograph IS the consent; nothing here infers, widens or invents one.
+// This was deceased-only in the first cut and that was wrong: it silently
+// dropped 9 of the 36 owner-supplied photographs. Living people's pages
+// still show only what the archive's own standard clears and permits —
+// this note governs the DECLARATION, not the content.
+// A noindexed page declares nothing at all — an image on a page Google is
+// told to ignore is a contradiction, so NOINDEX_SLUGS still excludes.
 const photoOfThisPerson =
   (person.images || []).find((i) => i.src === person.person_photo) || null;
 const photoCaption =
   (photoOfThisPerson?.alt || "").trim() ||
   `${personName}${person.lifespan ? ` (${person.lifespan})` : ""} — photograph`;
 const imageSchema =
-  person.person_photo && !person.is_living && !isNoIndex
+  person.person_photo && !isNoIndex
     ? {
         "@type": "ImageObject",
         url: `https://telferwiki.com/${String(person.person_photo).replace(/^\/+/, "")}`,
@@ -1403,7 +1405,8 @@ const personSchema = {
   ...(person.gender ? { gender: person.gender } : {}),
   url: `https://telferwiki.com/people/${person.slug}/`,
   // The page's own photograph, declared as a machine-readable image. See the
-  // SCOPE OF CONSENT note above imageSchema: deceased only, never noindexed.
+  // SCOPE OF CONSENT note above imageSchema: every owner-supplied photo,
+  // living or deceased, never noindexed.
   ...(imageSchema ? { image: imageSchema } : {}),
   // Schema.org Date values must be valid ISO-8601; a "?" placeholder (unknown year)
   // is NOT a valid Date and fails validators, so the field is omitted entirely.
