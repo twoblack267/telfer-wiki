@@ -2,7 +2,36 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const contactEmail = "contact@telferwiki.com";
-const mailtoHref = `mailto:${contactEmail}?subject=${encodeURIComponent("Telfer Wiki contact message")}`;
+
+/**
+ * Why this page sends from itself (2026-11-07).
+ *
+ * It previously offered ONLY a mailto: form:
+ *   <form action="mailto:...?subject=..." method="get" enctype="text/plain">
+ *
+ * Two defects followed, both reproduced by hand before this rewrite:
+ *
+ *   1. The submit serialised the fields as `&name=...&email=...&message=...`.
+ *      RFC 6068 permits only subject, body, cc, bcc and in-reply-to in a
+ *      mailto: URL. Every other key is illegal, so every mail client silently
+ *      discarded the name, the address and the whole message. The visitor's
+ *      mail client opened with a COMPLETELY EMPTY body — work done, nothing
+ *      carried across. That is the "doesn't copy the email across" report.
+ *
+ *   2. On any device with no mail client configured, submit did nothing at
+ *      all. No error, no feedback. A dead button.
+ *
+ * Cloudflare Email Routing for contact@telferwiki.com was tested separately and
+ * is working: a real message arrived and was found in All Mail. Earlier
+ * "missing email" reports were Gmail deduplicating a message sent from the
+ * same account it forwards to — not a delivery fault.
+ *
+ * The form below POSTs to Web3Forms from the browser. The copy-able address is
+ * retained below it as the guaranteed fallback (guard P7), and the script's
+ * failure path re-renders the visitor's words as text plus a correctly encoded
+ * mailto: with a `body` parameter — the only key that legitimately carries
+ * message content.
+ */
 
 // Pre-filled body — the four things that make a lead usable, so a stranger writing cold
 // doesn't have to guess what we need. Works on desktop and mobile because it is just text.
@@ -16,17 +45,111 @@ const leadTemplate = [
 ].join("\n");
 ---
 
-<BaseLayout title="Contact" description="Get in touch with the people behind the Telfer Family Wiki — corrections, questions, photos, or family stories welcome." canonicalPath="/contact/">
+<BaseLayout title="Contact" description="Send a message straight from this page — corrections, questions, photos, or family stories about the Telfer family line. No email app needed." canonicalPath="/contact/">
   <main class="max-w-3xl mx-auto px-4 py-8">
     <article class="prose prose-lg dark:prose-invert max-w-none">
       <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[var(--color-heading)] mb-2">Contact</h1>
       <p class="text-sm text-[var(--color-muted)] mb-8">Questions, corrections, photos, or stories — we'd love to hear from you</p>
 
-      <!-- tw-2026-11-04: address made copy-able. A mailto:-only link is a dead end on phones
-           with no mail app configured — the tap does nothing and the visitor assumes the site
-           is broken. The plain-text address below always works: copy, paste, send. -->
+      <section class="mb-10" id="send-a-message">
+        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">Send a Message</h2>
+        <p class="text-base text-[var(--color-muted)] mb-5">
+          Write it here and press send. Your message goes straight to the archive — you don't need
+          an email app, and nothing opens on top of this page.
+        </p>
+
+        <form
+          id="contact-form"
+          class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-5 sm:p-6 space-y-4 not-prose"
+          novalidate
+        >
+          <!-- Access key is deliberately public: it is an alias to the inbox, not a secret.
+               See Web3Forms FAQ — the key can only ever send mail TO the owner. -->
+          <input type="hidden" name="access_key" value="e376665a-87bb-4379-8542-d6604d1e7031" />
+          <input type="hidden" name="subject" value="Telfer Wiki — new message from the contact page" />
+          <input type="hidden" name="from_name" value="Telfer Wiki contact form" />
+
+          <!-- Honeypot. A real visitor never sees or fills this; bots fill every field they
+               find. Kept out of the tab order and hidden from screen readers too. -->
+          <div class="honeypot" aria-hidden="true">
+            <label for="contact-website">Leave this field empty</label>
+            <input type="text" id="contact-website" name="botcheck" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div>
+            <label for="contact-name" class="block text-sm font-semibold text-[var(--color-heading)] mb-1">Your name</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              required
+              autocomplete="name"
+              placeholder="Your full name"
+              class="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-input-bg)] text-[var(--color-ink)] placeholder:text-[var(--color-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
+            />
+            <p class="field-error" data-error-for="contact-name" hidden>Please tell us your name.</p>
+          </div>
+
+          <div>
+            <label for="contact-email" class="block text-sm font-semibold text-[var(--color-heading)] mb-1">Your email</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              required
+              autocomplete="email"
+              placeholder="you@example.com"
+              class="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-input-bg)] text-[var(--color-ink)] placeholder:text-[var(--color-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
+            />
+            <p class="field-error" data-error-for="contact-email" hidden>Please check that email address.</p>
+            <p class="text-xs text-[var(--color-muted)] mt-1">So a reply can reach you. Never shown on the site.</p>
+          </div>
+
+          <div>
+            <label for="contact-message" class="block text-sm font-semibold text-[var(--color-heading)] mb-1">Your message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="7"
+              required
+              placeholder="Who the record is about, when and where, where you got it, and how you connect."
+              class="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-input-bg)] text-[var(--color-ink)] placeholder:text-[var(--color-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
+            ></textarea>
+            <p class="field-error" data-error-for="contact-message" hidden>Please write a message.</p>
+            <p class="text-xs text-[var(--color-muted)] mt-1">
+              Approximate is fine. <em>"Grandma Ivy, born somewhere near Ipswich, around the twenties"</em> is enough to start.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-3 pt-1">
+            <button
+              type="submit"
+              id="contact-submit"
+              class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-semibold text-white bg-[var(--color-heading)] hover:bg-[var(--color-heading-hover)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed min-w-[9rem]"
+            >
+              <span data-submit-label>Send message</span>
+            </button>
+            <p class="text-xs text-[var(--color-muted)] m-0">
+              Sent straight from this page. No email app required.
+            </p>
+          </div>
+
+          <!-- Live region: every outcome is announced, never a silent dead button. -->
+          <div
+            id="contact-result"
+            class="contact-result"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></div>
+        </form>
+      </section>
+
+      <!-- tw-2026-11-04: address made copy-able. Kept below the form as the fallback path:
+           it must remain SELECTABLE PLAIN TEXT (guard P7), never only inside a link, because
+           a mailto:-only page is a dead end on devices with no mail app configured. -->
       <div class="mb-8 bg-[var(--color-card-bg)] border-2 border-[var(--color-highlight)] rounded-xl p-5 text-center">
-        <p class="text-sm font-semibold text-[var(--color-heading)] mb-2">Write to</p>
+        <p class="text-sm font-semibold text-[var(--color-heading)] mb-2">Or write to us directly</p>
         <p class="font-mono text-xl sm:text-2xl font-bold text-[var(--color-ink)] select-all break-all mb-3">
           contact@telferwiki.com
         </p>
@@ -34,9 +157,9 @@ const leadTemplate = [
           Select the address above, copy it, and send from whatever email you already use — phone,
           tablet, library computer, whatever you have. No app required.
         </p>
-        <a href={mailtoHref} class="inline-block text-xs text-[var(--color-muted)] underline hover:text-[var(--color-link)]">
-          Or tap here to open your email app if you have one set up
-        </a>
+        <p class="text-sm text-[var(--color-muted)] m-0">
+          If the form above ever fails, this address always reaches the same inbox.
+        </p>
       </div>
 
       <section class="mb-10">
@@ -57,71 +180,11 @@ const leadTemplate = [
           type="button"
           data-copy-lead
           data-template={leadTemplate}
-          class="mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-white bg-[var(--color-heading)] hover:bg-[var(--color-heading-hover)] transition-colors"
+          class="mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-white bg-[var(--color-heading)] hover:bg-[var(--color-heading-hover)] transition-colors not-prose"
         >
           Copy these four prompts
         </button>
         <p data-copy-note class="text-sm text-[var(--color-muted)] mt-2" aria-live="polite"></p>
-      </section>
-
-      <section class="mb-10">
-        <h2 class="font-serif text-2xl font-semibold text-[var(--color-heading)]">Send a Message</h2>
-        <p class="text-sm text-[var(--color-muted)] mb-4">
-          This form opens your email app with your message ready to send. If your device doesn't have an
-          email app set up, copy the address above instead — the message will still reach us.
-        </p>
-
-        <!-- tw-2026-11-04: the mailto: form is kept for desktop convenience, but it is no longer
-             the only route. The copy-able address block above is the guaranteed path. -->
-        <form
-          action={mailtoHref}
-          method="get"
-          enctype="text/plain"
-          class="bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl p-5 sm:p-6 space-y-4"
-        >
-          <div>
-            <label for="contact-name" class="block text-sm font-semibold text-[var(--color-heading)] mb-1">Your name</label>
-            <input
-              type="text"
-              id="contact-name"
-              name="name"
-              required
-              placeholder="Your full name"
-              class="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-input-bg)] text-[var(--color-ink)] placeholder:text-[var(--color-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
-            />
-          </div>
-
-          <div>
-            <label for="contact-email" class="block text-sm font-semibold text-[var(--color-heading)] mb-1">Your email</label>
-            <input
-              type="email"
-              id="contact-email"
-              name="email"
-              required
-              placeholder="you@example.com"
-              class="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-input-bg)] text-[var(--color-ink)] placeholder:text-[var(--color-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
-            />
-          </div>
-
-          <div>
-            <label for="contact-message" class="block text-sm font-semibold text-[var(--color-heading)] mb-1">Your message</label>
-            <textarea
-              id="contact-message"
-              name="message"
-              rows="6"
-              required
-              placeholder="Who the record is about, when and where, where you got it, and how you connect."
-              class="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-input-bg)] text-[var(--color-ink)] placeholder:text-[var(--color-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-white bg-[var(--color-heading)] hover:bg-[var(--color-heading-hover)] transition-colors"
-          >
-            Open email app
-          </button>
-        </form>
       </section>
 
       <section class="mb-10">
@@ -149,6 +212,156 @@ const leadTemplate = [
   </main>
 
   <script>
+    // ── Contact form — send from the page ────────────────────────────────────
+    // Two independent paths, because a contact form that can fail silently is
+    // worse than no form at all:
+    //
+    //   A. fetch POST to Web3Forms. Stays on the page, shows the outcome inline.
+    //   B. If that throws (offline, blocked, service down, CSP, any network
+    //      refusal), the panel prints the address as text AND offers a mailto
+    //      link with a correctly encoded `body`. The visitor's words are never
+    //      lost — they are re-rendered as text they can copy.
+    //
+    // The mailto: in path B uses the `body` parameter, which is the ONLY key
+    // RFC 6068 permits for message content. That was the original defect.
+    (() => {
+      const form = document.getElementById("contact-form") as HTMLFormElement | null;
+      const result = document.getElementById("contact-result") as HTMLElement | null;
+      const button = document.getElementById("contact-submit") as HTMLButtonElement | null;
+      const label = button?.querySelector("[data-submit-label]") as HTMLElement | null;
+      if (!form || !result || !button) return;
+
+      const CONTACT_EMAIL = "contact@telferwiki.com";
+      const ENDPOINT = "https://api.web3forms.com/submit";
+      const MIN_FILL_MS = 2500;
+      const openedAt = Date.now();
+
+      const fields = {
+        name: document.getElementById("contact-name") as HTMLInputElement,
+        email: document.getElementById("contact-email") as HTMLInputElement,
+        message: document.getElementById("contact-message") as HTMLTextAreaElement,
+      };
+
+      function showError(id: string, show: boolean) {
+        const el = document.querySelector(`[data-error-for="${id}"]`) as HTMLElement | null;
+        if (!el) return;
+        el.hidden = !show;
+        const field = document.getElementById(id) as HTMLElement | null;
+        if (field) field.setAttribute("aria-invalid", show ? "true" : "false");
+      }
+
+      function validate(): boolean {
+        let ok = true;
+        if (!fields.name.value.trim()) { showError("contact-name", true); ok = false; }
+        else showError("contact-name", false);
+
+        const email = fields.email.value.trim();
+        // Deliberately permissive: something@something.something. A stricter
+        // pattern rejects valid institutional addresses and loses real leads.
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { showError("contact-email", true); ok = false; }
+        else showError("contact-email", false);
+
+        if (!fields.message.value.trim()) { showError("contact-message", true); ok = false; }
+        else showError("contact-message", false);
+        return ok;
+      }
+
+      function setBusy(busy: boolean) {
+        button!.disabled = busy;
+        button!.setAttribute("aria-busy", busy ? "true" : "false");
+        if (label) label.textContent = busy ? "Sending…" : "Send message";
+      }
+
+      function setResult(kind: "ok" | "error" | "fallback", html: string) {
+        result!.hidden = false;
+        result!.dataset.kind = kind;
+        result!.innerHTML = html;
+      }
+
+      function escapeHtml(s: string) {
+        return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] as string));
+      }
+
+      // Path B — never lose the visitor's words.
+      function showFallback(reason: string) {
+        const subject = "Telfer Wiki — message from the contact page";
+        const body = [
+          `Name: ${fields.name.value.trim()}`,
+          `Email: ${fields.email.value.trim()}`,
+          "",
+          fields.message.value.trim(),
+        ].join("\n");
+        const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        setResult(
+          "fallback",
+          `<p class="contact-result__title">The form could not send${reason ? ` (${escapeHtml(reason)})` : ""}.</p>
+           <p>Your message has <strong>not</strong> been lost. Either send it from your own email to
+           <strong>${CONTACT_EMAIL}</strong>, or use the button below — it opens your email app with
+           your name, address and message already filled in.</p>
+           <p><a class="contact-result__action" href="${mailto}">Open my email app with this message</a></p>
+           <p class="contact-result__hint">Signals: check your connection, or an ad-blocker may be blocking the form.</p>`
+        );
+      }
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!validate()) {
+          setResult("error", "<p class=\"contact-result__title\">Please check the highlighted fields above.</p>");
+          const firstBad = form.querySelector('[aria-invalid="true"]') as HTMLElement | null;
+          firstBad?.focus();
+          return;
+        }
+
+        // Honeypot: a bot fills it. Fail silently rather than teach the bot.
+        const honey = form.querySelector('input[name="botcheck"]') as HTMLInputElement | null;
+        if (honey && honey.value) {
+          setResult("ok", "<p class=\"contact-result__title\">Thank you — your message has been received.</p>");
+          form.reset();
+          return;
+        }
+
+        // Time check: submissions faster than a human can type are not human.
+        if (Date.now() - openedAt < MIN_FILL_MS) {
+          setResult("error", "<p class=\"contact-result__title\">That was very quick — please try sending again in a moment.</p>");
+          return;
+        }
+
+        setBusy(true);
+        setResult("ok", "<p class=\"contact-result__title\">Sending…</p>");
+
+        const payload = Object.fromEntries(new FormData(form).entries());
+
+        try {
+          const res = await fetch(ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const data = await res.json().catch(() => null);
+
+          if (res.ok && data && data.success) {
+            form.reset();
+            const name = escapeHtml(fields.name.value.trim());
+            setResult(
+              "ok",
+              `<p class="contact-result__title">Thank you — your message has been sent.</p>
+               <p>It goes straight to the archive. Replies may take a few days, because every message is read by a person.
+               If you need to add anything, write to <strong>${CONTACT_EMAIL}</strong>.</p>`
+            );
+            // Keep the button disabled briefly so a double-click cannot double-send.
+            setTimeout(() => setBusy(false), 1200);
+            return;
+          }
+          throw new Error((data && data.message) || `HTTP ${res.status}`);
+        } catch (err) {
+          showFallback(err instanceof Error ? err.message : "");
+        } finally {
+          if (button!.disabled && Date.now() - openedAt < MIN_FILL_MS) setBusy(false);
+          else setBusy(false);
+        }
+      });
+    })();
+
     // Copy-the-prompts button. Falls back to a selectable prompt if the clipboard API is blocked
     // (older browsers, or a non-HTTPS context) so the visitor is never left with a dead button.
     document.querySelectorAll<HTMLElement>("[data-copy-lead]").forEach((btn) => {
@@ -157,7 +370,7 @@ const leadTemplate = [
         const text = btn.dataset.template || "";
         try {
           await navigator.clipboard.writeText(text);
-          if (note) note.textContent = "Copied. Paste it into an email to contact@telferwiki.com and fill in what you know.";
+          if (note) note.textContent = "Copied. Paste it into the message box above and fill in what you know.";
         } catch {
           if (note) {
             note.textContent =
@@ -167,4 +380,64 @@ const leadTemplate = [
       });
     });
   </script>
+
+  <style>
+    /* Honeypot: present in the DOM, invisible to a human. Not display:none,
+       because some bots skip those; moved off-screen and shrunk instead. */
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .field-error {
+      margin: 0.35rem 0 0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #b3261e;
+    }
+    :global(.dark) .field-error,
+    .dark .field-error {
+      color: #f38ba8;
+    }
+
+    [aria-invalid="true"] {
+      border-color: #b3261e !important;
+    }
+    :global(.dark) [aria-invalid="true"],
+    .dark [aria-invalid="true"] {
+      border-color: #f38ba8 !important;
+    }
+
+    .contact-result {
+      margin-top: 0.5rem;
+      padding: 0.9rem 1rem;
+      border-radius: 0.75rem;
+      border-left: 4px solid var(--color-border);
+      background: var(--color-surface);
+      font-size: 0.95rem;
+    }
+    .contact-result :global(p) { margin: 0 0 0.5rem; }
+    .contact-result :global(p:last-child) { margin-bottom: 0; }
+    .contact-result[data-kind="ok"] { border-left-color: #2e7d32; }
+    .contact-result[data-kind="error"] { border-left-color: #b3261e; }
+    .contact-result[data-kind="fallback"] { border-left-color: var(--color-highlight); }
+    .contact-result :global(.contact-result__title) { font-weight: 700; color: var(--color-heading); }
+    .contact-result :global(.contact-result__action) {
+      display: inline-block;
+      margin-top: 0.25rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background: var(--color-heading);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-result :global(.contact-result__hint) {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
+  </style>
 </BaseLayout>
