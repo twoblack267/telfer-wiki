@@ -63,6 +63,18 @@ function checkPII(text, label, severity = 'high', opts = {}) {
   // intentional public information, not a PII leak. Allowlist it before scanning.
   body = body.replace(/contact@telferwiki\.com/gi, '[SITE CONTACT]');
 
+  // FIXED 2026-11-07 — FORM PLACEHOLDERS ARE NOT PII.
+  // The email input on contact.astro carries placeholder="you@example.com".
+  // That is standard HTML, it is the same string in every form on earth, and it
+  // belongs to nobody. The scanner matched it and reported PII_EMAIL as a HIGH
+  // issue on every run, which permanently pinned the site's audit score at
+  // 1.3/10 "Poor". A permanently-red HIGH issue is worse than no scan: it
+  // makes the score unreadable and teaches everyone to ignore the top line.
+  // Strip placeholder attributes entirely, then the reserved example domains.
+  body = body.replace(/\bplaceholder\s*=\s*"[^"]*"/gi, '[PLACEHOLDER]');
+  body = body.replace(/\bplaceholder\s*=\s*'[^']*'/gi, '[PLACEHOLDER]');
+  body = body.replace(/[a-zA-Z0-9._%+-]+@(?:example\.(?:com|org|net)|example|test|localhost|invalid)\b/gi, '[EXAMPLE ADDR]');
+
   for (const { regex, type, label, skip = false } of checks) {
     if (skip) continue;
     const matches = body.match(regex);
