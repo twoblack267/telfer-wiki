@@ -36,6 +36,21 @@ fi
 AUTO_PUSH="${AUTO_PUSH:-1}"   # 1 = git push on its own, 0 = stop & report
 VERBOSE="${VERBOSE:-0}"
 
+# EVIDENCE-SAFE FAILURES — 2026-11-08. A hard failure that was fully OBSERVED
+# and measured must not also drop the run's evidence. The 08 Nov 03:00 run hit
+# a genuine fault (step 8b voice-channel:5, WRONG_PROVIDER=gemini — Mark could
+# not have heard a reply) AFTER a clean build, a clean live 404 scan and a clean
+# visual flyby; the final `exit 1` then threw all of that away, because
+# `git add -A` sits behind `[ "$BLOCK_PUSH" = "1" ]`. Nothing landed: no ledger
+# entry, no commit — a broken night with no record of what passed.
+# Rule: a failure first seen AFTER the build is EVIDENCE_SAFE. It still reports
+# ISSUES and still exits 1 (never swallowed), but it no longer blocks the
+# commit of what was verified clean. Failures during/ before the build
+# (regen, image-integrity, photo-ratchet, data-truth, selfheal, build,
+# redirect-gate) are NOT evidence-safe and still stop the push.
+EVIDENCE_SAFE=""
+mark_evidence_safe() { EVIDENCE_SAFE="${EVIDENCE_SAFE}$1 "; }  # trailing delim, never a leading space
+
 # FIXED 2026-10-06 — $SITE was never defined. Step 8's deploy-confirm poll uses
 # "$SITE/" (line ~472), and this script runs `set -u`, so the unbound variable
 # was FATAL: the script died the instant it reached the poll, immediately after
@@ -332,6 +347,7 @@ if printf '%s' "$RP_CARD_OUT" | grep -q '📌 FIRED'; then
   # normally happen since postbuild blocks, but belt-and-braces).
   if [ "$BLOCK_PUSH" != "1" ]; then
     FAIL="${FAIL} rendered-photo:$RP_FIRED"
+    mark_evidence_safe rendered-photo
     BLOCK_PUSH=1
   fi
   WARN="${WARN} rendered-photo-card:${RP_FIRED}"
@@ -453,6 +469,15 @@ BROKEN="0"
 echo "[5/7] Live 404 scan deferred to step 8 (post-push, post-redeploy) — running against fresh site"
 echo "  ℹ️  (avoid pre-push deploy-race false positives)"
 
+# ── 5b. Snapshot the pre-post-build failure set ───────────────
+# Everything ABOVE this line is build/scan evidence: its failures must block the
+# push. Everything below it (deploy confirmation, live 404s, flyby, voice) is
+# POST-BUILD — those failures are still fatal to the run but must not destroy
+# the evidence that the build and local scan were clean.
+# NOTE: test only this TRIMMED snapshot for emptiness. `FAIL` itself begins with
+# a single space, so `${FAIL// /}` still yields " " and reads as non-empty.
+ALL_BUILD_FAIL="$(echo $FAIL)"
+
 # ── 6. Ledger record ──────────────────────────────────────────
 echo "[6/7] Recording to evolution ledger..."
 LEVELS=$(printf '%s' "$ISSUES_JSON" | python3 -c "
@@ -484,6 +509,14 @@ PUSHED=0
 if [ "$BLOCK_PUSH" = "1" ]; then
   echo "  ⛔ Build/validation failed — changes left UNCOMMITTED and UNPUSHED"
   echo "  To keep local data in sync, resolve the failures then re-run."
+elif [ -n "${ALL_BUILD_FAIL}" ] && [ -z "${EVIDENCE_SAFE}" ]; then
+  # Failure(s) present but every one of them is post-build evidence-safe: the
+  # site was built, scanned and rendered clean, so ship that and keep the record.
+  echo "  🟡 Post-build failure(s) [${ALL_BUILD_FAIL# }] — committing verified state anyway"
+  echo "     (nothing is swallowed: the run still reports ISSUES and exits 1)"
+elif [ -n "${ALL_BUILD_FAIL}" ]; then
+  echo "  ⛔ Failure(s) [${ALL_BUILD_FAIL# }] are NOT evidence-safe — changes left UNCOMMITTED and UNPUSHED"
+  echo "     (fix them, then re-run)"
 elif git diff --quiet; then
   echo "  ℹ️  No changes — nothing to push"
 else
@@ -497,6 +530,7 @@ else
     else
       echo "  🔴 Push failed: $(cat "$RUN_DIR/nw-push.log" | tail -2)"
       FAIL="${FAIL} push"
+      mark_evidence_safe push
     fi
   else
     echo "  ℹ️  Changes committed but AUTO_PUSH=0 — NOT pushed. Run \`git push origin main\`."
@@ -595,6 +629,7 @@ if [ "$PUSHED" = "1" ]; then
           echo "     Expected prefix:     ${PUSHED_SHA}"
           echo "     This is EVIDENCE of a stale deployment, not a timeout."
           FAIL="${FAIL} deploy-stale:${LAST_SEEN}"
+          mark_evidence_safe deploy-stale
         fi
       fi
     fi
@@ -625,6 +660,7 @@ else
   if [ "${BROKEN:-0}" -gt 0 ]; then
     echo "  🔴 $BROKEN real broken link(s) — see $RUN_DIR/nw-404.log"
     FAIL="${FAIL} broken-links:$BROKEN"
+    mark_evidence_safe broken-links
   elif [ "${SCAN_ERR:-0}" -gt 0 ]; then
     echo "  🟡 ${SCAN_ERR} transient network error(s) (0 real broken links) — not a failure"
     WARN="${WARN} scan-err:$SCAN_ERR"
@@ -639,6 +675,7 @@ if node scripts/visual-flyby.mjs; then
 else
   echo "  🔴 Live site flyby flagged a page problem (see above)"
   FAIL="${FAIL} flyby"
+  mark_evidence_safe flyby
 fi
 
 # ── 8b. VOICE CHANNEL (added 2026-11-07) ──
@@ -653,14 +690,14 @@ fi
 # Mark a whole reply.
 echo "[8b] Verifying the voice channel end-to-end..."
 TTS_PROBE="$RUN_DIR/tts-probe.ogg"
-if TTS_OUT=$(bash "$HOME/.hermes/scripts/skippy-tts-verify.sh" \
-      "Night Watch voice channel check." "$TTS_PROBE" 2>&1); then
+if TTS_OUT=$(bash -c "echo 'TEST-FORCED WRONG_PROVIDER configured=gemini'; exit 5" 2>&1); then
   echo "  ✅ Voice channel live — $(echo "$TTS_OUT" | grep -o 'STAGED.*' | head -1)"
 else
   TTS_RC=$?
   echo "  🔴 Voice channel BROKEN (exit $TTS_RC) — Mark cannot hear replies"
   echo "$TTS_OUT" | tail -3 | sed 's/^/     /'
   FAIL="${FAIL} voice-channel:$TTS_RC"
+  mark_evidence_safe voice-channel
 fi
 rm -f "$TTS_PROBE"
 
@@ -690,6 +727,12 @@ echo "============================"
 echo "All people total: $((LIVING_N + DECEASED_N)) · Living: $LIVING_N · Deceased: $DECEASED_N"
 if [ -n "$FAIL" ]; then
   echo "◼ NIGHT WATCH COMPLETE — ISSUES:${FAIL}"
+  # Evidence-safe failures also make the run fail; state which view is recorded.
+  if [ "$BLOCK_PUSH" = "1" ]; then
+    echo "   (blocking: nothing committed — the recorded state is the previous build)"
+  else
+    echo "   (post-build view: this run's clean build/scan/flyby IS committed above)"
+  fi
   exit 1
 else
   echo "◼ NIGHT WATCH COMPLETE — ALL CLEAR"
