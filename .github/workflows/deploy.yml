@@ -281,7 +281,28 @@ jobs:
               got_id="$(grep -o 'data-build-id="[^"]*"' /tmp/_vl_body 2>/dev/null | head -1)"
               rm -f "$hdr"
               body="$(cat /tmp/_vl_body 2>/dev/null)" || body=""
-              if printf '%s' "$body" | grep -q "data-build-id=\"$BUILD_ID\""; then
+              # ── NO PIPELINE. NO SIGPIPE. NO PIPE-BUFFER RACE. ────────────────
+              # (tw-2026-11-07-001) This line used to be:
+              #     if printf '%s' "$body" | grep -q "data-build-id=\"$BUILD_ID\""
+              # That is the SAME SIGPIPE-under-pipefail hazard the 2026-09-21 fix
+              # (tw-2026-09-21-002) removed from the curl side — reintroduced on
+              # the printf side. $body is ~45KB, uncomfortably close to the 64KB
+              # pipe buffer, so it is a RACE: grep -q exits on the first match and
+              # closes the pipe; printf takes SIGPIPE finishing its write; pipefail
+              # turns that into exit 141; the `if` takes the ELSE branch and
+              # declares a perfectly live deploy "not yet live".
+              # Run 42300036842 lost that race 20 times in a row, logging the
+              # exact id it claimed not to find, and the runner printed
+              #   "line 84: printf: Broken pipe"
+              # on the check line itself — proof grep had already matched.
+              # At 45KB it passes 10/10 locally and fails on a loaded runner:
+              # an intermittent false-red that burns 20 attempts per deploy.
+              #
+              # grep reads the ALREADY-WRITTEN temp file /tmp/_vl_body directly.
+              # No pipeline, no process substitution, no second writer — so grep
+              # exiting on the first match cannot signal anyone. $body is kept
+              # only for the diagnostic log line below.
+              if grep -qF "data-build-id=\"$BUILD_ID\"" /tmp/_vl_body; then
                 :
               else
                 all_ok=0
