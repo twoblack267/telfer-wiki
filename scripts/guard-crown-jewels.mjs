@@ -112,17 +112,35 @@ const CROWN_JEWELS = {
     // identified: "William Telfer" (year-less, four men share the name), "Andrew
     // Telfer" (the page's body table points this at his BROTHER, and the page's
     // research note explicitly warns against that conflation) and "Elizabeth Telfer
-    // (Mrs Mansfield)" (no profile exists). Only two are resolvable: William 1841 and
-    // Edward. Demanding 5 would force the pipeline to fabricate identity — the exact
-    // sin this guard exists to prevent. Minimums come from what the VAULT can
-    // actually identify, never from previously generated data.
+    // (Mrs Mansfield)" (no profile existed at the time of that correction). Only two
+    // were resolvable then: William 1841 and Edward. Demanding 5 would force the
+    // pipeline to fabricate identity — the exact sin this guard exists to prevent.
+    // Minimums come from what the VAULT can actually identify, never from previously
+    // generated data.
+    //
+    // RAISED 2026-11-07 (children 2 -> 3) — and note WHICH child this is. On 7 Nov
+    // 12:51 commit d75192d created a real profile for "Elizabeth Telfer (Mrs
+    // Mansfield)", linking her from this man's Children row. She is his DAUGHTER
+    // ("Elizabeth became Mrs. Mansfield and lived in Tenterfield" — From the Borders
+    // to the Bush), living in the Tenterfield/NSW line with her brothers William 1841
+    // and Edward. She is NOT Elizabeth Beattie Telfer (b. 1832), who is a different
+    // woman entirely: born to James Telfer (1796) and Elizabeth Beattie (1802), with
+    // ten Dillon children of her own. Anyone later "fixing" this count by pointing
+    // the children ref at `elizabeth-beattie-telfer-1832` would move a daughter from
+    // the Australian line into a Scottish cousin's family — a silent, plausible-
+    // looking identity error, which is worse than the count being wrong.
+    // The old floor of 2 was therefore a STALE RUBBER STAMP: it sat one below the
+    // real count, so a rebuild could silently drop Elizabeth again and still pass.
+    // That is exactly what happened on 2026-11-07 — the 03:00 Night Watch regen
+    // produced a 2-child record and the gate waved it through, killing the push
+    // downstream. The floor is now pinned to what the vault identifies.
     parents: 2,
     spouses: 1,
-    children: 2,
+    children: 3,
     why:
-      "Parents William Telfer (shepherd) and Janet Nichol, wife Margaret, and the two " +
-      "children the vault identifies by name (William 1841, Edward). His other child " +
-      "refs are ambiguous or point at his brother; refusing to guess is correct.",
+      "Parents William Telfer (shepherd) and Janet Nichol, wife Margaret, and the three " +
+      "children the vault identifies: William 1841, Edward, and Elizabeth (Mrs Mansfield " +
+      "of Tenterfield — a real profile since d75192d, NOT Elizabeth Beattie Telfer 1832).",
   },
   "andrew-kelly-parker-1883": {
     // CORRECTED 2026-10-28 (children 8 -> 7): the eighth "child" was HIMSELF.
