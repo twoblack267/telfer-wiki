@@ -140,12 +140,6 @@
     "reason": "Slug shape changed; the person did not. Elizabeth Anne Smith (b. 1878) is the sole match — same record, canonical slug."
   },
   {
-    "from": "elizabeth-telfer",
-    "to": "elizabeth-telfer-1896",
-    "matched_by": "display_name",
-    "display_name": "Elizabeth Lillian Telfer"
-  },
-  {
     "from": "emma-louise-commane-1983",
     "to": "emma-commane",
     "matched_by": "removed-declared",
