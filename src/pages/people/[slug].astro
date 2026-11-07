@@ -140,6 +140,41 @@ const galleryImages = (person.images || []).filter(
     )
 );
 
+// ── Structured image data (added 2026-11-08) ──
+// WHY: until now NOT ONE person page told Google that its own photograph
+// existed. Measured 2026-11-08: the `Person` block carried name, dates,
+// relationships, sameAs and dateModified — and no `image`. A machine reading
+// the JSON-LD saw a person with no picture; only the human <img> tag carried
+// one, and Google had to guess by scraping markup. Google guesses badly, which
+// is why a thin third-party page outranked this archive in image results.
+//
+// Schema.org `image` is the formal declaration. `ImageObject` adds `caption`
+// and `creditText` — the two fields that make an image result legible.
+//
+// SCOPE OF CONSENT (owner's ruling, 2026-11-08): images are declared for
+// DECEASED people only. Living people's pages keep their photograph in the
+// markup for visitors and declare NOTHING to search engines. This is not
+// timidity — a living person's photo in Google Images is tied to their name,
+// birth year and family relationships across the internet, and the archive's
+// own standard already says living pages show only what is cleared and safe.
+// Declaring an image is what pushes it into image search; that push is for
+// the dead, who cannot be harmed by it. A noindexed page declares nothing at
+// all — an image on a page Google is told to ignore is a contradiction.
+const photoOfThisPerson =
+  (person.images || []).find((i) => i.src === person.person_photo) || null;
+const photoCaption =
+  (photoOfThisPerson?.alt || "").trim() ||
+  `${personName}${person.lifespan ? ` (${person.lifespan})` : ""} — photograph`;
+const imageSchema =
+  person.person_photo && !person.is_living && !isNoIndex
+    ? {
+        "@type": "ImageObject",
+        url: `https://telferwiki.com/${String(person.person_photo).replace(/^\/+/, "")}`,
+        caption: photoCaption,
+        creditText: "Telfer Family History Archive",
+      }
+    : null;
+
 // ── Helper: ordinal suffix (1st, 2nd, 3rd, 4th…) for generation labels ──
 function ordinalSuffix(n) {
   const s = ["th", "st", "nd", "rd"];
@@ -1367,6 +1402,9 @@ const personSchema = {
   ...(person.last_name ? { familyName: person.last_name } : {}),
   ...(person.gender ? { gender: person.gender } : {}),
   url: `https://telferwiki.com/people/${person.slug}/`,
+  // The page's own photograph, declared as a machine-readable image. See the
+  // SCOPE OF CONSENT note above imageSchema: deceased only, never noindexed.
+  ...(imageSchema ? { image: imageSchema } : {}),
   // Schema.org Date values must be valid ISO-8601; a "?" placeholder (unknown year)
   // is NOT a valid Date and fails validators, so the field is omitted entirely.
   ...(person.birth_date ? { birthDate: person.birth_date }

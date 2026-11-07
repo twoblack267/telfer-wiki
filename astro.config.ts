@@ -54,6 +54,67 @@ const LAST_MOD_BY_SLUG = (() => {
 })();
 
 // ---------------------------------------------------------------------------
+// <image:image> for person URLs (added 2026-11-08)
+//
+// WHY: measured 2026-11-08 — the sitemap declared the xmlns:image namespace on
+// every chunk and used it ZERO times. Google's image crawler had no image
+// entries and no captions; it had to infer every photo from HTML markup. That
+// is the declaration gap this map closes.
+//
+// SOURCE OF TRUTH: people.public.json — the same file the page template reads.
+// Nothing is duplicated by hand; a photo added to a person record appears here
+// on the next build with no other edit anywhere. That is the point: the owner
+// uploads a photo, the pipeline carries it the rest of the way unattended.
+//
+// CONSENT SCOPE — identical to the template's `imageSchema`: DECEASED people
+// only, and never a slug on NOINDEX_SLUGS. A sitemap image entry points Google
+// at a photo tied to a name; that is a deliberate push, and it is for the dead.
+// Living people get their photo in the page markup for visitors and nothing in
+// the sitemap. Both consumers read the same two rules — keep them in lockstep
+// or the two signals contradict each other in public.
+// ---------------------------------------------------------------------------
+type PublicPerson = {
+  slug?: string;
+  first_name?: string;
+  last_name?: string;
+  display_name?: string;
+  lifespan?: string;
+  person_photo?: string | null;
+  is_living?: boolean;
+  images?: { src?: string; alt?: string }[];
+};
+
+const SITE_ORIGIN = "https://telferwiki.com";
+
+const PERSON_IMAGE_BY_SLUG = (() => {
+  const map = new Map<string, { url: string; caption: string }>();
+  try {
+    const raw = readFileSync(resolve(__dirname, "src/data/people.public.json"), "utf-8");
+    const data = JSON.parse(raw) as PublicPerson[] | { people?: PublicPerson[] };
+    const people = Array.isArray(data) ? data : data.people || [];
+    for (const p of people) {
+      if (!p?.slug || !p.person_photo || p.is_living) continue;
+      if (NOINDEX_SLUGS.has(p.slug)) continue;
+      const alt = (p.images || []).find((i) => i.src === p.person_photo)?.alt;
+      const name =
+        (p.display_name || [p.first_name, p.last_name].filter(Boolean).join(" ")).trim() ||
+        p.slug;
+      const caption =
+        (alt || "").trim() ||
+        `${name}${p.lifespan ? ` (${p.lifespan})` : ""} — photograph`;
+      map.set(p.slug, {
+        url: `${SITE_ORIGIN}/${String(p.person_photo).replace(/^\/+/, "")}`,
+        caption,
+      });
+    }
+  } catch {
+    // no map -> sitemap carries no image entries; the build continues and the
+    // pages still declare their own images in JSON-LD. Fails quiet, not fatal.
+  }
+  return map;
+})();
+
+// ---------------------------------------------------------------------------
 // <lastmod> for NON-PERSON pages, taken from the last git commit of the source
 // file that renders them. Values are literal and dated — they are NOT computed
 // at build time, because a build-time fallback would restamp every page on
@@ -178,8 +239,26 @@ export default defineConfig({
           const pathname = decodeURIComponent(new URL(item.url).pathname);
           const m = pathname.match(/^\/people\/([^/]+)(\/|$)/);
           if (m) {
+            // A base person URL (not /family-sheet/ or /descendants/) carries
+            // the person's own photograph as an <image:image> entry. Derived
+            // pages do not: they print a relationship table, not a portrait,
+            // and Google would be told the same photo belongs to two URLs.
+            //
+            // CRITICAL: the sitemap library does `item.img.forEach(...)` with
+            // NO guard (node_modules/sitemap/.../sitemap-item-stream.js). An
+            // item whose `img` is undefined THROWS mid-stream and silently
+            // truncates the rest of that sitemap chunk. Measured 2026-11-08:
+            // returning items without `img` dropped 148 <lastmod> entries and
+            // the freshness gate caught it. Always emit an array, empty or not.
+            const isBasePersonUrl = pathname === `/people/${m[1]}/`;
+            const img = isBasePersonUrl ? PERSON_IMAGE_BY_SLUG.get(m[1]) : undefined;
+            const withImage = {
+              ...item,
+              img: img ? [{ url: img.url, caption: img.caption }] : [],
+            };
             const iso = LAST_MOD_BY_SLUG.get(m[1]);
-            if (iso) return { ...item, lastmod: iso };
+            if (iso) return { ...withImage, lastmod: iso };
+            return withImage;
           }
           const page = PAGE_LAST_MOD.get(pathname.replace(/\/?$/, "/"));
           if (page) return { ...item, lastmod: page };

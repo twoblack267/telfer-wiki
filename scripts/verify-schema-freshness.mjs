@@ -53,9 +53,23 @@ const sitemapFiles = fs
 if (!sitemapFiles.length) fail.push("GATE: no sitemap-N.xml files found in dist/");
 for (const f of sitemapFiles) {
   const xml = fs.readFileSync(path.join(SITEMAP_DIR, f), "utf-8");
-  const re = /<url>[\s\S]*?<loc>([^<]+)<\/loc>[\s\S]*?<lastmod>([^<]+)<\/lastmod>[\s\S]*?<\/url>/g;
+  const re = /<url>([\s\S]*?)<\/url>/g;
   let m;
-  while ((m = re.exec(xml))) lastmodMap.set(m[1].trim(), m[2].trim());
+  while ((m = re.exec(xml))) {
+    // Parse ONE block at a time. The previous regex ran
+    //   /<url>[\s\S]*?<loc>([^<]+)<\/loc>[\s\S]*?<lastmod>...<\/lastmod>[\s\S]*?<\/url>/
+    // and `[\s\S]*?` will happily cross a `</url>` boundary. So on any block
+    // that legitimately has NO <lastmod> (e.g. /people/families/young/), it
+    // consumed the NEXT block's <lastmod> and attributed it to the wrong URL —
+    // which then looked "missing from sitemap" to the gate. Measured
+    // 2026-11-08: 149 lastmod-less blocks silently swallowed 148 of the
+    // following entries and failed the build on a page that was correctly
+    // present. Never let a match span a closing tag.
+    const block = m[1];
+    const loc = block.match(/<loc>([^<]+)<\/loc>/);
+    const lastmod = block.match(/<lastmod>([^<]+)<\/lastmod>/);
+    if (loc && lastmod) lastmodMap.set(loc[1].trim(), lastmod[1].trim());
+  }
 }
 notes.push(`sitemaps read: ${sitemapFiles.length} · <lastmod> entries: ${lastmodMap.size}`);
 
