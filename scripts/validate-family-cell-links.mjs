@@ -104,6 +104,7 @@ const AUDIT_SOURCE = VAULT_PEOPLE ? "vault" : "snapshot";
 // Family-sheet row labels. Only these rows are the sheet; other tables in a body
 // are prose and not this guard's business.
 import { ROW_LABELS } from "./family-row-labels.mjs";
+import { splitTableRow } from "./lib/table-cells.mjs";
 
 // Cells that are legitimately not a person and must never be "fixed" into a link.
 const NON_PERSON = /^(n\/?a|unknown|none|—|-|–|\?|unmarried|never married|see below|see notes|tbc|tbd)$/i;
@@ -221,7 +222,9 @@ function* familyRows() {
       for (const rawLine of txt.split(/\r?\n/)) {
         const line = rawLine.trim();
         if (!line.startsWith("|")) continue;
-        const cells = line.split("|").map((c) => c.trim());
+        // Wikilink-aware: `[[Target|Display]]` hides a pipe inside the cell. Splitting
+        // naively truncated the value at the alias (266 rows / 151 files, 2026-11-07).
+        const cells = splitTableRow(line);
         if (cells.length < 4) continue;
         const label = norm(cells[1]).replace(/^\*+\s*|\s*\*+$/g, "").trim();
         if (!ROW_LABELS.has(label)) continue;
@@ -244,7 +247,9 @@ if (VAULT_PEOPLE && snapshot) {
     for (const raw of txt.split(/\r?\n/)) {
       const line = raw.trim();
       if (!line.startsWith("|")) continue;
-      const cells = line.split("|").map((c) => c.trim());
+      // Same wikilink-aware split as above — this block compares vault to snapshot,
+      // so a naive split here would report every alias row as DRIFT and hide the real ones.
+      const cells = splitTableRow(line);
       if (cells.length < 4) continue;
       const label = norm(cells[1]).replace(/^\*+\s*|\s*\*+$/g, "").trim();
       if (!ROW_LABELS.has(label)) continue;

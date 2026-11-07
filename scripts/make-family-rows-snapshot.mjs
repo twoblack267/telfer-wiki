@@ -18,6 +18,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { homedir } from "node:os";
 import { ROW_LABELS } from "./family-row-labels.mjs";
+import { splitTableRow } from "./lib/table-cells.mjs";
 
 const ROOT = join(import.meta.dirname, "..");
 const CANDIDATES = [
@@ -40,7 +41,10 @@ for (const f of files) {
   for (const raw of readFileSync(join(VAULT, f), "utf8").split(/\r?\n/)) {
     const line = raw.trim();
     if (!line.startsWith("|")) continue;
-    const cells = line.split("|").map((c) => c.trim());
+    // Wikilink-aware: `[[Target|Display]]` contains a legal pipe. Splitting naively
+    // truncated the value at the alias and silently dropped every later name in the
+    // cell — 266 rows across 151 files when this was measured on 2026-11-07.
+    const cells = splitTableRow(line);
     if (cells.length < 4) continue;
     const label = cells[1].replace(/^\*+\s*|\s*\*+$/g, "").replace(/\s+/g, " ").trim().toLowerCase();
     if (!ROW_LABELS.has(label)) continue;
