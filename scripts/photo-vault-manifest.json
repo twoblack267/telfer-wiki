@@ -1,7 +1,7 @@
 {
  "_comment": "Vault-derived photo inventory for CI, which has no ObsidianVault checkout. sha256 of every image under Family History/. Regenerate with \"node scripts/check-vault-photo-parity.mjs --write-manifest\" AFTER changing photos.",
- "generated": "2026-11-08T00:04:52.619Z",
- "vault_images": 109,
+ "generated": "2026-11-08T00:12:59.043Z",
+ "vault_images": 110,
  "vault_sha256": [
   "006ed4d7ac6d1481446bf3d5d2d749f85af9acab0e7b5f1f7f591fa7fe0beae1",
   "0a614b490eaca20478ce53387db7cb9688d3208a3591757d1453d6aadc55d3c0",
@@ -34,6 +34,7 @@
   "3cf7fd89fe99d66499c5141b382025464f680a0ab4409253dff4a7d3c5272384",
   "3d0b85d08d4f8dfcb0c82d2b73a9a64a407a36a0f841388ce9ffe7d9ff23dbd9",
   "3d5904648fa4b04ea36f6c5de0ef43cae7707e3545e92e074c24782c4556b825",
+  "3f094c468a7fe312050d5583b29507b1d026d610484a7da37503e4bb47458b9b",
   "3fc10b3699e09704d4a8cfc5b44d21151deef35cec159b29ba9244b6e5a4592f",
   "417c0239b1a9e81cc8774ceb9a05a78fb802a87acff2d6554e37a6c491ff2fb2",
   "41e8d61afc28f970f2c0570984d5631acd62f1635af679f5de75bb6c7f865572",
