@@ -996,9 +996,17 @@ function main() {
       // content for living AND deceased people — Mark's ruling — so they MUST be
       // excluded here or a column of newsprint becomes somebody's face. Per the
       // rules file: a clipping is never an avatar; fall back to initials.)
+      // (Added 2026-11-08: Australian Cemeteries Index downloads are named
+      // `<person>-<inscriptionId>.jpg` (e.g. ellie-valentine-smith-8701285.jpg)
+      // and contain NO 'grave'/'cemetery' token, so seven headstones were
+      // promoted to circular avatars. Any image carrying a bare 7-digit ACI
+      // inscription id is an In Memoriam/grave photograph, never a portrait.
+      // Also block Find a Grave headstone ids: `-fg<8digits>.jpg`.)
       person_photo: bodyImages.find(img =>
         !/grave|cemetery|map|scenery[-_]plate|clipping|newspaper|obituar|trove|in[-_]?memoriam|death[-_]?notice/i.test(img.src) &&
-        !/_[pP]\d+\.jpg$/.test(img.src)
+        !/_[pP]\d+\.jpg$/.test(img.src) &&
+        !/(?:^|[-_/])\d{7}(?:[-_.]|$)/.test(img.src) &&
+        !/-fg\d{6,}\./i.test(img.src)
       )?.src || null
     };
 

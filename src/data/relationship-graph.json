@@ -3304,6 +3304,46 @@
       "slug": "elizabeth-telfer-living",
       "id": "Elizabeth Telfer",
       "generation": 99
+    },
+    {
+      "slug": "allan-smith",
+      "id": "Allan Edward Smith (1912)",
+      "generation": 6
+    },
+    {
+      "slug": "ellie-smith",
+      "id": "Ellie Valentine Smith (1890)",
+      "generation": 5
+    },
+    {
+      "slug": "ena-simpson",
+      "id": "Ena Frances Simpson (1910)",
+      "generation": 6
+    },
+    {
+      "slug": "jessie-smith",
+      "id": "Jessie Stella Smith (1920)",
+      "generation": 6
+    },
+    {
+      "slug": "lachlan-simpson",
+      "id": "Lachlan Alexander Simpson (1901)",
+      "generation": 6
+    },
+    {
+      "slug": "laura-smith",
+      "id": "Laura Ellie Smith (1915)",
+      "generation": 6
+    },
+    {
+      "slug": "ronald-smith",
+      "id": "Ronald Malcolm Smith (1917)",
+      "generation": 6
+    },
+    {
+      "slug": "terence-simpson",
+      "id": "Terence Simpson (1955)",
+      "generation": 7
     }
   ],
   "edges": {
@@ -6827,6 +6867,54 @@
       {
         "from": "william-telfer-1802",
         "to": "elizabeth-telfer-living"
+      },
+      {
+        "from": "ellie-smith",
+        "to": "allan-smith"
+      },
+      {
+        "from": "francis-telfer-smith-1874",
+        "to": "allan-smith"
+      },
+      {
+        "from": "ellie-smith",
+        "to": "ena-simpson"
+      },
+      {
+        "from": "francis-telfer-smith-1874",
+        "to": "ena-simpson"
+      },
+      {
+        "from": "ellie-smith",
+        "to": "jessie-smith"
+      },
+      {
+        "from": "francis-telfer-smith-1874",
+        "to": "jessie-smith"
+      },
+      {
+        "from": "ellie-smith",
+        "to": "laura-smith"
+      },
+      {
+        "from": "francis-telfer-smith-1874",
+        "to": "laura-smith"
+      },
+      {
+        "from": "ellie-smith",
+        "to": "ronald-smith"
+      },
+      {
+        "from": "francis-telfer-smith-1874",
+        "to": "ronald-smith"
+      },
+      {
+        "from": "ena-simpson",
+        "to": "terence-simpson"
+      },
+      {
+        "from": "lachlan-simpson",
+        "to": "terence-simpson"
       }
     ],
     "spouseOf": [
@@ -7361,6 +7449,18 @@
       {
         "from": "frederick-albert-paynter",
         "to": "mildred-mary-mahar"
+      },
+      {
+        "from": "allan-smith",
+        "to": "jessie-smith"
+      },
+      {
+        "from": "ellie-smith",
+        "to": "francis-telfer-smith-1874"
+      },
+      {
+        "from": "ena-simpson",
+        "to": "lachlan-simpson"
       }
     ],
     "siblingOf": [
@@ -11467,6 +11567,46 @@
       {
         "from": "elizabeth-telfer-living",
         "to": "william-telfer-1841"
+      },
+      {
+        "from": "allan-smith",
+        "to": "ena-simpson"
+      },
+      {
+        "from": "allan-smith",
+        "to": "jessie-smith"
+      },
+      {
+        "from": "allan-smith",
+        "to": "laura-smith"
+      },
+      {
+        "from": "allan-smith",
+        "to": "ronald-smith"
+      },
+      {
+        "from": "ena-simpson",
+        "to": "jessie-smith"
+      },
+      {
+        "from": "ena-simpson",
+        "to": "laura-smith"
+      },
+      {
+        "from": "ena-simpson",
+        "to": "ronald-smith"
+      },
+      {
+        "from": "jessie-smith",
+        "to": "laura-smith"
+      },
+      {
+        "from": "jessie-smith",
+        "to": "ronald-smith"
+      },
+      {
+        "from": "laura-smith",
+        "to": "ronald-smith"
       }
     ],
     "stepParentOf": [

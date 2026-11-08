@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-11-08T00:30:24.853Z",
+  "checkedAt": "2026-11-08T01:52:59.640Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 661,
-    "after": 661
+    "after": 669
   },
   "crownJewelsChecked": 6,
   "renames": [],

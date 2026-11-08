@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-08T10:29:52+10:00",
+  "generated_at": "2026-11-08T11:52:29+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 679,
+  "count": 687,
   "kinds": {
-    "real": 661,
+    "real": 669,
     "redirect": 18,
     "empty": 0
   },
@@ -156,6 +156,11 @@
     "Alison Lucy Hooper (b. 1977).md": {
       "sha256": "bd1955f8d34c43985b4ba7dd8d91cd40c601cc0c7cb5935a2e0bdac05204ffc0",
       "sha256_whole": "a481ba2a5f90b4f2e22a71d01a255a4237e6b706e523106cb825d33fc823a27b",
+      "kind": "real"
+    },
+    "Allan Edward Smith (1912\u20131990).md": {
+      "sha256": "13a6cd22f668d7c3744752f3b58b3ebdab9010360233c601b04518fda1897990",
+      "sha256_whole": "a7e92bb0e72f95fe7e942d8cd92d2250a2aba18e5aa24e7597fde24178633d4c",
       "kind": "real"
     },
     "Allan Lawrence Pedler (1946).md": {
@@ -913,6 +918,11 @@
       "sha256_whole": "9f170358d04f336f87aff1222452f2d3fe3df0a76916bc8f84f8b17df86a9697",
       "kind": "real"
     },
+    "Ellie Valentine Smith (1890\u20131925).md": {
+      "sha256": "eaa6e5f4e14f71e6da25f888518404baa5e5dafd388dc7f7ae02b6d1805379e6",
+      "sha256_whole": "ffe5d0a910ce019ff8521260da7b58a89ea62bd3fd8db862879c5c69cd7b8ce7",
+      "kind": "real"
+    },
     "Elma Ellen Martina Pugsley (b. 1923).md": {
       "sha256": "16b68debf94f02c9c683bf30d744b8060d72ec30364c83c47f4c3d93f6aa32af",
       "sha256_whole": "af4df68f995d9ccb253af8f41779b29b2d0acdd542a4b102fc2d1155b989603e",
@@ -968,6 +978,11 @@
       "sha256_whole": "61281ae538a8cb6f339a920172e1169b3453fae79ffe29fdafdc998a76f2ce25",
       "kind": "real"
     },
+    "Ena Frances Simpson (1910\u20131998).md": {
+      "sha256": "8321d6b5c657f780a2b6a003889dc461c59fe1e7cd07de4d8a4d5e5325eac673",
+      "sha256_whole": "6df7679d6f48129ceb83ae421a8a531e5242c9fc05453af0ee54edcc470e295f",
+      "kind": "real"
+    },
     "Ernest John Telfer (1878\u20131953).md": {
       "sha256": "86c8f195c43d14e50d83751e2e92b45f9cfb598716ed7dfcc8e0d1316cf354f7",
       "sha256_whole": "6464808158165a0d3f6404941e7657ed5ec82789c0e8da3832bb4948dd90132f",
@@ -989,8 +1004,8 @@
       "kind": "redirect"
     },
     "Esther Jane Telfer (1834\u20131909).md": {
-      "sha256": "ca29d639efc29fe579eddc28b4f8e7c204341c6ede7172166126b9ab1710f2c3",
-      "sha256_whole": "29540f3dfe0bfdab9c62467d0218e2e9a14c73ac1154847e7c10adbb99e2a5d7",
+      "sha256": "356a0c237bb9f89d5eba5587dc47281273a5c8510a40e73dd9052532698283e3",
+      "sha256_whole": "07c5b7121651d69134fce6ae8599be47d8c5f29d3d11f0fd8f77f682e7bb8478",
       "kind": "real"
     },
     "Esther Naomi Lynette Telfer (b. 1993).md": {
@@ -999,8 +1014,8 @@
       "kind": "real"
     },
     "Esther Telfer Smith (1870\u20131906).md": {
-      "sha256": "4595742c9b2330028d69341fe3043e0f96220c4fa68b14c1cfc9fee6bc820f8e",
-      "sha256_whole": "aae653317dd4b6d9ec0723cd9ae2801a28f06acc1ba05ac4460270abe5cfb604",
+      "sha256": "0e611bf46f5ec48022a7c187b2e9d5c6b8dcb69f302e004fd0723341af40cfca",
+      "sha256_whole": "644d76ad8ffb6557dd361fe43d4b328de0f96854fcad1f2cc9c57cf2f88c65a9",
       "kind": "real"
     },
     "Ethel Edith Telfer.md": {
@@ -1089,8 +1104,8 @@
       "kind": "real"
     },
     "Francis Telfer Smith (1874\u20131945).md": {
-      "sha256": "b78c947eed015d2875d0fba8f2098edf99644d393a069a3287f75a43d223a4c1",
-      "sha256_whole": "3b485900bb7c60412de4cd605f070d5f5980d8844c5a001077be511b035e6219",
+      "sha256": "be6842ac1979fc2d5d41f3de8eef0ed2a9d285646c0bf3d0bbbd691a04819fda",
+      "sha256_whole": "9ab7ac994487e49f6d07c4d17a3f3c9a457f37f896ad8aa63cdf6cb83a085721",
       "kind": "real"
     },
     "Frank Lindsay Lawrie (1886\u20131920).md": {
@@ -1579,8 +1594,8 @@
       "kind": "real"
     },
     "Jane Sophie Smith.md": {
-      "sha256": "a4e4c6f052a38ca2f6227dda0075df5ffe5f1b53a9fa75f06b89f6dad2c33895",
-      "sha256_whole": "687fb6588c4d43b57c6ff8f08860e23b9107fa413f0d917da4f39877b38ca755",
+      "sha256": "cbe5dbc10a712106aa5292f0b650c1d9e122c2f8a72642029601f994db98de0f",
+      "sha256_whole": "9c20feab1bad38305b8a250e9d58e89915f125fdee0e6fd707ffc95f7f955008",
       "kind": "real"
     },
     "Janet Dunlop Lawrie (1811\u20131902).md": {
@@ -1713,6 +1728,11 @@
       "sha256_whole": "d64ac3bff2a0d7fa8fa4b3d6ef3dd622bef900b60e0f877a1145dd4a912a2bf2",
       "kind": "real"
     },
+    "Jessie Stella Smith (1920\u20131937).md": {
+      "sha256": "986b4c4b044ee8886b65126b3ad4b1c329dc5de29520d56a2b84a0e6445cbfb2",
+      "sha256_whole": "cfae2d0a0e2cce8fb85699489444fa1edb6c71002103e8aff6a2b2ede2b51837",
+      "kind": "real"
+    },
     "Joanna Margaret Welch (b. 1993).md": {
       "sha256": "7108c5e1b34e9c3f5e094a223e6252a6dcd4248add4ccb98e4bdcb86e77a99f6",
       "sha256_whole": "4f7664230594f931b82c4a4728b9cea54f3422c4ae48d660380eb7d31832c36a",
@@ -1759,8 +1779,8 @@
       "kind": "real"
     },
     "John James Smith (1871\u20131943).md": {
-      "sha256": "fa29786296763444a8a3b307eaec7d764d503558dcc99c9183e54a43b33a3867",
-      "sha256_whole": "4bd5f6fb6e3400860daf9767c7d64b77bdb3482430db1531cf11406f0fd59a60",
+      "sha256": "d826ff045d395f717ce3a15443e4b53d1d4e3443592093dd4c94c36dc5da76dd",
+      "sha256_whole": "67faed41c3dad4888a42056e6ab724c99add983dc6cf17f2fcf401baedfe4a29",
       "kind": "real"
     },
     "John James Telfer Farrow.md": {
@@ -2098,6 +2118,11 @@
       "sha256_whole": "649c1738af272d91d218df666b3e7be1cd99496e339c8df0113d3f44c24d2526",
       "kind": "real"
     },
+    "Lachlan Alexander Simpson (1901\u20131988).md": {
+      "sha256": "b79ebd40dec4a8cd945d3c61b9fbeef6900bc05722698073097b255c1c8b687e",
+      "sha256_whole": "d1b03fc9dcd938fa35002754a227df3476fbd5d9ad1e6859d8faa73f1252766a",
+      "kind": "real"
+    },
     "Lance Gordon Hawkins (1966).md": {
       "sha256": "1eee07c9db3cdd7f13b772f69802c0dbf24ff7235662aebca75e29b823ec246c",
       "sha256_whole": "59380ec761a385d46c7f2c0f4433087a306075931fa603e5f0013667f2393dbc",
@@ -2106,6 +2131,11 @@
     "Lancelot Hobart Watson (1888\u20131960).md": {
       "sha256": "9c754d83973fc0aee713304258ff3443fae499aa29fbfbcf51db438ad5a35a8f",
       "sha256_whole": "cc41eea2330c023bd8ef1b0c8a813908ac4267a9a230a30f7c3a30531d02f9e4",
+      "kind": "real"
+    },
+    "Laura Ellie Smith (1915\u20131993).md": {
+      "sha256": "983306aad59b0fe691850324e62618421ad0697c1b759aae62920e9ff16eb5e7",
+      "sha256_whole": "44c6989eb176691e114ee358b1a71fc9aa50336a4fa65da51fc314913c18c480",
       "kind": "real"
     },
     "Laurel Kaye Telfer (b. 1946).md": {
@@ -2893,6 +2923,11 @@
       "sha256_whole": "feb67be52fb58067ade86093cedc0892443b38844985113b647f455b92832412",
       "kind": "real"
     },
+    "Ronald Malcolm Smith (1917\u20131989).md": {
+      "sha256": "04e3b96aae38bbbe1d6de6f6354eeb2ffec891aaa290fbf758202b29a43543b8",
+      "sha256_whole": "282f6b6ae264cfe972a2843bf2d6269b956b2a1d44d8e115a1fa835e19a517f1",
+      "kind": "real"
+    },
     "Ronald Rex Fatchen.md": {
       "sha256": "219175741fc0163adc65e59a95a915375b3a117576808c43101c4856fd14407f",
       "sha256_whole": "d1fd5d52c84e42d8995b1288549dcc8436ea84d5a6bfb584c65e90ef53033da5",
@@ -3186,6 +3221,11 @@
     "Terence Hugh (Terry) Hooper (b. 1935).md": {
       "sha256": "83b79372912e0857c7954acc093918e48428d607f2283c678ac43ea03c2d1482",
       "sha256_whole": "61ffdfac51586462e4ad79f5402fa8ab4c79bf2b7e0f0979ce977a32b25e10e2",
+      "kind": "real"
+    },
+    "Terence Simpson (1955\u20131955).md": {
+      "sha256": "a1fa76afc0c34dfc973a76c660d8a5870b741c0050e27642f83c153cb339471b",
+      "sha256_whole": "1e92f2ce208a1f5a70a323bb3f2fc137ea2a0ad6966e54794819b183707e6419",
       "kind": "real"
     },
     "Thelma Ellen Parker (1924\u20132002).md": {
