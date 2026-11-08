@@ -2993,7 +2993,7 @@
       {
         "src": "images/people/Carissa-Telfer.jpg",
         "alt": "Carissa Telfer",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/_assets/Carissa Telfer.jpg",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Carissa-Telfer.jpg",
         "filename": "Carissa-Telfer.jpg"
       }
     ],
@@ -18084,7 +18084,7 @@
       {
         "src": "images/people/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
         "alt": "Wedding   Mark   Kylie Telfer  12 Mar 2016 ",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/_assets/Wedding - Mark & Kylie Telfer (12 Mar 2016).jpg",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg",
         "filename": "Wedding---Mark---Kylie-Telfer--12-Mar-2016-.jpg"
       }
     ],
@@ -18093,7 +18093,7 @@
     "step_parents": [],
     "step_children": [],
     "evidence_level": null,
-    "single_source": false,
+    "single_source": true,
     "provisional_why": null,
     "is_deceased": false
   },
@@ -21630,13 +21630,13 @@
       {
         "src": "images/people/Mitchell-Telfer---16th-Birthday.jpg",
         "alt": "Mitchell Telfer   16th Birthday",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/_assets/Mitchell Telfer - 16th Birthday.jpg",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Mitchell-Telfer---16th-Birthday.jpg",
         "filename": "Mitchell-Telfer---16th-Birthday.jpg"
       },
       {
         "src": "images/people/Mitchell-Telfer---18th-Birthday.jpg",
         "alt": "Mitchell Telfer   18th Birthday",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/_assets/Mitchell Telfer - 18th Birthday.jpg",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Mitchell-Telfer---18th-Birthday.jpg",
         "filename": "Mitchell-Telfer---18th-Birthday.jpg"
       }
     ],
@@ -21645,7 +21645,7 @@
     "step_parents": [],
     "step_children": [],
     "evidence_level": null,
-    "single_source": false,
+    "single_source": true,
     "provisional_why": null,
     "is_deceased": false
   },
@@ -22139,7 +22139,7 @@
       {
         "src": "images/people/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
         "alt": "Paul and Sheryle Ivory   Wedding Day",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/_assets/Paul and Sheryle Ivory - Wedding Day.jpg",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Paul-and-Sheryle-Ivory---Wedding-Day.jpg",
         "filename": "Paul-and-Sheryle-Ivory---Wedding-Day.jpg"
       }
     ],
@@ -22327,7 +22327,7 @@
       {
         "src": "images/people/Peter-Telfer.jpg",
         "alt": "Peter Telfer",
-        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/_assets/Peter Telfer.jpg",
+        "vault_path": "/Users/marktelfer/ObsidianVault/Family History/People/Photos/Peter-Telfer.jpg",
         "filename": "Peter-Telfer.jpg"
       }
     ],
@@ -22336,7 +22336,7 @@
     "step_parents": [],
     "step_children": [],
     "evidence_level": null,
-    "single_source": false,
+    "single_source": true,
     "provisional_why": null,
     "is_deceased": false
   },
