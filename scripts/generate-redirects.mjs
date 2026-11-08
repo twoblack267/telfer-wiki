@@ -358,6 +358,13 @@ const MANUAL_ALIASES = [
   // 404 for anyone who bookmarked them.
   { from: 'jono-telfer', to: 'jonathon-telfer', display_name: 'Jonathon Scott Telfer' },
   { from: 'nick-telfer', to: 'nicholas-telfer', display_name: 'Nicholas Adam Telfer' },
+
+  // 2026-11-08: John James Smith's page is `john-smith` (the older, richer URL is
+  // `john-smith-1871`). A worker run kept addressing him as `john-james-smith-1871`,
+  // which was never a real slug and hard-404s live. Declared here so legacy/external
+  // links carrying the full given name resolve to the canonical page instead of 404.
+  { from: 'john-james-smith', to: 'john-smith', display_name: 'John James Smith' },
+  { from: 'john-james-smith-1871', to: 'john-smith', display_name: 'John James Smith' },
 ];
 for (const a of MANUAL_ALIASES) pushRedirect(a);
 
