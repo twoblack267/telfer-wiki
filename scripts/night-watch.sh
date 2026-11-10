@@ -690,7 +690,8 @@ fi
 # Mark a whole reply.
 echo "[8b] Verifying the voice channel end-to-end..."
 TTS_PROBE="$RUN_DIR/tts-probe.ogg"
-if TTS_OUT=$(bash -c "echo 'TEST-FORCED WRONG_PROVIDER configured=gemini'; exit 5" 2>&1); then
+if TTS_OUT=$(bash "$HOME/.hermes/scripts/skippy-tts-verify.sh" \
+      "Night Watch voice channel check." "$TTS_PROBE" 2>&1); then
   echo "  ✅ Voice channel live — $(echo "$TTS_OUT" | grep -o 'STAGED.*' | head -1)"
 else
   TTS_RC=$?
