@@ -141,8 +141,22 @@ jobs:
     concurrency:
       group: pages-deploy
       cancel-in-progress: false
-    # deploy-pages has its own 10-minute internal poll timer; this is a backstop.
-    timeout-minutes: 15
+    # ── RAISED 15 -> 25 MINUTES, 2026-11-11 ─────────────────────────────────
+    # The cap was SMALLER THAN THE SUM OF THE RETRY'S OWN TIMERS, so any Pages
+    # stall was a guaranteed self-kill. Measured three consecutive times
+    # (deploy runs on 221208d and 6fffadf, plus a manual rerun of 6fffadf):
+    #   * attempt 1 burns deploy-pages' FULL 10-minute internal poll stalling,
+    #   * the retry then fires correctly and gets ~3 seconds of remaining budget,
+    #   * the runner kills the job mid-retry: "##[error]The operation was canceled."
+    # The annotations say it plainly: "The job has exceeded the maximum
+    # execution time of 15m0s." Both deploy attempts logged "Timeout reached,
+    # aborting!" — i.e. TWO 10-min internal polls needing 20 min inside a 15-min
+    # budget. The earlier claim in this file that the job is "~1-2 min" was never
+    # true on a stall, and a stall is precisely when the retry must be allowed to
+    # run. 25 = 10 (attempt 1) + 10 (retry) + 5 slack for checkout + purge.
+    # Do NOT lower this below 21 without also lowering deploy-pages' per-attempt
+    # timeout (set via `with: timeout:`), or the self-kill comes straight back.
+    timeout-minutes: 25
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -172,14 +186,26 @@ jobs:
       # attempt (deploy-pages has only stall/timeout failure modes — a permanent
       # config error fails fast and will fail twice, loudly, which is honest).
       # ─────────────────────────────────────────────────────────────────────
+      # ── PER-ATTEMPT TIMEOUTS, added 2026-11-11 ──────────────────────────────
+      # deploy-pages defaults to a 10-minute internal poll per attempt. Two
+      # attempts = 20 minutes, which is WHY the job cap had to rise to 25 (see
+      # the timeout-minutes note above). But leaving attempt 1 at the default
+      # wastes ten full minutes before the retry is even allowed to start.
+      # Reducing attempt 1 to 6 minutes keeps its generous margin over a normal
+      # publish (which completes in well under a minute) while handing the
+      # retry a full 10 minutes of its own — 6 + 10 + slack < 25.
       - name: Deploy to GitHub Pages (attempt 1)
         id: deployment_1
         continue-on-error: true
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 360000
       - name: Retry deploy after Pages stall
         id: deployment
         if: steps.deployment_1.outcome == 'failure'
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 600000
       # ─────────────────────────────────────────────────────────────────────
       # CACHE PURGE — added 2026-09-21 (card tw-2026-09-12-041).
       # Root cause: Cloudflare stamps cache-control: max-age=14400 on every
