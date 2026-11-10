@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-11T03:01:25+10:00",
+  "generated_at": "2026-11-11T06:15:04+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 687,
+  "count": 693,
   "kinds": {
-    "real": 669,
+    "real": 675,
     "redirect": 18,
     "empty": 0
   },
@@ -513,9 +513,14 @@
       "sha256_whole": "8a3e630aaf6807d9d438f1c77400ccd1937b026dc0a8eef0ff910c5ab5f3e6af",
       "kind": "real"
     },
+    "Charles Roy Telfer (1904\u20131956).md": {
+      "sha256": "115fd8a354ec3cd80c7afd91be002dbf86e4af1cf148096edc7746056535b1ce",
+      "sha256_whole": "ee6e12e122579b3bad0cb70b09e6e40b454ace35e48e496c18b44b5bc920a0b7",
+      "kind": "real"
+    },
     "Charles Telfer (1875\u20131954).md": {
-      "sha256": "71fe5119a524f5cb356c265d6147807b71e2c21e32b0f4754666b028acd25477",
-      "sha256_whole": "3f2d1367a95fb58ea5a1551acfc54f0ecbf8fc37f9c66ff65f9cb688eb9d406e",
+      "sha256": "8113248fd7e58d19ecb7297d32bc83974b745d85583051dcbbbfa3c25f709dd7",
+      "sha256_whole": "60ba9a62a029cc07b837278e64c32287f194eda9dfdbf6ccd2f7db1e896cb577",
       "kind": "real"
     },
     "Charlotte Eloise Hooper (b. 2004).md": {
@@ -731,6 +736,11 @@
     "Douglas Telfer (1887\u20131956).md": {
       "sha256": "652e19c88604bf3be09c5d699b6f8fb2163be95a81886f6214c398bbbf16d854",
       "sha256_whole": "ef29942d1455ccd32c4e529a9c9ca4a678e349b39913e1f5f316a4808453e6c2",
+      "kind": "real"
+    },
+    "Edith Amelia Telfer (1908\u20131969).md": {
+      "sha256": "15f82a35474b78a2fa19217fb68b3018528f0764e73b228480bcb7a9e3c18d31",
+      "sha256_whole": "7d3a977fd3313c4841086ab91f2330d472b5dd46372e03a0cba1f986caa35f12",
       "kind": "real"
     },
     "Edith Mary Kathleen Telfer.md": {
@@ -981,6 +991,11 @@
     "Ena Frances Simpson (1910\u20131998).md": {
       "sha256": "a308aaf7c732cc792ecc585b25833e8ac78ca98d5f210606122abc888ad859fa",
       "sha256_whole": "c9f3c11e3c0b621762ee8cd25893945ae29d992829a0613ff3927acea79df424",
+      "kind": "real"
+    },
+    "Eric John Telfer (1913\u20131963).md": {
+      "sha256": "fb4fc2347b2977cf8d331cecb3ff377e3a3eaa8a85dc2fd18cceae7f036da281",
+      "sha256_whole": "fc99b717944cd5d1985afb10b9e25ba623c94211049ed23cc2b115d0c6982462",
       "kind": "real"
     },
     "Ernest John Telfer (1878\u20131953).md": {
@@ -2454,8 +2469,8 @@
       "kind": "real"
     },
     "Martha Allen (1840\u20131876).md": {
-      "sha256": "62dd67211618ac9a5679b340a7466b045689181704bb5cff2bea00377c474311",
-      "sha256_whole": "42eaa2cc93231cf8c738aca53a52ea25d199f37a42c0215f0637e8e634a9b8db",
+      "sha256": "aa74ebab9d561cc15f7227e5e53e16fcd3548552f283014e3ea840426718e50b",
+      "sha256_whole": "3ccea8a6513ee27e87ced37d45733c9d1afe7b45fdf4979a7008465f9a5ff89f",
       "kind": "real"
     },
     "Martha Ann Masters Radford (1839\u20131912).md": {
@@ -2526,6 +2541,11 @@
     "Mary Frances Telfer (1893\u20131893).md": {
       "sha256": "a2f562beaf7faa9bb12d77f93e61e9a040e4e713ca610edf234837352d5e4e90",
       "sha256_whole": "bc09a1fc27b5394046bc40d0dad09c5a6796f71fd1fe30de8bbeff5464539b20",
+      "kind": "real"
+    },
+    "Mary Irene Telfer (1910\u2013).md": {
+      "sha256": "a2183ebbf369674bb0958771d07cb916ec83d350e54ea7fb1f774a24f4566ee4",
+      "sha256_whole": "d6366948af8cf612c5a38a8c7a7be5c28363f622dd0e733902c24132d311ff35",
       "kind": "real"
     },
     "Mary Jane Paynter (1861\u20131945).md": {
@@ -2978,6 +2998,11 @@
       "sha256_whole": "f828a0cd2164b7eafcf616ffac4a0b84496a90d7b3fea7d8443eab27b45ca51c",
       "kind": "real"
     },
+    "Ruby Martha Telfer (1906\u20131998).md": {
+      "sha256": "97912f2bdf1a4345d7a635d9f19f05d90341aaff13bf7a3989ef1fb92a07a3dc",
+      "sha256_whole": "26136390e315bf679844597e99165a2b6a798dce0a7d110a2cc5823b002ce093",
+      "kind": "real"
+    },
     "Ruth Allison Littlejohn (b. 1949).md": {
       "sha256": "b8c58074b027ba93ada6c25648fad7e6cb40558d32e154ee71b043a48a62551d",
       "sha256_whole": "b1751a23131ec274c85c03e01d06305f1d206b8acf0f2d3dbaa776187910d528",
@@ -3386,6 +3411,11 @@
     "William James Telfer (1880\u20131880).md": {
       "sha256": "99cd54834ce304980e0185a4d4dbd1928cdd2b62f8186e463cbf26a1ceedf28a",
       "sha256_whole": "2d1e8600bf487fb5ee01e02d025e24de62c78d11b619c46d62ae3596f0cb736c",
+      "kind": "real"
+    },
+    "William James Telfer (1902\u20131955).md": {
+      "sha256": "ccf684829a22edf8e20f315564ded620ff545a296f2e12677c414b2539aaaa5d",
+      "sha256_whole": "fffb18cd906f58ed0d1333b0d93c6a3d5d3deb72001fc2e43a39c1177f9126af",
       "kind": "real"
     },
     "William John Baker (1831\u20131919).md": {

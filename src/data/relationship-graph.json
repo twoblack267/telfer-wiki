@@ -3344,6 +3344,36 @@
       "slug": "terence-simpson",
       "id": "Terence Simpson (1955)",
       "generation": 7
+    },
+    {
+      "slug": "charles-telfer",
+      "id": "Charles Roy Telfer (1904)",
+      "generation": 6
+    },
+    {
+      "slug": "edith-telfer",
+      "id": "Edith Amelia Telfer (1908)",
+      "generation": 6
+    },
+    {
+      "slug": "eric-telfer",
+      "id": "Eric John Telfer (1913)",
+      "generation": 5
+    },
+    {
+      "slug": "mary-telfer",
+      "id": "Mary Irene Telfer (1910)",
+      "generation": 6
+    },
+    {
+      "slug": "ruby-telfer",
+      "id": "Ruby Martha Telfer (1906)",
+      "generation": 6
+    },
+    {
+      "slug": "william-telfer",
+      "id": "William James Telfer (1902)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -5047,10 +5077,6 @@
       {
         "from": "william-henry-parker-1893",
         "to": "william-humphrey-parker-1926"
-      },
-      {
-        "from": "caroline-telfer-1842",
-        "to": "william-telfer-1880"
       },
       {
         "from": "john-telfer-1847",
@@ -6915,6 +6941,30 @@
       {
         "from": "lachlan-simpson",
         "to": "terence-simpson"
+      },
+      {
+        "from": "charles-telfer-1875",
+        "to": "charles-telfer"
+      },
+      {
+        "from": "charles-telfer-1875",
+        "to": "edith-telfer"
+      },
+      {
+        "from": "charles-telfer-1875",
+        "to": "eric-telfer"
+      },
+      {
+        "from": "charles-telfer-1875",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "charles-telfer-1875",
+        "to": "ruby-telfer"
+      },
+      {
+        "from": "charles-telfer-1875",
+        "to": "william-telfer"
       }
     ],
     "spouseOf": [
@@ -7939,10 +7989,6 @@
       {
         "from": "bertha-telfer",
         "to": "walter-telfer-1884"
-      },
-      {
-        "from": "bertha-telfer",
-        "to": "william-telfer-1880"
       },
       {
         "from": "carissa-telfer-2023",
@@ -11494,10 +11540,6 @@
       },
       {
         "from": "margaret-telfer-living",
-        "to": "mary-telfer-1893"
-      },
-      {
-        "from": "margaret-telfer-living",
         "to": "mary-telfer-living"
       },
       {
@@ -11607,6 +11649,66 @@
       {
         "from": "laura-smith",
         "to": "ronald-smith"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "edith-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "eric-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "ruby-telfer"
+      },
+      {
+        "from": "charles-telfer",
+        "to": "william-telfer"
+      },
+      {
+        "from": "edith-telfer",
+        "to": "eric-telfer"
+      },
+      {
+        "from": "edith-telfer",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "edith-telfer",
+        "to": "ruby-telfer"
+      },
+      {
+        "from": "edith-telfer",
+        "to": "william-telfer"
+      },
+      {
+        "from": "eric-telfer",
+        "to": "mary-telfer"
+      },
+      {
+        "from": "eric-telfer",
+        "to": "ruby-telfer"
+      },
+      {
+        "from": "eric-telfer",
+        "to": "william-telfer"
+      },
+      {
+        "from": "mary-telfer",
+        "to": "ruby-telfer"
+      },
+      {
+        "from": "mary-telfer",
+        "to": "william-telfer"
+      },
+      {
+        "from": "ruby-telfer",
+        "to": "william-telfer"
       }
     ],
     "stepParentOf": [
