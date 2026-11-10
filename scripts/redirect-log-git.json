@@ -357,13 +357,6 @@
     "reason": "Slug changed by a vault correction on 2026-10-23 (card itc-20261023-1). This person's given names had been stored as the SURNAME — 'Marion Vida' where only the last word is the surname — so the page rendered under a false name. The vault record was split into first/middle/last correctly and the dates confirmed against their father's timeline (Robert Dunlop Lawrie), which also made them properly DECEASED rather than defaulting to living. The old URL must resolve to the corrected page."
   },
   {
-    "from": "mary-telfer",
-    "to": "mary-telfer-living",
-    "matched_by": "removed-declared",
-    "display_name": "mary-telfer-living",
-    "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
-  },
-  {
     "from": "nicholas-andre-maddern-1974",
     "to": "nicholas-andre-maddern",
     "matched_by": "removed-declared",
