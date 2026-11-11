@@ -115,14 +115,57 @@ function page(bare, list) {
   const ordered = [...list].sort((a, b) => (a.birth_year || 9999) - (b.birth_year || 9999));
   const listHtml = ordered.map(row).join('\n');
   const canon = `${ABS_BASE}/people/${bare}/`;
+
+  // ── HEAD METADATA + STRUCTURED DATA (added 2026-11-12; card seo-2026-11-11-001) ──
+  // WHY: these pages are hand-written here, NOT rendered by BaseLayout, so they
+  // inherited none of Astro's head. Measured live 2026-11-12 on 8 of 8 bare-name
+  // pages: zero og:/twitter: tags, zero JSON-LD, no <h1>-level entities for a
+  // crawler. They are indexable on purpose (line 25 above), so a shared link to
+  // one rendered as a bare URL with no title, no description and no image.
+  //
+  // The structured data is CollectionPage + ItemList, deliberately NOT Person:
+  // this page names a GROUP of people, and marking it up as a Person would tell
+  // Google these 7 Johns are one entity — the exact silent-collapse class the
+  // file header says this whole script exists to kill.
+  //
+  // Still no <meta name="robots"> — indexability is intentional, not an oversight.
+  const desc = `${ordered.length} people named ${title} appear in the Telfer family history. Choose the one you are looking for.`;
+  const jsonld = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${title} — which one?`,
+    description: desc,
+    url: canon,
+    isPartOf: { '@type': 'WebSite', name: 'Telfer Family History', url: `${ABS_BASE}/` },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: ordered.length,
+      itemListElement: ordered.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: p.display_name || p.slug,
+        url: `${ABS_BASE}/people/${p.slug}/`,
+      })),
+    },
+  });
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(title)} — which one? | Telfer Family History</title>
-  <meta name="description" content="${ordered.length} people named ${esc(title)} appear in the Telfer family history. Choose the one you are looking for.">
+  <meta name="description" content="${esc(desc)}">
   <link rel="canonical" href="${canon}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Telfer Family History">
+  <meta property="og:title" content="${esc(title)} — which one? | Telfer Family History">
+  <meta property="og:description" content="${esc(desc)}">
+  <meta property="og:url" content="${canon}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${esc(title)} — which one? | Telfer Family History">
+  <meta name="twitter:description" content="${esc(desc)}">
+  <script type="application/ld+json">${jsonld}</script>
   <link rel="stylesheet" href="${styleHref}">
   <style>
     .disambig { max-width: 46rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
