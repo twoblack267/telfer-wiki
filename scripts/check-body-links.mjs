@@ -334,6 +334,40 @@ for (const p of people) {
   }
 }
 
+// ── [A2] Detect UNLINKED relationship refs (2026-11-11, card broken-body-link-20261110) ──
+// [A] above only ever looked at body_markdown. The sidebar relationship rows are a
+// SECOND rendering path with its own blind spot: getLinksForRelationships() resolves a
+// ref to a page ONLY if it is an exact slug match, and renders anything else as a
+// <span> — plain text, no anchor. A vault name written with its lifespan
+// ("Amelia Curkpatrick (James) Telfer (1878–1919)") therefore prints as a dead name on
+// every page that names her, and the guard called the build clean.
+//
+// MEASURED 2026-11-11: 194 such refs existed across people.json while this guard
+// reported green. The card named 6 (Amelia Curkpatrick on 7 pages); the class was 194.
+//
+// This is INFO ONLY and deliberately NOT a build gate: a raw name with explicit years
+// is a CORRECT REFUSAL, not corruption. The pipeline writes a raw display name precisely
+// when it declined to bind that ref (see getLinksForRelationships — years are the
+// evidence that let it reject the candidate). Blocking the build would criminalise the
+// safe path and pressure someone into re-binding by bare name, which is how Neil Ronald
+// Telfer got a father who died 59 years before he was born.
+const unlinkedRefs = [];   // { slug, vault_file, relation, ref }
+for (const p of people) {
+  for (const relation of ['parents', 'spouses', 'children', 'siblings', 'step_parents', 'step_children']) {
+    for (const ref of (p[relation] || [])) {
+      // Object form = deliberately withdrawn relative (privacy strip). Renders as
+      // plain text BY DESIGN — a father's page must still name his children.
+      if (ref && typeof ref === 'object') continue;
+      if (typeof ref !== 'string' || !ref.trim()) continue;
+      if (people.some((q) => (q.slug || '') === ref.trim())) continue;  // resolves: linked
+      unlinkedRefs.push({
+        slug: p.slug, vault_file: p.vault_file || '',
+        relation, ref: ref.trim(),
+      });
+    }
+  }
+}
+
 // ── [B] Detect vault-note citations whose target note no longer exists ───────
 // The mirror of [A] for the vault's CITATION form (see citedNoteTitle above): the
 // note is named in a code span or in italics rather than as [[...]], so the author
@@ -508,6 +542,26 @@ if (deadLinks.length === 0) {
   for (const d of deadLinks) {
     console.log(`      - ${d.slug}: '[[${d.link}]]' does not resolve (vault: ${d.vault_file || 'none'})`);
   }
+}
+
+// INFO ONLY — see [A2]. Names are named, not counted: a number nobody can act on is
+// a different way of hiding the fault.
+if (unlinkedRefs.length === 0) {
+  console.log(`   ✅ No unlinked relationship refs (every sidebar relative resolves to a page)`);
+} else {
+  const byRef = new Map();
+  for (const u of unlinkedRefs) {
+    if (!byRef.has(u.ref)) byRef.set(u.ref, []);
+    byRef.get(u.ref).push(u.slug);
+  }
+  console.log(`   ⚠️  ${unlinkedRefs.length} UNLINKED relationship ref(s) across ${byRef.size} distinct name(s) — these render as plain text, no link:`);
+  for (const [ref, slugs] of [...byRef.entries()].sort((a, b) => b[1].length - a[1].length)) {
+    console.log(`      - "${ref}"  →  ${slugs.length} page(s): ${slugs.slice(0, 4).join(', ')}${slugs.length > 4 ? ', …' : ''}`);
+  }
+  console.log(`      → INFO ONLY (not a build gate). A ref with explicit years is a CORRECT REFUSAL,`);
+  console.log(`        not corruption: the pipeline declined to bind it. Do NOT "fix" by re-binding a`);
+  console.log(`        bare name. Fix by giving the relative a profile in the vault (so a slug exists)`);
+  console.log(`        or by leaving it plain. Unlinking is safe; a wrong link is the Neil Telfer defect.`);
 }
 
 if (phantomLiving.length === 0) {
