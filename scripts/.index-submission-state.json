@@ -1,6 +1,6 @@
 {
   "_comment": "URL -> lastmod last ACCEPTED by the search engines. Committed so the daily delta survives an ephemeral CI runner. Safe to reset to {} to force a full resubmission.",
-  "lastRun": "2026-11-10T13:33:59.449Z",
+  "lastRun": "2026-11-11T12:46:54.580Z",
   "submitted": {
     "https://telferwiki.com/": "2026-11-04T12:00:00.000Z",
     "https://telferwiki.com/about/": "2026-11-04T12:00:00.000Z",
@@ -60,7 +60,7 @@
     "https://telferwiki.com/people/charles-farrow-jr/": "2026-11-05T12:00:00.000Z",
     "https://telferwiki.com/people/charles-masters-1809/": "2026-10-28T12:00:00.000Z",
     "https://telferwiki.com/people/charles-masters-1837/": "2026-09-17T12:00:00.000Z",
-    "https://telferwiki.com/people/charles-telfer-1875/": "2026-10-27T12:00:00.000Z",
+    "https://telferwiki.com/people/charles-telfer-1875/": "2026-11-11T12:00:00.000Z",
     "https://telferwiki.com/people/charlotte-beven-1906/": "2026-09-17T12:00:00.000Z",
     "https://telferwiki.com/people/clara-ann-millicent-telfer-1878/": "2026-10-30T12:00:00.000Z",
     "https://telferwiki.com/people/clara-blanche-telfer-1883/": "2026-10-27T12:00:00.000Z",
@@ -527,7 +527,7 @@
     "https://telferwiki.com/people/william-telfer-1841/": "2026-11-06T12:00:00.000Z",
     "https://telferwiki.com/people/william-telfer-1880/": "2026-09-17T12:00:00.000Z",
     "https://telferwiki.com/people/william-telfer-shepherd/": "2026-11-06T12:00:00.000Z",
-    "https://telferwiki.com/people/william-telfer/": "2026-09-17T12:40:06.000Z",
+    "https://telferwiki.com/people/william-telfer/": "2026-11-11T12:00:00.000Z",
     "https://telferwiki.com/people/zabella-telfer-2019/": "2026-11-05T12:00:00.000Z",
     "https://telferwiki.com/privacy/": "2026-10-25T12:00:00.000Z",
     "https://telferwiki.com/search/": "2026-11-04T12:00:00.000Z",
@@ -707,8 +707,8 @@
     "https://telferwiki.com/people/charles-masters-1809/descendants/": "2026-10-28T12:00:00.000Z",
     "https://telferwiki.com/people/charles-masters-1809/family-sheet/": "2026-10-28T12:00:00.000Z",
     "https://telferwiki.com/people/charles-masters-1837/family-sheet/": "2026-09-17T12:00:00.000Z",
-    "https://telferwiki.com/people/charles-telfer-1875/descendants/": "2026-10-27T12:00:00.000Z",
-    "https://telferwiki.com/people/charles-telfer-1875/family-sheet/": "2026-10-27T12:00:00.000Z",
+    "https://telferwiki.com/people/charles-telfer-1875/descendants/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/charles-telfer-1875/family-sheet/": "2026-11-11T12:00:00.000Z",
     "https://telferwiki.com/people/charlotte-beven-1906/family-sheet/": "2026-09-17T12:00:00.000Z",
     "https://telferwiki.com/people/charlotte-hooper/": "2026-11-04T12:00:00.000Z",
     "https://telferwiki.com/people/charlotte-hooper/family-sheet/": "2026-11-04T12:00:00.000Z",
@@ -1854,6 +1854,17 @@
     "https://telferwiki.com/people/ronald-smith/": "2026-11-08T12:00:00.000Z",
     "https://telferwiki.com/people/ronald-smith/family-sheet/": "2026-11-08T12:00:00.000Z",
     "https://telferwiki.com/people/terence-simpson/": "2026-11-08T12:00:00.000Z",
-    "https://telferwiki.com/people/terence-simpson/family-sheet/": "2026-11-08T12:00:00.000Z"
+    "https://telferwiki.com/people/terence-simpson/family-sheet/": "2026-11-08T12:00:00.000Z",
+    "https://telferwiki.com/people/charles-telfer/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/charles-telfer/family-sheet/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/edith-telfer/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/edith-telfer/family-sheet/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/eric-telfer/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/eric-telfer/family-sheet/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/mary-telfer/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/mary-telfer/family-sheet/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/ruby-telfer/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/ruby-telfer/family-sheet/": "2026-11-11T12:00:00.000Z",
+    "https://telferwiki.com/people/william-telfer/family-sheet/": "2026-11-11T12:00:00.000Z"
   }
 }
