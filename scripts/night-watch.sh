@@ -524,9 +524,30 @@ else
   echo "  Detected changes. Committing..."
   git commit -m "Night Watch: auto-sync vault + rebuild ($(date '+%Y-%m-%d %H:%M'))" -q
   if [ "$AUTO_PUSH" = "1" ]; then
+    # Push with ONE rebase retry. WHY (fixed 2026-11-12, card nw-2026-11-12-001):
+    # on 12 Nov 03:04 this step hard-failed with "! [rejected] main -> main
+    # (fetch first)" — a plain non-fast-forward because another process had
+    # pushed while the night run was building. Nothing was wrong with the site
+    # or the data; the job simply lost the race and gave up. A nightly job that
+    # aborts on a normal race is a broken job, so: fetch + rebase, then retry
+    # exactly once. If the retry also fails that IS a real fault and we still
+    # fail honestly — never force-push, never swallow it.
     if git push origin main 2>"$RUN_DIR/nw-push.log"; then
       echo "  ✅ Pushed — GitHub Actions is redeploying the live site"
       PUSHED=1
+    elif grep -q "fetch first\|non-fast-forward" "$RUN_DIR/nw-push.log"; then
+      echo "  🟡 Push rejected (remote moved ahead) — rebasing and retrying once..."
+      if git fetch origin main -q 2>>"$RUN_DIR/nw-push.log" \
+         && git rebase origin/main 2>>"$RUN_DIR/nw-push.log" \
+         && git push origin main 2>"$RUN_DIR/nw-push.log"; then
+        echo "  ✅ Pushed after rebase — GitHub Actions is redeploying the live site"
+        PUSHED=1
+      else
+        git rebase --abort 2>/dev/null || true
+        echo "  🔴 Push failed after rebase retry: $(tail -2 "$RUN_DIR/nw-push.log")"
+        FAIL="${FAIL} push"
+        mark_evidence_safe push
+      fi
     else
       echo "  🔴 Push failed: $(cat "$RUN_DIR/nw-push.log" | tail -2)"
       FAIL="${FAIL} push"
