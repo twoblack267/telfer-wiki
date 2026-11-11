@@ -3374,6 +3374,10 @@
       "slug": "william-telfer",
       "id": "William James Telfer (1902)",
       "generation": 6
+    },
+    {
+      "slug": "william-paynter",
+      "id": "William Henry Paynter (1891)"
     }
   ],
   "edges": {
@@ -6965,6 +6969,14 @@
       {
         "from": "charles-telfer-1875",
         "to": "william-telfer"
+      },
+      {
+        "from": "ellen-liebich",
+        "to": "william-paynter"
+      },
+      {
+        "from": "francis-telfer-paynter-1862",
+        "to": "william-paynter"
       }
     ],
     "spouseOf": [
@@ -11585,6 +11597,10 @@
       {
         "from": "francis-john-burton-telfer",
         "to": "william-telfer-1869"
+      },
+      {
+        "from": "frederick-albert-paynter",
+        "to": "william-paynter"
       },
       {
         "from": "jean-telfer",

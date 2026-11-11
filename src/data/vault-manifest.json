@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-12T03:00:59+10:00",
+  "generated_at": "2026-11-12T05:12:48+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 693,
+  "count": 694,
   "kinds": {
-    "real": 675,
+    "real": 676,
     "redirect": 18,
     "empty": 0
   },
@@ -689,8 +689,8 @@
       "kind": "real"
     },
     "Dinah Flavel (1821\u20131844).md": {
-      "sha256": "5a75e8c3d6cae654774b57579ff78a6cdf7008a8dfd3667880469c40e9dfad4c",
-      "sha256_whole": "905a1183dda4325a01db9f4a134004efbfa6dcd7ca7446130c9edb7e13aaa708",
+      "sha256": "98ddbfcfa397465f7aa6f33ee92d887bece0026d72f89562556a4b7606b42476",
+      "sha256_whole": "da3616b8d4d72e34ca4ea09660f8106316626fcf774e5daf907f153a8c0b71fc",
       "kind": "real"
     },
     "Dinah Flavel Paynter (1869\u20131958).md": {
@@ -739,8 +739,8 @@
       "kind": "real"
     },
     "Edith Amelia Telfer (1908\u20131969).md": {
-      "sha256": "15f82a35474b78a2fa19217fb68b3018528f0764e73b228480bcb7a9e3c18d31",
-      "sha256_whole": "7d3a977fd3313c4841086ab91f2330d472b5dd46372e03a0cba1f986caa35f12",
+      "sha256": "07f4c7df979794d8a9576dd2148d2db908d7601a5dd6b66613b20fbe88ed8c83",
+      "sha256_whole": "319bf8022fa5e72e2a89465c81efa0ae94131d2ef8f202796dbba79af8c4e24c",
       "kind": "real"
     },
     "Edith Mary Kathleen Telfer.md": {
@@ -849,8 +849,8 @@
       "kind": "real"
     },
     "Elizabeth Jane Liebich (1859\u20131919).md": {
-      "sha256": "c62c2be20a01a75ab41d298c90346e1505cb5e65a43f34084f6dfe67018138d5",
-      "sha256_whole": "3951ee0959068b45ea087c1f3ab2f86e364472d849c21beaa54492a790253312",
+      "sha256": "6efb014dd5dbd168364230ced6ff7019385d8013b56bdab7e487f00c5f7ffc81",
+      "sha256_whole": "c1cc3c4e421f855637814c6805747be7eccabf60b6915b89b45d3a8fec91a644",
       "kind": "real"
     },
     "Elizabeth Lawrie (1847\u20131907).md": {
@@ -924,8 +924,8 @@
       "kind": "real"
     },
     "Ellen Jane Liebich (1865\u20131894).md": {
-      "sha256": "cbac984cdec6808657fcce0aeda55b33fbecd1331ab3990d4476de914e140572",
-      "sha256_whole": "9f170358d04f336f87aff1222452f2d3fe3df0a76916bc8f84f8b17df86a9697",
+      "sha256": "5a9a37dde6e5516e94ed06242cec36f03dfe80c29b5d8ea4e3ecf2b2b3331d12",
+      "sha256_whole": "9de127f7885477c002c2a639e98b0fe2caff8aee62dd476f3837d324b87f5166",
       "kind": "real"
     },
     "Ellie Valentine Smith (1890\u20131925).md": {
@@ -3396,6 +3396,11 @@
     "William Henry Parker (1893\u20131968).md": {
       "sha256": "3c5fe149a00ebc6d153feea260379fb497663700e3b435c85e788c0ea2ad7093",
       "sha256_whole": "14afed9546cb60d9c9cbf740deb4ee4499afab0cbe31f1438a8b770704319839",
+      "kind": "real"
+    },
+    "William Henry Paynter (b. 1891).md": {
+      "sha256": "2220652f0e3bff8b1f4031edbf475269e9a72aa1b458282601641b970db3ef92",
+      "sha256_whole": "03911631f9e4f465f9ce4da0728d21604eae7c1da23512d9fe9dc93a7f405bab",
       "kind": "real"
     },
     "William Humphrey Parker (1850\u20131926).md": {
