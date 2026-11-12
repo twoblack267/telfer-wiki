@@ -3384,6 +3384,11 @@
       "slug": "kathleen-hancock",
       "id": "Kathleen Meredith Hancock (1956)",
       "generation": 7
+    },
+    {
+      "slug": "francis-paynter",
+      "id": "Francis Thomas Paynter (1885)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -6995,6 +7000,14 @@
       {
         "from": "francis-telfer-paynter-1862",
         "to": "william-paynter"
+      },
+      {
+        "from": "ellen-liebich",
+        "to": "francis-paynter"
+      },
+      {
+        "from": "francis-telfer-paynter-1862",
+        "to": "francis-paynter"
       }
     ],
     "spouseOf": [
@@ -11711,6 +11724,14 @@
       {
         "from": "ruby-telfer",
         "to": "william-telfer"
+      },
+      {
+        "from": "francis-paynter",
+        "to": "frederick-albert-paynter"
+      },
+      {
+        "from": "francis-paynter",
+        "to": "william-paynter"
       }
     ],
     "stepParentOf": [
