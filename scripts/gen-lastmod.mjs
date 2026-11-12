@@ -197,16 +197,23 @@ function matchVaultFile(person, byName, byTriple) {
   }
 
   const y = year;
-  if (!/^\d{3,4}$/.test(y)) return null;
+  // NOTE (2026-11-13): this early return used to strand EVERY page without a birth_year
+  // before passes 3-5 could run. "Elizabeth Mansfield" has birth_year null (her birth year
+  // is genuinely unknown — the obituary age and the 1840 marriage date conflict), so she
+  // could never reach the bracket pass below. A missing year is a reason to skip the
+  // YEAR-based passes, not a reason to abandon name matching entirely.
+  const hasYear = /^\d{3,4}$/.test(y);
 
-  for (const k of keys) {
-    const toks = k.split(/\s+/).filter(Boolean);
-    const first = toks[0] || "";
-    const last = toks[toks.length - 1] || "";
-    if (!first || !last) continue;
-    const cands = byTriple.get(`${first}|${last}|${y}`);
-    if (!cands || cands.length !== 1) continue; // ambiguous -> try next key shape
-    return { file: cands[0], how: "first+last+year" };
+  if (hasYear) {
+    for (const k of keys) {
+      const toks = k.split(/\s+/).filter(Boolean);
+      const first = toks[0] || "";
+      const last = toks[toks.length - 1] || "";
+      if (!first || !last) continue;
+      const cands = byTriple.get(`${first}|${last}|${y}`);
+      if (!cands || cands.length !== 1) continue; // ambiguous -> try next key shape
+      return { file: cands[0], how: "first+last+year" };
+    }
   }
 
   // Pass 3 (added 2026-09-25): the wiki title may DROP the family surname that the vault
@@ -223,6 +230,64 @@ function matchVaultFile(person, byName, byTriple) {
     for (const vf of vfs) prefixCands.push(vf);
   }
   if (prefixCands.length === 1) return { file: prefixCands[0], how: "wiki-key-is-prefix-of-vault-name" };
+
+  // Pass 4 (added 2026-11-13): the vault filename carries a MAIDEN name where the wiki
+  // key carries the MARRIED one, so neither a full-name key nor a first|last|year triple
+  // can reach it. Measured on two real pages:
+  //   page "Sylvia Mabel Olive Kennett"   -> file "Sylvia Mabel Olive Sparrow.md"
+  //   page "Elizabeth Mansfield"          -> file "Elizabeth Telfer (Mrs Mansfield).md"
+  // Both were enriched on 2026-11-13 and both silently lost <lastmod> AND their JSON-LD
+  // dateModified, which failed the schema-freshness gate. Renaming the vault files was the
+  // wrong fix: 6 wikilinks point at those names and the filenames are Mark's data.
+  // So match on the GIVEN-NAME RUN, which both sides share, and accept ONLY when exactly
+  // one vault file agrees. Every token after the first must match positionally up to the
+  // point where they diverge, and the diverging token must be a single word on BOTH sides
+  // (a surname swap), never a different person with extra given names.
+  const wikiTokens = (keys[0] || "").split(/\s+/).filter(Boolean);
+  if (wikiTokens.length >= 2) {
+    const swapCands = [];
+    for (const [vk, vfs] of byName) {
+      // byName keys are already bracket-stripped by manifestParts, but a vault filename like
+      // "Elizabeth Telfer (Mrs Mansfield).md" keeps "telfer" as its surname token — the married
+      // name lives only inside the brackets. Compare on the bracket-free key, and ALSO allow the
+      // page title's surname to appear anywhere in the original filename (brackets included):
+      // that is the only signal that this Mansfield is the same person as that Telfer.
+      const vt = vk.split(/\s+/).filter(Boolean);
+      if (vt.length !== wikiTokens.length) continue;
+      if (vt[0] !== wikiTokens[0]) continue;
+      const diff = [];
+      for (let i = 0; i < vt.length; i++) if (vt[i] !== wikiTokens[i]) diff.push(i);
+      const surnameSwap =
+        diff.length === 1 && diff[0] === vt.length - 1;
+      const bracketCarriesSurname = diff.length === 1 && vfs.some((vf) =>
+        new RegExp(`\\([^)]*\\b${wikiTokens[wikiTokens.length - 1]}\\b[^)]*\\)`, "i").test(vf),
+      );
+      if (!surnameSwap && !bracketCarriesSurname) continue;
+      for (const vf of vfs) swapCands.push(vf);
+    }
+    if (swapCands.length === 1) return { file: swapCands[0], how: "given-name-run+surname-swap" };
+  }
+
+  // Pass 5 (added 2026-11-13, same day, second case): "Elizabeth Mansfield" vs
+  // "Elizabeth Telfer (Mrs Mansfield).md" — the married surname exists ONLY inside the
+  // bracket, and the token counts differ (2 vs 2 after bracket-strip, but the surname
+  // token is "telfer" not "mansfield"). Rule: the page's surname must appear as a whole
+  // word inside a parenthetical in the vault filename, and the given-name run before it
+  // must match. Exactly one candidate or nothing.
+  if (wikiTokens.length >= 2) {
+    const surname = wikiTokens[wikiTokens.length - 1];
+    const given = wikiTokens.slice(0, -1).join(" ");
+    const cands = [];
+    for (const [vk, vfs] of byName) {
+      const vt = vk.split(/\s+/).filter(Boolean);
+      if (vt.slice(0, -1).join(" ") !== given) continue;
+      for (const vf of vfs) {
+        const brackets = vf.match(/\([^)]*\)/g) || [];
+        if (brackets.some((b) => new RegExp(`\\b${surname}\\b`, "i").test(b))) cands.push(vf);
+      }
+    }
+    if (cands.length === 1) return { file: cands[0], how: "surname-in-bracket" };
+  }
 
   return null;
 }

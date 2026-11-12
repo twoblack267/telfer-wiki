@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-13T06:10:43+10:00",
+  "generated_at": "2026-11-13T07:06:47+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 696,
+  "count": 699,
   "kinds": {
-    "real": 678,
+    "real": 681,
     "redirect": 18,
     "empty": 0
   },
@@ -84,8 +84,8 @@
       "kind": "real"
     },
     "Alan Dale Telfer (1890\u20131937).md": {
-      "sha256": "d41a68a717a678eaf93d105d3be7fc7dde482247f1d45af7e0f33d1008b745fa",
-      "sha256_whole": "99821c51af9e4884511e0e2e8c203e8f462e414d701a8dc43b5328ea9e834721",
+      "sha256": "97a328334421f2c5f55cbea05ce5f3f77cc78966b930d6259026b345e7c0728f",
+      "sha256_whole": "60b5b826595cbe359d09b6d23bda085df279b8c3961da8a374660ff85299f97d",
       "kind": "real"
     },
     "Alan Theodore Downs (1905\u20131959).md": {
@@ -899,8 +899,8 @@
       "kind": "real"
     },
     "Elizabeth Telfer (Mrs Mansfield).md": {
-      "sha256": "e2831ecb0de8f7b2ffc3d63d972eca50ad4e4d4a8995bb5977b90bcd1abf7bb1",
-      "sha256_whole": "6c6b5ba3c46561360b0adc7272356368f256b44da2eacf4078ddf2dc43f81a2c",
+      "sha256": "2ebe4baa3e3ebfba7dad2b113ea28b81df2e31e9f5ab9f49b8f44a2af3a56246",
+      "sha256_whole": "ddb751a1313eb82d58a7f659ae12edba8f85965968eddcc1656f958be2b47784",
       "kind": "real"
     },
     "Elizabeth Telfer Farrow Holloway (1861\u20131946).md": {
@@ -1376,6 +1376,11 @@
     "Herbert Dougal Telfer (1881\u20131976).md": {
       "sha256": "ddace7e7aa55b9f58deff88542fd9c6f3e2c98dd1c9418b9510666d163346165",
       "sha256_whole": "df86e1afd78832862619d7d2ebfb2ced074439a435f580c44a51df42c85e6176",
+      "kind": "real"
+    },
+    "Howard Jubilee Kennett.md": {
+      "sha256": "944b24de7b348ec8ce070f37aa3ff9e0b366b8591aee3d0ea411a812eddd0e27",
+      "sha256_whole": "65fa95219be90687ee9eb394e59b8690095972339fdec7022dcd8b6bd47b6fa3",
       "kind": "real"
     },
     "Howard Lindsay Parker (1920\u20132003).md": {
@@ -2358,6 +2363,11 @@
       "sha256_whole": "14d56a0cdd73e911be2e18103843599bb29c30ee7a7796f122b13b700005eeb1",
       "kind": "real"
     },
+    "Margaret Brown.md": {
+      "sha256": "45fae357c9bfac9c6b60da875bd218513ca9e6317afedd06e47e789315379635",
+      "sha256_whole": "a9fc0be5072e6a53429dade3e0b240dd3fd2584fb44298092c88e45bd115df5d",
+      "kind": "real"
+    },
     "Margaret Dillon (1869\u20131869).md": {
       "sha256": "a13658f429279512e525264a9cf49d3c2228d637752e62af95160efecd6d8454",
       "sha256_whole": "95c62a4c23a32c7d4c54f43c7a64e3831574a0f8f73c8f5d3054316918f04a37",
@@ -3243,6 +3253,11 @@
       "sha256_whole": "9813f2145b2680cb906da8b66a51f09ebd2a02bd6f1416b3a3d921da6e1393d8",
       "kind": "real"
     },
+    "Sylvia Mabel Olive Sparrow.md": {
+      "sha256": "da66c75d5db886a216a2e287328fe6105504a52779449187352833437898c201",
+      "sha256_whole": "215f6245278502282b4c7cbbf53dd2fb0d59076927608742a51bc5ffa63c70fd",
+      "kind": "real"
+    },
     "Tahlia Paige Morris (b. 1998).md": {
       "sha256": "c963c9f6b4914d661a8a1ec6de074984cd46280b28dd86d6e148acdf642042b7",
       "sha256_whole": "c4cd782ec78e614bcfe39676ae5303c75e57883317630a5ba1d3e4bd9a397143",
@@ -3264,8 +3279,8 @@
       "kind": "real"
     },
     "Thelma Ellen Parker (1924\u20132002).md": {
-      "sha256": "d14f9952febe6fd316ed9fe157a1edc74396880058a09b2995a98c633f6f1718",
-      "sha256_whole": "585eb9c289d3f2bbd4c2cae37399fd08e85bdc53b11d28ce8920bcb7984a0c54",
+      "sha256": "b021e9e7b5912814039ea0e05293017c171b2ac8dbc8fcf604a94d84dab1809f",
+      "sha256_whole": "5f0a331478ebadee3b879b24679dd9639fb2dfaaf79183f68dd601fa2ad4a5d8",
       "kind": "real"
     },
     "Thirza Paynter (1867\u20131869).md": {
@@ -3444,8 +3459,8 @@
       "kind": "real"
     },
     "William Telfer (1802\u20131850).md": {
-      "sha256": "0fbddcd9823fea45b8ecc0012e1229bced423bd3239b0866f67b82f335ca7a5b",
-      "sha256_whole": "96296924aa65cb96b93ac6f352b8f6c18132c1061d505b3dce6aab5edbcd639e",
+      "sha256": "1604ad50c2e95aa3754de826e79b1ed6c6bc9248145e6798ab2b72e53a43eecb",
+      "sha256_whole": "bb2c0255a35dfc4f8afe61aaea7daa68e3a94f1a5551d18f0b52e27f9d0cc3f9",
       "kind": "real"
     },
     "William Telfer (1811\u2013?).md": {

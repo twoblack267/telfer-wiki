@@ -3302,7 +3302,7 @@
     },
     {
       "slug": "elizabeth-telfer-living",
-      "id": "Elizabeth Telfer",
+      "id": "Elizabeth Mansfield",
       "generation": 99
     },
     {
@@ -3388,6 +3388,21 @@
     {
       "slug": "francis-paynter",
       "id": "Francis Thomas Paynter (1885)",
+      "generation": 6
+    },
+    {
+      "slug": "howard-kennett",
+      "id": "Howard Jubilee Kennett",
+      "generation": 99
+    },
+    {
+      "slug": "margaret-brown",
+      "id": "Margaret Brown",
+      "generation": 99
+    },
+    {
+      "slug": "sylvia-kennett",
+      "id": "Sylvia Mabel Olive Kennett (1886)",
       "generation": 6
     }
   ],
@@ -4966,6 +4981,14 @@
         "to": "sydney-parker-1922"
       },
       {
+        "from": "howard-kennett",
+        "to": "thelma-ellen-parker-1924"
+      },
+      {
+        "from": "sylvia-kennett",
+        "to": "thelma-ellen-parker-1924"
+      },
+      {
         "from": "francis-telfer-dillon-1864",
         "to": "thomas-cleveland-dillon-1900"
       },
@@ -5108,6 +5131,10 @@
       {
         "from": "james-telfer-1761",
         "to": "william-telfer-1811"
+      },
+      {
+        "from": "margaret-brown",
+        "to": "william-telfer-1841"
       },
       {
         "from": "william-telfer-1802",
@@ -6918,6 +6945,10 @@
         "to": "john-ernest-telfer"
       },
       {
+        "from": "margaret-brown",
+        "to": "elizabeth-telfer-living"
+      },
+      {
         "from": "william-telfer-1802",
         "to": "elizabeth-telfer-living"
       },
@@ -7558,6 +7589,14 @@
       {
         "from": "ena-simpson",
         "to": "lachlan-simpson"
+      },
+      {
+        "from": "howard-kennett",
+        "to": "sylvia-kennett"
+      },
+      {
+        "from": "margaret-brown",
+        "to": "william-telfer-1802"
       }
     ],
     "siblingOf": [
