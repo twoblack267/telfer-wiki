@@ -3379,6 +3379,11 @@
       "slug": "william-paynter",
       "id": "William Henry Paynter (1891)",
       "generation": 6
+    },
+    {
+      "slug": "kathleen-hancock",
+      "id": "Kathleen Meredith Hancock (1956)",
+      "generation": 7
     }
   ],
   "edges": {
@@ -5324,6 +5329,10 @@
         "to": "ryan-telfer-1982"
       },
       {
+        "from": "kathleen-hancock",
+        "to": "ryan-telfer-1982"
+      },
+      {
         "from": "alfred-george-stribling-1853",
         "to": "alma-stribling"
       },
@@ -5956,7 +5965,15 @@
         "to": "simeon-david-telfer-1983"
       },
       {
+        "from": "kathleen-hancock",
+        "to": "simeon-david-telfer-1983"
+      },
+      {
         "from": "david-telfer-1957",
+        "to": "michael-scott-telfer-1986"
+      },
+      {
+        "from": "kathleen-hancock",
         "to": "michael-scott-telfer-1986"
       },
       {
@@ -6064,6 +6081,10 @@
         "to": "angelina-telfer"
       },
       {
+        "from": "kathleen-hancock",
+        "to": "angelina-telfer"
+      },
+      {
         "from": "andrew-nicholson-1956",
         "to": "anna-nicholson"
       },
@@ -6157,6 +6178,10 @@
       },
       {
         "from": "david-telfer-1957",
+        "to": "jordon-telfer"
+      },
+      {
+        "from": "kathleen-hancock",
         "to": "jordon-telfer"
       },
       {
@@ -7332,6 +7357,10 @@
       {
         "from": "ellen-liebich",
         "to": "francis-telfer-paynter-1862"
+      },
+      {
+        "from": "david-telfer-1957",
+        "to": "kathleen-hancock"
       },
       {
         "from": "james-cowan",
@@ -10580,10 +10609,6 @@
         "to": "luke-caleb-telfer"
       },
       {
-        "from": "samuel-joel-telfer",
-        "to": "simeon-david-telfer-1983"
-      },
-      {
         "from": "jonathon-telfer",
         "to": "kristin-stefanoff"
       },
@@ -11037,10 +11062,6 @@
       },
       {
         "from": "michael-scott-telfer-1986",
-        "to": "samuel-joel-telfer"
-      },
-      {
-        "from": "michael-scott-telfer-1986",
         "to": "simeon-david-telfer-1983"
       },
       {
@@ -11149,10 +11170,6 @@
       },
       {
         "from": "angelina-telfer",
-        "to": "samuel-joel-telfer"
-      },
-      {
-        "from": "angelina-telfer",
         "to": "simeon-david-telfer-1983"
       },
       {
@@ -11238,10 +11255,6 @@
       {
         "from": "jordon-telfer",
         "to": "ryan-telfer-1982"
-      },
-      {
-        "from": "jordon-telfer",
-        "to": "samuel-joel-telfer"
       },
       {
         "from": "jordon-telfer",

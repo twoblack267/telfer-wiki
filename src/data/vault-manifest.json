@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-12T05:20:41+10:00",
+  "generated_at": "2026-11-12T12:10:37+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 694,
+  "count": 695,
   "kinds": {
-    "real": 676,
+    "real": 677,
     "redirect": 18,
     "empty": 0
   },
@@ -279,8 +279,8 @@
       "kind": "real"
     },
     "Angelina Ellen Telfer (b. 1988).md": {
-      "sha256": "ee3e5a4ce76d8d92d2c1db3606082f5d09b3ff7bc3be53121916a065eae3a5b4",
-      "sha256_whole": "beb2977d8c413f276c429c2246e38aa217b0de341a43b324ffd1c5242fae5b81",
+      "sha256": "e59074e6b5c37b5ea5c93d49297fdd41c950968aef8b97bb8fc3b35aa18057e6",
+      "sha256_whole": "0b963bc5079050cd2f88efd6db4c2d73a4c4a8640b47e6d3d55324437102052c",
       "kind": "real"
     },
     "Anna Kate Nicholson (b. 1985).md": {
@@ -639,8 +639,8 @@
       "kind": "real"
     },
     "David Lyndon Telfer (1957\u20131996).md": {
-      "sha256": "2b8dfacf34be7636911c4c441bea27464e493e6ade2ce9b1201d718b3ec1b5ed",
-      "sha256_whole": "48800f8bb122f3dcc493a042a52b52e5c66c583df6988165feeb83921a1f3da3",
+      "sha256": "a574a04f29a169d0e3775b9e4bffdf608d749f300181997cff65d65c58a17a46",
+      "sha256_whole": "e0c45986c5b0bd4633c8fb4ccf4efe61c1749eb27366abb4c7c9e91c641b9dd0",
       "kind": "real"
     },
     "David Morris Telfer (b. 1970).md": {
@@ -1919,8 +1919,8 @@
       "kind": "real"
     },
     "Jordon Kane Telfer (b. 1984).md": {
-      "sha256": "e1f7eb28102e39d85d8a6fee162f11cfb8fba574992c827253531303838fc366",
-      "sha256_whole": "f5a4fe3d3f4b2b0611477b7656b756d6e25f11d6116fb6e7cc2db8e2dd49dfb8",
+      "sha256": "284bb78a00b139a101d2dcf375684611e761fd7c3e8b78b431fabef9bc343e81",
+      "sha256_whole": "9d373161ac5147ed91792603d119718aa54f7448de613666f1a1cdc161a82e5e",
       "kind": "real"
     },
     "Joseph Farrow (1814\u20131899).md": {
@@ -2026,6 +2026,11 @@
     "Karla Jayde (Vandenbroek) Telfer (b. 1985).md": {
       "sha256": "227c9d66d970cdc13f72521ad8b555a5fc2e5228e8c94b5acdc8e5c65b806609",
       "sha256_whole": "b6f4d1acf8e468a7c1a85d0f5ca02bed4bde9c9c931d4bbc452b6dc545a60714",
+      "kind": "real"
+    },
+    "Kathleen Meredith Hancock (b. 1956).md": {
+      "sha256": "046ccfa15d69f68c8311c2ea3b8c80dae1dccd8fe756ffbc0f96ad0f6c1c1f40",
+      "sha256_whole": "22ef856c1fcfe815695b0faeed28d4255fbcd94254c5f0cb5e46da8df1e41edd",
       "kind": "real"
     },
     "Kathryn Mavis Telfer (1961\u20131965).md": {
@@ -2594,8 +2599,8 @@
       "kind": "real"
     },
     "Michael Scott Telfer (b. 1986).md": {
-      "sha256": "01c35a455dd16a5d4f21036667abfeb75185a2cf34e93e77f6d0fb414765c322",
-      "sha256_whole": "e5b161004525629c64f583ab50bfff60b8b28c49dd02b10620a05b1fd763a5dc",
+      "sha256": "b43f05335e3589dcb28f0d945ebab73ce852b509739ae702d0af85e06818a974",
+      "sha256_whole": "7c5a9a3f7d6a9dd4811841d82ad1c43e5f5eec5eb42fae3afc114c8d71ae5e98",
       "kind": "real"
     },
     "Michaela Jayne Story (b. 1998).md": {
@@ -3024,8 +3029,8 @@
       "kind": "real"
     },
     "Ryan David Telfer (1982\u20131982).md": {
-      "sha256": "ca8da8b89b29a2b746747fb0aa65a838c3c03c047df0ae31693ba2485e6dbf26",
-      "sha256_whole": "973d953880387148054d75e11f8005ed97640b47a44e7f4497ed96a0f67993eb",
+      "sha256": "02183c75d5df985a553c1be3b89d910391e825858f0ce2a261ff434152d3f036",
+      "sha256_whole": "32e0d33878ed3213b026d4b649a0fdc93b93140a3eea55888c43b98d3494699e",
       "kind": "real"
     },
     "Ryan Jacob Telfer (b. 2001).md": {
@@ -3119,8 +3124,8 @@
       "kind": "real"
     },
     "Simeon David Telfer (b. 1983).md": {
-      "sha256": "1751ff8c503d61c1d951c5c4c94684f0fc8ff10d0d9d5e277d9db5b11c1314c4",
-      "sha256_whole": "4867d6b8d3b7be19e8f1dd7f1e5033d22150263a262f395f7d203578500625a8",
+      "sha256": "04f4cdecbfc0df3ebf4606bf749662f710cc64ef52b64ca302c998313fe1a114",
+      "sha256_whole": "d97184965e35b35c34672efaff525a42787cae010f945f4de45f7c912ea85f23",
       "kind": "real"
     },
     "Simon James Vickers (b. 1985).md": {
