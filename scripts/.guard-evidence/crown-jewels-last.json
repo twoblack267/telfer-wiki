@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-11-12T21:09:55.719Z",
+  "checkedAt": "2026-11-12T21:17:05.487Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
-    "before": 678,
+    "before": 681,
     "after": 681
   },
   "crownJewelsChecked": 6,
@@ -12,15 +12,15 @@
   "warnings": [
     {
       "kind": "FIELD_SHRANK",
-      "slug": "elizabeth-telfer-living",
-      "name": "Elizabeth Mansfield",
+      "slug": "william-telfer-1841",
+      "name": "William Telfer",
       "field": "parents",
-      "before": 3,
-      "after": 2,
+      "before": 4,
+      "after": 3,
       "lost": 1,
       "lostEntries": [
         "Margaret",
-        "maiden surname not recorded (no profile yet)"
+        "maiden surname not recorded"
       ]
     }
   ]

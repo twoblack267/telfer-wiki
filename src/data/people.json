@@ -27133,8 +27133,7 @@
       {
         "type": "Mother",
         "names": [
-          "Margaret",
-          "maiden surname not recorded"
+          "Margaret surname unknown"
         ]
       }
     ],
@@ -27146,8 +27145,7 @@
     "parents": [
       "margaret-brown",
       "william-telfer-1802",
-      "Margaret",
-      "maiden surname not recorded"
+      "Margaret surname unknown"
     ],
     "children": [],
     "spouses": [],
@@ -27165,7 +27163,7 @@
     "generation": 5,
     "step_parents": [],
     "step_children": [],
-    "evidence_level": null,
+    "evidence_level": "single_source",
     "single_source": false,
     "provisional_why": null,
     "is_deceased": false

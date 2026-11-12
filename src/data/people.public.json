@@ -5065,7 +5065,7 @@
     "generation": 5,
     "is_living": false,
     "is_deceased": false,
-    "evidence_level": null,
+    "evidence_level": "single_source",
     "single_source": false,
     "provisional_why": null,
     "body_markdown": "# William Telfer (1841–?)\n\n**Born:** 1841 — New South Wales, Australia\n**Father:** [[William Telfer (1802–1850)]]\n**Mother:** Margaret, whose maiden surname is not recorded in any located source\n\n## Why this page exists\n\nThis page exists as a research lead on a separate Telfer family — people of the Telfer name in the same Scottish border parishes, not shown to be related to the line this archive follows. The shared surname is why the record is kept; the absence of any linking record is why it is labelled a lead rather than a branch. Do not read this page as evidence that this person is an ancestor.\n\n## Sources\n\n- *From the Borders to the Bush*, pp. 366–370",
@@ -5080,10 +5080,7 @@
       "margaret-brown",
       "william-telfer-1802",
       {
-        "plain_name": "Margaret"
-      },
-      {
-        "plain_name": "maiden surname not recorded"
+        "plain_name": "Margaret surname unknown"
       }
     ],
     "children": [],
