@@ -1236,6 +1236,43 @@ for (const person of people) {
       if (!spouseEdges.has(targetSlug)) spouseEdges.set(targetSlug, new Set());
       if (!siblingEdges.has(targetSlug)) siblingEdges.set(targetSlug, new Set());
 
+      // ─── HEDGED RELATIONSHIP LABELS (2026-11-12) ─────────────────────────────
+      //
+      // The vault is allowed to say a link is probable, not proven — that is the
+      // whole point of `parentage_status: unproven` and of the "Probable children
+      // (parentage unproven)" / "Probable sibling (parentage unproven)" role labels
+      // the researcher writes by hand. Those labels were hitting `default` and being
+      // thrown away with a warning: the ref had resolved to a real person, the vault
+      // asserted the link, and NO edge was written. Four such refs on the Adam Telfer
+      // hedge alone (james-of-sorbietrees, margaret-armstrong, francis, jenet).
+      //
+      // Fix: strip the hedge wording down to the bare relationship role and let the
+      // switch below handle it. This does NOT assert a probable link as fact — the
+      // `parentage_status: unproven` gate further down still deletes the parent edge
+      // and the reverse child edge for that person. A hedged PARENT label therefore
+      // lands in disputed_parent_refs, never in parents[]. A hedged SIBLING label on
+      // a person with shared parents still produces a sibling edge, which is why the
+      // unproven gate explicitly clears siblingEdges afterwards.
+      //
+      // Deliberately conservative: only the qualifier words are removed. Anything
+      // the switch still does not recognise keeps shouting in `default` — a silent
+      // drop is the bug, not the unknown spelling.
+      rel.type = String(rel.type)
+        .replace(/\bprobable\b/gi, '')
+        .replace(/\bpossible\b/gi, '')
+        .replace(/\bunproven\b/gi, '')
+        .replace(/\(parentage[^)]*\)/gi, '')
+        .replace(/\s+-\s+/g, ' ')
+        .replace(/\s{2,}/g, ' ')
+        .trim();
+      if (!rel.type) continue;
+      // Then case-fold the first letter. The switch below is capitalised
+      // ('Children', 'Sibling'); the vault writes "Probable children …", so stripping
+      // the qualifier alone left a lowercase "children" that still missed the switch.
+      // Only the first character is touched — anything the switch does not know keeps
+      // reaching `default` and shouting there, which is the intended behaviour.
+      rel.type = rel.type.charAt(0).toUpperCase() + rel.type.slice(1);
+
       switch (rel.type) {
         case 'Father':
         case 'Mother':
@@ -1660,6 +1697,16 @@ for (const slug of UNPROVEN) {
 }
 // rebuild sibling edges for disputed people: they have no asserted siblings from this
 for (const slug of UNPROVEN) siblingEdges.set(slug, new Set());
+// 2026-11-12 — close the reverse direction too. The line above only clears the
+// disputed person's OWN sibling set; it left them sitting in every sibling's set,
+// so "Adam Telfer" still rendered as a sibling of Jenet and Francis. That path was
+// previously unreachable by accident (the "Probable sibling (parentage unproven)"
+// label hit `default` and wrote no edge at all). Now that hedged labels normalise
+// to real roles, the leak is live, so it has to be closed explicitly:
+// a person with unproven parentage is not asserted as anyone's sibling either way.
+for (const [, sibs] of siblingEdges) {
+  for (const slug of UNPROVEN) sibs.delete(slug);
+}
 
 // ─── Deduplicate and Convert to Arrays ────────────────────────────────────────
 //

@@ -4,7 +4,8 @@
   "_why_not_zero": "Many isolated people are genuinely alone in the vault - an immigrant progenitor whose parents were never recorded, or someone whose only relative has no profile. Forcing zero would make the pipeline invent relatives.",
   "_history": [
     {"date": "2026-10-28", "isolated": 25, "note": "was a bare constant in the script; reset here for reviewability"},
-    {"date": "2026-11-07", "isolated": 17, "note": "measured on HEAD b462f0e across 661 profiles; constant of 25 carried 8 people of unaudited slack, so it is pinned to the measured value"}
+    {"date": "2026-11-07", "isolated": 17, "note": "measured on HEAD b462f0e across 661 profiles; constant of 25 carried 8 people of unaudited slack, so it is pinned to the measured value"},
+    {"date": "2026-11-12", "isolated": 18, "note": "RAISED BY ONE ON PURPOSE, WITH A NAMED PERSON. adam-telfer-1771 (1771-1846) is the target of an explicit parentage hedge: the vault commits parentage_status: unproven and records his two candidate parents in disputed_parent_refs instead of asserting edges. He therefore has zero asserted parents, siblings or spouse BY DESIGN and correctly counts as isolated. Verified by diffing isolated sets against HEAD: he is the ONLY newly isolated person and nobody left the set. Rejected alternative: making disputed_parent_refs count as a relationship would silently change what the metric means for every profile instead of adding one audited name."}
   ],
-  "isolated": 17
+  "isolated": 18
 }
