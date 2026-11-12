@@ -604,6 +604,31 @@ const EDUCATION_OK_SLUGS = new Set([
 
 const PUBLIC_ROLE_HEADING = /^\s*##\s+Public Role\s*$/i;
 
+// ── CLEARED CLIPPINGS ON LIVING PAGES (owner ruling, Mark, 12 Nov 2026) ─────
+// The rules ("How We Work (Telfer Wiki Rules)") say a newspaper clipping naming
+// a living person is cleared exactly like a photo: it goes live once Mark or the
+// Can Do Board clears it. So a cleared clipping is a document section, sibling to
+// `## Marriage Certificate — …`.
+//
+// Two gates, both required, both fail-closed:
+//   1. the slug is listed here (a per-person ruling, never a blanket pass), and
+//   2. the heading itself carries its clearance:
+//        `## Clipping — <title> (cleared by Mark, 12 Nov 2026)`
+//      Without the parenthesised `(cleared by …, date)` the heading does not
+//      match and is dropped like any other unknown heading.
+//
+// Adding a person here cannot leak `## Evidence`, `## Notes`, `## Sources` or
+// any narrative section: only a heading that passes CLEARED_CLIPPING_HEADING
+// survives, and only that section's own body comes with it. Clearance must be
+// recorded in the vault's Corrections Log, as with every other exception.
+const CLEARED_CLIPPING_SLUGS = new Set([
+  'kathleen-hancock',   // 1977 engagement notice — Mark cleared 2026-11-12.
+]);
+
+const CLEARED_CLIPPING_HEADING =
+  /^\s*##\s*Clipping\s*[—–:-]\s*\S.*\(\s*cleared\s+by\s+[^)]+\)\s*$/i;
+
+
 /**
  * Extract the `## Public Role` section from a living person's body, if present.
  * Returns the section text (heading included) or null. Nothing else is read.
@@ -656,6 +681,20 @@ function stripLivingPrivateContent(text, slug) {
 
   const allowEducation =
     Boolean(slug) && EDUCATION_OK_SLUGS.has(String(slug).trim());
+
+  // ── CLEARED-CLIPPING EXCEPTION (owner ruling, 12 Nov 2026) ──────────────
+  // "How We Work (Telfer Wiki Rules)" rules that a newspaper clipping naming a
+  // living person is cleared the same way as a photo: it goes live once Mark or
+  // the Can Do Board clears it. A cleared clipping is therefore a document
+  // section, like `## Marriage Certificate — …`, and `## Clipping — …` must
+  // survive the living-person filter.
+  //
+  // The heading is deliberately self-invalidating: `## Clipping — <title>
+  // (cleared by <who>, <date>)` without the parenthesised clearance fails the
+  // pattern and is dropped like any other unknown heading. Fail-closed — an
+  // uncleared clipping publishes nothing, exactly as before.
+  const allowClearedClipping =
+    Boolean(slug) && CLEARED_CLIPPING_SLUGS.has(String(slug).trim());
 
   // Sections dropped wholesale for living people (narrative/residence/
   // occupation/research-provenance).
@@ -723,7 +762,8 @@ function stripLivingPrivateContent(text, slug) {
       // (owner decision, 18 Oct 2026).
       const keep =
         KEEP_SECTIONS.test(trimmed) ||
-        (allowEducation && /^\s*##\s*Education\s*$/i.test(trimmed));
+        (allowEducation && /^\s*##\s*Education\s*$/i.test(trimmed)) ||
+        (allowClearedClipping && CLEARED_CLIPPING_HEADING.test(trimmed));
       inDropSection = !keep;
       if (inDropSection) continue;         // heading itself dropped
     } else if (inDropSection) {
