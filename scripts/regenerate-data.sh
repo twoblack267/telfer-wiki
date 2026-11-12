@@ -88,7 +88,8 @@ RR="$(node scripts/resolve-refs.mjs --write 2>&1)" || {
   echo "$RR" | tail -20
   exit 1
 }
-echo "$RR" | grep -E 'RESOLVED|Remaining unresolved|Wrote' | head -5
+echo "$RR" | grep -E 'RESOLVED|Remaining unresolved|Wrote|NOT person names' | head -5
+
 
 echo
 echo

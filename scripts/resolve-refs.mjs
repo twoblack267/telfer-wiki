@@ -983,4 +983,49 @@ people.forEach(p => {
     });
   });
 });
-console.log(`\n📊 Remaining unresolved: ${remaining}`);
+console.log(`
+📊 Remaining unresolved: ${remaining}`);
+
+// ── Verdict report ──────────────────────────────
+//
+// HISTORY: this script used to print "RESOLVED: 0 / 801" as a mundane summary
+// line and exit 0. On a RE-RUN that is CORRECT: the leftover values are residue
+// (names with no matching profile, plus married-name mismatches such as
+// "Elizabeth Hutton (1774–1853)" whose page is "Elizabeth Telfer (1774)").
+// A second run resolving nothing is normal and must never red the build.
+//
+// What mattered was that the residue was never REPORTED as such, so nobody knew
+// 801 values were carrying unresolved names. This reports it, and separates the
+// two kinds, because they need different handling:
+//
+//   • a name that is not a profile yet  -> research lead (fine, expected), and
+//   • a value that is not a name at all -> data defect in the vault's
+//     relationships: line, e.g. spouses: "None (never married)".
+//
+// Exit stays 0. The report is the deliverable; a false red build is not.
+
+const notNames = [];
+people.forEach(p => {
+  fields.forEach(field => {
+    if (!p[field]) return;
+    p[field].forEach(ref => {
+      if (slugSet.has(ref)) return;
+      const s = String(ref).trim();
+      if (!/[A-Za-z]/.test(s) || /^none\b/i.test(s) || /\b(never married|unknown|n\/a)\b/i.test(s)) {
+        notNames.push(`${p.slug}.${field}: ${JSON.stringify(s)}`);
+      }
+    });
+  });
+});
+
+if (remaining > 0) {
+  console.log(`⚠️  ${remaining} unresolved ref(s) remain after resolution.`);
+  console.log(`    These are names with no matching profile — a research lead, not a bug.`);
+  if (notNames.length) {
+    console.log(`` + `🚩 ${notNames.length} of them are NOT person names (data defects):`);
+    notNames.slice(0, 15).forEach(n => console.log(`     ${n}`));
+    if (notNames.length > 15) console.log(`     ... and ${notNames.length - 15} more`);
+  }
+}
+
+
