@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-13T09:01:30+10:00",
+  "generated_at": "2026-11-13T09:32:00+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 699,
+  "count": 700,
   "kinds": {
-    "real": 681,
+    "real": 682,
     "redirect": 18,
     "empty": 0
   },
@@ -269,8 +269,8 @@
       "kind": "real"
     },
     "Andrew Telfer (b. 1850).md": {
-      "sha256": "c6de7de8b972558e2cfe5ddccd4af12668f13d37c4c9299367fd9222788bde0b",
-      "sha256_whole": "fc5e4d58ebd9f9f4669d1664a2a69d613472107b91377d5bf4abd569ef6343dc",
+      "sha256": "a1edbeb5a279af14b526f62cb30840a415999467fb3bf4825e7184809685da69",
+      "sha256_whole": "a074f5c10631976ec917c5c779b0df4a8ef7bf2b8317121dad989b0db847af95",
       "kind": "real"
     },
     "Angela Telfer.md": {
@@ -899,8 +899,8 @@
       "kind": "real"
     },
     "Elizabeth Telfer (Mrs Mansfield).md": {
-      "sha256": "2ebe4baa3e3ebfba7dad2b113ea28b81df2e31e9f5ab9f49b8f44a2af3a56246",
-      "sha256_whole": "ddb751a1313eb82d58a7f659ae12edba8f85965968eddcc1656f958be2b47784",
+      "sha256": "06e7187589db2c981b796ad7edaea06dd7ffdf7160487715b72a11b5d048d2b7",
+      "sha256_whole": "f17745899e494540d5d96f516fa96db0d94eaafd879a9ef83003c55088f28d56",
       "kind": "real"
     },
     "Elizabeth Telfer Farrow Holloway (1861\u20131946).md": {
@@ -2573,6 +2573,11 @@
       "sha256_whole": "84435e715c2b15d81324ddb119a86421ac72c0568660fa3cd08f2b5650053b6b",
       "kind": "real"
     },
+    "Mary Jane Telfer Mansfield (1847).md": {
+      "sha256": "53bd4f992cfd1bdf97dcf5e5f6c332b7466fffa6b71dc7c3faaefa8dfccc386a",
+      "sha256_whole": "6b4057db76cbc469a06647883c943f61acee90e1c28800613c55cc7887868d5a",
+      "kind": "real"
+    },
     "Mary Telfer.md": {
       "sha256": "bf848f3cd3d1cd2362763cec8a1d8d25eb1acb0846ab54a32d130f9b35471f69",
       "sha256_whole": "4d20874f543729f90872bd6ba468a74b80ebe812ea48d3561c076f65713d50df",
@@ -3459,8 +3464,8 @@
       "kind": "real"
     },
     "William Telfer (1802\u20131850).md": {
-      "sha256": "1604ad50c2e95aa3754de826e79b1ed6c6bc9248145e6798ab2b72e53a43eecb",
-      "sha256_whole": "bb2c0255a35dfc4f8afe61aaea7daa68e3a94f1a5551d18f0b52e27f9d0cc3f9",
+      "sha256": "85f71efee45537d3b3e1a48033a3237710ac84af848ff545630c1bc9485b06c2",
+      "sha256_whole": "9148ec74d9618319cc3bca3261bf92032219f7559dcc65cf84a3943050c0fdf1",
       "kind": "real"
     },
     "William Telfer (1811\u2013?).md": {

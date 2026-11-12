@@ -3302,7 +3302,7 @@
     },
     {
       "slug": "elizabeth-telfer-living",
-      "id": "Elizabeth Mansfield",
+      "id": "Elizabeth Telfer",
       "generation": 99
     },
     {
@@ -3404,6 +3404,11 @@
       "slug": "sylvia-kennett",
       "id": "Sylvia Mabel Olive Kennett (1886)",
       "generation": 6
+    },
+    {
+      "slug": "mary-jane-mansfield",
+      "id": "Mary Jane Mansfield (1847)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -7039,6 +7044,14 @@
       {
         "from": "francis-telfer-paynter-1862",
         "to": "francis-paynter"
+      },
+      {
+        "from": "margaret-brown",
+        "to": "mary-jane-mansfield"
+      },
+      {
+        "from": "william-telfer-1802",
+        "to": "mary-jane-mansfield"
       }
     ],
     "spouseOf": [
@@ -7955,6 +7968,10 @@
       {
         "from": "andrew-kelly-parker-1883",
         "to": "william-henry-parker-1893"
+      },
+      {
+        "from": "andrew-telfer-1798",
+        "to": "mary-jane-mansfield"
       },
       {
         "from": "andrew-telfer-1798",
@@ -11662,6 +11679,10 @@
       },
       {
         "from": "elizabeth-telfer-living",
+        "to": "mary-jane-mansfield"
+      },
+      {
+        "from": "elizabeth-telfer-living",
         "to": "william-telfer-1841"
       },
       {
@@ -11771,6 +11792,10 @@
       {
         "from": "francis-paynter",
         "to": "william-paynter"
+      },
+      {
+        "from": "mary-jane-mansfield",
+        "to": "william-telfer-1841"
       }
     ],
     "stepParentOf": [

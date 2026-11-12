@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-11-12T23:01:23.197Z",
+  "checkedAt": "2026-11-12T23:31:53.448Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 681,
-    "after": 681
+    "after": 682
   },
   "crownJewelsChecked": 6,
   "renames": [],
@@ -5253,6 +5253,32 @@
       "lostEntries": [
         "jessica-telfer",
         "lloyd-wilbur-telfer-1913"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "elizabeth-telfer-living",
+      "name": "Elizabeth Telfer",
+      "field": "children",
+      "before": 2,
+      "after": 0,
+      "lost": 2,
+      "lostEntries": [
+        "6 sons and 4 daughters",
+        "none named in surviving records"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "elizabeth-telfer-living",
+      "name": "Elizabeth Telfer",
+      "field": "spouses",
+      "before": 2,
+      "after": 0,
+      "lost": 2,
+      "lostEntries": [
+        "John Mansfield of Leech's Gully",
+        "Tenterfield"
       ]
     },
     {
