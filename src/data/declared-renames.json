@@ -1,0 +1,7 @@
+{
+  "_why": "Declared old-slug -> new-slug pairs for a vault profile that was RENAMED (not removed, not purged). The identity fallback chain in emit-git-slug-redirects.mjs matches on current fields (display_name, vault_file, tagset, namekey); when a rename leaves all of those identical apart from a date that only changes the slug, no candidate is unique and the gate fails closed. An entry here is the written statement that one specific old URL now belongs to one specific current slug. It is validated against people.json on every run: a target that is not published is reported and ignored rather than obeyed. Retire an entry once the old URL has been 410/redirected long enough that nothing links to it.",
+  "_shape": "old-slug (the URL that is live today): new-slug (a slug published in src/data/people.json right now)",
+  "renames": {
+    "margaret-telfer-1801": "margaret-telfer"
+  }
+}

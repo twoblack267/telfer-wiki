@@ -1116,11 +1116,6 @@
       "generation": 4
     },
     {
-      "slug": "margaret-telfer-1801",
-      "id": "Margaret Telfer (1802)",
-      "generation": 3
-    },
-    {
       "slug": "margaret-telfer-1829",
       "id": "Margaret Telfer (1829)",
       "generation": 4
@@ -3409,6 +3404,16 @@
       "slug": "mary-jane-mansfield",
       "id": "Mary Jane Mansfield (1847)",
       "generation": 5
+    },
+    {
+      "slug": "margaret-telfer",
+      "id": "Margaret Telfer (1801)",
+      "generation": 3
+    },
+    {
+      "slug": "emily-paynter",
+      "id": "Emily Louisa Paynter (d.1978)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -4664,14 +4669,6 @@
       {
         "from": "margaret-telfer-1810",
         "to": "margaret-telfer-1849"
-      },
-      {
-        "from": "elizabeth-telfer-1774",
-        "to": "margaret-telfer-1801"
-      },
-      {
-        "from": "james-telfer-1761",
-        "to": "margaret-telfer-1801"
       },
       {
         "from": "elizabeth-beattie-1802",
@@ -7052,6 +7049,14 @@
       {
         "from": "william-telfer-1802",
         "to": "mary-jane-mansfield"
+      },
+      {
+        "from": "elizabeth-telfer-1774",
+        "to": "margaret-telfer"
+      },
+      {
+        "from": "james-telfer-1761",
+        "to": "margaret-telfer"
       }
     ],
     "spouseOf": [
@@ -7610,6 +7615,10 @@
       {
         "from": "margaret-brown",
         "to": "william-telfer-1802"
+      },
+      {
+        "from": "emily-paynter",
+        "to": "francis-paynter"
       }
     ],
     "siblingOf": [
@@ -7703,7 +7712,7 @@
       },
       {
         "from": "adam-telfer-1799",
-        "to": "margaret-telfer-1801"
+        "to": "margaret-telfer"
       },
       {
         "from": "adam-telfer-1799",
@@ -9131,7 +9140,7 @@
       },
       {
         "from": "francis-telfer-1809",
-        "to": "margaret-telfer-1801"
+        "to": "margaret-telfer"
       },
       {
         "from": "francis-telfer-1809",
@@ -9559,7 +9568,7 @@
       },
       {
         "from": "isobel-telfer-1798",
-        "to": "margaret-telfer-1801"
+        "to": "margaret-telfer"
       },
       {
         "from": "isobel-telfer-1798",
@@ -9651,7 +9660,7 @@
       },
       {
         "from": "james-telfer-1796",
-        "to": "margaret-telfer-1801"
+        "to": "margaret-telfer"
       },
       {
         "from": "james-telfer-1796",
@@ -9887,7 +9896,7 @@
       },
       {
         "from": "john-telfer-1805",
-        "to": "margaret-telfer-1801"
+        "to": "margaret-telfer"
       },
       {
         "from": "john-telfer-1805",
@@ -10032,14 +10041,6 @@
       {
         "from": "mabel-winifred-parker-1890",
         "to": "william-henry-parker-1893"
-      },
-      {
-        "from": "margaret-telfer-1801",
-        "to": "robert-telfer-1803"
-      },
-      {
-        "from": "margaret-telfer-1801",
-        "to": "william-telfer-1811"
       },
       {
         "from": "margaret-telfer-1829",
@@ -11796,6 +11797,14 @@
       {
         "from": "mary-jane-mansfield",
         "to": "william-telfer-1841"
+      },
+      {
+        "from": "margaret-telfer",
+        "to": "robert-telfer-1803"
+      },
+      {
+        "from": "margaret-telfer",
+        "to": "william-telfer-1811"
       }
     ],
     "stepParentOf": [

@@ -235,6 +235,28 @@ for (const s of newBySlug.keys()) {
 const matched = [];
 const unresolved = [];
 
+// ── DECLARED RENAMES (added 2026-11-13) ──────────────────────────────────────
+// The identity fallback chain below is a heuristic over CURRENT fields: display_name,
+// vault_file, tagset, namekey. It is blind to the commonest rename of all — one where
+// nothing about the person changed except the thing that generates the slug. A vault
+// file retitled from (1801–?) to (1801–1884) keeps first_name, middle_name, last_name
+// and display_name identical, so namekey and display_name both collide with every
+// other "Margaret Telfer" in the archive, no candidate is unique, and the chain gives
+// up. That is the right behaviour — it must never guess between people — but it leaves
+// an honest rename unresolvable, and the gate then blocks the whole regen.
+//
+// src/data/declared-renames.json is the written statement: old slug, new slug, and the
+// reason. It is checked against the CURRENT data, so a stale entry (declared target no
+// longer published) is reported rather than silently obeyed, and it cannot be used to
+// invent a person — the target must exist in people.json right now.
+const RENAMES_ABS = path.join(REPO, 'src/data/declared-renames.json');
+let RENAMES = {};
+try {
+  RENAMES = JSON.parse(fs.readFileSync(RENAMES_ABS, 'utf-8')).renames || {};
+} catch {
+  // No declarations — fine, fall through to normal matching.
+}
+
 // ── EXPLICIT REMOVALS (added 2026-09-22, card tw-2026-09-22-011) ─────────────
 // A profile can be REMOVED from the vault on purpose — not renamed, not purged as a
 // phantom twin, but genuinely withdrawn because the evidence did not support it.
@@ -283,14 +305,31 @@ for (const oldSlug of vanished) {
     continue;
   }
 
+  // 1) A DECLARED RENAME wins, but only if its target is published RIGHT NOW.
+  //    A declaration is a written promise about one specific pair of URLs, so it is
+  //    stronger than any heuristic — and checked, so it can never point at a person
+  //    who is not in the current data.
+  let found = null;
+  const declaredTo = RENAMES[oldSlug];
+  if (declaredTo) {
+    if (isPublished(declaredTo)) {
+      found = { to: declaredTo, how: 'declared-rename' };
+    } else {
+      console.error(
+        `⚠️  declared-renames.json names ${declaredTo} as the successor of ${oldSlug}, ` +
+        `but no such slug is published in people.json — ignoring the declaration.`,
+      );
+    }
+  }
+  // 2) Otherwise the identity fallback chain.
   const attempts = [
     ['display_name', (o.display_name || '').trim()],
     ['vault_file', o.vault_file],
     ['tagset', tagKey(o)],
     ['namekey', nameKey(o)],
   ];
-  let found = null;
   for (const [how, key] of attempts) {
+    if (found) break;
     const cands = idx[how].get(key);
     if (cands && cands.length === 1) { found = { to: cands[0], how }; break; }
   }

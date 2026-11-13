@@ -1,13 +1,19 @@
 {
-  "checkedAt": "2026-11-13T06:29:36.164Z",
+  "checkedAt": "2026-11-13T07:40:08.265Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 682,
-    "after": 682
+    "after": 683
   },
   "crownJewelsChecked": 6,
-  "renames": [],
+  "renames": [
+    {
+      "from": "margaret-telfer-1801",
+      "to": "margaret-telfer",
+      "name": "Margaret Telfer"
+    }
+  ],
   "failures": [],
   "warnings": []
 }
