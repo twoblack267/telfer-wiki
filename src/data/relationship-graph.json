@@ -3414,6 +3414,10 @@
       "slug": "emily-paynter",
       "id": "Emily Louisa Paynter (d.1978)",
       "generation": 6
+    },
+    {
+      "slug": "joseph-flavel",
+      "id": "Joseph Flavel (1797)"
     }
   ],
   "edges": {
@@ -3685,6 +3689,10 @@
       {
         "from": "penny-telfer-1960",
         "to": "david-telfer-merrick-2000"
+      },
+      {
+        "from": "joseph-flavel",
+        "to": "dinah-flavel-1821"
       },
       {
         "from": "jean-telfer-1840",
