@@ -151,13 +151,20 @@ for (const rel of [...targets].sort()) {
     // no evidence_level — the ONLY remaining escape hatch is a page that genuinely
     // rests on one named source. `single_source: true` with no source named is the
     // exact lie this gate used to wave through, so it no longer counts on its own.
-    if (fm.single_source !== "true") {
+    // A bare `single_source: true` is still not enough: it must NAME the source in
+    // the same frontmatter (`single_source_ref:` etc). Otherwise it is the shrug
+    // again, just with a longer word. Fixed 14 Nov 2026 after the first "proof"
+    // stripped both fields at once and so proved less than it claimed.
+    const namedRef =
+      fm.single_source_ref || fm.single_source_name || fm.source;
+    if (fm.single_source !== "true" || !String(namedRef || "").trim()) {
       offences.push({
         name,
         why:
           "content changed but carries no `evidence_level:` — the page does not " +
           "say how well it is known. Add evidence_level: verified|unverified|" +
-          "soft-yes-provisional, or name the one source it rests on.",
+          "soft-yes-provisional. `single_source: true` alone no longer counts: " +
+          "it names no source. Add `single_source_ref: <the source>` to use that route.",
       });
       continue;
     }
