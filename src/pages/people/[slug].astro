@@ -306,6 +306,16 @@ const evidenceNote = (() => {
         "independent record. Treat the facts here as a lead to be checked, not as settled.",
     };
   }
+  if (evidenceLevel === "unverified") {
+    return {
+      tier: "provisional",
+      title: "Unverified — no source recorded",
+      body:
+        "This profile itself carries no citation. Its frontmatter says so: the facts " +
+        "here are a lead, not a finding. Nothing on this page should be taken as " +
+        "settled until a record is named against it.",
+    };
+  }
   if (evidenceLevel === "verified") {
     return {
       tier: "verified",

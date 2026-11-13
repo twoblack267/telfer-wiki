@@ -142,14 +142,38 @@ for (const rel of [...targets].sort()) {
   const hasLevel = "evidence_level" in fm;
   const hasSingle = "single_source" in fm;
 
-  if (!hasLevel && !hasSingle) {
-    offences.push({
-      name,
-      why:
-        "content changed but carries neither `evidence_level:` nor " +
-        "`single_source:` — the page does not say how well it is known",
-    });
-    continue;
+  // `single_source: true` on its own is NOT an evidence rating, it is a shrug with
+  // a tick on it. Mark, 14 Nov 2026: a page that says "one source" while naming no
+  // source is worse than a blank page, because the blank page admits it knows
+  // nothing. So the old escape hatch is closed: a page must name a level, and a
+  // single-source page must be able to say WHICH source it is resting on.
+  if (!hasLevel) {
+    // no evidence_level — the ONLY remaining escape hatch is a page that genuinely
+    // rests on one named source. `single_source: true` with no source named is the
+    // exact lie this gate used to wave through, so it no longer counts on its own.
+    if (fm.single_source !== "true") {
+      offences.push({
+        name,
+        why:
+          "content changed but carries no `evidence_level:` — the page does not " +
+          "say how well it is known. Add evidence_level: verified|unverified|" +
+          "soft-yes-provisional, or name the one source it rests on.",
+      });
+      continue;
+    }
+  }
+
+  if (fm.evidence_level === "unverified") {
+    // honest minimum: it admits it is a lead. Fine. But it must not also claim a
+    // verification it never had.
+    if (String(fm.single_source) === "false") {
+      offences.push({
+        name,
+        why:
+          "evidence_level: unverified contradicts single_source: false — " +
+          "one of the two fields is a lie",
+      });
+    }
   }
 
   if (fm.evidence_level === "soft-yes-provisional") {
@@ -181,8 +205,18 @@ if (offences.length) {
     console.error(`     ${o.why}`);
   }
   console.error("");
-  console.error("   Fix: add `evidence_level: verified|soft-yes-provisional`");
-  console.error("   or `single_source: true` to the page's frontmatter before saving.");
+  console.error(
+    "   Fix: add `evidence_level: verified|unverified|soft-yes-provisional`"
+  );
+  console.error(
+    "   (`soft-yes-provisional` also needs its four receipt keys)."
+  );
+  console.error(
+    "   Do NOT use `single_source: true` as a way past this gate — it names no"
+  );
+  console.error(
+    "   source and so records nothing. If a page rests on one source, say which."
+  );
   console.error("");
   process.exit(1);
 }
