@@ -14,6 +14,8 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const DIST = join(ROOT, 'dist');
+// Vault root: derived, never hardcoded per-machine.
+const VAULT_ROOT = process.env.TELFER_VAULT || join(process.env.HOME || '', 'ObsidianVault');
 
 function loadPeople() {
   const path = join(ROOT, 'src', 'data', 'people.json');
@@ -138,7 +140,7 @@ const normStem = (s) => s
   .toLowerCase();
 const stemOf = (v) => (v || '').split('/').pop().replace(/\.md$/i, '');
 
-function checkBrokenWikiLinks(text, people) {
+function checkBrokenWikiLinks(text, people, vaultNoteNames) {
   const issues = [];
   const knownSlugs = people.map(p => p.slug);
   const regex = /\[\[([^\]]+)\]\]/g;
@@ -154,9 +156,17 @@ function checkBrokenWikiLinks(text, people) {
     const strippedForPageCheck = linkTarget.toLowerCase().replace(/\(.*?\)/g, '').trim();
     if (knownInternalPages.some(p => strippedForPageCheck.includes(p))) continue;
 
-    // Skip known document/event references
+    // Skip references that resolve to a real vault note by name.
+    // FIX (Skippy, 2026-11-13): this used to be a hardcoded `knownDocPrefixes` list
+    // ('wedding -', 'affidavit -', ...). Any document note whose title did not start with one
+    // of those literals was reported BROKEN even though the note exists in the vault and renders
+    // fine -- e.g. 'FR776 - Alexander Telfer baptism 1841 (image read)' and 'NZ Telfer Contacts
+    // - Otorohanga Lead Sheet (2026-10-20)', which held the audit score down at 3/100 nightly.
+    // check-body-links.mjs (the guard mirroring the renderer) reported CLEAN on the same vault,
+    // so the audit was crying wolf, not the vault. Resolve by name: the vault IS the truth.
     const targetLower = linkTarget.toLowerCase();
     if (knownDocPrefixes.some(p => targetLower.startsWith(p))) continue;
+    if (vaultNoteNames.has(targetLower)) continue;
 
     // Strip parenthetical year ranges like (YYYY–YYYY) or (YYYY–?)
     const nameOnly = linkTarget.replace(/\s*\([^)]*\)\s*/g, '').trim();
@@ -289,9 +299,28 @@ async function main() {
   // ── 2. Broken Wiki Links ──
   console.log('🔗 Checking wiki links...');
   const knownSlugs = people.map(p => p.slug);
+  // Every .md note that actually exists in the vault, lowercased basename. A [[wikilink]] to a
+  // note that exists resolves in Obsidian and on the site, whatever its title starts with.
+  // people.json's vault_file is a BARE FILENAME ("Adam Dillon.md"), not a path, so roots are
+  // taken from the vault's known note trees. Scanned recursively, so new subfolders are covered.
+  const vaultNoteNames = new Set();
+  const vaultRoots = ['Family History'].map((d) => join(VAULT_ROOT, d));
+  for (const root of vaultRoots) {
+    if (!existsSync(root)) continue;
+    (function walkVault(d) {
+      for (const e of readdirSync(d, { withFileTypes: true })) {
+        const full = join(d, e.name);
+        if (e.isDirectory()) {
+          if (e.name !== '.obsidian' && e.name !== '.git') walkVault(full);
+        } else if (e.name.toLowerCase().endsWith('.md')) {
+          vaultNoteNames.add(e.name.slice(0, -3).toLowerCase());
+        }
+      }
+    })(root);
+  }
   for (const p of people) {
     if (p.body_markdown) {
-      allIssues.push(...checkBrokenWikiLinks(p.body_markdown, people));
+      allIssues.push(...checkBrokenWikiLinks(p.body_markdown, people, vaultNoteNames));
     }
   }
 
