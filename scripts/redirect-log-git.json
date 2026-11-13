@@ -357,12 +357,6 @@
     "reason": "URL rename only: the person is unchanged and still published, the slug moved to the canonical form (full Christian names dropped to given+family, or a living-person disambiguator added). Nothing was removed from the tree, so this is a redirect, not a retirement."
   },
   {
-    "from": "margaret-telfer-1801",
-    "to": "margaret-telfer",
-    "matched_by": "declared-rename",
-    "display_name": "Margaret Telfer"
-  },
-  {
     "from": "marion-vida",
     "to": "marion-lawrie-1888",
     "matched_by": "removed-declared",
