@@ -140,6 +140,13 @@
     "reason": "Slug shape changed; the person did not. Elizabeth Anne Smith (b. 1878) is the sole match — same record, canonical slug."
   },
   {
+    "from": "elizabeth-telfer-living",
+    "to": "elizabeth-telfer-1841",
+    "matched_by": "removed-declared",
+    "display_name": "Elizabeth Telfer",
+    "reason": "SLUG CORRECTION, not a removal. Vault file renamed \"Elizabeth Telfer (Mrs Mansfield).md\" -> \"Elizabeth Telfer (1841).md\" on 2026-11-13 and birth_year: 1841 added to frontmatter. The old -living suffix was never a privacy flag: it was the bare-slug-collision disambiguator that convert-markdown.mjs appends when several people share a name and none carries a birth year. The 1841 birth year now disambiguates properly, so the suffix is retired and the person keeps her page under her own year."
+  },
+  {
     "from": "emma-louise-commane-1983",
     "to": "emma-commane",
     "matched_by": "removed-declared",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T09:32:00+10:00",
+  "generated_at": "2026-11-13T11:06:21+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
   "count": 700,
   "kinds": {
@@ -269,8 +269,8 @@
       "kind": "real"
     },
     "Andrew Telfer (b. 1850).md": {
-      "sha256": "a1edbeb5a279af14b526f62cb30840a415999467fb3bf4825e7184809685da69",
-      "sha256_whole": "a074f5c10631976ec917c5c779b0df4a8ef7bf2b8317121dad989b0db847af95",
+      "sha256": "d64778ae8f853254997b3e3518233f0c7fbb55d5206df8b23015d993583c097a",
+      "sha256_whole": "ee131f11d465c844cf174f93336440e4a27aa1585fa1e34346323b7c8a23d629",
       "kind": "real"
     },
     "Angela Telfer.md": {
@@ -893,14 +893,14 @@
       "sha256_whole": "b71a10acd6c2e816c7de464f7afb93d0d246f00f164c207830615472aba9a7f8",
       "kind": "real"
     },
+    "Elizabeth Telfer (1841).md": {
+      "sha256": "2a1a714e0927e4f83568751ea5d45c77289ac5c5c1a461156464678212fbf6eb",
+      "sha256_whole": "86243ed3780668cc165d83c16fc6c2f9e0c1fdc52673ccc3d1553cb81085a81d",
+      "kind": "real"
+    },
     "Elizabeth Telfer (1868\u20131950).md": {
       "sha256": "f7fc8042739e2870d9ca497301682d0c965ff040360cd19d639ec995fc0434dd",
       "sha256_whole": "2a564643adbef4ba0c2629990ca0357292fb6436c1d1eddb43641afda123d137",
-      "kind": "real"
-    },
-    "Elizabeth Telfer (Mrs Mansfield).md": {
-      "sha256": "06e7187589db2c981b796ad7edaea06dd7ffdf7160487715b72a11b5d048d2b7",
-      "sha256_whole": "f17745899e494540d5d96f516fa96db0d94eaafd879a9ef83003c55088f28d56",
       "kind": "real"
     },
     "Elizabeth Telfer Farrow Holloway (1861\u20131946).md": {
@@ -2364,8 +2364,8 @@
       "kind": "real"
     },
     "Margaret Brown.md": {
-      "sha256": "45fae357c9bfac9c6b60da875bd218513ca9e6317afedd06e47e789315379635",
-      "sha256_whole": "a9fc0be5072e6a53429dade3e0b240dd3fd2584fb44298092c88e45bd115df5d",
+      "sha256": "48e60eab212cec7be755ffc5b430e35cbea3ed9e9cb85e8e1a18400c4ade8e20",
+      "sha256_whole": "cb0573acd69c73e922f0ad1540271af58732d5390f95d94ee3da54c834a5072b",
       "kind": "real"
     },
     "Margaret Dillon (1869\u20131869).md": {
@@ -2574,8 +2574,8 @@
       "kind": "real"
     },
     "Mary Jane Telfer Mansfield (1847).md": {
-      "sha256": "53bd4f992cfd1bdf97dcf5e5f6c332b7466fffa6b71dc7c3faaefa8dfccc386a",
-      "sha256_whole": "6b4057db76cbc469a06647883c943f61acee90e1c28800613c55cc7887868d5a",
+      "sha256": "4e2452dd46a49d01bed0c1df2c640417103cea24b65a655812c9d57ce9c63dcf",
+      "sha256_whole": "391de6b0f48ae0e39f4411dfc89f2f21abb6dac94b0c81b817f601559aadac34",
       "kind": "real"
     },
     "Mary Telfer.md": {
@@ -3464,8 +3464,8 @@
       "kind": "real"
     },
     "William Telfer (1802\u20131850).md": {
-      "sha256": "85f71efee45537d3b3e1a48033a3237710ac84af848ff545630c1bc9485b06c2",
-      "sha256_whole": "9148ec74d9618319cc3bca3261bf92032219f7559dcc65cf84a3943050c0fdf1",
+      "sha256": "ce281facc207cd35f9148f4a02feaf46897defc461f357c25fa01a2c8bb07229",
+      "sha256_whole": "5c47c98d9f1b19e9c74036e8b920fc724d81a5f2e4005c3fb11c014bd4559bfe",
       "kind": "real"
     },
     "William Telfer (1811\u2013?).md": {

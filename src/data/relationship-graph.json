@@ -3301,9 +3301,9 @@
       "generation": 6
     },
     {
-      "slug": "elizabeth-telfer-living",
-      "id": "Elizabeth Telfer",
-      "generation": 99
+      "slug": "elizabeth-telfer-1841",
+      "id": "Elizabeth Telfer (1841)",
+      "generation": 5
     },
     {
       "slug": "allan-smith",
@@ -6951,11 +6951,11 @@
       },
       {
         "from": "margaret-brown",
-        "to": "elizabeth-telfer-living"
+        "to": "elizabeth-telfer-1841"
       },
       {
         "from": "william-telfer-1802",
-        "to": "elizabeth-telfer-living"
+        "to": "elizabeth-telfer-1841"
       },
       {
         "from": "ellie-smith",
@@ -11678,11 +11678,11 @@
         "to": "lloyd-wilbur-telfer-1913"
       },
       {
-        "from": "elizabeth-telfer-living",
+        "from": "elizabeth-telfer-1841",
         "to": "mary-jane-mansfield"
       },
       {
-        "from": "elizabeth-telfer-living",
+        "from": "elizabeth-telfer-1841",
         "to": "william-telfer-1841"
       },
       {

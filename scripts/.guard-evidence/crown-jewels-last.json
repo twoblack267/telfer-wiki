@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-12T23:36:45.789Z",
+  "checkedAt": "2026-11-13T01:06:53.851Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -7,7 +7,14 @@
     "after": 682
   },
   "crownJewelsChecked": 6,
-  "renames": [],
+  "renames": [
+    {
+      "from": "elizabeth-telfer-living",
+      "to": "elizabeth-telfer-1841",
+      "name": "Elizabeth Telfer",
+      "declared": true
+    }
+  ],
   "failures": [],
   "warnings": []
 }

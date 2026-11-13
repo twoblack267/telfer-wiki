@@ -154,19 +154,25 @@ node scripts/generate-redirects.mjs > /tmp/redirect-log-refresh.log 2>&1 || {
   echo "⚠️  redirect-log refresh failed — crown-jewel guard will judge renames as data loss:"
   tail -5 /tmp/redirect-log-refresh.log
 }
-GJ="$(node scripts/guard-crown-jewels.mjs 2>&1)" || {
-  echo "$GJ"
-  echo ""
-  echo "CROWN-JEWEL GUARD FAILED — the pipeline just tried to LOSE family data."
-  echo "Filing the Can Do Board card for the 07:00 check…"
-  node scripts/crown-jewel-alarm.mjs || true
-  echo ""
-  echo "Recover with:  git checkout -- src/data/people.json"
-  echo "Then fix the RESOLVER (date/generation sanity), not the data."
-  exit 1
-}
-echo "$GJ" | tail -3
-
+# ── THE GUARD MUST JUDGE A FINISHED FILE (2026-11-13) ────────────────────────
+# This guard used to run HERE, at Step 2e — i.e. AFTER resolve-refs.mjs had
+# rewritten people.json but BEFORE build-relationship-graph.mjs (Step 4) had
+# rebuilt parents/children/siblings/spouses from the edge maps.
+#
+# Between those two points the file is DELIBERATELY incomplete: resolve-refs
+# empties the derived arrays so the graph step can rebuild them from the vault's
+# `relationships:` strings (see "DO NOT RE-INGEST THE DERIVED ARRAYS" in
+# build-relationship-graph.mjs). Running the data-loss guard inside that window
+# compares a half-built intermediate against HEAD and reports the rebuild as LOSS.
+#
+# Measured 2026-11-13: 385 fields / 967 edges "shrank" — parents 2→0 and
+# siblings 7→0 for adam-dillon-1870 — and the guard then `exit 1`s BEFORE the
+# graph is ever built. Net effect: the pipeline can never complete a regen, the
+# file is always left in the intermediate state, and anyone who commits it
+# publishes an empty tree. The loss was never real; it was measured mid-flight.
+#
+# The guard now runs immediately after the graph rebuild (see Step 4/5 below),
+# where the arrays are final. Same protection, correct vantage point.
 
 # Fail-closed: retired profiles must not survive into the published data. If the
 # retirer silently no-opped (bad list, changed carry-over logic), this catches it
@@ -233,6 +239,23 @@ echo
 echo "==> Step 4/5: rebuild relationship graph + generations (stale-graph fix)"
 node scripts/build-relationship-graph.mjs
 node scripts/compute-generations.mjs
+
+echo
+echo "==> Step 4z/5: CROWN-JEWEL DATA-LOSS GUARD (moved here 2026-11-13)"
+# Reads the baseline with `git show HEAD:src/data/people.json` — HEAD, never the
+# working copy — so a re-run cannot ratify an earlier run's mistake.
+GJ="$(node scripts/guard-crown-jewels.mjs 2>&1)" || {
+  echo "$GJ"
+  echo ""
+  echo "CROWN-JEWEL GUARD FAILED — the pipeline just tried to LOSE family data."
+  echo "Filing the Can Do Board card for the 07:00 check…"
+  node scripts/crown-jewel-alarm.mjs || true
+  echo ""
+  echo "Recover with:  git checkout -- src/data/people.json"
+  echo "Then fix the genuine shrink, not the guard."
+  exit 1
+}
+echo "$GJ" | tail -3
 
 echo
 echo "==> Step 4b/5: RELATIONSHIP-STRUCTURE VERIFIER (added 2026-10-28)"

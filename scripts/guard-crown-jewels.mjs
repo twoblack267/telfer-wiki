@@ -171,6 +171,13 @@ const CROWN_JEWELS = {
     parents: 2,
     spouses: 1,
     children: 3,
+    // Flattened sibling links: william-telfer-1802 (his brother, stated in the vault).
+    // 2026-11-13: mary-jane-mansfield was listed here as a sibling because the resolver
+    // matched her "Mary Jane Telfer (1847)" child entry to Andrew's SIBLING list via the
+    // Telfer surname — a name collision, not a family fact. She is his NIECE. The vault
+    // correction that separated her from Elizabeth removed the collision, so the guard
+    // must not demand it back. Minimum 1, deliberately NOT 2.
+    siblings: 1,
     why:
       "Parents, wife Mary Hayes, and his children — Mary (Telfer) Bowden, Andrew " +
       "Telfer, Elizabeth (Telfer) Bolton. His son William 1847 has no profile yet, " +
