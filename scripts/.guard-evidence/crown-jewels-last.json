@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-13T08:33:29.248Z",
+  "checkedAt": "2026-11-13T08:41:55.203Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
@@ -9,5 +9,42 @@
   "crownJewelsChecked": 6,
   "renames": [],
   "failures": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "jean-murray-1810",
+      "name": "Jean Murray",
+      "field": "parents",
+      "before": 3,
+      "after": 2,
+      "lost": 1,
+      "lostEntries": [
+        "Esther Cowen (1781–1856)"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "jean-murray-1810",
+      "name": "Jean Murray",
+      "field": "step_children",
+      "before": 1,
+      "after": 0,
+      "lost": 1,
+      "lostEntries": [
+        "jean-telfer-1840"
+      ]
+    },
+    {
+      "kind": "FIELD_SHRANK",
+      "slug": "jean-telfer-1840",
+      "name": "Jean Telfer",
+      "field": "step_parents",
+      "before": 1,
+      "after": 0,
+      "lost": 1,
+      "lostEntries": [
+        "jean-murray-1810"
+      ]
+    }
+  ]
 }
