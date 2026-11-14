@@ -3419,6 +3419,30 @@
       "slug": "joseph-flavel",
       "id": "Joseph Flavel (1797)",
       "generation": 3
+    },
+    {
+      "slug": "ella-paynter",
+      "id": "Ella Jane Paynter (1914)"
+    },
+    {
+      "slug": "ellen-paynter",
+      "id": "Ellen Mavis Paynter (1909)"
+    },
+    {
+      "slug": "lorna-paynter",
+      "id": "Lorna May Paynter (1916)"
+    },
+    {
+      "slug": "oliver-paynter",
+      "id": "Oliver Francis George Paynter (1918)"
+    },
+    {
+      "slug": "viva-paynter",
+      "id": "Viva Louisa Paynter (1907)"
+    },
+    {
+      "slug": "walter-paynter",
+      "id": "Walter Russell Paynter (1911)"
     }
   ],
   "edges": {
@@ -7066,6 +7090,54 @@
       {
         "from": "james-telfer-1761",
         "to": "margaret-telfer"
+      },
+      {
+        "from": "emily-paynter",
+        "to": "ella-paynter"
+      },
+      {
+        "from": "francis-paynter",
+        "to": "ella-paynter"
+      },
+      {
+        "from": "emily-paynter",
+        "to": "ellen-paynter"
+      },
+      {
+        "from": "francis-paynter",
+        "to": "ellen-paynter"
+      },
+      {
+        "from": "emily-paynter",
+        "to": "lorna-paynter"
+      },
+      {
+        "from": "francis-paynter",
+        "to": "lorna-paynter"
+      },
+      {
+        "from": "emily-paynter",
+        "to": "oliver-paynter"
+      },
+      {
+        "from": "francis-paynter",
+        "to": "oliver-paynter"
+      },
+      {
+        "from": "emily-paynter",
+        "to": "viva-paynter"
+      },
+      {
+        "from": "francis-paynter",
+        "to": "viva-paynter"
+      },
+      {
+        "from": "emily-paynter",
+        "to": "walter-paynter"
+      },
+      {
+        "from": "francis-paynter",
+        "to": "walter-paynter"
       }
     ],
     "spouseOf": [
@@ -11814,6 +11886,66 @@
       {
         "from": "margaret-telfer",
         "to": "william-telfer-1811"
+      },
+      {
+        "from": "ella-paynter",
+        "to": "ellen-paynter"
+      },
+      {
+        "from": "ella-paynter",
+        "to": "lorna-paynter"
+      },
+      {
+        "from": "ella-paynter",
+        "to": "oliver-paynter"
+      },
+      {
+        "from": "ella-paynter",
+        "to": "viva-paynter"
+      },
+      {
+        "from": "ella-paynter",
+        "to": "walter-paynter"
+      },
+      {
+        "from": "ellen-paynter",
+        "to": "lorna-paynter"
+      },
+      {
+        "from": "ellen-paynter",
+        "to": "oliver-paynter"
+      },
+      {
+        "from": "ellen-paynter",
+        "to": "viva-paynter"
+      },
+      {
+        "from": "ellen-paynter",
+        "to": "walter-paynter"
+      },
+      {
+        "from": "lorna-paynter",
+        "to": "oliver-paynter"
+      },
+      {
+        "from": "lorna-paynter",
+        "to": "viva-paynter"
+      },
+      {
+        "from": "lorna-paynter",
+        "to": "walter-paynter"
+      },
+      {
+        "from": "oliver-paynter",
+        "to": "viva-paynter"
+      },
+      {
+        "from": "oliver-paynter",
+        "to": "walter-paynter"
+      },
+      {
+        "from": "viva-paynter",
+        "to": "walter-paynter"
       }
     ],
     "stepParentOf": [

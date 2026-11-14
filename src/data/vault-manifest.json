@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-15T03:00:57+10:00",
+  "generated_at": "2026-11-15T05:53:38+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 702,
+  "count": 708,
   "kinds": {
-    "real": 684,
+    "real": 690,
     "redirect": 18,
     "empty": 0
   },
@@ -394,8 +394,8 @@
       "kind": "real"
     },
     "Brenda Janice Telfer (b. 1949).md": {
-      "sha256": "7d0447d94c4fbd2fd612fdd5dc522e33612af0c0d58fc34e1b9c49aaa744926e",
-      "sha256_whole": "212dff00f2ff288a282f1f5719292a4ddedc26927147d182a56006af8d8de65d",
+      "sha256": "51cb9d7c63a2b1e7236c11f5bf7d337855bc7b23e03bd97e610206125d05d4d6",
+      "sha256_whole": "0997aab32e0c69295f8733ba72be11d2aa8211ea37c80d99fc22b698b758b8eb",
       "kind": "real"
     },
     "Brenton Kym Siviour (b. 1966).md": {
@@ -918,6 +918,11 @@
       "sha256_whole": "065bcfe74e20ccb00309257747f3eb8b7907db40b3082ff6c972670a4315f79f",
       "kind": "real"
     },
+    "Ella Jane Paynter (b. 1914).md": {
+      "sha256": "006ae70c66e78e6d4bac8d752a436e9b92c80b2140391cf7be99dae3ecb54205",
+      "sha256_whole": "eca6a9718883fb3e56aab34cd6209d619e61cbaf97dd49eb7bc86e89065f8f6c",
+      "kind": "real"
+    },
     "Ella Lee Manuel (b. 2004).md": {
       "sha256": "6e8437085cf269c8076f649a94eba745708209b0e9c6618e92e61b8b6a143f1b",
       "sha256_whole": "a18b8141e079250db97a8eb158c7904364b6b017b7af4a2979c2a4cf4c942362",
@@ -926,6 +931,11 @@
     "Ellen Jane Liebich (1865\u20131894).md": {
       "sha256": "169552d50f4da20331ea4a35480ed41dafa61b5cb82548bd67fba286d2f86776",
       "sha256_whole": "9a9e0585ad338915f9055f5fddd2682ecb063ac3774c1cd2cde12e8569633a70",
+      "kind": "real"
+    },
+    "Ellen Mavis Paynter (b. 1909).md": {
+      "sha256": "bb4f1bcc9db86bb8b81b2d2b6c2c568465f9e9b1277725cc8a6815296b4d0c37",
+      "sha256_whole": "b1ac5b8db1b7f2352ea1cc5589116524fde2c470636fd885239bd2277525c2c1",
       "kind": "real"
     },
     "Ellie Valentine Smith (1890\u20131925).md": {
@@ -974,8 +984,8 @@
       "kind": "real"
     },
     "Emily Louisa Paynter (d. 1978).md": {
-      "sha256": "ca5b0c8b78db6336f3365e1ea15b262ecd59234290ee5f1ae2b1d002731ff61b",
-      "sha256_whole": "da079d1ed47fc2c4898917ffb9d027fb6c58b83acdcf280f12cee8ed549a2058",
+      "sha256": "23e0fe742ebefadfce71b07ac7777b1d3e34472886b4fedfe637a5ee01536ec5",
+      "sha256_whole": "a32fc596874051ed3f6dd861f6e57c0761a46915b9a0b3f7e9cf3c3d454142ff",
       "kind": "real"
     },
     "Emma Jane Masters Tuck (1855\u20131922).md": {
@@ -1129,8 +1139,8 @@
       "kind": "real"
     },
     "Francis Thomas Paynter (1885\u20131973).md": {
-      "sha256": "ebfa70e91dadd3fd99bd8f114c22d544a9d69f67e7a5f987c0c0b1e5c3bcc0e5",
-      "sha256_whole": "60989413a7f57da0d6f78c7d9fb210f313c25571ae674f16f797a89879d7ccc7",
+      "sha256": "e1158ac4be725a06e9b8006be6d1ed694ddd482db75661cf45e1dfb3a5a40e34",
+      "sha256_whole": "08c8fa67f7fc4a8522e2f0c51afe8b21f15b4deeef99e90b67666117b568077b",
       "kind": "real"
     },
     "Frank Lindsay Lawrie (1886\u20131920).md": {
@@ -1954,8 +1964,8 @@
       "kind": "real"
     },
     "Joseph March (1767\u20131831).md": {
-      "sha256": "22a8d3f104670637c6b08ce61870beadbfc2732c2e68d8dde66aed1e3db1b7ba",
-      "sha256_whole": "c047977def6085cddc7e87ac29618677e7c09cd239b28a06a278febe00d40553",
+      "sha256": "e217aabe78f5d42de10fddc414f7a613d6ce126560be26ec4761043a89c94d83",
+      "sha256_whole": "e7f095707e6b7d0e3814dedb5dbd5f9e114a70be1d9a054118d4e72aae9ce666",
       "kind": "real"
     },
     "Joseph March (1797\u20131883).md": {
@@ -2298,6 +2308,11 @@
       "sha256_whole": "2ccf895b7b4e62b41d0d459eb3caa2601a64154ad3b7623e2f2e51ec960b3d41",
       "kind": "real"
     },
+    "Lorna May Paynter (b. 1916).md": {
+      "sha256": "6b606810686e0c8756795a780b38ff110e85ed1c9b3bd8314c40d4a09a7b3d68",
+      "sha256_whole": "bcd89d3c9965ccaecb6c873a9e68f8439bf3c680f3e320956ddc886822e1c93b",
+      "kind": "real"
+    },
     "Lucy Agnes Parker (1881\u20131903).md": {
       "sha256": "d25f7aa0224dbd2e53a9128f3ce39acc897a615b753c0205f853e73024536d1c",
       "sha256_whole": "fc74c5963339bad192bf9fd57f99522624dbb7b6bab01da3225748df603d29e6",
@@ -2374,8 +2389,8 @@
       "kind": "real"
     },
     "Margaret Brown.md": {
-      "sha256": "f6e6b8a13cf91822540e2a52bdbd31aa1f34f1bd527b15fac97b7af1e74f1f0f",
-      "sha256_whole": "36486fa6609ade4bc87b82ab394e442630cb55972ffc65ad33137ac88ceb9a5a",
+      "sha256": "55cf597bcaa37902ae0af7efd2a5f9a03c013d1d36cace5d4dd4b535f06fd43f",
+      "sha256_whole": "3da57d6ffc3a609760c28feed8ba2263587d3cbb27626c347d231ba2ab6fee37",
       "kind": "real"
     },
     "Margaret Dillon (1869\u20131869).md": {
@@ -2524,8 +2539,8 @@
       "kind": "redirect"
     },
     "Martha Telfer Cameron (1873\u20131964).md": {
-      "sha256": "d182ff64bf723f2181afdd211e5e29da4ed37842bd5b22e3d361b5a59b0f6a3b",
-      "sha256_whole": "a8ac32138c72ba051f84ddc5109aee9a3fd2a885555eba344d9934bfc0fd59db",
+      "sha256": "a10913d30dc117737cf748fbf1671020fdd6e8ac94a6331331d6cb6081761938",
+      "sha256_whole": "6fdfbe2477e4465bda04c9116bdcce55bbc7966e01788c9be43ca179d4664408",
       "kind": "real"
     },
     "Martha Williams Masters (1814\u20131896).md": {
@@ -2719,8 +2734,8 @@
       "kind": "real"
     },
     "Neil Ronald Telfer (1936\u2013).md": {
-      "sha256": "486b41688f34c1c3ff890f474490da45bf06661232bea671e71fb9f2f0e4f3a3",
-      "sha256_whole": "13822cf958391c7bb8233e1362b38f94db367bf9f4c648bacb3271bf0648c9eb",
+      "sha256": "341fdd7876f6406c0f2ae34f9e4d749d147ee3f4e38201283d8f0c4af1629cb8",
+      "sha256_whole": "35b55145ced4ba373b88eae2306ed72e359e9d8e8769de081362fee11914679e",
       "kind": "real"
     },
     "Nicholas Adam Telfer (b. 1988).md": {
@@ -2756,6 +2771,11 @@
     "Olive Mary Lillecrapp (1899\u20131993).md": {
       "sha256": "fe22262d9fbf33fd923fa2c954f4586dc72a896a157e0668f424782fdecccc24",
       "sha256_whole": "426e48f54944261c1ac1437cd544b01161993d7bbcc4dee38116e3a1f9791ac3",
+      "kind": "real"
+    },
+    "Oliver Francis George Paynter (1918\u20132002).md": {
+      "sha256": "e9163287d5a89e0ddcf7d2e6f45c865d4b7e0b7705494eefbc422ca4ddf677a0",
+      "sha256_whole": "d658b173647d5c7e9d1489ced9c176150445ec684ab2eb76d9f9dab1dfaed1c4",
       "kind": "real"
     },
     "Paul Ivory (1955\u20131996).md": {
@@ -2824,8 +2844,8 @@
       "kind": "real"
     },
     "Reginald Masters Telfer (1922\u20132011).md": {
-      "sha256": "8e256c0a275167ec448f85df7e649cc6ca3f5d0598efbae43ba24d8ea10d9ead",
-      "sha256_whole": "c6bb24bdb1570d33f23a79395139f83685883e68bf3363a654ec5f5d12951fa1",
+      "sha256": "195cfdb1c930c5887ce4eaf02906f3431d26332019ae86eb2ca3b9f091d726a8",
+      "sha256_whole": "732a839ed6e428fadc2407180dd06f5d1f779c362371ce5c21072c91ca1d1b83",
       "kind": "real"
     },
     "Rev. Ralph Drummond (1792\u20131872).md": {
@@ -3363,6 +3383,11 @@
       "sha256_whole": "d6acd234b915b801055a77f5baa7815699893d8c13a48525a95bff68eb81250b",
       "kind": "real"
     },
+    "Viva Louisa Paynter (1907\u20131976).md": {
+      "sha256": "e71e17872e6b01bc9bf1743637a89b6fdf37816efd3778d641ceb98b79c33844",
+      "sha256_whole": "49e6e9c34938bd8dbc996c4aeeb483ebd9b9513da5bb182467a454d97e43c13f",
+      "kind": "real"
+    },
     "Vivonne Joy Fatchen (b. 1966).md": {
       "sha256": "c2fe2e31fe630a27ea64a063ffe42f35aa11043916468e808e1f5baa1eafcb16",
       "sha256_whole": "64fb1239e422318c00c19c0b4b2d73e20028bc23984e673b36b11be94929fa1a",
@@ -3391,6 +3416,11 @@
     "Walter John Hookings (1881\u20131962).md": {
       "sha256": "20ea5a44caf283af94270317e16914ce12ffb8e90ef0e647a7d8130aee9edf49",
       "sha256_whole": "023f8c63edf30be36a75959163e3416c7d8d6d97e31d9bc06e9c337d7245ff4a",
+      "kind": "real"
+    },
+    "Walter Russell Paynter (1911\u20131979).md": {
+      "sha256": "6d535101c4ee75d439e27d06e12d029849993eb2138e715331be7eb4d8d7dcaa",
+      "sha256_whole": "524ff52d4f0c631d4a62137ea9fffd5c8dc30e1a50155ad2439ac7f8a836e3b0",
       "kind": "real"
     },
     "Walter William Telfer (1884\u20131966).md": {
@@ -3474,8 +3504,8 @@
       "kind": "real"
     },
     "William Telfer (1802\u20131850).md": {
-      "sha256": "1b71b7c52447cb23042b6e5aecabcedef09b32552a0aca9f3d25ebbc9da163c8",
-      "sha256_whole": "351754207a3a03622500c2d528c411994ba9e52ce85cb35b38d1f27e0ff881b2",
+      "sha256": "6cb429be30e4d58e6365377b16b647effedcef2b2b31df83f5b003bc4155c784",
+      "sha256_whole": "235e34c7b3e83e0a200bacde771229d46da607f99cfe84a5e81e46215a8fa94e",
       "kind": "real"
     },
     "William Telfer (1811\u2013?).md": {
