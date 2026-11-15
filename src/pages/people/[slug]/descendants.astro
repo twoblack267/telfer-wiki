@@ -28,7 +28,21 @@ function buildDescendants(rootSlug, people, maxDepth = 6, currentDepth = 0) {
       // no page, so there is no node to recurse into. Skipped for the CHART
       // only; their name still appears in the person's sidebar and on their
       // relatives' pages. See src/data/privacy-exclusions.mjs.
-      if (child && typeof child === 'object') return null;
+      //
+      // AN UNBOUND NAME IS NOT THE SAME AS A WITHDRAWN ONE (fixed 2026-11-16).
+      // The no-silent-deletion rule deliberately carries a child with no profile
+      // (e.g. four living Fatchen children) as { plain_name } so the page still
+      // renders them. Both shapes used to be dropped here, so a parent with a
+      // real, named family printed "0 descendants across 1 generation" in their
+      // meta description — 67 pages said a family did not exist. Only a node
+      // carrying `withheld: true` is fenced; an unbound name is rendered as an
+      // unlinked leaf so the chart reports the truth without inventing a page.
+      if (child && typeof child === 'object') {
+        const name = child.plain_name || child.display_name || '';
+        return child.withheld === true || !name
+          ? null
+          : { slug: null, display_name: name, is_living: true, branch: root.branch, generation: (root.generation || 0) + 1, children: [] };
+      }
       // child might be a slug or a display name — resolve to child's slug first
       let childSlug = people.find(p => p.slug === child)?.slug
         || people.find(p => p.display_name === child)?.slug;
@@ -89,7 +103,20 @@ function getMaxGeneration(node) {
 }
 
 const totalDescendants = countDescendants(descendantTree);
-const generationsSpanned = getMaxGeneration(descendantTree) - (person.generation || 0);
+// A generation of 99 is the "unknown generation" sentinel, not a real depth — subtract
+// it and you get 230 descendants "across 1 generations" (which was also bad grammar).
+// When the root's generation is unknown, report depth from the chart itself instead.
+// Depth in edges below the root. Chosen over getMaxGeneration() arithmetic because
+// that returns a real generation NUMBER — subtracting the unknown-sentinel 99 gives
+// a nonsense span (George Provis read "230 descendants across 1 generations").
+const maxDepthBelow = (node, depth = 0) => {
+  if (!node || !node.children || node.children.length === 0) return depth;
+  return Math.max(...node.children.map(c => maxDepthBelow(c, depth + 1)));
+};
+const generationsSpanned = descendantTree ? maxDepthBelow(descendantTree) : 0;
+const generationLabel = generationsSpanned === 0
+  ? ''
+  : ` across ${generationsSpanned + 1} ${generationsSpanned + 1 === 1 ? 'generation' : 'generations'}`;
 
 // Compact inline lifespan for a person record where data exists
 function lifespan(p) {
@@ -113,7 +140,9 @@ function renderDescendantNode(node, depth = 0) {
     <details class="descendant-node" open>
       <summary class="flex items-center gap-2 cursor-pointer select-none py-1">
         <span class="${dotClass}" title="${node.branch || ''}"></span>
-        <a href="/people/${node.slug}/" class="text-sm font-medium text-[var(--color-link)] hover:underline">${node.display_name}</a>
+        ${node.slug
+          ? `<a href="/people/${node.slug}/" class="text-sm font-medium text-[var(--color-link)] hover:underline">${node.display_name}</a>`
+          : `<span class="text-sm font-medium">${node.display_name}</span>`}
         ${node.generation ? `<span class="text-xs text-[var(--color-muted)] font-mono">Gen ${node.generation}</span>` : ''}
         
       </summary>
@@ -145,7 +174,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<BaseLayout title={`Descendants of ${person.display_name}`} canonicalPath={`/people/${slug}/descendants/`} noindex={descendantHasWithdrawn} description={`Descendant chart for ${person.display_name}${lifespan(person)} — ${totalDescendants} descendant${totalDescendants === 1 ? '' : 's'} across ${generationsSpanned >= 0 ? generationsSpanned + 1 : '?'} generation${generationsSpanned === 0 ? '' : 's'}, from the Telfer family history archive.`}>
+<BaseLayout title={`Descendants of ${person.display_name}`} canonicalPath={`/people/${slug}/descendants/`} noindex={descendantHasWithdrawn} description={`Descendant chart for ${person.display_name}${lifespan(person)} — ${totalDescendants === 0 ? 'no descendants are recorded in the family archive' : `${totalDescendants} descendant${totalDescendants === 1 ? '' : 's'}${generationLabel}`}, from the Telfer family history archive.`}>
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">
@@ -170,7 +199,7 @@ export async function getStaticPaths() {
         <div class="text-sm text-[var(--color-muted)]">Total Descendants</div>
       </div>
       <div class="person-card rounded-xl p-4 text-center">
-        <div class="text-3xl font-bold text-[var(--color-highlight)]">{generationsSpanned >= 0 ? generationsSpanned + 1 : '?'}</div>
+        <div class="text-3xl font-bold text-[var(--color-highlight)]">{totalDescendants === 0 ? '—' : generationsSpanned + 1}</div>
         <div class="text-sm text-[var(--color-muted)]">Generations Spanned</div>
       </div>
       <div class="person-card rounded-xl p-4 text-center">
