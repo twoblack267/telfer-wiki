@@ -1389,18 +1389,6 @@
           "Lindsay Ellis Stribling (1893–1979)",
           "George Charles Stribling (1898–1988)"
         ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "Isa Katie Stribling",
-          "Ella Agnes Stribling",
-          "Arthur Clifford Stribling",
-          "Alma Maud Stribling",
-          "Lindsay Ellis Stribling",
-          "Hazel Jean Stribling",
-          "George Charles Stribling"
-        ]
       }
     ],
     "roles": [
@@ -13989,18 +13977,6 @@
           "Arthur Clifford Stribling (1890–1918)",
           "Lindsay Ellis Stribling (1893–1979)",
           "George Charles Stribling (1898–1988)"
-        ]
-      },
-      {
-        "type": "Children",
-        "names": [
-          "Isa Katie Stribling",
-          "Ella Agnes Stribling",
-          "Arthur Clifford Stribling",
-          "Alma Maud Stribling",
-          "Lindsay Ellis Stribling",
-          "Hazel Jean Stribling",
-          "George Charles Stribling"
         ]
       }
     ],
@@ -34818,7 +34794,7 @@
       {
         "type": "Self",
         "names": [
-          "Gladys Merle Telfer (1916–2008)"
+          "Gladys Merle Telfer (1916–living)"
         ]
       },
       {
@@ -34902,7 +34878,7 @@
     "images": [],
     "person_photo": null,
     "generation": 6,
-    "evidence_level": null,
+    "evidence_level": "unverified",
     "single_source": false,
     "provisional_why": null,
     "is_deceased": false,
@@ -34941,7 +34917,7 @@
       {
         "type": "Mother",
         "names": [
-          "Gladys Merle Telfer (1916–2008)"
+          "Gladys Merle Telfer (1916–living)"
         ]
       },
       {
@@ -34971,7 +34947,7 @@
     "roles": [
       "Child of Gladys Merle Telfer"
     ],
-    "body_markdown": "# Stanley James Pedler (1938–living)\n\n> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n> **Provenance:** facts collated from *From the Borders to the Bush* (B1) via `Gladys Merle Telfer (1916–living).md`, which holds the full sourcing audit. Written onto this record 2026-10-26 so the relationship graph has a canonical source.\n\n## Facts\n\n| Fact | Value | Source |\n|---|---|---|\n| Born | 28 Jul 1938 | B1 — \"**STANLEY JAMES** was born in 1938\" |\n| Father | [[Leslie Hedley Pedler (1907–1956)|Leslie Hedley Pedler (1907–1956)]] | B1 |\n| Mother | Gladys Merle Telfer (1916–2008) | B1 |\n| Married | Margaret Jean Richardson, Aug 1958 | B1 — \"married Margaret Richardson in 1958\" |\n\n**Children (as printed, B1):** Kenneth James (9 May 1959, m. Wendy May Ries → Mellissa, Rowland);\nKeith Gordon (25 Jan 1961 → Hannah); Sharon Marie (3 May 1964, m. Peter Jones);\nSusan Irene (7 Jan 1967).\n\n**The \"Stanley Lawrence\" error.** An earlier build created a phantom sibling\n\"Stanley Lawrence Pedler, b. 20 Dec 1948\" from a corrupted OCR line in B2\n(`stan Laweonce PEDLER`). That line is **Allan Lawrence Pedler, b. 20 Dec 1946**.\nThere is one Stanley — James — and one Allan — Lawrence. The phantom has been retired\n(`scripts/retired-profiles.json`). Do not reinstate it.\n\n## Sources\n\n- **B1** = *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" —\n  Gladys's own first-person account (~1987), the primary witness.\n- **B2** = *A Telfer Family Tree — Supplement 2008*, section 2 (Francis Charles TELFER),\n  pp.139–141 — raw OCR only; the \"Stanley Lawrence\" line is an OCR artifact.\n- Collated in `Gladys Merle Telfer (1916–living).md`, which carries the full [ok]/[ocr]/[dis]/[?] audit.",
+    "body_markdown": "# Stanley James Pedler (1938–living)\n\n> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n> **Provenance:** facts collated from *From the Borders to the Bush* (B1) via `Gladys Merle Telfer (1916–living).md`, which holds the full sourcing audit. Written onto this record 2026-10-26 so the relationship graph has a canonical source.\n\n## Facts\n\n| Fact | Value | Source |\n|---|---|---|\n| Born | 28 Jul 1938 | B1 — \"**STANLEY JAMES** was born in 1938\" |\n| Father | [[Leslie Hedley Pedler (1907–1956)|Leslie Hedley Pedler (1907–1956)]] | B1 |\n| Mother | Gladys Merle Telfer (1916–living) | B1 |\n| Married | Margaret Jean Richardson, Aug 1958 | B1 — \"married Margaret Richardson in 1958\" |\n\n**Children (as printed, B1):** Kenneth James (9 May 1959, m. Wendy May Ries → Mellissa, Rowland);\nKeith Gordon (25 Jan 1961 → Hannah); Sharon Marie (3 May 1964, m. Peter Jones);\nSusan Irene (7 Jan 1967).\n\n**The \"Stanley Lawrence\" error.** An earlier build created a phantom sibling\n\"Stanley Lawrence Pedler, b. 20 Dec 1948\" from a corrupted OCR line in B2\n(`stan Laweonce PEDLER`). That line is **Allan Lawrence Pedler, b. 20 Dec 1946**.\nThere is one Stanley — James — and one Allan — Lawrence. The phantom has been retired\n(`scripts/retired-profiles.json`). Do not reinstate it.\n\n## Sources\n\n- **B1** = *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" —\n  Gladys's own first-person account (~1987), the primary witness.\n- **B2** = *A Telfer Family Tree — Supplement 2008*, section 2 (Francis Charles TELFER),\n  pp.139–141 — raw OCR only; the \"Stanley Lawrence\" line is an OCR artifact.\n- Collated in `Gladys Merle Telfer (1916–living).md`, which carries the full [ok]/[ocr]/[dis]/[?] audit.",
     "is_living": true,
     "parents": [
       "gladys-telfer",
@@ -35004,7 +34980,7 @@
       "telfer-tree"
     ],
     "person_photo": null,
-    "evidence_level": null,
+    "evidence_level": "unverified",
     "single_source": true,
     "provisional_why": null,
     "is_deceased": false,
@@ -35043,7 +35019,7 @@
       {
         "type": "Mother",
         "names": [
-          "Gladys Merle Telfer (1916–2008)"
+          "Gladys Merle Telfer (1916–living)"
         ]
       },
       {
@@ -35072,7 +35048,7 @@
     "roles": [
       "Child of Gladys Merle Telfer"
     ],
-    "body_markdown": "# Mary Ellen Pedler (1940–living)\n\n> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n> **Provenance:** facts collated from *From the Borders to the Bush* (B1) via `Gladys Merle Telfer (1916–living).md`, which holds the full sourcing audit. Written onto this record 2026-10-26 so the relationship graph has a canonical source.\n\n## Facts\n\n| Fact | Value | Source |\n|---|---|---|\n| Born | 21 Mar 1940, Oakey Qld | B1 — \"On 21st March, 1940, our baby girl was born and we named her **Mary Ellen**.\" |\n| Father | [[Leslie Hedley Pedler (1907–1956)|Leslie Hedley Pedler (1907–1956)]] | B1 |\n| Mother | Gladys Merle Telfer (1916–2008) | B1 |\n| Married | Raymond Neil Hawkins, b. 18 Dec 1939 St George NSW, m. 19 Dec 1964 Toowoomba Qld | B1 |\n\n**Children (as printed, B1):** Lance Gordon (24 Feb 1966 Sydney NSW, m. Karen Durand,\nb. 25 Jul 1965, 17 Dec 1985 Maitland NSW); Craig Harold (23 Mar 1968 Orange NSW,\nm. Rachelle Holstein, b. 31 Oct 1974); Gaylene Merle (18 May 1970 Orange NSW).\n\n> **Raymond's death year is UNVERIFIED.** B1 does not print it in the copied passage.\n> Recorded here only where a source supports it; do not treat 2000 as confirmed.\n\n## Sources\n\n- **B1** = *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" —\n  Gladys's own first-person account (~1987), the primary witness.\n- Collated in `Gladys Merle Telfer (1916–living).md`, which carries the full [ok]/[ocr]/[dis]/[?] audit.",
+    "body_markdown": "# Mary Ellen Pedler (1940–living)\n\n> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n> **Provenance:** facts collated from *From the Borders to the Bush* (B1) via `Gladys Merle Telfer (1916–living).md`, which holds the full sourcing audit. Written onto this record 2026-10-26 so the relationship graph has a canonical source.\n\n## Facts\n\n| Fact | Value | Source |\n|---|---|---|\n| Born | 21 Mar 1940, Oakey Qld | B1 — \"On 21st March, 1940, our baby girl was born and we named her **Mary Ellen**.\" |\n| Father | [[Leslie Hedley Pedler (1907–1956)|Leslie Hedley Pedler (1907–1956)]] | B1 |\n| Mother | Gladys Merle Telfer (1916–living) | B1 |\n| Married | Raymond Neil Hawkins, b. 18 Dec 1939 St George NSW, m. 19 Dec 1964 Toowoomba Qld | B1 |\n\n**Children (as printed, B1):** Lance Gordon (24 Feb 1966 Sydney NSW, m. Karen Durand,\nb. 25 Jul 1965, 17 Dec 1985 Maitland NSW); Craig Harold (23 Mar 1968 Orange NSW,\nm. Rachelle Holstein, b. 31 Oct 1974); Gaylene Merle (18 May 1970 Orange NSW).\n\n> **Raymond's death year is UNVERIFIED.** B1 does not print it in the copied passage.\n> Recorded here only where a source supports it; do not treat 2000 as confirmed.\n\n## Sources\n\n- **B1** = *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" —\n  Gladys's own first-person account (~1987), the primary witness.\n- Collated in `Gladys Merle Telfer (1916–living).md`, which carries the full [ok]/[ocr]/[dis]/[?] audit.",
     "is_living": true,
     "parents": [
       "gladys-telfer",
@@ -35104,7 +35080,7 @@
       "telfer-tree"
     ],
     "person_photo": null,
-    "evidence_level": null,
+    "evidence_level": "unverified",
     "single_source": true,
     "provisional_why": null,
     "is_deceased": false,
@@ -35143,7 +35119,7 @@
       {
         "type": "Mother",
         "names": [
-          "Gladys Merle Telfer (1916–2008)"
+          "Gladys Merle Telfer (1916–living)"
         ]
       },
       {
@@ -35171,7 +35147,7 @@
     "roles": [
       "Child of Gladys Merle Telfer"
     ],
-    "body_markdown": "# Shirley Rene Pedler (1942–living)\n\n> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n> **Status: sourced (collated — created 2026-10-26 to give this profile a vault source.** Nothing below is new research — it is what the site\n> already asserts, written down so the record has a file to edit.\n\n## Facts\n\n| Fact | Value | Source |\n|---|---|---|\n| Born | 11 Sep 1942 | B1 — \"Our second daughter arrived on 11th September, 1942, and we named her **Shirley Irene**.\" |\n| Father | [[Leslie Hedley Pedler (1907–1956)|Leslie Hedley Pedler (1907–1956)]] | B1 |\n| Mother | Gladys Merle Telfer (1916–2008) | B1 |\n| Married (1) | Gordon William Rylance, 9 Nov 1974 — died 16 Dec 2001 | B1 |\n| Married (2) | Stephen Britton, 8 Oct 2005 Brisbane | B1 |\n\n**Children (as printed, B1):** Brett Kenneth John Rylance (10 May 1976, m. Jodie Perth\n→ Bronwyn Dee Rylance, b. Nov 2001 Perth WA); Julie Evelyn Rylance (19 Jul 1978,\nm. Stephen Britton, 8 Oct 2005 Brisbane).\n\n**Name spellings — all reconciled here, nothing guessed.** B1's narrative prints\n**Shirley Irene**; the 1986 photo caption prints **\"Shirley Ryland\"**; the published\nslug and this note's filename use **Rene**. Recorded as one person with aliases, so no\nfuture search counts a miss. Aliases: Shirley Irene Pedler, Shirley Ryland, Shirley Rene Pedler.\n\n> **Gordon William Rylance** appears only as a name in B1 — no birth year given.\n> Do not invent one.\n\n## Sources\n\n- **B1** = *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" —\n  Gladys's own first-person account (~1987), the primary witness.\n- Collated in `Gladys Merle Telfer (1916–living).md`, which carries the full [ok]/[ocr]/[dis]/[?] audit.",
+    "body_markdown": "# Shirley Rene Pedler (1942–living)\n\n> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n> **Status: sourced (collated — created 2026-10-26 to give this profile a vault source.** Nothing below is new research — it is what the site\n> already asserts, written down so the record has a file to edit.\n\n## Facts\n\n| Fact | Value | Source |\n|---|---|---|\n| Born | 11 Sep 1942 | B1 — \"Our second daughter arrived on 11th September, 1942, and we named her **Shirley Irene**.\" |\n| Father | [[Leslie Hedley Pedler (1907–1956)|Leslie Hedley Pedler (1907–1956)]] | B1 |\n| Mother | Gladys Merle Telfer (1916–living) | B1 |\n| Married (1) | Gordon William Rylance, 9 Nov 1974 — died 16 Dec 2001 | B1 |\n| Married (2) | Stephen Britton, 8 Oct 2005 Brisbane | B1 |\n\n**Children (as printed, B1):** Brett Kenneth John Rylance (10 May 1976, m. Jodie Perth\n→ Bronwyn Dee Rylance, b. Nov 2001 Perth WA); Julie Evelyn Rylance (19 Jul 1978,\nm. Stephen Britton, 8 Oct 2005 Brisbane).\n\n**Name spellings — all reconciled here, nothing guessed.** B1's narrative prints\n**Shirley Irene**; the 1986 photo caption prints **\"Shirley Ryland\"**; the published\nslug and this note's filename use **Rene**. Recorded as one person with aliases, so no\nfuture search counts a miss. Aliases: Shirley Irene Pedler, Shirley Ryland, Shirley Rene Pedler.\n\n> **Gordon William Rylance** appears only as a name in B1 — no birth year given.\n> Do not invent one.\n\n## Sources\n\n- **B1** = *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" —\n  Gladys's own first-person account (~1987), the primary witness.\n- Collated in `Gladys Merle Telfer (1916–living).md`, which carries the full [ok]/[ocr]/[dis]/[?] audit.",
     "is_living": true,
     "parents": [
       "gladys-telfer",
@@ -35202,7 +35178,7 @@
       "telfer-tree"
     ],
     "person_photo": null,
-    "evidence_level": null,
+    "evidence_level": "unverified",
     "single_source": true,
     "provisional_why": null,
     "is_deceased": false,
@@ -35239,7 +35215,7 @@
       {
         "type": "Mother",
         "names": [
-          "Gladys Merle Telfer (1916–2008)"
+          "Gladys Merle Telfer (1916–living)"
         ]
       },
       {
@@ -35274,7 +35250,7 @@
     "roles": [
       "Fourth and youngest child of Gladys Merle Telfer (née Telfer) and Leslie Hedley Pedler — the only son born in Queensland"
     ],
-    "body_markdown": "# Allan Lawrence Pedler (1946–living)\n\n> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n**Role:** Fourth and youngest child of Gladys Merle Telfer (née Telfer) and Leslie Hedley Pedler — the only son born in Queensland\n**Born:** **20 December 1946** — Queensland *(born at the family farm, Bongeen siding, near Mount Tyson, Darling Downs)*\n**Parents:** Gladys Merle Telfer (1916–2008) & Leslie Hedley Pedler (1907–1956)\n**Spouse:** Lynette Lillian Large, b. 11 Oct 1951 — m. **13 November 1976**, Brisbane\n**Sibling Note:** In B1's 1986 photo captions the family name is printed **\"Pedlar\"**; the formal spelling used throughout these records is **Pedler**.\n\n---\n\n## A note on this person's existence\n\nAn earlier data build recorded a **\"Stanley Lawrence Pedler, b. 20 Dec 1948\"** as\na separate child of Gladys and Leslie. That person does not exist. The record came\nfrom the 2008 tree book's OCR line `stan laweonce PEDLER, b. 20 Dec 1948`, which is\n**\"Allan Lawrence\"** with the first letters bitten off and **1946** misread as **1948**.\n\nThis note is the correction: the fourth child is **Allan Lawrence Pedler**, born\n**20 December 1946**.\n\n---\n\n## Children\n\n| Child | Born | Notes |\n|---|---|---|\n| **Shane Daniel Pedler** | 13 Aug 1979 | *(B2 layer printed \"1873\"; 1979 follows B1's printed text)* |\n| **Kirrilee Skye Pedler** | 27 Mar 1981 | |\n| **Lawrence Leslie David Pedler** | 29 Mar 1987 | |\n\nAllan lived in Brisbane at the time of the family history's compilation, involved in\nthe taxi business — *\"Allan is involved in the Taxi business in Brisbane where they live\"*\n(B1, Gladys's own account).\n\n## Sources\n\n- **B1** — *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" (Gladys's own first-person account, ~1987), Queensland pages. Primary witness: *\"On 20th December, 1946, our next baby boy, Allan Lawrence, was born.\"* Also: *\"ALLAN LAWRENCE was born in 1946 and married Lynette Large on 13th November, 1976.\"*\n- **B2** — *A Telfer Family Tree — Supplement 2008*, section 2 (Francis Charles TELFER), pp.139–141 — dates for Allan, Lynette and the three children.\n- **B1 photo captions** (1986) — \"Allan Pedlar\" listed among Gladys's adult children, confirming he is a son of Gladys and Leslie (not a second Stanley).\n- **Existence conflict resolved** against the phantom \"Stanley Lawrence Pedler (1948)\" — see the Gladys Merle Telfer note, section \"The two Stanleys were never two Stanleys\".",
+    "body_markdown": "# Allan Lawrence Pedler (1946–living)\n\n> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n**Role:** Fourth and youngest child of Gladys Merle Telfer (née Telfer) and Leslie Hedley Pedler — the only son born in Queensland\n**Born:** **20 December 1946** — Queensland *(born at the family farm, Bongeen siding, near Mount Tyson, Darling Downs)*\n**Parents:** Gladys Merle Telfer (1916–living) & Leslie Hedley Pedler (1907–1956)\n**Spouse:** Lynette Lillian Large, b. 11 Oct 1951 — m. **13 November 1976**, Brisbane\n**Sibling Note:** In B1's 1986 photo captions the family name is printed **\"Pedlar\"**; the formal spelling used throughout these records is **Pedler**.\n\n---\n\n## A note on this person's existence\n\nAn earlier data build recorded a **\"Stanley Lawrence Pedler, b. 20 Dec 1948\"** as\na separate child of Gladys and Leslie. That person does not exist. The record came\nfrom the 2008 tree book's OCR line `stan laweonce PEDLER, b. 20 Dec 1948`, which is\n**\"Allan Lawrence\"** with the first letters bitten off and **1946** misread as **1948**.\n\nThis note is the correction: the fourth child is **Allan Lawrence Pedler**, born\n**20 December 1946**.\n\n---\n\n## Children\n\n| Child | Born | Notes |\n|---|---|---|\n| **Shane Daniel Pedler** | 13 Aug 1979 | *(B2 layer printed \"1873\"; 1979 follows B1's printed text)* |\n| **Kirrilee Skye Pedler** | 27 Mar 1981 | |\n| **Lawrence Leslie David Pedler** | 29 Mar 1987 | |\n\nAllan lived in Brisbane at the time of the family history's compilation, involved in\nthe taxi business — *\"Allan is involved in the Taxi business in Brisbane where they live\"*\n(B1, Gladys's own account).\n\n## Sources\n\n- **B1** — *From the Borders to the Bush*, chapter \"A Gladys Pedler contribution\" (Gladys's own first-person account, ~1987), Queensland pages. Primary witness: *\"On 20th December, 1946, our next baby boy, Allan Lawrence, was born.\"* Also: *\"ALLAN LAWRENCE was born in 1946 and married Lynette Large on 13th November, 1976.\"*\n- **B2** — *A Telfer Family Tree — Supplement 2008*, section 2 (Francis Charles TELFER), pp.139–141 — dates for Allan, Lynette and the three children.\n- **B1 photo captions** (1986) — \"Allan Pedlar\" listed among Gladys's adult children, confirming he is a son of Gladys and Leslie (not a second Stanley).\n- **Existence conflict resolved** against the phantom \"Stanley Lawrence Pedler (1948)\" — see the Gladys Merle Telfer note, section \"The two Stanleys were never two Stanleys\".",
     "body_stripped": "> **SOURCE STATUS: SINGLE WITNESS — [single-source]**\n> Everything below rests on one source: B1, *From the Borders to the Bush*,\n> \"A Gladys Pedler contribution\" (Gladys Merle Telfer's own first-person account).\n> No second independent witness has been found. B2 (Supplement 2008) covers only\n> pp.141–142 of this branch; B3 (*A Brief Account* 1986) is direct-line only.\n> Treat as UNVERIFIED-CANDIDATE, not established fact.\n\n**Role:** Fourth and youngest child of Gladys Merle Telfer (née Telfer) ",
     "parents": [
       "gladys-telfer",
@@ -35303,7 +35279,7 @@
     "images": [],
     "person_photo": null,
     "generation": 7,
-    "evidence_level": null,
+    "evidence_level": "unverified",
     "single_source": true,
     "provisional_why": null,
     "is_deceased": false,
@@ -36252,7 +36228,7 @@
       {
         "type": "Spouse",
         "names": [
-          "Gladys Merle Telfer (1916–2008)"
+          "Gladys Merle Telfer (1916–living)"
         ]
       },
       {
@@ -56091,7 +56067,7 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Francis Thomas Paynter (1885–1973)\n\n> Eldest son of [[Francis Telfer Paynter (1862–1900)]] and [[Ellen Jane Liebich (1865–1894)]] — born at Tarcowie, South Australia, and died at Quorn in 1973.\n\n## Lifespan\n\n**Born:** 12 December 1885 — Tarcowie, South Australia\n**Died:** 27 January 1973 — Quorn and District Hospital, Quorn, South Australia *(registered)*\n**Buried:** place not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Telfer Paynter (1862–1900)]] — died Port Pirie, 1900 |\n| **Mother** | [[Ellen Jane Liebich (1865–1894)]] — died Quorn district, 1894 |\n| **Siblings** | Mary Jane Paynter (1887–1942) — **no page yet; not to be confused with [[Mary Jane Paynter (1861–1945)]], daughter of Richard Paynter, who married John Watson and is a different woman** · [[Frederick Albert Paynter (1889)]] · [[William Henry Paynter (b. 1891)]] |\n| **Spouse** | [[Emily Louisa Paynter (d. 1978)]] — married 10 December 1908, Frome; died 7 October 1978, aged 90 |\n| **Children** | [[Viva Louisa Paynter (1907–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nFrancis Thomas Paynter was born at Tarcowie in South Australia on 12 December 1885, the eldest child of Francis Telfer Paynter and Ellen Jane (Liebich) Paynter. He was eight years old when his mother died in the Quorn district in September 1894, and fourteen when his father died at Port Pirie in 1900.\n\nHe married Emily Louisa Wells at Frome in South Australia on 10 December 1908, and she survived him by five years. He died at the Quorn and District Hospital on 27 January 1973, aged 87, and was living at 26 Fourth Street, Quorn at the time of his death. His death is recorded in the South Australian death register, book 193A page 818, which prints him as married and names Emily Louisa Paynter as his spouse. The register does not record his parents' names.\n\nHe and Emily Louisa had six children, born between 1907 and 1918: Viva Louisa, Ellen Mavis, Walter Russell, Ella Jane, Lorna May and Oliver Francis George.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 12 Dec 1885 | Born, Tarcowie, South Australia |\n| Sep 1894 | Mother Ellen Jane died in the Quorn district |\n| 1900 | Father Francis died at Port Pirie |\n| 10 Dec 1908 | Married Emily Louisa Wells, Frome, South Australia |\n| 27 Jan 1973 | Died, Quorn and District Hospital, Quorn, aged 87 |\n| 7 Oct 1978 | Wife Emily Louisa died, aged 90 |\n\n## Sources\n\n1. **Genealogy SA — Death Registrations index (member view):** PAYNTER Francis Thomas, died 27 Jan 1973, aged 87, male, married, Quorn and District Hospital, residence 26 Fourth Street Quorn, spouse Emily Louisa Paynter, **193A/818** — read live 13 Nov 2026\n2. **Genealogy SA — Death Registrations index (member view):** PAYNTER Emily Louisa, died 7 Oct 1978, aged 90, female, **419A/7731** — read live 13 Nov 2026\n3. **A Telfer Family Tree — Supplement 2008**, printed page 102 — the entry for Francis Telfer Paynter and Ellen Jane Liebich lists their eldest son in the family block.\n4. **Genealogy SA — Marriage Registrations index (member view):** PAYNTER Francis Thomas to WELLS Emily Louisa, 10 Dec 1908, District of Frome, fathers Francis PAYNTER and George WELLS, **237/615** — read live 15 Nov 2026\n5. **Genealogy SA — Birth Registrations index (member view):** the six children of Francis Thomas PAYNTER and Emily Louisa WELLS — Viva Louisa (book 337A family, printed date 27 Sep 1907), Ellen Mavis **819/260**, Walter Russell **857/458**, Ella Jane **928/451**, Lorna May **979/561**, Oliver Francis George **20A/192** — read live 15 Nov 2026",
+    "body_markdown": "# Francis Thomas Paynter (1885–1973)\n\n> Eldest son of [[Francis Telfer Paynter (1862–1900)]] and [[Ellen Jane Liebich (1865–1894)]] — born at Tarcowie, South Australia, and died at Quorn in 1973.\n\n## Lifespan\n\n**Born:** 12 December 1885 — Tarcowie, South Australia\n**Died:** 27 January 1973 — Quorn and District Hospital, Quorn, South Australia *(registered)*\n**Buried:** place not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Telfer Paynter (1862–1900)]] — died Port Pirie, 1900 |\n| **Mother** | [[Ellen Jane Liebich (1865–1894)]] — died Quorn district, 1894 |\n| **Siblings** | Mary Jane Paynter (1887–1942) — **no page yet; not to be confused with [[Mary Jane Paynter (1861–1945)]], daughter of Richard Paynter, who married John Watson and is a different woman** · [[Frederick Albert Paynter (1889)]] · [[William Henry Paynter (b. 1891)]] |\n| **Spouse** | [[Emily Louisa Paynter (d. 1978)]] — married 10 December 1908, Frome; died 7 October 1978, aged 90 |\n| **Children** | [[Viva Louisa Paynter (1906–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nFrancis Thomas Paynter was born at Tarcowie in South Australia on 12 December 1885, the eldest child of Francis Telfer Paynter and Ellen Jane (Liebich) Paynter. He was eight years old when his mother died in the Quorn district in September 1894, and fourteen when his father died at Port Pirie in 1900.\n\nHe married Emily Louisa Wells at Frome in South Australia on 10 December 1908, and she survived him by five years. He died at the Quorn and District Hospital on 27 January 1973, aged 87, and was living at 26 Fourth Street, Quorn at the time of his death. His death is recorded in the South Australian death register, book 193A page 818, which prints him as married and names Emily Louisa Paynter as his spouse. The register does not record his parents' names.\n\nHe and Emily Louisa had six children, born between 1907 and 1918: Viva Louisa, Ellen Mavis, Walter Russell, Ella Jane, Lorna May and Oliver Francis George.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 12 Dec 1885 | Born, Tarcowie, South Australia |\n| Sep 1894 | Mother Ellen Jane died in the Quorn district |\n| 1900 | Father Francis died at Port Pirie |\n| 10 Dec 1908 | Married Emily Louisa Wells, Frome, South Australia |\n| 27 Jan 1973 | Died, Quorn and District Hospital, Quorn, aged 87 |\n| 7 Oct 1978 | Wife Emily Louisa died, aged 90 |\n\n## Sources\n\n1. **Genealogy SA — Death Registrations index (member view):** PAYNTER Francis Thomas, died 27 Jan 1973, aged 87, male, married, Quorn and District Hospital, residence 26 Fourth Street Quorn, spouse Emily Louisa Paynter, **193A/818** — read live 13 Nov 2026\n2. **Genealogy SA — Death Registrations index (member view):** PAYNTER Emily Louisa, died 7 Oct 1978, aged 90, female, **419A/7731** — read live 13 Nov 2026\n3. **A Telfer Family Tree — Supplement 2008**, printed page 102 — the entry for Francis Telfer Paynter and Ellen Jane Liebich lists their eldest son in the family block.\n4. **Genealogy SA — Marriage Registrations index (member view):** PAYNTER Francis Thomas to WELLS Emily Louisa, 10 Dec 1908, District of Frome, fathers Francis PAYNTER and George WELLS, **237/615** — read live 15 Nov 2026\n5. **Genealogy SA — Birth Registrations index (member view):** the six children of Francis Thomas PAYNTER and Emily Louisa WELLS — Viva Louisa (book 337A family, printed date 27 Sep 1907), Ellen Mavis **819/260**, Walter Russell **857/458**, Ella Jane **928/451**, Lorna May **979/561**, Oliver Francis George **20A/192** — read live 15 Nov 2026",
     "body_stripped": "> Eldest son of Francis Telfer Paynter (1862–1900) and Ellen Jane Liebich (1865–1894) — born at Tarcowie, South Australia, and died at Quorn in 1973.\n\n## Lifespan\n\n**Born:** 12 December 1885 — Tarcowie, South Australia\n**Died:** 27 January 1973 — Quorn and District Hospital, Quorn, South Australia *(registered)*\n**Buried:** place not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Telfer Paynter (1862–1900) — died Port Pirie, 1900 \n **Mother**  Ellen Jane Liebich (1865–1894) — die",
     "parents": [
       "ellen-liebich",
@@ -56598,7 +56574,7 @@
       {
         "type": "Children",
         "names": [
-          "Viva Louisa Paynter (1907–1976)",
+          "Viva Louisa Paynter (1906–1976)",
           "Ellen Mavis Paynter (b. 1909)",
           "Walter Russell Paynter (b. 1911)",
           "Ella Jane Paynter (b. 1914)",
@@ -56608,7 +56584,7 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Emily Louisa Paynter (d. 1978)\n\n> Wife of [[Francis Thomas Paynter (1885–1973)]] — died at Quorn, South Australia, on 7 October 1978, aged 90.\n\n## Lifespan\n\n**Born:** about 1888 — the death registration gives her age as 90, which places her birth about 1888; no birth record for her has been read\n**Died:** 7 October 1978 — registered in the South Australian death register, book **419A page 7731**\n**Buried:** not established from a record read here; a Quorn Town Cemetery memorial carrying this name exists in the Find a Grave index, which is a lead, not a corroboration\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Francis Thomas Paynter (1885–1973)]] — married 10 December 1908, Frome; died 27 January 1973, aged 87 |\n| **Father** | George Wells |\n| **Children** | [[Viva Louisa Paynter (1907–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nEmily Louisa Paynter was the wife of Francis Thomas Paynter, the eldest son of Francis Telfer Paynter and Ellen Jane Liebich. She survived him by five years and died on 7 October 1978 at the age of 90.\n\nShe married Francis Thomas Paynter at Frome in South Australia on 10 December 1908. The marriage is recorded in the South Australian marriage register, book 237 page 615, which prints her maiden surname as Wells, gives her father as George Wells, and gives her husband's father as Francis Paynter.\n\nHer husband's death registration prints her as his spouse by name — *Emily Louisa Paynter* — and her own registration records her death in the same district. The two entries corroborate one another: the husband's registration named her in January 1973, and her own registration is an independent record of her existence, her age and the year she died.\n\nShe and Francis Thomas had six children, born between 1907 and 1918: Viva Louisa, Ellen Mavis, Walter Russell, Ella Jane, Lorna May and Oliver Francis George.\n\n## Sources\n\n1. **Genealogy SA — Death Registrations index (member view):** PAYNTER Emily Louisa, died 7 Oct 1978, aged 90, female, **419A/7731** — read live 13 Nov 2026\n2. **Genealogy SA — Death Registrations index (member view):** PAYNTER Francis Thomas, died 27 Jan 1973, aged 87, married, spouse **Emily Louisa Paynter**, **193A/818** — read live 13 Nov 2026\n3. **Genealogy SA — Marriage Registrations index (member view):** PAYNTER Francis Thomas to WELLS Emily Louisa, 10 Dec 1908, District of Frome, fathers Francis PAYNTER and George WELLS, **237/615** — read live 15 Nov 2026\n4. **Birth registration — not read.** Her own birth entry, under the Wells surname, has not been located or read. Her birth year is inferred from the age of 90 given on her death registration, which places it in the second half of 1887 or the first ten months of 1888.",
+    "body_markdown": "# Emily Louisa Paynter (d. 1978)\n\n> Wife of [[Francis Thomas Paynter (1885–1973)]] — died at Quorn, South Australia, on 7 October 1978, aged 90.\n\n## Lifespan\n\n**Born:** about 1888 — the death registration gives her age as 90, which places her birth about 1888; no birth record for her has been read\n**Died:** 7 October 1978 — registered in the South Australian death register, book **419A page 7731**\n**Buried:** not established from a record read here; a Quorn Town Cemetery memorial carrying this name exists in the Find a Grave index, which is a lead, not a corroboration\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | [[Francis Thomas Paynter (1885–1973)]] — married 10 December 1908, Frome; died 27 January 1973, aged 87 |\n| **Father** | George Wells |\n| **Children** | [[Viva Louisa Paynter (1906–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nEmily Louisa Paynter was the wife of Francis Thomas Paynter, the eldest son of Francis Telfer Paynter and Ellen Jane Liebich. She survived him by five years and died on 7 October 1978 at the age of 90.\n\nShe married Francis Thomas Paynter at Frome in South Australia on 10 December 1908. The marriage is recorded in the South Australian marriage register, book 237 page 615, which prints her maiden surname as Wells, gives her father as George Wells, and gives her husband's father as Francis Paynter.\n\nHer husband's death registration prints her as his spouse by name — *Emily Louisa Paynter* — and her own registration records her death in the same district. The two entries corroborate one another: the husband's registration named her in January 1973, and her own registration is an independent record of her existence, her age and the year she died.\n\nShe and Francis Thomas had six children, born between 1907 and 1918: Viva Louisa, Ellen Mavis, Walter Russell, Ella Jane, Lorna May and Oliver Francis George.\n\n## Sources\n\n1. **Genealogy SA — Death Registrations index (member view):** PAYNTER Emily Louisa, died 7 Oct 1978, aged 90, female, **419A/7731** — read live 13 Nov 2026\n2. **Genealogy SA — Death Registrations index (member view):** PAYNTER Francis Thomas, died 27 Jan 1973, aged 87, married, spouse **Emily Louisa Paynter**, **193A/818** — read live 13 Nov 2026\n3. **Genealogy SA — Marriage Registrations index (member view):** PAYNTER Francis Thomas to WELLS Emily Louisa, 10 Dec 1908, District of Frome, fathers Francis PAYNTER and George WELLS, **237/615** — read live 15 Nov 2026\n4. **Birth registration — not read.** Her own birth entry, under the Wells surname, has not been located or read. Her birth year is inferred from the age of 90 given on her death registration, which places it in the second half of 1887 or the first ten months of 1888.",
     "body_stripped": "> Wife of Francis Thomas Paynter (1885–1973) — died at Quorn, South Australia, on 7 October 1978, aged 90.\n\n## Lifespan\n\n**Born:** about 1888 — the death registration gives her age as 90, which places her birth about 1888; no birth record for her has been read\n**Died:** 7 October 1978 — registered in the South Australian death register, book **419A page 7731**\n**Buried:** not established from a record read here; a Quorn Town Cemetery memorial carrying this name exists in the Find a Grave index, ",
     "parents": [
       "George Wells"
@@ -56767,7 +56743,7 @@
       {
         "type": "Siblings",
         "names": [
-          "Viva Louisa Paynter (1907–1976)",
+          "Viva Louisa Paynter (1906–1976)",
           "Ellen Mavis Paynter (b. 1909)",
           "Walter Russell Paynter (b. 1911)",
           "Lorna May Paynter (b. 1916)",
@@ -56776,8 +56752,8 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Ella Jane Paynter (b. 1914)\n\n> Daughter of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Hammond, South Australia, in 1914.\n\n## Lifespan\n\n**Born:** 2 January 1914 — Hammond, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1907–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nElla Jane Paynter was born at Hammond in South Australia on 2 January 1914, a daughter of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. Her birth is recorded in the South Australian birth register, book 928 page 451, in the district of Frome, which names both of her parents.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 2 Jan 1914 | Born, Hammond, South Australia |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Ella Jane, born 2 Jan 1914, Hammond, District of Frome, father Francis Thomas PAYNTER, mother Emily Louisa WELLS, **928/451** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — listed among the children of Francis Thomas Paynter and Louisa Emily Wells.",
-    "body_stripped": "> Daughter of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Hammond, South Australia, in 1914.\n\n## Lifespan\n\n**Born:** 2 January 1914 — Hammond, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1907–1976), Ellen Mavis Paynter (b. 1909), Walter Russell Paynter (b. 1911), Lorna May Paynter (b. 1916)",
+    "body_markdown": "# Ella Jane Paynter (b. 1914)\n\n> Daughter of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Hammond, South Australia, in 1914.\n\n## Lifespan\n\n**Born:** 2 January 1914 — Hammond, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1906–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nElla Jane Paynter was born at Hammond in South Australia on 2 January 1914, a daughter of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. Her birth is recorded in the South Australian birth register, book 928 page 451, in the district of Frome, which names both of her parents.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 2 Jan 1914 | Born, Hammond, South Australia |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Ella Jane, born 2 Jan 1914, Hammond, District of Frome, father Francis Thomas PAYNTER, mother Emily Louisa WELLS, **928/451** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — listed among the children of Francis Thomas Paynter and Louisa Emily Wells.",
+    "body_stripped": "> Daughter of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Hammond, South Australia, in 1914.\n\n## Lifespan\n\n**Born:** 2 January 1914 — Hammond, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1906–1976), Ellen Mavis Paynter (b. 1909), Walter Russell Paynter (b. 1911), Lorna May Paynter (b. 1916)",
     "parents": [
       "emily-paynter",
       "francis-paynter"
@@ -56848,7 +56824,7 @@
       {
         "type": "Siblings",
         "names": [
-          "Viva Louisa Paynter (1907–1976)",
+          "Viva Louisa Paynter (1906–1976)",
           "Walter Russell Paynter (b. 1911)",
           "Ella Jane Paynter (b. 1914)",
           "Lorna May Paynter (b. 1916)",
@@ -56857,8 +56833,8 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Ellen Mavis Paynter (b. 1909)\n\n> Eldest daughter of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Quorn, South Australia, in 1909.\n\n## Lifespan\n\n**Born:** 15 March 1909 — Quorn, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1907–1976)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nEllen Mavis Paynter was born at Quorn in South Australia on 15 March 1909, the second child of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. Her birth is recorded in the South Australian birth register, book 819 page 260, which names both of her parents.\n\nShe was the eldest of the couple's daughters, her older sister Viva Louisa having been born in 1907.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 15 Mar 1909 | Born, Quorn, South Australia |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Ellen Mavis, born 15 Mar 1909, Quorn, District of Frome, father Francis Thomas PAYNTER, mother Louisa Emily WELLS, **819/260** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — listed among the children of Francis Thomas Paynter and Louisa Emily Wells.",
-    "body_stripped": "> Eldest daughter of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Quorn, South Australia, in 1909.\n\n## Lifespan\n\n**Born:** 15 March 1909 — Quorn, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1907–1976), Walter Russell Paynter (b. 1911), Ella Jane Paynter (b. 1914), Lorna May Paynter (b. 1916)",
+    "body_markdown": "# Ellen Mavis Paynter (b. 1909)\n\n> Eldest daughter of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Quorn, South Australia, in 1909.\n\n## Lifespan\n\n**Born:** 15 March 1909 — Quorn, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1906–1976)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nEllen Mavis Paynter was born at Quorn in South Australia on 15 March 1909, the second child of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. Her birth is recorded in the South Australian birth register, book 819 page 260, which names both of her parents.\n\nShe was the eldest of the couple's daughters, her older sister Viva Louisa having been born in 1907.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 15 Mar 1909 | Born, Quorn, South Australia |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Ellen Mavis, born 15 Mar 1909, Quorn, District of Frome, father Francis Thomas PAYNTER, mother Louisa Emily WELLS, **819/260** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — listed among the children of Francis Thomas Paynter and Louisa Emily Wells.",
+    "body_stripped": "> Eldest daughter of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Quorn, South Australia, in 1909.\n\n## Lifespan\n\n**Born:** 15 March 1909 — Quorn, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1906–1976), Walter Russell Paynter (b. 1911), Ella Jane Paynter (b. 1914), Lorna May Paynter (b. 1916)",
     "parents": [
       "emily-paynter",
       "francis-paynter"
@@ -56929,7 +56905,7 @@
       {
         "type": "Siblings",
         "names": [
-          "Viva Louisa Paynter (1907–1976)",
+          "Viva Louisa Paynter (1906–1976)",
           "Ellen Mavis Paynter (b. 1909)",
           "Walter Russell Paynter (b. 1911)",
           "Ella Jane Paynter (b. 1914)",
@@ -56938,8 +56914,8 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Lorna May Paynter (b. 1916)\n\n> Daughter of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Quorn, South Australia, in 1916.\n\n## Lifespan\n\n**Born:** 29 May 1916 — Quorn, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1907–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nLorna May Paynter was born at Quorn in South Australia on 29 May 1916, a daughter of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. Her birth is recorded in the South Australian birth register, book 979 page 561, in the district of Frome, which names both of her parents.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 29 May 1916 | Born, Quorn, South Australia |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Lorna May, born 29 May 1916, Quorn, District of Frome, father Francis Thomas PAYNTER, mother Emily Louisa WELLS, **979/561** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — listed among the children of Francis Thomas Paynter and Louisa Emily Wells.",
-    "body_stripped": "> Daughter of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Quorn, South Australia, in 1916.\n\n## Lifespan\n\n**Born:** 29 May 1916 — Quorn, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1907–1976), Ellen Mavis Paynter (b. 1909), Walter Russell Paynter (b. 1911), Ella Jane Paynter (b. 1914), Olive",
+    "body_markdown": "# Lorna May Paynter (b. 1916)\n\n> Daughter of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Quorn, South Australia, in 1916.\n\n## Lifespan\n\n**Born:** 29 May 1916 — Quorn, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1906–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nLorna May Paynter was born at Quorn in South Australia on 29 May 1916, a daughter of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. Her birth is recorded in the South Australian birth register, book 979 page 561, in the district of Frome, which names both of her parents.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 29 May 1916 | Born, Quorn, South Australia |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Lorna May, born 29 May 1916, Quorn, District of Frome, father Francis Thomas PAYNTER, mother Emily Louisa WELLS, **979/561** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — listed among the children of Francis Thomas Paynter and Louisa Emily Wells.",
+    "body_stripped": "> Daughter of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Quorn, South Australia, in 1916.\n\n## Lifespan\n\n**Born:** 29 May 1916 — Quorn, South Australia *(registered)*\n**Died:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1906–1976), Ellen Mavis Paynter (b. 1909), Walter Russell Paynter (b. 1911), Ella Jane Paynter (b. 1914), Olive",
     "parents": [
       "emily-paynter",
       "francis-paynter"
@@ -57010,7 +56986,7 @@
       {
         "type": "Siblings",
         "names": [
-          "Viva Louisa Paynter (1907–1976)",
+          "Viva Louisa Paynter (1906–1976)",
           "Ellen Mavis Paynter (b. 1909)",
           "Walter Russell Paynter (b. 1911)",
           "Ella Jane Paynter (b. 1914)",
@@ -57019,8 +56995,8 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Oliver Francis George Paynter (1918–2002)\n\n> Youngest child of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Quorn, South Australia, in 1918, and died at Port Augusta in 2002.\n\n## Lifespan\n\n**Born:** 17 June 1918 — Quorn, South Australia *(registered)*\n**Died:** 3 October 2002 — Port Augusta, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1907–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]] |\n\n## Life Summary\n\nOliver Francis George Paynter was born at Quorn in South Australia on 17 June 1918, the youngest child of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. His birth is recorded in the South Australian birth register, book 20A page 192, in the district of Frome, which names both of his parents.\n\nHe died at Port Augusta in South Australia on 3 October 2002.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 17 Jun 1918 | Born, Quorn, South Australia |\n| 3 Oct 2002 | Died, Port Augusta, South Australia |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Oliver Francis George, born 17 Jun 1918, Quorn, District of Frome, father Francis Thomas PAYNTER, mother Emily Louisa WELLS, **20A/192** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — records him born 17 June 1918 at Quorn and died 3 October 2002 at Port Augusta.",
-    "body_stripped": "> Youngest child of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Quorn, South Australia, in 1918, and died at Port Augusta in 2002.\n\n## Lifespan\n\n**Born:** 17 June 1918 — Quorn, South Australia *(registered)*\n**Died:** 3 October 2002 — Port Augusta, South Australia\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1907–1976), Ellen Mavis Paynter (b. 190",
+    "body_markdown": "# Oliver Francis George Paynter (1918–2002)\n\n> Youngest child of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Quorn, South Australia, in 1918, and died at Port Augusta in 2002.\n\n## Lifespan\n\n**Born:** 17 June 1918 — Quorn, South Australia *(registered)*\n**Died:** 3 October 2002 — Port Augusta, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1906–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]] |\n\n## Life Summary\n\nOliver Francis George Paynter was born at Quorn in South Australia on 17 June 1918, the youngest child of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. His birth is recorded in the South Australian birth register, book 20A page 192, in the district of Frome, which names both of his parents.\n\nHe died at Port Augusta in South Australia on 3 October 2002.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 17 Jun 1918 | Born, Quorn, South Australia |\n| 3 Oct 2002 | Died, Port Augusta, South Australia |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Oliver Francis George, born 17 Jun 1918, Quorn, District of Frome, father Francis Thomas PAYNTER, mother Emily Louisa WELLS, **20A/192** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — records him born 17 June 1918 at Quorn and died 3 October 2002 at Port Augusta.",
+    "body_stripped": "> Youngest child of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Quorn, South Australia, in 1918, and died at Port Augusta in 2002.\n\n## Lifespan\n\n**Born:** 17 June 1918 — Quorn, South Australia *(registered)*\n**Died:** 3 October 2002 — Port Augusta, South Australia\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1906–1976), Ellen Mavis Paynter (b. 190",
     "parents": [
       "emily-paynter",
       "francis-paynter"
@@ -57042,87 +57018,6 @@
     "single_source": false,
     "provisional_why": null,
     "lifespan": "1918 – 2002",
-    "related_trees": [
-      "telfer-tree"
-    ],
-    "images": [],
-    "person_photo": null,
-    "generation": 7,
-    "maiden_name": null
-  },
-  {
-    "id": "Viva Louisa Paynter (1907)",
-    "slug": "viva-paynter",
-    "vault_file": "Viva Louisa Paynter (1907–1976).md",
-    "first_name": "Viva",
-    "middle_name": "Louisa",
-    "last_name": "Paynter",
-    "birth_year": 1907,
-    "death_year": 1976,
-    "birth_date": "27 September 1907",
-    "death_date": "5 September 1976",
-    "birth_year_display": "1907",
-    "death_year_display": "1976",
-    "display_name": "Viva Louisa Paynter",
-    "title": "Viva Louisa Paynter (1907–1976)",
-    "tags": [
-      "family",
-      "non-telfer"
-    ],
-    "relationships": [
-      {
-        "type": "Self",
-        "names": [
-          "Viva Louisa Paynter (1907–1976)"
-        ]
-      },
-      {
-        "type": "Father",
-        "names": [
-          "Francis Thomas Paynter (1885–1973)"
-        ]
-      },
-      {
-        "type": "Mother",
-        "names": [
-          "Emily Louisa Paynter (d. 1978)"
-        ]
-      },
-      {
-        "type": "Siblings",
-        "names": [
-          "Ellen Mavis Paynter (b. 1909)",
-          "Walter Russell Paynter (b. 1911)",
-          "Ella Jane Paynter (b. 1914)",
-          "Lorna May Paynter (b. 1916)",
-          "Oliver Francis George Paynter (1918–2002)"
-        ]
-      }
-    ],
-    "roles": [],
-    "body_markdown": "# Viva Louisa Paynter (1907–1976)\n\n> Eldest child of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born in 1907 and died at the age of 69 in 1976.\n\n## Lifespan\n\n**Born:** 27 September 1907 *(date as printed in the family book)*\n**Died:** 5 September 1976 — aged 69 *(registered)*\n**Buried:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nViva Louisa Paynter was born on 27 September 1907, the eldest child of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. She was born before her parents married at Frome on 10 December 1908.\n\nShe died on 5 September 1976 at the age of 69. Her death is recorded in the South Australian death register, book 337A page 6973, and the age given there agrees with a birth in the second half of 1907.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 27 Sep 1907 | Born |\n| 10 Dec 1908 | Her parents married at Frome |\n| 5 Sep 1976 | Died, aged 69 |\n\n## Sources\n\n1. **Genealogy SA — Death Registrations index (member view):** PAYNTER Viva Louisa, died 5 Sep 1976, aged 69, female, **337A/6973** — read live 15 Nov 2026\n2. **A Telfer Family Tree — Supplement 2008**, printed page 102 — lists her first among the children of Francis Thomas Paynter and Louisa Emily Wells, born 27 September 1907.",
-    "body_stripped": "> Eldest child of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born in 1907 and died at the age of 69 in 1976.\n\n## Lifespan\n\n**Born:** 27 September 1907 *(date as printed in the family book)*\n**Died:** 5 September 1976 — aged 69 *(registered)*\n**Buried:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Ellen Mavis Paynter (b. 1909), Walter Russell Paynter (b. 1911",
-    "parents": [
-      "emily-paynter",
-      "francis-paynter"
-    ],
-    "children": [],
-    "siblings": [
-      "ella-paynter",
-      "ellen-paynter",
-      "lorna-paynter",
-      "oliver-paynter",
-      "walter-paynter"
-    ],
-    "spouses": [],
-    "step_parents": [],
-    "step_children": [],
-    "is_living": false,
-    "is_deceased": true,
-    "evidence_level": "verified",
-    "single_source": false,
-    "provisional_why": null,
-    "lifespan": "1907 – 1976",
     "related_trees": [
       "telfer-tree"
     ],
@@ -57172,7 +57067,7 @@
       {
         "type": "Siblings",
         "names": [
-          "Viva Louisa Paynter (1907–1976)",
+          "Viva Louisa Paynter (1906–1976)",
           "Ellen Mavis Paynter (b. 1909)",
           "Ella Jane Paynter (b. 1914)",
           "Lorna May Paynter (b. 1916)",
@@ -57181,8 +57076,8 @@
       }
     ],
     "roles": [],
-    "body_markdown": "# Walter Russell Paynter (1911–1979)\n\n> Son of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Bruce, South Australia, in 1911 and died in 1979.\n\n## Lifespan\n\n**Born:** 20 January 1911 — Bruce, South Australia *(registered)*\n**Died:** 21 November 1979 — aged 68 *(registered)*\n**Buried:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1907–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nWalter Russell Paynter was born at Bruce in South Australia on 20 January 1911, the eldest son of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. His birth is recorded in the South Australian birth register, book 857 page 458, in the district of Frome, which names both of his parents.\n\nHe died on 21 November 1979 at the age of 68. His death is recorded in the South Australian death register, book 463A page 8866.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 20 Jan 1911 | Born, Bruce, South Australia |\n| 21 Nov 1979 | Died, aged 68 |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Walter Russell, born 20 Jan 1911, Bruce, District of Frome, father Francis Thomas PAYNTER, mother Emily Louisa WELLS, **857/458** — read live 15 Nov 2026\n2. **Genealogy SA — Death Registrations index (member view):** PAYNTER Walter Russell, died 21 Nov 1979, aged 68, male, **463A/8866** — read live 15 Nov 2026\n3. **A Telfer Family Tree — Supplement 2008**, printed page 102 — listed among the children of Francis Thomas Paynter and Louisa Emily Wells.",
-    "body_stripped": "> Son of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Bruce, South Australia, in 1911 and died in 1979.\n\n## Lifespan\n\n**Born:** 20 January 1911 — Bruce, South Australia *(registered)*\n**Died:** 21 November 1979 — aged 68 *(registered)*\n**Buried:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1907–1976), Ellen Mavis Paynter (b. 1909)",
+    "body_markdown": "# Walter Russell Paynter (1911–1979)\n\n> Son of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born at Bruce, South Australia, in 1911 and died in 1979.\n\n## Lifespan\n\n**Born:** 20 January 1911 — Bruce, South Australia *(registered)*\n**Died:** 21 November 1979 — aged 68 *(registered)*\n**Buried:** not established\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Viva Louisa Paynter (1906–1976)]], [[Ellen Mavis Paynter (b. 1909)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nWalter Russell Paynter was born at Bruce in South Australia on 20 January 1911, the eldest son of Francis Thomas Paynter and Emily Louisa (Wells) Paynter. His birth is recorded in the South Australian birth register, book 857 page 458, in the district of Frome, which names both of his parents.\n\nHe died on 21 November 1979 at the age of 68. His death is recorded in the South Australian death register, book 463A page 8866.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 20 Jan 1911 | Born, Bruce, South Australia |\n| 21 Nov 1979 | Died, aged 68 |\n\n## Sources\n\n1. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Walter Russell, born 20 Jan 1911, Bruce, District of Frome, father Francis Thomas PAYNTER, mother Emily Louisa WELLS, **857/458** — read live 15 Nov 2026\n2. **Genealogy SA — Death Registrations index (member view):** PAYNTER Walter Russell, died 21 Nov 1979, aged 68, male, **463A/8866** — read live 15 Nov 2026\n3. **A Telfer Family Tree — Supplement 2008**, printed page 102 — listed among the children of Francis Thomas Paynter and Louisa Emily Wells.",
+    "body_stripped": "> Son of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born at Bruce, South Australia, in 1911 and died in 1979.\n\n## Lifespan\n\n**Born:** 20 January 1911 — Bruce, South Australia *(registered)*\n**Died:** 21 November 1979 — aged 68 *(registered)*\n**Buried:** not established\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Viva Louisa Paynter (1906–1976), Ellen Mavis Paynter (b. 1909)",
     "parents": [
       "emily-paynter",
       "francis-paynter"
@@ -57211,5 +57106,86 @@
     "person_photo": null,
     "generation": 7,
     "maiden_name": null
+  },
+  {
+    "id": "Viva Louisa Paynter (1906)",
+    "slug": "viva-paynter",
+    "vault_file": "Viva Louisa Paynter (1906–1976).md",
+    "maiden_name": null,
+    "first_name": "Viva",
+    "middle_name": "Louisa",
+    "last_name": "Paynter",
+    "birth_year": 1906,
+    "death_year": 1976,
+    "birth_date": "27 September 1906",
+    "death_date": "5 September 1976",
+    "birth_year_display": "1906",
+    "death_year_display": "1976",
+    "display_name": "Viva Louisa Paynter",
+    "title": "Viva Louisa Paynter (1906–1976)",
+    "tags": [
+      "family",
+      "non-telfer"
+    ],
+    "relationships": [
+      {
+        "type": "Self",
+        "names": [
+          "Viva Louisa Paynter (1906–1976)"
+        ]
+      },
+      {
+        "type": "Father",
+        "names": [
+          "Francis Thomas Paynter (1885–1973)"
+        ]
+      },
+      {
+        "type": "Mother",
+        "names": [
+          "Emily Louisa Paynter (d. 1978)"
+        ]
+      },
+      {
+        "type": "Siblings",
+        "names": [
+          "Ellen Mavis Paynter (b. 1909)",
+          "Walter Russell Paynter (b. 1911)",
+          "Ella Jane Paynter (b. 1914)",
+          "Lorna May Paynter (b. 1916)",
+          "Oliver Francis George Paynter (1918–2002)"
+        ]
+      }
+    ],
+    "roles": [],
+    "body_markdown": "# Viva Louisa Paynter (1906–1976)\n\n> Eldest child of [[Francis Thomas Paynter (1885–1973)]] and [[Emily Louisa Paynter (d. 1978)]] — born 27 September 1906 and died at Quorn on 5 September 1976, aged 69.\n\n## Lifespan\n\n**Born:** 27 September 1906\n**Died:** 5 September 1976 — aged 69\n**Buried:** Quorn Cemetery, New Section, Row 9, Plot 167B, Quorn, Flinders Ranges Council, South Australia\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | [[Francis Thomas Paynter (1885–1973)]] |\n| **Mother** | [[Emily Louisa Paynter (d. 1978)]] |\n| **Siblings** | [[Ellen Mavis Paynter (b. 1909)]], [[Walter Russell Paynter (b. 1911)]], [[Ella Jane Paynter (b. 1914)]], [[Lorna May Paynter (b. 1916)]], [[Oliver Francis George Paynter (1918–2002)]] |\n\n## Life Summary\n\nViva Louisa Paynter was born on 27 September 1906, the eldest child of Francis Thomas Paynter and Emily Louisa Wells. Her parents married at Frome on 10 December 1908, so she was born before their marriage.\n\nShe lived in Quorn and did not marry. She died at Quorn on 5 September 1976, aged 69, and is buried in the Quorn Cemetery in the New Section, Row 9, Plot 167B.\n\nThe family book *From the Borders to the Bush* lists her first among the children of Francis Thomas Paynter and Emily Louisa Wells, under the name \"Viva Louis\", without a birth date.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 27 Sep 1906 | Born |\n| 10 Dec 1908 | Her parents married at Frome |\n| 5 Sep 1976 | Died at Quorn, aged 69; buried Quorn Cemetery |\n\n## Sources\n\n1. **Genealogy SA — Death Registrations index (member view):** PAYNTER Viva Louisa, died 5 Sep 1976, aged 69, female, residence Quorn, book **337A page 6973** — read live 16 November 2026.\n2. **[Find a Grave — Viva Louisa Paynter, Memorial 195889201](https://www.findagrave.com/memorial/195889201)** — birth 27 Sep 1906, death 5 Sep 1976 (aged 69), burial Quorn Cemetery, New Section Row 9 Plot 167B; parents linked as Francis Thomas Paynter (1885–1973) and Emily Louisa *Wells* Paynter (1888–1978) — accessed 16 November 2026.\n3. **OzBurials — Quorn Cemetery headstone transcriptions** (transcribed by Lorraine Larment): `PAYNTER, Viva Louisa. 5 September 1976. Aged 69 years` — accessed 16 November 2026.\n4. **From the Borders to the Bush** — lists \"Viva Louis\" first among the children of Francis Thomas Paynter and Emily Louisa Wells.",
+    "body_stripped": "> Eldest child of Francis Thomas Paynter (1885–1973) and Emily Louisa Paynter (d. 1978) — born 27 September 1906 and died at Quorn on 5 September 1976, aged 69.\n\n## Lifespan\n\n**Born:** 27 September 1906\n**Died:** 5 September 1976 — aged 69\n**Buried:** Quorn Cemetery, New Section, Row 9, Plot 167B, Quorn, Flinders Ranges Council, South Australia\n\n## Family\n\n Relation  Name \n\n **Father**  Francis Thomas Paynter (1885–1973) \n **Mother**  Emily Louisa Paynter (d. 1978) \n **Siblings**  Ellen Mavis Pa",
+    "parents": [
+      "emily-paynter",
+      "francis-paynter"
+    ],
+    "children": [],
+    "siblings": [
+      "ella-paynter",
+      "ellen-paynter",
+      "lorna-paynter",
+      "oliver-paynter",
+      "walter-paynter"
+    ],
+    "spouses": [],
+    "step_parents": [],
+    "step_children": [],
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": "verified",
+    "single_source": false,
+    "provisional_why": null,
+    "lifespan": "1906 – 1976",
+    "related_trees": [
+      "telfer-tree"
+    ],
+    "images": [],
+    "person_photo": null,
+    "generation": 7
   }
 ]

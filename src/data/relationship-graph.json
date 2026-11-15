@@ -3441,13 +3441,13 @@
       "generation": 7
     },
     {
-      "slug": "viva-paynter",
-      "id": "Viva Louisa Paynter (1907)",
+      "slug": "walter-paynter",
+      "id": "Walter Russell Paynter (1911)",
       "generation": 7
     },
     {
-      "slug": "walter-paynter",
-      "id": "Walter Russell Paynter (1911)",
+      "slug": "viva-paynter",
+      "id": "Viva Louisa Paynter (1906)",
       "generation": 7
     }
   ],
@@ -7131,19 +7131,19 @@
       },
       {
         "from": "emily-paynter",
-        "to": "viva-paynter"
+        "to": "walter-paynter"
       },
       {
         "from": "francis-paynter",
-        "to": "viva-paynter"
+        "to": "walter-paynter"
       },
       {
         "from": "emily-paynter",
-        "to": "walter-paynter"
+        "to": "viva-paynter"
       },
       {
         "from": "francis-paynter",
-        "to": "walter-paynter"
+        "to": "viva-paynter"
       }
     ],
     "spouseOf": [

@@ -143,11 +143,25 @@ def parse_relationships(rel):
         return out
     if not isinstance(rel, str):
         return out
+    # YAML folds a wrapped single-quoted value into ONE string with the newline and
+    # indent preserved. Left alone, a name split across the fold arrives as
+    # "Isa Katie Stribling\n  (1886–1973)" and normalises to something no children:
+    # entry can ever match. Collapse all whitespace runs first. 2026-11-16.
+    rel = re.sub(r"\s+", " ", rel)
+    # Gender-specific keys name children just as squarely as "child"/"children".
+    # "Daughter: A, B | Son: C" used to be filed under daughter:/son:, keys nothing
+    # downstream reads, so every child looked absent from the canonical field. Only
+    # "daughter" and "son" fold — never "father"/"mother", which are not children.
+    CHILD_KEYS = {"daughter", "son", "child", "children"}
     for part in rel.split("|"):
         if ":" not in part:
             continue
         k, v = part.split(":", 1)
-        k = k.strip().lower().rstrip("s")
+        k = k.strip().lower()
+        if k in CHILD_KEYS:
+            k = "child"
+        else:
+            k = k.rstrip("s")
         # Split on commas that are NOT inside a bracket. A qualifier inside the
         # lifespan bracket — "Susan (1967-living, adopted)" — used to be torn in half
         # here, leaving a phantom child named "adopted)". 2026-11-04.
