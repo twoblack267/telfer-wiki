@@ -1563,6 +1563,17 @@ const combinedSchema = faqSchema ? [personSchema, faqSchema] : personSchema;
             {person.display_name}
           </h1>
 
+          <!-- Maiden name — her own surname, not her husband's.
+               A page headed "Robyn Telfer" with nothing else states she was born a
+               Telfer; this is the correction. Only rendered when the vault records
+               one (maiden_name); absent means unrecorded, never "none". -->
+          {person.maiden_name && (
+            <div class="text-sm text-[var(--color-ink-light)] mb-1">
+              <span class="text-[var(--color-muted)]">née</span>{" "}
+              {person.maiden_name}
+            </div>
+          )}
+
           <!-- Lifespan -->
           <div class="text-sm text-[var(--color-ink-light)] mb-1">
             {heroLifespan}

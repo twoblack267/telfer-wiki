@@ -165,6 +165,10 @@ const PUBLIC_FIELDS = [
   'single_source',
   'provisional_why',
   'body_markdown',  // included but PII-scrubbed below
+  // Maiden name — public: it is the CORRECTION of a misleading surname, not
+  // private data. Absent (null) means the vault has no record; the template
+  // renders nothing rather than asserting "no maiden name".
+  'maiden_name',
   'roles',
   'tags',
   'parents',

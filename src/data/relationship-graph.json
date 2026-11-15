@@ -3422,27 +3422,33 @@
     },
     {
       "slug": "ella-paynter",
-      "id": "Ella Jane Paynter (1914)"
+      "id": "Ella Jane Paynter (1914)",
+      "generation": 7
     },
     {
       "slug": "ellen-paynter",
-      "id": "Ellen Mavis Paynter (1909)"
+      "id": "Ellen Mavis Paynter (1909)",
+      "generation": 7
     },
     {
       "slug": "lorna-paynter",
-      "id": "Lorna May Paynter (1916)"
+      "id": "Lorna May Paynter (1916)",
+      "generation": 7
     },
     {
       "slug": "oliver-paynter",
-      "id": "Oliver Francis George Paynter (1918)"
+      "id": "Oliver Francis George Paynter (1918)",
+      "generation": 7
     },
     {
       "slug": "viva-paynter",
-      "id": "Viva Louisa Paynter (1907)"
+      "id": "Viva Louisa Paynter (1907)",
+      "generation": 7
     },
     {
       "slug": "walter-paynter",
-      "id": "Walter Russell Paynter (1911)"
+      "id": "Walter Russell Paynter (1911)",
+      "generation": 7
     }
   ],
   "edges": {

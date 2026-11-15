@@ -922,6 +922,10 @@ function main() {
       id: toPersonId(displayName, birthYear, deathYear),
       slug,
       vault_file: vaultFile,
+      // Maiden name — the woman's OWN surname before marriage. A profile titled
+      // "Robyn Telfer" with no née silently reads as "born a Telfer", which is a
+      // genealogical falsehood, not a typo. Vault frontmatter `maiden_name`.
+      maiden_name: fm.maiden_name ? String(fm.maiden_name).trim() : null,
       first_name: firstName,
       middle_name: middleName,
       last_name: lastName,
@@ -1247,6 +1251,12 @@ function main() {
       existing.first_name = entry.first_name;
       existing.middle_name = entry.middle_name;
       existing.last_name = entry.last_name;
+      // Maiden name: copied unconditionally, exactly like last_name. A field that
+      // is NOT copied here is silently dropped on every re-run for every person
+      // who already exists — the merge only writes the fields it names. null when
+      // the vault has none, so removing it from the vault actually removes it
+      // from the page (no stale value survives a correction).
+      existing.maiden_name = entry.maiden_name;
       existing.birth_year = entry.birth_year;
       existing.death_year = entry.death_year;
       existing.birth_date = entry.birth_date;

@@ -320,6 +320,7 @@ function createStubPerson(name, slug, sourceSlug, relationshipType) {
     siblings: [],
     related_trees: ['telfer-main'],
     vault_file: null,
+    maiden_name: null,
     images: [],
     person_photo: null,
     _stub_source: sourceSlug,
@@ -561,6 +562,11 @@ async function build() {
       siblings,
       related_trees: [...new Set([finalBranch, 'telfer-main'])], // will expand
       vault_file: file.name,
+      // Maiden name: a married-in woman's own surname. Without it, a page titled
+      // "Robyn Telfer" quietly asserts she was born a Telfer — an omission that
+      // reads as a fact (robyn-telfer, 15 Nov 2026). Blank when the vault has no
+      // maiden_name; never invented.
+      maiden_name: (fm.maiden_name || '').trim() || null,
       images,
       person_photo: personPhoto,
       // DNA connections
