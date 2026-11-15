@@ -1677,7 +1677,11 @@ function navIsActive(entry: { href: string; match: string }): boolean {
        shape. */
     width: auto;
     height: auto;
-    align-items: center;
+    /* NOT align-items:center — that shrank the title bar to the photo's width,
+       which stranded the X in the middle of the window instead of the right
+       corner (Mark, 15 Nov 2026: "the X isn't in the right hand corner").
+       The body centres its own photo instead. */
+    align-items: stretch;
     max-width: 96vw;
     max-height: 92vh;
     background: var(--color-paper);
@@ -1695,7 +1699,9 @@ function navIsActive(entry: { href: string; match: string }): boolean {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.3rem 0.35rem 0.3rem 0.6rem;
+    /* Right padding must be TINY: the X is the only control and it belongs in
+       the top-right corner, not inset from it (Mark, 15 Nov 2026). */
+    padding: 0.3rem 0.15rem 0.3rem 0.6rem;
     background: linear-gradient(
       90deg,
       var(--color-heading) 0%,
