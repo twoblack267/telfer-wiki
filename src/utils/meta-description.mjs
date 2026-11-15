@@ -37,6 +37,19 @@ const ENTITY_MAP = [
 export function decodeDescriptionEntities(text) {
   let s = String(text == null ? "" : text);
   for (const [re, to] of ENTITY_MAP) s = s.replace(re, to);
+  // MARKDOWN EMPHASIS AND CODE MARKERS MUST NEVER REACH A CRAWLER (card seo-2026-11-15-005).
+  // The description pipeline cleaned brackets and entities but not bold/italic markers, so
+  // two live snippets shipped literal asterisks — ida-latter read "Eldest child of Richard
+  // Pelling Latter and **Esther Farrow Latter**." — and george-hucks leaked a backtick
+  // around `cornwalldiaspora`. The vault is written in markdown, so every tier that reaches
+  // this point can carry the markers. Single-sourced here, where the entity cleanup already
+  // lives, so no template has to remember.
+  s = s.replace(/\*\*\*(.+?)\*\*\*/g, "$1")
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/(^|[\s(])\*(\S(?:.*?\S)?)\*(?=[\s).,;:!?]|$)/g, "$1$2")
+    .replace(/(^|[\s(])_(\S(?:.*?\S)?)_(?=[\s).,;:!?]|$)/g, "$1$2")
+    .replace(/`([^`]*)`/g, "$1")
+    .replace(/~~(.+?)~~/g, "$1");
   // Any remaining numeric entity: keep the real character, never the escape.
   s = s.replace(/&#(\d+);/g, (m, n) => {
     const c = Number(n);

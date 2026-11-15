@@ -854,6 +854,128 @@ function navIsActive(entry: { href: string; match: string }): boolean {
       }
     });
   }
+
+  // ── CLICK-TO-ENLARGE IMAGE VIEWER (Mark, 15 Nov 2026) ──────────────────────
+  // A Win95-chassis window (title bar + single [X], no minimise/maximise) in
+  // the site's own colours. Delegated on document so it covers every route,
+  // including body HTML injected via set:html and gallery images mapped inline.
+  (function () {
+    var EXCLUDE = '.nav-ico, .avatar, #skippy-lightbox img';
+    var MIN_W = 120;   // icons and 22px nav glyphs are not worth zooming
+    var MIN_H = 80;
+
+    var box = document.createElement('div');
+    box.id = 'skippy-lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Enlarged image');
+    box.innerHTML =
+      '<div class="lb-window">' +
+        '<div class="lb-titlebar">' +
+          '<span class="lb-title"></span>' +
+          '<button type="button" class="lb-close" aria-label="Close enlarged image">&#10005;</button>' +
+        '</div>' +
+        '<div class="lb-body"><img alt=""><div class="lb-caption"></div></div>' +
+      '</div>';
+
+    var lastFocus = null;
+    var open = false;
+
+    function mount() {
+      if (document.getElementById('skippy-lightbox')) return;
+      document.body.appendChild(box);
+
+      var bodyEl = box.querySelector('.lb-body');
+      var closeBtn = box.querySelector('.lb-close');
+
+      closeBtn.addEventListener('click', close);
+      // Click the darkened backdrop (not the window) to dismiss, as Win95 dialogs do.
+      box.addEventListener('click', function (e) {
+        if (e.target === box) close();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (!open) return;
+        if (e.key === 'Escape') { e.preventDefault(); close(); }
+      });
+      // Body scroll is locked while open; CSS caps the image to 92vh so no
+      // re-measure is needed on resize.
+    }
+
+    function openBox(src, alt, caption, trigger) {
+      mount();
+      var img = box.querySelector('.lb-body img');
+      var capEl = box.querySelector('.lb-caption');
+      var titleEl = box.querySelector('.lb-title');
+
+      img.src = src;
+      img.alt = alt || '';
+      box.querySelector('.lb-title').textContent = 'Image viewer';
+      // Caption: prefer the figure's own figcaption (the human sentence); fall
+      // back to alt only when there is no visible caption on the page.
+      capEl.textContent = caption || alt || '';
+      if (!capEl.textContent) capEl.style.display = 'none';
+      else capEl.style.display = '';
+
+      lastFocus = trigger || document.activeElement;
+      box.classList.add('is-open');
+      document.body.classList.add('lb-locked');
+      open = true;
+      box.querySelector('.lb-close').focus();
+    }
+
+    function close() {
+      if (!open) return;
+      box.classList.remove('is-open');
+      document.body.classList.remove('lb-locked');
+      open = false;
+      var img = box.querySelector('.lb-body img');
+      img.removeAttribute('src');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    // Mark every candidate image once and attach ONE delegated handler.
+    // NEVER gate on naturalWidth here: lazy images report 0x0 until they are
+    // scrolled into view, so a load-time check would strip real photos. The
+    // gate runs at CLICK time instead, when the image has certainly decoded.
+    function arm() {
+      var imgs = document.querySelectorAll('img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        if (img.hasAttribute('data-zoomable')) continue;
+        // Never zoom the site's own chrome: logo, avatars, nav glyphs, in-viewer img.
+        if (img.closest('#skippy-lightbox')) continue;
+        if (img.matches(EXCLUDE)) continue;
+        img.setAttribute('data-zoomable', '');
+      }
+    }
+
+    // Decided at click time: an icon-sized photo gains nothing from a window.
+    function tooSmall(img) {
+      var w = img.naturalWidth || 0, h = img.naturalHeight || 0;
+      if (!w || !h) return false;       // unknown: let the user try
+      return w < MIN_W || h < MIN_H;
+    }
+
+    document.addEventListener('click', function (e) {
+      var img = e.target && e.target.closest ? e.target.closest('img[data-zoomable]') : null;
+      if (!img) return;
+      // Never hijack a click that is really a link or a button.
+      if (img.closest('a')) return;
+      if (tooSmall(img)) return;
+      e.preventDefault();
+      var fig = img.closest('figure');
+      var cap = fig ? fig.querySelector('figcaption') : null;
+      openBox(img.currentSrc || img.src, img.alt, cap ? cap.textContent.trim() : '');
+    }, true);
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', arm);
+    } else {
+      arm();
+    }
+    // Astro view transitions / any late-injected gallery markup.
+    document.addEventListener('astro:page-load', arm);
+  })();
 </script>
 
 <style is:global>
@@ -1502,6 +1624,181 @@ function navIsActive(entry: { href: string; match: string }): boolean {
   }
   /* Wordmark row: keep the icon optically centred against serif text */
   .nav-link--wordmark svg.nav-ico { width: 22px; height: 22px; }
+
+  /* ── CLICK-TO-ENLARGE IMAGE VIEWER (Mark, 15 Nov 2026) ─────────────────────
+     "sometimes it's too small I'd like to be able to click it and so it can
+     enlarge... like a windows 95 without the minimised button just an x you
+     click the x and it goes but below is the image obviously in our theme."
+
+     So: a Win95 window CHASSIS (raised bevel frame + title bar + single [X])
+     painted in the site's Heritage Parchment / Heritage Candlelight tokens,
+     with the full-size image in the body. No minimise, no maximise.
+
+     WHY A GLOBAL DELEGATED LISTENER AND NOT PER-IMAGE HANDLERS: the body HTML
+     is injected with set:html from markdown, and the gallery images are mapped
+     inline — there is no single component to attach to. One listener on
+     document (capture phase, delegated on [data-zoomable]) covers all 1,845
+     routes and any image added later, without touching the markup generators.
+
+     The trigger attribute is added at runtime, so no build guard that greps
+     dist/ for <img class="..."> is disturbed. */
+
+  /* Cursor affordance: only images big enough to be worth enlarging. */
+  .wiki-content img,
+  .photo-gallery img,
+  img[data-zoomable] {
+    cursor: zoom-in;
+  }
+
+  #skippy-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(20, 17, 14, 0.72);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+  #skippy-lightbox.is-open { display: flex; }
+
+  /* The window chassis: Win95 raised bevel, but in parchment, not grey. */
+  #skippy-lightbox .lb-window {
+    display: flex;
+    flex-direction: column;
+    /* Size the chassis to the photo, not to the viewport (Mark, 15 Nov 2026:
+       "Beautiful unit test it with the ego browser... see for changes properly").
+       A fixed min(96vw, 1400px) left a portrait photo stranded in ~59% empty
+       cream. An explicit width can't see the image's aspect ratio, but a flex
+       basis expressed in viewport HEIGHT can: a portrait image is the axis that
+       binds, so sizing from 92vh makes the window land close to the photo's own
+       shape. */
+    width: auto;
+    height: auto;
+    align-items: center;
+    max-width: 96vw;
+    max-height: 92vh;
+    background: var(--color-paper);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow:
+      inset 1px 1px 0 rgba(255, 255, 255, 0.55),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.18),
+      0 18px 48px rgba(20, 17, 14, 0.45);
+    overflow: hidden;
+  }
+
+  /* Title bar — the Win95 active title gradient, remapped to brand colours. */
+  #skippy-lightbox .lb-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.35rem 0.3rem 0.6rem;
+    background: linear-gradient(
+      90deg,
+      var(--color-heading) 0%,
+      var(--color-accent) 100%
+    );
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    user-select: none;
+  }
+  #skippy-lightbox .lb-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #skippy-lightbox .lb-close {
+    flex: 0 0 auto;
+    /* 44px touch target (16 Nov 2026): the old 24x22px button was under the
+       28px minimum and shared its background with the title bar, so on a phone
+       it read as part of the chrome rather than as the one control that exists. */
+    width: 2.75rem;
+    height: 2.75rem;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    /* Win95 raised bevel: light top-left, dark bottom-right. */
+    border: 2px solid;
+    border-color: #fff #6b6259 #6b6259 #fff;
+    border-radius: 0;
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    padding: 0;
+  }
+  #skippy-lightbox .lb-close:hover { background: var(--color-surface); }
+  #skippy-lightbox .lb-close:focus-visible {
+    outline: 2px solid var(--color-highlight);
+    outline-offset: 1px;
+  }
+
+  /* Body — the image, own scroll box so a tall portrait cannot exceed the view. */
+  #skippy-lightbox .lb-body {
+    overflow: auto;
+    padding: 0.5rem;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    /* Height-driven basis: a portrait photo then determines the window width
+       through its own aspect ratio instead of stretching to 1400px. */
+    flex: 0 1 auto;
+  }
+  #skippy-lightbox .lb-body img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: calc(92vh - 6rem);
+    /* Portrait photos are normally only ever WIDTH-capped, which left them at
+       their natural size inside a wide window and made the phone view show less
+       of the picture than the page did (Mark's test, 15 Nov 2026). Drive from
+       height too, so the largest axis that fits actually fills the view. */
+    min-height: min(calc(92vh - 6rem), 55vw);
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    background: var(--color-paper-dark);
+    /* Dark theme dims images globally to 0.9 — not here, this IS the zoom. */
+    opacity: 1 !important;
+  }
+  #skippy-lightbox .lb-caption {
+    margin: 0.5rem auto 0;
+    max-width: 68ch;
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: var(--color-ink-light);
+  }
+  [data-theme="dark"] #skippy-lightbox .lb-titlebar {
+    background: linear-gradient(
+      90deg,
+      var(--color-heading) 0%,
+      var(--color-accent) 100%
+    );
+  }
+  [data-theme="dark"] #skippy-lightbox .lb-window {
+    box-shadow:
+      inset 1px 1px 0 rgba(255, 255, 255, 0.12),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.5),
+      0 18px 48px rgba(0, 0, 0, 0.65);
+  }
+  /* Never let the overlay itself scroll the page underneath. */
+  body.lb-locked { overflow: hidden; }
+
+  @media print {
+    #skippy-lightbox { display: none !important; }
+  }
 
   /* Smooth transitions for theme changes */
   body, .person-card, .search-input, nav, footer {
