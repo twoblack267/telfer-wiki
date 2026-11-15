@@ -537,13 +537,25 @@ else
       PUSHED=1
     elif grep -q "fetch first\|non-fast-forward" "$RUN_DIR/nw-push.log"; then
       echo "  🟡 Push rejected (remote moved ahead) — rebasing and retrying once..."
+      # rebase refuses to run at all while ANY path is dirty ("cannot rebase: You
+      # have unstaged changes"), and this repo almost always carries one: the
+      # guard-evidence crown-jewels timestamp rewrites itself on every run. Left
+      # alone it aborted the rebase and the whole nightly push was lost to a file
+      # that only records when the guard last looked. Stash around the rebase and
+      # restore afterwards — the stamp is bookkeeping, not content. 2026-11-16.
+      NW_STASHED=0
+      if [ -n "$(git status --porcelain)" ]; then
+        git stash push -q -m "night-watch: rebase-retry" 2>>"$RUN_DIR/nw-push.log" && NW_STASHED=1
+      fi
       if git fetch origin main -q 2>>"$RUN_DIR/nw-push.log" \
          && git rebase origin/main 2>>"$RUN_DIR/nw-push.log" \
          && git push origin main 2>"$RUN_DIR/nw-push.log"; then
+        [ "$NW_STASHED" = "1" ] && git stash pop -q 2>>"$RUN_DIR/nw-push.log" || true
         echo "  ✅ Pushed after rebase — GitHub Actions is redeploying the live site"
         PUSHED=1
       else
         git rebase --abort 2>/dev/null || true
+        [ "$NW_STASHED" = "1" ] && git stash pop -q 2>>"$RUN_DIR/nw-push.log" || true
         echo "  🔴 Push failed after rebase retry: $(tail -2 "$RUN_DIR/nw-push.log")"
         FAIL="${FAIL} push"
         mark_evidence_safe push
