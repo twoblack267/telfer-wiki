@@ -891,8 +891,32 @@ function isEditorialOnly(t) {
   // shipping on gwenyth-telfer and jessica-telfer. Test the sentence ANYWHERE for the
   // bookkeeping phrases, not only at its head.
   if (/\b(?:vault profile|vault file|flagged unverified)\b/i.test(s)) return true;
-  if (/\bconfirmed here from the printed page\b/i.test(s)) return true;
-  if (/\bnot printed in the tree\b/i.test(s)) return true;
+  if (/\b(?:confirmed here from the printed page|not printed in the tree)\b/i.test(s)) return true;
+  // A SOURCE-VERIFICATION LEDGER IS NOT A BIOGRAPHY SENTENCE. The single-witness box that
+  // opens a thin profile ("This record rests on one source: his father's biography …
+  // No birth registration has been sighted.") is our audit trail. Its HEAD is caught by the
+  // book-citation openers below, but firstSentence() keeps a candidate only up to the first
+  // full stop — so the second sentence, "No birth registration has been sighted.", arrived
+  // with a clean start and shipped as the description on george-hucks and mary-telfer-living.
+  // Test for the ledger vocabulary ANYWHERE; no life story says "has been sighted".
+  if (/\bno\s+(?:\w+\s+){0,3}(?:registration|record|certificate|document|entry)\b.{0,40}?\b(?:has|have|had)\s+been\s+(?:sighted|found|located)\b/i.test(s)) return true;
+  if (/\bhas been sighted\b|\bare sighted\b/i.test(s) && s.split(/\s+/).length < 40) return true;
+  // THE HEAD OF THE LEDGER ITSELF. "The only record of this person is her mother's biography,
+  // which names her as a child." — no verb of ours, no date, no book name: the book-citation
+  // opener rules below all miss it, so mary-telfer-living shipped it as her description.
+  if (/\b(?:the only record|the sole record|rests on one source|rests on a single source|single witness)\b/i.test(s)) return true;
+  if (/\b(?:this record (?:rests|is based)|our only (?:record|source)|nothing else (?:survives|is known))\b/i.test(s)) return true;
+  // A NOTE ABOUT WHY THE PAGE EXISTS. "Created 27 Oct 2026 — the ninth child had no page.
+  // Every one of his eight siblings' profiles already named him … This is the page those
+  // references needed." The changelog rule below catches the head ("Created … 2026"), so
+  // firstSentence() handed the TAIL to the template and robe
+  // t-allan-burton-telfer shipped "for him. This is the page those references needed."
+  if (/\bthis is the page (?:that )?those references needed\b/i.test(s)) return true;
+  if (/\bhad no page\b|\bno file\b|\balready named him\b|\balready named her\b/i.test(s)) return true;
+  // FRAGMENTS THAT BEGIN MID-THOUGHT. When the ledger head is rejected but its leftovers
+  // survive the split, the description opens on a pronoun whose subject is gone ("for him.").
+  // A sentence about a person almost never begins with a bare preposition or a determiner.
+  if (/^(?:for|from|to|of|with|by|in|on|at|about|and|but|or|that|this|these|those|it|he|she|they)\b/i.test(s) && !/[!?]/.test(s) && s.split(/\s+/).length < 12) return true;
   if (/\b(?:flagged unverified|since 20\d\d)\b/i.test(s) && s.split(/\s+/).length < 40) return true;
   if (/\bdetails limited to the printed record\b/i.test(s)) return true;
   // A DISAMBIGUATION NOTE IS ABOUT OUR FILING, NOT A LIFE. "Not to be confused with
@@ -1101,7 +1125,13 @@ function firstProseSentenceAll(html) {
   // reads like a database, not a biography. Strip a short bold-opener prefix so the
   // sentence stands on its own: "she was born in Roxburghshire, Scotland, around 1829."
   const stripOpener = (t) => {
-    const m = /^[A-Z][A-Za-z\-']{0,14}(?: [A-Z][A-Za-z\-']{0,14})?:\s+(.+)$/.exec(t);
+    // The label must sit on ONE LINE. `\s+` matches a newline, so a blockquote that wrapped
+    // after its bold label ("**Single witness.** The only record of this person is her
+    // mother's biography, which\nnames her as a child.") was welded into one string whose
+    // label was "Single witness.: The only record …". Stripping it returned a tail that
+    // began mid-clause lower-case — the raw newline survived inside it — and the template
+    // trimmed it to "…her mother's biography, which." [ ]+ keeps the match on the label's line.
+    const m = /^[A-Z][A-Za-z\-']{0,14}(?: [A-Z][A-Za-z\-']{0,14})?:[ \t]+([^\n]+)$/.exec(t);
     if (!m) return t;
     const tail = m[1].trim();
     // Only when the tail can stand alone: starts lower-case or is a full clause.
