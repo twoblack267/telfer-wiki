@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-18T05:19:10+10:00",
+  "generated_at": "2026-11-18T05:24:43+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 711,
+  "count": 712,
   "kinds": {
-    "real": 693,
+    "real": 694,
     "redirect": 18,
     "empty": 0
   },
@@ -1134,8 +1134,8 @@
       "kind": "real"
     },
     "Francis Telfer Paynter (1862\u20131900).md": {
-      "sha256": "1e44f7531df85b9e94c4d71e870d8d1b16715395b0472a4345c4e7f17a873100",
-      "sha256_whole": "f48ffdaf3b151b0e33f492f847649d8e61a4b9358a14f71d2cac215afaae6171",
+      "sha256": "1cf454de9ed15d1bc673f12219488cf1337805cf1fa604dc874ee9e91b9cb922",
+      "sha256_whole": "44776373f114f0f17e6f2d4a9b72d2f60bad7c553f2a2b2989291bf5e8af8818",
       "kind": "real"
     },
     "Francis Telfer Smith (1874\u20131945).md": {
@@ -1144,8 +1144,8 @@
       "kind": "real"
     },
     "Francis Thomas Paynter (1885\u20131973).md": {
-      "sha256": "fe2ea38cfbaa95a67d8563af46a1abae3e0c61bae8505f61cc20154af4d2aeea",
-      "sha256_whole": "1c4c22a1a4fd4995fd1b9d8d48ad634be0ab4330c4b48931d4fcfc707274d3d7",
+      "sha256": "537c7abcce364b9b359912b79c3255a5b86786112bb6b6e07630228245832551",
+      "sha256_whole": "a26ae96652304eefa7e7757d1fbad252e96309ba4f627b7383c870b87dfbff80",
       "kind": "real"
     },
     "Frank Lindsay Lawrie (1886\u20131920).md": {
@@ -2606,6 +2606,11 @@
     "Mary Jane Paynter (1861\u20131945).md": {
       "sha256": "d13730386e3a1b8fa2f2ba21695dd899918fdec84c6ac342c6c012170503469b",
       "sha256_whole": "2fcc3bab65ba6131e1ce8291b1c8857aa8735707df917059faaa30722d6bd482",
+      "kind": "real"
+    },
+    "Mary Jane Paynter (1887\u20131942).md": {
+      "sha256": "6fa71778062f27cc3e7651d407b7eea7f4635858d840829478ea897a99f9b33f",
+      "sha256_whole": "e084ed684a24029334c6938ee9aed5bdce3f5f93e08e31011e062be9dca34318",
       "kind": "real"
     },
     "Mary Jane Telfer Mansfield (1847).md": {

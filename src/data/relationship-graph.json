@@ -3457,11 +3457,17 @@
     },
     {
       "slug": "florrie-paynter",
-      "id": "Florrie Catherine Paynter (1907)"
+      "id": "Florrie Catherine Paynter (1907)",
+      "generation": 6
     },
     {
       "slug": "kenneth-cornish",
-      "id": "Kenneth Merlin Cornish (1902)"
+      "id": "Kenneth Merlin Cornish (1902)",
+      "generation": 5
+    },
+    {
+      "slug": "mary-paynter",
+      "id": "Mary Jane Paynter (1887)"
     }
   ],
   "edges": {
@@ -7165,6 +7171,14 @@
       {
         "from": "thomas-paynter-1859",
         "to": "thomas-paynter"
+      },
+      {
+        "from": "ellen-liebich",
+        "to": "mary-paynter"
+      },
+      {
+        "from": "francis-telfer-paynter-1862",
+        "to": "mary-paynter"
       }
     ],
     "spouseOf": [
@@ -11740,6 +11754,10 @@
       },
       {
         "from": "frederick-albert-paynter",
+        "to": "mary-paynter"
+      },
+      {
+        "from": "frederick-albert-paynter",
         "to": "william-paynter"
       },
       {
@@ -11876,6 +11894,10 @@
       },
       {
         "from": "francis-paynter",
+        "to": "mary-paynter"
+      },
+      {
+        "from": "francis-paynter",
         "to": "william-paynter"
       },
       {
@@ -11989,6 +12011,10 @@
       {
         "from": "effie-telfer-1887",
         "to": "violet-hope-telfer-1883"
+      },
+      {
+        "from": "mary-paynter",
+        "to": "william-paynter"
       }
     ],
     "stepParentOf": [
