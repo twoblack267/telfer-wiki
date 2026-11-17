@@ -101,9 +101,31 @@ export async function getStaticPaths() {
 // `withheld: true` at the source; relRows carries it through.
 const familyHasWithdrawn = [...spouses, ...children, ...siblings, ...parents]
   .some((r) => r && r.withheld === true);
+
+// Do NOT append a lifespan the display_name already prints, or the family sheet
+// reads "Family group sheet for James Telfer (1761 – 1845) (1761 – 1845)" in both
+// the meta description and the visible "Primary person" line (card seo-2026-11-15-003).
+// The main profile page fixed this identical bug in card tw-2026-10-31-001; this
+// template never got the same guard. Test the YEAR TEXT, not the display form:
+// a name printing "(1761 – 1845)" does not contain a bare "(1761–1845)".
+const sheetDateRange = (() => {
+  const range = formatDateRange(person);
+  if (!range) return '';
+  const years = String(range).match(/\d{3,4}/g) || [];
+  if (years.length === 0) return '';
+  const name = person.display_name || '';
+  const pairs = [];
+  if (years.length >= 2) {
+    pairs.push(`${years[0]}\u2013${years[1]}`, `${years[0]} \u2013 ${years[1]}`, `${years[0]} - ${years[1]}`);
+  }
+  pairs.push(`(${years[0]})`, `(${range})`);
+  const namePrintsYears = pairs.some((p) => p && name.includes(p));
+  return namePrintsYears ? '' : range;
+})();
+const sheetSuffix = sheetDateRange ? ` (${sheetDateRange})` : '';
 ---
 
-<BaseLayout title={`Family Group Sheet: ${person.display_name}`} canonicalPath={`/people/${slug}/family-sheet/`} noindex={familyHasWithdrawn} description={`Family group sheet for ${person.display_name} (${formatDateRange(person)}) — parents, spouse${spouses.length === 1 ? '' : 's'}, siblings and children, from the Telfer family history archive.`}>
+<BaseLayout title={`Family Group Sheet: ${person.display_name}`} canonicalPath={`/people/${slug}/family-sheet/`} noindex={familyHasWithdrawn} description={`Family group sheet for ${person.display_name}${sheetSuffix} — parents, spouse${spouses.length === 1 ? '' : 's'}, siblings and children, from the Telfer family history archive.`}>
   <div class="max-w-3xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">
@@ -118,7 +140,7 @@ const familyHasWithdrawn = [...spouses, ...children, ...siblings, ...parents]
 
     <header class="mb-6 text-center">
       <h1 class="font-serif text-2xl md:text-3xl text-[var(--color-heading)] mb-1">Family Group Sheet</h1>
-      <p class="text-[var(--color-muted)]">Primary person: <a href={`/people/${slug}/`} class="text-[var(--color-link)] font-medium">{person.display_name}</a>{person.maiden_name ? ` (née ${person.maiden_name})` : ''}{(person.birth_year || person.birth_display || person.death_year || person.death_display || person.is_living) ? ` (${formatDateRange(person)})` : ''}</p>
+      <p class="text-[var(--color-muted)]">Primary person: <a href={`/people/${slug}/`} class="text-[var(--color-link)] font-medium">{person.display_name}</a>{person.maiden_name ? ` (née ${person.maiden_name})` : ''}{(person.birth_year || person.birth_display || person.death_year || person.death_display || person.is_living) ? sheetSuffix : ''}</p>
     </header>
 
     <!-- Parents Section -->

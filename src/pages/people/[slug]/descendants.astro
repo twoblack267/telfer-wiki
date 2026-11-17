@@ -125,7 +125,23 @@ function lifespan(p) {
   // A missing death year prints '?' — never 'living' (rules L306-L308).
   const d = p.death_year || p.death_display || '?';
   const both = (p.birth_year || p.birth_display) && (p.death_year || p.death_display);
-  return both ? ` (${b}–${d})` : '';
+  if (!both) return '';
+  // Do NOT append a span the display_name already prints. Around 590 vault
+  // profiles carry a bare name while ~42 carry the years inline, so an
+  // unconditional append printed the lifespan TWICE on those pages:
+  // "Descendant chart for James Telfer (1761 – 1845) (1761–1845) — 357
+  // descendants…" (card seo-2026-11-15-003). The main profile page fixed the
+  // identical bug in card tw-2026-10-31-001; these templates never got it.
+  // Test the YEAR TEXT, not the display form: a name printing "(1761 – 1845)"
+  // does not contain "(1761–1845)" because of the spaces and dash flavour.
+  const enDash = `${b}\u2013${d}`;
+  const spaced = `${b} \u2013 ${d}`;
+  const spacedHyphen = `${b} - ${d}`;
+  const namePrintsYears =
+    p.display_name.includes(enDash) ||
+    p.display_name.includes(spaced) ||
+    p.display_name.includes(spacedHyphen);
+  return namePrintsYears ? '' : ` (${enDash})`;
 }
 
 // Render descendant tree as HTML string
