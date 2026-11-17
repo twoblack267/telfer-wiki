@@ -1,13 +1,24 @@
 {
-  "checkedAt": "2026-11-16T17:01:18.060Z",
+  "checkedAt": "2026-11-17T19:19:46.853Z",
   "status": "CLEAN",
   "baseline": "HEAD:src/data/people.json",
   "people": {
     "before": 690,
-    "after": 690
+    "after": 693
   },
   "crownJewelsChecked": 6,
-  "renames": [],
+  "renames": [
+    {
+      "from": "effie-olive-telfer-1886",
+      "to": "effie-telfer-1887",
+      "name": "Effie Olive Telfer"
+    },
+    {
+      "from": "effie-telfer",
+      "to": "effie-telfer-1914",
+      "name": "Effie Telfer"
+    }
+  ],
   "failures": [],
   "warnings": []
 }

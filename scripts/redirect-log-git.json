@@ -133,6 +133,19 @@
     "reason": "SLUG RENAME, not a removal. Vault commits b9f7119 + 2ac5c8d (2026-10-26, 'Correct 4 Telfer dates against Trove + Genealogy SA sources') corrected this person's dates; the vault note was renamed to match and the derived slug changed. The person is unchanged. Dates 1921-2009 -> 1919-1996 per Genealogy SA birth index + cemeteries index, as recorded in the vault note 'Edwin Roy Telfer (1919-1996).md'. Edwin ROY Telfer (b.1919), distinct from Edwin Gilbert Telfer (b.1887). The old live URL must resolve to the new page."
   },
   {
+    "from": "effie-olive-telfer-1886",
+    "to": "effie-telfer-1887",
+    "matched_by": "removed-declared",
+    "display_name": "Effie Olive Telfer",
+    "reason": "SLUG CHANGE, not a removal. The profile is Effie Olive Telfer (b. 17 Sep 1887, Tantanoola, SA) and she is still published; the pipeline re-slugified her to effie-telfer-1887. Nothing about the person changed. Declared here because generate-redirects.mjs rebuilds redirect-log.json every run, and the crown-jewel guard would otherwise judge the rename PROFILE VANISHED."
+  },
+  {
+    "from": "effie-telfer",
+    "to": "effie-telfer-1914",
+    "matched_by": "display_name",
+    "display_name": "Effie Telfer"
+  },
+  {
     "from": "elizabeth-anne-smith-1878",
     "to": "elizabeth-smith",
     "matched_by": "removed-declared",
