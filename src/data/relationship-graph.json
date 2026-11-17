@@ -321,11 +321,6 @@
       "generation": 5
     },
     {
-      "slug": "effie-olive-telfer-1886",
-      "id": "Effie Olive Telfer (1886)",
-      "generation": 5
-    },
-    {
       "slug": "elizabeth-beattie-1741",
       "id": "Elizabeth Beattie (1741)",
       "generation": 1
@@ -994,11 +989,6 @@
       "slug": "kathryn-telfer-1961",
       "id": "Kathryn Mavis Telfer (1961)",
       "generation": 7
-    },
-    {
-      "slug": "kenneth-cornish",
-      "id": "Kenneth Cornish",
-      "generation": 5
     },
     {
       "slug": "kenneth-gregory-virgen-1925",
@@ -1721,7 +1711,7 @@
       "generation": 6
     },
     {
-      "slug": "effie-telfer",
+      "slug": "effie-telfer-1914",
       "id": "Effie Telfer (1914)",
       "generation": 6
     },
@@ -3449,6 +3439,29 @@
       "slug": "viva-paynter",
       "id": "Viva Louisa Paynter (1906)",
       "generation": 7
+    },
+    {
+      "slug": "effie-telfer-1887",
+      "id": "Effie Olive Telfer (1887)",
+      "generation": 5
+    },
+    {
+      "slug": "idona-murray",
+      "id": "Idona Caston Murray (1874)",
+      "generation": 5
+    },
+    {
+      "slug": "thomas-paynter",
+      "id": "Thomas Frederick Edward Paynter (1903)",
+      "generation": 6
+    },
+    {
+      "slug": "florrie-paynter",
+      "id": "Florrie Catherine Paynter (1907)"
+    },
+    {
+      "slug": "kenneth-cornish",
+      "id": "Kenneth Merlin Cornish (1902)"
     }
   ],
   "edges": {
@@ -3784,14 +3797,6 @@
       {
         "from": "john-telfer-1847",
         "to": "edwin-telfer-1887"
-      },
-      {
-        "from": "adam-telfer-1842",
-        "to": "effie-olive-telfer-1886"
-      },
-      {
-        "from": "margaret-telfer-1849",
-        "to": "effie-olive-telfer-1886"
       },
       {
         "from": "adam-telfer-1842",
@@ -5335,7 +5340,7 @@
       },
       {
         "from": "douglas-telfer-1887",
-        "to": "effie-telfer"
+        "to": "effie-telfer-1914"
       },
       {
         "from": "dinah-flavel-paynter-1869",
@@ -7144,6 +7149,22 @@
       {
         "from": "francis-paynter",
         "to": "viva-paynter"
+      },
+      {
+        "from": "adam-telfer-1842",
+        "to": "effie-telfer-1887"
+      },
+      {
+        "from": "margaret-telfer-1849",
+        "to": "effie-telfer-1887"
+      },
+      {
+        "from": "elizabeth-liebich-1859",
+        "to": "thomas-paynter"
+      },
+      {
+        "from": "thomas-paynter-1859",
+        "to": "thomas-paynter"
       }
     ],
     "spouseOf": [
@@ -7398,10 +7419,6 @@
       {
         "from": "julia-matilda-seebohm-1876",
         "to": "mark-telfer-1877"
-      },
-      {
-        "from": "kenneth-cornish",
-        "to": "marian-cornish-1896"
       },
       {
         "from": "kylie-telfer-1982",
@@ -7706,6 +7723,18 @@
       {
         "from": "emily-paynter",
         "to": "francis-paynter"
+      },
+      {
+        "from": "idona-murray",
+        "to": "john-smith"
+      },
+      {
+        "from": "florrie-paynter",
+        "to": "thomas-paynter"
+      },
+      {
+        "from": "kenneth-cornish",
+        "to": "marian-cornish-1896"
       }
     ],
     "siblingOf": [
@@ -7811,7 +7840,7 @@
       },
       {
         "from": "adelaide-elsie-pearl-telfer-1889",
-        "to": "effie-olive-telfer-1886"
+        "to": "effie-telfer-1887"
       },
       {
         "from": "adelaide-elsie-pearl-telfer-1889",
@@ -7856,6 +7885,10 @@
       {
         "from": "agnes-paynter-1895",
         "to": "rose-rankin-1900"
+      },
+      {
+        "from": "agnes-paynter-1895",
+        "to": "thomas-paynter"
       },
       {
         "from": "alan-telfer-1890",
@@ -8648,46 +8681,6 @@
       {
         "from": "edwin-telfer-1887",
         "to": "william-telfer-1880"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "elizabeth-beattie-telfer-1871"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "eva-rowena-telfer-1885"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "francis-adam-telfer-1875"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "hazel-rose-telfer-1891"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "herbert-dougal-telfer-1881"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "james-edgerston-telfer-1877"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "lillian-telfer"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "margaret-telfer-1869"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "vernon-ray-st-clair-telfer-1879"
-      },
-      {
-        "from": "effie-olive-telfer-1886",
-        "to": "violet-hope-telfer-1883"
       },
       {
         "from": "elizabeth-beattie-telfer-1871",
@@ -10284,6 +10277,10 @@
       {
         "from": "robert-telfer-dillon-1862",
         "to": "septimus-dillon-1871"
+      },
+      {
+        "from": "rose-rankin-1900",
+        "to": "thomas-paynter"
       },
       {
         "from": "shirley-telfer-1929",
@@ -11952,6 +11949,46 @@
       {
         "from": "viva-paynter",
         "to": "walter-paynter"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "elizabeth-beattie-telfer-1871"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "eva-rowena-telfer-1885"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "francis-adam-telfer-1875"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "hazel-rose-telfer-1891"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "herbert-dougal-telfer-1881"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "james-edgerston-telfer-1877"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "lillian-telfer"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "margaret-telfer-1869"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "vernon-ray-st-clair-telfer-1879"
+      },
+      {
+        "from": "effie-telfer-1887",
+        "to": "violet-hope-telfer-1883"
       }
     ],
     "stepParentOf": [

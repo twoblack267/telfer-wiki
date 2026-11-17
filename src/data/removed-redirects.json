@@ -9,6 +9,12 @@
   }
  },
  "removed": {
+    "effie-olive-telfer-1886": {
+      "to": "effie-telfer-1887",
+      "reason": "SLUG CHANGE, not a removal. The profile is Effie Olive Telfer (b. 17 Sep 1887, Tantanoola, SA) and she is still published; the pipeline re-slugified her to effie-telfer-1887. Nothing about the person changed. Declared here because generate-redirects.mjs rebuilds redirect-log.json every run, and the crown-jewel guard would otherwise judge the rename PROFILE VANISHED.",
+      "date": "2026-11-18",
+      "corrections_log": "n/a - slug rename only, no fact changed"
+    },
   "esther-naomi-lynette-telfer-1983": {
    "to": "esther-naomi-lynette-telfer",
    "reason": "Date correction, not a removal. The page was titled (b. 1983) from a bad OCR read of '6 Mar 1983' in the 2008 Supplement's scan-derived text layer. Two independent sources print 1993: the 1989 book's text layer ('b. 6 Mar 1993 Tumby Bay, SA') and a direct reading of the Supplement's printed page 145. The Supplement scan's OCR layer misread the 9 as an 8. Page retitled to 1993.",
