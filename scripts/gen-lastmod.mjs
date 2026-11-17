@@ -289,6 +289,40 @@ function matchVaultFile(person, byName, byTriple) {
     if (cands.length === 1) return { file: cands[0], how: "surname-in-bracket" };
   }
 
+  // Pass 6 (added 2026-11-18): ONE EXTRA GIVEN-NAME TOKEN on either side. Every earlier
+  // pass demanded equal token counts, so a page and its vault file that agree on first
+  // and last name but differ by a single middle name matched NOTHING. Measured on five
+  // pages that shipped with no <lastmod> and no JSON-LD dateModified, failing the
+  // schema-freshness gate:
+  //   "Mary Jane Mansfield"  -> "Mary Jane Telfer Mansfield (1847).md"   (extra token IN vault)
+  //   "Sheryle Joy Telfer"   -> "Sheryle Telfer (1961).md"              (extra token IN wiki)
+  //   "Aaron Ivory"          -> "Aaron Paul Ivory (1989).md"            (extra token IN vault)
+  //   "Joel Ivory"           -> "Joel Matthew Ivory (1986).md"
+  //   "Lauren Ivory"         -> "Lauren Maree Ivory (1994).md"
+  // RULE: same FIRST token, same LAST token, and the token counts differ by exactly one.
+  // Accept ONLY when exactly one vault file answers, AND (when both sides state a birth
+  // year) the years agree. That last clause is what stops this pass from jumping a
+  // generation: without it "William Telfer" would happily attach itself to any William
+  // Telfer with one extra middle name, and publish a stranger's date on the page.
+  if (wikiTokens.length >= 2) {
+    const wFirst = wikiTokens[0];
+    const wLast = wikiTokens[wikiTokens.length - 1];
+    const midCands = [];
+    for (const [vk, vfs] of byName) {
+      const vt = vk.split(/\s+/).filter(Boolean);
+      if (vt.length < 2) continue;
+      if (Math.abs(vt.length - wikiTokens.length) !== 1) continue;
+      if (vt[0] !== wFirst || vt[vt.length - 1] !== wLast) continue;
+      // Year guard: only when BOTH the page and the filename carry a 4-digit year.
+      for (const vf of vfs) {
+        const fy = (manifestParts(vf).year || "").trim();
+        if (hasYear && /^\d{4}$/.test(fy) && fy !== y) continue;
+        midCands.push(vf);
+      }
+    }
+    if (midCands.length === 1) return { file: midCands[0], how: "one-extra-given-name" };
+  }
+
   return null;
 }
 
