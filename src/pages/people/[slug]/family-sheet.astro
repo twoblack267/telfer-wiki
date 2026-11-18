@@ -123,9 +123,21 @@ const sheetDateRange = (() => {
   return namePrintsYears ? '' : range;
 })();
 const sheetSuffix = sheetDateRange ? ` (${sheetDateRange})` : '';
+
+// Derived pages were indexed (they sit in the sitemap with a <lastmod>) while
+// emitting NO structured data and NO robots directive at all (card itc-20261117-4/5).
+// Emit a real CollectionPage whose dateModified is the SAME lastmod.json value the
+// sitemap prints. Conditional, so a missing date omits the field rather than lying.
+const lastmod = (await import("../../../data/lastmod.json")).default;
+const sheetModified = (() => {
+  const raw = lastmod?.people?.[slug];
+  if (!raw) return null;
+  const d = new Date(raw);
+  return Number.isNaN(d.getTime()) ? null : d.toISOString();
+})();
 ---
 
-<BaseLayout title={`Family Group Sheet: ${person.display_name}`} canonicalPath={`/people/${slug}/family-sheet/`} noindex={familyHasWithdrawn} description={`Family group sheet for ${person.display_name}${sheetSuffix} — parents, spouse${spouses.length === 1 ? '' : 's'}, siblings and children, from the Telfer family history archive.`}>
+<BaseLayout title={`Family Group Sheet: ${person.display_name}`} canonicalPath={`/people/${slug}/family-sheet/`} noindex={familyHasWithdrawn} schema={{ "@context": "https://schema.org", "@type": "CollectionPage", name: `Family Group Sheet: ${person.display_name}`, description: `Family group sheet for ${person.display_name}${sheetSuffix} — parents, spouse${spouses.length === 1 ? '' : 's'}, siblings and children, from the Telfer family history archive.`, url: `https://telferwiki.com/people/${slug}/family-sheet/`, isPartOf: { "@type": "WebSite", name: "Telfer Family History", url: "https://telferwiki.com/" }, about: { "@type": "Person", name: person.display_name, url: `https://telferwiki.com/people/${slug}/` }, ...(sheetModified ? { dateModified: sheetModified } : {}) }} description={`Family group sheet for ${person.display_name}${sheetSuffix} — parents, spouse${spouses.length === 1 ? '' : 's'}, siblings and children, from the Telfer family history archive.`}>
   <div class="max-w-3xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">

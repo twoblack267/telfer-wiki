@@ -13,6 +13,20 @@ if (!person) {
   throw new Error(`Person not found: ${slug}`);
 }
 
+// Derived pages were indexed (they sit in the sitemap with a <lastmod>) while
+// emitting NO structured data and NO robots directive at all — so a crawler got
+// a <lastmod> it could never reconcile with the page (card itc-20261117-4/5).
+// Emit a real CollectionPage whose dateModified is the SAME lastmod.json value
+// the sitemap prints, so page and sitemap cannot disagree. Conditionally, so a
+// missing or unparseable date omits the field rather than shipping an invalid one.
+const lastmod = (await import("../../../data/lastmod.json")).default;
+const derivedModified = (() => {
+  const raw = lastmod?.people?.[slug];
+  if (!raw) return null;
+  const d = new Date(raw);
+  return Number.isNaN(d.getTime()) ? null : d.toISOString();
+})();
+
 // Build descendant tree
 function buildDescendants(rootSlug, people, maxDepth = 6, currentDepth = 0) {
   if (currentDepth >= maxDepth) return null;
@@ -190,7 +204,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<BaseLayout title={`Descendants of ${person.display_name}`} canonicalPath={`/people/${slug}/descendants/`} noindex={descendantHasWithdrawn} description={`Descendant chart for ${person.display_name}${lifespan(person)} — ${totalDescendants === 0 ? 'no descendants are recorded in the family archive' : `${totalDescendants} descendant${totalDescendants === 1 ? '' : 's'}${generationLabel}`}, from the Telfer family history archive.`}>
+<BaseLayout title={`Descendants of ${person.display_name}`} canonicalPath={`/people/${slug}/descendants/`} noindex={descendantHasWithdrawn} schema={{ "@context": "https://schema.org", "@type": "CollectionPage", name: `Descendants of ${person.display_name}`, description: `Descendant chart for ${person.display_name}${lifespan(person)} — ${totalDescendants === 0 ? 'no descendants are recorded in the family archive' : `${totalDescendants} descendant${totalDescendants === 1 ? '' : 's'}${generationLabel}`}, from the Telfer family history archive.`, url: `https://telferwiki.com/people/${slug}/descendants/`, isPartOf: { "@type": "WebSite", name: "Telfer Family History", url: "https://telferwiki.com/" }, about: { "@type": "Person", name: person.display_name, url: `https://telferwiki.com/people/${slug}/` }, ...(derivedModified ? { dateModified: derivedModified } : {}) }} description={`Descendant chart for ${person.display_name}${lifespan(person)} — ${totalDescendants === 0 ? 'no descendants are recorded in the family archive' : `${totalDescendants} descendant${totalDescendants === 1 ? '' : 's'}${generationLabel}`}, from the Telfer family history archive.`}>
   <div class="max-w-4xl mx-auto">
     <!-- Breadcrumb -->
     <div class="text-sm text-[var(--color-muted)] mb-1.5">
