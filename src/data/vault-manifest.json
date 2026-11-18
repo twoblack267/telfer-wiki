@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-19T03:00:55+10:00",
+  "generated_at": "2026-11-19T05:14:13+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 712,
+  "count": 717,
   "kinds": {
-    "real": 694,
+    "real": 699,
     "redirect": 18,
     "empty": 0
   },
@@ -16,6 +16,16 @@
     "Abbi May Manuel (b. 2004).md": {
       "sha256": "612a108089624342932871ccf06440e903dad41908294ff914a3a99a705fddcf",
       "sha256_whole": "97d38365e5e9fd54823cf59297d192ac0d02cf686d10d5451d25636f4f6005b4",
+      "kind": "real"
+    },
+    "Ada Rose Donovan (1910\u20131932).md": {
+      "sha256": "70b7d9fe7d5885c348b0cd77438e80f5ffe17b202b7b2eb35f95b825c5aa52ad",
+      "sha256_whole": "966beb40b2082ccb6b848b41690bd59e71b7f82eee5943361d622357fa7abaf1",
+      "kind": "real"
+    },
+    "Ada Satchell (1873\u20131952).md": {
+      "sha256": "bbd70f3e7c571b7677e02bb91d87ea91975b73f036f7459622ef72a06589f468",
+      "sha256_whole": "f7458924bc3be62776b969368f3401e3d8f26473bfe05a508a304031dc888103",
       "kind": "real"
     },
     "Adam Dillon.md": {
@@ -356,6 +366,11 @@
     "Ben Stefanoff.md": {
       "sha256": "218625e1039d0d07331ec48d48a041cfb6868291a8f895bd5a482e3f1115bccc",
       "sha256_whole": "a052095dd4e011d802bfd0c6223156a495e4221f92e28e89a8ec5118cb18eccd",
+      "kind": "real"
+    },
+    "Benjamin William Donovan (1913\u20131940).md": {
+      "sha256": "49a34e1182d8c972d3a50b5f0defe6bf4d6026f3eb895141bd0abc5a65db267c",
+      "sha256_whole": "e665f6b179a796b1eb6f07dcdb677fdc14b0659b1582ce6f3709caab119980a1",
       "kind": "real"
     },
     "Bernard Joseph Merchant (b. 1973).md": {
@@ -723,6 +738,11 @@
       "sha256_whole": "66b00825a323e02d283aedbcc7b37efa527c933ef82186a6d704c01b58bacb55",
       "kind": "real"
     },
+    "Dorothy Alice Donovan (1917\u20131935).md": {
+      "sha256": "c091bac19987da5dfc769824724a72a89872e8149cbfc610ec5f34070df57955",
+      "sha256_whole": "5d7c629eee6da34e7d1fcdbf750894c754061b7d88a2da05b74657798972e074",
+      "kind": "real"
+    },
     "Dorothy Dillon.md": {
       "sha256": "fc438d3170de7cbb5d6f3cdc6fe4846b9121b64350fe85f888a0d65473519325",
       "sha256_whole": "a08c3bc13d167ec2ca70b76c2b2762494c800838dd6a084c1344a5abd79c7d40",
@@ -1084,8 +1104,8 @@
       "kind": "real"
     },
     "Florrie Catherine (Donovan) Paynter (1907\u20131972).md": {
-      "sha256": "ac276d54e26f7ab2b3905b728799104af46f1801cfdfc2fe4782b1f5d7256be9",
-      "sha256_whole": "38636e98687ecbe33064e5c45fc829b91c1542acf3b72801bcec0edb916d1f7a",
+      "sha256": "71f4ec44609a6524018b3ff16ec27fae2bc86d8edbdb26e5b7d4f4aa92a6a90a",
+      "sha256_whole": "131b03fc70f018a06818b5f1e512f8793ed45ffa403c3a0383b844c7c7818da2",
       "kind": "real"
     },
     "Frances Margaret Oswald (1861\u20131931).md": {
@@ -1626,6 +1646,11 @@
     "James Telfer Dillon (1861\u20131951).md": {
       "sha256": "cb6259574c4478d984f492db785a14c34225165f2c02cd9bb60c828774d72987",
       "sha256_whole": "5f3bd41d3450fdf7c347b2eb2e1b1c5f82506bd746763b1fc06c80d076068edb",
+      "kind": "real"
+    },
+    "James William Donovan (1869\u20131950).md": {
+      "sha256": "26f6c0342d818121b0017a5d0047980dc3e221d984758b5d41640f3ea4cdafb7",
+      "sha256_whole": "e097b54522b6121d40b98cbd248d21d1396b8d11aa2e40b3b45241011bf0eeb1",
       "kind": "real"
     },
     "Jane Louise Goodson (b. 1981).md": {
@@ -3349,8 +3374,8 @@
       "kind": "real"
     },
     "Thomas Frederick Edward Paynter (1903\u20131940).md": {
-      "sha256": "55d987505cc3de7bf0ff28443f2079b181ab779b20e5bfbd69a4a43e23212216",
-      "sha256_whole": "6521eb34e91953254e862cf220099dc113b7c6bca6a0ba93415c3334dbc67453",
+      "sha256": "7ecef0019eb29a1607abcf383e668ab1b7968b9b1c17c32214b3250ae852723f",
+      "sha256_whole": "5776e0424c4f7f3967e381e2e21854619ca0886ed527e6b6b68709a52e972ec0",
       "kind": "real"
     },
     "Thomas Holloway (1856\u20131922).md": {

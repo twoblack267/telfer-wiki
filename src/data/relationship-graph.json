@@ -3469,6 +3469,26 @@
       "slug": "mary-paynter",
       "id": "Mary Jane Paynter (1887)",
       "generation": 6
+    },
+    {
+      "slug": "ada-rose-donovan",
+      "id": "Ada Rose Donovan (1910)"
+    },
+    {
+      "slug": "ada-satchell",
+      "id": "Ada Satchell (1873)"
+    },
+    {
+      "slug": "benjamin-william-donovan",
+      "id": "Benjamin William Donovan (1913)"
+    },
+    {
+      "slug": "dorothy-alice-donovan",
+      "id": "Dorothy Alice Donovan (1917)"
+    },
+    {
+      "slug": "james-william-donovan",
+      "id": "James William Donovan (1869)"
     }
   ],
   "edges": {
@@ -7174,12 +7194,44 @@
         "to": "thomas-paynter"
       },
       {
+        "from": "ada-satchell",
+        "to": "florrie-paynter"
+      },
+      {
+        "from": "james-william-donovan",
+        "to": "florrie-paynter"
+      },
+      {
         "from": "ellen-liebich",
         "to": "mary-paynter"
       },
       {
         "from": "francis-telfer-paynter-1862",
         "to": "mary-paynter"
+      },
+      {
+        "from": "ada-satchell",
+        "to": "ada-rose-donovan"
+      },
+      {
+        "from": "james-william-donovan",
+        "to": "ada-rose-donovan"
+      },
+      {
+        "from": "ada-satchell",
+        "to": "benjamin-william-donovan"
+      },
+      {
+        "from": "james-william-donovan",
+        "to": "benjamin-william-donovan"
+      },
+      {
+        "from": "ada-satchell",
+        "to": "dorothy-alice-donovan"
+      },
+      {
+        "from": "james-william-donovan",
+        "to": "dorothy-alice-donovan"
       }
     ],
     "spouseOf": [
@@ -7750,6 +7802,10 @@
       {
         "from": "kenneth-cornish",
         "to": "marian-cornish-1896"
+      },
+      {
+        "from": "ada-satchell",
+        "to": "james-william-donovan"
       }
     ],
     "siblingOf": [
@@ -12016,6 +12072,30 @@
       {
         "from": "mary-paynter",
         "to": "william-paynter"
+      },
+      {
+        "from": "ada-rose-donovan",
+        "to": "benjamin-william-donovan"
+      },
+      {
+        "from": "ada-rose-donovan",
+        "to": "dorothy-alice-donovan"
+      },
+      {
+        "from": "ada-rose-donovan",
+        "to": "florrie-paynter"
+      },
+      {
+        "from": "benjamin-william-donovan",
+        "to": "dorothy-alice-donovan"
+      },
+      {
+        "from": "benjamin-william-donovan",
+        "to": "florrie-paynter"
+      },
+      {
+        "from": "dorothy-alice-donovan",
+        "to": "florrie-paynter"
       }
     ],
     "stepParentOf": [
