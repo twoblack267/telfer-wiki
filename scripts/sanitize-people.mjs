@@ -904,6 +904,71 @@ function scrubSocialCredit(line) {
   return s;
 }
 
+// ─── Withheld-name scrub for free-prose fields ──────────────────────────────
+/**
+ * Remove the names of privacy-withheld people from a block of free prose.
+ *
+ * WHY THIS EXISTS (19 Nov 2026, card itcrew-20261116-01): the Ivory withdrawal
+ * (owner ruling 16 Oct 2026) strips slugs from publication and tells templates to
+ * render those relatives as plain text. But `roles` is prose copied out of the
+ * vault — "First husband of Sheryle Telfer, father of Aaron, Jared, Lauren & Joel
+ * Ivory" — so the names shipped to /people/families/ivory/ (sitemapped, indexable),
+ * /search/ and the family sheets. The withdrawal was enforced everywhere except
+ * the one place that actually printed the words. Publishing the prose IS publishing
+ * the name; this closes it at the source.
+ *
+ * Matching is deliberately loose on the middle name ("Sheryle Joy Telfer" must be
+ * caught by the short form too) but requires first AND last, so it can never fire
+ * on a common first name alone.
+ */
+export function scrubWithheldNamesFromProse(values, withheldNames) {
+  if (!withheldNames || withheldNames.size === 0) return values;
+  const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const patterns = [];
+  const firstNames = new Set();
+  for (const name of withheldNames) {
+    const parts = String(name).trim().split(/\s+/);
+    if (parts.length < 2) continue;
+    const head = escRe(parts[0]);
+    const tail = escRe(parts[parts.length - 1]);
+    patterns.push(new RegExp(`${head}(?:\\s+[A-Z][\\w'\\u2019-]*)*\\s+${tail}`, 'g'));
+    firstNames.add(parts[0]);
+  }
+  if (patterns.length === 0) return values;
+
+  // LIST FORM. A role often names a whole sibship by FIRST NAME only:
+  // "father of Aaron, Jared, Lauren & Joel Ivory". The full-name patterns above
+  // catch "Joel Ivory" but leave "Aaron, Jared, Lauren" published — which is the
+  // same disclosure, just spelled differently. Build one alternation of every
+  // withdrawn first name and collapse a whole comma/&/and list of them in a single
+  // pass. Restricted to the same sentence fragment so we cannot swallow a
+  // legitimate sibling who shares a first name with a withdrawn person — the
+  // pattern only fires on a LIST where two or more withdrawn first names appear
+  // together, never on a lone first name.
+  const firstAlt = [...firstNames].map(escRe).join('|');
+  const listRe = new RegExp(
+    `\\b(?:${firstAlt})\\b` +      // two or more withdrawn first names in a row,
+    `(?:\\s*(?:,|&|\\band\\b)\\s*(?:${firstAlt})\\b)+`, // separated by , & or 'and'
+    'g'
+  );
+
+  const REDACTED = 'a family member whose own record is withheld';
+  return values.map((v) => {
+    let out = String(v);
+    // List form first — it is the superset, and doing it first stops the
+    // full-name pass from leaving a ragged "Aaron, Jared, Lauren & <redacted>".
+    out = out.replace(listRe, REDACTED);
+    for (const re of patterns) out = out.replace(re, REDACTED);
+    return out
+      // Collapse the lists a redaction can leave behind: "X, Y & Z" -> "a family member…"
+      .replace(new RegExp(`(?:${REDACTED})(?:,\\s*(?:${REDACTED}))+`, 'g'), REDACTED)
+      .replace(/\s{2,}/g, ' ')
+      .replace(/\s+([,.&])/g, '$1')
+      .replace(/([,.&])\s*(?=[,.&])/g, '$1')
+      .trim();
+  });
+}
+
 // ─── Build Public Output ────────────────────────────────────────────────────
 // buildPublicPeople() is exported + run-guarded so tests can import
 // stripLivingPrivateContent without triggering the side-effectful write.
@@ -926,6 +991,25 @@ for (const person of people) {
 
   const publicPerson = {};
 
+  // ── WITHHELD-NAME SCRUB IN ROLE STRINGS (19 Nov 2026, card itcrew-20261116-01)
+  // `roles` is free prose lifted from the vault: "First husband of Sheryle
+  // Telfer, father of Aaron, Jared, Lauren & Joel Ivory". The whole point of
+  // PRIVACY_STRIP_SLUGS is that those names appear as PLAIN TEXT ONLY on the
+  // three parent profiles — but the sentence leaked onto /people/families/ivory/,
+  // /search/ and the family sheets, which are indexable and sitemapped. Publishing
+  // the prose is publishing the name. Scrub here, at the single point every
+  // template reads from, so no future template can re-leak it.
+  const withheldNames = new Set();
+  for (const p of people) {
+    if (!PRIVACY_STRIP_SLUGS.has(p.slug)) continue;
+    const full = String(p.display_name || '').trim();
+    if (!full) continue;
+    withheldNames.add(full);
+    // The site prints the short form ("Joel Ivory"), not "Joel Matthew Ivory".
+    const parts = full.split(/\s+/);
+    if (parts.length > 2) withheldNames.add(`${parts[0]} ${parts[parts.length - 1]}`);
+  }
+
   // Copy public fields
   for (const field of PUBLIC_FIELDS) {
     if (person[field] !== undefined) {
@@ -933,6 +1017,9 @@ for (const person of people) {
       // PII-scrub body_markdown before publishing
       if (field === 'body_markdown') {
         val = scrubPII(val, { scrubStreet: person.is_living === true });
+      }
+      if (field === 'roles' && Array.isArray(val)) {
+        val = scrubWithheldNamesFromProse(val, withheldNames);
       }
       publicPerson[field] = val;
     }

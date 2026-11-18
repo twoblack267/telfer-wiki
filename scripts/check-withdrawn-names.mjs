@@ -72,6 +72,15 @@ function allOccurrencesUnlinked(html, name) {
 
 // Names to search for. Derived from the source data so it cannot drift out of
 // step with the slug list — if a slug is added, its name is checked too.
+//
+// WHY THREE VARIANTS (fixed 19 Nov 2026, card itcrew-20261116-01):
+//   This gate used to search ONLY `display_name` — "Sheryle Joy Telfer". The
+//   site prints the SHORT form, "Sheryle Telfer" (and "Joel Ivory", not
+//   "Joel Matthew Ivory"), so the regex matched nothing and the gate reported
+//   "0 live links" while /people/families/ivory/ published two withdrawn names
+//   to crawlers from a sitemap-listed URL. A gate that searches a name the site
+//   never renders is a gate that always passes. Check every form a template can
+//   produce: display name, first+last, and first+middle+last.
 function withdrawnNames() {
   const src = 'src/data/people.json';
   if (!existsSync(src)) return [];
@@ -82,13 +91,23 @@ function withdrawnNames() {
     if (!PRIVACY_STRIP_SLUGS.has(p.slug)) continue;
     // Schema is {display_name, first_name, middle_name, last_name} — there is
     // no `name` field. Checked against people.json on 25 Oct 2026.
-    const name =
-      p.display_name ||
-      [p.first_name, p.middle_name, p.last_name].filter(Boolean).join(' ') ||
-      '';
-    if (name) out.set(p.slug, name);
+    const variants = [
+      p.display_name,
+      [p.first_name, p.last_name].filter(Boolean).join(' '),
+      [p.first_name, p.middle_name, p.last_name].filter(Boolean).join(' '),
+    ];
+    // Keep a variant only if it is specific enough to be one person: two tokens
+    // or more, and long enough not to fire on a common first name alone.
+    const seen = new Set();
+    for (const v of variants) {
+      const name = String(v || '').trim();
+      if (!name || seen.has(name)) continue;
+      if (name.split(/\s+/).length < 2 || name.length < 7) continue;
+      seen.add(name);
+      out.set(`${p.slug}::${name}`, [p.slug, name]);
+    }
   }
-  return [...out.entries()];
+  return [...out.values()].map(([slug, name]) => [slug, name]);
 }
 
 function walkHtml(dir, acc = []) {

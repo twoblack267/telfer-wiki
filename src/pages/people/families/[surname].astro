@@ -80,7 +80,14 @@ const letters = [
 const showJump = members.length >= 12 && letters.length > 2;
 
 // Gather unique roles (if available)
-const roles = [...new Set(members.flatMap((p) => p.roles || []))].sort();
+//
+// The withheld-name scrub for role prose lives in scripts/sanitize-people.mjs
+// (scrubWithheldNamesFromProse), i.e. at the point people.public.json is built —
+// so every consumer inherits it: this page, /search/ and the family sheets. It
+// used to be duplicated here, which is how the /search/ and family-sheet copies
+// stayed leaky while this one was "fixed". One scrub, one place. Do not re-add a
+// local filter here; extend the sanitizer instead.
+const roles = [...new Set(members.flatMap((p) => p.roles || []))].filter(Boolean).sort();
 
 // Gather unique tags (excluding generic)
 const tags = [...new Set(members.flatMap((p) => (p.tags || []).filter((t) => !["bio", "family", "person"].includes(t))))].sort();
