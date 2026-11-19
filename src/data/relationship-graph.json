@@ -3472,23 +3472,28 @@
     },
     {
       "slug": "ada-rose-donovan",
-      "id": "Ada Rose Donovan (1910)"
+      "id": "Ada Rose Donovan (1910)",
+      "generation": 7
     },
     {
       "slug": "ada-satchell",
-      "id": "Ada Satchell (1873)"
+      "id": "Ada Satchell (1873)",
+      "generation": 6
     },
     {
       "slug": "benjamin-william-donovan",
-      "id": "Benjamin William Donovan (1913)"
+      "id": "Benjamin William Donovan (1913)",
+      "generation": 7
     },
     {
       "slug": "dorothy-alice-donovan",
-      "id": "Dorothy Alice Donovan (1917)"
+      "id": "Dorothy Alice Donovan (1917)",
+      "generation": 7
     },
     {
       "slug": "james-william-donovan",
-      "id": "James William Donovan (1869)"
+      "id": "James William Donovan (1869)",
+      "generation": 6
     }
   ],
   "edges": {
