@@ -3494,6 +3494,10 @@
       "slug": "james-william-donovan",
       "id": "James William Donovan (1869)",
       "generation": 6
+    },
+    {
+      "slug": "walter-vale",
+      "id": "Walter Vale (1890)"
     }
   ],
   "edges": {
@@ -7237,6 +7241,10 @@
       {
         "from": "james-william-donovan",
         "to": "dorothy-alice-donovan"
+      },
+      {
+        "from": "ada-satchell",
+        "to": "walter-vale"
       }
     ],
     "spouseOf": [

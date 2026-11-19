@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T03:00:48+10:00",
+  "generated_at": "2026-11-20T05:04:00+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 717,
+  "count": 718,
   "kinds": {
-    "real": 699,
+    "real": 700,
     "redirect": 18,
     "empty": 0
   },
@@ -24,8 +24,8 @@
       "kind": "real"
     },
     "Ada Satchell (1873\u20131952).md": {
-      "sha256": "bbd70f3e7c571b7677e02bb91d87ea91975b73f036f7459622ef72a06589f468",
-      "sha256_whole": "f7458924bc3be62776b969368f3401e3d8f26473bfe05a508a304031dc888103",
+      "sha256": "17464644f3e71b217eaa297904454a74bcd346b5fead0b9ff61023762fc4ba10",
+      "sha256_whole": "cf8ce792ba3d489c76d8f5db909e53cb8194d78430b50b4cba22291ce85a3189",
       "kind": "real"
     },
     "Adam Dillon.md": {
@@ -1104,8 +1104,8 @@
       "kind": "real"
     },
     "Florrie Catherine (Donovan) Paynter (1907\u20131972).md": {
-      "sha256": "71f4ec44609a6524018b3ff16ec27fae2bc86d8edbdb26e5b7d4f4aa92a6a90a",
-      "sha256_whole": "131b03fc70f018a06818b5f1e512f8793ed45ffa403c3a0383b844c7c7818da2",
+      "sha256": "c1ae2c7b3346120adaa6a006efeedcb3aa95a688aabb7c041d6ef001d682f791",
+      "sha256_whole": "d9b4c6984ea3ff957567df19a3ef4168df3eaeb3ca803f363fcdbf194bf727d0",
       "kind": "real"
     },
     "Frances Margaret Oswald (1861\u20131931).md": {
@@ -1649,8 +1649,8 @@
       "kind": "real"
     },
     "James William Donovan (1869\u20131950).md": {
-      "sha256": "26f6c0342d818121b0017a5d0047980dc3e221d984758b5d41640f3ea4cdafb7",
-      "sha256_whole": "e097b54522b6121d40b98cbd248d21d1396b8d11aa2e40b3b45241011bf0eeb1",
+      "sha256": "9510e5a6f4c1e18156b2211f49bf4bcac08127d6950c99b910a12309be81ba00",
+      "sha256_whole": "90e8f3587b5f21a97ef5f1f8b5411c93e5b99482e2955f0be6b1181859d8a2b5",
       "kind": "real"
     },
     "Jane Louise Goodson (b. 1981).md": {
@@ -3466,6 +3466,11 @@
     "Walter Russell Paynter (1911\u20131979).md": {
       "sha256": "f39016179050145570728b14d18e7ac26499619b12e62b399ec599585d9b379f",
       "sha256_whole": "1174e04c6db8610fb1a1e54bd7b07b318d0ba64ba379efb59f1145f7748cc7a3",
+      "kind": "real"
+    },
+    "Walter Vale (1890\u20131969).md": {
+      "sha256": "c241858efbd4592e38f67f0df86dcef02155b31a278b025e17ac7e927be2d32a",
+      "sha256_whole": "53c6ce1b4ede82ae146232a29f96aedcbceb808c4048980addbdf919f0de7106",
       "kind": "real"
     },
     "Walter William Telfer (1884\u20131966).md": {
