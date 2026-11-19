@@ -780,6 +780,70 @@ const factDescription = clampDescription(
   })()
 );
 
+// LAST RESORT BEFORE THE TEMPLATE: the body's OPENING DESCRIPTIVE SENTENCE.
+//
+// WHY (card seo-2026-11-15-002): the tier order was prose -> fact line -> template, but the
+// prose tier demands a full sentence that is not a quote, not a label and not editorial. On
+// profiles whose whole body is a lead note, an H1, a blockquote tagline and a table — Hannah
+// Peacock (1862-1948) has a 1669-character body and still shipped "Hannah Peacock (1862 –
+// 1948) — Telfer family history. 5th generation Telfer." as her Google snippet. The template
+// said nothing a searcher could not already read in the title. This tier takes the body's
+// first sentence after the H1 that carries at least one fact word, whether it arrived as a
+// paragraph, a blockquote tagline or a labelled "**Born:**" line — still the person's own
+// published words, never invented — and the template is left for pages that are genuinely
+// empty. Template-only descriptions were 41% of the site; a searcher should be able to tell
+// two people apart from the snippet.
+const openingSentenceDescription = clampDescription(
+  (() => {
+    const rawBody = String(person.body_markdown || "");
+    // Drop the H1 line and fenced blocks (diagrams are not prose).
+    const lines = rawBody
+      .replace(/```[\s\S]*?```/g, "")
+      .split("\n")
+      .map((l) => l.trim())
+      .filter((l) => l && !/^#\s/.test(l));
+    const FACTS = /\b(?:[Bb]orn|[Bb]aptised|[Bb]aptized|[Dd]ied|[Dd]aughter|[Ss]on|[Ww]ife|[Hh]usband|[Mm]arried|[Ss]pouse|[Ff]ather|[Mm]other|[Ss]ister|[Bb]rother|[Ss]ettled|[Ee]migrated|[Ff]armer|[Ss]hepherd|[Mm]iner|[Cc]arpenter)\b/;
+    for (const sourceLine of lines.slice(0, 14)) {
+      // Const binding is the loop variable; the pipe-split and markdown scrub work on a copy.
+      let line = sourceLine;
+      // Skip our own editorial furniture and source/citation notes.
+      if (/^(?:\*\*)?(?:Sources?|Citations?|Notes?|What is (?:not )?known|Why this page exists|Research (?:gap|note)s?|Unknowns)\b/i.test(line)) return "";
+      if (/^(?:\||-{3,}|>\s*\[!)/.test(line)) continue;
+      // Keep only the first pipe-separated field of a welded run.
+      if (line.includes("|")) line = line.split("|")[0].trim();
+      // Strip markdown/labels but KEEP the fact: "**Born:** 2 May 1866 — Chain of Ponds, SA"
+      // becomes "Born: 2 May 1866 — Chain of Ponds, SA."
+      // A pipe-joined field run ("Born: 19 Oct 1924, Quorn SA | Mother: X | Father: Y")
+      // is a label table, not a sentence — the hygiene gate rejects it and rightly so.
+      // Strip to the FIRST field only, which is the factual claim we want to publish.
+      let t = line
+        .replace(/^>+\s*/, "")
+        .replace(/\s*[|·]\s*/g, " | ")
+        .replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2")
+        .replace(/\[\[([^\]]+)\]\]/g, "$1")
+        .replace(/\*\*\*/g, "")
+        .replace(/\*\*([^*]+)\*\*/g, "$1")
+        .replace(/[*`]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+      if (t.length < 30) continue;
+      if (!FACTS.test(t)) continue;
+      // A label with an empty value is not a fact ("Died: —").
+      if (/^[A-Z][A-Za-z ]{2,20}:\s*(?:—|-|\?)?$/.test(t)) continue;
+      // A bare "Role: Son of X." / "Relation: …" is an editorial chip, not prose — the
+      // template renders it under the name already. Publish the fact, not its label.
+      if (/^(?:Role|Relation|Relationship|Status|Notes?|Source|Generation)\s*:\s*/i.test(t)) continue;
+      // Take the first sentence; keep the whole line when it is already one clause.
+      const sentence = t.match(/^(.{30,}?[.!?])(?=\s+[A-Z"'“(]|\s*$)/);
+      const out = (sentence ? sentence[1] : t).replace(/\s+/g, " ").trim();
+      if (out.length < 30) continue;
+      if (!/[.!?]$/.test(out)) return `${out}.`;
+      return out;
+    }
+    return "";
+  })()
+);
+
 // FIRST PROSE SENTENCE from the person's own body. formatBody has already turned the
 // vault markdown into HTML with inline links; strip the tags, drop a leading heading,
 // and take the first real sentence. This is page content, not boilerplate, so it
@@ -1304,6 +1368,14 @@ const rawSeoDescription = leadSentence && !preferFact && !leadIsAStub && !leadIs
     // fact over our own boilerplate; fall back to the template only when the body has none.
     factDescription && (!fallbackFacts || factDescription.length >= templateDescription.length)
     ? factDescription
+    : // NEW (card seo-2026-11-15-002): before surrendering to the boilerplate, use the body's
+      // own opening fact sentence. The template names the person and counts generations; it
+      // never tells a searcher one thing about them. This tier only fires when nothing above
+      // it produced anything page-specific, so it can only add substance, never replace prose.
+      openingSentenceDescription
+    ? clampDescription(
+        `${person.display_name}${yearText && !nameHasYears ? ` (${yearText})` : ""}. ${openingSentenceDescription}`
+      )
     : templateDescription;
 // FINAL decode before the layout escapes for HTML. Without this, a nickname quote reaches
 // Google as "known as &#34;Cuth&#34;" — 22 pages did (card itc-20261026-2). Decoding here,
