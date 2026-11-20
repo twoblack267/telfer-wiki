@@ -64,7 +64,7 @@ const RECEIPT_KEYS = ["provisional_on", "provisional_why", "provisional_receipt"
 
 function git(args) {
   try {
-    return execFileSync("git", ["-C", VAULT, ...args], {
+    return execFileSync("git", ["-C", VAULT, "-c", "core.quotepath=false", ...args], {
       encoding: "utf8",
       stdio: ["ignore", "pipe", "ignore"],
     });
