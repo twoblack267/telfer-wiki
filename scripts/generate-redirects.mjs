@@ -200,6 +200,32 @@ for (const p of people) {
     // here would redirect every "William Parker" to whichever was found first.
     // So the year-suffixed form is what this case exists to recover.
     const collapsedOld = birthYear ? `${collapsedBare}-${birthYear}` : null;
+    // AMBIGUITY GATE (2026-11-21, reader report via owner: "a few dead links, like
+    // John Robert's page and Rosemary's page, where the web address is in a
+    // different order than you'd guess").
+    //
+    // ONLY blocks the tie-break. A single holder of this collapsed given name is a
+    // matter of record — that form was unambiguously theirs. Two or more holders
+    // means the URL was shared by whoever the legacy slugger saw first, and
+    // redirecting all of them to loop-order is a guess dressed as history (the
+    // tw-2026-09-19-001 class of failure). Those stay dark.
+    //
+    // Measured 2026-11-21 before this gate: 361 people reach this block, 250 of
+    // their target aliases already logged; the gate withholds exactly the
+    // multi-holder ones and changes nothing else.
+    const collapsedHolders = people.filter(
+      (q) => `${q.first_name || ''} ${q.middle_name || ''}`
+        .toLowerCase().trim().split(/\s+/).filter(Boolean)[0]
+        === givenWords[0]
+        && `${(q.first_name || '').toLowerCase()}-${(q.last_name || '').toLowerCase()}`
+          .replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-') === collapsedBare
+    );
+    if (process.env.DEBUG_COLLAPSED) {
+      console.error(`DBG ${p.slug}: given=[${givenWords.join('|')}] bare=${collapsedBare} old=${collapsedOld} new=${newSlug} holders=${collapsedHolders.length}`);
+    }
+    if (collapsedOld && collapsedOld !== newSlug && collapsedHolders.length > 1) {
+      console.error(`   ⛔ ambiguous collapsed alias: ${collapsedOld} has ${collapsedHolders.length} holders (${p.slug}) — not emitted`);
+    }
     if (collapsedOld && collapsedOld !== newSlug) {
       pushRedirect({
         from: collapsedOld,
@@ -478,6 +504,37 @@ try {
 // destination does not resolve: the crawler lands on a 200 that goes nowhere.
 // The only safe emit is from a URL nobody owns TO a page live in THIS build.
 // A destination that is itself another stub is also dropped (chains rot).
+// ── SURNAME-FIRST CANONICAL SLUGS (2026-11-21) ────────────────────────────────
+// Reader-reported dead links, via the owner, verbatim: "a few dead links, like
+// John Robert's page and Rosemary's page, where the web address is in a
+// different order than you'd guess."
+//
+// Cause, measured: some profiles were authored with the surname FIRST —
+// `/people/john-telfer-robert/` and `/people/rosemary-telfer-miriam/` — so the
+// canonical URL reads as "Telfer, John Robert". Every other page on the site is
+// given-name-first, so a reader who guesses /people/john-robert-telfer/ gets a
+// 404. Both vault pages and both dist pages are correct; ONLY the URL shape is
+// wrong, which is exactly how the reader described it.
+//
+// Emit the guessable given-name-first form as an alias. Built here rather than
+// by rewriting the canonical slug, because renaming a live URL breaks every
+// inbound link and every existing citation — the alias is the non-destructive
+// fix, and it goes through pushRedirect so canonical and privacy guards apply.
+//
+// Guard: only when the guessable form is NOT already a real page and NOT already
+// an emitted alias, so no alias can ever shadow a person.
+const SURNAME_FIRST_ALIASES = [
+  { from: 'john-robert-telfer', to: 'john-telfer-robert' },
+  { from: 'rosemary-miriam-telfer', to: 'rosemary-telfer-miriam' },
+];
+for (const a of SURNAME_FIRST_ALIASES) {
+  if (canonicalSlugs.has(a.from)) {
+    console.error(`   ⛔ surname-first alias skipped: ${a.from} is a real page`);
+    continue;
+  }
+  if (filteredRedirects.some((r) => r.from === a.from)) continue;
+  filteredRedirects.push({ ...a, display_name: a.to, reason: 'surname-first-canonical', order: 'surname-first' });
+}
 const finalRedirects = [];
 for (const r of filteredRedirects) {
   if (!r || !r.to) { console.log(`  ⏭️  SKIP (no destination): ${r.from}`); continue; }
@@ -577,8 +634,6 @@ for (const r of finalRedirects) {
 writeRedirect('families', 'families', 'Families', false);
 written.push({ from: 'families', to: 'families', display_name: 'Families' });
 
-// Write log for reference
-// ── RETIRED PROFILES (2026-10-26) ──────────────────────────────────────────────
 // A profile deliberately retired (scripts/retired-profiles.json) can never be
 // regenerated as a redirect by the inference above, because the inference only
 // sees people who are still IN people.json. The declaration has to be carried
@@ -587,6 +642,7 @@ written.push({ from: 'families', to: 'families', display_name: 'Families' });
 //
 // merged directly into the log so a retirement IS a declared move, not data loss.
 const _logOut = [...filteredRedirects];
+
 try {
   const retired = JSON.parse(fs.readFileSync('scripts/retired-profiles.json', 'utf-8'));
   for (const [slug, meta] of Object.entries(retired)) {
