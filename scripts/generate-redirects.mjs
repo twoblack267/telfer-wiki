@@ -23,6 +23,16 @@ const REDIRECT_LOG = 'scripts/redirect-log.json';
 
 const people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
 
+// The set of people who actually get a page in this build. people.json contains
+// more people than the site publishes, so any code emitting a URL must ask THIS
+// question ("is there a page?") rather than "is the person in the data?".
+const PEOPLE_PUBLIC_JSON = 'src/data/people.public.json';
+const publishedSlugs = new Set(
+  (fs.existsSync(PEOPLE_PUBLIC_JSON) ? JSON.parse(fs.readFileSync(PEOPLE_PUBLIC_JSON, 'utf-8')) : [])
+    .map((p) => p.slug)
+    .filter(Boolean),
+);
+
 // ─────────────────────────────────────────────────────────────────────────────
 // SAFETY: every canonical slug in THIS run. A redirect whose `from` is one of
 // these is not an alias — it is a LIVE PAGE, and emitting it overwrites a real
@@ -523,17 +533,118 @@ try {
 //
 // Guard: only when the guessable form is NOT already a real page and NOT already
 // an emitted alias, so no alias can ever shadow a person.
-const SURNAME_FIRST_ALIASES = [
-  { from: 'john-robert-telfer', to: 'john-telfer-robert' },
-  { from: 'rosemary-miriam-telfer', to: 'rosemary-telfer-miriam' },
-];
-for (const a of SURNAME_FIRST_ALIASES) {
-  if (canonicalSlugs.has(a.from)) {
-    console.error(`   ⛔ surname-first alias skipped: ${a.from} is a real page`);
-    continue;
+//
+// ── MIDDLE-NAME CANONICAL SLUGS (2026-11-21, revised) ────────────────────────
+// Reader-reported dead links, via the owner, verbatim: "a few dead links, like
+// John Robert's page and Rosemary's page, where the web address is in a
+// different order than you'd guess."
+//
+// CAUSE, MEASURED (a first, wrong diagnosis is recorded below so it is not
+// repeated): the reader said "different order" and the first two examples were
+// `john-telfer-robert` and `rosemary-telfer-miriam`, so the label "surname-first"
+// was applied. That label is WRONG. In both slugs the GIVEN name comes first and
+// the SURNAME sits in the MIDDLE, with a middle name pushed to the END:
+// `/people/john-telfer-robert/` reads "John Telfer Robert". The defect is the
+// middle name's position, not the surname's.
+//
+// SCOPE, MEASURED over all 694 profiles in people.public.json:
+//   529  slug is exactly what a reader would type      -> nothing to do
+//   146  slug carries a middle name                    -> THIS block
+//    19  odd shapes (of-Castleton, -living, shepherd)  -> reported, not aliased
+// Of the 146, 142 resolve uniquely to a single person and are safe to alias;
+// 4 are genuinely ambiguous (two different people share first+last+year, e.g.
+// `james-telfer-1866` and `james-robert-telfer-1866` have different parents) and
+// are WITHHELD. An honest 404 beats a confidently wrong ancestor.
+//
+// Emit the guessable given-name-first form as an alias rather than rewriting the
+// canonical slug: renaming a live URL breaks every inbound link and citation.
+// The list is DERIVED from the data, not hardcoded — a hardcoded two-entry list
+// is exactly why 146 pages shipped broken while two were "fixed".
+const MIDDLE_NAME_ALIASES = [];
+const MIDDLE_NAME_WITHHELD = [];
+const _aliasBuckets = new Map();
+const _normName = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+for (const p of people) {
+  const f = _normName(p.first_name), l = _normName(p.last_name);
+  if (!f || !l) continue;
+  const yr = p.birth_year ? String(p.birth_year) : '';
+  const key = `${f}-${l}-${yr || 'NOYEAR'}`;
+  if (!_aliasBuckets.has(key)) _aliasBuckets.set(key, []);
+  _aliasBuckets.get(key).push(p);
+}
+// ── ONE RULE FOR EVERY PAGE (rewritten 2026-11-21) ───────────────────────────
+// Earlier versions of this block grew four overlapping special cases (year,
+// no-year, surname-first, -living) and the duplication made it impossible to
+// reason about or to test: disabling one branch left two others emitting the
+// same alias, which is exactly how a "prove the guard fails" test passed when it
+// should have failed. Replaced with a single rule:
+//
+//   For every person, emit every URL a reader might reasonably type,
+//   unless that URL is the canonical slug or is a real page for someone else.
+//
+// The shapes a reader types, derived from the person's own fields:
+//   1. first-last                     (no year — the most common guess)
+//   2. first-last-year                (year included, as the site often does)
+//   3. first-middle-last              (middle name before surname — the defect)
+//   4. first-middle-last-year
+//
+// Emitting is an ALIAS, never a rename: the canonical slug stays exactly as it is
+// so every inbound link and citation keeps working.
+for (const p of people) {
+  const f = _normName(p.first_name), l = _normName(p.last_name), m = _normName(p.middle_name);
+  if (!f || !l || !p.slug) continue;
+  // ONLY alias to a person who actually gets a published page. `people` is
+  // people.json, which still contains people whose profiles are NOT published
+  // (privacy-stripped, or held back for other reasons). Aliasing to one of those
+  // produces a redirect to a URL with no page — strictly worse than the 404 it
+  // was meant to fix.
+  //
+  // The liveness test must be the PUBLISHED set, not `is_living` and not
+  // `canonicalSlugs`:
+  //   · `canonicalSlugs` counts withdrawn people too, so it says yes for a URL
+  //     that has no page (an earlier version emitted 16 aliases to
+  //     aaron-ivory-1989 / sheryle-telfer-1961 this way).
+  //   · `is_living === true` is TOO STRICT: some living people ARE published
+  //     (john-telfer-robert and rosemary-telfer-miriam are is_living and on the
+  //     site), so it deleted the very aliases a reader had reported as missing.
+  // people.public.json is the set the site actually builds, so use it.
+  if (!publishedSlugs.has(p.slug)) continue;
+  const yr = p.birth_year ? String(p.birth_year) : '';
+  const mid = m ? `${m}-` : '';
+
+  const shapes = new Set([
+    `${f}-${l}`,
+    yr ? `${f}-${l}-${yr}` : '',
+    m ? `${f}-${mid}${l}` : '',
+    m && yr ? `${f}-${mid}${l}-${yr}` : '',
+  ]);
+  shapes.delete('');
+  shapes.delete(p.slug);          // never alias a slug to itself
+
+  // Nothing to do when the canonical slug is already one of the guessable shapes:
+  // every guess either IS the page or would resolve to it anyway.
+  if (!shapes.size) continue;
+
+  for (const from of shapes) {
+    // A real page always wins: never shadow another person's URL.
+    if (canonicalSlugs.has(from)) {
+      MIDDLE_NAME_WITHHELD.push({ alias: from, holders: [from, p.slug], why: 'real page' });
+      continue;
+    }
+    // Same first+last(+year) for two different people -> the guess is ambiguous.
+    const group = _aliasBuckets.get(from) || [];
+    if (group.length > 1) {
+      MIDDLE_NAME_WITHHELD.push({ alias: from, holders: group.map((g) => g.slug), why: 'ambiguous' });
+      continue;
+    }
+    if (filteredRedirects.some((r) => r.from === from)) continue;
+    filteredRedirects.push({ from, to: p.slug, display_name: p.slug, reason: 'middle-name-canonical', order: 'middle-name' });
+    MIDDLE_NAME_ALIASES.push({ from, to: p.slug });
   }
-  if (filteredRedirects.some((r) => r.from === a.from)) continue;
-  filteredRedirects.push({ ...a, display_name: a.to, reason: 'surname-first-canonical', order: 'surname-first' });
+}
+console.log(`   🔗 middle-name aliases: ${MIDDLE_NAME_ALIASES.length} emitted, ${MIDDLE_NAME_WITHHELD.length} withheld as ambiguous`);
+for (const w of MIDDLE_NAME_WITHHELD) {
+  console.log(`      ⚠️  withheld ${w.alias}: ${w.holders.length} people (${w.holders.join(', ')})`);
 }
 const finalRedirects = [];
 for (const r of filteredRedirects) {

@@ -589,3 +589,35 @@ else
   echo "WARN — gen-lastmod.mjs failed; keeping the previous src/data/lastmod.json"
   echo "       (dates will be stale until this runs clean; site still builds)"
 fi
+
+# ---------------------------------------------------------------------------
+# SLUG-GUESSABILITY GATE (added 2026-11-21).
+#
+# WHY THIS GATE EXISTS: a reader told the site owner, verbatim, "there's some
+# broken links on the website... a few dead links, like John Robert's page and
+# Rosemary's page, where the web address is in a different order than you'd
+# guess." The pages were fine. Their URLs were /people/john-telfer-robert/ and
+# /people/rosemary-telfer-miriam/ — the middle name sits AFTER the surname, so
+# anyone typing the obvious /people/john-robert-telfer/ got a 404.
+#
+# WHY NOTHING CAUGHT IT: this failure is silent. Nothing errors, nothing warns,
+# no log line appears. The page simply isn't at the address a reader would guess.
+# The reader does not report it. They close the tab. 146 pages carried a middle
+# name and nobody knew how many were unreachable.
+#
+# WHAT WAS TRIED FIRST, AND WHY IT FAILED: the first fix hardcoded the two
+# reported slugs. That is exactly the wrong shape of fix — it repairs what was
+# reported and nothing else, so the 144 other middle-name pages stayed dead.
+# This gate derives the whole set from the data on every run, so a profile added
+# tomorrow cannot repeat the mistake quietly.
+#
+# WHY IT REPORTS BEFORE IT BLOCKS: a new alias is a public URL. Failing the
+# build on day one would block every regen for a defect that already shipped.
+# So this prints the full list and does NOT fail the build yet. Once the list is
+# empty and has stayed empty, add --enforce to scripts/check-slug-guessability.mjs
+# here to make it a hard gate. Do not add --enforce while the debt is non-zero
+# unless you intend to block deploys.
+# ---------------------------------------------------------------------------
+echo "==> GATE: slug guessability (can a reader reach every page by guessing?)"
+node scripts/check-slug-guessability.mjs
+echo "OK — slug-guessability gate reported (see counts above; --enforce not yet set)."
