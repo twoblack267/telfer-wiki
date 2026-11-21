@@ -619,5 +619,13 @@ fi
 # unless you intend to block deploys.
 # ---------------------------------------------------------------------------
 echo "==> GATE: slug guessability (can a reader reach every page by guessing?)"
-node scripts/check-slug-guessability.mjs
-echo "OK — slug-guessability gate reported (see counts above; --enforce not yet set)."
+if node scripts/check-slug-guessability.mjs --enforce; then
+  echo "OK — slug-guessability gate passed."
+else
+  echo "GATE FAILED — slug-guessability: a published page is not reachable at the"
+  echo "              URL a reader would type. Either emit an alias (preferred) or,"
+  echo "              if the guess is ambiguous, add it to the withheld set with a"
+  echo "              reason. Do NOT rename the canonical slug — that breaks every"
+  echo "              inbound link and citation."
+  exit 1
+fi
