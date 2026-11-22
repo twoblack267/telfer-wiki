@@ -3499,6 +3499,10 @@
       "slug": "walter-vale",
       "id": "Walter Vale (1890)",
       "generation": 6
+    },
+    {
+      "slug": "john-mahar",
+      "id": "John Mahar (d.1938)"
     }
   ],
   "edges": {
@@ -6994,6 +6998,10 @@
       {
         "from": "francis-telfer-paynter-1862",
         "to": "frederick-albert-paynter"
+      },
+      {
+        "from": "john-mahar",
+        "to": "mildred-mary-mahar"
       },
       {
         "from": "hannah-peacock-1862",
