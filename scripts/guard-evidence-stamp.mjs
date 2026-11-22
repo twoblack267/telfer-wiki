@@ -52,9 +52,11 @@
  */
 
 import { readFileSync, readdirSync } from "node:fs";
-import { join } from "node:path";
+import { join, dirname } from "node:path";
 import { homedir } from "node:os";
+import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
+import { isLegalLevel, LEGAL_VALUES } from "../src/data/evidence-levels.mjs";
 
 const VAULT = process.env.VAULT_DIR || join(homedir(), "ObsidianVault");
 const PEOPLE_REL = "Family History/People";
@@ -170,8 +172,45 @@ for (const rel of [...targets].sort()) {
     }
   }
 
+  // ── THE ENUM IS CLOSED (added 2026-11-22, card tk-vault-evidence-level-gap) ──
+  // The gate used to accept `evidence_level: <any value>`, which meant a page
+  // could carry `evidence_level: totally-made-up` and pass. Worse: the site
+  // renders a banner for exactly five values, so any other value shows NO
+  // banner at all — the page looks clean because it says nothing. Three pages
+  // were doing precisely that. Validity is now checked, forward only, against
+  // the single definition in src/data/evidence-levels.mjs.
+  if (hasLevel && !isLegalLevel(fm.evidence_level)) {
+    offences.push({
+      name,
+      why:
+        `evidence_level: "${fm.evidence_level}" is not a legal rating — no banner ` +
+        `will render and the page will look unrated but clean. Legal values: ` +
+        LEGAL_VALUES.join(" | ") + ". (Card tk-vault-evidence-level-gap.)",
+    });
+    continue;
+  }
+
   if (fm.evidence_level === "unverified") {
-    // honest minimum: it admits it is a lead. Fine. But it must not also claim a
+    // honest minimum: it admits it is a lead. Fine for a page that predates the
+    // convention (forward-only), but a page touched TODAY must name its witness.
+    // "unverified" with nothing named is a shrug, not a rating.
+    const named =
+      fm.single_source_ref ||
+      fm.source_citation ||
+      fm.source_ref ||
+      fm.primary_source;
+    if (!named) {
+      offences.push({
+        name,
+        why:
+          "evidence_level: unverified with no witness named — a changed page must " +
+          "say WHICH source it is unverified against (`single_source_ref: <...>`), " +
+          "or carry `single_source: true` + `source_count: 1` with a banner. " +
+          "(Card tk-vault-evidence-level-gap.)",
+      });
+      continue;
+    }
+    // honest minimum: it admits it is a lead. But it must not also claim a
     // verification it never had.
     if (String(fm.single_source) === "false") {
       offences.push({

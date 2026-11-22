@@ -30,8 +30,10 @@ Exit codes: 0 clean (or only below-threshold notes), 1 findings at/above --fail-
 """
 import os, re, sys, json, glob, argparse
 
-BASE = "/Users/marktelfer/ObsidianVault/Family History/People"
-CORRECTION = re.compile(r"formerly|corrected|previously (?:recorded|given)|was\s+\d{4}", re.I)
+BASE = os.environ.get("TELFER_PEOPLE_DIR") or "/Users/marktelfer/ObsidianVault/Family History/People"
+CORRECTION = re.compile(r"formerly|corrected|previously (?:recorded|given)|was\s+\d{4}"
+                         r"|not\s+(?:\d{4}|\*\*\d{4})"          # "is 1834, not 1835"
+                         r"|renamed\s+from|settled|canonical|inferred|flattened\s+ocr", re.I)
 # A page that QUOTES a value it has already judged wrong is not self-contradictory:
 # it is an audit record. This is the shape these pages actually take --
 #   "FindAGrave (1882-1953) ... the death date given on this memorial is incorrect"
@@ -133,9 +135,27 @@ def _index():
         m = re.match(r"^(.*?)\s*(?:\(b\.\s*)?(?:c\.)?(1[5-9]\d\d|20[0-2]\d)(?:\s*[–\u2013\u2014-]\s*((?:1[5-9]\d\d)|(?:20[0-2]\d)))?\s*\)?$", stem)
         if not m:
             continue
-        nm = m.group(1).strip().lower()
-        idx.setdefault((nm, int(m.group(2)), int(m.group(3)) if m.group(3) else None), 0)
-        idx[(nm, int(m.group(2)), int(m.group(3)) if m.group(3) else None)] += 1
+        # A REDIRECT STUB is not a second claimant of the person: it is the same
+        # person under an ASCII-hyphen stem, kept only to point at the canonical
+        # page. Counting it reports "duplicate person" on a vault that is correct.
+        try:
+            _head = open(f, encoding="utf-8").read(600)
+        except Exception:
+            _head = ""
+        if re.search(r"^\s*-\s*redirect\s*$", _head, re.M) or "REDIRECT STUB" in _head:
+            continue
+        # NOTE: group(1) is non-greedy and the optional "(" is not part of any
+        # required group, so the name comes back as "gus test (" — the opening
+        # bracket leaks in and the key never matches page_claims()'s "gus test".
+        # SC7 was therefore silent on the entire real vault. Strip trailing
+        # brackets/punctuation and collapse whitespace before keying.
+        nm = re.sub(r"[\s\(\[]+$", "", m.group(1)).strip().lower()
+        nm = re.sub(r"\s+", " ", nm)
+        if not nm:
+            continue
+        key = (nm, int(m.group(2)), int(m.group(3)) if m.group(3) else None)
+        idx.setdefault(key, 0)
+        idx[key] += 1
     _INDEX = idx
     return idx
 
@@ -243,9 +263,46 @@ def norm(n):
     return re.sub(r"\s+", " ", n.replace("[[", "").replace("]]", "")).strip().lower()
 
 
+_RANGE = re.compile(r"born\b[^.\n]{0,80}?\b(1[5-9]\d\d)\s*(?:[-–\u2013]|to|and)\s*(1[5-9]\d\d)\b"
+                    r"|birth\s+(?:year\s+)?(?:properly\s+)?(?:stated\s+as\s+)?(?:a\s+)?range\b"
+                    r"[^.\n]{0,60}?\b(1[5-9]\d\d)\s*(?:[-–\u2013]|to|and)\s*(1[5-9]\d\d)\b", re.I)
+
+
+def _in_stated_birth_range(body, death_year, age):
+    """True if the page states THIS person's birth as a RANGE wide enough to make `age` honest.
+
+    'Ellen Jane Liebich (1865–1894)' says in prose that her birth is properly a range of
+    about 1865–1869 while the stub filename keeps 1865; 'aged 25' in 1894 implies ~1869 —
+    inside the range she publishes. Reporting that would punish the page for being MORE
+    honest than its own title.
+
+    The range MUST be anchored to a statement about the SUBJECT's birth ("born ... 1865 to
+    1869", "birth ... a range of 1865–1869"). Scanning every lifespan span on the page is
+    wrong: a sibling's dates (1875–1954) would otherwise excuse a 9-year error in the
+    subject's own age. That mistake silenced a real defect once already.
+    """
+    for m in _RANGE.finditer(body):
+        g = [x for x in m.groups() if x]
+        lo, hi = int(g[0]), int(g[1])
+        if lo <= hi and (hi - lo) >= 2 and lo <= death_year - age <= hi:
+            return True
+    return False
+
+
+_CONFLICT_FLAG = re.compile(
+    r"SOURCE\s+CONFLICT[^\n]{0,120}(?:FLAGGED|UNRESOLVED)|FLAGGED\s+FOR\s+MARK",
+    re.I)
+
+
 def find_pages(paths):
     if paths:
-        return paths
+        out = []
+        for p in paths:
+            if os.path.isdir(p):
+                out.extend(sorted(glob.glob(os.path.join(p, "*.md"))))
+            else:
+                out.append(p)
+        return out
     return sorted(glob.glob(os.path.join(BASE, "*.md")))
 
 
@@ -309,7 +366,21 @@ def check(path):
         # this page's OWN cross-reference to a namesake must be exempt the same way.
         namesake = re.compile(r"distinct person|same-name|namesake|a different (?:son|daughter|person|man|woman)", re.I)
         seen = {}
+        _in_sources = False
         for line in body.splitlines():
+            # A Sources/References block CITES titles; it does not assert them. FindAGrave's
+            # own title is "[David Lyndon Telfer (1958–1996)]" on a page whose subject was
+            # born 1957 — quoting the memorial's title is not the page contradicting itself.
+            if re.match(r"^#{2,6}\s*(?:\d+[a-z]?\.?\s*)?(?:sources?|references?|"
+                        r"citations?|bibliography|documents?\s+(?:used|consulted)|"
+                        r"evidence\s+(?:cited|used))\b", line.strip(), re.I):
+                _in_sources = True
+            elif re.match(r"^#{1,6}\s", line.strip()):
+                _in_sources = False
+            if _in_sources:
+                continue
+            if re.match(r"^\s*[-*]\s+\*\*[^*]+\*\*\s+—\s", line) and "](" in line:
+                continue                      # a citation row: "**FindAGrave** — [Title](url)"
             if CORRECTION.search(line):
                 continue
             for m in adj_finditer(line):
@@ -374,7 +445,16 @@ def check(path):
     # Anything else is a relative's age on a shared line, a source register extract
     # ("TELFER, Susan - aged 80"), or a memorial's error already recorded on the page.
     if by and dy and subj_pat:
+        _head_owner = None      # the person a ####/### heading last introduced
         for line in body.splitlines():
+            _h = re.match(r"^#{3,6}\s*(?:\d+[a-z]?\.\s*)?(.+)$", line.strip())
+            if _h:
+                _t = _h.group(1)
+                # "#### 1. THOMAS PAYNTER" / "### Children of ..." -> an owned block
+                if not re.match(r"^(children|marriage|vital|life|sources|notes|"
+                                r"family|timeline|summary|research|appendix)\b", _t, re.I):
+                    _head_owner = _t if not subj_pat.search(_t) else None
+                continue        # a heading is never an age claim
             if CORRECTION.search(line) or DISAGREE.search(line):
                 continue
             if NOT_A_CLAIM.search(line):
@@ -390,16 +470,28 @@ def check(path):
                     continue
                 if OTHER_PERSON.search(line):
                     continue    # "Died ... aged 86. Buried ..." about a son, not the subject
+                if _head_owner:
+                    continue    # a #### heading introduced somebody else: their block
+                # THE AGE MUST BELONG TO THIS DEATH. "Died 7 Oct 1942 ... aged 75" on a
+                # page titled (1868-1908) is not a contradiction: the page is recounting
+                # a corrected death date, and the age belongs to 1942. Only compare when
+                # the line itself carries the page's death year, or carries no year at
+                # all (then it is plainly about the subject's own death).
+                _yrs = {int(y) for y in re.findall(r"\b(1[5-9]\d\d|20[0-2]\d)\b", line)}
+                if _yrs and dy not in _yrs:
+                    continue
                 for a in re.finditer(r"\b(?:aged|age\s+of)\s+(\d{1,3})\b"
-                                     r"(?!\s*(?:month|week|day|minute|hour|year))", line, re.I):
+                                     r"(?!\s*(?:months?|weeks?|days?|minutes?|hours?|min\b|hrs?\b))", line, re.I):
                     v = int(a.group(1))
                     if 1 <= v <= 115 and abs((dy - by) - v) > 1:
+                        if _in_stated_birth_range(body, dy, v):
+                            continue
                         findings.append(dict(code="SC2", sev="MED",
                                              msg=f"'aged {v}' but own lifespan {by}–{dy} is {dy - by} years",
                                              line=line.strip()[:180]))
                 continue
             for m in re.finditer(r"\b(?:aged|age\s+of)\s+(\d{1,3})\b"
-                                 r"(?!\s*(?:month|week|day|minute|hour|year))", line, re.I):
+                                 r"(?!\s*(?:months?|weeks?|days?|minutes?|hours?|min\b|hrs?\b))", line, re.I):
                 age = int(m.group(1))
                 if age < 1 or age > 115:
                     continue
@@ -411,6 +503,20 @@ def check(path):
                 own = [x for x in spans if int(x.group(1)) == by and int(x.group(2)) == dy]
                 if spans and not own:
                     continue        # another life intervenes (a child on the same row)
+                # The age must belong to THIS death: a page recounting a corrected death
+                # ("died 7 Oct 1942, aged 75") is not contradicting its own (1868-1908)
+                # title — the 75 belongs to 1942.
+                _yrs = {int(y) for y in re.findall(r"\b(1[5-9]\d\d|20[0-2]\d)\b", line)}
+                if _yrs and dy not in _yrs:
+                    continue
+                if _in_stated_birth_range(body, dy, age):
+                    continue
+                # A page that PUBLISHES the conflict as a flagged disagreement is not
+                # contradicting itself — it is doing exactly what the rulebook demands
+                # (How We Work line 199: flag for Mark, never quietly resolve). The age is
+                # quoted as its source states it and the flag is the resolution.
+                if _CONFLICT_FLAG.search(body):
+                    continue
                 other_names = re.findall(r"\b[A-Z][a-z]+\s+[A-Z][a-z]+\b", pre[nm.end():])
                 if other_names:
                     continue        # somebody else is named between: their age
@@ -419,6 +525,9 @@ def check(path):
                 # ... aged 88"). If another person's death/age statement sits between the
                 # subject's name and this age, the age is theirs.
                 between = pre[nm.end():]
+                if _head_owner and not re.search(
+                        r"\b(?:also|and)\b", between, re.I):
+                    continue    # inside another person's #### block: their age
                 if re.search(r"\b(?:also|and|his\s+wife|her\s+husband|son|daughter|"
                              r"brother|sister|mother|father)\b", between, re.I):
                     continue
@@ -439,9 +548,38 @@ def check(path):
                 # contradicted by an age that fits anywhere inside its own range.
                 rng = re.search(r"(1[5-9]\d\d)\s*[–\u2013\u2014-]\s*(1[5-9]\d\d)", pre)
                 if rng and int(rng.group(1)) <= by <= int(rng.group(2)):
+                    # The range belongs to the SUBJECT, not to a sibling's registers.
+                    lo_ok = abs((dy - int(rng.group(1))) - age) <= 1
+                    hi_ok = abs((dy - int(rng.group(2))) - age) <= 1
+                    if lo_ok or hi_ok:
+                        continue        # the age fits somewhere inside the stated range
                     by_lo = int(rng.group(1))
                 else:
                     by_lo = by
+                # A page with an EXACT birth date can be checked to the month, not just
+                # the year -- "born 23 Aug 1908, died 2 Jun 1969, aged 69" is 60, not 69.
+                exact = None
+                bdm = re.search(r"(\d{1,2})\s+([A-Z][a-z]+)\s+(\d{4})", fm.get("birth_date", "")
+                                or fm.get("birth", "") or "")
+                ddm = re.search(r"(\d{1,2})\s+([A-Z][a-z]+)\s+(\d{4})", fm.get("death_date", "")
+                                or fm.get("death", "") or "")
+                if bdm is not None and ddm is not None:
+                    MO = {m: i + 1 for i, m in enumerate(
+                        "January February March April May June July August September "
+                        "October November December".split())}
+                    bm, dm = MO.get(bdm.group(2)), MO.get(ddm.group(2))
+                    if bm is not None and dm is not None:
+                        bday, byr = int(bdm.group(1)), int(bdm.group(3))
+                        dday, dyr = int(ddm.group(1)), int(ddm.group(3))
+                        exact = dyr - byr - (1 if (dm, dday) < (bm, bday) else 0)
+                if exact is not None:
+                    if abs(exact - age) <= 1:
+                        continue        # exact date agrees: the age was right all along
+                    findings.append(dict(code="SC2", sev="HIGH",
+                                         msg=f"'aged {age}' but exact dates {bdm.group(0)} to "
+                                             f"{ddm.group(0)} give {exact} years",
+                                         line=line.strip()[:180]))
+                    continue
                 if abs((dy - by_lo) - age) > 1 and abs(lived - age) > 1:
                     findings.append(dict(code="SC2", sev="MED",
                                          msg=f"'aged {age}' but own lifespan {by}–{dy} is {lived} years",
@@ -529,6 +667,14 @@ def check(path):
                     # birth, and "est. birth ... m. 16 Nov 1864" after a parent's name is
                     # the parent's marriage. Take the NEAREST qualifying year only.
                     gap = before[len(kw.group(0)) if False else 0:]
+                    # A POSSESSIVE subject is not the subject: "Parents' marriage ...
+                    # m. 16 Nov 1864" is the parents' date, correctly labelled.
+                    poss = re.search(
+                        r"\b(?:parents?|father|mother|grandparents?|siblings?|"
+                        r"brother|sister|sons?|daughters?|children)\s*[’']?\s*"
+                        r"(?:marriage|married|m\.)\b", line, re.I)
+                    if poss and kw.start() > poss.start():
+                        continue        # the labelled possessive owns this date
                     if re.search(r"[A-Za-z]{3,}", re.sub(
                             r"\b(?:on|the|of|and|at|in|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|"
                             r"January|February|March|April|June|July|August|September|October|November|December|"

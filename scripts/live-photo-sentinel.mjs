@@ -60,12 +60,42 @@ const SETTLE_MS = parseInt(getArg('--settle', '2500'), 10);
 // The pool must therefore be the set of pages that are SUPPOSED to exist.
 import { PRIVACY_STRIP_SLUGS } from '../src/data/privacy-exclusions.mjs';
 
+// LIVING-PERSON FENCE (added 2026-11-22, card tk-3d81e6b25a0f).
+// Measured leak: 12 living people had already been swept by this pool —
+// mark-telfer-1986, kylie-telfer-1982, amy-telfer, mitchell-telfer-2008,
+// david-telfer-merrick-2000, penny-telfer-1960, ruth-telfer-1931,
+// kathleen-hancock, timothy-telfer-1959, peter-telfer, sandra-lee-smith,
+// leonard-arthur-dance. The pool asked only "has photos?" and "withdrawn?",
+// never "is this person alive?" — so the sentinel walked a real browser over
+// living people's pages. Neither `single_source` nor a photo count is consent.
+// Same three independent guards as ~/.hermes/scripts/bender-eyes.sh, so one
+// bad flag cannot leak a living person:
+//   1. is_living — the data layer's own flag,
+//   2. PRIVACY_STRIP_SLUGS — the owner-ruled withdrawals (incl. the Ivory branch),
+//   3. a hard birth-year cutoff: anyone born inside 105 years is out.
+const CUTOFF_YEAR = new Date().getFullYear() - 105;
+
 const people = JSON.parse(readFileSync(path.join(REPO, 'src/data/people.json'), 'utf8'));
+const excluded = [];
 const pool = people
   .filter((p) => Array.isArray(p.images) && p.images.length > 0)
   // A withdrawn profile is not a candidate: its 404 is the desired state.
   .filter((p) => !PRIVACY_STRIP_SLUGS.has(p.slug))
+  .filter((p) => {
+    if (p.is_living === true) { excluded.push({ slug: p.slug, why: 'is_living' }); return false; }
+    const y = p.birth_year || (p.birth_year_display ? parseInt(p.birth_year_display, 10) || null : null);
+    // No known birth year is NOT a pass — an unknown date cannot prove the
+    // person is dead, and the fence is only as good as what it can prove.
+    if (!y) { excluded.push({ slug: p.slug, why: 'no birth year' }); return false; }
+    if (y > CUTOFF_YEAR) { excluded.push({ slug: p.slug, why: `born ${y} (inside 105y)` }); return false; }
+    return true;
+  })
   .map((p) => ({ slug: p.slug, expected: p.images.length }));
+
+if (process.env.SENTINEL_VERBOSE) {
+  console.error(`   fence: ${pool.length} eligible, ${excluded.length} excluded`);
+  for (const e of excluded) console.error(`     ✗ ${e.slug} — ${e.why}`);
+}
 
 if (pool.length === 0) {
   console.error('❌ live-photo-sentinel: no photo-bearing profiles in people.json — refusing to claim a pass');
