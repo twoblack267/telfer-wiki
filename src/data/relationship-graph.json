@@ -3504,6 +3504,11 @@
       "slug": "john-mahar",
       "id": "John Mahar (d.1938)",
       "generation": 99
+    },
+    {
+      "slug": "mary-jane-liebich",
+      "id": "Mary Jane Jane Liebich (1837)",
+      "generation": 5
     }
   ],
   "edges": {
@@ -3867,6 +3872,10 @@
       {
         "from": "jean-murray-1810",
         "to": "elizabeth-hannah-telfer-1836"
+      },
+      {
+        "from": "mary-jane-liebich",
+        "to": "elizabeth-liebich-1859"
       },
       {
         "from": "hannah-baker-1855",

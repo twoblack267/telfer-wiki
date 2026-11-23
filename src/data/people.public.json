@@ -4823,6 +4823,65 @@
     "person_photo": null
   },
   {
+    "id": "Mary Jane Jane Liebich (1837)",
+    "slug": "mary-jane-liebich",
+    "first_name": "Mary Jane",
+    "middle_name": "Jane",
+    "last_name": "Liebich",
+    "birth_year": 1837,
+    "death_year": 1913,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1837",
+    "death_year_display": "1913",
+    "display_name": "Mary Jane Jane Liebich",
+    "title": "Mary Jane Liebich (née Orr)",
+    "lifespan": "1837 – 1913",
+    "generation": 5,
+    "is_living": false,
+    "is_deceased": true,
+    "evidence_level": "verified",
+    "single_source": false,
+    "provisional_why": null,
+    "body_markdown": "# Mary Jane Liebich (née Orr)\n\n**1837 – 16 July 1913** *(aged 76)*\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Spouse** | Gustave Johann Liebich (1836–1895) — m. South Australia |\n| **Children** | [[Elizabeth Jane Liebich (1859–1919)]] · Agnes Liebich (1863–1940) · Gustav Johannes Liebich (1872–1935) · Henry Charles Liebich (1876–1954) · Alice Maud Mary Liebich (1881–1949) |\n| Father | James Orr |\n| Mother | Elizabeth Orr |\n\n## Life Summary\n\nMary Jane Orr was born at Lurgan, County Armagh, in the north of Ireland, the daughter of James and Elizabeth Orr. She arrived in Adelaide aboard the *Victoria Regia* in 1855, part of the assisted emigration that carried a generation of Ulster Protestant families south to the newly settled districts of South Australia. She married Gustave Johann Liebich, a Prussian-born migrant, and the couple raised a family of five children in the Mid North, at Tarcowie on the western flank of the Flinders Ranges.\n\nShe died at Bruce on 16 July 1913, aged 76, and is buried at Tarcowie Cemetery, plot 255.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 1837 | Born at Lurgan, County Armagh, Ireland, daughter of James and Elizabeth Orr |\n| 1855 | Arrives in Adelaide aboard the *Victoria Regia* |\n| c. 1858 | Marries Gustave Johann Liebich in South Australia |\n| 1859 | Birth of daughter Elizabeth Jane |\n| 1863 | Birth of daughter Agnes |\n| 1872 | Birth of son Gustav Johannes |\n| 1876 | Birth of son Henry Charles |\n| 1881 | Birth of daughter Alice Maud Mary |\n| 31 Jul 1895 | Death of husband Gustave Johann |\n| 16 Jul 1913 | Dies at Bruce, South Australia, aged 76; buried Tarcowie Cemetery, plot 255 |\n\n## Sources\n\n- **Source:** [Genealogy SA — South Australian Death Registrations](https://www.genealogysa.org.au/) — entry: `LIEBICH Mary Jane`, 16-Jul-1913, age 76, female, relative `Gustave Johann LIEBICH (DH)`, district Frome, book/page 376/219 — accessed 24 November 2026.\n- **Source:** [Find a Grave — Mary Jane Orr Liebich, Memorial ID 188492258](https://www.findagrave.com/memorial/188492258/mary-jane-liebich) — Tarcowie Cemetery, plot 255; died 16 Jul 1913 at Bruce; widow of Gustave Johann Liebich (1836–1895) — accessed 24 November 2026.\n- **Source:** [WikiTree — Liebich-76](https://www.wikitree.com/wiki/Liebich-76) — corroborating compiled tree, not counted among the two independent groups — accessed 24 November 2026.",
+    "maiden_name": null,
+    "roles": [],
+    "tags": [
+      "bio",
+      "family",
+      "genealogy",
+      "liebich",
+      "orr",
+      "south-australia"
+    ],
+    "parents": [],
+    "children": [
+      "elizabeth-liebich-1859",
+      {
+        "plain_name": "Agnes Leopold"
+      },
+      {
+        "plain_name": "Gustav Johannes Liebich"
+      },
+      {
+        "plain_name": "Henry Charles Liebich"
+      },
+      {
+        "plain_name": "Alice Maud Mary Voigt"
+      }
+    ],
+    "spouses": [
+      {
+        "plain_name": "Gustave Johann Liebich (no profile)"
+      }
+    ],
+    "siblings": [],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
     "id": "Marion Lawrie (1838)",
     "slug": "marion-lawrie-1838",
     "first_name": "Marion",
@@ -7139,7 +7198,7 @@
     "evidence_level": null,
     "single_source": false,
     "provisional_why": null,
-    "body_markdown": "# Elizabeth Jane Liebich (1859–1919)\n\n> Verified 2-source (FindAGrave headstone + WikiTree citing Genealogy SA birth register). See Sources below.\n\n## Lifespan\n\n**Born:** 12 December 1859 — South Australia\n**Died:** 14 December 1919 (aged 60) — burial Quorn (Flinders Ranges), South Australia\n**Buried:** Quorn Town Cemetery, Quorn, SA\n\n## Family\n\n- **Father:** Gustav Johann Liebich (~1835–1895) — born Silesia, Prussia (per WikiTree)\n- **Mother:** Mary Jane Hoare (~1837–1913) — born Belfast, Ireland (per WikiTree)\n- **Spouse:** [[Thomas Paynter (1859–1946)]] — m. 1 Dec 1881, Tarcowie, SA (book) / Yongala (WikiTree — same Peterborough-region district)\n- **Children:** Richard William John (1882–1960), Lillian Ellen Jayne (→Hatchard), Gustav Francis George, Ethel Emily Elizabeth (→Flavel), Dinah Alice Mary (→Mundy), Agnes Letitia May Rose (→Hucks), Thomas Frederick Edward (1903–1940), Helena Florence Daisy (→Hill)\n\n## Life Summary\n\nElizabeth Jane Liebich married Thomas Paynter, eldest son of Richard Paynter and Jean (Telfer) Paynter, in the Peterborough region of South Australia (book gives Tarcowie; WikiTree gives Yongala — likely the same registration district). They had a large family of eight children. She died on 14 December 1919 and is buried at Quorn Town Cemetery. *(Family relationships per From the Borders to the Bush; vital dates per Find A Grave headstone and WikiTree citing Genealogy SA.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 12 Dec 1859 | Born, South Australia |\n| 1 Dec 1881 | Married Thomas Paynter (Tarcowie, SA) |\n| 1882–1906 | Children born (eight) |\n| 14 Dec 1919 | Died; buried Quorn Town Cemetery, SA |\n\n## Sources\n\n1. **Find A Grave:** [Elizabeth Jane Liebich Paynter — memorial 195864845](https://www.findagrave.com/memorial/195864845/elizabeth-jane-paynter) — b. 12 Dec 1859, d. 14 Dec 1919, buried Quorn Town Cemetery — accessed 26 Aug 2026\n2. **WikiTree:** [Elizabeth (Liebich) Paynter — Liebich-76](https://www.wikitree.com/wiki/Liebich-76) — b. 12 Dec 1859, d. 15 Dec 1919; daughter of Gustav Johann Liebich (~1835–1895) & Mary Jane Hoare; cites Genealogy SA birth registration 574/276 — accessed 26 Aug 2026\n3. **Book:** Donald Telfer, *From the Borders to the Bush*, ch.5 (Jean/Jane Telfer 1840–1892 chapter) — wife of Thomas Paynter, m. 1 Dec 1881; death 14 Dec 1919\n4. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Ethel Emily Elizabeth, 10 Feb 1891, father Thomas PAYNTER, mother Elizabeth LIEBICH, Nr Quorn, Frome, **473/4**; PAYNTER Dinah Alice Mary, 27 Sep 1893, father Thomas PAYNTER, mother Elizabeth LIEBIECH, Quorn, Frome, **530/9** — read live 12 Nov 2026",
+    "body_markdown": "# Elizabeth Jane Liebich (1859–1919)\n\n> Verified 2-source (FindAGrave headstone + WikiTree citing Genealogy SA birth register). See Sources below.\n\n## Lifespan\n\n**Born:** 12 December 1859 — South Australia\n**Died:** 14 December 1919 (aged 60) — burial Quorn (Flinders Ranges), South Australia\n**Buried:** Quorn Town Cemetery, Quorn, SA\n\n## Family\n\n- **Father:** Gustav Johann Liebich (~1835–1895) — born Silesia, Prussia (per WikiTree)\n- **Mother:** [[Mary Jane Liebich (1837–1913)]] (née Orr, 1837–1913) — born Lurgan, County Armagh, Ireland (death registration + memorial inscription)\n- **Spouse:** [[Thomas Paynter (1859–1946)]] — m. 1 Dec 1881, Tarcowie, SA (book) / Yongala (WikiTree — same Peterborough-region district)\n- **Children:** Richard William John (1882–1960), Lillian Ellen Jayne (→Hatchard), Gustav Francis George, Ethel Emily Elizabeth (→Flavel), Dinah Alice Mary (→Mundy), Agnes Letitia May Rose (→Hucks), Thomas Frederick Edward (1903–1940), Helena Florence Daisy (→Hill)\n\n## Life Summary\n\nElizabeth Jane Liebich married Thomas Paynter, eldest son of Richard Paynter and Jean (Telfer) Paynter, in the Peterborough region of South Australia (book gives Tarcowie; WikiTree gives Yongala — likely the same registration district). They had a large family of eight children. She died on 14 December 1919 and is buried at Quorn Town Cemetery. *(Family relationships per From the Borders to the Bush; vital dates per Find A Grave headstone and WikiTree citing Genealogy SA.)*\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| 12 Dec 1859 | Born, South Australia |\n| 1 Dec 1881 | Married Thomas Paynter (Tarcowie, SA) |\n| 1882–1906 | Children born (eight) |\n| 14 Dec 1919 | Died; buried Quorn Town Cemetery, SA |\n\n## Sources\n\n1. **Find A Grave:** [Elizabeth Jane Liebich Paynter — memorial 195864845](https://www.findagrave.com/memorial/195864845/elizabeth-jane-paynter) — b. 12 Dec 1859, d. 14 Dec 1919, buried Quorn Town Cemetery — accessed 26 Aug 2026\n2. **WikiTree:** [Elizabeth (Liebich) Paynter — Liebich-76](https://www.wikitree.com/wiki/Liebich-76) — b. 12 Dec 1859, d. 15 Dec 1919; daughter of Gustav Johann Liebich (~1835–1895) & Mary Jane Hoare; cites Genealogy SA birth registration 574/276 — accessed 26 Aug 2026\n3. **Book:** Donald Telfer, *From the Borders to the Bush*, ch.5 (Jean/Jane Telfer 1840–1892 chapter) — wife of Thomas Paynter, m. 1 Dec 1881; death 14 Dec 1919\n4. **Genealogy SA — Birth Registrations index (member view):** PAYNTER Ethel Emily Elizabeth, 10 Feb 1891, father Thomas PAYNTER, mother Elizabeth LIEBICH, Nr Quorn, Frome, **473/4**; PAYNTER Dinah Alice Mary, 27 Sep 1893, father Thomas PAYNTER, mother Elizabeth LIEBIECH, Quorn, Frome, **530/9** — read live 12 Nov 2026",
     "maiden_name": null,
     "roles": [],
     "tags": [
@@ -7147,11 +7206,9 @@
       "non-telfer"
     ],
     "parents": [
+      "mary-jane-liebich",
       {
         "plain_name": "Gustav Johann Liebich (~1835–1895)"
-      },
-      {
-        "plain_name": "Mary Jane Hoare (~1837–1913)"
       }
     ],
     "children": [
@@ -8443,7 +8500,7 @@
     "evidence_level": "soft-yes-provisional",
     "single_source": false,
     "provisional_why": "Birth year 1865 rests on a marriage-age reading and WikiTree, and her own birth registration is absent from the SA index; the range 1865-1869 is set by her siblings' registered births (57/361, 86/228) and her recorded age of 25 at death.",
-    "body_markdown": "# Ellen Jane Liebich (1865–1894)\n\n> Wife of [[Francis Telfer Paynter (1862–1900)]] — died at Quorn/Arden Vale district, SA, 7 September 1894. Sister of [[Elizabeth Jane Liebich (1859–1919)]].\n\n## Lifespan\n\n**Born:** about 1865–1869 — Yongala / Mannanarie district, South Australia *(no birth registration traced; the range is set by the registers of her siblings and her recorded age at death)*\n**Died:** 7 September 1894 — Quorn district, South Australia (aged 25) — of diabetes\n**Buried:** not yet located *(not in the Quorn Cemetery transcription)*\n\n**Provisional:** Her birth year of about 1865 rests on her age at marriage and her recorded age at death, with no birth registration in the South Australian index; the range 1865–1869 is set by her siblings' registered births — re-check on the yearly pass.\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | Gustav Johann Liebich (~1835–1895) — born Silesia, Prussia |\n| **Mother** | Mary Jane Hoare (~1837–1913) — of Mannanarie, SA |\n| **Siblings** | [[Elizabeth Jane Liebich (1859–1919)]] (m. Thomas Paynter), Gustav Alfred Liebich (1867–1889), Edward Liebich (b. 1870) — nine siblings in all |\n| **Spouse** | [[Francis Telfer Paynter (1862–1900)]] — m. 17 Aug 1885, Primitive Methodist Church, Yongala, SA |\n| **Children** | Francis Thomas Paynter (b. 12 Dec 1885, Tarcowie), Mary Jane Paynter (b. 3 Mar 1887, Mannanarie), Frederick Albert Paynter (b. 6 Apr 1889, Mannanarie), [[William Henry Paynter (b. 1891)]] (b. 24 Jul 1891, Tarcowie) |\n\n## Life Summary\n\nEllen Jane Liebich was born about 1865 in the Yongala/Mannanarie district of South Australia, the daughter of Gustav Johann Liebich and Mary Jane (Hoare) Liebich, and a sister of Elizabeth Jane Liebich who married Thomas Paynter. She married **Francis Telfer Paynter** at the Primitive Methodist Church, Yongala, on 17 August 1885, and they had at least four children born between 1885 and 1891. She died on **7 September 1894 at the age of 25, of diabetes**, in the Quorn district. A family notice in *The Advertiser* (Adelaide) on 21 September 1894 read: *\"PAYNTER — On the 7th September, at Quorn, of diabetes, Ellen Jane, beloved wife of Francis Paynter, and third loving daughter of Gustav and Mary Jane Liebich, of Mannanarie, aged 25 years. Gone home to rest.\"* Her husband Francis died six years later at Port Pirie.\n\nTwo of her brothers' births are recorded in the South Australian birth register at Julia Creek in the Kapunda district: Gustav Alfred on 8 September 1867 (57/361) and Edward on 1 June 1870 (86/228). No birth registration for Ellen Jane herself appears in the South Australian index.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| ~1865 | Born, Yongala / Mannanarie district, SA |\n| 17 Aug 1885 | Married Francis Telfer Paynter, Primitive Methodist Church, Yongala, SA |\n| 1885–1891 | Four children born (Tarcowie / Mannanarie) |\n| 7 Sep 1894 | Died, Quorn district, SA, aged 25 (diabetes) |\n\n## Sources\n\n1. **Trove (primary — newspaper death notice):** [The Advertiser (Adelaide), 21 Sep 1894, Family Notices, page 4 — article 25736907](https://trove.nla.gov.au/newspaper/article/25736907) — \"PAYNTER —On the 7th September, at Quorn, of diabetes, Ellen Jane, beloved wife of Francis Paynter, and third loving daughter of Gustav and Mary Jane Liebich, of Mannanarie, aged 25 years.\" — content read live 9 Oct 2026\n2. **WikiTree:** [Ellen Jane (Liebich) Paynter — Liebich-78](https://www.wikitree.com/wiki/Liebich-78) — \"abt 1865 Yongala, South Australia, Australia – 07 Sep 1894 Yarrah, South Australia, Australia\" (listed in the [WikiTree Liebich surname hub](https://www.wikitree.com/genealogy/LIEBICH)) — accessed 9 Oct 2026\n3. **WikiTree (marriage + children):** [Francis Telfer Paynter — Paynter-1377](https://www.wikitree.com/wiki/Paynter-1377) — \"Husband of Ellen Jane (Liebich) Paynter — married 17 Aug 1885 in Yongala, South Australia\"; four sons named — accessed 9 Oct 2026\n4. **Genealogy SA — Birth Registrations index (member view):** Gustav Alfred LIEBICH, 8 Sep 1867, father Gustav LIEBICH, mother Mary Jane HOARE, Julia Creek, Kapunda, **57/361**; and Edward LIEBICH, 1 Jun 1870, father Gustav LIEBICH, mother Mary Jane HALL, Julia Creek, Kapunda, **86/228** — read live 12 Nov 2026\n5. **Genealogy SA — Birth Registrations index (surname sweep):** `LIEBICH / Ellen` returns **0** rows; the 1864–1879 LIEBICH births carry no daughter of Gustav and Mary Jane before 1867 — read live 12 Nov 2026",
+    "body_markdown": "# Ellen Jane Liebich (1865–1894)\n\n> Wife of [[Francis Telfer Paynter (1862–1900)]] — died at Quorn/Arden Vale district, SA, 7 September 1894. Sister of [[Elizabeth Jane Liebich (1859–1919)]].\n\n## Lifespan\n\n**Born:** about 1865–1869 — Yongala / Mannanarie district, South Australia *(no birth registration traced; the range is set by the registers of her siblings and her recorded age at death)*\n**Died:** 7 September 1894 — Quorn district, South Australia (aged 25) — of diabetes\n**Buried:** not yet located *(not in the Quorn Cemetery transcription)*\n\n**Provisional:** Her birth year of about 1865 rests on her age at marriage and her recorded age at death, with no birth registration in the South Australian index; the range 1865–1869 is set by her siblings' registered births — re-check on the yearly pass.\n\n## Family\n\n| Relation | Name |\n|----------|------|\n| **Father** | Gustav Johann Liebich (~1835–1895) — born Silesia, Prussia |\n| **Mother** | [[Mary Jane Liebich (1837–1913)]] (née Orr, 1837–1913) — of Mannanarie, SA |\n| **Siblings** | [[Elizabeth Jane Liebich (1859–1919)]] (m. Thomas Paynter), Gustav Alfred Liebich (1867–1889), Edward Liebich (b. 1870) — nine siblings in all |\n| **Spouse** | [[Francis Telfer Paynter (1862–1900)]] — m. 17 Aug 1885, Primitive Methodist Church, Yongala, SA |\n| **Children** | Francis Thomas Paynter (b. 12 Dec 1885, Tarcowie), Mary Jane Paynter (b. 3 Mar 1887, Mannanarie), Frederick Albert Paynter (b. 6 Apr 1889, Mannanarie), [[William Henry Paynter (b. 1891)]] (b. 24 Jul 1891, Tarcowie) |\n\n## Life Summary\n\nEllen Jane Liebich was born about 1865 in the Yongala/Mannanarie district of South Australia, the daughter of Gustav Johann Liebich and Mary Jane (née Orr) Liebich, and a sister of Elizabeth Jane Liebich who married Thomas Paynter. She married **Francis Telfer Paynter** at the Primitive Methodist Church, Yongala, on 17 August 1885, and they had at least four children born between 1885 and 1891. She died on **7 September 1894 at the age of 25, of diabetes**, in the Quorn district. A family notice in *The Advertiser* (Adelaide) on 21 September 1894 read: *\"PAYNTER — On the 7th September, at Quorn, of diabetes, Ellen Jane, beloved wife of Francis Paynter, and third loving daughter of Gustav and Mary Jane Liebich, of Mannanarie, aged 25 years. Gone home to rest.\"* Her husband Francis died six years later at Port Pirie.\n\nTwo of her brothers' births are recorded in the South Australian birth register at Julia Creek in the Kapunda district: Gustav Alfred on 8 September 1867 (57/361) and Edward on 1 June 1870 (86/228). No birth registration for Ellen Jane herself appears in the South Australian index.\n\n## Timeline\n\n| Date | Event |\n|------|-------|\n| ~1865 | Born, Yongala / Mannanarie district, SA |\n| 17 Aug 1885 | Married Francis Telfer Paynter, Primitive Methodist Church, Yongala, SA |\n| 1885–1891 | Four children born (Tarcowie / Mannanarie) |\n| 7 Sep 1894 | Died, Quorn district, SA, aged 25 (diabetes) |\n\n## Sources\n\n1. **Trove (primary — newspaper death notice):** [The Advertiser (Adelaide), 21 Sep 1894, Family Notices, page 4 — article 25736907](https://trove.nla.gov.au/newspaper/article/25736907) — \"PAYNTER —On the 7th September, at Quorn, of diabetes, Ellen Jane, beloved wife of Francis Paynter, and third loving daughter of Gustav and Mary Jane Liebich, of Mannanarie, aged 25 years.\" — content read live 9 Oct 2026\n2. **WikiTree:** [Ellen Jane (Liebich) Paynter — Liebich-78](https://www.wikitree.com/wiki/Liebich-78) — \"abt 1865 Yongala, South Australia, Australia – 07 Sep 1894 Yarrah, South Australia, Australia\" (listed in the [WikiTree Liebich surname hub](https://www.wikitree.com/genealogy/LIEBICH)) — accessed 9 Oct 2026\n3. **WikiTree (marriage + children):** [Francis Telfer Paynter — Paynter-1377](https://www.wikitree.com/wiki/Paynter-1377) — \"Husband of Ellen Jane (Liebich) Paynter — married 17 Aug 1885 in Yongala, South Australia\"; four sons named — accessed 9 Oct 2026\n4. **Genealogy SA — Birth Registrations index (member view):** Gustav Alfred LIEBICH, 8 Sep 1867, father Gustav LIEBICH, mother Mary Jane HOARE, Julia Creek, Kapunda, **57/361**; and Edward LIEBICH, 1 Jun 1870, father Gustav LIEBICH, mother Mary Jane HALL, Julia Creek, Kapunda, **86/228** — read live 12 Nov 2026\n5. **Genealogy SA — Birth Registrations index (surname sweep):** `LIEBICH / Ellen` returns **0** rows; the 1864–1879 LIEBICH births carry no daughter of Gustav and Mary Jane before 1867 — read live 12 Nov 2026",
     "maiden_name": null,
     "roles": [],
     "tags": [
@@ -8453,9 +8510,6 @@
     "parents": [
       {
         "plain_name": "Gustav Johann Liebich (~1835–1895)"
-      },
-      {
-        "plain_name": "Mary Jane Hoare (~1837–1913)"
       }
     ],
     "children": [

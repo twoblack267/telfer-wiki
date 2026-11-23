@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-24T03:01:14+10:00",
+  "generated_at": "2026-11-24T04:01:00+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 719,
+  "count": 720,
   "kinds": {
-    "real": 701,
+    "real": 702,
     "redirect": 18,
     "empty": 0
   },
@@ -869,8 +869,8 @@
       "kind": "real"
     },
     "Elizabeth Jane Liebich (1859\u20131919).md": {
-      "sha256": "0681772af4d6aef1cd0083887da5f5531ba27dbecdf70ad08d847b48b1ee7a52",
-      "sha256_whole": "60592b495d66a8e0617ca9342ca14c42021333982ab89a8dd5fc6c856886159b",
+      "sha256": "5f49b6318ebeee6664c373bf695d1195223bcf20be6b3b8f6bbadc1653367498",
+      "sha256_whole": "65a72d0fabd0512d815671e69b5b00cc5e4ca6fca6a1965f7304d32b5ed7c38a",
       "kind": "real"
     },
     "Elizabeth Lawrie (1847\u20131907).md": {
@@ -949,8 +949,8 @@
       "kind": "real"
     },
     "Ellen Jane Liebich (1865\u20131894).md": {
-      "sha256": "169552d50f4da20331ea4a35480ed41dafa61b5cb82548bd67fba286d2f86776",
-      "sha256_whole": "9a9e0585ad338915f9055f5fddd2682ecb063ac3774c1cd2cde12e8569633a70",
+      "sha256": "60b8c82b3d5c47685a1fbc6e3cdaf4c649f92c2a01b67ef8375cb56d4ea9e5dc",
+      "sha256_whole": "6311414094cefdc83539d7bcd8d8c019a145000458aff89b0aed1b79817e66eb",
       "kind": "real"
     },
     "Ellen Mavis Paynter (b. 1909).md": {
@@ -2631,6 +2631,11 @@
     "Mary Irene Telfer (1910\u2013).md": {
       "sha256": "a2183ebbf369674bb0958771d07cb916ec83d350e54ea7fb1f774a24f4566ee4",
       "sha256_whole": "d6366948af8cf612c5a38a8c7a7be5c28363f622dd0e733902c24132d311ff35",
+      "kind": "real"
+    },
+    "Mary Jane Liebich (1837\u20131913).md": {
+      "sha256": "5fbebf239248fa405cacc4e04fab8cc432170471b77c3ace1717a63509c0b252",
+      "sha256_whole": "e6ac6d3a81d9e68342dcf75b37cc88f770949295d97ffae03c53d93b6fad8ce1",
       "kind": "real"
     },
     "Mary Jane Paynter (1861\u20131945).md": {
