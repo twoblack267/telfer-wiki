@@ -2215,9 +2215,9 @@
     "middle_name": "Cuthbert",
     "last_name": "Lawrie",
     "birth_year": 1895,
-    "death_year": null,
+    "death_year": 1963,
     "birth_year_display": "1895",
-    "death_year_display": "?",
+    "death_year_display": "1963",
     "display_name": "Arnold Cuthbert Lawrie",
     "title": "Arnold Cuthbert Lawrie — Family & Biography",
     "tags": [
@@ -2238,9 +2238,15 @@
         ]
       },
       {
+        "type": "Father",
+        "names": [
+          "John Lawrie"
+        ]
+      },
+      {
         "type": "Mother",
         "names": [
-          "Elizabeth Nunan"
+          "Elizabeth Johns Nunan"
         ]
       },
       {
@@ -2254,12 +2260,12 @@
     "roles": [
       "Husband of Hazel Rose Telfer"
     ],
-    "body_markdown": "# Arnold Cuthbert Lawrie (1895–?)\n\n**Role:** Husband of Hazel Rose Telfer\n\n**Born:** 22 June 1895 — Telowie, South Australia\n**Died:** Unknown\n\n**Father:** John Lawrie\n**Mother:** Elizabeth Nunan\n**Spouse:** [[Hazel Rose Telfer (1891–1939)]] (m. 28 June 1924)\n\n---\n\n## Life Summary\n\nArnold Cuthbert Lawrie — known as \"Cuth\" — was born on 22 June 1895 at Telowie, South Australia, the son of John and Elizabeth (née Nunan) Lawrie of Nelshaby, near Port Pirie. He was a compositor in the printing trade and a skilled artisan.\n\nHe married Hazel Rose Telfer on 28 June 1924. During the early years of their marriage they lived in Adelaide, but the Great Depression forced them to leave the city and seek work in the country. They moved to Ceduna on the Far West Coast, where Cuth was employed at the gypsum works.\n\nAs economic conditions improved, the family left the West Coast and moved to Murray Bridge, where Cuth resumed his trade as a compositor at the *Murray Valley Standard* newspaper.\n\nHe was a keen sportsman — an excellent footballer, cricketer and tennis player. He loved fishing and would travel to Streaky Bay and Smoky Bay where there was an abundance of fish. He would shoot rabbits to help supplement the family's food.\n\n### Children\n\n| Child | Born |\n|-------|------|\n| Barbara June Lawrie | 16 Jun 1928, Ceduna, SA |\n| Malcolm Roderick Lawrie | 24 Feb 1931, Rose Park, SA |\n\n*(From the Borders to the Bush, pp. 331–333)*\n\n> 🟡 **PARTIAL — death (09 Sep 2026, single book source, not yet confirmed):** The Supplement (*A Telfer Family Tree*, 2008) p.311 records his death: **d. 1963, Red Cliffs, Victoria**. This fills the year the vault previously held as \"Unknown\" (Borders ends his bio at Murray Bridge). However this rests on a **single book source** — no independent VIC/SA death registration or funeral notice located yet — so `death_year` is deliberately **not** set and 1963 is held as a clearly-labelled partial, not a verified fact. A candidate burial (Find A Grave memorial 211558129, \"Arnold Lawrie d. 30 Apr 1963, Nichols Point Cemetery, Mildura\") **cannot be confirmed as this Arnold** — it has no bio/photo/family links tying it to Hazel Rose Telfer's husband — pending a Sunraysia Daily funeral notice or VIC BDM. Upgrade path: VIC death index 1963 / Mildura-region funeral notice.\n\n---\n\n## Sources\n\n- Donald Telfer, *From the Borders to the Bush* (1986), pp. 331–333 (biography of Hazel Rose Telfer)\n- *A Brief Account of the First Members of the Telfer Family to Settle in South Australia* (1986 reunion booklet)\n\n---",
-    "body_stripped": "**Role:** Husband of Hazel Rose Telfer\n\n**Born:** 22 June 1895 — Telowie, South Australia\n**Died:** Unknown\n\n**Father:** John Lawrie\n**Mother:** Elizabeth Nunan\n**Spouse:** Hazel Rose Telfer (1891–1939) (m. 28 June 1924)\n\n## Life Summary\n\nArnold Cuthbert Lawrie — known as \"Cuth\" — was born on 22 June 1895 at Telowie, South Australia, the son of John and Elizabeth (née Nunan) Lawrie of Nelshaby, near Port Pirie. He was a compositor in the printing trade and a skilled artisan.\n\nHe married Hazel Ro",
+    "body_markdown": "# Arnold Cuthbert Lawrie (1895–1963)\n\n**Role:** Husband of Hazel Rose Telfer\n\n**Born:** 22 June 1895 — Telowie, South Australia\n**Died:** 30 April 1963 — Red Cliffs, Victoria (buried Nichols Point Cemetery, Mildura)\n\n**Father:** John Lawrie\n**Mother:** Elizabeth Johns Nunan\n**Spouse:** [[Hazel Rose Telfer (1891–1939)]] (m. 28 June 1924)\n\n---\n\n## Life Summary\n\nArnold Cuthbert Lawrie — known as \"Cuth\" — was born on 22 June 1895 at Telowie, South Australia, the son of John and Elizabeth Johns (née Nunan) Lawrie of Nelshaby, near Port Pirie. He was a compositor in the printing trade and a skilled artisan.\n\nHe married Hazel Rose Telfer on 28 June 1924 at the Baptist Church, Knightsbridge. During the early years of their marriage they lived in Adelaide, but the Great Depression forced them to leave the city and seek work in the country. They moved to Ceduna on the Far West Coast, where Cuth was employed at the gypsum works.\n\nAs economic conditions improved, the family left the West Coast and moved to Murray Bridge, where Cuth resumed his trade as a compositor at the *Murray Valley Standard* newspaper.\n\nHe was a keen sportsman — an excellent footballer, cricketer and tennis player. He loved fishing and would travel to Streaky Bay and Smoky Bay where there was an abundance of fish. He would shoot rabbits to help supplement the family's food.\n\nHe died on 30 April 1963 in the Red Cliffs district of Victoria and was buried at Nichols Point Cemetery, Mildura.\n\n### Children\n\n| Child | Born |\n|-------|------|\n| Barbara June Lawrie | 16 Jun 1928, Ceduna, SA |\n| Malcolm Roderick Lawrie | 24 Feb 1931, Rose Park, SA |\n\n*(From the Borders to the Bush, pp. 331–333)*\n\n---\n\n## Sources\n\n- Donald Telfer, *From the Borders to the Bush* (1986), pp. 331–333 (biography of Hazel Rose Telfer)\n- *A Brief Account of the First Members of the Telfer Family to Settle in South Australia* (1986 reunion booklet)\n- **Genealogy SA**, *South Australian Birth Registrations* database, entry for Arnold Cuthbert Lawrie, born 22 June 1895, Telowie, district Clare, father John Lawrie, mother Elizabeth Johns Nunan, book/page **567/85** — accessed 25 November 2026.\n- **Genealogy SA**, *South Australian Marriage Registrations* database, entry for Arnold Cuthbert Lawrie and Hazel Rose Telfer, married 28 June 1924, Baptist Church Knightsbridge, district Norwood, book/page **299/1080** — accessed 25 November 2026.\n- **Find a Grave**, memorial page for Arnold Lawrie (d. 30 Apr 1963), Memorial ID 211558129, citing Nichols Point Cemetery, Mildura, plot NP-Anglican-HH007 — accessed 25 November 2026.\n- **Mildura & District Genealogical Society Inc.**, *Sunraysia Daily index, deaths and funerals 1960–1964* (SD 1960-1964), entry \"LAWRIE, ARNOLD CUTHBERT, 1-May-1963\" (funeral notice) — accessed 25 November 2026.",
+    "body_stripped": "**Role:** Husband of Hazel Rose Telfer\n\n**Born:** 22 June 1895 — Telowie, South Australia\n**Died:** 30 April 1963 — Red Cliffs, Victoria (buried Nichols Point Cemetery, Mildura)\n\n**Father:** John Lawrie\n**Mother:** Elizabeth Johns Nunan\n**Spouse:** Hazel Rose Telfer (1891–1939) (m. 28 June 1924)\n\n## Life Summary\n\nArnold Cuthbert Lawrie — known as \"Cuth\" — was born on 22 June 1895 at Telowie, South Australia, the son of John and Elizabeth Johns (née Nunan) Lawrie of Nelshaby, near Port Pirie. He ",
     "is_living": false,
-    "lifespan": "1895 – ?",
+    "lifespan": "1895 – 1963",
     "parents": [
-      "Elizabeth Nunan"
+      "Elizabeth Johns Nunan"
     ],
     "children": [
       "Barbara June Lawrie",
@@ -2280,10 +2286,10 @@
     "generation": 5,
     "step_parents": [],
     "step_children": [],
-    "evidence_level": null,
+    "evidence_level": "verified",
     "single_source": false,
     "provisional_why": null,
-    "is_deceased": false,
+    "is_deceased": true,
     "maiden_name": null
   },
   {
@@ -17053,7 +17059,7 @@
     "generation": 4,
     "step_parents": [],
     "step_children": [],
-    "evidence_level": null,
+    "evidence_level": "verified",
     "single_source": false,
     "provisional_why": null,
     "is_deceased": true,
