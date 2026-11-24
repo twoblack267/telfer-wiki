@@ -698,7 +698,12 @@ if (suppressed.length > 0) {
   console.log(`   These people KEEP their own URLs. No alias emitted.`);
 }
 
-function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
+function writeRedirect(from, to, displayName, isPeopleRedirect = true, explicitTarget = null) {
+  // The SOURCE directory and the DESTINATION path are independent decisions.
+  // `to` is the destination slug; `destPath` below is always a destination, never
+  // reused as a source. (The old all-in-one boolean derived both from one flag and
+  // could not express "alias at /families/, target /people/families/" — it wrote a
+  // stub ON TOP of the real page. Card itcrew-20261124-1.)
   const baseDir = isPeopleRedirect ? DIST_DIR : 'dist';
   const dir = path.join(baseDir, from);
   const filePath = path.join(dir, 'index.html');
@@ -710,7 +715,7 @@ function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
   // are unambiguous and are what the SEO audit flagged the old relative form as.
   const absBase = 'https://telferwiki.com';
   // People redirects -> /people/<slug>/; top-level (families) -> /<slug>/
-  const destPath = isPeopleRedirect ? `/people/${to}/` : `/${to}/`;
+  const destPath = explicitTarget ?? (isPeopleRedirect ? `/people/${to}/` : `/${to}/`);
   const targetUrl = `${absBase}${destPath}`;
 
   const html = `<!DOCTYPE html>
@@ -738,12 +743,19 @@ function writeRedirect(from, to, displayName, isPeopleRedirect = true) {
 const written = [];
 for (const r of finalRedirects) {
   writeRedirect(r.from, r.to, r.display_name, true);
-  written.push(r);
+  written.push({ ...r, is_people: true });
 }
 
 // Static redirect for /families/ → /people/families/
-writeRedirect('families', 'families', 'Families', false);
-written.push({ from: 'families', to: 'families', display_name: 'Families' });
+// The alias lives at dist/families/ (a TOP-LEVEL dir, isPeopleRedirect=false) but
+// its TARGET is the people-level page, so the destination is passed explicitly.
+// Before: writeRedirect('families','families',...,false) built destPath `/families/`
+// — a page that refreshed/canonical'd/location.replace()'d back to ITSELF, an
+// infinite reload loop; and the "fix" of flipping the flag wrote the stub ON TOP of
+// the real /people/families/ page. Source dir and destination path are now separate
+// decisions. Card itcrew-20261124-1.
+writeRedirect('families', 'families', 'Families', false, '/people/families/');
+written.push({ from: 'families', to: 'families', display_name: 'Families', is_people: false });
 
 // A profile deliberately retired (scripts/retired-profiles.json) can never be
 // regenerated as a redirect by the inference above, because the inference only
@@ -780,7 +792,10 @@ fs.writeFileSync(REDIRECT_LOG, JSON.stringify(_logOut, null, 2));
 // "407 written" while silently shipping zero of the six privacy aliases. A
 // receipt must be read back off the disk, never off the plan.
 const onDisk = written.filter((r) => {
-  const base = r.display_name === 'Families' ? 'dist' : DIST_DIR;
+  // Must mirror writeRedirect's own baseDir rule, not a guess from display_name.
+  // (A display_name heuristic put /families/ in dist/ root and reported it missing
+  // the moment the writer correctly targeted /people/. Card itcrew-20261124-1.)
+  const base = (r.is_people === false) ? 'dist' : DIST_DIR;
   return fs.existsSync(path.join(base, r.from, 'index.html'));
 });
 const missing = written.length - onDisk.length;
