@@ -224,6 +224,22 @@ const freedoms: Freedom[] = [
     detail: "It replaces Part 2 of the Online Safety Act 2021. A service “must ensure” a safe online environment, and must conduct risk assessments of its own features — recommender, endless-feed, logged-in and time-limited features are all defined. Section 26B carves out private messages between consenting adults. To test compliance the Commissioner may assume a “sock puppet identity” — “a false or fictitious identity” — and approved researchers may take platform data.",
     source: "Online Safety Amendment (Digital Duty of Care) Bill 2026, finally passed both Houses 25 Nov 2026 (APH bId r7553; Bills Digest bd2627/27bd026) — ss.25–26C, 205B–205K",
     tone: "lavender" },
+  // tw-2026-11-26-003: Schedule 1 item 77 of the Digital Duty of Care Bill
+  // repeals the penalty in s.91 of the Online Safety Act 2021 — the section
+  // that enforces a cyber-abuse removal notice — and substitutes "6,000
+  // penalty units". Items 73–83 do the same to every other removal-notice
+  // compliance section (67, 75, 80, 83, 91, 103, 111, 116, 121, 125, 129):
+  // 500 units becomes 6,000. Schedule 1 commences the day AFTER Royal Assent,
+  // so the card does not say "in force" — it says what the Bill does.
+  // s.88(1)(d)/1(g): 48 hours for the platform to fail to act on the
+  // complaint, then 24 hours to remove once the notice issues.
+  // s.220(2)–(3): review at the ART by the provider or the posting end-user.
+  { decade: 2020, year: "25 Nov 2026", title: "One complaint, two million dollars", tone: "sage",
+    enacted: "Digital Duty of Care Bill 2026 — Schedule 1, item 77",
+    power: "“77 Section 91 (penalty) — Repeal the penalty, substitute: Civil penalty: 6,000 penalty units.”",
+    detail: "Section 91 is the section that makes a cyber-abuse removal notice enforceable. At 500 penalty units it was $165,000. At 6,000 it is $1,980,000 — and items 73 to 83 apply the same figure to every other removal notice in the Act: cyber-bullying, intimate images, abhorrent violent conduct, the lot. The door s.88 opens is already wide: a complaint goes to the platform, the platform gets 48 hours to fail to act, then the Commissioner may order removal within 24 hours after the notice. No truth test. The test is material an ordinary reasonable person would regard as “menacing, harassing or offensive”. Only the provider or the person who posted may ask the Tribunal to look at it (s.220(3)). Not the reader. Not the public.",
+    source: "Online Safety Amendment (Digital Duty of Care) Bill 2026, as passed both Houses 25 Nov 2026 — Schedule 1 Part 4 items 73–83, amending Online Safety Act 2021 ss.67, 75, 80, 83, 91, 103, 111, 116, 121, 125, 129; cf. ss.7, 88, 220",
+    tone: "sage" },
 ];
 
 const freedomsByDecade = new Map<number, Freedom[]>();
