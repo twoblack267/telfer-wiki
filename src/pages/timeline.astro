@@ -240,6 +240,27 @@ const freedoms: Freedom[] = [
     detail: "Section 91 is the section that makes a cyber-abuse removal notice enforceable. At 500 penalty units it was $165,000. At 6,000 it is $1,980,000 — and items 73 to 83 apply the same figure to every removal-notice compliance section in the Act — cyber-bullying, intimate images, and the rest. The door s.88 opens is already wide: the material must first have been complained about to the platform and not removed within 48 hours, then the Commissioner may give the provider a removal notice requiring removal within 24 hours. No truth test. The test is material an ordinary reasonable person would regard as “menacing, harassing or offensive”. Only the provider or the person who posted may ask the Tribunal to look at it (s.220(3)). Not the reader. Not the public.",
     source: "Online Safety Amendment (Digital Duty of Care) Bill 2026, as passed both Houses 25 Nov 2026 — Schedule 1 Part 4 items 73–83, amending Online Safety Act 2021 ss.67, 75, 80, 83, 91, 103, 111, 116, 121, 125, 129 (items 84–85 raise ss.143 and 146 to 60,000 units); cf. ss.7, 88, 91, 220",
     tone: "sage" },
+  // tw-2026-11-26-004: s.23 of the Classification Act 1995 lets a State,
+  // Territory or local government make an "enforcement application" and
+  // force the Board to classify any unclassified publication. The gateway
+  // is the definition of "submittable publication" (s.5), which needs only
+  // a depiction "unsuitable for a minor to see or read". No complaint,
+  // no harm, no merits test. Sale/display offences then live in State law.
+  { decade: 2020, year: "1995 → today", title: "A council can call your book in", tone: "peach",
+    enacted: "Classification (Publications, Films and Computer Games) Act 1995 — s.23",
+    power: "“A … government body may make an enforcement application to the Board for classification of a submittable publication.”",
+    detail: "Any unclassified book on any shelf is a candidate. A “submittable publication” is one containing depictions or descriptions that “(a) are likely to cause the publication to be classified RC; or (b) are likely to cause offence to a reasonable adult …; or (c) are unsuitable for a minor to see or read.” Limb (c) is the hook: nothing has to be harmful, obscene or complained about — unsuitable for a minor is enough. A council, a State, a Territory, a police force or the Commonwealth can lodge the application and the Board must classify the title. Once it is RC it cannot lawfully be sold or displayed, and the Act does not itself create that offence — it leaves it to State and Territory law. No truth test. No literary merit. No public interest.", 
+    source: "Classification (Publications, Films and Computer Games) Act 1995 (Cth), ss.5 (“submittable publication”, “enforcement application”), 9A, 23 (“Calling in submittable publications for classification”), 13; compilation No. 40, registered 28 Aug 2017",
+    tone: "peach" },
+  // tw-2026-11-26-005: Tasmanian Police Offences Act 1935 s.49AB — a
+  // demonstration on a public street needs a permit from a police officer.
+  // Limb (4)(c) is open-ended and the Act gives no review of a refusal.
+  { decade: 1930, year: "1935 → today", title: "Permission to stand on the footpath", tone: "rose",
+    enacted: "Police Offences Act 1935 (Tas) — s.49AB, inserted by No. 104 of 2001",
+    power: "“A person must not organise or conduct any of the following activities without a permit if it is to be held, wholly or partly, on a public street: (a) a demonstration; (b) a fundraising drive; (c) a procession.”",
+    detail: "The statute lists a demonstration beside a fundraising drive and a road cycle race as an activity that requires permission. A senior police officer decides. The considerations are the safety and convenience of the public, the safety of participants, and “such other considerations as appear relevant” — an open discretion with no stated test and no requirement to give reasons. The permit “is not capable of being amended, renewed or transferred”, and the Act contains no right of review or appeal against a refusal. Breach: fine not exceeding 10 penalty units. Tasmania is not alone — every State and Territory has a version of this, from NSW authorised-assembly notices to Queensland’s peaceful-assembly notice scheme.",
+    source: "Police Offences Act 1935 (Tas), s.49AB (“Public street permits”), inserted by No. 104 of 2001, Applied 1 Jan 2002; penalty as amended — subsections (1), (2), (4), (5), (7), (8)",
+    tone: "rose" },
 ];
 
 const freedomsByDecade = new Map<number, Freedom[]>();
@@ -255,6 +276,14 @@ const firstDecade = Math.floor(timeline[0].sortYear / 10) * 10;
 const lastDecade = Math.floor(timeline[timeline.length - 1].sortYear / 10) * 10;
 const allDecades: number[] = [];
 for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
+// A freedom card anchored to an earlier statute still has to land beside a
+// decade heading, or it floats under a heading that isn't its own.
+for (const f of freedoms) {
+  if (!allDecades.includes(f.decade)) {
+    allDecades.push(f.decade);
+    allDecades.sort((x, y) => x - y);
+  }
+}
 ---
 
 <BaseLayout
