@@ -195,9 +195,19 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
       const decade = Math.floor(event.sortYear / 10) * 10;
       const prevDecade = i > 0 ? Math.floor(timeline[i - 1].sortYear / 10) * 10 : -1;
       const showHeader = decade !== prevDecade && Number.isFinite(decade);
+      const nextDecade = i + 1 < timeline.length ? Math.floor(timeline[i + 1].sortYear / 10) * 10 : -1;
+      const endOfDecade = nextDecade !== decade;
+
+      // Each decade's events are wrapped in one measured block so the
+      // survivals column can match its height exactly.
+      const DecadeWrap = showHeader ? "div" : Fragment;
+      const wrapProps = showHeader
+        ? { class: "tl-decade", "data-decade": decade }
+        : {};
 
       return (
         <>
+          <DecadeWrap {...wrapProps}>
           {showHeader && (
             <div id={`decade-${decade}`} class="py-4 -ml-0">
               <h2 class="text-2xl font-bold font-serif text-[var(--color-navy)] border-b-2 border-[var(--color-gold)] pb-1 inline-block">
@@ -229,6 +239,7 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
               </div>
             </div>
           </div>
+          </DecadeWrap>
         </>
       );
     })}
@@ -272,10 +283,8 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
     align-items: start;
   }
 
-  /* Sticky column so the cards stay beside the decade you are reading. */
+  /* Column scrolls with the page so every card meets its decade. */
   .tl-side {
-    position: sticky;
-    top: 1.5rem;
     align-self: start;
     display: flex;
     flex-direction: column;
@@ -301,12 +310,16 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
 
   /* Each decade gets a slot. Empty slots hold their height so the cards
      keep step with the timeline — an empty decade is shown empty. */
+  /* Each decade slot is measured in JS to match the height of its decade
+     block on the left, so a card sits level with its own decade. Fallback
+     min-height applies only before the measurement runs. */
   .tl-side-row {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 3.6rem;
+    min-height: 3rem;
     padding: 0.35rem 0;
+    box-sizing: border-box;
   }
   .tl-side-row.is-empty { min-height: 0; }
 
@@ -369,3 +382,40 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
     .tl-side-row { min-height: 0; }
   }
 </style>
+
+<script is:inline>
+  // Align each survival card with its own decade. The left column's decade
+  // blocks are the truth; each right-hand slot is set to the measured height
+  // of its twin so a card sits level with the decade it belongs to.
+  (function () {
+    function align() {
+      if (window.matchMedia("(max-width: 860px)").matches) {
+        // Phone: clear inline heights so cards stack naturally.
+        document.querySelectorAll(".tl-side-row").forEach(function (r) {
+          r.style.height = "";
+        });
+        return;
+      }
+      var lefts = document.querySelectorAll(".tl-main [data-decade]");
+      var rights = document.querySelectorAll(".tl-side [data-decade]");
+      if (!lefts.length || !rights.length) return;
+      rights.forEach(function (right) {
+        var d = right.getAttribute("data-decade");
+        var left = null;
+        for (var i = 0; i < lefts.length; i++) {
+          if (lefts[i].getAttribute("data-decade") === d) { left = lefts[i]; break; }
+        }
+        right.style.height = left
+          ? Math.max(0, Math.round(left.getBoundingClientRect().height)) + "px"
+          : "0px";
+      });
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", align);
+    } else {
+      align();
+    }
+    window.addEventListener("load", align);
+    window.addEventListener("resize", align);
+  })();
+</script>
