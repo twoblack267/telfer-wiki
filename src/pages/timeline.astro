@@ -144,7 +144,7 @@ const survivals: Survival[] = [
   { decade: 1910, year: "1919", title: "Spanish flu", tone: "peach",
     feared: "15,000 Australians dead; 40% infected",
     detail: "Quarantine held the country back longer than any other nation. It got in anyway." },
-  { decade: 1970, year: "1960 → 2026", title: "Doomsday: Friday 13 November", tone: "blue",
+  { decade: 1960, year: "1960 → 2026", title: "Doomsday: Friday 13 November", tone: "blue",
     feared: "Population reaches infinity",
     detail: "Von Foerster, Mora & Amiot, Science, 1960. The date has passed. The world did not go infinite." },
   { decade: 1980, year: "1980", title: "Smallpox eradicated", tone: "sage",
@@ -266,14 +266,26 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
   /* Left cell: a decade heading plus its events. */
   .tl-cell { min-width: 0; }
 
-  /* Right cell: the survival card(s) for that same decade, vertically
-     centred against the decade block it belongs to. */
+  /* Right cell: the survival card(s) for that same decade.
+
+     Anchored to the TOP of the decade row so every card sits beside its own
+     decade HEADING. Centring it was wrong: a decade with 60-80 events is
+     thousands of pixels tall, so a centred card landed beside the NEXT
+     decade's heading (the 1960s Doomsday card sat level with the 1970s).
+
+     No `position: sticky` here. It is inert in a printed/screen-shotted page
+     and it makes the card appear to drift while scrolling, which reads as a
+     bug rather than a feature. Geometry does the work. */
   .tl-card-cell {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     min-width: 0;
     padding: .35rem 0;
+    align-self: start;
+    /* Pull the card up so its top edge lines up with the heading's cap
+       height rather than the heading's line-box top. */
+    margin-top: -.1rem;
   }
   .tl-card-cell.is-empty { padding: 0; }
 
