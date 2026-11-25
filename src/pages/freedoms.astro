@@ -75,18 +75,12 @@ for (const f of freedoms) {
 ---
 
 <BaseLayout
-  title="What Australians lost"
+  title="Freedoms Australia has lost"
   description="Nine statute-anchored losses of Australian liberty, one accordion per decade. Click a tab to open its card directly beneath it; every other tab stays visible."
 >
-  <div class="page-header">
-    <h1>What Australians lost</h1>
-    <p class="text-[var(--color-ink-light)] mt-2">
-      {freedoms.length} losses, each anchored to the Act that did it.
-    </p>
-  </div>
-
   <p class="li-hint">
-    Tap any tab. Its card opens underneath it; the others fold back to a sliver.
+    A side note, not the main event: nine laws that took something away, each anchored to the Act
+    that did it. Tap any tab — its card opens underneath and the others fold back.
   </p>
 
   <div class="li-stage">
@@ -146,9 +140,30 @@ for (const f of freedoms) {
     font-size: .82rem;
     color: var(--color-ink-light);
     margin: .7rem 0 1.4rem;
+    max-width: 30rem;
+    margin-left: auto;
+    text-align: right;
   }
 
-  .li-dec { margin: 0 0 2.8rem; }
+  /* ── Right-hand rail ─────────────────────────────────────���────────────
+     Everything is pushed against the right edge. The stage hugs the right
+     side of the content column at every width; nothing sits on the left. */
+  .li-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .li-dec {
+    margin: 0 0 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 44rem;
+    margin-left: auto;
+  }
 
   .li-dec-h {
     font-family: var(--font-serif, serif);
@@ -159,16 +174,18 @@ for (const f of freedoms) {
     padding-bottom: .2rem;
     margin-bottom: .9rem;
     display: inline-block;
+    text-align: right;
   }
 
   .li-deck {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     width: 100%;
-    max-width: 44rem;
   }
 
-  /* The card unit: tab on top, body beneath. */
+  /* The card unit: tab on top, body beneath. Right-aligned, and capped so
+     there is always breathing room on the left rather than a full-width slab. */
   .li-item {
     border: 1px solid var(--color-border);
     border-left: 4px solid var(--li-edge);
@@ -176,8 +193,11 @@ for (const f of freedoms) {
     background: #fffdf9;
     overflow: hidden;
     transition: box-shadow .18s ease;
+    width: 100%;
+    max-width: 40rem;
+    margin-left: auto;
   }
-  .li-item + .li-item { margin-top: .4rem; }
+  .li-item + .li-item { margin-top: .7rem; }
   .li-item:has(.li-tab[aria-expanded="true"]) {
     box-shadow: 0 3px 14px rgba(0, 0, 0, .1);
   }
@@ -294,6 +314,12 @@ for (const f of freedoms) {
   }
 
   @media (max-width: 620px) {
+    /* On a phone "against the right" only reads if there is real empty space
+       beside the cards, so the stack is indented from the left rather than
+       hugging both edges. */
+    .li-dec, .li-deck { padding-left: 2.6rem; }
+    .li-item { max-width: 100%; }
+    .li-hint { padding-left: 2.6rem; }
     .li-dec { margin-bottom: 2.1rem; }
     .li-dec-h { font-size: 1.22rem; margin-bottom: .7rem; }
     .li-tab { min-height: 2.3rem; padding: .45rem .62rem; gap: .4rem; }
@@ -303,7 +329,8 @@ for (const f of freedoms) {
     .li-detail { font-size: .73rem; line-height: 1.5; }
     .li-power { font-size: .69rem; }
     .li-source { font-size: .535rem; }
-    .li-item + .li-item { margin-top: .32rem; }
+    .li-item + .li-item { margin-top: .6rem; }
+    .li-dec { margin-bottom: 2.2rem; }
   }
 </style>
 
