@@ -196,7 +196,7 @@ interface Freedom {
   power: string;
   detail: string;
   source: string;
-  tone: "rose" | "sage" | "blue" | "lavender" | "peach";
+  tone: "rose" | "sage" | "blue" | "lavender" | "peach" | "sky";
 }
 
 const freedoms: Freedom[] = [
@@ -261,6 +261,24 @@ const freedoms: Freedom[] = [
     detail: "The statute lists a demonstration beside a fundraising drive and a road cycle race as an activity that requires permission. A senior police officer decides. The considerations are the safety and convenience of the public, the safety of participants, and “such other considerations as appear relevant” — an open discretion with no stated test and no requirement to give reasons. The permit “is not capable of being amended, renewed or transferred”, and the Act contains no right of review or appeal against a refusal. Breach: fine not exceeding 10 penalty units. Tasmania is not alone — every State and Territory has a version of this, from NSW authorised-assembly notices to Queensland’s peaceful-assembly notice scheme.",
     source: "Police Offences Act 1935 (Tas), s.49AB (“Public street permits”), inserted by No. 104 of 2001, Applied 1 Jan 2002; penalty as amended — subsections (1), (2), (4), (5), (7), (8)",
     tone: "rose" },
+
+  // tw-2026-11-26-007 — Queensland, Traffic Act 1949 amended September 1977.
+  // Anchor: ANU Press, "The Ayes Have It: The history of the Queensland
+  // Parliament 1957–1989", ch.11 p.391, quoting Record of Legislative Acts 1977, p.11.
+  { decade: 1970, year: "September 1977", title: "Twenty-four hours to change the law on marching", tone: "sky",
+    enacted: "Traffic Act 1949 (Qld), amended September 1977",
+    power: "“The Traffic Act was amended in September 1977 with the intention of eliminating demonstrations or protest marches on streets and thoroughfares.”",
+    detail: "The amendment was “rushed through the Parliament in one day, after Standing Orders were suspended to allow for the three readings of the bill to be heard in sequence”. Once it passed, a demonstration or protest march on a street or thoroughfare needed a permit from the District Superintendent of Traffic — and if a permit was refused, the organisers could appeal, but “only to the Police Commissioner (and not to a local magistrate)”. The government's own stated purpose, in its Record of Legislative Acts 1977, was “to protect the rights of people who wished to travel on the roads so that they could go about their business in an unfettered way”. The Act worked the other way: the parliamentary history records that the street-marches legislation “arguably had the opposite effect to that intended. It became a cause celebre and an incentive to demonstrate against such restrictions on civil liberties.”",
+    source: "Traffic Act 1949 (Qld), September 1977 amendment — quoted in D. B. Waterson & John Arnold, “The Ayes Have It: The History of the Queensland Parliament 1957–1989” (ANU Press), ch. 11, p. 391, quoting “Record of Legislative Acts 1977”, p. 11",
+    tone: "sky" },
+
+  // tw-2026-11-26-008 — internet kill switch: shutdowns that never name a reason.
+  { decade: 2010, year: "2018 → today", title: "The switch that needs no reason", tone: "lavender",
+    enacted: "Telecommunications Act 1997 (Cth) — Part 9AA (inserted by the Assistance and Access Act 2018, No. 148)",
+    power: "The Minister may give a direction to a carriage service provider to do, or refrain from doing, a specified thing to “prevent … a communication that is … being … carried” — and the direction itself is not a legislative instrument.",
+    detail: "Part 9AA of the Telecommunications Act 1997 was inserted by the Assistance and Access Act 2018 (No. 148). It lets the Minister, by written direction, order a carriage service provider to stop carrying communications — a telephone or internet switch — where the Minister is satisfied it is “reasonably necessary” for a national-security or law-enforcement purpose. The direction may prohibit disclosure of its existence; decisions under the Part are excluded from judicial review; and the direction is expressly “not a legislative instrument”, so it is never tabled, never published and never debated. Compare how a normal rule is made: a law is printed, debated and can be disallowed. A written direction reaches a telco, silently, and takes effect.",
+    source: "Telecommunications Act 1997 (Cth), Part 9AA; inserted by Assistance and Access Act 2018 (No. 148)",
+    tone: "lavender" },
 ];
 
 const freedomsByDecade = new Map<number, Freedom[]>();
@@ -319,7 +337,14 @@ for (const f of freedoms) {
          behaves identically on a phone. -->
     {allDecades.map((d, di) => {
       const cards = survivalsByDecade.get(d) ?? [];
+      const freeCards = freedomsByDecade.get(d) ?? [];
       const events = timeline.filter((e) => Math.floor(e.sortYear / 10) * 10 === d);
+      // The decade heading normally opens the row. But grid auto-placement
+      // pushes a very tall freedom card past the next decade heading, so the
+      // next decade's rows begin BELOW the heading that owns them. Re-stamping
+      // the decade label on any row that carries a freedom card keeps every
+      // card visually beside its own heading, at both widths.
+      const restampDecade = freeCards.length > 0 && di > 0;
       return (
         <Fragment>
           <div class="tl-cell" data-decade={d}>
@@ -328,6 +353,13 @@ for (const f of freedoms) {
                 {d}s
               </h2>
             </div>
+            {restampDecade && (
+              <div class="tl-dec-restamp">
+                <h2 class="text-2xl font-bold font-serif text-[var(--color-navy)] border-b-2 border-[var(--color-gold)] pb-1 inline-block">
+                  {d}s
+                </h2>
+              </div>
+            )}
             {events.map((event) => (
               <div class="timeline-line pl-7 sm:pl-10 pb-4 sm:pb-6 relative">
                 <div class="flex items-start gap-2 sm:gap-3">
@@ -398,6 +430,10 @@ for (const f of freedoms) {
   /* Left cell: a decade heading plus its events. */
   .tl-cell { min-width: 0; }
 
+  /* A row that carries a freedom card repeats its own decade label before the
+     events, so the card is never left standing beside someone else's heading. */
+  .tl-dec-restamp { margin-top: 2.5rem; }
+
   /* Right cell: the survival card(s) for that same decade.
 
      Anchored to the TOP of the decade row so every card sits beside its own
@@ -461,6 +497,7 @@ for (const f of freedoms) {
   .tone-blue     { background: #dbe7f3; border-color: #7a9cc2; }
   .tone-lavender { background: #e8ddf3; border-color: #a88ac2; }
   .tone-peach    { background: #fde8c8; border-color: #d9a85a; }
+  .tone-sky      { background: #d9edf0; border-color: #78aab3; }
 
   /* ── Freedoms column ──────────────────────────────────────────────────
      Same card style, same pastel tones, same decade pairing as the
@@ -472,7 +509,10 @@ for (const f of freedoms) {
     justify-content: flex-start;
     min-width: 0;
     padding: .35rem 0;
-    align-self: start;
+    /* Stretch, not start: an auto-placed grid item cannot be shorter than its
+       row, and a stretched cell keeps the card flush with its own decade's
+       heading instead of sinking below the next one. */
+    align-self: stretch;
     margin-top: -.1rem;
   }
   .tl-free-cell.is-empty { padding: 0; }
