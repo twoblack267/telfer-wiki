@@ -695,6 +695,22 @@ const cleanFactLine = (raw) => {
     // the birthplace.
     .replace(/\*+/g, "")
     .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]/g, "$2" || "$1")
+    // A VACUUM-FORMATTED DATE IS NOT ENGLISH. Some vault profiles carry the date as
+    // "1918 05 06" (year month day) because the page was written from a data dump, and the
+    // meta description shipped that verbatim: "Born:12 05 — Hobart, Tasmania". A reader (and
+    // a search snippet) needs a month name. This runs FIRST, before the whitespace squeeze
+    // below (which turns "1918 05 06" into a single space-joined run anyway) and before
+    // anything else can shuffle the digits apart. Convert ONLY the unambiguous YYYY MM DD
+    // shape; anything else is left exactly as written, because a wrong guess is worse than
+    // a raw one.
+    .replace(/\b(\d{4})[ -](\d{1,2})[ -](\d{1,2})\b/g, (m, y, mo, d) => {
+      const MONTHS = ["January","February","March","April","May","June","July","August",
+        "September","October","November","December"];
+      const mi = Number(mo);
+      const di = Number(d);
+      if (mi < 1 || mi > 12 || di < 1 || di > 31) return m;
+      return `${di} ${MONTHS[mi - 1]} ${y}`;
+    })
     .replace(/\s+/g, " ")
     .trim();
   // Field run: everything after the first "|" is another column, not another sentence.
@@ -833,6 +849,19 @@ const openingSentenceDescription = clampDescription(
       // A bare "Role: Son of X." / "Relation: …" is an editorial chip, not prose — the
       // template renders it under the name already. Publish the fact, not its label.
       if (/^(?:Role|Relation|Relationship|Status|Notes?|Source|Generation)\s*:\s*/i.test(t)) continue;
+      // A VACUUM-FORMATTED DATE IS NOT ENGLISH (card itcreq). "Born: 1918 05 06 — Newton,
+      // South Australia" is a data dump, not a sentence: no reader parses YYYY MM DD at
+      // speed, and a Google snippet that opens on it looks like a leak. Same rule as
+      // cleanFactLine(): convert ONLY the unambiguous YYYY MM DD shape, leave everything
+      // else exactly as written.
+      t = t.replace(/\b(\d{4})[ -](\d{1,2})[ -](\d{1,2})\b/g, (m, y, mo, d) => {
+        const MONTHS = ["January","February","March","April","May","June","July","August",
+          "September","October","November","December"];
+        const mi = Number(mo);
+        const di = Number(d);
+        if (mi < 1 || mi > 12 || di < 1 || di > 31) return m;
+        return `${di} ${MONTHS[mi - 1]} ${y}`;
+      });
       // Take the first sentence; keep the whole line when it is already one clause.
       const sentence = t.match(/^(.{30,}?[.!?])(?=\s+[A-Z"'“(]|\s*$)/);
       const out = (sentence ? sentence[1] : t).replace(/\s+/g, " ").trim();
