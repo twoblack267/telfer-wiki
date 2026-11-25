@@ -1,0 +1,372 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Freedom {
+  decade: number;
+  year: string;
+  title: string;
+  tone: string;
+  enacted: string;
+  power: string;
+  detail: string;
+  source: string;
+}
+
+// tw-2026-11-26-010 — the same nine statute-anchored cards as the timeline's
+// third column, re-presented as a left-hand accordion. Data is duplicated
+// rather than imported because timeline.astro keeps its array inline (not
+// exported); if a card changes there, change it here too. Card bodies are
+// verbatim identical — no new claims, no new wording.
+const freedoms: Freedom[] = [
+  { decade: 1930, year: "1935 → today", title: "Permission to stand on the footpath", tone: "rose",
+    enacted: "Police Offences Act 1935 (Tas) — s.49AB, inserted by No. 104 of 2001",
+    power: "“A person must not organise or conduct any of the following activities without a permit if it is to be held, wholly or partly, on a public street: (a) a demonstration; (b) a fundraising drive; (c) a procession.”",
+    detail: "The statute lists a demonstration beside a fundraising drive and a road cycle race as an activity that requires permission. A senior police officer decides. The considerations are the safety and convenience of the public, the safety of participants, and “such other considerations as appear relevant” — an open discretion with no stated test and no requirement to give reasons. The permit “is not capable of being amended, renewed or transferred”, and the Act contains no right of review or appeal against a refusal. Breach: fine not exceeding 10 penalty units.",
+    source: "Police Offences Act 1935 (Tas), s.49AB (“Public street permits”), inserted by No. 104 of 2001, applied 1 Jan 2002; subsections (1), (2), (4), (5), (7), (8)" },
+  { decade: 1970, year: "September 1977", title: "Twenty-four hours to change the law on marching", tone: "sky",
+    enacted: "Traffic Act 1949 (Qld), amended September 1977",
+    power: "“The Traffic Act was amended in September 1977 with the intention of eliminating demonstrations or protest marches on streets and thoroughfares.”",
+    detail: "The amendment was “rushed through the Parliament in one day, after Standing Orders were suspended to allow for the three readings of the bill to be heard in sequence”. Once it passed, a demonstration or protest march on a street or thoroughfare needed a permit from the District Superintendent of Traffic — and if a permit was refused, the organisers could appeal, but “only to the Police Commissioner (and not to a local magistrate)”. The government's own stated purpose, in its Record of Legislative Acts 1977, was “to protect the rights of people who wished to travel on the roads”. The parliamentary history records that the legislation “arguably had the opposite effect to that intended. It became a cause celebre and an incentive to demonstrate against such restrictions on civil liberties.”",
+    source: "Traffic Act 1949 (Qld), September 1977 amendment — quoted in Waterson & Arnold, “The Ayes Have It” (ANU Press), ch. 11, p. 391, quoting “Record of Legislative Acts 1977”, p. 11" },
+  { decade: 2010, year: "2015", title: "Two years of records on everyone", tone: "rose",
+    enacted: "Data Retention Act 2015 — No. 39, 2015",
+    power: "“A person (a service provider) … must keep, or cause to be kept … relating to any communication carried by means of the service”",
+    detail: "Two years. Every carrier and internet provider in Australia must keep, on every subscriber: name and address, contract and billing details, who you contacted, when, for how long, and the cell tower or Wi-Fi hotspot at each end. Not what you said. Who, when, where. The clock under s.187C runs two years past the closing of your account. You were never asked.",
+    source: "Telecommunications (Interception and Access) Act 1979, ss.187A–187C, inserted by Act No. 39 of 2015 (assent 13 Apr 2015)" },
+  { decade: 2010, year: "2018", title: "Breaking encryption, by notice", tone: "blue",
+    enacted: "Assistance and Access Act 2018 — No. 148, 2018",
+    power: "“…frameworks for voluntary and mandatory industry assistance to law enforcement and intelligence agencies in relation to encryption technologies”",
+    detail: "Three instruments: a technical assistance request, a technical assistance notice, and a technical capability notice. Together they let law enforcement and intelligence agencies seek or compel a company to build a capability to reach data that encryption was protecting. The amending Act also provides that certain decisions under the new arrangements are not subject to judicial review, and shields providers from criminal liability for acts done consistently with a notice.",
+    source: "Telecommunications and Other Legislation Amendment (Assistance and Access) Act 2018, Act No. 148 of 2018 (assent 8 Dec 2018)" },
+  { decade: 2010, year: "2018 → today", title: "The switch that needs no reason", tone: "lavender",
+    enacted: "Telecommunications Act 1997 (Cth) — Part 9AA (inserted by No. 148 of 2018)",
+    power: "The Minister may give a direction to a carriage service provider to do, or refrain from doing, a specified thing to “prevent … a communication that is … being … carried” — and the direction itself is not a legislative instrument.",
+    detail: "Part 9AA lets the Minister, by written direction, order a carriage service provider to stop carrying communications — a telephone or internet switch — where the Minister is satisfied it is “reasonably necessary” for a national-security or law-enforcement purpose. The direction may prohibit disclosure of its existence; decisions under the Part are excluded from judicial review; and the direction is expressly “not a legislative instrument”, so it is never tabled, never published and never debated. A law is printed, debated and can be disallowed. A written direction reaches a telco, silently, and takes effect.",
+    source: "Telecommunications Act 1997 (Cth), Part 9AA; inserted by Assistance and Access Act 2018 (No. 148)" },
+  { decade: 2020, year: "1995 → today", title: "A council can call your book in", tone: "peach",
+    enacted: "Classification Act 1995 — s.23",
+    power: "“A … government body may make an enforcement application to the Board for classification of a submittable publication.”",
+    detail: "Any unclassified book on any shelf is a candidate. A “submittable publication” is one containing depictions or descriptions that “(a) are likely to cause the publication to be classified RC; or (b) are likely to cause offence to a reasonable adult …; or (c) are unsuitable for a minor to see or read.” Limb (c) is the hook: nothing has to be harmful, obscene or complained about — unsuitable for a minor is enough. A council, a State, a Territory, a police force or the Commonwealth can lodge the application and the Board must classify the title. Once it is RC it cannot lawfully be sold or displayed, and the Act leaves the offence itself to State and Territory law. No truth test. No literary merit. No public interest.",
+    source: "Classification (Publications, Films and Computer Games) Act 1995 (Cth), ss.5, 9A, 23 (“Calling in submittable publications for classification”), 13; compilation No. 40, registered 28 Aug 2017" },
+  { decade: 2020, year: "11 Dec 2024", title: "Proof of age to speak", tone: "peach",
+    enacted: "Social Media Minimum Age Act 2024 — No. 127, 2024",
+    power: "“A provider of an age-restricted social media platform must take reasonable steps to prevent age-restricted users having accounts with the age-restricted social media platform.”",
+    detail: "An age-restricted user is “an Australian child who has not reached 16 years”. To keep children out, platforms must work out who is an adult — every Australian user becomes someone whose age has been established. The Act caps that: the Minister may specify kinds of information that must NOT be collected to comply (s.63DA). The maximum penalty is 30,000 penalty units. Australia was the first country to require this nationwide.",
+    source: "Online Safety Amendment (Social Media Minimum Age) Act 2024, No. 127 of 2024 (assent 10 Dec 2024, commenced 11 Dec 2024), inserting Part 4A, ss.63A–63DA, into the Online Safety Act 2021" },
+  { decade: 2020, year: "25 Nov 2026", title: "The Digital Duty of Care", tone: "lavender",
+    enacted: "Digital Duty of Care Bill 2026 — passed both Houses 25 Nov 2026",
+    power: "“A person must not fail to comply with the person’s digital duty of care.” Civil penalty: 60,000 penalty units.",
+    detail: "It replaces Part 2 of the Online Safety Act 2021. A service “must ensure” a safe online environment, and must conduct risk assessments of its own features — recommender, endless-feed, logged-in and time-limited features are all defined. Section 26B carves out private messages between consenting adults. To test compliance the Commissioner may assume a “sock puppet identity” — “a false or fictitious identity” — and approved researchers may take platform data.",
+    source: "Online Safety Amendment (Digital Duty of Care) Bill 2026, finally passed both Houses 25 Nov 2026 (APH bId r7553) — ss.25–26C, 205B–205K" },
+  { decade: 2020, year: "25 Nov 2026", title: "One complaint, two million dollars", tone: "sage",
+    enacted: "Digital Duty of Care Bill 2026 — Schedule 1, item 77",
+    power: "“77 Section 91 (penalty) — Repeal the penalty, substitute: Civil penalty: 6,000 penalty units.”",
+    detail: "Section 91 is the section that makes a cyber-abuse removal notice enforceable. At 500 penalty units it was $165,000. At 6,000 it is $1,980,000 — and items 73 to 83 apply the same figure to every removal-notice compliance section in the Act. The door s.88 opens is already wide: the material must first have been complained about to the platform and not removed within 48 hours, then the Commissioner may give the provider a removal notice requiring removal within 24 hours. No truth test. The test is material an ordinary reasonable person would regard as “menacing, harassing or offensive”. Only the provider or the person who posted may ask the Tribunal to look at it (s.220(3)). Not the reader. Not the public.",
+    source: "Online Safety Amendment (Digital Duty of Care) Bill 2026, as passed both Houses 25 Nov 2026 — Schedule 1 Part 4 items 73–83; cf. ss.7, 88, 91, 220" },
+];
+
+const decades = [...new Set(freedoms.map((f) => f.decade))].sort((a, b) => a - b);
+const byDecade = new Map<number, Freedom[]>();
+for (const f of freedoms) {
+  const list = byDecade.get(f.decade) ?? [];
+  list.push(f);
+  byDecade.set(f.decade, list);
+}
+---
+
+<BaseLayout
+  title="What Australians lost"
+  description="Nine statute-anchored losses of Australian liberty, one accordion per decade. Click a tab to open its card directly beneath it; every other tab stays visible."
+>
+  <div class="page-header">
+    <h1>What Australians lost</h1>
+    <p class="text-[var(--color-ink-light)] mt-2">
+      {freedoms.length} losses, each anchored to the Act that did it.
+    </p>
+  </div>
+
+  <p class="li-hint">
+    Tap any tab. Its card opens underneath it; the others fold back to a sliver.
+  </p>
+
+  <div class="li-stage">
+    {decades.map((d, di) => (
+      <section class="li-dec" data-decade={d}>
+        <h2 class="li-dec-h">{d}s</h2>
+        <div class="li-deck" data-deck={di}>
+          {(byDecade.get(d) ?? []).map((f, i) => (
+            <div class={`li-item tone-${f.tone}`} data-li-item data-i={i} data-deck={di}>
+              <button
+                class="li-tab"
+                type="button"
+                data-li-tab
+                aria-expanded={i === 0 ? "true" : "false"}
+                aria-controls={`li-body-${di}-${i}`}
+              >
+                <span class="li-tab-yr">{f.year}</span>
+                <span class="li-tab-t">{f.title}</span>
+                <span class="li-caret" aria-hidden="true"></span>
+              </button>
+              <article
+                class="li-body"
+                id={`li-body-${di}-${i}`}
+                data-li-card
+                data-file={f.title}
+                hidden={i !== 0}
+              >
+                <div class="li-act">{f.enacted}</div>
+                <div class="li-power">{f.power}</div>
+                <div class="li-detail">{f.detail}</div>
+                <div class="li-source">{f.source}</div>
+              </article>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <p class="li-foot">
+    Every card cites the statute. Nothing here is a headline or an inference: where the exact
+    section could not be verified, the card says so and does not claim it.
+  </p>
+</BaseLayout>
+
+<style is:global>
+  /* ── Left-hand accordion ──────────────────────────────────────────────
+     One .li-item per card. The tab is always visible. The body expands
+     directly beneath its OWN tab, so the selected tab is unambiguously
+     attached to the open card. Closed items collapse to just the tab
+     (the "sliver that pokes out"). No absolute positioning, no overlay,
+     nothing can cover a tab. */
+
+  .li-hint {
+    font-family: var(--font-serif, serif);
+    font-style: italic;
+    font-size: .82rem;
+    color: var(--color-ink-light);
+    margin: .7rem 0 1.4rem;
+  }
+
+  .li-dec { margin: 0 0 2.8rem; }
+
+  .li-dec-h {
+    font-family: var(--font-serif, serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    border-bottom: 2px solid var(--color-gold);
+    padding-bottom: .2rem;
+    margin-bottom: .9rem;
+    display: inline-block;
+  }
+
+  .li-deck {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 44rem;
+  }
+
+  /* The card unit: tab on top, body beneath. */
+  .li-item {
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--li-edge);
+    border-radius: 11px;
+    background: #fffdf9;
+    overflow: hidden;
+    transition: box-shadow .18s ease;
+  }
+  .li-item + .li-item { margin-top: .4rem; }
+  .li-item:has(.li-tab[aria-expanded="true"]) {
+    box-shadow: 0 3px 14px rgba(0, 0, 0, .1);
+  }
+
+  /* ── The tab (always visible — the sliver) ─────────────────────────── */
+  .li-tab {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    width: 100%;
+    min-height: 2.55rem;
+    padding: .55rem .8rem;
+    margin: 0;
+    text-align: left;
+    background: var(--li-bg);
+    border: 0;
+    font: inherit;
+    color: var(--color-ink);
+    cursor: pointer;
+    transition: filter .14s ease;
+  }
+  .li-tab:hover { filter: brightness(.965); }
+  .li-tab:focus-visible { outline: 2px solid var(--color-navy); outline-offset: -3px; }
+
+  .li-tab-yr {
+    flex: none;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    opacity: .7;
+  }
+  .li-tab-t {
+    flex: 1 1 auto;
+    font-family: var(--font-serif, serif);
+    font-size: .88rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .li-tab[aria-expanded="true"] .li-tab-t { font-weight: 700; }
+
+  /* Caret rotates when open. */
+  .li-caret {
+    flex: none;
+    width: .5rem;
+    height: .5rem;
+    margin-left: .15rem;
+    align-self: center;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    opacity: .5;
+    transition: transform .18s ease;
+  }
+  .li-tab[aria-expanded="true"] .li-caret {
+    transform: rotate(-135deg);
+    opacity: .8;
+  }
+
+  /* ── The body, opening beneath its own tab ─────────────────────────── */
+  .li-body {
+    padding: .75rem .9rem .95rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    background: #fffdf9;
+    animation: li-in .18s ease-out;
+  }
+  .li-body[hidden] { display: none; }
+  @keyframes li-in {
+    from { opacity: 0; transform: translateY(-3px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .li-act {
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    opacity: .8;
+    margin-bottom: .45rem;
+  }
+  .li-power {
+    font-size: .78rem;
+    line-height: 1.45;
+    font-style: italic;
+    border-left: 2px solid rgba(0, 0, 0, .22);
+    padding-left: .55rem;
+    margin: 0 0 .55rem;
+  }
+  .li-detail { font-size: .8rem; line-height: 1.55; }
+  .li-source {
+    margin-top: .6rem;
+    padding-top: .45rem;
+    border-top: 1px dotted rgba(0, 0, 0, .22);
+    font-size: .585rem;
+    line-height: 1.4;
+    opacity: .72;
+  }
+
+  .tone-rose     { --li-bg: #f3d9d7; --li-edge: #c98a8a; }
+  .tone-sage     { --li-bg: #dcead3; --li-edge: #8aa87a; }
+  .tone-blue     { --li-bg: #dbe7f3; --li-edge: #7a9cc2; }
+  .tone-lavender { --li-bg: #e8ddf3; --li-edge: #a88ac2; }
+  .tone-peach    { --li-bg: #fde8c8; --li-edge: #d9a85a; }
+  .tone-sky      { --li-bg: #d9edf0; --li-edge: #78aab3; }
+
+  .li-foot {
+    margin-top: 1.4rem;
+    padding-top: .8rem;
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-serif, serif);
+    font-style: italic;
+    font-size: .8rem;
+    color: var(--color-ink-light);
+  }
+
+  @media (max-width: 620px) {
+    .li-dec { margin-bottom: 2.1rem; }
+    .li-dec-h { font-size: 1.22rem; margin-bottom: .7rem; }
+    .li-tab { min-height: 2.3rem; padding: .45rem .62rem; gap: .4rem; }
+    .li-tab-yr { font-size: .5rem; }
+    .li-tab-t { font-size: .76rem; }
+    .li-body { padding: .6rem .7rem .8rem; }
+    .li-detail { font-size: .73rem; line-height: 1.5; }
+    .li-power { font-size: .69rem; }
+    .li-source { font-size: .535rem; }
+    .li-item + .li-item { margin-top: .32rem; }
+  }
+</style>
+
+<script>
+  // One open card per decade. Clicking a tab opens its card immediately
+  // beneath it and closes that decade's other cards; clicking the open tab
+  // again collapses it. Tabs are never covered, so nothing becomes
+  // unreachable. Real <button>s, so keyboard works natively.
+  function decks() {
+    document.querySelectorAll<HTMLElement>("[data-deck]").forEach((deck) => {
+      const items = Array.from(deck.querySelectorAll<HTMLElement>("[data-li-item]"));
+
+      function open(idx: number) {
+        items.forEach((item, i) => {
+          const tab = item.querySelector<HTMLElement>("[data-li-tab]");
+          const body = item.querySelector<HTMLElement>("[data-li-card]");
+          const on = i === idx;
+          tab?.setAttribute("aria-expanded", String(on));
+          if (body) body.hidden = !on;
+        });
+      }
+
+      items.forEach((item, i) => {
+        const tab = item.querySelector<HTMLElement>("[data-li-tab]");
+        if (!tab) return;
+        // Toggle semantics: clicking the open tab closes it.
+        if (tab.getAttribute("aria-expanded") === "true") {
+          tab.setAttribute("data-first", "1");
+        }
+        tab.addEventListener("click", () => {
+          const isOpen = tab.getAttribute("aria-expanded") === "true";
+          // Never leave a deck with nothing open: at least one card must stay
+          // visible, otherwise there is no sliver to click and the deck reads
+          // as empty. Clicking the only open card simply does nothing.
+          if (isOpen) {
+            if (items.length === 1) return;
+            tab.setAttribute("aria-expanded", "false");
+            const body = item.querySelector<HTMLElement>("[data-li-card]");
+            if (body) body.hidden = true;
+          } else {
+            open(i);
+          }
+        });
+      });
+
+      // Arrow keys move between tabs within a decade.
+      deck.addEventListener("keydown", (e) => {
+        const ke = e as KeyboardEvent;
+        const active = document.activeElement as HTMLElement | null;
+        const tabs = items.map((it) => it.querySelector<HTMLElement>("[data-li-tab]"));
+        const i = tabs.indexOf(active as HTMLElement);
+        if (i < 0) return;
+        let next = i;
+        if (ke.key === "ArrowDown") next = Math.min(tabs.length - 1, i + 1);
+        else if (ke.key === "ArrowUp") next = Math.max(0, i - 1);
+        else if (ke.key === "Home") next = 0;
+        else if (ke.key === "End") next = tabs.length - 1;
+        else return;
+        ke.preventDefault();
+        tabs[next]?.focus();
+      });
+    });
+  }
+
+  decks();
+</script>
