@@ -140,7 +140,7 @@ const survivals: Survival[] = [
     detail: "Potato blight hit the Scottish Highlands in 1846. About a third of the western Highlands population emigrated between 1841 and 1861, more than 16,000 paid for by landlords and shipped to Canada or Australia. Our Telfers had already left — the ones who hadn't nearly didn't." },
   { decade: 1930, year: "1929–39", title: "The Great Depression", tone: "rose",
     feared: "One in three breadwinners out of work",
-    detail: "Unemployment in Australia peaked at 32 per cent in 1932. By the following year one in three breadwinners was out of work. By 1932 more than 60,000 men, women and children were dependent on the susso, a state payment that bought only the bare minimum of food. One Queenslander said people spent more on a dog. Our line ran a general store at Glencoe West, in South Australian farming country: groceries, hardware, drapery, and the local Post Office in the same building. A store lives on what farmers can pay, and farmers could pay almost nothing. James Telfer had opened it with his wife Alma in 1917, two years before his daughter Vida was born. He was 50 when the Wall Street crash came — a farmer, newspaper agent, Justice of the Peace and Presbyterian elder. Vida was ten that year, and lived through every year of it to 2021." },
+    detail: "Unemployment in Australia peaked at 32 per cent in 1932. By the following year one in three breadwinners was out of work. By 1932 more than 60,000 men, women and children were dependent on the susso, a state payment that bought only the bare minimum of food. One Queenslander said people spent more on a dog. Our line ran a general store at Glencoe West, in South Australian farming country: groceries, hardware, drapery, and the local Post Office in the same building. A store lives on what farmers can pay, and farmers could pay almost nothing. James Telfer had opened it with his wife Alma in 1917, two years before his daughter Vida was born. He was 63 when the Wall Street crash came — a farmer, newspaper agent, Justice of the Peace and Presbyterian elder. Vida was ten that year, and lived through every year of it to 2021." },
   { decade: 1940, year: "14 May 1944", title: "The Second World War", tone: "sage",
     feared: "39,000 Australians killed",
     detail: "Our own line again: SX10061 Private Colin Lindsay Beaton, 2 Reserve Motor Company — Bessie Telfer's youngest son. Taken at Changi, sent to Thailand as forced labour on the Burma Railway, died of illness, aged 29. Buried Kranji." },
@@ -174,6 +174,65 @@ for (const s of survivals) {
   survivalsByDecade.set(s.decade, list);
 }
 
+// ── Freedoms column ───────────────────────────────────────────────────
+// tw-2026-11-26-002: Mark asked for "things that took away freedoms from
+// normal Australians" — the new digital duty of care bill and whatever else
+// does it. This is a THIRD column, deliberately separate from the survivals
+// column, because a law that removed a freedom is not a near-extinction
+// event, and filing it under "could have ended the line and didn't" would
+// be a category error and a lie of emphasis.
+//
+// EVIDENCE RULE for this column, non-negotiable: a card may only state what
+// a NAMED Commonwealth Act does, quoting the Act's own operative words. The
+// Act text at legislation.gov.au is the witness; no blog, no campaign, no
+// newspaper. No characterisation ("police state", "like China") appears as
+// fact — the reader draws the conclusion. Every card carries the Act, the
+// assent date and the verbatim power. Decade = the decade of assent.
+interface Freedom {
+  decade: number;
+  year: string;
+  title: string;
+  enacted: string;
+  power: string;
+  detail: string;
+  source: string;
+  tone: "rose" | "sage" | "blue" | "lavender" | "peach";
+}
+
+const freedoms: Freedom[] = [
+  { decade: 2010, year: "2015", title: "Two years of records on everyone", tone: "rose",
+    enacted: "Data Retention Act 2015 — No. 39, 2015",
+    power: "“A person (a service provider) … must keep, or cause to be kept … relating to any communication carried by means of the service”",
+    detail: "Two years. Every carrier and internet provider in Australia must keep, on every subscriber: name and address, contract and billing details, who you contacted, when, for how long, and the cell tower or Wi-Fi hotspot at each end. Not what you said. Who, when, where. The clock under s.187C runs two years past the closing of your account. You were never asked.",
+    source: "Telecommunications (Interception and Access) Act 1979, ss.187A–187C, inserted by Act No. 39 of 2015 (assent 13 Apr 2015)",
+    tone: "rose" },
+  { decade: 2010, year: "2018", title: "Breaking encryption, by notice", tone: "blue",
+    enacted: "Assistance and Access Act 2018 — No. 148, 2018",
+    power: "“…frameworks for voluntary and mandatory industry assistance to law enforcement and intelligence agencies in relation to encryption technologies”",
+    detail: "Three instruments: a technical assistance request, a technical assistance notice, and a technical capability notice. Together they let law enforcement and intelligence agencies seek or compel a company to build a capability to reach data that encryption was protecting. The amending Act also provides that certain decisions under the new arrangements are not subject to judicial review, and shields providers from criminal liability for acts done consistently with a notice.",
+    source: "Telecommunications and Other Legislation Amendment (Assistance and Access) Act 2018, Act No. 148 of 2018 (assent 8 Dec 2018)",
+    tone: "blue" },
+  { decade: 2020, year: "11 Dec 2024", title: "Proof of age to speak", tone: "peach",
+    enacted: "Social Media Minimum Age Act 2024 — No. 127, 2024",
+    power: "“A provider of an age-restricted social media platform must take reasonable steps to prevent age-restricted users having accounts with the age-restricted social media platform.”",
+    detail: "An age-restricted user is “an Australian child who has not reached 16 years”. To keep children out, platforms must work out who is an adult — every Australian user becomes someone whose age has been established. The Act caps that: the Minister may specify kinds of information that must NOT be collected to comply (s.63DA). The maximum penalty is 30,000 penalty units. Australia was the first country to require this nationwide.",
+    source: "Online Safety Amendment (Social Media Minimum Age) Act 2024, No. 127 of 2024 (assent 10 Dec 2024, commenced 11 Dec 2024), inserting Part 4A, ss.63A–63DA, into the Online Safety Act 2021",
+    tone: "peach" },
+  { decade: 2020, year: "25 Nov 2026", title: "The Digital Duty of Care", tone: "lavender",
+    enacted: "Digital Duty of Care Bill 2026 — passed both Houses 25 Nov 2026",
+    power: "“A person must not fail to comply with the person’s digital duty of care.” Civil penalty: 60,000 penalty units.",
+    detail: "It replaces Part 2 of the Online Safety Act 2021. A service “must ensure” a safe online environment, and must conduct risk assessments of its own features — recommender, endless-feed, logged-in and time-limited features are all defined. Section 26B carves out private messages between consenting adults. To test compliance the Commissioner may assume a “sock puppet identity” — “a false or fictitious identity” — and approved researchers may take platform data.",
+    source: "Online Safety Amendment (Digital Duty of Care) Bill 2026, finally passed both Houses 25 Nov 2026 (APH bId r7553; Bills Digest bd2627/27bd026) — ss.25–26C, 205B–205K",
+    tone: "lavender" },
+];
+
+const freedomsByDecade = new Map<number, Freedom[]>();
+for (const f of freedoms) {
+  const list = freedomsByDecade.get(f.decade) ?? [];
+  list.push(f);
+  freedomsByDecade.set(f.decade, list);
+}
+
 // Every decade from the first event to the last, so the column keeps step
 // with the timeline even where it holds nothing.
 const firstDecade = Math.floor(timeline[0].sortYear / 10) * 10;
@@ -203,6 +262,11 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
   </div>
 
   <!-- Timeline + Survivals: one two-column layout, cards aligned to their decade -->
+  <div class="tl-legend">
+    <div class="tl-lg-1">The Telfer line</div>
+    <div class="tl-lg-2">What the line survived</div>
+    <div class="tl-lg-3">What Australians lost</div>
+  </div>
   <div class="tl-grid">
     <!-- One grid ROW per decade: the timeline cell and its survival card are
          siblings in the same row, so each card sits BESIDE its own decade by
@@ -251,6 +315,18 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
               </div>
             ))}
           </div>
+          <div class={`tl-free-cell${(freedomsByDecade.get(d) ?? []).length ? "" : " is-empty"}`}>
+            {(freedomsByDecade.get(d) ?? []).map((f) => (
+              <div class={`freedom-card tone-${f.tone}`}>
+                <div class="sc-year">{f.year}</div>
+                <div class="sc-title">{f.title}</div>
+                <div class="fc-act">{f.enacted}</div>
+                <div class="fc-power">{f.power}</div>
+                <div class="sc-detail">{f.detail}</div>
+                <div class="fc-source">{f.source}</div>
+              </div>
+            ))}
+          </div>
         </Fragment>
       );
     })}
@@ -264,10 +340,12 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
   /* ── Survivals column ─────────────────────────────────────────────── */
   .tl-grid {
     display: grid;
-    /* Two columns at EVERY width. One row per decade, so the card is beside
-       its own decade by construction — desktop and phone behave the same. */
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
-    column-gap: 2.5rem;
+    /* Three columns at EVERY width. One row per decade, so each card is
+       beside its own decade by construction — desktop and phone behave the
+       same. Column 2 = what the line survived; column 3 = what Australians
+       lost, statute by statute. */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+    column-gap: 2rem;
     row-gap: 0;
     align-items: start;
   }
@@ -339,6 +417,77 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
   .tone-lavender { background: #e8ddf3; border-color: #a88ac2; }
   .tone-peach    { background: #fde8c8; border-color: #d9a85a; }
 
+  /* ── Freedoms column ──────────────────────────────────────────────────
+     Same card style, same pastel tones, same decade pairing as the
+     survivals column — but visually distinguished by a left rule, so no
+     reader mistakes a law for a catastrophe. */
+  .tl-free-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+    padding: .35rem 0;
+    align-self: start;
+    margin-top: -.1rem;
+  }
+  .tl-free-cell.is-empty { padding: 0; }
+
+  .freedom-card {
+    border-radius: 14px;
+    border: 1px solid var(--color-border);
+    border-left: 4px solid currentColor;
+    padding: .7rem .85rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    color: var(--color-ink);
+  }
+  .freedom-card + .freedom-card { margin-top: .6rem; }
+
+  /* The operative words of the Act, boxed — this is the witness. */
+  .fc-act {
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    opacity: .8;
+    margin-bottom: .25rem;
+  }
+  .fc-power {
+    font-size: .72rem;
+    line-height: 1.4;
+    font-style: italic;
+    border-left: 2px solid rgba(0,0,0,.18);
+    padding-left: .45rem;
+    margin: .1rem 0 .4rem;
+  }
+  .fc-source {
+    margin-top: .45rem;
+    padding-top: .35rem;
+    border-top: 1px dotted rgba(0,0,0,.18);
+    font-size: .58rem;
+    line-height: 1.35;
+    opacity: .7;
+  }
+
+  /* Column legend — three labels matching the three columns below. */
+  .tl-legend {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+    column-gap: 2rem;
+    margin: 1.2rem 0 .3rem;
+    padding-bottom: .4rem;
+    border-bottom: 2px solid var(--color-gold);
+  }
+  .tl-legend > div {
+    font-family: var(--font-serif, serif);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--color-ink-light);
+  }
+  .tl-lg-2 { padding-left: .1rem; }
+  .tl-lg-3 { border-left: 4px solid #c98a8a; padding-left: .55rem; }
+
   .tl-side-foot {
     margin-top: 1rem;
     padding-top: .7rem;
@@ -353,23 +502,38 @@ for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
      decade on a phone exactly as it does on the desktop — that was the whole
      point. Nothing is reordered, nothing folds underneath. */
   @media (max-width: 860px) {
+    .tl-legend {
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: .5rem;
+    }
+    .tl-legend > div { font-size: .52rem; letter-spacing: .02em; }
+    .tl-lg-3 { border-left-width: 3px; padding-left: .3rem; }
     .tl-grid {
-      grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr);
-      column-gap: .8rem;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: .5rem;
     }
     .tl-cell h2 { font-size: 1.15rem; }
     .survival-card { padding: .5rem .55rem; border-radius: 10px; }
+    .freedom-card { padding: .5rem .55rem; border-radius: 10px; border-left-width: 3px; }
     .sc-year { font-size: .58rem; }
     .sc-title { font-size: .74rem; line-height: 1.2; margin: .12rem 0 .2rem; }
     .sc-feared { font-size: .64rem; margin-bottom: .2rem; line-height: 1.25; }
     .sc-detail { font-size: .62rem; line-height: 1.3; }
+    .fc-act { font-size: .5rem; margin-bottom: .18rem; }
+    .fc-power { font-size: .6rem; line-height: 1.3; padding-left: .3rem; margin: .08rem 0 .3rem; }
+    .fc-source { font-size: .48rem; line-height: 1.3; margin-top: .3rem; padding-top: .25rem; }
   }
   @media (max-width: 430px) {
-    .tl-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); column-gap: .6rem; }
+    .tl-legend { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1fr); column-gap: .4rem; }
+    .tl-legend > div { font-size: .46rem; }
+    .tl-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1fr); column-gap: .4rem; }
     .tl-cell h2 { font-size: 1.05rem; }
     .survival-card { padding: .42rem .5rem; }
+    .freedom-card { padding: .42rem .5rem; }
     .sc-title { font-size: .7rem; }
     .sc-detail { font-size: .58rem; }
+    .fc-power { font-size: .55rem; }
+    .fc-source { font-size: .44rem; }
   }
 </style>
 
