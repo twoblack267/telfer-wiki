@@ -399,53 +399,58 @@ for (const f of freedoms) {
               </div>
             ))}
           </div>
-          <div class={`tl-card-cell${cards.length ? "" : " is-empty"}`}>
-            {cards.map((c) => (
-              <div
-                class={`survival-card tone-${c.tone}`}
+          <div class={`tl-card-cell${cards.length || freeCards.length ? "" : " is-empty"}`}>
+            {/* ONE chassis for every card in this column (Mark, 26 Nov 2026:
+                "I want all the cards to be the same like the grey ones").
+                COVID used to be a fat coloured block with a TAP TO READ label
+                sitting above a strip of narrow tabs — two shapes in one
+                column. Now survivals and freedoms are ONE stack of identical
+                cards, and the grey kicker is always the date, never a
+                placeholder title. Tone colours are deliberately NOT applied:
+                a per-card fill was the thing that made them look unalike. */}
+            {[...cards.map((c) => ({
+                kicker: c.year,
+                title: c.title,
+                kind: "survival" as const,
+                data: {
+                  kicker: c.year,
+                  title: c.title,
+                  lede: c.feared,
+                  power: "",
+                  text: c.detail,
+                  src: "",
+                },
+              })),
+              ...freeCards.map((f) => ({
+                kicker: f.year,
+                title: f.title,
+                kind: "freedom" as const,
+                data: {
+                  kicker: f.year,
+                  title: f.title,
+                  lede: f.enacted,
+                  power: f.power,
+                  text: f.detail,
+                  src: f.source,
+                },
+              }))].map((c) => (
+              <button
+                type="button"
+                class="tcard"
                 data-rd
-                data-kind="survival"
-                data-kicker={c.year}
-                data-title={c.title}
-                data-lede={c.feared}
-                data-text={c.detail}
-                role="button"
-                tabindex="0"
-                aria-label={`${c.year} — ${c.title}. Open full note`}
+                data-kind={c.kind}
+                data-kicker={c.data.kicker}
+                data-title={c.data.title}
+                data-lede={c.data.lede}
+                data-power={c.data.power || undefined}
+                data-text={c.data.text}
+                data-src={c.data.src || undefined}
+                aria-label={`${c.kicker} — ${c.title}. Open full card`}
               >
-                <div class="sc-year">{c.year}</div>
-                <div class="sc-title">{c.title}</div>
-                <div class="sc-feared">{c.feared}</div>
-                <span class="sc-hint" aria-hidden="true">Tap to read</span>
-              </div>
+                <span class="tcard-year">{c.kicker}</span>
+                <span class="tcard-title">{c.title}</span>
+              </button>
             ))}
-            {freeCards.length > 0 && (
-              <div class="tl-free-cell">
-                <div class="fdeck" data-deck={String(di)}>
-                  {freeCards.map((f) => (
-                    <div class={`fcard tone-${f.tone}`} data-fcard>
-                      <button
-                        type="button"
-                        class="fcard-tab"
-                        data-ftab
-                        data-rd
-                        data-kind="freedom"
-                        data-kicker={f.year}
-                        data-title={f.title}
-                        data-lede={f.enacted}
-                        data-power={f.power}
-                        data-text={f.detail}
-                        data-src={f.source}
-                        aria-label={`${f.year} — ${f.title}. Open full card`}
-                      >
-                        <span class="ftab-year">{f.year}</span>
-                        <span class="ftab-title">{f.title}</span>
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </Fragment>
       );
@@ -501,39 +506,54 @@ for (const f of freedoms) {
   }
   .tl-card-cell.is-empty { padding: 0; }
 
-  /* Two cards in ONE decade may overlap by 8px — nothing else may. */
-  .tl-card-cell > .survival-card + .survival-card { margin-top: -8px; }
-
-  .survival-card {
-    border-radius: 14px;
-    border: 1px solid var(--color-border);
-    padding: .7rem .85rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  /* ── The ONE card chassis ─────────────────────────────────────────────
+     Every card in this column is this shape: same width, same radius, same
+     border, same left colour bar, same padding. A survival note (COVID-19)
+     and a freedom card ("The Digital Duty of Care") are the same object to
+     the eye; only the words inside differ. No per-card tone fill — the fills
+     were the reason two identical cards looked like two different things.
+     The left bar is a single brand colour, not the tone palette. */
+  .tcard {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 15.5rem;
+    margin: 0 0 .35rem;
+    text-align: left;
+    font: inherit;
     color: var(--color-ink);
+    background: var(--color-surface, #fff);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-burgundy);
+    border-radius: 8px;
+    padding: .42rem .55rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    cursor: pointer;
+    transition: box-shadow .15s ease, border-color .15s ease;
   }
-  .sc-year {
-    font-size: .68rem;
+  .tcard:hover { box-shadow: 0 3px 10px rgba(0,0,0,.10); }
+  .tcard:focus-visible { outline: 2px solid var(--color-burgundy); outline-offset: 2px; }
+  .tcard-year {
+    display: block;
+    font-size: .58rem;
     font-weight: 700;
-    letter-spacing: .04em;
+    letter-spacing: .06em;
     text-transform: uppercase;
-    opacity: .75;
+    color: var(--color-ink-light);
+    opacity: .85;
+    margin-bottom: .12rem;
   }
-  .sc-title {
+  .tcard-title {
+    display: block;
     font-family: var(--font-serif, serif);
     font-weight: 700;
-    font-size: .95rem;
-    line-height: 1.25;
-    margin: .15rem 0 .3rem;
-  }
-  .sc-feared {
-    font-size: .78rem;
-    font-weight: 600;
-    margin-bottom: .3rem;
-  }
-  .sc-detail {
-    font-size: .76rem;
-    line-height: 1.45;
-    color: var(--color-ink-light);
+    font-size: .8rem;
+    line-height: 1.2;
+    /* Wrap at whole words only — never hyphenate a name mid-syllable. */
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
   }
 
   .tone-rose     { background: #f3d9d7; border-color: #c98a8a; }
@@ -542,185 +562,6 @@ for (const f of freedoms) {
   .tone-lavender { background: #e8ddf3; border-color: #a88ac2; }
   .tone-peach    { background: #fde8c8; border-color: #d9a85a; }
   .tone-sky      { background: #d9edf0; border-color: #78aab3; }
-
-  /* ── Trivia deck ──────────────────────────────────────────────────────
-     A small, SECONDARY stack of cards sitting in its own column beside the
-     family line. The cards overlap on purpose: each one is mostly hidden
-     behind the next, with only a tab poking out. Touch a tab and that card
-     opens; the others fold back. The family line is never covered by any
-     of this — the deck lives in its own grid column. */
-  .tl-free-cell {
-    /* Sits at the foot of the survival cell, under that decade's own cards. */
-    margin-top: .55rem;
-    min-width: 0;
-    padding: 0;
-  }
-
-  .fdeck {
-    display: flex;
-    flex-direction: column;
-    /* Small: the deck is a narrow strip in the corner of the column, not
-       a full-width panel. The family line keeps the rest of the width.
-       overflow:visible is deliberate - closed tabs sit offset by transform,
-       so any clipping here slices them in half. */
-    align-items: flex-start;
-    overflow: visible;
-    /* The deck reserves the height of its closed stack. An open card is
-       pulled out of that flow and floats over it, so tapping never shoves
-       the family text below. */
-    position: relative;
-  }
-
-  .fcard {
-    position: relative;
-    /* Small = narrow. The card does NOT grow sideways to swallow a long
-       title, and it does NOT fill its column either - it stays a small tab
-       strip and the tab runs a little taller to hold the words on a second
-       line. Width is capped hard, height is free. */
-    /* Just wide enough for the longest single word in the deck
-       ('Permission' / 'Twenty-four'), then the title wraps at spaces.
-       Still far narrower than the column so the family text keeps its room. */
-    width: 9.75rem;
-    max-width: 74%;
-    border-radius: 8px;
-    border: 1px solid var(--color-border);
-    border-left: 4px solid currentColor;
-    color: var(--color-ink);
-    box-shadow: 0 1px 3px rgba(0,0,0,.05);
-    transition: width .18s ease, box-shadow .18s ease;
-    overflow: visible;
-  }
-  /* The open card hangs OVER the tabs below it: lifted out of the deck's
-     flow onto its own layer so it cannot displace a single pixel of
-     anything. top:0 anchors it to the slot it already occupies. */
-  .fcard.is-open {
-    /* The OPEN card is the exception. You are reading ONE thing, so it is
-       allowed to grow leftwards and cover the family text - it is not read
-       at the same time. It grows out of its own right edge, so the tab
-       never slides off the side of the phone. */
-    /* The card's right edge is pinned 38px in from the viewport edge by
-       `right:` below, so the width available is 100vw - 38px - 8px gutter.
-       Subtract the offset ONCE: taking it off again is what left a 4px
-       sliver hanging off the left of the phone. */
-    width: min(22rem, calc(100vw - var(--open-right, 0px) - 1rem));
-    /* The base card's max-width:74% would otherwise clamp this to a third
-       of the column and the open card could never grow. Release it. */
-    max-width: none;
-    z-index: 20;
-    box-shadow: 0 4px 14px rgba(0,0,0,.13);
-  }
-  /* While open, the deck keeps its closed height so nothing underneath
-     moves - the card is allowed to paint outside the deck box instead. */
-  .fdeck.is-leaky { height: var(--deck-closed-h); }
-  .fdeck.is-leaky .fcard.is-open {
-    position: absolute;
-    top: var(--open-top, 0px);
-    /* Right edge stays put; the extra width grows to the LEFT, over the
-       family text. max() floors the left edge at 0.5rem so the card can
-       never hang off the side of the phone. */
-    right: var(--open-right, 0px);
-    left: auto;
-    /* No max-width here: the single width on .fcard.is-open owns the size.
-       Two competing caps is how the card ended up hanging off the screen. */
-  }
-  /* Overlap: each card below sits slightly on top of the one above, so a
-     stack reads as a deck of tabs rather than a column of articles.
-     A closed card is entirely its tab, so the tab controls rounding. */
-  .fcard + .fcard { margin-top: -6px; margin-left: 3px; }
-
-  /* The little tab you touch. */
-  .fcard-tab {
-    box-sizing: border-box;
-    display: flex;
-    /* Baseline keeps year and title on one line; when a long title needs a
-       second line the tab simply grows downwards to hold it. */
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: .1rem .3rem;
-    width: 100%;
-    min-width: 0;
-    height: auto;
-    text-align: left;
-    background: var(--color-surface, #fff);
-    border: 0;
-    cursor: pointer;
-    border-radius: 7px;
-    padding: .38rem .55rem;
-    font: inherit;
-    color: inherit;
-    /* Nudge the tab out to the right so it pokes past the card edge. */
-    transform: translateX(6px);
-  }
-  .fcard-tab:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
-  }
-  .ftab-year {
-    flex: none;
-    flex-basis: 100%;
-    font-size: .58rem;
-    font-weight: 700;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    opacity: .7;
-    white-space: nowrap;
-  }
-  .ftab-title {
-    flex: 0 1 auto;
-    min-width: 0;
-    font-family: var(--font-serif, serif);
-    font-weight: 700;
-    font-size: .78rem;
-    line-height: 1.2;
-    /* Wrap at whole words only. anywhere/break-word would hyphenate a word
-       mid-syllable, which is the exact 'cut word' look to avoid. */
-    white-space: normal;
-    overflow-wrap: normal;
-    word-break: normal;
-    hyphens: none;
-  }
-
-  .fcard-body {
-    padding: 0 .55rem .6rem;
-    border-top: 1px dotted rgba(0,0,0,.18);
-    margin-top: .1rem;
-    padding-top: .45rem;
-    /* The open card must show its whole citation - a capped box that clips
-       a sentence mid-word reads as broken. Let it grow; the deck stays
-       small because only one card is ever open. */
-    font-size: .72rem;
-    line-height: 1.35;
-  }
-  @media (max-width: 860px) {
-    .fcard-body { font-size: .66rem; }
-  }
-
-  /* The operative words of the Act, boxed — this is the witness. */
-  .fc-act {
-    font-size: .58rem;
-    font-weight: 700;
-    letter-spacing: .03em;
-    text-transform: uppercase;
-    opacity: .8;
-    margin-bottom: .25rem;
-  }
-  .fc-power {
-    font-size: .7rem;
-    line-height: 1.4;
-    font-style: italic;
-    border-left: 2px solid rgba(0,0,0,.18);
-    padding-left: .45rem;
-    margin: .1rem 0 .4rem;
-  }
-  .fc-source {
-    margin-top: .45rem;
-    padding-top: .35rem;
-    border-top: 1px dotted rgba(0,0,0,.18);
-    font-size: .68rem;
-    line-height: 1.45;
-    opacity: .8;
-  }
-  .fcard-body .sc-detail { font-size: .72rem; line-height: 1.45; }
 
   /* Column legend — two labels matching the two columns below. The trivia
      deck is a side note, so it gets no third heading of its own. */
@@ -766,20 +607,9 @@ for (const f of freedoms) {
       column-gap: .5rem;
     }
     .tl-cell h2 { font-size: 1.15rem; }
-    .survival-card { padding: .5rem .55rem; border-radius: 10px; }
-    .fcard { border-radius: 9px; border-left-width: 3px; }
-    .fcard-tab { padding: .3rem .35rem; gap: .25rem; transform: translateX(3px); }
-    .ftab-year { font-size: .48rem; }
-    .ftab-title { font-size: .6rem; }
-    .fcard-body { padding: 0 .4rem .5rem; padding-top: .35rem; }
-    .sc-year { font-size: .58rem; }
-    .sc-title { font-size: .74rem; line-height: 1.2; margin: .12rem 0 .2rem; }
-    .sc-feared { font-size: .64rem; margin-bottom: .2rem; line-height: 1.25; }
-    .sc-detail { font-size: .62rem; line-height: 1.3; }
-    .fc-act { font-size: .58rem; margin-bottom: .18rem; }
-    .fc-power { font-size: .58rem; line-height: 1.3; padding-left: .3rem; margin: .08rem 0 .3rem; }
-    .fc-source { font-size: .6rem; line-height: 1.4; margin-top: .3rem; padding-top: .25rem; }
-    .fcard-body .sc-detail { font-size: .66rem; line-height: 1.4; }
+    .tcard { padding: .38rem .5rem; }
+    .tcard-year { font-size: .54rem; }
+    .tcard-title { font-size: .78rem; }
   }
   /* ── Family line: every entry is a button that opens the same Win95
         reader window the trivia tabs use (Mark, 26 Nov 2026). No inline
@@ -1031,55 +861,15 @@ for (const f of freedoms) {
      off the screen. */
 
   .tl-card-cell { margin-right: calc(-1 * var(--wrap-gap, 12px)); }
-  .tl-free-cell { padding-right: 0; }
-  /* NO width override here. An earlier "width:auto; max-width:none" block
-     (left over from the old slide-out overlay) stretched every closed tab
-     into a full-width box and killed the poker-tab look. The narrow width
-     lives in the .fcard rule above and stays the single source of truth. */
-  .fcard-tab:hover { background: var(--color-surface); }
-  /* Flush means the TAB's right edge touches the wall, not merely the deck's
-     box. The deck is right-aligned in its cell and the card's own right edge
-     is what carries the bleed, so nothing is left floating 41px off the wall. */
-  .fdeck { align-items: flex-end; margin-left: auto; margin-right: 0; }
-  .fcard { margin-right: 0; }
-  .fcard-tab { transform: none; }
-  @media (max-width: 860px) {
-    .fcard-tab { padding: .3rem .3rem .3rem .35rem; }
-  }
-  .tl-card-cell > .survival-card { cursor: pointer; }
-  .tl-card-cell > .survival-card .sc-hint {
-    display: block;
-    margin-top: .22rem;
-    font-family: var(--font-mono);
-    font-size: .56rem;
-    font-weight: 700;
-    letter-spacing: .07em;
-    text-transform: uppercase;
-    opacity: .55;
-  }
 
-  @media print {
-    #skippy-reader { display: none !important; }
-    .tl-card-cell > .survival-card .sc-hint { display: none; }
-  }
 
   @media (max-width: 430px) {
     .tl-legend { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: .4rem; }
     .tl-legend > div { font-size: .46rem; }
     .tl-grid { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: .4rem; }
     .tl-cell h2 { font-size: 1.05rem; }
-    .survival-card { padding: .42rem .5rem; }
-    .freedom-card { padding: .42rem .5rem; }
-    .ftab-year { font-size: .52rem; }
-    .ftab-title { font-size: .72rem; }
-    .fcard-tab { padding: .34rem .34rem; flex-wrap: wrap; gap: .1rem .3rem; }
-    .ftab-year { flex-basis: 100%; }
-    .sc-title { font-size: .7rem; }
-    .sc-detail { font-size: .58rem; }
-    .fc-power { font-size: .62rem; }
-    /* Never shrink the citation below reading size: 0.44rem rendered at
-       7px on a phone is the text Mark could not read. */
-    .fc-source { font-size: .62rem; }
+    .tcard { padding: .38rem .5rem; }
+    .tcard-title { font-size: .78rem; }
   }
 </style>
 
@@ -1094,7 +884,7 @@ for (const f of freedoms) {
      at this viewport — not a number guessed from the Tailwind classes. */
   (function () {
     function setWrapGap() {
-      var card = document.querySelector("[data-fcard]");
+      var card = document.querySelector("[data-rd]");
       if (!card) return;
       /* Walk up from a card to the first ancestor that actually has padding —
          that ancestor's right padding is the entire gutter between the tabs
