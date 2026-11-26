@@ -90,6 +90,16 @@ for (const p of telferPeople) {
 }
 
 // Add key historical events from tree content
+/* A family line reads as a sentence, not a fragment. The stored detail
+     is a verb phrase ("is born"), so it needs a name, a year and a full stop
+     or the card shows "is born." on its own with nothing in front of it. */
+  function describeFamily(name: string, detail: string, year: string) {
+    var d = (detail || "").trim();
+    var body = d ? d.charAt(0).toUpperCase() + d.slice(1) : "";
+    if (body && !/[.?!]$/.test(body)) body += ".";
+    return body ? name + " — " + year + ". " + body : name + " — " + year + ".";
+  }
+  
 timeline.push({ year: 1839, sortYear: 1839, dateLabel: "1839", type: "event", personName: "Francis Telfer", personSlug: "francis-telfer-1809", detail: "emigrates to South Australia" });
 timeline.push({ year: 1845, sortYear: 1845, dateLabel: "1845", type: "event", personName: "The Telfer family", personSlug: "", detail: "settles in the Tantanoola district, SA" });
 timeline.push({ year: 1874, sortYear: 1874, dateLabel: "1874", type: "event", personName: "John Telfer", personSlug: "john-telfer-1847", detail: "marries Caroline Masters" });
@@ -562,12 +572,12 @@ for (const f of freedoms) {
                         data-kind="family"
                         data-kicker={event.year}
                         data-title={event.personName}
-                        data-text={event.detail}
+                        data-text={describeFamily(event.personName, event.detail, event.year)}
                         data-slug={event.personSlug || undefined}
                         aria-label={`${event.personName}, ${event.year} — open full entry`}
                       >
                         <span class={event.personSlug ? "font-medium text-[var(--color-link)]" : "font-medium text-[var(--color-ink)]"}>{event.personName}</span>
-                        <span class="text-[var(--color-ink-light)]"> {event.detail}</span>
+                        <span class="text-[var(--color-ink-light)]">{" \u00b7 "}{event.year}</span>
                       </button>
                     </div>
                   </div>
@@ -1037,6 +1047,11 @@ for (const f of freedoms) {
   }
   #skippy-reader .rd-text p { margin: 0 0 .55rem; }
   #skippy-reader .rd-text p:last-child { margin-bottom: 0; }
+  #skippy-reader .rd-more {
+    display: block;
+    margin-top: .35rem;
+    font-weight: 600;
+  }
   #skippy-reader .rd-src {
     margin-top: .7rem;
     padding-top: .5rem;
