@@ -838,7 +838,11 @@ for (const f of freedoms) {
     background: transparent;
     transition: background-color .12s linear, border-color .12s linear;
   }
-  .tl-fam-name {
+  /* Specificity: .tl-fam .tl-fam-name (0,2,0) beats the plain .tl-fam-name
+     rule, which was losing the cascade and leaving names at weight 400 --
+     that is why a ledger line rendered like a flat grey widget. Measured
+     with getComputedStyle().fontWeight, not eyeballed. */
+  .tl-fam .tl-fam-name {
     display: block;
     font-family: var(--font-serif);
     font-weight: 700;
@@ -874,7 +878,7 @@ for (const f of freedoms) {
     transform: translateY(1px);
   }
   .tl-fam:focus-visible { outline: 2px solid var(--color-highlight); outline-offset: 2px; }
-  [data-theme="dark"] .tl-fam-name { text-decoration-color: rgba(255,255,255,.3); }
+  [data-theme="dark"] .tl-fam .tl-fam-name { text-decoration-color: rgba(255,255,255,.3); }
   [data-theme="dark"] .tl-fam:hover { background: rgba(255,255,255,.05); }
 
   /* ── The reader window ────────────────────────────────────────────────
