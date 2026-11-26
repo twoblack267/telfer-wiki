@@ -585,16 +585,14 @@ for (const f of freedoms) {
     border-top: 1px dotted rgba(0,0,0,.18);
     margin-top: .1rem;
     padding-top: .45rem;
-    /* Keep the whole card SMALL even when open: the body scrolls inside a
-       capped box so the deck stays a row of tabs, not a full article. */
-    max-height: 7.5rem;
-    overflow-y: auto;
-    overscroll-behavior: contain;
+    /* The open card must show its whole citation - a capped box that clips
+       a sentence mid-word reads as broken. Let it grow; the deck stays
+       small because only one card is ever open. */
     font-size: .72rem;
     line-height: 1.35;
   }
   @media (max-width: 860px) {
-    .fcard-body { max-height: 6.5rem; font-size: .66rem; }
+    .fcard-body { font-size: .66rem; }
   }
 
   /* The operative words of the Act, boxed — this is the witness. */
