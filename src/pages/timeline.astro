@@ -68,7 +68,6 @@ for (const p of telferPeople) {
         bareName(p.display_name),
         p.slug,
         "is born",
-        lifeDates(p.display_name, p.birth_year, p.death_year).dates,
       ),
     );
   }
@@ -88,7 +87,6 @@ for (const p of telferPeople) {
         bareName(p.display_name),
         p.slug,
         aged === "?" ? "dies" : `dies, aged ${aged}`,
-        lifeDates(p.display_name, p.birth_year, p.death_year).dates,
       ),
     );
   }
@@ -663,9 +661,7 @@ for (const f of freedoms) {
                         data-slug={event.personSlug || undefined}
                         aria-label={`${event.personName}, ${event.year} — open full entry`}
                       >
-                        <span class="tl-fam-name">{event.personName}</span>{event.lifeDates ? (
-                          <span class="tl-fam-life">{event.lifeDates}</span>
-                        ) : null}
+                        <span class="tl-fam-name">{event.personName}</span>
                       </button>
                     </div>
                   </div>
