@@ -14,6 +14,7 @@ interface TimelineEvent {
   personName: string;
   personSlug: string;
   detail: string;
+  lifeDates?: string;
 }
 
 const timeline: TimelineEvent[] = [];
@@ -42,6 +43,7 @@ function makeEvent(
   personName: string,
   personSlug: string,
   detail: string,
+  life = "",
 ): TimelineEvent {
   const numeric = parseYearValue(raw);
   return {
@@ -51,6 +53,7 @@ function makeEvent(
     personName,
     personSlug,
     detail,
+    lifeDates: life,
     sortYear: numeric ?? Number.MAX_SAFE_INTEGER,
   };
 }
@@ -62,9 +65,10 @@ for (const p of telferPeople) {
         p.birth_year,
         p.birth_year,
         "birth",
-        p.display_name,
+        bareName(p.display_name),
         p.slug,
         "is born",
+        lifeDates(p.display_name, p.birth_year, p.death_year).dates,
       ),
     );
   }
@@ -81,9 +85,10 @@ for (const p of telferPeople) {
         p.death_year,
         p.death_year,
         "death",
-        p.display_name,
+        bareName(p.display_name),
         p.slug,
         aged === "?" ? "dies" : `dies, aged ${aged}`,
+        lifeDates(p.display_name, p.birth_year, p.death_year).dates,
       ),
     );
   }
@@ -93,11 +98,93 @@ for (const p of telferPeople) {
 /* A family line reads as a sentence, not a fragment. The stored detail
      is a verb phrase ("is born"), so it needs a name, a year and a full stop
      or the card shows "is born." on its own with nothing in front of it. */
-  function describeFamily(name: string, detail: string, year: string) {
+  function describeFamily(name: string, detail: string, year: string, lifeDates = "") {
     var d = (detail || "").trim();
     var body = d ? d.charAt(0).toUpperCase() + d.slice(1) : "";
     if (body && !/[.?!]$/.test(body)) body += ".";
-    return body ? name + " — " + year + ". " + body : name + " — " + year + ".";
+    /* The card face carries the bracket, and the panel must agree with it,
+       so the same string is handed in. "Elizabeth Beattie — 1741. Is born."
+       on the reader while the card says "(1741 – 1819)" is two sources of
+       truth for one fact - Mark noticed exactly that class of drift before. */
+    var life = (lifeDates || "").trim();
+    /* The sentence now carries the dates: "Elizabeth Beattie, born 1741, died
+       1819." A bracket under a name on the card was never the wording Mark
+       remembers; he asked for born ... then died ... in words. The year strip
+       is dropped from the sentence because the birth and death years are
+       already in it, and printing "1741. Is born." under "born 1741" reads
+       like a typo. Event cards pass no life dates and keep the strip. */
+    if (!life) {
+      var bare0 = name;
+      return body ? bare0 + " — " + year + ". " + body : bare0 + " — " + year + ".";
+    }
+    var yr = String(year || "").trim();
+    var mMatch = life.match(/^\(\s*(?:b\.\s*)?(\d{3,4})\s*(?:–|—|-)\s*(\d{3,4})\s*\)$/);
+    var bMatch = life.match(/^\(\s*b\.\s*(\d{3,4})\s*\)$/);
+    var head = "";
+    if (mMatch) {
+      head = name + ", born " + mMatch[1] + ", died " + mMatch[2];
+    } else if (bMatch) {
+      head = name + ", born " + bMatch[1];
+    } else {
+      head = name + " " + life;
+    }
+    /* Don't say it twice: the card already stated the birth (or the death)
+       in the same sentence, so "Elspeth Young, born 1722. Is born." is out.
+       Only the detail survives when it adds a fact, otherwise the sentence
+       stops honestly at the dates. */
+    var yr2 = String(year || "").trim();
+    if (body && (yr2 === "" || mMatch && (mMatch[1] === yr2 || mMatch[2] === yr2) || bMatch && bMatch[1] === yr2)) {
+      body = "";
+    }
+    return body ? head + ". " + body : head + ".";
+  }
+
+  /* Life dates on every family line.
+     The data already carries them: people.public.json has birth_year,
+     death_year, is_living and lifespan. 64 of those rows bake the range into
+     display_name already ("Joseph March (1767 - 1831)"), which is why a few
+     lines showed brackets and most showed none - the bracket was whatever the
+     name string happened to contain, not a rule. Now it is a rule.
+     Dead -> (birth - death). Living with a birth year -> (b. 1910).
+     No birth year at all -> no bracket, never a guessed one. */
+  /* The name without its baked-in bracket. Splitting it out of lifeDates
+     because people.public.json writes some display_name values as
+     "Joseph March (1767 - 1831)" and that string goes to FOUR places: the card
+     face, the panel title, the reader sentence and the aria-label. Only the
+     card face wanted the bracket, so the name is normalised once here and the
+     bracket is added back by exactly one rule. */
+  function bareName(displayName: any) {
+    return String(displayName || "")
+      .replace(/\s*\(\s*(?:b\.\s*|abt\.\s*|c\.\s*|ca\.\s*|~\s*)?\d{3,4}\s*[–—-]\s*(?:\d{3,4}|\?)\s*\)/, "")
+      .replace(/\s*\(\s*(?:b\.\s*|abt\.\s*|c\.\s*|ca\.\s*|~\s*)?\d{3,4}\s*\)/, "")
+      .replace(/\s*\(\s*\?\s*\)/, "")
+      .trim();
+  }
+
+  function lifeDates(displayName: string, birthYear: any, deathYear: any) {
+    var nm = String(displayName || "").trim();
+    /* Some display_name values arrive with the range already baked in
+       ("Joseph March (1767 - 1831)") because the vault note is named that way.
+       Strip any bracket from the name FIRST, then build exactly one bracket
+       from the birth/death fields. Leaving the name's own bracket in place
+       printed the range twice on 115 rows - once inline, once underneath -
+       which is the half-bracketed mess Mark was looking at.
+       - Mark, 27 Nov 2026: "Remember how these cards used to say born and the
+       date they were born and then death the day they died." */
+    var rangeRe = /\(\s*(?:b\.\s*|abt\.\s*|c\.\s*|ca\.\s*|~\s*)?(\d{3,4})\s*[–—-]\s*(\d{3,4}|\?)\s*\)/;
+    var singleRe = /\(\s*(?:b\.\s*|abt\.\s*|c\.\s*|ca\.\s*|~\s*)?(\d{3,4})\s*\)/;
+    var mR = nm.match(rangeRe);
+    var mS = nm.match(singleRe);
+    var b = birthYear ? String(birthYear).trim() : (mR ? mR[1] : (mS ? mS[1] : ""));
+    var d = deathYear ? String(deathYear).trim() : (mR && mR[2] !== "?" ? mR[2] : "");
+    var knownDead = !!(mR && mR[2] !== "?");
+    var bare = nm.replace(rangeRe, "").replace(singleRe, "")
+                 .replace(/\s*\(\s*\?\s*\)/, "").replace(/\s*\([^)]*\)\s*$/, "").trim() || nm;
+    var dates = "";
+    if (b && d) dates = "(" + b + " \u2013 " + d + ")";
+    else if (b && knownDead) dates = "(" + b + " \u2013 ?)";
+    else if (b) dates = "(b. " + b + ")";
+    return { name: bare, dates: dates, rendered: dates ? bare + " " + dates : bare };
   }
   
 timeline.push({ year: 1839, sortYear: 1839, dateLabel: "1839", type: "event", personName: "Francis Telfer", personSlug: "francis-telfer-1809", detail: "emigrates to South Australia" });
@@ -572,11 +659,13 @@ for (const f of freedoms) {
                         data-kind="family"
                         data-kicker={event.year}
                         data-title={event.personName}
-                        data-text={describeFamily(event.personName, event.detail, event.year)}
+                        data-text={describeFamily(event.personName, event.detail, event.year, event.lifeDates)}
                         data-slug={event.personSlug || undefined}
                         aria-label={`${event.personName}, ${event.year} — open full entry`}
                       >
-                        <span class="tl-fam-name">{event.personName}</span>
+                        <span class="tl-fam-name">{event.personName}</span>{event.lifeDates ? (
+                          <span class="tl-fam-life">{event.lifeDates}</span>
+                        ) : null}
                       </button>
                     </div>
                   </div>
@@ -842,6 +931,22 @@ for (const f of freedoms) {
      rule, which was losing the cascade and leaving names at weight 400 --
      that is why a ledger line rendered like a flat grey widget. Measured
      with getComputedStyle().fontWeight, not eyeballed. */
+  /* The bracket under the name: same serif, quieter ink, tabular figures so
+     the ranges line up down the column like a printed index. It is a second
+     line rather than an inline suffix because at 390px "Elizabeth Beattie
+     Telfer (1832 - 1896)" wraps mid-name and the name stops reading as a name. */
+  .tl-fam-life {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-ink-light);
+    line-height: 1.35;
+    margin-top: 1px;
+  }
+  .tl-fam:hover .tl-fam-life,
+  .tl-fam:focus-visible .tl-fam-life { color: var(--color-ink); }
+
   .tl-fam .tl-fam-name {
     display: block;
     font-family: var(--font-serif);
