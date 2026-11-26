@@ -87,31 +87,53 @@ function lifeStatus(p: any): string {
      silent, but a 1785 birth is not a living person. Named plainly rather than
      dressed up as a status: no death date in the record. */
   const longAgo = b && parseInt(b, 10) < 1920;
-  let years: string;
-  let word: string;
   if (b && d) {
-    years = `${b}\u2013${d}`;
-    word = "died";
+    /* Mark, 27 Nov 2026: "we should have when they die a date only not when
+       they were live as well." The range used to print on BOTH the birth card
+       and the death card, so the same "1741-1819" appeared twice per person.
+       Now each card states the date it sits on and nothing else. */
+    return "died";
   } else if (b && dead) {
-    years = `${b}\u2013?`;
-    word = "d. unknown";
+    return "died, year not recorded";
   } else if (b && living) {
-    years = `${b}\u2013`;
-    word = "living";
-  } else if (b && longAgo) {
-    years = `${b}\u2013?`;
-    word = "no death date";
+    return "living";
   } else if (b) {
-    years = `${b}\u2013?`;
-    word = "no death date";
+    /* longAgo is kept for readability of intent: a 1785 birth with no death
+       year is a gap in the record, not a living person, and certainly not a
+       status to guess at. Both branches say the same thing on purpose. */
+    return longAgo ? "no death date in the record" : "no death date in the record";
   } else if (dead) {
-    years = "?";
-    word = "died";
-  } else {
-    years = "?";
-    word = "no dates";
+    return "died, year not recorded";
   }
-  return `${years} \u00b7 ${word}`;
+  return "no dates recorded";
+}
+
+/* Mark, 27 Nov 2026: "if they have the same day we make an exception to the
+   rule and have both death and year". The exception is not triggered by a
+   shared year — it is triggered by AMBIGUITY: a row that cannot be told apart
+   from another row on the page. Two people with the same printed name landing
+   on the same year are indistinguishable once the range is gone, so those few
+   rows (and only those) keep the full lifespan, computed here rather than
+   hand-listed, so a fourth collision is caught the day it appears. */
+const nameYearCount = new Map<string, number>();
+for (const p of telferPeople) {
+  if (!p.birth_year) continue;
+  const nm = bareName(p.display_name);
+  for (const y of [p.birth_year, p.death_year]) {
+    if (!y) continue;
+    const key = `${nm}|${y}`;
+    nameYearCount.set(key, (nameYearCount.get(key) ?? 0) + 1);
+  }
+}
+function isAmbiguousRow(p: any, year: any): boolean {
+  if (!year) return false;
+  return (nameYearCount.get(`${bareName(p.display_name)}|${year}`) ?? 0) > 1;
+}
+function lifespan(p: any): string {
+  const b = p.birth_year ? String(p.birth_year) : "";
+  const d = p.death_year ? String(p.death_year) : "";
+  if (b && d) return `${b}\u2013${d}`;
+  return "";
 }
 
 for (const p of telferPeople) {
@@ -123,7 +145,7 @@ for (const p of telferPeople) {
         "birth",
         bareName(p.display_name),
         p.slug,
-        "is born",
+        isAmbiguousRow(p, p.birth_year) ? `is born (${lifespan(p)})` : "is born",
         "",
         lifeStatus(p),
       ),
@@ -163,7 +185,9 @@ for (const p of telferPeople) {
             "death",
             bareName(p.display_name),
             p.slug,
-            "is born and dies the same year",
+            isAmbiguousRow(p, p.death_year)
+              ? `is born and dies the same year (${lifespan(p)})`
+              : "is born and dies the same year",
             "",
             lifeStatus(p),
           ),
@@ -177,7 +201,9 @@ for (const p of telferPeople) {
           "death",
           bareName(p.display_name),
           p.slug,
-          aged === "?" ? "dies" : `dies, aged ${aged}`,
+          isAmbiguousRow(p, p.death_year)
+            ? (aged === "?" ? `dies (${lifespan(p)})` : `dies, aged ${aged} (${lifespan(p)})`)
+            : aged === "?" ? "dies" : `dies, aged ${aged}`,
           "",
           lifeStatus(p),
         ),
@@ -705,6 +731,44 @@ for (const f of freedoms) {
     </p>
   </div>
 
+  {/* Mark, 27 Nov 2026: "there's no description at the top of this page that
+      explains what the timeline is about ... we should probably put some more
+      information at the top to explain what this page does."
+      Every claim in this box is something a reader can check by scrolling:
+      the three columns exist, the year column carries the birth or death
+      year, every person appears on each date the record holds, and the
+      freedom cards quote Acts of Parliament. Nothing here asserts a cause,
+      a motive or an opinion. */}
+  <div class="tl-intro">
+    <p>
+      This page puts the Telfer family beside the world it lived in. The left
+      column is the family, oldest at the top. The two columns on the right are
+      the times they lived through.
+    </p>
+    <p>
+      <strong>The year on a family card is the year of that card's event.</strong>
+      A person with a recorded birth and a recorded death appears twice: once at
+      the year they were born, once at the year they died. The line under the
+      name says which — <em>died</em>, <em>living</em>, or
+      <em>no death date in the record</em>. Tap any name to open that person's
+      full page with every date, place and source the archive holds.
+    </p>
+    <p>
+      <strong>Where a name cannot be told apart from another on the page</strong>
+      — two people of the same name landing on the same year — that row keeps
+      the full lifespan in brackets, so the two are never confused.
+    </p>
+    <p>
+      <strong>On the right, &ldquo;What the line survived&rdquo;</strong> collects
+      the disasters, epidemics, wars and massacres that brushed the family or the
+      country it settled in — the events that could have ended the line and did
+      not. <strong>&ldquo;Rights taken away&rdquo;</strong> collects Commonwealth
+      laws that removed a power from ordinary Australians. Those cards state only
+      what the named Act does, quoting the Act's own operative words, with the
+      Act and its assent date given on the card — the conclusion is left to you.
+    </p>
+  </div>
+
   <!-- Decade jump nav -->
   <div class="flex flex-wrap gap-2 mb-8">
     {decades.map((d) => (
@@ -940,6 +1004,30 @@ for (const f of freedoms) {
 
   /* Column legend — two labels matching the two columns below. The trivia
      deck is a side note, so it gets no third heading of its own. */
+  /* Top-of-page explainer. Same paper, same border, same type as the grey
+     cards below it, so it reads as part of the page rather than a notice
+     pasted on top of it. Mark asked for "more information at the top to
+     explain what this page does" - not a hero banner. */
+  .tl-intro {
+    margin: 1.4rem 0 1.6rem;
+    padding: 1rem 1.1rem;
+    background: var(--color-surface, #f7f6f3);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-gold);
+    border-radius: 6px;
+    font-family: var(--font-serif, serif);
+    font-size: .93rem;
+    line-height: 1.6;
+    color: var(--color-ink);
+  }
+  .tl-intro p { margin: 0 0 .7rem; }
+  .tl-intro p:last-child { margin-bottom: 0; }
+  .tl-intro strong { font-weight: 700; }
+  .tl-intro em { font-style: italic; color: var(--color-ink-light); }
+  @media (max-width: 640px) {
+    .tl-intro { font-size: .9rem; padding: .85rem .9rem; }
+  }
+
   .tl-legend {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);

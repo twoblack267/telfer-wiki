@@ -1,12 +1,12 @@
 {
-  "activeKey": "fca6775553264f5c",
-  "ticketId": "tw-2026-11-17-002",
-  "filedAt": "2026-11-16T21:01:25.451Z",
+  "activeKey": "71fd75e0c4c0b750",
+  "ticketId": "tw-2026-11-27-001",
+  "filedAt": "2026-11-26T18:03:38.900Z",
   "failures": [
-    "VANISHED|effie-olive-telfer-1886"
+    "VANISHED|malcolm-lawrie"
   ],
   "profiles": {
-    "before": 690,
-    "after": 692
+    "before": 703,
+    "after": 702
   }
 }
