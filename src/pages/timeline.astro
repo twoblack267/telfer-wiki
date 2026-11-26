@@ -380,19 +380,19 @@ for (const f of freedoms) {
             {freeCards.length > 0 && (
               <div class="tl-free-cell">
                 <div class="fdeck" data-deck={String(di)}>
-                  {freeCards.map((f, fci) => (
-                    <div class={`fcard tone-${f.tone}${fci === 0 ? " is-open" : ""}`} data-fcard>
+                  {freeCards.map((f) => (
+                    <div class={`fcard tone-${f.tone}`} data-fcard>
                       <button
                         type="button"
                         class="fcard-tab"
                         data-ftab
-                        aria-expanded={fci === 0 ? "true" : "false"}
+                        aria-expanded="false"
                         aria-label={`${f.year} — ${f.title}`}
                       >
                         <span class="ftab-year">{f.year}</span>
                         <span class="ftab-title">{f.title}</span>
                       </button>
-                      <div class="fcard-body" data-fbody hidden={fci !== 0}>
+                      <div class="fcard-body" data-fbody hidden>
                         <div class="fc-act">{f.enacted}</div>
                         <div class="fc-power">{f.power}</div>
                         <div class="sc-detail">{f.detail}</div>
@@ -513,25 +513,37 @@ for (const f of freedoms) {
     padding: 0;
   }
 
-  .fdeck { display: block; }
+  .fdeck {
+    display: flex;
+    flex-direction: column;
+    /* Small: the deck is a narrow strip in the corner of the column, not
+       a full-width panel. The family line keeps the rest of the width. */
+    align-items: flex-start;
+  }
 
   .fcard {
     position: relative;
-    border-radius: 12px;
+    /* Small = narrow. A closed card is only as wide as its tab and only as
+       tall as its tab. The open card widens just enough to read. */
+    width: 13rem;
+    max-width: 100%;
+    border-radius: 8px;
     border: 1px solid var(--color-border);
     border-left: 4px solid currentColor;
     color: var(--color-ink);
     box-shadow: 0 1px 3px rgba(0,0,0,.05);
-    /* Small: the closed card is only as tall as its tab. */
     overflow: hidden;
+    transition: width .18s ease;
   }
+  .fcard.is-open { width: 19rem; }
   /* Overlap: each card below sits slightly on top of the one above, so a
      stack reads as a deck of tabs rather than a column of articles. */
-  .fcard + .fcard { margin-top: -6px; }
+  .fcard + .fcard { margin-top: -6px; margin-left: 3px; }
   .fcard.is-open { box-shadow: 0 3px 10px rgba(0,0,0,.10); z-index: 2; }
 
   /* The little tab you touch. */
   .fcard-tab {
+    box-sizing: border-box;
     display: flex;
     align-items: baseline;
     gap: .4rem;
