@@ -1,0 +1,16 @@
+import { chromium } from "playwright";
+const b = await chromium.launch();
+const p = await b.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+await p.goto("http://127.0.0.1:4402/timeline/", { waitUntil: "networkidle" });
+await p.waitForTimeout(900);
+const decks = await p.$$("[data-deck]");
+const d = decks[3];
+await d.scrollIntoViewIfNeeded(); await p.waitForTimeout(400);
+const bb = await d.boundingBox();
+await p.screenshot({ path: "/tmp/Y_closed.png", clip: { x: 0, y: Math.max(0,bb.y-120), width: 390, height: 620 } });
+const tabs = await d.$$("[data-ftab]");
+await tabs[1].click(); await p.waitForTimeout(600);
+const bb2 = await d.boundingBox();
+await p.screenshot({ path: "/tmp/Y_open.png", clip: { x: 0, y: Math.max(0,bb.y-120), width: 390, height: 760 } });
+console.log("shot ok", JSON.stringify({closedY: Math.round(bb.y), openY: Math.round(bb2.y)}));
+await b.close();

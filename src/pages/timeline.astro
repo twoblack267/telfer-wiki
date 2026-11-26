@@ -517,29 +517,52 @@ for (const f of freedoms) {
     display: flex;
     flex-direction: column;
     /* Small: the deck is a narrow strip in the corner of the column, not
-       a full-width panel. The family line keeps the rest of the width. */
+       a full-width panel. The family line keeps the rest of the width.
+       overflow:visible is deliberate - closed tabs sit offset by transform,
+       so any clipping here slices them in half. */
     align-items: flex-start;
+    overflow: visible;
+    /* The deck reserves the height of its closed stack. An open card is
+       pulled out of that flow and floats over it, so tapping never shoves
+       the family text below. */
+    position: relative;
   }
 
   .fcard {
     position: relative;
-    /* Small = narrow. A closed card is only as wide as its tab and only as
-       tall as its tab. The open card widens just enough to read. */
-    width: 13rem;
+    /* Small = narrow. A closed card is only as wide as its tab. Never
+       ellipsis a title: the tab grows to fit the words, up to the column. */
+    width: max-content;
+    min-width: 11rem;
     max-width: 100%;
     border-radius: 8px;
     border: 1px solid var(--color-border);
     border-left: 4px solid currentColor;
     color: var(--color-ink);
     box-shadow: 0 1px 3px rgba(0,0,0,.05);
-    overflow: hidden;
-    transition: width .18s ease;
+    transition: width .18s ease, box-shadow .18s ease;
+    overflow: visible;
   }
-  .fcard.is-open { width: 19rem; }
+  /* The open card hangs OVER the tabs below it: lifted out of the deck's
+     flow onto its own layer so it cannot displace a single pixel of
+     anything. top:0 anchors it to the slot it already occupies. */
+  .fcard.is-open {
+    width: min(19rem, calc(100vw - 4rem));
+    z-index: 5;
+    box-shadow: 0 3px 10px rgba(0,0,0,.10);
+  }
+  /* While open, the deck keeps its closed height so nothing underneath
+     moves - the card is allowed to paint outside the deck box instead. */
+  .fdeck.is-leaky { height: var(--deck-closed-h); }
+  .fdeck.is-leaky .fcard.is-open {
+    position: absolute;
+    top: var(--open-top, 0px);
+    left: var(--open-left, 0px);
+  }
   /* Overlap: each card below sits slightly on top of the one above, so a
-     stack reads as a deck of tabs rather than a column of articles. */
+     stack reads as a deck of tabs rather than a column of articles.
+     A closed card is entirely its tab, so the tab controls rounding. */
   .fcard + .fcard { margin-top: -6px; margin-left: 3px; }
-  .fcard.is-open { box-shadow: 0 3px 10px rgba(0,0,0,.10); z-index: 2; }
 
   /* The little tab you touch. */
   .fcard-tab {
@@ -548,10 +571,12 @@ for (const f of freedoms) {
     align-items: baseline;
     gap: .4rem;
     width: 100%;
+    min-width: 0;
     text-align: left;
-    background: transparent;
+    background: var(--color-surface, #fff);
     border: 0;
     cursor: pointer;
+    border-radius: 7px;
     padding: .38rem .55rem;
     font: inherit;
     color: inherit;
@@ -563,6 +588,7 @@ for (const f of freedoms) {
     outline-offset: 2px;
   }
   .ftab-year {
+    flex: none;
     font-size: .58rem;
     font-weight: 700;
     letter-spacing: .04em;
@@ -571,13 +597,16 @@ for (const f of freedoms) {
     white-space: nowrap;
   }
   .ftab-title {
+    flex: 0 1 auto;
+    min-width: 0;
     font-family: var(--font-serif, serif);
     font-weight: 700;
-    font-size: .74rem;
+    font-size: .78rem;
     line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    /* Wrap rather than cut: a truncated word on a tab reads as broken and
+       the phone column is too narrow for the longer titles. */
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .fcard-body {
@@ -616,9 +645,9 @@ for (const f of freedoms) {
     margin-top: .45rem;
     padding-top: .35rem;
     border-top: 1px dotted rgba(0,0,0,.18);
-    font-size: .56rem;
-    line-height: 1.35;
-    opacity: .7;
+    font-size: .68rem;
+    line-height: 1.45;
+    opacity: .8;
   }
   .fcard-body .sc-detail { font-size: .72rem; line-height: 1.45; }
 
@@ -676,10 +705,10 @@ for (const f of freedoms) {
     .sc-title { font-size: .74rem; line-height: 1.2; margin: .12rem 0 .2rem; }
     .sc-feared { font-size: .64rem; margin-bottom: .2rem; line-height: 1.25; }
     .sc-detail { font-size: .62rem; line-height: 1.3; }
-    .fc-act { font-size: .48rem; margin-bottom: .18rem; }
+    .fc-act { font-size: .58rem; margin-bottom: .18rem; }
     .fc-power { font-size: .58rem; line-height: 1.3; padding-left: .3rem; margin: .08rem 0 .3rem; }
-    .fc-source { font-size: .44rem; line-height: 1.3; margin-top: .3rem; padding-top: .25rem; }
-    .fcard-body .sc-detail { font-size: .6rem; line-height: 1.3; }
+    .fc-source { font-size: .6rem; line-height: 1.4; margin-top: .3rem; padding-top: .25rem; }
+    .fcard-body .sc-detail { font-size: .66rem; line-height: 1.4; }
   }
   @media (max-width: 430px) {
     .tl-legend { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: .4rem; }
@@ -688,13 +717,15 @@ for (const f of freedoms) {
     .tl-cell h2 { font-size: 1.05rem; }
     .survival-card { padding: .42rem .5rem; }
     .freedom-card { padding: .42rem .5rem; }
-    .ftab-year { font-size: .44rem; }
-    .ftab-title { font-size: .56rem; }
-    .fcard-tab { padding: .26rem .28rem; }
+    .ftab-year { font-size: .52rem; }
+    .ftab-title { font-size: .72rem; }
+    .fcard-tab { padding: .34rem .34rem; }
     .sc-title { font-size: .7rem; }
     .sc-detail { font-size: .58rem; }
-    .fc-power { font-size: .55rem; }
-    .fc-source { font-size: .44rem; }
+    .fc-power { font-size: .62rem; }
+    /* Never shrink the citation below reading size: 0.44rem rendered at
+       7px on a phone is the text Mark could not read. */
+    .fc-source { font-size: .62rem; }
   }
 </style>
 
@@ -708,12 +739,34 @@ for (const f of freedoms) {
     const open = (target: HTMLElement) => {
       cards.forEach((c) => {
         const isTarget = c === target;
+        /* Record where the card will sit BEFORE it goes absolute, so the
+           floating copy lands exactly on its own slot. */
+        if (isTarget && !deck.classList.contains("is-leaky")) {
+          const dr = deck.getBoundingClientRect();
+          const cr = c.getBoundingClientRect();
+          deck.style.setProperty("--open-top", `${Math.round(cr.top - dr.top)}px`);
+          deck.style.setProperty("--open-left", `${Math.round(cr.left - dr.left)}px`);
+          deck.style.setProperty("--deck-closed-h", `${Math.round(dr.height)}px`);
+        }
         c.classList.toggle("is-open", isTarget);
         const tab = c.querySelector<HTMLElement>("[data-ftab]");
         const body = c.querySelector<HTMLElement>("[data-fbody]");
         if (tab) tab.setAttribute("aria-expanded", isTarget ? "true" : "false");
         if (body) body.hidden = !isTarget;
       });
+      /* Now the open card floats over the deck instead of growing it, so
+         the family text below it stays exactly where it was. */
+      deck.classList.add("is-leaky");
+    };
+
+    const close = (card: HTMLElement) => {
+      card.classList.remove("is-open");
+      const tab = card.querySelector<HTMLElement>("[data-ftab]");
+      const body = card.querySelector<HTMLElement>("[data-fbody]");
+      if (tab) tab.setAttribute("aria-expanded", "false");
+      if (body) body.hidden = true;
+      deck.classList.remove("is-leaky");
+      deck.style.removeProperty("--deck-closed-h");
     };
 
     cards.forEach((card) => {
@@ -724,10 +777,7 @@ for (const f of freedoms) {
         // Only card in its deck, already open — do nothing, never hide it all.
         if (isOpen && cards.length === 1) return;
         if (isOpen) {
-          card.classList.remove("is-open");
-          tab.setAttribute("aria-expanded", "false");
-          const body = card.querySelector<HTMLElement>("[data-fbody]");
-          if (body) body.hidden = true;
+          close(card);
         } else {
           open(card);
         }

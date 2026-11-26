@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 
-const URL = "http://127.0.0.1:4402/freedoms/";
+const URL = "https://telferwiki.com/freedoms/";
 
 async function run(w, h, tag) {
   const browser = await chromium.launch();
@@ -114,7 +114,7 @@ async function run(w, h, tag) {
 
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(300);
-  await page.screenshot({ path: `/tmp/r_${tag}_top.png` });
+  await page.screenshot({ path: `/tmp/prod_${tag}_top.png` });
   const last = page.locator("[data-li-tab]").nth(n - 1);
   await last.scrollIntoViewIfNeeded();
   await last.click();
@@ -122,10 +122,10 @@ async function run(w, h, tag) {
   await last.scrollIntoViewIfNeeded();
   await page.evaluate(() => window.scrollBy(0, -80));
   await page.waitForTimeout(280);
-  await page.screenshot({ path: `/tmp/r_${tag}_last.png` });
+  await page.screenshot({ path: `/tmp/prod_${tag}_last.png` });
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(200);
-  await page.screenshot({ path: `/tmp/r_${tag}_full.png`, fullPage: true });
+  await page.screenshot({ path: `/tmp/prod_${tag}_full.png`, fullPage: true });
 
   const ov = await page.evaluate(() => ({ s: document.documentElement.scrollWidth, c: document.documentElement.clientWidth }));
   console.log(`${tag} overflow=${ov.s > ov.c + 1 ? "YES " + ov.s + ">" + ov.c : "none"} errs=${errs.length ? errs.join("|") : "none"}`);
