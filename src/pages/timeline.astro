@@ -530,11 +530,15 @@ for (const f of freedoms) {
 
   .fcard {
     position: relative;
-    /* Small = narrow. A closed card is only as wide as its tab. Never
-       ellipsis a title: the tab grows to fit the words, up to the column. */
-    width: max-content;
-    min-width: 11rem;
-    max-width: 100%;
+    /* Small = narrow. The card does NOT grow sideways to swallow a long
+       title, and it does NOT fill its column either - it stays a small tab
+       strip and the tab runs a little taller to hold the words on a second
+       line. Width is capped hard, height is free. */
+    /* Just wide enough for the longest single word in the deck
+       ('Permission' / 'Twenty-four'), then the title wraps at spaces.
+       Still far narrower than the column so the family text keeps its room. */
+    width: 9.75rem;
+    max-width: 74%;
     border-radius: 8px;
     border: 1px solid var(--color-border);
     border-left: 4px solid currentColor;
@@ -547,7 +551,10 @@ for (const f of freedoms) {
      flow onto its own layer so it cannot displace a single pixel of
      anything. top:0 anchors it to the slot it already occupies. */
   .fcard.is-open {
-    width: min(19rem, calc(100vw - 4rem));
+    /* The OPEN card is the exception: it must widen enough to read the
+       body text without wrapping every third word. */
+    width: min(19rem, calc(100vw - 3.5rem));
+    max-width: min(19rem, calc(100vw - 3.5rem));
     z-index: 5;
     box-shadow: 0 3px 10px rgba(0,0,0,.10);
   }
@@ -568,10 +575,14 @@ for (const f of freedoms) {
   .fcard-tab {
     box-sizing: border-box;
     display: flex;
+    /* Baseline keeps year and title on one line; when a long title needs a
+       second line the tab simply grows downwards to hold it. */
     align-items: baseline;
-    gap: .4rem;
+    flex-wrap: wrap;
+    gap: .1rem .3rem;
     width: 100%;
     min-width: 0;
+    height: auto;
     text-align: left;
     background: var(--color-surface, #fff);
     border: 0;
@@ -589,6 +600,7 @@ for (const f of freedoms) {
   }
   .ftab-year {
     flex: none;
+    flex-basis: 100%;
     font-size: .58rem;
     font-weight: 700;
     letter-spacing: .04em;
@@ -603,10 +615,12 @@ for (const f of freedoms) {
     font-weight: 700;
     font-size: .78rem;
     line-height: 1.2;
-    /* Wrap rather than cut: a truncated word on a tab reads as broken and
-       the phone column is too narrow for the longer titles. */
+    /* Wrap at whole words only. anywhere/break-word would hyphenate a word
+       mid-syllable, which is the exact 'cut word' look to avoid. */
     white-space: normal;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
   }
 
   .fcard-body {
@@ -719,7 +733,8 @@ for (const f of freedoms) {
     .freedom-card { padding: .42rem .5rem; }
     .ftab-year { font-size: .52rem; }
     .ftab-title { font-size: .72rem; }
-    .fcard-tab { padding: .34rem .34rem; }
+    .fcard-tab { padding: .34rem .34rem; flex-wrap: wrap; gap: .1rem .3rem; }
+    .ftab-year { flex-basis: 100%; }
     .sc-title { font-size: .7rem; }
     .sc-detail { font-size: .58rem; }
     .fc-power { font-size: .62rem; }
