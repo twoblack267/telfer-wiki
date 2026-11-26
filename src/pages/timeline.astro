@@ -248,10 +248,10 @@ const survivals: Survival[] = [
     source: "The Dictionary of Sydney, “Hawkesbury River flood 1867”, for the June 1867 date, the destruction from Pitt Town to Wiseman's Ferry, the 19 metres above the Windsor Bridge, and the twelve Eather dead; ABC News, “Remembering the great Hawkesbury flood tragedy of 1867” (Amanda Hoh, 22 June 2017), for the 19.7 metre peak at Windsor, the 21 June date, the twenty total dead, the collapse of the house on Rickabys Creek at Cornwallis, the ten children and two wives lost, the three men saved by the trees, and the recovery of the bodies. Those two accounts are independent of one another and agree.",
     img: "/images/timeline/hawkesbury-1867.jpg",
     cap: "A river mill on the Hawkesbury River, probably Singletons Mill, photographed about 1900. From the collection of the Australian National Maritime Museum, no known copyright restrictions, via Wikimedia Commons. This is the river in flood country, not the 1867 flood itself — no photograph of that flood is known." },
-  { decade: 1890, year: "4 March 1899", sortYear: 1899, title: "Cyclone Mahina", tone: "lavender",
+  { decade: 1890, year: "4–5 March 1899", sortYear: 1899, title: "Cyclone Mahina", tone: "lavender",
     feared: "A cyclone drove the sea over Princess Charlotte Bay and drowned a fleet of pearling luggers at anchor — the deadliest natural disaster in Australia's recorded history.",
-    detail: "<p>In March 1899 a tropical cyclone crossed the far north Queensland coast near Bathurst Bay, on Princess Charlotte Bay. The pearling fleet was at anchor with the season's crews aboard. The storm surge carried the sea inland and the fleet was destroyed where it lay: <b>fifty-four luggers</b> were lost.</p> <p><b>The dead.</b> The toll is put at somewhere between <b>three hundred and four hundred and ten</b> people. The range is wide for an ugly reason: many of the dead were Aboriginal and Torres Strait Islander crewmen whose names were never recorded by the industry that employed them, and the bodies were never all recovered. It is generally accepted as the deadliest natural disaster in recorded Australian history.</p> <p><b>The chart came afterwards.</b> Clement Wragge, the government meteorologist, mapped the storm's path from the evidence of survivors and wreckage rather than from instruments, because there were none in the region to record it. Wragge had argued for years that a network of weather stations was worth the money. There was no station within hundreds of miles.</p> <p>The chart in the image is dated 5 March 1899 — one day after the 4 March date usually given for the cyclone. That discrepancy is in the contemporary record and is noted here rather than quietly corrected.</p><p><b>What the pearling fleet was.</b> The luggers worked the reefs of Torres Strait and the far north coast, largely with indentured Islander and Aboriginal crews under European skippers. When a fleet is lost, the men who die are the ones whose names the industry kept least carefully. That is why the death toll of Cyclone Mahina is a range and will stay one: the loss is documented as an industry's catastrophe rather than as a list of the dead.</p>",
-    source: "The death toll is given as a range, 307 to 410, following the standard accounts of Cyclone Mahina; the figure is not stated as a single number because the sources do not. Fifty-four luggers lost, the Bathurst Bay landfall and the season's fleet at anchor from the same accounts. The storm-path chart in the photograph is Wragge's, and the map itself is dated 5 March 1899 — one day after the 4 March date usually given for the cyclone, a discrepancy in the contemporary record that is noted here rather than corrected.",
+    detail: "<p>In March 1899 a tropical cyclone crossed the far north Queensland coast near Bathurst Bay, on Princess Charlotte Bay. The pearling fleet was at anchor with the season's crews aboard. The storm surge carried the sea inland and the fleet was destroyed where it lay: <b>fifty-four luggers</b> were lost.</p> <p><b>The dead.</b> The toll is put at somewhere between <b>three hundred and four hundred and ten</b> people. The range is wide for an ugly reason: many of the dead were Aboriginal and Torres Strait Islander crewmen whose names were never recorded by the industry that employed them, and the bodies were never all recovered. It is generally accepted as the deadliest natural disaster in recorded Australian history.</p> <p><b>The chart came afterwards.</b> Clement Wragge, the government meteorologist, mapped the storm's path from the evidence of survivors and wreckage rather than from instruments, because there were none in the region to record it. Wragge had argued for years that a network of weather stations was worth the money. There was no station within hundreds of miles.</p> <p><b>Why the card carries two dates.</b> The storm struck on 4 March 1899 and the weather that destroyed the fleet ran through the night into the 5th. The Bureau of Meteorology's cyclones record, the National Museum and the eyewitness accounts all put the impact on the 4th; Wragge's chart in the image is dated the 5th, because by then he was mapping what had already happened. Both dates are in the record and neither is a transcription error, so the card carries both rather than picking one.</p><p><b>What the pearling fleet was.</b> The luggers worked the reefs of Torres Strait and the far north coast, largely with indentured Islander and Aboriginal crews under European skippers. When a fleet is lost, the men who die are the ones whose names the industry kept least carefully. That is why the death toll of Cyclone Mahina is a range and will stay one: the loss is documented as an industry's catastrophe rather than as a list of the dead.</p>",
+    source: "The death toll is given as a range, 307 to 410, following the standard accounts of Cyclone Mahina; the figure is not stated as a single number because the sources do not. Fifty-four luggers lost, the Bathurst Bay landfall and the season's fleet at anchor from the same accounts. The storm-path chart in the photograph is Clement Wragge's, drawn after the event and dated 5 March 1899. The impact date of 4 March 1899 is the one given by the Bureau of Meteorology's tropical cyclone record, the National Museum of Australia's Defining Moments account and eyewitness testimony, with the storm continuing into 5 March; the card therefore gives the range 4–5 March 1899 and does not prefer one source's date over another's.",
     img: "/images/timeline/mahina-1899.jpg",
     cap: "Clement Lindley Wragge's chart of the storm path of the Cyclone Mahina, 1899, drawn after the event. Public domain, via Wikimedia Commons." },
 
@@ -567,7 +567,7 @@ for (const f of freedoms) {
                     <div class="text-xs sm:text-sm">
                       <button
                         type="button"
-                        class="tl-ev"
+                        class="tl-ev tl-fam"
                         data-rd
                         data-kind="family"
                         data-kicker={event.year}
@@ -576,8 +576,7 @@ for (const f of freedoms) {
                         data-slug={event.personSlug || undefined}
                         aria-label={`${event.personName}, ${event.year} — open full entry`}
                       >
-                        <span class={event.personSlug ? "font-medium text-[var(--color-link)]" : "font-medium text-[var(--color-ink)]"}>{event.personName}</span>
-                        <span class="text-[var(--color-ink-light)]">{" \u00b7 "}{event.year}</span>
+                        <span class="tl-fam-name">{event.personName}</span>
                       </button>
                     </div>
                   </div>
@@ -822,6 +821,62 @@ for (const f of freedoms) {
   .tl-ev:hover { background: rgba(0,0,0,.045); }
   .tl-ev:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
 
+  /* ── Family line, dressed for the page it lives on ────────────────────
+     Mark, 27 Nov 2026: "a little bit retro and match the style of the page".
+     The page is a parchment ledger — Playfair Display headings, dotted rules,
+     monospaced years in the gutter. So the family entry is set as a ledger
+     line, not as a grey widget: the name in the page's own serif, the year
+     rubber-stamped underneath in mono. The raised Win95 bevel stays — it is
+     the same chassis as the reader window the button opens, so the card
+     already looks like the thing it leads to. */
+  .tl-fam {
+    position: relative;
+    padding: .34rem .5rem .3rem;
+    margin: -.34rem -.5rem;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    background: transparent;
+    transition: background-color .12s linear, border-color .12s linear;
+  }
+  .tl-fam-name {
+    display: block;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: .002em;
+    line-height: 1.3;
+    color: var(--color-ink);
+  }
+  /* Resting state: flat on the parchment, no box, no stamp, nothing modern.
+     The affordance is the ledger rule that appears at the left margin and the
+     name taking an underline — the same treatment a printed index gives a
+     cross-reference. No arrow, no "read", no pill. */
+  .tl-fam::before {
+    content: "";
+    position: absolute;
+    left: .1rem;
+    top: .3rem;
+    bottom: .3rem;
+    width: 2px;
+    background: var(--color-navy, #2b2b6b);
+    opacity: 0;
+    transition: opacity .12s linear;
+  }
+  .tl-fam:hover::before, .tl-fam:focus-visible::before { opacity: .8; }
+  .tl-fam:hover .tl-fam-name,
+  .tl-fam:focus-visible .tl-fam-name {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .tl-fam:active { transform: translateY(1px); }
+  .tl-fam:active {
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.18);
+    transform: translateY(1px);
+  }
+  .tl-fam:focus-visible { outline: 2px solid var(--color-highlight); outline-offset: 2px; }
+  [data-theme="dark"] .tl-fam-name { text-decoration-color: rgba(255,255,255,.3); }
+  [data-theme="dark"] .tl-fam:hover { background: rgba(255,255,255,.05); }
+
   /* ── The reader window ────────────────────────────────────────────────
      Cloned rule-for-rule from #skippy-lightbox in BaseLayout.astro (the photo
      viewer Mark approved on 15/16 Nov 2026). Those rules are scoped to the
@@ -1047,10 +1102,66 @@ for (const f of freedoms) {
   }
   #skippy-reader .rd-text p { margin: 0 0 .55rem; }
   #skippy-reader .rd-text p:last-child { margin-bottom: 0; }
-  #skippy-reader .rd-more {
-    display: block;
-    margin-top: .35rem;
+  /* Continue, or don't. The window ends by asking a question in words and
+     offering both answers as buttons (Mark, 27 Nov 2026: "yes and no like a
+     pop-up ... instead of an arrow telling you to go"). The old arrow link is
+     gone; nothing on the page implies a direction with a glyph. */
+  #skippy-reader .rd-ask {
+    margin: .85rem 0 .1rem;
+    padding-top: .7rem;
+    border-top: 1px dotted var(--color-border);
+  }
+  #skippy-reader .rd-ask-q {
+    margin: 0 0 .5rem;
+    font-family: var(--font-serif);
+    font-size: .88rem;
+    font-style: italic;
+    color: var(--color-ink-light);
+  }
+  #skippy-reader .rd-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    margin: 0 0 .4rem;
+    padding: .5rem .8rem;
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    border: 2px solid;
+    /* The same raised bevel as the window's X button: paper, not plastic. */
+    border-color: #fff #6b6259 #6b6259 #fff;
+    border-radius: 0;
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  #skippy-reader .rd-cta:hover { background: var(--color-surface); }
+  #skippy-reader .rd-cta:active {
+    border-color: #6b6259 #fff #fff #6b6259;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.25);
+  }
+  #skippy-reader .rd-cta:focus-visible {
+    outline: 2px solid var(--color-highlight);
+    outline-offset: 1px;
+  }
+  #skippy-reader .rd-cta-no {
+    margin-bottom: 0;
     font-weight: 600;
+    color: var(--color-ink-light);
+    text-decoration: none;
+  }
+  /* Both answers are the same width — a No button visually smaller than the
+     Yes reads as a nudge toward the link, which it is not. */
+  #skippy-reader .rd-ask { display: flex; flex-direction: column; }
+  #skippy-reader .rd-ask > .rd-cta { width: 100%; }
+  [data-theme="dark"] #skippy-reader .rd-cta {
+    background: var(--color-surface);
+    border-color: #585b70 #181825 #181825 #585b70;
   }
   #skippy-reader .rd-src {
     margin-top: .7rem;
@@ -1224,11 +1335,31 @@ for (const f of freedoms) {
       var textEl = el(".rd-text");
       var slug = d.slug && d.slug.trim();
       if (slug) {
+        /* The ask, in words: continue to the page, or not. Two buttons, not an
+           arrow glued to the end of a sentence — a reader should never have
+           to work out what a glyph does. Both are 44px tall on a phone. */
+        var ask = document.createElement("div");
+        ask.className = "rd-ask";
+
+        var q = document.createElement("p");
+        q.className = "rd-ask-q";
+        q.textContent = "Want to read the whole story?";
+
         var a = document.createElement("a");
         a.href = "/people/" + slug + "/";
-        a.className = "rd-more";
-        a.textContent = "Read the full page for " + (d.title || "this person") + " \u2192";
-        textEl.appendChild(a);
+        a.className = "rd-cta";
+        a.textContent = "Yes, take me to " + (d.title || "this person") + "’s page";
+
+        var no = document.createElement("button");
+        no.type = "button";
+        no.className = "rd-cta rd-cta-no";
+        no.textContent = "No, I’ll stop here";
+        no.addEventListener("click", closeReader);
+
+        ask.appendChild(q);
+        ask.appendChild(a);
+        ask.appendChild(no);
+        textEl.appendChild(ask);
       }
 
       box.classList.add("is-open");
