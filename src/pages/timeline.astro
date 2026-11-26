@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import type { PersonData } from "../utils/extract-data.mjs";
-import { personCardText } from "../utils/timeline-card-text.mjs";
 
 const people = (await import("../data/people.public.json")).default as PersonData[];
 const telferPeople = people.filter((p) => (p.branch === "telfer" || !p.branch) && p.id);
@@ -15,7 +14,6 @@ interface TimelineEvent {
   personName: string;
   personSlug: string;
   detail: string;
-  cardText?: string;
 }
 
 const timeline: TimelineEvent[] = [];
@@ -44,7 +42,6 @@ function makeEvent(
   personName: string,
   personSlug: string,
   detail: string,
-  cardText?: string,
 ): TimelineEvent {
   const numeric = parseYearValue(raw);
   return {
@@ -54,38 +51,11 @@ function makeEvent(
     personName,
     personSlug,
     detail,
-    cardText: cardText || detail,
     sortYear: numeric ?? Number.MAX_SAFE_INTEGER,
   };
 }
 
-/**
- * THE WINDOW BODY, NOT THE CAPTION.
- *
- * "is born" is a fine caption under a year on a dense timeline row. It is a
- * miserable thing to open a whole window for — which is what Mark hit: every
- * one of the 1,025 family entries opened onto a three-word fragment, because
- * the window was being handed `detail`.
- *
- * So each event now carries TWO strings: `detail` (the short caption that keeps
- * the timeline readable at a glance) and `cardText` (the full body the reader
- * shows). cardText is assembled by personCardText() strictly from vault fields
- * — vitals, prose, parents, spouse, children, evidence note — with every
- * missing line omitted rather than guessed.
- *
- * The slug index is built once so relationship slugs ("ernest-telfer-1878")
- * resolve to printed names ("Ernest John Telfer"). Anything that will not
- * resolve is dropped, never printed raw.
- */
-const peopleIndex = new Map(telferPeople.filter((q) => q.slug).map((q) => [q.slug, q] as [string, any]));
-const cardTextFor = new Map<string, string>();
-for (const q of telferPeople) {
-  if (!q.slug) continue;
-  cardTextFor.set(q.slug, personCardText(q as any, peopleIndex));
-}
-
 for (const p of telferPeople) {
-  const body = (p.slug && cardTextFor.get(p.slug)) || "";
   if (p.birth_year) {
     timeline.push(
       makeEvent(
@@ -95,7 +65,6 @@ for (const p of telferPeople) {
         p.display_name,
         p.slug,
         "is born",
-        body,
       ),
     );
   }
@@ -115,47 +84,15 @@ for (const p of telferPeople) {
         p.display_name,
         p.slug,
         aged === "?" ? "dies" : `dies, aged ${aged}`,
-        body,
       ),
     );
   }
 }
 
 // Add key historical events from tree content
-/**
- * Three hand-written narrative events. They used to carry a caption and nothing
- * else, so opening one produced a five-word window. Where the event belongs to a
- * person who HAS a vault record, the window body is that record's own text; the
- * caption stays short for the timeline row.
- *
- * The Tantanoola event has no single person — it is the family moving — and no
- * vault record states a date for that move, so its body says exactly what is
- * known and no more. No date is invented to make it look fuller.
- */
-{
-  const bodyOf = (slug: string) => (slug && cardTextFor.get(slug)) || "";
-  timeline.push({
-    year: 1839, sortYear: 1839, dateLabel: "1839", type: "event",
-    personName: "Francis Telfer", personSlug: "francis-telfer-1809",
-    detail: "emigrates to South Australia",
-    cardText: bodyOf("francis-telfer-1809") || "emigrates to South Australia",
-  } as any);
-  timeline.push({
-    year: 1845, sortYear: 1845, dateLabel: "1845", type: "event",
-    personName: "The Telfer family", personSlug: "",
-    detail: "settles in the Tantanoola district, SA",
-    cardText:
-      "The wider Telfer family settled in the Tantanoola district of South Australia. " +
-      "Tantanoola is named in the family record for Francis Telfer (1809–1895) and his descendants. " +
-      "No single date for the move is recorded in the vault, so none is given here.",
-  } as any);
-  timeline.push({
-    year: 1874, sortYear: 1874, dateLabel: "1874", type: "event",
-    personName: "John Telfer", personSlug: "john-telfer-1847",
-    detail: "marries Caroline Masters",
-    cardText: bodyOf("john-telfer-1847") || "marries Caroline Masters",
-  } as any);
-}
+timeline.push({ year: 1839, sortYear: 1839, dateLabel: "1839", type: "event", personName: "Francis Telfer", personSlug: "francis-telfer-1809", detail: "emigrates to South Australia" });
+timeline.push({ year: 1845, sortYear: 1845, dateLabel: "1845", type: "event", personName: "The Telfer family", personSlug: "", detail: "settles in the Tantanoola district, SA" });
+timeline.push({ year: 1874, sortYear: 1874, dateLabel: "1874", type: "event", personName: "John Telfer", personSlug: "john-telfer-1847", detail: "marries Caroline Masters" });
 
 // Sort by year (sortYear guarantees finite numerics; unparseable years sink to the end)
 timeline.sort((a, b) => a.sortYear - b.sortYear);
@@ -449,7 +386,7 @@ for (const f of freedoms) {
                         data-kind="family"
                         data-kicker={event.year}
                         data-title={event.personName}
-                        data-text={event.cardText || event.detail}
+                        data-text={event.detail}
                         data-slug={event.personSlug || undefined}
                         aria-label={`${event.personName}, ${event.year} — open full entry`}
                       >
@@ -1224,24 +1161,7 @@ for (const f of freedoms) {
       var node = box.querySelector("." + name) as HTMLElement | null;
       if (!node) return;
       if (value && value.trim()) {
-        /* Card bodies are plain text with blank-line paragraphs and single
-           newlines inside a vitals block. textContent collapsed all of it into
-           one grey slab, so build real paragraphs: blank line = new <p>,
-           single newline = <br> within the paragraph. Values here come from
-           the vault record, never from user input — but they are still built
-           as text nodes, never as HTML, so nothing can inject markup. */
-        node.textContent = "";
-        var blocks = value.split(/\n\s*\n/);
-        for (var bi = 0; bi < blocks.length; bi++) {
-          if (!blocks[bi].trim()) continue;
-          var para = document.createElement("p");
-          var lines = blocks[bi].split("\n");
-          for (var li = 0; li < lines.length; li++) {
-            if (li > 0) para.appendChild(document.createElement("br"));
-            para.appendChild(document.createTextNode(lines[li]));
-          }
-          node.appendChild(para);
-        }
+        node.textContent = value;
         node.hidden = false;
       } else {
         node.textContent = "";
