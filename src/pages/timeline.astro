@@ -15,6 +15,16 @@ interface TimelineEvent {
   personSlug: string;
   detail: string;
   lifeDates?: string;
+  /* The at-a-glance status. Mark, 27 Nov 2026: "at a glance doesn't tell you
+     if they're dead or alive — what's going on". The birth card and the death
+     card are separate entries (correct), but a reader scrolling past a single
+     row still could not tell which end of a life they were looking at. Every
+     family row now carries the person's own years plus the word: dead, living,
+     or the third state that actually exists in this tree — dead, death year
+     not yet found ("d. unknown"). Never guessed: living is the default only
+     where people.public.json says is_living, and "d. unknown" is used where a
+     death is recorded but the year is not. */
+  life?: string;
 }
 
 const timeline: TimelineEvent[] = [];
@@ -44,6 +54,7 @@ function makeEvent(
   personSlug: string,
   detail: string,
   life = "",
+  status = "",
 ): TimelineEvent {
   const numeric = parseYearValue(raw);
   return {
@@ -54,8 +65,53 @@ function makeEvent(
     personSlug,
     detail,
     lifeDates: life,
+    life: status,
     sortYear: numeric ?? Number.MAX_SAFE_INTEGER,
   };
+}
+
+/* At-a-glance life status for one person.
+   Three states, all evidenced — nothing guessed:
+     "1924–1997 · died"          both years known
+     "1917–? · d. unknown"       death recorded, year not found
+     "1986– · living"            is_living true in people.public.json
+     "? · no dates found"        no year at all, and not flagged living
+   The label deliberately does NOT say "alive" from a missing death year — a
+   missing year is a gap in the record, not proof of life. */
+function lifeStatus(p: any): string {
+  const b = p.birth_year ? String(p.birth_year) : "";
+  const d = p.death_year ? String(p.death_year) : "";
+  const living = !!p.is_living;
+  const dead = !!p.is_deceased || !!d;
+  /* Pre-1920 births with no death year are not "status unknown" — the record is
+     silent, but a 1785 birth is not a living person. Named plainly rather than
+     dressed up as a status: no death date in the record. */
+  const longAgo = b && parseInt(b, 10) < 1920;
+  let years: string;
+  let word: string;
+  if (b && d) {
+    years = `${b}\u2013${d}`;
+    word = "died";
+  } else if (b && dead) {
+    years = `${b}\u2013?`;
+    word = "d. unknown";
+  } else if (b && living) {
+    years = `${b}\u2013`;
+    word = "living";
+  } else if (b && longAgo) {
+    years = `${b}\u2013?`;
+    word = "no death date";
+  } else if (b) {
+    years = `${b}\u2013?`;
+    word = "no death date";
+  } else if (dead) {
+    years = "?";
+    word = "died";
+  } else {
+    years = "?";
+    word = "no dates";
+  }
+  return `${years} \u00b7 ${word}`;
 }
 
 for (const p of telferPeople) {
@@ -68,6 +124,8 @@ for (const p of telferPeople) {
         bareName(p.display_name),
         p.slug,
         "is born",
+        "",
+        lifeStatus(p),
       ),
     );
   }
@@ -87,6 +145,8 @@ for (const p of telferPeople) {
         bareName(p.display_name),
         p.slug,
         aged === "?" ? "dies" : `dies, aged ${aged}`,
+        "",
+        lifeStatus(p),
       ),
     );
   }
@@ -662,6 +722,9 @@ for (const f of freedoms) {
                         aria-label={`${event.personName}, ${event.year} — open full entry`}
                       >
                         <span class="tl-fam-name">{event.personName}</span>
+                        {event.life && (
+                          <span class="tl-fam-life">{event.life}</span>
+                        )}
                       </button>
                     </div>
                   </div>
