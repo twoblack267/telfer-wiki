@@ -328,7 +328,6 @@ for (const f of freedoms) {
   <div class="tl-legend">
     <div class="tl-lg-1">The Telfer line</div>
     <div class="tl-lg-2">What the line survived</div>
-    <div class="tl-lg-3">What Australians lost</div>
   </div>
   <div class="tl-grid">
     <!-- One grid ROW per decade: the timeline cell and its survival card are
@@ -339,12 +338,6 @@ for (const f of freedoms) {
       const cards = survivalsByDecade.get(d) ?? [];
       const freeCards = freedomsByDecade.get(d) ?? [];
       const events = timeline.filter((e) => Math.floor(e.sortYear / 10) * 10 === d);
-      // The decade heading normally opens the row. But grid auto-placement
-      // pushes a very tall freedom card past the next decade heading, so the
-      // next decade's rows begin BELOW the heading that owns them. Re-stamping
-      // the decade label on any row that carries a freedom card keeps every
-      // card visually beside its own heading, at both widths.
-      const restampDecade = freeCards.length > 0 && di > 0;
       return (
         <Fragment>
           <div class="tl-cell" data-decade={d}>
@@ -353,13 +346,6 @@ for (const f of freedoms) {
                 {d}s
               </h2>
             </div>
-            {restampDecade && (
-              <div class="tl-dec-restamp">
-                <h2 class="text-2xl font-bold font-serif text-[var(--color-navy)] border-b-2 border-[var(--color-gold)] pb-1 inline-block">
-                  {d}s
-                </h2>
-              </div>
-            )}
             {events.map((event) => (
               <div class="timeline-line pl-7 sm:pl-10 pb-4 sm:pb-6 relative">
                 <div class="flex items-start gap-2 sm:gap-3">
@@ -391,18 +377,32 @@ for (const f of freedoms) {
                 <div class="sc-detail">{c.detail}</div>
               </div>
             ))}
-          </div>
-          <div class={`tl-free-cell${(freedomsByDecade.get(d) ?? []).length ? "" : " is-empty"}`}>
-            {(freedomsByDecade.get(d) ?? []).map((f) => (
-              <div class={`freedom-card tone-${f.tone}`}>
-                <div class="sc-year">{f.year}</div>
-                <div class="sc-title">{f.title}</div>
-                <div class="fc-act">{f.enacted}</div>
-                <div class="fc-power">{f.power}</div>
-                <div class="sc-detail">{f.detail}</div>
-                <div class="fc-source">{f.source}</div>
+            {freeCards.length > 0 && (
+              <div class="tl-free-cell">
+                <div class="fdeck" data-deck={String(di)}>
+                  {freeCards.map((f, fci) => (
+                    <div class={`fcard tone-${f.tone}${fci === 0 ? " is-open" : ""}`} data-fcard>
+                      <button
+                        type="button"
+                        class="fcard-tab"
+                        data-ftab
+                        aria-expanded={fci === 0 ? "true" : "false"}
+                        aria-label={`${f.year} — ${f.title}`}
+                      >
+                        <span class="ftab-year">{f.year}</span>
+                        <span class="ftab-title">{f.title}</span>
+                      </button>
+                      <div class="fcard-body" data-fbody hidden={fci !== 0}>
+                        <div class="fc-act">{f.enacted}</div>
+                        <div class="fc-power">{f.power}</div>
+                        <div class="sc-detail">{f.detail}</div>
+                        <div class="fc-source">{f.source}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
+            )}
           </div>
         </Fragment>
       );
@@ -417,11 +417,12 @@ for (const f of freedoms) {
   /* ── Survivals column ─────────────────────────────────────────────── */
   .tl-grid {
     display: grid;
-    /* Three columns at EVERY width. One row per decade, so each card is
-       beside its own decade by construction — desktop and phone behave the
-       same. Column 2 = what the line survived; column 3 = what Australians
-       lost, statute by statute. */
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+    /* Two columns: the family line gets the majority of the width, its
+       survival card a narrower column beside it. The freedom cards are
+       NESTED inside the survival cell (markup, below), so a decade is always
+       exactly two grid children and the deck can never be auto-placed onto
+       the wrong row. */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
     column-gap: 2rem;
     row-gap: 0;
     align-items: start;
@@ -499,37 +500,94 @@ for (const f of freedoms) {
   .tone-peach    { background: #fde8c8; border-color: #d9a85a; }
   .tone-sky      { background: #d9edf0; border-color: #78aab3; }
 
-  /* ── Freedoms column ──────────────────────────────────────────────────
-     Same card style, same pastel tones, same decade pairing as the
-     survivals column — but visually distinguished by a left rule, so no
-     reader mistakes a law for a catastrophe. */
+  /* ── Trivia deck ──────────────────────────────────────────────────────
+     A small, SECONDARY stack of cards sitting in its own column beside the
+     family line. The cards overlap on purpose: each one is mostly hidden
+     behind the next, with only a tab poking out. Touch a tab and that card
+     opens; the others fold back. The family line is never covered by any
+     of this — the deck lives in its own grid column. */
   .tl-free-cell {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    /* Sits at the foot of the survival cell, under that decade's own cards. */
+    margin-top: .55rem;
     min-width: 0;
-    padding: .35rem 0;
-    /* Stretch, not start: an auto-placed grid item cannot be shorter than its
-       row, and a stretched cell keeps the card flush with its own decade's
-       heading instead of sinking below the next one. */
-    align-self: stretch;
-    margin-top: -.1rem;
+    padding: 0;
   }
-  .tl-free-cell.is-empty { padding: 0; }
 
-  .freedom-card {
-    border-radius: 14px;
+  .fdeck { display: block; }
+
+  .fcard {
+    position: relative;
+    border-radius: 12px;
     border: 1px solid var(--color-border);
     border-left: 4px solid currentColor;
-    padding: .7rem .85rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,.05);
     color: var(--color-ink);
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    /* Small: the closed card is only as tall as its tab. */
+    overflow: hidden;
   }
-  .freedom-card + .freedom-card { margin-top: .6rem; }
+  /* Overlap: each card below sits slightly on top of the one above, so a
+     stack reads as a deck of tabs rather than a column of articles. */
+  .fcard + .fcard { margin-top: -6px; }
+  .fcard.is-open { box-shadow: 0 3px 10px rgba(0,0,0,.10); z-index: 2; }
+
+  /* The little tab you touch. */
+  .fcard-tab {
+    display: flex;
+    align-items: baseline;
+    gap: .4rem;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: .38rem .55rem;
+    font: inherit;
+    color: inherit;
+    /* Nudge the tab out to the right so it pokes past the card edge. */
+    transform: translateX(6px);
+  }
+  .fcard-tab:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+  .ftab-year {
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    opacity: .7;
+    white-space: nowrap;
+  }
+  .ftab-title {
+    font-family: var(--font-serif, serif);
+    font-weight: 700;
+    font-size: .74rem;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .fcard-body {
+    padding: 0 .55rem .6rem;
+    border-top: 1px dotted rgba(0,0,0,.18);
+    margin-top: .1rem;
+    padding-top: .45rem;
+    /* Keep the whole card SMALL even when open: the body scrolls inside a
+       capped box so the deck stays a row of tabs, not a full article. */
+    max-height: 7.5rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    font-size: .72rem;
+    line-height: 1.35;
+  }
+  @media (max-width: 860px) {
+    .fcard-body { max-height: 6.5rem; font-size: .66rem; }
+  }
 
   /* The operative words of the Act, boxed — this is the witness. */
   .fc-act {
-    font-size: .62rem;
+    font-size: .58rem;
     font-weight: 700;
     letter-spacing: .03em;
     text-transform: uppercase;
@@ -537,7 +595,7 @@ for (const f of freedoms) {
     margin-bottom: .25rem;
   }
   .fc-power {
-    font-size: .72rem;
+    font-size: .7rem;
     line-height: 1.4;
     font-style: italic;
     border-left: 2px solid rgba(0,0,0,.18);
@@ -548,15 +606,17 @@ for (const f of freedoms) {
     margin-top: .45rem;
     padding-top: .35rem;
     border-top: 1px dotted rgba(0,0,0,.18);
-    font-size: .58rem;
+    font-size: .56rem;
     line-height: 1.35;
     opacity: .7;
   }
+  .fcard-body .sc-detail { font-size: .72rem; line-height: 1.45; }
 
-  /* Column legend — three labels matching the three columns below. */
+  /* Column legend — two labels matching the two columns below. The trivia
+     deck is a side note, so it gets no third heading of its own. */
   .tl-legend {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
     column-gap: 2rem;
     margin: 1.2rem 0 .3rem;
     padding-bottom: .4rem;
@@ -571,7 +631,6 @@ for (const f of freedoms) {
     color: var(--color-ink-light);
   }
   .tl-lg-2 { padding-left: .1rem; }
-  .tl-lg-3 { border-left: 4px solid #c98a8a; padding-left: .55rem; }
 
   .tl-side-foot {
     margin-top: 1rem;
@@ -583,38 +642,45 @@ for (const f of freedoms) {
     color: var(--color-ink-light);
   }
 
-  /* Phone: the SAME two columns, just tighter. The card stays beside its own
-     decade on a phone exactly as it does on the desktop — that was the whole
-     point. Nothing is reordered, nothing folds underneath. */
+  /* Phone: the family line keeps the width it had; the trivia deck narrows
+     into a thin strip of poking-out tabs down the right. The people are the
+     main event at every width. */
   @media (max-width: 860px) {
     .tl-legend {
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
       column-gap: .5rem;
     }
-    .tl-legend > div { font-size: .52rem; letter-spacing: .02em; }
-    .tl-lg-3 { border-left-width: 3px; padding-left: .3rem; }
+    .tl-legend > div { font-size: .54rem; letter-spacing: .02em; }
     .tl-grid {
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
       column-gap: .5rem;
     }
     .tl-cell h2 { font-size: 1.15rem; }
     .survival-card { padding: .5rem .55rem; border-radius: 10px; }
-    .freedom-card { padding: .5rem .55rem; border-radius: 10px; border-left-width: 3px; }
+    .fcard { border-radius: 9px; border-left-width: 3px; }
+    .fcard-tab { padding: .3rem .35rem; gap: .25rem; transform: translateX(3px); }
+    .ftab-year { font-size: .48rem; }
+    .ftab-title { font-size: .6rem; }
+    .fcard-body { padding: 0 .4rem .5rem; padding-top: .35rem; }
     .sc-year { font-size: .58rem; }
     .sc-title { font-size: .74rem; line-height: 1.2; margin: .12rem 0 .2rem; }
     .sc-feared { font-size: .64rem; margin-bottom: .2rem; line-height: 1.25; }
     .sc-detail { font-size: .62rem; line-height: 1.3; }
-    .fc-act { font-size: .5rem; margin-bottom: .18rem; }
-    .fc-power { font-size: .6rem; line-height: 1.3; padding-left: .3rem; margin: .08rem 0 .3rem; }
-    .fc-source { font-size: .48rem; line-height: 1.3; margin-top: .3rem; padding-top: .25rem; }
+    .fc-act { font-size: .48rem; margin-bottom: .18rem; }
+    .fc-power { font-size: .58rem; line-height: 1.3; padding-left: .3rem; margin: .08rem 0 .3rem; }
+    .fc-source { font-size: .44rem; line-height: 1.3; margin-top: .3rem; padding-top: .25rem; }
+    .fcard-body .sc-detail { font-size: .6rem; line-height: 1.3; }
   }
   @media (max-width: 430px) {
-    .tl-legend { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1fr); column-gap: .4rem; }
+    .tl-legend { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: .4rem; }
     .tl-legend > div { font-size: .46rem; }
-    .tl-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1fr); column-gap: .4rem; }
+    .tl-grid { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: .4rem; }
     .tl-cell h2 { font-size: 1.05rem; }
     .survival-card { padding: .42rem .5rem; }
     .freedom-card { padding: .42rem .5rem; }
+    .ftab-year { font-size: .44rem; }
+    .ftab-title { font-size: .56rem; }
+    .fcard-tab { padding: .26rem .28rem; }
     .sc-title { font-size: .7rem; }
     .sc-detail { font-size: .58rem; }
     .fc-power { font-size: .55rem; }
@@ -622,4 +688,40 @@ for (const f of freedoms) {
   }
 </style>
 
-<!-- No alignment script needed: each decade and its card share a grid row. -->
+<!-- Trivia deck: touch a tab to open its card; the rest fold back. One card
+     in each deck always stays open, so a deck never collapses to nothing. -->
+<script>
+  document.querySelectorAll<HTMLElement>("[data-deck]").forEach((deck) => {
+    const cards = Array.from(deck.querySelectorAll<HTMLElement>("[data-fcard]"));
+    if (!cards.length) return;
+
+    const open = (target: HTMLElement) => {
+      cards.forEach((c) => {
+        const isTarget = c === target;
+        c.classList.toggle("is-open", isTarget);
+        const tab = c.querySelector<HTMLElement>("[data-ftab]");
+        const body = c.querySelector<HTMLElement>("[data-fbody]");
+        if (tab) tab.setAttribute("aria-expanded", isTarget ? "true" : "false");
+        if (body) body.hidden = !isTarget;
+      });
+    };
+
+    cards.forEach((card) => {
+      const tab = card.querySelector<HTMLElement>("[data-ftab]");
+      if (!tab) return;
+      tab.addEventListener("click", () => {
+        const isOpen = tab.getAttribute("aria-expanded") === "true";
+        // Only card in its deck, already open — do nothing, never hide it all.
+        if (isOpen && cards.length === 1) return;
+        if (isOpen) {
+          card.classList.remove("is-open");
+          tab.setAttribute("aria-expanded", "false");
+          const body = card.querySelector<HTMLElement>("[data-fbody]");
+          if (body) body.hidden = true;
+        } else {
+          open(card);
+        }
+      });
+    });
+  });
+</script>
