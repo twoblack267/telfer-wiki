@@ -137,18 +137,52 @@ for (const p of telferPeople) {
       birthNumeric !== null && deathNumeric !== null
         ? deathNumeric - birthNumeric
         : "?";
-    timeline.push(
-      makeEvent(
-        p.death_year,
-        p.death_year,
-        "death",
-        bareName(p.display_name),
-        p.slug,
-        aged === "?" ? "dies" : `dies, aged ${aged}`,
-        "",
-        lifeStatus(p),
-      ),
-    );
+    /* Born and died in the same year: one card, because two identical rows at
+       the same year read as a bug on the page. Mark asked for a birth card and
+       a death card; he did not ask for "1982 · born" stacked on "1982 · died".
+       Infants keep both words on the single row instead. */
+    const sameYear =
+      birthNumeric !== null && deathNumeric !== null && birthNumeric === deathNumeric;
+    if (sameYear) {
+      /* Upgrade the card already pushed for the birth year rather than adding
+         a second one at the same year. A new card would leave the plain "is
+         born" row standing above it — two rows, same name, same year, which
+         is the duplication Mark reported. */
+      var twin = null;
+      for (const e of timeline) {
+        if (e.type === "birth" && e.personSlug === p.slug) twin = e;
+      }
+      if (twin) {
+        twin.detail = "is born and dies the same year";
+        twin.type = "death";
+      } else {
+        timeline.push(
+          makeEvent(
+            p.death_year,
+            p.death_year,
+            "death",
+            bareName(p.display_name),
+            p.slug,
+            "is born and dies the same year",
+            "",
+            lifeStatus(p),
+          ),
+        );
+      }
+    } else {
+      timeline.push(
+        makeEvent(
+          p.death_year,
+          p.death_year,
+          "death",
+          bareName(p.display_name),
+          p.slug,
+          aged === "?" ? "dies" : `dies, aged ${aged}`,
+          "",
+          lifeStatus(p),
+        ),
+      );
+    }
   }
 }
 
@@ -722,8 +756,10 @@ for (const f of freedoms) {
                         aria-label={`${event.personName}, ${event.year} — open full entry`}
                       >
                         <span class="tl-fam-name">{event.personName}</span>
-                        {event.life && (
+                        {event.life ? (
                           <span class="tl-fam-life">{event.life}</span>
+                        ) : (
+                          <span class="tl-fam-life tl-fam-life--none">no dates recorded</span>
                         )}
                       </button>
                     </div>
