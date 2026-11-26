@@ -3512,7 +3512,8 @@
     },
     {
       "slug": "malcolm-lawrie",
-      "id": "Malcolm Maxdon Lawrie (1893)"
+      "id": "Malcolm Maxdon Lawrie (1893)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -8228,10 +8229,6 @@
       {
         "from": "angela-telfer",
         "to": "sophia-telfer"
-      },
-      {
-        "from": "arnold-cuthbert-lawrie-1895",
-        "to": "malcolm-lawrie"
       },
       {
         "from": "arthur-clifford-stribling-1890",

@@ -693,6 +693,10 @@ function slugify(text) {
 
 const parentEdges = new Map();    // childSlug -> Set(parentSlug)
 const childEdges = new Map();     // parentSlug -> Set(childSlug)
+// Rendered-but-refused references (added 2026-11-27). A ref that resolved to a slug
+// but failed the date gate used to vanish entirely; these keep the vault's wording as
+// a visible research gap. Applied after the edge maps are built.
+const refusedRefs = [];
 const spouseEdges = new Map();    // slug -> Set(spouseSlug)
 const siblingEdges = new Map();   // slug -> Set(siblingSlug)
 // Step relationships (added 2026-09-22) — deliberately SEPARATE from the biological
@@ -1224,6 +1228,23 @@ for (const person of people) {
             });
             if (!plaus.ok) {
               console.warn(`   ⛔ refused impossible ${rel.type}: ${sourceSlug} -> ${targetSlug} (${plaus.reason})`);
+              // A REFUSED MATCH MUST NOT EAT THE REFERENCE (fixed 2026-11-27).
+              //
+              // The ref RESOLVED to a slug, so `carryUnresolved()` will not restore it —
+              // that function only preserves entries that are still RAW NAMES. Dropping
+              // the edge outright therefore deleted the only record that the
+              // relationship exists anywhere.
+              //
+              // Measured case: Hazel Rose Telfer's child "Malcolm Roderick Lawrie"
+              // (b.1931) has no profile. The name fuzzy-matched the newly created
+              // Malcolm Maxdon Lawrie (b.1893) — the only Malcolms-Lawrie candidate —
+              // which the date gate then correctly refused as an impossible child.
+              // Resolved-and-refused meant her children list fell from 2 to 1 and the
+              // crown-jewel guard fired on a vault that was never wrong.
+              //
+              // Keep the vault's own wording as an unresolved name so it renders as the
+              // research gap it is. The refused edge is still NOT written.
+              refusedRefs.push({ slug: sourceSlug, field: KIND === 'parent' ? 'parents' : 'children', name });
               continue;
             }
           }
@@ -1876,6 +1897,19 @@ for (const person of people) {
   person.children = carryUnresolved(person, 'children', Array.from(childEdges.get(slug) || []).sort(byBirth));
   person.spouses = carryUnresolved(person, 'spouses', Array.from(spouseEdges.get(slug) || []).sort());
   person.siblings = carryUnresolved(person, 'siblings', Array.from(siblingEdges.get(slug) || []).sort());
+  // Re-append references the date gate refused (added 2026-11-27). They resolved to a
+  // slug, so carryUnresolved treats them as handled and drops them; the vault's own
+  // wording is restored here as an unresolved name so the gap stays visible on the
+  // page. No edge is created — this only stops the relationship disappearing.
+  for (const r of refusedRefs) {
+    if (r.slug !== slug) continue;
+    const arr = person[r.field];
+    if (!Array.isArray(arr)) continue;
+    if (arr.includes(r.name)) continue;
+    if (arr.some((s) => typeof s === 'string' && slugToPerson.has(s) &&
+        String(slugToPerson.get(s).display_name || '').toLowerCase() === String(r.name).toLowerCase())) continue;
+    arr.push(r.name);
+  }
   // Step arrays (added 2026-09-22). Emitted alongside the biological ones so the
   // renderer can show a labelled "Step-parent(s)"/"Stepchildren" section. A slug
   // must never appear in BOTH a biological and a step array — Rex's page claimed
