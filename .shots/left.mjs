@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 const b = await chromium.launch();
 for (const [nm,W,H] of [["phone",390,844],["desk",1400,1000]]) {
   const p = await b.newPage({ viewport:{width:W,height:H}, deviceScaleFactor:2 });
-  await p.goto("http://127.0.0.1:4402/timeline/",{waitUntil:"networkidle"});
+  await p.goto("https://telferwiki.com/timeline/",{waitUntil:"networkidle"});
   await p.waitForTimeout(700);
   const decks = await p.$$("[data-deck]");
   for (let di=0; di<decks.length; di++){
