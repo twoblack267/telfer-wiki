@@ -379,14 +379,20 @@ for (const f of freedoms) {
                   </div>
                   <div class="flex-1 min-w-0">
                     <div class="text-xs sm:text-sm">
-                      {event.personSlug ? (
-                        <a href={`${import.meta.env.BASE_URL}people/${event.personSlug}/`} class="font-medium text-[var(--color-link)]">
-                          {event.personName}
-                        </a>
-                      ) : (
-                        <span class="font-medium text-[var(--color-ink)]">{event.personName}</span>
-                      )}
-                      <span class="text-[var(--color-ink-light)]"> {event.detail}</span>
+                      <button
+                        type="button"
+                        class="tl-ev"
+                        data-rd
+                        data-kind="family"
+                        data-kicker={event.year}
+                        data-title={event.personName}
+                        data-text={event.detail}
+                        data-slug={event.personSlug || undefined}
+                        aria-label={`${event.personName}, ${event.year} — open full entry`}
+                      >
+                        <span class={event.personSlug ? "font-medium text-[var(--color-link)]" : "font-medium text-[var(--color-ink)]"}>{event.personName}</span>
+                        <span class="text-[var(--color-ink-light)]"> {event.detail}</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -395,11 +401,22 @@ for (const f of freedoms) {
           </div>
           <div class={`tl-card-cell${cards.length ? "" : " is-empty"}`}>
             {cards.map((c) => (
-              <div class={`survival-card tone-${c.tone}`}>
+              <div
+                class={`survival-card tone-${c.tone}`}
+                data-rd
+                data-kind="survival"
+                data-kicker={c.year}
+                data-title={c.title}
+                data-lede={c.feared}
+                data-text={c.detail}
+                role="button"
+                tabindex="0"
+                aria-label={`${c.year} — ${c.title}. Open full note`}
+              >
                 <div class="sc-year">{c.year}</div>
                 <div class="sc-title">{c.title}</div>
                 <div class="sc-feared">{c.feared}</div>
-                <div class="sc-detail">{c.detail}</div>
+                <span class="sc-hint" aria-hidden="true">Tap to read</span>
               </div>
             ))}
             {freeCards.length > 0 && (
@@ -411,18 +428,19 @@ for (const f of freedoms) {
                         type="button"
                         class="fcard-tab"
                         data-ftab
-                        aria-expanded="false"
-                        aria-label={`${f.year} — ${f.title}`}
+                        data-rd
+                        data-kind="freedom"
+                        data-kicker={f.year}
+                        data-title={f.title}
+                        data-lede={f.enacted}
+                        data-power={f.power}
+                        data-text={f.detail}
+                        data-src={f.source}
+                        aria-label={`${f.year} — ${f.title}. Open full card`}
                       >
                         <span class="ftab-year">{f.year}</span>
                         <span class="ftab-title">{f.title}</span>
                       </button>
-                      <div class="fcard-body" data-fbody hidden>
-                        <div class="fc-act">{f.enacted}</div>
-                        <div class="fc-power">{f.power}</div>
-                        <div class="sc-detail">{f.detail}</div>
-                        <div class="fc-source">{f.source}</div>
-                      </div>
                     </div>
                   ))}
                 </div>
@@ -763,6 +781,288 @@ for (const f of freedoms) {
     .fc-source { font-size: .6rem; line-height: 1.4; margin-top: .3rem; padding-top: .25rem; }
     .fcard-body .sc-detail { font-size: .66rem; line-height: 1.4; }
   }
+  /* ── Family line: every entry is a button that opens the same Win95
+        reader window the trivia tabs use (Mark, 26 Nov 2026). No inline
+        expansion on the page at all — the line stays the family line. ── */
+  .tl-ev {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: .12rem .3rem;
+    margin: -.12rem -.3rem;
+    border-radius: 6px;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  .tl-ev:hover { background: rgba(0,0,0,.045); }
+  .tl-ev:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
+
+  /* ── The reader window ────────────────────────────────────────────────
+     Cloned rule-for-rule from #skippy-lightbox in BaseLayout.astro (the photo
+     viewer Mark approved on 15/16 Nov 2026). Those rules are scoped to the
+     lightbox ID inside the layout's own <style>, so they do NOT cascade into
+     this page — re-declaring them under #skippy-reader is the only way this
+     window is genuinely the same chassis rather than a lookalike. */
+  #skippy-reader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(20, 17, 14, 0.72);
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+    }
+    #skippy-reader.is-open { display: flex; }
+
+    /* The window chassis: Win95 raised bevel, but in parchment, not grey. */
+    #skippy-reader .lb-window {
+      display: flex;
+      flex-direction: column;
+      /* Size the chassis to the photo, not to the viewport (Mark, 15 Nov 2026:
+         "Beautiful unit test it with the ego browser... see for changes properly").
+         A fixed min(96vw, 1400px) left a portrait photo stranded in ~59% empty
+         cream. An explicit width can't see the image's aspect ratio, but a flex
+         basis expressed in viewport HEIGHT can: a portrait image is the axis that
+         binds, so sizing from 92vh makes the window land close to the photo's own
+         shape. */
+      width: auto;
+      height: auto;
+      /* NOT align-items:center — that shrank the title bar to the photo's width,
+         which stranded the X in the middle of the window instead of the right
+         corner (Mark, 15 Nov 2026: "the X isn't in the right hand corner").
+         The body centres its own photo instead. */
+      align-items: stretch;
+      max-width: 96vw;
+      max-height: 92vh;
+      background: var(--color-paper);
+      border: 2px solid var(--color-border);
+      border-radius: 8px;
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.55),
+        inset -1px -1px 0 rgba(0, 0, 0, 0.18),
+        0 18px 48px rgba(20, 17, 14, 0.45);
+      overflow: hidden;
+    }
+
+    /* Title bar — the Win95 active title gradient, remapped to brand colours. */
+    #skippy-reader .lb-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      /* Right padding must be TINY: the X is the only control and it belongs in
+         the top-right corner, not inset from it (Mark, 15 Nov 2026). */
+      padding: 0.3rem 0.15rem 0.3rem 0.6rem;
+      background: linear-gradient(
+        90deg,
+        var(--color-heading) 0%,
+        var(--color-accent) 100%
+      );
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      user-select: none;
+    }
+    #skippy-reader .lb-title {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    #skippy-reader .lb-close {
+      flex: 0 0 auto;
+      /* 44px touch target (16 Nov 2026): the old 24x22px button was under the
+         28px minimum and shared its background with the title bar, so on a phone
+         it read as part of the chrome rather than as the one control that exists. */
+      width: 2.75rem;
+      height: 2.75rem;
+      display: grid;
+      place-items: center;
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--color-ink);
+      background: var(--color-paper);
+      /* Win95 raised bevel: light top-left, dark bottom-right. */
+      border: 2px solid;
+      border-color: #fff #6b6259 #6b6259 #fff;
+      border-radius: 0;
+      box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      padding: 0;
+    }
+    #skippy-reader .lb-close:hover { background: var(--color-surface); }
+    #skippy-reader .lb-close:focus-visible {
+      outline: 2px solid var(--color-highlight);
+      outline-offset: 1px;
+    }
+
+    /* Body — the image, own scroll box so a tall portrait cannot exceed the view. */
+    #skippy-reader .lb-body {
+      overflow: auto;
+      padding: 0.5rem;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      /* Height-driven basis: a portrait photo then determines the window width
+         through its own aspect ratio instead of stretching to 1400px. */
+      flex: 0 1 auto;
+    }
+    [data-theme="dark"] #skippy-reader .lb-titlebar {
+      background: linear-gradient(
+        90deg,
+        var(--color-heading) 0%,
+        var(--color-accent) 100%
+      );
+    }
+    [data-theme="dark"] #skippy-reader .lb-window {
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.12),
+        inset -1px -1px 0 rgba(0, 0, 0, 0.5),
+        0 18px 48px rgba(0, 0, 0, 0.65);
+    }
+    /* Never let the overlay itself scroll the page underneath. */
+  
+  /* ── The reader window: one stylesheet, zero animation ────────────────
+     Deliberately NOT a new design. The chassis, bevel, title bar, X button
+     and parchment body are all inherited from #skippy-lightbox in
+     BaseLayout.astro, so a trivia card, a survival note and a family entry
+     all open in the identical window Mark already approved on the photo
+     pages. Only the body's CONTENTS differ per kind. */
+  #skippy-reader {
+    position: fixed; inset: 0; z-index: 9999;
+    display: none; align-items: center; justify-content: center;
+    padding: 1rem;
+    background: rgba(20, 17, 14, 0.72);
+    -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  }
+  #skippy-reader.is-open { display: flex; }
+  /* A long card ends mid-sentence if the body gives no sign it scrolls.
+     A visible thumb is the cue — the window must look like it has more in it. */
+  #skippy-reader .rd-body::-webkit-scrollbar { width: 10px; }
+  #skippy-reader .rd-body::-webkit-scrollbar-track { background: rgba(0,0,0,.06); }
+  #skippy-reader .rd-body::-webkit-scrollbar-thumb {
+    background: var(--color-ink-light); border-radius: 5px;
+    border: 2px solid var(--color-surface);
+  }
+  #skippy-reader .rd-body { scrollbar-width: thin; scrollbar-color: var(--color-ink-light) transparent; }
+  #skippy-reader .rd-body {
+    overflow: auto;
+    padding: .85rem .95rem 1rem;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    flex: 0 1 auto;
+    /* The text body is the scroll box: a 5,760-character card cannot fit
+       an 92vh window, and a clipped card is a broken card. */
+    max-height: calc(92vh - 5rem);
+    -webkit-overflow-scrolling: touch;
+  }
+  #skippy-reader .rd-kicker {
+    font-family: var(--font-mono);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--color-ink-light);
+  }
+  #skippy-reader .rd-h {
+    font-family: var(--font-serif, serif);
+    font-size: 1.18rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-ink);
+    margin: .18rem 0 .5rem;
+  }
+  #skippy-reader .rd-lede {
+    font-size: .86rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: .3rem;
+  }
+  #skippy-reader .rd-power {
+    font-size: .84rem;
+    line-height: 1.45;
+    font-style: italic;
+    border-left: 3px solid var(--color-border);
+    padding-left: .55rem;
+    margin: .2rem 0 .6rem;
+  }
+  #skippy-reader .rd-text {
+    font-size: .84rem;
+    line-height: 1.5;
+    margin: .5rem 0;
+  }
+  #skippy-reader .rd-text p { margin: 0 0 .55rem; }
+  #skippy-reader .rd-text p:last-child { margin-bottom: 0; }
+  #skippy-reader .rd-src {
+    margin-top: .7rem;
+    padding-top: .5rem;
+    border-top: 1px dotted var(--color-border);
+    font-size: .72rem;
+    line-height: 1.45;
+    color: var(--color-ink-light);
+    overflow-wrap: anywhere;
+  }
+  /* Phones: a card that opened at 9px text is how Mark ended up squinting. */
+  @media (max-width: 860px) {
+    #skippy-reader { padding: .5rem; }
+    #skippy-reader .rd-h { font-size: 1.05rem; }
+    #skippy-reader .rd-lede, #skippy-reader .rd-power, #skippy-reader .rd-text { font-size: .8rem; }
+    #skippy-reader .rd-src { font-size: .7rem; }
+  }
+
+  /* Closed cards sit FLUSH against the screen edge (Mark, 26 Nov 2026).
+     The 12px gutter was the page wrapper's px-3, inherited from the layout —
+     not the cards. Cancel it on the card column only: .tl-card-cell bleeds
+     12px right, so the tabs reach the wall while the family text beside them
+     keeps its own margin. */
+  .tl-card-cell { padding-right: 0; }
+  /* Above 64rem the wrapper is centred by mx-auto, so the gap to the wall is
+     the centring margin PLUS its padding. Read it off the wrapper rather than
+     re-deriving it — deriving it double-subtracted and pushed cards 192px
+     off the screen. */
+
+  .tl-card-cell { margin-right: calc(-1 * var(--wrap-gap, 12px)); }
+  .tl-free-cell { padding-right: 0; }
+  /* NO width override here. An earlier "width:auto; max-width:none" block
+     (left over from the old slide-out overlay) stretched every closed tab
+     into a full-width box and killed the poker-tab look. The narrow width
+     lives in the .fcard rule above and stays the single source of truth. */
+  .fcard-tab:hover { background: var(--color-surface); }
+  /* Flush means the TAB's right edge touches the wall, not merely the deck's
+     box. The deck is right-aligned in its cell and the card's own right edge
+     is what carries the bleed, so nothing is left floating 41px off the wall. */
+  .fdeck { align-items: flex-end; margin-left: auto; margin-right: 0; }
+  .fcard { margin-right: 0; }
+  .fcard-tab { transform: none; }
+  @media (max-width: 860px) {
+    .fcard-tab { padding: .3rem .3rem .3rem .35rem; }
+  }
+  .tl-card-cell > .survival-card { cursor: pointer; }
+  .tl-card-cell > .survival-card .sc-hint {
+    display: block;
+    margin-top: .22rem;
+    font-family: var(--font-mono);
+    font-size: .56rem;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    opacity: .55;
+  }
+
+  @media print {
+    #skippy-reader { display: none !important; }
+    .tl-card-cell > .survival-card .sc-hint { display: none; }
+  }
+
   @media (max-width: 430px) {
     .tl-legend { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: .4rem; }
     .tl-legend > div { font-size: .46rem; }
@@ -783,65 +1083,161 @@ for (const f of freedoms) {
   }
 </style>
 
-<!-- Trivia deck: touch a tab to open its card; the rest fold back. One card
-     in each deck always stays open, so a deck never collapses to nothing. -->
+<!-- Reader window: a trivia tab, a survival note and a family entry all open
+     the SAME Win95 chassis Mark already has on the photo pages
+     (#skippy-lightbox in BaseLayout.astro). The chassis is reused; only the
+     contents of the body differ. No slide animation, no inline reflow: the
+     family line underneath never moves. -->
 <script>
-  document.querySelectorAll<HTMLElement>("[data-deck]").forEach((deck) => {
-    const cards = Array.from(deck.querySelectorAll<HTMLElement>("[data-fcard]"));
-    if (!cards.length) return;
-
-    const open = (target: HTMLElement) => {
-      cards.forEach((c) => {
-        const isTarget = c === target;
-        /* Record where the card will sit BEFORE it goes absolute, so the
-           floating copy lands exactly on its own slot. */
-        if (isTarget && !deck.classList.contains("is-leaky")) {
-          const dr = deck.getBoundingClientRect();
-          const cr = c.getBoundingClientRect();
-          deck.style.setProperty("--open-top", `${Math.round(cr.top - dr.top)}px`);
-          /* Set on the CARD, not just the deck: the card's own width calc
-             reads this, and a deck-level custom property is not guaranteed
-             to have resolved when the card's width is computed. */
-          c.style.setProperty("--open-right", `${Math.round(dr.right - cr.right)}px`);
-          deck.style.setProperty("--deck-closed-h", `${Math.round(dr.height)}px`);
+  /* Flush-to-the-wall measurement: the gutter the cards must cancel is
+     whatever the page wrapper (and its mx-auto centring) actually contributes
+     at this viewport — not a number guessed from the Tailwind classes. */
+  (function () {
+    function setWrapGap() {
+      var card = document.querySelector("[data-fcard]");
+      if (!card) return;
+      /* Walk up from a card to the first ancestor that actually has padding —
+         that ancestor's right padding is the entire gutter between the tabs
+         and the wall (measured: 12px phone, 16px tablet, 32px desktop). */
+      var n = card.parentElement;
+      var gap = 0;
+      while (n && n !== document.body) {
+        var cs = getComputedStyle(n);
+        var pr = parseFloat(cs.paddingRight) || 0;
+        var mr = parseFloat(cs.marginRight) || 0;
+        if (pr > 0) {
+          var r = n.getBoundingClientRect();
+          gap = Math.max(0, Math.round(document.documentElement.clientWidth - r.right + pr));
+          break;
         }
-        c.classList.toggle("is-open", isTarget);
-        const tab = c.querySelector<HTMLElement>("[data-ftab]");
-        const body = c.querySelector<HTMLElement>("[data-fbody]");
-        if (tab) tab.setAttribute("aria-expanded", isTarget ? "true" : "false");
-        if (body) body.hidden = !isTarget;
-      });
-      /* Now the open card floats over the deck instead of growing it, so
-         the family text below it stays exactly where it was. */
-      deck.classList.add("is-leaky");
+        if (mr > 0) gap += mr;
+        n = n.parentElement;
+      }
+      document.documentElement.style.setProperty("--wrap-gap", gap + "px");
+    }
+    setWrapGap();
+    addEventListener("resize", setWrapGap);
+    addEventListener("load", setWrapGap);
+  })();
+
+  (function () {
+    var KIND_LABEL: Record<string, string> = {
+      family: "Family",
+      survival: "What the line survived",
+      freedom: "A freedom taken",
     };
 
-    const close = (card: HTMLElement) => {
-      card.classList.remove("is-open");
-      const tab = card.querySelector<HTMLElement>("[data-ftab]");
-      const body = card.querySelector<HTMLElement>("[data-fbody]");
-      if (tab) tab.setAttribute("aria-expanded", "false");
-      if (body) body.hidden = true;
-      deck.classList.remove("is-leaky");
-      deck.style.removeProperty("--deck-closed-h");
-      card.style.removeProperty("--open-right");
-    };
+    var box = document.createElement("div");
+    box.id = "skippy-reader";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    /* Reuses the lightbox's own classes so the chassis, bevel and X button are
+       the identical CSS, not a lookalike that drifts apart later. */
+    box.innerHTML =
+      '<div class="lb-window">' +
+        '<div class="lb-titlebar">' +
+          '<span class="lb-title"></span>' +
+          '<button type="button" class="lb-close" aria-label="Close">&#10005;</button>' +
+        '</div>' +
+        '<div class="lb-body rd-body">' +
+          '<div class="rd-kicker"></div>' +
+          '<div class="rd-h"></div>' +
+          '<div class="rd-lede"></div>' +
+          '<div class="rd-power"></div>' +
+          '<div class="rd-text"></div>' +
+          '<div class="rd-src"></div>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(box);
 
-    cards.forEach((card) => {
-      const tab = card.querySelector<HTMLElement>("[data-ftab]");
-      if (!tab) return;
-      tab.addEventListener("click", () => {
-        const isOpen = tab.getAttribute("aria-expanded") === "true";
-        /* Every tab must be able to toggle itself shut - including the only
-           card in its deck. A tab that opens and refuses to close is the
-           fault Mark keeps hitting. The deck keeps its height while open,
-           so closing never collapses the family timeline. */
-        if (isOpen) {
-          close(card);
-        } else {
-          open(card);
-        }
-      });
+    var lastFocus: HTMLElement | null = null;
+    var isOpen = false;
+
+    function el<T extends HTMLElement>(sel: string): T {
+      return box.querySelector(sel) as T;
+    }
+
+    function fill(name: string, value: string | null) {
+      var node = box.querySelector("." + name) as HTMLElement | null;
+      if (!node) return;
+      if (value && value.trim()) {
+        node.textContent = value;
+        node.hidden = false;
+      } else {
+        node.textContent = "";
+        node.hidden = true;
+      }
+    }
+
+    function openReader(trigger: HTMLElement) {
+      var d = trigger.dataset;
+      var kind = d.kind || "freedom";
+      lastFocus = trigger;
+
+      el(".lb-title").textContent = KIND_LABEL[kind] || "Entry";
+      fill("rd-kicker", d.kicker ?? null);
+      fill("rd-h", d.title ?? null);
+      fill("rd-lede", d.lede ?? null);
+      fill("rd-power", d.power ?? null);
+      fill("rd-text", d.text ?? null);
+      fill("rd-src", d.src ?? null);
+
+      /* A family entry keeps its own page one tap away: the window shows the
+         line from the timeline, and this link walks to the whole story. */
+      var textEl = el(".rd-text");
+      var slug = d.slug && d.slug.trim();
+      if (slug) {
+        var a = document.createElement("a");
+        a.href = "/people/" + slug + "/";
+        a.className = "rd-more";
+        a.textContent = "Read the full page for " + (d.title || "this person") + " \u2192";
+        textEl.appendChild(a);
+      }
+
+      box.classList.add("is-open");
+      document.body.classList.add("lb-locked");
+      isOpen = true;
+      el(".rd-body").scrollTop = 0;
+      el(".lb-close").focus();
+    }
+
+    function closeReader() {
+      if (!isOpen) return;
+      box.classList.remove("is-open");
+      document.body.classList.remove("lb-locked");
+      isOpen = false;
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    el(".lb-close").addEventListener("click", closeReader);
+    box.addEventListener("click", function (e) {
+      if (e.target === box) closeReader();
     });
-  });
+    document.addEventListener("keydown", function (e) {
+      if (!isOpen) return;
+      if (e.key === "Escape") { e.preventDefault(); closeReader(); }
+    });
+
+    /* One delegated pair handles every card on the page — including the
+       single-card decks that used to refuse to close. */
+    document.addEventListener("click", function (e) {
+      var t = e.target as HTMLElement | null;
+      var trigger = t && t.closest ? (t.closest("[data-rd]") as HTMLElement | null) : null;
+      if (!trigger) return;
+      /* Let the person link inside the window behave as a link. */
+      if (t && t.closest && t.closest("#skippy-reader a")) return;
+      e.preventDefault();
+      openReader(trigger);
+    });
+
+    /* Survival cards are divs, so they need the keyboard path spelled out. */
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      var t = e.target as HTMLElement | null;
+      if (!t || !t.dataset || !t.hasAttribute("data-rd")) return;
+      if (t.tagName === "BUTTON") return;
+      e.preventDefault();
+      openReader(t);
+    });
+  })();
 </script>
