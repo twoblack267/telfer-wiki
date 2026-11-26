@@ -551,12 +551,20 @@ for (const f of freedoms) {
      flow onto its own layer so it cannot displace a single pixel of
      anything. top:0 anchors it to the slot it already occupies. */
   .fcard.is-open {
-    /* The OPEN card is the exception: it must widen enough to read the
-       body text without wrapping every third word. */
-    width: min(19rem, calc(100vw - 3.5rem));
-    max-width: min(19rem, calc(100vw - 3.5rem));
-    z-index: 5;
-    box-shadow: 0 3px 10px rgba(0,0,0,.10);
+    /* The OPEN card is the exception. You are reading ONE thing, so it is
+       allowed to grow leftwards and cover the family text - it is not read
+       at the same time. It grows out of its own right edge, so the tab
+       never slides off the side of the phone. */
+    /* The card's right edge is pinned 38px in from the viewport edge by
+       `right:` below, so the width available is 100vw - 38px - 8px gutter.
+       Subtract the offset ONCE: taking it off again is what left a 4px
+       sliver hanging off the left of the phone. */
+    width: min(22rem, calc(100vw - var(--open-right, 0px) - 1rem));
+    /* The base card's max-width:74% would otherwise clamp this to a third
+       of the column and the open card could never grow. Release it. */
+    max-width: none;
+    z-index: 20;
+    box-shadow: 0 4px 14px rgba(0,0,0,.13);
   }
   /* While open, the deck keeps its closed height so nothing underneath
      moves - the card is allowed to paint outside the deck box instead. */
@@ -564,7 +572,13 @@ for (const f of freedoms) {
   .fdeck.is-leaky .fcard.is-open {
     position: absolute;
     top: var(--open-top, 0px);
-    left: var(--open-left, 0px);
+    /* Right edge stays put; the extra width grows to the LEFT, over the
+       family text. max() floors the left edge at 0.5rem so the card can
+       never hang off the side of the phone. */
+    right: var(--open-right, 0px);
+    left: auto;
+    /* No max-width here: the single width on .fcard.is-open owns the size.
+       Two competing caps is how the card ended up hanging off the screen. */
   }
   /* Overlap: each card below sits slightly on top of the one above, so a
      stack reads as a deck of tabs rather than a column of articles.
@@ -760,7 +774,10 @@ for (const f of freedoms) {
           const dr = deck.getBoundingClientRect();
           const cr = c.getBoundingClientRect();
           deck.style.setProperty("--open-top", `${Math.round(cr.top - dr.top)}px`);
-          deck.style.setProperty("--open-left", `${Math.round(cr.left - dr.left)}px`);
+          /* Set on the CARD, not just the deck: the card's own width calc
+             reads this, and a deck-level custom property is not guaranteed
+             to have resolved when the card's width is computed. */
+          c.style.setProperty("--open-right", `${Math.round(dr.right - cr.right)}px`);
           deck.style.setProperty("--deck-closed-h", `${Math.round(dr.height)}px`);
         }
         c.classList.toggle("is-open", isTarget);
@@ -782,6 +799,7 @@ for (const f of freedoms) {
       if (body) body.hidden = true;
       deck.classList.remove("is-leaky");
       deck.style.removeProperty("--deck-closed-h");
+      card.style.removeProperty("--open-right");
     };
 
     cards.forEach((card) => {
@@ -789,8 +807,10 @@ for (const f of freedoms) {
       if (!tab) return;
       tab.addEventListener("click", () => {
         const isOpen = tab.getAttribute("aria-expanded") === "true";
-        // Only card in its deck, already open — do nothing, never hide it all.
-        if (isOpen && cards.length === 1) return;
+        /* Every tab must be able to toggle itself shut - including the only
+           card in its deck. A tab that opens and refuses to close is the
+           fault Mark keeps hitting. The deck keeps its height while open,
+           so closing never collapses the family timeline. */
         if (isOpen) {
           close(card);
         } else {
