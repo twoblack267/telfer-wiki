@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-27T03:55:39+10:00",
+  "generated_at": "2026-11-27T04:01:06+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 720,
+  "count": 721,
   "kinds": {
-    "real": 702,
+    "real": 703,
     "redirect": 18,
     "empty": 0
   },
@@ -319,8 +319,8 @@
       "kind": "real"
     },
     "Arnold Cuthbert Lawrie.md": {
-      "sha256": "3e9c76b8c5388f5e693ef60fa512de4592db04ddbdb88276b84545025df7a90c",
-      "sha256_whole": "29e548f08dbd7b4c19273384ba5bd8df51f949ff9c08d78f7d5a9aa546bc8f9d",
+      "sha256": "3fdd20788016cc163c288ad8741cf1c7259b61a4dee183a0c3a4e8824504eee5",
+      "sha256_whole": "48e4512addc74547eccafb93fa922d7e3f9a113dc3bdf18396ade4c06f5d4330",
       "kind": "real"
     },
     "Arthur Clifford Stribling (1890\u20131918).md": {
@@ -2411,6 +2411,11 @@
     "Malcolm Geoffrey Fatchen (b. 1942).md": {
       "sha256": "fd1f117740f4dd423b459e9144ab158cea4f8e1fdd536d452e26d309af322ae2",
       "sha256_whole": "61fac19ed6fd5514eeefbd436024fed7d53f4d297e2a3695a924dcccff8b3c7a",
+      "kind": "real"
+    },
+    "Malcolm Maxdon Lawrie (b. 1893).md": {
+      "sha256": "85bf927583abc456d2b4107323c5ef6800cf14e5897a1ee54f1c36ede935040c",
+      "sha256_whole": "211dc3ea732a440ecc7636fd17fa1ab61e2721d423a03b5fcc942c6677599fd0",
       "kind": "real"
     },
     "Malcolm Murray Cameron.md": {

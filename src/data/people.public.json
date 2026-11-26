@@ -13084,9 +13084,6 @@
     "children": [
       {
         "plain_name": "Barbara June Lawrie"
-      },
-      {
-        "plain_name": "Malcolm Roderick Lawrie"
       }
     ],
     "spouses": [
@@ -13202,15 +13199,14 @@
     "children": [
       {
         "plain_name": "Barbara June Lawrie"
-      },
-      {
-        "plain_name": "Malcolm Roderick Lawrie"
       }
     ],
     "spouses": [
       "hazel-rose-telfer-1891"
     ],
-    "siblings": [],
+    "siblings": [
+      "malcolm-lawrie"
+    ],
     "step_parents": [],
     "step_children": [],
     "images": [],
@@ -16587,6 +16583,51 @@
       "george-stribling",
       "hazel-stribling",
       "isa-stribling"
+    ],
+    "step_parents": [],
+    "step_children": [],
+    "images": [],
+    "person_photo": null
+  },
+  {
+    "id": "Malcolm Maxdon Lawrie (1893)",
+    "slug": "malcolm-lawrie",
+    "first_name": "Malcolm",
+    "middle_name": "Maxdon",
+    "last_name": "Lawrie",
+    "birth_year": 1893,
+    "death_year": null,
+    "birth_date": null,
+    "death_date": null,
+    "birth_year_display": "1893",
+    "death_year_display": "?",
+    "display_name": "Malcolm Maxdon Lawrie",
+    "title": "Malcolm Maxdon Lawrie (b. 1893) — Family & Biography",
+    "lifespan": "1893 – ?",
+    "generation": 6,
+    "is_living": false,
+    "is_deceased": false,
+    "evidence_level": "single-source",
+    "single_source": true,
+    "provisional_why": null,
+    "body_markdown": "# Malcolm Maxdon Lawrie (b. 1893)\n\n**Role:** Son of John Lawrie and Elizabeth Johns Nunan; elder brother of Arnold Cuthbert Lawrie\n\n**Born:** 6 June 1893 — Telowie, South Australia (District Clare)\n\n**Father:** John Lawrie\n**Mother:** Elizabeth Johns Nunan\n\n---\n\n## Life Summary\n\n> **SOURCE STATUS: SINGLE WITNESS.** The only record of this man is his birth registration. Nothing records his death, his marriage, or his later life, and no other source of any kind names him. He is entered here on the strength of a civil register, which stands on its own for the *birth* recorded in it — it says nothing whatever about the rest of his life. Treat everything beyond the birth as unknown.\n\nMalcolm Maxdon Lawrie was born on 6 June 1893 at Telowie, South Australia, the son of John Lawrie and Elizabeth Johns (née Nunan) Lawrie. He was their son two years before Arnold Cuthbert Lawrie, who was born at the same place on 22 June 1895. Nothing further is recorded of him in the family's book, in the South Australian death index, or in any newspaper notice located to date.\n\nHe is not the Malcolm Roderick Lawrie born in 1931, who was Arnold's son and therefore his nephew. A \"Lawrie Clifford Arnold (1910–1963)\" recorded at Geni is likewise a different man; neither set of dates belongs to this one. The similarity of given names within the same family is the reason both confusions are named here — it is not evidence of any connection.\n\n## Family\n\n| Relation | Name |\n|---|---|\n| Self | Malcolm Maxdon Lawrie (b. 1893) |\n| Father | John Lawrie |\n| Mother | Elizabeth Johns Nunan |\n| Brother | [[Arnold Cuthbert Lawrie]] (1895–1963) |\n\n## Timeline\n\n| Date | Event |\n|---|---|\n| 6 June 1893 | Born at Telowie, South Australia |\n\n## Sources\n\n- **Source:** Genealogy SA — Birth Registration `LAWRIE, Malcolm Maxdon · 06-Jun-1893 · M · father John LAWRIE · mother Elizabeth Johns NUNAN · Birth Residence Telowie · District Clare · Book 523 / Page 306` (read under member access 26 November 2026, confirmed against a control query in the same session) — accessed 27 November 2026",
+    "maiden_name": null,
+    "roles": [
+      "Son of John Lawrie and Elizabeth Johns Nunan; elder brother of Arnold Cuthbert Lawrie"
+    ],
+    "tags": [
+      "person",
+      "lawrie"
+    ],
+    "parents": [
+      {
+        "plain_name": "Elizabeth Johns Nunan"
+      }
+    ],
+    "children": [],
+    "spouses": [],
+    "siblings": [
+      "arnold-cuthbert-lawrie-1895"
     ],
     "step_parents": [],
     "step_children": [],

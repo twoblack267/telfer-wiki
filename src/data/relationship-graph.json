@@ -3509,6 +3509,10 @@
       "slug": "mary-jane-liebich",
       "id": "Mary Jane Jane Liebich (1837)",
       "generation": 5
+    },
+    {
+      "slug": "malcolm-lawrie",
+      "id": "Malcolm Maxdon Lawrie (1893)"
     }
   ],
   "edges": {
@@ -8224,6 +8228,10 @@
       {
         "from": "angela-telfer",
         "to": "sophia-telfer"
+      },
+      {
+        "from": "arnold-cuthbert-lawrie-1895",
+        "to": "malcolm-lawrie"
       },
       {
         "from": "arthur-clifford-stribling-1890",
