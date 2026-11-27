@@ -15,11 +15,65 @@
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 import { PRIVACY_STRIP_SLUGS } from '../src/data/privacy-exclusions.mjs';
 
 const PEOPLE_JSON = 'src/data/people.json';
 const DIST_DIR = 'dist/people';
 const REDIRECT_LOG = 'scripts/redirect-log.json';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// COLLAPSED-ALIAS PROOF (2026-11-28, ticket tw-2026-11-27-002).
+//
+// A collapsed-first-name alias ("dinah-paynter-1869" for Dinah Flavel Paynter)
+// asserts the URL was LIVE and its owner's slug changed shape. True for anyone
+// who has been on the site a while; FALSE for a profile first published today,
+// where the alias invents a URL that never existed (horace-mahar-1888, 27 Nov).
+//
+// The proof is therefore "was this URL ever actually published", read from the
+// two durable artefacts available to a build:
+//   1. the PREVIOUS redirect log (what the last build emitted), and
+//   2. the deployed dist/people tree (what CI shipped for the current HEAD).
+// Both are read BEFORE the log is rewritten below. Note this deliberately is
+// NOT prove-rename.mjs: that asks whether HEAD's people.json held the slug, and
+// the collapsed form is exactly what today's slugger never produces, so it
+// returns false for legitimate history and would strip ~300 working URLs.
+// Measured 28 Nov: that mistake 404'd dinah-paynter-1869 and arnold-lawrie-1895,
+// both verified HTTP 200 on the live site.
+// NOTE: there is deliberately NO "previous redirect log" witness here. An
+// earlier draft used one and it self-proved: a build that had already emitted
+// horace-mahar-1888 wrote it into redirect-log.json, so the NEXT run read its
+// own output back as history and emitted the alias forever. Measured 28 Nov —
+// 0 suppressions on a clean build while the stub kept being written. History
+// must come from something the build cannot author: the committed data.
+const collapsedWasPublished = new Set();
+
+// The dist/ probe above is necessary but NOT sufficient: dist/people holds the
+// CURRENT build's stubs, so a URL conjured by this very run also appears there
+// and would prove itself. That is how a first draft of this gate sat inert —
+// measured 28 Nov, 0 suppressions while horace-mahar-1888 kept being emitted.
+// The decisive signal is "did this PERSON exist before this build", taken from
+// the COMMITTED people.json (git HEAD), which by definition predates the change
+// under test. A collapsed alias is a rename of a page that was already live; if
+// the profile itself is new there is no rename to honour, only a URL invented
+// from a name.
+const peopleWerePublished = new Set();
+try {
+  const headJson = execSync('git show HEAD:src/data/people.json', {
+    encoding: 'utf-8',
+    stdio: ['ignore', 'pipe', 'ignore'],
+  });
+  for (const q of JSON.parse(headJson)) {
+    if (q && q.slug) peopleWerePublished.add(q.slug);
+  }
+} catch {
+  // No git, or a shallow CI clone without HEAD:src/data/people.json.
+  // DELIBERATELY NO fallback to scripts/redirect-log.json. That log is written
+  // by THIS SCRIPT, so reading it back as history is the script certifying its
+  // own output — the exact self-proving loop that let horace-mahar-1888 survive
+  // a "fixed" gate on 28 Nov. With no independent witness the set stays empty
+  // and the gate cannot suppress: honest ignorance beats false proof.
+}
 
 const people = JSON.parse(fs.readFileSync(PEOPLE_JSON, 'utf-8'));
 
@@ -235,6 +289,39 @@ for (const p of people) {
     }
     if (collapsedOld && collapsedOld !== newSlug && collapsedHolders.length > 1) {
       console.error(`   ⛔ ambiguous collapsed alias: ${collapsedOld} has ${collapsedHolders.length} holders (${p.slug}) — not emitted`);
+    }
+    // PROOF GATE (2026-11-28, ticket tw-2026-11-27-002).
+    //
+    // A collapsed alias is a claim that a URL WAS LIVE and its owner's slug
+    // changed shape. For an existing person that is true and must keep being
+    // emitted — dinah-paynter-1869, arnold-lawrie-1895 and ~50 others are real
+    // deployed redirects (verified 28 Nov: all HTTP 200, canonical to the
+    // full-name slug). Dropping them would 404 live URLs. That is why the
+    // year-stripped HEAD lookup (prove-rename.mjs) is the WRONG test here: it
+    // asks "did HEAD's people.json hold this slug", and the collapsed form is
+    // precisely the form the current slugger never produces, so it returns
+    // proven:false for legitimate history and would gut 303 working URLs —
+    // measured doing exactly that when first attempted this morning.
+    //
+    // The case that IS a fabrication is a person NEW to the site: horace-mahar-1888
+    // was first published 27 Nov 2026 and no earlier build ever served that URL,
+    // so the alias invents history. The honest test is whether the URL already
+    // exists as deployed output — legacyLive is populated from the previously
+    // emitted redirect log (what earlier builds actually published). A slug that
+    // was never published is not a rename; it is a URL conjured from a name.
+    if (collapsedOld && collapsedOld !== newSlug && !canonicalSlugs.has(collapsedOld)) {
+      // Two ways this alias can be legitimate:
+      //  (a) the collapsed URL itself was published before, or
+      //  (b) the person's canonical page existed before (a genuine rename).
+      // If NEITHER is true, the profile is new in this build and the collapsed
+      // form is a URL invented from a name — suppress it and let the canonical
+      // page be the only address (horace-mahar-1888, first published 27 Nov 26).
+      const urlSeenBefore = collapsedWasPublished.has(collapsedOld);
+      const personSeenBefore = peopleWerePublished.has(newSlug);
+      if (!urlSeenBefore && !personSeenBefore) {
+        console.error(`   ⛔ unproven collapsed alias: ${collapsedOld} never published and ${newSlug} is new — not emitted`);
+        continue;
+      }
     }
     if (collapsedOld && collapsedOld !== newSlug) {
       pushRedirect({
