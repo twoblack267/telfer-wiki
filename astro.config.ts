@@ -181,6 +181,21 @@ export default defineConfig({
         const treePaths = /^https?:\/\/[^/]+\/tree\/?$|^https?:\/\/[^/]+\/people\/full-tree\/?$/;
         if (treePaths.test(page)) return false;
 
+        // 5. /search/ — a noindexed tool page the sitemap kept advertising.
+        //    Measured live 2026-11-27: the page renders
+        //    <meta name="robots" content="noindex, nofollow"> (search.astro:13
+        //    `noindex={true}`) yet sitemap-1.xml still published
+        //    <loc>https://telferwiki.com/search/</loc>. We were asking Google to
+        //    crawl and index a page whose own head refuses indexing.
+        //    This case MUST sit above the /people/ early-return below: /search/
+        //    matches no /people/ pattern, so case 5 written further down was
+        //    unreachable and the URL survived the build. Measured twice —
+        //    the first attempt changed nothing and the sitemap still carried it.
+        //    Same precedent as /tree/ and /people/full-tree/: the page keeps
+        //    working for humans and in-site navigation, it just stops being
+        //    advertised to crawlers. `noindex` already covers the page itself.
+        if (/^https?:\/\/[^/]+\/search\/?$/.test(page)) return false;
+
         const m = page.match(/\/people\/([^/?]+)/);
         if (!m) return true;
         const slug = m[1];
