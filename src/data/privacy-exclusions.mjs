@@ -9,11 +9,16 @@
  *      explicit noindex/sitemap-fence list consumed by the page template
  *      (robots noindex meta) and astro.config.ts (sitemap filter).
  *
- * OWNER RULING — IVORY BRANCH (Mark, 16 Oct 2026):
- *   At Aaron Ivory's request (relayed by Mark), the living Ivory youngest
- *   generation and their mother are withdrawn from publication. Scope is ONE
- *   family, not a general rule change.
- *     - Living youngest generation: name + date of birth only, no page, no
+ * OWNER RULING — IVORY BRANCH (Mark, 16 Oct 2026; RE-FRAMED 27 Nov 2026):
+ *   The living Ivory youngest generation and their mother are NEVER PUBLISHED.
+ *   This is a PROHIBITION, not a withdrawal request: Mark's words 27 Nov 2026 —
+ *   "those guys can never be added, never, did not exist — their name is their
+ *   legacy. They do not ever have pages... with the exception of Paul. When
+ *   they're dead we'll reconsider it, but until then their pages are locked."
+ *   Authority: rules § THE NEVER-PUBLISH LIST in
+ *   ~/ObsidianVault/Family History/How We Work (Telfer Wiki Rules).md
+ *   Scope is ONE family, not a general rule change.
+ *     - Living youngest generation: name as plain text only, no page, no
  *       clickable link, no photo, out of Google, out of the sitemap.
  *     - Their NAMES REMAIN VISIBLE as plain text inside the profile pages of
  *       Paul Ivory (father, deceased), Sheryle Telfer (mother) and Timothy
@@ -21,7 +26,9 @@
  *     - PAUL IVORY'S PAGE IS EXEMPT: nothing about his page changes.
  *     - The vault is NOT edited. This is a website publication setting only,
  *       fully reversible by removing slugs from the list and rebuilding.
- *     - The record unlocks on death: remove the slug when the person dies.
+ *     - The record unlocks on DEATH — and only death, lifted by hand. Automation
+ *       never removes a slug; the living->deceased flip is Mark's call on two
+ *       confirming sources.
  *
  * Prior history: an equivalent strip ran from 25 Aug 2026 and was switched off
  * on 8 Sep 2026 (commit a817c46) when the youngest generation was deliberately

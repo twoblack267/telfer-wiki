@@ -1,8 +1,28 @@
 # Privacy withdrawal — how it works, and what stops it silently coming back
 
-**Status:** active. **Decided:** 2026-10-16 by Mark Telfer (owner).
+**Status:** active. **Decided:** 2026-10-16 by Mark Telfer (owner). **Re-affirmed and
+re-framed 2026-11-27** — see the box below, which supersedes the "withdrawal" framing
+everywhere in this document.
 **Applied to:** the living Ivory generation — Aaron, Joel, Jared, Lauren, Karina —
 and their mother **Sheryle Joy Telfer**. **Not** Paul Ivory. Not Tim Telfer.
+
+> ## ⚠️ IT IS NOT A WITHDRAWAL. IT IS A PROHIBITION. (Mark, 2026-11-27)
+>
+> This file was written as a record of a family member *asking to be taken off*. That framing
+> was wrong, and it matters, because a withdrawal is a request that can be reconsidered and a
+> prohibition is not.
+>
+> Mark's words: *"those guys can never be added, never, did not exist — their name is their
+> legacy. They do not ever have pages… with the exception of Paul. When they're dead we'll
+> reconsider it, but until then their pages are locked."*
+>
+> So: **these six are never published. Not by default, not by request, not pending a decision.**
+> The mechanism below is unchanged and correct; the *reason* is not a favour to Aaron. Do not
+> re-open this because somebody asks nicely, and do not "tidy" Paul's exemption.
+>
+> **The authority is `~/ObsidianVault/Family History/How We Work (Telfer Wiki Rules).md`
+> § THE NEVER-PUBLISH LIST.** This file is the engineering companion to that section. If the
+> two ever disagree, the rules file wins and this file is the defect.
 
 If you are reading this because something looks odd about those six names, read
 the whole page before changing anything. Every safeguard here exists because a
@@ -162,6 +182,12 @@ automatically.
 is theirs while they are alive to object, and the family's historical record
 resumes afterwards. Their vault record already carries the dates; the strip does
 not need to know about death. It is lifted by hand, deliberately, at the time.
+
+**Death is the *only* unlock, and automation never applies it.** The living↔deceased
+flip is Mark's call and needs two confirming sources (see the rules file). So a job that
+notices one of the six has died does **not** remove the slug — it files a card naming the
+person and the two sources, and Mark lifts the strip. A privacy fence that lifts itself
+on a machine's judgement is the failure this whole file exists to prevent.
 
 ---
 

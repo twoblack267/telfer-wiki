@@ -37,8 +37,21 @@ const isDeadFile = (fn) => DEAD_FILE_PATTERNS.some(re => re.test(fn));
 const FORCE_CHECK = /\(\d{4}[–\-—]\?\)|\(\?–living\)|\?–living/i;
 
 const RULES = [
+  // NOTE — OCCUPATION IS NOT A VAULT DEFECT (ruling 2026-11-27).
+  // The occupation/employer prohibition governs the WEBSITE, not the vault. Mark's words:
+  // "it's quite happy to stay in the vault but it can't go on the website." The previous
+  // EMPLOYER-FIELD rule here scanned `**Occupation:**` in the VAULT and would have failed a
+  // profile for carrying the very field the rules require it to keep. The site-side strip is
+  // enforced in sanitize-people.mjs (DROP_SECTIONS `Occupations?|Career|Employment|Work History`
+  // + DROP_FIELDS `Occupation|Employer|Workplace`) and asserted against dist/, which is where
+  // this belongs. A vault scan may not police a website rule.
+  //
+  // WORKS-PROSE stays: "works for <Company>" in a living person's file is prose that would be
+  // rendered as narrative, and it is the one occupation shape the site-side heading/label strip
+  // cannot see.
   ['RESIDENCE-FIELD', /^\*\*(?:Residence|Location)\s*:/i],
-  ['EMPLOYER-FIELD',  /^\*\*(?:Occupation|Employer|Work|Employment)\s*:/i],
+  // (EMPLOYER-FIELD removed 2026-11-27 — see the note above.)
+
   ['SCHOOL-FIELD',    /^\*\*(?:Education|School|Schooling)\s*:/i],
   ['SOCIAL-FIELD',    /^\*\*(?:Facebook|LinkedIn|Instagram)\s*:/i],
   ['SOCIAL-URL',      /(?:facebook|instagram|linkedin)\.com/i],
