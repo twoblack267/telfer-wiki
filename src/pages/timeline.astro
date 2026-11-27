@@ -345,6 +345,16 @@ interface Survival {
 }
 
 const survivals: Survival[] = [
+  // The column's own floor. Mark asked why the timeline cannot go further back
+  // and whether records were destroyed (27 Nov 2026). For this family the
+  // answer begins in the parish chest, so the earliest card says so — with
+  // the register dates stated as the registers state them, not as a story.
+  { decade: 1590, year: "1597", sortYear: 1597, title: "The first register the parish ever had", tone: "sage",
+    feared: "Paper registers ordered copied onto parchment — and the paper thrown away",
+    detail: "<p>Nothing in this column is older than the thing that recorded it. In <b>1597</b> every parish in Scotland was ordered to keep its register on parchment, in a chest with locks, and to send an annual copy to the bishop. England had begun the same thing in <b>1538</b>, and in England in 1598 the older paper registers were ordered to be copied onto parchment — which is why the earliest English registers that survive are mostly copies, and why the original paper leaves, where they were not copied, simply do not exist.</p><p>The Scottish registers that came out of that order are the ones this family's earliest records sit in. In Roxburghshire the earliest surviving entries begin at different dates in different parishes: <b>1597</b> at Kelso, <b>1622</b> at Kelso's session minutes, <b>1624</b> at Roxburgh, <b>1639</b> at Jedburgh, <b>1642</b> at Smailholm, <b>1690</b> at Yetholm, <b>1692</b> at Makerstoun, <b>1694</b> at Eckford, <b>1697</b> at Bowden, <b>1700</b> at Oxnam, and <b>1726</b> at Morebattle. Those dates are not guesses and they are not a national rule. They are what the ministers of each parish reported in the 1840s when they were asked, parish by parish, when their registers began.</p><p><b>And Castleton, where this family's line is first recorded, made no return at all.</b> That is the honest reason this timeline starts where it does. The family's own register is not lost to a fire or a war in any record I can find — the parish that kept it was never asked, or never answered, and the date its register begins is therefore not written down anywhere I have been able to check.</p><p><b>What this means for the line.</b> The Telfers appear in Scottish charters centuries earlier — a Telfer holds land in Lanarkshire in 1369 — but a charter is a record of property, not of a family's births. To put a person on this timeline with a date, you need a parish register, and the registers in this corner of Scotland begin in the 1600s and 1700s, not in the 1200s. That is the wall. It is made of paper and order-keeping, not of anybody's decision to hide anything.</p>",
+    source: "Turnbull, William B., <i>Memoranda of the State of the Parochial Registers of Scotland</i> (Edinburgh, 1849) — the Roxburghshire parish returns quoted verbatim: Kelso 1597 (baptisms) and 1622 (session minutes), Roxburgh 1624, Jedburgh 1639, Smailholm 1642, Yetholm 1690, Makerstoun 1692, Eckford 1694, Bowden 1697, Oxnam 1700, Morebattle 1726; Castleton, 'No return'. National Records of Scotland, 'Old Parish Registers' — approximately 3,500 OPR volumes survive, earliest entry 27 December 1553, Errol, Perthshire (OPR 351/1). FamilySearch, 'History of Parish Registers in England' — 1538 mandate, 1597–98 parchment copying.",
+    tone: "sage" },
+
   { decade: 1780, year: "1770", sortYear: 1770, title: "The smallpox that came with the first ship", tone: "rose",
     feared: "The pandemic that met the first settlers",
     detail: "<p>Every survival card below this one is a disaster that arrived, or was feared to. This is the one already in place before the colony began. Smallpox was present on the east coast of Australia from the first years of British settlement, and its origin — whether carried by the First Fleet, brought by Macassan trepangers from the north, or released deliberately — remains contested by historians. What is not contested is that it travelled faster than the settlers did, and it emptied country they had not yet reached.</p><p>When Governor Phillip's party pushed up the Hawkesbury in 1791 they found the river deserted. The people were gone, not moved on. Along the Georges River and the Nepean the same story repeated; the smallpox reached the clans ahead of the settlers, and the land was taken afterwards by people who did not have to fight for it. This is why the epidemics of 1789 and 1830 matter to a family history: the first colonial generation in New South Wales and Van Diemen's Land was farming country that had already been emptied.</p><p>The 1789 outbreak alone is credited with killing as much as half the Aboriginal population of the Sydney region. Smallpox reappeared in 1830 and ran down the length of the continent, and the two together are the largest single cause of Aboriginal population loss in the colonial period. That is not a figure from an activist's pamphlet; it is the settled view of the historical demographers who have counted the burial grounds and the mission registers. The Telfer line arrived on this coast in the generations when this was happening.</p>",
@@ -723,6 +733,16 @@ const firstDecade = Math.floor(timeline[0].sortYear / 10) * 10;
 const lastDecade = Math.floor(timeline[timeline.length - 1].sortYear / 10) * 10;
 const allDecades: number[] = [];
 for (let d = firstDecade; d <= lastDecade; d += 10) allDecades.push(d);
+// A survival card can predate the family line itself (the 1597 register card)
+// and a timeline row can be older than its own decade heading's first row.
+// Both had to be able to open a decade of their own, or the card lands in the
+// wrong row or drifts under somebody else's heading.
+for (const c of survivals) {
+  if (!allDecades.includes(c.decade)) {
+    allDecades.push(c.decade);
+    allDecades.sort((x, y) => x - y);
+  }
+}
 // A freedom card anchored to an earlier statute still has to land beside a
 // decade heading, or it floats under a heading that isn't its own.
 for (const f of freedoms) {
@@ -786,7 +806,9 @@ for (const f of freedoms) {
     {allDecades.map((d, di) => {
       const cards = survivalsByDecade.get(d) ?? [];
       const freeCards = freedomsByDecade.get(d) ?? [];
-      const events = timeline.filter((e) => Math.floor(e.sortYear / 10) * 10 === d);
+      const events = timeline
+        .filter((e) => Math.floor(e.sortYear / 10) * 10 === d)
+        .sort((a, b) => a.sortYear - b.sortYear);
       return (
         <Fragment>
           <div class="tl-cell" data-decade={d}>
