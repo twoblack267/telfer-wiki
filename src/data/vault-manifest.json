@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-27T18:22:46+10:00",
+  "generated_at": "2026-11-27T19:08:16+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 721,
+  "count": 722,
   "kinds": {
-    "real": 703,
+    "real": 704,
     "redirect": 18,
     "empty": 0
   },
@@ -1418,6 +1418,11 @@
       "sha256_whole": "5377e600bf7aaad0dddbc94c702b74da5cf068e2896573d413ccd717839878a9",
       "kind": "real"
     },
+    "Horace Lewis Mahar (1888).md": {
+      "sha256": "cfaefff90edfdf6fb50ad2882b6fec5f294b65d0893f621ff384ba20384787e4",
+      "sha256_whole": "cad455aed9ad8f155103c97f4780425773ca8b5331465427413827f79d1e683a",
+      "kind": "real"
+    },
     "Howard Jubilee Kennett.md": {
       "sha256": "fc894595b3d08da8344d753b8c937bad0516f80db9bf17c076e14ee3e5a2d875",
       "sha256_whole": "f66e6dd2da38d1aca4bd300690ad11ef3d4aac362f11e9f840429a4511e24bb7",
@@ -1894,8 +1899,8 @@
       "kind": "real"
     },
     "John Mahar (d. 1938).md": {
-      "sha256": "bd3c8b6204a63ee30c37b368017bac328b5b246765c20916336caaa1123c059d",
-      "sha256_whole": "c7e9a3fdd82d7091c82470f289e7203d80bca788c453ec20df5330da81437aab",
+      "sha256": "219ada41d57792d8e3d2b0f8d4b38cdb277cec8d39207c95e036020c8c4ec6c0",
+      "sha256_whole": "f8143df007f92191655bc7d017e010f2788e3d654aa150f75030690728246e89",
       "kind": "real"
     },
     "John Murray (1779\u20131849).md": {
@@ -2719,8 +2724,8 @@
       "kind": "real"
     },
     "Mildred Mary Mahar.md": {
-      "sha256": "03c87f1ed670e1df3a17e89d2008963e0bf470465f12239f6e34e614db0c9d41",
-      "sha256_whole": "5e03c91f3e3add530a1d2d3792a417bb21b1ceacf9abe335dbfc1584ea10147c",
+      "sha256": "1ffb731a82c2e1465109333cd4f5051ce168b845be6bafae860a17d3045ddb0d",
+      "sha256_whole": "9fffc5eba4c75ed8967f01af4a4dda67deb49cf2b7cbf01a9a4f80e9f961f55e",
       "kind": "real"
     },
     "Millicent Agnes Telfer (1887\u20131985).md": {

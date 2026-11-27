@@ -3514,6 +3514,11 @@
       "slug": "malcolm-lawrie",
       "id": "Malcolm Maxdon Lawrie (1893)",
       "generation": 6
+    },
+    {
+      "slug": "horace-lewis-mahar",
+      "id": "Horace Lewis Mahar (1888)",
+      "generation": 6
     }
   ],
   "edges": {
@@ -7269,6 +7274,10 @@
       {
         "from": "ada-satchell",
         "to": "walter-vale"
+      },
+      {
+        "from": "john-mahar",
+        "to": "horace-lewis-mahar"
       }
     ],
     "spouseOf": [
@@ -12133,6 +12142,10 @@
       {
         "from": "dorothy-alice-donovan",
         "to": "florrie-paynter"
+      },
+      {
+        "from": "horace-lewis-mahar",
+        "to": "mildred-mary-mahar"
       }
     ],
     "stepParentOf": [
