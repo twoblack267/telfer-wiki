@@ -93,7 +93,24 @@ export function clampDescription(text, max = META_DESCRIPTION_MAX) {
   if (d.length <= max) return closeShort(d);
   const cut = d.slice(0, max + 1);
   // Prefer a sentence boundary, then a clause boundary, then a word boundary.
-  const lastSentence = cut.lastIndexOf(". ");
+  // A full stop inside an abbreviation or an initial ("...Castleton (b. 1731) to the present
+  // day...") is NOT a sentence boundary. Treating it as one cut the 2026-11-27 timeline
+  // description at 143 chars and delivered "...from John Telfer of Castleton (b." with no
+  // ellipsis, because the string ended on a "." and the terminator check passed it. Only a
+  // stop preceded by a real word and followed by a capital/quote counts as a sentence end.
+  const sentenceEnd = (str) => {
+    let idx = str.lastIndexOf(". ");
+    while (idx > 0) {
+      const before = str.slice(0, idx);
+      const lastWord = (before.match(/([A-Za-z]+)$/) || [, ""])[1];
+      const tooShortToBeAWord = lastWord.length < 2;      // "b", "c", "d", initials
+      const opensParen = before.lastIndexOf("(") > before.lastIndexOf(")");
+      if (!tooShortToBeAWord && !opensParen) return idx;
+      idx = before.lastIndexOf(". ");
+    }
+    return -1;
+  };
+  const lastSentence = sentenceEnd(cut);
   const lastClause = Math.max(cut.lastIndexOf(", "), cut.lastIndexOf("; "), cut.lastIndexOf(" — "));
   const lastSpace = cut.lastIndexOf(" ");
   const at =

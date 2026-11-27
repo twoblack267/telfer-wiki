@@ -722,7 +722,7 @@ for (const f of freedoms) {
 
 <BaseLayout
   title="Timeline"
-  description={`A chronological timeline of the Telfer family — births, deaths, marriages and events across nine generations, from John Telfer of Castleton (b. 1731) to the present day. Part of the Telfer Family Wiki.`}
+  description={`Every birth, death and marriage in the Telfer family, decade by decade, beside the disasters and the rights taken from ordinary Australians.`}
 >
   <div class="page-header">
     <h1>Timeline</h1>
@@ -896,6 +896,26 @@ for (const f of freedoms) {
     })}
   </div>
   </div>
+
+  {/* Structured data. The page carried no JSON-LD at all before 2026-11-27, so Google had only
+      the <title> and one <h1> to work from. Declares the page as a dated collection so the
+      timeline is understood as an index of events, not an article. No invented dates: the
+      dateModified is the build date, which is true by construction. */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Timeline — Telfer Family Wiki",
+    "description": "Every birth, death and marriage in the Telfer family, decade by decade, beside the disasters and the rights taken from ordinary Australians.",
+    "url": "https://telferwiki.com/timeline/",
+    "isPartOf": { "@type": "WebSite", "name": "Telfer Family Wiki", "url": "https://telferwiki.com/" },
+    "about": { "@type": "Thing", "name": "Telfer family history" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Telfer family timeline",
+      "numberOfItems": timeline.length,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending"
+    }
+  })} />
 </BaseLayout>
 
 <style is:global>
