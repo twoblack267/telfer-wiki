@@ -1642,7 +1642,28 @@ for (const f of freedoms) {
          authored in this repo, never taken from user input. */
       var textNode = box.querySelector(".rd-text") as HTMLElement | null;
       if (textNode && d.text && d.text.trim()) textNode.innerHTML = d.text;
-      fill("rd-src", d.src ?? null);
+      /* Source lines are authored as citations, not prose — the card data
+         marks book titles with <i>, so this one leg needs markup too. Escaped
+         first, then only <i>/<em>/<b> restored, so nothing else can ride in. */
+      var srcNode = box.querySelector(".rd-src") as HTMLElement | null;
+      var srcVal = (d.src ?? "").trim();
+      if (srcNode) {
+        if (srcVal) {
+          var safeSrc = srcVal
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+          safeSrc = safeSrc
+            .replace(/&lt;(\/?)i&gt;/g, "<$1i>")
+            .replace(/&lt;(\/?)em&gt;/g, "<$1em>")
+            .replace(/&lt;(\/?)b&gt;/g, "<$1b>");
+          srcNode.innerHTML = "Source: " + safeSrc;
+          srcNode.hidden = false;
+        } else {
+          srcNode.textContent = "";
+          srcNode.hidden = true;
+        }
+      }
 
       /* Photo + its credit. Set src on the real element so the licensing
          line underneath can never drift away from the picture above it. */
