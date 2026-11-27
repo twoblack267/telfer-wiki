@@ -133,7 +133,7 @@ const PERSON_IMAGE_BY_SLUG = (() => {
 const PAGE_LAST_MOD = new Map<string, string>([
   ["/", "2026-11-04T12:00:00.000Z"], // src/pages/index.astro
   ["/about/", "2026-11-04T12:00:00.000Z"], // src/pages/about.astro
-  ["/timeline/", "2026-11-04T12:00:00.000Z"], // src/pages/timeline.astro
+  ["/timeline/", "2026-11-27T12:00:00.000Z"], // src/pages/timeline.astro
   ["/contact/", "2026-11-04T12:00:00.000Z"], // src/pages/contact.astro
   ["/search/", "2026-11-04T12:00:00.000Z"], // src/pages/search.astro
   ["/downloads/", "2026-10-24T12:00:00.000Z"], // src/pages/downloads.astro
