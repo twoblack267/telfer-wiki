@@ -25,6 +25,14 @@ interface TimelineEvent {
      where people.public.json says is_living, and "d. unknown" is used where a
      death is recorded but the year is not. */
   life?: string;
+  /* The picture the reader shows for this row. Mark, 27 Nov 2026: "you've
+     made sure there's photos and images on all of them". Every person who
+     already carries an archive image on their own page now carries the lead
+     one onto their timeline rows too, so the reader is never a text-only
+     panel where a photograph exists. Nothing is invented: this is the same
+     images[] entry the profile page renders, first one wins. */
+  img?: string;
+  imgCap?: string;
 }
 
 const timeline: TimelineEvent[] = [];
@@ -57,6 +65,7 @@ function makeEvent(
   status = "",
 ): TimelineEvent {
   const numeric = parseYearValue(raw);
+  const pic = leadImage(personSlug);
   return {
     year: numeric ?? (raw as any),
     dateLabel: `${display}`,
@@ -66,8 +75,27 @@ function makeEvent(
     detail,
     lifeDates: life,
     life: status,
+    img: pic?.src ? `${pic.src.startsWith("/") ? "" : "/"}${pic.src}` : undefined,
+    imgCap: pic?.alt,
     sortYear: numeric ?? Number.MAX_SAFE_INTEGER,
   };
+}
+
+/* The lead photograph for a person, straight out of their own record's
+   images[] — the identical entry the profile page already renders, so the
+   timeline cannot show a picture the person's page does not have, or a
+   caption that disagrees with it. First entry wins; no entry means no figure,
+   and the reader stays text-only rather than showing a placeholder that
+   pretends a photograph exists. */
+const leadImageBySlug = new Map<string, { src: string; alt?: string }>();
+for (const p of people) {
+  const imgs = (p as any).images as Array<{ src?: string; alt?: string }> | undefined;
+  if (!imgs || !imgs.length) continue;
+  const first = imgs.find((i) => i && i.src && String(i.src).trim());
+  if (first) leadImageBySlug.set(p.slug, { src: String(first.src), alt: first.alt });
+}
+function leadImage(slug: string) {
+  return slug ? leadImageBySlug.get(slug) : undefined;
 }
 
 /* At-a-glance life status for one person.
@@ -836,6 +864,8 @@ for (const f of freedoms) {
                         data-title={event.personName}
                         data-text={describeFamily(event.personName, event.detail, event.year, event.lifeDates)}
                         data-slug={event.personSlug || undefined}
+                        data-img={event.img || undefined}
+                        data-cap={event.imgCap || undefined}
                         aria-label={`${event.personName}, ${event.year} — open full entry`}
                       >
                         <span class="tl-fam-name">{event.personName}</span>
