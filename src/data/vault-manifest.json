@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-29T03:00:47+10:00",
+  "generated_at": "2026-11-29T03:55:52+10:00",
   "vault_dir": "/Users/marktelfer/ObsidianVault/Family History/People",
-  "count": 722,
+  "count": 723,
   "kinds": {
-    "real": 704,
+    "real": 705,
     "redirect": 18,
     "empty": 0
   },
@@ -1419,8 +1419,8 @@
       "kind": "real"
     },
     "Horace Lewis Mahar (1888).md": {
-      "sha256": "0121588249e80ae17fcf3ea92ab0a6db76b1524664da050ac24e601dd40c9edd",
-      "sha256_whole": "0302cba9c8bc462cc59329e75331a4d4d4b0e463f78e8c65566d6194b2f3bc41",
+      "sha256": "d0e1715e13517ce5cec58e513c53baeb26368eeb1bcfcde5d3bc5a57e49977a8",
+      "sha256_whole": "f7092e9b255f951c71843c79c4cfb58f4f1b3418eed4d570ec41c37072d6ffa4",
       "kind": "real"
     },
     "Howard Jubilee Kennett.md": {
@@ -1596,6 +1596,11 @@
     "James Sara (b. 1970).md": {
       "sha256": "6785190bec0ef79eaac9994aba38c364bda8f88794edbf7f47d670110e1befa9",
       "sha256_whole": "7a8fdb7f43c22e4d638a331f5aaf342c98eb356a46ba7637628d1c9deca182b2",
+      "kind": "real"
+    },
+    "James Shakespeare Mahar (1886-1923).md": {
+      "sha256": "fe5c38f2d63a1233078c78a2854e5d560a47fb1d16363b5f4891e6eb429b377b",
+      "sha256_whole": "42bbd0751cfaa7501147cb6172bb9050e652678d834b277179cf7668b68622ca",
       "kind": "real"
     },
     "James Telfer (1761-1845).md": {
@@ -1899,8 +1904,8 @@
       "kind": "real"
     },
     "John Mahar (d. 1938).md": {
-      "sha256": "219ada41d57792d8e3d2b0f8d4b38cdb277cec8d39207c95e036020c8c4ec6c0",
-      "sha256_whole": "585e44f2e85256b672db0de314d8d1598618d6458c29dd3d106bb228010705cf",
+      "sha256": "cabb8d5dcfdd5d9801046acd8fcfb26a8cd9192912d7630fbd0fb458d37dc677",
+      "sha256_whole": "646788d7008f1e0a8d841f166e7f2dfe2d5dace11a6f699ab88e4f2f440fe794",
       "kind": "real"
     },
     "John Murray (1779\u20131849).md": {
@@ -2724,8 +2729,8 @@
       "kind": "real"
     },
     "Mildred Mary Mahar.md": {
-      "sha256": "1ffb731a82c2e1465109333cd4f5051ce168b845be6bafae860a17d3045ddb0d",
-      "sha256_whole": "c70540d6cca767cd8d614caf04acce0bd7aca52d78ca6a615b8ad30d8cb71d8c",
+      "sha256": "ecd68b5e28b533bf6d10bb31c59ebc970752ba8fea95253b9270128afd78ba88",
+      "sha256_whole": "f20c1a46c2a73c9c3fa16c38e6c3b81f3fc5a59bd6c8bdb63ef343fd0a7767d0",
       "kind": "real"
     },
     "Millicent Agnes Telfer (1887\u20131985).md": {

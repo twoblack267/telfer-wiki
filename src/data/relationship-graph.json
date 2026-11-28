@@ -3519,6 +3519,10 @@
       "slug": "horace-lewis-mahar",
       "id": "Horace Lewis Mahar (1888)",
       "generation": 6
+    },
+    {
+      "slug": "james-shakespeare-mahar",
+      "id": "James Shakespeare Mahar (1886)"
     }
   ],
   "edges": {
@@ -7278,6 +7282,10 @@
       {
         "from": "john-mahar",
         "to": "horace-lewis-mahar"
+      },
+      {
+        "from": "john-mahar",
+        "to": "james-shakespeare-mahar"
       }
     ],
     "spouseOf": [
@@ -12145,6 +12153,14 @@
       },
       {
         "from": "horace-lewis-mahar",
+        "to": "james-shakespeare-mahar"
+      },
+      {
+        "from": "horace-lewis-mahar",
+        "to": "mildred-mary-mahar"
+      },
+      {
+        "from": "james-shakespeare-mahar",
         "to": "mildred-mary-mahar"
       }
     ],
